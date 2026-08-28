@@ -104116,3 +104116,1119 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Biologia - Organismo y ambiente: flujo de energia y ciclo del
+# carbono
+#
+# La otra mitad del area: las implicancias de la fotosintesis y la respiracion
+# en el flujo de energia y en el reciclaje del carbono y del oxigeno. Niveles
+# troficos, la eficiencia de transferencia y lo que pasa con el 90% restante,
+# los reservorios de carbono y por que la quema de combustibles fosiles altera
+# el ciclo, y el contraste de fondo: la materia circula, la energia se disipa.
+#
+# Las catorce dificiles incluyen la piramide de biomasa invertida del oceano,
+# la oscilacion anual del CO2 atmosferico, dos cuencas que difieren en mas de
+# una cosa, y que evidencia hace falta para sostener que un contaminante se
+# concentra a lo largo de la cadena.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_ecosistemas", "facil",
+        "¿Qué organismos son los consumidores primarios de una cadena trófica?",
+        "Los herbívoros",
+        "El nivel se define por lo que el organismo consume.\n\n"
+        "1) Los productores ocupan el primer nivel y fabrican su propia materia "
+        "orgánica.\n"
+        "2) Los consumidores primarios son los que se alimentan directamente de "
+        "esos productores, o sea los herbívoros.\n"
+        "3) Los que se alimentan de herbívoros son consumidores secundarios, y "
+        "así sucesivamente.\n\n"
+        "Un mismo organismo puede ocupar niveles distintos según de qué se "
+        "alimente en cada caso.",
+        [
+            ("Los carnívoros",
+             "Los carnívoros se alimentan de otros consumidores, no de los productores."),
+            ("Las plantas",
+             "Las plantas son productores y ocupan el primer nivel, no el de consumidores."),
+            ("Los descomponedores, que obtienen su materia orgánica de los restos de otros organismos",
+             "Los descomponedores actúan sobre restos de cualquier nivel, y forman un grupo aparte."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "facil",
+        "¿Qué componentes forman un ecosistema?",
+        "Los seres vivos y su ambiente físico",
+        "Un ecosistema no es solo el conjunto de organismos.\n\n"
+        "1) El componente biótico son las poblaciones de las distintas especies "
+        "que habitan el lugar.\n"
+        "2) El componente abiótico incluye el agua, el suelo, la temperatura, "
+        "la luz y los nutrientes disponibles.\n"
+        "3) Lo que define al ecosistema son las relaciones entre ambos: el "
+        "flujo de energía y el reciclaje de materia.\n\n"
+        "Estudiar solo los organismos deja fuera las condiciones que explican "
+        "por qué están donde están.",
+        [
+            ("Solo los animales del lugar",
+             "Deja fuera a los productores, a los descomponedores y al ambiente físico."),
+            ("Solo las plantas y los animales",
+             "Faltan los descomponedores y todo el componente abiótico."),
+            ("Únicamente las condiciones físicas del lugar, como la temperatura y la disponibilidad de agua",
+             "Esas condiciones son parte del ecosistema, pero no lo constituyen por sí solas."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "facil",
+        "En una cadena trófica, ¿qué representa cada flecha?",
+        "Hacia dónde va la materia y la energía",
+        "La flecha indica un sentido y no una preferencia alimentaria.\n\n"
+        "1) La flecha va desde el organismo que es consumido hacia el que lo "
+        "consume.\n"
+        "2) Ese sentido es el del traspaso de materia y de energía dentro del "
+        "ecosistema.\n"
+        "3) Leerla al revés invierte el significado completo del esquema.\n\n"
+        "Por eso una cadena siempre parte de los productores: son la entrada de "
+        "energía al sistema.",
+        [
+            ("Qué organismo caza a cuál",
+             "El sentido correcto va del consumido al consumidor, aunque no haya caza involucrada."),
+            ("El orden en que aparecieron las especies",
+             "La cadena describe relaciones alimentarias actuales, no historia evolutiva."),
+            ("La cantidad de individuos de cada especie que habitan en ese ecosistema en particular",
+             "El número de individuos no se representa con flechas sino con pirámides."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "facil",
+        "¿Qué es la biomasa de un nivel trófico?",
+        "La cantidad de materia orgánica que contiene",
+        "La biomasa mide materia y no energía ni número de individuos.\n\n"
+        "1) Corresponde a la masa total de materia orgánica de los organismos "
+        "de ese nivel.\n"
+        "2) Se expresa por unidad de superficie o de volumen, para poder "
+        "comparar ecosistemas distintos.\n"
+        "3) Suele disminuir al subir de nivel, porque cada uno recibe solo una "
+        "fracción de la energía del anterior.\n\n"
+        "Es distinta del número de individuos: pocos organismos grandes pueden "
+        "tener más biomasa que muchos pequeños.",
+        [
+            ("El número de especies que lo componen",
+             "El número de especies es una medida de diversidad, no de materia."),
+            ("La energía que ese nivel pierde como calor",
+             "Esa pérdida se relaciona con la eficiencia de transferencia, no con la biomasa."),
+            ("La cantidad de individuos que ese nivel puede sostener en un año determinado",
+             "El número de individuos es otra medida: la biomasa se refiere a la materia orgánica."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "facil",
+        "¿Qué proceso devuelve carbono a la atmósfera en forma de dióxido de "
+        "carbono?",
+        "La respiración celular",
+        "El ciclo del carbono se cierra con procesos que liberan el gas.\n\n"
+        "1) La fotosíntesis retira dióxido de carbono del aire y fija su "
+        "carbono en materia orgánica.\n"
+        "2) La respiración celular de todos los organismos degrada esa materia "
+        "y devuelve el carbono a la atmósfera.\n"
+        "3) La descomposición y la combustión hacen lo mismo por otras vías.\n\n"
+        "Que la entrada y la salida estén equilibradas es lo que mantiene "
+        "estable la concentración atmosférica.",
+        [
+            ("La fotosíntesis",
+             "La fotosíntesis hace lo contrario: retira dióxido de carbono del aire."),
+            ("La absorción de agua por las raíces",
+             "El transporte de agua no participa del intercambio de carbono con la atmósfera."),
+            ("La formación de suelo a partir de la roca madre por acción del clima y de los organismos",
+             "Ese proceso libera minerales, pero no es la vía principal de retorno del carbono."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "facil",
+        "¿Qué caracteriza a un organismo omnívoro en una red trófica?",
+        "Ocupa más de un nivel trófico",
+        "El nivel depende de la fuente de alimento en cada caso.\n\n"
+        "1) Al comer productores, el omnívoro actúa como consumidor primario.\n"
+        "2) Al comer herbívoros, actúa como consumidor secundario.\n"
+        "3) Por eso en una red trófica aparece con flechas que provienen de "
+        "niveles distintos.\n\n"
+        "Es una de las razones por las que las redes tróficas describen mejor "
+        "la realidad que una cadena lineal.",
+        [
+            ("Ocupa siempre el último nivel",
+             "El último nivel lo ocupan los depredadores tope, y un omnívoro no necesariamente lo es."),
+            ("No participa de ninguna cadena trófica",
+             "Participa de varias a la vez, y por eso aparece en distintos niveles."),
+            ("Se alimenta exclusivamente de restos de otros organismos ya muertos en el ecosistema",
+             "Eso describe a un detritívoro, no a un omnívoro."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "facil",
+        "¿Qué es un depredador tope?",
+        "El que no tiene depredadores naturales",
+        "El nombre indica su posición en la red trófica.\n\n"
+        "1) Ocupa el nivel más alto de su ecosistema y se alimenta de otros "
+        "consumidores.\n"
+        "2) Ningún otro organismo lo caza de forma habitual, aunque sí lo "
+        "afectan parásitos y enfermedades.\n"
+        "3) Al morir, su materia entra al circuito de los descomponedores como "
+        "la de cualquier organismo.\n\n"
+        "Su presencia regula las poblaciones de los niveles inferiores, y por "
+        "eso su desaparición altera todo el sistema.",
+        [
+            ("El organismo más grande del ecosistema",
+             "El tamaño no determina la posición trófica."),
+            ("El que se alimenta solo de plantas",
+             "Alimentarse de plantas corresponde a un consumidor primario."),
+            ("El organismo que produce la mayor cantidad de materia orgánica dentro de un ecosistema",
+             "Esa producción corresponde a los productores, que ocupan el primer nivel."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "facil",
+        "¿Por qué las cadenas tróficas rara vez tienen más de cinco niveles?",
+        "Porque en cada nivel se pierde mucha energía",
+        "El límite proviene del balance energético.\n\n"
+        "1) Solo alrededor del diez por ciento de la energía de un nivel pasa "
+        "al siguiente.\n"
+        "2) Tras cuatro o cinco niveles, la energía disponible es tan escasa "
+        "que no alcanza para sostener una población.\n"
+        "3) Por eso los depredadores tope suelen ser pocos y necesitar "
+        "territorios extensos.\n\n"
+        "El límite no lo pone la falta de especies, sino la energía que llega "
+        "hasta arriba.",
+        [
+            ("Porque no existen suficientes especies",
+             "Hay especies de sobra; lo que se agota es la energía disponible."),
+            ("Porque los descomponedores lo impiden",
+             "Los descomponedores reciclan materia y no limitan el número de niveles."),
+            ("Porque los organismos de los niveles superiores son siempre de mayor tamaño corporal",
+             "El tamaño no es lo que impone el límite: lo hace la energía que llega a cada nivel."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Qué ocurre con el noventa por ciento de la energía que no pasa al "
+        "nivel trófico siguiente?",
+        "Se usa en respiración y se disipa como calor",
+        "La energía no desaparece: cambia de forma y deja de estar "
+        "disponible.\n\n"
+        "1) Una parte importante se consume en la respiración celular del "
+        "propio organismo, que la usa para vivir.\n"
+        "2) Otra parte se pierde como calor, que ya no puede ser aprovechado "
+        "por ningún organismo.\n"
+        "3) También queda materia que no es consumida o que no se digiere y "
+        "pasa a los descomponedores.\n\n"
+        "Por eso la energía fluye en un solo sentido: entra como luz y sale "
+        "como calor.",
+        [
+            ("Se acumula en el nivel siguiente",
+             "Si se acumulara ahí, la transferencia sería completa y no del diez por ciento."),
+            ("Se recicla hacia los productores",
+             "La materia se recicla, pero la energía disipada como calor no vuelve al sistema."),
+            ("Queda almacenada en el suelo del ecosistema y se libera lentamente durante los años siguientes",
+             "El suelo almacena materia orgánica, pero la energía disipada como calor no se recupera."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Qué diferencia hay entre una pirámide de energía y una de biomasa?",
+        "Una mide energía por año y la otra, materia",
+        "Cada pirámide representa una magnitud distinta.\n\n"
+        "1) La pirámide de energía muestra cuánta energía circula por cada "
+        "nivel en un periodo determinado.\n"
+        "2) La de biomasa muestra la cantidad de materia orgánica presente en "
+        "cada nivel en un momento dado.\n"
+        "3) La primera nunca se invierte, porque la energía disponible siempre "
+        "disminuye al subir de nivel.\n\n"
+        "La de biomasa sí puede invertirse, y ese caso es justamente el que "
+        "obliga a distinguirlas.",
+        [
+            ("Ambas miden lo mismo con distinto nombre",
+             "Miden magnitudes distintas: energía en el tiempo frente a materia en un instante."),
+            ("La de biomasa mide el número de individuos",
+             "El número de individuos corresponde a la pirámide de números."),
+            ("La de energía representa la cantidad de calor que cada nivel entrega al nivel inferior",
+             "El calor se disipa al ambiente y no se transfiere hacia abajo entre niveles."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Cuáles son los principales reservorios de carbono del planeta?",
+        "La atmósfera, el océano, la biomasa y las rocas",
+        "El ciclo del carbono se entiende siguiendo dónde se acumula.\n\n"
+        "1) En la atmósfera está como dióxido de carbono, y en el océano, "
+        "disuelto en sus aguas.\n"
+        "2) En la biomasa está incorporado a la materia orgánica de todos los "
+        "seres vivos y del suelo.\n"
+        "3) En el subsuelo está en rocas carbonatadas y en los combustibles "
+        "fósiles, que son el reservorio de mayor permanencia.\n\n"
+        "El ciclo consiste en el traspaso de carbono entre esos reservorios, a "
+        "velocidades muy distintas según el caso.",
+        [
+            ("Solo la atmósfera",
+             "La atmósfera contiene una fracción menor del carbono del planeta."),
+            ("Solo los seres vivos",
+             "La biomasa es un reservorio, pero mucho menor que el océano o las rocas."),
+            ("Únicamente los combustibles fósiles, que concentran todo el carbono disponible del planeta",
+             "Son un reservorio importante, pero no el único ni el mayor."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Por qué la quema de combustibles fósiles altera el ciclo del carbono?",
+        "Libera carbono que estaba fuera del ciclo",
+        "El problema no es la emisión en sí, sino su origen.\n\n"
+        "1) El carbono de los combustibles fósiles quedó almacenado en el "
+        "subsuelo durante millones de años.\n"
+        "2) Al quemarlos se libera en pocas décadas un carbono que el ciclo no "
+        "estaba movilizando.\n"
+        "3) La fotosíntesis y la absorción oceánica no alcanzan a retirar esa "
+        "cantidad adicional al mismo ritmo.\n\n"
+        "El resultado es una acumulación neta en la atmósfera, que es lo que "
+        "registran las mediciones.",
+        [
+            ("Destruye el dióxido de carbono existente",
+             "La combustión produce dióxido de carbono, no lo destruye."),
+            ("Impide que las plantas realicen fotosíntesis",
+             "Las plantas siguen fotosintetizando; lo que cambia es el balance del ciclo."),
+            ("Consume todo el oxígeno atmosférico disponible en un plazo muy breve de tiempo",
+             "El consumo de oxígeno por combustión es pequeño frente a la reserva atmosférica."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Qué procesos mantienen el ciclo del oxígeno?",
+        "La fotosíntesis lo libera y la respiración lo consume",
+        "El ciclo del oxígeno es el reverso del ciclo del carbono.\n\n"
+        "1) La fotosíntesis rompe moléculas de agua y libera oxígeno a la "
+        "atmósfera.\n"
+        "2) La respiración celular de todos los organismos lo consume para "
+        "degradar materia orgánica.\n"
+        "3) La combustión de materia orgánica y de combustibles fósiles agrega "
+        "otra vía de consumo.\n\n"
+        "Ambos ciclos están acoplados: los mismos procesos que mueven el "
+        "carbono mueven el oxígeno en sentido inverso.",
+        [
+            ("Solo la respiración de los animales",
+             "Falta la fotosíntesis, que es la única fuente significativa de oxígeno."),
+            ("La evaporación y la condensación del agua",
+             "Esos procesos forman parte del ciclo del agua."),
+            ("La descomposición de las rocas del suelo, que libera oxígeno hacia la atmósfera terrestre",
+             "La meteorización de rocas no es una fuente significativa de oxígeno atmosférico."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Qué efecto tiene la desaparición de un depredador tope sobre su "
+        "ecosistema?",
+        "Aumentan los herbívoros y disminuyen las plantas",
+        "El efecto se propaga hacia abajo, nivel por nivel.\n\n"
+        "1) Sin depredación, las poblaciones de sus presas crecen sin ese "
+        "control.\n"
+        "2) Esas presas, en general herbívoras, ejercen mayor presión sobre la "
+        "vegetación.\n"
+        "3) La pérdida de cobertura vegetal afecta a su vez al suelo, al agua y "
+        "a las demás especies del lugar.\n\n"
+        "Este encadenamiento muestra que la abundancia de una especie depende "
+        "de varias otras y no solo de sus recursos.",
+        [
+            ("No se produce ningún cambio apreciable",
+             "La regulación que ejercía el depredador desaparece y sus efectos se propagan."),
+            ("Disminuyen los herbívoros por falta de alimento",
+             "Al inicio ocurre lo contrario: sin depredación sus poblaciones aumentan."),
+            ("Aumentan las plantas, porque los herbívoros pierden a su fuente principal de alimento",
+             "El depredador no alimentaba a los herbívoros: los controlaba."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Por qué la introducción de una especie exótica puede alterar un "
+        "ecosistema?",
+        "Porque puede no tener depredadores en el lugar",
+        "El desequilibrio proviene de la falta de controles.\n\n"
+        "1) En su ecosistema de origen, la especie está regulada por "
+        "depredadores, parásitos y competidores.\n"
+        "2) En el nuevo lugar esos controles pueden no existir, y su población "
+        "crece sin límite.\n"
+        "3) Al hacerlo desplaza a especies nativas, ya sea compitiendo por "
+        "recursos o depredándolas.\n\n"
+        "Por eso el efecto de una introducción no se predice mirando solo a la "
+        "especie introducida, sino a la red completa.",
+        [
+            ("Porque las especies exóticas son más grandes",
+             "El tamaño no es lo determinante: lo es la ausencia de controles poblacionales."),
+            ("Porque no pueden alimentarse en el nuevo lugar",
+             "Si no pudieran alimentarse no prosperarían ni causarían alteraciones."),
+            ("Porque modifican el clima de la región en que son introducidas por primera vez",
+             "El efecto es sobre la red trófica y los recursos, no sobre el clima regional."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Por qué se dice que los descomponedores reciclan materia pero no "
+        "energía?",
+        "Porque la energía se disipa como calor",
+        "Materia y energía siguen recorridos distintos.\n\n"
+        "1) Los descomponedores degradan restos y devuelven al suelo y al aire "
+        "los elementos que los formaban.\n"
+        "2) Esos elementos vuelven a estar disponibles para los productores, de "
+        "modo que la materia circula.\n"
+        "3) La energía contenida en esos restos se usa en su propia respiración "
+        "y se disipa como calor, que ningún organismo recupera.\n\n"
+        "Por eso el ecosistema necesita una entrada continua de energía, pero "
+        "no una entrada continua de materia.",
+        [
+            ("Porque no consumen materia orgánica",
+             "Se alimentan justamente de materia orgánica muerta."),
+            ("Porque devuelven la energía a los productores",
+             "La energía disipada como calor no vuelve a los productores."),
+            ("Porque la materia que liberan ya no puede ser utilizada por ningún otro organismo del sistema",
+             "Ocurre lo contrario: los nutrientes liberados vuelven a estar disponibles."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "Un contaminante persistente se acumula en los tejidos y no se elimina. "
+        "¿En qué nivel trófico se encuentra en mayor concentración?",
+        "En el nivel más alto",
+        "La acumulación sigue el mismo camino que la materia.\n\n"
+        "1) Cada organismo incorpora el contaminante presente en todo lo que "
+        "consume a lo largo de su vida.\n"
+        "2) Como no lo elimina, su concentración corporal supera a la de su "
+        "alimento.\n"
+        "3) El efecto se repite en cada nivel, de modo que la concentración más "
+        "alta aparece en los depredadores tope.\n\n"
+        "Es la razón por la que se recomienda limitar el consumo de algunos "
+        "peces grandes y de vida larga.",
+        [
+            ("En los productores",
+             "Los productores son el nivel de menor concentración de un contaminante persistente."),
+            ("En todos por igual",
+             "La concentración aumenta nivel a nivel, porque el contaminante no se elimina."),
+            ("En los descomponedores, porque procesan los restos de todos los niveles del ecosistema",
+             "Procesan materia de todos los niveles, pero la acumulación característica se observa en los depredadores tope."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "En una cadena trófica, los productores fijan 20.000 kcal. Con una "
+        "transferencia del 10% por nivel, ¿cuánta energía llega a los "
+        "consumidores secundarios?",
+        "200 kcal",
+        "El cálculo aplica la eficiencia una vez por cada paso.\n\n"
+        "1) Del productor al consumidor primario pasa el 10%: 20.000 por 0,1 "
+        "da 2.000 kcal.\n"
+        "2) Del consumidor primario al secundario vuelve a pasar el 10%: 2.000 "
+        "por 0,1 da 200 kcal.\n"
+        "3) Los consumidores secundarios reciben entonces 200 kcal, la "
+        "centésima parte de lo fijado por los productores.\n\n"
+        "Esa caída tan rápida es la que limita el número de niveles que un "
+        "ecosistema puede sostener.",
+        [
+            ("2.000 kcal",
+             "Corresponde a los consumidores primarios: falta aplicar una transferencia más."),
+            ("20 kcal",
+             "Aplica la eficiencia tres veces, o sea llega hasta el nivel siguiente."),
+            ("10.000 kcal, que es la mitad de la energía fijada por los productores del ecosistema",
+             "La transferencia es del 10% y no del 50% entre un nivel y el siguiente."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Por qué una dieta basada en vegetales permite alimentar a más "
+        "personas con la misma superficie cultivada?",
+        "Porque se aprovecha un nivel trófico más bajo",
+        "El argumento es el mismo de la eficiencia de transferencia.\n\n"
+        "1) Al consumir vegetales, las personas actúan como consumidores "
+        "primarios y aprovechan la producción de forma directa.\n"
+        "2) Al consumir animales que se alimentaron de vegetales, se agrega un "
+        "nivel y se pierde alrededor del noventa por ciento de esa energía.\n"
+        "3) Con la misma superficie, la energía disponible para las personas es "
+        "entonces mucho mayor en el primer caso.\n\n"
+        "El razonamiento es energético y no zanja por sí solo otras "
+        "consideraciones sobre nutrición o uso del territorio.",
+        [
+            ("Porque los vegetales tienen más energía por gramo",
+             "En general aportan menos energía por gramo: el argumento es el número de niveles."),
+            ("Porque los animales no aprovechan la energía que consumen",
+             "Sí la aprovechan, pero en su mayor parte para vivir, no para acumularla."),
+            ("Porque el cultivo de vegetales no requiere agua ni nutrientes del suelo para producir alimento",
+             "Los cultivos requieren agua y nutrientes: el argumento es la pérdida de energía por nivel."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Qué papel cumplen los detritívoros en un ecosistema?",
+        "Fragmentan los restos orgánicos",
+        "Son un paso previo a la descomposición completa.\n\n"
+        "1) Los detritívoros, como las lombrices, se alimentan de restos "
+        "vegetales y animales.\n"
+        "2) Al fragmentarlos, aumentan la superficie disponible para la acción "
+        "de bacterias y hongos.\n"
+        "3) Con eso aceleran el reciclaje de nutrientes hacia el suelo.\n\n"
+        "Sin ellos, la materia muerta se acumularía y el retorno de nutrientes "
+        "sería mucho más lento.",
+        [
+            ("Producen materia orgánica a partir de luz",
+             "Esa es la función de los productores."),
+            ("Depredan a los consumidores primarios",
+             "Los detritívoros se alimentan de restos, no de presas vivas."),
+            ("Aportan energía nueva al ecosistema al transformar los restos en compuestos aprovechables",
+             "No aportan energía nueva: la única entrada de energía es la que fijan los productores."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Por qué un ecosistema necesita una entrada continua de energía pero "
+        "no de materia?",
+        "Porque la materia se recicla y la energía se disipa",
+        "Los dos flujos tienen naturaleza distinta.\n\n"
+        "1) Los átomos que forman a los organismos se reincorporan al ambiente "
+        "y vuelven a ser usados por los productores.\n"
+        "2) La energía, en cambio, se degrada a calor en cada transferencia y "
+        "se pierde hacia el ambiente.\n"
+        "3) Como ese calor no puede volver a usarse, el sistema requiere una "
+        "entrada permanente desde el exterior.\n\n"
+        "Esa entrada es la luz solar, captada por los productores mediante la "
+        "fotosíntesis.",
+        [
+            ("Porque la materia se destruye y la energía no",
+             "Ocurre lo contrario: la materia se conserva y circula, y la energía se degrada."),
+            ("Porque los descomponedores fabrican materia nueva",
+             "Los descomponedores reciclan materia existente; no la fabrican."),
+            ("Porque la energía se acumula en los niveles superiores de la cadena trófica del ecosistema",
+             "La energía disminuye al subir de nivel en lugar de acumularse."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Qué relación hay entre la reforestación y el ciclo del carbono?",
+        "Los árboles fijan carbono mientras crecen",
+        "Un bosque en crecimiento retira carbono de la atmósfera.\n\n"
+        "1) Al fotosintetizar, los árboles incorporan carbono atmosférico a su "
+        "madera, sus hojas y sus raíces.\n"
+        "2) Mientras la biomasa del bosque aumenta, hay una retirada neta de "
+        "carbono del aire.\n"
+        "3) Cuando el bosque madura y su biomasa se estabiliza, la fijación y "
+        "la liberación tienden a equilibrarse.\n\n"
+        "Si ese bosque se quema o se tala, el carbono almacenado vuelve a la "
+        "atmósfera.",
+        [
+            ("Los árboles liberan carbono mientras crecen",
+             "Durante el crecimiento la fijación supera a la liberación."),
+            ("La reforestación no afecta al ciclo del carbono",
+             "Afecta a uno de sus flujos principales: la fijación por la vegetación."),
+            ("Los árboles retiran carbono del suelo y lo devuelven a la atmósfera a medida que se desarrollan",
+             "El carbono que fijan proviene del aire, y queda almacenado en su biomasa."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Qué papel cumple el océano en el ciclo del carbono?",
+        "Absorbe y almacena dióxido de carbono",
+        "El océano es uno de los grandes reservorios del planeta.\n\n"
+        "1) El dióxido de carbono atmosférico se disuelve en el agua de mar, "
+        "sobre todo en las zonas frías.\n"
+        "2) Parte de ese carbono es fijado por el fitoplancton y se incorpora a "
+        "la materia orgánica marina.\n"
+        "3) Otra parte se deposita en el fondo, donde puede permanecer durante "
+        "mucho tiempo.\n\n"
+        "Esa absorción tiene consecuencias: al disolverse, el dióxido de "
+        "carbono acidifica el agua y afecta a los organismos con estructuras "
+        "calcáreas.",
+        [
+            ("No participa del ciclo del carbono",
+             "Es uno de los reservorios y sumideros más importantes del planeta."),
+            ("Solo libera carbono a la atmósfera",
+             "Hay intercambio en ambos sentidos, con absorción neta en varias regiones."),
+            ("Almacena carbono únicamente en forma de combustibles fósiles depositados en su fondo",
+             "El carbono oceánico está sobre todo disuelto y en materia orgánica, no como combustible fósil."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Qué representa la productividad primaria neta de un ecosistema?",
+        "La materia que queda disponible para los consumidores",
+        "Es la producción de los autótrofos descontando su propio consumo.\n\n"
+        "1) La productividad primaria bruta es toda la materia orgánica que los "
+        "productores fabrican.\n"
+        "2) Parte de ella se consume en su propia respiración celular.\n"
+        "3) Lo que queda es la productividad neta, y es la energía que "
+        "efectivamente puede pasar al nivel siguiente.\n\n"
+        "Por eso dos ecosistemas con la misma producción bruta pueden sostener "
+        "poblaciones muy distintas.",
+        [
+            ("Toda la materia orgánica que los productores fabrican",
+             "Esa es la productividad bruta, antes de descontar la respiración."),
+            ("La energía que se pierde como calor en cada nivel",
+             "Esa pérdida es lo que explica la baja eficiencia de transferencia, no la productividad neta."),
+            ("La cantidad total de organismos que el ecosistema puede sostener durante un año completo",
+             "Eso se relaciona con la capacidad de carga, que es una medida distinta."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "En una red trófica, ¿qué ocurre si desaparece una especie de la que "
+        "dependen muchas otras?",
+        "El efecto se propaga por varias cadenas",
+        "En una red, una especie participa de varias relaciones a la vez.\n\n"
+        "1) Si muchas especies se alimentan de ella, todas pierden a la vez una "
+        "fuente de alimento.\n"
+        "2) Esas especies pueden desplazarse hacia otras presas, con lo que la "
+        "presión se traslada a otras partes de la red.\n"
+        "3) El efecto llega así a especies que no tenían relación directa con "
+        "la que desapareció.\n\n"
+        "Cuanto más conexiones tiene una especie, mayor es el alcance de su "
+        "pérdida.",
+        [
+            ("Solo se afecta la especie que la depredaba directamente",
+             "En una red, el efecto se transmite más allá de la relación directa."),
+            ("La red se reorganiza sin ningún efecto",
+             "Puede haber reorganización, pero acompañada de cambios en varias poblaciones."),
+            ("Desaparecen de inmediato todas las especies del ecosistema por falta de alimento disponible",
+             "El efecto es un reordenamiento con cambios de abundancia, no una extinción inmediata generalizada."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Por qué el fitoplancton se considera la base de las cadenas tróficas "
+        "marinas?",
+        "Porque es el principal productor del océano",
+        "La base de una cadena la ocupa quien fija la energía.\n\n"
+        "1) El fitoplancton realiza fotosíntesis en la zona iluminada del "
+        "océano.\n"
+        "2) Esa producción es la entrada de energía para el zooplancton, y de "
+        "ahí para peces y depredadores mayores.\n"
+        "3) Su abundancia determina cuánta energía circula por el resto del "
+        "sistema marino.\n\n"
+        "Por eso las zonas de mayor productividad pesquera coinciden con las de "
+        "mayor producción de fitoplancton.",
+        [
+            ("Porque se alimenta de los peces pequeños",
+             "El fitoplancton no se alimenta de otros organismos: es productor."),
+            ("Porque descompone la materia orgánica del mar",
+             "Esa función corresponde a bacterias descomponedoras."),
+            ("Porque ocupa el nivel más alto de la cadena trófica marina y regula a todas las demás especies",
+             "Ocupa el primer nivel, no el más alto."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_ecosistemas", "medio",
+        "Un pastizal tiene 1.000 kg de biomasa de productores. Con una "
+        "transferencia del 10%, ¿cuánta biomasa pueden sostener los "
+        "herbívoros?",
+        "100 kg",
+        "La eficiencia se aplica una vez por cada paso entre niveles.\n\n"
+        "1) Del nivel de los productores al de los herbívoros se transfiere "
+        "alrededor del diez por ciento.\n"
+        "2) El diez por ciento de 1.000 kg es 1.000 multiplicado por 0,1.\n"
+        "3) El resultado es 100 kg de biomasa en el nivel de los "
+        "herbívoros.\n\n"
+        "Por eso una superficie dada sostiene mucha más biomasa vegetal que "
+        "animal, y esa proporción se repite en cada nivel.",
+        [
+            ("10 kg",
+             "Aplica la transferencia dos veces, o sea llega hasta el nivel siguiente."),
+            ("500 kg",
+             "Corresponde a una transferencia del 50%, muy superior a la observada."),
+            ("1.000 kg, porque toda la biomasa de un nivel pasa íntegramente al nivel siguiente",
+             "La transferencia entre niveles es parcial: la mayor parte de la energía se disipa."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Qué papel cumple el suelo en el ciclo del carbono?",
+        "Almacena carbono en su materia orgánica",
+        "El suelo es un reservorio que se suele pasar por alto.\n\n"
+        "1) Los restos vegetales y animales se incorporan al suelo y forman "
+        "materia orgánica.\n"
+        "2) Parte de ese carbono permanece almacenado durante décadas o "
+        "siglos, sobre todo en suelos fríos o húmedos.\n"
+        "3) La actividad de los descomponedores lo devuelve gradualmente a la "
+        "atmósfera como dióxido de carbono.\n\n"
+        "Las prácticas que degradan el suelo liberan ese carbono acumulado y lo "
+        "suman a la atmósfera.",
+        [
+            ("No contiene carbono",
+             "La materia orgánica del suelo es uno de los reservorios de carbono más grandes."),
+            ("Convierte el carbono en oxígeno",
+             "Ningún proceso del suelo transforma un elemento en otro."),
+            ("Retiene el carbono de forma definitiva, sin devolverlo nunca a la atmósfera terrestre",
+             "La descomposición lo devuelve gradualmente: el almacenamiento no es permanente."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Qué ocurre con el carbono contenido en un organismo cuando muere?",
+        "Los descomponedores lo devuelven al ambiente",
+        "La muerte no saca al carbono del ciclo.\n\n"
+        "1) Los restos son consumidos por detritívoros y descompuestos por "
+        "bacterias y hongos.\n"
+        "2) La respiración de esos organismos libera parte del carbono como "
+        "dióxido de carbono.\n"
+        "3) Otra parte queda incorporada a la materia orgánica del suelo, donde "
+        "puede permanecer largo tiempo.\n\n"
+        "En condiciones excepcionales, sin oxígeno, esa materia puede "
+        "acumularse y dar origen con el tiempo a combustibles fósiles.",
+        [
+            ("Se destruye junto con el organismo",
+             "La materia no se destruye: cambia de forma y de lugar."),
+            ("Queda fuera del ciclo de manera permanente",
+             "El grueso del carbono vuelve al ciclo por descomposición."),
+            ("Se transforma en oxígeno que los descomponedores liberan hacia la atmósfera del planeta",
+             "Los descomponedores consumen oxígeno y liberan dióxido de carbono."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Qué es la capacidad de carga de un ecosistema?",
+        "El tamaño máximo de población que puede sostener",
+        "El límite lo imponen los recursos disponibles.\n\n"
+        "1) Una población puede crecer mientras haya alimento, espacio y demás "
+        "recursos suficientes.\n"
+        "2) Al acercarse al límite que esos recursos permiten, el crecimiento "
+        "se frena.\n"
+        "3) Ese valor máximo sostenible en el tiempo es la capacidad de "
+        "carga.\n\n"
+        "No es un número fijo: cambia si cambian las condiciones del ambiente o "
+        "la disponibilidad de recursos.",
+        [
+            ("La cantidad de especies distintas que habitan el lugar",
+             "Ese es un indicador de biodiversidad, no de capacidad de carga."),
+            ("La energía total que fijan los productores en un año",
+             "Esa es la productividad primaria, que influye pero no es la definición."),
+            ("El peso máximo que el suelo del ecosistema puede soportar sin sufrir compactación ni erosión",
+             "El concepto es ecológico y se refiere a población sostenible, no a resistencia física del suelo."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Por qué un ecosistema con mayor biodiversidad tiende a ser más "
+        "estable frente a una perturbación?",
+        "Porque hay más caminos alternativos en la red",
+        "La estabilidad depende de la redundancia de conexiones.\n\n"
+        "1) En una red con muchas especies, varias cumplen funciones "
+        "similares.\n"
+        "2) Si una desaparece o disminuye, otras pueden ocupar parcialmente su "
+        "lugar y el flujo de energía continúa.\n"
+        "3) En una red simple, en cambio, la pérdida de una especie puede "
+        "interrumpir una cadena completa.\n\n"
+        "Por eso los monocultivos son especialmente vulnerables frente a una "
+        "plaga o a un cambio de las condiciones.",
+        [
+            ("Porque hay más individuos en total",
+             "Lo relevante es la variedad de especies y de conexiones, no el número de individuos."),
+            ("Porque las especies dejan de competir entre sí",
+             "La competencia existe igual: lo que aporta la diversidad son alternativas dentro de la red."),
+            ("Porque la energía disponible aumenta al haber más especies fijándola en el mismo ecosistema",
+             "La energía disponible depende de la producción de los autótrofos, no del número de especies."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Qué efecto tiene un incendio forestal sobre el ciclo del carbono?",
+        "Libera de golpe el carbono almacenado",
+        "El fuego acelera un retorno que normalmente es lento.\n\n"
+        "1) La biomasa del bosque contiene carbono acumulado durante años o "
+        "décadas de crecimiento.\n"
+        "2) La combustión lo libera a la atmósfera como dióxido de carbono en "
+        "cuestión de horas.\n"
+        "3) Además se pierde, por un tiempo, la capacidad del bosque de fijar "
+        "carbono nuevo.\n\n"
+        "Si el bosque se regenera, ese carbono vuelve a fijarse, pero en una "
+        "escala de tiempo mucho mayor que la de la quema.",
+        [
+            ("Retira carbono de la atmósfera",
+             "La combustión libera carbono en lugar de retirarlo."),
+            ("No modifica el ciclo del carbono",
+             "Modifica dos de sus flujos: libera carbono y reduce la fijación."),
+            ("Convierte el carbono de la biomasa en carbono mineral que queda fijado en el suelo del bosque",
+             "Parte queda como cenizas, pero la mayor parte se libera como dióxido de carbono."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Por qué una pirámide de números puede no tener la forma habitual?",
+        "Porque un solo organismo puede alimentar a muchos",
+        "El conteo de individuos no refleja la cantidad de materia.\n\n"
+        "1) Un árbol es un único productor y puede sostener a miles de insectos "
+        "herbívoros.\n"
+        "2) En ese caso, el nivel de los consumidores primarios tiene muchos "
+        "más individuos que el de los productores.\n"
+        "3) La pirámide de números aparece entonces invertida, aunque la de "
+        "energía siga siendo normal.\n\n"
+        "Contar individuos es útil, pero lo que gobierna la estructura del "
+        "ecosistema es la energía disponible.",
+        [
+            ("Porque los productores siempre son más numerosos",
+             "Justamente puede ocurrir lo contrario, como en el caso del árbol y los insectos."),
+            ("Porque las pirámides de números no se usan en ecología",
+             "Sí se usan, con la precaución de interpretarlas junto a las de energía y biomasa."),
+            ("Porque el número de individuos de un nivel depende de la energía disipada como calor en el anterior",
+             "Depende sobre todo del tamaño de los organismos, que el conteo no considera."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "dificil",
+        "En un ecosistema oceánico, la biomasa del fitoplancton es menor que la "
+        "del zooplancton que lo consume. ¿Cómo se explica?",
+        "El fitoplancton se renueva muy rápido",
+        "Una pirámide invertida de biomasa se explica por el tiempo, no por la "
+        "energía.\n\n"
+        "1) La biomasa es una fotografía: mide la materia presente en un "
+        "instante.\n"
+        "2) El fitoplancton tiene una tasa de renovación altísima: se reproduce "
+        "y es consumido en pocos días.\n"
+        "3) A lo largo de un año produce mucho más de lo que su biomasa "
+        "instantánea sugiere, y eso sostiene al nivel siguiente.\n\n"
+        "La pirámide de energía, medida a lo largo del tiempo, no se invierte "
+        "nunca.",
+        [
+            ("El zooplancton produce su propia materia orgánica",
+             "El zooplancton es consumidor: no fija carbono por fotosíntesis."),
+            ("La energía fluye desde el zooplancton al fitoplancton",
+             "El flujo va del productor al consumidor, no al revés."),
+            ("La transferencia de energía en el océano es cercana al cien por ciento entre ambos niveles",
+             "Ninguna transferencia trófica se acerca a ese valor: la explicación es la tasa de renovación."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "dificil",
+        "Se mide un contaminante persistente en cuatro niveles tróficos de un "
+        "lago y la concentración aumenta en cada nivel. ¿Qué se infiere?",
+        "El contaminante se acumula a lo largo de la cadena",
+        "El patrón observado corresponde a un mecanismo conocido.\n\n"
+        "1) Cada organismo incorpora el contaminante de todo lo que consume y "
+        "no logra eliminarlo.\n"
+        "2) Como consume mucha más masa de la que acumula, la concentración en "
+        "su cuerpo supera a la de su alimento.\n"
+        "3) Repetido en cada nivel, el patrón produce concentraciones máximas "
+        "en los depredadores tope.\n\n"
+        "El dato se usa para decidir restricciones de consumo en especies de "
+        "vida larga y posición trófica alta.",
+        [
+            ("El contaminante se degrada al pasar de un nivel a otro",
+             "Si se degradara, la concentración disminuiría en lugar de aumentar."),
+            ("Los niveles superiores están más expuestos a la fuente directa",
+             "La exposición directa no explica un aumento ordenado nivel por nivel."),
+            ("Los organismos de los niveles superiores producen el contaminante en sus propios tejidos",
+             "El contaminante proviene del ambiente y se acumula por la dieta, no se sintetiza."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "dificil",
+        "Tras reintroducir un depredador tope en un parque, la vegetación de "
+        "las riberas se recupera. ¿Cuál es la explicación más razonable?",
+        "El depredador redujo la presión de los herbívoros",
+        "El efecto se transmite a través de un nivel intermedio.\n\n"
+        "1) El depredador reduce el número de herbívoros y también modifica "
+        "dónde y cuánto tiempo pastan.\n"
+        "2) Con menor presión de pastoreo, la vegetación de ribera puede "
+        "crecer.\n"
+        "3) La recuperación de esa vegetación estabiliza las orillas y "
+        "beneficia a otras especies.\n\n"
+        "Este encadenamiento se llama cascada trófica y muestra que un "
+        "depredador puede influir sobre niveles con los que no interactúa "
+        "directamente.",
+        [
+            ("El depredador fertilizó el suelo de las riberas",
+             "El aporte de nutrientes existe, pero no explica por sí solo la recuperación observada."),
+            ("El depredador se alimenta de las plantas dañadas",
+             "Es un depredador: no se alimenta de vegetación."),
+            ("La reintroducción coincidió con un aumento de la temperatura que favoreció el crecimiento vegetal",
+             "Es una explicación alternativa posible, pero la relación con la presión de herbívoros es la que el caso sostiene."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "dificil",
+        "Para estimar cuánta biomasa consumen los herbívoros de una pradera, "
+        "¿qué diseño conviene usar?",
+        "Comparar parcelas cercadas con parcelas abiertas",
+        "La comparación aísla el efecto del pastoreo.\n\n"
+        "1) En las parcelas cercadas los herbívoros no acceden, de modo que la "
+        "vegetación crece sin ser consumida.\n"
+        "2) En las abiertas crece bajo pastoreo, en las mismas condiciones de "
+        "suelo, clima y riego.\n"
+        "3) La diferencia de biomasa entre unas y otras estima cuánto "
+        "consumieron los herbívoros.\n\n"
+        "Conviene repetir el montaje en varias parcelas, para que la diferencia "
+        "no dependa de las particularidades de un solo lugar.",
+        [
+            ("Contar los herbívoros presentes cada día",
+             "El conteo indica cuántos hay, pero no cuánta biomasa consumieron."),
+            ("Medir la biomasa de una sola parcela al final de la temporada",
+             "Sin una parcela de comparación no se sabe cuánto habría crecido sin pastoreo."),
+            ("Pesar a los herbívoros al inicio y al final del periodo de estudio para estimar su crecimiento",
+             "Su aumento de peso es una fracción de lo consumido: la mayor parte se disipa."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "dificil",
+        "Un estudiante afirma que la energía se recicla en el ecosistema igual "
+        "que la materia. ¿Cómo se evalúa?",
+        "Es incorrecta: la energía se disipa como calor",
+        "Materia y energía se comportan de manera distinta en el "
+        "ecosistema.\n\n"
+        "1) Los átomos que forman a los organismos vuelven al ambiente y son "
+        "reutilizados por los productores: la materia circula.\n"
+        "2) La energía, en cambio, se degrada a calor en cada transferencia y "
+        "se pierde hacia el ambiente.\n"
+        "3) Ese calor no puede volver a ser aprovechado, de modo que el flujo "
+        "de energía es de un solo sentido.\n\n"
+        "Por eso el ecosistema depende de una entrada continua de energía "
+        "solar, mientras que la materia le basta con reciclarse.",
+        [
+            ("Es correcta, porque los descomponedores devuelven todo al sistema",
+             "Devuelven materia, pero la energía que contenían esos restos ya se disipó."),
+            ("Es correcta, porque la energía no se crea ni se destruye",
+             "No se destruye, pero se degrada a calor y deja de estar disponible para el sistema."),
+            ("Es incorrecta, porque tampoco la materia se recicla dentro de los ecosistemas naturales",
+             "La materia sí se recicla: es justamente lo que distingue a ambos flujos."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "dificil",
+        "El dióxido de carbono atmosférico medido en el hemisferio norte baja "
+        "en verano y sube en invierno, año tras año. ¿Qué explica esa "
+        "oscilación?",
+        "La actividad fotosintética estacional de la vegetación",
+        "El patrón anual sigue el ritmo de la vegetación terrestre.\n\n"
+        "1) En verano la vegetación del hemisferio norte fotosintetiza "
+        "intensamente y retira dióxido de carbono del aire.\n"
+        "2) En invierno esa actividad cae, mientras la respiración y la "
+        "descomposición continúan liberándolo.\n"
+        "3) La diferencia entre ambos flujos produce la oscilación anual que "
+        "registran las estaciones de medición.\n\n"
+        "Sobre esa oscilación se superpone una tendencia creciente de largo "
+        "plazo, que responde a otra causa.",
+        [
+            ("El aumento de las emisiones industriales solo en invierno",
+             "Las emisiones varían, pero la oscilación sigue el ciclo vegetativo del hemisferio."),
+            ("La mayor disolución de dióxido de carbono en el mar durante el verano",
+             "El agua fría disuelve más gas, lo que iría en sentido contrario al observado."),
+            ("La rotación de la Tierra, que cambia la cantidad de aire presente sobre cada hemisferio",
+             "La rotación no redistribuye la masa atmosférica de esa manera."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "dificil",
+        "Los consumidores terciarios de una cadena disponen de 5 kcal. Con un "
+        "10% de transferencia por nivel, ¿cuánta energía fijaron los "
+        "productores?",
+        "5.000 kcal",
+        "El cálculo se recorre hacia atrás, multiplicando por diez en cada "
+        "paso.\n\n"
+        "1) Entre los consumidores secundarios y los terciarios se pierde el "
+        "noventa por ciento: los secundarios tenían 50 kcal.\n"
+        "2) Con el mismo razonamiento, los primarios tenían 500 kcal.\n"
+        "3) Y los productores, 5.000 kcal, o sea mil veces lo que llega al "
+        "tercer nivel de consumidores.\n\n"
+        "Esa proporción explica por qué sostener un depredador tope requiere "
+        "una superficie de ecosistema tan extensa.",
+        [
+            ("500 kcal",
+             "Corresponde a los consumidores primarios: falta un paso hacia atrás."),
+            ("50.000 kcal",
+             "Aplica un paso de más en el recorrido hacia los productores."),
+            ("50 kcal, que resultan de multiplicar por diez el valor del nivel inmediatamente superior",
+             "Ese es el valor de los consumidores secundarios, no el de los productores."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "dificil",
+        "Se comparan dos lagos: uno con salmonicultura tiene menos oxígeno "
+        "disuelto que otro sin ella. ¿Qué debe verificarse antes de atribuir la "
+        "diferencia?",
+        "Que los lagos sean comparables en profundidad y temperatura",
+        "Dos cuerpos de agua distintos difieren en muchas cosas a la vez.\n\n"
+        "1) El oxígeno disuelto depende de la temperatura, de la profundidad, "
+        "del movimiento del agua y de la carga de nutrientes.\n"
+        "2) Si los lagos difieren en esas condiciones, la diferencia observada "
+        "puede no tener relación con la actividad productiva.\n"
+        "3) Recién con lagos comparables, o con mediciones antes y después en "
+        "el mismo lago, la atribución tiene sustento.\n\n"
+        "Una serie de mediciones en el mismo lugar a lo largo del tiempo suele "
+        "ser más informativa que comparar dos sitios distintos una sola vez.",
+        [
+            ("Que ambos lagos tengan el mismo número de especies de peces",
+             "Es un dato de interés, pero no es la condición que hace comparables las mediciones de oxígeno."),
+            ("Que la medición se haya hecho con el mismo instrumento",
+             "Ayuda a la precisión, pero no corrige las diferencias entre los dos cuerpos de agua."),
+            ("Que la salmonicultura lleve funcionando al menos diez años en el lago que se está estudiando",
+             "El tiempo de operación importa, pero antes hay que establecer que los lagos son comparables."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "dificil",
+        "Una pradera tiene poca biomasa vegetal pero sostiene una gran "
+        "población de herbívoros. ¿Qué explica esa situación?",
+        "La vegetación se renueva rápidamente",
+        "La biomasa presente no equivale a la producción del periodo.\n\n"
+        "1) La biomasa mide lo que hay en un momento; la productividad, lo que "
+        "se genera a lo largo del tiempo.\n"
+        "2) Un pastizal muy pastoreado mantiene poca biomasa en pie, pero "
+        "produce continuamente material nuevo.\n"
+        "3) Esa producción sostenida es la que alimenta a los herbívoros, "
+        "aunque en cualquier instante haya poco pasto visible.\n\n"
+        "Es el mismo razonamiento que explica la pirámide de biomasa invertida "
+        "del océano.",
+        [
+            ("Los herbívoros no consumen vegetación",
+             "Sí la consumen: por eso la biomasa en pie se mantiene baja."),
+            ("La pradera recibe energía de otra fuente además de la luz",
+             "La entrada de energía sigue siendo la fotosíntesis."),
+            ("La transferencia de energía entre la vegetación y los herbívoros es prácticamente completa",
+             "La transferencia sigue siendo de alrededor del diez por ciento: lo que cambia es la tasa de renovación."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "dificil",
+        "Se afirma que los descomponedores aportan energía nueva al ecosistema "
+        "porque liberan nutrientes. ¿Cómo se evalúa?",
+        "Es incorrecta: liberan materia, no energía nueva",
+        "La afirmación mezcla los dos flujos del ecosistema.\n\n"
+        "1) Los descomponedores liberan nutrientes que vuelven a estar "
+        "disponibles para los productores: eso es reciclaje de materia.\n"
+        "2) La energía contenida en los restos la usan ellos mismos para vivir "
+        "y se disipa como calor.\n"
+        "3) La única entrada de energía al ecosistema sigue siendo la que fijan "
+        "los productores a partir de la luz.\n\n"
+        "Reciclar nutrientes es indispensable, pero no equivale a incorporar "
+        "energía al sistema.",
+        [
+            ("Es correcta, porque sin descomponedores el ecosistema se detiene",
+             "Su papel es indispensable, pero eso no los convierte en una entrada de energía."),
+            ("Es correcta, porque transforman materia muerta en materia viva",
+             "Incorporan parte de esa materia a su propio cuerpo, sin crear energía nueva."),
+            ("Es incorrecta, porque los descomponedores tampoco participan del reciclaje de la materia",
+             "Sí participan: son los principales responsables de ese reciclaje."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "dificil",
+        "Si la transferencia entre niveles fuera del 20% en lugar del 10%, ¿qué "
+        "se esperaría de las cadenas tróficas?",
+        "Podrían sostener más niveles",
+        "El número de niveles depende de cuánta energía llega arriba.\n\n"
+        "1) Con una transferencia mayor, cada nivel recibe una fracción más "
+        "grande de la energía del anterior.\n"
+        "2) La energía disponible se agota más lentamente al subir por la "
+        "cadena.\n"
+        "3) Eso permitiría sostener poblaciones viables en niveles que hoy "
+        "quedan sin energía suficiente.\n\n"
+        "El razonamiento inverso también vale: en ecosistemas de baja "
+        "eficiencia, las cadenas son más cortas.",
+        [
+            ("Tendrían menos niveles",
+             "Una transferencia mayor permite llegar más arriba, no menos."),
+            ("El número de niveles no cambiaría",
+             "La energía disponible en los niveles altos es justamente lo que fija ese límite."),
+            ("Los productores necesitarían fijar el doble de energía para sostener el mismo ecosistema",
+             "Con mayor eficiencia se requeriría menos producción, no más."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "dificil",
+        "En una cuenca deforestada se registra mayor caudal máximo en las "
+        "lluvias que en una cuenca con bosque. ¿Qué conclusión es prudente?",
+        "Hay asociación entre cobertura vegetal y caudal",
+        "La comparación entre dos cuencas admite otras diferencias.\n\n"
+        "1) El dato muestra que la cuenca sin bosque presenta crecidas "
+        "mayores, lo que es coherente con el papel del bosque en retener "
+        "agua.\n"
+        "2) Pero ambas cuencas pueden diferir además en pendiente, en tipo de "
+        "suelo o en la cantidad de lluvia recibida.\n"
+        "3) Sin controlar esas variables, la relación observada es una "
+        "asociación respaldada por un mecanismo plausible, no una causa "
+        "demostrada.\n\n"
+        "Un seguimiento de la misma cuenca antes y después de la deforestación "
+        "entrega evidencia más fuerte.",
+        [
+            ("La deforestación es la única causa del aumento del caudal",
+             "Otras diferencias entre las cuencas no fueron controladas."),
+            ("La cobertura vegetal no influye en el comportamiento del agua",
+             "El dato apunta en sentido contrario y existe un mecanismo que lo respalda."),
+            ("Toda cuenca deforestada tendrá exactamente el mismo aumento de caudal máximo en sus crecidas",
+             "Extrapola a todas las cuencas un resultado obtenido en un solo par de casos."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "dificil",
+        "Para comprobar que un contaminante se concentra a lo largo de la "
+        "cadena trófica, ¿qué evidencia hace falta?",
+        "Medirlo en varios niveles del mismo lugar",
+        "La afirmación es sobre una progresión y por eso requiere varios "
+        "puntos.\n\n"
+        "1) Medirlo en una sola especie no permite saber si su concentración es "
+        "alta o baja respecto de su alimento.\n"
+        "2) Medirlo en varios niveles del mismo ecosistema permite comparar y "
+        "ver si la concentración aumenta al subir.\n"
+        "3) Tomar todas las muestras en el mismo lugar y periodo evita que las "
+        "diferencias provengan de otra fuente.\n\n"
+        "Con esa serie, un aumento ordenado nivel por nivel respalda la "
+        "acumulación a lo largo de la cadena.",
+        [
+            ("Medirlo solo en el depredador tope",
+             "Un valor aislado no muestra progresión alguna."),
+            ("Medirlo en el agua del ecosistema",
+             "Informa sobre la exposición ambiental, pero no sobre lo que ocurre entre niveles."),
+            ("Medirlo en la misma especie en distintos ecosistemas para comparar entre lugares diferentes",
+             "Esa comparación informa sobre lugares, no sobre la progresión dentro de una cadena."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "dificil",
+        "Una tabla registra la energía disponible en cuatro niveles: 100.000, "
+        "9.000, 950 y 80 kcal. ¿Qué se puede afirmar?",
+        "La transferencia ronda el diez por ciento en cada paso",
+        "Los cocientes sucesivos describen el comportamiento del sistema.\n\n"
+        "1) De 100.000 a 9.000 kcal pasa aproximadamente un nueve por "
+        "ciento.\n"
+        "2) De 9.000 a 950 y de 950 a 80 las proporciones son parecidas, "
+        "cercanas al diez por ciento.\n"
+        "3) La regularidad de esos cocientes es lo que permite hablar de una "
+        "eficiencia de transferencia típica.\n\n"
+        "Los valores reales varían entre ecosistemas: el diez por ciento es una "
+        "aproximación útil, no una constante exacta.",
+        [
+            ("La energía se conserva íntegra entre niveles",
+             "Los datos muestran que en cada paso se pierde alrededor del noventa por ciento."),
+            ("El cuarto nivel recibe la mitad del tercero",
+             "De 950 a 80 kcal la caída es mucho mayor que la mitad."),
+            ("La transferencia aumenta a medida que se sube por los niveles de la cadena trófica",
+             "Los cocientes se mantienen en un orden similar y no muestran esa tendencia."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Por qué toda cadena trófica comienza con organismos productores?",
+        "Porque son la entrada de energía al sistema",
+        "La cadena representa el recorrido de la energía dentro del "
+        "ecosistema.\n\n"
+        "1) Los productores son los únicos que incorporan energía desde fuera "
+        "del sistema, al fijar la luz solar en materia orgánica.\n"
+        "2) Todos los demás niveles obtienen su energía consumiendo materia "
+        "orgánica ya formada.\n"
+        "3) Por eso una cadena que no partiera de un productor no tendría "
+        "origen para la energía que la recorre.\n\n"
+        "Lo mismo vale en ecosistemas sin luz, donde los productores obtienen "
+        "energía de compuestos químicos en lugar de la radiación solar.",
+        [
+            ("Porque son los organismos más abundantes",
+             "No siempre lo son: un solo árbol puede sostener a miles de herbívoros."),
+            ("Porque son los que menos energía consumen",
+             "También respiran y consumen buena parte de lo que producen."),
+            ("Porque son los únicos organismos que los descomponedores pueden degradar tras su muerte",
+             "Los descomponedores actúan sobre restos de todos los niveles."),
+        ],
+    ),
+]

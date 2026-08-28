@@ -218,6 +218,10 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "moléculas de oxígeno se liberan por cada molécula de glucosa": f"{6} moléculas",
     "Si una planta produce 2 moléculas de glucosa": f"{6 * 2} moléculas",
     "moléculas de agua se necesitan para formar 4 moléculas de glucosa": f"{6 * 4} moléculas",
+    # Flujo de energia: la transferencia del 10% aplicada en ambos sentidos
+    "los productores fijan 20.000 kcal": f"{int(20_000 * 0.1 * 0.1)} kcal",
+    "1.000 kg de biomasa de productores": f"{int(1_000 * 0.1)} kg",
+    "consumidores terciarios de una cadena disponen de 5 kcal": f"{5 * 10 ** 3:,}".replace(",", ".") + " kcal",
     # Ácido-base
 }
 
