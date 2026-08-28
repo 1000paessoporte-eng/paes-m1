@@ -78818,3 +78818,3015 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Física - área oficial "Energía – Tierra"
+#
+# El temario la resume en tres conocimientos: la deriva continental y sus
+# evidencias, la tectónica de placas y sus consecuencias (sismos, volcanismo y
+# relieve), y la relación entre el modelo físico del interior de la Tierra y esa
+# tectónica. El banco no tenía ni una pregunta, pese a que las tres pruebas
+# oficiales de 2026 preguntan por volcanes, sismos y placas.
+#
+# Chile aparece seguido en los enunciados a propósito: la convergencia Nazca -
+# Sudamericana es el ejemplo de subducción que el estudiante tiene bajo los pies,
+# y el temario pide analizar los contenidos "en diversos contextos".
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_tierra", "facil",
+        "En 1912 Alfred Wegener propuso que los continentes actuales estuvieron "
+        "unidos en un único bloque. Para sostenerlo reunió observaciones de "
+        "distintas disciplinas. ¿Cuál de las siguientes constituye una evidencia "
+        "a favor de esa propuesta?",
+        "Fósiles del mismo reptil de agua dulce en África y Sudamérica",
+        "La evidencia sirve si el dato es difícil de explicar SIN suponer que los "
+        "continentes estuvieron juntos.\n\n"
+        "1) El Mesosaurus era un reptil de agua dulce: no podía cruzar un océano "
+        "salado de miles de kilómetros.\n"
+        "2) Sus fósiles aparecen en el sur de África y en el este de Sudamérica, "
+        "y en ningún otro lugar del planeta.\n"
+        "3) Si los continentes hubieran estado siempre separados, habría que "
+        "explicar cómo llegó el mismo animal a las dos orillas. Si estuvieron "
+        "unidos, no hay nada que explicar: era un solo territorio.\n\n"
+        "Wegener sumó además el encaje de las costas, cordilleras que continúan "
+        "de un continente a otro y depósitos glaciares en zonas hoy tropicales.",
+        [
+            ("El océano Pacífico es más profundo que el océano Atlántico",
+             "Es cierto, pero la profundidad de una cuenca no dice nada sobre si los continentes estuvieron unidos."),
+            ("La Luna se aleja de la Tierra unos centímetros cada año",
+             "Es un fenómeno real y también de centímetros por año, pero es astronómico y no informa sobre la posición pasada de los continentes."),
+            ("En los continentes se registran sismos a cualquier profundidad",
+             "Los sismos profundos se concentran en las zonas de subducción, y en todo caso son consecuencia del movimiento actual, no evidencia de la unión pasada."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "facil",
+        "Las placas tectónicas son bloques rígidos que se desplazan lentamente "
+        "sobre el manto. ¿Sobre qué capa se desplazan?",
+        "La astenósfera",
+        "El movimiento exige que debajo haya material capaz de fluir.\n\n"
+        "1) La litósfera es rígida y quebradiza: es la que se fragmenta en "
+        "placas.\n"
+        "2) Justo debajo está la astenósfera, en el manto superior, donde la "
+        "temperatura y la presión dejan a la roca en un estado dúctil: se "
+        "deforma sin quebrarse, como un plástico muy viscoso.\n"
+        "3) Esa capacidad de fluir es la que permite que las placas se "
+        "desplacen encima, a razón de unos pocos centímetros por año.",
+        [
+            ("La corteza continental",
+             "La corteza es parte de la litósfera, es decir, forma parte de las placas mismas: no es la capa sobre la cual se deslizan."),
+            ("El núcleo externo",
+             "Es líquido, pero está a más de 2.900 km de profundidad, separado de las placas por todo el manto."),
+            ("La discontinuidad de Mohorovicic",
+             "No es una capa sino el límite entre la corteza y el manto, detectado por un cambio brusco en la velocidad de las ondas sísmicas."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "facil",
+        "El interior de la Tierra puede describirse con un modelo físico, que "
+        "agrupa las capas según su comportamiento mecánico. En ese modelo, ¿qué "
+        "es la litósfera?",
+        "La capa rígida formada por la corteza y el manto superior",
+        "El modelo físico no separa las capas por su composición, sino por cómo "
+        "responden a un esfuerzo.\n\n"
+        "1) La corteza y la parte más alta del manto están lo bastante frías "
+        "para comportarse como un sólido rígido.\n"
+        "2) Por eso el modelo físico las agrupa en una sola unidad, la "
+        "litósfera, de unos 100 km de espesor.\n"
+        "3) Ese bloque rígido es el que se rompe en placas. Bajo él, la "
+        "astenósfera fluye.\n\n"
+        "Ojo con no confundir los dos modelos: el químico separa corteza, manto "
+        "y núcleo por composición; el físico separa litósfera, astenósfera, "
+        "mesósfera y núcleo por comportamiento.",
+        [
+            ("Solamente la corteza terrestre",
+             "La litósfera incluye la corteza, pero también la porción rígida del manto que va debajo: el límite no coincide con el de la corteza."),
+            ("La capa líquida sobre la que flotan los continentes",
+             "La litósfera es precisamente la capa rígida; ninguna capa líquida sostiene a los continentes."),
+            ("El conjunto del manto, desde la corteza hasta el núcleo",
+             "Eso es el manto completo, de unos 2.900 km: la litósfera solo alcanza su primera centena de kilómetros."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "facil",
+        "Frente a la costa de Chile, la placa de Nazca se hunde por debajo de la "
+        "placa Sudamericana. ¿Cómo se denomina este tipo de borde entre placas?",
+        "Convergente, con subducción",
+        "El nombre del borde depende del movimiento relativo entre las dos "
+        "placas.\n\n"
+        "1) Las dos placas se acercan, así que el borde es CONVERGENTE.\n"
+        "2) La de Nazca es oceánica y por lo tanto más densa que la "
+        "Sudamericana, que es continental.\n"
+        "3) La más densa se hunde bajo la otra: eso es la SUBDUCCIÓN.\n\n"
+        "De ahí salen las tres consecuencias que se ven en Chile: la fosa frente "
+        "a la costa, la cordillera de los Andes y el arco de volcanes.",
+        [
+            ("Divergente, porque las placas se separan",
+             "En un borde divergente las placas se alejan y se crea corteza nueva; frente a Chile ocurre lo contrario."),
+            ("Transformante, porque las placas se rozan de lado",
+             "En un borde transformante las placas se deslizan lateralmente sin crearse ni destruirse corteza, como en la falla de San Andrés."),
+            ("Convergente, pero sin subducción, con choque de dos continentes",
+             "Ese caso da una colisión continental como la del Himalaya; aquí una de las placas es oceánica y sí se hunde."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "facil",
+        "En el fondo del océano Atlántico recorre una cadena montañosa submarina "
+        "en cuyo eje brota material del manto que se solidifica. ¿Qué ocurre en "
+        "esa estructura?",
+        "Se crea corteza oceánica nueva y las placas se separan",
+        "Una dorsal oceánica es el lugar donde nace el fondo marino.\n\n"
+        "1) El material caliente del manto asciende por el eje de la dorsal.\n"
+        "2) Al enfriarse se solidifica y queda adherido a los bordes de las dos "
+        "placas.\n"
+        "3) Como no deja de llegar material nuevo, el ya solidificado es "
+        "empujado hacia los lados: las placas se separan.\n\n"
+        "Por eso la roca del fondo oceánico es más joven junto a la dorsal y más "
+        "antigua a medida que uno se aleja de ella.",
+        [
+            ("Se destruye corteza oceánica antigua",
+             "La corteza se destruye en las fosas de subducción, no en las dorsales, que son justamente donde se produce."),
+            ("Las dos placas se deslizan lateralmente sin crear material",
+             "Ese es el movimiento de un borde transformante; en la dorsal el rasgo definitorio es que aparece material nuevo."),
+            ("Se acumulan sedimentos traídos por los ríos desde los continentes",
+             "El eje de la dorsal es donde MENOS sedimento hay: la roca acaba de formarse y no ha tenido tiempo de acumularlo."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "facil",
+        "Un texto escolar afirma que la tectónica de placas explica varios "
+        "rasgos del planeta con un único mecanismo. ¿Cuál de los siguientes "
+        "conjuntos corresponde a consecuencias de la tectónica de placas?",
+        "Sismos, volcanismo y formación de relieve",
+        "La tectónica es una teoría unificadora: un solo proceso da cuenta de "
+        "fenómenos que antes se estudiaban por separado.\n\n"
+        "1) SISMOS: las placas no se deslizan suavemente, se traban y liberan de "
+        "golpe la energía acumulada.\n"
+        "2) VOLCANISMO: en la subducción, la placa que se hunde arrastra agua "
+        "que baja el punto de fusión del manto y genera magma.\n"
+        "3) RELIEVE: la convergencia levanta cordilleras y excava fosas; la "
+        "divergencia construye dorsales.",
+        [
+            ("Las estaciones del año, las mareas y los eclipses",
+             "Los tres dependen de la posición de la Tierra respecto del Sol y de la Luna, no del movimiento de las placas."),
+            ("Los huracanes, las sequías y las corrientes marinas",
+             "Son fenómenos de la atmósfera y de la hidrósfera, gobernados por la energía del Sol y la rotación terrestre."),
+            ("El campo magnético terrestre y las auroras polares",
+             "El campo magnético se origina en el núcleo externo líquido, no en el movimiento de las placas de la litósfera."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "facil",
+        "Frente a las costas de Chile y Perú se extiende una depresión alargada "
+        "del fondo marino que supera los 8.000 metros de profundidad. ¿Cómo se "
+        "origina una estructura de este tipo?",
+        "Por el hundimiento de una placa oceánica bajo otra placa",
+        "Las fosas son la marca superficial de una zona de subducción.\n\n"
+        "1) Al llegar al borde, la placa oceánica se flexiona hacia abajo antes "
+        "de hundirse.\n"
+        "2) Esa flexión deja en la superficie del fondo marino un surco largo y "
+        "estrecho, paralelo a la costa: la fosa.\n"
+        "3) La fosa de Atacama recorre así miles de kilómetros frente al margen "
+        "chileno, siempre paralela al continente.",
+        [
+            ("Por la erosión del fondo marino causada por las corrientes",
+             "Las corrientes mueven sedimento, pero no excavan surcos de ocho kilómetros de profundidad ni los alinean con la costa."),
+            ("Por la separación de dos placas que dejan un vacío entre ellas",
+             "Cuando dos placas se separan no queda un vacío: asciende material del manto y se forma una dorsal, que es una elevación."),
+            ("Por el peso de los sedimentos que hunden la corteza oceánica",
+             "El sedimento se acumula justamente en el fondo de la fosa, es decir, la rellena en vez de excavarla."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "facil",
+        "El modelo del interior de la Tierra reconoce un núcleo externo y un "
+        "núcleo interno. ¿En qué se diferencian?",
+        "El externo es líquido y el interno es sólido",
+        "Los dos tienen prácticamente la misma composición, de hierro y níquel: "
+        "lo que cambia es su estado.\n\n"
+        "1) En el núcleo externo la temperatura alcanza para fundir el "
+        "material, y se comporta como un líquido.\n"
+        "2) En el núcleo interno la temperatura es aún mayor, pero la presión lo "
+        "es todavía más: comprime tanto los átomos que el material permanece "
+        "sólido.\n"
+        "3) El movimiento del núcleo externo líquido es el que genera el campo "
+        "magnético terrestre.",
+        [
+            ("El externo es sólido y el interno es líquido",
+             "Está invertido: la presión creciente hacia el centro mantiene sólido al núcleo interno pese a la mayor temperatura."),
+            ("El externo es de hierro y el interno es de silicatos",
+             "Los silicatos son propios del manto; los dos núcleos son de hierro y níquel."),
+            ("El externo está frío por su cercanía al manto y el interno está caliente",
+             "El núcleo externo está a miles de grados: es el más frío de los dos, pero no está frío en ningún sentido."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Mediciones con GPS indican que la placa de Nazca se aproxima a la "
+        "Sudamericana a una rapidez media de 7 cm por año. Si esa rapidez se "
+        "mantuviera constante, ¿cuánto se habría desplazado en un millón de "
+        "años?",
+        "70 km",
+        "Es un cálculo de rapidez constante, con el cuidado de mantener las "
+        "unidades consistentes.\n\n"
+        "1) Desplazamiento = rapidez · tiempo = 7 cm/año · 1.000.000 años.\n"
+        "2) Eso da 7.000.000 cm.\n"
+        "3) Convierte a kilómetros: 1 km = 100.000 cm, así que 7.000.000 ÷ "
+        "100.000 = 70 km.\n\n"
+        "El resultado explica por qué un movimiento imperceptible en la escala "
+        "de una vida humana reordena la superficie del planeta en la escala "
+        "geológica.",
+        [
+            ("7 km", "Dividió por un millón en vez de multiplicar por él en algún paso: son 7.000.000 cm, no 700.000 cm."),
+            ("700 km", "Convirtió los centímetros a kilómetros dividiendo por 10.000 en lugar de por 100.000."),
+            ("7.000 km", "Dejó el resultado en centímetros y le cambió la etiqueta a kilómetros sin hacer la conversión."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Un equipo dató muestras de roca del fondo del Atlántico y encontró que "
+        "una tomada a 80 km del eje de la dorsal tiene 4 millones de años. "
+        "Suponiendo una expansión constante, ¿cuál fue la rapidez media de "
+        "separación en ese flanco?",
+        "2 cm por año",
+        "La roca se formó en el eje y desde entonces se alejó: su edad marca el "
+        "tiempo que tardó en recorrer esa distancia.\n\n"
+        "1) Pasa la distancia a centímetros: 80 km = 8.000.000 cm.\n"
+        "2) Rapidez = distancia ÷ tiempo = 8.000.000 cm ÷ 4.000.000 años.\n"
+        "3) Resulta 2 cm por año.\n\n"
+        "Ese es el orden de magnitud real de la expansión del Atlántico, bastante "
+        "menor que la convergencia frente a Chile.",
+        [
+            ("20 cm por año", "Se equivocó en un factor 10 al pasar de kilómetros a centímetros."),
+            ("0,5 cm por año", "Dividió el tiempo por la distancia, invirtiendo la fórmula de la rapidez."),
+            ("4 cm por año", "Usó los millones de años como si fueran la distancia: mezcló los dos datos del enunciado."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Al perforar el fondo oceánico se comprueba que la roca junto al eje de "
+        "una dorsal tiene menos de un millón de años, mientras que la roca "
+        "cercana a los continentes supera los cien millones. Además, el patrón "
+        "de edades es simétrico a ambos lados del eje. ¿Qué conclusión sostiene "
+        "directamente esta evidencia?",
+        "El fondo oceánico se forma en la dorsal y se expande hacia los lados",
+        "La conclusión debe explicar las dos observaciones a la vez: el gradiente "
+        "de edades y su simetría.\n\n"
+        "1) Que la roca más joven esté en el eje indica que ahí es donde se "
+        "está formando.\n"
+        "2) Que la edad aumente de forma continua al alejarse indica que la roca "
+        "se desplaza desde el eje hacia afuera.\n"
+        "3) Que el patrón sea SIMÉTRICO indica que el material se reparte hacia "
+        "los dos lados por igual, es decir, que las dos placas se separan.\n\n"
+        "Esta fue la evidencia que le dio a la deriva continental el mecanismo "
+        "que a Wegener le faltaba.",
+        [
+            ("Los océanos se están secando lentamente desde los bordes",
+             "Nada en el dato se refiere al volumen de agua: las edades informan sobre la roca del fondo, no sobre el océano que la cubre."),
+            ("La corteza oceánica es más antigua que la continental",
+             "Es justo al revés, y además la comparación no se desprende de estos datos, que son todos de fondo oceánico."),
+            ("Los sedimentos se acumulan más rápido cerca de los continentes",
+             "Es cierto que ahí hay más sedimento, pero eso no explicaría la simetría de las edades de la ROCA a ambos lados del eje."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "La propuesta de Wegener fue rechazada por la mayoría de los geólogos de "
+        "su época pese a la cantidad de evidencias que había reunido. ¿Cuál fue "
+        "la principal objeción que se le hizo?",
+        "No proponía una fuerza capaz de mover los continentes",
+        "Una explicación científica no se sostiene solo con correlaciones: "
+        "necesita un mecanismo.\n\n"
+        "1) Wegener mostró que los continentes ENCAJAN y que comparten fósiles y "
+        "formaciones: eso establece que estuvieron juntos.\n"
+        "2) Pero no logró decir qué fuerza los empujaba. Las que propuso "
+        "resultaban demasiado débiles para desplazar bloques de roca de ese "
+        "tamaño.\n"
+        "3) La objeción quedó respondida recién en los años sesenta, con el "
+        "descubrimiento de la expansión del fondo oceánico y las corrientes de "
+        "convección del manto.",
+        [
+            ("Sus evidencias fósiles resultaron ser falsificaciones",
+             "Los fósiles eran auténticos y siguen siendo evidencia válida; lo que se discutía era cómo interpretarlos."),
+            ("El encaje de las costas de África y Sudamérica era inexacto",
+             "El encaje mejora aún más si se usa el borde de la plataforma continental en vez de la línea de costa actual."),
+            ("Ya existía una teoría alternativa que explicaba mejor los datos",
+             "No la había: las explicaciones de la época recurrían a puentes de tierra hundidos, que no daban cuenta del conjunto de las observaciones."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Un sismógrafo registra primero un tren de ondas y algunos segundos "
+        "después otro distinto. Se sabe que las ondas P son de compresión y las "
+        "ondas S son de cizalle. ¿Qué diferencia permite distinguirlas?",
+        "Las ondas P llegan primero y atraviesan líquidos; las S, no",
+        "Las dos diferencias son consecuencia de cómo deforma el material cada "
+        "tipo de onda.\n\n"
+        "1) La onda P comprime y estira el material en la dirección en que "
+        "avanza. Cualquier medio, sólido o líquido, resiste ser comprimido, así "
+        "que la onda P se propaga en todos.\n"
+        "2) La onda S hace oscilar el material perpendicularmente al avance. Un "
+        "líquido no ofrece resistencia a ese tipo de deformación, así que la "
+        "onda S no lo atraviesa.\n"
+        "3) La onda P es además la más rápida, por eso es la PRIMERA en llegar, "
+        "y de ahí su nombre.\n\n"
+        "Esa asimetría es la herramienta con que se descubrió que el núcleo "
+        "externo es líquido.",
+        [
+            ("Las S llegan primero y las P quedan atrapadas en el manto",
+             "Está invertido: la P es la más rápida, y ninguna de las dos queda atrapada en el manto."),
+            ("Las P se propagan solo por los continentes y las S por los océanos",
+             "Ambas se propagan por el interior del planeta sin distinguir qué hay en la superficie que tienen encima."),
+            ("Las P tienen mayor amplitud y por eso causan más daño",
+             "El daño mayor suele producirlo la onda S y las ondas superficiales; en todo caso la amplitud no es lo que las define."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Tras un sismo grande, las estaciones ubicadas a más de 103° de arco "
+        "desde el epicentro no registran ondas S, y en una amplia franja tampoco "
+        "llegan ondas P. ¿Qué se infiere de esa zona de sombra?",
+        "Que hay una capa líquida en el interior de la Tierra",
+        "La zona de sombra es una observación indirecta: informa del interior sin "
+        "necesidad de perforarlo.\n\n"
+        "1) Las ondas S no atraviesan líquidos. Si desaparecen más allá de cierta "
+        "distancia, en su camino hay material líquido.\n"
+        "2) Las ondas P sí atraviesan líquidos, pero se REFRACTAN al cambiar de "
+        "medio, y esa desviación las aleja de una franja del planeta.\n"
+        "3) Ambas observaciones se explican con una sola capa: un núcleo externo "
+        "líquido bajo el manto sólido.",
+        [
+            ("Que el sismo fue demasiado débil para propagarse tan lejos",
+             "Si fuera cuestión de energía, la señal se debilitaría de manera gradual con la distancia, no desaparecería a partir de un ángulo definido."),
+            ("Que el núcleo interno de la Tierra está hueco",
+             "Un hueco no dejaría pasar ninguna de las dos ondas; aquí las P sí llegan al otro lado, aunque desviadas."),
+            ("Que las estaciones lejanas tienen instrumentos menos sensibles",
+             "La zona de sombra aparece en las mismas estaciones que sí registran otros sismos: depende de la geometría, no del equipo."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "El motor que se acepta hoy para el movimiento de las placas está en el "
+        "manto. ¿En qué consiste?",
+        "Corrientes de convección de material caliente y frío",
+        "La convección transporta calor moviendo materia, y el manto reúne las "
+        "condiciones para que ocurra.\n\n"
+        "1) El material profundo del manto se calienta, se dilata y por ser menos "
+        "denso asciende.\n"
+        "2) Al llegar arriba se enfría, se vuelve más denso y desciende.\n"
+        "3) El circuito cerrado arrastra la litósfera que tiene encima, igual "
+        "que el agua hirviendo arrastra las hojas de té.\n\n"
+        "A esa fuerza se suman el empuje de la dorsal y, sobre todo, la tracción "
+        "que ejerce la propia placa fría al hundirse en la subducción.",
+        [
+            ("La atracción gravitatoria de la Luna sobre la corteza",
+             "La Luna produce las mareas y una pequeña deformación de la corteza, pero es un efecto oscilante que no arrastra placas en una dirección."),
+            ("La rotación de la Tierra, que lanza las placas hacia el ecuador",
+             "La rotación es constante desde hace miles de millones de años y no explica que unas placas se acerquen mientras otras se separan."),
+            ("El aumento de volumen del planeta, que separa los continentes",
+             "La Tierra no se expande: si lo hiciera no se explicaría que en las fosas se destruya corteza al mismo ritmo que se crea en las dorsales."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "En California, dos placas se deslizan una junto a la otra a lo largo de "
+        "la falla de San Andrés. Allí hay sismos frecuentes pero prácticamente "
+        "no hay volcanes. ¿Cómo se explica esa combinación?",
+        "Las placas se rozan sin hundirse, y sin subducción no se genera magma",
+        "Cada consecuencia de la tectónica tiene su propia causa, y en un borde "
+        "transformante solo se cumple una.\n\n"
+        "1) Los SISMOS aparecen porque las placas se traban al rozarse y liberan "
+        "de golpe la energía acumulada. Eso ocurre en cualquier borde.\n"
+        "2) El VOLCANISMO de los bordes convergentes necesita que una placa se "
+        "hunda: al bajar arrastra agua, que disminuye el punto de fusión del "
+        "manto y genera magma.\n"
+        "3) En un borde transformante no se hunde ninguna placa: no hay "
+        "material que descienda ni magma que ascienda.",
+        [
+            ("Los volcanes existen, pero están todos bajo el nivel del mar",
+             "El trazado de la falla de San Andrés es continental y está a la vista: no hay un arco volcánico oculto bajo el agua."),
+            ("El magma no logra atravesar una corteza continental tan gruesa",
+             "El grosor no es el impedimento: los Andes tienen corteza continental aún más gruesa y un arco volcánico activo."),
+            ("Los sismos consumen toda la energía que alimentaría a los volcanes",
+             "Son procesos independientes: la energía de un sismo es elástica acumulada en la roca, no calor disponible para fundirla."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "La cordillera del Himalaya se levanta donde la placa india converge con "
+        "la euroasiática. A diferencia de lo que ocurre en Chile, ahí no se forma "
+        "una fosa oceánica ni un arco de volcanes activos. ¿Por qué?",
+        "Las dos placas son continentales y ninguna se hunde bajo la otra",
+        "Lo que decide el resultado de una convergencia es la densidad de las "
+        "placas que chocan.\n\n"
+        "1) La corteza continental es poco densa: 'flota' sobre el manto y se "
+        "resiste a hundirse.\n"
+        "2) Cuando convergen dos placas continentales, ninguna gana: en vez de "
+        "hundirse, el material se pliega y se apila.\n"
+        "3) Ese apilamiento levanta la cordillera más alta del planeta, pero sin "
+        "subducción no hay ni fosa ni magma, y por eso tampoco arco volcánico.\n\n"
+        "En Chile, en cambio, la placa oceánica de Nazca sí es más densa y se "
+        "hunde: por eso hay fosa, Andes y volcanes a la vez.",
+        [
+            ("La placa india es demasiado delgada para generar una fosa",
+             "El espesor no es el factor determinante; de hecho la corteza continental india es más gruesa que la corteza oceánica que sí subduce."),
+            ("El choque es tan lento que no alcanza a producir magma",
+             "La convergencia India-Eurasia es de varios centímetros por año, comparable a la de Nazca frente a Chile."),
+            ("Toda el agua necesaria para fundir el manto se evaporó hace millones de años",
+             "El agua que interviene en la subducción viaja dentro de los minerales de la placa oceánica, y aquí simplemente no hay placa oceánica hundiéndose."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Un profesor advierte que el interior de la Tierra se describe con dos "
+        "modelos distintos y que no deben mezclarse. ¿Cuál es la diferencia "
+        "entre ambos?",
+        "Uno separa las capas por composición y el otro por comportamiento",
+        "Los dos modelos describen el mismo planeta, pero responden preguntas "
+        "distintas.\n\n"
+        "1) El modelo QUÍMICO agrupa por composición: corteza, manto y núcleo.\n"
+        "2) El modelo FÍSICO agrupa por cómo responde el material a un esfuerzo: "
+        "litósfera, astenósfera, mesósfera, núcleo externo y núcleo interno.\n"
+        "3) Los límites no coinciden: la litósfera incluye la corteza entera MÁS "
+        "la parte alta del manto, porque ambas son rígidas aunque su composición "
+        "sea distinta.\n\n"
+        "Por eso decir 'las placas son la corteza' es impreciso: las placas son "
+        "la litósfera.",
+        [
+            ("Uno describe la Tierra actual y el otro la Tierra primitiva",
+             "Los dos describen el planeta de hoy: no son modelos de épocas distintas sino criterios de clasificación distintos."),
+            ("Uno se basa en perforaciones y el otro en cálculos teóricos",
+             "Ambos se apoyan sobre todo en el registro de ondas sísmicas: la perforación más profunda no llega ni a la base de la corteza."),
+            ("Uno se aplica a la corteza oceánica y el otro a la continental",
+             "Los dos modelos describen el planeta completo, sin distinguir bajo qué tipo de corteza se esté."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Las islas de Hawái forman una cadena en la que la isla del extremo "
+        "sureste tiene volcanes activos y las demás son progresivamente más "
+        "antiguas y erosionadas hacia el noroeste. La cadena está en el centro de "
+        "una placa, lejos de todo borde. ¿Cómo se explica?",
+        "Un foco de calor fijo por el que la placa va pasando",
+        "El patrón de edades es el mismo que se observa junto a una dorsal, pero "
+        "aquí ordenado en una línea.\n\n"
+        "1) Bajo la litósfera hay un punto caliente que se mantiene "
+        "aproximadamente fijo respecto del manto profundo.\n"
+        "2) La placa del Pacífico se desplaza sobre él hacia el noroeste.\n"
+        "3) Cada porción de placa que pasa sobre el foco desarrolla un volcán; al "
+        "seguir avanzando queda fuera del foco, el volcán se apaga y empieza a "
+        "erosionarse.\n\n"
+        "La cadena funciona entonces como un registro de la dirección y la "
+        "rapidez del movimiento de la placa.",
+        [
+            ("Un borde divergente escondido bajo el océano Pacífico",
+             "Un borde divergente produce una dorsal continua, no una fila de islas de edades escalonadas, y además ahí no hay ninguno."),
+            ("Erupciones que se fueron propagando de una isla a la siguiente",
+             "Los volcanes no se contagian: cada isla tiene su propia cámara y las edades se escalonan en millones de años, no en el tiempo de una erupción."),
+            ("El choque de la placa del Pacífico contra la placa de Nazca",
+             "Ese contacto está a miles de kilómetros, y las consecuencias de un borde aparecen en el borde, no en el centro de la placa."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Tras un sismo, los informes suelen entregar dos cifras: una magnitud y "
+        "una intensidad medida en distintas localidades. ¿Qué distingue a una de "
+        "la otra?",
+        "La magnitud mide la energía liberada; la intensidad, los efectos",
+        "Un mismo sismo tiene una sola magnitud pero muchas intensidades.\n\n"
+        "1) La MAGNITUD se calcula a partir del registro instrumental y estima la "
+        "energía liberada en el foco. Es una propiedad del sismo, así que es "
+        "única.\n"
+        "2) La INTENSIDAD describe lo que se sintió y los daños observados en un "
+        "lugar determinado.\n"
+        "3) Por eso la intensidad disminuye al alejarse del epicentro y depende "
+        "además del tipo de suelo y de la construcción: un mismo sismo puede "
+        "arrasar un sector y apenas sentirse en otro.",
+        [
+            ("La magnitud se mide en la superficie y la intensidad en el foco",
+             "Es al revés en cuanto a lo que describe cada una: la magnitud caracteriza lo ocurrido en el foco y la intensidad, lo percibido en superficie."),
+            ("La magnitud se usa para sismos y la intensidad para erupciones",
+             "Las dos escalas se aplican a sismos; el volcanismo tiene sus propios índices."),
+            ("La magnitud la calculan los instrumentos y la intensidad se estima por el tiempo que duró el movimiento",
+             "La intensidad no se deduce de la duración sino de los efectos observados sobre las personas, los objetos y las construcciones."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "En el margen chileno, el arco de volcanes no se ubica sobre la fosa sino "
+        "a unos doscientos kilómetros tierra adentro, en la cordillera. ¿Qué "
+        "explica esa distancia?",
+        "La placa hundida debe descender bastante antes de generar magma",
+        "El magma no aparece en el punto donde la placa empieza a hundirse, sino "
+        "donde alcanza cierta profundidad.\n\n"
+        "1) La placa oceánica entra en la fosa y desciende en diagonal bajo el "
+        "continente.\n"
+        "2) Recién a unos cien kilómetros de profundidad la presión y la "
+        "temperatura liberan el agua atrapada en sus minerales.\n"
+        "3) Esa agua baja el punto de fusión del manto que está encima y ahí se "
+        "genera el magma, que asciende casi vertical.\n\n"
+        "Como la placa avanzó en diagonal mientras bajaba, ese punto queda "
+        "desplazado hacia el continente: de ahí la distancia entre la fosa y los "
+        "volcanes.",
+        [
+            ("Los volcanes se formaron antes de que existiera la fosa",
+             "El arco volcánico y la fosa son parte del mismo sistema de subducción y se mantienen activos a la vez."),
+            ("El magma asciende en diagonal siguiendo la pendiente de la placa",
+             "El magma es menos denso que la roca que lo rodea, así que asciende esencialmente en vertical; lo que va en diagonal es la placa."),
+            ("La cordillera es más alta y por eso el magma encuentra menos presión",
+             "El magma se genera bajo tierra, a decenas de kilómetros: la altura del terreno en superficie no determina dónde se funde el manto."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "dificil",
+        "Un estudiante sostiene que la deriva continental queda demostrada "
+        "porque las costas de África y Sudamérica encajan como dos piezas de un "
+        "rompecabezas. ¿Cuál es la principal limitación de apoyarse SOLO en esa "
+        "evidencia?",
+        "Un encaje de formas puede darse por casualidad",
+        "El problema no es que la observación sea falsa, sino que por sí sola no "
+        "descarta otras explicaciones.\n\n"
+        "1) La semejanza entre dos contornos es una coincidencia geométrica, y "
+        "las coincidencias geométricas ocurren.\n"
+        "2) Para que sostenga la conclusión hace falta evidencia "
+        "INDEPENDIENTE que apunte a lo mismo: los mismos fósiles a los dos "
+        "lados, cordilleras que continúan de un continente al otro, depósitos "
+        "glaciares alineados.\n"
+        "3) Que evidencias de disciplinas distintas converjan en la misma "
+        "explicación es lo que la hace sólida; un único indicio, por llamativo "
+        "que sea, no lo hace.\n\n"
+        "Esto es justamente lo que hizo Wegener: no se quedó en el encaje.",
+        [
+            ("El encaje solo se cumple si se usan las costas actuales",
+             "El encaje MEJORA al usar el borde de la plataforma continental en vez de la línea de costa, así que este no es el punto débil."),
+            ("Las costas cambian por la erosión y hoy ya no encajan",
+             "La erosión modifica el detalle del litoral, pero el ajuste a escala continental se mantiene y es reproducible."),
+            ("África y Sudamérica están hoy demasiado lejos como para haber estado unidas",
+             "La distancia actual es exactamente lo que la teoría explica mediante millones de años de separación gradual."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "dificil",
+        "En una estación sismológica, la onda P llega 40 segundos antes que la "
+        "onda S. Si en esa región la onda P viaja a 8 km/s y la S a 4 km/s, ¿a "
+        "qué distancia está el epicentro?",
+        "320 km",
+        "Las dos ondas recorren la MISMA distancia, pero tardan tiempos "
+        "distintos: esa diferencia es el dato.\n\n"
+        "1) Llama d a la distancia. El tiempo de la P es d/8 y el de la S es "
+        "d/4.\n"
+        "2) La diferencia es 40 s: d/4 − d/8 = 40.\n"
+        "3) Reduce: 2d/8 − d/8 = d/8, así que d/8 = 40.\n"
+        "4) Despeja: d = 320 km.\n\n"
+        "Comprobación: la P tarda 320/8 = 40 s y la S tarda 320/4 = 80 s. La "
+        "diferencia es 40 s, como pide el enunciado. Con tres estaciones se "
+        "cruzan tres circunferencias y se ubica el epicentro.",
+        [
+            ("160 km", "Multiplicó la diferencia de tiempo por la rapidez de la onda S, como si esos 40 s fueran el viaje completo de la S."),
+            ("480 km", "Sumó las dos rapideces en lugar de restar los tiempos: 40 · (8 + 4) no corresponde a ninguna etapa del problema."),
+            ("40 km", "Confundió el dato: los 40 son segundos de diferencia entre las llegadas, no una distancia en kilómetros."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "dificil",
+        "En la escala de magnitud, cada unidad entera equivale a unas 32 veces "
+        "más energía liberada. El terremoto de Valdivia de 1960 alcanzó magnitud "
+        "9,5. ¿Cuántas veces más energía liberó que un sismo de magnitud 7,5?",
+        "Alrededor de 1.000 veces más",
+        "La escala es logarítmica: las diferencias de magnitud se traducen en "
+        "factores multiplicativos, no en sumas.\n\n"
+        "1) La diferencia de magnitud es 9,5 − 7,5 = 2 unidades enteras.\n"
+        "2) Cada unidad multiplica la energía por unas 32 veces.\n"
+        "3) Dos unidades multiplican por 32 · 32 = 1.024, es decir, del orden de "
+        "mil veces.\n\n"
+        "Por eso comparar magnitudes restando es engañoso: un 9,5 no es 'un poco "
+        "más' que un 7,5, es tres órdenes de magnitud más de energía.",
+        [
+            ("Alrededor de 64 veces más", "Sumó los factores (32 + 32) en vez de multiplicarlos, tratando la escala como si fuera aditiva."),
+            ("Alrededor de 32 veces más", "Aplicó el factor de UNA unidad de magnitud, pero la diferencia entre 9,5 y 7,5 es de dos unidades."),
+            ("Alrededor de 2 veces más", "Restó las magnitudes y usó el resultado directamente como factor, ignorando que la escala es logarítmica."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "dificil",
+        "Un equipo instala receptores GPS a ambos lados de una falla y registra "
+        "durante ocho años la posición de cada uno con precisión milimétrica. "
+        "¿Cuál es la variable dependiente de esta investigación?",
+        "El desplazamiento acumulado de cada receptor",
+        "En una investigación, la variable dependiente es la que se MIDE y se "
+        "espera que cambie en respuesta a otra.\n\n"
+        "1) El equipo no manipula el movimiento de las placas: solo observa cómo "
+        "avanza con el paso del tiempo.\n"
+        "2) Lo que va cambiando y se registra es la posición de cada receptor, "
+        "es decir, el desplazamiento acumulado.\n"
+        "3) El tiempo transcurrido es la variable independiente: es la que "
+        "ordena las mediciones y frente a la cual se analiza el resultado.\n\n"
+        "La precisión milimétrica y el modelo de receptor son condiciones "
+        "controladas: se mantienen iguales para que la comparación sea válida.",
+        [
+            ("El tiempo transcurrido desde que se instalaron los receptores",
+             "El tiempo es la variable independiente: es contra la cual se analiza cómo evoluciona lo que se mide."),
+            ("La precisión milimétrica del instrumento utilizado",
+             "Esa es una condición que se mantiene constante durante todo el estudio, no algo que varíe como resultado."),
+            ("La cantidad de receptores instalados a cada lado de la falla",
+             "Es una decisión de diseño tomada antes de empezar y que no cambia a lo largo del registro."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "dificil",
+        "En rocas de la India, Australia y el sur de África se encontraron "
+        "depósitos dejados por glaciares hace unos 300 millones de años, en "
+        "regiones que hoy tienen clima tropical. Además, las marcas de arrastre "
+        "apuntan hacia direcciones que solo son coherentes entre sí al reunir los "
+        "continentes. ¿Qué conclusión respalda mejor esta evidencia?",
+        "Esas tierras estuvieron juntas y en latitudes polares",
+        "Hay que explicar dos hechos a la vez: el hielo donde hoy hace calor y la "
+        "coherencia de las direcciones.\n\n"
+        "1) Un glaciar necesita clima frío, propio de latitudes altas. Que haya "
+        "dejado depósitos en zonas hoy tropicales indica que esas tierras "
+        "estuvieron mucho más cerca del polo.\n"
+        "2) Las marcas de arrastre indican hacia dónde fluía el hielo. Tomadas "
+        "por separado en cada continente actual apuntan a ninguna parte; "
+        "reunidos los continentes, describen un único casquete que se expandía "
+        "desde un centro común.\n"
+        "3) La explicación más económica de ambas cosas es que los continentes "
+        "estaban unidos y en otra latitud.",
+        [
+            ("El planeta entero atravesó una glaciación que cubrió los trópicos",
+             "Una glaciación global no explicaría por qué las direcciones de arrastre solo resultan coherentes al reunir los continentes."),
+            ("Los depósitos fueron transportados por ríos desde zonas frías lejanas",
+             "Un río no deja el mismo tipo de depósito que un glaciar, y no produce estrías de arrastre sobre el lecho rocoso."),
+            ("El eje de rotación de la Tierra se inclinó lo suficiente para congelar los trópicos",
+             "Una inclinación semejante afectaría el clima del planeta entero y aun así no daría cuenta de la coherencia de las direcciones entre continentes."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "dificil",
+        "En una zona de subducción, los focos sísmicos son superficiales cerca de "
+        "la fosa y cada vez más profundos a medida que se avanza hacia el "
+        "continente, alineados en un plano inclinado. ¿De qué es evidencia ese "
+        "patrón?",
+        "De la trayectoria de la placa que se hunde",
+        "La distribución en el espacio de los focos dibuja algo que no se puede "
+        "ver directamente.\n\n"
+        "1) Los sismos se producen donde la roca es rígida y puede quebrarse "
+        "acumulando y liberando esfuerzo.\n"
+        "2) La placa oceánica que se hunde es fría y rígida, así que sigue "
+        "generando sismos mientras desciende, rodeada de un manto que se deforma "
+        "sin quebrarse.\n"
+        "3) Al graficar los focos, aparecen alineados sobre el plano inclinado "
+        "que la placa va ocupando: ese plano es la propia placa en descenso.\n\n"
+        "El patrón fue una de las pruebas decisivas de que en las fosas se "
+        "consume corteza.",
+        [
+            ("De que la corteza continental es más gruesa hacia el interior",
+             "El espesor de la corteza continental sí aumenta bajo una cordillera, pero eso no produciría focos a cientos de kilómetros de profundidad."),
+            ("De que las rocas profundas son más frágiles que las superficiales",
+             "Ocurre lo contrario: con la profundidad, la presión y la temperatura hacen que la roca tienda a deformarse en lugar de quebrarse."),
+            ("De que la energía de un sismo se propaga hacia abajo desde la fosa",
+             "Cada foco es el punto donde se origina un sismo distinto, no un punto por el que pase la energía de otro."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "dificil",
+        "Supón que las corrientes de convección del manto se detuvieran por "
+        "completo, manteniéndose todo lo demás igual. ¿Cuál sería la predicción "
+        "más razonable para los millones de años siguientes?",
+        "Cesaría la formación de cordilleras y de fosas nuevas",
+        "Hay que separar lo que depende del movimiento de las placas de lo que "
+        "no.\n\n"
+        "1) La convección es lo que arrastra la litósfera. Sin ella, las placas "
+        "dejarían de desplazarse.\n"
+        "2) Sin convergencia no se levantarían cordilleras nuevas ni se "
+        "excavarían fosas; sin divergencia no se crearía fondo oceánico.\n"
+        "3) La erosión, en cambio, no depende de las placas: seguiría "
+        "actuando. Con el relieve dejando de renovarse y la erosión "
+        "desgastándolo, la superficie tendería a aplanarse.\n\n"
+        "Es la diferencia entre los procesos internos, que construyen relieve, y "
+        "los externos, que lo destruyen.",
+        [
+            ("La Tierra se enfriaría de golpe y el núcleo se solidificaría",
+             "La convección transporta calor hacia la superficie; sin ella el interior conservaría el calor MÁS tiempo, no menos."),
+            ("Los continentes se hundirían en el manto por su propio peso",
+             "La corteza continental es menos densa que el manto: no se hunde en él, y la convección no es lo que la sostiene."),
+            ("Los sismos y las erupciones aumentarían por acumulación de energía",
+             "Sin movimiento de placas no se acumularía esfuerzo elástico ni se generaría magma de subducción: ambos fenómenos disminuirían."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "dificil",
+        "Al muestrear el fondo oceánico se comprueba que ninguna roca supera los "
+        "200 millones de años, mientras que en los continentes hay rocas de más "
+        "de 3.500 millones. Si la Tierra tiene la misma edad bajo el mar y bajo "
+        "tierra firme, ¿cómo se explica la diferencia?",
+        "El fondo oceánico se recicla en las zonas de subducción",
+        "La diferencia no está en cuándo se formó el planeta, sino en cuánto dura "
+        "cada tipo de corteza.\n\n"
+        "1) La corteza oceánica nace en las dorsales y se destruye en las fosas: "
+        "está en un ciclo permanente que la renueva por completo.\n"
+        "2) Ese ciclo tarda del orden de doscientos millones de años, y por eso "
+        "no queda fondo oceánico más antiguo que eso.\n"
+        "3) La corteza continental es menos densa y no subduce: se conserva, se "
+        "deforma y se recicla mucho más lentamente, así que guarda el registro "
+        "más antiguo del planeta.",
+        [
+            ("Los océanos se formaron mucho después que los continentes",
+             "El agua es antiquísima; lo que es joven es la ROCA del fondo, y eso ocurre porque se renueva, no porque el océano sea reciente."),
+            ("El agua de mar destruye químicamente las rocas más antiguas",
+             "La alteración química modifica la superficie de la roca, pero no borra la edad de formación que registran sus minerales."),
+            ("Bajo el océano la corteza es tan delgada que las rocas antiguas ya se erosionaron",
+             "La erosión actúa sobre todo en la superficie continental; en el fondo oceánico predomina la acumulación de sedimento, no su remoción."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "dificil",
+        "Al estudiar bandas de roca paralelas al eje de una dorsal se encontró "
+        "que su magnetización alterna de sentido, y que el patrón de anchos es "
+        "idéntico a un lado y al otro del eje. ¿Qué componente de una "
+        "investigación representa este hallazgo?",
+        "Una evidencia que sustenta el modelo de expansión del fondo oceánico",
+        "Conviene identificar qué papel cumple el dato dentro de la "
+        "investigación.\n\n"
+        "1) No es una hipótesis: no es una explicación tentativa por poner a "
+        "prueba, sino una observación ya obtenida.\n"
+        "2) Es un resultado de medición que APOYA un modelo previo. La roca "
+        "registra el sentido del campo magnético terrestre del momento en que "
+        "se solidificó, y ese campo se ha invertido muchas veces.\n"
+        "3) Si el fondo se expandiera desde el eje hacia los dos lados, cada "
+        "inversión quedaría grabada como una banda simétrica. Eso es "
+        "exactamente lo observado.\n\n"
+        "El valor de la evidencia está en la SIMETRÍA: es lo que el modelo "
+        "predecía y lo que resultaría inexplicable si el fondo no se expandiera.",
+        [
+            ("Una hipótesis sobre el comportamiento del campo magnético terrestre",
+             "Una hipótesis es una explicación por poner a prueba; aquí se trata de mediciones ya realizadas sobre las rocas."),
+            ("Un procedimiento para determinar la edad de las rocas del fondo",
+             "El patrón permite datar por comparación, pero eso es una aplicación posterior: el hallazgo en sí es una observación."),
+            ("Una conclusión sobre la composición química de la corteza oceánica",
+             "El dato se refiere a la orientación de la magnetización, no a de qué está hecha la roca."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_tierra", "facil",
+        "Wegener llamó Pangea al supercontinente que, según su propuesta, reunía "
+        "a todas las tierras emergidas antes de fragmentarse. ¿Qué ocurrió con "
+        "ese bloque según la teoría?",
+        "Se fragmentó y sus partes se separaron hasta la posición actual",
+        "La deriva continental describe un proceso, no un estado.\n\n"
+        "1) Pangea existió hace unos 300 millones de años como un único "
+        "bloque rodeado de un solo océano.\n"
+        "2) Hace unos 200 millones de años comenzó a fracturarse.\n"
+        "3) Los fragmentos se fueron separando y siguen desplazándose: la "
+        "configuración de continentes que vemos hoy es una foto de un proceso "
+        "que continúa.",
+        [
+            ("Se hundió por completo bajo el nivel del mar",
+             "Si se hubiera hundido no habría continentes hoy; la teoría plantea que se fragmentó, no que desapareció."),
+            ("Permanece unido bajo el hielo de la Antártica",
+             "La Antártica es uno de los fragmentos de Pangea, no el lugar donde se conservaría entero."),
+            ("Se transformó en el fondo del océano Pacífico al ser cubierto por el agua",
+             "El fondo del Pacífico es corteza oceánica de basalto, distinta en composición y densidad de la corteza continental de Pangea."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "facil",
+        "La corteza oceánica y la corteza continental se distinguen por varias "
+        "propiedades. ¿Cuál de las siguientes afirmaciones es correcta?",
+        "La oceánica es más densa y más delgada que la continental",
+        "Las dos diferencias están relacionadas y explican el comportamiento de "
+        "cada una en un borde de placas.\n\n"
+        "1) La corteza oceánica es de composición basáltica, rica en hierro y "
+        "magnesio, y por eso resulta más DENSA.\n"
+        "2) Además es delgada: del orden de 7 km, frente a los 35 km o más de la "
+        "continental.\n"
+        "3) Su mayor densidad es la razón de que sea siempre ella la que se "
+        "hunde cuando converge con una placa continental.",
+        [
+            ("La oceánica es más gruesa porque soporta el peso del agua",
+             "El agua no engrosa la corteza; la oceánica es la más delgada de las dos."),
+            ("Las dos tienen la misma densidad y solo cambia su espesor",
+             "Si tuvieran la misma densidad no habría razón para que una subduzca sistemáticamente bajo la otra."),
+            ("La continental es más densa porque contiene rocas más antiguas",
+             "La antigüedad no determina la densidad: la continental es la menos densa, y por eso mismo se conserva sin subducir."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "facil",
+        "En el este de África, un extenso valle alargado se está ensanchando y "
+        "presenta volcanes y sismos frecuentes en su interior, lejos de toda "
+        "costa. ¿Qué proceso está ocurriendo allí?",
+        "Un continente se está fracturando por un borde divergente",
+        "Los bordes divergentes no ocurren solo en el fondo del mar.\n\n"
+        "1) Cuando el material caliente del manto asciende bajo una masa "
+        "continental, la estira y la adelgaza.\n"
+        "2) La corteza se fractura y se hunde formando un valle alargado, con "
+        "volcanismo y sismos asociados.\n"
+        "3) Si el proceso continúa, el mar terminará entrando: es lo que ya "
+        "ocurrió en el mar Rojo, un océano en formación.",
+        [
+            ("Dos placas continentales están chocando y levantando una cordillera",
+             "Una colisión produce una elevación por apilamiento; aquí el terreno se está hundiendo y separando."),
+            ("Una placa oceánica se hunde bajo el continente africano",
+             "La subducción ocurre en los márgenes, no en el interior de un continente, y produce una fosa en el mar."),
+            ("Es la huella de un antiguo impacto de meteorito de gran tamaño",
+             "Un impacto deja una estructura aproximadamente circular y no genera sismos ni erupciones durante millones de años."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "facil",
+        "Islandia es una isla volcánica muy activa situada justo sobre el eje de "
+        "la dorsal mesoatlántica. ¿Qué se espera observar en ella?",
+        "Que se está separando en dos mitades",
+        "La isla comparte el comportamiento del borde sobre el que se asienta.\n\n"
+        "1) El eje de la dorsal es un borde divergente: las placas a cada lado "
+        "se alejan.\n"
+        "2) Islandia queda atravesada por ese eje, así que su mitad occidental "
+        "se mueve con la placa norteamericana y la oriental, con la euroasiática.\n"
+        "3) Entre ambas se abren fisuras que se rellenan con material nuevo: por "
+        "eso la isla es volcánicamente tan activa.",
+        [
+            ("Que se está hundiendo lentamente en el manto",
+             "Sobre una dorsal el material asciende y se acumula: la tendencia es a construir relieve, no a hundirlo."),
+            ("Que sus volcanes se apagarán cuando la dorsal se aleje de la isla",
+             "La dorsal no se aleja de Islandia: la isla se está construyendo sobre ella y ambas se mantienen juntas."),
+            ("Que sus dos mitades se comprimen y forman una cordillera central",
+             "La compresión es propia de los bordes convergentes; en una dorsal el esfuerzo es de estiramiento."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "facil",
+        "Al describir un sismo se distingue entre hipocentro y epicentro. ¿Cuál "
+        "es la diferencia?",
+        "El hipocentro está en profundidad y el epicentro, sobre él en la superficie",
+        "Son dos puntos distintos del mismo sismo.\n\n"
+        "1) El HIPOCENTRO o foco es el punto del interior de la Tierra donde la "
+        "roca se rompe y se libera la energía.\n"
+        "2) El EPICENTRO es el punto de la superficie ubicado justo encima del "
+        "hipocentro, en la vertical.\n"
+        "3) Por eso el epicentro suele ser el lugar donde el sismo se siente con "
+        "más fuerza: es el punto de la superficie más cercano al foco.",
+        [
+            ("El hipocentro es donde más se siente y el epicentro donde menos",
+             "Ninguno de los dos se define por la intensidad percibida, sino por su ubicación geométrica."),
+            ("El hipocentro corresponde al primer sismo y el epicentro a las réplicas",
+             "Las réplicas son sismos posteriores con sus propios focos; los dos términos se refieren a un mismo evento."),
+            ("El hipocentro se calcula con las ondas P y el epicentro con las ondas S",
+             "Ambos se determinan combinando los registros de las dos ondas en varias estaciones a la vez."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "facil",
+        "La temperatura del interior de la Tierra aumenta con la profundidad. "
+        "¿De dónde proviene principalmente ese calor?",
+        "De la desintegración de elementos radiactivos y del calor original",
+        "Son dos fuentes que actúan a la vez, una antigua y otra continua.\n\n"
+        "1) Parte del calor es RESIDUAL: quedó desde la formación del planeta, "
+        "cuando la acreción y los impactos liberaron enormes cantidades de "
+        "energía.\n"
+        "2) La otra parte se genera hoy, por la desintegración de isótopos "
+        "radiactivos presentes en el manto y la corteza.\n"
+        "3) Ese calor es el que alimenta las corrientes de convección y, con "
+        "ellas, el movimiento de las placas.",
+        [
+            ("De la radiación solar que penetra hasta el manto",
+             "La energía del Sol calienta apenas los primeros metros del suelo: no llega ni remotamente al manto."),
+            ("Del roce entre las placas al desplazarse por la superficie",
+             "El roce entre placas genera calor local en las fallas, pero es una consecuencia del movimiento, no su fuente de energía."),
+            ("Del campo magnético terrestre, que calienta el núcleo al girar",
+             "El campo magnético es un efecto del movimiento del núcleo externo, no una fuente de calor que lo alimente."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "facil",
+        "El borde del océano Pacífico concentra la mayoría de los volcanes "
+        "activos y de los grandes sismos del planeta, en una franja conocida "
+        "como Cinturón de Fuego. ¿A qué se debe esa concentración?",
+        "A que casi todo ese borde es una zona de subducción",
+        "La distribución de volcanes y sismos no es azarosa: dibuja los bordes de "
+        "las placas.\n\n"
+        "1) La placa del Pacífico y las placas vecinas, como la de Nazca, "
+        "subducen bajo las placas continentales que las rodean.\n"
+        "2) La subducción genera los dos fenómenos a la vez: sismos, porque las "
+        "placas se traban, y volcanismo, porque el descenso produce magma.\n"
+        "3) Chile forma parte de ese cinturón, y por eso concentra ambos "
+        "fenómenos en su territorio.",
+        [
+            ("A que el fondo del Pacífico es el más profundo del planeta",
+             "La profundidad es consecuencia de las fosas de subducción, no la causa de los sismos y erupciones."),
+            ("A que el agua del océano se filtra y enfría bruscamente el manto",
+             "El agua que interviene viaja dentro de los minerales de la placa que subduce, y su efecto es facilitar la fusión, no enfriar."),
+            ("A que las corrientes marinas del Pacífico arrastran la corteza oceánica",
+             "Las corrientes mueven agua, no placas: la litósfera se desplaza por procesos del manto, no por el océano que tiene encima."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Los volcanes de los Andes producen erupciones explosivas, mientras que "
+        "los de Hawái emiten coladas de lava que fluyen con facilidad. ¿Qué "
+        "explica la diferencia?",
+        "La viscosidad del magma, que retiene o deja salir los gases",
+        "El estilo de una erupción depende sobre todo de cuánto puede fluir el "
+        "magma.\n\n"
+        "1) El magma andino es rico en sílice y por lo tanto muy viscoso: los "
+        "gases disueltos no logran escapar y se acumulan a presión hasta "
+        "reventar. La erupción es explosiva.\n"
+        "2) El magma hawaiano es basáltico, pobre en sílice y muy fluido: los "
+        "gases salen con facilidad y no alcanzan a acumular presión. La erupción "
+        "es efusiva.\n"
+        "3) La diferencia de composición no es casual: el magma de subducción "
+        "incorpora material de la corteza continental, rico en sílice.",
+        [
+            ("La profundidad de la cámara magmática de cada volcán",
+             "Volcanes con cámaras a profundidades semejantes pueden tener estilos opuestos si su magma tiene composiciones distintas."),
+            ("La altura del volcán, que aumenta la presión sobre el magma",
+             "La columna de roca por sobre la cámara influye poco frente a la diferencia de viscosidad entre los dos tipos de magma."),
+            ("La cantidad de agua de mar que se filtra hasta la cámara magmática",
+             "El agua interviene en la generación del magma en profundidad, pero el estilo eruptivo lo determina la composición resultante."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Un sismo de gran magnitud ocurrido en el fondo marino frente a la costa "
+        "genera un tsunami, mientras que otro de magnitud similar ocurrido tierra "
+        "adentro no lo hace. ¿Cuál es la razón?",
+        "El tsunami exige un desplazamiento vertical del fondo marino",
+        "Un tsunami no lo produce la sacudida, sino el movimiento de la columna "
+        "de agua.\n\n"
+        "1) En una subducción, la placa superior se trabó y se fue flexionando; "
+        "al liberarse rebota y desplaza el fondo marino hacia arriba.\n"
+        "2) Toda la columna de agua que estaba encima sube con él, y esa "
+        "perturbación se propaga como una ola de longitud enorme.\n"
+        "3) Un sismo continental sacude la roca con la misma energía, pero no "
+        "tiene una masa de agua sobre la cual transmitir ese desplazamiento.",
+        [
+            ("Los sismos submarinos siempre liberan más energía que los continentales",
+             "El enunciado plantea magnitudes similares: la diferencia no está en la energía sino en dónde ocurre."),
+            ("Las ondas sísmicas viajan mejor por el agua que por la roca",
+             "Ocurre al revés: las ondas sísmicas se propagan más rápido en la roca, y además el tsunami no es una onda sísmica."),
+            ("El agua de mar amplifica la magnitud del sismo al transmitirla a la costa",
+             "La magnitud es una propiedad del sismo en su foco y no cambia según el medio que atraviese después."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Los sismos de una zona de subducción se clasifican según la profundidad "
+        "de su foco. Si un sismo tiene su hipocentro a 300 km, se lo clasifica "
+        "como profundo. ¿Por qué los sismos profundos solo aparecen en zonas de "
+        "subducción y no bajo un continente estable?",
+        "Solo ahí hay roca fría y rígida a esa profundidad",
+        "Para que haya un sismo hace falta roca capaz de quebrarse.\n\n"
+        "1) A 300 km de profundidad, la temperatura del manto normal deja la "
+        "roca en estado dúctil: se deforma lentamente sin acumular esfuerzo ni "
+        "romperse de golpe.\n"
+        "2) La placa que subduce llega ahí siendo todavía FRÍA, porque "
+        "descendió más rápido de lo que alcanzó a calentarse.\n"
+        "3) Esa placa fría sí es rígida y sí puede fracturarse: por eso los "
+        "focos profundos dibujan justamente su trayectoria.",
+        [
+            ("Porque la presión a esa profundidad solo se alcanza bajo el océano",
+             "La presión depende de la profundidad, no de si arriba hay mar o continente: a 300 km es prácticamente la misma en ambos casos."),
+            ("Porque el magma de la subducción explota al llegar a esa profundidad",
+             "El magma se genera por encima de la placa que desciende y asciende sin explotar en profundidad; los sismos profundos son fracturas de roca sólida."),
+            ("Porque las ondas sísmicas de los sismos superficiales rebotan y se registran como profundas",
+             "La profundidad del foco se calcula combinando registros de varias estaciones y no se confunde con una reflexión."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Se propone un modelo analógico de la convección del manto: un recipiente "
+        "con un líquido viscoso se calienta por abajo y se colocan trozos de "
+        "corcho en la superficie. Al cabo de unos minutos, los corchos se "
+        "desplazan y se separan sobre ciertas zonas. ¿Qué representa cada "
+        "elemento del modelo?",
+        "El líquido es el manto y los corchos, las placas litosféricas",
+        "Un modelo analógico vale por la correspondencia entre sus partes y las "
+        "del sistema real.\n\n"
+        "1) La fuente de calor por abajo representa el calor interno del planeta, "
+        "que viene del núcleo y de la radiactividad del manto.\n"
+        "2) El líquido viscoso que circula representa el manto en convección: se "
+        "deforma sin quebrarse, igual que la astenósfera.\n"
+        "3) Los corchos, rígidos y flotando encima, representan las placas "
+        "litosféricas, que son arrastradas por el material que circula abajo.\n\n"
+        "El modelo reproduce el mecanismo, pero no la escala: en el planeta el "
+        "proceso ocurre a centímetros por año.",
+        [
+            ("El líquido es el núcleo externo y los corchos, los continentes",
+             "El núcleo externo está separado de las placas por todo el manto: no las arrastra directamente."),
+            ("El líquido es el océano y los corchos, las islas volcánicas",
+             "Las islas no flotan sobre el agua: están ancladas al fondo, que es parte de la placa."),
+            ("El líquido representa el magma de las cámaras volcánicas y los corchos, las erupciones que llegan a la superficie",
+             "Las cámaras magmáticas son bolsones locales y superficiales; el modelo representa la circulación del manto completo."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Las cordilleras de los Apalaches, en América del Norte, tienen la misma "
+        "edad, la misma estructura y los mismos tipos de roca que las montañas "
+        "de Escocia y Escandinavia, al otro lado del Atlántico. ¿Qué explicación "
+        "da cuenta mejor de esta coincidencia?",
+        "Fueron una sola cordillera antes de que el Atlántico se abriera",
+        "La coincidencia abarca demasiadas propiedades independientes como para "
+        "atribuirla al azar.\n\n"
+        "1) Que coincida la edad podría ser casualidad. Que coincidan además la "
+        "estructura y la secuencia de rocas, ya no.\n"
+        "2) Si se cierra el Atlántico reuniendo los continentes, las dos "
+        "cordilleras quedan alineadas formando una cadena continua.\n"
+        "3) Se formaron entonces como una sola, durante la colisión que armó "
+        "Pangea, y quedaron partidas al abrirse el océano.",
+        [
+            ("Los mismos procesos geológicos producen siempre montañas idénticas",
+             "Procesos semejantes producen cordilleras de estilo parecido, pero no la misma edad ni la misma secuencia exacta de rocas."),
+            ("Las rocas fueron transportadas de un continente al otro por los glaciares",
+             "Un glaciar transporta fragmentos sueltos; no traslada la estructura interna de una cordillera entera."),
+            ("La corteza terrestre tiene la misma composición en todos los continentes del planeta",
+             "La composición general es semejante, pero eso no explicaría que coincidan la edad y el orden de las capas."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "En el registro de una estación se identifica el instante de llegada de "
+        "las ondas P y de las ondas S de un mismo sismo. Con esos dos datos y las "
+        "rapideces conocidas se obtiene la distancia al epicentro. ¿Por qué hacen "
+        "falta al menos tres estaciones para ubicarlo?",
+        "Cada estación entrega una distancia, no una dirección",
+        "El dato que da una estación restringe la ubicación, pero no la fija.\n\n"
+        "1) Con una estación se sabe a qué distancia está el epicentro, pero no "
+        "hacia dónde: los puntos posibles forman una circunferencia alrededor de "
+        "la estación.\n"
+        "2) Con dos estaciones, las dos circunferencias se cortan en dos puntos: "
+        "sigue habiendo ambigüedad.\n"
+        "3) Con una tercera, las tres circunferencias coinciden en un solo "
+        "punto, y ese es el epicentro.",
+        [
+            ("Porque una sola estación puede tener el reloj mal calibrado",
+             "La calibración es un problema de control de calidad; aun con relojes perfectos una estación seguiría sin poder indicar la dirección."),
+            ("Porque las ondas P y S se registran en estaciones distintas",
+             "Una misma estación registra ambas ondas: justamente de esa diferencia de tiempo sale la distancia."),
+            ("Porque la profundidad del foco cambia el resultado y hay que promediar entre varias mediciones",
+             "El promedio no resolvería la ambigüedad de dirección, que es un problema geométrico y no de precisión."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Un estudiante afirma: 'Como los continentes se mueven, en el futuro "
+        "Chile podría chocar con Australia'. ¿Qué habría que revisar antes de "
+        "aceptar esa afirmación?",
+        "La dirección en que se mueve cada una de las placas involucradas",
+        "Que las placas se muevan no implica que dos puntos cualesquiera se "
+        "acerquen.\n\n"
+        "1) Cada placa tiene su propia dirección y rapidez de desplazamiento.\n"
+        "2) La placa Sudamericana se desplaza hacia el oeste y la Australiana "
+        "hacia el noreste, así que no van una contra la otra.\n"
+        "3) Además, entre ambas está la placa del Pacífico, cuya corteza se "
+        "consume en las fosas: el océano intermedio se recicla en vez de "
+        "cerrarse por simple acercamiento.\n\n"
+        "La afirmación no es absurda como tipo de razonamiento, pero necesita el "
+        "dato direccional para evaluarse.",
+        [
+            ("La rapidez a la que se mueven, porque si es baja el choque es imposible",
+             "La rapidez determina cuándo, no si: en escalas de cientos de millones de años unos centímetros por año bastan para cerrar un océano."),
+            ("Si el nivel del mar bajará lo suficiente para unir los territorios",
+             "El nivel del mar cambia qué queda emergido, pero no desplaza las placas ni acerca los continentes."),
+            ("Si la Tierra seguirá teniendo suficiente calor interno dentro de tantos millones de años",
+             "Es una consideración de fondo válida a muy largo plazo, pero no es lo primero que decide si esas dos placas convergen."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "El campo magnético terrestre se atribuye al movimiento del núcleo "
+        "externo. ¿Qué condición del núcleo externo lo hace posible?",
+        "Ser líquido y conductor, y estar en movimiento",
+        "Un campo magnético de este tipo se genera cuando cargas eléctricas se "
+        "mueven de forma organizada.\n\n"
+        "1) El núcleo externo es de hierro y níquel fundidos: es un conductor "
+        "eléctrico.\n"
+        "2) Al estar LÍQUIDO puede circular, y lo hace por convección, "
+        "influido además por la rotación del planeta.\n"
+        "3) Ese movimiento de material conductor genera corrientes eléctricas y "
+        "con ellas un campo magnético que se automantiene.\n\n"
+        "Las inversiones de ese campo quedaron registradas en las rocas del fondo "
+        "oceánico y fueron clave para confirmar la expansión.",
+        [
+            ("Ser sólido y muy denso, lo que concentra el magnetismo",
+             "Un sólido no puede circular, y sin circulación de material conductor no se genera el campo."),
+            ("Contener grandes cantidades de imanes naturales de magnetita",
+             "A la temperatura del núcleo ningún material conserva magnetización permanente: se pierde muy por debajo de esas temperaturas."),
+            ("Estar en contacto directo con la astenósfera, que transmite el magnetismo hacia la superficie",
+             "El núcleo externo limita con el manto inferior, no con la astenósfera, y el campo no se transmite por contacto."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Un equipo quiere comparar la actividad sísmica de dos regiones de Chile "
+        "durante una década. Dispone del número de sismos por año, su magnitud y "
+        "la profundidad de cada foco. ¿Qué recurso comunica mejor cómo se "
+        "distribuyen las profundidades en cada región?",
+        "Un histograma de profundidades para cada región",
+        "La elección del recurso depende de qué se quiere mostrar.\n\n"
+        "1) La pregunta es por una DISTRIBUCIÓN: cómo se reparten los sismos "
+        "entre los distintos rangos de profundidad.\n"
+        "2) Un histograma agrupa los datos en intervalos y muestra de un vistazo "
+        "dónde se concentran, que es exactamente lo pedido.\n"
+        "3) Poniendo uno al lado del otro, la comparación entre las dos regiones "
+        "es inmediata.",
+        [
+            ("Una tabla con la profundidad de cada uno de los sismos registrados",
+             "La tabla conserva todos los datos, pero con miles de registros no deja ver la forma de la distribución."),
+            ("Un gráfico de líneas con el número de sismos por año",
+             "Muestra la evolución en el tiempo, que es otra pregunta: no informa nada sobre las profundidades."),
+            ("Un gráfico circular con el porcentaje de sismos de cada región",
+             "Compara el total entre regiones, pero pierde por completo la variable profundidad."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Las ondas sísmicas cambian bruscamente de velocidad a ciertas "
+        "profundidades. Esos saltos se conocen como discontinuidades. ¿Qué "
+        "informan?",
+        "Que a esa profundidad cambian las propiedades del material",
+        "La velocidad de una onda depende del medio que atraviesa, así que un "
+        "salto en la velocidad delata un cambio de medio.\n\n"
+        "1) Si el material fuera homogéneo, la velocidad variaría de forma "
+        "gradual y continua con la profundidad.\n"
+        "2) Un salto brusco indica un límite: cambia la composición, el estado "
+        "físico o la estructura del material.\n"
+        "3) Así se identificó el límite entre corteza y manto y el límite entre "
+        "manto y núcleo, sin necesidad de perforar.\n\n"
+        "Es un buen ejemplo de medición indirecta: el interior del planeta se "
+        "conoce por cómo responde a las ondas que lo atraviesan.",
+        [
+            ("Que en ese punto se originan los sismos más profundos del planeta",
+             "Las discontinuidades son límites entre capas; los focos sísmicos dependen de dónde hay roca rígida que pueda fracturarse."),
+            ("Que las ondas pierden energía y se detienen a esa profundidad",
+             "Las ondas continúan más allá: lo que cambia es su velocidad y su trayectoria, no su existencia."),
+            ("Que a esa profundidad la roca alcanza su punto de fusión y se convierte en magma",
+             "Solo una de las discontinuidades corresponde a un cambio de estado; las demás marcan cambios de composición o de estructura."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Después de un gran terremoto se registran durante semanas sismos "
+        "menores en la misma zona, las llamadas réplicas. ¿Cómo se explican?",
+        "La roca alrededor de la falla sigue reacomodándose",
+        "El sismo principal no deja el sistema en equilibrio.\n\n"
+        "1) La ruptura principal libera la mayor parte de la energía acumulada, "
+        "pero redistribuye el esfuerzo hacia los bordes de la zona que se "
+        "rompió.\n"
+        "2) Esas zonas vecinas quedan cargadas y ceden después, en rupturas "
+        "menores.\n"
+        "3) Por eso las réplicas se concentran alrededor de la ruptura "
+        "principal y van disminuyendo en número con el paso del tiempo.",
+        [
+            ("Son ecos del sismo principal que rebotan en el núcleo terrestre",
+             "Las reflexiones de las ondas llegan en minutos, no en semanas, y no son sismos nuevos."),
+            ("Son sismos de otras fallas lejanas que se sienten por casualidad",
+             "Las réplicas se localizan en la misma zona de ruptura: su ubicación es lo que las identifica como tales."),
+            ("Corresponden al magma que asciende por las grietas abiertas durante el sismo",
+             "Las réplicas ocurren también en fallas sin actividad volcánica alguna, como las de un borde transformante."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "En una zona de subducción se miden dos cosas: la profundidad de los "
+        "focos sísmicos y su distancia a la fosa. Al graficar una en función de "
+        "la otra, los puntos se alinean sobre una recta de pendiente positiva. "
+        "¿Qué se concluye?",
+        "Que la placa desciende con un ángulo aproximadamente constante",
+        "La forma del gráfico describe la geometría de la placa que se hunde.\n\n"
+        "1) Cada punto es un sismo, ubicado por su distancia horizontal a la "
+        "fosa y su profundidad.\n"
+        "2) Que se alineen indica que todos ocurren sobre un mismo plano, no "
+        "dispersos en el volumen.\n"
+        "3) Que la recta tenga pendiente CONSTANTE indica que ese plano es "
+        "aproximadamente plano, es decir, que la placa mantiene el mismo ángulo "
+        "de descenso.\n\n"
+        "Si el ángulo cambiara, el gráfico se curvaría; en Chile eso ocurre y da "
+        "tramos de subducción más plana y otros más inclinada.",
+        [
+            ("Que los sismos son más intensos a mayor distancia de la fosa",
+             "El gráfico relaciona profundidad con distancia; la magnitud no es ninguna de las dos variables representadas."),
+            ("Que la placa se detiene al alcanzar cierta profundidad",
+             "Si se detuviera, los puntos dejarían de aumentar en profundidad y la recta se volvería horizontal."),
+            ("Que hay dos placas distintas hundiéndose en la misma zona con ángulos diferentes",
+             "Dos placas darían dos alineaciones distintas; aquí los puntos se ajustan a una sola recta."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Frente al margen chileno, la convergencia entre Nazca y Sudamericana es "
+        "de unos 7 cm por año, pero la costa no avanza hacia el oeste a esa "
+        "rapidez. ¿Cómo se explica?",
+        "Casi toda la convergencia se consume en la subducción de la placa",
+        "Que dos placas converjan a cierta rapidez no significa que el borde de "
+        "una avance esa misma cantidad.\n\n"
+        "1) La mayor parte del movimiento se traduce en placa de Nazca que "
+        "desaparece bajo el continente: se consume en profundidad.\n"
+        "2) Una fracción menor sí deforma el margen continental, lo acorta y lo "
+        "levanta: es lo que construye los Andes a lo largo de millones de años.\n"
+        "3) Además parte de esa deformación es elástica y se acumula hasta que "
+        "un gran terremoto la libera de golpe.",
+        [
+            ("La costa sí avanza 7 cm al año, pero la erosión la desgasta a la misma rapidez",
+             "La erosión no podría compensar con esa exactitud durante millones de años, y las mediciones GPS del margen no muestran ese avance."),
+            ("El océano empuja la costa hacia el este con la misma fuerza",
+             "El agua no ejerce un empuje horizontal capaz de oponerse al movimiento de una placa litosférica."),
+            ("La cordillera de los Andes bloquea el movimiento e impide que el continente se desplace",
+             "Los Andes son el resultado de esa convergencia, no un obstáculo externo que la frene."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "medio",
+        "Se afirma que la corteza continental 'flota' sobre el manto. ¿Qué "
+        "propiedad hace válida esa descripción?",
+        "Su densidad es menor que la del manto sobre el que se apoya",
+        "La palabra flotar aquí no es una metáfora vacía: describe un equilibrio "
+        "real entre densidades.\n\n"
+        "1) La corteza continental, de composición granítica, es menos densa que "
+        "el material del manto.\n"
+        "2) Por eso se sostiene sobre él en un equilibrio semejante al de un "
+        "cuerpo en un fluido: cuanto más gruesa es, más se hunde y más se "
+        "levanta a la vez.\n"
+        "3) Esa es la razón de que las cordilleras tengan además una raíz "
+        "profunda de corteza bajo ellas, y de que la corteza continental no "
+        "subduzca.",
+        [
+            ("Está separada del manto por una capa de aire a presión",
+             "No hay ninguna capa de aire en profundidad: el contacto entre corteza y manto es entre materiales sólidos."),
+            ("El manto es líquido en toda su extensión y la corteza se desplaza sobre él",
+             "El manto es sólido casi en su totalidad; solo se comporta como un material que fluye muy lentamente en la astenósfera."),
+            ("Su temperatura es mucho menor y el calor la mantiene suspendida sobre el manto",
+             "La diferencia de temperatura influye en la densidad, pero no es el calor lo que la sostiene: es el contraste de densidad."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "dificil",
+        "Dos investigadores discuten cómo poner a prueba la hipótesis de que la "
+        "cadena de islas de un archipiélago se formó por el paso de la placa "
+        "sobre un punto caliente. ¿Qué predicción permitiría contrastarla?",
+        "La edad de las islas debe aumentar de forma ordenada en una dirección",
+        "Una hipótesis se pone a prueba derivando de ella algo observable que "
+        "podría no cumplirse.\n\n"
+        "1) Si el foco de calor está fijo y la placa se desplaza, cada isla se "
+        "formó cuando esa porción de placa pasó por encima.\n"
+        "2) Entonces la isla más cercana al foco actual debe ser la más joven, y "
+        "las edades deben crecer de manera progresiva en el sentido del "
+        "movimiento de la placa.\n"
+        "3) Es una predicción arriesgada: si al datar las islas las edades "
+        "aparecieran mezcladas, la hipótesis quedaría refutada.\n\n"
+        "En Hawái la datación confirmó el patrón, y de paso permitió calcular la "
+        "rapidez de la placa del Pacífico.",
+        [
+            ("Todas las islas del archipiélago deben tener la misma composición química",
+             "Es esperable cierta semejanza, pero también la habría si las islas se hubieran formado por otro mecanismo: no distingue entre hipótesis."),
+            ("Las islas deben alinearse sobre el borde de una placa tectónica",
+             "Un punto caliente actúa en el interior de una placa: si estuvieran sobre un borde, la explicación sería justamente otra."),
+            ("Los sismos del archipiélago deben tener focos cada vez más profundos hacia el noroeste",
+             "Los focos profundos son propios de la subducción; en un punto caliente la sismicidad es superficial y de origen volcánico."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "dificil",
+        "Se comparan dos hipótesis sobre el origen del calor que impulsa la "
+        "convección del manto: (I) es únicamente calor residual de la formación "
+        "del planeta, y (II) hay además una fuente que sigue produciendo calor "
+        "hoy. ¿Qué observación permite decidir entre ambas?",
+        "El planeta se ha enfriado mucho menos de lo que predice solo el calor residual",
+        "Dos hipótesis se distinguen cuando predicen cosas distintas y una de "
+        "ellas se puede medir.\n\n"
+        "1) Si solo hubiera calor residual, el planeta se habría enfriado a un "
+        "ritmo calculable desde su formación.\n"
+        "2) Ese cálculo, hecho en el siglo XIX antes de conocerse la "
+        "radiactividad, daba una Tierra mucho más fría y mucho más joven que la "
+        "que efectivamente hay.\n"
+        "3) El desajuste indica que existe una fuente adicional. La "
+        "desintegración de isótopos radiactivos en el manto y la corteza la "
+        "provee, y su descubrimiento resolvió la contradicción.",
+        [
+            ("La temperatura aumenta con la profundidad en cualquier mina o perforación",
+             "Ese gradiente existiría igual con cualquiera de las dos hipótesis: no permite distinguirlas."),
+            ("El núcleo externo continúa en estado líquido",
+             "Es consistente con ambas hipótesis, porque el calor residual por sí solo también podría mantenerlo fundido durante mucho tiempo."),
+            ("Las erupciones volcánicas siguen ocurriendo en todos los continentes del planeta",
+             "El volcanismo indica que hay calor disponible, pero no informa sobre cuál de las dos fuentes lo provee."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "dificil",
+        "Un grupo mide con GPS que dos puntos separados por una falla se acercan "
+        "2 cm por año durante 150 años sin que ocurra un gran sismo. Si toda esa "
+        "deformación fuera elástica y se liberara de una sola vez, ¿cuánto se "
+        "desplazaría la falla en ese evento?",
+        "3 m",
+        "La deformación elástica acumulada es la que se libera de golpe cuando la "
+        "falla cede.\n\n"
+        "1) Acumulado = 2 cm/año · 150 años = 300 cm.\n"
+        "2) Convierte: 300 cm = 3 m.\n"
+        "3) Ese es el orden de magnitud del desplazamiento observado en grandes "
+        "terremotos de subducción, y la razón de que el intervalo entre ellos se "
+        "cuente en siglos.\n\n"
+        "El razonamiento es el que está detrás de la idea de brecha sísmica: un "
+        "tramo que lleva mucho tiempo sin romper tiene más deformación "
+        "acumulada.",
+        [
+            ("30 cm", "Se equivocó en un factor 10 al multiplicar, o convirtió 300 cm como si fueran 30."),
+            ("300 m", "Trató los 300 cm como si fueran metros, saltándose la conversión."),
+            ("2 m", "Usó la rapidez anual como si fuera el desplazamiento total, ignorando los 150 años."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "dificil",
+        "Un texto divulgativo sostiene que 'los continentes flotan a la deriva "
+        "sobre un océano de magma'. ¿Cuál es el error de fondo de esa "
+        "descripción?",
+        "El manto es sólido, aunque se deforme lentamente",
+        "La imagen es intuitiva, pero contradice lo que muestran las ondas "
+        "sísmicas.\n\n"
+        "1) Las ondas S no se propagan en líquidos, y sí atraviesan el manto "
+        "completo. Por lo tanto el manto es SÓLIDO.\n"
+        "2) Lo que ocurre en la astenósfera es que la roca sólida se deforma "
+        "plásticamente en escalas de millones de años: fluye, pero no está "
+        "fundida.\n"
+        "3) El magma existe solo en bolsones locales, generados en condiciones "
+        "particulares como las de una zona de subducción, y es una fracción "
+        "diminuta del volumen del manto.\n\n"
+        "Además, no son los continentes los que se desplazan por su cuenta: se "
+        "mueven placas completas de litósfera, con su parte oceánica incluida.",
+        [
+            ("Los continentes no se mueven, solo lo hace el fondo oceánico",
+             "Ambos se mueven: forman parte de las mismas placas litosféricas."),
+            ("El magma es más denso que los continentes y por eso no podrían flotar sobre él",
+             "El contraste de densidad es real y favorece que la corteza continental se mantenga arriba: no es ese el error de la frase."),
+            ("La deriva se detuvo hace millones de años y hoy las placas están inmóviles",
+             "Las mediciones GPS registran hoy desplazamientos de varios centímetros por año."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "dificil",
+        "En un mismo terremoto, una localidad sobre suelo de relleno sedimentario "
+        "sufre daños mucho mayores que otra situada a igual distancia del "
+        "epicentro pero sobre roca firme. ¿Qué muestra esta comparación?",
+        "Que la intensidad depende también del terreno, no solo del sismo",
+        "El caso aísla una variable: la distancia al epicentro es la misma, así "
+        "que la diferencia tiene que venir de otra parte.\n\n"
+        "1) La magnitud del sismo es única: la energía liberada en el foco fue "
+        "la misma para las dos localidades.\n"
+        "2) Lo que cambia es el medio por el que llegan las ondas al final del "
+        "recorrido. Un suelo blando amplifica la amplitud del movimiento y "
+        "prolonga su duración.\n"
+        "3) Por eso la INTENSIDAD, que describe los efectos, puede diferir "
+        "mucho entre dos puntos igual de lejanos del epicentro.\n\n"
+        "Es la razón por la que la microzonificación sísmica forma parte de la "
+        "planificación urbana.",
+        [
+            ("Que el epicentro estaba en realidad más cerca de la primera localidad",
+             "El enunciado fija la distancia como igual: aceptar esto sería contradecir un dato del problema en vez de explicarlo."),
+            ("Que el sismo tuvo dos magnitudes distintas según la dirección",
+             "La magnitud es una sola por sismo: caracteriza lo ocurrido en el foco, no lo percibido en cada dirección."),
+            ("Que las ondas sísmicas pierden energía más rápido cuando atraviesan roca firme y por eso allí se sintió menos",
+             "La roca firme transmite las ondas con menos amplificación, pero el punto no es que pierdan energía: es que el suelo blando la amplifica."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "dificil",
+        "Al reconstruir Pangea se observa que los depósitos glaciares de "
+        "Sudamérica, África, India y Australia quedan reunidos, mientras que en "
+        "el mismo periodo Norteamérica y Europa registran carbón formado en "
+        "pantanos tropicales. ¿Qué apoya este contraste?",
+        "Que los bloques ocupaban latitudes muy distintas en esa época",
+        "El valor de la evidencia está en que dos indicadores climáticos "
+        "independientes apuntan a lo mismo.\n\n"
+        "1) Los depósitos glaciares indican clima frío, propio de latitudes "
+        "altas.\n"
+        "2) El carbón se forma a partir de vegetación abundante de pantano, "
+        "propia de latitudes bajas y cálidas.\n"
+        "3) Que ambos registros sean CONTEMPORÁNEOS descarta que se trate de un "
+        "cambio climático global: en el mismo momento hubo hielo en unas tierras "
+        "y selva pantanosa en otras.\n"
+        "4) La explicación es que esos bloques estaban en latitudes muy "
+        "distintas de las actuales, y que después se desplazaron.\n\n"
+        "Que la reconstrucción de Pangea ordene ambos conjuntos en franjas "
+        "climáticas coherentes es lo que le da fuerza al argumento.",
+        [
+            ("Que en esa época el planeta atravesó una glaciación global",
+             "Una glaciación global no dejaría carbón de pantano tropical formándose al mismo tiempo en otras tierras."),
+            ("Que el clima de cada continente depende solo de su altitud",
+             "La altitud influye, pero no explica que continentes enteros registren condiciones opuestas de manera simultánea."),
+            ("Que los depósitos glaciares y el carbón se formaron en épocas separadas por millones de años",
+             "La datación los sitúa en el mismo periodo: si fueran de épocas distintas, el contraste no tendría nada que explicar."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "dificil",
+        "Un estudiante propone medir la rapidez de expansión de una dorsal "
+        "datando UNA sola muestra de roca tomada a cierta distancia del eje. Un "
+        "compañero objeta que el resultado sería poco confiable. ¿Cuál es la "
+        "objeción más pertinente?",
+        "Una sola medición no permite detectar un error ni comprobar el patrón",
+        "La objeción tiene que apuntar a la confiabilidad del procedimiento, no a "
+        "si el método es correcto en principio.\n\n"
+        "1) Datar una muestra y dividir la distancia por la edad es un "
+        "procedimiento válido: entrega una rapidez media.\n"
+        "2) El problema es que con un solo punto no hay con qué comparar. Si la "
+        "muestra estuviera alterada o mal ubicada, nada lo delataría.\n"
+        "3) Con varias muestras a distancias crecientes, los puntos deberían "
+        "alinearse. Que lo hagan confirma el patrón, y un punto fuera de la "
+        "recta señala un problema en esa medición.\n\n"
+        "La replicabilidad no es un trámite: es lo que permite distinguir un dato "
+        "de un accidente.",
+        [
+            ("La datación radiométrica no sirve para rocas volcánicas del fondo marino",
+             "Es justamente donde mejor funciona: la roca basáltica de la dorsal se dató así para establecer la expansión."),
+            ("La rapidez de expansión no puede calcularse a partir de edades y distancias",
+             "Ese es exactamente el cálculo que se usa: rapidez es distancia dividida por tiempo."),
+            ("Habría que tomar la muestra exactamente en el eje de la dorsal para que el cálculo tenga sentido",
+             "En el eje la roca tiene edad prácticamente cero y la distancia también: no se podría calcular ninguna rapidez."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "dificil",
+        "Se sabe que la placa de Nazca subduce bajo la Sudamericana y que la "
+        "corteza oceánica del Pacífico oriental no supera unas decenas de "
+        "millones de años. A partir de esto, ¿qué se puede inferir sobre el "
+        "volumen total de la litósfera terrestre a lo largo del tiempo?",
+        "Se mantiene aproximadamente constante, porque lo creado compensa lo destruido",
+        "El razonamiento es de balance: hay que mirar las dos puntas del "
+        "proceso.\n\n"
+        "1) En las dorsales se crea litósfera oceánica de forma continua.\n"
+        "2) En las fosas se destruye litósfera oceánica al hundirse en el "
+        "manto.\n"
+        "3) Que la corteza oceánica sea siempre joven indica que ambos procesos "
+        "van a un ritmo comparable: si se creara más de lo que se destruye, el "
+        "planeta tendría que estar creciendo, y no lo hace.\n\n"
+        "Por eso la tectónica se describe como un ciclo y no como una simple "
+        "fragmentación.",
+        [
+            ("Aumenta de manera sostenida, porque las dorsales producen material nuevo sin parar",
+             "Si solo se creara, el radio del planeta tendría que crecer; las mediciones no registran nada semejante."),
+            ("Disminuye, porque la subducción devuelve material al manto",
+             "La subducción devuelve material, pero las dorsales aportan otro tanto: mirar solo una mitad del ciclo desbalancea el razonamiento."),
+            ("Se mantiene constante porque la corteza oceánica se transforma en corteza continental en las fosas",
+             "En la subducción la placa se hunde en el manto; una parte contribuye al magma del arco, pero no es una conversión que cierre el balance."),
+        ],
+    ),
+    _q(
+        "cie_tierra", "dificil",
+        "Una investigación busca establecer si el ángulo con que subduce la placa "
+        "de Nazca influye en la altura de la cordillera. Se comparan tramos del "
+        "margen chileno con distintos ángulos de subducción, midiendo en cada uno "
+        "la altura media de los Andes. ¿Qué componente de la investigación "
+        "corresponde al ángulo de subducción?",
+        "La variable independiente",
+        "Hay que identificar qué se compara y qué se mide como resultado.\n\n"
+        "1) El ángulo de subducción es lo que distingue a un tramo de otro: es "
+        "el criterio con el que se seleccionaron los casos.\n"
+        "2) La altura media de la cordillera es lo que se MIDE en cada tramo, "
+        "esperando que varíe según el ángulo: esa es la variable dependiente.\n"
+        "3) El estudio es no experimental, porque el ángulo no lo manipula "
+        "nadie: se aprovecha una variación que existe en la naturaleza. Aun así, "
+        "la distinción entre variable independiente y dependiente se mantiene.",
+        [
+            ("La variable dependiente",
+             "La dependiente es la altura de la cordillera, que es lo que se mide como resultado de la comparación."),
+            ("La hipótesis de la investigación",
+             "La hipótesis sería la afirmación de que el ángulo influye en la altura; el ángulo por sí solo es una variable, no una afirmación."),
+            ("Una variable controlada, porque se mantiene igual en todos los tramos comparados",
+             "Es justo lo contrario: el ángulo es lo que se hace variar entre los tramos, y por eso permite la comparación."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Física - "Mecánica": modelos del sistema solar y del universo
+#
+# El temario de Admisión 2027 agregó a esta área dos conocimientos que el banco
+# no tenía: los modelos geocéntricos de Aristóteles y Ptolomeo frente al
+# heliocéntrico de Copérnico, con los aportes de Galileo y Kepler, y las teorías
+# sobre el origen y la evolución del universo con las evidencias que las
+# sustentan.
+#
+# El hilo de todo el nodo es el mismo que el temario pide evaluar: qué hace que
+# un modelo se prefiera a otro. No es que uno sea "la verdad", sino que explica
+# más observaciones, hace predicciones arriesgadas y sobrevive a las pruebas.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_cosmologia", "facil",
+        "En el modelo de Aristóteles, retomado después por Ptolomeo, ¿qué lugar "
+        "ocupaba la Tierra?",
+        "Estaba inmóvil en el centro del universo",
+        "Es la característica que define a un modelo geocéntrico.\n\n"
+        "1) La Tierra se ubicaba en el centro y permanecía quieta.\n"
+        "2) El Sol, la Luna, los planetas y las estrellas giraban en torno a "
+        "ella, cada uno en su propia esfera.\n"
+        "3) El modelo se apoyaba en la experiencia inmediata: no se siente que "
+        "el suelo se mueva, y el Sol efectivamente se ve cruzar el cielo cada "
+        "día.\n\n"
+        "Que coincida con lo que uno percibe no lo hace correcto, pero sí explica "
+        "por qué se sostuvo durante casi dos mil años.",
+        [
+            ("Giraba alrededor del Sol junto con los demás planetas",
+             "Esa es la propuesta heliocéntrica de Copérnico, casi dos mil años posterior."),
+            ("Se desplazaba en línea recta a través del espacio",
+             "Ningún modelo antiguo planteaba una Tierra en traslación rectilínea; la discusión era entre centro inmóvil y órbita."),
+            ("Ocupaba el centro pero rotaba sobre su propio eje cada día",
+             "El modelo aristotélico atribuía el movimiento diario a la esfera de las estrellas, no a una rotación de la Tierra."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "facil",
+        "Nicolás Copérnico publicó en 1543 un modelo alternativo al de Ptolomeo. "
+        "¿Cuál era su propuesta central?",
+        "El Sol ocupa el centro y la Tierra es un planeta más que lo orbita",
+        "El cambio es de qué está en el centro, y arrastra consigo el estatus de "
+        "la Tierra.\n\n"
+        "1) Copérnico puso al Sol en el centro del sistema.\n"
+        "2) La Tierra pasó a ser un planeta como los demás, con dos movimientos: "
+        "rotación diaria sobre su eje y traslación anual alrededor del Sol.\n"
+        "3) La Luna siguió girando en torno a la Tierra, que dejó de ser el "
+        "centro de todo para ser el centro de una sola órbita.\n\n"
+        "Copérnico mantuvo, eso sí, las órbitas circulares: fue Kepler quien "
+        "después las corrigió.",
+        [
+            ("La Tierra y el Sol giran ambos en torno a un punto vacío",
+             "Ningún modelo de la época propuso un centro vacío; el debate era entre la Tierra y el Sol como centro."),
+            ("El universo no tiene centro y todos los cuerpos se mueven libremente",
+             "Esa idea es muy posterior: Copérnico conservaba un centro y una esfera de estrellas fijas."),
+            ("El Sol gira alrededor de la Tierra, pero los demás planetas giran alrededor del Sol",
+             "Ese es el modelo intermedio que propuso Tycho Brahe algunas décadas después, no el de Copérnico."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "facil",
+        "Galileo apuntó por primera vez un telescopio al cielo y observó cuatro "
+        "puntos brillantes que cambiaban de posición noche a noche alrededor de "
+        "Júpiter. ¿Por qué esa observación fue relevante para el debate de la "
+        "época?",
+        "Mostraba que no todo gira alrededor de la Tierra",
+        "El modelo geocéntrico afirmaba que la Tierra era el centro de TODOS los "
+        "movimientos celestes.\n\n"
+        "1) Los cuatro puntos resultaron ser satélites que giran en torno a "
+        "Júpiter.\n"
+        "2) Ahí había, entonces, un centro de giro que no era la Tierra.\n"
+        "3) Eso no demuestra que la Tierra orbite el Sol, pero derriba el "
+        "principio de que solo puede existir un centro y que ese centro somos "
+        "nosotros.\n\n"
+        "Además respondía a una objeción práctica: si la Tierra se moviera, "
+        "decían, dejaría atrás a la Luna. Júpiter se movía y no dejaba atrás a "
+        "sus lunas.",
+        [
+            ("Demostraba que Júpiter es más grande que la Tierra",
+             "El tamaño de Júpiter no se deduce de la existencia de sus satélites, y no era lo que estaba en discusión."),
+            ("Probaba que los planetas tienen órbitas elípticas y no circulares",
+             "Las órbitas elípticas fueron el aporte de Kepler, obtenido del análisis de las mediciones de Marte."),
+            ("Confirmaba que las estrellas están mucho más lejos de lo que se creía",
+             "La distancia a las estrellas es otro problema, que recién se resolvió con la medición del paralaje en el siglo XIX."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "facil",
+        "La primera ley de Kepler corrigió un supuesto que Copérnico había "
+        "mantenido. ¿Qué establece?",
+        "Los planetas describen órbitas elípticas con el Sol en un foco",
+        "Kepler llegó a esa conclusión ajustando los datos de Marte medidos por "
+        "Tycho Brahe.\n\n"
+        "1) La órbita no es un círculo con el Sol al medio, sino una ELIPSE.\n"
+        "2) El Sol no está en el centro de la elipse: ocupa uno de sus dos "
+        "focos.\n"
+        "3) Por eso la distancia entre un planeta y el Sol cambia a lo largo del "
+        "año: hay un punto más cercano y uno más lejano.\n\n"
+        "Copérnico había puesto al Sol en el centro pero conservó las órbitas "
+        "circulares heredadas de la tradición griega; Kepler abandonó ese "
+        "supuesto porque los datos no calzaban.",
+        [
+            ("Los planetas giran en círculos perfectos alrededor del Sol",
+             "Ese era justamente el supuesto que Kepler tuvo que abandonar para que los datos de Marte encajaran."),
+            ("Los planetas más lejanos tardan más en completar una vuelta",
+             "Eso es cierto y es contenido de la TERCERA ley, no de la primera."),
+            ("El Sol se ubica exactamente en el centro geométrico de la órbita de cada planeta",
+             "El Sol ocupa un foco, y el foco de una elipse no coincide con su centro salvo que la elipse sea un círculo."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "facil",
+        "La teoría del Big Bang describe el origen del universo. ¿Qué plantea?",
+        "El universo se expande desde un estado inicial denso y caliente",
+        "El nombre sugiere una explosión, pero lo que describe es una "
+        "expansión.\n\n"
+        "1) Hace unos 13.800 millones de años toda la materia y la energía "
+        "estaban concentradas en un estado extremadamente denso y caliente.\n"
+        "2) Desde entonces el universo se expande y, al expandirse, se enfría.\n"
+        "3) No fue una explosión ocurrida EN un lugar del espacio: es el espacio "
+        "mismo el que se expande, y por eso no existe un centro desde el cual "
+        "todo se aleje.",
+        [
+            ("Una explosión ocurrida en el centro del universo",
+             "No hay un punto central: la expansión ocurre en todas partes a la vez, y desde cualquier galaxia se ve alejarse a las demás."),
+            ("Que la materia se crea continuamente para mantener la densidad constante",
+             "Esa era la propuesta del modelo de estado estacionario, que compitió con el Big Bang y fue descartada."),
+            ("Que el universo se contrae desde un estado inicial frío y muy poco denso",
+             "Invierte las dos cosas: el estado inicial era denso y caliente, y lo observado es expansión, no contracción."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "facil",
+        "Al analizar la luz de galaxias lejanas se observa que sus líneas "
+        "espectrales aparecen desplazadas hacia longitudes de onda mayores. ¿Qué "
+        "indica ese corrimiento al rojo?",
+        "Que esas galaxias se alejan de nosotros",
+        "El corrimiento de las líneas de un espectro informa sobre el movimiento "
+        "relativo de la fuente.\n\n"
+        "1) Cada elemento químico emite y absorbe en longitudes de onda "
+        "conocidas, medidas en el laboratorio.\n"
+        "2) Si en la luz de una galaxia esas mismas líneas aparecen corridas "
+        "hacia el rojo, la longitud de onda que nos llega es mayor que la "
+        "emitida.\n"
+        "3) Eso ocurre cuando la fuente se ALEJA del observador.\n\n"
+        "Que prácticamente todas las galaxias muestren corrimiento al rojo es la "
+        "observación básica sobre la que se apoya la expansión del universo.",
+        [
+            ("Que esas galaxias se acercan a nosotros",
+             "El acercamiento produciría el efecto contrario, un corrimiento hacia el azul, es decir, hacia longitudes de onda menores."),
+            ("Que esas galaxias están compuestas por elementos distintos",
+             "Las líneas corresponden a los mismos elementos: lo que cambia es su posición en el espectro, no cuáles aparecen."),
+            ("Que la luz pierde energía por el simple hecho de recorrer distancias enormes",
+             "Esa explicación alternativa se propuso y no resiste las pruebas: no daría cuenta de la relación entre corrimiento y distancia."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "facil",
+        "Además del corrimiento al rojo, hay una segunda evidencia que sostiene "
+        "el Big Bang: una radiación débil que llega desde todas las direcciones "
+        "del cielo por igual. ¿Cómo se interpreta?",
+        "Es el resto enfriado de la radiación del universo primitivo",
+        "Su rasgo decisivo es que viene de TODAS partes con la misma "
+        "intensidad.\n\n"
+        "1) Si el universo comenzó denso y caliente, estuvo lleno de radiación "
+        "intensa.\n"
+        "2) Al expandirse se enfrió, y esa radiación se estiró hasta quedar en "
+        "el rango de las microondas, a unos pocos grados sobre el cero absoluto.\n"
+        "3) Como llenaba todo el universo, debe llegarnos desde cualquier "
+        "dirección por igual, y eso es exactamente lo que se mide.\n\n"
+        "Su existencia fue PREDICHA antes de ser detectada, lo que la convierte "
+        "en una prueba especialmente fuerte.",
+        [
+            ("Es la luz combinada de todas las estrellas de la Vía Láctea",
+             "La luz de nuestra galaxia se concentra en el plano galáctico: no llegaría con la misma intensidad desde todas las direcciones."),
+            ("Es radiación emitida por el Sol y reflejada por la atmósfera",
+             "Se detecta también fuera de la atmósfera y desde el lado nocturno; su origen no es local."),
+            ("Corresponde a las ondas de radio producidas por la actividad humana en la Tierra",
+             "Las emisiones humanas tienen frecuencias identificables y varían según la zona; esta radiación es uniforme y ajena a ellas."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "En el modelo de Ptolomeo se agregaron epiciclos: cada planeta giraba en "
+        "un círculo pequeño cuyo centro, a su vez, recorría un círculo mayor "
+        "alrededor de la Tierra. ¿Qué observación se buscaba explicar con ese "
+        "recurso?",
+        "Que a veces los planetas parecen retroceder en el cielo",
+        "El movimiento retrógrado era el problema que ningún modelo geocéntrico "
+        "simple lograba explicar.\n\n"
+        "1) Observados noche tras noche, los planetas avanzan entre las "
+        "estrellas, pero por temporadas parecen detenerse, retroceder y volver a "
+        "avanzar.\n"
+        "2) Con una órbita circular simple en torno a la Tierra eso es "
+        "imposible: el movimiento sería siempre en el mismo sentido.\n"
+        "3) El epiciclo permite que el planeta, al recorrer su círculo pequeño, "
+        "se mueva por momentos en sentido contrario visto desde la Tierra.\n\n"
+        "El heliocentrismo explica lo mismo sin recursos adicionales: el "
+        "retroceso aparente ocurre cuando la Tierra adelanta al planeta en su "
+        "órbita.",
+        [
+            ("Que los planetas brillan con intensidad variable a lo largo del año",
+             "El cambio de brillo también se observaba, pero el epiciclo se introdujo específicamente para dar cuenta del retroceso."),
+            ("Que las estrellas salen cuatro minutos antes cada noche",
+             "Ese corrimiento afecta a todo el cielo por igual y se explicaba con el giro de la esfera de las estrellas."),
+            ("Que la Luna muestra siempre la misma cara hacia la Tierra",
+             "Es un fenómeno del sistema Tierra-Luna que no tiene relación con el movimiento de los planetas entre las estrellas."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "Con su telescopio, Galileo comprobó que Venus presenta el ciclo "
+        "completo de fases, incluida una fase llena, y que su tamaño aparente "
+        "cambia mucho a lo largo del ciclo. ¿Por qué esa observación fue "
+        "decisiva?",
+        "El modelo de Ptolomeo no permitía que Venus se viera lleno",
+        "La observación funciona como una prueba que un modelo pasa y el otro "
+        "no.\n\n"
+        "1) En el modelo de Ptolomeo, Venus se mantenía siempre entre la Tierra "
+        "y el Sol. Desde la Tierra nunca podría verse iluminado por completo: "
+        "solo mostraría fases de creciente delgado.\n"
+        "2) Si Venus orbita el Sol, en algún momento pasa por detrás de él y "
+        "queda con toda su cara iluminada mirando hacia nosotros: se ve LLENO, y "
+        "además pequeño, porque está lejos.\n"
+        "3) Galileo observó exactamente el ciclo completo, con Venus lleno y "
+        "pequeño y creciente y grande.\n\n"
+        "Ptolomeo quedó descartado por la observación, no por una discusión "
+        "filosófica.",
+        [
+            ("Demostraba directamente que la Tierra gira alrededor del Sol",
+             "Demuestra que VENUS gira alrededor del Sol; el modelo de Tycho Brahe también lo permitía manteniendo la Tierra quieta."),
+            ("Probaba que Venus tiene atmósfera y por lo tanto es un planeta como la Tierra",
+             "La atmósfera de Venus se estableció mucho después y no se deduce de sus fases."),
+            ("Mostraba que Venus emite luz propia como las estrellas y no la refleja del Sol",
+             "Las fases prueban justamente lo contrario: que Venus refleja la luz del Sol, porque de otro modo no tendría fases."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "La segunda ley de Kepler dice que la línea que une un planeta con el "
+        "Sol barre áreas iguales en tiempos iguales. ¿Qué consecuencia tiene "
+        "sobre la rapidez del planeta?",
+        "Se mueve más rápido cuando está más cerca del Sol",
+        "La ley es una afirmación sobre áreas, pero su consecuencia es sobre "
+        "rapidez.\n\n"
+        "1) Cerca del Sol, el radio que une planeta y Sol es corto. Para barrer "
+        "una cierta área con un radio corto, hay que recorrer mucho arco.\n"
+        "2) Lejos del Sol, el radio es largo. La misma área se barre "
+        "recorriendo mucho menos arco.\n"
+        "3) Como los tiempos son iguales, el planeta debe avanzar más rápido "
+        "cuando está cerca y más lento cuando está lejos.\n\n"
+        "Newton mostró después que esto es consecuencia de que la fuerza "
+        "gravitatoria apunta siempre hacia el Sol.",
+        [
+            ("Se mueve siempre con la misma rapidez a lo largo de toda su órbita",
+             "Si la rapidez fuera constante, las áreas barridas serían mayores lejos del Sol que cerca, y no iguales."),
+            ("Se mueve más rápido cuando está más lejos del Sol",
+             "Está invertido: con un radio largo, recorrer el mismo arco barrería un área mucho mayor."),
+            ("Su rapidez depende de la masa del planeta y no de su distancia al Sol",
+             "La masa del planeta no aparece en las leyes de Kepler: dos planetas a la misma distancia orbitan con la misma rapidez."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "La tercera ley de Kepler relaciona el periodo orbital T de un planeta "
+        "con el semieje mayor a de su órbita mediante T² proporcional a a³. Si un "
+        "planeta orbita el Sol a 4 unidades astronómicas, ¿cuál es su periodo, "
+        "medido en años terrestres?",
+        "8 años",
+        "Usando años y unidades astronómicas, la constante de proporcionalidad "
+        "vale 1 y la ley queda simplemente T² = a³.\n\n"
+        "1) Reemplaza: T² = 4³ = 64.\n"
+        "2) Saca raíz: T = 8.\n"
+        "3) El periodo es de 8 años terrestres.\n\n"
+        "Comprobación con la Tierra: a = 1 y T = 1, y en efecto 1² = 1³. La ley "
+        "explica por qué los planetas exteriores tardan tanto: Júpiter, a poco "
+        "más de 5 unidades, demora casi 12 años.",
+        [
+            ("4 años", "Igualó el periodo a la distancia, sin aplicar la relación entre el cuadrado y el cubo."),
+            ("64 años", "Calculó a³ = 64 y se detuvo ahí: ese valor es T², falta extraer la raíz cuadrada."),
+            ("16 años", "Elevó la distancia al cuadrado en vez de al cubo, y además no sacó la raíz."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "Un opositor al heliocentrismo argumentaba que, si la Tierra se moviera "
+        "alrededor del Sol, las estrellas deberían verse cambiar de posición a lo "
+        "largo del año, y eso no se observaba. ¿Cómo se resolvió finalmente esa "
+        "objeción?",
+        "Las estrellas están tan lejos que el efecto es diminuto",
+        "La objeción era correcta en su lógica: el efecto tiene que existir. El "
+        "error estaba en la escala supuesta.\n\n"
+        "1) Si la Tierra cambia de posición a lo largo del año, una estrella "
+        "cercana debería verse desplazada respecto de las lejanas. Eso es el "
+        "paralaje.\n"
+        "2) El desplazamiento es tanto menor cuanto más lejos está la estrella. "
+        "Con las distancias reales, resulta imperceptible a simple vista.\n"
+        "3) Recién en 1838, con instrumentos mucho mejores, se logró medir el "
+        "paralaje de una estrella, confirmando a la vez el movimiento de la "
+        "Tierra y la enormidad de las distancias estelares.\n\n"
+        "La objeción fue buena ciencia: señalaba una predicción contrastable. Lo "
+        "que faltaba era precisión instrumental.",
+        [
+            ("Se comprobó que las estrellas también se mueven y compensan el efecto",
+             "Las estrellas tienen movimiento propio, pero es independiente y no podría cancelar el paralaje de manera sistemática."),
+            ("Se demostró que la atmósfera terrestre desvía la luz y anula el desplazamiento",
+             "La atmósfera desvía la luz, pero ese efecto se corrige y no anula un desplazamiento anual."),
+            ("Se aceptó que el heliocentrismo es solo un recurso de cálculo y no una descripción real",
+             "Esa postura existió en la época, pero no fue la resolución: la medición del paralaje zanjó el asunto empíricamente."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "Newton mostró que las tres leyes de Kepler se deducen de un principio "
+        "más general. ¿Cuál fue su aporte?",
+        "Una ley de gravitación válida en la Tierra y en el cielo",
+        "Kepler describió cómo se mueven los planetas; Newton explicó por qué.\n\n"
+        "1) Las leyes de Kepler eran empíricas: resumían los datos, pero no "
+        "decían qué las causaba.\n"
+        "2) Newton propuso que dos cuerpos cualesquiera se atraen con una fuerza "
+        "que depende de sus masas y de la distancia entre ellos.\n"
+        "3) De ahí se deducen matemáticamente las tres leyes de Kepler.\n\n"
+        "Lo más importante fue la UNIFICACIÓN: la misma fuerza que hace caer una "
+        "manzana mantiene a la Luna en órbita. Hasta entonces se creía que el "
+        "cielo y la Tierra se regían por leyes distintas.",
+        [
+            ("Midió con más precisión las órbitas y corrigió los datos de Kepler",
+             "Newton no rehizo las mediciones: trabajó sobre las regularidades que Kepler ya había establecido."),
+            ("Descubrió que las órbitas son elípticas y no circulares",
+             "Eso ya lo había establecido Kepler; Newton demostró por qué tenían que serlo."),
+            ("Demostró que el Sol también se mueve alrededor del centro de la galaxia",
+             "El movimiento del Sol en la galaxia es un hallazgo del siglo XX, ajeno a la obra de Newton."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "Edwin Hubble encontró que, cuanto más lejana es una galaxia, mayor es su "
+        "velocidad de alejamiento. ¿Qué se concluye de esa relación?",
+        "Que el universo está en expansión",
+        "La clave no es que las galaxias se alejen, sino que lo hagan de forma "
+        "PROPORCIONAL a su distancia.\n\n"
+        "1) Si el espacio mismo se estira, dos puntos separados por el doble de "
+        "distancia se separan al doble de rapidez.\n"
+        "2) Eso es exactamente la relación que Hubble midió.\n"
+        "3) La consecuencia es que la expansión no tiene un centro: desde "
+        "cualquier galaxia se observaría lo mismo.\n\n"
+        "Recorrer la expansión hacia atrás en el tiempo lleva a un estado inicial "
+        "mucho más denso, que es la base del Big Bang.",
+        [
+            ("Que la Tierra ocupa el centro del universo, porque todo se aleja de ella",
+             "Precisamente porque la velocidad es proporcional a la distancia, un observador en cualquier galaxia vería lo mismo: no hay centro privilegiado."),
+            ("Que las galaxias más lejanas son también las más antiguas y por eso se mueven más rápido",
+             "Verlas más antiguas es cierto, porque su luz tardó más en llegar, pero eso no explica la proporcionalidad entre velocidad y distancia."),
+            ("Que existe una fuerza que empuja a las galaxias desde el exterior del universo",
+             "No hay un exterior del universo desde el cual empujar; la separación resulta de la expansión del propio espacio."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "El modelo del Big Bang predice que en el universo primitivo se formó "
+        "una proporción determinada de los elementos más livianos. ¿Qué "
+        "observación confirma esa predicción?",
+        "El universo es en su mayoría hidrógeno y helio, en la proporción prevista",
+        "La predicción es cuantitativa, y por eso la confirmación es "
+        "convincente.\n\n"
+        "1) En los primeros minutos, el universo estaba lo bastante caliente y "
+        "denso para que ocurrieran reacciones nucleares.\n"
+        "2) Los cálculos del modelo predicen que de ahí debía salir "
+        "aproximadamente tres cuartas partes de hidrógeno y una cuarta parte de "
+        "helio en masa, más trazas de elementos livianos.\n"
+        "3) Las mediciones en estrellas y nubes de gas antiguas coinciden con "
+        "esa proporción.\n\n"
+        "Los elementos más pesados vinieron mucho después, fabricados en el "
+        "interior de las estrellas.",
+        [
+            ("Todos los elementos de la tabla periódica aparecen en igual proporción",
+             "Los elementos pesados son escasísimos, y además se formaron en las estrellas, no en el universo primitivo."),
+            ("El hierro es el elemento más abundante del universo",
+             "El hierro es abundante en el núcleo de los planetas rocosos, pero a escala cósmica es una fracción mínima."),
+            ("La proporción de hidrógeno y helio es distinta en cada región del universo observable",
+             "Lo observado es lo contrario: la proporción es notablemente uniforme, y esa uniformidad es parte de la evidencia."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "Se han planteado distintos escenarios para el futuro del universo. Uno "
+        "de ellos, llamado Big Crunch, propone un final determinado. ¿En qué "
+        "consiste?",
+        "La expansión se detiene y el universo vuelve a contraerse",
+        "El escenario depende de si la gravedad alcanza para frenar la "
+        "expansión.\n\n"
+        "1) Toda la materia del universo se atrae gravitatoriamente, y esa "
+        "atracción actúa en contra de la expansión.\n"
+        "2) Si la densidad de materia fuera suficientemente alta, la expansión "
+        "se frenaría, se detendría y se invertiría.\n"
+        "3) El universo se contraería entonces hasta un estado extremadamente "
+        "denso y caliente: el Big Crunch.\n\n"
+        "Las observaciones actuales no apuntan a ese escenario: la expansión no "
+        "solo continúa, sino que se está acelerando.",
+        [
+            ("El universo se expande cada vez más rápido hasta desgarrarse",
+             "Ese es otro escenario distinto, asociado a una expansión acelerada creciente, no al Big Crunch."),
+            ("El universo alcanza un tamaño fijo y se mantiene igual para siempre",
+             "Un universo estático es otra posibilidad teórica, pero no es lo que describe el Big Crunch."),
+            ("Toda la materia se convierte en radiación y el universo queda vacío de partículas",
+             "Ese proceso pertenece a escenarios de muerte térmica a plazos larguísimos, no a una contracción gravitatoria."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "Antes de que el Big Bang se impusiera existió un modelo rival, el de "
+        "estado estacionario, según el cual el universo se expande pero mantiene "
+        "su densidad porque se crea materia continuamente. ¿Qué observación "
+        "resultó incompatible con él?",
+        "La radiación de fondo, que exige un pasado caliente y denso",
+        "Un modelo se descarta cuando una observación contradice algo que él "
+        "afirma necesariamente.\n\n"
+        "1) El estado estacionario sostiene que el universo se ve "
+        "aproximadamente igual en todo momento: sin un pasado más denso ni más "
+        "caliente.\n"
+        "2) La radiación de fondo de microondas solo se explica como el resto "
+        "enfriado de una etapa en que todo el universo estuvo muy caliente.\n"
+        "3) Un universo sin esa etapa no tendría por qué estar bañado en una "
+        "radiación uniforme de esas características.\n\n"
+        "Su detección en 1965 inclinó definitivamente la balanza hacia el Big "
+        "Bang.",
+        [
+            ("El corrimiento al rojo de las galaxias lejanas",
+             "La expansión era compatible con ambos modelos: el estado estacionario también la aceptaba, explicándola con creación continua de materia."),
+            ("La existencia de galaxias con formas espirales y elípticas",
+             "La variedad de formas de las galaxias no distingue entre los dos modelos."),
+            ("La comprobación de que la Vía Láctea no ocupa el centro del universo",
+             "Los dos modelos coinciden en que no hay un centro privilegiado, así que esto no permite elegir entre ellos."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "Una galaxia está a 100 millones de años luz y se aleja a 2.200 km/s. "
+        "Otra está a 300 millones de años luz. Si se cumple la relación que "
+        "encontró Hubble, ¿a qué rapidez se aleja la segunda?",
+        "6.600 km/s",
+        "La relación es de proporcionalidad directa entre velocidad y "
+        "distancia.\n\n"
+        "1) La segunda galaxia está tres veces más lejos: 300 ÷ 100 = 3.\n"
+        "2) Por proporcionalidad directa, su velocidad de alejamiento es tres "
+        "veces mayor.\n"
+        "3) Calcula: 2.200 km/s · 3 = 6.600 km/s.\n\n"
+        "Esa proporcionalidad es justamente lo que se espera si el espacio se "
+        "estira de manera uniforme.",
+        [
+            ("2.200 km/s", "Supuso que todas las galaxias se alejan a la misma rapidez, que es lo contrario de lo que estableció Hubble."),
+            ("733 km/s", "Dividió por tres en lugar de multiplicar: eso correspondería a una galaxia tres veces más cercana."),
+            ("4.400 km/s", "Multiplicó por dos en vez de por tres, usando la diferencia entre las distancias y no su cociente."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "Se afirma que observar objetos muy lejanos es una forma de mirar hacia "
+        "el pasado. ¿Por qué?",
+        "La luz demora un tiempo enorme en recorrer esas distancias",
+        "La velocidad de la luz es finita, y a escalas cósmicas ese detalle se "
+        "vuelve determinante.\n\n"
+        "1) La luz viaja a unos 300.000 km por segundo: rapidísima en la vida "
+        "cotidiana, pero lenta frente a las distancias entre galaxias.\n"
+        "2) La luz de una galaxia situada a mil millones de años luz partió hace "
+        "mil millones de años.\n"
+        "3) Al observarla, vemos cómo era entonces, no cómo es ahora.\n\n"
+        "Por eso mirar más lejos permite estudiar etapas más tempranas del "
+        "universo, y de ahí que los telescopios más potentes sirvan para "
+        "reconstruir su historia.",
+        [
+            ("Los objetos lejanos se formaron después que los cercanos",
+             "Invierte la relación: lo que se ve lejos corresponde a etapas más TEMPRANAS del universo."),
+            ("La expansión del universo hace retroceder el tiempo a grandes distancias",
+             "La expansión estira las distancias y las longitudes de onda, pero no invierte el sentido del tiempo."),
+            ("Los telescopios registran la luz con un retraso proporcional a su potencia de aumento",
+             "El retraso no depende del instrumento sino de la distancia que la luz debió recorrer."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "Un estudiante sostiene que el modelo de Copérnico se impuso porque "
+        "predecía las posiciones de los planetas con mucha más exactitud que el "
+        "de Ptolomeo. Un profesor responde que, en su primera versión, no fue "
+        "así. ¿Qué ventaja ofrecía entonces el modelo copernicano?",
+        "Explicaba el movimiento retrógrado sin agregar recursos especiales",
+        "Un modelo puede preferirse por razones distintas de la exactitud "
+        "numérica.\n\n"
+        "1) Copérnico mantuvo las órbitas circulares, así que también necesitó "
+        "artificios para ajustar los datos: su precisión era comparable a la de "
+        "Ptolomeo, no superior.\n"
+        "2) Su ventaja era de ECONOMÍA explicativa: el retroceso aparente de los "
+        "planetas surge naturalmente de que la Tierra los adelanta en su órbita, "
+        "sin necesidad de postular epiciclos para cada uno.\n"
+        "3) Además ordenaba los planetas por distancia de manera coherente con "
+        "sus periodos, algo que el modelo geocéntrico dejaba sin explicación.\n\n"
+        "La superioridad predictiva llegó después, con las órbitas elípticas de "
+        "Kepler.",
+        [
+            ("Eliminaba la necesidad de suponer que la Tierra rota sobre su eje",
+             "Al contrario: el modelo copernicano exige que la Tierra rote, y es una de las cosas que lo hacían difícil de aceptar."),
+            ("Estaba respaldado por observaciones telescópicas que Ptolomeo no tuvo",
+             "El telescopio llegó más de medio siglo después de la publicación de Copérnico."),
+            ("Permitía calcular la masa de cada planeta a partir de su órbita",
+             "El cálculo de masas requiere la gravitación de Newton, muy posterior, y no forma parte del modelo copernicano."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "Dos estudiantes discuten sobre la expansión del universo. Uno dice: "
+        "'Como todas las galaxias se alejan de nosotros, debemos estar en el "
+        "centro'. ¿Cuál es el error de su razonamiento?",
+        "En un espacio que se expande, todo observador ve lo mismo",
+        "El error está en interpretar la expansión como un movimiento a través "
+        "del espacio en vez de una expansión DEL espacio.\n\n"
+        "1) Imagina puntos marcados sobre una banda elástica que se estira. "
+        "Desde cualquier punto, todos los demás se alejan.\n"
+        "2) Y se alejan más rápido los que están más lejos, exactamente como "
+        "midió Hubble.\n"
+        "3) Ninguno de esos puntos es el centro del estiramiento: la observación "
+        "es idéntica desde todos.\n\n"
+        "Ver que todo se aleja no informa sobre nuestra posición. Lo que informa "
+        "es que la separación sea proporcional a la distancia, y eso implica "
+        "justamente que no hay centro.",
+        [
+            ("Las galaxias no se alejan realmente: solo parece por el movimiento de la Tierra",
+             "El alejamiento es real y está medido; el movimiento de la Tierra se corrige y es de una escala incomparablemente menor."),
+            ("Solo se alejan las galaxias más lejanas, y las cercanas se acercan",
+             "Algunas galaxias del grupo local sí se acercan por atracción gravitatoria, pero eso es una excepción local que no cambia el argumento."),
+            ("El centro del universo existe, pero está en un punto que todavía no ha sido observado por los telescopios",
+             "El problema no es de observación pendiente: en una expansión del espacio no hay un punto central que buscar."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "Kepler dispuso de las mediciones de Tycho Brahe, las más precisas "
+        "obtenidas sin telescopio. Al ajustar la órbita circular de Marte le "
+        "quedaba un desajuste de unos 8 minutos de arco. En vez de ignorarlo, "
+        "abandonó el círculo. ¿Qué muestra esa decisión sobre el trabajo "
+        "científico?",
+        "Un desajuste pequeño puede indicar que el modelo está equivocado",
+        "La decisión de Kepler es un ejemplo de cómo se evalúa la relación entre "
+        "un modelo y la evidencia.\n\n"
+        "1) Ocho minutos de arco es una cantidad diminuta, y con mediciones menos "
+        "precisas habría pasado por error de observación.\n"
+        "2) Pero Kepler CONFIABA en la precisión de Tycho: sabía que sus datos "
+        "eran mejores que ese margen.\n"
+        "3) Entonces el desajuste no podía atribuirse al instrumento, y solo "
+        "quedaba una posibilidad: el supuesto de la órbita circular estaba mal.\n\n"
+        "La calidad de los datos es lo que convierte una discrepancia pequeña en "
+        "información. Con datos malos, el mismo desajuste no habría significado "
+        "nada.",
+        [
+            ("Los modelos deben descartarse apenas aparece cualquier discrepancia",
+             "No: una discrepancia dentro del margen de error del instrumento no es razón para descartar nada. Lo decisivo fue que este quedaba fuera de ese margen."),
+            ("Las mediciones más antiguas siempre son menos confiables que las nuevas",
+             "Kepler hizo lo contrario: se apoyó en la confiabilidad de las mediciones de Tycho para sostener su conclusión."),
+            ("Conviene ajustar los datos que no calzan para conservar un modelo que funciona bien",
+             "Eso es exactamente lo que Kepler NO hizo, y es la razón por la que su resultado tuvo valor."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "Un planeta tiene un periodo orbital de 27 años terrestres. Aplicando la "
+        "tercera ley de Kepler, ¿a qué distancia media del Sol se encuentra, en "
+        "unidades astronómicas?",
+        "9 UA",
+        "Con años y unidades astronómicas la ley queda T² = a³, y aquí hay que "
+        "despejar la distancia.\n\n"
+        "1) Reemplaza: 27² = a³, es decir 729 = a³.\n"
+        "2) Busca el número cuyo cubo es 729: 9 · 9 · 9 = 729.\n"
+        "3) La distancia es 9 unidades astronómicas.\n\n"
+        "Comprobación: 9³ = 729 y 27² = 729, así que se cumple la relación. Es "
+        "aproximadamente la situación de Saturno, a poco menos de 10 unidades y "
+        "con un periodo cercano a 29 años.",
+        [
+            ("27 UA", "Igualó la distancia al periodo, sin aplicar la relación entre cuadrado y cubo."),
+            ("3 UA", "Sacó la raíz cúbica de 27 en vez de la del cuadrado del periodo: usó T y no T²."),
+            ("729 UA", "Calculó T² = 729 y lo tomó como resultado, cuando ese valor es a³ y falta extraer la raíz cúbica."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "Se afirma que la radiación cósmica de fondo constituye una evidencia "
+        "más fuerte a favor del Big Bang que el corrimiento al rojo de las "
+        "galaxias. ¿Qué justifica esa afirmación?",
+        "Fue predicha por el modelo antes de que alguien la detectara",
+        "El peso de una evidencia depende de cuánto arriesga el modelo al "
+        "afirmarla.\n\n"
+        "1) El corrimiento al rojo se conocía ANTES: cualquier modelo propuesto "
+        "después tenía que dar cuenta de él, y de hecho el estado estacionario "
+        "también lo hacía.\n"
+        "2) La radiación de fondo, en cambio, fue una predicción: si el universo "
+        "empezó caliente y denso, tiene que quedar un resto enfriado y uniforme, "
+        "a una temperatura calculable.\n"
+        "3) Años después se detectó, con las características previstas. El "
+        "modelo se jugó a algo que podría no haber aparecido, y apareció.\n\n"
+        "Una predicción arriesgada que se cumple vale más que la explicación de "
+        "un dato ya conocido.",
+        [
+            ("Se mide con instrumentos más modernos y por lo tanto más confiables",
+             "La modernidad del instrumento no es lo que da fuerza a la evidencia; el corrimiento al rojo también se mide hoy con gran precisión."),
+            ("Proviene de objetos mucho más lejanos que las galaxias observadas",
+             "Es cierto que procede de una época más temprana, pero el punto no es la distancia sino que se trató de una predicción previa."),
+            ("Es la única observación compatible con la expansión del universo",
+             "El corrimiento al rojo también es compatible con la expansión, y de hecho fue la primera evidencia de ella."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "Al observar el cielo desde la Tierra, Marte parece detenerse, retroceder "
+        "y luego reanudar su marcha. ¿Cómo explica el modelo heliocéntrico ese "
+        "comportamiento?",
+        "La Tierra adelanta a Marte porque su órbita es más rápida",
+        "El movimiento retrógrado es un efecto de perspectiva entre dos cuerpos "
+        "que se mueven.\n\n"
+        "1) La Tierra está más cerca del Sol y recorre su órbita en menos "
+        "tiempo que Marte.\n"
+        "2) Cuando la Tierra alcanza y adelanta a Marte, la línea de visión "
+        "hacia el planeta cambia de sentido respecto del fondo de estrellas.\n"
+        "3) Visto desde la Tierra, Marte parece retroceder durante ese periodo, "
+        "y luego retoma su avance.\n\n"
+        "Es lo mismo que se ve al adelantar a un auto en la carretera: por un "
+        "momento parece ir hacia atrás respecto del paisaje del fondo, aunque "
+        "los dos avancen.",
+        [
+            ("Marte invierte realmente el sentido de su órbita durante unos meses",
+             "Ningún planeta invierte su órbita: el retroceso es aparente, resultado del punto de vista desde el que se observa."),
+            ("La atracción gravitatoria del Sol frena a Marte hasta hacerlo retroceder",
+             "La gravedad del Sol mantiene a Marte en órbita, pero no lo detiene ni lo hace retroceder."),
+            ("Marte describe un círculo pequeño mientras recorre su órbita mayor alrededor de la Tierra",
+             "Esa es la explicación de Ptolomeo mediante epiciclos, no la del modelo heliocéntrico."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "El modelo del Big Bang no describe qué ocurrió antes del instante "
+        "inicial ni qué lo causó. Un estudiante concluye que, por eso, no es una "
+        "teoría científica válida. ¿Cómo se evalúa esa conclusión?",
+        "Es incorrecta: una teoría se juzga por lo que explica y predice",
+        "El alcance limitado de un modelo no equivale a un defecto que lo "
+        "invalide.\n\n"
+        "1) Toda teoría científica tiene un dominio de aplicación. El Big Bang "
+        "describe la evolución del universo desde una fracción de segundo "
+        "después del instante inicial en adelante.\n"
+        "2) Dentro de ese dominio explica observaciones muy variadas y hace "
+        "predicciones que se cumplieron: la radiación de fondo, la proporción de "
+        "hidrógeno y helio, la relación entre distancia y corrimiento al rojo.\n"
+        "3) Que no responda preguntas fuera de su dominio marca dónde termina lo "
+        "que hoy se puede contrastar, y señala un problema abierto, no un "
+        "error.\n\n"
+        "Exigir que una teoría lo explique todo para aceptarla dejaría sin "
+        "validez a la física entera.",
+        [
+            ("Es correcta: una teoría que deja preguntas abiertas debe reemplazarse",
+             "Todas las teorías dejan preguntas abiertas; si ese fuera el criterio, no quedaría ninguna en pie."),
+            ("Es correcta, porque los modelos científicos deben explicar también las causas primeras",
+             "Las causas primeras no son contrastables con observaciones, y la ciencia trabaja con afirmaciones que se puedan poner a prueba."),
+            ("Es incorrecta, porque en realidad el modelo sí describe con detalle lo ocurrido antes del instante inicial",
+             "No lo describe: es justamente el límite reconocido del modelo, y no hay que atribuirle un alcance que no tiene."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "Se comparan dos afirmaciones sobre el sistema solar: (I) los planetas "
+        "más lejanos tardan más en dar una vuelta al Sol, y (II) esa relación "
+        "sigue la proporción entre el cuadrado del periodo y el cubo de la "
+        "distancia. ¿Qué distingue a la segunda de la primera?",
+        "La segunda es cuantitativa y permite predecir valores concretos",
+        "Las dos afirmaciones son verdaderas, pero no tienen el mismo poder.\n\n"
+        "1) La primera describe una TENDENCIA: más lejos, más lento. Es "
+        "correcta, pero admite infinitas relaciones matemáticas distintas.\n"
+        "2) La segunda fija exactamente cuál es la relación. Con ella, conocido "
+        "el periodo se calcula la distancia, y viceversa.\n"
+        "3) Por eso la segunda es contrastable de manera mucho más exigente: "
+        "basta un planeta que no cumpla la proporción para refutarla, mientras "
+        "que la primera sobreviviría igual.\n\n"
+        "Ese salto de lo cualitativo a lo cuantitativo es lo que convirtió las "
+        "regularidades observadas por Kepler en leyes.",
+        [
+            ("La segunda fue confirmada por observaciones y la primera nunca lo fue",
+             "Las dos están respaldadas por las mismas observaciones: la diferencia está en cuánto afirman, no en si fueron comprobadas."),
+            ("La primera se refiere a los planetas y la segunda a cualquier cuerpo del universo",
+             "Ambas se formularon para los planetas del sistema solar; la tercera ley se extendió después a otros sistemas."),
+            ("La segunda explica por qué ocurre esa relación, mientras la primera solo la describe",
+             "La tercera ley de Kepler tampoco explica la causa: la explicación llegó con la gravitación de Newton."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "Un equipo mide el corrimiento al rojo de cincuenta galaxias y estima la "
+        "distancia de cada una por un método independiente. Grafica velocidad de "
+        "alejamiento en función de distancia y obtiene puntos que se ajustan a "
+        "una recta que pasa por el origen. ¿Qué componente de la investigación es "
+        "esa recta?",
+        "Un resultado del que se infiere la expansión del universo",
+        "Conviene distinguir el dato obtenido de la conclusión que se extrae de "
+        "él.\n\n"
+        "1) La recta no es una hipótesis: es lo que salió del análisis de las "
+        "mediciones, es decir, un resultado.\n"
+        "2) Su forma es informativa. Que pase por el origen indica que una "
+        "galaxia a distancia cero no se alejaría, y que la velocidad sea "
+        "PROPORCIONAL a la distancia es lo que se espera si el espacio se "
+        "estira uniformemente.\n"
+        "3) De ese resultado se infiere la expansión, que es la conclusión.\n\n"
+        "El método independiente para medir la distancia es esencial: sin él, "
+        "distancia y velocidad se estarían estimando con el mismo dato y la "
+        "relación sería circular.",
+        [
+            ("Una hipótesis sobre el comportamiento de las galaxias lejanas",
+             "La hipótesis se formula antes de medir; aquí la recta resume mediciones ya realizadas."),
+            ("Una variable controlada del diseño experimental",
+             "Las variables controladas se fijan de antemano; una recta obtenida del análisis de datos no es una variable."),
+            ("Un procedimiento para estimar la distancia a la que se encuentra cada galaxia",
+             "La distancia se midió por un método independiente ANTES de construir el gráfico; usarla después para estimarla sería circular."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "Galileo defendió que un observador dentro de un barco que navega con "
+        "velocidad constante no puede determinar, mediante experimentos "
+        "mecánicos hechos bajo cubierta, si el barco se mueve o está detenido. "
+        "¿Qué objeción al heliocentrismo respondía este argumento?",
+        "Que si la Tierra se moviera, lo notaríamos en los objetos que caen",
+        "La objeción era mecánica, y Galileo la respondió con un argumento "
+        "mecánico.\n\n"
+        "1) Se decía que, si la Tierra se moviera, una piedra soltada desde una "
+        "torre debería caer desplazada, porque el suelo se habría corrido "
+        "mientras la piedra caía.\n"
+        "2) Galileo respondió que la piedra COMPARTE el movimiento de la Tierra "
+        "antes de ser soltada y lo conserva mientras cae.\n"
+        "3) Por eso cae al pie de la torre, igual que un objeto soltado en el "
+        "mástil de un barco en movimiento cae al pie del mástil.\n\n"
+        "El principio es que las leyes de la mecánica son las mismas en "
+        "cualquier sistema que se mueva con velocidad constante: el movimiento "
+        "uniforme es indetectable desde adentro.",
+        [
+            ("Que las estrellas deberían mostrar un desplazamiento anual",
+             "Esa es la objeción del paralaje, de naturaleza astronómica, y se resolvió midiéndolo recién en el siglo XIX."),
+            ("Que la Luna quedaría atrás si la Tierra se desplazara alrededor del Sol",
+             "Esa objeción la respondieron los satélites de Júpiter, no el argumento del barco."),
+            ("Que un cuerpo tan pesado como la Tierra no podría ser puesto en movimiento por ninguna fuerza conocida",
+             "Es una objeción sobre la causa del movimiento, y el argumento del barco trata de cómo se detectaría un movimiento ya existente."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_cosmologia", "facil",
+        "En la física de Aristóteles, el mundo se dividía en una región terrestre "
+        "y una región celeste. ¿Qué se afirmaba de la región celeste?",
+        "Que era perfecta e inmutable",
+        "La división no era solo geográfica: implicaba dos conjuntos de leyes "
+        "distintas.\n\n"
+        "1) En la región terrestre, bajo la Luna, los cuerpos nacían, cambiaban "
+        "y se corrompían, y se movían en línea recta hacia su lugar natural.\n"
+        "2) En la región celeste, de la Luna hacia afuera, los cuerpos eran "
+        "eternos, incorruptibles y se movían en círculos perfectos.\n"
+        "3) Esa separación es la que Newton terminó de derribar, al mostrar que "
+        "una misma ley de gravitación rige la caída de una manzana y la órbita "
+        "de la Luna.",
+        [
+            ("Que se regía por las mismas leyes que la Tierra",
+             "Justamente lo contrario: la unificación de ambas regiones bajo las mismas leyes es un logro muy posterior."),
+            ("Que estaba compuesta por los mismos cuatro elementos que la Tierra",
+             "Aristóteles postuló un quinto elemento, el éter, exclusivo de la región celeste."),
+            ("Que cambiaba constantemente y por eso los planetas modificaban su brillo",
+             "El cambio de brillo se observaba, pero el modelo lo atribuía a la distancia y no a una transformación de los cuerpos celestes."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "facil",
+        "Con su telescopio, Galileo observó que la Luna tiene montañas y cráteres "
+        "y que el Sol presenta manchas que cambian. ¿Contra qué idea de la época "
+        "iban estas observaciones?",
+        "Contra la idea de que los cuerpos celestes son perfectos",
+        "Las dos observaciones apuntan a lo mismo: irregularidad y cambio donde "
+        "se suponía que no podía haberlos.\n\n"
+        "1) Una Luna con montañas y cráteres es un cuerpo áspero e irregular, "
+        "parecido a la Tierra, no una esfera perfecta.\n"
+        "2) Unas manchas que aparecen, se desplazan y desaparecen muestran que "
+        "el Sol cambia.\n"
+        "3) La región celeste dejaba así de ser incorruptible, y con ello se "
+        "debilitaba la idea de que el cielo y la Tierra son de naturaleza "
+        "distinta.",
+        [
+            ("Contra la idea de que la Luna gira alrededor de la Tierra",
+             "Ese punto no estaba en discusión: todos los modelos coincidían en que la Luna orbita la Tierra."),
+            ("Contra la idea de que el Sol es una estrella",
+             "Reconocer al Sol como una estrella es posterior y no se deduce de la observación de sus manchas."),
+            ("Contra la idea de que la Tierra tiene forma esférica y no plana",
+             "La esfericidad de la Tierra estaba establecida desde la Antigüedad y no era objeto de debate entre astrónomos."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "facil",
+        "Un año luz es la unidad que se usa para expresar distancias "
+        "astronómicas. ¿Qué mide exactamente?",
+        "La distancia que recorre la luz en un año",
+        "El nombre confunde porque incluye la palabra año, pero la magnitud es "
+        "una distancia.\n\n"
+        "1) La luz viaja a unos 300.000 kilómetros por segundo.\n"
+        "2) Multiplicando esa rapidez por los segundos que tiene un año se "
+        "obtiene una distancia enorme, del orden de nueve billones y medio de "
+        "kilómetros.\n"
+        "3) Esa distancia es un año luz. Decir que una estrella está a cuatro "
+        "años luz es decir a qué distancia está, y de paso, que su luz demoró "
+        "cuatro años en llegar.",
+        [
+            ("El tiempo que tarda la luz en llegar desde el Sol",
+             "Es una distancia, no un tiempo, y además la luz del Sol tarda unos ocho minutos, no un año."),
+            ("La cantidad de luz que emite una estrella durante un año",
+             "Esa magnitud sería una energía o una potencia, y se mide con otras unidades."),
+            ("El tiempo que demora la Tierra en completar una vuelta alrededor del Sol",
+             "Eso es simplemente un año, y no tiene relación con la distancia que la unidad expresa."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "facil",
+        "Según las estimaciones actuales, ¿cuál es aproximadamente la edad del "
+        "universo?",
+        "Unos 13.800 millones de años",
+        "La cifra se obtiene por varios caminos independientes que coinciden.\n\n"
+        "1) Extrapolando hacia atrás la expansión medida se llega a un instante "
+        "inicial hace unos 13.800 millones de años.\n"
+        "2) El análisis detallado de la radiación cósmica de fondo entrega un "
+        "valor compatible.\n"
+        "3) Además, ninguna estrella datada resulta más antigua que esa cifra, "
+        "lo que sería una contradicción evidente si el valor estuviera mal.\n\n"
+        "Como referencia, la Tierra tiene unos 4.500 millones de años: es "
+        "bastante más joven que el universo.",
+        [
+            ("Unos 4.500 millones de años",
+             "Esa es la edad estimada de la Tierra y del sistema solar, no la del universo."),
+            ("Unos 100.000 años",
+             "Esa cifra es del orden de la historia de nuestra especie, no de la del universo."),
+            ("Unos 13.800 años, es decir, poco después del final de la última glaciación",
+             "Confunde la escala: son 13.800 MILLONES de años, un factor de un millón de diferencia."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "facil",
+        "El sistema solar se formó a partir de una nube de gas y polvo que se "
+        "contrajo por efecto de la gravedad. ¿Qué se formó en el centro de esa "
+        "nube?",
+        "El Sol",
+        "La contracción concentra la mayor parte de la masa en el centro.\n\n"
+        "1) La nube se contrajo por su propia gravedad, y al hacerlo giró cada "
+        "vez más rápido y se aplanó en un disco.\n"
+        "2) En el centro se acumuló la mayor parte del material, hasta alcanzar "
+        "temperatura y presión suficientes para iniciar reacciones nucleares: "
+        "así nació el Sol.\n"
+        "3) En el disco que quedó girando alrededor se fueron agrupando los "
+        "granos de polvo, formando los planetas.\n\n"
+        "Por eso todos los planetas orbitan aproximadamente en un mismo plano y "
+        "en el mismo sentido: heredaron el giro del disco.",
+        [
+            ("La Tierra, y alrededor de ella el resto del sistema",
+             "La Tierra se formó en el disco, como los demás planetas: nunca ocupó el centro del sistema."),
+            ("Un agujero negro que atrae a todos los planetas",
+             "El Sol es una estrella común; el sistema solar no contiene ningún agujero negro."),
+            ("El cinturón de asteroides, que después se dispersó hacia las órbitas exteriores",
+             "El cinturón de asteroides está entre Marte y Júpiter y es material que no llegó a formar un planeta, no el origen del sistema."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "Copérnico notó que, ordenando los planetas por el tiempo que tardan en "
+        "dar una vuelta completa, quedaban también ordenados por su distancia al "
+        "Sol. ¿Por qué ese hecho favorecía a su modelo?",
+        "El modelo geocéntrico no daba ninguna razón para ese orden",
+        "El valor de un modelo se mide también por cuántas coincidencias deja de "
+        "necesitar.\n\n"
+        "1) En el heliocentrismo, que los planetas lejanos tarden más es una "
+        "consecuencia esperable: recorren órbitas más grandes y, además, se "
+        "mueven más lento.\n"
+        "2) En el geocentrismo, en cambio, el orden de los planetas y sus "
+        "periodos eran datos independientes: nada obligaba a que coincidieran.\n"
+        "3) Cuando un modelo convierte en consecuencia necesaria lo que el otro "
+        "solo puede aceptar como casualidad, gana poder explicativo.\n\n"
+        "Kepler formuló después esa regularidad con precisión en su tercera ley.",
+        [
+            ("Permitía calcular por primera vez la masa de cada planeta",
+             "El cálculo de masas requiere la gravitación de Newton, y no se desprende del orden de los periodos."),
+            ("Demostraba que las órbitas son elípticas",
+             "La forma elíptica la estableció Kepler bastante después, a partir de los datos de Marte."),
+            ("Probaba que el Sol es mucho más masivo que cualquiera de los planetas del sistema",
+             "Es cierto que lo es, pero eso no se deduce del orden de los periodos ni era parte del argumento de Copérnico."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "Tycho Brahe propuso un modelo intermedio: los planetas giran alrededor "
+        "del Sol, pero el Sol con todos ellos gira alrededor de una Tierra "
+        "inmóvil. ¿Qué ventaja buscaba con esa combinación?",
+        "Explicar las observaciones sin tener que mover la Tierra",
+        "El modelo intenta quedarse con lo mejor de los dos, y la razón es "
+        "empírica además de doctrinal.\n\n"
+        "1) Reproduce todo lo que el heliocentrismo explica bien, como el "
+        "movimiento retrógrado y las fases de Venus, porque los planetas sí "
+        "orbitan el Sol.\n"
+        "2) Al mismo tiempo evita la principal objeción observacional contra "
+        "Copérnico: la ausencia de paralaje estelar, que Tycho había buscado sin "
+        "encontrar con los mejores instrumentos de la época.\n"
+        "3) Si la Tierra no se mueve, no hay paralaje que explicar.\n\n"
+        "El modelo era geométricamente equivalente al de Copérnico para las "
+        "observaciones disponibles: no se podía decidir entre ambos con los datos "
+        "de entonces.",
+        [
+            ("Simplificar los cálculos eliminando por completo los epiciclos",
+             "El modelo de Tycho seguía requiriendo ajustes; su motivación no era la simplicidad del cálculo."),
+            ("Incorporar las órbitas elípticas que él mismo había descubierto",
+             "Las elipses las dedujo Kepler a partir de los datos de Tycho, después de la muerte de este."),
+            ("Explicar por qué las estrellas se ven fijas pese a que el universo se expande",
+             "La expansión del universo es un descubrimiento del siglo XX y no formaba parte del problema."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "Se suele preguntar por qué la Luna no cae sobre la Tierra si la gravedad "
+        "la atrae. ¿Cuál es la respuesta correcta según la mecánica newtoniana?",
+        "Sí cae, pero su movimiento lateral la mantiene en órbita",
+        "El error está en oponer caer y orbitar, cuando orbitar ES caer.\n\n"
+        "1) La Luna se mueve con una velocidad perpendicular a la línea que la "
+        "une con la Tierra.\n"
+        "2) La gravedad la desvía continuamente de la línea recta, es decir, la "
+        "hace caer hacia la Tierra.\n"
+        "3) Pero mientras cae, su movimiento lateral la lleva más allá, así que "
+        "la superficie terrestre se le sigue 'escapando': el resultado es una "
+        "trayectoria cerrada.\n\n"
+        "Newton lo ilustró con un cañón en una montaña muy alta: a poca "
+        "velocidad el proyectil cae cerca; con la velocidad justa, cae "
+        "eternamente sin llegar nunca al suelo.",
+        [
+            ("La gravedad terrestre no alcanza a una distancia tan grande",
+             "La gravedad disminuye con la distancia pero no se anula, y es justamente la que mantiene a la Luna en órbita."),
+            ("La fuerza centrífuga empuja a la Luna hacia afuera y equilibra la gravedad",
+             "La llamada fuerza centrífuga no es una fuerza real sobre la Luna: aparece solo al describir el movimiento desde un sistema que gira."),
+            ("La atracción del Sol sobre la Luna compensa exactamente la de la Tierra",
+             "El Sol atrae a la Luna, pero eso no cancela la atracción terrestre: la Luna sigue orbitando la Tierra."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "Si el Sol dejara de ejercer atracción gravitatoria sobre la Tierra de "
+        "manera instantánea, ¿qué trayectoria seguiría nuestro planeta?",
+        "Una línea recta, tangente a su órbita",
+        "Sin fuerza neta, se aplica el principio de inercia.\n\n"
+        "1) La Tierra tiene en cada instante una velocidad tangente a su "
+        "órbita.\n"
+        "2) La gravedad del Sol es lo que la desvía continuamente de esa "
+        "dirección y curva su trayectoria.\n"
+        "3) Si esa fuerza desapareciera, no quedaría nada que la desviara: "
+        "seguiría en línea recta, con rapidez constante, en la dirección que "
+        "llevaba en ese instante.\n\n"
+        "La órbita no es el estado natural del movimiento: el estado natural es "
+        "la línea recta, y la órbita requiere una fuerza que la mantenga.",
+        [
+            ("Una espiral que se abriría lentamente hacia afuera",
+             "Una espiral requeriría una fuerza que siguiera actuando; sin ninguna fuerza el movimiento es rectilíneo."),
+            ("Seguiría girando por inercia en la misma órbita circular",
+             "La inercia conserva la velocidad en línea recta, no el movimiento circular, que necesita una fuerza dirigida al centro."),
+            ("Se detendría gradualmente al perder la energía que le entregaba el Sol",
+             "El Sol no le entrega energía de movimiento a la Tierra, y sin fuerzas que la frenen no habría razón para que se detuviera."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "La galaxia de Andrómeda muestra corrimiento al azul, es decir, se acerca "
+        "a la Vía Láctea, mientras que casi todas las demás galaxias se alejan. "
+        "¿Contradice esto la expansión del universo?",
+        "No, porque a escala local domina la atracción gravitatoria",
+        "La expansión es una tendencia a gran escala, no una regla que se cumpla "
+        "punto por punto.\n\n"
+        "1) Andrómeda y la Vía Láctea pertenecen al mismo grupo local y están "
+        "relativamente cerca.\n"
+        "2) A esa escala, la atracción gravitatoria entre ambas es más intensa "
+        "que el efecto de la expansión, y las hace acercarse.\n"
+        "3) La expansión se manifiesta con claridad entre cúmulos de galaxias "
+        "muy separados, donde la gravedad mutua es despreciable.\n\n"
+        "Por lo mismo, la expansión no separa a los átomos de un cuerpo ni a los "
+        "planetas de su estrella: ahí también dominan otras fuerzas.",
+        [
+            ("Sí, y por eso el modelo de expansión se considera provisional",
+             "El caso está previsto por el modelo: no constituye una anomalía sin resolver."),
+            ("No, porque el corrimiento al azul de Andrómeda es un error de medición",
+             "La medición es sólida y se ha repetido; la explicación no pasa por descartar el dato."),
+            ("No, porque la expansión solo afecta al espacio que hay entre las estrellas de una misma galaxia",
+             "Es al revés: dentro de una galaxia la gravedad domina, y la expansión se manifiesta entre sistemas muy separados."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "Los elementos más pesados que el hierro no pudieron formarse en el "
+        "universo primitivo. ¿Dónde se originaron los átomos pesados que hoy "
+        "componen la Tierra?",
+        "En el interior de las estrellas y en sus explosiones finales",
+        "El universo primitivo solo alcanzó a producir los elementos más "
+        "livianos.\n\n"
+        "1) En los primeros minutos se formaron sobre todo hidrógeno y helio: "
+        "la expansión enfrió el universo antes de que pudieran armarse núcleos "
+        "más pesados.\n"
+        "2) Las estrellas fusionan hidrógeno en helio y, las más masivas, "
+        "continúan hasta elementos cada vez más pesados.\n"
+        "3) Al morir, las estrellas masivas explotan y dispersan ese material "
+        "enriquecido, que pasa a formar parte de nuevas nubes, estrellas y "
+        "planetas.\n\n"
+        "El carbono de un ser vivo y el hierro de su sangre se formaron dentro "
+        "de estrellas anteriores al Sol.",
+        [
+            ("En el momento del Big Bang, junto con el hidrógeno y el helio",
+             "El universo se enfrió demasiado rápido: en esa etapa solo se formaron los núcleos más livianos."),
+            ("En el núcleo de los planetas, por la presión y el calor internos",
+             "La presión y la temperatura del interior de un planeta están muchísimos órdenes de magnitud por debajo de lo necesario para fusionar núcleos."),
+            ("En el espacio entre las galaxias, donde el vacío permite que los átomos se combinen libremente",
+             "En el espacio intergaláctico la densidad es bajísima y no hay energía disponible para la fusión nuclear."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "La luz del Sol demora unos 8 minutos en llegar a la Tierra, y la de la "
+        "estrella más cercana después del Sol, unos 4 años. ¿Qué implica esto "
+        "para lo que observamos?",
+        "Vemos el Sol como era hace 8 minutos y esa estrella, hace 4 años",
+        "Toda observación astronómica es una observación del pasado.\n\n"
+        "1) La información nos llega en la luz, y la luz tarda en recorrer la "
+        "distancia.\n"
+        "2) Lo que vemos del Sol partió de él hace unos 8 minutos: si se apagara "
+        "ahora, lo seguiríamos viendo brillar ese rato.\n"
+        "3) De esa estrella vemos cómo era hace unos 4 años.\n\n"
+        "El retraso es despreciable en la vida diaria, pero al observar galaxias "
+        "a miles de millones de años luz se vuelve la herramienta principal para "
+        "estudiar el universo joven.",
+        [
+            ("Vemos ambos objetos exactamente como son en este instante",
+             "Eso exigiría que la luz viajara a velocidad infinita, y su rapidez es finita y bien medida."),
+            ("Vemos el Sol en tiempo real y la estrella con 4 años de retraso",
+             "El retraso existe en los dos casos: para el Sol es de unos 8 minutos, pequeño pero real."),
+            ("Vemos el Sol con 8 minutos de adelanto respecto de la estrella, porque está más cerca",
+             "No hay adelantos: hay retrasos distintos, y el del Sol es simplemente menor."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "Un planeta se encuentra a 25 unidades astronómicas del Sol. Usando la "
+        "tercera ley de Kepler en la forma T² = a³, ¿cuál es aproximadamente su "
+        "periodo orbital?",
+        "125 años",
+        "Hay que calcular el cubo de la distancia y luego extraer la raíz "
+        "cuadrada.\n\n"
+        "1) Calcula a³: 25³ = 15.625.\n"
+        "2) Entonces T² = 15.625.\n"
+        "3) Saca la raíz: T = 125, porque 125 · 125 = 15.625.\n\n"
+        "Otra vía más corta: como a = 25 = 5², se tiene a³ = 5⁶, y su raíz "
+        "cuadrada es 5³ = 125.",
+        [
+            ("25 años", "Igualó el periodo a la distancia sin aplicar la relación entre el cuadrado y el cubo."),
+            ("15.625 años", "Calculó a³ y se quedó ahí: ese valor es T², y falta extraer la raíz cuadrada."),
+            ("625 años", "Elevó la distancia al cuadrado en lugar de al cubo y no sacó la raíz."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "Las observaciones de supernovas lejanas indican que la expansión del "
+        "universo no se está frenando, sino acelerando. ¿Por qué ese resultado "
+        "fue sorprendente?",
+        "Se esperaba que la gravedad frenara la expansión",
+        "El resultado contradecía la predicción que salía de lo que se conocía.\n\n"
+        "1) Toda la materia del universo se atrae gravitatoriamente, y esa "
+        "atracción actúa en contra de la expansión.\n"
+        "2) La pregunta abierta era si la expansión se frenaría hasta detenerse "
+        "o seguiría eternamente cada vez más lenta. Las dos opciones suponían "
+        "FRENADO.\n"
+        "3) Encontrar aceleración obligó a postular algo que no estaba en el "
+        "inventario: una componente que actúa en sentido opuesto a la gravedad, "
+        "llamada provisionalmente energía oscura.\n\n"
+        "Es un buen ejemplo de cómo una observación puede abrir un problema en "
+        "vez de cerrarlo.",
+        [
+            ("Se esperaba que el universo estuviera estático y sin cambios",
+             "La expansión estaba establecida desde Hubble: lo discutido era a qué ritmo, no si ocurría."),
+            ("Se esperaba que las supernovas lejanas no fueran observables",
+             "Las supernovas lejanas se venían observando; el hallazgo salió justamente de medir su brillo con cuidado."),
+            ("Se esperaba que la expansión fuera distinta en cada dirección del cielo",
+             "Lo esperado y lo observado es que la expansión sea homogénea; la sorpresa estuvo en la aceleración."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "Si el cielo nocturno está lleno de estrellas en todas direcciones, "
+        "¿por qué es oscuro en lugar de brillar por completo?",
+        "El universo tiene una edad finita y no toda la luz alcanzó a llegar",
+        "La pregunta parece ingenua, pero es una de las más productivas de la "
+        "cosmología.\n\n"
+        "1) En un universo infinito, eterno y con estrellas repartidas por "
+        "todas partes, cualquier línea de visión terminaría en la superficie de "
+        "alguna estrella, y el cielo entero brillaría.\n"
+        "2) Como el universo tiene una edad finita, solo nos llega la luz de las "
+        "fuentes lo bastante cercanas como para que su luz haya alcanzado a "
+        "recorrer la distancia.\n"
+        "3) A eso se suma que la expansión corre la luz de las fuentes más "
+        "lejanas hacia longitudes de onda que ya no son visibles.\n\n"
+        "La oscuridad del cielo es, entonces, una pista sobre la historia del "
+        "universo.",
+        [
+            ("Porque la mayoría de las estrellas ya se apagaron hace mucho tiempo",
+             "Las estrellas se siguen formando de manera continua, y las que vemos están efectivamente brillando."),
+            ("Porque el polvo interestelar absorbe toda la luz que viene de lejos",
+             "Si el polvo absorbiera esa energía durante tiempo indefinido, terminaría calentándose y emitiendo, con lo que el problema reaparece."),
+            ("Porque la atmósfera terrestre bloquea la luz de las estrellas más débiles durante la noche",
+             "Desde el espacio, fuera de la atmósfera, el cielo nocturno también se ve oscuro."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "Una investigación quiere estimar la rapidez de expansión del universo. "
+        "Para cada galaxia se mide el corrimiento al rojo y se determina la "
+        "distancia mediante un método independiente. ¿Por qué es indispensable "
+        "que el método de distancia sea independiente?",
+        "Si no, se estaría deduciendo la distancia del mismo dato que se quiere relacionar",
+        "El riesgo es construir una relación que se cumple por como se hicieron "
+        "los cálculos y no por como es el universo.\n\n"
+        "1) La investigación busca establecer si existe una relación entre "
+        "distancia y velocidad de alejamiento.\n"
+        "2) Si la distancia se estimara A PARTIR del corrimiento al rojo, la "
+        "relación aparecería en el gráfico necesariamente, aunque no existiera "
+        "en la naturaleza.\n"
+        "3) Solo midiendo la distancia por otra vía, por ejemplo el brillo de "
+        "cierto tipo de estrella variable, la coincidencia se vuelve "
+        "informativa.\n\n"
+        "Fue exactamente lo que permitió a Hubble sostener su conclusión.",
+        [
+            ("Porque el corrimiento al rojo es una medición poco precisa",
+             "El corrimiento al rojo se mide con gran precisión: el problema no es de precisión sino de circularidad."),
+            ("Porque las distancias astronómicas cambian con el tiempo",
+             "Cambian, pero muy lentamente frente al tiempo de una observación: no es esa la razón."),
+            ("Porque cada galaxia tiene una composición química distinta y eso altera su espectro",
+             "Las líneas espectrales de un mismo elemento son las mismas en cualquier galaxia; por eso sirven de referencia."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "Un estudiante afirma que el modelo geocéntrico 'era simplemente falso y "
+        "por eso se abandonó'. ¿Qué precisión conviene hacer sobre esa "
+        "afirmación?",
+        "Predecía bien las posiciones observadas durante siglos",
+        "Un modelo puede describir bien los datos y aun así no corresponder a la "
+        "estructura real del sistema.\n\n"
+        "1) El modelo de Ptolomeo permitía calcular con buena aproximación dónde "
+        "se vería cada planeta, y por eso se usó durante casi mil quinientos "
+        "años.\n"
+        "2) Lo que se le fue haciendo insostenible fue otra cosa: cada nueva "
+        "observación exigía agregar recursos adicionales, y llegaron "
+        "observaciones que directamente no podía acomodar, como las fases de "
+        "Venus.\n"
+        "3) Fue reemplazado por un modelo que explicaba lo mismo con menos "
+        "supuestos y que además predecía cosas nuevas.\n\n"
+        "Los modelos no se descartan por ser falsos en abstracto, sino porque "
+        "aparece otro que rinde más.",
+        [
+            ("Nunca logró predecir el movimiento de ningún planeta",
+             "Sí lo lograba con precisión razonable: de otro modo no se habría usado durante siglos para calendarios y navegación."),
+            ("Se abandonó porque contradecía las leyes de Newton",
+             "Se abandonó antes de Newton; fueron las observaciones telescópicas y el modelo de Kepler los que zanjaron la cuestión."),
+            ("Era equivalente al modelo heliocéntrico y la elección entre ambos fue arbitraria",
+             "No eran equivalentes: el de Ptolomeo no admite un Venus lleno, y esa observación decidió la cuestión."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "La luz de una galaxia lejana muestra las líneas del hidrógeno "
+        "desplazadas hacia el rojo. Un estudiante concluye que esa galaxia está "
+        "formada por un elemento distinto del hidrógeno. ¿Dónde está el error?",
+        "El patrón de líneas se conserva; lo que cambia es su posición",
+        "Un espectro identifica elementos por el PATRÓN de líneas, no por su "
+        "ubicación absoluta.\n\n"
+        "1) Cada elemento produce un conjunto de líneas con separaciones "
+        "relativas características, que funcionan como una huella.\n"
+        "2) En la galaxia lejana ese conjunto aparece completo y con las mismas "
+        "proporciones, solo que corrido en bloque hacia el rojo.\n"
+        "3) Un elemento distinto daría otro patrón, con otro número de líneas y "
+        "otras separaciones, no el mismo patrón desplazado.\n\n"
+        "Por eso el corrimiento se interpreta como movimiento de la fuente y no "
+        "como un cambio de composición: es justamente lo que permite medir la "
+        "velocidad.",
+        [
+            ("El hidrógeno no produce líneas espectrales observables a esa distancia",
+             "Las líneas del hidrógeno son las más usadas justamente por ser intensas y observables en galaxias muy lejanas."),
+            ("Las galaxias lejanas no tienen elementos químicos identificables",
+             "Su composición se determina rutinariamente por espectroscopía, y es predominantemente hidrógeno y helio."),
+            ("El corrimiento al rojo se debe a que la galaxia es más caliente y eso cambia los elementos que emiten",
+             "La temperatura cambia la intensidad relativa de las líneas, pero no desplaza todo el patrón en bloque."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "Se comparan dos afirmaciones: (I) el universo se expande, y (II) las "
+        "galaxias se alejan unas de otras moviéndose a través del espacio. ¿Por "
+        "qué la segunda no es una buena formulación de la primera?",
+        "En la expansión es el espacio el que se estira, no las galaxias las que viajan",
+        "La diferencia parece de matiz pero tiene consecuencias observables.\n\n"
+        "1) Si las galaxias simplemente viajaran por el espacio, habría que "
+        "explicar por qué todas se apartan de un mismo punto, y ese punto sería "
+        "un centro.\n"
+        "2) Si lo que crece es la distancia entre puntos del espacio, no hay "
+        "centro: desde cualquier galaxia se observa lo mismo.\n"
+        "3) Además, la expansión del espacio permite que la separación entre "
+        "galaxias muy lejanas aumente más rápido de lo que un objeto podría "
+        "viajar por el espacio, algo imposible bajo la otra descripción.\n\n"
+        "La formulación correcta es también la que explica por qué la luz llega "
+        "estirada: la longitud de onda creció junto con el espacio que recorrió.",
+        [
+            ("La segunda es correcta y la primera es solo una manera figurada de decirlo",
+             "Es al revés: la descripción precisa es la expansión del espacio, y la otra es la simplificación que genera confusiones."),
+            ("Las galaxias en realidad están inmóviles y solo parece que se alejan",
+             "La separación entre ellas aumenta realmente; lo que se discute es el mecanismo, no si ocurre."),
+            ("La segunda supone que el universo tiene un borde exterior hacia el cual se desplazan las galaxias",
+             "Es una consecuencia posible de esa mala formulación, pero el problema de fondo es confundir estiramiento del espacio con desplazamiento en él."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "En un modelo a escala, el Sol se representa con una esfera de 10 cm de "
+        "diámetro. Sabiendo que la Tierra está a unos 150 millones de kilómetros "
+        "y que el diámetro real del Sol es de unos 1,4 millones de kilómetros, "
+        "¿a qué distancia aproximada habría que ubicar la Tierra?",
+        "Cerca de 11 m",
+        "En un modelo a escala, todas las longitudes se reducen en la misma "
+        "proporción.\n\n"
+        "1) Calcula cuántas veces cabe el diámetro del Sol en la distancia "
+        "Tierra-Sol: 150.000.000 ÷ 1.400.000, que es aproximadamente 107.\n"
+        "2) Esa razón debe conservarse en el modelo: la Tierra va a 107 veces el "
+        "diámetro de la esfera.\n"
+        "3) Calcula: 107 · 10 cm = 1.070 cm, es decir, cerca de 11 metros.\n\n"
+        "El resultado muestra algo que los dibujos escolares nunca respetan: a "
+        "escala, el sistema solar es sobre todo espacio vacío.",
+        [
+            ("Cerca de 1,1 m", "Se equivocó en un factor 10 al pasar los 1.070 cm a metros."),
+            ("Cerca de 107 m", "Multiplicó por 100 cm en vez de por los 10 cm que mide la esfera del modelo."),
+            ("Cerca de 15 cm, porque la Tierra está muy cerca del Sol en comparación con el resto del sistema",
+             "La cercanía es relativa a los planetas exteriores; frente al tamaño del Sol la distancia sigue siendo unas cien veces su diámetro."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "Un equipo quiere comprobar la tercera ley de Kepler con datos del "
+        "sistema solar. Grafica el cuadrado del periodo en función del cubo del "
+        "semieje mayor para los ocho planetas. Si la ley se cumple, ¿qué debe "
+        "obtener?",
+        "Puntos alineados sobre una recta que pasa por el origen",
+        "Cuando dos magnitudes son directamente proporcionales, el gráfico de una "
+        "contra la otra es una recta por el origen.\n\n"
+        "1) La ley dice que T² es proporcional a a³.\n"
+        "2) Al poner T² en un eje y a³ en el otro, la proporcionalidad se "
+        "traduce en una recta.\n"
+        "3) Debe pasar por el ORIGEN porque un semieje nulo correspondería a un "
+        "periodo nulo: no hay término constante que sumar.\n\n"
+        "La pendiente de esa recta es la constante de proporcionalidad, que "
+        "depende de la masa del cuerpo central. Por eso el mismo gráfico hecho "
+        "con las lunas de Júpiter da una recta de otra pendiente.",
+        [
+            ("Una curva creciente cada vez más empinada",
+             "Esa forma aparecería al graficar T contra a directamente; al elevar cada variable como indica la ley, la relación se vuelve lineal."),
+            ("Una recta horizontal, porque la relación es constante para todos los planetas",
+             "Lo constante es el COCIENTE entre T² y a³, no el valor de T², que cambia mucho de un planeta a otro."),
+            ("Puntos alineados sobre una recta que corta el eje vertical por encima del origen",
+             "Un corte por encima del origen implicaría que un planeta de semieje nulo tendría un periodo distinto de cero."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "Un texto afirma que la radiación cósmica de fondo 'proviene del borde "
+        "del universo'. ¿Qué corrección merece esa formulación?",
+        "Proviene de todas partes, y de una época y no de un lugar",
+        "La imagen de un borde traslada al espacio algo que corresponde al "
+        "tiempo.\n\n"
+        "1) La radiación de fondo se emitió cuando el universo entero se volvió "
+        "transparente, unos cientos de miles de años después del inicio.\n"
+        "2) Ese proceso ocurrió en TODO el espacio a la vez, no en una frontera.\n"
+        "3) Lo que hoy detectamos es la radiación emitida entonces desde la "
+        "distancia justa para que su luz recién nos alcance. Por eso llega desde "
+        "todas las direcciones por igual.\n\n"
+        "Lo que suele llamarse borde es el límite de lo OBSERVABLE, que depende "
+        "de cuánto ha viajado la luz, y es distinto para cada observador.",
+        [
+            ("Proviene del centro del universo, que está en dirección opuesta a la Vía Láctea",
+             "No hay un centro del universo, y la radiación llega con la misma intensidad desde todas las direcciones."),
+            ("Proviene de las galaxias más lejanas que se han logrado observar",
+             "Es anterior a la formación de cualquier galaxia: por eso permite estudiar una época previa a ellas."),
+            ("Proviene efectivamente de un borde, pero ese borde se aleja de nosotros con la expansión",
+             "El límite de lo observable sí se modifica, pero no es un borde físico del universo ni el lugar donde se emitió la radiación."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "Ordena estos hitos según el aporte que hicieron: Kepler estableció la "
+        "forma de las órbitas, Newton dio con la causa del movimiento y Galileo "
+        "aportó observaciones que descartaron un modelo. ¿Qué caracteriza al "
+        "aporte de Newton frente a los otros dos?",
+        "Explicó con una sola causa lo que los otros habían descrito",
+        "Conviene distinguir describir de explicar.\n\n"
+        "1) Galileo aportó OBSERVACIONES nuevas que un modelo no podía "
+        "acomodar: las fases de Venus, los satélites de Júpiter.\n"
+        "2) Kepler aportó una DESCRIPCIÓN precisa: elipses, áreas iguales, la "
+        "relación entre periodo y distancia. Sus leyes resumen los datos con "
+        "exactitud, pero no dicen por qué.\n"
+        "3) Newton propuso una CAUSA: una fuerza de atracción entre masas, de la "
+        "que se deducen las tres leyes de Kepler y que además rige la caída de "
+        "los cuerpos en la Tierra.\n\n"
+        "El salto es de regularidad a explicación unificada.",
+        [
+            ("Reunió más observaciones que ninguno de los dos anteriores",
+             "Newton no destacó por acumular observaciones: trabajó sobre las regularidades ya establecidas por otros."),
+            ("Corrigió los errores de medición que Kepler había cometido",
+             "Newton no corrigió las leyes de Kepler: las dedujo, mostrando que se seguían de su ley de gravitación."),
+            ("Fue el primero en sostener que la Tierra gira alrededor del Sol",
+             "El heliocentrismo ya estaba establecido y ampliamente aceptado entre los astrónomos cuando Newton publicó su obra."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "El destino del universo depende de la relación entre su densidad y un "
+        "valor llamado densidad crítica. ¿Qué ocurriría si la densidad de "
+        "materia fuera muy superior a ese valor?",
+        "La gravedad frenaría la expansión hasta invertirla",
+        "El razonamiento es análogo al de lanzar un objeto hacia arriba: si la "
+        "atracción es suficiente, vuelve.\n\n"
+        "1) Toda la materia del universo se atrae, y esa atracción actúa contra "
+        "la expansión.\n"
+        "2) Si hay materia de sobra, la atracción alcanza para frenar la "
+        "expansión, detenerla e invertirla.\n"
+        "3) El universo entraría entonces en contracción, en el escenario "
+        "conocido como Big Crunch.\n\n"
+        "Con una densidad menor que la crítica, la expansión continuaría "
+        "indefinidamente; con una densidad exactamente igual, se frenaría cada "
+        "vez más sin llegar a detenerse. Las observaciones actuales complican "
+        "este esquema, porque la expansión se está acelerando.",
+        [
+            ("La expansión se aceleraría por el mayor efecto de la gravedad",
+             "La gravedad es atractiva: más materia frena más, no acelera."),
+            ("El universo alcanzaría un tamaño fijo de inmediato y quedaría estático",
+             "Un equilibrio estático es inestable y correspondería al caso límite, no a una densidad muy superior a la crítica."),
+            ("No cambiaría nada, porque la expansión del espacio no se ve afectada por la materia que contiene",
+             "La materia sí influye: la relación entre densidad y expansión es justamente lo que determina el destino del universo."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "Una revista divulga que 'los científicos descubrieron que el Big Bang "
+        "fue una explosión gigantesca que lanzó la materia hacia todos lados "
+        "desde un punto'. Un profesor señala dos errores. ¿Cuáles son?",
+        "Ni fue una explosión en el espacio ni hubo un punto de origen ubicable",
+        "La palabra explosión arrastra dos supuestos que el modelo no "
+        "contiene.\n\n"
+        "1) Una explosión ocurre EN un espacio preexistente y lanza fragmentos "
+        "hacia afuera. En el Big Bang lo que se expande es el espacio mismo: no "
+        "hay un afuera hacia donde lanzar nada.\n"
+        "2) Una explosión tiene un centro identificable. Aquí no lo hay: la "
+        "expansión ocurrió en todas partes a la vez, y por eso desde cualquier "
+        "galaxia se observa el mismo alejamiento de las demás.\n\n"
+        "El modelo describe un estado inicial denso y caliente en TODO el "
+        "espacio, y una expansión posterior de ese espacio.",
+        [
+            ("Que no fue gigantesca y que no ocurrió hace tanto tiempo",
+             "La escala y la antigüedad no son el problema: los errores están en la imagen de explosión y de punto central."),
+            ("Que la materia no se lanzó hacia afuera sino hacia adentro, en una implosión",
+             "El modelo no describe una implosión: describe una expansión, solo que del espacio y no en el espacio."),
+            ("Que fueron los astrónomos y no los científicos quienes lo descubrieron, y que aún no está confirmado",
+             "Los astrónomos son científicos, y el modelo cuenta con varias líneas de evidencia independientes que lo respaldan."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "Se propone poner a prueba la afirmación de que el universo es homogéneo "
+        "e isótropo a gran escala. ¿Qué observación sería incompatible con ella?",
+        "Que la radiación de fondo fuera mucho más intensa en una dirección",
+        "Homogéneo significa parecido en todas partes; isótropo, parecido en "
+        "todas las direcciones.\n\n"
+        "1) La radiación de fondo llena todo el universo, así que su intensidad "
+        "es una prueba directa de isotropía.\n"
+        "2) Si desde una dirección llegara mucho más intensa que desde otra, "
+        "habría una dirección privilegiada y la isotropía quedaría refutada.\n"
+        "3) Lo que se mide es una uniformidad notable, con variaciones "
+        "diminutas que además son justamente las que permitieron que se formaran "
+        "las galaxias.\n\n"
+        "Esas variaciones no contradicen el principio: es a GRAN escala donde se "
+        "cumple, no en cada punto.",
+        [
+            ("Que existan cúmulos de galaxias en unas regiones y vacíos en otras",
+             "Esa estructura existe y es compatible: la homogeneidad se afirma a escalas mucho mayores que la de los cúmulos."),
+            ("Que unas galaxias sean espirales y otras elípticas",
+             "La variedad de tipos de galaxias no implica ninguna dirección privilegiada en el universo."),
+            ("Que las galaxias más lejanas se vean distintas de las cercanas",
+             "Eso se observa y se explica por la edad: las lejanas se ven como eran hace más tiempo, lo que no contradice la homogeneidad espacial."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "La constante que relaciona velocidad de alejamiento y distancia permite "
+        "estimar la edad del universo. Conceptualmente, ¿cómo se obtiene esa "
+        "estimación?",
+        "Calculando cuánto tardaron las galaxias en llegar a su separación actual",
+        "La idea es retroceder la película de la expansión.\n\n"
+        "1) Si dos galaxias se separan a cierta rapidez y hoy están a cierta "
+        "distancia, se puede calcular cuánto tiempo tomó alcanzar esa "
+        "separación partiendo de cero: tiempo = distancia dividida por "
+        "velocidad.\n"
+        "2) Como la velocidad es proporcional a la distancia, ese cociente da el "
+        "MISMO valor para cualquier par de galaxias, y ese valor es una "
+        "estimación de la edad del universo.\n"
+        "3) La estimación supone un ritmo de expansión constante; los modelos "
+        "más finos corrigen ese supuesto, y el resultado sigue siendo del orden "
+        "de los 13.800 millones de años.\n\n"
+        "Que el mismo número aparezca para cualquier par de galaxias es una "
+        "consistencia interna del modelo.",
+        [
+            ("Midiendo la edad de la estrella más antigua que se conoce",
+             "Ese cálculo entrega una cota inferior útil para contrastar el resultado, pero no es la estimación que sale de la expansión."),
+            ("Sumando el tiempo que la luz de la galaxia más lejana tardó en llegar",
+             "Ese tiempo depende de qué tan lejos alcanzamos a observar y no equivale a la edad del universo."),
+            ("Contando las inversiones del campo magnético registradas en las rocas más antiguas de la Tierra",
+             "Ese método sirve para datar procesos terrestres, cuya escala es de miles de millones de años pero ajena a la expansión cósmica."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "dificil",
+        "Un estudiante pregunta por qué se sigue enseñando el modelo geocéntrico "
+        "si es incorrecto. ¿Cuál es la mejor razón?",
+        "Muestra cómo la evidencia obliga a cambiar un modelo",
+        "El valor de estudiarlo no está en su contenido sino en el proceso que "
+        "ilustra.\n\n"
+        "1) Permite ver que un modelo puede ser coherente, útil y compatible con "
+        "la experiencia inmediata y aun así estar equivocado.\n"
+        "2) Permite seguir cómo observaciones concretas, y no discusiones "
+        "abstractas, fueron acorralándolo: el retroceso de los planetas, las "
+        "fases de Venus, los satélites de Júpiter.\n"
+        "3) Y permite entender qué hace mejor a un modelo: explicar más con "
+        "menos supuestos y arriesgar predicciones que podrían fallar.\n\n"
+        "El temario pide justamente eso: analizar modelos y las evidencias que "
+        "los sustentan, no memorizar cuál ganó.",
+        [
+            ("Porque sus cálculos siguen siendo los más precisos para predecir eclipses",
+             "Los cálculos actuales de eclipses se basan en la mecánica newtoniana y son mucho más precisos."),
+            ("Porque todavía no se ha demostrado que sea incorrecto",
+             "Está descartado desde hace siglos por observaciones que no puede acomodar, como las fases de Venus."),
+            ("Porque describe correctamente lo que se observa desde la Tierra y por eso sigue siendo válido para la navegación",
+             "Para orientarse basta con las posiciones aparentes, pero eso no requiere sostener que la Tierra sea el centro del sistema."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "El Sol y las estrellas que vemos de noche son objetos del mismo tipo. "
+        "¿Por qué el Sol se ve enormemente más brillante?",
+        "Porque está muchísimo más cerca que cualquier otra estrella",
+        "La comparación de brillos aparentes depende tanto de la potencia emitida "
+        "como de la distancia.\n\n"
+        "1) El Sol es una estrella común: hay muchas más luminosas que él.\n"
+        "2) Pero está a unos 150 millones de kilómetros, mientras que la "
+        "siguiente estrella más cercana está a más de 40 billones.\n"
+        "3) El brillo aparente disminuye rápidamente con la distancia, así que "
+        "esa diferencia enorme explica por sí sola el contraste.\n\n"
+        "Es la misma razón por la que un farol cercano parece más brillante que "
+        "un reflector de estadio a varios kilómetros.",
+        [
+            ("Porque es mucho más grande que cualquier otra estrella conocida",
+             "Existen estrellas cientos de veces mayores que el Sol; su tamaño no es lo que lo distingue."),
+            ("Porque emite luz visible y las demás estrellas emiten sobre todo radiación invisible",
+             "Las estrellas emiten en un amplio rango, buena parte de él visible: por eso se ven."),
+            ("Porque la atmósfera terrestre amplifica su luz durante el día y debilita la de las demás",
+             "La atmósfera dispersa la luz solar y por eso el cielo diurno es claro, pero no amplifica la luz del Sol."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "Al comparar los aportes de Kepler y de Copérnico, ¿qué supuesto de "
+        "Copérnico tuvo que abandonar Kepler para ajustar los datos?",
+        "Que las órbitas son circunferencias perfectas",
+        "Copérnico cambió el centro del sistema, pero conservó una herencia de la "
+        "tradición griega.\n\n"
+        "1) Para Copérnico, el movimiento celeste debía ser circular y uniforme, "
+        "por considerarlo el movimiento perfecto.\n"
+        "2) Ese supuesto lo obligó a mantener artificios de ajuste para que las "
+        "posiciones calzaran con lo observado.\n"
+        "3) Kepler, trabajando con los datos de Marte, comprobó que ninguna "
+        "combinación de círculos ajustaba dentro del margen de error de Tycho, y "
+        "abandonó el círculo por la elipse.\n\n"
+        "El cambio de centro y el cambio de forma de la órbita fueron dos pasos "
+        "distintos, separados por más de medio siglo.",
+        [
+            ("Que el Sol ocupa el centro del sistema",
+             "Ese supuesto Kepler lo conservó: sus leyes son heliocéntricas."),
+            ("Que la Tierra rota sobre su propio eje",
+             "También lo conservó; la rotación terrestre no fue puesta en duda por Kepler."),
+            ("Que los planetas más lejanos tardan más en completar su órbita alrededor del Sol",
+             "Lejos de abandonarlo, Kepler lo precisó y lo convirtió en su tercera ley."),
+        ],
+    ),
+    _q(
+        "cie_cosmologia", "medio",
+        "En el universo primitivo, durante unos cientos de miles de años, la luz "
+        "no podía propagarse libremente porque chocaba constantemente con "
+        "partículas cargadas. ¿Qué hizo que el universo se volviera "
+        "transparente?",
+        "Los núcleos y los electrones se unieron formando átomos neutros",
+        "La transparencia depende de que la luz pueda recorrer distancias sin ser "
+        "dispersada.\n\n"
+        "1) Mientras el universo estuvo muy caliente, los electrones andaban "
+        "libres y dispersaban la luz continuamente: el conjunto era opaco, como "
+        "una niebla.\n"
+        "2) Al expandirse, el universo se enfrió lo suficiente para que los "
+        "electrones quedaran ligados a los núcleos formando átomos neutros.\n"
+        "3) Sin electrones libres que la dispersen, la luz pudo por fin viajar "
+        "sin obstáculos.\n\n"
+        "Esa luz liberada es precisamente la que hoy detectamos como radiación "
+        "cósmica de fondo.",
+        [
+            ("Se formaron las primeras estrellas, que iluminaron el espacio",
+             "Las primeras estrellas aparecieron mucho después; el universo ya era transparente cuando se formaron."),
+            ("La materia se concentró en galaxias y dejó el resto del espacio vacío",
+             "La formación de galaxias es muy posterior, y la opacidad no dependía de la distribución sino de los electrones libres."),
+            ("La expansión estiró la longitud de onda de la luz hasta que dejó de interactuar con la materia",
+             "El estiramiento ocurre, pero lo decisivo fue el enfriamiento que permitió a los electrones quedar ligados en átomos."),
+        ],
+    ),
+]
