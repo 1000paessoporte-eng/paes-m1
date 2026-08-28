@@ -107,6 +107,11 @@ RESULTADOS_LECCIONES: dict[str, Fraction] = {
 # Cada valor se recalcula acá desde la definición, sin mirar la alternativa que
 # el banco marcó como correcta. Es la única forma de que un error de cálculo no
 # pase silenciosamente a un estudiante que lo va a estudiar como verdad.
+def _sub(formula: str) -> str:
+    """Pasa los digitos de una formula a subindices, como los escribe el banco."""
+    return formula.translate(str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉"))
+
+
 COMPROBACIONES_CIENCIAS: dict[str, str] = {
     # --- Ciencias: física, tanda de ampliación a 600 por eje (2026-08-28) ---
     # Energía-Tierra
@@ -234,6 +239,12 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "hierro tiene número atómico 26": f"{26 - 3} electrones",
     "uno de masa 10 con 20% de abundancia": f"{10 * 0.20 + 11 * 0.80:.1f}".replace(".", ","),
     "átomo neutro tiene 17 electrones": "17",
+    # Quimica organica: formulas generales de los hidrocarburos
+    "alcano de cadena abierta tiene 6 carbonos": _sub(f"C6H{2 * 6 + 2}"),
+    "alqueno de cadena abierta tiene 5 carbonos": _sub(f"C5H{2 * 5}"),
+    "alcano de cadena abierta tiene 10 carbonos": f"{2 * 10 + 2} hidrógenos",
+    "fórmula semidesarrollada CH₃–CH₂–CH₂–CH₃": f"{4} carbonos y {3 + 2 + 2 + 3} hidrógenos",
+    "Su masa molar es aproximadamente 56 g/mol": _sub(f"C{56 // 14}H{2 * (56 // 14)}"),
     # Ácido-base
 }
 

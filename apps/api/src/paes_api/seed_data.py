@@ -107703,3 +107703,1202 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Quimica - Quimica organica: el carbono y los hidrocarburos
+#
+# El temario pide las propiedades del atomo de carbono (tetravalencia,
+# hibridacion, tipos de enlace, energia, longitud y angulo), los modelos de
+# representacion —molecular, empirica, desarrollada, condensada,
+# semidesarrollada, topologica, esferas y varillas, compacta— y los
+# hidrocarburos alifaticos, ciclicos y aromaticos con sus aplicaciones.
+#
+# Las catorce dificiles hacen leer datos: una tabla de longitudes de enlace,
+# una formula topologica a la que hay que reponerle los hidrogenos, un C4H8 de
+# cadena abierta que solo puede tener un doble enlace, y por que la formula
+# molecular no basta para identificar un compuesto.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_organica", "facil",
+        "¿Qué elementos forman un hidrocarburo?",
+        "Carbono e hidrógeno",
+        "El nombre del grupo describe su composición.\n\n"
+        "1) Los hidrocarburos están formados únicamente por átomos de carbono y "
+        "de hidrógeno.\n"
+        "2) El carbono forma el esqueleto de la molécula y el hidrógeno "
+        "completa sus enlaces disponibles.\n"
+        "3) Si aparece oxígeno, nitrógeno u otro elemento, el compuesto ya "
+        "pertenece a otra familia.\n\n"
+        "El metano, el etano y el benceno son ejemplos: todos contienen solo "
+        "esos dos elementos.",
+        [
+            ("Carbono y oxígeno",
+             "Un compuesto con oxígeno pertenece a otra familia, como los alcoholes o los ácidos."),
+            ("Hidrógeno y nitrógeno",
+             "Sin carbono no hay hidrocarburo."),
+            ("Carbono, hidrógeno y oxígeno combinados en proporciones que pueden variar libremente",
+             "La presencia de oxígeno excluye al compuesto de la familia de los hidrocarburos."),
+        ],
+    ),
+    _q(
+        "cie_organica", "facil",
+        "¿Qué caracteriza a un alcano?",
+        "Que solo tiene enlaces simples entre carbonos",
+        "La familia se define por el tipo de enlace del esqueleto.\n\n"
+        "1) En un alcano cada carbono se une a sus vecinos por enlaces "
+        "simples.\n"
+        "2) El resto de sus enlaces se completa con hidrógenos, y por eso se "
+        "dice que está saturado.\n"
+        "3) El metano, el etano y el propano son los primeros de la serie.\n\n"
+        "Si aparece un doble enlace se trata de un alqueno, y si aparece uno "
+        "triple, de un alquino.",
+        [
+            ("Que tiene un doble enlace",
+             "Un doble enlace corresponde a un alqueno."),
+            ("Que tiene un triple enlace",
+             "Un triple enlace corresponde a un alquino."),
+            ("Que contiene siempre un anillo cerrado de átomos de carbono en su estructura",
+             "Los alcanos pueden ser de cadena abierta; el anillo caracteriza a los cíclicos."),
+        ],
+    ),
+    _q(
+        "cie_organica", "facil",
+        "¿Qué distingue a un alqueno de un alcano?",
+        "Que tiene al menos un doble enlace",
+        "La diferencia está en cómo se unen los carbonos entre sí.\n\n"
+        "1) El alcano tiene solo enlaces simples y está saturado de "
+        "hidrógenos.\n"
+        "2) El alqueno tiene al menos un doble enlace entre dos carbonos.\n"
+        "3) Ese doble enlace ocupa el lugar de dos hidrógenos, así que el "
+        "alqueno es insaturado.\n\n"
+        "El eteno, con dos carbonos unidos por un doble enlace, es el más "
+        "simple de la serie.",
+        [
+            ("Que tiene más carbonos",
+             "El número de carbonos no distingue a una familia de la otra."),
+            ("Que no contiene hidrógeno",
+             "Los alquenos contienen hidrógeno: son hidrocarburos."),
+            ("Que sus carbonos se disponen siempre formando un anillo cerrado en lugar de una cadena",
+             "Existen alquenos de cadena abierta; el anillo define a los cíclicos."),
+        ],
+    ),
+    _q(
+        "cie_organica", "facil",
+        "¿Qué tipo de enlace tiene un alquino entre dos de sus carbonos?",
+        "Un enlace triple",
+        "Cada familia de hidrocarburos se define por su enlace "
+        "característico.\n\n"
+        "1) El alquino contiene al menos un enlace triple entre dos átomos de "
+        "carbono.\n"
+        "2) Ese enlace es el más corto y el más fuerte de los tres tipos.\n"
+        "3) El etino, conocido como acetileno, es el más simple de la serie y "
+        "se usa en soldadura.\n\n"
+        "Al tener un triple enlace, el alquino es el más insaturado de los tres "
+        "tipos de hidrocarburos de cadena abierta.",
+        [
+            ("Un enlace simple",
+             "Los enlaces simples solamente caracterizan a los alcanos."),
+            ("Un enlace doble",
+             "El doble enlace corresponde a los alquenos."),
+            ("Un enlace iónico entre dos átomos de carbono con cargas eléctricas opuestas",
+             "Entre carbonos el enlace es covalente: comparten electrones en lugar de transferirlos."),
+        ],
+    ),
+    _q(
+        "cie_organica", "facil",
+        "¿Qué caracteriza a un hidrocarburo cíclico?",
+        "Que sus carbonos forman un anillo cerrado",
+        "La forma del esqueleto distingue a esta familia.\n\n"
+        "1) En un hidrocarburo cíclico el último carbono de la cadena se une al "
+        "primero.\n"
+        "2) Esa unión cierra un anillo, a diferencia de las cadenas abiertas de "
+        "los alifáticos.\n"
+        "3) El ciclohexano, con seis carbonos en anillo, es uno de los más "
+        "conocidos.\n\n"
+        "Cerrar el anillo consume dos hidrógenos respecto del alcano abierto "
+        "con el mismo número de carbonos.",
+        [
+            ("Que contiene oxígeno",
+             "Si contuviera oxígeno no sería un hidrocarburo."),
+            ("Que solo tiene dos carbonos",
+             "Con dos carbonos no se puede formar un anillo estable."),
+            ("Que todos sus enlaces entre carbonos son dobles y se alternan a lo largo de la molécula",
+             "Esa alternancia caracteriza a los aromáticos, no a los cíclicos en general."),
+        ],
+    ),
+    _q(
+        "cie_organica", "facil",
+        "¿Cuál es el hidrocarburo aromático más representativo?",
+        "El benceno",
+        "Los aromáticos se definen a partir de una estructura particular.\n\n"
+        "1) El benceno es un anillo de seis carbonos con enlaces intermedios "
+        "entre simple y doble.\n"
+        "2) Esa distribución le da una estabilidad mayor que la de un alqueno "
+        "cíclico común.\n"
+        "3) Muchos compuestos aromáticos derivan de él, reemplazando alguno de "
+        "sus hidrógenos.\n\n"
+        "El nombre aromático es histórico y proviene del olor de los primeros "
+        "compuestos de este tipo que se estudiaron.",
+        [
+            ("El metano",
+             "El metano es el alcano más simple, de un solo carbono."),
+            ("El etino",
+             "El etino es un alquino de cadena abierta."),
+            ("El ciclohexano, que también tiene seis carbonos dispuestos formando un anillo cerrado",
+             "El ciclohexano es cíclico pero no aromático: sus enlaces son simples."),
+        ],
+    ),
+    _q(
+        "cie_organica", "facil",
+        "¿Qué informa la fórmula molecular de un compuesto?",
+        "Cuántos átomos de cada elemento contiene",
+        "Es la representación más compacta y también la que menos detalla.\n\n"
+        "1) Indica los elementos presentes y el número de átomos de cada uno en "
+        "una molécula.\n"
+        "2) No dice cómo están unidos entre sí ni qué forma tiene la "
+        "molécula.\n"
+        "3) Por eso dos compuestos distintos pueden compartir la misma fórmula "
+        "molecular.\n\n"
+        "Para conocer la disposición de los átomos hacen falta la fórmula "
+        "desarrollada o la semidesarrollada.",
+        [
+            ("Cómo están unidos los átomos entre sí",
+             "Esa información la entregan las fórmulas desarrollada y semidesarrollada."),
+            ("La forma tridimensional de la molécula",
+             "Esa forma se representa con modelos de esferas y varillas o compactos."),
+            ("La proporción más simple entre los átomos, reducida al mínimo posible por división",
+             "Esa es la fórmula empírica, que puede diferir de la molecular."),
+        ],
+    ),
+    _q(
+        "cie_organica", "facil",
+        "¿Qué muestra la fórmula desarrollada de una molécula?",
+        "Todos los enlaces entre todos sus átomos",
+        "Es la representación más explícita en dos dimensiones.\n\n"
+        "1) Dibuja cada átomo y cada enlace, incluidos los que unen al carbono "
+        "con sus hidrógenos.\n"
+        "2) Permite ver de inmediato dónde hay enlaces dobles o triples y cómo "
+        "se ramifica la cadena.\n"
+        "3) Su desventaja es que ocupa mucho espacio en moléculas grandes.\n\n"
+        "Por eso, para cadenas largas, se prefieren la fórmula semidesarrollada "
+        "o la topológica.",
+        [
+            ("Solo el número de átomos",
+             "Ese dato lo entrega la fórmula molecular."),
+            ("Solo el esqueleto de carbonos",
+             "Esa simplificación corresponde a la fórmula topológica."),
+            ("La proporción mínima entre los elementos que componen la molécula representada",
+             "Esa es la fórmula empírica, que no representa enlaces."),
+        ],
+    ),
+    _q(
+        "cie_organica", "facil",
+        "En una fórmula topológica o lineal, ¿qué representa cada vértice de la "
+        "línea quebrada?",
+        "Un átomo de carbono",
+        "La representación omite lo que se puede dar por supuesto.\n\n"
+        "1) Cada vértice y cada extremo de la línea corresponde a un átomo de "
+        "carbono.\n"
+        "2) Los hidrógenos unidos a esos carbonos no se dibujan: se sobreentiende "
+        "que completan los cuatro enlaces.\n"
+        "3) Los átomos distintos del carbono sí se escriben con su símbolo.\n\n"
+        "Es la representación preferida para moléculas grandes, porque muestra "
+        "el esqueleto sin saturar el dibujo.",
+        [
+            ("Un átomo de hidrógeno",
+             "Los hidrógenos no se dibujan en esta representación: se sobreentienden."),
+            ("Un enlace doble",
+             "Los enlaces dobles se indican con una línea adicional, no con un vértice."),
+            ("Una molécula completa unida a las demás para formar una cadena de mayor tamaño",
+             "Cada vértice es un átomo de carbono dentro de una misma molécula."),
+        ],
+    ),
+    _q(
+        "cie_organica", "facil",
+        "¿Qué tipo de enlace forma el carbono con otros átomos en los "
+        "compuestos orgánicos?",
+        "Enlace covalente",
+        "El tipo de enlace depende de cómo se distribuyen los electrones.\n\n"
+        "1) El carbono no cede ni capta electrones con facilidad, porque tiene "
+        "cuatro en su capa externa.\n"
+        "2) Lo que hace es compartirlos con otros átomos, y esa compartición es "
+        "un enlace covalente.\n"
+        "3) Así completa los ocho electrones de su capa externa formando cuatro "
+        "enlaces.\n\n"
+        "Esa capacidad de compartir en cuatro direcciones es lo que le permite "
+        "formar cadenas y estructuras muy variadas.",
+        [
+            ("Enlace iónico",
+             "El enlace iónico implica transferencia de electrones, típica entre metales y no metales."),
+            ("Enlace metálico",
+             "El enlace metálico es propio de los metales, con electrones deslocalizados."),
+            ("Enlace de hidrógeno, que se establece entre moléculas vecinas y las mantiene unidas entre sí",
+             "Esa es una interacción entre moléculas, no el enlace que forma el carbono dentro de ellas."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "En el etino (CH≡CH) cada carbono forma un triple enlace y un enlace "
+        "simple. ¿Qué hibridación presenta y qué ángulo forma?",
+        "Hibridación sp y ángulo de 180°",
+        "El número de direcciones de enlace determina la hibridación.\n\n"
+        "1) Cada carbono del etino está unido a solo dos átomos: el otro "
+        "carbono y un hidrógeno.\n"
+        "2) Dos direcciones de enlace corresponden a hibridación sp.\n"
+        "3) Esas dos direcciones se ubican lo más separadas posible, o sea "
+        "opuestas, con un ángulo de 180°.\n\n"
+        "El resultado es una molécula lineal, a diferencia del eteno, que es "
+        "plana, y del metano, que es tetraédrico.",
+        [
+            ("Hibridación sp² y ángulo de 120°",
+             "Esa combinación corresponde al eteno, donde cada carbono se une a tres átomos."),
+            ("Hibridación sp³ y ángulo de 109,5°",
+             "Esa combinación corresponde al metano, con cuatro enlaces simples."),
+            ("Hibridación sp³ y ángulo de 180°, porque el triple enlace mantiene la molécula estirada",
+             "El ángulo de 180° es correcto, pero con dos direcciones de enlace la hibridación es sp."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Cómo varía la longitud del enlace entre carbonos al pasar de simple a "
+        "doble y a triple?",
+        "Disminuye a medida que aumenta el orden del enlace",
+        "Más pares de electrones compartidos acercan a los núcleos.\n\n"
+        "1) El enlace simple comparte un par de electrones y es el más "
+        "largo.\n"
+        "2) El doble comparte dos pares y acerca más a los átomos.\n"
+        "3) El triple comparte tres pares y es el más corto de los tres.\n\n"
+        "La energía de enlace sigue el camino inverso: mientras más corto, más "
+        "energía se necesita para romperlo.",
+        [
+            ("Aumenta a medida que aumenta el orden del enlace",
+             "Ocurre lo contrario: compartir más pares acerca a los núcleos."),
+            ("Se mantiene constante en los tres casos",
+             "Las longitudes medidas son claramente distintas entre los tres tipos."),
+            ("Disminuye del simple al doble, pero vuelve a aumentar al pasar del doble al triple",
+             "La disminución es sostenida: el triple es el más corto de los tres."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Qué relación hay entre la longitud y la energía de un enlace entre "
+        "carbonos?",
+        "Mientras más corto, mayor es su energía de enlace",
+        "Ambas propiedades reflejan cuán fuerte es la unión.\n\n"
+        "1) Un enlace más corto implica núcleos más cercanos y más electrones "
+        "compartidos entre ellos.\n"
+        "2) Esa mayor densidad de electrones sostiene la unión con más fuerza.\n"
+        "3) Por eso hace falta más energía para romper un enlace triple que uno "
+        "doble, y más para uno doble que para uno simple.\n\n"
+        "La relación es útil para predecir estabilidad sin memorizar valores: "
+        "basta comparar longitudes.",
+        [
+            ("Mientras más corto, menor es su energía de enlace",
+             "Invierte la relación: los enlaces cortos son los más fuertes."),
+            ("No existe relación entre ambas propiedades",
+             "Están estrechamente relacionadas, y ambas dependen del orden del enlace."),
+            ("La energía depende solo del número de átomos que participan en el enlace y no de su longitud",
+             "En un enlace participan siempre dos átomos: lo que cambia es cuántos pares comparten."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "Un alcano de cadena abierta tiene 6 carbonos. ¿Cuál es su fórmula "
+        "molecular?",
+        "C₆H₁₄",
+        "La fórmula general de los alcanos permite deducirla.\n\n"
+        "1) Los alcanos de cadena abierta responden a la fórmula CnH2n+2.\n"
+        "2) Con n igual a 6, el número de hidrógenos es 2 por 6 más 2, o sea "
+        "14.\n"
+        "3) La fórmula resultante es C₆H₁₄, que corresponde al hexano.\n\n"
+        "Los dos hidrógenos adicionales corresponden a los extremos de la "
+        "cadena, donde cada carbono terminal lleva tres.",
+        [
+            ("C₆H₁₂",
+             "Esa fórmula corresponde a un alqueno o a un alcano cíclico de seis carbonos."),
+            ("C₆H₆",
+             "Esa es la fórmula del benceno, un compuesto aromático."),
+            ("C₆H₁₆, que resulta de asignar tres hidrógenos a cada uno de los seis átomos de carbono",
+             "Solo los carbonos de los extremos llevan tres hidrógenos; los internos llevan dos."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "Un alqueno de cadena abierta tiene 5 carbonos y un solo doble enlace. "
+        "¿Cuál es su fórmula molecular?",
+        "C₅H₁₀",
+        "El doble enlace ocupa el lugar de dos hidrógenos.\n\n"
+        "1) Un alcano de cinco carbonos tendría 2 por 5 más 2, o sea 12 "
+        "hidrógenos.\n"
+        "2) Al formarse un doble enlace, dos carbonos comparten un par "
+        "adicional y dejan de unirse a un hidrógeno cada uno.\n"
+        "3) Quedan entonces 10 hidrógenos, y la fórmula general de los alquenos "
+        "con un doble enlace es CnH2n.\n\n"
+        "Un alquino con un triple enlace descontaría dos hidrógenos más, "
+        "quedando en CnH2n−2.",
+        [
+            ("C₅H₁₂",
+             "Esa fórmula corresponde al alcano de cinco carbonos, sin doble enlace."),
+            ("C₅H₈",
+             "Esa fórmula correspondería a un alquino o a un compuesto con dos insaturaciones."),
+            ("C₅H₅, porque el doble enlace reduce a la mitad el número de hidrógenos de la molécula",
+             "El doble enlace descuenta dos hidrógenos, no la mitad de ellos."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Qué diferencia hay entre la fórmula molecular y la fórmula empírica?",
+        "La empírica expresa la proporción más simple",
+        "Ambas informan composición, pero a distinta escala.\n\n"
+        "1) La fórmula molecular indica el número real de átomos de cada "
+        "elemento en la molécula.\n"
+        "2) La empírica reduce esos números a la proporción más simple posible "
+        "entre ellos.\n"
+        "3) En la glucosa, C₆H₁₂O₆, la proporción se simplifica a CH₂O, que es "
+        "su fórmula empírica.\n\n"
+        "Dos compuestos distintos pueden compartir la fórmula empírica, así que "
+        "por sí sola no identifica a ninguno.",
+        [
+            ("La empírica indica cómo se unen los átomos",
+             "Ninguna de las dos representa enlaces: eso lo hacen las fórmulas desarrolladas."),
+            ("La molecular se obtiene por experimentos y la empírica, por cálculo",
+             "El análisis experimental entrega la empírica; la molecular requiere además la masa molar."),
+            ("La empírica siempre coincide con la molecular en todos los compuestos orgánicos conocidos",
+             "Coinciden solo cuando la proporción ya está en su forma más simple."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Qué diferencia hay entre una fórmula condensada y una "
+        "semidesarrollada?",
+        "La semidesarrollada dibuja los enlaces de la cadena",
+        "Ambas resumen la fórmula desarrollada, pero en distinto grado.\n\n"
+        "1) La condensada agrupa los átomos unidos a cada carbono sin dibujar "
+        "ningún enlace, como CH₃CH₂CH₃.\n"
+        "2) La semidesarrollada mantiene los enlaces entre carbonos, como "
+        "CH₃–CH₂–CH₃, y agrupa solo los hidrógenos.\n"
+        "3) Con eso la semidesarrollada muestra las ramificaciones y los "
+        "enlaces múltiples sin ocupar tanto espacio.\n\n"
+        "La elección depende de qué se quiera destacar: composición o "
+        "estructura.",
+        [
+            ("La condensada muestra la forma tridimensional",
+             "Ninguna de las dos representa la geometría espacial de la molécula."),
+            ("La semidesarrollada omite los átomos de carbono",
+             "Los carbonos aparecen escritos; lo que se omite en la topológica."),
+            ("La condensada indica la proporción más simple entre los elementos de la molécula",
+             "Esa es la fórmula empírica, distinta de ambas."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Qué muestra un modelo de esferas y varillas que una fórmula "
+        "desarrollada no puede mostrar?",
+        "La disposición de los átomos en el espacio",
+        "El modelo agrega la dimensión que el papel plano no representa.\n\n"
+        "1) La fórmula desarrollada indica qué átomo se une con cuál, pero "
+        "dibuja todo sobre un plano.\n"
+        "2) El modelo de esferas y varillas conserva los ángulos reales entre "
+        "enlaces y permite ver la forma tridimensional.\n"
+        "3) Por eso muestra, por ejemplo, que el metano es tetraédrico y no "
+        "plano como sugiere su dibujo.\n\n"
+        "El modelo compacto va un paso más allá y representa el volumen que "
+        "ocupa cada átomo, aunque oculta los enlaces.",
+        [
+            ("El número de átomos de cada elemento",
+             "Ese dato ya está disponible en cualquiera de las dos representaciones."),
+            ("La masa de la molécula",
+             "La masa se calcula a partir de la fórmula, no se lee del modelo."),
+            ("La proporción más simple entre los elementos que forman el compuesto representado",
+             "Esa es la fórmula empírica, y no es lo que aporta un modelo tridimensional."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Por qué el carbono puede formar tantos compuestos distintos?",
+        "Porque forma cuatro enlaces y se une a sí mismo",
+        "Dos propiedades combinadas explican la variedad.\n\n"
+        "1) Su tetravalencia le permite unirse simultáneamente a cuatro "
+        "átomos.\n"
+        "2) Además forma enlaces estables consigo mismo, lo que permite cadenas "
+        "largas, ramificadas o cerradas en anillo.\n"
+        "3) Sumando enlaces simples, dobles y triples, las combinaciones "
+        "posibles se multiplican.\n\n"
+        "Por eso los compuestos de carbono conocidos superan ampliamente a los "
+        "de todos los demás elementos juntos.",
+        [
+            ("Porque es el elemento más abundante",
+             "No es el más abundante: su versatilidad proviene de cómo enlaza."),
+            ("Porque forma enlaces iónicos con facilidad",
+             "El carbono forma enlaces covalentes, no iónicos."),
+            ("Porque su núcleo puede variar el número de protones según el compuesto que esté formando",
+             "El número de protones nunca cambia: define al elemento."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Qué significa que un hidrocarburo sea saturado?",
+        "Que solo tiene enlaces simples entre carbonos",
+        "El término se refiere a cuántos hidrógenos puede aún incorporar.\n\n"
+        "1) Con solo enlaces simples, cada carbono tiene el máximo número de "
+        "hidrógenos posible.\n"
+        "2) La molécula está saturada de hidrógeno: no admite más sin romper "
+        "enlaces entre carbonos.\n"
+        "3) Un enlace doble o triple deja lugar para incorporar hidrógenos, y "
+        "por eso esos compuestos se llaman insaturados.\n\n"
+        "Es el mismo término que se usa en los aceites y las grasas, y significa "
+        "exactamente lo mismo.",
+        [
+            ("Que contiene la mayor cantidad posible de carbonos",
+             "La saturación se refiere a los hidrógenos, no al número de carbonos."),
+            ("Que no puede reaccionar con ninguna sustancia",
+             "Los alcanos reaccionan, por ejemplo en la combustión."),
+            ("Que está disuelto en la máxima cantidad posible dentro de otro compuesto orgánico",
+             "Eso describe una disolución saturada, que es un concepto distinto."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Qué se obtiene al quemar completamente un hidrocarburo?",
+        "Dióxido de carbono y agua",
+        "La combustión completa oxida todos los átomos del combustible.\n\n"
+        "1) El carbono del hidrocarburo se combina con oxígeno y forma dióxido "
+        "de carbono.\n"
+        "2) El hidrógeno se combina con oxígeno y forma agua.\n"
+        "3) Para que la combustión sea completa debe haber oxígeno "
+        "suficiente.\n\n"
+        "Si el oxígeno es insuficiente, aparecen además monóxido de carbono y "
+        "hollín, que es la combustión incompleta.",
+        [
+            ("Solo dióxido de carbono",
+             "Falta el agua, que proviene del hidrógeno del combustible."),
+            ("Hidrógeno y oxígeno por separado",
+             "La combustión combina esos elementos con oxígeno, no los libera aislados."),
+            ("Monóxido de carbono y hollín, que son los productos característicos de toda combustión",
+             "Esos productos aparecen cuando la combustión es incompleta por falta de oxígeno."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "Una llama de gas que produce hollín y luz amarilla indica un problema. "
+        "¿Cuál?",
+        "Falta oxígeno para completar la combustión",
+        "Los productos visibles informan sobre las condiciones de la "
+        "reacción.\n\n"
+        "1) Con oxígeno suficiente, la combustión es completa y la llama se ve "
+        "azul, sin residuos.\n"
+        "2) Si el oxígeno es insuficiente, parte del carbono no se oxida por "
+        "completo y queda como partículas incandescentes, que dan el color "
+        "amarillo y el hollín.\n"
+        "3) En esas condiciones también se produce monóxido de carbono, que es "
+        "tóxico y no tiene olor.\n\n"
+        "Por eso los artefactos a gas requieren ventilación y mantención "
+        "periódica de sus quemadores.",
+        [
+            ("Sobra oxígeno en la mezcla",
+             "Con exceso de oxígeno la combustión es completa y no se produce hollín."),
+            ("El combustible está contaminado con agua",
+             "El agua dificultaría el encendido, pero el hollín indica falta de oxígeno."),
+            ("La temperatura de la llama es demasiado alta para que el combustible alcance a quemarse",
+             "Una temperatura alta favorece la combustión completa en lugar de impedirla."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Qué relación hay entre el petróleo y los hidrocarburos?",
+        "El petróleo es una mezcla de hidrocarburos",
+        "El petróleo es la materia prima de la industria orgánica.\n\n"
+        "1) Está formado por hidrocarburos de cadenas de distinta longitud, "
+        "junto con otros compuestos en menor proporción.\n"
+        "2) La destilación fraccionada los separa según su temperatura de "
+        "ebullición.\n"
+        "3) De ahí salen los combustibles, los lubricantes y la materia prima "
+        "para plásticos y otros materiales.\n\n"
+        "Las cadenas más cortas corresponden a los gases y las más largas, a "
+        "los asfaltos.",
+        [
+            ("El petróleo es un solo hidrocarburo puro",
+             "Es una mezcla de muchos compuestos, y por eso se separa por destilación."),
+            ("El petróleo no contiene carbono",
+             "Está formado principalmente por compuestos de carbono e hidrógeno."),
+            ("El petróleo se forma a partir de hidrocarburos fabricados en las refinerías industriales",
+             "Ocurre al revés: los productos se obtienen a partir del petróleo, no lo forman."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "El gas natural domiciliario es principalmente metano. ¿Qué "
+        "característica de su molécula explica que sea gaseoso?",
+        "Tiene un solo carbono y una cadena muy corta",
+        "El estado físico se relaciona con el tamaño de la molécula.\n\n"
+        "1) Las moléculas pequeñas interactúan débilmente entre sí y se separan "
+        "con facilidad.\n"
+        "2) El metano, con un solo carbono, es la más pequeña de la serie y por "
+        "eso es gaseosa a temperatura ambiente.\n"
+        "3) A medida que la cadena se alarga, los hidrocarburos pasan a "
+        "líquidos y luego a sólidos.\n\n"
+        "Esa progresión es la que permite separarlos por destilación "
+        "fraccionada.",
+        [
+            ("Tiene un doble enlace que lo mantiene separado",
+             "El metano solo tiene enlaces simples."),
+            ("Contiene oxígeno en su estructura",
+             "El metano es un hidrocarburo: solo tiene carbono e hidrógeno."),
+            ("Su molécula es la más pesada de todos los hidrocarburos conocidos y por eso se dispersa",
+             "Es la más liviana, y precisamente por eso es gaseosa."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Todos los compuestos que contienen carbono son orgánicos?",
+        "No: el dióxido de carbono y los carbonatos no lo son",
+        "La clasificación tiene excepciones establecidas por convención.\n\n"
+        "1) La química orgánica estudia los compuestos de carbono con "
+        "hidrógeno y sus derivados.\n"
+        "2) Algunos compuestos con carbono se clasifican como inorgánicos: el "
+        "dióxido de carbono, el monóxido, los carbonatos y los cianuros.\n"
+        "3) La razón es histórica y práctica: su comportamiento se parece más "
+        "al de los compuestos inorgánicos.\n\n"
+        "Por eso el criterio no es solo la presencia de carbono, sino el tipo "
+        "de estructura que forma.",
+        [
+            ("Sí, sin ninguna excepción",
+             "Hay excepciones bien establecidas, como los carbonatos y los óxidos de carbono."),
+            ("No, porque el carbono nunca forma compuestos inorgánicos",
+             "Justamente los forma: esa es la excepción que la pregunta plantea."),
+            ("Sí, porque la presencia de carbono es el único criterio que define a un compuesto orgánico",
+             "Ese criterio dejaría dentro al dióxido de carbono y a los carbonatos, que se clasifican aparte."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Qué información se pierde al pasar de la fórmula desarrollada a la "
+        "molecular?",
+        "Cómo están unidos los átomos entre sí",
+        "Cada representación conserva unas cosas y descarta otras.\n\n"
+        "1) La fórmula desarrollada muestra todos los enlaces y las "
+        "ramificaciones.\n"
+        "2) La molecular solo conserva cuántos átomos de cada elemento hay.\n"
+        "3) Con eso se pierde la estructura, y dos compuestos distintos pueden "
+        "quedar representados por la misma fórmula.\n\n"
+        "Ese es justamente el caso de los isómeros, que comparten fórmula "
+        "molecular y difieren en estructura y propiedades.",
+        [
+            ("El número de átomos de carbono",
+             "Ese dato se conserva en la fórmula molecular."),
+            ("Los elementos presentes",
+             "También se conservan: la fórmula molecular los enumera."),
+            ("La masa molecular del compuesto, que solo puede calcularse desde la fórmula desarrollada",
+             "La masa se calcula igual desde la fórmula molecular."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_organica", "medio",
+        "La fórmula C₄H₁₀ corresponde a dos compuestos distintos. ¿Qué los "
+        "diferencia?",
+        "La forma en que se ordena la cadena de carbonos",
+        "Una misma fórmula molecular admite más de una estructura.\n\n"
+        "1) En uno los cuatro carbonos forman una cadena continua: es el "
+        "butano.\n"
+        "2) En el otro, tres carbonos forman la cadena principal y el cuarto "
+        "queda como ramificación: es el metilpropano.\n"
+        "3) Ambos tienen los mismos átomos, pero unidos de manera distinta, y "
+        "por eso son isómeros.\n\n"
+        "Sus propiedades difieren: el ramificado hierve a menor temperatura, "
+        "porque sus moléculas se atraen con menos fuerza.",
+        [
+            ("El número de átomos de carbono",
+             "Ambos tienen cuatro: la fórmula molecular es la misma."),
+            ("El tipo de elemento que contienen",
+             "Los dos contienen exactamente carbono e hidrógeno."),
+            ("La cantidad de hidrógenos unidos a la molécula completa, que difiere entre uno y otro",
+             "La fórmula indica diez hidrógenos en ambos casos."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Por qué un alcano ramificado hierve a menor temperatura que su isómero "
+        "de cadena lineal?",
+        "Porque sus moléculas se atraen con menos fuerza",
+        "La forma de la molécula influye en cómo se agrupan entre sí.\n\n"
+        "1) Una cadena lineal permite que las moléculas se acerquen a lo largo "
+        "de toda su longitud.\n"
+        "2) Una molécula ramificada es más compacta y tiene menos superficie de "
+        "contacto con sus vecinas.\n"
+        "3) Con menos atracción entre moléculas, se separan a menor temperatura "
+        "y el punto de ebullición baja.\n\n"
+        "Es un buen ejemplo de que la estructura, y no solo la composición, "
+        "determina las propiedades.",
+        [
+            ("Porque tiene menos carbonos",
+             "Los isómeros tienen exactamente el mismo número de carbonos."),
+            ("Porque contiene enlaces dobles",
+             "Ambos isómeros son alcanos: solo tienen enlaces simples."),
+            ("Porque su masa molecular es menor que la de la cadena lineal correspondiente",
+             "Las masas moleculares son idénticas: comparten la fórmula molecular."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "En la nomenclatura de los hidrocarburos, ¿qué indica el prefijo del "
+        "nombre?",
+        "El número de carbonos de la cadena",
+        "El nombre se arma por partes, y cada una aporta información.\n\n"
+        "1) El prefijo indica cuántos carbonos tiene la cadena principal: met- "
+        "para uno, et- para dos, prop- para tres, but- para cuatro.\n"
+        "2) Desde cinco en adelante se usan prefijos numéricos griegos: pent-, "
+        "hex-, hept-, oct-.\n"
+        "3) La terminación indica el tipo de enlace: -ano, -eno o -ino.\n\n"
+        "Así, el nombre propeno informa de inmediato que hay tres carbonos y un "
+        "doble enlace.",
+        [
+            ("El tipo de enlace entre carbonos",
+             "Esa información la entrega la terminación del nombre, no el prefijo."),
+            ("El número de hidrógenos",
+             "Los hidrógenos se deducen del número de carbonos y del tipo de enlace."),
+            ("La familia de compuestos orgánicos a la que pertenece la molécula que se está nombrando",
+             "La familia se reconoce por la terminación y por el grupo funcional presente."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Cómo se llama el alcano de cadena abierta con cinco carbonos?",
+        "Pentano",
+        "El nombre combina el prefijo del número de carbonos con la "
+        "terminación.\n\n"
+        "1) Cinco carbonos corresponden al prefijo pent-.\n"
+        "2) Al tener solo enlaces simples, la terminación es -ano.\n"
+        "3) El nombre resultante es pentano, de fórmula C₅H₁₂.\n\n"
+        "Si tuviera un doble enlace sería penteno, y con uno triple, pentino.",
+        [
+            ("Pentino",
+             "La terminación -ino corresponde a un triple enlace."),
+            ("Buteno",
+             "But- indica cuatro carbonos, y -eno, un doble enlace."),
+            ("Ciclopentano, que es el nombre que reciben las cadenas de cinco carbonos según la nomenclatura",
+             "Ciclo- se agrega solo cuando la cadena se cierra formando un anillo."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Qué distingue a los hidrocarburos alifáticos de los aromáticos?",
+        "Los aromáticos tienen un anillo con enlaces deslocalizados",
+        "La clasificación separa dos comportamientos químicos distintos.\n\n"
+        "1) Los alifáticos son de cadena abierta o cíclica, con enlaces simples, "
+        "dobles o triples bien localizados.\n"
+        "2) Los aromáticos tienen un anillo donde los electrones se reparten "
+        "entre todos sus carbonos.\n"
+        "3) Esa deslocalización les da una estabilidad mayor y una reactividad "
+        "distinta de la de un alqueno.\n\n"
+        "El benceno es el ejemplo básico, y de él derivan muchos compuestos de "
+        "uso industrial.",
+        [
+            ("Los alifáticos contienen oxígeno",
+             "Ninguno de los dos grupos contiene oxígeno: ambos son hidrocarburos."),
+            ("Los aromáticos siempre son gaseosos",
+             "El benceno es líquido a temperatura ambiente."),
+            ("Los alifáticos siempre forman anillos cerrados y los aromáticos, cadenas abiertas",
+             "Es al revés en cuanto al anillo, y además los alifáticos pueden ser abiertos o cíclicos."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Cuál es la fórmula molecular del ciclohexano, un anillo de seis "
+        "carbonos con enlaces simples?",
+        "C₆H₁₂",
+        "Cerrar el anillo cuesta dos hidrógenos.\n\n"
+        "1) Un alcano abierto de seis carbonos tendría 14 hidrógenos, según "
+        "CnH2n+2.\n"
+        "2) Al unirse el primer carbono con el último, cada uno usa un enlace "
+        "que antes ocupaba un hidrógeno.\n"
+        "3) Quedan 12 hidrógenos, de modo que la fórmula es C₆H₁₂.\n\n"
+        "Los hidrocarburos cíclicos saturados responden a la fórmula general "
+        "CnH2n, la misma de los alquenos de cadena abierta.",
+        [
+            ("C₆H₁₄",
+             "Esa es la fórmula del hexano, de cadena abierta."),
+            ("C₆H₆",
+             "Esa es la fórmula del benceno, que es aromático."),
+            ("C₆H₁₀, porque al cerrarse el anillo se pierden cuatro hidrógenos de la cadena original",
+             "El cierre del anillo consume dos hidrógenos, uno por cada carbono terminal."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "El polietileno se fabrica a partir del eteno. ¿Qué característica del "
+        "eteno lo hace posible?",
+        "Su doble enlace puede abrirse y unir moléculas",
+        "La insaturación es lo que permite encadenar unidades.\n\n"
+        "1) El doble enlace concentra electrones disponibles para reaccionar.\n"
+        "2) Al abrirse, cada molécula queda con dos puntos de unión libres y "
+        "puede enlazarse con sus vecinas.\n"
+        "3) Repetido miles de veces, ese proceso forma una cadena muy larga: el "
+        "polímero.\n\n"
+        "Un alcano no sirve para esto, porque sus enlaces simples no ofrecen "
+        "esos puntos de unión.",
+        [
+            ("Que es un gas a temperatura ambiente",
+             "Su estado facilita el manejo industrial, pero no es lo que permite la unión."),
+            ("Que contiene oxígeno",
+             "El eteno es un hidrocarburo: solo tiene carbono e hidrógeno."),
+            ("Que su cadena es lo bastante larga como para enredarse con las cadenas de sus vecinas",
+             "El eteno tiene solo dos carbonos: la cadena larga es el resultado, no la causa."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "El etino se usa en sopletes de soldadura. ¿Qué propiedad lo hace útil "
+        "para eso?",
+        "Su combustión libera mucha energía por molécula",
+        "La energía almacenada se relaciona con el tipo de enlace.\n\n"
+        "1) El etino contiene un triple enlace entre carbonos, con mucha "
+        "energía involucrada.\n"
+        "2) Al quemarse con oxígeno puro, esa energía se libera en una llama "
+        "que alcanza temperaturas muy altas.\n"
+        "3) Eso permite fundir metales, que es lo que la soldadura requiere.\n\n"
+        "El mismo compuesto se conoce con su nombre común, acetileno.",
+        [
+            ("Que no produce dióxido de carbono al arder",
+             "Su combustión produce dióxido de carbono como la de cualquier hidrocarburo."),
+            ("Que es sólido a temperatura ambiente",
+             "Es un gas en condiciones normales."),
+            ("Que arde a temperatura muy baja, lo que permite trabajar los metales sin riesgo de quemaduras",
+             "Ocurre lo contrario: su llama alcanza temperaturas muy altas."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Por qué el benceno es más estable que un alqueno cíclico con el mismo "
+        "número de carbonos?",
+        "Porque sus electrones se reparten por todo el anillo",
+        "La deslocalización distribuye la energía y estabiliza la "
+        "estructura.\n\n"
+        "1) En un alqueno los electrones del doble enlace están localizados "
+        "entre dos carbonos determinados.\n"
+        "2) En el benceno esos electrones se reparten entre los seis carbonos "
+        "del anillo.\n"
+        "3) Esa distribución baja la energía del conjunto y hace que la "
+        "molécula sea más estable y menos reactiva.\n\n"
+        "Por eso el benceno no se comporta como un alqueno común frente a los "
+        "reactivos que atacan dobles enlaces.",
+        [
+            ("Porque tiene más hidrógenos",
+             "El benceno tiene menos hidrógenos que un cicloalqueno equivalente."),
+            ("Porque sus enlaces son todos simples",
+             "Sus enlaces son intermedios entre simple y doble, no simples."),
+            ("Porque su anillo es más grande que el de cualquier otro hidrocarburo cíclico conocido",
+             "El tamaño del anillo no es lo determinante: lo es la deslocalización de sus electrones."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Por qué la molécula de metano no es plana, pese a que se dibuje así "
+        "en el papel?",
+        "Porque sus cuatro enlaces se separan en el espacio",
+        "La geometría real busca la máxima separación entre enlaces.\n\n"
+        "1) Los cuatro pares de electrones de enlace se repelen entre sí.\n"
+        "2) La disposición que los deja lo más separados posible es un "
+        "tetraedro, con ángulos de 109,5°.\n"
+        "3) El dibujo plano, con ángulos de 90°, es una simplificación del "
+        "papel y no la forma real.\n\n"
+        "Los modelos de esferas y varillas existen justamente para mostrar esa "
+        "geometría que la fórmula desarrollada no representa.",
+        [
+            ("Porque contiene un doble enlace",
+             "El metano solo tiene enlaces simples."),
+            ("Porque los hidrógenos se repelen entre sí y forman un anillo",
+             "La repulsión existe, pero el resultado es un tetraedro y no un anillo."),
+            ("Porque el carbono central se desplaza continuamente y la molécula cambia de forma todo el tiempo",
+             "La geometría tetraédrica es estable: no es un promedio de formas cambiantes."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "En la fórmula semidesarrollada CH₃–CH₂–CH₂–CH₃, ¿cuántos carbonos y "
+        "cuántos hidrógenos hay?",
+        "4 carbonos y 10 hidrógenos",
+        "La lectura consiste en sumar lo que cada grupo declara.\n\n"
+        "1) Hay cuatro grupos escritos, cada uno con un carbono: son 4 "
+        "carbonos.\n"
+        "2) Los dos extremos aportan 3 hidrógenos cada uno y los dos internos, "
+        "2 cada uno.\n"
+        "3) Sumando: 3 más 2 más 2 más 3 da 10 hidrógenos.\n\n"
+        "La fórmula molecular resultante es C₄H₁₀, que corresponde al butano.",
+        [
+            ("4 carbonos y 8 hidrógenos",
+             "Ese conteo omite dos hidrógenos de los extremos de la cadena."),
+            ("4 carbonos y 12 hidrógenos",
+             "Asigna tres hidrógenos también a los carbonos internos, que solo llevan dos."),
+            ("8 carbonos y 10 hidrógenos, contando además los carbonos que quedan implícitos entre los guiones",
+             "Los guiones representan enlaces, no carbonos adicionales."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Qué diferencia hay entre un modelo compacto y uno de esferas y "
+        "varillas?",
+        "El compacto muestra el volumen y oculta los enlaces",
+        "Cada modelo destaca un aspecto distinto de la molécula.\n\n"
+        "1) El de esferas y varillas representa los átomos separados y los "
+        "enlaces como barras, lo que deja ver ángulos y conexiones.\n"
+        "2) El compacto dibuja los átomos como esferas que se interpenetran, "
+        "mostrando el espacio que realmente ocupa la molécula.\n"
+        "3) A cambio, en el compacto los enlaces quedan escondidos.\n\n"
+        "Se elige uno u otro según interese la conectividad o el tamaño real de "
+        "la molécula.",
+        [
+            ("El compacto indica la fórmula molecular",
+             "Ninguno de los dos escribe la fórmula: ambos son representaciones tridimensionales."),
+            ("El de esferas y varillas muestra el volumen real",
+             "Ese es justamente el aporte del modelo compacto."),
+            ("El compacto representa solo el esqueleto de carbonos, sin mostrar los hidrógenos de la molécula",
+             "Esa simplificación corresponde a la fórmula topológica."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "La gasolina contiene principalmente hidrocarburos de ocho carbonos. "
+        "¿Cómo se llama el alcano correspondiente?",
+        "Octano",
+        "El nombre se arma con el prefijo del número de carbonos.\n\n"
+        "1) Ocho carbonos corresponden al prefijo oct-.\n"
+        "2) Al ser un alcano, la terminación es -ano.\n"
+        "3) El nombre es octano, de fórmula C₈H₁₈.\n\n"
+        "De ahí viene la expresión número de octano, que compara el "
+        "comportamiento de un combustible con el de un isómero de ese "
+        "compuesto.",
+        [
+            ("Octeno",
+             "La terminación -eno indica un doble enlace, no un alcano."),
+            ("Hexano",
+             "Hex- corresponde a seis carbonos."),
+            ("Ciclooctano, porque los hidrocarburos de ocho carbonos se cierran formando un anillo",
+             "Los de ocho carbonos pueden ser de cadena abierta; el prefijo ciclo- se agrega solo si hay anillo."),
+        ],
+    ),
+    _q(
+        "cie_organica", "dificil",
+        "Una tabla da estas longitudes de enlace entre carbonos: 154, 134 y 120 "
+        "picómetros. ¿A qué tipo corresponde cada una?",
+        "154 al simple, 134 al doble y 120 al triple",
+        "La longitud disminuye al aumentar el número de pares compartidos.\n\n"
+        "1) El enlace simple comparte un par de electrones y es el más largo: "
+        "154 picómetros.\n"
+        "2) El doble comparte dos pares y acerca más a los núcleos: 134.\n"
+        "3) El triple comparte tres pares y es el más corto: 120.\n\n"
+        "Las energías de enlace siguen el orden inverso, así que el de 120 "
+        "picómetros es también el más difícil de romper.",
+        [
+            ("120 al simple, 134 al doble y 154 al triple",
+             "Invierte la relación: compartir más pares acorta el enlace, no lo alarga."),
+            ("134 al simple, 154 al doble y 120 al triple",
+             "Rompe el orden sin criterio: la secuencia es monótona decreciente."),
+            ("Las tres corresponden al mismo tipo de enlace medido con instrumentos de distinta precisión",
+             "Las diferencias son sistemáticas y bien establecidas: corresponden a tipos de enlace distintos."),
+        ],
+    ),
+    _q(
+        "cie_organica", "dificil",
+        "¿Cuántos isómeros de cadena tiene el compuesto de fórmula C₅H₁₂?",
+        "Tres",
+        "El conteo se hace ordenando las formas posibles de la cadena.\n\n"
+        "1) La primera opción es una cadena continua de cinco carbonos: el "
+        "pentano.\n"
+        "2) La segunda es una cadena de cuatro con una ramificación de un "
+        "carbono: el metilbutano.\n"
+        "3) La tercera es una cadena de tres con dos ramificaciones sobre el "
+        "carbono central: el dimetilpropano.\n\n"
+        "No hay más posibilidades: cualquier otro dibujo resulta ser una de "
+        "estas tres vista desde otro ángulo.",
+        [
+            ("Dos",
+             "Falta la estructura con dos ramificaciones sobre el carbono central."),
+            ("Cinco",
+             "Confunde el número de carbonos con el número de estructuras posibles."),
+            ("Uno solo, porque una misma fórmula molecular corresponde siempre a un único compuesto",
+             "Los isómeros son justamente el caso contrario: comparten fórmula y difieren en estructura."),
+        ],
+    ),
+    _q(
+        "cie_organica", "dificil",
+        "Un compuesto de cadena abierta tiene fórmula C₄H₈. ¿Qué se puede "
+        "afirmar sobre sus enlaces?",
+        "Tiene un doble enlace entre dos carbonos",
+        "La comparación con el alcano correspondiente revela la "
+        "insaturación.\n\n"
+        "1) Un alcano de cuatro carbonos tendría 10 hidrógenos, según "
+        "CnH2n+2.\n"
+        "2) El compuesto tiene 8, o sea dos menos.\n"
+        "3) Faltar dos hidrógenos en una cadena abierta implica un doble "
+        "enlace.\n\n"
+        "Si además fuera cíclico, la misma fórmula correspondería a un "
+        "ciclobutano, y por eso el enunciado precisa que es de cadena abierta.",
+        [
+            ("Tiene solo enlaces simples",
+             "Con solo enlaces simples y cuatro carbonos habría 10 hidrógenos, no 8."),
+            ("Tiene un triple enlace",
+             "Un triple enlace descontaría cuatro hidrógenos, dejando la fórmula en C₄H₆."),
+            ("Tiene dos dobles enlaces separados a lo largo de la cadena principal de la molécula",
+             "Dos dobles enlaces descontarían cuatro hidrógenos, no dos."),
+        ],
+    ),
+    _q(
+        "cie_organica", "dificil",
+        "Un alcano de cadena abierta tiene 10 carbonos. ¿Cuántos hidrógenos "
+        "tiene?",
+        "22 hidrógenos",
+        "La fórmula general se aplica sin necesidad de dibujar la "
+        "molécula.\n\n"
+        "1) Los alcanos de cadena abierta responden a CnH2n+2.\n"
+        "2) Con n igual a 10, el cálculo es 2 por 10 más 2.\n"
+        "3) El resultado es 22 hidrógenos, y la fórmula es C₁₀H₂₂.\n\n"
+        "El más dos corresponde a los extremos: los ocho carbonos internos "
+        "llevan dos hidrógenos cada uno y los dos terminales, tres.",
+        [
+            ("20 hidrógenos",
+             "Omite los dos hidrógenos adicionales de los extremos de la cadena."),
+            ("24 hidrógenos",
+             "Agrega dos de más respecto de lo que permite la tetravalencia del carbono."),
+            ("10 hidrógenos, uno por cada átomo de carbono presente en la cadena de la molécula",
+             "Cada carbono se une a dos o tres hidrógenos, no a uno."),
+        ],
+    ),
+    _q(
+        "cie_organica", "dificil",
+        "Dos líquidos tienen la misma fórmula molecular y hierven a "
+        "temperaturas distintas. ¿Qué se infiere?",
+        "Son isómeros con estructuras diferentes",
+        "Una misma composición no garantiza el mismo compuesto.\n\n"
+        "1) La temperatura de ebullición es una propiedad de cada sustancia, "
+        "así que valores distintos indican sustancias distintas.\n"
+        "2) Como comparten la fórmula molecular, la diferencia debe estar en "
+        "cómo se ordenan sus átomos.\n"
+        "3) Eso es precisamente la definición de isómeros.\n\n"
+        "La comparación entre butano y metilpropano es el caso clásico: mismos "
+        "átomos, distinta estructura y distinto punto de ebullición.",
+        [
+            ("Uno de los dos está contaminado",
+             "La contaminación es posible, pero la explicación directa es la isomería."),
+            ("Tienen distinto número de átomos de carbono",
+             "Comparten la fórmula molecular, así que el número de carbonos es el mismo."),
+            ("Se midieron a presiones distintas y por eso los valores obtenidos no coinciden entre sí",
+             "Es una posibilidad que se descarta midiendo ambos en las mismas condiciones."),
+        ],
+    ),
+    _q(
+        "cie_organica", "dificil",
+        "Al quemar metano en presencia de oxígeno suficiente, ¿en qué "
+        "proporción se forman los productos?",
+        "Una molécula de dióxido de carbono y dos de agua",
+        "La proporción se deduce de contar átomos a ambos lados.\n\n"
+        "1) El metano, CH₄, aporta un carbono, que forma una molécula de "
+        "dióxido de carbono.\n"
+        "2) Aporta además cuatro hidrógenos, que forman dos moléculas de agua, "
+        "porque cada una lleva dos.\n"
+        "3) Para eso se consumen dos moléculas de oxígeno, que completan los "
+        "cuatro átomos de oxígeno necesarios.\n\n"
+        "El conteo de átomos a ambos lados es lo que garantiza que la ecuación "
+        "respete la conservación de la materia.",
+        [
+            ("Una molécula de dióxido de carbono y una de agua",
+             "Una sola molécula de agua dejaría dos hidrógenos sin destino."),
+            ("Dos moléculas de dióxido de carbono y dos de agua",
+             "El metano aporta un solo carbono: no alcanza para dos moléculas de dióxido."),
+            ("Cuatro moléculas de agua y una de dióxido de carbono, una por cada hidrógeno del metano",
+             "Cada molécula de agua contiene dos hidrógenos, así que cuatro hidrógenos dan dos moléculas."),
+        ],
+    ),
+    _q(
+        "cie_organica", "dificil",
+        "Un estudiante afirma que la fórmula molecular basta para identificar un "
+        "compuesto. ¿Cómo se evalúa?",
+        "Es incorrecta: los isómeros la comparten",
+        "La fórmula molecular describe composición, no estructura.\n\n"
+        "1) Dos compuestos pueden tener los mismos átomos ordenados de manera "
+        "distinta.\n"
+        "2) El etanol y el dimetiléter comparten la fórmula C₂H₆O y tienen "
+        "propiedades muy diferentes.\n"
+        "3) Para identificar un compuesto hace falta conocer su estructura, no "
+        "solo su composición.\n\n"
+        "Por eso las representaciones desarrollada, semidesarrollada y "
+        "topológica no son un lujo: aportan lo que la fórmula molecular no "
+        "puede.",
+        [
+            ("Es correcta, porque los átomos determinan las propiedades",
+             "Determinan las propiedades junto con la manera en que están unidos entre sí."),
+            ("Es correcta, porque cada compuesto tiene una fórmula única",
+             "Los isómeros son el contraejemplo directo de esa afirmación."),
+            ("Es incorrecta, porque la fórmula molecular no permite conocer siquiera qué elementos hay",
+             "Sí los indica: lo que no informa es cómo están unidos."),
+        ],
+    ),
+    _q(
+        "cie_organica", "dificil",
+        "Para distinguir experimentalmente un alcano de un alqueno, ¿en qué "
+        "propiedad conviene apoyarse?",
+        "En que solo el alqueno reacciona con facilidad por su doble enlace",
+        "La diferencia estructural se traduce en una diferencia de "
+        "reactividad.\n\n"
+        "1) El alcano tiene solo enlaces simples y es poco reactivo frente a "
+        "reactivos que atacan insaturaciones.\n"
+        "2) El alqueno tiene un doble enlace con electrones disponibles, y "
+        "reacciona con rapidez al agregarse sobre él.\n"
+        "3) Un ensayo en que una sustancia decolora el reactivo y la otra no "
+        "distingue ambos casos.\n\n"
+        "Conviene incluir un control con un compuesto conocido de cada tipo, "
+        "para verificar que el reactivo funciona.",
+        [
+            ("En su color, porque el alqueno es coloreado",
+             "Ambos son incoloros: el color aparece en el reactivo, no en el hidrocarburo."),
+            ("En su masa molecular",
+             "Un alcano y un alqueno pueden tener masas parecidas y no se distinguen así."),
+            ("En que solo el alcano puede quemarse en presencia de oxígeno del aire circundante",
+             "Ambos arden: la combustión no distingue entre uno y otro."),
+        ],
+    ),
+    _q(
+        "cie_organica", "dificil",
+        "En una fórmula topológica se cuentan seis vértices, incluidos los "
+        "extremos, y todos los enlaces son simples. ¿De qué compuesto se trata?",
+        "Del hexano, C₆H₁₄",
+        "La lectura de la representación exige recuperar lo omitido.\n\n"
+        "1) Cada vértice y cada extremo representa un carbono: son seis.\n"
+        "2) Al ser todos los enlaces simples, se trata de un alcano.\n"
+        "3) Aplicando CnH2n+2, los hidrógenos son 14 y el compuesto es el "
+        "hexano.\n\n"
+        "Los hidrógenos no aparecen dibujados, y ese es justamente el paso que "
+        "hay que reponer al leer una fórmula topológica.",
+        [
+            ("Del hexeno, C₆H₁₂",
+             "Un hexeno tendría un doble enlace, que se dibujaría como una línea adicional."),
+            ("Del benceno, C₆H₆",
+             "El benceno se representa como un anillo cerrado con enlaces alternados o un círculo interior."),
+            ("Del ciclohexano, C₆H₁₂, porque seis vértices unidos forman necesariamente un anillo cerrado",
+             "Una línea quebrada con extremos libres no es un anillo: el ciclo se dibuja cerrado."),
+        ],
+    ),
+    _q(
+        "cie_organica", "dificil",
+        "Un carbono participa de un triple enlace y de un enlace simple. ¿Qué "
+        "hibridación tiene y por qué?",
+        "sp, porque se une a solo dos átomos",
+        "La hibridación se deduce contando direcciones de enlace, no "
+        "enlaces.\n\n"
+        "1) Un triple enlace une a ese carbono con un solo átomo vecino, aunque "
+        "compartan tres pares de electrones.\n"
+        "2) Sumando el enlace simple, el carbono se une a dos átomos en "
+        "total.\n"
+        "3) Dos direcciones de enlace corresponden a hibridación sp y a una "
+        "geometría lineal, con ángulo de 180°.\n\n"
+        "El error frecuente es contar los tres pares del triple enlace como si "
+        "fueran tres direcciones distintas.",
+        [
+            ("sp³, porque participa de cuatro enlaces en total",
+             "Cuenta pares de electrones en lugar de átomos vecinos: son dos vecinos, no cuatro."),
+            ("sp², porque tiene un enlace múltiple",
+             "sp² corresponde a un carbono unido a tres átomos, como en un doble enlace más dos simples."),
+            ("No tiene hibridación, porque los enlaces triples se forman sin necesidad de orbitales híbridos",
+             "El triple enlace combina un enlace formado por orbitales híbridos con dos que no lo son."),
+        ],
+    ),
+    _q(
+        "cie_organica", "dificil",
+        "Se comparan las temperaturas de ebullición de metano, etano, propano y "
+        "butano, y aumentan en ese orden. ¿Qué explica la tendencia?",
+        "Las moléculas más grandes se atraen con más fuerza",
+        "La tendencia se explica por la interacción entre moléculas.\n\n"
+        "1) Los cuatro compuestos son alcanos y difieren solo en el largo de su "
+        "cadena.\n"
+        "2) Una cadena más larga ofrece más superficie de contacto entre "
+        "moléculas vecinas.\n"
+        "3) Con más atracción entre ellas, hace falta más energía para "
+        "separarlas y el punto de ebullición sube.\n\n"
+        "Es la misma tendencia que permite separar las fracciones del petróleo "
+        "por destilación.",
+        [
+            ("Los enlaces dentro de la molécula se hacen más fuertes",
+             "Hervir no rompe enlaces internos: separa moléculas entre sí."),
+            ("Las moléculas más grandes tienen más hidrógenos disponibles para reaccionar",
+             "La ebullición es un cambio físico y no implica reacción."),
+            ("Las moléculas más grandes contienen enlaces dobles que las mantienen unidas a sus vecinas",
+             "Los cuatro son alcanos y solo tienen enlaces simples."),
+        ],
+    ),
+    _q(
+        "cie_organica", "dificil",
+        "¿Por qué el metano tiene ángulos de 109,5° y el eteno de 120°?",
+        "Porque los enlaces se separan lo más posible en cada caso",
+        "La geometría resulta de la repulsión entre pares de electrones.\n\n"
+        "1) En el metano, cada carbono se une a cuatro átomos, y la separación "
+        "máxima entre cuatro direcciones da un tetraedro de 109,5°.\n"
+        "2) En el eteno, cada carbono se une a tres átomos, y la separación "
+        "máxima entre tres direcciones da un plano de 120°.\n"
+        "3) El número de átomos vecinos determina la hibridación y con ella el "
+        "ángulo.\n\n"
+        "Con dos vecinos, como en el etino, la separación máxima da 180° y la "
+        "molécula resulta lineal.",
+        [
+            ("Porque el eteno tiene más átomos de carbono",
+             "El número de carbonos no determina el ángulo: lo hace cuántos vecinos tiene cada uno."),
+            ("Porque el metano es un gas y el eteno un líquido",
+             "Ambos son gases en condiciones normales, y el estado no fija los ángulos."),
+            ("Porque los ángulos dependen del número de hidrógenos que tenga la molécula en total",
+             "Dependen de cuántos átomos rodean a cada carbono, no del total de hidrógenos."),
+        ],
+    ),
+    _q(
+        "cie_organica", "dificil",
+        "Un compuesto contiene solo carbono e hidrógeno y su fórmula empírica es "
+        "CH₂. Su masa molar es aproximadamente 56 g/mol. ¿Cuál es su fórmula "
+        "molecular?",
+        "C₄H₈",
+        "La fórmula molecular es un múltiplo entero de la empírica.\n\n"
+        "1) La masa de la unidad CH₂ es 12 más 2, o sea 14 g/mol.\n"
+        "2) Dividiendo la masa molar del compuesto por esa unidad: 56 dividido "
+        "por 14 da 4.\n"
+        "3) Multiplicando la fórmula empírica por 4 se obtiene C₄H₈.\n\n"
+        "Ese resultado corresponde a un alqueno de cuatro carbonos o a un "
+        "ciclobutano, cosa que la fórmula molecular por sí sola no distingue.",
+        [
+            ("C₂H₄",
+             "Corresponde a multiplicar por 2, lo que daría una masa molar de 28 g/mol."),
+            ("CH₂",
+             "Esa es la fórmula empírica, cuya masa es 14 y no 56 g/mol."),
+            ("C₅H₁₀, que resulta de dividir la masa molar del compuesto directamente por el número de carbonos",
+             "El divisor correcto es la masa de la unidad empírica, 14, y el cociente da 4."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_organica", "dificil",
+        "De dos muestras se conoce la fórmula molecular, la masa molar y la "
+        "fórmula semidesarrollada. ¿Qué dato permite decidir si son isómeros?",
+        "La fórmula semidesarrollada de cada una",
+        "Ser isómeros exige coincidir en composición y diferir en "
+        "estructura.\n\n"
+        "1) La fórmula molecular y la masa molar solo permiten comprobar la "
+        "primera condición: que tengan los mismos átomos.\n"
+        "2) Dos muestras con la misma fórmula molecular pueden ser el mismo "
+        "compuesto o dos isómeros distintos.\n"
+        "3) La fórmula semidesarrollada muestra cómo se unen esos átomos, y es "
+        "lo único que permite ver si las estructuras difieren.\n\n"
+        "Sin ese dato, la conclusión quedaría en que las muestras son "
+        "compatibles con ser isómeros, no en que lo son.",
+        [
+            ("La fórmula molecular de cada una",
+             "Permite comprobar que la composición coincide, pero no distingue estructuras."),
+            ("La masa molar de cada una",
+             "Dos isómeros tienen exactamente la misma masa molar, así que el dato no distingue."),
+            ("Los tres datos por igual, porque cualquiera de ellos identifica a un compuesto sin ambigüedad",
+             "Solo la representación estructural identifica sin ambigüedad: las otras dos las comparten los isómeros."),
+        ],
+    ),
+]
