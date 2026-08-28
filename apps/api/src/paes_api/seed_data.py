@@ -78716,27 +78716,6 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
     _q(
-        "cie_nervioso", "medio",
-        "Entre las medidas de cuidado del sistema nervioso, el temario "
-        "menciona dormir las horas necesarias. ¿Por qué el sueño es una "
-        "medida de cuidado y no solo un descanso?",
-        "Durante el sueño el cerebro consolida lo aprendido y elimina desechos metabólicos",
-        "Dormir no es apagar el cerebro: es ponerlo a hacer otra cosa.\n\n"
-        "1) Mientras se duerme se consolidan las conexiones formadas durante "
-        "el día: lo estudiado se fija de verdad ahí.\n"
-        "2) Además se eliminan productos de desecho acumulados por la "
-        "actividad neuronal.\n"
-        "3) Dormir poco de forma sostenida deteriora atención, memoria y "
-        "tiempo de reacción, que son funciones nerviosas.\n"
-        "4) Por eso el temario lo lista junto a la prevención de traumatismos: "
-        "las dos protegen el mismo sistema.",
-        [
-            ("Porque el cerebro deja de funcionar y así se desgasta menos", "El cerebro no se apaga durante el sueño: mantiene actividad intensa y organizada."),
-            ("Porque durante el sueño se generan neuronas nuevas que reemplazan a las dañadas", "La generación de neuronas en el adulto es muy limitada y no es lo que ocurre cada noche."),
-            ("Porque el sueño solo descansa los músculos, no el sistema nervioso", "Es al revés: buena parte de la función del sueño es nerviosa, no muscular."),
-        ],
-    ),
-    _q(
         "cie_reproduccion", "medio",
         "En la fecundación humana participan un ovocito y un espermatozoide. "
         "¿Qué aporta cada uno?",
@@ -92280,7 +92259,7 @@ QUESTIONS_CIENCIAS += [
         "desarrollo de un antepasado común.\n"
         "3) Las diferencias entre las especies adultas aparecen en etapas más "
         "tardías del desarrollo.\n\n"
-        "Es una de las cuatro líneas de evidencia que el temario menciona, junto "
+        "Es una de las cuatro líneas de evidencia de la evolución, junto "
         "con la anatomía comparada, la biología molecular y el registro fósil.",
         [
             ("Evidencia anatómica, porque compara estructuras adultas",
@@ -96117,6 +96096,1339 @@ QUESTIONS_CIENCIAS += [
              "Los cloroplastos producen glucosa, y su degradación para obtener ATP sigue las mismas vías."),
             ("Es incorrecta, porque las células sin mitocondrias obtienen ATP directamente del medio",
              "Las células no captan ATP del exterior: deben producirlo."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Biología - "Procesos y funciones biológicas": sistema nervioso
+#
+# El temario de Admisión 2027 agregó esta área: estructura y función de las
+# neuronas, generación y propagación del impulso nervioso, transmisión por
+# sinapsis química, arco reflejo simple, consecuencias del consumo de café,
+# alcohol y drogas de abuso, y medidas de cuidado como las horas de sueño
+# necesarias y la prevención de traumatismos.
+#
+# El banco tenía cinco preguntas en total para todo esto.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_nervioso", "facil",
+        "¿Cuál es la función general del sistema nervioso en el organismo?",
+        "Coordinar e integrar las respuestas a los estímulos",
+        "Es un sistema de control que conecta lo que ocurre afuera con lo que "
+        "hace el cuerpo.\n\n"
+        "1) RECIBE información del ambiente y del interior mediante "
+        "receptores.\n"
+        "2) INTEGRA esa información: la compara, la combina con la experiencia "
+        "previa y decide una respuesta.\n"
+        "3) ORDENA la respuesta a los músculos y a las glándulas.\n\n"
+        "Esa función integradora es lo que distingue al sistema nervioso de una "
+        "simple cadena de reflejos: no solo reacciona, sino que coordina "
+        "respuestas de todo el organismo.",
+        [
+            ("Transportar los nutrientes hacia todas las células del cuerpo",
+             "Esa es función del sistema circulatorio."),
+            ("Producir las hormonas que regulan el crecimiento del organismo",
+             "Las hormonas las produce el sistema endocrino, aunque ambos sistemas trabajan coordinados."),
+            ("Defender al organismo del ataque de microorganismos externos",
+             "Esa es función del sistema inmune."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "facil",
+        "¿Qué es una sinapsis?",
+        "El punto de contacto donde una neurona comunica con otra célula",
+        "Es el lugar donde la señal pasa de una célula a la siguiente.\n\n"
+        "1) El terminal del axón de una neurona se aproxima a la membrana de "
+        "otra célula, sin llegar a tocarla: queda un espacio estrecho.\n"
+        "2) La señal eléctrica no puede cruzar ese espacio por sí sola.\n"
+        "3) La neurona libera neurotransmisores que atraviesan el espacio y se "
+        "unen a receptores de la célula siguiente, reiniciando allí la señal.\n\n"
+        "La célula que recibe puede ser otra neurona, una fibra muscular o una "
+        "célula glandular.",
+        [
+            ("La región del axón recubierta por la vaina de mielina",
+             "La mielina recubre tramos del axón, pero la sinapsis es el punto de contacto entre células."),
+            ("El conjunto de dendritas que rodean al cuerpo de la neurona",
+             "Las dendritas reciben señales, pero la sinapsis es el contacto en sí, no las dendritas."),
+            ("El espacio dentro del axón por donde viaja el impulso nervioso",
+             "El impulso viaja por la membrana del axón; la sinapsis está en su extremo."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "facil",
+        "¿Qué se libera desde el terminal de una neurona para transmitir la "
+        "señal a la célula siguiente?",
+        "Neurotransmisores",
+        "La transmisión sináptica es un proceso químico.\n\n"
+        "1) Al llegar el impulso al terminal, se abren canales de calcio y las "
+        "vesículas se fusionan con la membrana.\n"
+        "2) Liberan neurotransmisores al espacio sináptico.\n"
+        "3) Esas moléculas se unen a receptores específicos de la célula "
+        "siguiente y provocan en ella un cambio eléctrico.\n\n"
+        "Después son retiradas del espacio, por degradación o por recaptación, "
+        "para que la señal termine y la sinapsis quede lista para la siguiente.",
+        [
+            ("Iones de sodio que atraviesan el espacio entre las dos células",
+             "Los iones cruzan la membrana durante el impulso, pero no son lo que se libera para comunicar."),
+            ("Fragmentos de mielina que estimulan a la célula receptora",
+             "La mielina es aislante y no se libera como señal."),
+            ("Hormonas que viajan por la sangre hasta la neurona siguiente",
+             "Las hormonas viajan por la sangre y actúan a distancia; la sinapsis es un contacto local."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "facil",
+        "Una persona toca una superficie muy caliente y retira la mano antes de "
+        "sentir el dolor. ¿Qué explica esa rapidez?",
+        "La respuesta se resuelve en la médula, sin pasar por el cerebro",
+        "Es la característica del arco reflejo.\n\n"
+        "1) El receptor de la piel envía la señal por una neurona sensitiva "
+        "hasta la médula espinal.\n"
+        "2) En la médula, la señal pasa directamente a una neurona motora que "
+        "ordena la contracción del músculo.\n"
+        "3) Ese circuito corto ahorra el tiempo que tomaría llegar al cerebro y "
+        "volver.\n\n"
+        "La señal también sube al cerebro, y por eso se siente el dolor un "
+        "instante después: para entonces la mano ya se retiró.",
+        [
+            ("El cerebro procesa la señal más rápido cuando hay peligro",
+             "El cerebro no interviene en la respuesta refleja: por eso es tan rápida."),
+            ("El calor hace que el músculo se contraiga por sí solo",
+             "El músculo no responde directamente al calor: la contracción la ordena una neurona motora."),
+            ("Los nervios de la mano conducen más rápido que los del resto del cuerpo",
+             "La velocidad de conducción es comparable: lo que acorta el tiempo es la longitud del circuito."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "facil",
+        "¿Qué efecto tiene el alcohol sobre el sistema nervioso central?",
+        "Es depresor: enlentece la actividad nerviosa",
+        "Su clasificación farmacológica describe su efecto, no la sensación "
+        "subjetiva.\n\n"
+        "1) El alcohol reduce la actividad de los circuitos nerviosos, "
+        "enlenteciendo la conducción y la respuesta.\n"
+        "2) La desinhibición inicial, que puede parecer estimulación, resulta "
+        "justamente de deprimir primero los circuitos que controlan la "
+        "conducta.\n"
+        "3) A mayor cantidad, la depresión alcanza funciones como la "
+        "coordinación, el habla, la conciencia y, en casos graves, la "
+        "respiración.\n\n"
+        "Por eso deteriora los tiempos de reacción y la capacidad de conducir "
+        "mucho antes de que la persona lo perciba.",
+        [
+            ("Es estimulante: acelera la actividad nerviosa",
+             "La desinhibición inicial engaña: farmacológicamente el alcohol es depresor."),
+            ("No tiene efecto sobre el sistema nervioso, solo sobre el hígado",
+             "El hígado lo metaboliza, pero sus efectos sobre el sistema nervioso son inmediatos y notorios."),
+            ("Actúa como analgésico bloqueando los receptores del dolor",
+             "Puede reducir la percepción del dolor por depresión general, pero no bloquea receptores del dolor específicamente."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "La cafeína produce sensación de alerta y dificulta conciliar el sueño. "
+        "¿Cómo se explica su efecto?",
+        "Bloquea receptores de una sustancia que induce somnolencia",
+        "Actúa impidiendo una señal en vez de generando una propia.\n\n"
+        "1) Durante la vigilia se acumula en el cerebro una sustancia, la "
+        "adenosina, que promueve la somnolencia al unirse a sus receptores.\n"
+        "2) La cafeína tiene una forma parecida y ocupa esos receptores sin "
+        "activarlos.\n"
+        "3) La señal de somnolencia no llega, y la persona se siente alerta.\n\n"
+        "La cafeína no elimina el cansancio ni reemplaza al sueño: solo bloquea "
+        "la señal. Cuando su efecto pasa, la adenosina acumulada se une de golpe "
+        "a sus receptores y la somnolencia reaparece con fuerza.",
+        [
+            ("Aporta energía directamente a las neuronas del cerebro",
+             "La cafeína no es una fuente de energía: no aporta calorías utilizables por las neuronas."),
+            ("Aumenta la producción de neurotransmisores en todas las sinapsis",
+             "Su mecanismo principal es bloquear receptores de adenosina, no aumentar la producción general de neurotransmisores."),
+            ("Repara las neuronas dañadas por el cansancio acumulado del día",
+             "El cansancio no daña neuronas, y la cafeína no repara tejido nervioso."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "Se administra a un cultivo de neuronas una sustancia que impide la "
+        "liberación de neurotransmisores. ¿Qué efecto se observaría?",
+        "El impulso llegaría al terminal pero no pasaría a la célula siguiente",
+        "El bloqueo actúa en una etapa concreta de la transmisión.\n\n"
+        "1) La generación y la propagación del impulso a lo largo del axón "
+        "dependen de canales iónicos y seguirían funcionando.\n"
+        "2) Al llegar al terminal, la señal necesita convertirse en liberación "
+        "de neurotransmisores para cruzar el espacio sináptico.\n"
+        "3) Si eso se bloquea, la comunicación se interrumpe ahí: la célula "
+        "siguiente no recibe nada.\n\n"
+        "Varias toxinas naturales actúan exactamente así, y producen parálisis "
+        "porque las neuronas motoras no logran ordenar la contracción muscular.",
+        [
+            ("El impulso no se generaría en ninguna parte de la neurona",
+             "La generación del impulso depende de canales iónicos, no de la liberación de neurotransmisores."),
+            ("La célula siguiente se estimularía de manera continua",
+             "Sin neurotransmisores no hay estimulación alguna: ocurre lo contrario."),
+            ("El impulso viajaría en sentido inverso, desde el axón hacia las dendritas",
+             "La dirección del impulso la determina la estructura de la neurona y no se invierte por este bloqueo."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "¿Cuál es la secuencia correcta de un arco reflejo simple?",
+        "Receptor, neurona sensitiva, médula, neurona motora, efector",
+        "Cada elemento cumple un papel definido en el circuito.\n\n"
+        "1) El RECEPTOR detecta el estímulo, por ejemplo el calor en la piel.\n"
+        "2) La NEURONA SENSITIVA lleva esa información hasta la médula "
+        "espinal.\n"
+        "3) En la MÉDULA la señal pasa a la neurona motora, con una o pocas "
+        "sinapsis de por medio.\n"
+        "4) La NEURONA MOTORA conduce la orden hasta el EFECTOR, que es el "
+        "músculo que se contrae.\n\n"
+        "Que el circuito se cierre en la médula y no en el cerebro es lo que "
+        "hace la respuesta tan rápida.",
+        [
+            ("Receptor, cerebro, médula, neurona motora, efector",
+             "El cerebro recibe la información en paralelo, pero la respuesta refleja no pasa por él."),
+            ("Efector, neurona sensitiva, médula, neurona motora, receptor",
+             "Invierte los extremos: el receptor detecta y el efector responde, no al revés."),
+            ("Receptor, neurona motora, médula, neurona sensitiva, efector",
+             "Intercambia las dos neuronas: la sensitiva lleva la información y la motora trae la orden."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "¿Qué ocurre en la membrana de una neurona cuando se genera un impulso "
+        "nervioso?",
+        "Entran iones que invierten momentáneamente su carga",
+        "El impulso es un cambio eléctrico rápido y local.\n\n"
+        "1) En reposo, el interior de la neurona es negativo respecto del "
+        "exterior: hay una diferencia de potencial mantenida por bombas.\n"
+        "2) Ante un estímulo suficiente, se abren canales y entran iones "
+        "positivos: la diferencia se invierte por un instante.\n"
+        "3) Ese cambio abre los canales vecinos y así el impulso se propaga a lo "
+        "largo de la membrana.\n\n"
+        "Después la neurona restablece su estado de reposo, gastando ATP, y "
+        "queda lista para conducir el siguiente impulso.",
+        [
+            ("Se libera energía en forma de calor a lo largo del axón",
+             "El impulso es un fenómeno eléctrico por movimiento de iones, no una liberación de calor."),
+            ("La mielina se desplaza a lo largo del axón transportando la señal",
+             "La mielina es una cubierta fija: no se desplaza."),
+            ("El núcleo envía una señal química que recorre toda la neurona",
+             "El impulso se genera y propaga en la membrana, sin intervención directa del núcleo."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "Dormir las horas necesarias se considera una medida de cuidado del "
+        "sistema nervioso. ¿Por qué?",
+        "Durante el sueño se consolidan aprendizajes y se elimina desecho",
+        "El sueño no es una simple pausa: es un estado con funciones "
+        "propias.\n\n"
+        "1) Durante el sueño se refuerzan las conexiones asociadas a lo "
+        "aprendido durante el día: la memoria se consolida.\n"
+        "2) También se intensifica la eliminación de productos de desecho "
+        "acumulados en el tejido nervioso.\n"
+        "3) La privación sostenida deteriora la atención, el estado de ánimo, la "
+        "capacidad de decidir y los tiempos de reacción.\n\n"
+        "Por eso estudiar toda la noche antes de una prueba suele rendir menos "
+        "que dormir: sin sueño, lo estudiado se consolida peor.",
+        [
+            ("Porque el cerebro deja de funcionar y ahorra energía",
+             "El cerebro se mantiene muy activo durante el sueño, con patrones distintos de los de la vigilia."),
+            ("Porque durante el sueño se generan neuronas nuevas que reemplazan a las viejas",
+             "La generación de neuronas nuevas en el adulto es muy limitada y no es la función principal del sueño."),
+            ("Porque el sueño permite que los músculos descansen y con ellos el sistema nervioso",
+             "El descanso muscular ocurre, pero las funciones del sueño sobre el sistema nervioso son propias y activas."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "El uso de casco al andar en bicicleta se recomienda como medida de "
+        "cuidado del sistema nervioso. ¿Cuál es el fundamento?",
+        "El tejido nervioso prácticamente no se regenera tras un daño",
+        "La prevención importa tanto porque la reparación es muy limitada.\n\n"
+        "1) Las neuronas del sistema nervioso central casi no se dividen ni "
+        "reemplazan a las perdidas.\n"
+        "2) Un traumatismo puede destruir tejido de manera irreversible, con "
+        "secuelas permanentes.\n"
+        "3) El casco reduce la aceleración que sufre el encéfalo durante el "
+        "impacto y disminuye mucho la gravedad de la lesión.\n\n"
+        "A diferencia de una fractura ósea o de una herida cutánea, que se "
+        "reparan, el daño neurológico suele quedar: por eso la única estrategia "
+        "eficaz es evitarlo.",
+        [
+            ("El cerebro se regenera rápido y el casco acelera esa recuperación",
+             "El tejido nervioso central prácticamente no se regenera, y el casco previene, no repara."),
+            ("El casco evita que el cerebro se sobrecaliente durante el ejercicio",
+             "El casco no cumple función térmica: su propósito es amortiguar impactos."),
+            ("Los golpes en la cabeza afectan sobre todo al cráneo y no al tejido nervioso",
+             "El daño más grave y menos reversible es justamente el del tejido nervioso."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "¿Qué diferencia hay entre el sistema nervioso central y el periférico?",
+        "El central son encéfalo y médula; el periférico, los nervios",
+        "La división es anatómica y corresponde a funciones distintas.\n\n"
+        "1) El SISTEMA NERVIOSO CENTRAL está formado por el encéfalo y la "
+        "médula espinal: es donde se procesa e integra la información.\n"
+        "2) El PERIFÉRICO son los nervios que conectan el central con el resto "
+        "del cuerpo: llevan información hacia adentro y órdenes hacia afuera.\n"
+        "3) El central está protegido por hueso, el cráneo y la columna, "
+        "justamente por su vulnerabilidad.\n\n"
+        "Los nervios periféricos sí tienen alguna capacidad de regeneración, a "
+        "diferencia del tejido del sistema nervioso central.",
+        [
+            ("El central controla los movimientos y el periférico, las sensaciones",
+             "Ambos participan tanto en lo sensitivo como en lo motor: la división es anatómica."),
+            ("El central es voluntario y el periférico, involuntario",
+             "Lo voluntario e involuntario cruza ambas divisiones y corresponde a otra clasificación."),
+            ("El central está formado por neuronas y el periférico por células de soporte",
+             "Ambos contienen neuronas y células de soporte."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "¿Por qué el consumo repetido de una droga suele requerir dosis cada vez "
+        "mayores para producir el mismo efecto?",
+        "El sistema nervioso se adapta y reduce su respuesta",
+        "El fenómeno se llama tolerancia y tiene una base biológica.\n\n"
+        "1) Ante la estimulación repetida, las neuronas reducen la cantidad de "
+        "receptores disponibles o su sensibilidad.\n"
+        "2) La misma dosis produce entonces un efecto menor.\n"
+        "3) Para obtener el efecto original se requiere más sustancia, lo que "
+        "profundiza la adaptación y aumenta el riesgo.\n\n"
+        "Esa adaptación también explica el síndrome de abstinencia: al "
+        "suspender el consumo, el sistema queda desajustado en sentido contrario "
+        "hasta que vuelve a adaptarse.",
+        [
+            ("El hígado destruye la droga cada vez más rápido y no alcanza a llegar al cerebro",
+             "El metabolismo hepático puede acelerarse y contribuye, pero la adaptación de los receptores es el mecanismo central."),
+            ("La droga se acumula en el organismo y neutraliza a las dosis siguientes",
+             "La acumulación aumentaría el efecto, no lo reduciría."),
+            ("Las neuronas afectadas mueren y por eso hace falta estimular a más de ellas",
+             "La tolerancia aparece mucho antes de cualquier pérdida neuronal y es reversible."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "Una sustancia bloquea los receptores de un neurotransmisor excitatorio "
+        "en un circuito. ¿Qué efecto se espera sobre ese circuito?",
+        "Disminuye su actividad",
+        "El efecto depende de qué tipo de señal se interrumpe.\n\n"
+        "1) Un neurotransmisor EXCITATORIO aumenta la probabilidad de que la "
+        "neurona siguiente genere un impulso.\n"
+        "2) Bloquear sus receptores impide esa señal: la neurona siguiente se "
+        "activa menos.\n"
+        "3) El resultado es una reducción de la actividad del circuito.\n\n"
+        "Si el neurotransmisor bloqueado fuera INHIBITORIO, el efecto sería el "
+        "opuesto: al quitar el freno, la actividad aumentaría.",
+        [
+            ("Aumenta su actividad al quedar los receptores libres",
+             "Los receptores quedan ocupados por el bloqueador y no responden: no hay liberación de actividad."),
+            ("No cambia, porque el impulso viaja igual por el axón",
+             "El impulso viaja por el axón, pero no logra pasar a la neurona siguiente sin activar sus receptores."),
+            ("Invierte el sentido de la señal dentro del circuito",
+             "El sentido de la transmisión lo determina la estructura de la sinapsis y no se invierte."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "¿Por qué la señal en una sinapsis química viaja siempre en un solo "
+        "sentido?",
+        "Solo un lado libera y solo el otro tiene receptores",
+        "La asimetría estructural determina la dirección.\n\n"
+        "1) Las vesículas con neurotransmisores están únicamente en el terminal "
+        "de la neurona que envía la señal.\n"
+        "2) Los receptores específicos están únicamente en la membrana de la "
+        "célula que la recibe.\n"
+        "3) Por lo tanto la señal solo puede pasar en esa dirección: no hay con "
+        "qué transmitirla al revés.\n\n"
+        "Esa unidireccionalidad es lo que permite que los circuitos nerviosos "
+        "tengan una organización definida y no se conviertan en un ruido "
+        "generalizado.",
+        [
+            ("Porque el impulso eléctrico solo puede avanzar en una dirección",
+             "En un axón aislado el impulso puede propagarse en ambos sentidos; la dirección la impone la sinapsis."),
+            ("Porque la mielina impide que la señal retroceda por el axón",
+             "La mielina acelera la conducción, pero no determina el sentido de la transmisión sináptica."),
+            ("Porque el espacio sináptico solo permite el paso de moléculas en un sentido",
+             "El espacio sináptico no tiene direccionalidad propia: las moléculas difunden en todas direcciones."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "dificil",
+        "Se compara la velocidad de conducción en un axón con mielina y en uno "
+        "sin ella, del mismo diámetro. ¿Qué resultado se espera y por qué?",
+        "El mielinizado conduce mucho más rápido",
+        "El mecanismo de propagación cambia por completo con la mielina.\n\n"
+        "1) En un axón SIN mielina, el impulso debe regenerarse punto a punto a "
+        "lo largo de toda la membrana: es un proceso continuo y relativamente "
+        "lento.\n"
+        "2) En un axón MIELINIZADO, la membrana solo queda expuesta en las "
+        "interrupciones de la vaina, y el impulso salta de una a la siguiente.\n"
+        "3) Al reducirse el número de puntos donde debe regenerarse, la "
+        "velocidad aumenta mucho.\n\n"
+        "La mielina permite además ahorrar energía: al regenerarse en menos "
+        "puntos, se mueven menos iones y se gasta menos ATP en restablecer el "
+        "reposo.",
+        [
+            ("El no mielinizado conduce más rápido porque no tiene obstáculos",
+             "La mielina no es un obstáculo para la señal: cambia el modo de propagación y la acelera."),
+            ("Ambos conducen a la misma velocidad si tienen igual diámetro",
+             "El diámetro influye, pero la mielinización produce una diferencia mucho mayor."),
+            ("El mielinizado conduce más rápido porque la mielina conduce la electricidad",
+             "La mielina es aislante, no conductora: su efecto es forzar el salto entre interrupciones."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "dificil",
+        "Un estudiante afirma que el arco reflejo demuestra que el cerebro no "
+        "participa en absoluto cuando alguien retira la mano del fuego. ¿Cómo se "
+        "evalúa?",
+        "Es parcialmente correcta: no participa en la respuesta, pero sí recibe la señal",
+        "Hay que distinguir la respuesta motora de la percepción.\n\n"
+        "1) La RESPUESTA se resuelve en la médula: la mano se retira sin esperar "
+        "al cerebro, y por eso es tan rápida.\n"
+        "2) Pero la señal también asciende hacia el encéfalo, y por eso la "
+        "persona SIENTE el dolor un instante después y sabe lo que ocurrió.\n"
+        "3) Además el cerebro puede modular reflejos: es posible, con esfuerzo, "
+        "inhibir parcialmente algunos.\n\n"
+        "La afirmación captura bien lo esencial del arco reflejo, pero se pasa "
+        "al decir que el cerebro no participa en absoluto.",
+        [
+            ("Es completamente correcta: el cerebro no interviene de ninguna manera",
+             "La señal asciende igualmente al encéfalo, y por eso la persona percibe el dolor."),
+            ("Es incorrecta: la respuesta refleja siempre pasa por el cerebro",
+             "Si pasara por el cerebro, la respuesta sería considerablemente más lenta."),
+            ("Es incorrecta, porque los reflejos no existen y toda respuesta es voluntaria",
+             "Los reflejos están bien documentados y se evalúan clínicamente de manera rutinaria."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "dificil",
+        "Se estudia el efecto de la privación de sueño sobre el tiempo de "
+        "reacción. Un grupo duerme ocho horas y otro, cuatro, durante una "
+        "semana. ¿Qué variable debe controlarse cuidadosamente?",
+        "El consumo de cafeína de ambos grupos",
+        "El diseño debe aislar el efecto de las horas de sueño.\n\n"
+        "1) La variable independiente son las horas de sueño y la dependiente, "
+        "el tiempo de reacción.\n"
+        "2) La cafeína afecta directamente el estado de alerta y por lo tanto el "
+        "tiempo de reacción: si un grupo la consume más, el resultado quedaría "
+        "confundido.\n"
+        "3) Es esperable, además, que el grupo privado de sueño consuma más "
+        "cafeína de manera espontánea, lo que agrava el problema.\n\n"
+        "También conviene controlar la edad, el horario de medición y la "
+        "práctica previa en la tarea usada.",
+        [
+            ("El número de horas que duerme cada grupo",
+             "Esa es la variable independiente: justamente lo que el diseño hace variar."),
+            ("El tiempo de reacción medido en cada participante",
+             "Es la variable dependiente: el resultado que se mide."),
+            ("La cantidad de participantes de cada grupo, que debe ser distinta para comparar",
+             "Los grupos deben ser comparables en tamaño, no deliberadamente distintos."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "dificil",
+        "Una persona bajo efectos del alcohol afirma sentirse más desinhibida y "
+        "con más energía, y de ahí concluye que el alcohol es estimulante. "
+        "¿Cómo se evalúa esa conclusión?",
+        "Es incorrecta: la desinhibición resulta de deprimir el autocontrol",
+        "La sensación subjetiva no coincide con el efecto farmacológico.\n\n"
+        "1) El alcohol deprime la actividad nerviosa desde el comienzo.\n"
+        "2) Los primeros circuitos afectados son los que ejercen control e "
+        "inhibición sobre la conducta.\n"
+        "3) Al deprimirse esos frenos, la persona actúa con más soltura y lo "
+        "interpreta como estimulación. Pero es depresión, no excitación.\n\n"
+        "La comprobación objetiva es directa: los tiempos de reacción, la "
+        "coordinación y la atención se deterioran de inmediato, cosa que ningún "
+        "estimulante produciría.",
+        [
+            ("Es correcta: el alcohol estimula el sistema nervioso en dosis bajas",
+             "Incluso en dosis bajas los tiempos de reacción y la coordinación se deterioran: eso es depresión."),
+            ("Es incorrecta, porque el alcohol no tiene ningún efecto sobre la conducta",
+             "Sí lo tiene, y muy marcado: el punto es que ese efecto es depresor."),
+            ("Es correcta, pero solo durante los primeros minutos tras el consumo",
+             "La depresión de la actividad nerviosa comienza desde el inicio; no hay una fase estimulante real."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "dificil",
+        "¿Por qué una lesión de la médula espinal a la altura del cuello produce "
+        "consecuencias mucho más extensas que una lesión a la altura lumbar?",
+        "Interrumpe las vías que conectan con todo lo que está más abajo",
+        "La médula funciona como una vía de comunicación entre el encéfalo y el "
+        "resto del cuerpo.\n\n"
+        "1) Toda la información que sube y todas las órdenes que bajan atraviesan "
+        "la médula.\n"
+        "2) Una lesión interrumpe esa comunicación para TODO lo que está por "
+        "debajo del punto dañado.\n"
+        "3) Una lesión cervical deja sin conexión a los cuatro miembros y al "
+        "tronco; una lumbar, solo a las piernas y a la parte baja.\n\n"
+        "Por eso la altura de la lesión determina la extensión de la pérdida, y "
+        "las lesiones cervicales altas pueden comprometer incluso la "
+        "respiración.",
+        [
+            ("El cuello tiene más neuronas que la región lumbar",
+             "La diferencia no es de cantidad de neuronas, sino de cuántas vías quedan interrumpidas por debajo."),
+            ("La médula cervical controla directamente el corazón y el cerebro",
+             "El corazón tiene su propio marcapasos y el cerebro está por encima de la lesión."),
+            ("Las lesiones cervicales dañan el cráneo además de la médula",
+             "Son estructuras distintas: una lesión medular cervical no implica daño craneal."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "Después de que un neurotransmisor actúa sobre la célula siguiente, ¿qué "
+        "debe ocurrir para que la sinapsis quede lista para otra señal?",
+        "El neurotransmisor debe retirarse del espacio sináptico",
+        "Si la señal no termina, la sinapsis no puede transmitir la "
+        "siguiente.\n\n"
+        "1) Mientras el neurotransmisor siga unido a los receptores, la célula "
+        "receptora permanece estimulada.\n"
+        "2) Para que la señal termine, esas moléculas deben ser degradadas por "
+        "enzimas o recaptadas por la neurona que las liberó.\n"
+        "3) Solo entonces los receptores quedan libres y la sinapsis puede "
+        "responder a un nuevo impulso.\n\n"
+        "Varios fármacos actúan justamente sobre esa retirada: al enlentecerla, "
+        "prolongan el efecto del neurotransmisor en el espacio sináptico.",
+        [
+            ("La neurona debe generar un nuevo impulso en sentido contrario",
+             "No existe una señal de retorno que apague la sinapsis."),
+            ("La célula receptora debe liberar sus propios neurotransmisores",
+             "Eso ocurriría si a su vez transmite a otra célula, pero no es lo que apaga esta sinapsis."),
+            ("La vaina de mielina debe cubrir el espacio sináptico",
+             "La mielina recubre el axón, no el espacio sináptico."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "¿Qué relación existe entre el sistema nervioso y el sistema endocrino "
+        "en la respuesta del organismo?",
+        "Ambos coordinan respuestas, uno rápido y otro más prolongado",
+        "Son dos sistemas de control complementarios.\n\n"
+        "1) El sistema NERVIOSO transmite señales eléctricas y químicas por vías "
+        "definidas: su respuesta es rápida, precisa y breve.\n"
+        "2) El sistema ENDOCRINO libera hormonas a la sangre, que alcanzan a "
+        "todo el cuerpo: su respuesta es más lenta pero más duradera.\n"
+        "3) Trabajan coordinados: ante una situación de alarma, el sistema "
+        "nervioso responde en un instante y desencadena además la liberación de "
+        "hormonas que sostienen la respuesta.\n\n"
+        "Esa combinación permite responder tanto a lo inmediato como a lo "
+        "sostenido en el tiempo.",
+        [
+            ("El nervioso controla al endocrino y este no influye sobre aquel",
+             "La influencia es recíproca: varias hormonas modifican el funcionamiento del sistema nervioso."),
+            ("Ambos usan exclusivamente señales eléctricas para comunicarse",
+             "El sistema endocrino usa señales químicas transportadas por la sangre."),
+            ("El endocrino responde más rápido porque las hormonas viajan por la sangre",
+             "La vía sanguínea es más lenta que la conducción nerviosa: la respuesta hormonal tarda más."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "El consumo sostenido de sustancias de abuso puede producir dependencia. "
+        "¿En qué consiste?",
+        "El organismo necesita la sustancia para funcionar con normalidad",
+        "Es la consecuencia de una adaptación profunda del sistema nervioso.\n\n"
+        "1) Ante la presencia repetida de la sustancia, los circuitos se "
+        "reajustan para compensar su efecto.\n"
+        "2) Ese nuevo equilibrio requiere la presencia de la sustancia: sin "
+        "ella, el sistema queda desajustado y aparece el síndrome de "
+        "abstinencia.\n"
+        "3) A eso se suma el componente conductual: la búsqueda compulsiva de la "
+        "sustancia por encima de otras prioridades.\n\n"
+        "Por eso interrumpir un consumo prolongado no es cuestión de voluntad "
+        "únicamente: hay una adaptación biológica que revertir.",
+        [
+            ("La sustancia se acumula en el cuerpo y no puede eliminarse",
+             "La mayoría de las sustancias se metaboliza y elimina; la dependencia persiste igual."),
+            ("El consumo produce cada vez efectos más intensos con la misma dosis",
+             "Ocurre lo contrario: la tolerancia hace que la misma dosis produzca menos efecto."),
+            ("La persona olvida cómo funcionaba su organismo antes del consumo",
+             "No es un fenómeno de memoria: es una adaptación fisiológica de los circuitos nerviosos."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "Se compara el tiempo que tarda una respuesta refleja con el de una "
+        "respuesta voluntaria ante el mismo estímulo. ¿Qué se espera y por qué?",
+        "La refleja es más rápida porque su circuito es más corto",
+        "La diferencia se explica por el recorrido de la señal.\n\n"
+        "1) La respuesta REFLEJA se resuelve en la médula, con muy pocas "
+        "sinapsis de por medio.\n"
+        "2) La respuesta VOLUNTARIA exige que la señal suba al encéfalo, sea "
+        "procesada e integrada con otra información, y que la orden baje de "
+        "vuelta.\n"
+        "3) Cada sinapsis adicional agrega retraso, y el recorrido es mucho más "
+        "largo.\n\n"
+        "Esa diferencia es lo que hace útiles a los reflejos: protegen al "
+        "organismo antes de que la decisión consciente alcance a formularse.",
+        [
+            ("La voluntaria es más rápida porque el cerebro procesa mejor la información",
+             "El mejor procesamiento tiene un costo en tiempo: la respuesta voluntaria es más lenta."),
+            ("Ambas tardan lo mismo porque la conducción nerviosa es igual de rápida",
+             "La velocidad de conducción es semejante, pero la distancia y el número de sinapsis difieren mucho."),
+            ("La refleja es más rápida porque no requiere que la neurona use energía",
+             "Ambas requieren energía: la diferencia está en la longitud del circuito."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "¿Qué función cumplen las células de soporte que rodean a las neuronas "
+        "en el tejido nervioso?",
+        "Nutren, aíslan y sostienen a las neuronas",
+        "Son mucho más que un relleno del tejido.\n\n"
+        "1) Aportan sostén estructural y mantienen las neuronas en posición.\n"
+        "2) Producen la vaina de mielina que aísla los axones y acelera la "
+        "conducción.\n"
+        "3) Regulan la composición del medio que rodea a las neuronas y retiran "
+        "desechos y neurotransmisores sobrantes.\n\n"
+        "Su número supera al de las neuronas, y hoy se sabe que participan "
+        "activamente en el funcionamiento del tejido, no solo en su "
+        "mantenimiento.",
+        [
+            ("Transmitir los impulsos nerviosos cuando las neuronas se agotan",
+             "La conducción del impulso es tarea exclusiva de las neuronas."),
+            ("Almacenar los recuerdos que las neuronas no alcanzan a retener",
+             "La memoria se asocia a las conexiones entre neuronas, no a un almacenamiento en células de soporte."),
+            ("Reemplazar a las neuronas dañadas convirtiéndose en neuronas nuevas",
+             "Las células de soporte no se convierten en neuronas funcionales para reemplazar a las perdidas."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "dificil",
+        "Una sustancia impide la recaptación de un neurotransmisor tras su "
+        "liberación. ¿Qué efecto tendría sobre la transmisión sináptica?",
+        "El neurotransmisor permanece más tiempo y prolonga la señal",
+        "La retirada del neurotransmisor es lo que apaga la señal.\n\n"
+        "1) Normalmente, parte del neurotransmisor es recaptado por la neurona "
+        "que lo liberó, lo que termina la estimulación.\n"
+        "2) Si esa recaptación se bloquea, el neurotransmisor permanece en el "
+        "espacio sináptico y sigue uniéndose a los receptores.\n"
+        "3) El efecto sobre la célula receptora se prolonga e intensifica.\n\n"
+        "Varios fármacos usados en psiquiatría actúan exactamente así, y también "
+        "algunas drogas de abuso, lo que explica tanto su efecto como su "
+        "potencial de generar dependencia.",
+        [
+            ("La transmisión se interrumpe por falta de neurotransmisor",
+             "El neurotransmisor no falta: sobra, porque no se retira del espacio sináptico."),
+            ("El impulso deja de propagarse por el axón de la neurona",
+             "La propagación por el axón depende de canales iónicos y no se ve afectada por la recaptación."),
+            ("La neurona receptora deja de tener receptores disponibles de inmediato",
+             "Con el tiempo puede reducir sus receptores como adaptación, pero el efecto inmediato es una señal prolongada."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "dificil",
+        "Se afirma que dormir menos permite aprovechar más horas para estudiar y "
+        "por lo tanto rendir mejor en una prueba. ¿Cómo se evalúa esa "
+        "afirmación?",
+        "Es incorrecta: sin sueño el aprendizaje se consolida peor",
+        "El razonamiento cuenta las horas pero ignora qué hace el sueño.\n\n"
+        "1) Es cierto que dormir menos deja más horas disponibles.\n"
+        "2) Pero durante el sueño se consolida lo aprendido: las conexiones "
+        "asociadas se refuerzan y la información pasa a almacenarse de forma más "
+        "estable.\n"
+        "3) Además, la privación deteriora la atención, la memoria de trabajo y "
+        "la capacidad de razonar, que es justamente lo que una prueba exige.\n\n"
+        "El resultado neto suele ser peor: se estudia más horas y se retiene y "
+        "se rinde menos.",
+        [
+            ("Es correcta: más horas de estudio siempre significan mejor rendimiento",
+             "El rendimiento depende de la calidad del estudio y del estado cognitivo, no solo de las horas."),
+            ("Es correcta si se compensa el sueño perdido con cafeína",
+             "La cafeína bloquea la señal de somnolencia pero no reemplaza las funciones del sueño."),
+            ("Es incorrecta, porque estudiar de noche no permite retener nada de información",
+             "Sí se retiene información estudiando de noche: el problema es que sin sueño posterior se consolida peor."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "¿Qué tipo de neurona lleva la información desde un receptor de la piel "
+        "hacia el sistema nervioso central?",
+        "La neurona sensitiva",
+        "Las neuronas se clasifican según la dirección en que conducen.\n\n"
+        "1) La neurona SENSITIVA, o aferente, conduce desde los receptores hacia "
+        "el sistema nervioso central.\n"
+        "2) La neurona MOTORA, o eferente, conduce desde el centro hacia los "
+        "efectores: músculos y glándulas.\n"
+        "3) Entre ambas suele haber interneuronas, que integran la información "
+        "dentro del sistema nervioso central.\n\n"
+        "Los tres tipos participan en el arco reflejo, y su orden define el "
+        "recorrido de la señal.",
+        [
+            ("La neurona motora, que conduce hacia los músculos del cuerpo",
+             "La motora lleva las órdenes hacia los efectores, no la información desde los receptores."),
+            ("La interneurona, que conecta neuronas dentro de la médula espinal",
+             "La interneurona integra dentro del sistema nervioso central, no recoge del receptor."),
+            ("La célula de soporte, que transmite la señal hasta la médula",
+             "Las células de soporte no conducen impulsos nerviosos."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "Se dice que el impulso nervioso es un fenómeno de todo o nada. ¿Qué "
+        "significa?",
+        "O se genera con su tamaño completo o no se genera",
+        "La intensidad del impulso no depende de la del estímulo.\n\n"
+        "1) Si el estímulo no alcanza cierto umbral, no se genera ningún "
+        "impulso.\n"
+        "2) Si lo alcanza, el impulso se produce siempre con la misma amplitud, "
+        "por intenso que sea el estímulo.\n"
+        "3) La intensidad del estímulo se codifica de otra manera: en la "
+        "FRECUENCIA de impulsos y en cuántas neuronas se activan.\n\n"
+        "Por eso un dolor intenso no produce impulsos más grandes, sino muchos "
+        "más impulsos por segundo en muchas más fibras.",
+        [
+            ("El impulso es más grande cuanto más intenso es el estímulo",
+             "La amplitud es siempre la misma: lo que cambia con la intensidad es la frecuencia de impulsos."),
+            ("El impulso puede detenerse a mitad de camino por el axón",
+             "Una vez generado, se propaga hasta el final del axón sin decaer."),
+            ("Todas las neuronas del circuito responden simultáneamente al estímulo",
+             "El número de neuronas activadas depende de la intensidad, y no todas responden a la vez."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "facil",
+        "¿Qué parte de la neurona conduce el impulso desde el cuerpo celular "
+        "hacia otras células?",
+        "El axón",
+        "Cada región de la neurona cumple un papel en el recorrido de la "
+        "señal.\n\n"
+        "1) Las DENDRITAS reciben las señales de otras neuronas.\n"
+        "2) El CUERPO CELULAR contiene el núcleo e integra las señales "
+        "recibidas.\n"
+        "3) El AXÓN conduce el impulso resultante hasta sus terminales, donde se "
+        "produce la sinapsis con la célula siguiente.\n\n"
+        "Un axón puede ser extremadamente largo: los que van de la médula al pie "
+        "miden alrededor de un metro en una sola célula.",
+        [
+            ("Las dendritas, que se ramifican alrededor del cuerpo celular",
+             "Las dendritas reciben señales: no las conducen hacia otras células."),
+            ("La vaina de mielina, que recubre parte de la neurona",
+             "La mielina acelera la conducción, pero no es ella la que conduce."),
+            ("El cuerpo celular, donde se encuentra el núcleo de la neurona",
+             "El cuerpo integra las señales, y el impulso resultante sale por el axón."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_nervioso", "facil",
+        "¿Qué órganos forman el sistema nervioso central?",
+        "El encéfalo y la médula espinal",
+        "Son las dos estructuras donde se procesa e integra la información.\n\n"
+        "1) El ENCÉFALO ocupa la cavidad craneal e incluye el cerebro, el "
+        "cerebelo y el tronco encefálico.\n"
+        "2) La MÉDULA ESPINAL recorre el interior de la columna vertebral y "
+        "conecta el encéfalo con el resto del cuerpo.\n"
+        "3) Ambos están protegidos por hueso y por membranas, y bañados por un "
+        "líquido que amortigua los golpes.\n\n"
+        "Los nervios que salen de ellos hacia el resto del organismo forman el "
+        "sistema nervioso periférico.",
+        [
+            ("Los nervios que recorren todo el cuerpo humano",
+             "Los nervios forman el sistema nervioso periférico, no el central."),
+            ("El cerebro y los órganos de los sentidos del organismo",
+             "Los órganos de los sentidos contienen receptores, pero no forman parte del sistema nervioso central."),
+            ("La médula espinal y los músculos que ella controla",
+             "Los músculos son efectores: reciben órdenes del sistema nervioso pero no forman parte de él."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "facil",
+        "¿Qué estructura protege al encéfalo de los golpes?",
+        "El cráneo",
+        "La protección del sistema nervioso central es sobre todo mecánica.\n\n"
+        "1) El CRÁNEO es una caja ósea rígida que rodea al encéfalo.\n"
+        "2) Bajo él hay membranas y un líquido que amortigua los movimientos "
+        "bruscos.\n"
+        "3) La médula espinal está protegida de manera equivalente por las "
+        "vértebras.\n\n"
+        "Esa protección tiene un límite: en una desaceleración brusca el "
+        "encéfalo puede golpear contra el interior del cráneo, y de ahí que el "
+        "casco siga siendo necesario aunque el hueso esté intacto.",
+        [
+            ("La columna vertebral, que rodea al encéfalo por completo",
+             "La columna protege a la médula espinal, no al encéfalo."),
+            ("La vaina de mielina que recubre el tejido nervioso",
+             "La mielina recubre axones individuales y cumple una función eléctrica, no protectora frente a golpes."),
+            ("La piel del cuero cabelludo, que amortigua los impactos recibidos",
+             "La piel aporta muy poca protección mecánica frente a un impacto significativo."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "Una persona pisa un objeto punzante y retira el pie de inmediato. Si "
+        "además debe mantener el equilibrio sobre la otra pierna, ¿qué muestra "
+        "esa combinación?",
+        "El reflejo actúa junto a una respuesta coordinada más compleja",
+        "La respuesta completa combina dos niveles de control.\n\n"
+        "1) La retirada del pie es un reflejo medular: rápido y automático.\n"
+        "2) Mantener el equilibrio exige ajustar la postura de todo el cuerpo, y "
+        "eso involucra al cerebelo y a otras estructuras encefálicas.\n"
+        "3) Ambos ocurren casi simultáneamente y de manera coordinada.\n\n"
+        "Ese es exactamente el sentido de la función INTEGRADORA del sistema "
+        "nervioso que el temario menciona: no responde con un solo circuito "
+        "aislado sino organizando varios a la vez.",
+        [
+            ("Que todos los reflejos requieren la participación del cerebelo",
+             "El reflejo de retirada se resuelve en la médula; lo que involucra al cerebelo es el ajuste postural."),
+            ("Que el equilibrio también es una respuesta refleja de la médula espinal",
+             "El control del equilibrio involucra estructuras encefálicas y no se resuelve solo en la médula."),
+            ("Que el sistema nervioso solo puede ejecutar una respuesta a la vez",
+             "El caso muestra justamente lo contrario: varias respuestas coordinadas de manera simultánea."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "¿Por qué se recomienda no consumir café en las horas previas a dormir?",
+        "Su efecto sobre los receptores dura varias horas",
+        "El problema es la duración del efecto, no solo su intensidad.\n\n"
+        "1) La cafeína bloquea los receptores de la sustancia que induce "
+        "somnolencia.\n"
+        "2) El organismo tarda varias horas en eliminar la mitad de la cafeína "
+        "consumida, y ese tiempo varía entre personas.\n"
+        "3) Una taza tomada al atardecer puede seguir bloqueando esos receptores "
+        "a la hora de acostarse, y dificultar tanto conciliar el sueño como su "
+        "calidad.\n\n"
+        "El efecto sobre la calidad del sueño puede aparecer incluso en personas "
+        "que logran dormirse sin dificultad.",
+        [
+            ("La cafeína produce sueño al principio y luego lo interrumpe",
+             "La cafeína no produce sueño en ninguna fase: bloquea la señal de somnolencia."),
+            ("El café contiene azúcar que altera el descanso nocturno",
+             "El efecto se debe a la cafeína, y ocurre igual con café sin azúcar."),
+            ("La cafeína daña las neuronas encargadas de regular el sueño",
+             "No las daña: bloquea temporalmente unos receptores, y el efecto es reversible."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "Se compara la conducción del impulso nervioso con la de la corriente "
+        "por un cable eléctrico. ¿Cuál es la diferencia esencial?",
+        "El impulso se regenera en cada punto y no se debilita",
+        "Los dos son fenómenos eléctricos, pero de naturaleza distinta.\n\n"
+        "1) En un cable, la corriente se atenúa con la distancia por la "
+        "resistencia del conductor.\n"
+        "2) En un axón, el impulso no viaja pasivamente: en cada punto se abren "
+        "canales que lo REGENERAN con la misma amplitud.\n"
+        "3) Por eso llega al final del axón exactamente igual de intenso que al "
+        "comienzo, incluso tras un metro de recorrido.\n\n"
+        "El costo de esa regeneración es energético: la neurona debe restablecer "
+        "después las diferencias iónicas, y eso consume ATP.",
+        [
+            ("El impulso nervioso viaja mucho más rápido que la corriente eléctrica",
+             "Ocurre lo contrario: la señal eléctrica en un cable es muchísimo más rápida."),
+            ("El impulso nervioso no involucra cargas eléctricas de ningún tipo",
+             "Sí las involucra: consiste en el movimiento de iones a través de la membrana."),
+            ("El impulso nervioso puede viajar en ambos sentidos por el mismo axón a la vez",
+             "Tras el paso del impulso la membrana queda momentáneamente inexcitable, lo que impide el retroceso."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "Algunas sustancias de abuso actúan sobre los circuitos cerebrales "
+        "asociados a la recompensa. ¿Qué consecuencia tiene eso?",
+        "Refuerzan la conducta de consumo por encima de otras",
+        "El sistema de recompensa existe para reforzar conductas útiles.\n\n"
+        "1) Normalmente ese circuito se activa ante comer, beber o relacionarse "
+        "con otros, y refuerza la repetición de esas conductas.\n"
+        "2) Varias sustancias lo activan de manera mucho más intensa que "
+        "cualquier estímulo natural.\n"
+        "3) El resultado es que la conducta de consumo queda reforzada por "
+        "encima de las demás, y con el tiempo desplaza a otras prioridades.\n\n"
+        "A eso se suma la tolerancia, que empuja a aumentar la dosis, y la "
+        "adaptación de los circuitos, que produce malestar al suspender.",
+        [
+            ("Aumentan de manera permanente la capacidad de sentir placer",
+             "Ocurre lo contrario: la adaptación de los circuitos reduce la respuesta a los estímulos naturales."),
+            ("Mejoran la memoria porque activan circuitos de aprendizaje",
+             "El refuerzo de la conducta de consumo no equivale a una mejora general de la memoria."),
+            ("Bloquean el sistema de recompensa e impiden que la persona sienta placer",
+             "Lo activan de manera intensa; el empobrecimiento de la respuesta viene después, por adaptación."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "En una sinapsis, ¿qué determina si el efecto sobre la célula siguiente "
+        "será excitatorio o inhibitorio?",
+        "El tipo de receptor que se activa",
+        "El mismo neurotransmisor puede producir efectos opuestos.\n\n"
+        "1) El neurotransmisor solo se une a un receptor: quien determina la "
+        "respuesta es ese receptor.\n"
+        "2) Si al activarse abre canales que despolarizan la membrana, el efecto "
+        "es EXCITATORIO: acerca a la célula al umbral.\n"
+        "3) Si abre canales que la hiperpolarizan, el efecto es INHIBITORIO: la "
+        "aleja del umbral.\n\n"
+        "Por eso una misma molécula puede excitar en un circuito e inhibir en "
+        "otro, y por eso los fármacos que actúan sobre receptores específicos "
+        "pueden ser tan selectivos.",
+        [
+            ("La cantidad de neurotransmisor liberado en el espacio sináptico",
+             "La cantidad influye en la intensidad del efecto, no en si es excitatorio o inhibitorio."),
+            ("La velocidad con que el impulso llegó al terminal del axón",
+             "La velocidad de llegada no determina el signo del efecto sobre la célula receptora."),
+            ("El grosor de la vaina de mielina que recubre al axón presináptico",
+             "La mielina afecta la velocidad de conducción, no el tipo de respuesta en la sinapsis."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "¿Qué ocurre con la capacidad de reacción de una persona que ha dormido "
+        "muy poco, comparada con la de una persona con alcohol en la sangre?",
+        "La privación de sueño puede deteriorarla de manera comparable",
+        "Los estudios sobre conducción muestran efectos de magnitud "
+        "semejante.\n\n"
+        "1) Ambas condiciones enlentecen los tiempos de reacción y deterioran la "
+        "atención sostenida.\n"
+        "2) La privación prolongada de sueño produce déficits comparables a los "
+        "de una alcoholemia significativa.\n"
+        "3) La diferencia práctica es que el alcohol se puede medir y está "
+        "regulado, y la falta de sueño no.\n\n"
+        "Por eso conducir con sueño es un riesgo que suele subestimarse: la "
+        "persona no se percibe incapacitada, igual que ocurre con el alcohol.",
+        [
+            ("La privación de sueño no afecta la capacidad de reacción",
+             "La afecta de manera medible y significativa."),
+            ("La privación de sueño mejora la atención por el estado de alerta que produce",
+             "La sensación de alerta puede aparecer, pero el rendimiento medido empeora."),
+            ("El alcohol afecta la reacción y la falta de sueño solo el estado de ánimo",
+             "La falta de sueño afecta también el rendimiento cognitivo y motor, no solo el ánimo."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "dificil",
+        "Un fármaco imita a un neurotransmisor y se une a sus receptores, "
+        "activándolos. Otro se une a los mismos receptores sin activarlos. ¿Qué "
+        "efecto tiene cada uno?",
+        "El primero reproduce la señal y el segundo la bloquea",
+        "La unión al receptor y su activación son dos cosas distintas.\n\n"
+        "1) Un fármaco que se une Y activa produce el mismo efecto que el "
+        "neurotransmisor natural, incluso en su ausencia.\n"
+        "2) Un fármaco que se une SIN activar ocupa el receptor y le impide al "
+        "neurotransmisor natural unirse: bloquea la señal.\n"
+        "3) El segundo no tiene efecto propio, pero impide el efecto del "
+        "primero.\n\n"
+        "Esa distinción es la base de buena parte de la farmacología: se puede "
+        "imitar una señal o silenciarla, según lo que se necesite.",
+        [
+            ("Ambos producen el mismo efecto porque se unen al mismo receptor",
+             "Unirse no basta: el efecto depende de si el receptor se activa o no."),
+            ("El primero bloquea la señal y el segundo la refuerza",
+             "Está invertido: el que activa reproduce la señal y el que solo se une la bloquea."),
+            ("Ninguno tiene efecto porque no son el neurotransmisor natural",
+             "El receptor responde a la forma de la molécula, no a su origen: un fármaco puede activarlo perfectamente."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "dificil",
+        "Se investiga si el uso de casco reduce la gravedad de las lesiones en "
+        "ciclistas. ¿Qué diseño sería más adecuado y qué limitación tendría un "
+        "experimento?",
+        "Comparar lesiones reales entre quienes usaban casco y quienes no",
+        "Hay preguntas que no se pueden responder experimentando.\n\n"
+        "1) Un experimento exigiría asignar al azar a las personas a usar casco "
+        "o no y esperar accidentes: eso es éticamente inadmisible.\n"
+        "2) La alternativa es un estudio OBSERVACIONAL: registrar accidentes "
+        "reales y comparar la gravedad de las lesiones según el uso de casco.\n"
+        "3) Su limitación es que quienes usan casco pueden diferir en otras "
+        "conductas de riesgo, así que hay que controlar esas variables.\n\n"
+        "Aun con esa limitación, la evidencia acumulada es consistente y "
+        "proviene de muchos estudios independientes.",
+        [
+            ("Asignar al azar a un grupo a andar sin casco y comparar sus lesiones",
+             "Exponer deliberadamente a un grupo a un riesgo evitable es éticamente inaceptable."),
+            ("Medir la resistencia del casco en laboratorio y extrapolar a las personas",
+             "Los ensayos de laboratorio son útiles, pero no reemplazan la evidencia sobre lesiones reales."),
+            ("Preguntar a los ciclistas si creen que el casco los protege",
+             "La percepción de las personas no es evidencia sobre la gravedad efectiva de las lesiones."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "dificil",
+        "Un estudiante sostiene que como el impulso nervioso es eléctrico, la "
+        "sinapsis también debe ser eléctrica. ¿Cómo se evalúa esa inferencia?",
+        "Es incorrecta para la sinapsis química, que usa moléculas",
+        "La conducción a lo largo del axón y la transmisión entre células "
+        "funcionan de maneras distintas.\n\n"
+        "1) A lo largo del axón, la señal sí es eléctrica: un cambio de "
+        "potencial que se propaga.\n"
+        "2) En la sinapsis química, esa señal eléctrica se convierte en química: "
+        "se liberan neurotransmisores que cruzan el espacio y activan receptores "
+        "en la otra célula, donde vuelve a hacerse eléctrica.\n"
+        "3) Ese cambio de formato es lo que permite modular la señal: "
+        "amplificarla, inhibirla, filtrarla.\n\n"
+        "Existen también sinapsis eléctricas, más rápidas pero mucho menos "
+        "frecuentes y con menor capacidad de regulación.",
+        [
+            ("Es correcta: todas las sinapsis funcionan por contacto eléctrico directo",
+             "La mayoría de las sinapsis del sistema nervioso humano son químicas."),
+            ("Es incorrecta porque el impulso nervioso no es un fenómeno eléctrico",
+             "Sí lo es: consiste en cambios de potencial por movimiento de iones."),
+            ("Es correcta, porque los neurotransmisores transportan carga eléctrica entre las células",
+             "Los neurotransmisores actúan uniéndose a receptores, no transportando carga a través del espacio."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "dificil",
+        "¿Por qué una lesión de un nervio periférico tiene mejor pronóstico de "
+        "recuperación que una del sistema nervioso central?",
+        "Los axones periféricos pueden regenerarse y los centrales casi no",
+        "La diferencia está en el ambiente que rodea a los axones.\n\n"
+        "1) En el sistema nervioso PERIFÉRICO, las células de soporte forman una "
+        "guía por la que el axón dañado puede volver a crecer hasta reconectar "
+        "con su destino.\n"
+        "2) En el CENTRAL, el ambiente contiene señales que inhiben ese "
+        "crecimiento, y se forma tejido cicatricial que lo bloquea.\n"
+        "3) Por eso una lesión de un nervio del brazo puede recuperarse en meses "
+        "y una lesión medular suele dejar secuelas permanentes.\n\n"
+        "Entender esa diferencia es una de las líneas de investigación centrales "
+        "en el tratamiento de lesiones medulares.",
+        [
+            ("Los nervios periféricos tienen más neuronas de reemplazo disponibles",
+             "No hay un banco de neuronas de reemplazo: lo que se regenera es el axón de la misma neurona."),
+            ("El sistema nervioso central no contiene axones que puedan dañarse",
+             "El sistema nervioso central está lleno de axones, y su daño es justamente el problema."),
+            ("Las lesiones periféricas son siempre más leves que las centrales",
+             "La gravedad inicial puede ser comparable: lo que difiere es la capacidad de reparación."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "¿Qué papel cumple el umbral en la generación de un impulso nervioso?",
+        "Define la intensidad mínima de estímulo que dispara la señal",
+        "El umbral convierte un estímulo continuo en una respuesta de todo o "
+        "nada.\n\n"
+        "1) Un estímulo débil produce un cambio pequeño en el potencial de la "
+        "membrana, que se disipa sin más.\n"
+        "2) Si el cambio alcanza el umbral, se abren de golpe los canales y se "
+        "genera el impulso completo.\n"
+        "3) Por debajo del umbral no ocurre nada; por encima, el impulso es "
+        "siempre del mismo tamaño.\n\n"
+        "Ese filtro impide que cualquier fluctuación menor dispare señales, y es "
+        "lo que hace confiable la transmisión de información.",
+        [
+            ("Determina el tamaño del impulso según la fuerza del estímulo",
+             "El tamaño del impulso es siempre el mismo: el umbral solo decide si se genera o no."),
+            ("Marca la velocidad con que el impulso recorrerá el axón",
+             "La velocidad depende del diámetro del axón y de la mielinización, no del umbral."),
+            ("Indica cuántos neurotransmisores se liberarán en la sinapsis",
+             "La cantidad liberada depende de la frecuencia de impulsos que llegan, no del umbral."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "¿Cómo codifica el sistema nervioso la intensidad de un estímulo, si "
+        "todos los impulsos tienen el mismo tamaño?",
+        "Con la frecuencia de impulsos y el número de fibras activas",
+        "La información no está en la amplitud sino en el patrón.\n\n"
+        "1) Un estímulo más intenso genera impulsos con MAYOR FRECUENCIA en la "
+        "misma neurona.\n"
+        "2) Además activa MÁS FIBRAS, incluidas las de umbral más alto que un "
+        "estímulo débil no alcanzaba a excitar.\n"
+        "3) El sistema nervioso central interpreta esa combinación como "
+        "intensidad.\n\n"
+        "Es el mismo principio de una señal digital: la información se codifica "
+        "en el patrón de pulsos y no en su altura, lo que la hace mucho más "
+        "resistente al ruido.",
+        [
+            ("Con impulsos de mayor amplitud cuando el estímulo es más fuerte",
+             "El impulso es de todo o nada: su amplitud no varía con la intensidad del estímulo."),
+            ("Con impulsos que viajan más rápido cuando el estímulo es más intenso",
+             "La velocidad depende de las propiedades del axón, no de la intensidad del estímulo."),
+            ("Con neurotransmisores distintos según la intensidad percibida",
+             "Cada neurona libera su propio neurotransmisor: no lo cambia según la intensidad."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "Se afirma que el sistema nervioso solo reacciona a estímulos externos. "
+        "¿Qué corrección corresponde?",
+        "También recibe y regula información del interior del cuerpo",
+        "Buena parte de su trabajo no tiene nada que ver con el exterior.\n\n"
+        "1) Recibe información de receptores internos: presión sanguínea, "
+        "composición de la sangre, posición de las articulaciones, estado de los "
+        "órganos.\n"
+        "2) Regula funciones que ocurren sin intervención consciente: frecuencia "
+        "cardíaca, respiración, digestión, temperatura.\n"
+        "3) Esa regulación interna es continua y no depende de ningún estímulo "
+        "ambiental.\n\n"
+        "La función integradora abarca entonces dos frentes: relacionar al "
+        "organismo con su ambiente y mantener estable su medio interno.",
+        [
+            ("Es correcta: sin estímulo externo el sistema nervioso permanece inactivo",
+             "Mantiene actividad continua incluso durante el sueño y en ausencia de estímulos externos."),
+            ("Es correcta, salvo durante el sueño, cuando regula el interior del cuerpo",
+             "La regulación interna es permanente, tanto en vigilia como durante el sueño."),
+            ("Solo el sistema endocrino regula el interior del organismo",
+             "Ambos sistemas participan en esa regulación, de manera coordinada."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "En una sinapsis, ¿por qué la señal puede modularse mientras que en el "
+        "axón el impulso viaja sin cambios?",
+        "En la sinapsis intervienen muchos factores regulables",
+        "El cambio de formato eléctrico a químico abre posibilidades de "
+        "control.\n\n"
+        "1) A lo largo del axón el impulso se regenera idéntico: no hay dónde "
+        "modularlo.\n"
+        "2) En la sinapsis, en cambio, se puede regular cuánto neurotransmisor "
+        "se libera, cuántos receptores hay disponibles, con qué rapidez se "
+        "retira la molécula del espacio.\n"
+        "3) Cada uno de esos factores es un punto de ajuste.\n\n"
+        "Por eso el aprendizaje se asocia a cambios en las sinapsis y no en los "
+        "axones, y por eso casi todos los fármacos que actúan sobre el sistema "
+        "nervioso lo hacen sobre alguno de esos puntos.",
+        [
+            ("Porque en el axón la señal es química y en la sinapsis, eléctrica",
+             "Está invertido: en el axón la señal es eléctrica y en la sinapsis química se vuelve química."),
+            ("Porque la sinapsis conduce el impulso mucho más lento que el axón",
+             "La sinapsis introduce un retraso, pero la modulación se debe a los factores regulables, no a la lentitud."),
+            ("Porque en el axón no hay membrana y en la sinapsis sí",
+             "El axón está delimitado por membrana en toda su extensión."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "dificil",
+        "Se observa que ciertas conexiones nerviosas se refuerzan cuando se usan "
+        "repetidamente y se debilitan cuando no. ¿Qué explica ese fenómeno?",
+        "Las sinapsis cambian su eficacia con el uso",
+        "Es la base biológica del aprendizaje.\n\n"
+        "1) Una sinapsis activada de manera repetida aumenta su eficacia: libera "
+        "más neurotransmisor, la célula receptora dispone de más receptores.\n"
+        "2) Una sinapsis poco usada se debilita y puede llegar a eliminarse.\n"
+        "3) El resultado es que los circuitos más usados se vuelven más "
+        "eficientes, y eso corresponde a lo que llamamos aprender y recordar.\n\n"
+        "Es la razón de que practicar una habilidad la mejore, y de que se "
+        "pierda si se abandona por mucho tiempo.",
+        [
+            ("Se generan neuronas nuevas cada vez que se aprende algo",
+             "La generación de neuronas en el adulto es muy limitada: lo que cambia son las conexiones."),
+            ("El axón se engrosa hasta conducir el impulso más rápido",
+             "Hay algunos cambios en la mielinización, pero el mecanismo principal del aprendizaje ocurre en las sinapsis."),
+            ("Los neurotransmisores cambian de tipo según lo que se aprenda",
+             "Cada neurona conserva su neurotransmisor: lo que varía es la eficacia de la transmisión."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "dificil",
+        "Un estudiante propone que basta con no consumir drogas para que el "
+        "sistema nervioso se mantenga sano. ¿Qué habría que agregar?",
+        "También influyen el sueño, la prevención de golpes y otros factores",
+        "El cuidado del sistema nervioso abarca más de un frente.\n\n"
+        "1) Evitar el consumo de sustancias es efectivamente una medida "
+        "importante, y el temario la incluye.\n"
+        "2) Pero junto a ella figuran dormir las horas necesarias y prevenir los "
+        "traumatismos, que son igual de determinantes.\n"
+        "3) A eso se suman la alimentación, la actividad física y la actividad "
+        "cognitiva sostenida.\n\n"
+        "La propuesta no es incorrecta: es incompleta. Reducirla a un solo "
+        "factor deja fuera riesgos tan importantes como el traumatismo craneal, "
+        "que es la principal causa de daño neurológico evitable en jóvenes.",
+        [
+            ("Nada más: evitar las drogas es suficiente para un sistema nervioso sano",
+             "Deja fuera factores tan importantes como el sueño y la prevención de traumatismos."),
+            ("Que basta con evitar el alcohol, porque las demás sustancias no afectan al sistema nervioso",
+             "Muchas otras sustancias afectan al sistema nervioso, y además hay factores no relacionados con el consumo."),
+            ("Que el sistema nervioso no puede cuidarse porque su deterioro es inevitable con la edad",
+             "Existen medidas con efecto demostrado: el deterioro no es enteramente inevitable ni uniforme."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "¿Qué es el potencial de reposo de una neurona?",
+        "La diferencia de carga que mantiene cuando no conduce impulsos",
+        "Es el estado desde el cual la neurona puede responder.\n\n"
+        "1) En reposo, el interior de la neurona es negativo respecto del "
+        "exterior.\n"
+        "2) Esa diferencia se mantiene gracias a bombas que trasladan iones "
+        "contra su gradiente, consumiendo ATP de manera continua.\n"
+        "3) Cuando llega un estímulo suficiente, esa diferencia se invierte de "
+        "golpe y se genera el impulso.\n\n"
+        "Mantener el reposo no es gratuito: es una de las principales razones del "
+        "alto consumo energético del tejido nervioso, incluso cuando parece "
+        "inactivo.",
+        [
+            ("El estado en que la neurona deja de consumir energía por completo",
+             "Mantener el potencial de reposo consume ATP de manera continua."),
+            ("El momento en que la neurona libera todos sus neurotransmisores",
+             "La liberación ocurre cuando llega un impulso, no en reposo."),
+            ("La ausencia total de diferencia de carga entre el interior y el exterior",
+             "Existe una diferencia de carga marcada: eso es precisamente el potencial de reposo."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "¿Qué relación hay entre la función de la neurona y su alto consumo de "
+        "energía?",
+        "Mantener las diferencias iónicas de la membrana cuesta ATP",
+        "El gasto no se debe sobre todo a conducir impulsos, sino a estar "
+        "lista para hacerlo.\n\n"
+        "1) Cada impulso mueve iones a través de la membrana y desordena las "
+        "diferencias de concentración.\n"
+        "2) Restablecerlas exige bombear esos iones de vuelta contra su "
+        "gradiente, y eso consume ATP.\n"
+        "3) Ese trabajo es continuo, incluso en reposo.\n\n"
+        "Por eso el tejido nervioso consume una fracción enorme de la energía "
+        "del organismo, y por eso una interrupción del suministro de oxígeno lo "
+        "daña en pocos minutos.",
+        [
+            ("La neurona gasta energía sobre todo en sintetizar neurotransmisores",
+             "La síntesis consume energía, pero el gasto dominante es el mantenimiento de los gradientes iónicos."),
+            ("El gasto se debe al crecimiento constante de sus dendritas",
+             "Las neuronas maduras no crecen de manera continua: el gasto es de mantenimiento funcional."),
+            ("La neurona consume energía solo cuando conduce un impulso nervioso",
+             "El consumo es continuo: mantener el potencial de reposo ya requiere ATP."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "facil",
+        "¿Qué tipo de neurona lleva las órdenes desde el sistema nervioso "
+        "central hasta un músculo?",
+        "La neurona motora",
+        "Su nombre describe hacia dónde conduce.\n\n"
+        "1) La neurona MOTORA, o eferente, sale del sistema nervioso central "
+        "hacia los efectores.\n"
+        "2) Su axón termina sobre la fibra muscular, en una sinapsis "
+        "especializada.\n"
+        "3) Al liberar su neurotransmisor, desencadena la contracción de la "
+        "fibra.\n\n"
+        "El daño de estas neuronas produce parálisis, aunque el músculo esté "
+        "sano: sin la orden, no se contrae.",
+        [
+            ("La neurona sensitiva, que conduce información desde los receptores",
+             "La sensitiva lleva información hacia el centro, no órdenes hacia los músculos."),
+            ("La interneurona, que conecta neuronas dentro del sistema nervioso",
+             "La interneurona integra dentro del sistema nervioso central; no llega al músculo."),
+            ("La célula de soporte, que rodea a los axones periféricos",
+             "Las células de soporte no conducen impulsos ni ordenan contracciones."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "facil",
+        "¿Qué le ocurre a una persona con una lesión que interrumpe la "
+        "conducción de sus neuronas sensitivas en una zona del cuerpo?",
+        "Deja de percibir estímulos en esa zona",
+        "El déficit corresponde a la vía interrumpida.\n\n"
+        "1) Las neuronas sensitivas llevan al sistema nervioso central la "
+        "información captada por los receptores.\n"
+        "2) Si esa vía se interrumpe, la información no llega y la persona no "
+        "percibe tacto, temperatura ni dolor en esa zona.\n"
+        "3) Si las neuronas motoras están intactas, puede mover la zona "
+        "normalmente.\n\n"
+        "La pérdida de sensibilidad es peligrosa por sí misma: sin dolor, una "
+        "herida o una quemadura pueden pasar desapercibidas y agravarse.",
+        [
+            ("Pierde la capacidad de mover esa zona del cuerpo",
+             "El movimiento depende de las neuronas motoras, que en este caso están intactas."),
+            ("Siente dolor constante en esa zona sin causa aparente",
+             "Con la vía interrumpida no llega ninguna señal, incluido el dolor."),
+            ("Los músculos de esa zona se contraen de manera involuntaria",
+             "Las contracciones involuntarias se asocian a alteraciones de las vías motoras, no de las sensitivas."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "Se compara la respuesta del organismo ante un susto con la respuesta "
+        "ante una comida abundante. ¿Qué muestra esa comparación sobre el sistema "
+        "nervioso?",
+        "Regula funciones internas ajustándolas a cada situación",
+        "Ambas respuestas son involuntarias y opuestas entre sí.\n\n"
+        "1) Ante un SUSTO, el organismo prepara una reacción rápida: aumenta la "
+        "frecuencia cardíaca y la respiración, y se enlentece la digestión.\n"
+        "2) Tras una COMIDA abundante, ocurre lo contrario: la digestión se "
+        "activa, la frecuencia cardíaca baja y aparece somnolencia.\n"
+        "3) Ninguna de las dos se decide conscientemente: el sistema nervioso "
+        "ajusta el funcionamiento interno según la situación.\n\n"
+        "Ese ajuste automático de las funciones internas es una parte central de "
+        "su función reguladora.",
+        [
+            ("Solo responde a estímulos que la persona percibe conscientemente",
+             "Ambas respuestas ocurren sin decisión consciente."),
+            ("Ambas situaciones producen exactamente la misma respuesta corporal",
+             "Las respuestas son opuestas en frecuencia cardíaca, respiración y actividad digestiva."),
+            ("Las respuestas internas dependen únicamente del sistema endocrino",
+             "El sistema nervioso participa directamente, además de desencadenar respuestas hormonales."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "dificil",
+        "Se afirma que los reflejos son respuestas primitivas sin utilidad en el "
+        "ser humano actual. ¿Cómo se evalúa esa afirmación?",
+        "Es incorrecta: protegen al organismo en situaciones donde el tiempo importa",
+        "Su valor está justamente en su rapidez.\n\n"
+        "1) Retirar la mano del fuego antes de percibir el dolor evita una "
+        "quemadura más profunda: cada décima de segundo cuenta.\n"
+        "2) Muchos reflejos mantienen funciones básicas: el parpadeo protege el "
+        "ojo, el reflejo de tos despeja la vía aérea, los reflejos posturales "
+        "mantienen el equilibrio.\n"
+        "3) Además se usan clínicamente para evaluar el estado del sistema "
+        "nervioso.\n\n"
+        "Que sean automáticos y evolutivamente antiguos no los vuelve inútiles: "
+        "resuelven problemas que una respuesta deliberada no alcanzaría a "
+        "resolver a tiempo.",
+        [
+            ("Es correcta: los reflejos solo existían en nuestros antepasados",
+             "Están plenamente presentes y funcionales, y se evalúan de manera rutinaria en el examen médico."),
+            ("Es correcta, porque hoy podemos controlar conscientemente todas nuestras respuestas",
+             "La respuesta consciente es mucho más lenta y no puede reemplazar a un reflejo protector."),
+            ("Es incorrecta, porque los reflejos son en realidad respuestas voluntarias muy rápidas",
+             "No son voluntarios: se resuelven en la médula sin intervención de la decisión consciente."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "Una persona consume una sustancia que aumenta la actividad del sistema "
+        "nervioso central. ¿Qué efectos son esperables?",
+        "Aumento del estado de alerta y de la frecuencia cardíaca",
+        "Los efectos siguen la clasificación de la sustancia.\n\n"
+        "1) Un ESTIMULANTE incrementa la actividad de los circuitos nerviosos.\n"
+        "2) Eso se traduce en mayor estado de alerta, dificultad para dormir, "
+        "aumento de la frecuencia cardíaca y de la presión arterial.\n"
+        "3) En dosis altas puede producir ansiedad, temblor y arritmias.\n\n"
+        "Es lo opuesto a un depresor como el alcohol, que enlentece esas mismas "
+        "funciones. Conocer la clasificación permite anticipar los efectos y los "
+        "riesgos.",
+        [
+            ("Somnolencia y disminución de la frecuencia respiratoria",
+             "Esos son efectos de un depresor, no de un estimulante."),
+            ("Pérdida de sensibilidad en las extremidades del cuerpo",
+             "La pérdida de sensibilidad se asocia a anestésicos locales, no a estimulantes generales."),
+            ("Aumento del apetito y enlentecimiento de la digestión",
+             "Los estimulantes suelen reducir el apetito, no aumentarlo."),
+        ],
+    ),
+    _q(
+        "cie_nervioso", "medio",
+        "¿Por qué el sistema nervioso es especialmente vulnerable a una "
+        "interrupción del suministro de oxígeno?",
+        "Su alto consumo de energía no admite pausas",
+        "El tejido nervioso depende críticamente de un abastecimiento "
+        "continuo.\n\n"
+        "1) Mantener las diferencias iónicas de sus membranas consume ATP de "
+        "manera permanente.\n"
+        "2) Las neuronas prácticamente no almacenan reservas energéticas y "
+        "dependen del aporte continuo de glucosa y oxígeno.\n"
+        "3) Sin oxígeno, la producción de ATP cae en segundos y las bombas se "
+        "detienen: el daño comienza en pocos minutos y es irreversible.\n\n"
+        "Por eso una interrupción del riego cerebral es una emergencia médica "
+        "donde cada minuto cuenta.",
+        [
+            ("Las neuronas necesitan oxígeno para transmitir el impulso directamente",
+             "El impulso depende de gradientes iónicos; el oxígeno se necesita para producir el ATP que los mantiene."),
+            ("El oxígeno es el neurotransmisor principal del sistema nervioso",
+             "El oxígeno no es un neurotransmisor: participa en la respiración celular."),
+            ("El tejido nervioso almacena grandes reservas de oxígeno que se agotan de golpe",
+             "Ocurre lo contrario: prácticamente no almacena reservas, y por eso es tan vulnerable."),
         ],
     ),
 ]
