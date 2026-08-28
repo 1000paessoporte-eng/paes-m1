@@ -83301,3 +83301,677 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Física - "Ondas": ondas electromagnéticas y espectro
+#
+# El temario acota esta área a las ondas ELECTROMAGNÉTICAS. Las preguntas de
+# sonido que había en el banco salieron por eso, no por estar mal: el sonido es
+# una onda mecánica y no figura en ninguna de las cuatro áreas del eje.
+#
+# Los conocimientos que cubre este nodo son los elementos de la onda (longitud
+# de onda, frecuencia, período, amplitud), la relación entre ellos y la rapidez
+# de propagación, el espectro ordenado por longitud de onda y frecuencia, y los
+# usos tecnológicos de cada rango.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_ondas", "facil",
+        "¿Qué distingue a las ondas electromagnéticas de las ondas mecánicas, "
+        "como el sonido?",
+        "Las electromagnéticas se propagan en el vacío",
+        "La diferencia de fondo está en qué es lo que oscila.\n\n"
+        "1) Una onda mecánica es una perturbación que se transmite deformando un "
+        "medio material: sin partículas que perturbar, no existe.\n"
+        "2) Una onda electromagnética consiste en campos eléctricos y magnéticos "
+        "que oscilan y se generan mutuamente. No necesitan nada material.\n"
+        "3) Por eso la luz del Sol llega hasta la Tierra atravesando el vacío del "
+        "espacio, mientras que el sonido de una explosión en el espacio no "
+        "llegaría nunca.",
+        [
+            ("Las electromagnéticas viajan más lento que las mecánicas",
+             "Ocurre lo contrario y por muchísimo: la luz viaja a unos 300.000 km/s y el sonido en el aire a unos 340 m/s."),
+            ("Las electromagnéticas no transportan energía",
+             "Sí la transportan: es la energía de la luz solar la que calienta la Tierra y alimenta la fotosíntesis."),
+            ("Las electromagnéticas solo existen dentro del rango que el ojo humano puede ver",
+             "El rango visible es una franja diminuta: las ondas de radio, los rayos X y los infrarrojos también son electromagnéticos."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "facil",
+        "En una onda, ¿qué magnitud corresponde a la distancia entre dos crestas "
+        "consecutivas?",
+        "La longitud de onda",
+        "Cada elemento de la onda describe un aspecto distinto de la "
+        "perturbación.\n\n"
+        "1) La LONGITUD DE ONDA es la distancia entre dos puntos que están en el "
+        "mismo estado de oscilación, por ejemplo dos crestas seguidas. Se mide "
+        "en metros.\n"
+        "2) La amplitud es la altura de la cresta respecto de la posición de "
+        "equilibrio.\n"
+        "3) El período es el tiempo que tarda en pasar una onda completa, y la "
+        "frecuencia es cuántas pasan por segundo.\n\n"
+        "Longitud de onda y amplitud son distancias, pero medidas en direcciones "
+        "distintas: una a lo largo del avance y la otra perpendicular a él.",
+        [
+            ("La amplitud", "La amplitud se mide desde la posición de equilibrio hasta la cresta, en dirección perpendicular al avance."),
+            ("El período", "El período es un tiempo, no una distancia: es lo que tarda en completarse una oscilación."),
+            ("La frecuencia, porque indica cuántas crestas hay en la onda completa",
+             "La frecuencia cuenta cuántas oscilaciones ocurren por segundo, así que es un número por unidad de tiempo, no una distancia."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "facil",
+        "Ordenados de mayor a menor longitud de onda, ¿cuál es la secuencia "
+        "correcta de estas regiones del espectro electromagnético?",
+        "Ondas de radio, infrarrojo, luz visible, rayos X",
+        "El espectro es continuo y se ordena por longitud de onda, que varía en "
+        "sentido inverso a la frecuencia.\n\n"
+        "1) Las ondas de RADIO tienen las longitudes mayores, desde centímetros "
+        "hasta kilómetros.\n"
+        "2) El INFRARROJO viene después, con longitudes algo mayores que las de "
+        "la luz roja.\n"
+        "3) La luz VISIBLE ocupa una franja estrechísima, del rojo al violeta.\n"
+        "4) Los rayos X están mucho más allá del violeta, con longitudes de onda "
+        "diminutas y frecuencias enormes.\n\n"
+        "Como todas viajan a la misma rapidez en el vacío, a menor longitud de "
+        "onda corresponde siempre mayor frecuencia.",
+        [
+            ("Rayos X, luz visible, infrarrojo, ondas de radio",
+             "Es la secuencia correcta pero en el orden inverso: va de menor a mayor longitud de onda."),
+            ("Luz visible, ondas de radio, rayos X, infrarrojo",
+             "El orden está mezclado: la luz visible queda entre el infrarrojo y el ultravioleta, no antes que las ondas de radio."),
+            ("Infrarrojo, ondas de radio, rayos X, luz visible",
+             "Las ondas de radio tienen mayor longitud de onda que el infrarrojo, y los rayos X mucho menor que la luz visible."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "facil",
+        "Una onda electromagnética tiene un período de 0,004 s. ¿Cuál es su "
+        "frecuencia?",
+        "250 Hz",
+        "Frecuencia y período son magnitudes inversas.\n\n"
+        "1) La relación es f = 1 / T.\n"
+        "2) Reemplaza: f = 1 ÷ 0,004 s.\n"
+        "3) Calcula: 1 ÷ 0,004 = 250.\n\n"
+        "Comprobación: si cada oscilación demora 0,004 segundos, en un segundo "
+        "caben 250 de ellas. El resultado se expresa en hertz, que significa "
+        "oscilaciones por segundo.",
+        [
+            ("0,004 Hz", "Copió el período como si fuera la frecuencia, sin invertirlo."),
+            ("400 Hz", "Se equivocó en el orden de magnitud al dividir: 1 dividido por 0,004 no es 400 sino 250."),
+            ("4 Hz", "Interpretó los 0,004 s como si fueran 0,25 s, perdiendo el factor de conversión."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "facil",
+        "En el vacío, todas las ondas electromagnéticas comparten una propiedad. "
+        "¿Cuál es?",
+        "Se propagan con la misma rapidez",
+        "Es una de las características que unifica a todo el espectro.\n\n"
+        "1) Un rayo gamma, una onda de radio y la luz visible viajan en el vacío "
+        "exactamente a la misma rapidez: unos 300.000 km/s.\n"
+        "2) Lo que las diferencia es su frecuencia y su longitud de onda, que "
+        "quedan ligadas por esa rapidez común.\n"
+        "3) De ahí que baste conocer una de las dos para calcular la otra.\n\n"
+        "En un medio material la rapidez disminuye, y puede hacerlo de manera "
+        "algo distinta según la longitud de onda: ese es el origen de la "
+        "dispersión.",
+        [
+            ("Tienen la misma frecuencia",
+             "La frecuencia es justamente lo que las distingue: va desde unos pocos hertz hasta más de mil billones."),
+            ("Transportan la misma cantidad de energía",
+             "La energía crece con la frecuencia: un rayo gamma transporta muchísima más que una onda de radio."),
+            ("Se propagan siempre en línea recta sin ser afectadas por ningún material",
+             "Los materiales las absorben, reflejan o refractan, y el efecto depende mucho de la longitud de onda."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "facil",
+        "Los hornos de microondas calientan los alimentos con radiación de esa "
+        "región del espectro. ¿Dónde se ubican las microondas respecto de la luz "
+        "visible?",
+        "Tienen longitud de onda mucho mayor que la luz visible",
+        "Las microondas ocupan la zona entre las ondas de radio y el "
+        "infrarrojo.\n\n"
+        "1) Su longitud de onda se mide en centímetros, mientras que la de la "
+        "luz visible se mide en fracciones de micrómetro.\n"
+        "2) Por lo tanto su frecuencia es mucho MENOR que la de la luz "
+        "visible.\n"
+        "3) Y como la energía crece con la frecuencia, son mucho menos "
+        "energéticas: no ionizan la materia.\n\n"
+        "Calientan porque su frecuencia coincide con la de rotación de las "
+        "moléculas de agua, que absorben esa energía y la reparten como calor.",
+        [
+            ("Tienen longitud de onda mucho menor que la luz visible",
+             "Eso corresponde al ultravioleta, los rayos X y los rayos gamma, que están al otro extremo del espectro."),
+            ("Tienen la misma longitud de onda, pero mayor amplitud",
+             "Si tuvieran la misma longitud de onda serían luz visible; lo que las define es su longitud de onda mucho mayor."),
+            ("Tienen longitud de onda mayor pero frecuencia también mayor que la luz visible",
+             "Es imposible: como la rapidez es la misma, mayor longitud de onda implica necesariamente menor frecuencia."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "facil",
+        "La radiación ultravioleta del Sol puede dañar la piel, mientras que la "
+        "luz visible no lo hace. ¿Qué explica la diferencia?",
+        "El ultravioleta tiene mayor frecuencia y más energía",
+        "El daño depende de cuánta energía transporta cada porción de "
+        "radiación.\n\n"
+        "1) El ultravioleta tiene menor longitud de onda que la luz visible y "
+        "por lo tanto mayor frecuencia.\n"
+        "2) La energía crece con la frecuencia, así que el ultravioleta llega "
+        "con energía suficiente para romper enlaces químicos en las moléculas de "
+        "la piel, incluido el ADN.\n"
+        "3) La luz visible, de menor frecuencia, no alcanza ese umbral por "
+        "intensa que sea.\n\n"
+        "Por eso el criterio no es cuánta luz llega sino de qué tipo: la "
+        "protección solar bloquea el ultravioleta, no el brillo.",
+        [
+            ("El ultravioleta viaja más rápido y golpea con más fuerza",
+             "Todas las ondas electromagnéticas viajan a la misma rapidez en el vacío."),
+            ("El ultravioleta es una onda mecánica y la luz visible no",
+             "Las dos son electromagnéticas: pertenecen al mismo espectro y se diferencian solo en frecuencia."),
+            ("El ultravioleta llega en mayor cantidad porque la atmósfera lo deja pasar por completo",
+             "La capa de ozono absorbe buena parte del ultravioleta; el daño se debe a su energía, no a su abundancia."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Una emisora de radio transmite en 100 MHz, es decir, 100 millones de "
+        "hertz. Si las ondas viajan a 3 · 10⁸ m/s, ¿cuál es su longitud de onda?",
+        "3 m",
+        "La relación entre las tres magnitudes es v = longitud de onda por "
+        "frecuencia.\n\n"
+        "1) Despeja la longitud de onda: es la rapidez dividida por la "
+        "frecuencia.\n"
+        "2) Reemplaza: 3 · 10⁸ m/s ÷ 1 · 10⁸ Hz.\n"
+        "3) Calcula: el resultado es 3 m.\n\n"
+        "Ese valor explica por qué las antenas de radio FM miden alrededor de un "
+        "metro: su tamaño guarda relación con la longitud de onda que reciben.",
+        [
+            ("300 m", "Se equivocó en dos órdenes de magnitud al dividir las potencias de diez."),
+            ("0,3 m", "Dividió por mil millones en vez de por cien millones."),
+            ("3 · 10¹⁶ m", "Multiplicó la rapidez por la frecuencia en vez de dividirla."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Dos ondas electromagnéticas viajan por el vacío. La onda P tiene el "
+        "doble de frecuencia que la onda Q. ¿Qué se puede afirmar de sus "
+        "longitudes de onda?",
+        "La de P es la mitad de la de Q",
+        "En el vacío la rapidez es la misma para ambas, así que frecuencia y "
+        "longitud de onda quedan ligadas de manera inversa.\n\n"
+        "1) El producto de longitud de onda por frecuencia es igual a la "
+        "rapidez, que es la misma constante para las dos.\n"
+        "2) Si la frecuencia se duplica, la longitud de onda debe reducirse a la "
+        "mitad para que el producto no cambie.\n"
+        "3) Por lo tanto la longitud de onda de P es la mitad de la de Q.\n\n"
+        "Es la razón por la que el espectro se puede ordenar indistintamente por "
+        "frecuencia creciente o por longitud de onda decreciente.",
+        [
+            ("La de P es el doble de la de Q",
+             "Eso valdría si las magnitudes fueran directamente proporcionales, y en realidad son inversamente proporcionales."),
+            ("Ambas tienen la misma longitud de onda",
+             "Si las longitudes de onda coincidieran y la rapidez también, las frecuencias tendrían que ser iguales."),
+            ("No se puede saber, porque falta conocer la amplitud de cada onda",
+             "La amplitud es independiente: no interviene en la relación entre rapidez, frecuencia y longitud de onda."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "La amplitud de una onda electromagnética se duplica mientras su "
+        "frecuencia se mantiene. ¿Qué cambia?",
+        "Transporta más energía, pero sigue siendo del mismo tipo",
+        "Amplitud y frecuencia describen aspectos distintos e independientes.\n\n"
+        "1) La FRECUENCIA determina a qué región del espectro pertenece la onda, "
+        "y con ella su longitud de onda y la energía de cada fotón.\n"
+        "2) La AMPLITUD determina la intensidad: cuánta energía llega por "
+        "unidad de tiempo y de superficie.\n"
+        "3) Duplicar la amplitud manteniendo la frecuencia significa una señal "
+        "más intensa de la misma clase: una luz roja más brillante sigue siendo "
+        "roja.\n\n"
+        "Por eso una lámpara roja muy potente nunca produce el efecto de una luz "
+        "ultravioleta débil: lo que decide es la frecuencia.",
+        [
+            ("Se convierte en una onda de mayor frecuencia",
+             "La amplitud y la frecuencia son independientes: cambiar una no modifica la otra."),
+            ("Pasa a viajar más rápido por el vacío",
+             "La rapidez en el vacío es la misma para toda onda electromagnética, sin importar su amplitud."),
+            ("Cambia de color, porque el color depende de la intensidad de la luz",
+             "El color depende de la frecuencia; más intensidad con la misma frecuencia da el mismo color más brillante."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Las radiografías médicas usan rayos X, mientras que las ecografías usan "
+        "ultrasonido. Solo una de las dos es una onda electromagnética. ¿Cuál y "
+        "por qué?",
+        "Los rayos X, porque no necesitan un medio material",
+        "La clasificación no depende del uso sino de la naturaleza de la "
+        "onda.\n\n"
+        "1) Los rayos X son ondas electromagnéticas de muy alta frecuencia: "
+        "campos que oscilan y se propagan incluso en el vacío.\n"
+        "2) El ultrasonido es sonido de frecuencia demasiado alta para el oído "
+        "humano, y el sonido es una onda MECÁNICA: necesita un medio material "
+        "que vibre.\n"
+        "3) Por eso una ecografía requiere gel entre el transductor y la piel, "
+        "para que no quede aire que interrumpa la transmisión.\n\n"
+        "Solo la radiografía implica radiación ionizante, y de ahí las "
+        "precauciones distintas en cada examen.",
+        [
+            ("El ultrasonido, porque atraviesa los tejidos del cuerpo",
+             "Atravesar tejidos no define la naturaleza de la onda: el ultrasonido sigue siendo mecánico."),
+            ("Los rayos X, porque tienen una frecuencia menor que el ultrasonido",
+             "Su frecuencia es enormemente MAYOR; el argumento correcto es que no requiere medio material."),
+            ("El ultrasonido, porque su nombre indica que va más allá del espectro del sonido audible",
+             "Ir más allá del rango audible sigue siendo sonido: cambia la frecuencia, no la naturaleza mecánica de la onda."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Una cámara termográfica detecta el calor que emiten los cuerpos y "
+        "muestra imágenes de personas en total oscuridad. ¿Qué región del "
+        "espectro registra?",
+        "El infrarrojo",
+        "Todo cuerpo emite radiación electromagnética según su temperatura.\n\n"
+        "1) A la temperatura del cuerpo humano, esa emisión se concentra en el "
+        "INFRARROJO, justo por debajo del rojo visible.\n"
+        "2) El ojo no lo detecta, así que a oscuras no vemos nada; un sensor "
+        "sensible al infrarrojo sí.\n"
+        "3) Como la intensidad y la distribución dependen de la temperatura, la "
+        "imagen permite distinguir zonas más y menos calientes.\n\n"
+        "Se usa para detectar pérdidas de calor en edificios, fallas eléctricas "
+        "por sobrecalentamiento y fiebre en controles sanitarios.",
+        [
+            ("El ultravioleta", "El ultravioleta lo emiten cuerpos muchísimo más calientes, como el Sol, no un cuerpo a 37 grados."),
+            ("Las ondas de radio", "Los cuerpos a temperatura ambiente emiten muy poco en radio; su emisión se concentra en el infrarrojo."),
+            ("La luz visible, amplificada electrónicamente para poder verla en la oscuridad",
+             "Eso corresponde a un intensificador de imagen, que necesita algo de luz; una termográfica funciona en oscuridad total."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Una onda electromagnética pasa del vacío a un bloque de vidrio. Su "
+        "frecuencia no cambia, pero su rapidez disminuye. ¿Qué ocurre con su "
+        "longitud de onda?",
+        "Disminuye",
+        "El producto de longitud de onda por frecuencia es la rapidez, así que "
+        "si uno de los tres cambia, otro debe acompañarlo.\n\n"
+        "1) La frecuencia la impone la fuente y no cambia al pasar de un medio a "
+        "otro: la onda no puede llegar con más o menos oscilaciones por segundo "
+        "de las que trae.\n"
+        "2) La rapidez sí disminuye dentro del vidrio.\n"
+        "3) Como rapidez = longitud de onda por frecuencia, y la frecuencia se "
+        "mantiene, la longitud de onda debe DISMINUIR en la misma proporción.\n\n"
+        "Ese cambio de longitud de onda al entrar en otro medio es lo que "
+        "produce la refracción, es decir, el cambio de dirección.",
+        [
+            ("Aumenta", "Con la frecuencia fija, una rapidez menor exige una longitud de onda menor, no mayor."),
+            ("Se mantiene igual", "Si la longitud de onda y la frecuencia no cambiaran, la rapidez tampoco podría cambiar."),
+            ("Se mantiene igual, y lo que cambia es la amplitud de la onda",
+             "La amplitud puede disminuir por absorción, pero eso no explica el cambio de rapidez."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Un teléfono móvil se comunica con la antena mediante ondas de radio. "
+        "¿Por qué se usa esa región del espectro y no rayos X?",
+        "Las ondas de radio atraviesan obstáculos sin dañar los tejidos",
+        "La elección responde a dos criterios: que la señal llegue y que sea "
+        "segura.\n\n"
+        "1) Las ondas de radio tienen longitudes de onda grandes: rodean "
+        "obstáculos y atraviesan paredes, así que la señal llega dentro de un "
+        "edificio.\n"
+        "2) Su frecuencia es baja y por lo tanto su energía también: no ionizan "
+        "la materia ni rompen enlaces químicos.\n"
+        "3) Los rayos X, en cambio, son radiación ionizante: usarlos para "
+        "comunicaciones cotidianas sería un riesgo sanitario evidente.\n\n"
+        "Además, generar y detectar ondas de radio con antenas es tecnológicamente "
+        "sencillo y barato.",
+        [
+            ("Las ondas de radio viajan más rápido que los rayos X",
+             "Ambas viajan a la misma rapidez en el vacío: la diferencia está en su frecuencia."),
+            ("Los rayos X no pueden transportar información",
+             "Cualquier onda puede modularse para transportar información; el problema es que son ionizantes."),
+            ("Las ondas de radio son las únicas que las antenas metálicas pueden emitir",
+             "Las antenas están diseñadas para ese rango, pero es una consecuencia de la elección, no su motivo."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Se dice que la capa de ozono protege la vida en la Tierra. ¿Qué hace "
+        "exactamente?",
+        "Absorbe buena parte de la radiación ultravioleta solar",
+        "La atmósfera no es transparente por igual a todas las regiones del "
+        "espectro.\n\n"
+        "1) El ozono de la estratósfera absorbe con mucha eficiencia el "
+        "ultravioleta de longitudes de onda más cortas y energéticas.\n"
+        "2) Esa radiación tiene energía suficiente para romper enlaces químicos, "
+        "incluidos los del ADN: sin ese filtro, la vida en la superficie sería "
+        "inviable tal como la conocemos.\n"
+        "3) La luz visible y buena parte del infrarrojo, en cambio, atraviesan "
+        "la atmósfera, y de ahí que veamos y que el planeta se caliente.\n\n"
+        "El deterioro de esa capa por ciertos compuestos industriales aumenta "
+        "la radiación ultravioleta que llega al suelo.",
+        [
+            ("Refleja los rayos X provenientes del espacio exterior",
+             "Los rayos X cósmicos los absorbe la atmósfera en capas mucho más altas, y no es la función del ozono."),
+            ("Impide que el calor de la Tierra escape hacia el espacio",
+             "Esa es la función de los gases de efecto invernadero como el dióxido de carbono, no del ozono estratosférico."),
+            ("Convierte la radiación ultravioleta en luz visible para que podamos aprovecharla",
+             "El ozono absorbe esa energía y la disipa como calor: no la transforma en luz utilizable."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Una onda de radio de 1.500 kHz recorre 600 m en cierto tiempo. ¿Cuántas "
+        "longitudes de onda caben en esa distancia, si su longitud de onda es de "
+        "200 m?",
+        "3",
+        "Es una división directa entre la distancia y la longitud de onda.\n\n"
+        "1) Cada longitud de onda ocupa 200 m.\n"
+        "2) Divide: 600 m ÷ 200 m.\n"
+        "3) Caben 3 longitudes de onda completas.\n\n"
+        "Comprobación de la coherencia del dato: con una longitud de onda de "
+        "200 m y una frecuencia de 1.500.000 Hz, la rapidez sería 200 · "
+        "1.500.000 = 3 · 10⁸ m/s, que es exactamente la rapidez de la luz.",
+        [
+            ("300", "Dividió la distancia por 2 en lugar de por 200."),
+            ("120.000", "Multiplicó la distancia por la longitud de onda en vez de dividirla."),
+            ("1.500", "Usó el valor de la frecuencia como respuesta, sin relacionarlo con la distancia recorrida."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "Un estudiante afirma que la luz roja es 'más potente' que la azul "
+        "porque el rojo se ve más intenso en un semáforo. ¿Cómo se evalúa esa "
+        "afirmación?",
+        "Confunde intensidad de la fuente con energía de la radiación",
+        "Hay dos magnitudes distintas y el argumento las mezcla.\n\n"
+        "1) La INTENSIDAD depende de cuánta energía emite la fuente por unidad "
+        "de tiempo, y se puede aumentar subiendo la potencia de la lámpara.\n"
+        "2) La ENERGÍA de la radiación depende de su frecuencia, y la del azul "
+        "es MAYOR que la del rojo, porque su frecuencia es mayor.\n"
+        "3) Que un semáforo rojo se vea más intenso solo indica que esa lámpara "
+        "emite más potencia o que el ojo es más sensible en esa zona: no dice "
+        "nada sobre la energía de cada porción de radiación.\n\n"
+        "La distinción es la misma que explica por qué una luz ultravioleta "
+        "débil daña la piel y una luz roja intensa no.",
+        [
+            ("Es correcta: la luz roja tiene mayor energía que la azul",
+             "Es al revés: a menor longitud de onda mayor frecuencia y mayor energía, así que el azul supera al rojo."),
+            ("Es correcta, porque la luz roja tiene mayor longitud de onda",
+             "Mayor longitud de onda implica menor frecuencia y por lo tanto menor energía."),
+            ("Es incorrecta porque el color de la luz no tiene ninguna relación con su energía",
+             "Sí la tiene, y es directa: el color corresponde a la frecuencia, y la energía crece con ella."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "Una fuente emite simultáneamente radiación en tres regiones: radio, "
+        "visible y gamma. Todas parten al mismo tiempo hacia un detector ubicado "
+        "en el vacío a 300.000 km. ¿En qué orden llegan?",
+        "Las tres llegan al mismo tiempo",
+        "En el vacío la rapidez de propagación no depende de la frecuencia.\n\n"
+        "1) Toda onda electromagnética viaja en el vacío a la misma rapidez, "
+        "unos 300.000 km/s.\n"
+        "2) Recorren la misma distancia, así que emplean el mismo tiempo: un "
+        "segundo en este caso.\n"
+        "3) Lo que las distingue es la frecuencia y la energía, no la rapidez.\n\n"
+        "En un medio material la situación cambia: ahí la rapidez depende algo "
+        "de la frecuencia, y esa dependencia es la que produce la dispersión de "
+        "la luz blanca en un prisma.",
+        [
+            ("Primero la gamma, por tener mayor frecuencia",
+             "Mayor frecuencia significa más energía por fotón, no mayor rapidez de propagación."),
+            ("Primero la de radio, por tener mayor longitud de onda",
+             "La longitud de onda tampoco influye en la rapidez dentro del vacío."),
+            ("Primero la visible, porque es la única que el detector puede registrar de inmediato",
+             "El instante de llegada no depende de qué detecte el instrumento: las tres llegan simultáneamente."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "Se quiere estimar la distancia a la Luna enviando un pulso láser que "
+        "rebota en un reflector dejado en su superficie. El pulso regresa "
+        "2,6 segundos después de ser emitido. Si la luz viaja a 3 · 10⁸ m/s, "
+        "¿cuál es la distancia aproximada?",
+        "390.000 km",
+        "El tiempo medido corresponde al viaje de ida y vuelta.\n\n"
+        "1) Distancia total recorrida = rapidez · tiempo = 3 · 10⁸ m/s · 2,6 s = "
+        "7,8 · 10⁸ m.\n"
+        "2) Ese valor incluye la ida y el regreso, así que la distancia a la "
+        "Luna es la mitad: 3,9 · 10⁸ m.\n"
+        "3) Convierte a kilómetros: 390.000 km.\n\n"
+        "El valor coincide con la distancia media Tierra-Luna, y esta es "
+        "efectivamente la técnica con que se mide desde 1969.",
+        [
+            ("780.000 km", "Olvidó dividir por dos: ese es el recorrido completo de ida y vuelta."),
+            ("195.000 km", "Dividió por cuatro en vez de por dos."),
+            ("1.170.000 km", "Multiplicó por tres el tiempo en algún paso, en vez de aplicar la rapidez una sola vez."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "Un equipo quiere comprobar si un material bloquea las ondas de radio. "
+        "Coloca un receptor sintonizado en una emisora dentro de una caja del "
+        "material y mide la intensidad de la señal. ¿Qué control debe incluir "
+        "para que el resultado sea concluyente?",
+        "Medir la señal en el mismo lugar con la caja abierta",
+        "Sin un punto de comparación, cualquier lectura baja podría deberse a "
+        "otra cosa.\n\n"
+        "1) La intensidad de la señal depende de la distancia a la antena "
+        "emisora, de los edificios cercanos y de la orientación del receptor.\n"
+        "2) Si solo se mide dentro de la caja, no se sabe cuánta señal habría "
+        "habido ahí de todos modos.\n"
+        "3) La medición de control debe hacerse en el MISMO lugar y con el mismo "
+        "receptor, cambiando únicamente la variable en estudio: la presencia del "
+        "material.\n\n"
+        "La comparación entre ambas mediciones es lo que atribuye la diferencia "
+        "al material y no al entorno.",
+        [
+            ("Repetir la medición con otro receptor de mejor calidad",
+             "Un receptor distinto agrega una segunda variable y hace la comparación menos limpia, no más."),
+            ("Medir la señal en otra ciudad con la misma emisora",
+             "Cambiar de ubicación introduce diferencias de distancia y obstáculos que arruinan la comparación."),
+            ("Verificar que la emisora esté transmitiendo a su potencia máxima durante el experimento",
+             "Es una precaución razonable, pero no reemplaza la necesidad de una medición de referencia sin la caja."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "Las antenas de radio tienen longitudes comparables a la longitud de "
+        "onda que emiten o reciben. Sabiendo esto, ¿por qué las antenas de "
+        "telefonía móvil son mucho más cortas que las de radio AM?",
+        "Porque la telefonía usa frecuencias mucho mayores",
+        "El tamaño de la antena está ligado a la longitud de onda, y esta al "
+        "inverso de la frecuencia.\n\n"
+        "1) La radio AM transmite en torno a un millón de hertz, lo que da "
+        "longitudes de onda de cientos de metros: de ahí las torres enormes.\n"
+        "2) La telefonía móvil trabaja en torno a mil millones de hertz, mil "
+        "veces más, así que su longitud de onda es de unos pocos centímetros.\n"
+        "3) Una antena de ese orden cabe dentro del propio teléfono.\n\n"
+        "El precio de subir la frecuencia es que la señal rodea peor los "
+        "obstáculos, y por eso se necesitan muchas antenas repartidas en vez de "
+        "una sola muy potente.",
+        [
+            ("Porque la telefonía móvil transmite señales de menor potencia",
+             "La potencia determina el alcance, no la longitud de la antena, que depende de la longitud de onda."),
+            ("Porque las ondas de telefonía viajan más rápido en el aire",
+             "Todas las ondas electromagnéticas viajan a la misma rapidez en un mismo medio."),
+            ("Porque las antenas de radio AM deben ser altas para superar los cerros del terreno",
+             "La altura ayuda a la cobertura, pero la longitud de la antena la fija la longitud de onda que debe emitir."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "Se comparan dos afirmaciones: (I) la luz es una onda electromagnética, "
+        "y (II) la luz visible ocupa una franja muy estrecha del espectro "
+        "electromagnético. ¿Qué relación hay entre ambas?",
+        "Las dos son correctas y la segunda precisa el alcance de la primera",
+        "No compiten entre sí: una clasifica y la otra ubica.\n\n"
+        "1) La primera afirma la naturaleza de la luz: campos eléctricos y "
+        "magnéticos oscilantes que se propagan sin medio.\n"
+        "2) La segunda ubica a la luz visible dentro del conjunto de todas las "
+        "ondas de esa naturaleza, que abarca desde las de radio hasta los rayos "
+        "gamma.\n"
+        "3) La franja visible va aproximadamente de 400 a 700 nanómetros, un "
+        "intervalo diminuto frente a los muchos órdenes de magnitud que cubre "
+        "el espectro completo.\n\n"
+        "Juntas explican por qué existen instrumentos para 'ver' lo que el ojo "
+        "no capta: es la misma clase de onda, en otra frecuencia.",
+        [
+            ("La segunda contradice a la primera, porque limita a la luz a un rango pequeño",
+             "Limitar el rango de lo VISIBLE no niega que la luz sea electromagnética: son afirmaciones compatibles."),
+            ("La primera es correcta y la segunda es falsa, porque el espectro visible abarca la mayor parte del espectro",
+             "El rango visible es una fracción diminuta: el espectro se extiende muchísimo en ambos sentidos."),
+            ("Ambas son correctas pero se refieren a fenómenos distintos y no tienen relación entre sí",
+             "Sí la tienen: la segunda es una precisión sobre el mismo objeto que describe la primera."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "Un texto de divulgación afirma que 'las ondas de radio son sonido que "
+        "viaja por el aire hasta la radio'. ¿Cuáles son los errores de esa "
+        "descripción?",
+        "Confunde dos tipos de onda distintos y el papel del aire",
+        "La frase mezcla el medio de transmisión con lo que finalmente se "
+        "escucha.\n\n"
+        "1) Las ondas de radio son ELECTROMAGNÉTICAS: no son sonido y no "
+        "necesitan aire, se propagan también en el vacío. Por eso funcionan las "
+        "comunicaciones con sondas espaciales.\n"
+        "2) Lo que viaja es una señal que codifica la información; el sonido "
+        "aparece recién en el parlante del receptor, que convierte esa señal en "
+        "vibraciones del aire.\n"
+        "3) Ahí sí hay una onda mecánica, en el último tramo, entre el parlante "
+        "y el oído.\n\n"
+        "La confusión es frecuente porque el nombre de la tecnología y el "
+        "resultado audible se solapan.",
+        [
+            ("Solo el nombre está mal: en realidad se llaman microondas",
+             "Las microondas son otra región del espectro; el problema de la frase es de fondo, no de nomenclatura."),
+            ("El error es que las ondas de radio viajan por el agua y no por el aire",
+             "Las ondas de radio se propagan mal en el agua: eso complica justamente la comunicación con submarinos."),
+            ("El único error es la velocidad, porque el sonido tarda mucho más en llegar que la señal",
+             "El error no es de velocidad sino de naturaleza: la señal transmitida no es sonido en ningún tramo del recorrido."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "Un satélite meteorológico observa la Tierra en el infrarrojo además de "
+        "hacerlo en luz visible. ¿Qué ventaja obtiene con ese segundo canal?",
+        "Puede formar imágenes también de noche",
+        "Las dos regiones informan cosas distintas porque tienen orígenes "
+        "distintos.\n\n"
+        "1) La imagen VISIBLE es luz solar reflejada: de noche, sin Sol "
+        "iluminando esa cara del planeta, no hay nada que registrar.\n"
+        "2) La imagen INFRARROJA capta la radiación que los propios cuerpos "
+        "emiten según su temperatura, y eso ocurre las veinticuatro horas.\n"
+        "3) Además, como la emisión depende de la temperatura, permite "
+        "distinguir la altura de las nubes: las más altas son más frías.\n\n"
+        "Por eso las imágenes satelitales de la noche que se ven en los "
+        "informes del tiempo son infrarrojas.",
+        [
+            ("Puede ver a través de las nubes con total claridad",
+             "El infrarrojo tampoco atraviesa las nubes densas; para eso se usan radares en longitudes de onda mayores."),
+            ("Obtiene imágenes de mayor resolución que en luz visible",
+             "A mayor longitud de onda, la resolución alcanzable con la misma óptica es menor, no mayor."),
+            ("Puede medir directamente la velocidad del viento en la superficie del océano",
+             "Esa medición se hace con instrumentos de radar; el canal infrarrojo entrega temperatura."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "En una onda, el período y la frecuencia se relacionan de manera "
+        "inversa. Si la frecuencia de una onda electromagnética se triplica, "
+        "¿qué ocurre con su período?",
+        "Se reduce a un tercio",
+        "El período es el inverso de la frecuencia, así que un cambio en una "
+        "invierte el efecto en la otra.\n\n"
+        "1) La relación es T = 1 / f.\n"
+        "2) Si f se multiplica por 3, el denominador crece tres veces.\n"
+        "3) Por lo tanto T se reduce a la tercera parte.\n\n"
+        "Tiene sentido: si en un segundo caben tres veces más oscilaciones, cada "
+        "una debe durar tres veces menos.",
+        [
+            ("Se triplica", "Eso ocurriría si fueran directamente proporcionales, y la relación es inversa."),
+            ("No cambia", "Si el período no cambiara, la cantidad de oscilaciones por segundo tampoco podría cambiar."),
+            ("Se reduce a la novena parte", "Aplicó el cuadrado del factor: la relación es inversa simple, no inversa al cuadrado."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "El Sol emite radiación en todo el espectro, pero la mayor parte de la "
+        "energía que llega a la superficie terrestre corresponde a la luz "
+        "visible y al infrarrojo cercano. ¿Qué relación tiene ese hecho con el "
+        "ojo humano?",
+        "El ojo evolucionó siendo sensible al rango más disponible",
+        "La coincidencia entre la emisión solar y la sensibilidad del ojo no es "
+        "casual.\n\n"
+        "1) La franja donde el Sol emite más y donde la atmósfera es más "
+        "transparente es justamente la del visible.\n"
+        "2) Un sistema visual sensible a ese rango dispone de mucha más "
+        "información que uno sensible a una región donde llega poca radiación.\n"
+        "3) La selección natural favoreció, entonces, receptores ajustados a esa "
+        "franja.\n\n"
+        "El llamado espectro visible no tiene nada de especial desde el punto de "
+        "vista físico: está definido por nuestra biología, no por la física de "
+        "las ondas.",
+        [
+            ("El ojo determina qué radiación puede emitir el Sol",
+             "Invierte la relación causal: la emisión del Sol depende de su temperatura, no de quién la observe."),
+            ("La atmósfera convierte toda la radiación solar en luz visible",
+             "La atmósfera filtra y dispersa, pero no transforma unas regiones del espectro en otras."),
+            ("Es una coincidencia sin ninguna explicación, porque la visión se desarrolló antes que el Sol emitiera en ese rango",
+             "El Sol emite en ese rango desde mucho antes de que existiera cualquier ojo: la explicación es evolutiva."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Los rayos gamma se usan para esterilizar instrumental médico. ¿Qué "
+        "propiedad de esta radiación lo permite?",
+        "Su alta energía destruye el material genético de los microorganismos",
+        "El uso se apoya directamente en su posición en el espectro.\n\n"
+        "1) Los rayos gamma tienen las frecuencias más altas de todo el "
+        "espectro electromagnético, y por lo tanto la mayor energía.\n"
+        "2) Esa energía alcanza para ionizar átomos y romper enlaces químicos, "
+        "incluidos los del ADN de bacterias y esporas.\n"
+        "3) El instrumental queda estéril sin necesidad de calentarlo ni de "
+        "abrir el envase, porque la radiación lo atraviesa.\n\n"
+        "La misma propiedad exige blindaje y protocolos estrictos: lo que "
+        "destruye microorganismos daña también tejidos vivos.",
+        [
+            ("Su gran longitud de onda le permite atravesar los envases",
+             "Su longitud de onda es la más pequeña del espectro; atraviesa por su energía, no por ser larga."),
+            ("Calienta el instrumental hasta una temperatura que mata las bacterias",
+             "La esterilización por calor es otro método; la ventaja del rayo gamma es que actúa sin calentar apreciablemente."),
+            ("Produce una capa protectora sobre la superficie que impide nuevas contaminaciones",
+             "No deja ninguna capa ni efecto residual: una vez abierto el envase, el instrumental puede recontaminarse."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "facil",
+        "¿Qué magnitud de una onda electromagnética determina la energía que "
+        "transporta cada porción de radiación?",
+        "La frecuencia",
+        "Es la magnitud que ordena el espectro por energía.\n\n"
+        "1) A mayor frecuencia corresponde mayor energía: por eso los rayos "
+        "gamma y los rayos X son ionizantes y las ondas de radio no.\n"
+        "2) La longitud de onda entrega la misma información al revés, porque "
+        "es inversamente proporcional a la frecuencia.\n"
+        "3) La amplitud determina la intensidad total, es decir, cuánta "
+        "radiación llega, pero no de qué tipo es.\n\n"
+        "Esa distinción explica por qué una radiación débil puede ser peligrosa "
+        "y una intensa, inofensiva.",
+        [
+            ("La amplitud", "La amplitud fija la intensidad de la señal, no la energía asociada a su frecuencia."),
+            ("La rapidez de propagación", "En el vacío es la misma para todas las ondas electromagnéticas, así que no puede distinguirlas."),
+            ("El período, porque una onda más lenta acumula más energía en cada ciclo",
+             "El período es el inverso de la frecuencia: un período mayor corresponde a MENOS energía, no a más."),
+        ],
+    ),
+]
