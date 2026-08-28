@@ -98818,3 +98818,1395 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Biología - "Procesos y funciones biológicas": control de la
+# natalidad e infecciones de transmisión sexual
+#
+# El temario es explícito sobre qué entra: los métodos naturales (Billings, del
+# calendario y temperatura basal), los artificiales reversibles (hormonales y de
+# barrera) y los parcialmente reversibles (quirúrgicos); y las ITS como VIH,
+# herpes, gonorrea y clamidia, considerando tipo de agente patógeno, mecanismo
+# de transmisión, síntomas generales y medidas de prevención.
+#
+# Es contenido de salud: cada dato se trata con precisión, porque un error acá
+# no es un ejercicio mal calculado sino desinformación sanitaria.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_natalidad_its", "facil",
+        "¿Qué tipo de agente patógeno causa el VIH?",
+        "Un virus",
+        "Identificar el agente determina el tratamiento posible.\n\n"
+        "1) El VIH es un virus que infecta células del sistema inmune, en "
+        "particular ciertos linfocitos.\n"
+        "2) Al destruirlas progresivamente, deteriora la capacidad de defensa "
+        "del organismo.\n"
+        "3) Los antibióticos no tienen ningún efecto sobre virus: el tratamiento "
+        "es con antirretrovirales, que controlan la infección sin eliminar el "
+        "virus del organismo.\n\n"
+        "Con tratamiento sostenido, la carga viral puede volverse indetectable y "
+        "la persona no transmite el virus por vía sexual.",
+        [
+            ("Una bacteria", "Las bacterias causan la gonorrea y la clamidia, y se tratan con antibióticos."),
+            ("Un hongo", "Los hongos causan otras infecciones, y el VIH no es una de ellas."),
+            ("Un parásito de mayor tamaño que una célula humana",
+             "El VIH es un virus, muchísimo más pequeño que cualquier célula."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "facil",
+        "¿Cuál es el único método anticonceptivo que además previene las "
+        "infecciones de transmisión sexual?",
+        "El preservativo",
+        "Es el único que actúa como barrera física frente a los agentes "
+        "infecciosos.\n\n"
+        "1) Impide el contacto directo entre mucosas y el paso de fluidos, que "
+        "es la vía de transmisión de la mayoría de las ITS.\n"
+        "2) Los métodos hormonales actúan sobre la ovulación o sobre el moco "
+        "cervical: no interponen ninguna barrera frente a los patógenos.\n"
+        "3) Los quirúrgicos impiden el encuentro de los gametos, pero tampoco "
+        "protegen de infecciones.\n\n"
+        "Por eso se recomienda su uso incluso cuando se emplea otro método "
+        "anticonceptivo: cumplen funciones distintas.",
+        [
+            ("La píldora anticonceptiva",
+             "Actúa sobre el ciclo hormonal y no ofrece ninguna protección frente a infecciones."),
+            ("El dispositivo intrauterino",
+             "Actúa dentro del útero y no impide el contacto con agentes infecciosos."),
+            ("La vasectomía, por ser un método definitivo",
+             "Impide la presencia de espermatozoides en el semen, pero no protege de infecciones."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "facil",
+        "¿Cómo se clasifican los métodos quirúrgicos de control de la natalidad "
+        "según el temario?",
+        "Como parcialmente reversibles",
+        "La clasificación distingue tres grupos según su reversibilidad.\n\n"
+        "1) Los métodos NATURALES y los ARTIFICIALES REVERSIBLES permiten "
+        "recuperar la fertilidad al suspenderlos.\n"
+        "2) Los QUIRÚRGICOS, como la vasectomía y la ligadura de trompas, "
+        "interrumpen el paso de los gametos de manera permanente.\n"
+        "3) Se los llama parcialmente reversibles porque existen cirugías de "
+        "reversión, pero no siempre resultan y su éxito no está garantizado.\n\n"
+        "Por eso la decisión se considera de otro orden que la de un método "
+        "temporal, y requiere una reflexión distinta.",
+        [
+            ("Como métodos naturales, porque no usan hormonas",
+             "Los naturales son los que se basan en identificar el periodo fértil, sin intervención."),
+            ("Como métodos de barrera, porque impiden el paso de los gametos",
+             "Los de barrera son los que se interponen físicamente durante la relación, como el preservativo."),
+            ("Como completamente reversibles, porque la cirugía siempre puede deshacerse",
+             "La reversión es posible pero no siempre exitosa: por eso se los llama parcialmente reversibles."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "facil",
+        "¿En qué se basa el método de Billings?",
+        "En observar los cambios del moco cervical",
+        "Es uno de los métodos naturales que el temario menciona.\n\n"
+        "1) El moco cervical cambia de consistencia a lo largo del ciclo por "
+        "efecto de las hormonas.\n"
+        "2) En torno a la ovulación se vuelve más fluido y transparente; el "
+        "resto del tiempo es más espeso.\n"
+        "3) El método consiste en registrar esos cambios para estimar el periodo "
+        "fértil.\n\n"
+        "Requiere observación diaria y entrenamiento, y su eficacia es "
+        "considerablemente menor que la de los métodos hormonales o de barrera, "
+        "porque la interpretación es subjetiva y el ciclo es variable.",
+        [
+            ("En medir la temperatura corporal al despertar cada día",
+             "Ese es el método de la temperatura basal, otro de los métodos naturales."),
+            ("En contar los días transcurridos desde la última menstruación",
+             "Ese es el método del calendario o del ritmo."),
+            ("En impedir físicamente el paso de los espermatozoides",
+             "Esa es la lógica de los métodos de barrera, no de los naturales."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "facil",
+        "La clamidia es una infección de transmisión sexual frecuente. ¿Qué "
+        "característica la hace especialmente riesgosa?",
+        "Suele no dar síntomas y pasa desapercibida",
+        "La ausencia de síntomas retrasa el diagnóstico y el tratamiento.\n\n"
+        "1) Una proporción alta de las personas infectadas no presenta síntomas "
+        "evidentes.\n"
+        "2) Sin síntomas no se consulta, y la infección persiste y se sigue "
+        "transmitiendo.\n"
+        "3) Sin tratamiento puede ascender por el tracto reproductor y provocar "
+        "daño en las trompas uterinas, con riesgo de infertilidad.\n\n"
+        "Por eso el control periódico es relevante aun sin molestias, y por eso "
+        "el tratamiento debe incluir a la pareja sexual.",
+        [
+            ("Produce síntomas muy intensos que impiden cualquier actividad",
+             "Ocurre lo contrario: en muchos casos no produce síntomas evidentes."),
+            ("No tiene tratamiento disponible en la actualidad",
+             "Es causada por una bacteria y se trata eficazmente con antibióticos."),
+            ("Se transmite por el aire, lo que dificulta su prevención",
+             "Se transmite por contacto sexual, no por vía aérea."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Cómo actúan los métodos anticonceptivos hormonales?",
+        "Impiden la ovulación y alteran el moco cervical",
+        "Actúan sobre el ciclo, no sobre el encuentro de los gametos.\n\n"
+        "1) Aportan hormonas que mantienen a la hipófisis informada de niveles "
+        "altos, lo que suprime la señal que desencadena la ovulación.\n"
+        "2) Sin ovulación no hay ovocito disponible para ser fecundado.\n"
+        "3) Además espesan el moco cervical, lo que dificulta el paso de los "
+        "espermatozoides.\n\n"
+        "Su eficacia es alta cuando se usan correctamente, pero no ofrecen "
+        "ninguna protección frente a las infecciones de transmisión sexual.",
+        [
+            ("Bloquean físicamente el paso de los espermatozoides",
+             "Ese es el mecanismo de los métodos de barrera, no de los hormonales."),
+            ("Destruyen los espermatozoides que ingresan al tracto reproductor",
+             "Ese es el mecanismo de los espermicidas, que son otro tipo de método."),
+            ("Interrumpen el desarrollo del embrión una vez implantado",
+             "Su acción es previa: impiden la ovulación y dificultan el encuentro de los gametos."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Por qué el VIH deteriora progresivamente la capacidad de defensa del "
+        "organismo?",
+        "Infecta y destruye células clave del sistema inmune",
+        "El daño no es indirecto: ataca al propio sistema de defensa.\n\n"
+        "1) El virus infecta linfocitos que coordinan la respuesta inmune.\n"
+        "2) Al replicarse dentro de ellos los destruye, y su número disminuye "
+        "con el tiempo.\n"
+        "3) Sin esa coordinación, el organismo queda vulnerable a infecciones "
+        "que normalmente controlaría sin dificultad.\n\n"
+        "El tratamiento antirretroviral frena la replicación del virus y permite "
+        "que el número de esos linfocitos se recupere y se mantenga.",
+        [
+            ("Produce toxinas que dañan directamente a todos los tejidos",
+             "El VIH no actúa por toxinas: su efecto es la destrucción de células inmunes."),
+            ("Impide la producción de glóbulos rojos en la médula ósea",
+             "Su blanco son linfocitos del sistema inmune, no la producción de glóbulos rojos."),
+            ("Bloquea la absorción de nutrientes y produce desnutrición",
+             "La desnutrición puede aparecer en etapas avanzadas, pero no es el mecanismo del daño."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "El herpes genital es causado por un virus. ¿Qué característica tiene "
+        "esta infección?",
+        "Persiste en el organismo y puede reactivarse",
+        "El virus no se elimina tras el primer episodio.\n\n"
+        "1) Después de la infección inicial, el virus permanece latente en "
+        "ganglios nerviosos.\n"
+        "2) Puede reactivarse periódicamente y producir nuevas lesiones, a "
+        "menudo asociadas a estrés o a otras infecciones.\n"
+        "3) Existen tratamientos que reducen la frecuencia y la intensidad de "
+        "los episodios, pero no eliminan el virus.\n\n"
+        "La transmisión puede ocurrir incluso sin lesiones visibles, lo que "
+        "refuerza la importancia del uso de preservativo.",
+        [
+            ("Se elimina por completo con un tratamiento antibiótico",
+             "Los antibióticos no actúan sobre virus, y el herpes persiste de por vida."),
+            ("Solo se transmite cuando hay lesiones visibles",
+             "La transmisión puede ocurrir también en ausencia de lesiones."),
+            ("Produce inmunidad permanente tras el primer episodio",
+             "No genera inmunidad que impida las reactivaciones: el virus permanece en el organismo."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿En qué se basa el método de la temperatura basal?",
+        "En que la temperatura sube levemente después de ovular",
+        "El método detecta un cambio hormonal a través de sus efectos.\n\n"
+        "1) Tras la ovulación, las hormonas del cuerpo lúteo producen un ligero "
+        "aumento de la temperatura corporal en reposo.\n"
+        "2) Registrándola cada mañana antes de levantarse, ese aumento se "
+        "identifica en el gráfico.\n"
+        "3) La limitación es decisiva: indica que la ovulación YA ocurrió, no "
+        "que va a ocurrir.\n\n"
+        "Por eso no permite anticipar el periodo fértil, y suele combinarse con "
+        "otros indicadores. Su eficacia es bastante menor que la de los métodos "
+        "hormonales o de barrera.",
+        [
+            ("En que la temperatura baja bruscamente el día de la ovulación",
+             "El cambio característico es un aumento leve posterior a la ovulación."),
+            ("En que la temperatura permite predecir la ovulación con días de anticipación",
+             "Justamente no lo permite: el cambio ocurre después de la ovulación."),
+            ("En que la temperatura se mantiene constante durante todo el ciclo",
+             "Si fuera constante no habría nada que registrar ni ningún método posible."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Por qué la gonorrea y la clamidia se tratan con antibióticos y el VIH "
+        "no?",
+        "Las primeras son bacterianas y el VIH es viral",
+        "El tratamiento depende del tipo de agente patógeno.\n\n"
+        "1) Los antibióticos actúan sobre estructuras propias de las bacterias, "
+        "como su pared o sus ribosomas.\n"
+        "2) Los virus no tienen esas estructuras: usan la maquinaria de la "
+        "célula que infectan, así que los antibióticos no tienen blanco sobre el "
+        "cual actuar.\n"
+        "3) El VIH se trata con antirretrovirales, que bloquean pasos "
+        "específicos de la replicación viral.\n\n"
+        "Por eso identificar el agente es el primer paso del tratamiento, y por "
+        "eso usar antibióticos ante una infección viral no sirve y contribuye a "
+        "la resistencia bacteriana.",
+        [
+            ("Las primeras son más recientes y por eso hay tratamiento disponible",
+             "La antigüedad no determina la disponibilidad de tratamiento: lo hace el tipo de agente."),
+            ("El VIH es una bacteria resistente a todos los antibióticos conocidos",
+             "El VIH es un virus, no una bacteria resistente."),
+            ("Las primeras afectan solo a las mucosas y el VIH a todo el organismo",
+             "La extensión del daño no determina qué tipo de fármaco es eficaz."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Cuáles son las principales vías de transmisión del VIH?",
+        "Sexual, sanguínea y de madre a hijo",
+        "El virus se transmite por fluidos que lo contienen en cantidad "
+        "suficiente.\n\n"
+        "1) SEXUAL: por contacto con fluidos durante relaciones sin "
+        "preservativo.\n"
+        "2) SANGUÍNEA: por compartir material punzante o por transfusiones no "
+        "controladas.\n"
+        "3) DE MADRE A HIJO: durante el embarazo, el parto o la lactancia, "
+        "riesgo que el tratamiento reduce drásticamente.\n\n"
+        "No se transmite por contacto cotidiano: dar la mano, compartir "
+        "utensilios, abrazar o usar el mismo baño no representan riesgo alguno. "
+        "Esa precisión importa, porque el desconocimiento alimenta la "
+        "discriminación.",
+        [
+            ("Por contacto cotidiano, como compartir utensilios o dar la mano",
+             "El contacto cotidiano no transmite el VIH: esa creencia es incorrecta y alimenta la discriminación."),
+            ("Por vía aérea, al igual que las infecciones respiratorias",
+             "El VIH no se transmite por el aire."),
+            ("Por picaduras de insectos que hayan estado en contacto con una persona infectada",
+             "Los insectos no transmiten el VIH."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Qué diferencia hay entre los métodos de barrera y los hormonales en "
+        "cuanto a su mecanismo?",
+        "Unos impiden el encuentro de los gametos y otros la ovulación",
+        "Actúan en momentos distintos del proceso.\n\n"
+        "1) Los de BARRERA se interponen físicamente e impiden que los "
+        "espermatozoides alcancen al ovocito.\n"
+        "2) Los HORMONALES actúan antes: suprimen la ovulación, de modo que no "
+        "hay ovocito disponible.\n"
+        "3) Además, solo los de barrera protegen frente a las infecciones de "
+        "transmisión sexual.\n\n"
+        "Esa complementariedad es la razón por la que se recomienda combinarlos: "
+        "cubren riesgos distintos.",
+        [
+            ("Unos son reversibles y los otros, definitivos",
+             "Ambos son reversibles: los definitivos son los quirúrgicos."),
+            ("Unos requieren receta médica y los otros no",
+             "Es una diferencia práctica, pero no describe el mecanismo de acción."),
+            ("Unos actúan antes de la relación y los otros después",
+             "Ambos deben estar en uso antes de la relación para ser eficaces."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "dificil",
+        "Se comparan las eficacias de distintos métodos anticonceptivos y se "
+        "observa que la de los naturales es considerablemente menor. ¿Cuál es la "
+        "razón principal?",
+        "Dependen de estimar un momento que es variable e incierto",
+        "Su eficacia está limitada por la biología, no solo por el uso.\n\n"
+        "1) Todos los métodos naturales buscan identificar el periodo fértil, "
+        "pero el momento de la ovulación varía entre ciclos.\n"
+        "2) Los espermatozoides sobreviven varios días, lo que amplía la ventana "
+        "de riesgo más allá del día de la ovulación.\n"
+        "3) A eso se suma la dificultad de interpretar correctamente los signos "
+        "y la necesidad de un registro riguroso y sostenido.\n\n"
+        "Los métodos hormonales y de barrera no dependen de esa estimación, y "
+        "por eso su eficacia es sustancialmente mayor.",
+        [
+            ("Porque requieren autorización médica y no siempre se obtiene",
+             "Los métodos naturales no requieren autorización: su limitación es de precisión."),
+            ("Porque tienen efectos secundarios que obligan a suspenderlos",
+             "Los métodos naturales no producen efectos secundarios: no involucran fármacos."),
+            ("Porque solo funcionan en personas con ciclos completamente irregulares",
+             "Funcionan mejor en ciclos regulares, y aun así su eficacia es limitada."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "dificil",
+        "Una persona afirma que si su pareja no presenta síntomas, no hay riesgo "
+        "de infección de transmisión sexual. ¿Cómo se evalúa esa afirmación?",
+        "Es incorrecta: varias ITS cursan sin síntomas evidentes",
+        "La ausencia de síntomas no equivale a ausencia de infección.\n\n"
+        "1) La clamidia y la gonorrea con frecuencia no producen síntomas, sobre "
+        "todo en las etapas iniciales.\n"
+        "2) El VIH puede permanecer años sin manifestaciones evidentes mientras "
+        "se transmite igual.\n"
+        "3) El herpes puede transmitirse incluso sin lesiones visibles.\n\n"
+        "Por eso la ausencia de síntomas no es un criterio para descartar riesgo: "
+        "lo que corresponde es el uso de preservativo y, si hay dudas, el examen "
+        "correspondiente.",
+        [
+            ("Es correcta: las infecciones siempre producen síntomas visibles",
+             "Muchas ITS son asintomáticas durante largos periodos."),
+            ("Es correcta si la pareja se realizó un examen hace más de un año",
+             "Un examen antiguo no informa sobre el estado actual."),
+            ("Es incorrecta, porque los síntomas siempre aparecen dentro de las primeras 24 horas",
+             "Los tiempos de aparición varían mucho, y en muchos casos no aparecen síntomas."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "dificil",
+        "¿Por qué se recomienda que el tratamiento de una infección de "
+        "transmisión sexual incluya a la pareja sexual?",
+        "Para evitar la reinfección y cortar la cadena de transmisión",
+        "Tratar a una sola persona deja el problema abierto.\n\n"
+        "1) Si la pareja sigue infectada, la persona tratada puede volver a "
+        "contagiarse en la siguiente relación.\n"
+        "2) La pareja, además, puede transmitir la infección a otras personas, "
+        "sobre todo si no presenta síntomas.\n"
+        "3) Tratar a ambos corta esa cadena.\n\n"
+        "Por eso los protocolos de salud pública contemplan la notificación y el "
+        "tratamiento de los contactos: es una medida individual y también "
+        "colectiva.",
+        [
+            ("Porque el tratamiento solo funciona si se administra a dos personas a la vez",
+             "El tratamiento es eficaz individualmente: el problema es la reinfección posterior."),
+            ("Porque la pareja desarrollará inmunidad si recibe el mismo tratamiento",
+             "Los tratamientos no generan inmunidad frente a estas infecciones."),
+            ("Porque así se reduce el costo del tratamiento para el sistema de salud",
+             "El fundamento es sanitario: interrumpir la transmisión, no el costo."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Qué caracteriza al método del calendario o del ritmo?",
+        "Estima el periodo fértil contando días del ciclo",
+        "Es el más simple de los métodos naturales y también el menos "
+        "preciso.\n\n"
+        "1) Se registran varios ciclos y se calcula el rango probable de la "
+        "ovulación a partir de su duración.\n"
+        "2) Se evita la relación durante los días estimados como fértiles.\n"
+        "3) Su debilidad es que supone regularidad: cualquier variación del "
+        "ciclo desplaza la ovulación fuera de lo previsto.\n\n"
+        "Como los espermatozoides sobreviven varios días, un pequeño error de "
+        "cálculo se traduce directamente en riesgo. Su eficacia es "
+        "considerablemente menor que la de otros métodos.",
+        [
+            ("Registra la temperatura corporal cada mañana antes de levantarse",
+             "Ese es el método de la temperatura basal."),
+            ("Observa los cambios de consistencia del moco cervical",
+             "Ese es el método de Billings."),
+            ("Utiliza una barrera física durante los días fértiles del ciclo",
+             "Usar barrera es un método distinto; el del calendario se basa solo en el cálculo de días."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Qué medida es la más eficaz para prevenir las infecciones de "
+        "transmisión sexual durante una relación?",
+        "El uso correcto y consistente del preservativo",
+        "Es la única barrera que interrumpe la vía de transmisión.\n\n"
+        "1) Impide el contacto directo entre mucosas y el intercambio de "
+        "fluidos, que es como se transmiten la mayoría de las ITS.\n"
+        "2) CORRECTO significa usarlo desde el comienzo y de la manera "
+        "indicada; CONSISTENTE, en todas las relaciones.\n"
+        "3) Ningún método hormonal ni quirúrgico ofrece esa protección.\n\n"
+        "A eso se suman los controles periódicos y, en el caso de algunas "
+        "infecciones, la vacunación disponible.",
+        [
+            ("Tomar antibióticos de manera preventiva antes de la relación",
+             "El uso de antibióticos sin indicación no previene infecciones y favorece la resistencia bacteriana."),
+            ("Usar un método anticonceptivo hormonal de manera continua",
+             "Los métodos hormonales no ofrecen ninguna protección frente a infecciones."),
+            ("Realizarse un examen después de cada relación sexual",
+             "El examen detecta, no previene, y además los resultados no son inmediatos."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Qué consecuencia puede tener una infección por clamidia no tratada en "
+        "el sistema reproductor femenino?",
+        "Daño en las trompas uterinas con riesgo de infertilidad",
+        "La infección puede ascender desde el sitio inicial.\n\n"
+        "1) Sin tratamiento, la bacteria puede progresar desde el cuello del "
+        "útero hacia las trompas uterinas.\n"
+        "2) La inflamación resultante puede dejar cicatrices que obstruyan el "
+        "conducto.\n"
+        "3) Una trompa obstruida impide el encuentro de los gametos y aumenta "
+        "además el riesgo de embarazo ectópico.\n\n"
+        "Como la infección suele ser asintomática, ese daño puede producirse sin "
+        "que la persona lo advierta: de ahí la importancia del control "
+        "periódico.",
+        [
+            ("Una alteración permanente del ciclo hormonal",
+             "La infección afecta las estructuras del tracto reproductor, no la regulación hormonal del ciclo."),
+            ("La imposibilidad de producir ovocitos en el ovario",
+             "La producción de ovocitos en el ovario no se ve afectada: el daño es en las trompas."),
+            ("Una infección generalizada del sistema nervioso central",
+             "La clamidia no compromete el sistema nervioso central."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "dificil",
+        "Se afirma que los métodos anticonceptivos hormonales protegen contra el "
+        "VIH porque impiden el embarazo. ¿Cómo se evalúa?",
+        "Es incorrecta: impedir el embarazo y prevenir infecciones son cosas distintas",
+        "El razonamiento confunde dos mecanismos sin relación entre sí.\n\n"
+        "1) Los métodos hormonales actúan sobre la ovulación y sobre el moco "
+        "cervical: impiden la fecundación.\n"
+        "2) El VIH se transmite por contacto con fluidos, y eso ocurre con "
+        "independencia de si hay ovulación o no.\n"
+        "3) Solo una barrera física interrumpe esa vía.\n\n"
+        "La confusión es peligrosa en la práctica: alguien podría sentirse "
+        "protegido y no serlo. Por eso se insiste en la doble protección.",
+        [
+            ("Es correcta: al impedir el embarazo también se bloquea el contagio",
+             "El contagio no depende de la fecundación: son procesos independientes."),
+            ("Es correcta, pero solo si el método se usa de manera continua",
+             "Ningún nivel de cumplimiento convierte a un método hormonal en protección frente a infecciones."),
+            ("Es incorrecta, porque los métodos hormonales aumentan el riesgo de contagio",
+             "No aumentan el riesgo: simplemente no protegen frente a él."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Qué tipo de agente patógeno causa la gonorrea y cómo se trata?",
+        "Una bacteria, con antibióticos",
+        "El tipo de agente determina el tratamiento.\n\n"
+        "1) La gonorrea es causada por una bacteria que infecta las mucosas del "
+        "tracto reproductor y de otras zonas.\n"
+        "2) Los antibióticos actúan sobre estructuras bacterianas y son "
+        "eficaces.\n"
+        "3) Es importante completar el tratamiento indicado y tratar también a "
+        "la pareja para evitar la reinfección.\n\n"
+        "Un problema creciente es la aparición de cepas resistentes a varios "
+        "antibióticos, consecuencia directa de tratamientos incompletos o de uso "
+        "inadecuado.",
+        [
+            ("Un virus, con antirretrovirales de por vida",
+             "Esa descripción corresponde al VIH, no a la gonorrea."),
+            ("Un hongo, con antifúngicos de aplicación local",
+             "La gonorrea no es una infección por hongos."),
+            ("Una bacteria, pero no existe tratamiento eficaz disponible",
+             "Existen antibióticos eficaces, aunque la resistencia es un problema creciente."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Por qué la vasectomía y la ligadura de trompas impiden la fecundación?",
+        "Interrumpen el paso de los gametos por sus conductos",
+        "Ambos métodos actúan sobre la vía de transporte, no sobre la "
+        "producción.\n\n"
+        "1) La VASECTOMÍA secciona los conductos deferentes: los espermatozoides "
+        "se siguen produciendo pero no llegan al semen.\n"
+        "2) La LIGADURA DE TROMPAS interrumpe las trompas uterinas: el ovocito "
+        "no puede encontrarse con los espermatozoides.\n"
+        "3) En ambos casos la producción de gametos y de hormonas continúa "
+        "normalmente.\n\n"
+        "Por eso no alteran el ciclo ni los caracteres sexuales: lo único que se "
+        "interrumpe es el trayecto.",
+        [
+            ("Detienen por completo la producción de gametos",
+             "La producción continúa: lo que se interrumpe es el trayecto de los gametos."),
+            ("Bloquean la producción de hormonas sexuales del organismo",
+             "La producción hormonal no se ve afectada por estos procedimientos."),
+            ("Impiden la implantación del embrión en el útero",
+             "Actúan antes: impiden que llegue a haber fecundación."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "dificil",
+        "Se compara la eficacia teórica de un método con su eficacia en el uso "
+        "real, y la segunda resulta menor. ¿Cómo se explica esa diferencia?",
+        "El uso real incluye olvidos y errores de aplicación",
+        "La diferencia mide la distancia entre las condiciones ideales y las "
+        "cotidianas.\n\n"
+        "1) La eficacia TEÓRICA supone un uso perfecto: sin olvidos, sin "
+        "errores, en todas las ocasiones.\n"
+        "2) La eficacia en el USO REAL registra lo que efectivamente ocurre: "
+        "olvidos de una toma, uso incorrecto o no uso en alguna ocasión.\n"
+        "3) La diferencia es mayor en los métodos que dependen más de la "
+        "conducta cotidiana, y menor en los que no requieren acción diaria.\n\n"
+        "Por eso al comparar métodos conviene mirar la eficacia en uso real: es "
+        "la que describe lo que pasa en la práctica.",
+        [
+            ("El método pierde eficacia con el tiempo por adaptación del organismo",
+             "No hay una pérdida de eficacia por adaptación: la diferencia se explica por el uso."),
+            ("Los estudios teóricos usan muestras más pequeñas y menos confiables",
+             "Ambas cifras provienen de estudios rigurosos: miden cosas distintas."),
+            ("La eficacia real es menor porque incluye casos de infecciones además de embarazos",
+             "Las dos cifras se refieren a la prevención del embarazo, no a infecciones."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Qué significa que una persona con VIH tenga carga viral indetectable?",
+        "El tratamiento redujo el virus a niveles no medibles",
+        "Es un objetivo terapéutico con consecuencias importantes.\n\n"
+        "1) El tratamiento antirretroviral frena la replicación del virus.\n"
+        "2) Cuando la cantidad de virus en sangre cae por debajo del límite que "
+        "los exámenes detectan, se habla de carga indetectable.\n"
+        "3) En esa condición, y manteniendo el tratamiento, la persona no "
+        "transmite el virus por vía sexual.\n\n"
+        "No significa que el virus haya desaparecido del organismo: si el "
+        "tratamiento se interrumpe, la carga vuelve a aumentar.",
+        [
+            ("El virus fue eliminado por completo del organismo",
+             "El virus permanece en el organismo: lo que baja es su cantidad en sangre."),
+            ("La persona desarrolló inmunidad natural contra el virus",
+             "El control se debe al tratamiento, no a una inmunidad desarrollada."),
+            ("El examen utilizado no es adecuado para detectar la infección",
+             "El examen es adecuado: el resultado refleja una carga viral efectivamente muy baja."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Por qué se recomienda combinar un método anticonceptivo con el "
+        "preservativo?",
+        "Porque cada uno cubre un riesgo distinto",
+        "Prevenir el embarazo y prevenir infecciones son objetivos "
+        "diferentes.\n\n"
+        "1) Un método hormonal o un dispositivo intrauterino ofrece alta "
+        "eficacia anticonceptiva, pero ninguna protección frente a las ITS.\n"
+        "2) El preservativo protege frente a las ITS y además aporta eficacia "
+        "anticonceptiva.\n"
+        "3) Usarlos juntos cubre ambos frentes.\n\n"
+        "A esa combinación se la llama doble protección, y es la recomendación "
+        "habitual en salud sexual.",
+        [
+            ("Porque un método por sí solo nunca tiene eficacia suficiente",
+             "Varios métodos tienen alta eficacia anticonceptiva por sí solos: el punto es que no cubren las infecciones."),
+            ("Porque los métodos hormonales dejan de funcionar tras cierto tiempo de uso",
+             "Su eficacia se mantiene mientras se usen correctamente."),
+            ("Porque el preservativo pierde eficacia si se usa como único método",
+             "Su eficacia no depende de que se combine: la combinación cubre riesgos distintos."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "dificil",
+        "Un estudio compara la incidencia de infecciones de transmisión sexual "
+        "en dos grupos con distinto nivel de acceso a información y a "
+        "preservativos. ¿Qué variable debe controlarse para interpretar el "
+        "resultado?",
+        "El nivel de acceso a servicios de salud de ambos grupos",
+        "Un factor común podría explicar tanto la exposición como el "
+        "resultado.\n\n"
+        "1) El acceso a servicios de salud influye en el diagnóstico: donde hay "
+        "más controles se detectan más casos, aunque la incidencia real sea "
+        "similar.\n"
+        "2) También influye en el tratamiento oportuno y en la interrupción de "
+        "las cadenas de transmisión.\n"
+        "3) Si un grupo tiene mejor acceso a salud Y a información, no se sabría "
+        "a cuál de los dos factores atribuir la diferencia.\n\n"
+        "Controlar esa variable, o al menos registrarla y ajustar por ella, es "
+        "lo que permite interpretar el resultado.",
+        [
+            ("El número de personas de cada grupo, que debe ser muy distinto",
+             "Los grupos deben ser comparables: una diferencia grande de tamaño complica el análisis, no lo mejora."),
+            ("La incidencia de infecciones, que es la variable que se mide",
+             "Esa es la variable dependiente, no una que haya que controlar."),
+            ("El tipo de infecciones estudiadas, que debe variar entre los dos grupos",
+             "Deben estudiarse las mismas infecciones en ambos grupos para que la comparación sea válida."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Qué caracteriza a los métodos anticonceptivos de barrera?",
+        "Impiden físicamente el encuentro de los gametos",
+        "Su nombre describe exactamente su mecanismo.\n\n"
+        "1) Se interponen entre los gametos e impiden que los espermatozoides "
+        "alcancen al ovocito.\n"
+        "2) No alteran el ciclo hormonal ni la ovulación: la persona sigue "
+        "ovulando normalmente.\n"
+        "3) El preservativo, además, es el único método que protege frente a las "
+        "infecciones de transmisión sexual.\n\n"
+        "Su eficacia depende del uso correcto en cada ocasión, y por eso la "
+        "diferencia entre eficacia teórica y real es más marcada que en los "
+        "métodos que no requieren acción en cada relación.",
+        [
+            ("Suprimen la ovulación mediante el aporte de hormonas",
+             "Ese es el mecanismo de los métodos hormonales."),
+            ("Interrumpen de manera permanente el paso de los gametos",
+             "Esa es la lógica de los métodos quirúrgicos, que no son reversibles con facilidad."),
+            ("Identifican el periodo fértil para evitar las relaciones en esos días",
+             "Ese es el fundamento de los métodos naturales."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Por qué el examen de VIH puede dar negativo aunque la persona esté "
+        "infectada, si se realiza muy poco después de la exposición?",
+        "El organismo aún no produce lo que el examen detecta",
+        "Existe un periodo entre la infección y la posibilidad de "
+        "detectarla.\n\n"
+        "1) Muchos exámenes detectan los anticuerpos que el organismo produce en "
+        "respuesta al virus.\n"
+        "2) Esa producción toma un tiempo: durante ese periodo el examen puede "
+        "resultar negativo aunque la infección exista.\n"
+        "3) Por eso se indica repetir el examen pasado un plazo determinado.\n\n"
+        "Durante ese periodo la persona sí puede transmitir el virus, lo que "
+        "refuerza la importancia de las medidas de prevención mientras se espera "
+        "el resultado confirmatorio.",
+        [
+            ("El virus permanece inactivo y no puede transmitirse durante ese periodo",
+             "La transmisión es posible durante ese periodo, y de hecho puede ser especialmente eficiente."),
+            ("El examen solo detecta el virus cuando aparecen los primeros síntomas",
+             "La detección no depende de la aparición de síntomas."),
+            ("El organismo elimina el virus en las primeras semanas y luego reaparece",
+             "El organismo no elimina el VIH: la infección persiste desde el comienzo."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "facil",
+        "¿Qué tienen en común el VIH y el herpes genital en cuanto a su agente "
+        "patógeno?",
+        "Ambos son causados por virus",
+        "La clasificación del agente determina el tipo de tratamiento "
+        "disponible.\n\n"
+        "1) Ambos son infecciones virales, y por lo tanto los antibióticos no "
+        "tienen efecto sobre ellos.\n"
+        "2) En ambos casos el virus permanece en el organismo: los tratamientos "
+        "controlan la infección, no la eliminan.\n"
+        "3) La gonorrea y la clamidia, en cambio, son bacterianas y sí se curan "
+        "con antibióticos.\n\n"
+        "Esa diferencia entre infecciones curables y controlables es una de las "
+        "distinciones centrales del contenido.",
+        [
+            ("Ambos son causados por bacterias",
+             "Las infecciones bacterianas de este grupo son la gonorrea y la clamidia."),
+            ("Ambos se curan por completo con antibióticos",
+             "Los antibióticos no actúan sobre virus, y ninguna de las dos infecciones se elimina del organismo."),
+            ("Ambos se transmiten exclusivamente por vía sanguínea",
+             "Ambos se transmiten por vía sexual, y el VIH también por otras vías."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "facil",
+        "¿Cuál de los siguientes es un método anticonceptivo natural según la "
+        "clasificación del temario?",
+        "El método de la temperatura basal",
+        "Los naturales se basan en identificar el periodo fértil sin "
+        "intervención externa.\n\n"
+        "1) El temario nombra tres: Billings, el del calendario y el de la "
+        "temperatura basal.\n"
+        "2) Los tres buscan estimar cuándo ocurre la ovulación a partir de "
+        "signos o cálculos.\n"
+        "3) No usan fármacos ni dispositivos, y por eso se los clasifica como "
+        "naturales.\n\n"
+        "Su eficacia es considerablemente menor que la de los métodos hormonales "
+        "y de barrera, porque dependen de estimar un momento variable.",
+        [
+            ("El preservativo masculino",
+             "Es un método artificial reversible de barrera."),
+            ("La píldora anticonceptiva combinada",
+             "Es un método artificial reversible de tipo hormonal."),
+            ("La ligadura de trompas uterinas",
+             "Es un método quirúrgico, clasificado como parcialmente reversible."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Qué significa que las ITS puedan transmitirse durante el periodo de "
+        "ventana o en ausencia de síntomas, en términos de prevención?",
+        "La prevención no puede basarse en la apariencia de salud",
+        "El criterio visual no funciona como medida preventiva.\n\n"
+        "1) Varias infecciones cursan sin síntomas durante largos periodos, y "
+        "aun así se transmiten.\n"
+        "2) Otras, como el VIH, tienen un periodo inicial en que los exámenes "
+        "todavía no las detectan pero la transmisión ya es posible.\n"
+        "3) Por lo tanto, ni la ausencia de síntomas ni un examen reciente "
+        "garantizan ausencia de riesgo.\n\n"
+        "La conclusión práctica es que la prevención debe ser una conducta "
+        "sostenida y no una evaluación caso a caso basada en apariencias.",
+        [
+            ("Basta con observar cuidadosamente antes de cada relación",
+             "La observación no detecta infecciones asintomáticas, que son frecuentes."),
+            ("Los exámenes son innecesarios porque nunca detectan las infecciones a tiempo",
+             "Los exámenes son útiles y necesarios: lo que tienen es un periodo de ventana acotado."),
+            ("Solo las personas con síntomas necesitan tomar medidas de prevención",
+             "Las medidas son necesarias con independencia de los síntomas, propios o de la pareja."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Biología - control de la natalidad e ITS (segunda mitad del nodo)
+#
+# Completa el nodo con lo que el temario nombra y la primera mitad no alcanzó a
+# cubrir: el dispositivo intrauterino y los hormonales de larga duración, la
+# anticoncepción de emergencia, el método de la lactancia, la sífilis y el virus
+# del papiloma humano, y el bloque de habilidades científicas —diseño de una
+# campaña, muestra autoseleccionada, eficacia con uso perfecto frente a uso
+# típico, cultivo con antibiótico y lectura de una tendencia sin causa probada.
+#
+# Cada dato de salud se afirma solo si es exacto: acá un error no es un
+# ejercicio mal calculado sino desinformación sanitaria.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_natalidad_its", "facil",
+        "¿Qué tipo de agente patógeno causa la sífilis?",
+        "Una bacteria",
+        "El tipo de agente decide si existe tratamiento curativo.\n\n"
+        "1) La sífilis es causada por una bacteria que se transmite por vía "
+        "sexual y también de la persona gestante al feto.\n"
+        "2) Al ser bacteriana, responde a antibióticos y la infección puede "
+        "curarse por completo si se trata a tiempo.\n"
+        "3) Eso la diferencia del VIH y del herpes, que son virales y solo "
+        "admiten tratamientos que controlan la infección.\n\n"
+        "Curable no significa inofensiva: sin tratamiento avanza por etapas y "
+        "puede dañar el sistema nervioso y el corazón años después.",
+        [
+            ("Un virus",
+             "Confunde la sífilis con las infecciones virales como el VIH o el herpes genital."),
+            ("Un hongo",
+             "Los hongos causan otras infecciones genitales, pero no la sífilis."),
+            ("Un parásito que se aloja en la sangre y se multiplica dentro de los glóbulos rojos",
+             "Describe el mecanismo de la malaria, que no es una infección de transmisión sexual."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "facil",
+        "¿Cuál de las siguientes situaciones NO transmite el VIH?",
+        "Compartir utensilios de cocina",
+        "Conocer las vías reales de transmisión evita el estigma sin bajar la "
+        "prevención.\n\n"
+        "1) El VIH se transmite por sangre, por relaciones sexuales sin "
+        "protección y de la persona gestante al hijo durante el embarazo, el "
+        "parto o la lactancia.\n"
+        "2) El virus no sobrevive lo suficiente fuera del organismo ni alcanza "
+        "concentraciones infectantes en la saliva.\n"
+        "3) Por eso convivir, abrazarse o compartir vajilla no implica ningún "
+        "riesgo de contagio.\n\n"
+        "Separar lo que transmite de lo que no es parte de la prevención: el "
+        "miedo mal dirigido no protege y sí aísla a las personas.",
+        [
+            ("Una transfusión con sangre infectada",
+             "Es una de las vías de transmisión reconocidas, por contacto directo con sangre."),
+            ("Una relación sexual sin preservativo",
+             "Es la vía de transmisión más frecuente de esta infección."),
+            ("La lactancia materna de una persona con la infección sin tratamiento antirretroviral",
+             "Es una de las formas de transmisión de la persona gestante al hijo."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "facil",
+        "¿Contra cuál de estas infecciones existe una vacuna incluida en el "
+        "programa nacional de inmunizaciones?",
+        "El virus del papiloma humano",
+        "La vacunación es una medida de prevención primaria, anterior a la "
+        "exposición.\n\n"
+        "1) La vacuna contra el virus del papiloma humano se administra en la "
+        "edad escolar, antes del inicio de la vida sexual.\n"
+        "2) Se aplica entonces porque protege frente a los tipos virales "
+        "asociados al cáncer cervicouterino, y su efecto es preventivo y no "
+        "curativo.\n"
+        "3) Para el VIH, la gonorrea y la clamidia no existe vacuna disponible: "
+        "su prevención depende del preservativo y del diagnóstico oportuno.\n\n"
+        "Que exista vacuna para una infección no reemplaza las demás medidas "
+        "frente a las otras.",
+        [
+            ("El VIH",
+             "No existe una vacuna disponible contra el VIH; su prevención es conductual y farmacológica."),
+            ("La gonorrea",
+             "No cuenta con vacuna: se previene con preservativo y se trata con antibióticos."),
+            ("La clamidia, mediante una dosis anual que se administra junto con la vacuna contra la influenza",
+             "No existe tal vacuna; la clamidia se previene con preservativo y se detecta con exámenes."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "facil",
+        "¿Qué es el dispositivo intrauterino?",
+        "Un anticonceptivo reversible de larga duración",
+        "El dispositivo intrauterino se clasifica entre los métodos artificiales "
+        "reversibles.\n\n"
+        "1) Es un dispositivo que se instala dentro del útero y permanece "
+        "varios años actuando de forma continua.\n"
+        "2) Su efecto termina cuando se retira: la fertilidad se recupera sin "
+        "necesidad de una nueva intervención, y por eso es reversible.\n"
+        "3) Existen versiones de cobre y versiones con hormona, con mecanismos "
+        "distintos pero la misma clasificación.\n\n"
+        "Que dure años no lo convierte en quirúrgico: la diferencia con la "
+        "ligadura es justamente que se retira.",
+        [
+            ("Un método quirúrgico definitivo",
+             "Los quirúrgicos son la ligadura y la vasectomía; el dispositivo se retira sin cirugía."),
+            ("Un método natural",
+             "Los naturales no usan dispositivos: se basan en identificar el periodo fértil."),
+            ("Un tratamiento que se administra después de una relación sexual sin protección",
+             "Eso describe la anticoncepción de emergencia, que es una píldora y no un dispositivo."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Cuál es el mecanismo principal de la anticoncepción de emergencia?",
+        "Retrasa o impide la ovulación",
+        "El mecanismo explica por qué su eficacia depende del momento del ciclo.\n\n"
+        "1) La píldora de emergencia contiene una hormona en dosis alta que "
+        "actúa sobre la señal que desencadena la ovulación.\n"
+        "2) Si se toma antes de que el óvulo sea liberado, la retrasa o la "
+        "impide, y sin óvulo disponible no hay fecundación posible.\n"
+        "3) Si la fecundación ya ocurrió, no tiene efecto: no interrumpe un "
+        "embarazo en curso.\n\n"
+        "De ahí que su eficacia sea mayor mientras antes se tome y que no sirva "
+        "como método regular, para el que existen opciones más eficaces.",
+        [
+            ("Interrumpe un embarazo ya iniciado",
+             "No tiene efecto sobre un embarazo en curso: actúa antes de la fecundación."),
+            ("Bloquea de forma permanente la producción de óvulos",
+             "Su efecto es puntual sobre ese ciclo; la ovulación se reanuda normalmente después."),
+            ("Elimina los espermatozoides presentes en el aparato reproductor femenino mediante un agente químico",
+             "Ese mecanismo corresponde a los espermicidas, no a la anticoncepción de emergencia."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Por qué el preservativo reduce el riesgo de herpes genital pero no lo "
+        "elimina?",
+        "Hay contacto de piel que no queda cubierta",
+        "La vía de transmisión determina hasta dónde alcanza la barrera.\n\n"
+        "1) El preservativo impide el contacto con fluidos y cubre la zona "
+        "sobre la que se coloca.\n"
+        "2) El herpes se transmite por contacto directo de piel con piel, y las "
+        "lesiones pueden estar en zonas genitales vecinas que quedan fuera de "
+        "esa cobertura.\n"
+        "3) Por eso reduce mucho el riesgo, pero no lo lleva a cero, a "
+        "diferencia de lo que ocurre con infecciones que se transmiten solo por "
+        "fluidos.\n\n"
+        "La misma limitación aplica al virus del papiloma humano, y es la razón "
+        "de que la vacuna aporte una protección que la barrera no da.",
+        [
+            ("Porque el virus atraviesa el látex",
+             "El látex íntegro es impermeable a los virus; el problema es la zona que no cubre."),
+            ("Porque el herpes se transmite por el aire",
+             "No se transmite por vía aérea, sino por contacto directo con la piel o las mucosas."),
+            ("Porque el virus solo se transmite cuando no hay lesiones visibles en la piel",
+             "Se transmite tanto con lesiones como sin ellas; la ausencia de lesiones no descarta el contagio."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "El dispositivo intrauterino de cobre no libera hormonas. ¿Cómo evita "
+        "entonces el embarazo?",
+        "Altera el ambiente uterino y daña los espermatozoides",
+        "Un método puede ser eficaz sin actuar sobre el sistema hormonal.\n\n"
+        "1) Los iones de cobre modifican el medio interno del útero y afectan la "
+        "movilidad y la viabilidad de los espermatozoides.\n"
+        "2) Con eso, la probabilidad de que un espermatozoide alcance el óvulo "
+        "cae drásticamente.\n"
+        "3) Como no aporta hormonas, no interfiere con la ovulación ni con el "
+        "ciclo menstrual, que sigue su curso.\n\n"
+        "Esa es la diferencia de fondo con el dispositivo hormonal, que sí "
+        "libera una hormona de forma local.",
+        [
+            ("Libera una hormona en dosis muy baja",
+             "Ese es el mecanismo del dispositivo hormonal, no del de cobre."),
+            ("Impide la ovulación",
+             "El de cobre no interfiere con la ovulación: el ciclo continúa con normalidad."),
+            ("Forma una barrera física que sella por completo la entrada del útero al modo de un tapón",
+             "No actúa como tapón: su efecto es químico sobre el ambiente uterino, no un sello mecánico."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "El implante subdérmico y la inyección anticonceptiva se agrupan con la "
+        "píldora combinada. ¿Qué criterio los reúne?",
+        "Los tres actúan por vía hormonal",
+        "La clasificación del temario se hace por mecanismo, no por la forma de "
+        "administración.\n\n"
+        "1) Píldora, inyección e implante liberan hormonas que suprimen la "
+        "ovulación y modifican el moco cervical.\n"
+        "2) Todos son artificiales y reversibles: al suspenderlos o retirarlos, "
+        "la fertilidad se recupera.\n"
+        "3) Lo que cambia entre ellos es la duración del efecto y la frecuencia "
+        "de uso, no el mecanismo.\n\n"
+        "Ninguno de los tres ofrece protección frente a infecciones de "
+        "transmisión sexual, precisamente porque su acción es hormonal.",
+        [
+            ("Los tres se toman por vía oral",
+             "Solo la píldora es oral; el implante se inserta bajo la piel y la inyección es intramuscular."),
+            ("Los tres son métodos de barrera",
+             "Ninguno interpone una barrera: actúan sobre el sistema hormonal."),
+            ("Los tres exigen un procedimiento quirúrgico para instalarse y otro para ser retirados",
+             "Solo el implante requiere un procedimiento menor; la píldora y la inyección, ninguno."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Por qué el tratamiento antibiótico de la gonorrea debe completarse "
+        "aunque los síntomas desaparezcan antes?",
+        "Para eliminar las bacterias que aún sobreviven",
+        "La mejoría de los síntomas antecede a la eliminación del agente.\n\n"
+        "1) Los síntomas ceden cuando la población bacteriana baja lo "
+        "suficiente, pero todavía quedan bacterias vivas.\n"
+        "2) Si el tratamiento se corta ahí, esas bacterias vuelven a "
+        "multiplicarse y la infección reaparece.\n"
+        "3) Además, las que sobreviven a una exposición incompleta al "
+        "antibiótico tienden a ser las más resistentes, y son las que "
+        "repoblan.\n\n"
+        "La gonorrea es hoy uno de los casos donde la resistencia a "
+        "antibióticos avanza más rápido, y el uso incompleto contribuye a ella.",
+        [
+            ("Porque el antibiótico deja de hacer efecto si se interrumpe una sola vez",
+             "El problema no es una pérdida de potencia del fármaco, sino la sobrevida de bacterias."),
+            ("Porque los síntomas nunca desaparecen antes del fin del tratamiento",
+             "Sí pueden desaparecer antes: justamente por eso el tratamiento se abandona."),
+            ("Porque el antibiótico necesita acumularse hasta el último día para empezar a actuar",
+             "Actúa desde las primeras dosis; el punto es sostener el efecto hasta eliminar la población."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Por qué el control del embarazo incluye exámenes de VIH y de sífilis?",
+        "Ambas pueden transmitirse al feto",
+        "El tamizaje se justifica por una vía de transmisión que no es sexual.\n\n"
+        "1) El VIH y la sífilis pueden pasar de la persona gestante al hijo "
+        "durante el embarazo, el parto o la lactancia.\n"
+        "2) Detectadas a tiempo, existen tratamientos que reducen esa "
+        "transmisión a niveles muy bajos.\n"
+        "3) Como ambas pueden cursar sin síntomas, el examen es la única forma "
+        "de identificarlas dentro del plazo en que el tratamiento sirve.\n\n"
+        "Es un ejemplo de prevención que depende del diagnóstico y no de la "
+        "conducta de la persona examinada.",
+        [
+            ("Porque son las dos únicas infecciones de transmisión sexual que existen",
+             "Hay muchas otras; estas se tamizan por su transmisión al feto y por tener tratamiento."),
+            ("Porque el embarazo aumenta el riesgo de contraerlas",
+             "El embarazo no es un factor de contagio: lo que cambia es la consecuencia para el feto."),
+            ("Porque solo durante el embarazo los exámenes de estas infecciones entregan resultados confiables",
+             "Los exámenes son confiables en cualquier momento; el embarazo solo hace urgente hacerlos."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Por qué el herpes genital reaparece en brotes después del primer "
+        "episodio?",
+        "El virus queda latente en tejido nervioso",
+        "La latencia explica por qué no existe cura pero sí control.\n\n"
+        "1) Tras la infección inicial, el virus se traslada a ganglios "
+        "nerviosos y permanece allí sin multiplicarse.\n"
+        "2) El sistema inmune no lo elimina en ese estado, porque el virus no "
+        "está produciendo partículas visibles para la defensa.\n"
+        "3) Ante ciertos estímulos, como estrés o baja de defensas, se reactiva "
+        "y produce un nuevo brote de lesiones.\n\n"
+        "Por eso el tratamiento antiviral reduce la frecuencia y la duración de "
+        "los brotes, pero no erradica el virus del organismo.",
+        [
+            ("Porque cada brote corresponde a un contagio nuevo",
+             "Los brotes provienen del mismo virus ya presente, no de reinfecciones sucesivas."),
+            ("Porque el tratamiento antiviral genera resistencia inmediata",
+             "Las recurrencias ocurren igual sin tratamiento: dependen de la latencia, no del fármaco."),
+            ("Porque el virus se multiplica sin pausa en la piel durante toda la vida de la persona",
+             "Entre brotes no hay multiplicación activa en la piel: el virus está en estado latente."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Por qué la temperatura basal permite identificar la ovulación solo "
+        "después de que ocurrió?",
+        "El alza térmica es posterior a la ovulación",
+        "El método registra una consecuencia, no un aviso.\n\n"
+        "1) Después de la ovulación aumenta la progesterona, y esa hormona "
+        "eleva la temperatura corporal basal unas décimas.\n"
+        "2) El alza se detecta al comparar varios días seguidos de registro, o "
+        "sea cuando el óvulo ya fue liberado.\n"
+        "3) Para anticipar el periodo fértil habría que reconocer una señal "
+        "previa, y la temperatura no la entrega.\n\n"
+        "Por eso este método se usa combinado con otros indicadores, como el "
+        "moco cervical, que sí cambian antes de la ovulación.",
+        [
+            ("Porque el termómetro tiene poca precisión",
+             "La variación es pequeña pero medible; el problema es cuándo ocurre, no cómo se mide."),
+            ("Porque la temperatura baja durante la ovulación",
+             "Lo que se registra es un alza sostenida posterior, no un descenso."),
+            ("Porque la temperatura corporal cambia únicamente cuando ya han transcurrido varios ciclos completos",
+             "El cambio ocurre dentro del mismo ciclo; lo que exige varios ciclos es conocer el patrón propio."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Por qué el método del calendario es menos confiable en personas con "
+        "ciclos irregulares?",
+        "Estima el periodo fértil a partir de ciclos previos",
+        "El método supone una regularidad que no siempre existe.\n\n"
+        "1) El cálculo del periodo fértil se hace proyectando la duración de "
+        "los ciclos anteriores hacia el ciclo actual.\n"
+        "2) Si la duración varía de un mes a otro, la ovulación puede caer "
+        "fuera de la ventana estimada.\n"
+        "3) Esa desviación no se detecta a tiempo, porque el método no observa "
+        "ninguna señal del ciclo en curso.\n\n"
+        "Los métodos basados en observación directa, como el de Billings, son "
+        "menos sensibles a esa irregularidad, aunque tampoco la eliminan.",
+        [
+            ("Porque los ciclos irregulares impiden la ovulación",
+             "La ovulación ocurre igual: lo que cambia es la fecha en que se produce."),
+            ("Porque en ciclos irregulares la fecundación no es posible",
+             "La fecundación sigue siendo posible; el problema es no poder predecir cuándo."),
+            ("Porque el método exige un registro diario de la temperatura que en esos casos resulta imposible",
+             "El del calendario no usa temperatura: ese es el método de la temperatura basal."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Qué ocurre con la producción de hormonas sexuales después de una "
+        "vasectomía?",
+        "Se mantiene igual que antes del procedimiento",
+        "El procedimiento interrumpe un conducto, no una glándula.\n\n"
+        "1) La vasectomía secciona los conductos deferentes, que transportan "
+        "los espermatozoides desde los testículos.\n"
+        "2) La testosterona se produce en los testículos y se libera a la "
+        "sangre por una vía distinta, que el procedimiento no toca.\n"
+        "3) Por eso no se altera el nivel hormonal ni las características que "
+        "dependen de él.\n\n"
+        "Los espermatozoides que se siguen produciendo son reabsorbidos por el "
+        "organismo, y el volumen del semen prácticamente no cambia.",
+        [
+            ("Se detiene por completo",
+             "Los testículos siguen produciendo hormonas: lo que se interrumpe es el paso de los espermatozoides."),
+            ("Disminuye a la mitad",
+             "No hay una reducción hormonal atribuible al procedimiento."),
+            ("Aumenta como respuesta compensatoria del organismo ante la interrupción de los conductos",
+             "No existe tal compensación: la producción hormonal sigue su regulación habitual."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Por qué la ligadura de trompas y la vasectomía se clasifican como "
+        "parcialmente reversibles y no como reversibles?",
+        "Revertirlas exige cirugía y no siempre resulta",
+        "La clasificación mide qué tan recuperable es la fertilidad.\n\n"
+        "1) Un método reversible recupera la fertilidad al suspenderlo, sin "
+        "ninguna intervención adicional.\n"
+        "2) En estos dos, la reversión requiere una segunda cirugía que "
+        "reconecta los conductos y que no está disponible en cualquier "
+        "contexto.\n"
+        "3) Aun realizada, la fertilidad puede no recuperarse, porque el "
+        "resultado depende del tiempo transcurrido y de la técnica usada.\n\n"
+        "Por eso se presentan como decisiones de largo plazo y no como una "
+        "alternativa que se prueba y luego se deshace.",
+        [
+            ("Porque su eficacia anticonceptiva es baja",
+             "Su eficacia es de las más altas del conjunto de métodos: no es ese el criterio."),
+            ("Porque dejan de actuar solos después de algunos años",
+             "El efecto se mantiene indefinidamente; no caduca con el tiempo."),
+            ("Porque solo pueden aplicarse a personas que ya tienen hijos y que firman una autorización",
+             "Ese sería un criterio de acceso, no la razón de la clasificación por reversibilidad."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Por qué se desaconseja usar lubricantes con base de aceite junto con "
+        "un preservativo de látex?",
+        "El aceite degrada el látex y facilita su ruptura",
+        "La eficacia de una barrera depende de la integridad del material.\n\n"
+        "1) El látex es un material elástico que se debilita en contacto con "
+        "sustancias oleosas.\n"
+        "2) Debilitado, el preservativo puede romperse durante el uso sin que "
+        "eso se advierta en el momento.\n"
+        "3) Con la barrera rota desaparecen a la vez las dos protecciones: la "
+        "anticonceptiva y la que impide el paso de agentes infecciosos.\n\n"
+        "Los lubricantes con base de agua no producen ese efecto, y por eso son "
+        "los recomendados con preservativos de látex.",
+        [
+            ("Porque el aceite inactiva las hormonas del preservativo",
+             "El preservativo no contiene hormonas: es un método de barrera."),
+            ("Porque el aceite mata los espermatozoides antes de tiempo",
+             "Ese sería el efecto de un espermicida, y no explica el riesgo asociado al aceite."),
+            ("Porque el aceite hace que el preservativo se adhiera con demasiada fuerza y resulte imposible retirarlo",
+             "El problema descrito no es de adherencia sino de pérdida de resistencia del material."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Por qué se recomienda el examen periódico de clamidia en personas "
+        "jóvenes sexualmente activas aunque no tengan molestias?",
+        "Porque la infección suele cursar sin síntomas",
+        "El tamizaje existe justamente para lo que no se manifiesta.\n\n"
+        "1) Una proporción alta de las infecciones por clamidia no produce "
+        "síntomas perceptibles.\n"
+        "2) Sin síntomas no hay consulta, y la infección sigue transmitiéndose "
+        "y avanzando durante meses.\n"
+        "3) Detectada por examen, se trata con antibióticos y se evitan las "
+        "secuelas sobre el aparato reproductor.\n\n"
+        "Es la misma lógica de otros tamizajes: buscar en quien se siente sano, "
+        "porque esperar el síntoma llega tarde.",
+        [
+            ("Porque el examen es la única forma de tratarla",
+             "El examen detecta; el tratamiento es el antibiótico. Son cosas distintas."),
+            ("Porque la clamidia solo se contagia entre personas jóvenes",
+             "Puede afectar a cualquier edad; el tamizaje se enfoca donde la incidencia es mayor."),
+            ("Porque los síntomas de la clamidia son idénticos a los de un resfrío y por eso pasan inadvertidos",
+             "No se confunde con un resfrío: el punto es que muchas veces no hay ningún síntoma."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Qué caracteriza al preservativo femenino frente al masculino?",
+        "Se instala en el interior de la vagina",
+        "Los dos son de barrera, pero se colocan en lugares distintos.\n\n"
+        "1) El preservativo femenino es una funda que se introduce en la "
+        "vagina y cubre además parte de la zona externa.\n"
+        "2) Al igual que el masculino, impide el contacto con fluidos y por eso "
+        "protege de infecciones de transmisión sexual.\n"
+        "3) Puede colocarse con anticipación a la relación, lo que lo hace "
+        "menos dependiente del momento.\n\n"
+        "No deben usarse los dos a la vez: la fricción entre ambos aumenta el "
+        "riesgo de que alguno se desplace o se rompa.",
+        [
+            ("Actúa por vía hormonal",
+             "Es un método de barrera: no contiene ni libera hormonas."),
+            ("No protege frente a infecciones de transmisión sexual",
+             "Sí protege, porque impide el contacto con fluidos igual que el masculino."),
+            ("Debe usarse siempre en conjunto con el preservativo masculino para alcanzar su eficacia declarada",
+             "Usarlos juntos es contraproducente: la fricción entre ambos favorece la ruptura."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "El método de la lactancia materna se considera anticonceptivo solo "
+        "bajo condiciones estrictas. ¿Por qué?",
+        "Su efecto depende de una lactancia exclusiva y frecuente",
+        "El mecanismo hormonal que lo sostiene es frágil.\n\n"
+        "1) La succión frecuente mantiene niveles hormonales que suprimen la "
+        "ovulación durante los primeros meses.\n"
+        "2) Si la lactancia deja de ser exclusiva o se espacian las tomas, esa "
+        "supresión se debilita y la ovulación puede reanudarse.\n"
+        "3) Como la primera ovulación ocurre antes de la primera menstruación, "
+        "el retorno de la fertilidad no se anuncia.\n\n"
+        "Por eso se recomienda incorporar otro método antes de que las "
+        "condiciones dejen de cumplirse, y no después.",
+        [
+            ("Porque solo funciona en el primer parto",
+             "El número de partos no es una condición del método."),
+            ("Porque su eficacia aumenta con el tiempo transcurrido desde el parto",
+             "Ocurre lo contrario: disminuye a medida que pasan los meses."),
+            ("Porque la lactancia impide de forma permanente que se produzca una nueva ovulación",
+             "El efecto es transitorio y depende de que se mantengan las condiciones descritas."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "medio",
+        "¿Qué consecuencia puede tener una sífilis no tratada?",
+        "Daño al sistema nervioso y al corazón",
+        "Una infección curable puede ser grave si se deja avanzar.\n\n"
+        "1) La sífilis progresa por etapas: tras las lesiones iniciales viene "
+        "un periodo sin síntomas que puede durar años.\n"
+        "2) Ese silencio se interpreta como curación, pero la bacteria sigue "
+        "presente en el organismo.\n"
+        "3) En etapas tardías puede comprometer el sistema nervioso y el "
+        "sistema cardiovascular, con daños que ya no revierten.\n\n"
+        "El tratamiento con antibióticos elimina la bacteria en cualquier "
+        "etapa, pero no repara lo que ya fue dañado.",
+        [
+            ("Se cura sola después de la etapa inicial",
+             "La desaparición de las lesiones no significa curación: la infección continúa."),
+            ("Provoca inmunidad permanente frente a otras infecciones de transmisión sexual",
+             "No genera inmunidad frente a otras infecciones ni frente a una nueva sífilis."),
+            ("Solo produce lesiones en la piel que desaparecen sin dejar ninguna consecuencia",
+             "Las lesiones iniciales ceden, pero la infección puede avanzar a órganos internos."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "dificil",
+        "Un municipio reparte preservativos gratuitos durante un año y registra "
+        "menos casos de infecciones de transmisión sexual que el año anterior. "
+        "¿Qué debilidad tiene esa comparación?",
+        "No hay un grupo de comparación sin la campaña",
+        "Comparar contra el pasado no aísla el efecto de la intervención.\n\n"
+        "1) Entre un año y el otro pueden haber cambiado varias cosas a la vez: "
+        "la cantidad de exámenes realizados, la población atendida, otras "
+        "campañas simultáneas.\n"
+        "2) Cualquiera de esos cambios explicaría por sí solo una baja en los "
+        "casos registrados.\n"
+        "3) Con un grupo comparable que no recibió la campaña, la diferencia "
+        "entre ambos sí podría atribuirse al reparto.\n\n"
+        "La comparación antes y después no es inútil, pero por sí sola no "
+        "sostiene una conclusión causal.",
+        [
+            ("Que el periodo de un año es demasiado breve para observar cambios",
+             "Un año permite observar cambios en incidencia; el problema es no tener con qué comparar."),
+            ("Que los preservativos no previenen infecciones de transmisión sexual",
+             "Sí las previenen: la debilidad está en el diseño del registro, no en el método."),
+            ("Que los casos deberían haberse contado en personas y no en episodios de infección registrados",
+             "La unidad de conteo puede discutirse, pero no es lo que impide atribuir la baja a la campaña."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "dificil",
+        "Un estudiante sostiene que la anticoncepción de emergencia es abortiva "
+        "porque impide el embarazo después de la relación. ¿Cómo se evalúa esa "
+        "afirmación?",
+        "Es incorrecta: actúa antes de la fecundación",
+        "La afirmación confunde el momento en que actúa el fármaco.\n\n"
+        "1) El mecanismo descrito de la píldora de emergencia es retrasar o "
+        "impedir la ovulación.\n"
+        "2) Si no hay óvulo liberado, no hay fecundación, y por lo tanto no hay "
+        "embarazo que interrumpir.\n"
+        "3) Cuando la fecundación ya ocurrió, el fármaco no tiene efecto: el "
+        "embarazo continúa su curso.\n\n"
+        "Que un método actúe después de la relación no dice nada sobre si actúa "
+        "antes o después de la fecundación, y esa es la distinción que la "
+        "afirmación pasa por alto.",
+        [
+            ("Es correcta, porque actúa después de la relación sexual",
+             "El momento de la toma no determina sobre qué proceso actúa el fármaco."),
+            ("Es correcta, porque impide que el embrión se implante",
+             "El mecanismo descrito es la supresión de la ovulación, no una acción sobre la implantación."),
+            ("Es incorrecta, porque la píldora de emergencia no tiene ningún efecto anticonceptivo demostrado",
+             "Sí tiene efecto anticonceptivo: lo que se discute es en qué etapa del proceso actúa."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "dificil",
+        "Una encuesta voluntaria en redes sociales concluye que el 90% de las "
+        "personas usa preservativo en cada relación. ¿Qué limitación tiene ese "
+        "resultado?",
+        "Quienes responden no representan a la población",
+        "La forma de reclutar a los participantes condiciona el resultado.\n\n"
+        "1) En una encuesta voluntaria responde quien decide hacerlo, y esa "
+        "decisión suele relacionarse con el tema mismo.\n"
+        "2) Quien tiene una conducta que considera correcta tiende a "
+        "responder más que quien no, lo que infla la proporción observada.\n"
+        "3) A eso se suma que en temas de conducta sexual las respuestas "
+        "tienden a acercarse a lo socialmente aceptado.\n\n"
+        "Aumentar el número de respuestas no corrige el problema: una muestra "
+        "grande y sesgada sigue siendo sesgada.",
+        [
+            ("Que el porcentaje es demasiado alto para ser real",
+             "El valor puede parecer alto, pero descartarlo por intuición no es un argumento metodológico."),
+            ("Que faltó calcular el promedio de relaciones por persona",
+             "Ese dato agregaría contexto, pero no corrige el problema de quién respondió."),
+            ("Que las encuestas en línea nunca entregan información válida sobre conductas de salud",
+             "Sí pueden entregarla si la muestra se selecciona; el problema es la participación voluntaria."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "dificil",
+        "Para un método, la eficacia con uso perfecto es 99,7% y con uso típico, "
+        "91%. Para otro, 99,5% y 99,4%. ¿Qué se infiere?",
+        "El segundo depende menos del uso correcto",
+        "La brecha entre ambas cifras mide la sensibilidad al error humano.\n\n"
+        "1) En el primer método la diferencia es de casi nueve puntos: su "
+        "resultado real depende mucho de que se use bien cada vez.\n"
+        "2) En el segundo la diferencia es de una décima, señal de que casi no "
+        "hay margen para el error de uso.\n"
+        "3) Con uso perfecto ambos son casi equivalentes, así que comparar solo "
+        "esa columna llevaría a una conclusión equivocada.\n\n"
+        "Esa brecha es lo que distingue a los métodos de larga duración de los "
+        "que se aplican en cada relación o cada día.",
+        [
+            ("El primero es más eficaz porque su eficacia con uso perfecto es mayor",
+             "La diferencia con uso perfecto es de dos décimas, irrelevante frente a la brecha del uso típico."),
+            ("Ambos son equivalentes, porque las cuatro cifras superan el 90%",
+             "Superar el 90% no los iguala: nueve puntos de brecha implican muchos más embarazos al año."),
+            ("El segundo método es peor, porque su eficacia con uso perfecto es levemente inferior a la del primero",
+             "Esa diferencia mínima queda anulada por el comportamiento del método en condiciones reales."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "dificil",
+        "Un estudiante propone usar la temperatura basal para saber qué día "
+        "tendrá relaciones con menor riesgo de embarazo dentro del mismo ciclo. "
+        "¿Qué falla en ese razonamiento?",
+        "La señal aparece cuando la ovulación ya pasó",
+        "El razonamiento pide al método algo que su mecanismo no puede dar.\n\n"
+        "1) El alza de temperatura es consecuencia de la progesterona liberada "
+        "después de la ovulación.\n"
+        "2) Para reconocerla hay que comparar el registro de varios días "
+        "seguidos, con lo que la confirmación llega aún más tarde.\n"
+        "3) La ventana fértil incluye los días previos a la ovulación, porque "
+        "los espermatozoides sobreviven varios días en el aparato reproductor "
+        "femenino, y esos días el método no los anticipa.\n\n"
+        "Sirve para reconocer el patrón del propio ciclo a lo largo de varios "
+        "meses, no para decidir dentro del ciclo en curso.",
+        [
+            ("Que la temperatura basal no varía durante el ciclo",
+             "Sí varía: el alza posterior a la ovulación es medible y es la base del método."),
+            ("Que el método solo es válido si se combina con anticoncepción hormonal",
+             "Combinarlo con un método hormonal no tendría sentido: la falla es de oportunidad de la señal."),
+            ("Que la temperatura debe medirse después de cada actividad física para que el registro resulte comparable",
+             "Se mide en reposo al despertar, precisamente para evitar esa interferencia; no es la falla del razonamiento."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "dificil",
+        "Un cultivo de la bacteria que causa la gonorrea, tomado de un paciente "
+        "que no mejoró, crece pese a la presencia del antibiótico usado. ¿Qué "
+        "se infiere?",
+        "La cepa es resistente a ese antibiótico",
+        "El cultivo prueba el efecto del fármaco fuera del paciente.\n\n"
+        "1) En el cultivo, la bacteria está expuesta directamente al "
+        "antibiótico, sin la variabilidad de la absorción ni del cumplimiento "
+        "del tratamiento.\n"
+        "2) Que crezca igual indica que el fármaco no la inhibe: la resistencia "
+        "está en la bacteria, no en cómo se administró.\n"
+        "3) La conducta que sigue es cambiar de antibiótico, guiándose por el "
+        "resultado del cultivo frente a otros fármacos.\n\n"
+        "Este es el procedimiento que permitió detectar el avance de la "
+        "resistencia en esta bacteria, hoy una de las más vigiladas.",
+        [
+            ("Que el paciente no completó el tratamiento",
+             "Eso explicaría la falta de mejoría, pero no que la bacteria crezca en el cultivo con el fármaco presente."),
+            ("Que el diagnóstico inicial fue equivocado",
+             "El cultivo confirma la bacteria: lo que muestra es su respuesta al antibiótico."),
+            ("Que el antibiótico se degradó por completo antes de ser incorporado al medio de cultivo",
+             "Es una falla posible del procedimiento, pero se descarta con los controles habituales del cultivo."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "dificil",
+        "Se compara la eficacia del método del calendario en dos grupos: "
+        "adolescentes y mujeres de 30 a 40 años. Resulta menor en el primero. "
+        "¿Qué variable debe considerarse antes de concluir?",
+        "La regularidad de los ciclos en cada grupo",
+        "Una diferencia entre grupos puede venir de una variable asociada a la "
+        "edad y no del método.\n\n"
+        "1) El método estima el periodo fértil suponiendo ciclos de duración "
+        "estable.\n"
+        "2) Los ciclos tienden a ser más irregulares en los primeros años tras "
+        "la menarquia, lo que reduce la precisión de la estimación.\n"
+        "3) Si esa irregularidad no se mide, la diferencia observada podría "
+        "atribuirse a la edad cuando en realidad la explica el patrón del "
+        "ciclo.\n\n"
+        "Registrar la variabilidad de los ciclos en ambos grupos permite "
+        "distinguir un efecto del otro.",
+        [
+            ("El número total de participantes en cada grupo",
+             "El tamaño afecta la precisión del resultado, pero no explica una diferencia sistemática entre grupos."),
+            ("El país en que se realizó el estudio",
+             "Sin una razón que lo vincule al método, el país no es la variable que confunde la comparación."),
+            ("El tipo de preservativo que cada grupo declaró usar durante el periodo estudiado",
+             "El estudio evalúa el método del calendario; el preservativo es otro método y no interviene aquí."),
+        ],
+    ),
+    _q(
+        "cie_natalidad_its", "dificil",
+        "Un gráfico muestra que, a medida que sube la cobertura de control "
+        "prenatal en una región, bajan los casos de sífilis en recién nacidos. "
+        "¿Qué conclusión es válida?",
+        "Hay una asociación entre ambas variables",
+        "Una tendencia conjunta describe una relación, pero no la demuestra.\n\n"
+        "1) El gráfico muestra que las dos variables se mueven en sentidos "
+        "opuestos a lo largo del periodo.\n"
+        "2) Eso es una asociación, y es compatible con un efecto del control "
+        "prenatal, que incluye el examen de sífilis y su tratamiento.\n"
+        "3) Pero también podrían haber cambiado a la vez el acceso a "
+        "antibióticos, la calidad del registro o las campañas de prevención.\n\n"
+        "El mecanismo conocido hace la explicación plausible; para afirmarla "
+        "hace falta comparar con regiones donde la cobertura no cambió.",
+        [
+            ("El control prenatal es la única causa de la baja observada",
+             "El gráfico no permite descartar otros cambios ocurridos en el mismo periodo."),
+            ("La sífilis congénita desaparecerá cuando la cobertura llegue al 100%",
+             "Una tendencia no autoriza a extrapolar hasta un valor que el gráfico no contiene."),
+            ("No existe ninguna relación entre el control prenatal y los casos observados en recién nacidos",
+             "El gráfico muestra justamente una relación; lo que no establece es que sea causal."),
+        ],
+    ),
+]
