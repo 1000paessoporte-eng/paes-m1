@@ -108902,3 +108902,1286 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Quimica - Quimica organica: grupos funcionales
+#
+# El temario los nombra uno por uno y estan los trece: haluros, eteres,
+# alcoholes, sulfuros, aminas, cetonas, aldehidos, acidos carboxilicos,
+# anhidridos, esteres, amidas, fenoles y nitrilos, con su formulacion, sus
+# nombres, sus caracteristicas y sus aplicaciones.
+#
+# Las catorce dificiles son de laboratorio y de razonamiento por descarte: que
+# ensayo separa un acido de un alcohol, por que la formula C3H6O no decide
+# entre propanal y propanona, una tabla de puntos de ebullicion a masa molar
+# constante, y tres muestras que solo quedan identificadas al cruzar dos
+# ensayos.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_grupos_funcionales", "facil",
+        "¿Qué grupo funcional caracteriza a los aldehídos?",
+        "Un carbonilo en un extremo de la cadena",
+        "La posición del grupo carbonilo define la familia.\n\n"
+        "1) El carbonilo es un carbono unido a un oxígeno por doble enlace.\n"
+        "2) En un aldehído ese carbono está en un extremo de la cadena, así que "
+        "lleva además un hidrógeno.\n"
+        "3) Se escribe como –CHO al final de la fórmula.\n\n"
+        "Si el mismo carbonilo estuviera entre dos carbonos, el compuesto sería "
+        "una cetona.",
+        [
+            ("Un carbonilo entre dos carbonos",
+             "Esa posición corresponde a una cetona."),
+            ("Un grupo hidroxilo",
+             "El hidroxilo caracteriza a los alcoholes."),
+            ("Un átomo de oxígeno que une dos cadenas de carbono entre sí mediante enlaces simples",
+             "Esa descripción corresponde a un éter."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "facil",
+        "¿Qué grupo funcional tiene un ácido carboxílico?",
+        "El grupo carboxilo, –COOH",
+        "El grupo reúne dos funciones en un mismo carbono.\n\n"
+        "1) El carboxilo combina un carbonilo y un hidroxilo sobre el mismo "
+        "átomo de carbono.\n"
+        "2) Esa combinación permite liberar el hidrógeno del hidroxilo, y de "
+        "ahí su carácter ácido.\n"
+        "3) Siempre se ubica en un extremo de la cadena.\n\n"
+        "El ácido acético del vinagre y el ácido fórmico de las hormigas son "
+        "ejemplos conocidos.",
+        [
+            ("El grupo amino, –NH₂",
+             "El grupo amino caracteriza a las aminas."),
+            ("El grupo hidroxilo, –OH",
+             "Por sí solo, el hidroxilo caracteriza a los alcoholes."),
+            ("Un átomo de halógeno unido directamente a un átomo de carbono de la cadena principal",
+             "Esa descripción corresponde a un haluro."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "facil",
+        "¿Qué grupo funcional caracteriza a las aminas?",
+        "El grupo amino, –NH₂",
+        "La familia se reconoce por la presencia de nitrógeno.\n\n"
+        "1) Una amina tiene un átomo de nitrógeno unido a la cadena de "
+        "carbono.\n"
+        "2) En la forma más simple ese nitrógeno lleva además dos hidrógenos, y "
+        "se escribe –NH₂.\n"
+        "3) Existen aminas donde uno o los dos hidrógenos están reemplazados "
+        "por otras cadenas.\n\n"
+        "Los aminoácidos, que forman las proteínas, contienen este grupo junto "
+        "con un carboxilo.",
+        [
+            ("El grupo carbonilo",
+             "El carbonilo caracteriza a aldehídos y cetonas."),
+            ("El grupo hidroxilo",
+             "El hidroxilo caracteriza a los alcoholes."),
+            ("Un átomo de azufre que une dos cadenas de carbono mediante enlaces simples",
+             "Esa descripción corresponde a un sulfuro."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "facil",
+        "¿Qué caracteriza a un éter?",
+        "Un oxígeno que une dos cadenas de carbono",
+        "El oxígeno funciona como puente entre dos partes de la molécula.\n\n"
+        "1) En un éter, un átomo de oxígeno se une por enlaces simples a dos "
+        "átomos de carbono.\n"
+        "2) No hay hidrógeno unido a ese oxígeno, y esa es la diferencia con un "
+        "alcohol.\n"
+        "3) Se escribe como C–O–C dentro de la fórmula.\n\n"
+        "El dimetiléter comparte fórmula molecular con el etanol, y sus "
+        "propiedades son muy distintas.",
+        [
+            ("Un oxígeno unido a un hidrógeno",
+             "Esa combinación es el grupo hidroxilo de los alcoholes."),
+            ("Un carbono unido a un oxígeno por doble enlace",
+             "Ese es el grupo carbonilo de aldehídos y cetonas."),
+            ("Dos átomos de oxígeno unidos entre sí en el interior de la cadena principal de carbonos",
+             "El éter tiene un solo oxígeno, que actúa como puente entre dos carbonos."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "facil",
+        "¿Qué caracteriza a un haluro orgánico?",
+        "Un halógeno unido a un carbono",
+        "La familia se define por la presencia de un átomo del grupo de los "
+        "halógenos.\n\n"
+        "1) Los halógenos son flúor, cloro, bromo y yodo.\n"
+        "2) En un haluro orgánico, uno de ellos reemplaza a un hidrógeno de la "
+        "cadena.\n"
+        "3) Esa sustitución cambia de manera importante las propiedades del "
+        "compuesto.\n\n"
+        "El cloroformo y los antiguos gases refrigerantes son ejemplos de esta "
+        "familia.",
+        [
+            ("Un oxígeno unido a la cadena",
+             "El oxígeno aparece en alcoholes, éteres y otras familias, no en los haluros."),
+            ("Un nitrógeno unido a la cadena",
+             "El nitrógeno caracteriza a aminas, amidas y nitrilos."),
+            ("Un enlace triple entre dos átomos de carbono de la cadena principal del compuesto",
+             "Ese enlace define a un alquino, no a un haluro."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "facil",
+        "¿Qué grupo funcional caracteriza a los nitrilos?",
+        "Un carbono unido a nitrógeno por triple enlace",
+        "El triple enlace con nitrógeno es la marca de la familia.\n\n"
+        "1) El grupo se escribe como –C≡N al final de la cadena.\n"
+        "2) Ese carbono usa tres de sus cuatro enlaces con el nitrógeno y el "
+        "cuarto con la cadena.\n"
+        "3) Es un grupo muy usado como intermediario en síntesis industrial.\n\n"
+        "El acrilonitrilo, materia prima de fibras sintéticas y de los guantes "
+        "de nitrilo, contiene este grupo.",
+        [
+            ("Un nitrógeno con dos hidrógenos",
+             "Esa combinación es el grupo amino de las aminas."),
+            ("Un carbonilo unido a un nitrógeno",
+             "Esa combinación corresponde a una amida."),
+            ("Un átomo de nitrógeno que une dos cadenas de carbono mediante enlaces simples",
+             "Ese sería el caso de una amina secundaria, no de un nitrilo."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "facil",
+        "¿Qué caracteriza a un fenol?",
+        "Un hidroxilo unido a un anillo aromático",
+        "La familia combina un grupo conocido con una estructura "
+        "particular.\n\n"
+        "1) El grupo hidroxilo es el mismo de los alcoholes: un oxígeno unido a "
+        "un hidrógeno.\n"
+        "2) Lo distintivo es que está unido directamente a un carbono del "
+        "anillo aromático.\n"
+        "3) Esa unión modifica sus propiedades: el fenol es más ácido que un "
+        "alcohol común.\n\n"
+        "Varios antisépticos y conservantes derivan de esta familia.",
+        [
+            ("Un hidroxilo unido a una cadena abierta",
+             "Esa es la descripción de un alcohol."),
+            ("Un carboxilo unido a un anillo",
+             "Ese compuesto sería un ácido carboxílico aromático."),
+            ("Un anillo aromático sin ningún sustituyente unido a sus átomos de carbono",
+             "Ese es el benceno, un hidrocarburo sin grupo funcional."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "facil",
+        "¿Qué caracteriza a un sulfuro orgánico?",
+        "Un azufre que une dos cadenas de carbono",
+        "El sulfuro es el análogo del éter con azufre.\n\n"
+        "1) Un átomo de azufre se une por enlaces simples a dos átomos de "
+        "carbono.\n"
+        "2) La estructura es equivalente a la de un éter, con azufre en lugar "
+        "de oxígeno.\n"
+        "3) Los compuestos de esta familia suelen tener olores muy intensos.\n\n"
+        "Los responsables del olor del ajo y de la cebolla pertenecen a este "
+        "grupo, y también los odorizantes que se agregan al gas domiciliario.",
+        [
+            ("Un oxígeno que une dos cadenas",
+             "Esa descripción corresponde a un éter."),
+            ("Un azufre unido a un hidrógeno",
+             "Esa combinación corresponde a un tiol, distinto de un sulfuro."),
+            ("Un átomo de azufre unido a un carbono mediante un enlace doble en el extremo de la cadena",
+             "El sulfuro se define por el azufre como puente entre dos carbonos."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "facil",
+        "¿Qué grupo funcional tiene una amida?",
+        "Un carbonilo unido a un nitrógeno",
+        "La amida combina dos elementos característicos en un solo grupo.\n\n"
+        "1) Tiene un carbono unido a oxígeno por doble enlace, o sea un "
+        "carbonilo.\n"
+        "2) Ese mismo carbono está unido además a un átomo de nitrógeno.\n"
+        "3) La combinación se escribe como –CONH₂ cuando el nitrógeno lleva dos "
+        "hidrógenos.\n\n"
+        "El enlace que une a los aminoácidos en una proteína es justamente un "
+        "enlace de este tipo.",
+        [
+            ("Un carbonilo unido a un oxígeno",
+             "Esa combinación corresponde a un ácido carboxílico o a un éster."),
+            ("Un nitrógeno unido solo a hidrógenos",
+             "Ese es el grupo amino de las aminas, sin carbonilo."),
+            ("Un carbono unido a un nitrógeno mediante un enlace triple al final de la cadena",
+             "Esa descripción corresponde a un nitrilo."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "facil",
+        "¿Cómo se forma un éster?",
+        "Uniendo un ácido carboxílico con un alcohol",
+        "El éster surge de la reacción entre dos familias conocidas.\n\n"
+        "1) El grupo carboxilo del ácido reacciona con el hidroxilo del "
+        "alcohol.\n"
+        "2) Se libera una molécula de agua y queda un grupo –COO– que une "
+        "ambas cadenas.\n"
+        "3) Esa reacción se llama esterificación.\n\n"
+        "Muchos aromas de frutas son ésteres, y también lo son las grasas y los "
+        "poliésteres.",
+        [
+            ("Uniendo dos alcoholes entre sí",
+             "La unión de dos alcoholes con pérdida de agua da un éter."),
+            ("Uniendo dos ácidos carboxílicos",
+             "Esa combinación, con pérdida de agua, da un anhídrido."),
+            ("Uniendo un alcohol con una amina en presencia de un catalizador adecuado",
+             "Esa combinación no produce un éster: el éster requiere un ácido carboxílico."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "facil",
+        "¿Qué es un anhídrido de ácido?",
+        "Dos grupos de ácido unidos por un oxígeno",
+        "El nombre indica que se formó perdiendo agua.\n\n"
+        "1) Dos moléculas de ácido carboxílico pueden unirse liberando una "
+        "molécula de agua.\n"
+        "2) El resultado son dos carbonilos unidos a través de un mismo átomo "
+        "de oxígeno.\n"
+        "3) Anhídrido significa justamente sin agua.\n\n"
+        "Estos compuestos son muy reactivos y se usan como intermediarios en "
+        "síntesis, por ejemplo en la fabricación de aspirina.",
+        [
+            ("Un ácido al que se le agregó agua",
+             "El anhídrido se forma perdiendo agua, no agregándola."),
+            ("Un alcohol sin oxígeno",
+             "Un alcohol sin oxígeno no tendría grupo funcional."),
+            ("Un ácido carboxílico en el que el hidrógeno del hidroxilo fue reemplazado por un metal",
+             "Ese compuesto es una sal del ácido, no un anhídrido."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "facil",
+        "¿Qué familia corresponde al compuesto CH₃–CO–CH₃?",
+        "Una cetona",
+        "La posición del carbonilo decide la familia.\n\n"
+        "1) El carbono central está unido a un oxígeno por doble enlace: es un "
+        "carbonilo.\n"
+        "2) Ese carbono tiene a ambos lados otros carbonos, así que el "
+        "carbonilo es interno.\n"
+        "3) Un carbonilo entre dos carbonos corresponde a una cetona.\n\n"
+        "Este compuesto es la propanona, más conocida como acetona.",
+        [
+            ("Un aldehído",
+             "En un aldehído el carbonilo está en un extremo y lleva un hidrógeno."),
+            ("Un ácido carboxílico",
+             "El ácido carboxílico tiene además un hidroxilo sobre el mismo carbono."),
+            ("Un éter, porque el oxígeno se encuentra ubicado entre dos cadenas de carbono",
+             "En un éter el oxígeno forma dos enlaces simples; acá está unido por doble enlace."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿Qué diferencia a un aldehído de una cetona?",
+        "La posición del carbonilo en la cadena",
+        "Ambas familias comparten el mismo grupo, ubicado en lugares "
+        "distintos.\n\n"
+        "1) En el aldehído el carbonilo está en un extremo, y ese carbono lleva "
+        "además un hidrógeno.\n"
+        "2) En la cetona el carbonilo está entre dos carbonos, sin hidrógeno "
+        "unido a él.\n"
+        "3) Esa diferencia cambia su reactividad: el aldehído se oxida con "
+        "facilidad y la cetona no.\n\n"
+        "Por eso un ensayo de oxidación suave permite distinguirlos "
+        "experimentalmente.",
+        [
+            ("El tipo de átomo unido al carbono",
+             "En ambos casos el carbono está unido a un oxígeno por doble enlace."),
+            ("El número de carbonos de la cadena",
+             "Existen aldehídos y cetonas con el mismo número de carbonos."),
+            ("La presencia de un átomo de oxígeno, que solo aparece en uno de los dos grupos funcionales",
+             "Ambas familias contienen oxígeno en su grupo carbonilo."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿Qué diferencia hay entre un alcohol y un fenol?",
+        "El fenol tiene el hidroxilo sobre un anillo aromático",
+        "El mismo grupo se comporta distinto según a qué esté unido.\n\n"
+        "1) En un alcohol el hidroxilo está unido a un carbono de una cadena "
+        "abierta o de un ciclo no aromático.\n"
+        "2) En un fenol está unido directamente a un carbono del anillo "
+        "aromático.\n"
+        "3) El anillo estabiliza la forma que queda tras liberar el hidrógeno, "
+        "y por eso el fenol es más ácido que un alcohol.\n\n"
+        "Esa diferencia de acidez es medible y permite distinguirlos.",
+        [
+            ("El alcohol no contiene oxígeno",
+             "El alcohol contiene oxígeno en su grupo hidroxilo."),
+            ("El fenol no contiene hidrógeno",
+             "El fenol contiene hidrógenos, incluido el del grupo hidroxilo."),
+            ("El alcohol siempre tiene más átomos de carbono que cualquier compuesto de la familia de los fenoles",
+             "El número de carbonos no distingue a una familia de la otra."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "El etanol y el dimetiléter comparten la fórmula C₂H₆O. ¿Por qué el "
+        "etanol hierve a temperatura mucho mayor?",
+        "Porque su hidroxilo forma enlaces entre moléculas",
+        "La diferencia está en cómo interactúan las moléculas entre sí.\n\n"
+        "1) El etanol tiene un hidrógeno unido a oxígeno, lo que permite formar "
+        "enlaces de hidrógeno con moléculas vecinas.\n"
+        "2) Esos enlaces mantienen unidas a las moléculas y hay que romperlos "
+        "para que el líquido hierva.\n"
+        "3) El dimetiléter no tiene hidrógeno unido a oxígeno, así que esa "
+        "interacción no se produce.\n\n"
+        "Por eso el etanol es líquido a temperatura ambiente y el dimetiléter "
+        "es un gas.",
+        [
+            ("Porque tiene más átomos de carbono",
+             "Ambos tienen dos carbonos: comparten la fórmula molecular."),
+            ("Porque su masa molecular es mayor",
+             "Las masas moleculares son idénticas."),
+            ("Porque el dimetiléter contiene dos átomos de oxígeno y el etanol solamente uno",
+             "Ambos tienen un solo oxígeno, como indica la fórmula compartida."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿Por qué los alcoholes de cadena corta se disuelven bien en agua?",
+        "Porque su hidroxilo interactúa con el agua",
+        "La solubilidad depende de la afinidad entre las moléculas.\n\n"
+        "1) El grupo hidroxilo puede formar enlaces de hidrógeno con las "
+        "moléculas de agua.\n"
+        "2) En una cadena corta ese grupo domina el comportamiento de la "
+        "molécula completa.\n"
+        "3) A medida que la cadena se alarga, la parte hidrocarbonada pesa más "
+        "y la solubilidad disminuye.\n\n"
+        "Por eso el etanol se mezcla con agua en cualquier proporción y un "
+        "alcohol de doce carbonos, prácticamente no.",
+        [
+            ("Porque son líquidos",
+             "Muchos líquidos no se disuelven en agua, como el aceite."),
+            ("Porque contienen carbono",
+             "El carbono está también en los hidrocarburos, que no se disuelven en agua."),
+            ("Porque su cadena es tan corta que las moléculas caben entre las moléculas de agua sin alterarlas",
+             "La solubilidad no es cuestión de tamaño sino de interacción entre grupos."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿Qué relación hay entre los ésteres y los aromas de las frutas?",
+        "Muchos aromas frutales son ésteres",
+        "La familia tiene una aplicación cotidiana muy reconocible.\n\n"
+        "1) Los ésteres de cadena corta son volátiles y de olor agradable.\n"
+        "2) Varios de los aromas característicos de frutas corresponden a "
+        "ésteres presentes de forma natural.\n"
+        "3) La industria alimentaria sintetiza esos mismos compuestos para "
+        "usarlos como saborizantes.\n\n"
+        "Se obtienen combinando un ácido carboxílico con un alcohol, y por eso "
+        "son un ejemplo clásico de laboratorio escolar.",
+        [
+            ("Los aromas frutales son ácidos carboxílicos",
+             "Los ácidos de cadena corta tienen olores más bien desagradables."),
+            ("Los aromas frutales son aminas",
+             "Las aminas suelen tener olor a descomposición, no frutal."),
+            ("Los ésteres no tienen olor, pero permiten que otros compuestos aromáticos se disuelvan mejor",
+             "Los ésteres de cadena corta sí tienen olor propio y muy característico."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿Qué grupo funcional se forma al unirse dos aminoácidos en una "
+        "proteína?",
+        "Un grupo amida",
+        "El enlace peptídico es un caso particular de un grupo conocido.\n\n"
+        "1) Cada aminoácido tiene un grupo carboxilo y un grupo amino.\n"
+        "2) Al unirse dos de ellos, el carboxilo de uno reacciona con el amino "
+        "del otro y se libera agua.\n"
+        "3) Queda un carbonilo unido a un nitrógeno, que es exactamente un "
+        "grupo amida.\n\n"
+        "Ese enlace, llamado peptídico, es el que sostiene la cadena de toda "
+        "proteína.",
+        [
+            ("Un grupo éster",
+             "El éster se forma entre un ácido y un alcohol, no entre un ácido y una amina."),
+            ("Un grupo éter",
+             "El éter es un oxígeno entre dos carbonos, sin carbonilo ni nitrógeno."),
+            ("Un grupo nitrilo, porque el nitrógeno queda unido directamente a un átomo de carbono",
+             "En el nitrilo la unión es un triple enlace, y acá el carbono conserva su carbonilo."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿Qué terminación recibe el nombre de un alcohol en la nomenclatura "
+        "sistemática?",
+        "La terminación -ol",
+        "Cada familia tiene su terminación característica.\n\n"
+        "1) El nombre parte del hidrocarburo correspondiente y cambia su "
+        "terminación.\n"
+        "2) Para un alcohol se usa -ol: de etano se pasa a etanol.\n"
+        "3) Aldehídos usan -al, cetonas -ona, y los ácidos carboxílicos, ácido "
+        "...-oico.\n\n"
+        "Con esas reglas, el nombre informa a la vez cuántos carbonos hay y qué "
+        "grupo funcional está presente.",
+        [
+            ("La terminación -al",
+             "Esa terminación corresponde a los aldehídos."),
+            ("La terminación -ona",
+             "Esa terminación corresponde a las cetonas."),
+            ("La terminación -oico, precedida de la palabra ácido en el nombre completo del compuesto",
+             "Esa forma corresponde a los ácidos carboxílicos."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿Cómo se llama el compuesto CH₃–CH₂–OH en nomenclatura sistemática?",
+        "Etanol",
+        "El nombre se arma con el prefijo del hidrocarburo y la terminación del "
+        "grupo.\n\n"
+        "1) La cadena tiene dos carbonos, lo que corresponde al prefijo et-.\n"
+        "2) El grupo funcional es un hidroxilo, así que la terminación es "
+        "-ol.\n"
+        "3) El nombre resultante es etanol, conocido también como alcohol "
+        "etílico.\n\n"
+        "Es el alcohol de las bebidas y el que se usa como desinfectante y como "
+        "combustible.",
+        [
+            ("Metanol",
+             "El metanol tiene un solo carbono."),
+            ("Etanal",
+             "La terminación -al corresponde a un aldehído, no a un alcohol."),
+            ("Ácido etanoico, porque la cadena de dos carbonos termina en un grupo con oxígeno",
+             "El ácido etanoico tiene un carboxilo completo, con carbonilo e hidroxilo en el mismo carbono."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿Por qué el metanol es tóxico y el etanol, en cambio, se consume en "
+        "bebidas?",
+        "Porque el organismo los transforma en productos distintos",
+        "La diferencia está en lo que resulta al metabolizarlos.\n\n"
+        "1) El organismo oxida ambos alcoholes con las mismas enzimas.\n"
+        "2) Del etanol se obtiene acetaldehído y luego acetato, que el cuerpo "
+        "procesa.\n"
+        "3) Del metanol se obtiene formaldehído y luego ácido fórmico, que "
+        "daña el nervio óptico y puede causar la muerte.\n\n"
+        "Ambos se parecen mucho en olor y aspecto, y por eso la adulteración de "
+        "bebidas con metanol es especialmente peligrosa.",
+        [
+            ("Porque el metanol no es un alcohol",
+             "El metanol es un alcohol: tiene un grupo hidroxilo."),
+            ("Porque el metanol tiene más carbonos",
+             "Tiene menos: uno frente a los dos del etanol."),
+            ("Porque el metanol no se disuelve en agua y por eso se acumula en los tejidos del organismo",
+             "El metanol es muy soluble en agua; su toxicidad viene de sus productos de oxidación."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿Qué aplicación tiene la propanona, conocida como acetona?",
+        "Se usa como disolvente",
+        "Su comportamiento frente a otras sustancias explica su uso.\n\n"
+        "1) La acetona disuelve tanto compuestos polares como muchos "
+        "compuestos orgánicos poco polares.\n"
+        "2) Además es muy volátil, así que se evapora con rapidez y no deja "
+        "residuo.\n"
+        "3) Por eso se usa como quitaesmalte, como limpiador y como disolvente "
+        "en laboratorio e industria.\n\n"
+        "El organismo también la produce en pequeñas cantidades como parte de "
+        "su metabolismo.",
+        [
+            ("Se usa como combustible de vehículos",
+             "No es un combustible de uso habitual en motores."),
+            ("Se usa como conservante de alimentos",
+             "Ese uso corresponde a otros compuestos, y la acetona no es apta para eso."),
+            ("Se usa como material de construcción por su resistencia mecánica y su durabilidad",
+             "Es un líquido volátil: no tiene ninguna aplicación estructural."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "El vinagre contiene ácido acético. ¿Qué propiedad de su grupo "
+        "funcional explica su sabor ácido?",
+        "El carboxilo puede liberar un hidrógeno",
+        "El carácter ácido proviene de una parte específica del grupo.\n\n"
+        "1) El grupo carboxilo combina un carbonilo con un hidroxilo sobre el "
+        "mismo carbono.\n"
+        "2) Esa vecindad debilita la unión del hidrógeno del hidroxilo, que "
+        "puede liberarse en disolución.\n"
+        "3) Ese hidrógeno liberado es el responsable del comportamiento ácido y "
+        "del sabor característico.\n\n"
+        "Los alcoholes, con un hidroxilo aislado, no liberan ese hidrógeno con "
+        "facilidad y no son ácidos.",
+        [
+            ("El carbonilo capta hidrógenos del agua",
+             "El comportamiento ácido consiste en ceder hidrógenos, no en captarlos."),
+            ("La cadena de carbonos reacciona con el agua",
+             "La cadena hidrocarbonada es poco reactiva frente al agua."),
+            ("El compuesto contiene oxígeno, y todo compuesto orgánico con oxígeno resulta ácido en disolución",
+             "Alcoholes y éteres contienen oxígeno y no son ácidos."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿Qué aplicación tienen los haluros orgánicos?",
+        "Se usan como disolventes y refrigerantes",
+        "La familia tiene aplicaciones industriales muy extendidas.\n\n"
+        "1) Los haluros de cadena corta son buenos disolventes de grasas y "
+        "otros compuestos orgánicos.\n"
+        "2) Varios se usaron como gases refrigerantes y propelentes durante "
+        "décadas.\n"
+        "3) El policloruro de vinilo, un plástico de uso masivo, deriva de un "
+        "haluro orgánico.\n\n"
+        "Algunos de esos usos se restringieron al comprobarse su efecto sobre "
+        "la capa de ozono.",
+        [
+            ("Se usan como fuente de energía en la alimentación",
+             "No son nutrientes: varios son tóxicos."),
+            ("Se usan para fabricar vidrio",
+             "El vidrio se fabrica a partir de sílice y otros minerales."),
+            ("Se usan como fertilizantes agrícolas por su alto contenido de nitrógeno aprovechable",
+             "Los haluros no aportan nitrógeno: contienen halógenos."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿Por qué las aminas tienen olores tan característicos?",
+        "Porque son volátiles y contienen nitrógeno",
+        "Los compuestos de nitrógeno se asocian a olores intensos.\n\n"
+        "1) Las aminas de cadena corta se evaporan con facilidad y alcanzan el "
+        "olfato en concentraciones muy bajas.\n"
+        "2) Varias de ellas se producen durante la descomposición de proteínas, "
+        "que son ricas en nitrógeno.\n"
+        "3) Por eso su olor se asocia al pescado en mal estado o a la materia "
+        "en descomposición.\n\n"
+        "El olfato humano es especialmente sensible a estos compuestos, lo que "
+        "funciona como una señal de alerta.",
+        [
+            ("Porque contienen azufre",
+             "El azufre está en los sulfuros; las aminas contienen nitrógeno."),
+            ("Porque son sólidas a temperatura ambiente",
+             "Un sólido poco volátil difícilmente produce olor intenso."),
+            ("Porque reaccionan con el aire y forman compuestos nuevos apenas salen del recipiente",
+             "El olor proviene de las propias aminas volátiles, no de una reacción con el aire."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿Para qué se agregan compuestos de azufre al gas domiciliario?",
+        "Para que una fuga se detecte por el olor",
+        "La aplicación aprovecha una propiedad sensorial.\n\n"
+        "1) El gas natural y el gas licuado son inodoros en su estado "
+        "original.\n"
+        "2) Una fuga pasaría inadvertida hasta alcanzar concentraciones "
+        "peligrosas.\n"
+        "3) Se agregan compuestos de azufre, detectables por el olfato en "
+        "cantidades mínimas, para que cualquier fuga se advierta de "
+        "inmediato.\n\n"
+        "El olor característico del gas no proviene del gas mismo sino de ese "
+        "aditivo.",
+        [
+            ("Para aumentar su poder calórico",
+             "El aditivo se agrega en cantidades mínimas y no aporta energía apreciable."),
+            ("Para que el gas queme con llama azul",
+             "El color de la llama depende de la combustión, no del odorizante."),
+            ("Para evitar que el gas se acumule en espacios cerrados durante periodos prolongados",
+             "El aditivo no impide la acumulación: permite detectarla a tiempo."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿Qué caracteriza a los jabones desde el punto de vista de su grupo "
+        "funcional?",
+        "Son sales de ácidos carboxílicos de cadena larga",
+        "La estructura explica cómo funciona el jabón.\n\n"
+        "1) Un jabón proviene de un ácido carboxílico de cadena larga cuyo "
+        "hidrógeno fue reemplazado por un metal.\n"
+        "2) La molécula queda con un extremo que interactúa con el agua y una "
+        "cadena que interactúa con las grasas.\n"
+        "3) Esa doble afinidad es lo que permite arrastrar la suciedad grasa "
+        "con agua.\n\n"
+        "Sin la cadena larga no habría afinidad con la grasa, y sin el extremo "
+        "iónico el jabón no se dispersaría en agua.",
+        [
+            ("Son alcoholes de cadena larga",
+             "Un alcohol de cadena larga no tiene el extremo iónico que caracteriza al jabón."),
+            ("Son hidrocarburos puros",
+             "Un hidrocarburo no interactúa con el agua y no serviría para lavar."),
+            ("Son ésteres formados entre dos ácidos carboxílicos de cadena larga unidos por un oxígeno",
+             "Esa descripción corresponde a un anhídrido, no a un jabón."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿Qué grupo funcional está presente en un poliéster como el de las "
+        "fibras textiles?",
+        "El grupo éster, repetido a lo largo de la cadena",
+        "El nombre del material declara su grupo funcional.\n\n"
+        "1) Un poliéster se forma uniendo moléculas mediante enlaces de tipo "
+        "éster.\n"
+        "2) Cada unión proviene de la reacción entre un grupo ácido y un grupo "
+        "alcohol.\n"
+        "3) Repetida miles de veces, esa unión forma una cadena larga con "
+        "muchos grupos éster.\n\n"
+        "Las poliamidas, como el nailon, se forman de manera equivalente pero "
+        "con enlaces de tipo amida.",
+        [
+            ("El grupo amina",
+             "Las aminas participan en la formación de poliamidas, no de poliésteres."),
+            ("El grupo hidroxilo libre",
+             "Los hidroxilos se consumen al formarse los enlaces éster."),
+            ("El grupo carbonilo aislado, sin ningún otro átomo de oxígeno unido al mismo carbono",
+             "En el éster el carbonilo va acompañado de un segundo oxígeno que enlaza las cadenas."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿Cómo se llama el compuesto CH₃–CHO en nomenclatura sistemática?",
+        "Etanal",
+        "El nombre combina el número de carbonos con el grupo presente.\n\n"
+        "1) La cadena tiene dos carbonos, lo que da el prefijo et-.\n"
+        "2) El grupo es un carbonilo en el extremo, con un hidrógeno unido: es "
+        "un aldehído, de terminación -al.\n"
+        "3) El nombre resultante es etanal, conocido también como "
+        "acetaldehído.\n\n"
+        "Es el compuesto que el organismo produce al oxidar el etanol, y el "
+        "responsable de buena parte del malestar posterior al consumo de "
+        "alcohol.",
+        [
+            ("Etanol",
+             "El etanol tiene un grupo hidroxilo, no un carbonilo."),
+            ("Etanona",
+             "La terminación -ona corresponde a una cetona, que necesita el carbonilo entre dos carbonos."),
+            ("Ácido etanoico, porque el carbono del extremo se encuentra unido a un átomo de oxígeno",
+             "El ácido tendría además un hidroxilo sobre ese mismo carbono."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "El ácido metanoico, o fórmico, es el más simple de su familia. ¿Dónde "
+        "se encuentra de forma natural?",
+        "En la secreción de algunas hormigas",
+        "El nombre común del compuesto proviene de su origen.\n\n"
+        "1) La palabra fórmico deriva del término latino para hormiga.\n"
+        "2) Varias especies lo producen y lo usan como defensa química.\n"
+        "3) También está presente en la ortiga, y es el responsable de la "
+        "irritación que provoca.\n\n"
+        "Es un ácido carboxílico de un solo carbono, con el carboxilo unido "
+        "directamente a un hidrógeno.",
+        [
+            ("En el jugo de los cítricos",
+             "En los cítricos predomina el ácido cítrico, que es otro compuesto."),
+            ("En la sal de mesa",
+             "La sal de mesa es un compuesto inorgánico, sin carbono."),
+            ("En el aire que respiramos, donde se forma por reacción del oxígeno con el dióxido de carbono",
+             "Esa reacción no ocurre: el ácido fórmico es producido por organismos."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "El metanal, o formaldehído, se ha usado para conservar muestras "
+        "biológicas. ¿Por qué cumple esa función?",
+        "Porque altera las proteínas de los tejidos",
+        "El efecto conservante y su toxicidad tienen la misma causa.\n\n"
+        "1) El metanal reacciona con los grupos amino de las proteínas y las "
+        "modifica de manera irreversible.\n"
+        "2) Al hacerlo, detiene la actividad de los microorganismos que "
+        "descomponen el tejido.\n"
+        "3) Esa misma reactividad lo hace tóxico e irritante para quien lo "
+        "manipula.\n\n"
+        "Por eso su uso está regulado y se prefieren alternativas cuando "
+        "existen.",
+        [
+            ("Porque elimina el agua de los tejidos",
+             "No actúa por deshidratación sino modificando las proteínas."),
+            ("Porque aporta nutrientes que impiden la descomposición",
+             "No aporta nutrientes: detiene la actividad biológica."),
+            ("Porque baja la temperatura de la muestra e impide el crecimiento de los microorganismos",
+             "No enfría nada: su efecto es químico y no térmico."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "La glicerina tiene tres grupos hidroxilo en una cadena de tres "
+        "carbonos. ¿A qué familia pertenece?",
+        "A los alcoholes",
+        "El grupo funcional define la familia, aunque se repita.\n\n"
+        "1) El grupo hidroxilo caracteriza a los alcoholes.\n"
+        "2) Tener tres de ellos no cambia la familia: la convierte en un "
+        "polialcohol.\n"
+        "3) Esos tres hidroxilos hacen que sea muy soluble en agua y que "
+        "retenga humedad.\n\n"
+        "Por esa propiedad se usa en cremas, jabones y productos alimentarios.",
+        [
+            ("A los éteres",
+             "Un éter tiene el oxígeno entre dos carbonos, sin hidrógeno unido."),
+            ("A los ácidos carboxílicos",
+             "Le falta el carbonilo sobre el mismo carbono del hidroxilo."),
+            ("A los fenoles, porque los grupos hidroxilo se repiten a lo largo de la misma molécula",
+             "Los fenoles requieren que el hidroxilo esté unido a un anillo aromático."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "Un aminoácido tiene un grupo carboxilo y un grupo amino en la misma "
+        "molécula. ¿Qué consecuencia tiene eso?",
+        "Puede comportarse como ácido y como base",
+        "Tener dos grupos funcionales amplía el comportamiento de la "
+        "molécula.\n\n"
+        "1) El carboxilo puede ceder un hidrógeno, lo que corresponde a un "
+        "comportamiento ácido.\n"
+        "2) El grupo amino puede captar un hidrógeno, lo que corresponde a un "
+        "comportamiento básico.\n"
+        "3) Ambos grupos coexisten y actúan según el medio en que se "
+        "encuentre.\n\n"
+        "Esa doble capacidad es la que permite que los aminoácidos se enlacen "
+        "entre sí formando cadenas.",
+        [
+            ("Deja de tener grupo funcional",
+             "Tiene dos, y ambos conservan sus propiedades."),
+            ("Se convierte en un hidrocarburo",
+             "Un hidrocarburo solo tiene carbono e hidrógeno, sin estos grupos."),
+            ("Pierde la capacidad de reaccionar, porque los dos grupos se neutralizan entre sí de forma permanente",
+             "La interacción interna existe, pero la molécula sigue siendo reactiva por ambos extremos."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿Qué aplicación tuvo históricamente el éter etílico en medicina?",
+        "Se usó como anestésico",
+        "La aplicación deriva de sus efectos sobre el sistema nervioso.\n\n"
+        "1) El éter etílico es volátil y se inhala con facilidad.\n"
+        "2) A mediados del siglo XIX se comprobó que producía pérdida de "
+        "conciencia y permitía operar sin dolor.\n"
+        "3) Fue reemplazado por anestésicos más seguros, porque es muy "
+        "inflamable y produce efectos secundarios importantes.\n\n"
+        "Hoy se usa principalmente como disolvente en laboratorio e industria.",
+        [
+            ("Se usó como antiséptico",
+             "Ese papel lo cumplieron el fenol y el alcohol etílico."),
+            ("Se usó como suplemento alimentario",
+             "No es un compuesto apto para consumo."),
+            ("Se usó como material de sutura por su resistencia y su compatibilidad con los tejidos",
+             "Es un líquido volátil, sin ninguna aplicación estructural."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿Por qué el fenol se usó como antiséptico en cirugía?",
+        "Porque destruye a los microorganismos",
+        "La aplicación histórica proviene de una propiedad química.\n\n"
+        "1) El fenol altera las proteínas y las membranas de bacterias y "
+        "hongos.\n"
+        "2) Aplicado sobre instrumentos y heridas, reduce drásticamente el "
+        "riesgo de infección.\n"
+        "3) Su introducción en el siglo XIX cambió los resultados de la "
+        "cirugía.\n\n"
+        "Esa misma capacidad lo hace irritante y tóxico para los tejidos, y por "
+        "eso hoy se prefieren derivados menos agresivos.",
+        [
+            ("Porque acelera la cicatrización de la herida",
+             "Su efecto es sobre los microorganismos, no sobre la regeneración del tejido."),
+            ("Porque alivia el dolor de manera inmediata",
+             "No es un analgésico: su función es antiséptica."),
+            ("Porque forma una capa impermeable que aísla la herida del contacto con el aire circundante",
+             "No actúa formando una barrera física sino destruyendo microorganismos."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "Los guantes de nitrilo se fabrican con un polímero que contiene ese "
+        "grupo. ¿Qué ventaja tienen frente a los de látex?",
+        "No provocan la alergia asociada al látex",
+        "El material se eligió por un problema concreto del anterior.\n\n"
+        "1) El látex natural contiene proteínas que provocan reacciones "
+        "alérgicas en parte de la población.\n"
+        "2) El polímero de nitrilo es sintético y no contiene esas "
+        "proteínas.\n"
+        "3) Además resiste mejor el contacto con aceites y varios "
+        "disolventes.\n\n"
+        "Por eso reemplazó al látex en buena parte del uso clínico e "
+        "industrial.",
+        [
+            ("Son comestibles",
+             "Ningún guante es apto para consumo."),
+            ("Conducen la electricidad",
+             "Se usan justamente como material aislante y protector."),
+            ("Se disuelven en agua al terminar su uso, lo que facilita su eliminación como residuo",
+             "No son solubles en agua: su eliminación es como residuo sólido."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "El nailon es una poliamida. ¿Qué grupo se repite a lo largo de su "
+        "cadena?",
+        "El grupo amida",
+        "El nombre del material declara el enlace que lo forma.\n\n"
+        "1) Se obtiene uniendo moléculas que aportan un grupo ácido y otras que "
+        "aportan un grupo amino.\n"
+        "2) Cada unión libera agua y deja un carbonilo enlazado a un nitrógeno, "
+        "que es un grupo amida.\n"
+        "3) Repetida miles de veces, esa unión forma la fibra.\n\n"
+        "Es el mismo tipo de enlace que sostiene a las proteínas naturales, "
+        "como la seda y la lana.",
+        [
+            ("El grupo éster",
+             "El éster se repite en los poliésteres, no en las poliamidas."),
+            ("El grupo hidroxilo",
+             "Los hidroxilos se consumen durante la formación del polímero."),
+            ("El grupo nitrilo, porque el nitrógeno queda unido al carbono mediante un enlace triple",
+             "En la amida el carbono conserva su carbonilo y el enlace con el nitrógeno es simple."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "Se comparan la acidez de un alcohol, un fenol y un ácido carboxílico. "
+        "¿Cuál es el orden creciente?",
+        "Alcohol, fenol y ácido carboxílico",
+        "La acidez depende de cuán estable queda la molécula al perder el "
+        "hidrógeno.\n\n"
+        "1) El alcohol prácticamente no cede su hidrógeno: es el menos "
+        "ácido.\n"
+        "2) En el fenol, el anillo aromático estabiliza la carga que queda, así "
+        "que cede el hidrógeno con más facilidad.\n"
+        "3) En el ácido carboxílico, el carbonilo vecino estabiliza aún más esa "
+        "carga: es el más ácido de los tres.\n\n"
+        "Los tres contienen un grupo hidroxilo, y sin embargo su comportamiento "
+        "es muy distinto según a qué esté unido.",
+        [
+            ("Ácido carboxílico, fenol y alcohol",
+             "Invierte el orden: el ácido carboxílico es el más ácido de los tres."),
+            ("Fenol, alcohol y ácido carboxílico",
+             "El alcohol es el menos ácido, así que va primero."),
+            ("Los tres tienen la misma acidez, porque todos contienen un grupo hidroxilo en su estructura",
+             "Tener el mismo grupo no basta: lo que cambia es a qué está unido."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿A qué familia pertenece el compuesto CH₃–CH₂–NH₂?",
+        "A las aminas",
+        "La presencia de nitrógeno unido a la cadena identifica la familia.\n\n"
+        "1) La cadena tiene dos carbonos y termina en un nitrógeno con dos "
+        "hidrógenos.\n"
+        "2) Ese grupo –NH₂ es el grupo amino.\n"
+        "3) No hay carbonilo unido a ese nitrógeno, así que no es una amida.\n\n"
+        "El compuesto se llama etilamina, y como todas las aminas de cadena "
+        "corta tiene olor intenso.",
+        [
+            ("A las amidas",
+             "Una amida requiere un carbonilo unido al nitrógeno."),
+            ("A los nitrilos",
+             "Un nitrilo tiene un triple enlace entre carbono y nitrógeno."),
+            ("A los alcoholes, porque el grupo del extremo contiene hidrógenos unidos a un átomo distinto del carbono",
+             "El alcohol tiene oxígeno en ese grupo; acá hay nitrógeno."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿A qué familia pertenece el compuesto CH₃–COO–CH₃?",
+        "A los ésteres",
+        "La secuencia de átomos identifica el grupo.\n\n"
+        "1) El segundo carbono está unido a un oxígeno por doble enlace y a "
+        "otro oxígeno por enlace simple.\n"
+        "2) Ese segundo oxígeno se une a otra cadena de carbono, no a un "
+        "hidrógeno.\n"
+        "3) Esa disposición, –COO– entre dos cadenas, es el grupo éster.\n\n"
+        "Si el oxígeno terminara en un hidrógeno en lugar de una cadena, sería "
+        "un ácido carboxílico.",
+        [
+            ("A los ácidos carboxílicos",
+             "El ácido tendría un hidrógeno unido al segundo oxígeno, no una cadena."),
+            ("A los éteres",
+             "El éter no tiene carbonilo: su oxígeno forma dos enlaces simples."),
+            ("A las cetonas, porque el carbono central está unido a un oxígeno mediante un doble enlace",
+             "En una cetona ese carbono se une a dos carbonos; acá se une a un segundo oxígeno."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "¿A qué familia pertenece el compuesto CH₃–O–CH₃?",
+        "A los éteres",
+        "La posición del oxígeno define la familia.\n\n"
+        "1) El oxígeno está unido por enlaces simples a dos átomos de "
+        "carbono.\n"
+        "2) No tiene hidrógeno unido, así que no es un alcohol.\n"
+        "3) Tampoco forma un doble enlace, así que no hay carbonilo.\n\n"
+        "El compuesto es el dimetiléter, isómero del etanol y muy distinto de "
+        "él en propiedades.",
+        [
+            ("A los alcoholes",
+             "El alcohol tiene un hidrógeno unido al oxígeno."),
+            ("A las cetonas",
+             "Una cetona requiere un carbono unido a oxígeno por doble enlace."),
+            ("A los ésteres, porque el oxígeno se encuentra ubicado entre dos cadenas de átomos de carbono",
+             "El éster necesita además un carbonilo, que acá no existe."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "En la síntesis de aspirina se usa un anhídrido. ¿Qué aporta ese "
+        "reactivo?",
+        "Transfiere un grupo acilo con facilidad",
+        "El anhídrido es un reactivo especialmente reactivo.\n\n"
+        "1) El anhídrido está formado por dos grupos acilo unidos por un "
+        "oxígeno.\n"
+        "2) Esa estructura cede uno de esos grupos con facilidad a un alcohol o "
+        "a un fenol.\n"
+        "3) En la síntesis de aspirina, el grupo se transfiere al hidroxilo de "
+        "un ácido aromático y se forma un éster.\n\n"
+        "Usar el anhídrido en lugar del ácido hace que la reacción sea más "
+        "rápida y completa.",
+        [
+            ("Aporta el anillo aromático de la molécula",
+             "El anillo proviene del otro reactivo, no del anhídrido."),
+            ("Actúa solo como disolvente",
+             "Participa de la reacción: no es un mero medio."),
+            ("Aporta el agua necesaria para que la reacción de síntesis pueda completarse correctamente",
+             "El anhídrido reacciona con agua: su presencia sería un problema, no un aporte."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "medio",
+        "En el nombre cloroetano, ¿qué información aporta el prefijo?",
+        "Que hay un átomo de cloro unido a la cadena",
+        "Los sustituyentes se nombran como prefijos.\n\n"
+        "1) La parte etano indica una cadena de dos carbonos con enlaces "
+        "simples.\n"
+        "2) El prefijo cloro- indica que un hidrógeno fue reemplazado por un "
+        "átomo de cloro.\n"
+        "3) El compuesto pertenece entonces a la familia de los haluros "
+        "orgánicos.\n\n"
+        "Si hubiera dos átomos de cloro, el nombre llevaría además el prefijo "
+        "di-.",
+        [
+            ("Que el compuesto es un alcohol",
+             "Un alcohol llevaría la terminación -ol y un grupo hidroxilo."),
+            ("Que la cadena tiene dos carbonos",
+             "Ese dato lo aporta la raíz etano, no el prefijo."),
+            ("Que el compuesto reacciona con cloro para formar un producto distinto durante su síntesis",
+             "El prefijo indica que el cloro ya está presente en la molécula."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "dificil",
+        "Se dispone de dos líquidos incoloros: uno es un alcohol y el otro un "
+        "ácido carboxílico. ¿Qué ensayo permite distinguirlos?",
+        "Agregar bicarbonato y observar si hay burbujas",
+        "El ensayo aprovecha el comportamiento ácido de uno de los dos.\n\n"
+        "1) El ácido carboxílico cede hidrógenos en disolución; el alcohol "
+        "prácticamente no.\n"
+        "2) Al reaccionar con bicarbonato, ese ácido libera dióxido de carbono, "
+        "que se ve como burbujas.\n"
+        "3) El alcohol no produce ninguna efervescencia.\n\n"
+        "Conviene incluir un control con una sustancia conocida de cada tipo, "
+        "para verificar que el reactivo está en buen estado.",
+        [
+            ("Comparar sus colores",
+             "Ambos son incoloros: la vista no los distingue."),
+            ("Comparar sus densidades",
+             "Pueden tener densidades parecidas, y el dato no identifica el grupo funcional."),
+            ("Calentar ambos líquidos y comprobar cuál de los dos se evapora primero por completo",
+             "La volatilidad depende del tamaño de la molécula y no distingue de manera confiable el grupo."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "dificil",
+        "Dos compuestos tienen fórmula C₃H₆O: uno es propanal y el otro "
+        "propanona. ¿Qué dato permite decidir cuál es cuál?",
+        "La posición del carbonilo dentro de la cadena",
+        "La fórmula molecular no distingue entre isómeros.\n\n"
+        "1) Ambos tienen los mismos átomos: tres carbonos, seis hidrógenos y un "
+        "oxígeno.\n"
+        "2) En el propanal el carbonilo está en un extremo y lleva un "
+        "hidrógeno; en la propanona está entre los dos carbonos restantes.\n"
+        "3) Solo una representación estructural, o un ensayo que distinga "
+        "aldehído de cetona, resuelve la pregunta.\n\n"
+        "Experimentalmente, un oxidante suave transforma al aldehído en ácido y "
+        "deja intacta a la cetona.",
+        [
+            ("La masa molar de cada uno",
+             "Al ser isómeros, sus masas molares son idénticas."),
+            ("El número de átomos de oxígeno",
+             "Ambos tienen exactamente un átomo de oxígeno."),
+            ("El número de átomos de carbono presentes en la cadena principal de cada uno de los compuestos",
+             "Ambos tienen tres carbonos: comparten la fórmula molecular."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "dificil",
+        "Un estudiante afirma que todo compuesto con un grupo –OH es un "
+        "alcohol. ¿Cómo se evalúa?",
+        "Es incorrecta: fenoles y ácidos también lo tienen",
+        "El grupo hidroxilo aparece en varias familias distintas.\n\n"
+        "1) En un alcohol el hidroxilo está unido a un carbono de cadena "
+        "abierta o de un ciclo no aromático.\n"
+        "2) En un fenol está unido a un anillo aromático, y su comportamiento "
+        "es más ácido.\n"
+        "3) En un ácido carboxílico está sobre el mismo carbono que un "
+        "carbonilo, y ahí la acidez es mucho mayor.\n\n"
+        "Lo que define a la familia no es la presencia del grupo, sino a qué "
+        "está unido.",
+        [
+            ("Es correcta, porque el hidroxilo define a los alcoholes",
+             "Lo define solo cuando está unido a un carbono saturado, no en cualquier caso."),
+            ("Es correcta, porque todos esos compuestos se comportan igual",
+             "Su acidez es muy distinta, y eso se comprueba experimentalmente."),
+            ("Es incorrecta, porque los alcoholes en realidad no contienen ningún grupo hidroxilo",
+             "Sí lo contienen: es justamente su grupo funcional."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "dificil",
+        "Se hace reaccionar ácido etanoico con metanol. ¿Qué productos se "
+        "obtienen?",
+        "Un éster y agua",
+        "La esterificación combina dos grupos y libera agua.\n\n"
+        "1) El grupo carboxilo del ácido reacciona con el hidroxilo del "
+        "alcohol.\n"
+        "2) Se libera una molécula de agua formada con el hidroxilo del ácido y "
+        "el hidrógeno del alcohol.\n"
+        "3) Queda un grupo –COO– que une ambas cadenas: el producto es un "
+        "éster.\n\n"
+        "El éster resultante, etanoato de metilo, tiene el olor característico "
+        "de este tipo de compuestos.",
+        [
+            ("Un éter y agua",
+             "El éter se forma entre dos alcoholes, no entre un ácido y un alcohol."),
+            ("Una amida y agua",
+             "Una amida requiere un compuesto con nitrógeno, que acá no participa."),
+            ("Un anhídrido y agua, porque los dos reactantes aportan un grupo con oxígeno a la reacción",
+             "El anhídrido se forma entre dos ácidos carboxílicos, no entre un ácido y un alcohol."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "dificil",
+        "Una muestra es soluble en agua, enrojece el papel indicador y huele a "
+        "vinagre. ¿Qué grupo funcional contiene?",
+        "Un grupo carboxilo",
+        "Cada observación acota las familias posibles.\n\n"
+        "1) Enrojecer el indicador señala comportamiento ácido, lo que descarta "
+        "alcoholes, éteres y cetonas.\n"
+        "2) Ser soluble en agua indica una cadena corta con un grupo capaz de "
+        "interactuar con ella.\n"
+        "3) El olor a vinagre apunta directamente al ácido acético, un ácido "
+        "carboxílico de dos carbonos.\n\n"
+        "Las tres observaciones juntas son mucho más concluyentes que "
+        "cualquiera por separado.",
+        [
+            ("Un grupo hidroxilo de alcohol",
+             "Un alcohol no enrojece el indicador de manera apreciable."),
+            ("Un grupo amino",
+             "Las aminas tienen comportamiento básico, no ácido."),
+            ("Un grupo éster, porque los ésteres son los responsables de los olores característicos de los alimentos",
+             "Los ésteres no son ácidos: no enrojecerían el indicador."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "dificil",
+        "Una tabla compara tres compuestos de masa molar parecida: un alcano "
+        "hierve a −0,5 °C, un éter a 35 °C y un alcohol a 78 °C. ¿Qué explica "
+        "la tendencia?",
+        "La fuerza de la interacción entre sus moléculas",
+        "La comparación aísla el efecto del grupo funcional.\n\n"
+        "1) Las masas molares son parecidas, así que ese factor no explica la "
+        "diferencia.\n"
+        "2) El alcano solo tiene interacciones débiles entre moléculas; el éter "
+        "agrega un oxígeno que interactúa algo más.\n"
+        "3) El alcohol forma enlaces de hidrógeno entre sus moléculas, que son "
+        "los más fuertes de los tres casos, y por eso hierve mucho más "
+        "arriba.\n\n"
+        "El diseño de la tabla es lo que permite la conclusión: al mantener la "
+        "masa constante, la única variable que queda es el grupo funcional.",
+        [
+            ("La diferencia de masa molar entre ellos",
+             "El enunciado indica que las masas molares son parecidas."),
+            ("El número de átomos de carbono de cada uno",
+             "Con masas molares parecidas, el número de carbonos es similar y no explica la tendencia."),
+            ("La cantidad de oxígeno presente en cada molécula, que determina directamente su punto de ebullición",
+             "El éter y el alcohol tienen un oxígeno cada uno y aun así difieren en más de cuarenta grados."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "dificil",
+        "Al oxidar suavemente un alcohol primario, ¿qué familia se obtiene "
+        "primero?",
+        "Un aldehído",
+        "La oxidación avanza por etapas sobre el mismo carbono.\n\n"
+        "1) En un alcohol primario el hidroxilo está en un carbono terminal, "
+        "que además lleva dos hidrógenos.\n"
+        "2) La primera oxidación transforma ese grupo en un carbonilo con un "
+        "hidrógeno unido, o sea un aldehído.\n"
+        "3) Si la oxidación continúa, ese aldehído se convierte en un ácido "
+        "carboxílico.\n\n"
+        "Un alcohol secundario, en cambio, da una cetona y ahí se detiene.",
+        [
+            ("Una cetona",
+             "La cetona resulta de oxidar un alcohol secundario, no uno primario."),
+            ("Un éter",
+             "El éter no se obtiene por oxidación de un alcohol."),
+            ("Un ácido carboxílico, porque la oxidación transforma el grupo directamente en su forma final",
+             "El ácido es el producto de una oxidación más avanzada: el aldehído es la etapa intermedia."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "dificil",
+        "Para comparar la solubilidad de dos familias, alguien usa una amina de "
+        "dos carbonos y un alcohol de diez. ¿Qué problema tiene la "
+        "comparación?",
+        "Cambian el grupo y el largo de la cadena a la vez",
+        "El diseño no permite atribuir la diferencia a una sola causa.\n\n"
+        "1) La solubilidad en agua depende tanto del grupo funcional como del "
+        "largo de la cadena hidrocarbonada.\n"
+        "2) Los dos compuestos elegidos difieren en ambas cosas.\n"
+        "3) Si uno resulta más soluble, no se sabe si fue por su grupo o por su "
+        "cadena más corta.\n\n"
+        "La comparación válida usa compuestos con el mismo número de carbonos y "
+        "distinto grupo funcional.",
+        [
+            ("Que las aminas no se disuelven en agua",
+             "Las aminas de cadena corta sí son solubles en agua."),
+            ("Que la solubilidad no se puede medir",
+             "Se mide sin dificultad: el problema es el diseño de la comparación."),
+            ("Que debería haberse usado un alcohol de dos carbonos y otro alcohol de diez carbonos",
+             "Eso compararía largos de cadena dentro de una familia, no dos familias entre sí."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "dificil",
+        "Al unir cinco aminoácidos en una cadena, ¿cuántas moléculas de agua se "
+        "liberan?",
+        "Cuatro",
+        "Cada enlace formado libera una molécula de agua.\n\n"
+        "1) Unir dos aminoácidos forma un enlace y libera una molécula de "
+        "agua.\n"
+        "2) Con cinco aminoácidos en cadena hay cuatro uniones: entre el "
+        "primero y el segundo, el segundo y el tercero, y así hasta el "
+        "quinto.\n"
+        "3) Se liberan entonces cuatro moléculas de agua.\n\n"
+        "La regla general es que una cadena de n aminoácidos libera n menos una "
+        "moléculas de agua.",
+        [
+            ("Cinco",
+             "Confunde el número de aminoácidos con el de enlaces formados entre ellos."),
+            ("Una",
+             "Una sola molécula correspondería a la unión de dos aminoácidos."),
+            ("Diez, contando dos moléculas de agua por cada uno de los enlaces que se forman en la cadena",
+             "Cada enlace libera una sola molécula de agua, no dos."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "dificil",
+        "El ácido láctico tiene un grupo carboxilo y un grupo hidroxilo en "
+        "carbonos distintos. ¿Cómo se clasifica?",
+        "Como un compuesto con dos grupos funcionales",
+        "Una molécula puede pertenecer a más de una familia a la vez.\n\n"
+        "1) El grupo carboxilo le da comportamiento de ácido carboxílico.\n"
+        "2) El grupo hidroxilo sobre otro carbono le da además comportamiento "
+        "de alcohol.\n"
+        "3) Ambos conservan sus propiedades y la molécula puede participar de "
+        "reacciones propias de las dos familias.\n\n"
+        "Al nombrarlo se elige un grupo como principal y el otro se indica como "
+        "sustituyente, pero eso no elimina al segundo.",
+        [
+            ("Solo como alcohol",
+             "Ignora el grupo carboxilo, que además domina su comportamiento ácido."),
+            ("Solo como éster",
+             "No hay grupo éster: el hidroxilo y el carboxilo están en carbonos distintos y sin unirse entre sí."),
+            ("Como un hidrocarburo, porque su esqueleto está formado por átomos de carbono e hidrógeno",
+             "Tener esqueleto de carbono no lo convierte en hidrocarburo: contiene oxígeno en dos grupos."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "dificil",
+        "Alguien sostiene que ésteres y ácidos carboxílicos son la misma "
+        "familia, porque ambos contienen la secuencia –COO–. ¿Cómo se evalúa?",
+        "Es incorrecta: se diferencian en qué sigue a ese oxígeno",
+        "Una coincidencia parcial de átomos no define una familia.\n\n"
+        "1) En el ácido carboxílico, el segundo oxígeno lleva un hidrógeno, y "
+        "es ese hidrógeno el que puede liberarse.\n"
+        "2) En el éster, ese oxígeno se une a una cadena de carbono, así que no "
+        "hay hidrógeno que ceder.\n"
+        "3) Por eso el ácido enrojece un indicador y el éster no, y sus olores "
+        "y solubilidades también difieren.\n\n"
+        "La comparación muestra que el grupo funcional se define por el "
+        "conjunto completo y no por una parte de él.",
+        [
+            ("Es correcta, porque comparten los mismos átomos",
+             "Compartir átomos no basta: lo que cambia es a qué está unido el segundo oxígeno."),
+            ("Es correcta, porque ambos reaccionan igual con el agua",
+             "Su comportamiento frente al agua y frente a un indicador es distinto."),
+            ("Es incorrecta, porque en realidad los ésteres no contienen ningún átomo de oxígeno en su estructura",
+             "Los ésteres contienen dos átomos de oxígeno: esa es justamente la coincidencia parcial."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "dificil",
+        "Una muestra no reacciona con bicarbonato, no enrojece el indicador y "
+        "no se disuelve en agua. ¿Qué familia es la más probable?",
+        "Un hidrocarburo o un haluro de cadena larga",
+        "El descarte sucesivo acota las posibilidades.\n\n"
+        "1) No reaccionar con bicarbonato ni enrojecer el indicador descarta "
+        "los ácidos carboxílicos y los fenoles.\n"
+        "2) No disolverse en agua hace poco probable un alcohol o una amina de "
+        "cadena corta.\n"
+        "3) Queda un compuesto poco polar, como un hidrocarburo o un haluro de "
+        "cadena larga.\n\n"
+        "Para avanzar habría que probar ensayos que detecten insaturaciones o "
+        "la presencia de halógenos.",
+        [
+            ("Un ácido carboxílico",
+             "Habría reaccionado con el bicarbonato produciendo burbujas."),
+            ("Una amina de cadena corta",
+             "Sería soluble en agua y de comportamiento básico."),
+            ("Un alcohol de cadena corta, porque los alcoholes no reaccionan con el bicarbonato de sodio",
+             "Es cierto que no reaccionan, pero un alcohol de cadena corta sí se disolvería en agua."),
+        ],
+    ),
+    _q(
+        "cie_grupos_funcionales", "dificil",
+        "¿Por qué una amina de dos carbonos se disuelve en agua y una de doce "
+        "prácticamente no?",
+        "Porque la cadena larga domina sobre el grupo funcional",
+        "La solubilidad resulta del balance entre dos partes de la "
+        "molécula.\n\n"
+        "1) El grupo amino puede interactuar con el agua mediante enlaces de "
+        "hidrógeno.\n"
+        "2) La cadena hidrocarbonada, en cambio, no interactúa con ella.\n"
+        "3) Con dos carbonos, el grupo determina el comportamiento; con doce, "
+        "la cadena pesa mucho más y el compuesto deja de disolverse.\n\n"
+        "El mismo razonamiento explica la solubilidad decreciente de los "
+        "alcoholes a medida que su cadena se alarga.",
+        [
+            ("Porque la de doce carbonos no tiene grupo amino",
+             "Ambas lo tienen: la diferencia está en el largo de la cadena."),
+            ("Porque la de doce carbonos es un hidrocarburo",
+             "Sigue siendo una amina: contiene nitrógeno unido a la cadena."),
+            ("Porque las moléculas grandes no caben entre las moléculas de agua que forman el disolvente",
+             "La solubilidad no es una cuestión de tamaño sino de afinidad entre grupos."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_grupos_funcionales", "dificil",
+        "Tres muestras dan estos resultados: A es soluble en agua y no altera "
+        "el indicador; B es soluble y lo enrojece; C es insoluble y no lo "
+        "altera. ¿Qué asignación es coherente?",
+        "A alcohol, B ácido carboxílico y C hidrocarburo",
+        "Cada ensayo separa el conjunto en dos, y la combinación identifica.\n\n"
+        "1) B enrojece el indicador, así que es el único con comportamiento "
+        "ácido: corresponde al ácido carboxílico.\n"
+        "2) A es soluble en agua pero no es ácido, lo que encaja con un alcohol "
+        "de cadena corta.\n"
+        "3) C no interactúa con el agua ni tiene carácter ácido, lo que apunta "
+        "a un compuesto poco polar como un hidrocarburo.\n\n"
+        "Ninguno de los dos ensayos por separado habría bastado: es el cruce de "
+        "ambos el que asigna las tres familias.",
+        [
+            ("A ácido carboxílico, B alcohol y C hidrocarburo",
+             "Intercambia A con B: el que enrojece el indicador es el ácido."),
+            ("A hidrocarburo, B alcohol y C ácido carboxílico",
+             "Un hidrocarburo no sería soluble en agua, y el ácido sí alteraría el indicador."),
+            ("Las tres muestras podrían ser alcoholes de distinto largo de cadena, según estos resultados",
+             "Un alcohol no enrojece el indicador, así que B no puede serlo."),
+        ],
+    ),
+]
