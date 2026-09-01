@@ -19,6 +19,11 @@ class CarreraPublicaOut(BaseModel):
     nombre: str
     sede: str
 
+    #: Dónde se dicta, para ubicar la carrera en el mapa del país. `None`
+    #: cuando el cruce con el SIES no la identificó (ver el modelo `Carrera`).
+    region: str | None = None
+    comuna: str | None = None
+
     #: Ponderaciones en porcentaje. Suman 100 entre todas.
     nem: float | None = None
     ranking: float | None = None
@@ -54,6 +59,37 @@ class CarreraCatalogoOut(BaseModel):
     universidad: str
     nombre: str
     sede: str
+
+
+class CarreraBusquedaOut(BaseModel):
+    """Una fila de resultados del buscador.
+
+    Es el `CarreraCatalogoOut` más la ubicación: el catálogo entero (1.855
+    filas para el sitemap) no la carga para no engordar un payload que solo
+    nombra y enlaza, pero un resultado de búsqueda sí la muestra —dónde queda
+    la carrera es justo lo que el filtro por región y comuna deja ver.
+    """
+
+    model_config = ConfigDict(from_attributes=True)
+
+    codigo: str
+    universidad: str
+    nombre: str
+    sede: str
+    region: str | None = None
+    comuna: str | None = None
+
+
+class RegionConComunasOut(BaseModel):
+    """Una región y las comunas donde hay carreras, para armar el filtro.
+
+    El selector de comuna depende de la región elegida, así que las comunas
+    viajan agrupadas bajo su región y no como una lista plana: mostrar las 346
+    comunas del país cuando en una región hay tres sería ruido, no ayuda.
+    """
+
+    region: str
+    comunas: list[str]
 
 
 class UniversidadOut(BaseModel):

@@ -43,6 +43,15 @@ class Carrera(Base):
     universidad: Mapped[str] = mapped_column(String(200), index=True)
     nombre: Mapped[str] = mapped_column(String(250), index=True)
     sede: Mapped[str] = mapped_column(String(120))
+    #: Región y comuna donde se dicta, para filtrar el catálogo por ubicación.
+    #: NO se derivan de `sede` -- ese campo es texto libre del PDF del DEMRE
+    #: (mezcla ciudades, campus y hasta regiones). Salen de la base oficial de
+    #: matrícula del SIES (Mineduc), cruzada por universidad+sede+carrera en
+    #: `scripts/asignar_geo_carreras.py`. Son NULL cuando el cruce no encuentra
+    #: la carrera en el SIES; la pantalla decide cómo mostrar esa ausencia, y el
+    #: filtro por región/comuna simplemente no las incluye.
+    region: Mapped[str | None] = mapped_column(String(80), nullable=True, index=True)
+    comuna: Mapped[str | None] = mapped_column(String(80), nullable=True, index=True)
     #: Nombre y universidad sin tildes y en minúsculas, para buscar.
     #: Nadie escribe "ENFERMERÍA" con tilde en un buscador, y un ILIKE contra
     #: el nombre original no encuentra nada. Es una columna y no `unaccent()`

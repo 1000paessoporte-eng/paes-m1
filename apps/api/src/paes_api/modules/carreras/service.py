@@ -5,15 +5,39 @@ Solo consultas de lectura: nada de lo que hay acá escribe en la base. Es el
 la entrada viene de internet y la valida antes de tocar la base.
 """
 
+from collections import defaultdict
 from collections.abc import Callable
 from typing import Any
 
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from paes_api.modules.carreras.schemas import UniversidadOut
+from paes_api.modules.carreras.schemas import RegionConComunasOut, UniversidadOut
 from paes_api.modules.goals.models import Carrera
 from paes_api.modules.goals.service import buscar_carreras as _buscar
+
+#: Las regiones de norte a sur, como las nombra el SIES. El selector las lista
+#: en este orden —el del mapa—, no alfabético: quien busca "más al sur" espera
+#: bajar por la lista, no saltar de la A a la Z. Una región que no esté acá
+#: (nombre nuevo del SIES) igual aparece, al final y por orden alfabético.
+ORDEN_REGIONES = [
+    "Arica y Parinacota",
+    "Tarapacá",
+    "Antofagasta",
+    "Atacama",
+    "Coquimbo",
+    "Valparaíso",
+    "Metropolitana",
+    "O'Higgins",
+    "Maule",
+    "Ñuble",
+    "Biobío",
+    "La Araucanía",
+    "Los Ríos",
+    "Los Lagos",
+    "Aysén",
+    "Magallanes",
+]
 
 
 def catalogo(db: Session) -> list[Carrera]:
@@ -63,8 +87,13 @@ def universidades(db: Session) -> list[UniversidadOut]:
 LIMITE_BUSQUEDA = 25
 
 
-def buscar(db: Session, texto: str) -> list[Carrera]:
-    """Busca carreras por nombre, universidad o sede. Sin sesión.
+def buscar(
+    db: Session,
+    texto: str,
+    region: str | None = None,
+    comuna: str | None = None,
+) -> list[Carrera]:
+    """Busca carreras por nombre, universidad o sede, y/o por ubicación. Sin sesión.
 
     Reusa la misma función que el buscador del alumno con sesión
     (`goals.service.buscar_carreras`): que el resultado dependa de si estás
@@ -73,13 +102,53 @@ def buscar(db: Session, texto: str) -> list[Carrera]:
     El texto llega desde internet, así que se acota antes de tocar la base: un
     `LIKE` con una cadena de 10 KB no encuentra nada pero igual viaja a
     Postgres, y una consulta de 200 palabras encadena 200 condiciones.
+
+    Con `region` o `comuna` la búsqueda es válida aunque no haya texto —"todas
+    las de la Región de Aysén" es una consulta entera—; y un texto de una o dos
+    letras se ignora en vez de anular el filtro de ubicación.
     """
     texto = texto.strip()[:120]
-    if len(texto) < 3:
+    region = (region or "").strip()[:80] or None
+    comuna = (comuna or "").strip()[:80] or None
+    if len(texto) < 3 and not region and not comuna:
         # Con una o dos letras el resultado no discrimina nada: "me" está
         # dentro de medicina, comercio, ingeniería comercial y otras 300.
         return []
-    return _buscar(db, texto, limite=LIMITE_BUSQUEDA)
+    # Un texto demasiado corto no debe filtrar, pero tampoco anular la búsqueda
+    # cuando lo que acota es la ubicación.
+    texto_util = texto if len(texto) >= 3 else ""
+    return _buscar(db, texto_util, limite=LIMITE_BUSQUEDA, region=region, comuna=comuna)
+
+
+def ubicaciones(db: Session) -> list[RegionConComunasOut]:
+    """Las regiones y comunas donde hay carreras, para poblar el filtro.
+
+    Solo lo que existe en el catálogo: mostrar una región sin carreras sería
+    ofrecer un filtro que siempre devuelve vacío. Las comunas van agrupadas
+    bajo su región porque el selector de comuna depende de la región elegida.
+
+    Una región puede aparecer con carreras pero sin comunas: son las que se
+    cruzaron con el SIES a nivel de región pero cuya comuna quedó ambigua (ver
+    `scripts/asignar_geo_carreras.py`). La región se ofrece igual; su lista de
+    comunas simplemente no las incluye.
+    """
+    filas = db.execute(
+        select(Carrera.region, Carrera.comuna).where(Carrera.region.is_not(None)).distinct()
+    ).all()
+    comunas_por_region: dict[str, set[str]] = defaultdict(set)
+    for region, comuna in filas:
+        comunas_por_region[region]  # asegura la región aunque no traiga comuna
+        if comuna:
+            comunas_por_region[region].add(comuna)
+
+    def orden(region: str) -> tuple[int, str]:
+        indice = ORDEN_REGIONES.index(region) if region in ORDEN_REGIONES else len(ORDEN_REGIONES)
+        return (indice, region)
+
+    return [
+        RegionConComunasOut(region=region, comunas=sorted(comunas_por_region[region]))
+        for region in sorted(comunas_por_region, key=orden)
+    ]
 
 
 #: Cuántas fichas hermanas acompañan a una carrera. Suficiente para que la

@@ -1021,13 +1021,39 @@ export interface paths {
         };
         /**
          * Buscar Carreras
-         * @description Busca carreras por nombre, universidad o sede. Público.
+         * @description Busca carreras por nombre, universidad o sede, y filtra por ubicación. Público.
          *
          *     Es la pregunta con la que la gente llega de verdad —cuánto puntaje
          *     necesita para la carrera que quiere—, y hasta ahora el buscador vivía
-         *     detrás del login. Va ANTES de `/{codigo}`, como el resto.
+         *     detrás del login. `region` y `comuna` acotan el resultado, y sirven solas:
+         *     se puede pedir "todas las de tal comuna" sin escribir nada. Va ANTES de
+         *     `/{codigo}`, como el resto.
          */
         get: operations["buscar_carreras_api_carreras_buscar_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/carreras/ubicaciones": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Listar Ubicaciones
+         * @description Las regiones y comunas con carreras, para poblar el filtro de ubicación.
+         *
+         *     Va ANTES de `/{codigo}`: si no, FastAPI leería "ubicaciones" como el código
+         *     de una carrera. Las comunas viajan agrupadas bajo su región porque el
+         *     selector de comuna depende de la región elegida.
+         */
+        get: operations["listar_ubicaciones_api_carreras_ubicaciones_get"];
         put?: never;
         post?: never;
         delete?: never;
@@ -1659,6 +1685,29 @@ export interface components {
             codigo: string;
         };
         /**
+         * CarreraBusquedaOut
+         * @description Una fila de resultados del buscador.
+         *
+         *     Es el `CarreraCatalogoOut` más la ubicación: el catálogo entero (1.855
+         *     filas para el sitemap) no la carga para no engordar un payload que solo
+         *     nombra y enlaza, pero un resultado de búsqueda sí la muestra —dónde queda
+         *     la carrera es justo lo que el filtro por región y comuna deja ver.
+         */
+        CarreraBusquedaOut: {
+            /** Codigo */
+            codigo: string;
+            /** Universidad */
+            universidad: string;
+            /** Nombre */
+            nombre: string;
+            /** Sede */
+            sede: string;
+            /** Region */
+            region?: string | null;
+            /** Comuna */
+            comuna?: string | null;
+        };
+        /**
          * CarreraCatalogoOut
          * @description Lo mínimo para armar el sitemap y el índice navegable.
          *
@@ -1729,6 +1778,10 @@ export interface components {
             nombre: string;
             /** Sede */
             sede: string;
+            /** Region */
+            region?: string | null;
+            /** Comuna */
+            comuna?: string | null;
             /** Nem */
             nem?: number | null;
             /** Ranking */
@@ -2985,6 +3038,20 @@ export interface components {
             image_url?: string | null;
             /** Alternatives */
             alternatives: components["schemas"]["AlternativeSafeOut"][];
+        };
+        /**
+         * RegionConComunasOut
+         * @description Una región y las comunas donde hay carreras, para armar el filtro.
+         *
+         *     El selector de comuna depende de la región elegida, así que las comunas
+         *     viajan agrupadas bajo su región y no como una lista plana: mostrar las 346
+         *     comunas del país cuando en una región hay tres sería ruido, no ayuda.
+         */
+        RegionConComunasOut: {
+            /** Region */
+            region: string;
+            /** Comunas */
+            comunas: string[];
         };
         /** RegisterIn */
         RegisterIn: {
@@ -4973,6 +5040,8 @@ export interface operations {
         parameters: {
             query?: {
                 q?: string;
+                region?: string;
+                comuna?: string;
             };
             header?: never;
             path?: never;
@@ -4986,7 +5055,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": components["schemas"]["CarreraCatalogoOut"][];
+                    "application/json": components["schemas"]["CarreraBusquedaOut"][];
                 };
             };
             /** @description Validation Error */
@@ -4996,6 +5065,26 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    listar_ubicaciones_api_carreras_ubicaciones_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["RegionConComunasOut"][];
                 };
             };
         };

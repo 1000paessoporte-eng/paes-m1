@@ -597,8 +597,35 @@ export function gradeDemo(
  * Sin cachear: cada búsqueda es distinta y el resultado se pide desde el
  * navegador mientras la persona escribe.
  */
-export function buscarCarrerasPublico(q: string): Promise<CarreraCatalogo[]> {
-  return apiFetch<CarreraCatalogo[]>(`/api/carreras/buscar?q=${encodeURIComponent(q)}`);
+export type CarreraBusqueda =
+  paths["/api/carreras/buscar"]["get"]["responses"][200]["content"]["application/json"][number];
+
+export function buscarCarrerasPublico(
+  q: string,
+  filtros: { region?: string; comuna?: string } = {},
+): Promise<CarreraBusqueda[]> {
+  const params = new URLSearchParams();
+  if (q) params.set("q", q);
+  if (filtros.region) params.set("region", filtros.region);
+  if (filtros.comuna) params.set("comuna", filtros.comuna);
+  return apiFetch<CarreraBusqueda[]>(`/api/carreras/buscar?${params.toString()}`);
+}
+
+export type RegionConComunas =
+  paths["/api/carreras/ubicaciones"]["get"]["responses"][200]["content"]["application/json"][number];
+
+/**
+ * Las regiones y comunas con carreras, para poblar el filtro de ubicación.
+ *
+ * Cambia una vez por proceso de admisión, así que se cachea como el catálogo.
+ * Las comunas viajan agrupadas bajo su región: el selector de comuna depende
+ * de la región elegida.
+ */
+export function getUbicacionesCarreras(): Promise<RegionConComunas[]> {
+  return apiFetch<RegionConComunas[]>("/api/carreras/ubicaciones", undefined, {
+    cache: "force-cache",
+    next: { revalidate: 86400 },
+  });
 }
 
 export type Universidad =

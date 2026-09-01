@@ -12,10 +12,12 @@ from paes_api.core.database import get_db
 from paes_api.core.limiter import limiter
 from paes_api.modules.carreras import service
 from paes_api.modules.carreras.schemas import (
+    CarreraBusquedaOut,
     CarreraCatalogoOut,
     CarreraPublicaOut,
     CarreraRelacionadaOut,
     CarreraRelacionadasOut,
+    RegionConComunasOut,
     UniversidadOut,
 )
 from paes_api.modules.goals.models import Carrera
@@ -35,20 +37,38 @@ def listar_catalogo(request: Request, db: Session = Depends(get_db)) -> list[Car
     return service.catalogo(db)
 
 
-@router.get("/buscar", response_model=list[CarreraCatalogoOut])
+@router.get("/buscar", response_model=list[CarreraBusquedaOut])
 @limiter.limit("30/minute")
 def buscar_carreras(
     request: Request,
     q: str = Query(default="", max_length=120),
+    region: str = Query(default="", max_length=80),
+    comuna: str = Query(default="", max_length=80),
     db: Session = Depends(get_db),
 ) -> list[Carrera]:
-    """Busca carreras por nombre, universidad o sede. Público.
+    """Busca carreras por nombre, universidad o sede, y filtra por ubicación. Público.
 
     Es la pregunta con la que la gente llega de verdad —cuánto puntaje
     necesita para la carrera que quiere—, y hasta ahora el buscador vivía
-    detrás del login. Va ANTES de `/{codigo}`, como el resto.
+    detrás del login. `region` y `comuna` acotan el resultado, y sirven solas:
+    se puede pedir "todas las de tal comuna" sin escribir nada. Va ANTES de
+    `/{codigo}`, como el resto.
     """
-    return service.buscar(db, q)
+    return service.buscar(db, q, region=region, comuna=comuna)
+
+
+@router.get("/ubicaciones", response_model=list[RegionConComunasOut])
+@limiter.limit("60/minute")
+def listar_ubicaciones(
+    request: Request, db: Session = Depends(get_db)
+) -> list[RegionConComunasOut]:
+    """Las regiones y comunas con carreras, para poblar el filtro de ubicación.
+
+    Va ANTES de `/{codigo}`: si no, FastAPI leería "ubicaciones" como el código
+    de una carrera. Las comunas viajan agrupadas bajo su región porque el
+    selector de comuna depende de la región elegida.
+    """
+    return service.ubicaciones(db)
 
 
 @router.get("/universidades", response_model=list[UniversidadOut])
