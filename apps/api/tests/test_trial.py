@@ -215,3 +215,38 @@ def test_mi_plan_dice_que_estas_en_prueba(register_user, client, db_session) -> 
     datos = client.get("/api/plan", headers=headers).json()
     assert datos["plan"] == "pro"
     assert datos["en_prueba"] is True
+
+
+def test_puede_rendir_corta_solo_con_los_limites_activos(
+    register_user, db_session, monkeypatch
+) -> None:
+    """El muro del plan Gratis: con LIMITES_ACTIVOS el tope de ensayos bloquea;
+    sin él, se informa pero deja seguir. Es la palanca de la Fase 2, y encenderla
+    sin que exista salida de pago dejaría al alumno atrapado."""
+    from paes_api.core.config import get_settings
+
+    register_user(email="lim1@milpaes.cl")
+    user = _usuario(db_session, "lim1@milpaes.cl")  # plan Gratis
+
+    try:
+        # Con el flag encendido y la cuota agotada: no puede.
+        monkeypatch.setenv("LIMITES_ACTIVOS", "true")
+        get_settings.cache_clear()
+        with patch(
+            "paes_api.modules.billing.service.ensayos_del_mes", return_value=999
+        ):
+            permitido, motivo = service.puede_rendir(db_session, user.id)
+        assert permitido is False
+        assert motivo is not None
+
+        # Mismo caso sin el flag: informa el tope pero no corta.
+        monkeypatch.delenv("LIMITES_ACTIVOS", raising=False)
+        get_settings.cache_clear()
+        with patch(
+            "paes_api.modules.billing.service.ensayos_del_mes", return_value=999
+        ):
+            permitido2, _ = service.puede_rendir(db_session, user.id)
+        assert permitido2 is True
+    finally:
+        monkeypatch.delenv("LIMITES_ACTIVOS", raising=False)
+        get_settings.cache_clear()
