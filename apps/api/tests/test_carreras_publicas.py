@@ -27,6 +27,7 @@ def carreras(db_session) -> list[Carrera]:
         historia=None, m2=None, prueba_especial=None,
         electivo_alternativo=False,
         ponderado_min=600, promedio_min=550, vacantes=80,
+        region="Metropolitana", comuna="SANTIAGO",
         proceso=2026,
         fuente="https://demre.cl/",
     )
@@ -39,6 +40,7 @@ def carreras(db_session) -> list[Carrera]:
         ciencias=None, m2=None, prueba_especial=None,
         electivo_alternativo=False,
         ponderado_min=None, promedio_min=None, vacantes=None,
+        region="Valparaíso", comuna="VALPARAÍSO",
         proceso=2026,
         fuente="https://demre.cl/",
     )
@@ -240,3 +242,56 @@ def test_relacionadas_se_ven_sin_iniciar_sesion(client: TestClient, carreras) ->
     res = client.get("/api/carreras/99001/relacionadas")
     assert res.status_code == 200
     assert set(res.json()) == {"misma_carrera", "misma_universidad"}
+
+
+def test_buscar_filtra_por_region(client: TestClient, carreras) -> None:
+    """El filtro de región deja solo las carreras de esa región."""
+    res = client.get("/api/carreras/buscar", params={"region": "Metropolitana"})
+
+    assert res.status_code == 200
+    datos = res.json()
+    assert [c["codigo"] for c in datos] == ["99001"]
+    assert datos[0]["region"] == "Metropolitana"
+    assert datos[0]["comuna"] == "SANTIAGO"
+
+
+def test_buscar_filtra_por_comuna(client: TestClient, carreras) -> None:
+    res = client.get("/api/carreras/buscar", params={"comuna": "VALPARAÍSO"})
+
+    assert [c["codigo"] for c in res.json()] == ["99002"]
+
+
+def test_buscar_solo_por_ubicacion_sin_texto(client: TestClient, carreras) -> None:
+    """Filtrar por región sin escribir nada es una consulta entera y válida."""
+    res = client.get("/api/carreras/buscar", params={"region": "Valparaíso"})
+
+    assert res.status_code == 200
+    assert [c["codigo"] for c in res.json()] == ["99002"]
+
+
+def test_buscar_combina_texto_y_region(client: TestClient, carreras) -> None:
+    """El texto y la ubicación se exigen juntos, no uno u otro."""
+    en_region = client.get(
+        "/api/carreras/buscar", params={"q": "arte", "region": "Valparaíso"}
+    )
+    fuera = client.get(
+        "/api/carreras/buscar", params={"q": "arte", "region": "Metropolitana"}
+    )
+
+    assert [c["codigo"] for c in en_region.json()] == ["99002"]
+    assert fuera.json() == []
+
+
+def test_ubicaciones_agrupa_comunas_por_region_de_norte_a_sur(
+    client: TestClient, carreras
+) -> None:
+    """Las regiones van en orden geográfico y las comunas bajo la suya."""
+    res = client.get("/api/carreras/ubicaciones")
+
+    assert res.status_code == 200
+    datos = res.json()
+    # Valparaíso va antes que Metropolitana (norte -> sur), no alfabético.
+    assert [r["region"] for r in datos] == ["Valparaíso", "Metropolitana"]
+    por_region = {r["region"]: r["comunas"] for r in datos}
+    assert por_region["Metropolitana"] == ["SANTIAGO"]
+    assert por_region["Valparaíso"] == ["VALPARAÍSO"]
