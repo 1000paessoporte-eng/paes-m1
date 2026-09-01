@@ -2699,8 +2699,8 @@
    "historia": 10.0,
    "ciencias": 10.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "Metropolitana",
+   "comuna": "PROVIDENCIA"
   },
   {
    "codigo": "52507",
@@ -2779,8 +2779,8 @@
    "historia": 10.0,
    "ciencias": 10.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "Metropolitana",
+   "comuna": "PROVIDENCIA"
   },
   {
    "codigo": "52176",
@@ -7519,8 +7519,8 @@
    "historia": 10.0,
    "ciencias": null,
    "m2": 30.0,
-   "region": null,
-   "comuna": null
+   "region": "Los Ríos",
+   "comuna": "VALDIVIA"
   },
   {
    "codigo": "17030",
@@ -7539,8 +7539,8 @@
    "historia": null,
    "ciencias": 10.0,
    "m2": 5.0,
-   "region": null,
-   "comuna": null
+   "region": "Los Ríos",
+   "comuna": "VALDIVIA"
   },
   {
    "codigo": "17036",
@@ -7559,8 +7559,8 @@
    "historia": null,
    "ciencias": 10.0,
    "m2": 5.0,
-   "region": null,
-   "comuna": null
+   "region": "Los Ríos",
+   "comuna": "VALDIVIA"
   },
   {
    "codigo": "17008",
@@ -7579,8 +7579,8 @@
    "historia": null,
    "ciencias": 10.0,
    "m2": 5.0,
-   "region": null,
-   "comuna": null
+   "region": "Los Ríos",
+   "comuna": "VALDIVIA"
   },
   {
    "codigo": "17004",
@@ -7599,8 +7599,8 @@
    "historia": null,
    "ciencias": 10.0,
    "m2": 5.0,
-   "region": null,
-   "comuna": null
+   "region": "Los Ríos",
+   "comuna": "VALDIVIA"
   },
   {
    "codigo": "17822",
@@ -7619,8 +7619,8 @@
    "historia": null,
    "ciencias": 10.0,
    "m2": 5.0,
-   "region": null,
-   "comuna": null
+   "region": "Los Ríos",
+   "comuna": "VALDIVIA"
   },
   {
    "codigo": "17079",
@@ -7639,8 +7639,8 @@
    "historia": null,
    "ciencias": 10.0,
    "m2": 5.0,
-   "region": null,
-   "comuna": null
+   "region": "Los Ríos",
+   "comuna": "VALDIVIA"
   },
   {
    "codigo": "17037",
@@ -7659,8 +7659,8 @@
    "historia": null,
    "ciencias": 10.0,
    "m2": 5.0,
-   "region": null,
-   "comuna": null
+   "region": "Los Ríos",
+   "comuna": "VALDIVIA"
   },
   {
    "codigo": "17040",
@@ -7679,8 +7679,8 @@
    "historia": null,
    "ciencias": 10.0,
    "m2": 5.0,
-   "region": null,
-   "comuna": null
+   "region": "Los Ríos",
+   "comuna": "VALDIVIA"
   },
   {
    "codigo": "17807",
@@ -14219,8 +14219,8 @@
    "historia": 10.0,
    "ciencias": null,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "Atacama",
+   "comuna": "COPIAPO"
   },
   {
    "codigo": "27023",
@@ -14239,8 +14239,8 @@
    "historia": 10.0,
    "ciencias": null,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "Atacama",
+   "comuna": "COPIAPO"
   },
   {
    "codigo": "27022",
@@ -19339,8 +19339,8 @@
    "historia": 10.0,
    "ciencias": 10.0,
    "m2": 5.0,
-   "region": null,
-   "comuna": null
+   "region": "Metropolitana",
+   "comuna": "SANTIAGO"
   },
   {
    "codigo": "56116",
@@ -21719,8 +21719,8 @@
    "historia": 15.0,
    "ciencias": null,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "47462",
@@ -21739,8 +21739,8 @@
    "historia": 10.0,
    "ciencias": 10.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "47431",
@@ -21759,8 +21759,8 @@
    "historia": 15.0,
    "ciencias": null,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "47301",
@@ -21779,8 +21779,8 @@
    "historia": null,
    "ciencias": 15.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "47101",
@@ -21799,8 +21799,8 @@
    "historia": null,
    "ciencias": 10.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "SAN FERNANDO"
   },
   {
    "codigo": "47131",
@@ -21819,8 +21819,8 @@
    "historia": null,
    "ciencias": 10.0,
    "m2": 5.0,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "SAN FERNANDO"
   },
   {
    "codigo": "47201",
@@ -21839,8 +21839,8 @@
    "historia": null,
    "ciencias": 10.0,
    "m2": 5.0,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "47461",
@@ -21859,8 +21859,8 @@
    "historia": 10.0,
    "ciencias": 10.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "47305",
@@ -21879,8 +21879,8 @@
    "historia": null,
    "ciencias": 15.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "47151",
@@ -21899,8 +21899,8 @@
    "historia": null,
    "ciencias": 20.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "SAN FERNANDO"
   },
   {
    "codigo": "47302",
@@ -21919,8 +21919,8 @@
    "historia": null,
    "ciencias": 10.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "47304",
@@ -21939,8 +21939,8 @@
    "historia": null,
    "ciencias": 15.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "47007",
@@ -21959,8 +21959,8 @@
    "historia": null,
    "ciencias": 15.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "47002",
@@ -21979,8 +21979,8 @@
    "historia": 10.0,
    "ciencias": 10.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "47006",
@@ -21999,8 +21999,8 @@
    "historia": 10.0,
    "ciencias": 10.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "47001",
@@ -22019,8 +22019,8 @@
    "historia": 10.0,
    "ciencias": 10.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "47003",
@@ -22039,8 +22039,8 @@
    "historia": 10.0,
    "ciencias": 10.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "47005",
@@ -22059,8 +22059,8 @@
    "historia": 10.0,
    "ciencias": 10.0,
    "m2": 5.0,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "47004",
@@ -22079,8 +22079,8 @@
    "historia": 10.0,
    "ciencias": 10.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "47491",
@@ -22099,8 +22099,8 @@
    "historia": 10.0,
    "ciencias": 10.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "47306",
@@ -22119,8 +22119,8 @@
    "historia": null,
    "ciencias": 15.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "47303",
@@ -22139,8 +22139,8 @@
    "historia": null,
    "ciencias": 15.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "O'Higgins",
+   "comuna": "RANCAGUA"
   },
   {
    "codigo": "26083",
@@ -26019,8 +26019,8 @@
    "historia": 10.0,
    "ciencias": null,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "Valparaíso",
+   "comuna": "VALPARAISO"
   },
   {
    "codigo": "19068",
@@ -26319,8 +26319,8 @@
    "historia": 10.0,
    "ciencias": 10.0,
    "m2": 5.0,
-   "region": null,
-   "comuna": null
+   "region": "Valparaíso",
+   "comuna": "VALPARAISO"
   },
   {
    "codigo": "19018",
@@ -26399,8 +26399,8 @@
    "historia": 10.0,
    "ciencias": 10.0,
    "m2": 5.0,
-   "region": null,
-   "comuna": null
+   "region": "Valparaíso",
+   "comuna": "VALPARAISO"
   },
   {
    "codigo": "19019",
@@ -26459,8 +26459,8 @@
    "historia": 10.0,
    "ciencias": null,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "Valparaíso",
+   "comuna": "VALPARAISO"
   },
   {
    "codigo": "19060",
@@ -26519,8 +26519,8 @@
    "historia": 10.0,
    "ciencias": 10.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "Valparaíso",
+   "comuna": "VALPARAISO"
   },
   {
    "codigo": "19100",
@@ -26539,8 +26539,8 @@
    "historia": 10.0,
    "ciencias": 10.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "Valparaíso",
+   "comuna": "VALPARAISO"
   },
   {
    "codigo": "19088",
@@ -26559,8 +26559,8 @@
    "historia": 10.0,
    "ciencias": null,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "Valparaíso",
+   "comuna": "VALPARAISO"
   },
   {
    "codigo": "19043",
@@ -26599,8 +26599,8 @@
    "historia": null,
    "ciencias": 20.0,
    "m2": null,
-   "region": null,
-   "comuna": null
+   "region": "Valparaíso",
+   "comuna": "VALPARAISO"
   },
   {
    "codigo": "19040",
@@ -36319,8 +36319,8 @@
    "historia": 10.0,
    "ciencias": 10.0,
    "m2": 5.0,
-   "region": null,
-   "comuna": null
+   "region": "Metropolitana",
+   "comuna": "ÑUÑOA"
   },
   {
    "codigo": "21049",

@@ -74,8 +74,16 @@ ALIAS_CRUDO = {
 
 
 def norm(s: str) -> str:
-    """Sin tildes, sin puntuación, en mayúsculas y con espacios colapsados."""
-    s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode()
+    """Sin tildes, sin puntuación, en mayúsculas y con espacios colapsados.
+
+    Los apóstrofes se pasan a espacio ANTES de quitar lo no-ASCII: si no, el
+    apóstrofe tipográfico `’` (U+2019, el que usa el PDF del DEMRE) lo borra el
+    encode ASCII y "O’Higgins" queda "OHIGGINS", mientras el apóstrofe recto `'`
+    del SIES lo vuelve espacio y da "O HIGGINS". Dos formas del mismo nombre que
+    no cruzaban. Igualadas acá, "O'Higgins" siempre es "O HIGGINS".
+    """
+    s = unicodedata.normalize("NFKD", s or "").replace("’", " ").replace("'", " ")
+    s = s.encode("ascii", "ignore").decode()
     s = re.sub(r"[^A-Z0-9 ]", " ", s.upper())
     return " ".join(s.split())
 
@@ -87,10 +95,45 @@ def limpia_carrera(s: str) -> str:
 
 ALIAS = {norm(k): norm(v) for k, v in ALIAS_CRUDO.items()}
 
+#: El SIES escribe el nombre largo de la región de O'Higgins. Se canoniza al
+#: nombre corto para que quede alineado con `ORDEN_REGIONES` del servicio y con
+#: cómo lo escribe todo el resto del país.
+NOMBRE_REGION_CANONICO = {"Lib. Gral. B. O'Higgins": "O'Higgins"}
+
+#: Rescate curado para carreras que el SIES no resuelve por el parseo roto del
+#: DEMRE (sede "10", nombre de carrera partido) o campus que el SIES nombra
+#: distinto. Cada fila es geografía verificable, no un dato inventado: cada
+#: campus está donde dice. Formato: (institución, palabra en la sede o None para
+#: cualquier sede) -> (región, comuna). Las palabras específicas van ANTES del
+#: None de la misma institución. Se aplican solo como último recurso, cuando el
+#: cruce con el SIES ya falló. Universidades cuya sede es genuinamente ambigua
+#: (UCN entre Antofagasta y Coquimbo, Autónoma entre tres regiones) se dejan
+#: fuera a propósito: mejor sin geo que con una comuna equivocada.
+OVERRIDES: list[tuple[str, str | None, str, str]] = [
+    ("UNIVERSIDAD DE O HIGGINS", "COLCHAGUA", "O'Higgins", "SAN FERNANDO"),
+    ("UNIVERSIDAD DE O HIGGINS", None, "O'Higgins", "RANCAGUA"),
+    ("UNIVERSIDAD AUSTRAL DE CHILE", "MIRAFLORES", "Los Ríos", "VALDIVIA"),
+    ("UNIVERSIDAD AUSTRAL DE CHILE", "ISLA", "Los Ríos", "VALDIVIA"),
+    ("UNIVERSIDAD AUSTRAL DE CHILE", "10", "Los Ríos", "VALDIVIA"),
+    ("UNIVERSIDAD DE VALPARAISO", None, "Valparaíso", "VALPARAISO"),
+    ("UNIVERSIDAD DE LAS AMERICAS", "SANTIAGO CENTRO", "Metropolitana", "SANTIAGO"),
+    ("UNIVERSIDAD TECNOLOGICA METROPOLITANA", "NUNOA", "Metropolitana", "ÑUÑOA"),
+    ("UNIVERSIDAD ACADEMIA DE HUMANISMO CRISTIANO", "CONDELL", "Metropolitana", "PROVIDENCIA"),
+    ("UNIVERSIDAD DE ATACAMA", None, "Atacama", "COPIAPO"),
+]
+
 
 def institucion(universidad: str) -> str:
     n = norm(universidad)
     return ALIAS.get(n, n)
+
+
+def _override(inst: str, sede_norm: str) -> tuple[str, str] | None:
+    """La geografía curada para una carrera que el SIES no resolvió, o None."""
+    for inst_ov, palabra, region, comuna in OVERRIDES:
+        if inst == inst_ov and (palabra is None or palabra in sede_norm):
+            return region, comuna
+    return None
 
 
 def construir_indices(csv_path: Path):
@@ -110,6 +153,7 @@ def construir_indices(csv_path: Path):
             com = (row["comuna_sede"] or "").strip()
             if not reg or not com:
                 continue
+            reg = NOMBRE_REGION_CANONICO.get(reg, reg)
             i = institucion(row["nomb_inst"])
             sd = norm(row["nomb_sede"])
             kk = limpia_carrera(row["nomb_carrera"])
@@ -141,29 +185,31 @@ def resolver(universidad, sede, carrera, idx):
         regiones = {r for (r, _) in geos}
         if len(regiones) == 1:
             return "carrera(region)", next(iter(regiones)), None
-        # Ni siquiera la región es única: que la sede del DEMRE, si es comuna
-        # conocida, resuelva las dos.
-        if sd in por_comuna:
-            r, c = por_comuna[sd].most_common(1)[0][0]
-            return "sede=comuna", r, c
-        return "sin_match", None, None
+        # Carrera ambigua entre regiones: no se rinde acá, cae a los fallbacks
+        # comunes de abajo (sede=comuna, override) como si no la hubiera hallado.
 
-    # La carrera no está en el SIES con ese nombre. Probar por sede.
+    # Fallbacks comunes: valen tanto si la carrera no está en el SIES como si
+    # está pero quedó ambigua. La sede del DEMRE suele ser una ciudad/comuna.
+    if sd in por_comuna:
+        r, c = por_comuna[sd].most_common(1)[0][0]
+        return "sede=comuna", r, c
+
     sede_hit = por_inst_sede.get((i, sd))
     if sede_hit and len({g for g in sede_hit}) == 1:
         r, c = next(iter(sede_hit))
         return "inst+sede", r, c
 
-    # La sede del DEMRE suele ser una ciudad/comuna: rescatarla por ahí.
-    if sd in por_comuna:
-        r, c = por_comuna[sd].most_common(1)[0][0]
-        return "sede=comuna", r, c
-
-    # Último recurso: la institución dicta en una sola comuna.
+    # La institución dicta en una sola comuna: esa es.
     inst_hit = por_inst.get(i)
     if inst_hit and len(inst_hit) == 1:
         r, c = next(iter(inst_hit))
         return "inst_unica", r, c
+
+    # Último recurso: geografía curada para los casos que el SIES no resuelve
+    # (parseo roto del DEMRE, campus con otro nombre). Ver `OVERRIDES`.
+    ov = _override(i, sd)
+    if ov is not None:
+        return "override", ov[0], ov[1]
 
     return "sin_match", None, None
 
