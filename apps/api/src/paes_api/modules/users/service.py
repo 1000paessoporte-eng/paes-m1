@@ -281,7 +281,8 @@ def eliminar_cuenta(db: Session, user: User, password: str | None) -> bool:
 
     import paes_api.all_models  # noqa: F401 -- registra los modelos que se borran
     from paes_api.modules.analytics.models import StudyStreak
-    from paes_api.modules.billing.models import Pago, Subscription
+    from paes_api.modules.billing import flow
+    from paes_api.modules.billing.models import ClienteFlow, Pago, Subscription
     from paes_api.modules.colegios.models import Colegio
     from paes_api.modules.errores.models import ErrorCliente
     from paes_api.modules.exam_focus.models import (
@@ -293,6 +294,25 @@ def eliminar_cuenta(db: Session, user: User, password: str | None) -> bool:
     from paes_api.modules.metrics.models import PageView
     from paes_api.modules.practice.models import PracticeAnswer
     from paes_api.modules.skill_tree.models import UserSkillProgress
+
+    # Si el usuario tiene una suscripción viva en Flow, hay que apagarla ALLÁ
+    # antes de borrar su rastro local: si no, Flow le seguiría cobrando a una
+    # cuenta que ya no existe. Best-effort: un fallo de Flow no puede impedir
+    # que alguien se dé de baja.
+    cliente_flow = db.execute(
+        select(ClienteFlow).where(ClienteFlow.user_id == user.id)
+    ).scalar_one_or_none()
+    if cliente_flow is not None and cliente_flow.flow_subscription_id:
+        try:
+            flow.cancelar_suscripcion(
+                subscription_id=cliente_flow.flow_subscription_id,
+                al_terminar_periodo=False,
+            )
+        except flow.FlowError:
+            logger.warning(
+                "no se pudo cancelar en Flow la suscripción %s al borrar la cuenta",
+                cliente_flow.flow_subscription_id,
+            )
 
     intentos = [
         a.id
@@ -314,6 +334,7 @@ def eliminar_cuenta(db: Session, user: User, password: str | None) -> bool:
         PasswordResetToken,
         Pago,
         Subscription,
+        ClienteFlow,
     ):
         db.execute(delete(tabla).where(tabla.user_id == user.id))
 

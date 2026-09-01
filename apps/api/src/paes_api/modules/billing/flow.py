@@ -127,3 +127,124 @@ def estado(token: str) -> dict[str, Any]:
     if "status" not in datos:
         raise FlowError(f"respuesta inesperada de Flow al consultar: {datos}")
     return datos
+
+
+# ---------------------------------------------------------------------------
+# Suscripciones recurrentes
+#
+# El cobro puntual de arriba (`payment/create`) sirve para comprar un plazo una
+# vez. Lo de acá es distinto: se registra la tarjeta del cliente en Flow y se lo
+# suscribe a un plan que Flow cobra solo, mes a mes, hasta que alguien lo cancele.
+# El flujo son cuatro pasos: crear el cliente, mandarlo a registrar su tarjeta,
+# confirmar que quedó registrada, y recién ahí crear la suscripción.
+# ---------------------------------------------------------------------------
+
+#: `status` que devuelve `customer/getRegisterStatus`: 1 = la tarjeta quedó
+#: registrada. Cualquier otro valor es que el cliente no terminó o falló.
+REGISTRO_OK = 1
+
+
+def crear_cliente(*, nombre: str, email: str, external_id: str) -> dict[str, Any]:
+    """Crea el cliente en Flow. Devuelve `{customerId, ...}`.
+
+    `external_id` es nuestro id de usuario: deja conciliar el cliente de Flow con
+    la cuenta sin depender del correo, que la persona puede cambiar.
+    """
+    datos = _llamar(
+        "customer/create",
+        {"name": nombre, "email": email, "externalId": external_id},
+    )
+    if "customerId" not in datos:
+        raise FlowError(f"respuesta inesperada de Flow al crear el cliente: {datos}")
+    return datos
+
+
+def registrar_tarjeta(*, customer_id: str, url_retorno: str) -> dict[str, Any]:
+    """Pide a Flow la URL donde el cliente registra su tarjeta.
+
+    Devuelve `{url, token}`. Al cliente se lo manda a `url`; cuando termina, Flow
+    lo devuelve a `url_retorno` y hay que confirmar con `estado_tarjeta`.
+    """
+    datos = _llamar(
+        "customer/register",
+        {"customerId": customer_id, "url_return": url_retorno},
+    )
+    if "url" not in datos or "token" not in datos:
+        raise FlowError(f"respuesta inesperada de Flow al registrar tarjeta: {datos}")
+    return datos
+
+
+def estado_tarjeta(token: str) -> dict[str, Any]:
+    """Consulta si el registro de tarjeta terminó bien. Fuente de verdad.
+
+    `status == REGISTRO_OK` significa que la tarjeta quedó guardada y el cliente
+    ya se puede suscribir.
+    """
+    datos = _llamar("customer/getRegisterStatus", {"token": token}, metodo="GET")
+    if "status" not in datos:
+        raise FlowError(f"respuesta inesperada de Flow al consultar la tarjeta: {datos}")
+    return datos
+
+
+def crear_suscripcion(
+    *, plan_id: str, customer_id: str, trial_period_days: int | None = None
+) -> dict[str, Any]:
+    """Suscribe al cliente al plan recurrente. Devuelve `{subscriptionId, ...}`.
+
+    Con `trial_period_days` Flow no cobra hasta que pasen esos días; el primer
+    cobro cae el día que se acaba el trial. Después cobra solo, según el plan.
+    """
+    params: dict[str, Any] = {"planId": plan_id, "customerId": customer_id}
+    if trial_period_days is not None:
+        params["trial_period_days"] = trial_period_days
+    datos = _llamar("subscription/create", params)
+    if "subscriptionId" not in datos:
+        raise FlowError(f"respuesta inesperada de Flow al crear la suscripción: {datos}")
+    return datos
+
+
+def estado_suscripcion(subscription_id: str) -> dict[str, Any]:
+    """El estado real de una suscripción en Flow, con sus cobros (invoices)."""
+    return _llamar("subscription/get", {"subscriptionId": subscription_id}, metodo="GET")
+
+
+def cancelar_suscripcion(*, subscription_id: str, al_terminar_periodo: bool = True) -> dict[str, Any]:
+    """Corta la renovación en Flow.
+
+    `al_terminar_periodo=True` deja que el período ya cobrado se use hasta el
+    final y no cobra más; en False corta de inmediato. Se usa el primero: quien
+    cancela pagó un mes y ese mes es suyo.
+    """
+    return _llamar(
+        "subscription/cancel",
+        {"subscriptionId": subscription_id, "at_period_end": 1 if al_terminar_periodo else 0},
+    )
+
+
+def crear_plan(
+    *,
+    plan_id: str,
+    nombre: str,
+    monto: int,
+    interval: int,
+    trial_period_days: int,
+    url_callback: str,
+) -> dict[str, Any]:
+    """Crea el plan recurrente en Flow. Lo usa `scripts/crear_plan_flow.py`.
+
+    `interval` es la periodicidad del cobro según Flow (mensual, anual, etc.).
+    `url_callback` es donde Flow avisará cada cobro de este plan.
+    """
+    return _llamar(
+        "plans/create",
+        {
+            "planId": plan_id,
+            "name": nombre,
+            "currency": "CLP",
+            "amount": int(monto),
+            "interval": interval,
+            "interval_count": 1,
+            "trial_period_days": trial_period_days,
+            "urlCallback": url_callback,
+        },
+    )

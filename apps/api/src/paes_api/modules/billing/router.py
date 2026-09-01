@@ -10,11 +10,13 @@ from paes_api.core.database import get_db
 from paes_api.modules.billing import flow, service
 from paes_api.modules.billing.schemas import (
     CanjearIn,
+    ConfirmarTarjetaIn,
     MiPlanOut,
     PagarIn,
     PagarOut,
     ProductoOut,
     ProductosOut,
+    TrialOut,
 )
 from paes_api.modules.users.deps import get_current_admin, get_current_user
 from paes_api.modules.users.models import User
@@ -117,6 +119,85 @@ def pagar(
         ) from None
 
     return PagarOut(url=url, orden=pago.orden)
+
+
+@router.post("/trial/iniciar", response_model=TrialOut)
+def iniciar_trial(
+    db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
+) -> TrialOut:
+    """Empieza el trial: devuelve la URL de Flow donde el usuario pone su tarjeta.
+
+    No otorga acceso todavía; el trial se activa cuando la tarjeta queda
+    registrada y se confirma en `/plan/flow/confirmar-tarjeta`.
+    """
+    front = get_settings().frontend_url.rstrip("/")
+    try:
+        url = service.iniciar_trial(db, user, url_retorno=f"{front}/plan/tarjeta")
+    except service.TrialNoDisponible as e:
+        raise HTTPException(status_code=409, detail=str(e)) from None
+    except flow.FlowNoConfigurado:
+        raise HTTPException(
+            status_code=503, detail="El plan con prueba todavía no está disponible."
+        ) from None
+    except flow.FlowError as e:
+        logger.error("Flow falló al iniciar el trial: %s", e)
+        raise HTTPException(
+            status_code=502,
+            detail="No se pudo empezar la prueba. Inténtalo de nuevo en unos minutos.",
+        ) from None
+    return TrialOut(url=url)
+
+
+@router.post("/flow/confirmar-tarjeta", response_model=MiPlanOut)
+def confirmar_tarjeta(
+    payload: ConfirmarTarjetaIn,
+    db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
+) -> MiPlanOut:
+    """El frontend lo llama al volver de Flow con el token del registro de tarjeta.
+
+    Si la tarjeta quedó registrada, crea la suscripción en Flow y otorga los días
+    de prueba. Es idempotente: llamarlo dos veces no crea dos suscripciones.
+    """
+    try:
+        service.confirmar_tarjeta(db, payload.token)
+    except service.ClienteFlowNoEncontrado:
+        raise HTTPException(status_code=404, detail="No encontramos tu registro.") from None
+    except service.TarjetaNoRegistrada:
+        raise HTTPException(
+            status_code=402,
+            detail="La tarjeta no quedó registrada. Vuelve a intentarlo.",
+        ) from None
+    except flow.FlowError as e:
+        logger.error("Flow falló al confirmar la tarjeta: %s", e)
+        raise HTTPException(
+            status_code=502,
+            detail="No se pudo confirmar tu tarjeta. Inténtalo de nuevo.",
+        ) from None
+    return _armar(db, user.id)
+
+
+@router.post("/flow/cobro", status_code=status.HTTP_200_OK)
+def cobro_recurrente(
+    subscriptionId: str = Form(...),
+    db: Session = Depends(get_db),
+) -> Response:
+    """Webhook de Flow por cada cobro mensual de una suscripción.
+
+    Igual que el webhook del pago puntual: Flow avisa, y el estado real se
+    consulta de servidor a servidor antes de extender nada. Idempotente por el
+    id del cobro. Responde 200 salvo caída, para que Flow no reintente algo ya
+    procesado.
+    """
+    try:
+        service.procesar_cobro_recurrente(db, subscriptionId)
+    except service.ClienteFlowNoEncontrado:
+        logger.warning("Flow notificó un cobro de una suscripción desconocida")
+    except flow.FlowError as e:
+        logger.error("No se pudo procesar el cobro recurrente: %s", e)
+        raise HTTPException(status_code=500, detail="reintentar") from None
+    return Response(status_code=status.HTTP_200_OK)
 
 
 @router.post("/flow/confirmar", status_code=status.HTTP_200_OK)

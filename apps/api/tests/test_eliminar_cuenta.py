@@ -92,6 +92,7 @@ def test_ninguna_tabla_apunta_a_users_sin_estar_en_el_borrado() -> None:
     # Las que `eliminar_cuenta` borra o desvincula hoy. Si agregas una tabla,
     # agrégala también allá y acá.
     cubiertas = {
+        "clientes_flow",  # se cancela en Flow y se borra
         "colegios",  # no se borra: el curso pierde a su creador y sigue vivo
         "errores_cliente",  # no se borra: se le quita el dueño
         "exam_attempts",

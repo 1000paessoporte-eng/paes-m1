@@ -8,6 +8,7 @@ exista la pasarela se cambia una constante y el sistema entero empieza a
 respetarlos.
 """
 
+import logging
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 from uuid import uuid4
@@ -18,6 +19,8 @@ from sqlalchemy.orm import Session
 from paes_api.core.config import get_settings
 from paes_api.modules.billing import flow
 from paes_api.modules.billing.models import (
+    ClienteFlow,
+    EstadoFlow,
     Origen,
     Pago,
     PagoStatus,
@@ -28,6 +31,8 @@ from paes_api.modules.billing.models import (
 )
 from paes_api.modules.exam_focus.models import ExamAttempt
 from paes_api.modules.users.models import User
+
+logger = logging.getLogger(__name__)
 
 
 def limites_activos() -> bool:
@@ -447,5 +452,210 @@ def cancelar_suscripcion(db: Session, user_id: int) -> bool:
         return False
 
     suscripcion.status = SubscriptionStatus.CANCELED
+
+    # Si el plan lo cobra Flow mes a mes, hay que apagar la renovación ALLÁ o
+    # seguirá cobrando pese a estar cancelado acá. Se cancela al terminar el
+    # período: el mes ya pagado se respeta. Un fallo de Flow no debe impedir la
+    # cancelación local —el usuario quiso irse—, así que se registra y sigue.
+    cliente = _cliente_flow(db, user_id)
+    if cliente is not None and cliente.flow_subscription_id:
+        try:
+            flow.cancelar_suscripcion(
+                subscription_id=cliente.flow_subscription_id, al_terminar_periodo=True
+            )
+        except flow.FlowError:
+            logger.warning(
+                "no se pudo cancelar en Flow la suscripción %s; se canceló localmente",
+                cliente.flow_subscription_id,
+            )
+        cliente.status = EstadoFlow.CANCELADA
+
     db.commit()
     return True
+
+
+# ---------------------------------------------------------------------------
+# Trial con tarjeta y suscripción recurrente
+#
+# El modelo: al empezar, el usuario registra su tarjeta en Flow y queda suscrito
+# a un plan mensual con `trial_dias` de prueba. Durante el trial no se le cobra,
+# pero ya tiene Pro. Cuando el trial se acaba, Flow cobra solo el primer mes y
+# sigue cobrando cada mes hasta que cancele. Cada cobro exitoso extiende su
+# `Subscription` local; el acceso lo decide `Subscription`, no Flow.
+# ---------------------------------------------------------------------------
+
+
+class TrialNoDisponible(Exception):
+    """El usuario ya usó su prueba o ya tiene un plan activo."""
+
+
+class TarjetaNoRegistrada(Exception):
+    """El cliente volvió de Flow pero la tarjeta no quedó registrada."""
+
+
+class ClienteFlowNoEncontrado(Exception):
+    """No hay cliente de Flow para ese token o esa suscripción."""
+
+
+def _cliente_flow(db: Session, user_id: int) -> ClienteFlow | None:
+    return db.execute(
+        select(ClienteFlow).where(ClienteFlow.user_id == user_id)
+    ).scalar_one_or_none()
+
+
+def iniciar_trial(db: Session, user: User, *, url_retorno: str) -> str:
+    """Prepara el trial y devuelve la URL donde el usuario registra su tarjeta.
+
+    No otorga nada todavía: hasta que la tarjeta no quede registrada en Flow no
+    hay ni suscripción ni acceso. Reusa el cliente de Flow si ya existía, así
+    reintentar el registro no crea un cliente nuevo cada vez.
+
+    Se niega si la persona ya tuvo su prueba o ya tiene un plan vigente: el trial
+    es una sola vez, y regalar días a quien ya paga no tiene sentido.
+    """
+    if not flow.esta_configurado() or not get_settings().flow_plan_id:
+        raise flow.FlowNoConfigurado
+
+    plan, _ = plan_actual(db, user.id)
+    if plan is not Plan.GRATIS:
+        raise TrialNoDisponible("Ya tienes un plan activo.")
+
+    cliente = _cliente_flow(db, user.id)
+    if cliente is not None and cliente.status in (EstadoFlow.TRIAL, EstadoFlow.ACTIVA):
+        raise TrialNoDisponible("Ya tienes una suscripción en curso.")
+    if cliente is not None and cliente.status == EstadoFlow.CANCELADA:
+        # Ya pasó por el trial alguna vez: no se regala de nuevo.
+        raise TrialNoDisponible("Ya usaste tu prueba gratis.")
+
+    if cliente is None:
+        cliente = ClienteFlow(user_id=user.id, status=EstadoFlow.REGISTRANDO)
+        db.add(cliente)
+
+    if not cliente.flow_customer_id:
+        datos = flow.crear_cliente(
+            nombre=user.name or user.email,
+            email=user.email,
+            external_id=str(user.id),
+        )
+        cliente.flow_customer_id = datos["customerId"]
+
+    registro = flow.registrar_tarjeta(
+        customer_id=cliente.flow_customer_id, url_retorno=url_retorno
+    )
+    cliente.registro_token = registro["token"]
+    cliente.status = EstadoFlow.REGISTRANDO
+    db.commit()
+    return registro["url"]
+
+
+def confirmar_tarjeta(db: Session, token: str) -> ClienteFlow:
+    """Confirma la tarjeta, crea la suscripción en Flow y otorga el trial.
+
+    Es idempotente: si la suscripción ya se creó (Flow puede devolver al usuario
+    y notificar por su cuenta), no se crea de nuevo ni se regala otro trial.
+    """
+    cliente = db.execute(
+        select(ClienteFlow).where(ClienteFlow.registro_token == token)
+    ).scalar_one_or_none()
+    if cliente is None:
+        raise ClienteFlowNoEncontrado(token)
+
+    # Ya suscrito: nada que hacer. Evita doble trial si esto se llama dos veces.
+    if cliente.flow_subscription_id:
+        return cliente
+
+    datos = flow.estado_tarjeta(token)
+    if int(datos.get("status", 0)) != flow.REGISTRO_OK:
+        cliente.status = EstadoFlow.FALLIDA
+        db.commit()
+        raise TarjetaNoRegistrada(token)
+
+    trial_dias = get_settings().trial_dias
+    sub_flow = flow.crear_suscripcion(
+        plan_id=get_settings().flow_plan_id,
+        customer_id=cliente.flow_customer_id,
+        trial_period_days=trial_dias,
+    )
+    cliente.flow_subscription_id = sub_flow["subscriptionId"]
+    cliente.status = EstadoFlow.TRIAL
+
+    # Acceso durante el trial: Pro por los días de prueba. Origen MANUAL porque
+    # todavía no se cobró nada; el primer cobro real llega cuando Flow lo haga y
+    # entra por `procesar_cobro_recurrente`.
+    ahora = datetime.now(UTC)
+    db.add(
+        Subscription(
+            user_id=cliente.user_id,
+            plan=Plan.PRO,
+            status=SubscriptionStatus.ACTIVE,
+            origen=Origen.MANUAL,
+            started_at=ahora,
+            expires_at=ahora + timedelta(days=trial_dias),
+        )
+    )
+    db.commit()
+    db.refresh(cliente)
+    return cliente
+
+
+def procesar_cobro_recurrente(db: Session, subscription_id: str) -> None:
+    """Webhook de Flow cuando cobra un mes de la suscripción.
+
+    Consulta el estado real en Flow (el aviso solo trae el id; el detalle se
+    pide de servidor a servidor, como en el pago puntual) y, por cada cobro
+    PAGADO que no se haya registrado antes, extiende un mes la `Subscription` y
+    lo anota como `Pago`. La idempotencia es por el id del cobro: Flow puede
+    reintentar el aviso, y sin esto cada reintento regalaría otro mes.
+
+    NOTA: los nombres exactos de los campos de invoice (`invoices`, `id`,
+    `status`, `amount`) se confirman contra el sandbox de Flow en la Fase 4; la
+    forma de abajo es la documentada y se ajusta ahí si difiere.
+    """
+    cliente = db.execute(
+        select(ClienteFlow).where(ClienteFlow.flow_subscription_id == subscription_id)
+    ).scalar_one_or_none()
+    if cliente is None:
+        raise ClienteFlowNoEncontrado(subscription_id)
+
+    datos = flow.estado_suscripcion(subscription_id)
+    invoices = datos.get("invoices") or []
+    for inv in invoices:
+        if int(inv.get("status", 0)) != flow.PAGADA:
+            continue
+        inv_id = str(inv.get("id") or inv.get("invoiceId") or "")
+        if not inv_id:
+            continue
+        orden = f"sub-{subscription_id}-{inv_id}"
+        ya = db.execute(select(Pago).where(Pago.orden == orden)).scalar_one_or_none()
+        if ya is not None:
+            continue  # este cobro ya se procesó
+
+        ahora = datetime.now(UTC)
+        monto = int(float(inv.get("amount", 0)))
+        db.add(
+            Pago(
+                user_id=cliente.user_id,
+                orden=orden,
+                plan=Plan.PRO,
+                dias=30,
+                monto=monto,
+                status=PagoStatus.PAGADO,
+                confirmado_at=ahora,
+                flow_order=inv_id,
+            )
+        )
+        _, actual = plan_actual(db, cliente.user_id)
+        desde = actual.expires_at if actual and actual.expires_at else ahora
+        db.add(
+            Subscription(
+                user_id=cliente.user_id,
+                plan=Plan.PRO,
+                status=SubscriptionStatus.ACTIVE,
+                origen=Origen.PAGO,
+                started_at=ahora,
+                expires_at=desde + timedelta(days=30),
+            )
+        )
+        cliente.status = EstadoFlow.ACTIVA
+
+    db.commit()

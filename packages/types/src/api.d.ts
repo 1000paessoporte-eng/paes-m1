@@ -857,6 +857,77 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/plan/trial/iniciar": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Iniciar Trial
+         * @description Empieza el trial: devuelve la URL de Flow donde el usuario pone su tarjeta.
+         *
+         *     No otorga acceso todavía; el trial se activa cuando la tarjeta queda
+         *     registrada y se confirma en `/plan/flow/confirmar-tarjeta`.
+         */
+        post: operations["iniciar_trial_api_plan_trial_iniciar_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/plan/flow/confirmar-tarjeta": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Confirmar Tarjeta
+         * @description El frontend lo llama al volver de Flow con el token del registro de tarjeta.
+         *
+         *     Si la tarjeta quedó registrada, crea la suscripción en Flow y otorga los días
+         *     de prueba. Es idempotente: llamarlo dos veces no crea dos suscripciones.
+         */
+        post: operations["confirmar_tarjeta_api_plan_flow_confirmar_tarjeta_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/plan/flow/cobro": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Cobro Recurrente
+         * @description Webhook de Flow por cada cobro mensual de una suscripción.
+         *
+         *     Igual que el webhook del pago puntual: Flow avisa, y el estado real se
+         *     consulta de servidor a servidor antes de extender nada. Idempotente por el
+         *     id del cobro. Responde 200 salvo caída, para que Flow no reintente algo ya
+         *     procesado.
+         */
+        post: operations["cobro_recurrente_api_plan_flow_cobro_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/plan/flow/confirmar": {
         parameters: {
             query?: never;
@@ -1642,6 +1713,11 @@ export interface components {
             /** Nodos Flacos */
             nodos_flacos: string[];
         };
+        /** Body_cobro_recurrente_api_plan_flow_cobro_post */
+        Body_cobro_recurrente_api_plan_flow_cobro_post: {
+            /** Subscriptionid */
+            subscriptionId: string;
+        };
         /** Body_confirmar_api_plan_flow_confirmar_post */
         Body_confirmar_api_plan_flow_confirmar_post: {
             /** Token */
@@ -1889,6 +1965,14 @@ export interface components {
             es_profesor: boolean;
             /** Alumnos */
             alumnos: number;
+        };
+        /**
+         * ConfirmarTarjetaIn
+         * @description El token que Flow deja en la URL de retorno tras registrar la tarjeta.
+         */
+        ConfirmarTarjetaIn: {
+            /** Token */
+            token: string;
         };
         /** ContenidoOut */
         ContenidoOut: {
@@ -3314,6 +3398,14 @@ export interface components {
              */
             token_type: string;
             user: components["schemas"]["UserOut"];
+        };
+        /**
+         * TrialOut
+         * @description La URL de Flow donde el usuario registra su tarjeta para empezar el trial.
+         */
+        TrialOut: {
+            /** Url */
+            url: string;
         };
         /** UnirseIn */
         UnirseIn: {
@@ -4864,6 +4956,92 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["PagarOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    iniciar_trial_api_plan_trial_iniciar_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["TrialOut"];
+                };
+            };
+        };
+    };
+    confirmar_tarjeta_api_plan_flow_confirmar_tarjeta_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ConfirmarTarjetaIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MiPlanOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    cobro_recurrente_api_plan_flow_cobro_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/x-www-form-urlencoded": components["schemas"]["Body_cobro_recurrente_api_plan_flow_cobro_post"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown;
                 };
             };
             /** @description Validation Error */

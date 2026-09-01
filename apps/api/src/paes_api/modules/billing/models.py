@@ -167,3 +167,57 @@ class PromoCode(Base):
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )
+
+
+class EstadoFlow(StrEnum):
+    """En qué punto del cobro recurrente está el usuario.
+
+    No se borra ni se reescribe la historia: un trial que no registró tarjeta
+    (FALLIDA) y uno que canceló (CANCELADA) son cosas distintas que el negocio
+    necesita poder contar por separado.
+    """
+
+    REGISTRANDO = "registrando"  # se le pidió la tarjeta y aún no vuelve
+    TRIAL = "trial"  # tarjeta ok, en los días de prueba, sin cobrar todavía
+    ACTIVA = "activa"  # Flow ya cobra el mensual
+    CANCELADA = "cancelada"  # canceló; el período ya cobrado se respeta
+    FALLIDA = "fallida"  # no registró la tarjeta o el cobro falló
+
+
+class ClienteFlow(Base):
+    """El vínculo de un usuario con Flow para el cobro recurrente.
+
+    Uno por usuario: el cliente de Flow se crea una vez y se reusa si la persona
+    reintenta registrar la tarjeta. Guarda los identificadores que Flow devuelve
+    —el del cliente y el de la suscripción— porque sin ellos no se puede ni
+    cobrar ni cancelar después.
+
+    Es una tabla aparte de `Subscription` a propósito: `Subscription` es "qué
+    plan tengo vigente y hasta cuándo" (y la puede otorgar un código o el
+    colegio, sin Flow de por medio); esto es "cómo me cobra Flow". Mezclarlas
+    ataría el acceso a la pasarela.
+    """
+
+    __tablename__ = "clientes_flow"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    user_id: Mapped[int] = mapped_column(
+        ForeignKey("users.id"), unique=True, index=True
+    )
+    #: Id del cliente en Flow (`customerId`). NULL hasta crearlo.
+    flow_customer_id: Mapped[str | None] = mapped_column(String(80), nullable=True)
+    #: Id de la suscripción en Flow (`subscriptionId`). NULL hasta suscribir.
+    flow_subscription_id: Mapped[str | None] = mapped_column(
+        String(80), nullable=True, index=True
+    )
+    #: Token del registro de tarjeta en curso, para confirmarlo al volver.
+    registro_token: Mapped[str | None] = mapped_column(String(120), nullable=True)
+    status: Mapped[EstadoFlow] = mapped_column(
+        Enum(EstadoFlow), default=EstadoFlow.REGISTRANDO
+    )
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), onupdate=func.now()
+    )
