@@ -187,3 +187,31 @@ def test_cobro_recurrente_extiende_un_mes_y_es_idempotente(
         select(ClienteFlow).where(ClienteFlow.user_id == user.id)
     ).scalar_one()
     assert cliente.status == EstadoFlow.ACTIVA
+
+
+def test_mi_plan_dice_que_estas_en_prueba(register_user, client, db_session) -> None:
+    """El panel necesita distinguir la prueba del Pro pagado para avisar cuándo
+    se cobra y que cancelar ahora no cuesta."""
+    headers, _ = register_user(email="trial6@milpaes.cl")
+    user = _usuario(db_session, "trial6@milpaes.cl")
+    db_session.add(
+        ClienteFlow(
+            user_id=user.id,
+            flow_customer_id="cus_6",
+            flow_subscription_id="sub_6",
+            status=EstadoFlow.TRIAL,
+        )
+    )
+    db_session.add(
+        Subscription(
+            user_id=user.id,
+            plan=Plan.PRO,
+            status=SubscriptionStatus.ACTIVE,
+            expires_at=datetime.now(UTC) + timedelta(days=3),
+        )
+    )
+    db_session.commit()
+
+    datos = client.get("/api/plan", headers=headers).json()
+    assert datos["plan"] == "pro"
+    assert datos["en_prueba"] is True

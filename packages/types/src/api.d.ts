@@ -2776,6 +2776,11 @@ export interface components {
             carreras_limite: number;
             /** Limites Activos */
             limites_activos: boolean;
+            /**
+             * En Prueba
+             * @default false
+             */
+            en_prueba: boolean;
         };
         /** NodeDiagnosisOut */
         NodeDiagnosisOut: {

@@ -503,6 +503,17 @@ def _cliente_flow(db: Session, user_id: int) -> ClienteFlow | None:
     ).scalar_one_or_none()
 
 
+def esta_en_prueba(db: Session, user_id: int) -> bool:
+    """Si el acceso actual es la prueba gratis y todavía no se le cobró nada.
+
+    El trial pasa a ACTIVA en cuanto Flow hace el primer cobro (ver
+    `procesar_cobro_recurrente`), así que TRIAL significa exactamente "tiene Pro
+    pero aún no pagó".
+    """
+    cliente = _cliente_flow(db, user_id)
+    return cliente is not None and cliente.status == EstadoFlow.TRIAL
+
+
 def iniciar_trial(db: Session, user: User, *, url_retorno: str) -> str:
     """Prepara el trial y devuelve la URL donde el usuario registra su tarjeta.
 

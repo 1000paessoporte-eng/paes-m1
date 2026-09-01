@@ -17,6 +17,10 @@ class MiPlanOut(BaseModel):
     #: False mientras los límites se informen pero no bloqueen, porque todavía
     #: no se puede contratar el plan Pro.
     limites_activos: bool
+    #: True si el acceso actual es la prueba gratis (aún no se ha cobrado nada).
+    #: La pantalla lo usa para decir "estás en tu prueba, se cobra el DD/MM" en
+    #: vez de "Plan Pro", y para mostrar que cancelar ahora no cuesta.
+    en_prueba: bool = False
 
 
 class CanjearIn(BaseModel):

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { BotonComprar } from "@/components/plan/boton-comprar";
+import { BotonTrial } from "@/components/plan/boton-trial";
 
 /**
  * Lo que ve un alumno del plan Gratis cuando agota sus ensayos del mes.
@@ -84,12 +84,18 @@ export function LimiteAlcanzado({
             ))}
           </ul>
           <p className="mt-3 text-xs text-muted">
-            Sin permanencia: cancelas cuando quieras. O el año completo por
-            $89.900, que son nueve meses y no doce.
+            Empieza con 3 días gratis. Sin permanencia: cancelas cuando quieras,
+            y si cancelas durante la prueba no se te cobra.
           </p>
           <div className="mt-4">
-            <BotonComprar producto="pro_mensual" etiqueta="Contratar Pro por un mes" />
+            <BotonTrial etiqueta="Empezar 3 días gratis" />
           </div>
+          <p className="mt-3 text-center text-xs text-muted">
+            ¿Ya usaste tu prueba?{" "}
+            <Link href="/planes" className="text-accent hover:underline">
+              Paga directo
+            </Link>
+          </p>
         </div>
 
         <div className="mt-6 flex flex-col gap-3 text-center">

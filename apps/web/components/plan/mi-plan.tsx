@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import type { MiPlan, Productos } from "@/lib/api";
-import { ApiError, canjearCodigo, iniciarPago } from "@/lib/api";
+import { ApiError, cancelarSuscripcion, canjearCodigo, iniciarPago } from "@/lib/api";
 import { getClientToken } from "@/lib/auth";
 import { BarraProgreso } from "@/components/ui/barra-progreso";
 import { BotonTrial } from "@/components/plan/boton-trial";
@@ -36,6 +36,26 @@ export function MiPlanPanel({
   const [canjeando, setCanjeando] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [exito, setExito] = useState(false);
+  const [cancelando, setCancelando] = useState(false);
+  const [confirmarCancelar, setConfirmarCancelar] = useState(false);
+  const [errorCancelar, setErrorCancelar] = useState<string | null>(null);
+
+  async function cancelar() {
+    setCancelando(true);
+    setErrorCancelar(null);
+    try {
+      setPlan(await cancelarSuscripcion(getClientToken() ?? undefined));
+      setConfirmarCancelar(false);
+    } catch (err) {
+      setErrorCancelar(
+        err instanceof ApiError && err.detail
+          ? err.detail
+          : "No se pudo cancelar. Inténtalo de nuevo."
+      );
+    } finally {
+      setCancelando(false);
+    }
+  }
 
   const limite = plan.ensayos_limite;
   const usados = plan.ensayos_usados;
@@ -95,7 +115,7 @@ export function MiPlanPanel({
     <section className="card-panel p-6" aria-labelledby="h-plan">
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <h2 id="h-plan" className="font-semibold tracking-tight">
-          {NOMBRE[plan.plan] ?? plan.plan}
+          {plan.en_prueba ? "Prueba gratis" : NOMBRE[plan.plan] ?? plan.plan}
         </h2>
         {plan.plan === "gratis" ? (
           <Link href="/planes" className="text-xs font-medium text-accent hover:underline">
@@ -104,7 +124,7 @@ export function MiPlanPanel({
         ) : (
           plan.vence_el && (
             <span className="text-xs text-muted">
-              Hasta el{" "}
+              {plan.en_prueba ? "Se cobra el " : "Hasta el "}
               {new Date(plan.vence_el).toLocaleDateString("es-CL", {
                 day: "numeric",
                 month: "long",
@@ -188,6 +208,49 @@ export function MiPlanPanel({
               : "El pago se procesa en Flow. No guardamos los datos de tu tarjeta."}
           </p>
           {errorPago && <p className="mt-2 text-sm text-danger">{errorPago}</p>}
+        </div>
+      )}
+
+      {plan.plan === "pro" && (
+        <div className="mt-5 border-t border-border pt-4">
+          {!confirmarCancelar ? (
+            <button
+              type="button"
+              onClick={() => setConfirmarCancelar(true)}
+              className="text-xs text-muted underline-offset-4 hover:text-foreground hover:underline"
+            >
+              Cancelar suscripción
+            </button>
+          ) : (
+            <div>
+              <p className="text-sm leading-relaxed text-muted">
+                {plan.en_prueba
+                  ? "Si cancelas ahora no se te cobra nada y conservas el acceso hasta que termine la prueba."
+                  : "Dejamos de renovar. Conservas el acceso hasta el final del período que ya pagaste."}
+              </p>
+              <div className="mt-3 flex gap-2">
+                <button
+                  type="button"
+                  onClick={cancelar}
+                  disabled={cancelando}
+                  className="rounded-lg border border-danger/50 px-3 py-1.5 text-xs font-medium text-danger transition-colors hover:bg-danger/5 disabled:opacity-50"
+                >
+                  {cancelando ? "Cancelando…" : "Sí, cancelar"}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setConfirmarCancelar(false)}
+                  disabled={cancelando}
+                  className="rounded-lg border border-border px-3 py-1.5 text-xs font-medium transition-colors hover:bg-surface-hover disabled:opacity-50"
+                >
+                  Mejor no
+                </button>
+              </div>
+              {errorCancelar && (
+                <p className="mt-2 text-xs text-danger">{errorCancelar}</p>
+              )}
+            </div>
+          )}
         </div>
       )}
 
