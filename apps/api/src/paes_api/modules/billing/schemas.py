@@ -56,9 +56,3 @@ class TrialOut(BaseModel):
     """La URL de Flow donde el usuario registra su tarjeta para empezar el trial."""
 
     url: str
-
-
-class ConfirmarTarjetaIn(BaseModel):
-    """El token que Flow deja en la URL de retorno tras registrar la tarjeta."""
-
-    token: str = Field(min_length=1, max_length=120)

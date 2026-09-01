@@ -891,10 +891,11 @@ export interface paths {
         put?: never;
         /**
          * Confirmar Tarjeta
-         * @description El frontend lo llama al volver de Flow con el token del registro de tarjeta.
+         * @description El frontend lo llama al volver de Flow, cuando el usuario registró su tarjeta.
          *
-         *     Si la tarjeta quedó registrada, crea la suscripción en Flow y otorga los días
-         *     de prueba. Es idempotente: llamarlo dos veces no crea dos suscripciones.
+         *     Se guía por el usuario autenticado: busca su registro en curso y le pregunta
+         *     a Flow si la tarjeta quedó. Si sí, crea la suscripción y otorga los días de
+         *     prueba. Es idempotente: llamarlo dos veces no crea dos suscripciones.
          */
         post: operations["confirmar_tarjeta_api_plan_flow_confirmar_tarjeta_post"];
         delete?: never;
@@ -1965,14 +1966,6 @@ export interface components {
             es_profesor: boolean;
             /** Alumnos */
             alumnos: number;
-        };
-        /**
-         * ConfirmarTarjetaIn
-         * @description El token que Flow deja en la URL de retorno tras registrar la tarjeta.
-         */
-        ConfirmarTarjetaIn: {
-            /** Token */
-            token: string;
         };
         /** ContenidoOut */
         ContenidoOut: {
@@ -4996,11 +4989,7 @@ export interface operations {
             path?: never;
             cookie?: never;
         };
-        requestBody: {
-            content: {
-                "application/json": components["schemas"]["ConfirmarTarjetaIn"];
-            };
-        };
+        requestBody?: never;
         responses: {
             /** @description Successful Response */
             200: {
@@ -5009,15 +4998,6 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["MiPlanOut"];
-                };
-            };
-            /** @description Validation Error */
-            422: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };

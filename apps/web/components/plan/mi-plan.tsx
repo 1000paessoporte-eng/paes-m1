@@ -6,6 +6,7 @@ import type { MiPlan, Productos } from "@/lib/api";
 import { ApiError, canjearCodigo, iniciarPago } from "@/lib/api";
 import { getClientToken } from "@/lib/auth";
 import { BarraProgreso } from "@/components/ui/barra-progreso";
+import { BotonTrial } from "@/components/plan/boton-trial";
 
 /**
  * El plan del estudiante y lo que le queda de él.
@@ -150,9 +151,16 @@ export function MiPlanPanel({
         </p>
       )}
 
+      {productos?.pago_disponible && plan.plan === "gratis" && (
+        <div className="mt-5 border-t border-border pt-4">
+          <p className="text-xs font-medium text-muted">Empieza con Pro</p>
+          <BotonTrial etiqueta="Comenzar 3 días gratis" />
+        </div>
+      )}
+
       {comprables.length > 0 && (
         <div className="mt-5 border-t border-border pt-4">
-          <p className="text-xs font-medium text-muted">Pasar a Pro</p>
+          <p className="text-xs font-medium text-muted">O paga directo, sin prueba</p>
           <div className="mt-3 flex flex-col gap-2">
             {comprables.map((p) => (
               <button

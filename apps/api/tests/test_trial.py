@@ -110,7 +110,7 @@ def test_confirmar_tarjeta_ok_suscribe_y_da_los_dias(register_user, db_session) 
             return_value={"subscriptionId": "sub_3"},
         ),
     ):
-        service.confirmar_tarjeta(db_session, "regtok_3")
+        service.confirmar_tarjeta(db_session, user.id)
 
     cliente = db_session.execute(
         select(ClienteFlow).where(ClienteFlow.user_id == user.id)
@@ -139,7 +139,7 @@ def test_confirmar_tarjeta_no_registrada_no_da_acceso(register_user, db_session)
         patch("paes_api.modules.billing.flow.estado_tarjeta", return_value={"status": 0}),
         pytest.raises(service.TarjetaNoRegistrada),
     ):
-        service.confirmar_tarjeta(db_session, "regtok_4")
+        service.confirmar_tarjeta(db_session, user.id)
 
     cliente = db_session.execute(
         select(ClienteFlow).where(ClienteFlow.user_id == user.id)

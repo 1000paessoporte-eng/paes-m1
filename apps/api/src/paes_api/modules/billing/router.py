@@ -10,7 +10,6 @@ from paes_api.core.database import get_db
 from paes_api.modules.billing import flow, service
 from paes_api.modules.billing.schemas import (
     CanjearIn,
-    ConfirmarTarjetaIn,
     MiPlanOut,
     PagarIn,
     PagarOut,
@@ -151,17 +150,17 @@ def iniciar_trial(
 
 @router.post("/flow/confirmar-tarjeta", response_model=MiPlanOut)
 def confirmar_tarjeta(
-    payload: ConfirmarTarjetaIn,
     db: Session = Depends(get_db),
     user: User = Depends(get_current_user),
 ) -> MiPlanOut:
-    """El frontend lo llama al volver de Flow con el token del registro de tarjeta.
+    """El frontend lo llama al volver de Flow, cuando el usuario registró su tarjeta.
 
-    Si la tarjeta quedó registrada, crea la suscripción en Flow y otorga los días
-    de prueba. Es idempotente: llamarlo dos veces no crea dos suscripciones.
+    Se guía por el usuario autenticado: busca su registro en curso y le pregunta
+    a Flow si la tarjeta quedó. Si sí, crea la suscripción y otorga los días de
+    prueba. Es idempotente: llamarlo dos veces no crea dos suscripciones.
     """
     try:
-        service.confirmar_tarjeta(db, payload.token)
+        service.confirmar_tarjeta(db, user.id)
     except service.ClienteFlowNoEncontrado:
         raise HTTPException(status_code=404, detail="No encontramos tu registro.") from None
     except service.TarjetaNoRegistrada:

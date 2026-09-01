@@ -548,27 +548,29 @@ def iniciar_trial(db: Session, user: User, *, url_retorno: str) -> str:
     return registro["url"]
 
 
-def confirmar_tarjeta(db: Session, token: str) -> ClienteFlow:
-    """Confirma la tarjeta, crea la suscripción en Flow y otorga el trial.
+def confirmar_tarjeta(db: Session, user_id: int) -> ClienteFlow:
+    """Confirma la tarjeta del usuario, crea la suscripción y otorga el trial.
 
-    Es idempotente: si la suscripción ya se creó (Flow puede devolver al usuario
-    y notificar por su cuenta), no se crea de nuevo ni se regala otro trial.
+    Se guía por el usuario autenticado y su registro en curso, no por un token
+    que venga en la URL: Flow devuelve al usuario a nuestra página y esa vuelta
+    la controla el navegador. El `registro_token` que se guardó al iniciar es el
+    que se usa para preguntarle a Flow, de servidor a servidor, si la tarjeta
+    quedó registrada. Es idempotente: si ya hay suscripción, no crea otra ni
+    regala un segundo trial.
     """
-    cliente = db.execute(
-        select(ClienteFlow).where(ClienteFlow.registro_token == token)
-    ).scalar_one_or_none()
-    if cliente is None:
-        raise ClienteFlowNoEncontrado(token)
+    cliente = _cliente_flow(db, user_id)
+    if cliente is None or not cliente.registro_token:
+        raise ClienteFlowNoEncontrado(str(user_id))
 
     # Ya suscrito: nada que hacer. Evita doble trial si esto se llama dos veces.
     if cliente.flow_subscription_id:
         return cliente
 
-    datos = flow.estado_tarjeta(token)
+    datos = flow.estado_tarjeta(cliente.registro_token)
     if int(datos.get("status", 0)) != flow.REGISTRO_OK:
         cliente.status = EstadoFlow.FALLIDA
         db.commit()
-        raise TarjetaNoRegistrada(token)
+        raise TarjetaNoRegistrada(str(user_id))
 
     trial_dias = get_settings().trial_dias
     sub_flow = flow.crear_suscripcion(

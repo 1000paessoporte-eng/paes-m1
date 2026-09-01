@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BotonComprar } from "@/components/plan/boton-comprar";
+import { BotonTrial } from "@/components/plan/boton-trial";
 import { EMAIL_CONTACTO } from "@/lib/redes-sociales";
 /*
  * PRECIO DE LANZAMIENTO, NO "ANTES/AHORA"
@@ -346,7 +347,18 @@ export function Planes({
               </ul>
 
               {pagoDisponible && plan.nombre === "Pro" ? (
-                <EscalaPro />
+                <div>
+                  {/* La oferta primaria es la prueba: entrar cuesta cero y el
+                      cobro llega después. El pago directo queda como salida para
+                      quien ya se decidió y no quiere registrar una prueba. */}
+                  <BotonTrial />
+                  <div className="mt-5 border-t border-border pt-4">
+                    <p className="text-center text-xs text-muted">
+                      ¿Prefieres pagar directo, sin prueba?
+                    </p>
+                    <EscalaPro />
+                  </div>
+                </div>
               ) : plan.nombre === "Colegios" && !plan.disponible ? (
                 /* Un colegio compra con orden de compra y factura, no con
                    tarjeta, así que acá no va un botón de pago: va la forma de

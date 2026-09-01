@@ -255,6 +255,24 @@ export function canjearCodigo(codigo: string, token?: string): Promise<MiPlan> {
   });
 }
 
+/**
+ * Empieza el trial: devuelve la URL de Flow donde el usuario registra su tarjeta.
+ * No otorga acceso todavía; eso pasa al volver, en `confirmarTarjeta`.
+ */
+export function iniciarTrial(token?: string): Promise<{ url: string }> {
+  return apiFetch("/api/plan/trial/iniciar", token, { method: "POST" });
+}
+
+/**
+ * Al volver de Flow: confirma la tarjeta, crea la suscripción y activa el trial.
+ * Idempotente, así que recargar la página de retorno no hace daño.
+ */
+export function confirmarTarjeta(token?: string): Promise<MiPlan> {
+  return apiFetch<MiPlan>("/api/plan/flow/confirmar-tarjeta", token, {
+    method: "POST",
+  });
+}
+
 export type Onboarding =
   paths["/api/auth/onboarding"]["get"]["responses"][200]["content"]["application/json"];
 
