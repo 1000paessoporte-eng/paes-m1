@@ -144,6 +144,10 @@ export function ExamConfigScreen({
 
   const options = optionsBySubject[subject];
   const repaso = repasoBySubject[subject];
+  // La web y la API se despliegan por separado, así que puede haber un rato con
+  // la web nueva hablando con la API vieja, que todavía no manda los temas. En
+  // ese caso el bloque no aparece, en vez de reventar.
+  const temasDebiles = repaso.nodes ?? [];
 
   const maxDisponible = useMemo(() => {
     if (ejes.length === 0) return options.total_available;
@@ -357,33 +361,57 @@ export function ExamConfigScreen({
         </div>
       </section>
 
-      {repaso.has_data && (
-        <div className="mb-8 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-accent/40 bg-accent/5 p-4">
-          <div>
-            <p className="text-sm font-medium">Ensayo de repaso</p>
-            <p className="mt-0.5 text-sm text-muted">
-              Enfocado en donde peor rindes:{" "}
-              <strong className="text-foreground">
-                {repaso.axis_labels.join(" y ")}
-              </strong>
-              .
-            </p>
+      {/* EL ENSAYO DE REFUERZO.
+          Antes decía el EJE donde rendías peor y armaba el ensayo con ese eje
+          entero. Un eje es un cajón grande --"Números" son cinco temas-- así
+          que el ensayo venía lleno de temas que ya dominabas. Ahora nombra los
+          temas concretos y el ensayo se arma solo con ellos. */}
+      {repaso.has_data && temasDebiles.length > 0 && (
+        <div className="mb-8 rounded-xl border border-accent/40 bg-accent/5 p-4">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div className="min-w-0">
+              <p className="text-sm font-medium">Reforzar mis temas débiles</p>
+              <p className="mt-0.5 text-sm text-muted">
+                {temasDebiles.length === 1
+                  ? "El tema donde vas peor, con 20 preguntas."
+                  : `Los ${temasDebiles.length} temas donde vas peor, con 20 preguntas repartidas entre ellos.`}
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() =>
+                onComenzar({
+                  subject,
+                  question_count: 20,
+                  pace: "oficial",
+                  axes: [],
+                  // Los temas, no el eje: en eso consiste el refuerzo.
+                  skill_nodes: temasDebiles.map((n) => n.code),
+                  oficial: false,
+                })
+              }
+              className="btn-glow shrink-0 rounded-lg px-4 py-2 text-sm font-medium text-accent-foreground"
+            >
+              Empezar ahora
+            </button>
           </div>
-          <button
-            type="button"
-            onClick={() =>
-              onComenzar({
-                subject,
-                question_count: 20,
-                pace: "oficial",
-                axes: repaso.axes,
-                oficial: false,
-              })
-            }
-            className="btn-glow shrink-0 rounded-lg px-4 py-2 text-sm font-medium text-accent-foreground"
-          >
-            Empezar ahora
-          </button>
+
+          {/* Decir CUÁLES son, y con qué porcentaje. Sin esto hay que confiar
+              en que el sistema eligió bien; con esto el alumno reconoce sus
+              temas y entiende por qué salieron. */}
+          <ul className="mt-3 flex flex-wrap gap-2 border-t border-accent/20 pt-3">
+            {temasDebiles.map((n) => (
+              <li
+                key={n.code}
+                className="flex items-baseline gap-1.5 rounded-full bg-surface px-3 py-1 text-xs"
+              >
+                <span className="font-medium">{n.name}</span>
+                <span className="tabular-nums text-muted">
+                  {Math.round(n.accuracy * 100)}%
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
 

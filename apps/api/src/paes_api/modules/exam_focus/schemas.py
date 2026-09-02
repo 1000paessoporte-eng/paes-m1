@@ -89,6 +89,12 @@ class ExamConfigIn(BaseModel):
     pace: Pace = Pace.OFICIAL
     #: Ejes seleccionados. Lista vacía significa "todos", repartidos proporcionalmente.
     axes: list[str] = Field(default_factory=list)
+    #: Nodos concretos del temario, por código. Es lo que arma el ensayo de
+    #: refuerzo: un eje es un cajón grande --"Números" son cinco temas-- así que
+    #: filtrar por eje trae también los temas que el estudiante ya domina. Con
+    #: esto el ensayo se arma SOLO con los temas pedidos, repartidos en partes
+    #: iguales entre ellos. Cuando viene con contenido, manda sobre `axes`.
+    skill_nodes: list[str] = Field(default_factory=list)
     #: Formato oficial: la prueba completa, todos los ejes y la duración exacta
     #: del DEMRE. Cuando viene en True, el servidor ignora `question_count`,
     #: `pace` y `axes`: el formato no es configurable, en eso consiste.
@@ -105,15 +111,30 @@ class ExamConfigOut(BaseModel):
     oficial: bool = False
 
 
+class RepasoNodoOut(BaseModel):
+    """Un tema flojo, con lo necesario para que la pantalla lo nombre."""
+
+    code: str
+    name: str
+    axis_label: str
+    accuracy: float
+    attempts: int
+
+
 class RepasoOut(BaseModel):
-    """Sugerencia para el boton "Ensayo de repaso": los ejes de los nodos
-    donde el estudiante rinde peor, reusando el mismo progreso del Arbol de
-    Habilidades. has_data en False significa que todavia no hay suficientes
-    respuestas para sugerir nada (usuario nuevo)."""
+    """Sugerencia para el boton "Reforzar mis temas debiles": los temas donde el
+    estudiante rinde peor, reusando el mismo progreso del Arbol de Habilidades.
+    has_data en False significa que todavia no hay suficientes respuestas para
+    sugerir nada (usuario nuevo)."""
 
     has_data: bool
+    #: Los ejes de esos temas. Se mantienen porque el ensayo los sigue
+    #: guardando para poder mostrar despues de que iba el intento.
     axes: list[str]
     axis_labels: list[str]
+    #: Los temas concretos, que es con lo que se arma el ensayo. Antes solo
+    #: viajaban los ejes y el ensayo salia con temas que el alumno ya dominaba.
+    nodes: list[RepasoNodoOut] = Field(default_factory=list)
 
 
 class ExamStartOut(BaseModel):

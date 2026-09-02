@@ -2386,6 +2386,8 @@ export interface components {
             pace: components["schemas"]["Pace"];
             /** Axes */
             axes?: string[];
+            /** Skill Nodes */
+            skill_nodes?: string[];
             /**
              * Oficial
              * @default false
@@ -3066,11 +3068,27 @@ export interface components {
             name: string;
         };
         /**
+         * RepasoNodoOut
+         * @description Un tema flojo, con lo necesario para que la pantalla lo nombre.
+         */
+        RepasoNodoOut: {
+            /** Code */
+            code: string;
+            /** Name */
+            name: string;
+            /** Axis Label */
+            axis_label: string;
+            /** Accuracy */
+            accuracy: number;
+            /** Attempts */
+            attempts: number;
+        };
+        /**
          * RepasoOut
-         * @description Sugerencia para el boton "Ensayo de repaso": los ejes de los nodos
-         *     donde el estudiante rinde peor, reusando el mismo progreso del Arbol de
-         *     Habilidades. has_data en False significa que todavia no hay suficientes
-         *     respuestas para sugerir nada (usuario nuevo).
+         * @description Sugerencia para el boton "Reforzar mis temas debiles": los temas donde el
+         *     estudiante rinde peor, reusando el mismo progreso del Arbol de Habilidades.
+         *     has_data en False significa que todavia no hay suficientes respuestas para
+         *     sugerir nada (usuario nuevo).
          */
         RepasoOut: {
             /** Has Data */
@@ -3079,6 +3097,8 @@ export interface components {
             axes: string[];
             /** Axis Labels */
             axis_labels: string[];
+            /** Nodes */
+            nodes?: components["schemas"]["RepasoNodoOut"][];
         };
         /** ResetPasswordIn */
         ResetPasswordIn: {
