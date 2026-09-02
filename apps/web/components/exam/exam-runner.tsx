@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { cn } from "@paes-m1/utils";
 import { FiguraPregunta } from "@/components/exam/figura-pregunta";
 import { PassagePanel } from "@/components/exam/passage-panel";
+import { Pizarra } from "@/components/texto/pizarra";
 import { Burbuja } from "@/components/ui/burbuja";
 import { IconoEstrella } from "@/components/ui/iconos";
 import { TextoRico } from "@/components/texto-rico";
@@ -81,6 +82,10 @@ interface ExamRunnerProps {
   //: Llega desde el servidor para no hacer otra llamada al montar.
   cuota?: { usados: number; limite: number | null; activa: boolean } | null;
 }
+
+/** Las pruebas donde hay algo que desarrollar a mano. Lectora e Historia se
+ *  responden leyendo, no calculando. */
+const CON_DESARROLLO = new Set<Subject>(["m1", "m2", "ciencias"]);
 
 export function ExamRunner({
   optionsBySubject,
@@ -1142,6 +1147,14 @@ export function ExamRunner({
                         );
                       })}
                     </div>
+
+                    {/* La hoja para desarrollar, como la que dan en la prueba.
+                        Solo donde se calcula: en Lectora e Historia no hay nada
+                        que desarrollar y sería un botón de adorno bajo cada
+                        pregunta. */}
+                    {CON_DESARROLLO.has(attemptSubject) && (
+                      <Pizarra key={q.id} id={`pregunta-${q.id}`} />
+                    )}
                   </article>
                 );
               })}
