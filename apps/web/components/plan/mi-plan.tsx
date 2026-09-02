@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { useState } from "react";
 import type { MiPlan, Productos } from "@/lib/api";
-import { ApiError, canjearCodigo, iniciarPago } from "@/lib/api";
+import { ApiError, cancelarPlan, canjearCodigo, iniciarPago } from "@/lib/api";
 import { getClientToken } from "@/lib/auth";
 import { BarraProgreso } from "@/components/ui/barra-progreso";
+import { BotonTrial } from "@/components/plan/boton-trial";
 
 /**
  * El plan del estudiante y lo que le queda de él.
@@ -32,6 +33,8 @@ export function MiPlanPanel({
   const [pagando, setPagando] = useState<string | null>(null);
   const [errorPago, setErrorPago] = useState<string | null>(null);
   const [codigo, setCodigo] = useState("");
+  const [cancelando, setCancelando] = useState(false);
+  const [errorCancelar, setErrorCancelar] = useState<string | null>(null);
   const [canjeando, setCanjeando] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [exito, setExito] = useState(false);
@@ -61,6 +64,29 @@ export function MiPlanPanel({
       );
     } finally {
       setCanjeando(false);
+    }
+  }
+
+  function enTexto(iso: string): string {
+    return new Date(iso).toLocaleDateString("es-CL", {
+      day: "numeric",
+      month: "long",
+    });
+  }
+
+  async function cancelar() {
+    setCancelando(true);
+    setErrorCancelar(null);
+    try {
+      setPlan(await cancelarPlan(getClientToken() ?? undefined));
+    } catch (err) {
+      setErrorCancelar(
+        err instanceof ApiError && err.detail
+          ? err.detail
+          : "No se pudo cancelar. Inténtalo de nuevo."
+      );
+    } finally {
+      setCancelando(false);
     }
   }
 
@@ -103,11 +129,14 @@ export function MiPlanPanel({
         ) : (
           plan.vence_el && (
             <span className="text-xs text-muted">
-              Hasta el{" "}
-              {new Date(plan.vence_el).toLocaleDateString("es-CL", {
-                day: "numeric",
-                month: "long",
-              })}
+              {/* "Tu plan vence el 5" y "se te cobra el 5" son cosas
+                  distintas, y quien está en la prueba necesita leer la
+                  segunda. Confundirlas es cobrar por sorpresa. */}
+              {plan.en_trial
+                ? `Primer cobro el ${enTexto(plan.vence_el)}`
+                : plan.cancelada_al_terminar
+                  ? `Acceso hasta el ${enTexto(plan.vence_el)}`
+                  : `Se renueva el ${enTexto(plan.vence_el)}`}
             </span>
           )
         )}
@@ -150,9 +179,86 @@ export function MiPlanPanel({
         </p>
       )}
 
+      {/* La prueba gratis, para quien todavía puede tomarla. Va ANTES de los
+          precios sueltos: es la puerta de entrada barata y competir consigo
+          misma en la misma tarjeta solo obliga a decidir dos cosas a la vez. */}
+      {plan.plan === "gratis" && plan.trial_disponible && (
+        <div className="mt-5 border-t border-border pt-4">
+          <p className="text-sm font-semibold tracking-tight">
+            Prueba el plan Pro {plan.trial_dias} días gratis
+          </p>
+          <p className="mt-1 text-xs leading-relaxed text-muted">
+            Ensayos sin límite desde hoy y hasta 10 carreras en Mi meta.
+          </p>
+          <BotonTrial dias={plan.trial_dias} monto={plan.trial_monto} compacto />
+        </div>
+      )}
+
+      {/* Estado de la prueba en curso. Lo primero que dice es cuándo se cobra:
+          quien entró con tarjeta necesita ver esa fecha sin buscarla, y
+          esconderla es lo que convierte un trial en un cobro por sorpresa. */}
+      {plan.en_trial && plan.vence_el && (
+        <div className="mt-5 rounded-xl border border-accent/40 bg-accent/5 p-4">
+          <p className="text-sm font-medium">
+            Estás en tu prueba gratis de {plan.trial_dias} días
+          </p>
+          <p className="mt-1 text-xs leading-relaxed text-muted">
+            {plan.cancelada_al_terminar ? (
+              <>
+                Ya la cancelaste: <strong className="font-medium text-foreground">
+                no se te va a cobrar nada</strong>. Sigues con Pro hasta el{" "}
+                {enTexto(plan.vence_el)}.
+              </>
+            ) : (
+              <>
+                El {enTexto(plan.vence_el)} se cobran $
+                {plan.trial_monto.toLocaleString("es-CL")}
+                {plan.tarjeta ? ` a tu ${plan.tarjeta}` : ""}. Si cancelas antes
+                de esa fecha, no se te cobra.
+              </>
+            )}
+          </p>
+        </div>
+      )}
+
+      {/* Cancelar. Estaba solo como "escríbenos a hola@": pedir un correo para
+          dejar de pagar, cuando pagar son dos clics, es fricción puesta a
+          propósito. */}
+      {plan.plan !== "gratis" && !plan.cancelada_al_terminar && plan.vence_el && (
+        <div className="mt-4">
+          <button
+            type="button"
+            onClick={cancelar}
+            disabled={cancelando}
+            className="text-xs font-medium text-muted underline underline-offset-2 transition-colors hover:text-foreground disabled:opacity-50"
+          >
+            {cancelando
+              ? "Cancelando…"
+              : plan.en_trial
+                ? "Cancelar antes del cobro"
+                : "Cancelar la renovación"}
+          </button>
+          <p className="mt-1 text-xs text-muted">
+            Conservas el acceso hasta el {enTexto(plan.vence_el)}.
+          </p>
+          {errorCancelar && (
+            <p className="mt-2 text-sm text-danger">{errorCancelar}</p>
+          )}
+        </div>
+      )}
+
+      {plan.plan !== "gratis" && plan.cancelada_al_terminar && !plan.en_trial && plan.vence_el && (
+        <p className="mt-4 text-xs leading-relaxed text-muted">
+          Tu plan no se va a renovar. Sigues con Pro hasta el{" "}
+          {enTexto(plan.vence_el)}, y después vuelves al plan Gratis.
+        </p>
+      )}
+
       {comprables.length > 0 && (
         <div className="mt-5 border-t border-border pt-4">
-          <p className="text-xs font-medium text-muted">Pasar a Pro</p>
+          <p className="text-xs font-medium text-muted">
+            {plan.trial_disponible ? "O contrata directamente" : "Pasar a Pro"}
+          </p>
           <div className="mt-3 flex flex-col gap-2">
             {comprables.map((p) => (
               <button

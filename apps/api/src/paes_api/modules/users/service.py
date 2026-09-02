@@ -281,7 +281,8 @@ def eliminar_cuenta(db: Session, user: User, password: str | None) -> bool:
 
     import paes_api.all_models  # noqa: F401 -- registra los modelos que se borran
     from paes_api.modules.analytics.models import StudyStreak
-    from paes_api.modules.billing.models import Pago, Subscription
+    from paes_api.modules.billing import service as billing
+    from paes_api.modules.billing.models import FlowCustomer, Pago, Subscription
     from paes_api.modules.colegios.models import Colegio
     from paes_api.modules.errores.models import ErrorCliente
     from paes_api.modules.exam_focus.models import (
@@ -293,6 +294,15 @@ def eliminar_cuenta(db: Session, user: User, password: str | None) -> bool:
     from paes_api.modules.metrics.models import PageView
     from paes_api.modules.practice.models import PracticeAnswer
     from paes_api.modules.skill_tree.models import UserSkillProgress
+
+    # ANTES de borrar nada: apagar el cobro recurrente en Flow.
+    #
+    # Una suscripción viva en la pasarela sobrevive al borrado de la cuenta y
+    # sigue cobrándole todos los meses a una tarjeta cuyo dueño ya no tiene
+    # dónde entrar a reclamar. Va primero a propósito: si falla, la cuenta NO
+    # se borra y queda algo que se puede arreglar, en vez de un cobro fantasma
+    # que nadie va a notar hasta que llegue el reclamo.
+    billing.cancelar_suscripciones_de_flow(db, user.id)
 
     intentos = [
         a.id
@@ -314,6 +324,7 @@ def eliminar_cuenta(db: Session, user: User, password: str | None) -> bool:
         PasswordResetToken,
         Pago,
         Subscription,
+        FlowCustomer,
     ):
         db.execute(delete(tabla).where(tabla.user_id == user.id))
 

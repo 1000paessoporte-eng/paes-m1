@@ -1,7 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { BotonComprar } from "@/components/plan/boton-comprar";
+import { BotonTrial } from "@/components/plan/boton-trial";
+import { getMiPlan, type MiPlan } from "@/lib/api";
+import { getClientToken } from "@/lib/auth";
 
 /**
  * Lo que ve un alumno del plan Gratis cuando agota sus ensayos del mes.
@@ -21,6 +25,18 @@ import { BotonComprar } from "@/components/plan/boton-comprar";
  * Gratis está completo— y recién después se ofrece pagar. Un muro que solo
  * dice "paga" convierte peor que uno que reconoce lo que la persona ya estaba
  * haciendo.
+ *
+ * Si a esta persona todavía le corresponde la prueba gratis, es ACÁ donde más
+ * sentido tiene ofrecérsela: ya demostró que quiere seguir y el muro es el
+ * único punto del producto donde eso es un hecho y no una suposición. Pedirle
+ * $9.990 en ese momento, cuando existe una forma de seguir hoy sin pagar, es
+ * cobrar por la puerta en vez de por el producto.
+ *
+ * El plan se consulta acá dentro y no llega por prop: este muro aparece en un
+ * estado poco frecuente, y hacer que todo el flujo del ensayo cargue el plan
+ * para un caso que casi nunca ocurre sería pagar en cada ensayo por algo que
+ * se usa una vez al mes. Mientras la consulta no vuelve se muestra el camino
+ * de pago de siempre, que es correcto para cualquiera.
  */
 
 /** Lo que Pro entrega de verdad. Los mismos dos puntos que la página de
@@ -43,6 +59,24 @@ export function LimiteAlcanzado({
   motivo: string;
   onVolver: () => void;
 }) {
+  const [plan, setPlan] = useState<MiPlan | null>(null);
+
+  useEffect(() => {
+    let vigente = true;
+    // Si la consulta falla, el muro se dibuja igual con el camino de pago: un
+    // tope alcanzado no puede convertirse en una pantalla rota.
+    getMiPlan(getClientToken() ?? undefined)
+      .then((p) => {
+        if (vigente) setPlan(p);
+      })
+      .catch(() => {});
+    return () => {
+      vigente = false;
+    };
+  }, []);
+
+  const ofrecerTrial = Boolean(plan?.trial_disponible);
+
   return (
     <div className="mx-auto max-w-lg py-12">
       <div className="card-panel p-8">
@@ -70,7 +104,20 @@ export function LimiteAlcanzado({
           <div className="flex items-baseline justify-between gap-3">
             <h2 className="font-semibold">Seguir hoy con Pro</h2>
             <span className="text-lg font-bold tracking-tight">
-              $9.990<span className="text-xs font-medium text-muted"> al mes</span>
+              {ofrecerTrial ? (
+                <>
+                  Gratis
+                  <span className="text-xs font-medium text-muted">
+                    {" "}
+                    {plan!.trial_dias} días
+                  </span>
+                </>
+              ) : (
+                <>
+                  $9.990
+                  <span className="text-xs font-medium text-muted"> al mes</span>
+                </>
+              )}
             </span>
           </div>
           <ul className="mt-3 flex flex-col gap-1.5 text-sm text-muted">
@@ -83,13 +130,33 @@ export function LimiteAlcanzado({
               </li>
             ))}
           </ul>
-          <p className="mt-3 text-xs text-muted">
-            Sin permanencia: cancelas cuando quieras. O el año completo por
-            $89.900, que son nueve meses y no doce.
-          </p>
-          <div className="mt-4">
-            <BotonComprar producto="pro_mensual" etiqueta="Contratar Pro por un mes" />
-          </div>
+          {ofrecerTrial ? (
+            <>
+              {/* Las condiciones del cobro viajan dentro de BotonTrial: la
+                  fecha del primer cobro, el monto y que se pide tarjeta. No se
+                  repiten acá para no decirlas dos veces y distinto. */}
+              <BotonTrial dias={plan!.trial_dias} monto={plan!.trial_monto} />
+              <p className="mt-3 text-center text-xs text-muted">
+                ¿Prefieres pagar de una vez?{" "}
+                <Link href="/planes" className="text-accent hover:underline">
+                  Ver los planes
+                </Link>
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="mt-3 text-xs text-muted">
+                Sin permanencia: cancelas cuando quieras. O el año completo por
+                $89.900, que son nueve meses y no doce.
+              </p>
+              <div className="mt-4">
+                <BotonComprar
+                  producto="pro_mensual"
+                  etiqueta="Contratar Pro por un mes"
+                />
+              </div>
+            </>
+          )}
         </div>
 
         <div className="mt-6 flex flex-col gap-3 text-center">

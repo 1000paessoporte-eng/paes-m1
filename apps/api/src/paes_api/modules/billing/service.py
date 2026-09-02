@@ -8,6 +8,7 @@ exista la pasarela se cambia una constante y el sistema entero empieza a
 respetarlos.
 """
 
+import logging
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 from uuid import uuid4
@@ -18,6 +19,7 @@ from sqlalchemy.orm import Session
 from paes_api.core.config import get_settings
 from paes_api.modules.billing import flow
 from paes_api.modules.billing.models import (
+    FlowCustomer,
     Origen,
     Pago,
     PagoStatus,
@@ -28,6 +30,8 @@ from paes_api.modules.billing.models import (
 )
 from paes_api.modules.exam_focus.models import ExamAttempt
 from paes_api.modules.users.models import User
+
+logger = logging.getLogger(__name__)
 
 
 def limites_activos() -> bool:
@@ -180,6 +184,31 @@ def plan_actual(db: Session, user_id: int) -> tuple[Plan, Subscription | None]:
     vigente: Subscription | None = None
     cambios = False
     for sub in subs:
+        if not _vigente(sub, ahora) and sub.flow_subscription_id:
+            # Se venció según lo que sabíamos, pero es recurrente: Flow pudo
+            # haber cobrado el mes siguiente hace un minuto. Se le pregunta
+            # ANTES de darla por terminada, porque acá no está la verdad.
+            #
+            # Esta consulta ocurre como mucho una vez por período y por
+            # persona —solo en la ventana en que la fecha local ya pasó—, así
+            # que no es un llamado a Flow en cada lectura de plan.
+            try:
+                sincronizar_con_flow(db, sub)
+            except flow.FlowError as e:
+                # Flow no contesta. NO se le corta el acceso a alguien que
+                # probablemente está al día: se lo deja pasar y se reintenta
+                # en la próxima lectura. El riesgo de regalar unas horas es
+                # mucho menor que el de dejar afuera a quien pagó, y esto se
+                # corrige solo apenas Flow vuelva a responder.
+                logger.warning(
+                    "no se pudo verificar la suscripción %s con Flow: %s",
+                    sub.flow_subscription_id,
+                    e,
+                )
+                if vigente is None:
+                    vigente = sub
+                continue
+
         if _vigente(sub, ahora):
             if vigente is None:
                 vigente = sub
@@ -426,15 +455,19 @@ def confirmar_pago(db: Session, token: str) -> Pago:
 
 
 def cancelar_suscripcion(db: Session, user_id: int) -> bool:
-    """Cancela la renovación, sin quitar lo ya pagado. False si no había nada.
+    """Apaga la renovación sin quitar lo ya pagado. False si no había nada.
 
-    Cancelar NO es cortar el acceso: el alumno pagó un período y ese período se
-    respeta entero. Lo que se apaga es la renovación. Cortarle el acceso el día
-    que cancela sería cobrarle por días que después no puede usar.
+    Cancelar NO es cortar el acceso: el período cobrado se respeta entero.
+    Cortarlo el día que alguien cancela es cobrarle días que después no puede
+    usar, y es exactamente lo que hacía esta función hasta ahora: ponía
+    `status = CANCELED`, y como `plan_actual` solo mira las ACTIVE, el plan
+    volvía a Gratis en el acto. La pantalla prometía una cosa y el código hacía
+    la contraria. Ahora se marca `cancelada_al_terminar` y la suscripción sigue
+    ACTIVE hasta su fecha, momento en que vence sola como cualquier otra.
 
-    Existía solo como "escríbenos a hola@": pedir un correo para dejar de pagar,
-    cuando pagar son dos clics, es una fricción puesta a propósito y no algo que
-    este producto quiera hacer.
+    Si la suscripción es recurrente, se cancela TAMBIÉN en Flow y eso ocurre
+    primero: dejarla apagada solo de este lado significaría seguir cobrándole
+    todos los meses a alguien que en su pantalla ve "cancelada".
     """
     suscripcion = db.execute(
         select(Subscription)
@@ -446,6 +479,339 @@ def cancelar_suscripcion(db: Session, user_id: int) -> bool:
     if suscripcion is None:
         return False
 
-    suscripcion.status = SubscriptionStatus.CANCELED
+    if suscripcion.flow_subscription_id:
+        # Sin `at_period_end` Flow cortaría de inmediato. Lo que se apaga es la
+        # renovación, no el mes en curso.
+        flow.suscripcion_cancelar(suscripcion.flow_subscription_id, al_terminar=True)
+
+    suscripcion.cancelada_al_terminar = True
     db.commit()
     return True
+
+
+def cancelar_suscripciones_de_flow(db: Session, user_id: int) -> None:
+    """Corta el cobro recurrente de una cuenta que se va a borrar.
+
+    Va aparte de `cancelar_suscripcion` porque acá no importa respetar el
+    período: la cuenta desaparece. Lo que no puede pasar bajo ninguna
+    circunstancia es que quede una suscripción viva en Flow cobrándole todos
+    los meses a una tarjeta cuyo dueño ya se fue y no tiene dónde entrar a
+    reclamar.
+
+    Los errores de Flow se propagan a propósito: borrar la cuenta y fallar en
+    silencio al cancelar el cobro es el peor de los dos desenlaces posibles.
+    """
+    for sub in db.execute(
+        select(Subscription)
+        .where(Subscription.user_id == user_id)
+        .where(Subscription.flow_subscription_id.is_not(None))
+    ).scalars():
+        flow.suscripcion_cancelar(sub.flow_subscription_id or "", al_terminar=False)
+
+
+# ---------------------------------------------------------------------------
+# Prueba gratis y cobro recurrente
+# ---------------------------------------------------------------------------
+#
+# Cómo se sostiene la frase "3 días gratis, después $9.990 al mes, cancelas
+# cuando quieras". Cada una de las tres partes es una pieza de código, porque
+# una promesa de cobro que el sistema no cumple es publicidad engañosa y no un
+# detalle de redacción:
+#
+#   "3 días gratis"      -> `trial_period_days` viaja a Flow en cada
+#                           suscripción, con el mismo número que muestra la
+#                           pantalla (`settings.trial_dias`).
+#   "después $9.990"     -> el plan recurrente de Flow cobra solo. El monto es
+#                           el del producto `pro_mensual`, no una constante
+#                           aparte que pueda quedar desincronizada.
+#   "cancelas cuando     -> `cancelar_suscripcion` apaga la renovación en Flow
+#    quieras"              Y acá, y el acceso corre hasta el final del período
+#                           que ya se cobró.
+#
+# La regla que ordena todo lo que sigue: **la fecha de término la manda Flow**.
+# Este servicio no calcula cuándo vence una suscripción recurrente; se la
+# pregunta a `subscription/get` y copia `period_end`. Quien cobra es quien sabe
+# hasta cuándo está pagado, y cualquier aritmética local se desvía el primer
+# día que Flow reintente un cobro o mueva la fecha de facturación.
+
+
+#: El producto del que sale el precio del cobro recurrente. Es el mismo que se
+#: vende suelto: si mañana el mensual sube, sube en un solo lugar.
+PRODUCTO_RECURRENTE = "pro_mensual"
+
+
+class TrialNoDisponible(Exception):
+    """Falta configuración de Flow para el cobro recurrente."""
+
+
+class TrialYaUsado(Exception):
+    """Esta cuenta ya ocupó su prueba gratis."""
+
+
+class YaTienePlan(Exception):
+    """Ya tiene un plan vigente: no hay nada que probar."""
+
+
+class TarjetaNoInscrita(Exception):
+    """Flow no confirmó la inscripción de la tarjeta."""
+
+
+class RegistroNoEncontrado(Exception):
+    """El token de inscripción no corresponde a ningún cliente registrado."""
+
+
+def trial_disponible() -> bool:
+    """Si la prueba gratis se puede ofrecer.
+
+    Exige credenciales de Flow *y* un plan recurrente creado en ese ambiente.
+    Sin el plan, `subscription/create` falla y la persona vería el error
+    después de haber entregado su tarjeta, que es la peor forma posible de
+    descubrir que algo estaba mal configurado.
+    """
+    return flow.esta_configurado() and bool(get_settings().flow_plan_pro_id)
+
+
+def trial_dias() -> int:
+    return get_settings().trial_dias
+
+
+def ya_uso_trial(db: Session, user_id: int) -> bool:
+    """Si esta cuenta ya ocupó su prueba, aunque haya terminado hace meses.
+
+    Se mira el historial completo y no solo lo vigente: el trial es uno por
+    cuenta, y una suscripción vencida sigue siendo prueba de que se usó. Sin
+    esto, cancelar y volver a suscribirse sería Pro gratis para siempre, en
+    tandas de tres días.
+    """
+    return (
+        db.execute(
+            select(Subscription.id)
+            .where(Subscription.user_id == user_id)
+            .where(Subscription.origen == Origen.TRIAL)
+            .limit(1)
+        ).scalar_one_or_none()
+        is not None
+    )
+
+
+def _fecha_flow(valor: object) -> datetime | None:
+    """Convierte una fecha de Flow a datetime con zona horaria.
+
+    Flow entrega "YYYY-MM-DD HH:MM:SS" y, en algunos campos, solo la fecha. Se
+    aceptan las dos y también ISO con "T", porque el formato ha variado entre
+    ambientes y una fecha mal leída acá termina en cortarle el acceso a alguien
+    que pagó.
+    """
+    if not valor:
+        return None
+    texto = str(valor).strip()
+    if not texto:
+        return None
+    for formato in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d"):
+        try:
+            return datetime.strptime(texto, formato).replace(tzinfo=UTC)
+        except ValueError:
+            continue
+    return None
+
+
+def _cliente_flow(db: Session, user: User) -> FlowCustomer:
+    """El cliente de Flow de esta persona, creándolo la primera vez.
+
+    Se reutiliza siempre el mismo: un usuario con dos clientes en Flow es un
+    usuario al que se le puede terminar cobrando dos veces, y eso no se
+    descubre hasta que llega el reclamo.
+    """
+    cliente = db.execute(
+        select(FlowCustomer).where(FlowCustomer.user_id == user.id)
+    ).scalar_one_or_none()
+    if cliente is not None:
+        return cliente
+
+    datos = flow.cliente_crear(
+        nombre=(user.name or user.email).strip()[:80],
+        email=user.email,
+        externo=f"u{user.id}",
+    )
+    cliente = FlowCustomer(
+        user_id=user.id,
+        customer_id=str(datos["customerId"]),
+        registrado=False,
+    )
+    db.add(cliente)
+    db.commit()
+    db.refresh(cliente)
+    return cliente
+
+
+def iniciar_trial(db: Session, user: User, *, url_retorno: str) -> str:
+    """Deja lista la inscripción de la tarjeta y devuelve la URL de Flow.
+
+    Acá NO se activa ningún plan: lo único que ocurre es que la persona queda
+    encaminada al formulario donde Flow guarda su tarjeta. El trial se crea
+    recién cuando Flow confirma esa inscripción de servidor a servidor, en
+    `confirmar_tarjeta`. Activar algo en este paso sería regalarle Pro a quien
+    abandone el formulario.
+    """
+    if not trial_disponible():
+        raise TrialNoDisponible
+
+    plan, _ = plan_actual(db, user.id)
+    if plan is not Plan.GRATIS:
+        raise YaTienePlan
+
+    if ya_uso_trial(db, user.id):
+        raise TrialYaUsado
+
+    cliente = _cliente_flow(db, user)
+    datos = flow.cliente_registrar(
+        customer_id=cliente.customer_id, url_retorno=url_retorno
+    )
+    cliente.token_registro = str(datos["token"])
+    db.commit()
+
+    return f"{datos['url']}?token={datos['token']}"
+
+
+def confirmar_tarjeta(db: Session, token: str) -> Subscription:
+    """Verifica la tarjeta contra Flow, suscribe, y deja el trial activo.
+
+    Es el único camino que activa la prueba. Igual que en el pago suelto, el
+    token llega por el navegador y por sí solo no prueba nada: lo que vale es
+    lo que Flow responde a `customer/getRegisterStatus`.
+
+    Es idempotente: si la persona recarga la pantalla de vuelta, se le devuelve
+    la suscripción que ya tiene en vez de crear una segunda en Flow, que sería
+    cobrarle dos veces el mismo mes.
+    """
+    cliente = db.execute(
+        select(FlowCustomer).where(FlowCustomer.token_registro == token)
+    ).scalar_one_or_none()
+    if cliente is None:
+        raise RegistroNoEncontrado(token)
+
+    existente = db.execute(
+        select(Subscription)
+        .where(Subscription.user_id == cliente.user_id)
+        .where(Subscription.origen == Origen.TRIAL)
+        .order_by(Subscription.started_at.desc())
+    ).scalars().first()
+    if existente is not None:
+        return existente
+
+    datos = flow.cliente_estado_registro(token)
+    if not flow.tarjeta_quedo_inscrita(datos):
+        raise TarjetaNoInscrita(str(datos.get("status", "")))
+
+    cliente.registrado = True
+    cliente.marca = str(datos.get("creditCardType") or "")[:40] or None
+    ultimos = str(datos.get("last4CardDigits") or "")[-4:]
+    cliente.ultimos4 = ultimos or None
+    db.commit()
+
+    dias = trial_dias()
+    suscripcion = flow.suscripcion_crear(
+        plan_id=get_settings().flow_plan_pro_id,
+        customer_id=cliente.customer_id,
+        trial_dias=dias,
+    )
+
+    ahora = datetime.now(UTC)
+    # El período lo dice Flow. Si por algún motivo no viniera, se cae a los
+    # días prometidos: más vale un trial que dura exactamente lo anunciado que
+    # uno sin fecha de término.
+    termina = (
+        _fecha_flow(suscripcion.get("period_end"))
+        or _fecha_flow(suscripcion.get("trial_end"))
+        or ahora + timedelta(days=dias)
+    )
+
+    sub = Subscription(
+        user_id=cliente.user_id,
+        plan=Plan.PRO,
+        status=SubscriptionStatus.ACTIVE,
+        origen=Origen.TRIAL,
+        started_at=ahora,
+        expires_at=termina,
+        flow_subscription_id=str(suscripcion["subscriptionId"]),
+        en_trial=True,
+    )
+    db.add(sub)
+    db.commit()
+    db.refresh(sub)
+    return sub
+
+
+def sincronizar_con_flow(db: Session, sub: Subscription) -> Subscription:
+    """Copia desde Flow el estado real de una suscripción recurrente.
+
+    Actualiza la fecha de término con `period_end` —hasta cuándo está
+    efectivamente cobrado— y de paso registra si sigue en período de prueba y
+    si la renovación quedó apagada desde el lado de Flow: alguien puede
+    cancelar en el panel de la pasarela, no solo acá.
+
+    Propaga `flow.FlowError` si Flow no responde. Quien llama decide qué hacer
+    con eso; este módulo no inventa un estado cuando no lo sabe.
+    """
+    if not sub.flow_subscription_id:
+        return sub
+
+    datos = flow.suscripcion_estado(sub.flow_subscription_id)
+
+    termina = _fecha_flow(datos.get("period_end"))
+    if termina is not None:
+        sub.expires_at = termina
+
+    fin_trial = _fecha_flow(datos.get("trial_end"))
+    sub.en_trial = fin_trial is not None and fin_trial > datetime.now(UTC)
+
+    if str(datos.get("cancel_at_period_end", "0")).strip() in ("1", "true", "True"):
+        sub.cancelada_al_terminar = True
+
+    db.commit()
+    db.refresh(sub)
+    return sub
+
+
+def sincronizar_todas(db: Session) -> int:
+    """Reconcilia con Flow todas las suscripciones recurrentes vigentes.
+
+    La reconciliación perezosa de `plan_actual` alcanza para que nadie pierda
+    acceso, porque corre justo cuando la fecha local venció. Lo que no cubre es
+    el caso inverso: alguien que dejó de pagar y no vuelve a entrar. Su
+    suscripción queda ACTIVE en esta base para siempre, y las cifras internas
+    —cuántos Pro hay— empiezan a contar gente que ya no paga.
+
+    Por eso existe además este barrido diario, que es de dónde salen los
+    números y no de dónde sale el acceso. Devuelve cuántas revisó.
+    """
+    subs = db.execute(
+        select(Subscription)
+        .where(Subscription.status == SubscriptionStatus.ACTIVE)
+        .where(Subscription.flow_subscription_id.is_not(None))
+    ).scalars().all()
+
+    confirmadas: list[Subscription] = []
+    for sub in subs:
+        try:
+            sincronizar_con_flow(db, sub)
+            confirmadas.append(sub)
+        except flow.FlowError as e:
+            # Una suscripción que Flow no puede informar no detiene el barrido:
+            # las demás sí se pueden reconciliar y esto vuelve a correr mañana.
+            logger.warning(
+                "no se pudo reconciliar la suscripción %s: %s",
+                sub.flow_subscription_id,
+                e,
+            )
+
+    # Solo se dan por vencidas las que Flow ALCANZÓ A CONFIRMAR. Marcar como
+    # vencida una suscripción cuya consulta falló sería dejar sin plan a quien
+    # está al día porque la pasarela no contestó, y con la misma política que
+    # aplica `plan_actual`: cuando no se sabe, no se corta.
+    ahora = datetime.now(UTC)
+    for sub in confirmadas:
+        if not _vigente(sub, ahora):
+            sub.status = SubscriptionStatus.EXPIRED
+    db.commit()
+    return len(confirmadas)

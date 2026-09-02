@@ -42,6 +42,11 @@ class Origen(StrEnum):
     PAGO = "pago"
     CODIGO = "codigo"
     MANUAL = "manual"
+    #: Los tres días de prueba que anteceden al primer cobro. Es su propio
+    #: origen y no un `PAGO` con precio cero: son el período por el que NO se
+    #: cobró, y contarlo como pago rompería el requisito del premio al puntaje
+    #: nacional, que pide seis meses de Pro *pagados* en los últimos doce.
+    TRIAL = "trial"
 
 
 class PagoStatus(StrEnum):
@@ -130,7 +135,77 @@ class Subscription(Base):
     #: Con qué código se obtuvo, si vino de uno.
     codigo: Mapped[str | None] = mapped_column(String(40), nullable=True)
 
+    #: La suscripción equivalente en Flow, cuando el plan se renueva solo.
+    #: Null en todo lo que no es cobro recurrente: un canje de código o un
+    #: plan otorgado a mano no tienen contraparte en la pasarela.
+    #:
+    #: Es la llave con que se reconcilia: la fecha de término de una
+    #: suscripción recurrente la manda Flow, no la aritmética de acá.
+    flow_subscription_id: Mapped[str | None] = mapped_column(
+        String(60), nullable=True, index=True
+    )
+
+    #: True cuando la persona pidió no renovar. El acceso SIGUE hasta
+    #: `expires_at`.
+    #:
+    #: Existe porque hasta ahora cancelar ponía `status = CANCELED`, y como
+    #: `plan_actual` solo mira las ACTIVE, el acceso se cortaba en el acto: lo
+    #: contrario exacto de lo que la pantalla prometía. Apagar la renovación y
+    #: terminar la suscripción son dos hechos distintos y necesitan dos
+    #: campos distintos.
+    cancelada_al_terminar: Mapped[bool] = mapped_column(Boolean, default=False)
+
+    #: Si el período en curso es el de prueba gratuita. Se apaga solo en la
+    #: primera reconciliación posterior al primer cobro. Importa para la
+    #: pantalla —"te quedan 2 días de prueba" no es lo mismo que "tu plan
+    #: vence en 2 días"— y para no contar el trial como mes pagado.
+    en_trial: Mapped[bool] = mapped_column(Boolean, default=False)
+
     user: Mapped["User"] = relationship(back_populates="subscriptions")
+
+
+class FlowCustomer(Base):
+    """El cliente de Flow donde queda inscrita la tarjeta de una persona.
+
+    Acá NO hay datos de tarjeta y no puede haberlos: el número vive en Flow y
+    este servidor guarda solo lo que sirve para mostrarle a alguien con qué
+    está pagando ("Visa terminada en 4242") y el identificador con que se le
+    pide a Flow que cobre.
+
+    Es uno por usuario. Reinscribir una tarjeta reutiliza el mismo cliente en
+    vez de crear otro: un usuario con dos clientes en Flow es un usuario al que
+    se le puede terminar cobrando dos veces.
+    """
+
+    __tablename__ = "flow_customers"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    user_id: Mapped[int] = mapped_column(
+        ForeignKey("users.id"), unique=True, index=True
+    )
+
+    #: El `customerId` que devolvió Flow.
+    customer_id: Mapped[str] = mapped_column(String(60), unique=True, index=True)
+
+    #: False mientras la tarjeta no esté confirmada. Un cliente creado no es
+    #: un cliente con tarjeta: entre `customer/create` y el formulario de Flow
+    #: hay una persona que puede cerrar la pestaña.
+    registrado: Mapped[bool] = mapped_column(Boolean, default=False)
+
+    #: Para mostrar en pantalla. Nada de esto identifica una tarjeta ni sirve
+    #: para cobrar con ella.
+    marca: Mapped[str | None] = mapped_column(String(40), nullable=True)
+    ultimos4: Mapped[str | None] = mapped_column(String(4), nullable=True)
+
+    #: Token de la última inscripción iniciada, para poder verificarla cuando
+    #: la persona vuelve del formulario de Flow.
+    token_registro: Mapped[str | None] = mapped_column(
+        String(120), nullable=True, index=True
+    )
+
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
 
 
 class PromoCode(Base):

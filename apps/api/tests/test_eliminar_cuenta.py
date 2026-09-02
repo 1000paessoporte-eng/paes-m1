@@ -95,6 +95,7 @@ def test_ninguna_tabla_apunta_a_users_sin_estar_en_el_borrado() -> None:
         "colegios",  # no se borra: el curso pierde a su creador y sigue vivo
         "errores_cliente",  # no se borra: se le quita el dueño
         "exam_attempts",
+        "flow_customers",  # además, la suscripción se cancela en Flow antes de borrar
         "login_events",
         "page_views",  # no se borra: se le quita el dueño
         "pagos",

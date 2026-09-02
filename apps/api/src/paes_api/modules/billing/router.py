@@ -2,12 +2,24 @@ import logging
 import time
 from uuid import uuid4
 
-from fastapi import APIRouter, Depends, Form, HTTPException, Response, status
+from fastapi import (
+    APIRouter,
+    Depends,
+    Form,
+    Header,
+    HTTPException,
+    Request,
+    Response,
+    status,
+)
+from fastapi.responses import RedirectResponse
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from paes_api.core.config import get_settings
 from paes_api.core.database import get_db
 from paes_api.modules.billing import flow, service
+from paes_api.modules.billing.models import FlowCustomer
 from paes_api.modules.billing.schemas import (
     CanjearIn,
     MiPlanOut,
@@ -15,6 +27,7 @@ from paes_api.modules.billing.schemas import (
     PagarOut,
     ProductoOut,
     ProductosOut,
+    TrialOut,
 )
 from paes_api.modules.users.deps import get_current_admin, get_current_user
 from paes_api.modules.users.models import User
@@ -22,6 +35,22 @@ from paes_api.modules.users.models import User
 logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/plan", tags=["plan"])
+
+
+def _tarjeta(db: Session, user_id: int) -> str | None:
+    """"Visa ····4242", o None si no hay tarjeta inscrita.
+
+    Nunca sale de acá otra cosa: el número vive en Flow y este servidor no lo
+    tiene ni puede tenerlo.
+    """
+    cliente = db.execute(
+        select(FlowCustomer)
+        .where(FlowCustomer.user_id == user_id)
+        .where(FlowCustomer.registrado.is_(True))
+    ).scalar_one_or_none()
+    if cliente is None or not cliente.ultimos4:
+        return None
+    return f"{cliente.marca or 'Tarjeta'} ····{cliente.ultimos4}"
 
 
 def _armar(db: Session, user_id: int) -> MiPlanOut:
@@ -34,6 +63,19 @@ def _armar(db: Session, user_id: int) -> MiPlanOut:
         ensayos_limite=limites.ensayos_por_mes,
         carreras_limite=limites.carreras_en_meta,
         limites_activos=service.limites_activos(),
+        en_trial=bool(sub and sub.en_trial),
+        cancelada_al_terminar=bool(sub and sub.cancelada_al_terminar),
+        # Se ofrece solo a quien puede tomarla de verdad: sin plan vigente y
+        # sin haberla usado antes. Mostrarle "3 días gratis" a alguien que ya
+        # los ocupó es prometerle algo que el siguiente clic le va a negar.
+        trial_disponible=(
+            service.trial_disponible()
+            and plan is service.Plan.GRATIS
+            and not service.ya_uso_trial(db, user_id)
+        ),
+        trial_dias=service.trial_dias(),
+        trial_monto=service.PRODUCTOS[service.PRODUCTO_RECURRENTE].monto,
+        tarjeta=_tarjeta(db, user_id),
     )
 
 
@@ -68,6 +110,9 @@ def productos() -> ProductosOut:
     muestra el botón de pago o el aviso de "disponible pronto"."""
     return ProductosOut(
         pago_disponible=flow.esta_configurado(),
+        trial_disponible=service.trial_disponible(),
+        trial_dias=service.trial_dias(),
+        trial_monto=service.PRODUCTOS[service.PRODUCTO_RECURRENTE].monto,
         productos=[
             ProductoOut(
                 id=p.id,
@@ -178,11 +223,30 @@ def diagnostico(user: User = Depends(get_current_admin)) -> dict[str, object]:
         "api_key_empieza": s.flow_api_key[:4] if s.flow_api_key else "",
         "secret_key_largo": len(s.flow_secret_key),
         "timeout_segundos": flow.TIMEOUT,
+        # El cobro recurrente necesita, ademas de las credenciales, un plan
+        # creado en ESTE ambiente. Es el error de configuracion mas facil de
+        # cometer --el plan del sandbox no existe en produccion-- y el mas
+        # caro: se descubre cuando alguien ya entrego su tarjeta.
+        "plan_recurrente": s.flow_plan_pro_id or "(sin configurar)",
+        "trial_dias": s.trial_dias,
     }
 
     if not flow.esta_configurado():
         info["resultado"] = "faltan credenciales"
         return info
+
+    if s.flow_plan_pro_id:
+        try:
+            plan = flow.plan_estado(s.flow_plan_pro_id)
+            info["plan_en_flow"] = {
+                clave: plan.get(clave)
+                for clave in ("planId", "amount", "interval", "trial_period_days", "status")
+                if clave in plan
+            }
+        except flow.FlowError as e:
+            info["plan_en_flow"] = f"error: {e}"
+    else:
+        info["plan_en_flow"] = "sin FLOW_PLAN_PRO_ID: la prueba gratis esta apagada"
 
     inicio = time.monotonic()
     try:
@@ -221,3 +285,206 @@ def cancelar(
     if not service.cancelar_suscripcion(db, user.id):
         raise HTTPException(status_code=409, detail="No tienes una suscripción activa")
     return _armar(db, user.id)
+
+
+@router.post("/trial", response_model=TrialOut)
+def iniciar_trial(
+    db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
+) -> TrialOut:
+    """Empieza la prueba gratis: devuelve la URL donde Flow pide la tarjeta.
+
+    Este endpoint NO activa nada. Devuelve una dirección de Flow y hasta ahí
+    llega su efecto; el plan se enciende recién cuando Flow confirma la
+    inscripción en `/plan/trial/retorno`. La distinción es la misma que en el
+    pago: si acá se activara el plan, tomarlo sin dejar tarjeta sería cuestión
+    de llamar a esta URL.
+
+    Cada motivo de rechazo se le dice a la persona tal cual, porque son cosas
+    distintas y esconderlas tras un error genérico solo produce correos a
+    soporte: no está disponible, ya la usaste, o ya tienes plan.
+    """
+    settings = get_settings()
+    api_base = settings.api_url.rstrip("/")
+
+    try:
+        url = service.iniciar_trial(
+            db,
+            user,
+            # Flow devuelve el navegador a la API y no al frontend a
+            # propósito: la vuelta trae el token de inscripción y hay que
+            # verificarlo de servidor a servidor antes de encender nada. La
+            # API confirma y recién ahí redirige a la pantalla del alumno.
+            url_retorno=f"{api_base}/api/plan/trial/retorno",
+        )
+    except service.TrialNoDisponible:
+        raise HTTPException(
+            status_code=503,
+            detail="La prueba gratis todavía no está disponible.",
+        ) from None
+    except service.TrialYaUsado:
+        raise HTTPException(
+            status_code=409,
+            detail="Ya ocupaste tu prueba gratis: es una por cuenta.",
+        ) from None
+    except service.YaTienePlan:
+        raise HTTPException(
+            status_code=409, detail="Ya tienes un plan activo."
+        ) from None
+    except flow.FlowNoConfigurado:
+        raise HTTPException(
+            status_code=503,
+            detail="La prueba gratis todavía no está disponible.",
+        ) from None
+    except flow.FlowError as e:
+        logger.error("Flow falló al inscribir la tarjeta: %s", e)
+        raise HTTPException(
+            status_code=502,
+            detail="No se pudo iniciar la prueba. Inténtalo de nuevo en unos minutos.",
+        ) from None
+
+    return TrialOut(url=url)
+
+
+@router.get("/trial/retorno")
+@router.post("/trial/retorno")
+async def retorno_trial(
+    request: Request,
+    db: Session = Depends(get_db),
+) -> RedirectResponse:
+    """A donde Flow devuelve el navegador tras el formulario de la tarjeta.
+
+    Confirma de servidor a servidor y luego redirige a la pantalla del alumno.
+    Es el único camino que activa la prueba.
+
+    Acepta GET y POST porque Flow ha usado los dos según el ambiente, y el
+    token puede venir en el cuerpo o en la query. Un retorno que responde 405
+    deja a la persona con la tarjeta ya inscrita en Flow y sin plan acá: el
+    peor estado posible de los dos lados.
+
+    Nunca devuelve un error a la cara: pase lo que pase redirige a
+    `/plan/resultado`, que lee el plan real y explica lo que corresponda. Una
+    pantalla de error crudo de la API después de haber entregado una tarjeta es
+    exactamente donde alguien concluye que le cobraron mal.
+    """
+    front = get_settings().frontend_url.rstrip("/")
+
+    # El token se busca en la query y en el cuerpo, sin suponer cuál usó Flow.
+    # Leer solo uno de los dos es la clase de detalle que funciona en sandbox y
+    # falla en producción.
+    recibido = (request.query_params.get("token") or "").strip()
+    if not recibido:
+        try:
+            formulario = await request.form()
+            recibido = str(formulario.get("token") or "").strip()
+        except Exception:  # noqa: BLE001 -- un cuerpo ilegible no es un token
+            recibido = ""
+
+    destino = f"{front}/plan/resultado?origen=trial"
+    if not recibido:
+        return RedirectResponse(url=f"{destino}&estado=sin-token", status_code=303)
+
+    try:
+        service.confirmar_tarjeta(db, recibido)
+    except service.RegistroNoEncontrado:
+        logger.warning("retorno de inscripción con un token sin cliente asociado")
+        destino = f"{destino}&estado=desconocido"
+    except service.TarjetaNoInscrita as e:
+        logger.info("la tarjeta no quedó inscrita en Flow: %s", e)
+        destino = f"{destino}&estado=sin-tarjeta"
+    except flow.FlowError as e:
+        # La tarjeta puede haber quedado inscrita igual. No se le dice que
+        # falló: se le manda a la pantalla que consulta el plan de verdad, y
+        # el barrido diario reconcilia lo que haya quedado a medias.
+        logger.error("Flow falló al confirmar la inscripción: %s", e)
+        destino = f"{destino}&estado=pendiente"
+
+    return RedirectResponse(url=destino, status_code=303)
+
+
+@router.post("/flow/suscripcion", status_code=status.HTTP_200_OK)
+def webhook_suscripcion(
+    # El nombre del campo lo fija Flow; acá se recibe con alias para no
+    # arrastrar camelCase al resto del archivo.
+    subscription_id: str = Form(default="", alias="subscriptionId"),
+    token: str = Form(default=""),
+    db: Session = Depends(get_db),
+) -> Response:
+    """Aviso de Flow cuando cobra una cuota del plan recurrente.
+
+    Adelanta la reconciliación de esa suscripción, pero **el sistema no depende
+    de este aviso para estar correcto**, y eso es deliberado: el contenido
+    exacto de esta notificación no está documentado por Flow, así que colgar de
+    ella la fecha hasta la que alguien tiene acceso sería construir sobre algo
+    que puede cambiar sin avisar.
+
+    Las dos garantías reales están en otra parte: `plan_actual` le pregunta a
+    Flow en cuanto la fecha local vence —así nadie que pagó pierde acceso— y el
+    barrido diario reconcilia todo lo demás. Esto solo hace que el mes nuevo
+    aparezca en pantalla enseguida en vez de en la próxima lectura.
+
+    Responde 200 siempre salvo error interno: Flow reintenta ante cualquier
+    otra cosa y reintentar una reconciliación no aporta nada, porque es
+    idempotente por construcción.
+    """
+    identificador = subscription_id.strip()
+
+    if not identificador and token.strip():
+        # Algunas notificaciones traen el token del pago en vez del
+        # identificador de la suscripción. Se le pregunta a Flow por ese pago a
+        # ver si nombra la suscripción; si no la nombra, no se adivina.
+        try:
+            datos = flow.estado(token.strip())
+            identificador = str(datos.get("subscriptionId") or "").strip()
+        except flow.FlowError as e:
+            logger.warning("no se pudo leer el pago avisado por Flow: %s", e)
+
+    if not identificador:
+        logger.info("aviso de suscripción sin identificador reconocible; se ignora")
+        return Response(status_code=status.HTTP_200_OK)
+
+    sub = db.execute(
+        select(service.Subscription).where(
+            service.Subscription.flow_subscription_id == identificador
+        )
+    ).scalars().first()
+    if sub is None:
+        logger.warning("Flow avisó de una suscripción que no está en la base")
+        return Response(status_code=status.HTTP_200_OK)
+
+    try:
+        service.sincronizar_con_flow(db, sub)
+    except flow.FlowError as e:
+        logger.error("no se pudo reconciliar tras el aviso de Flow: %s", e)
+
+    return Response(status_code=status.HTTP_200_OK)
+
+
+@router.get("/flow/reconciliar")
+@router.post("/flow/reconciliar")
+def reconciliar(
+    authorization: str = Header(default=""),
+    x_cron_secret: str = Header(default=""),
+    db: Session = Depends(get_db),
+) -> dict[str, int]:
+    """Barrido diario: pone al día todas las suscripciones recurrentes.
+
+    Lo que la reconciliación perezosa de `plan_actual` no cubre es el caso de
+    quien deja de pagar y no vuelve a entrar: su suscripción quedaría ACTIVE
+    para siempre en esta base y las cifras internas contarían como Pro a gente
+    que ya no lo es. Esto existe para eso, no para el acceso.
+
+    Mismo esquema de autenticación que los recordatorios: secreto compartido,
+    GET aceptado porque los cron de Vercel disparan GET con `Authorization:
+    Bearer`, y 404 cuando el secreto no está configurado --una tarea que habla
+    con la pasarela de pago no se deja abierta por comodidad.
+    """
+    secreto = get_settings().cron_secret
+    if not secreto:
+        raise HTTPException(status_code=404, detail="No encontrado")
+
+    portador = authorization.removeprefix("Bearer ").strip()
+    if portador != secreto and x_cron_secret != secreto:
+        raise HTTPException(status_code=401, detail="No autorizado")
+
+    return {"revisadas": service.sincronizar_todas(db)}

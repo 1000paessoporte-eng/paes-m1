@@ -35,13 +35,14 @@ export default async function HomePage() {
   // número inventado, que es la primera regla del proyecto. Lo mismo vale para
   // las otras tres llamadas, y por eso van en paralelo y cada una con su
   // propio respaldo: que se caiga una no puede dejar la portada en blanco.
-  const [stats, uso, universidades, pagoDisponible] = await Promise.all([
+  const [stats, uso, universidades, productos] = await Promise.all([
     conRespaldo<ContentStats | null>(() => getContentStats(), null),
     conRespaldo<UsoPublico | null>(() => getUsoPublico(), null),
     conRespaldo<Universidad[]>(() => getUniversidades(), []),
     // Si el catálogo de productos no responde, la portada muestra los planes
-    // sin botón de compra en vez de ofrecer uno que llevaría a un error.
-    conRespaldo(async () => (await getProductos()).pago_disponible, false),
+    // sin botón de compra ni prueba gratis, en vez de ofrecer algo que
+    // llevaría a un error.
+    conRespaldo(async () => await getProductos(), null),
   ]);
 
   return (
@@ -49,7 +50,16 @@ export default async function HomePage() {
       stats={stats}
       uso={uso}
       universidades={universidades}
-      pagoDisponible={pagoDisponible}
+      pagoDisponible={productos?.pago_disponible ?? false}
+      trial={
+        productos
+          ? {
+              disponible: productos.trial_disponible,
+              dias: productos.trial_dias,
+              monto: productos.trial_monto,
+            }
+          : null
+      }
     />
   );
 }

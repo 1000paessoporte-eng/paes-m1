@@ -3,7 +3,7 @@ import type { ContentStats, Universidad, UsoPublico } from "@/lib/api";
 import { GoogleButton } from "@/components/auth/google-button";
 import { NumeroAnimado } from "@/components/motion/numero-animado";
 import { Reveal } from "@/components/motion/reveal";
-import { Planes } from "@/components/home/planes";
+import { Planes, type OfertaTrial } from "@/components/home/planes";
 import { HeroPregunta } from "@/components/home/hero-pregunta";
 import { BentoProducto } from "@/components/home/bento-producto";
 import { TrazoLapiz } from "@/components/home/trazo-lapiz";
@@ -69,11 +69,13 @@ export function LandingPublica({
   uso,
   universidades,
   pagoDisponible = false,
+  trial = null,
 }: {
   stats: ContentStats | null;
   uso: UsoPublico | null;
   universidades: Universidad[];
   pagoDisponible?: boolean;
+  trial?: OfertaTrial | null;
 }) {
   const totalCarreras = universidades.length
     ? universidades.reduce((suma, u) => suma + u.carreras, 0)
@@ -286,7 +288,7 @@ export function LandingPublica({
       {/* ── Cierre motivacional ─────────────────────────────────────── */}
       <CierreMotivacional />
 
-      <Planes pagoDisponible={pagoDisponible} />
+      <Planes pagoDisponible={pagoDisponible} trial={trial} />
 
       <SiteFooter />
     </main>
