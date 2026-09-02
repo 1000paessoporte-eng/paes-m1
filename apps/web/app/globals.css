@@ -275,6 +275,55 @@ html {
   color: var(--foreground);
 }
 
+/* ---------------------------------------------------------------------------
+   DESTACADOR
+
+   Los rangos los entrega `components/texto/resaltador.tsx` a la CSS Custom
+   Highlight API y el navegador los pinta encima: el HTML del texto no se toca,
+   así que las fórmulas de KaTeX y las tablas siguen intactas.
+
+   El color se fija a mano y no sale de la paleta: un destacado imita tinta
+   sobre papel y tiene que leerse igual en los dos temas. En oscuro se baja la
+   opacidad y se fuerza el texto a negro, porque una franja amarilla saturada
+   con letra clara encima no se lee.
+   ------------------------------------------------------------------------- */
+::highlight(marca-amarillo) {
+  background-color: #fde68a;
+  color: #17171c;
+}
+::highlight(marca-verde) {
+  background-color: #bbf7d0;
+  color: #17171c;
+}
+::highlight(marca-rosa) {
+  background-color: #fbcfe8;
+  color: #17171c;
+}
+
+/* Los dos caminos del tema oscuro, igual que el resto del archivo: el del
+   sistema --dejando que la elección manual gane-- y el del botón. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) ::highlight(marca-amarillo) {
+    background-color: #d9b03c;
+  }
+  :root:not([data-theme="light"]) ::highlight(marca-verde) {
+    background-color: #7fc48f;
+  }
+  :root:not([data-theme="light"]) ::highlight(marca-rosa) {
+    background-color: #d492b1;
+  }
+}
+
+:root[data-theme="dark"] ::highlight(marca-amarillo) {
+  background-color: #d9b03c;
+}
+:root[data-theme="dark"] ::highlight(marca-verde) {
+  background-color: #7fc48f;
+}
+:root[data-theme="dark"] ::highlight(marca-rosa) {
+  background-color: #d492b1;
+}
+
 :focus-visible {
   outline: 2px solid color-mix(in srgb, var(--accent) 70%, transparent);
   outline-offset: 2px;
