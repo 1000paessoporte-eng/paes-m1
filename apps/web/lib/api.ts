@@ -247,6 +247,22 @@ export function iniciarPago(
   });
 }
 
+/**
+ * Empieza la prueba gratis: devuelve la URL de Flow donde se inscribe la
+ * tarjeta.
+ *
+ * No activa nada por sí sola. El plan se enciende cuando Flow confirma la
+ * inscripción contra la API, no cuando el navegador vuelve.
+ */
+export function iniciarTrial(token?: string): Promise<{ url: string }> {
+  return apiFetch("/api/plan/trial", token, { method: "POST" });
+}
+
+/** Apaga la renovación. El acceso sigue hasta la fecha ya cobrada. */
+export function cancelarPlan(token?: string): Promise<MiPlan> {
+  return apiFetch<MiPlan>("/api/plan/cancelar", token, { method: "POST" });
+}
+
 export function canjearCodigo(codigo: string, token?: string): Promise<MiPlan> {
   return apiFetch<MiPlan>("/api/plan/canjear", token, {
     method: "POST",

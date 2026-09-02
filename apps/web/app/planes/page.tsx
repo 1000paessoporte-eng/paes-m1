@@ -1,4 +1,4 @@
-import { Planes } from "@/components/home/planes";
+import { Planes, type OfertaTrial } from "@/components/home/planes";
 import { getProductos } from "@/lib/api";
 import { SiteFooter } from "@/components/site-footer";
 
@@ -18,15 +18,23 @@ export default async function PlanesPage() {
   // Si el catálogo no responde, la página se dibuja igual con el cobro
   // apagado: una vitrina sin botón es mucho mejor que una página caída.
   let pagoDisponible = false;
+  let trial: OfertaTrial | null = null;
   try {
-    pagoDisponible = (await getProductos()).pago_disponible;
+    const productos = await getProductos();
+    pagoDisponible = productos.pago_disponible;
+    trial = {
+      disponible: productos.trial_disponible,
+      dias: productos.trial_dias,
+      monto: productos.trial_monto,
+    };
   } catch {
     pagoDisponible = false;
+    trial = null;
   }
 
   return (
     <main className="flex flex-1 flex-col">
-      <Planes pagoDisponible={pagoDisponible} encabezado="h1" />
+      <Planes pagoDisponible={pagoDisponible} trial={trial} encabezado="h1" />
       <SiteFooter />
     </main>
   );
