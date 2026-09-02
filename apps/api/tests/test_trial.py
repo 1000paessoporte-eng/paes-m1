@@ -473,3 +473,41 @@ def test_el_barrido_no_vence_lo_que_flow_no_pudo_confirmar(
     assert revisadas == 0
     db_session.refresh(sub)
     assert sub.status is SubscriptionStatus.ACTIVE
+
+
+def test_puede_rendir_corta_solo_con_los_limites_activos(
+    register_user, db_session, monkeypatch
+) -> None:
+    """El muro del plan Gratis: con LIMITES_ACTIVOS el tope bloquea; sin él, se
+    informa pero deja seguir.
+
+    Es la palanca que enciende el cobro de verdad, y encenderla antes de que
+    exista la salida --pagar o empezar la prueba-- deja al alumno atrapado en
+    una pantalla que le pide algo que todavía no puede hacer. Por eso el flag
+    arranca apagado y esto comprueba las dos posiciones.
+
+    Viene de la rama `pablo/trial-suscripcion-flow`, que probaba esto y esta no.
+    """
+    register_user(email="lim1@milpaes.cl")
+    user = _usuario(db_session, "lim1@milpaes.cl")  # plan Gratis
+
+    try:
+        monkeypatch.setenv("LIMITES_ACTIVOS", "true")
+        get_settings.cache_clear()
+        with patch(
+            "paes_api.modules.billing.service.ensayos_del_mes", return_value=999
+        ):
+            permitido, motivo = service.puede_rendir(db_session, user.id)
+        assert permitido is False
+        assert motivo is not None
+
+        monkeypatch.delenv("LIMITES_ACTIVOS", raising=False)
+        get_settings.cache_clear()
+        with patch(
+            "paes_api.modules.billing.service.ensayos_del_mes", return_value=999
+        ):
+            permitido_sin_flag, _ = service.puede_rendir(db_session, user.id)
+        assert permitido_sin_flag is True
+    finally:
+        monkeypatch.delenv("LIMITES_ACTIVOS", raising=False)
+        get_settings.cache_clear()
