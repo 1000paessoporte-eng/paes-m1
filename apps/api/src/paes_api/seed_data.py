@@ -111401,3 +111401,1295 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Quimica - Reacciones quimicas: mol, masa molar y estequiometria
+#
+# El temario pide "Estequiometria. Concepto, caracteristicas y relaciones entre
+# masa, masa molar y mol". El nodo recorre esa cadena en los dos sentidos:
+# masa -> mol -> particulas y de vuelta, y despues la usa para leer los
+# coeficientes de una ecuacion balanceada como una proporcion.
+#
+# Masas atomicas usadas en todo el nodo, las que entrega la prueba oficial:
+# H=1, C=12, N=14, O=16, Na=23, Mg=24, S=32, Cl=35,5, Ca=40, Fe=56, Zn=65,
+# Al=27, Cu=63,5.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_estequiometria", "facil",
+        "¿Qué cantidad de partículas contiene un mol de cualquier sustancia?",
+        "6,02 × 10²³ partículas",
+        "El mol es una unidad de cantidad de sustancia, no de masa ni de "
+        "volumen.\n\n"
+        "1) Un mol contiene siempre 6,02 × 10²³ unidades elementales, sean "
+        "átomos, moléculas o iones.\n"
+        "2) Ese número es fijo: no depende de qué sustancia se trate.\n"
+        "3) Lo que sí cambia de una sustancia a otra es cuánto pesa ese mol, "
+        "porque cada partícula tiene su propia masa.\n\n"
+        "Por eso un mol de hidrógeno y un mol de plomo tienen el mismo número "
+        "de átomos y masas muy distintas.",
+        [
+            ("1.000 partículas",
+             "El mol no es un múltiplo decimal como el kilo: su valor es 6,02 × 10²³."),
+            ("Una cantidad distinta para cada sustancia",
+             "Lo que cambia entre sustancias es la masa de ese mol, no el número de partículas."),
+            ("Tantas partículas como gramos tenga la muestra que se está analizando en el laboratorio",
+             "La masa de la muestra determina cuántos moles hay, no cuántas partículas tiene un mol."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "facil",
+        "¿Qué indica la masa molar de una sustancia?",
+        "La masa de un mol de esa sustancia",
+        "La masa molar es el puente entre lo que se pesa y lo que se cuenta.\n\n"
+        "1) Se define como la masa que tiene un mol, es decir, 6,02 × 10²³ "
+        "partículas de esa sustancia.\n"
+        "2) Se obtiene sumando las masas atómicas de todos los átomos de la "
+        "fórmula.\n"
+        "3) Se expresa en gramos por mol, así que traduce directamente masa a "
+        "cantidad de sustancia.\n\n"
+        "Sin ella no se podría pasar de la balanza, que mide gramos, a la "
+        "ecuación química, que habla de moles.",
+        [
+            ("La masa de una molécula",
+             "Una sola molécula pesa 6,02 × 10²³ veces menos que un mol."),
+            ("El número de átomos de la fórmula",
+             "Ese número se lee en los subíndices; la masa molar es una masa."),
+            ("La masa total de la muestra que se colocó sobre la balanza del laboratorio",
+             "Esa masa depende de cuánto se pesó; la masa molar es una propiedad de la sustancia."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "facil",
+        "¿En qué unidad se expresa la masa molar?",
+        "En gramos por mol",
+        "La unidad refleja la definición.\n\n"
+        "1) La masa molar responde a cuántos gramos pesa un mol.\n"
+        "2) Por eso su unidad es el cociente entre una masa y una cantidad de "
+        "sustancia: g/mol.\n"
+        "3) Al multiplicar moles por g/mol, la unidad mol se cancela y queda "
+        "una masa en gramos.\n\n"
+        "Ese seguimiento de unidades es la forma más rápida de detectar si una "
+        "conversión se hizo al revés.",
+        [
+            ("En gramos",
+             "El gramo mide masa, no masa por cada mol."),
+            ("En moles",
+             "El mol mide cantidad de sustancia, no la masa que le corresponde."),
+            ("En partículas por gramo de sustancia presente en la muestra analizada",
+             "Esa razón es otra cosa: la masa molar relaciona gramos con moles, no partículas con gramos."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "facil",
+        "¿Cómo se calcula la masa molar de un compuesto a partir de su "
+        "fórmula?",
+        "Sumando las masas atómicas de todos sus átomos",
+        "La fórmula dice exactamente cuántos átomos de cada elemento hay.\n\n"
+        "1) Cada subíndice indica cuántos átomos de ese elemento tiene la "
+        "unidad de fórmula.\n"
+        "2) Se multiplica la masa atómica de cada elemento por su subíndice.\n"
+        "3) Se suman todos esos productos y el total es la masa molar del "
+        "compuesto.\n\n"
+        "En el agua, por ejemplo, son dos hidrógenos y un oxígeno: 2 · 1 más "
+        "16, es decir 18 g/mol.",
+        [
+            ("Multiplicando las masas atómicas entre sí",
+             "Los aportes de cada elemento se suman, no se multiplican entre ellos."),
+            ("Promediando las masas atómicas de los elementos",
+             "El promedio ignoraría cuántos átomos de cada elemento hay en la fórmula."),
+            ("Restando la masa del elemento más liviano a la del elemento más pesado del compuesto",
+             "La masa molar es la suma de todos los aportes, no una diferencia entre dos de ellos."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "facil",
+        "Con H = 1 y O = 16, ¿cuál es la masa molar del agua, $H_2O$?",
+        "18 g/mol",
+        "La fórmula indica dos hidrógenos y un oxígeno.\n\n"
+        "1) El aporte del hidrógeno es 2 · 1 = 2.\n"
+        "2) El aporte del oxígeno es 1 · 16 = 16.\n"
+        "3) La suma de ambos es 18, así que la masa molar es 18 g/mol.\n\n"
+        "Eso significa que 18 gramos de agua contienen 6,02 × 10²³ moléculas: "
+        "algo menos de una cucharada.",
+        [
+            ("17 g/mol",
+             "Considera un solo hidrógeno y no los dos que indica el subíndice."),
+            ("34 g/mol",
+             "Duplica también el oxígeno, que en la fórmula aparece una sola vez."),
+            ("16 g/mol, porque el oxígeno es el elemento que aporta casi toda la masa",
+             "Aporta la mayor parte, pero los dos hidrógenos también cuentan."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "facil",
+        "¿Cuántas moléculas hay en un mol de dióxido de carbono?",
+        "6,02 × 10²³ moléculas",
+        "El número de partículas por mol no depende de la sustancia.\n\n"
+        "1) Un mol es, por definición, 6,02 × 10²³ unidades elementales.\n"
+        "2) En un compuesto molecular como el dióxido de carbono, esas "
+        "unidades son moléculas.\n"
+        "3) Por eso un mol de dióxido de carbono tiene el mismo número de "
+        "moléculas que un mol de agua.\n\n"
+        "Lo que las distingue es la masa: 44 gramos en un caso y 18 en el "
+        "otro.",
+        [
+            ("44 moléculas",
+             "44 es la masa molar en gramos, no un número de moléculas."),
+            ("3,01 × 10²³ moléculas",
+             "Corresponde a medio mol y no a un mol completo."),
+            ("1,806 × 10²⁴ moléculas, porque cada molécula está formada por tres átomos",
+             "Ese es el número de ÁTOMOS del mol, no el de moléculas."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "facil",
+        "¿Qué operación convierte una masa en gramos a cantidad de moles?",
+        "Dividir la masa por la masa molar",
+        "La masa molar dice cuántos gramos hay en cada mol.\n\n"
+        "1) Si un mol pesa 18 g, en 36 g caben dos veces esa cantidad.\n"
+        "2) Por eso se divide la masa de la muestra por la masa molar.\n"
+        "3) Las unidades lo confirman: gramos divididos por gramos por mol "
+        "dejan moles.\n\n"
+        "La operación inversa, moles por masa molar, devuelve la masa.",
+        [
+            ("Multiplicar la masa por la masa molar",
+             "Esa operación da gramos al cuadrado por mol, una unidad sin sentido."),
+            ("Dividir la masa molar por la masa",
+             "Invierte la división y entrega el inverso de los moles."),
+            ("Multiplicar la masa por el número de Avogadro para obtener la cantidad buscada",
+             "Ese producto lleva a un número de partículas, no a moles."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "facil",
+        "En condiciones normales de presión y temperatura, ¿qué volumen ocupa "
+        "un mol de cualquier gas?",
+        "22,4 litros",
+        "El volumen molar es igual para todos los gases en esas "
+        "condiciones.\n\n"
+        "1) En un gas las moléculas están tan separadas que el tamaño de cada "
+        "una es despreciable frente al espacio vacío.\n"
+        "2) Por eso lo que fija el volumen es cuántas partículas hay, no cuáles "
+        "son.\n"
+        "3) A 0 °C y 1 atmósfera, un mol ocupa 22,4 litros.\n\n"
+        "Esa constante permite medir moles de un gas con una probeta en vez de "
+        "una balanza.",
+        [
+            ("1 litro",
+             "Un litro de gas en esas condiciones contiene bastante menos de un mol."),
+            ("Un volumen distinto para cada gas",
+             "Justamente lo notable es que en esas condiciones el volumen molar es el mismo."),
+            ("22,4 litros solo si se trata de un gas formado por moléculas de un solo átomo",
+             "La regla vale para cualquier gas, sea monoatómico o no."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "facil",
+        "Con C = 12, ¿qué masa tiene un mol de átomos de carbono?",
+        "12 gramos",
+        "La masa atómica leída en gramos es la masa de un mol.\n\n"
+        "1) La masa atómica del carbono es 12.\n"
+        "2) Esa cifra, expresada en gramos, corresponde a la masa de 6,02 × "
+        "10²³ átomos.\n"
+        "3) Por eso un mol de carbono pesa 12 gramos.\n\n"
+        "El mismo razonamiento vale para cualquier elemento: un mol de oxígeno "
+        "atómico pesa 16 gramos.",
+        [
+            ("1 gramo",
+             "Un gramo de carbono es bastante menos de un mol."),
+            ("6,02 × 10²³ gramos",
+             "Ese número cuenta átomos; sería una masa astronómica."),
+            ("24 gramos, porque el carbono forma moléculas de dos átomos como el oxígeno",
+             "El carbono sólido no forma moléculas diatómicas: la pregunta pide un mol de átomos."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "facil",
+        "En una ecuación química balanceada, ¿qué informan los coeficientes?",
+        "La proporción en moles entre las sustancias",
+        "El coeficiente es lo que convierte una ecuación en una receta.\n\n"
+        "1) Indica cuántas unidades de fórmula participan de cada sustancia.\n"
+        "2) Como esa proporción vale para cualquier número de partículas, vale "
+        "también en moles.\n"
+        "3) Por eso en $2H_2 + O_2 \\rightarrow 2H_2O$ se leen dos moles de "
+        "hidrógeno por cada mol de oxígeno.\n\n"
+        "La proporción NO es de masas: los gramos se obtienen recién al "
+        "multiplicar por la masa molar de cada sustancia.",
+        [
+            ("La proporción en masa entre las sustancias",
+             "Las masas se obtienen después, multiplicando cada coeficiente por su masa molar."),
+            ("La velocidad con que ocurre la reacción",
+             "La velocidad no se lee en la ecuación balanceada."),
+            ("El número de átomos que tiene cada una de las moléculas que participan",
+             "Ese dato está en los subíndices, no en los coeficientes."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "facil",
+        "¿Cuántos átomos de oxígeno hay en una unidad de fórmula de $H_2SO_4$?",
+        "4 átomos",
+        "El subíndice acompaña al símbolo que tiene a la izquierda.\n\n"
+        "1) El 2 corresponde al hidrógeno y el 4, al oxígeno.\n"
+        "2) El azufre no lleva subíndice, así que aparece una sola vez.\n"
+        "3) La unidad de fórmula tiene entonces 2 hidrógenos, 1 azufre y 4 "
+        "oxígenos.\n\n"
+        "Leer bien los subíndices es el primer paso de cualquier cálculo de "
+        "masa molar.",
+        [
+            ("2 átomos",
+             "Ese es el subíndice del hidrógeno, no el del oxígeno."),
+            ("7 átomos",
+             "Siete es el total de átomos de la fórmula, no los de oxígeno."),
+            ("1 átomo, porque el oxígeno aparece una sola vez escrito en la fórmula",
+             "Aparece escrito una vez, pero su subíndice indica cuatro átomos."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Con Ca = 40, C = 12 y O = 16, ¿cuál es la masa molar del carbonato de "
+        "calcio, $CaCO_3$?",
+        "100 g/mol",
+        "Cada elemento aporta según su subíndice.\n\n"
+        "1) El calcio aporta 1 · 40 = 40.\n"
+        "2) El carbono aporta 1 · 12 = 12.\n"
+        "3) El oxígeno aporta 3 · 16 = 48, y la suma de los tres es 100.\n\n"
+        "El valor redondo hace de este compuesto un caso cómodo: 100 gramos de "
+        "carbonato de calcio puro son exactamente un mol.",
+        [
+            ("68 g/mol",
+             "Cuenta un solo oxígeno en lugar de los tres que indica el subíndice."),
+            ("116 g/mol",
+             "Multiplica por tres también el carbono, que aparece una sola vez."),
+            ("52 g/mol, sumando únicamente las masas del calcio y del carbono del compuesto",
+             "Deja fuera los tres oxígenos, que aportan casi la mitad de la masa."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "¿Cuántos moles de agua hay en 36 gramos de agua, si su masa molar es "
+        "18 g/mol?",
+        "2 moles",
+        "La masa molar dice cuántos gramos pesa cada mol.\n\n"
+        "1) Un mol de agua pesa 18 gramos.\n"
+        "2) La muestra pesa 36 gramos, que es el doble.\n"
+        "3) Dividiendo 36 por 18 se obtienen 2 moles.\n\n"
+        "En esos 36 gramos hay entonces 1,204 × 10²⁴ moléculas de agua.",
+        [
+            ("0,5 moles",
+             "Resulta de dividir la masa molar por la masa, es decir, de invertir la división."),
+            ("18 moles",
+             "Confunde el valor de la masa molar con la cantidad de moles de la muestra."),
+            ("36 moles, porque cada gramo de la muestra corresponde a un mol de sustancia",
+             "Un gramo de agua es bastante menos de un mol: hacen falta 18."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Con Na = 23 y Cl = 35,5, ¿qué masa tienen 2 moles de cloruro de "
+        "sodio?",
+        "117 g",
+        "Primero la masa molar y después la masa de la muestra.\n\n"
+        "1) La masa molar del cloruro de sodio es 23 + 35,5 = 58,5 g/mol.\n"
+        "2) La muestra tiene 2 moles.\n"
+        "3) Multiplicando 2 por 58,5 se obtienen 117 gramos.\n\n"
+        "Ese es el orden habitual: la fórmula entrega la masa molar y recién "
+        "después se escala por la cantidad de moles.",
+        [
+            ("58,5 g",
+             "Corresponde a un solo mol y la muestra tiene dos."),
+            ("29,25 g",
+             "Divide la masa molar por dos en vez de multiplicarla."),
+            ("234 g, considerando que la sal tiene dos átomos de cloro por cada sodio",
+             "La fórmula del cloruro de sodio es NaCl: un cloro por cada sodio."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "¿Cuántas moléculas hay en 0,5 moles de oxígeno gaseoso?",
+        "3,01 × 10²³ moléculas",
+        "El número de partículas escala con los moles.\n\n"
+        "1) Un mol contiene 6,02 × 10²³ moléculas.\n"
+        "2) La muestra tiene la mitad de un mol.\n"
+        "3) La mitad de 6,02 × 10²³ es 3,01 × 10²³ moléculas.\n\n"
+        "Si en cambio se preguntara por átomos, habría que duplicar el "
+        "resultado, porque cada molécula de oxígeno tiene dos.",
+        [
+            ("6,02 × 10²³ moléculas",
+             "Ese es el contenido de un mol completo y la muestra tiene medio."),
+            ("1,204 × 10²⁴ moléculas",
+             "Duplica en vez de dividir a la mitad."),
+            ("0,5 moléculas, que es exactamente la cantidad de moles que indica el enunciado",
+             "Los moles no son moléculas: hay que multiplicar por el número de Avogadro."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Si la masa molar del dióxido de carbono es 44 g/mol, ¿cuántos moles "
+        "hay en 88 gramos de ese gas?",
+        "2 moles",
+        "La conversión es una división directa.\n\n"
+        "1) Cada mol de dióxido de carbono pesa 44 gramos.\n"
+        "2) La muestra pesa 88 gramos.\n"
+        "3) Dividiendo 88 por 44 se obtienen 2 moles.\n\n"
+        "Esos dos moles ocuparían 44,8 litros si el gas se midiera en "
+        "condiciones normales.",
+        [
+            ("0,5 moles",
+             "Invierte la división y calcula 44 dividido por 88."),
+            ("44 moles",
+             "Repite el valor de la masa molar en lugar de dividir por él."),
+            ("88 moles, tomando cada gramo de la muestra como si fuera un mol de gas",
+             "Un gramo de dióxido de carbono es una fracción pequeña de un mol."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "¿Qué volumen ocupan 3 moles de un gas en condiciones normales de "
+        "presión y temperatura?",
+        "67,2 litros",
+        "El volumen molar se multiplica por la cantidad de moles.\n\n"
+        "1) En condiciones normales un mol de gas ocupa 22,4 litros.\n"
+        "2) La muestra tiene 3 moles.\n"
+        "3) Multiplicando 3 por 22,4 se obtienen 67,2 litros.\n\n"
+        "El resultado no depende de qué gas sea, porque en esas condiciones "
+        "todos tienen el mismo volumen molar.",
+        [
+            ("22,4 litros",
+             "Corresponde a un solo mol y la muestra tiene tres."),
+            ("7,5 litros",
+             "Divide el volumen molar por tres en vez de multiplicarlo."),
+            ("Depende del gas, porque las moléculas más pesadas ocupan más espacio",
+             "En un gas las moléculas están tan separadas que su tamaño no altera el volumen molar."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Según $2H_2 + O_2 \\rightarrow 2H_2O$, ¿cuántos moles de agua se "
+        "forman a partir de 4 moles de hidrógeno, con oxígeno suficiente?",
+        "4 moles",
+        "Los coeficientes fijan la proporción en moles.\n\n"
+        "1) La ecuación indica 2 moles de hidrógeno por cada 2 moles de agua, "
+        "una proporción de 1 a 1.\n"
+        "2) La muestra aporta 4 moles de hidrógeno.\n"
+        "3) Esa misma proporción da 4 moles de agua.\n\n"
+        "El oxígeno solo entra en el cálculo si escasea; el enunciado aclara "
+        "que hay suficiente.",
+        [
+            ("2 moles",
+             "Toma el coeficiente de la ecuación como si fuera el resultado del cálculo."),
+            ("8 moles",
+             "Duplica, pese a que la proporción hidrógeno-agua es de uno a uno."),
+            ("6 moles, sumando los cuatro moles de hidrógeno con los dos de oxígeno",
+             "Los moles de reactantes no se suman: la proporción se lee en los coeficientes."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Según $N_2 + 3H_2 \\rightarrow 2NH_3$, ¿cuántos moles de hidrógeno se "
+        "necesitan para obtener 4 moles de amoníaco?",
+        "6 moles",
+        "La proporción se lee entre las dos sustancias que interesan.\n\n"
+        "1) Los coeficientes indican 3 moles de hidrógeno por cada 2 moles de "
+        "amoníaco.\n"
+        "2) Se quieren 4 moles de amoníaco, el doble de esos 2.\n"
+        "3) Entonces se necesita el doble de hidrógeno: 6 moles.\n\n"
+        "El nitrógeno queda fuera del cálculo porque la pregunta no lo "
+        "involucra.",
+        [
+            ("3 moles",
+             "Repite el coeficiente sin escalarlo a los 4 moles pedidos."),
+            ("4 moles",
+             "Supone una proporción de uno a uno, y la ecuación indica 3 a 2."),
+            ("12 moles, multiplicando los cuatro moles de amoníaco por el coeficiente 3",
+             "Multiplicar por 3 ignora que ese coeficiente corresponde a 2 moles de amoníaco, no a uno."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Con C = 12, H = 1 y O = 16, ¿cuál es la masa molar de la glucosa, "
+        "$C_6H_{12}O_6$?",
+        "180 g/mol",
+        "Se suma el aporte de cada elemento por separado.\n\n"
+        "1) El carbono aporta 6 · 12 = 72.\n"
+        "2) El hidrógeno aporta 12 · 1 = 12.\n"
+        "3) El oxígeno aporta 6 · 16 = 96, y la suma de los tres es 180.\n\n"
+        "Esa es la masa de un mol de glucosa, la molécula que las células "
+        "degradan en la respiración celular.",
+        [
+            ("29 g/mol",
+             "Suma las masas atómicas sin multiplicarlas por los subíndices."),
+            ("108 g/mol",
+             "Deja fuera el aporte del hidrógeno y de dos oxígenos."),
+            ("168 g/mol, considerando que los doce hidrógenos no alcanzan a aportar masa apreciable",
+             "Aportan 12 unidades, que sí cambian el resultado."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "¿Cuántos átomos de hidrógeno hay en un mol de agua?",
+        "1,204 × 10²⁴ átomos",
+        "Cada molécula aporta dos átomos de hidrógeno.\n\n"
+        "1) Un mol de agua contiene 6,02 × 10²³ moléculas.\n"
+        "2) Cada molécula tiene 2 átomos de hidrógeno.\n"
+        "3) El producto es 2 · 6,02 × 10²³ = 1,204 × 10²⁴ átomos.\n\n"
+        "Distinguir moléculas de átomos es lo que evita el error más frecuente "
+        "en este tipo de conteos.",
+        [
+            ("6,02 × 10²³ átomos",
+             "Ese es el número de moléculas; cada una aporta dos hidrógenos."),
+            ("3,01 × 10²³ átomos",
+             "Divide a la mitad en vez de duplicar."),
+            ("1,806 × 10²⁴ átomos, contando los tres átomos que tiene cada molécula de agua",
+             "Ese sería el total de átomos de la muestra, no solo los de hidrógeno."),
+        ],
+    ),
+]
+
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_estequiometria", "medio",
+        "Con C = 12 y O = 16, según $CH_4 + 2O_2 \\rightarrow CO_2 + 2H_2O$, "
+        "¿qué masa de dióxido de carbono se obtiene al quemar un mol de "
+        "metano?",
+        "44 g",
+        "El cálculo va de moles a moles y recién al final a gramos.\n\n"
+        "1) Los coeficientes indican 1 mol de dióxido de carbono por cada mol "
+        "de metano quemado.\n"
+        "2) Un mol de metano produce entonces un mol de dióxido de carbono.\n"
+        "3) La masa molar del dióxido de carbono es 12 + 2 · 16 = 44 g/mol, "
+        "así que se obtienen 44 gramos.\n\n"
+        "Pasar por los moles es lo que evita el error de comparar masas "
+        "directamente: el metano pesa 16 g/mol y el producto, 44.",
+        [
+            ("16 g",
+             "Corresponde a la masa del metano de partida, no a la del dióxido de carbono."),
+            ("22 g",
+             "Divide la masa molar por dos, pese a que la proporción es de uno a uno."),
+            ("88 g, porque la ecuación indica dos moléculas de oxígeno como reactante",
+             "El coeficiente 2 acompaña al oxígeno, no al dióxido de carbono."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Según $CH_4 + 2O_2 \\rightarrow CO_2 + 2H_2O$, ¿cuántos moles de "
+        "oxígeno se consumen al quemar 2 moles de metano?",
+        "4 moles",
+        "La proporción entre metano y oxígeno es de 1 a 2.\n\n"
+        "1) Cada mol de metano exige 2 moles de oxígeno.\n"
+        "2) La muestra son 2 moles de metano.\n"
+        "3) Multiplicando 2 por 2 se obtienen 4 moles de oxígeno.\n\n"
+        "Si el oxígeno disponible fuera menor, parte del metano quedaría sin "
+        "quemar y la combustión sería incompleta.",
+        [
+            ("2 moles",
+             "Repite los moles de metano en vez de aplicar la proporción de 1 a 2."),
+            ("1 mol",
+             "Invierte la proporción y divide donde corresponde multiplicar."),
+            ("6 moles, sumando los dos moles de metano con los cuatro de la proporción",
+             "Los moles de metano no se suman al resultado: solo fijan la escala."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Según $2H_2O_2 \\rightarrow 2H_2O + O_2$, ¿cuántos moles de oxígeno "
+        "se liberan al descomponer 4 moles de agua oxigenada?",
+        "2 moles",
+        "La proporción es de 2 a 1.\n\n"
+        "1) Los coeficientes indican 2 moles de agua oxigenada por cada mol de "
+        "oxígeno liberado.\n"
+        "2) La muestra tiene 4 moles, el doble de esos 2.\n"
+        "3) Se liberan entonces 2 moles de oxígeno.\n\n"
+        "Ese oxígeno es el que forma las burbujas cuando el agua oxigenada "
+        "toca una herida.",
+        [
+            ("4 moles",
+             "Supone una proporción de uno a uno, y la ecuación indica 2 a 1."),
+            ("8 moles",
+             "Multiplica por dos donde corresponde dividir."),
+            ("1 mol, que es el coeficiente que la ecuación asigna al oxígeno molecular",
+             "Ese coeficiente corresponde a 2 moles de agua oxigenada, y aquí hay 4."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Con H = 1, S = 32 y O = 16, ¿cuál es la masa molar del ácido "
+        "sulfúrico, $H_2SO_4$?",
+        "98 g/mol",
+        "Cada subíndice multiplica a la masa atómica que le corresponde.\n\n"
+        "1) El hidrógeno aporta 2 · 1 = 2.\n"
+        "2) El azufre aporta 1 · 32 = 32.\n"
+        "3) El oxígeno aporta 4 · 16 = 64, y la suma de los tres es 98.\n\n"
+        "El oxígeno aporta casi dos tercios de la masa pese a ser el elemento "
+        "más liviano de los tres, porque hay cuatro átomos.",
+        [
+            ("49 g/mol",
+             "Corresponde a la mitad del valor correcto, como si hubiera dos oxígenos."),
+            ("50 g/mol",
+             "Cuenta un solo oxígeno en lugar de los cuatro del subíndice."),
+            ("34 g/mol, sumando las masas atómicas de los tres elementos sin repetir ninguna",
+             "Ignora los subíndices, que indican cuántos átomos de cada elemento hay."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Con Fe = 56, ¿cuántos moles de hierro hay en una muestra de 5,6 "
+        "gramos?",
+        "0,1 moles",
+        "La división por la masa molar puede dar menos de un mol.\n\n"
+        "1) Un mol de hierro pesa 56 gramos.\n"
+        "2) La muestra pesa 5,6 gramos, la décima parte.\n"
+        "3) Dividiendo 5,6 por 56 se obtienen 0,1 moles.\n\n"
+        "Que el resultado sea menor que uno es esperable: la muestra pesa "
+        "mucho menos que un mol.",
+        [
+            ("1 mol",
+             "Un mol de hierro pesa 56 gramos, diez veces la masa de la muestra."),
+            ("10 moles",
+             "Invierte la división y calcula 56 dividido por 5,6."),
+            ("5,6 moles, tomando el valor de la masa como si ya estuviera en moles",
+             "Los gramos deben dividirse por la masa molar para convertirse en moles."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Con Mg = 24 y O = 16, según $2Mg + O_2 \\rightarrow 2MgO$, ¿qué masa "
+        "de óxido de magnesio se forma a partir de 48 gramos de magnesio?",
+        "80 g",
+        "Conviene pasar por moles antes de volver a gramos.\n\n"
+        "1) 48 gramos de magnesio son 48 dividido por 24, es decir, 2 moles.\n"
+        "2) La proporción de la ecuación es de 2 a 2, así que se forman 2 moles "
+        "de óxido de magnesio.\n"
+        "3) La masa molar del óxido es 24 + 16 = 40 g/mol, y 2 moles pesan 80 "
+        "gramos.\n\n"
+        "Los 32 gramos de diferencia son el oxígeno que la cinta de magnesio "
+        "toma del aire al arder.",
+        [
+            ("48 g",
+             "Repite la masa del magnesio, sin sumar el oxígeno incorporado."),
+            ("40 g",
+             "Corresponde a un solo mol de óxido y se forman dos."),
+            ("64 g, que es la masa que tienen dos moles de oxígeno molecular",
+             "El producto contiene magnesio además del oxígeno: son 80 gramos."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Según $2H_2 + O_2 \\rightarrow 2H_2O$, ¿qué masa de agua se obtiene a "
+        "partir de 4 gramos de hidrógeno, con oxígeno suficiente?",
+        "36 g",
+        "El camino es gramos, moles, moles y gramos otra vez.\n\n"
+        "1) La masa molar del hidrógeno molecular es 2 g/mol, así que 4 gramos "
+        "son 2 moles.\n"
+        "2) La proporción hidrógeno-agua es de 2 a 2, o sea de uno a uno: se "
+        "forman 2 moles de agua.\n"
+        "3) Con masa molar 18 g/mol, esos 2 moles pesan 36 gramos.\n\n"
+        "Los 32 gramos que aparecen de más son el oxígeno que se incorporó, y "
+        "corresponden justamente a un mol de $O_2$.",
+        [
+            ("4 g",
+             "Repite la masa del hidrógeno sin incorporar la del oxígeno."),
+            ("18 g",
+             "Corresponde a un mol de agua y se forman dos."),
+            ("72 g, duplicando la masa molar del agua por los dos moles de hidrógeno",
+             "Duplicar la masa molar y además multiplicar por dos cuenta el factor dos dos veces."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Con Ca = 40, C = 12 y O = 16, según $CaCO_3 \\rightarrow CaO + CO_2$, "
+        "¿qué masa de dióxido de carbono libera la descomposición de 200 gramos "
+        "de carbonato de calcio?",
+        "88 g",
+        "El carbonato de calcio tiene masa molar 100 g/mol.\n\n"
+        "1) 200 gramos corresponden a 200 dividido por 100, es decir, 2 "
+        "moles.\n"
+        "2) La proporción de la ecuación es de uno a uno, así que se liberan 2 "
+        "moles de dióxido de carbono.\n"
+        "3) Con masa molar 44 g/mol, esos 2 moles pesan 88 gramos.\n\n"
+        "Los 112 gramos restantes quedan en el recipiente como óxido de calcio: "
+        "esa pérdida de masa es lo que se mide en la calcinación de la caliza.",
+        [
+            ("44 g",
+             "Corresponde a un solo mol de dióxido de carbono y se liberan dos."),
+            ("100 g",
+             "Es la masa molar del carbonato de calcio, no la del gas liberado."),
+            ("200 g, suponiendo que todo el carbonato se convierte en dióxido de carbono",
+             "Parte de la masa queda como óxido de calcio dentro del recipiente."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "¿Cuántas partículas contienen 3 moles de una sustancia?",
+        "1,806 × 10²⁴ partículas",
+        "El número de Avogadro se multiplica por la cantidad de moles.\n\n"
+        "1) Un mol contiene 6,02 × 10²³ partículas.\n"
+        "2) La muestra tiene 3 moles.\n"
+        "3) El producto 3 · 6,02 × 10²³ es 18,06 × 10²³, que se escribe 1,806 × "
+        "10²⁴.\n\n"
+        "Al multiplicar, la potencia de diez sube un orden porque el "
+        "coeficiente pasó de 6 a 18.",
+        [
+            ("6,02 × 10²³ partículas",
+             "Corresponde a un mol y la muestra tiene tres."),
+            ("2,01 × 10²³ partículas",
+             "Divide por tres en vez de multiplicar."),
+            ("1,806 × 10²³ partículas, conservando el mismo exponente del número de Avogadro",
+             "Al multiplicar por tres el coeficiente pasa de 6,02 a 18,06 y el exponente sube en uno."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Un recipiente contiene 44,8 litros de un gas en condiciones normales. "
+        "¿Cuántos moles hay?",
+        "2 moles",
+        "El volumen molar funciona como una masa molar, pero en litros.\n\n"
+        "1) En condiciones normales un mol ocupa 22,4 litros.\n"
+        "2) El recipiente contiene 44,8 litros, exactamente el doble.\n"
+        "3) Dividiendo 44,8 por 22,4 se obtienen 2 moles.\n\n"
+        "El resultado no depende de qué gas sea, así que medir el volumen "
+        "basta para conocer los moles.",
+        [
+            ("1 mol",
+             "Un mol ocuparía 22,4 litros, la mitad del volumen indicado."),
+            ("22,4 moles",
+             "Confunde el volumen molar con la cantidad de moles del recipiente."),
+            ("No se puede saber sin conocer de qué gas se trata y cuál es su masa molar",
+             "En condiciones normales el volumen molar es igual para todos los gases."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Con N = 14 y H = 1, ¿cuál es la masa molar del amoníaco, $NH_3$?",
+        "17 g/mol",
+        "Un nitrógeno y tres hidrógenos.\n\n"
+        "1) El nitrógeno aporta 1 · 14 = 14.\n"
+        "2) El hidrógeno aporta 3 · 1 = 3.\n"
+        "3) La suma es 17, así que la masa molar es 17 g/mol.\n\n"
+        "Los hidrógenos aportan poco a la masa, pero determinan la fórmula y la "
+        "proporción con que el amoníaco se forma.",
+        [
+            ("15 g/mol",
+             "Cuenta un solo hidrógeno en lugar de los tres del subíndice."),
+            ("42 g/mol",
+             "Multiplica por tres también el nitrógeno, que aparece una sola vez."),
+            ("14 g/mol, porque el nitrógeno es el único elemento que aporta masa apreciable",
+             "Los tres hidrógenos aportan 3 unidades, que sí cambian el resultado."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "¿Cuántos moles de átomos de oxígeno hay en un mol de $H_2SO_4$?",
+        "4 moles",
+        "Los subíndices escalan igual que los coeficientes.\n\n"
+        "1) Cada unidad de fórmula tiene 4 átomos de oxígeno.\n"
+        "2) Un mol de compuesto son 6,02 × 10²³ unidades de fórmula.\n"
+        "3) Entonces hay 4 · 6,02 × 10²³ átomos de oxígeno, es decir, 4 moles "
+        "de átomos.\n\n"
+        "Hablar de moles de átomos evita arrastrar potencias de diez en todo el "
+        "cálculo.",
+        [
+            ("1 mol",
+             "Confunde un mol de compuesto con un mol de átomos de oxígeno."),
+            ("2 moles",
+             "Toma el subíndice del hidrógeno en vez del del oxígeno."),
+            ("7 moles, que corresponden a todos los átomos presentes en la fórmula",
+             "Siete es el total de átomos; la pregunta pide solo los de oxígeno."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Con Zn = 65, según $Zn + 2HCl \\rightarrow ZnCl_2 + H_2$, ¿cuántos "
+        "moles de hidrógeno se producen con 65 gramos de zinc?",
+        "1 mol",
+        "La masa de zinc corresponde exactamente a un mol.\n\n"
+        "1) 65 gramos divididos por 65 g/mol dan 1 mol de zinc.\n"
+        "2) La ecuación indica un mol de hidrógeno por cada mol de zinc.\n"
+        "3) Se produce entonces 1 mol de hidrógeno.\n\n"
+        "Ese mol ocuparía 22,4 litros si se recogiera sobre agua en condiciones "
+        "normales.",
+        [
+            ("2 moles",
+             "Toma el coeficiente del ácido clorhídrico, que no es el del hidrógeno molecular."),
+            ("65 moles",
+             "Usa los gramos como si fueran moles, sin dividir por la masa molar."),
+            ("0,5 moles, repartiendo el mol de zinc entre los dos moles de ácido que reaccionan",
+             "La proporción zinc-hidrógeno es de uno a uno; el ácido no divide el resultado."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Un grupo pesa tres muestras de un mismo gas y calcula sus moles: 11 g "
+        "dan 0,25 mol; 22 g dan 0,5 mol; 44 g dan 1 mol. ¿Qué relación muestran "
+        "los datos?",
+        "La masa y los moles son directamente proporcionales",
+        "La regularidad se ve al dividir cada par de valores.\n\n"
+        "1) En las tres muestras el cociente entre masa y moles da el mismo "
+        "número: 44.\n"
+        "2) Un cociente constante entre dos magnitudes es lo que define una "
+        "proporcionalidad directa.\n"
+        "3) Ese valor constante, 44 g/mol, es justamente la masa molar del "
+        "gas.\n\n"
+        "Graficados, los tres puntos quedan sobre una recta que pasa por el "
+        "origen y cuya pendiente es la masa molar.",
+        [
+            ("La masa es inversamente proporcional a los moles",
+             "En una relación inversa la masa bajaría al subir los moles, y aquí sube."),
+            ("No hay relación entre ambas magnitudes",
+             "El cociente constante entre las tres muestras muestra que sí la hay."),
+            ("La masa crece más rápido que los moles",
+             "Si creciera más rápido el cociente aumentaría, y aquí se mantiene en 44."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Un estudiante calcula los moles de una muestra dividiendo la masa "
+        "molar por la masa. ¿Qué consecuencia tiene ese procedimiento?",
+        "Obtiene el inverso del valor correcto",
+        "El error es de orden en la división, no de datos.\n\n"
+        "1) La conversión correcta divide la masa de la muestra por la masa "
+        "molar.\n"
+        "2) Al invertir el orden se obtiene el recíproco del resultado "
+        "buscado.\n"
+        "3) Las unidades lo delatan: quedan moles por gramo en vez de moles.\n\n"
+        "Revisar las unidades del resultado es el control más barato contra "
+        "este tipo de error.",
+        [
+            ("Obtiene el valor correcto igual",
+             "Solo coincidiría si masa y masa molar fueran iguales, es decir, en un caso de un mol exacto."),
+            ("Obtiene el número de partículas",
+             "Para llegar a partículas hay que multiplicar por el número de Avogadro."),
+            ("Obtiene un valor correcto pero expresado en gramos en lugar de en moles",
+             "No es un cambio de unidad: el número mismo es el recíproco del buscado."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "¿Por qué un gramo de hidrógeno contiene más átomos que un gramo de "
+        "oxígeno?",
+        "Porque cada átomo de hidrógeno pesa menos",
+        "A igual masa, la cantidad de átomos depende de cuánto pesa cada "
+        "uno.\n\n"
+        "1) La masa atómica del hidrógeno es 1 y la del oxígeno, 16.\n"
+        "2) Un mol de hidrógeno atómico pesa 1 gramo y uno de oxígeno, 16.\n"
+        "3) Entonces en un gramo de hidrógeno hay un mol de átomos y en un "
+        "gramo de oxígeno, apenas un dieciseisavo de mol.\n\n"
+        "El número de átomos por gramo es inversamente proporcional a la masa "
+        "atómica del elemento.",
+        [
+            ("Porque el hidrógeno es un gas",
+             "El estado de agregación no determina cuántos átomos hay en un gramo."),
+            ("Porque el hidrógeno tiene más protones",
+             "Tiene uno solo; el oxígeno tiene ocho."),
+            ("Porque los átomos de hidrógeno se ordenan más juntos dentro de la muestra",
+             "El empaquetamiento afecta al volumen, no al número de átomos por gramo."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Dos moles de un gas desconocido pesan 88 gramos. ¿Cuál es su masa "
+        "molar?",
+        "44 g/mol",
+        "La masa molar se despeja del cociente.\n\n"
+        "1) La masa molar es la masa dividida por la cantidad de moles.\n"
+        "2) Aquí son 88 gramos repartidos en 2 moles.\n"
+        "3) El cociente da 44 g/mol.\n\n"
+        "Ese valor coincide con el del dióxido de carbono, aunque el dato por "
+        "sí solo no permite afirmar de qué gas se trata.",
+        [
+            ("88 g/mol",
+             "Toma la masa total como si correspondiera a un solo mol."),
+            ("176 g/mol",
+             "Multiplica por dos donde corresponde dividir."),
+            ("2 g/mol, que es el número de moles que indica el enunciado del problema",
+             "Los moles son el divisor del cálculo, no el resultado."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Según $4Al + 3O_2 \\rightarrow 2Al_2O_3$, ¿en qué proporción están el "
+        "aluminio y el óxido de aluminio?",
+        "Dos de aluminio por cada uno de óxido",
+        "La proporción se lee entre los coeficientes de ambas sustancias.\n\n"
+        "1) El aluminio lleva coeficiente 4 y el óxido, 2.\n"
+        "2) La razón 4 a 2 se simplifica a 2 a 1.\n"
+        "3) Por cada dos moles de aluminio consumidos se forma un mol de "
+        "óxido.\n\n"
+        "El resultado es coherente con la fórmula: cada unidad de óxido "
+        "contiene dos átomos de aluminio.",
+        [
+            ("Uno de aluminio por cada uno de óxido",
+             "Ignora que el coeficiente del aluminio duplica al del óxido."),
+            ("Cuatro de aluminio por cada tres de óxido",
+             "Ese 3 es el coeficiente del oxígeno, no el del óxido de aluminio."),
+            ("Tres de aluminio por cada dos de óxido, según los coeficientes que aparecen escritos",
+             "El 3 corresponde al oxígeno molecular; el aluminio lleva coeficiente 4."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Con H = 1 y O = 16, ¿qué masa de oxígeno hay en 90 gramos de agua?",
+        "80 g",
+        "Conviene calcular primero cuántos moles de agua hay.\n\n"
+        "1) 90 gramos divididos por 18 g/mol dan 5 moles de agua.\n"
+        "2) Cada mol de agua contiene un mol de átomos de oxígeno.\n"
+        "3) Cinco moles de oxígeno atómico pesan 5 · 16 = 80 gramos.\n\n"
+        "Los 10 gramos restantes corresponden al hidrógeno, que aporta apenas "
+        "un noveno de la masa del agua.",
+        [
+            ("16 g",
+             "Corresponde a un solo mol de oxígeno y la muestra contiene cinco."),
+            ("45 g",
+             "Reparte la masa por mitades, pese a que el oxígeno pesa dieciséis veces más que cada hidrógeno."),
+            ("90 g",
+             "Es la masa total del agua, que incluye el hidrógeno."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Al disolver un mol de cloruro de calcio, $CaCl_2$, se separan sus "
+        "iones. ¿Cuántos moles de iones quedan en la disolución?",
+        "3 moles",
+        "Cada unidad de fórmula libera todos sus iones.\n\n"
+        "1) El cloruro de calcio se separa en un ion calcio y dos iones "
+        "cloruro.\n"
+        "2) Son tres iones por cada unidad de fórmula.\n"
+        "3) Un mol de compuesto libera entonces 3 moles de iones.\n\n"
+        "Ese conteo importa porque varias propiedades de una disolución "
+        "dependen del número total de partículas disueltas, no de cuáles sean.",
+        [
+            ("1 mol",
+             "Cuenta la unidad de fórmula como si permaneciera entera en la disolución."),
+            ("2 moles",
+             "Considera solo los dos iones cloruro y deja fuera el calcio."),
+            ("4 moles, contando el ion calcio, los dos cloruros y la unidad de fórmula original",
+             "La unidad de fórmula deja de existir al separarse: no se cuenta aparte."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Con C = 12 y O = 16, ¿qué pesa más: un mol de dióxido de carbono o un "
+        "mol de oxígeno gaseoso?",
+        "El dióxido de carbono, con 44 g",
+        "Ambos tienen el mismo número de moléculas, así que decide la masa "
+        "molar.\n\n"
+        "1) La masa molar del dióxido de carbono es 12 + 2 · 16 = 44 g/mol.\n"
+        "2) La del oxígeno gaseoso es 2 · 16 = 32 g/mol.\n"
+        "3) A igual número de moles, pesa más el de mayor masa molar: el "
+        "dióxido de carbono.\n\n"
+        "En condiciones normales los dos ocuparían 22,4 litros, de modo que la "
+        "diferencia se nota en la balanza y no en el volumen.",
+        [
+            ("El oxígeno, con 32 g",
+             "El valor está bien calculado, pero es el menor de los dos."),
+            ("Pesan lo mismo, porque son un mol de cada uno",
+             "Un mol fija el número de moléculas, no la masa: cada sustancia tiene su masa molar."),
+            ("Pesan lo mismo, porque ambos gases ocupan 22,4 litros en condiciones normales",
+             "El volumen molar coincide, pero las masas molares son 44 y 32 g/mol."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Una muestra de 0,25 moles de un compuesto tiene una masa de 20 "
+        "gramos. ¿Cuál es su masa molar?",
+        "80 g/mol",
+        "La masa molar se obtiene dividiendo masa por moles.\n\n"
+        "1) La muestra es apenas un cuarto de mol.\n"
+        "2) Si un cuarto de mol pesa 20 gramos, un mol completo pesa cuatro "
+        "veces más.\n"
+        "3) El cociente 20 dividido por 0,25 da 80 g/mol.\n\n"
+        "Dividir por un número menor que uno aumenta el resultado, que es lo "
+        "que corresponde: un mol pesa más que un cuarto de mol.",
+        [
+            ("5 g/mol",
+             "Multiplica por 0,25 en vez de dividir."),
+            ("20 g/mol",
+             "Toma la masa de la muestra como si correspondiera a un mol completo."),
+            ("0,0125 g/mol, dividiendo los moles de la muestra por su masa en gramos",
+             "Invierte la división: la masa molar es masa dividida por moles."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Según $CaCO_3 \\rightarrow CaO + CO_2$, ¿qué volumen de dióxido de "
+        "carbono, medido en condiciones normales, libera un mol de carbonato de "
+        "calcio?",
+        "22,4 litros",
+        "La proporción entrega los moles y el volumen molar los convierte en "
+        "litros.\n\n"
+        "1) Los coeficientes indican un mol de gas por cada mol de carbonato "
+        "descompuesto.\n"
+        "2) Se libera entonces un mol de dióxido de carbono.\n"
+        "3) En condiciones normales ese mol ocupa 22,4 litros.\n\n"
+        "Recoger y medir ese volumen es una forma de seguir el avance de la "
+        "descomposición sin abrir el horno.",
+        [
+            ("44,8 litros",
+             "Corresponde a dos moles de gas y la ecuación libera uno."),
+            ("100 litros",
+             "Confunde la masa molar del carbonato con un volumen."),
+            ("11,2 litros, que es la mitad del volumen molar en condiciones normales",
+             "La proporción es de uno a uno: se libera un mol completo, no medio."),
+        ],
+    ),
+]
+
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_estequiometria", "dificil",
+        "Con C = 12, H = 1 y O = 16, según $C_3H_8 + 5O_2 \\rightarrow 3CO_2 + "
+        "4H_2O$, ¿qué masa de dióxido de carbono libera la combustión completa "
+        "de un mol de propano?",
+        "132 g",
+        "Un mol de propano no produce un mol de dióxido de carbono: produce "
+        "tres.\n\n"
+        "1) El coeficiente del dióxido de carbono es 3, así que un mol de "
+        "propano genera 3 moles del gas.\n"
+        "2) La masa molar del dióxido de carbono es 44 g/mol.\n"
+        "3) Tres moles pesan 3 · 44 = 132 gramos.\n\n"
+        "El resultado también se anticipa contando carbonos: los tres del "
+        "propano terminan repartidos en tres moléculas de dióxido de carbono.",
+        [
+            ("44 g",
+             "Supone una proporción de uno a uno e ignora el coeficiente 3."),
+            ("176 g",
+             "Usa el coeficiente 4, que corresponde al agua y no al dióxido de carbono."),
+            ("220 g, aplicando el coeficiente 5 que la ecuación asigna al oxígeno molecular",
+             "Ese coeficiente rige el consumo de oxígeno, no la producción de dióxido de carbono."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "dificil",
+        "Una muestra de 250 gramos de caliza contiene 80% de carbonato de "
+        "calcio y el resto es material inerte. Al calcinarla según $CaCO_3 "
+        "\\rightarrow CaO + CO_2$, ¿qué masa de gas se libera? (masas molares: "
+        "$CaCO_3$ 100 g/mol, $CO_2$ 44 g/mol)",
+        "88 g",
+        "Solo reacciona la fracción activa de la muestra.\n\n"
+        "1) El 80% de 250 gramos son 200 gramos de carbonato de calcio; los "
+        "otros 50 no participan.\n"
+        "2) Esos 200 gramos, divididos por 100 g/mol, son 2 moles.\n"
+        "3) La proporción es de uno a uno, así que se liberan 2 moles de "
+        "dióxido de carbono: 88 gramos.\n\n"
+        "Omitir la pureza es el error más caro en este cálculo, porque infla el "
+        "resultado en la misma proporción en que la muestra está impurificada.",
+        [
+            ("110 g",
+             "Calcula sobre los 250 gramos completos, sin descontar el material inerte."),
+            ("44 g",
+             "Corresponde a un solo mol de gas y la muestra aporta dos."),
+            ("200 g, que es la masa de carbonato de calcio efectivamente presente en la caliza",
+             "Esa es la masa que reacciona, no la del gas que se desprende."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "dificil",
+        "Un cálculo estequiométrico predice 88 gramos de producto y en el "
+        "laboratorio se obtienen 66 gramos. ¿Cuál es el rendimiento de la "
+        "reacción?",
+        "75%",
+        "El rendimiento compara lo obtenido con lo predicho.\n\n"
+        "1) La razón entre la masa obtenida y la esperada es 66 dividido por "
+        "88.\n"
+        "2) Ese cociente vale 0,75.\n"
+        "3) Expresado como porcentaje, corresponde a un 75%.\n\n"
+        "Un rendimiento bajo no contradice la conservación de la materia: la "
+        "masa faltante quedó como reactante sin reaccionar, como subproducto o "
+        "adherida al material de vidrio.",
+        [
+            ("22%",
+             "Corresponde a la fracción que faltó, no a la que se obtuvo."),
+            ("133%",
+             "Invierte la razón y divide lo esperado por lo obtenido."),
+            ("100%, porque la ley de conservación de la materia obliga a que nada se pierda",
+             "La ley se cumple, pero parte de la materia no llega a producto: queda sin reaccionar o se pierde en el manejo."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "dificil",
+        "Un grupo calcina carbonato de calcio en un crisol abierto y observa "
+        "que la masa final es menor que la inicial. Concluye que la materia no "
+        "se conserva. ¿Qué falla en esa conclusión?",
+        "No consideraron el dióxido de carbono que escapó del crisol",
+        "La balanza mide solo lo que queda dentro del crisol.\n\n"
+        "1) La descomposición libera dióxido de carbono, que es un gas.\n"
+        "2) En un crisol abierto ese gas se dispersa en el aire y deja de "
+        "pesarse.\n"
+        "3) La masa perdida es exactamente la del gas: sumándola, el total se "
+        "conserva.\n\n"
+        "El diseño correcto es cerrar el sistema o recoger el gas, porque la ley "
+        "de conservación vale para sistemas cerrados.",
+        [
+            ("La balanza no tenía precisión suficiente",
+             "La pérdida es de decenas de gramos, muy por encima del error de cualquier balanza de laboratorio."),
+            ("El carbonato de calcio no reaccionó por completo",
+             "Una reacción incompleta dejaría MÁS masa en el crisol, no menos."),
+            ("La ley no se aplica si hay calor",
+             "La ley vale para toda reacción química, se caliente o no."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "dificil",
+        "Un grupo grafica masa contra moles para dos gases distintos y obtiene "
+        "dos rectas que parten del origen con pendientes diferentes. ¿Qué "
+        "representa la pendiente de cada recta?",
+        "La masa molar de cada gas",
+        "La pendiente es el cociente entre las magnitudes de los ejes.\n\n"
+        "1) En el eje vertical va la masa, en gramos, y en el horizontal, los "
+        "moles.\n"
+        "2) La pendiente es entonces gramos por mol, que es la unidad de la "
+        "masa molar.\n"
+        "3) Como cada gas tiene su propia masa molar, cada recta tiene su "
+        "propia pendiente.\n\n"
+        "Que ambas pasen por el origen confirma que la relación es de "
+        "proporcionalidad directa: cero moles pesan cero gramos.",
+        [
+            ("El número de Avogadro",
+             "Ese número es igual para las dos sustancias y no explicaría pendientes distintas."),
+            ("El volumen que ocupa cada gas",
+             "El volumen no aparece en ninguno de los dos ejes del gráfico."),
+            ("La cantidad de átomos que tiene cada molécula de la sustancia representada",
+             "Ese dato influye en la masa molar, pero la pendiente es la masa molar completa."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "dificil",
+        "¿Cuántos átomos, en total, hay en un mol de $H_2SO_4$?",
+        "4,214 × 10²⁴ átomos",
+        "Primero se cuentan los átomos de la fórmula y después se escala.\n\n"
+        "1) La fórmula tiene 2 hidrógenos, 1 azufre y 4 oxígenos: 7 átomos por "
+        "unidad de fórmula.\n"
+        "2) Un mol contiene 6,02 × 10²³ unidades de fórmula.\n"
+        "3) El producto 7 · 6,02 × 10²³ es 42,14 × 10²³, que se escribe 4,214 × "
+        "10²⁴ átomos.\n\n"
+        "Equivale a decir que un mol del compuesto contiene 7 moles de átomos.",
+        [
+            ("6,02 × 10²³ átomos",
+             "Ese es el número de unidades de fórmula, y cada una aporta siete átomos."),
+            ("7 átomos",
+             "Corresponde a una sola unidad de fórmula, no a un mol de ellas."),
+            ("4,214 × 10²³ átomos, conservando el exponente que tiene el número de Avogadro",
+             "Al multiplicar por siete el coeficiente pasa de 6,02 a 42,14 y el exponente sube en uno."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "dificil",
+        "Para medir cuánto gas libera una reacción, un grupo repite el ensayo "
+        "cuatro veces aumentando a la vez la masa de reactante y la temperatura "
+        "del baño. Obtiene más gas en cada ensayo. ¿Qué limita esa evidencia?",
+        "Cambiaron la masa y la temperatura a la vez",
+        "Con dos variables moviéndose juntas no se puede atribuir el efecto.\n\n"
+        "1) El aumento de gas puede deberse a la mayor masa de reactante.\n"
+        "2) También puede deberse a la temperatura, que acelera la reacción y "
+        "la lleva más lejos en el mismo tiempo.\n"
+        "3) Como ambas subieron en cada ensayo, los datos no permiten separar "
+        "los dos efectos.\n\n"
+        "El diseño correcto fija la temperatura y varía solo la masa, o al "
+        "revés, de modo que quede una sola variable independiente.",
+        [
+            ("Hicieron pocas repeticiones",
+             "Aunque repitieran veinte veces, las dos variables seguirían confundidas."),
+            ("No midieron la masa del gas",
+             "El volumen recogido es una medida válida del gas liberado."),
+            ("La temperatura del baño no influye",
+             "Sí influye en la velocidad y en cuánto avanza la reacción en el tiempo del ensayo."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "dificil",
+        "Un grupo quiere comprobar que el gas recogido al descomponer "
+        "carbonato de calcio proviene de la muestra y no del aire del "
+        "recipiente. ¿Qué control conviene incorporar?",
+        "Repetir el ensayo con el recipiente vacío",
+        "Un control sirve para descartar una explicación alternativa.\n\n"
+        "1) La explicación que se quiere descartar es que el gas provenga del "
+        "aire encerrado.\n"
+        "2) Un ensayo idéntico, pero sin muestra, deja actuar solo esa fuente "
+        "alternativa.\n"
+        "3) Si en ese ensayo no se recoge gas, la única fuente posible es la "
+        "muestra.\n\n"
+        "Un control se distingue de una repetición en que le quita al montaje "
+        "justamente aquello cuyo efecto se está poniendo a prueba.",
+        [
+            ("Repetir el ensayo tres veces con la misma muestra",
+             "Eso mide la reproducibilidad, pero no descarta que el gas venga del aire."),
+            ("Usar una muestra de mayor masa",
+             "Cambiar la masa explora la proporción, no el origen del gas."),
+            ("Medir la temperatura del recipiente",
+             "La temperatura informa sobre el calor intercambiado, no sobre de dónde proviene el gas."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "dificil",
+        "El nitrógeno se convierte en amoníaco según $N_2 + 3H_2 \\rightarrow "
+        "2NH_3$ y el amoníaco en monóxido de nitrógeno según $4NH_3 + 5O_2 "
+        "\\rightarrow 4NO + 6H_2O$. Partiendo de 2 moles de nitrógeno y con "
+        "los demás reactantes en exceso, ¿cuántos moles de monóxido se "
+        "obtienen?",
+        "4 moles",
+        "Las dos etapas se encadenan por el amoníaco.\n\n"
+        "1) En la primera etapa, 2 moles de nitrógeno producen 4 moles de "
+        "amoníaco, porque la proporción es de 1 a 2.\n"
+        "2) En la segunda, la proporción entre amoníaco y monóxido es de 4 a 4, "
+        "es decir, de uno a uno.\n"
+        "3) Los 4 moles de amoníaco dan entonces 4 moles de monóxido de "
+        "nitrógeno.\n\n"
+        "En un encadenamiento así, el producto de la primera etapa es el "
+        "reactante de la segunda y no aparece en el resultado final.",
+        [
+            ("2 moles",
+             "Repite los moles de nitrógeno sin aplicar la proporción de la primera etapa."),
+            ("8 moles",
+             "Duplica dos veces, pese a que la segunda etapa es de uno a uno."),
+            ("6 moles, tomando el coeficiente del agua que aparece en la segunda ecuación",
+             "Ese coeficiente rige la producción de agua, no la de monóxido de nitrógeno."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "dificil",
+        "Con C = 12, N = 14 y O = 16, ¿cuál de estas tres muestras contiene más "
+        "átomos: 32 g de $O_2$, 28 g de $N_2$ o 44 g de $CO_2$?",
+        "La de dióxido de carbono",
+        "Las tres muestras tienen un mol, así que decide cuántos átomos trae "
+        "cada molécula.\n\n"
+        "1) 32 gramos de oxígeno son un mol, y cada molécula aporta 2 átomos: 2 "
+        "moles de átomos.\n"
+        "2) 28 gramos de nitrógeno también son un mol, con 2 átomos por "
+        "molécula: otros 2 moles de átomos.\n"
+        "3) 44 gramos de dióxido de carbono son un mol, pero cada molécula "
+        "tiene 3 átomos: 3 moles de átomos.\n\n"
+        "La comparación muestra que igual número de moléculas no significa "
+        "igual número de átomos.",
+        [
+            ("La de oxígeno",
+             "Aporta 2 moles de átomos, menos que los 3 del dióxido de carbono."),
+            ("La de nitrógeno",
+             "También aporta 2 moles de átomos, igual que el oxígeno."),
+            ("Las tres contienen la misma cantidad, porque cada muestra corresponde a un mol",
+             "Un mol iguala el número de moléculas, no el de átomos: eso depende de la fórmula."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "dificil",
+        "Se calientan 25 gramos de sulfato de cobre hidratado, $CuSO_4 \\cdot "
+        "5H_2O$, de masa molar 250 g/mol, hasta que pierde toda su agua. ¿Qué "
+        "masa de agua se desprende? (masa molar del agua: 18 g/mol)",
+        "9 g",
+        "El agua de hidratación se cuenta con los mismos moles del "
+        "compuesto.\n\n"
+        "1) 25 gramos divididos por 250 g/mol dan 0,1 moles de sulfato "
+        "hidratado.\n"
+        "2) Cada mol arrastra 5 moles de agua, así que se liberan 0,5 moles.\n"
+        "3) Esos 0,5 moles pesan 0,5 · 18 = 9 gramos.\n\n"
+        "En el crisol quedan 16 gramos de sulfato anhidro, y el cambio de color "
+        "de azul a blanco es la señal visible de esa pérdida.",
+        [
+            ("18 g",
+             "Corresponde a un mol de agua y aquí se liberan medio mol."),
+            ("5 g",
+             "Toma el subíndice 5 como si fuera una masa en gramos."),
+            ("16 g, que es la masa que queda en el crisol una vez terminado el calentamiento",
+             "Esa es la masa del sulfato anhidro, no la del agua desprendida."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "dificil",
+        "En una reacción entre dos sustancias, una de ellas está en exceso. Si "
+        "se duplica la masa de la otra manteniendo el exceso, ¿qué ocurre con "
+        "la cantidad de producto?",
+        "Se duplica",
+        "El producto queda determinado por el reactante que se agota.\n\n"
+        "1) Mientras uno de los reactantes esté en exceso, no es él quien "
+        "limita el resultado.\n"
+        "2) La cantidad de producto es proporcional a los moles del reactante "
+        "que se consume por completo.\n"
+        "3) Duplicar ese reactante duplica entonces el producto, siempre que el "
+        "otro siga sobrando.\n\n"
+        "La proporcionalidad se rompe si al duplicar la masa el reactante que "
+        "sobraba deja de estar en exceso.",
+        [
+            ("Se mantiene igual",
+             "Se mantendría si el reactante duplicado no fuera el que limita la reacción."),
+            ("Se reduce a la mitad",
+             "Aumentar un reactante nunca disminuye la cantidad de producto."),
+            ("Se cuadruplica, porque los dos reactantes aportan al producto en la misma proporción",
+             "El que está en exceso no cambia de cantidad: el producto crece en el mismo factor que el otro."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "dificil",
+        "Un estudiante afirma que una ecuación balanceada permite predecir "
+        "cuánto demorará la reacción. ¿Es correcta esa afirmación?",
+        "No, la ecuación solo entrega proporciones entre las cantidades",
+        "Balancear y medir el tiempo son problemas distintos.\n\n"
+        "1) Los coeficientes informan en qué proporción se consumen los "
+        "reactantes y se forman los productos.\n"
+        "2) Esa proporción no cambia aunque la reacción tarde un segundo o un "
+        "año.\n"
+        "3) La duración depende de la temperatura, de la superficie de "
+        "contacto, de la concentración y de la presencia de catalizadores.\n\n"
+        "Por eso dos reacciones con la misma ecuación pueden ocurrir a "
+        "velocidades muy diferentes según las condiciones del ensayo.",
+        [
+            ("Sí, porque los coeficientes indican la rapidez del proceso",
+             "Los coeficientes son proporciones de cantidad, no de tiempo."),
+            ("Sí, si además se conoce la masa molar de cada sustancia",
+             "La masa molar convierte moles en gramos; tampoco informa sobre el tiempo."),
+            ("No, porque solo sirven para gases",
+             "Se usan para cualquier reacción; el problema es otro: no describen velocidad."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "dificil",
+        "Un grupo hace reaccionar masas crecientes de zinc con ácido en exceso "
+        "y mide el hidrógeno liberado. Los puntos quedan sobre una recta que "
+        "pasa por el origen. ¿Qué conclusión autorizan esos datos?",
+        "El hidrógeno liberado es proporcional a la masa de zinc",
+        "La forma del gráfico es lo que autoriza la conclusión.\n\n"
+        "1) Una recta que pasa por el origen indica proporcionalidad directa "
+        "entre las dos magnitudes.\n"
+        "2) Aquí eso significa que al duplicar el zinc se duplica el hidrógeno "
+        "recogido.\n"
+        "3) El resultado es coherente con la estequiometría, porque el ácido "
+        "está en exceso y el zinc es quien limita.\n\n"
+        "Lo que los datos NO autorizan es afirmar algo sobre la velocidad de la "
+        "reacción: el gráfico no tiene el tiempo en ningún eje.",
+        [
+            ("La reacción es más rápida con más zinc",
+             "El gráfico no registra tiempo, así que no dice nada sobre la velocidad."),
+            ("El ácido es el reactivo limitante",
+             "Si lo fuera, la recta se aplanaría al aumentar el zinc, y aquí no lo hace."),
+            ("Zinc e hidrógeno tienen igual masa molar",
+             "La proporción de uno a uno es en moles; sus masas molares son 65 y 2 g/mol."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "dificil",
+        "Un estudiante calcula que 18 gramos de agua líquida ocupan 22,4 litros "
+        "porque corresponden a un mol. ¿Qué error comete?",
+        "El volumen molar de 22,4 litros vale solo para gases",
+        "La constante que usó tiene una condición de aplicación que no se "
+        "cumple.\n\n"
+        "1) El volumen molar de 22,4 litros describe un gas a 0 °C y 1 "
+        "atmósfera.\n"
+        "2) Vale porque en un gas las moléculas están separadas y el volumen "
+        "depende de cuántas hay, no de cuáles.\n"
+        "3) En un líquido las moléculas están en contacto, así que el volumen sí "
+        "depende de la sustancia: 18 gramos de agua ocupan unos 18 mililitros.\n\n"
+        "El cálculo es mil veces mayor que el valor real, lo que muestra que "
+        "revisar el orden de magnitud del resultado detecta el error de "
+        "inmediato.",
+        [
+            ("Usó mal la masa molar del agua líquida",
+             "La masa molar está bien: 18 gramos de agua sí son un mol."),
+            ("El agua no forma moles por ser un compuesto",
+             "Cualquier sustancia, compuesto o elemento, se puede medir en moles."),
+            ("Debió multiplicar por los dos hidrógenos",
+             "El número de átomos por molécula no interviene en el volumen que ocupa la muestra."),
+        ],
+    ),
+]
