@@ -374,10 +374,8 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "300 mL de una disolución 0,1 mol/L": f"{0.1 * 0.3:.2f} moles".replace(".", ","),
     "9 gramos de glucosa": f"{9 / 180 / 0.25:.1f} mol/L".replace(".", ","),
     "mitad de una disolución 0,4 mol/L": f"{0.4:.1f} mol/L".replace(".", ","),
-    "preparar "
-        "500 mL de una disolución 0,2 mol/L": f"{0.2 * 0.5 * 58.5:.2f} g".replace(".", ","),
-    "200 mL de una disolución "
-        "0,5 mol/L": f"{0.5 * 0.2:.1f} moles".replace(".", ","),
+    "preparar 500 mL de una disolución 0,2 mol/L": f"{0.2 * 0.5 * 58.5:.2f} g".replace(".", ","),
+    "clorhídrico hay en 200 mL": f"{0.5 * 0.2:.1f} moles".replace(".", ","),
     "0,25 moles de soluto y se completa hasta 500 mL": f"{0.25 / 0.5:.1f} mol/L".replace(".", ","),
     "12 gramos de soluto en 48 gramos de agua": f"{int(100 * 12 / 60)}%",
     "informa una concentración de 5 mg/L": f"{5} ppm",
@@ -387,6 +385,28 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "ácido comercial es 36,5% m/m": f"{int(1000 * 1.2 * 0.365 / 36.5)} mol/L",
     "Se evaporan 100 mL": f"{0.4 * 0.2 / 0.1:.1f} mol/L".replace(".", ","),
     "rotulado como 0,9% m/v": f"{int(0.9 * 1000 / 100)} gramos",
+    # --- Quimica: diluciones, mezclas de disoluciones y solubilidad ---
+    "100 mL de una disolución 2 mol/L y se completan con agua hasta 400 mL": f"{2 * 0.1 / 0.4:.1f} mol/L".replace(".", ","),
+    "50 mL de una disolución 1 mol/L hasta un volumen final de 250": f"{1 * 50 / 250:.1f} mol/L".replace(".", ","),
+    "2 mol/L se necesita para preparar 500 mL de otra 0,4 mol/L": f"{int(0.4 * 500 / 2)} mL",
+    "200 mL de una disolución 0,5 mol/L y se completan con agua hasta un litro": f"{0.5 * 0.2 / 1:.1f} mol/L".replace(".", ","),
+    "100 mL de una disolución 1 mol/L con 100 mL de otra 3 mol/L": f"{(1 * 0.1 + 3 * 0.1) / 0.2:.0f} mol/L",
+    "200 mL de una disolución 0,2 mol/L con 300 mL de otra 0,7": f"{(0.2 * 0.2 + 0.7 * 0.3) / 0.5:.1f} mol/L".replace(".", ","),
+    "en 250 g de agua a esa": f"{int(36 * 250 / 100)} g",
+    "se agregan 40 gramos de": f"{40 - 36} gramos",
+    "20 g por 100 g de agua a 20 °C y 60 g": f"{60 - 20} gramos",
+    "50 mL de una disolución y se diluyen hasta 200 mL, quedando": f"{0.3 * 200 / 50:.1f} mol/L".replace(".", ","),
+    "dilución 1:10 de una disolución 0,5 mol/L": f"{0.5 / 10:.2f} mol/L".replace(".", ","),
+    "0,9% m/v se diluye con un volumen igual": f"{0.9 / 2:.2f}% m/v".replace(".", ","),
+    "25 mL de una disolución 0,4 mol/L y se completan hasta 100": f"{0.4 * 25 / 100:.1f} mol/L".replace(".", ","),
+    "agregar a 100 mL de una disolución 1 mol/L para": f"{int(1 * 100 / 0.25 - 100)} mL",
+    "400 mL de una disolución 0,3 mol/L con 100 mL de otra 0,8": f"{(0.3 * 0.4 + 0.8 * 0.1) / 0.5:.1f} mol/L".replace(".", ","),
+    "es 20 g por cada 100 mL": f"{int(20 * 50 / 100)} gramos",
+    "300 mL de agua pura a 100 mL de una disolución 0,8 mol/L": f"{0.8 * 0.1 / 0.4:.1f} mol/L".replace(".", ","),
+    "dos diluciones 1:10": f"{0.5 / 100:.3f} mol/L".replace(".", ","),
+    "60 g por 100 g de agua a 80 °C y 20 g por": f"{(60 - 20) * 200 // 100} gramos",
+    "100 mL de una disolución 2 mol/L hasta 500 mL y el": f"{(2 * 0.1 + 0.2 * 0.5) / 1.0:.1f} mol/L".replace(".", ","),
+    "30 gramos de sal en 100 gramos de agua a 60": f"{30} gramos",
 }
 
 # Enunciado (recortado) -> valor esperado, recalculado acá de forma independiente.

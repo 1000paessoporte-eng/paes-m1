@@ -116466,3 +116466,1175 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Quimica - Reacciones quimicas: diluciones, mezclas y solubilidad
+#
+# El temario cierra el area con tres lineas: "Concepto de dilucion y
+# determinacion de concentraciones en diluciones", "Determinacion de la
+# concentracion en mezclas de soluciones" y "Concepto de solubilidad y factores
+# que influyen en ella".
+#
+# La idea que sostiene las tres: al diluir o al mezclar, los MOLES de soluto se
+# conservan y lo unico que cambia es el volumen en que estan repartidos. De ahi
+# sale C1V1 = C2V2 y tambien la formula de la mezcla, que es la misma cuenta
+# con dos aportes en el numerador.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_dilucion", "facil",
+        "¿En qué consiste diluir una disolución?",
+        "En agregarle más disolvente",
+        "Diluir cambia el volumen sin tocar el soluto.\n\n"
+        "1) Se añade disolvente a la disolución ya preparada.\n"
+        "2) La cantidad de soluto sigue siendo la misma: no se agrega ni se "
+        "quita.\n"
+        "3) Como ese soluto queda repartido en más volumen, la concentración "
+        "baja.\n\n"
+        "Por eso una dilución se describe siempre con dos pares de datos: la "
+        "concentración y el volumen antes, y los mismos después.",
+        [
+            ("En agregarle más soluto",
+             "Agregar soluto concentra la disolución en vez de diluirla."),
+            ("En calentar la disolución",
+             "Calentar cambia el volumen levemente, pero no es lo que se llama diluir."),
+            ("En quitarle parte del disolvente para reducir su volumen total",
+             "Eso la concentra: diluir es lo contrario, agregar disolvente."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "facil",
+        "Al diluir una disolución, ¿qué ocurre con los moles de soluto?",
+        "No cambian",
+        "El soluto no se crea ni se destruye al agregar disolvente.\n\n"
+        "1) Diluir consiste en añadir disolvente, no soluto.\n"
+        "2) Las partículas de soluto siguen siendo exactamente las mismas.\n"
+        "3) Lo que cambia es el volumen en que están repartidas.\n\n"
+        "Esa conservación es la que justifica la igualdad $C_1V_1 = C_2V_2$: "
+        "ambos productos son los mismos moles.",
+        [
+            ("Aumentan",
+             "Aumentarían solo si se agregara más soluto, que no es lo que hace una dilución."),
+            ("Disminuyen",
+             "El soluto no se pierde: sigue completo dentro de la disolución."),
+            ("Disminuyen en la misma proporción en que aumenta el volumen final",
+             "Lo que disminuye en esa proporción es la concentración, no la cantidad de soluto."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "facil",
+        "Al diluir una disolución, ¿qué ocurre con su concentración?",
+        "Disminuye",
+        "El numerador se mantiene y el denominador crece.\n\n"
+        "1) La concentración es moles de soluto divididos por volumen.\n"
+        "2) Los moles no cambian al diluir.\n"
+        "3) El volumen aumenta, así que el cociente disminuye.\n\n"
+        "Duplicar el volumen deja la concentración en la mitad; multiplicarlo "
+        "por diez, en la décima parte.",
+        [
+            ("Aumenta",
+             "Aumentaría si se agregara soluto o se quitara disolvente."),
+            ("No cambia",
+             "No cambiaría si soluto y volumen crecieran en la misma proporción."),
+            ("Disminuye solo si el disolvente agregado es distinto del original",
+             "Disminuye igual con el mismo disolvente: lo que decide es el aumento de volumen."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "facil",
+        "¿Qué es la solubilidad de una sustancia?",
+        "La máxima cantidad que se disuelve a una temperatura dada",
+        "La solubilidad es un límite, no una velocidad.\n\n"
+        "1) Indica cuánto soluto acepta una cantidad fija de disolvente.\n"
+        "2) Ese límite depende de la temperatura, así que siempre se informa "
+        "junto con ella.\n"
+        "3) Superado ese valor, el soluto adicional queda sin disolver en el "
+        "fondo.\n\n"
+        "No dice nada sobre cuánto demora el proceso: eso depende de la "
+        "agitación y del tamaño de las partículas.",
+        [
+            ("La rapidez con que una sustancia se disuelve",
+             "Esa es la velocidad de disolución, que depende de la agitación y del tamaño de grano."),
+            ("La cantidad de soluto que tiene una disolución",
+             "Esa es la concentración, que puede estar muy por debajo del límite."),
+            ("La temperatura a la que una sustancia se disuelve por completo en agua",
+             "La solubilidad es una cantidad de soluto, no una temperatura."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "facil",
+        "¿Qué es una disolución saturada?",
+        "La que contiene el máximo de soluto disuelto",
+        "La saturación es el equilibrio entre disolver y precipitar.\n\n"
+        "1) A una temperatura dada, el disolvente admite una cantidad máxima de "
+        "soluto.\n"
+        "2) Cuando esa cantidad está disuelta, la disolución está saturada.\n"
+        "3) Todo soluto adicional queda sin disolver, depositado en el "
+        "fondo.\n\n"
+        "El valor de saturación cambia con la temperatura: una disolución "
+        "saturada en frío puede dejar de estarlo al calentarse.",
+        [
+            ("La que admite más soluto",
+             "Esa es una disolución insaturada, que todavía no llegó al límite."),
+            ("La que tiene mucho disolvente",
+             "Tener mucho disolvente aleja del límite en vez de acercar a él."),
+            ("La que tiene soluto y disolvente en partes exactamente iguales",
+             "La proporción de saturación depende de cada sustancia y no es de uno a uno."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "facil",
+        "¿Qué es una disolución insaturada?",
+        "La que aún puede disolver más soluto",
+        "Está por debajo del límite de solubilidad.\n\n"
+        "1) La cantidad de soluto disuelto es menor que la máxima posible.\n"
+        "2) Por eso agregar más soluto lo disuelve por completo, sin dejar "
+        "residuo.\n"
+        "3) Sigue siendo insaturada hasta alcanzar el valor de saturación.\n\n"
+        "La mayoría de las disoluciones de laboratorio son insaturadas: se "
+        "preparan bastante por debajo del límite.",
+        [
+            ("La que ya no admite más soluto",
+             "Esa es una disolución saturada."),
+            ("La que tiene soluto sin disolver en el fondo",
+             "Ese depósito indica que se superó el límite: la disolución está saturada."),
+            ("La que se preparó con un disolvente distinto del agua destilada",
+             "El disolvente usado no define si la disolución está o no saturada."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "facil",
+        "¿Qué caracteriza a una disolución sobresaturada?",
+        "Tiene más soluto disuelto del que admitiría",
+        "Es un estado inestable, no un límite mayor.\n\n"
+        "1) Se obtiene saturando en caliente y enfriando con mucho cuidado.\n"
+        "2) El soluto queda disuelto por encima de lo que corresponde a esa "
+        "temperatura.\n"
+        "3) Cualquier perturbación —un golpe, un cristal semilla— provoca la "
+        "cristalización del exceso.\n\n"
+        "Ese es el principio de los calentadores químicos de mano, que "
+        "cristalizan de golpe al accionar una lámina metálica.",
+        [
+            ("Tiene menos soluto del que admitiría",
+             "Esa es una disolución insaturada."),
+            ("Tiene soluto sin disolver en el fondo",
+             "En una sobresaturada todo el soluto está disuelto: por eso es inestable."),
+            ("Contiene dos solutos distintos disueltos en el mismo disolvente",
+             "El número de solutos no tiene relación con la sobresaturación."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "facil",
+        "¿En qué unidad se expresa habitualmente la solubilidad de un sólido en "
+        "agua?",
+        "En gramos por cada 100 g de agua",
+        "La unidad refleja la definición de límite.\n\n"
+        "1) El numerador es la masa máxima de soluto que llega a disolverse.\n"
+        "2) El denominador es una cantidad fija de disolvente: 100 gramos de "
+        "agua.\n"
+        "3) Junto al valor se informa siempre la temperatura, porque el límite "
+        "depende de ella.\n\n"
+        "Con esa unidad se construyen las curvas de solubilidad, que llevan la "
+        "temperatura en el eje horizontal.",
+        [
+            ("En gramos por cada 100 g de disolución",
+             "El denominador es la masa de DISOLVENTE, no la de la disolución completa."),
+            ("En moles por litro de disolución",
+             "Esa es la molaridad, una unidad de concentración y no de solubilidad."),
+            ("En grados Celsius, porque la solubilidad depende de la temperatura",
+             "La temperatura acompaña al dato, pero la solubilidad misma es una masa."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "facil",
+        "¿Qué expresa la relación $C_1V_1 = C_2V_2$ en una dilución?",
+        "Que los moles de soluto se conservan",
+        "Cada producto de la igualdad son los mismos moles.\n\n"
+        "1) El producto de una concentración por un volumen entrega moles de "
+        "soluto.\n"
+        "2) Antes de diluir, esos moles son $C_1V_1$; después, $C_2V_2$.\n"
+        "3) Como diluir no agrega ni quita soluto, ambos productos son "
+        "iguales.\n\n"
+        "La relación vale con cualquier unidad de volumen, siempre que se use "
+        "la misma a ambos lados de la igualdad.",
+        [
+            ("Que el volumen se conserva",
+             "El volumen cambia justamente: aumenta al agregar disolvente."),
+            ("Que la concentración se conserva",
+             "La concentración disminuye: es lo que la dilución busca."),
+            ("Que la masa total de la disolución permanece constante al diluirla",
+             "La masa total aumenta, porque se agrega disolvente."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "facil",
+        "¿Qué le ocurre a la solubilidad de un gas en agua al aumentar la "
+        "temperatura?",
+        "Disminuye, porque el gas escapa más fácil",
+        "Los gases se comportan al revés que la mayoría de los sólidos.\n\n"
+        "1) Al calentar, las moléculas del gas ganan energía y escapan del "
+        "líquido con más facilidad.\n"
+        "2) Por eso la cantidad que permanece disuelta se reduce.\n"
+        "3) Es lo contrario de lo que ocurre con la mayoría de las sales, que "
+        "se disuelven mejor en caliente.\n\n"
+        "Es la razón por la que una bebida gaseosa tibia pierde el gas mucho "
+        "más rápido que una fría.",
+        [
+            ("Aumenta",
+             "Ese es el comportamiento de la mayoría de los sólidos, no el de los gases."),
+            ("No cambia",
+             "La temperatura afecta claramente a la solubilidad de los gases."),
+            ("Aumenta hasta los 50 °C y después empieza a disminuir de manera brusca",
+             "La disminución es progresiva desde el comienzo: no hay tal umbral."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "facil",
+        "¿Qué efecto tiene aumentar la presión sobre la solubilidad de un gas "
+        "en un líquido?",
+        "La aumenta",
+        "La presión empuja al gas hacia el interior del líquido.\n\n"
+        "1) A mayor presión, más moléculas de gas chocan contra la superficie "
+        "del líquido.\n"
+        "2) Eso favorece que entren y permanezcan disueltas.\n"
+        "3) Por eso las bebidas gaseosas se embotellan a presión.\n\n"
+        "Al abrir la botella la presión cae y el exceso de gas escapa: esas son "
+        "las burbujas que se ven de inmediato.",
+        [
+            ("La disminuye",
+             "La presión favorece la entrada del gas, no su salida."),
+            ("No la afecta",
+             "En los gases el efecto de la presión es muy marcado."),
+            ("La aumenta solo si el líquido se mantiene a temperatura elevada",
+             "El efecto de la presión se observa a cualquier temperatura, y el frío además ayuda."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "facil",
+        "Agitar una mezcla de azúcar y agua, ¿qué modifica?",
+        "La rapidez con que el azúcar se disuelve",
+        "La agitación actúa sobre el proceso, no sobre el límite.\n\n"
+        "1) Al agitar se renueva el líquido en contacto con los cristales.\n"
+        "2) Eso acelera la disolución, porque el disolvente que rodea al soluto "
+        "no se satura localmente.\n"
+        "3) La cantidad máxima que llega a disolverse, en cambio, sigue siendo "
+        "la misma.\n\n"
+        "Los factores que cambian la velocidad son la agitación, la temperatura "
+        "y el tamaño de grano; el límite lo fija la solubilidad.",
+        [
+            ("La cantidad máxima que se puede disolver",
+             "Ese límite es la solubilidad, y la agitación no la modifica."),
+            ("La temperatura de la disolución",
+             "La agitación no calienta de manera apreciable la mezcla."),
+            ("La concentración final que alcanza la disolución una vez terminada",
+             "La concentración final depende de cuánto soluto se agregó, no de si se agitó."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "Se toman 100 mL de una disolución 2 mol/L y se completan con agua "
+        "hasta 400 mL. ¿Cuál es la nueva concentración?",
+        "0,5 mol/L",
+        "Los moles se conservan y el volumen se cuadruplica.\n\n"
+        "1) Los moles iniciales son 2 mol/L por 0,1 litros, es decir, 0,2 "
+        "moles.\n"
+        "2) El volumen final es 0,4 litros.\n"
+        "3) La nueva concentración es 0,2 dividido por 0,4, es decir, 0,5 "
+        "mol/L.\n\n"
+        "El volumen se multiplicó por cuatro y la concentración quedó en la "
+        "cuarta parte: la relación es inversa.",
+        [
+            ("2 mol/L",
+             "Repite la concentración inicial, sin considerar el aumento de volumen."),
+            ("8 mol/L",
+             "Multiplica por cuatro donde corresponde dividir."),
+            ("0,2 mol/L, que corresponde a los moles de soluto presentes en la disolución",
+             "Esos son los moles: falta dividirlos por el volumen final en litros."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "Se diluyen 50 mL de una disolución 1 mol/L hasta un volumen final de "
+        "250 mL. ¿Cuál es la concentración resultante?",
+        "0,2 mol/L",
+        "La relación $C_1V_1 = C_2V_2$ resuelve el problema en un paso.\n\n"
+        "1) El producto inicial es 1 mol/L por 50 mL, es decir, 50 unidades.\n"
+        "2) El volumen final es 250 mL.\n"
+        "3) La concentración final es 50 dividido por 250, o sea 0,2 mol/L.\n\n"
+        "Los mililitros se pueden usar directamente porque aparecen a ambos "
+        "lados de la igualdad y se cancelan.",
+        [
+            ("1 mol/L",
+             "Repite la concentración inicial, sin considerar la dilución."),
+            ("5 mol/L",
+             "Invierte la relación y multiplica en vez de dividir."),
+            ("0,05 mol/L, tomando el volumen inicial expresado directamente en litros",
+             "Ese valor son los moles de soluto, no la concentración final."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "¿Qué volumen de una disolución 2 mol/L se necesita para preparar 500 "
+        "mL de otra 0,4 mol/L?",
+        "100 mL",
+        "Se despeja el volumen inicial de la relación de dilución.\n\n"
+        "1) Los moles que debe tener la disolución final son 0,4 por 0,5, es "
+        "decir, 0,2 moles.\n"
+        "2) Esos moles deben provenir de la disolución concentrada.\n"
+        "3) El volumen necesario es 0,2 dividido por 2, o sea 0,1 litros: 100 "
+        "mL.\n\n"
+        "En el laboratorio se miden esos 100 mL, se vierten en un matraz de 500 "
+        "mL y se completa con agua hasta la marca.",
+        [
+            ("500 mL",
+             "Ese es el volumen final que se quiere preparar, no el que hay que tomar."),
+            ("250 mL",
+             "Correspondería a diluir a la mitad, y la dilución es de cinco veces."),
+            ("2.500 mL, multiplicando el volumen final por la concentración de partida",
+             "El volumen inicial siempre es menor que el final en una dilución."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "Una disolución 0,6 mol/L se diluye hasta quedar en 0,2 mol/L. ¿Cuántas "
+        "veces aumentó su volumen?",
+        "Tres veces",
+        "Concentración y volumen son inversamente proporcionales al diluir.\n\n"
+        "1) Los moles de soluto no cambian.\n"
+        "2) La concentración pasó de 0,6 a 0,2, es decir, se redujo a la tercera "
+        "parte.\n"
+        "3) Para que eso ocurra el volumen debe haberse triplicado.\n\n"
+        "Si el volumen inicial era 100 mL, el final es 300 mL: se agregaron 200 "
+        "mL de agua.",
+        [
+            ("Dos veces",
+             "Duplicar el volumen habría dejado la concentración en 0,3 mol/L."),
+            ("Cuatro veces",
+             "Cuadruplicar el volumen habría dejado la concentración en 0,15 mol/L."),
+            ("Media vez, porque la concentración bajó en menos de la mitad de su valor",
+             "El volumen aumenta al diluir; además pasó de 0,6 a 0,2, que es un tercio."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "Se toman 200 mL de una disolución 0,5 mol/L y se completan con agua "
+        "hasta un litro. ¿Cuál es la concentración final?",
+        "0,1 mol/L",
+        "El cálculo pasa por los moles de soluto.\n\n"
+        "1) Los moles son 0,5 mol/L por 0,2 litros, es decir, 0,1 moles.\n"
+        "2) El volumen final es 1 litro.\n"
+        "3) La concentración final es 0,1 dividido por 1, o sea 0,1 mol/L.\n\n"
+        "El volumen se multiplicó por cinco y la concentración quedó en la "
+        "quinta parte.",
+        [
+            ("0,5 mol/L",
+             "Repite la concentración inicial, sin considerar el agua agregada."),
+            ("0,25 mol/L",
+             "Correspondería a diluir al doble, y aquí el volumen se quintuplicó."),
+            ("2,5 mol/L, dividiendo el volumen final por el volumen inicial de la muestra",
+             "Ese cociente es el factor de dilución, no la concentración final."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "Se mezclan 100 mL de una disolución 1 mol/L con 100 mL de otra 3 mol/L "
+        "del mismo soluto. ¿Cuál es la concentración de la mezcla?",
+        "2 mol/L",
+        "Los moles de ambas disoluciones se suman y el volumen también.\n\n"
+        "1) La primera aporta 1 por 0,1 = 0,1 moles; la segunda, 3 por 0,1 = 0,3 "
+        "moles.\n"
+        "2) El total es 0,4 moles en un volumen de 0,2 litros.\n"
+        "3) La concentración es 0,4 dividido por 0,2, es decir, 2 mol/L.\n\n"
+        "Con volúmenes iguales el resultado coincide con el promedio de ambas "
+        "concentraciones, pero eso solo ocurre en ese caso particular.",
+        [
+            ("4 mol/L",
+             "Suma las concentraciones sin dividir por el volumen total."),
+            ("1,5 mol/L",
+             "Promedia mal: el promedio de 1 y 3 es 2, no 1,5."),
+            ("0,4 mol/L, que corresponde al total de moles de soluto de la mezcla",
+             "Esos son los moles: falta dividirlos por los 0,2 litros de la mezcla."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "Se mezclan 200 mL de una disolución 0,2 mol/L con 300 mL de otra 0,7 "
+        "mol/L del mismo soluto. ¿Cuál es la concentración de la mezcla?",
+        "0,5 mol/L",
+        "Con volúmenes distintos el promedio simple no sirve.\n\n"
+        "1) La primera aporta 0,2 por 0,2 = 0,04 moles; la segunda, 0,7 por 0,3 "
+        "= 0,21 moles.\n"
+        "2) El total es 0,25 moles en 0,5 litros.\n"
+        "3) La concentración es 0,25 dividido por 0,5, es decir, 0,5 mol/L.\n\n"
+        "El resultado se acerca más a 0,7 que a 0,2 porque la disolución "
+        "concentrada aporta más volumen.",
+        [
+            ("0,45 mol/L",
+             "Promedia las dos concentraciones sin pesar cada una por su volumen."),
+            ("0,9 mol/L",
+             "Suma las concentraciones sin dividir por el volumen total de la mezcla."),
+            ("0,25 mol/L, que corresponde al total de moles de soluto de la mezcla",
+             "Esos son los moles: falta dividirlos por los 0,5 litros de la mezcla."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "Una sal tiene una solubilidad de 36 g por cada 100 g de agua a 20 °C. "
+        "¿Cuánta sal se disuelve, como máximo, en 250 g de agua a esa "
+        "temperatura?",
+        "90 g",
+        "La solubilidad escala con la cantidad de disolvente.\n\n"
+        "1) En 100 gramos de agua se disuelven 36 gramos de sal.\n"
+        "2) La muestra tiene 250 gramos de agua, dos veces y media esos 100.\n"
+        "3) Se disuelven entonces 36 por 2,5 = 90 gramos.\n\n"
+        "Agregar más de esos 90 gramos dejaría el exceso sin disolver en el "
+        "fondo, sin importar cuánto se agite.",
+        [
+            ("36 g",
+             "Corresponde a 100 gramos de agua y aquí hay 250."),
+            ("250 g",
+             "Es la masa de agua, no la de sal que se puede disolver en ella."),
+            ("14,4 g, dividiendo la masa de agua por el valor de la solubilidad indicada",
+             "La solubilidad se multiplica por la proporción de agua, no se divide por ella."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "Con una solubilidad de 36 g por 100 g de agua, se agregan 40 gramos de "
+        "sal a 100 gramos de agua. ¿Qué se observa?",
+        "Quedan 4 gramos sin disolver",
+        "El exceso por sobre el límite no se disuelve.\n\n"
+        "1) El agua admite como máximo 36 gramos de sal a esa temperatura.\n"
+        "2) Se agregaron 40 gramos, cuatro más que el límite.\n"
+        "3) Esos 4 gramos quedan depositados en el fondo y la disolución está "
+        "saturada.\n\n"
+        "Agitar más tiempo no cambia el resultado: la agitación acelera el "
+        "proceso, pero no corre el límite.",
+        [
+            ("Se disuelven los 40 gramos",
+             "El límite a esa temperatura es 36 gramos: los 4 restantes no caben."),
+            ("Quedan 36 gramos sin disolver",
+             "Confunde la cantidad que sí se disuelve con la que sobra."),
+            ("Se disuelven 40 gramos si se agita el tiempo suficiente y con fuerza",
+             "La agitación acelera la disolución, pero no modifica la solubilidad."),
+        ],
+    ),
+]
+
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_dilucion", "medio",
+        "Una tabla indica que la solubilidad de una sal es 20 g por 100 g de "
+        "agua a 20 °C y 60 g a 80 °C. ¿Cuánta sal adicional admite el agua "
+        "caliente?",
+        "40 gramos más",
+        "La diferencia entre ambos límites es lo que el calentamiento "
+        "habilita.\n\n"
+        "1) A 20 °C el límite es 20 gramos por cada 100 de agua.\n"
+        "2) A 80 °C ese límite sube a 60 gramos.\n"
+        "3) La diferencia, 60 menos 20, deja 40 gramos adicionales.\n\n"
+        "Esa diferencia es exactamente lo que cristaliza si la disolución "
+        "saturada en caliente se vuelve a enfriar a 20 °C.",
+        [
+            ("20 gramos más",
+             "Ese es el límite a 20 °C, no la diferencia entre ambos."),
+            ("60 gramos más",
+             "Ese es el límite a 80 °C: parte de esa sal ya se disolvía en frío."),
+            ("3 gramos más, porque la solubilidad se triplica al subir la temperatura",
+             "Se triplica el valor, pero la pregunta pide la diferencia en gramos, que es 40."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "Una disolución saturada en caliente se enfría lentamente. ¿Qué se "
+        "espera observar?",
+        "Aparecen cristales de soluto",
+        "Al bajar la temperatura baja el límite de solubilidad.\n\n"
+        "1) En caliente el disolvente admitía más soluto del que admite en "
+        "frío.\n"
+        "2) Al enfriar, la cantidad disuelta supera el nuevo límite.\n"
+        "3) El exceso abandona la disolución y se deposita como cristales.\n\n"
+        "Ese procedimiento se llama recristalización y es la forma habitual de "
+        "purificar un sólido en el laboratorio.",
+        [
+            ("La disolución se vuelve más diluida",
+             "La concentración baja porque precipita soluto, pero lo que se observa son los cristales."),
+            ("El soluto se evapora junto con el agua",
+             "Las sales no se evaporan a esas temperaturas: lo que precipita queda en el vaso."),
+            ("No ocurre ningún cambio, porque la cantidad de soluto no varió",
+             "La cantidad total no varía, pero deja de caber disuelta y cristaliza."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "¿Por qué una bebida gaseosa libera burbujas apenas se abre la "
+        "botella?",
+        "Porque cae la presión y el gas deja de caber",
+        "La solubilidad de un gas depende de la presión sobre el líquido.\n\n"
+        "1) La bebida se embotella con dióxido de carbono a presión elevada.\n"
+        "2) A esa presión el líquido mantiene disuelta mucha más cantidad de "
+        "gas.\n"
+        "3) Al abrir, la presión baja de golpe y el exceso escapa formando "
+        "burbujas.\n\n"
+        "Si además la bebida está tibia, escapa más rápido todavía, porque la "
+        "temperatura reduce la solubilidad de los gases.",
+        [
+            ("Porque el gas reacciona con el aire",
+             "No hay reacción: el gas simplemente deja de estar disuelto."),
+            ("Porque el líquido se calienta al abrirse",
+             "El cambio de temperatura al abrir es despreciable frente al de presión."),
+            ("Porque el dióxido de carbono se descompone al entrar en contacto con el aire",
+             "El gas no se descompone: escapa intacto desde el líquido."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "El yodo se disuelve bien en alcohol y muy poco en agua. ¿Qué principio "
+        "explica esa diferencia?",
+        "Lo semejante disuelve a lo semejante",
+        "La afinidad entre soluto y disolvente depende de su polaridad.\n\n"
+        "1) El agua es un disolvente muy polar y el yodo, una sustancia "
+        "apolar.\n"
+        "2) Entre moléculas de polaridad distinta las interacciones son "
+        "débiles, así que la disolución es escasa.\n"
+        "3) El alcohol tiene una parte apolar que sí interactúa bien con el "
+        "yodo.\n\n"
+        "Ese principio también explica por qué el aceite no se mezcla con agua "
+        "y sí con bencina.",
+        [
+            ("Los sólidos se disuelven mejor en líquidos livianos",
+             "La masa del disolvente no es lo que decide: lo que decide es la polaridad."),
+            ("El alcohol tiene mayor temperatura de ebullición",
+             "El alcohol hierve a menor temperatura que el agua, y eso no explica la solubilidad."),
+            ("El yodo reacciona químicamente con el alcohol y forma un compuesto nuevo",
+             "No hay reacción: el yodo se dispersa y puede recuperarse evaporando el alcohol."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "¿Por qué el azúcar molida se disuelve más rápido que la misma masa en "
+        "terrones?",
+        "Porque expone más superficie al agua",
+        "La disolución ocurre en la superficie de contacto.\n\n"
+        "1) Solo las partículas de la superficie están en contacto con el "
+        "disolvente.\n"
+        "2) Al moler, la misma masa queda repartida en muchos granos pequeños, "
+        "con mucha más superficie total.\n"
+        "3) Más superficie significa más partículas disolviéndose al mismo "
+        "tiempo.\n\n"
+        "La cantidad máxima que llega a disolverse no cambia: el tamaño de "
+        "grano afecta la velocidad, no la solubilidad.",
+        [
+            ("Porque el azúcar molida es más soluble",
+             "La solubilidad es la misma: lo que cambia es la rapidez del proceso."),
+            ("Porque los granos pequeños pesan menos",
+             "La masa total es la misma en ambos casos."),
+            ("Porque el azúcar molida contiene menos impurezas que la que viene en terrones",
+             "La pureza es la misma: lo que cambia es la superficie de contacto."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "Se toman 50 mL de una disolución y se diluyen hasta 200 mL, quedando "
+        "en 0,3 mol/L. ¿Cuál era la concentración inicial?",
+        "1,2 mol/L",
+        "Se despeja la concentración inicial de la relación de dilución.\n\n"
+        "1) Los moles de la disolución final son 0,3 por 0,2, es decir, 0,06 "
+        "moles.\n"
+        "2) Esos mismos moles estaban en los 50 mL iniciales.\n"
+        "3) La concentración inicial es 0,06 dividido por 0,05, o sea 1,2 "
+        "mol/L.\n\n"
+        "La concentración inicial siempre es mayor que la final: el volumen se "
+        "cuadruplicó y la concentración era cuatro veces mayor.",
+        [
+            ("0,3 mol/L",
+             "Repite la concentración final, sin deshacer la dilución."),
+            ("0,075 mol/L",
+             "Divide donde corresponde multiplicar: la inicial es la más concentrada."),
+            ("4 mol/L, que es el factor por el que se multiplicó el volumen de la muestra",
+             "Ese es el factor de dilución, no la concentración inicial."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "Se prepara una dilución 1:10 de una disolución 0,5 mol/L. ¿Cuál es la "
+        "concentración resultante?",
+        "0,05 mol/L",
+        "La notación 1:10 indica el factor por el que crece el volumen.\n\n"
+        "1) Una parte de disolución se lleva a un volumen final de diez "
+        "partes.\n"
+        "2) Los moles no cambian y el volumen se multiplica por diez.\n"
+        "3) La concentración queda en la décima parte: 0,05 mol/L.\n\n"
+        "Es la dilución más común en el laboratorio, porque encadenar dos de "
+        "ellas divide la concentración por cien.",
+        [
+            ("5 mol/L",
+             "Multiplica por diez donde corresponde dividir."),
+            ("0,1 mol/L",
+             "Correspondería a una dilución 1:5 y no a una 1:10."),
+            ("0,5 mol/L, porque la dilución no altera la cantidad de soluto disuelto",
+             "La cantidad de soluto no cambia, pero la concentración sí: queda en la décima parte."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "Un suero al 0,9% m/v se diluye con un volumen igual de agua. ¿Cuál es "
+        "la nueva concentración?",
+        "0,45% m/v",
+        "Duplicar el volumen deja la concentración en la mitad.\n\n"
+        "1) La masa de soluto no cambia al agregar agua.\n"
+        "2) El volumen final es el doble del inicial.\n"
+        "3) El porcentaje queda en la mitad: 0,45% m/v.\n\n"
+        "Ese suero diluido ya no sería isotónico con la sangre, y por eso las "
+        "diluciones clínicas se calculan con cuidado.",
+        [
+            ("1,8% m/v",
+             "Duplica la concentración, cuando diluir la reduce."),
+            ("0,9% m/v",
+             "Repite la concentración inicial, sin considerar el agua agregada."),
+            ("0,09% m/v, desplazando la coma un lugar por el agua que se agregó",
+             "Eso corresponde a una dilución de diez veces, y aquí el volumen solo se duplicó."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "Se toman 25 mL de una disolución 0,4 mol/L y se completan hasta 100 "
+        "mL. ¿Cuál es la nueva concentración?",
+        "0,1 mol/L",
+        "El volumen se cuadruplica y la concentración se divide por cuatro.\n\n"
+        "1) Los moles son 0,4 por 0,025, es decir, 0,01 moles.\n"
+        "2) El volumen final es 0,1 litros.\n"
+        "3) La concentración es 0,01 dividido por 0,1, o sea 0,1 mol/L.\n\n"
+        "Comprobación con la relación de dilución: 0,4 por 25 da 10, y 10 "
+        "dividido por 100 da 0,1.",
+        [
+            ("0,4 mol/L",
+             "Repite la concentración inicial, sin considerar la dilución."),
+            ("1,6 mol/L",
+             "Multiplica por cuatro donde corresponde dividir."),
+            ("0,01 mol/L, que es la cantidad de moles de soluto que se tomó al comienzo",
+             "Esos son los moles: falta dividirlos por el volumen final en litros."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "¿Cuánta agua hay que agregar a 100 mL de una disolución 1 mol/L para "
+        "que quede en 0,25 mol/L?",
+        "300 mL",
+        "Primero se calcula el volumen final y después el agua agregada.\n\n"
+        "1) Los moles son 1 por 0,1, es decir, 0,1 moles, y no cambian.\n"
+        "2) Para quedar en 0,25 mol/L el volumen final debe ser 0,1 dividido "
+        "por 0,25, o sea 0,4 litros.\n"
+        "3) El agua que hay que agregar es 400 menos 100, es decir, 300 mL.\n\n"
+        "El error más frecuente es responder 400 mL, que es el volumen FINAL y "
+        "no el agua añadida.",
+        [
+            ("400 mL",
+             "Ese es el volumen final de la disolución, no el agua que se agrega."),
+            ("100 mL",
+             "Agregar 100 mL dejaría la disolución en 0,5 mol/L."),
+            ("25 mL, que corresponde a la concentración final expresada en mililitros",
+             "Una concentración no se puede leer como un volumen."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "Se mezclan 400 mL de una disolución 0,3 mol/L con 100 mL de otra 0,8 "
+        "mol/L del mismo soluto. ¿Cuál es la concentración final?",
+        "0,4 mol/L",
+        "Se suman los moles y se dividen por el volumen total.\n\n"
+        "1) La primera aporta 0,3 por 0,4 = 0,12 moles; la segunda, 0,8 por 0,1 "
+        "= 0,08 moles.\n"
+        "2) El total es 0,20 moles en 0,5 litros.\n"
+        "3) La concentración es 0,20 dividido por 0,5, es decir, 0,4 mol/L.\n\n"
+        "El resultado se acerca más a 0,3 que a 0,8 porque la disolución "
+        "diluida aporta cuatro veces más volumen.",
+        [
+            ("0,55 mol/L",
+             "Promedia las dos concentraciones sin pesar cada una por su volumen."),
+            ("1,1 mol/L",
+             "Suma las concentraciones sin dividir por el volumen total."),
+            ("0,2 mol/L, que corresponde al total de moles de soluto de la mezcla",
+             "Esos son los moles: falta dividirlos por los 0,5 litros de la mezcla."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "La solubilidad de una sustancia es 20 g por cada 100 mL de agua. "
+        "¿Cuánto se disuelve, como máximo, en 50 mL?",
+        "10 gramos",
+        "El límite escala con la cantidad de disolvente.\n\n"
+        "1) En 100 mL de agua se disuelven 20 gramos.\n"
+        "2) La muestra tiene 50 mL, la mitad de ese volumen.\n"
+        "3) Se disuelven entonces 10 gramos.\n\n"
+        "Agregar más de esos 10 gramos dejaría el exceso en el fondo, aunque se "
+        "agite durante horas.",
+        [
+            ("20 gramos",
+             "Corresponde a 100 mL de agua y aquí hay la mitad."),
+            ("40 gramos",
+             "Duplica donde corresponde dividir a la mitad."),
+            ("50 gramos, que es el volumen de agua expresado directamente como masa",
+             "Un volumen de agua no es una masa de soluto: hay que aplicar la solubilidad."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "Al diluir una disolución, ¿qué ocurre con la masa de soluto que "
+        "contiene?",
+        "No cambia",
+        "Diluir agrega disolvente, no quita soluto.\n\n"
+        "1) El soluto disuelto sigue siendo el mismo antes y después.\n"
+        "2) Lo que aumenta es la masa total de la disolución, por el disolvente "
+        "añadido.\n"
+        "3) La concentración baja porque ese soluto queda repartido en más "
+        "volumen.\n\n"
+        "Distinguir cantidad de soluto y concentración es lo que evita el error "
+        "más común de este tema.",
+        [
+            ("Disminuye",
+             "Disminuiría si se quitara soluto, y diluir no lo hace."),
+            ("Aumenta",
+             "Aumentaría si se agregara soluto, y lo que se agrega es disolvente."),
+            ("Disminuye en la misma proporción en que aumenta el volumen de la disolución",
+             "Lo que disminuye en esa proporción es la concentración, no la masa de soluto."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "El alcohol y el agua se mezclan en cualquier proporción sin separarse. "
+        "¿Cómo se llaman dos líquidos con esa propiedad?",
+        "Miscibles",
+        "La miscibilidad es la solubilidad aplicada a dos líquidos.\n\n"
+        "1) Dos líquidos miscibles forman una sola fase, sea cual sea la "
+        "proporción.\n"
+        "2) Eso ocurre cuando sus moléculas tienen polaridades compatibles.\n"
+        "3) El agua y el aceite, en cambio, son inmiscibles y se separan en dos "
+        "capas.\n\n"
+        "En una mezcla de líquidos miscibles el disolvente es el que está en "
+        "mayor proporción.",
+        [
+            ("Inmiscibles",
+             "Ese término describe justamente lo contrario: líquidos que se separan."),
+            ("Saturados",
+             "La saturación se refiere al límite de soluto, no a la mezcla de líquidos."),
+            ("Insolubles, porque ninguno de los dos actúa como soluto del otro",
+             "Sí se disuelven mutuamente: por eso forman una sola fase."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "Se agregan 300 mL de agua pura a 100 mL de una disolución 0,8 mol/L. "
+        "¿Cuál es la concentración final?",
+        "0,2 mol/L",
+        "El agua pura no aporta soluto, solo volumen.\n\n"
+        "1) Los moles son 0,8 por 0,1, es decir, 0,08 moles.\n"
+        "2) El volumen final es 100 más 300, o sea 0,4 litros.\n"
+        "3) La concentración es 0,08 dividido por 0,4, es decir, 0,2 mol/L.\n\n"
+        "Es el mismo cálculo de una mezcla, con la particularidad de que uno de "
+        "los aportes de soluto es cero.",
+        [
+            ("0,8 mol/L",
+             "Repite la concentración inicial, sin considerar el agua agregada."),
+            ("0,27 mol/L",
+             "Divide por los 300 mL de agua en vez de por el volumen total."),
+            ("0,08 mol/L, que corresponde a los moles de soluto que contiene la mezcla",
+             "Esos son los moles: falta dividirlos por los 0,4 litros finales."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "¿Por qué dos disoluciones saturadas de la misma sal, preparadas por "
+        "separado a la misma temperatura, tienen igual concentración?",
+        "Porque la solubilidad fija ese valor",
+        "La saturación corresponde a un valor determinado por la sustancia y la "
+        "temperatura.\n\n"
+        "1) La solubilidad es la cantidad máxima de soluto que el disolvente "
+        "admite a esa temperatura.\n"
+        "2) Una disolución saturada contiene exactamente esa cantidad, ni más "
+        "ni menos.\n"
+        "3) Como ambas se prepararon a la misma temperatura, ambas llegan al "
+        "mismo valor.\n\n"
+        "Cuánta sal se haya agregado de más no influye: el exceso queda en el "
+        "fondo sin alterar la concentración.",
+        [
+            ("Porque se les agregó la misma cantidad de sal",
+             "Puede haberse agregado distinta cantidad: el exceso queda sin disolver."),
+            ("Porque el agua siempre disuelve la misma masa de cualquier sal",
+             "Cada sal tiene su propia solubilidad: unas se disuelven mucho más que otras."),
+            ("Porque las disoluciones saturadas tienen todas la misma concentración molar",
+             "El valor de saturación es propio de cada sustancia y de cada temperatura."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "Al diluir un ácido concentrado, ¿cuál es el procedimiento seguro?",
+        "Verter el ácido sobre el agua, de a poco",
+        "El orden importa porque la dilución libera calor.\n\n"
+        "1) Al mezclarse con agua, el ácido concentrado desprende una cantidad "
+        "importante de calor.\n"
+        "2) Si el ácido se vierte sobre el agua, ese calor se reparte en toda la "
+        "masa de agua y la temperatura sube poco.\n"
+        "3) Al revés, el agua caería sobre poco ácido y podría hervir de golpe, "
+        "salpicando ácido concentrado.\n\n"
+        "La regla se recuerda como agregar el ácido al agua, nunca el agua al "
+        "ácido.",
+        [
+            ("Verter el agua sobre el ácido",
+             "Ese es justamente el orden peligroso: el calor concentrado puede hacer hervir el agua."),
+            ("Mezclar ambos de golpe",
+             "Verter de golpe libera todo el calor a la vez y aumenta el riesgo de salpicaduras."),
+            ("Calentar el ácido antes de mezclar",
+             "Calentar el ácido agrava el problema: la dilución ya libera calor por sí sola."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "Se quieren llevar dos disoluciones, una 0,8 mol/L y otra 0,4 mol/L, "
+        "hasta 0,2 mol/L. ¿Cuál requiere más agua por cada 100 mL?",
+        "La de 0,8 mol/L",
+        "Cuanto mayor sea la concentración inicial, mayor será la dilución "
+        "necesaria.\n\n"
+        "1) Para pasar de 0,8 a 0,2 el volumen debe cuadruplicarse: 100 mL "
+        "pasan a 400, con 300 mL de agua.\n"
+        "2) Para pasar de 0,4 a 0,2 basta con duplicarlo: 100 mL pasan a 200, "
+        "con 100 mL de agua.\n"
+        "3) La primera necesita entonces tres veces más agua que la segunda.\n\n"
+        "El factor de dilución es el cociente entre la concentración inicial y "
+        "la final: 4 en un caso y 2 en el otro.",
+        [
+            ("La de 0,4 mol/L",
+             "Está más cerca del valor buscado, así que necesita menos agua."),
+            ("Las dos requieren lo mismo",
+             "Sus factores de dilución son 4 y 2: no coinciden."),
+            ("No se puede saber sin conocer de qué soluto se trata en cada caso",
+             "El cálculo de dilución es el mismo para cualquier soluto."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "medio",
+        "¿Qué indica el factor de dilución de una disolución?",
+        "Cuántas veces aumentó el volumen al diluir",
+        "El factor resume la operación en un solo número.\n\n"
+        "1) Se calcula como el volumen final dividido por el volumen "
+        "inicial.\n"
+        "2) Equivale también al cociente entre la concentración inicial y la "
+        "final, porque ambas magnitudes son inversas.\n"
+        "3) Un factor 5 significa que el volumen se quintuplicó y la "
+        "concentración quedó en un quinto.\n\n"
+        "Por eso una dilución 1:10 tiene factor 10: una parte de disolución "
+        "llevada a diez partes de volumen final.",
+        [
+            ("Cuántos moles de soluto se agregaron",
+             "Diluir no agrega soluto: los moles se conservan."),
+            ("Cuánto disolvente se usó en total",
+             "El factor es un cociente entre volúmenes, no el volumen de agua agregada."),
+            ("Cuántas veces se repitió el procedimiento de dilución en el laboratorio",
+             "Ese sería el número de diluciones en serie, no el factor de una sola."),
+        ],
+    ),
+]
+
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_dilucion", "dificil",
+        "Un grupo quiere determinar la solubilidad de una sal a 25 °C. ¿Qué "
+        "procedimiento se lo permite?",
+        "Saturar el agua, filtrar y evaporar un volumen conocido",
+        "La solubilidad se mide sobre una disolución que ya llegó al "
+        "límite.\n\n"
+        "1) Se agrega sal en exceso y se agita hasta que quede sólido sin "
+        "disolver: eso garantiza saturación.\n"
+        "2) Se filtra para retirar ese exceso, que falsearía la pesada.\n"
+        "3) Se evapora un volumen conocido del filtrado y se pesa el residuo, "
+        "que es la sal que estaba disuelta.\n\n"
+        "El paso que más se olvida es filtrar: sin él se pesa también la sal "
+        "que nunca llegó a disolverse.",
+        [
+            ("Pesar la sal que se agregó al agua",
+             "Parte de esa sal puede haber quedado sin disolver: no toda estaba en disolución."),
+            ("Medir el tiempo que tarda en disolverse",
+             "El tiempo informa sobre la velocidad, no sobre el límite de solubilidad."),
+            ("Agregar sal hasta que deje de disolverse",
+             "La temperatura es un dato del ensayo, no la solubilidad: falta pesar la sal disuelta."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "dificil",
+        "Un estudiante mezcla 100 mL de una disolución 0,3 mol/L con 100 mL de "
+        "otra 0,5 mol/L y concluye que la mezcla es 0,8 mol/L. ¿Qué error "
+        "comete?",
+        "Sumó las concentraciones en vez de los moles",
+        "Las concentraciones son cocientes y no se suman.\n\n"
+        "1) Lo que se suma son los moles de soluto: 0,03 más 0,05 dan 0,08 "
+        "moles.\n"
+        "2) También se suman los volúmenes: 0,2 litros en total.\n"
+        "3) La concentración de la mezcla es 0,08 dividido por 0,2, es decir, "
+        "0,4 mol/L.\n\n"
+        "Un control rápido: el resultado de una mezcla siempre queda entre las "
+        "dos concentraciones de partida, nunca por encima de ambas.",
+        [
+            ("Olvidó convertir los mililitros a litros",
+             "La conversión no es el problema: el error está en sumar concentraciones."),
+            ("Usó volúmenes distintos para cada disolución",
+             "Los dos volúmenes eran iguales, de 100 mL cada uno."),
+            ("Debió restar las concentraciones en lugar de sumarlas para hallar la mezcla",
+             "Tampoco se restan: se suman los moles y se divide por el volumen total."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "dificil",
+        "A una disolución 0,5 mol/L se le aplican dos diluciones 1:10 "
+        "sucesivas. ¿Cuál es la concentración final?",
+        "0,005 mol/L",
+        "Los factores de dilución se multiplican entre sí.\n\n"
+        "1) La primera dilución lleva la concentración a 0,05 mol/L.\n"
+        "2) La segunda divide ese valor otra vez por diez.\n"
+        "3) El resultado es 0,005 mol/L, es decir, cien veces menos que al "
+        "comienzo.\n\n"
+        "Encadenar diluciones es la forma práctica de preparar concentraciones "
+        "muy pequeñas: medir directamente un microlitro sería inviable.",
+        [
+            ("0,05 mol/L",
+             "Corresponde a una sola dilución de las dos que se aplicaron."),
+            ("0,025 mol/L",
+             "Divide por veinte, como si los factores se sumaran en vez de multiplicarse."),
+            ("0,0005 mol/L, dividiendo por mil por tratarse de dos etapas consecutivas",
+             "Dos factores de diez dan cien, no mil: eso exigiría tres diluciones."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "dificil",
+        "La solubilidad de una sal es 60 g por 100 g de agua a 80 °C y 20 g por "
+        "100 g a 20 °C. Si se enfría desde 80 hasta 20 °C una disolución "
+        "saturada con 200 g de agua, ¿cuánta sal cristaliza?",
+        "80 gramos",
+        "Se comparan las cantidades disueltas a cada temperatura.\n\n"
+        "1) Con 200 gramos de agua, a 80 °C hay 120 gramos de sal disueltos.\n"
+        "2) A 20 °C esa misma agua solo admite 40 gramos.\n"
+        "3) La diferencia, 120 menos 40, deja 80 gramos que cristalizan.\n\n"
+        "Escalar la solubilidad a los 200 gramos de agua antes de restar es el "
+        "paso decisivo: con 100 gramos el resultado sería la mitad.",
+        [
+            ("40 gramos",
+             "Es la diferencia de solubilidad por cada 100 g de agua, y aquí hay 200."),
+            ("120 gramos",
+             "Es toda la sal disuelta en caliente: parte de ella sigue disuelta en frío."),
+            ("20 gramos, que es la solubilidad que tiene esa sal a la temperatura final",
+             "Esa cifra corresponde a 100 g de agua, y además es lo que QUEDA disuelto, no lo que cristaliza."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "dificil",
+        "En el fondo de un vaso con disolución hay un sólido sin disolver. Un "
+        "estudiante concluye que la disolución está saturada. ¿Qué falla en esa "
+        "conclusión?",
+        "El sólido podría ser una impureza insoluble",
+        "El depósito tiene más de una explicación posible.\n\n"
+        "1) Si el sólido es el soluto, entonces sí se alcanzó el límite y la "
+        "disolución está saturada.\n"
+        "2) Pero también podría ser un material insoluble que venía con la "
+        "muestra y nunca iba a disolverse.\n"
+        "3) En ese segundo caso la disolución podría estar muy por debajo de su "
+        "límite.\n\n"
+        "La forma de decidirlo es agregar un poco más de soluto y observar si "
+        "se disuelve o no.",
+        [
+            ("El sólido siempre indica saturación",
+             "Solo la indica si ese sólido es el mismo soluto de la disolución."),
+            ("La saturación no depende del calor",
+             "Sí depende, pero ese no es el problema de esta conclusión."),
+            ("Debió medir la concentración antes",
+             "Esa medición no descarta que el depósito sea material insoluble."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "dificil",
+        "Para estudiar cómo influye la temperatura en la solubilidad de una "
+        "sal, un grupo calienta cada ensayo y a la vez lo agita más fuerte. "
+        "Todos disuelven más sal. ¿Qué limita esa evidencia?",
+        "Cambiaron la temperatura y la agitación a la vez",
+        "Dos variables juntas impiden atribuir el efecto observado.\n\n"
+        "1) La mayor cantidad disuelta puede deberse al calentamiento.\n"
+        "2) También podría explicarse por la agitación, si en los ensayos "
+        "anteriores no se alcanzó a disolver todo lo posible.\n"
+        "3) Como ambas subieron en cada ensayo, los datos no permiten "
+        "separarlas.\n\n"
+        "El diseño correcto agita todos los ensayos igual y con tiempo "
+        "suficiente, y varía solo la temperatura.",
+        [
+            ("Hicieron pocos ensayos",
+             "Con veinte ensayos las dos variables seguirían confundidas entre sí."),
+            ("No midieron la masa de sal",
+             "Sí la midieron: es lo que compararon entre ensayos."),
+            ("La agitación no influye en la cantidad de sal que llega a disolverse",
+             "No cambia el límite, pero sí permite alcanzarlo: por eso confunde el resultado."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "dificil",
+        "¿Qué control conviene incorporar para comprobar que el aumento de sal "
+        "disuelta se debe al calentamiento y no al mayor tiempo de agitación?",
+        "Repetir en frío agitando el mismo tiempo",
+        "El control iguala la variable que se quiere descartar.\n\n"
+        "1) La explicación alternativa es que el tiempo de agitación fuera la "
+        "causa.\n"
+        "2) Un ensayo en frío, agitado exactamente el mismo tiempo, deja actuar "
+        "solo esa explicación.\n"
+        "3) Si en frío se disuelve menos, la diferencia se debe a la "
+        "temperatura.\n\n"
+        "Un control se distingue de una repetición en que iguala una variable "
+        "en vez de repetir la misma condición.",
+        [
+            ("Repetir el ensayo caliente tres veces",
+             "Eso mide la reproducibilidad, no descarta el efecto del tiempo de agitación."),
+            ("Usar el doble de sal en cada ensayo",
+             "Cambiar la cantidad de sal no aísla ninguna de las dos variables en juego."),
+            ("Medir la temperatura del agua al comienzo y al final de cada ensayo",
+             "Ese registro es útil, pero no separa el efecto del calor del de la agitación."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "dificil",
+        "Se diluyen 100 mL de una disolución 2 mol/L hasta 500 mL y el "
+        "resultado se mezcla con 500 mL de otra 0,2 mol/L del mismo soluto. "
+        "¿Cuál es la concentración final?",
+        "0,3 mol/L",
+        "El problema encadena una dilución con una mezcla.\n\n"
+        "1) La dilución conserva los moles: 2 por 0,1 dan 0,2 moles en 500 "
+        "mL.\n"
+        "2) La segunda disolución aporta 0,2 por 0,5 = 0,1 moles.\n"
+        "3) El total es 0,3 moles en 1 litro: la concentración final es 0,3 "
+        "mol/L.\n\n"
+        "Trabajar siempre con moles evita tener que calcular la concentración "
+        "intermedia de la dilución, que aquí ni siquiera hace falta.",
+        [
+            ("0,6 mol/L",
+             "Suma las concentraciones intermedias en vez de los moles."),
+            ("0,2 mol/L",
+             "Corresponde a la disolución diluida sola, sin considerar la mezcla."),
+            ("0,3 moles, que es la cantidad total de soluto presente en la mezcla",
+             "Esos son los moles: coinciden numéricamente con la concentración solo porque el volumen es 1 litro."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "dificil",
+        "Un estudiante afirma que al diluir una disolución se pierde parte del "
+        "soluto. ¿Es correcto?",
+        "No, el soluto se conserva y solo baja la concentración",
+        "Diluir cambia el reparto, no la cantidad.\n\n"
+        "1) Al agregar disolvente no se retira nada de la disolución.\n"
+        "2) Los moles de soluto siguen siendo exactamente los mismos.\n"
+        "3) Lo que baja es la concentración, porque ese soluto queda en más "
+        "volumen.\n\n"
+        "La relación $C_1V_1 = C_2V_2$ es precisamente la escritura matemática "
+        "de esa conservación.",
+        [
+            ("Sí, parte del soluto se pierde al diluir",
+             "Nada se retira: el soluto sigue completo dentro de la disolución."),
+            ("Sí, si la dilución es muy grande en volumen",
+             "El tamaño de la dilución no cambia que el soluto se conserve."),
+            ("No, porque el volumen no cambia",
+             "El volumen sí cambia: aumenta, y por eso baja la concentración."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "dificil",
+        "Un gráfico muestra que la cantidad de oxígeno disuelto en un río baja "
+        "a medida que sube la temperatura del agua. ¿Qué conclusión autorizan "
+        "esos datos?",
+        "La solubilidad del oxígeno disminuye al calentarse el agua",
+        "El gráfico relaciona dos variables medidas, y nada más.\n\n"
+        "1) En el eje horizontal está la temperatura y en el vertical, el "
+        "oxígeno disuelto.\n"
+        "2) La tendencia decreciente indica que a mayor temperatura hay menos "
+        "oxígeno disuelto.\n"
+        "3) Ese comportamiento es el esperable en un gas, al revés que en la "
+        "mayoría de las sales.\n\n"
+        "Lo que los datos NO autorizan es afirmar por qué subió la temperatura "
+        "del río: el gráfico no registra ninguna causa.",
+        [
+            ("El agua caliente contiene más contaminantes",
+             "El gráfico no mide contaminantes: solo temperatura y oxígeno disuelto."),
+            ("El oxígeno reacciona con el agua al calentarse",
+             "No hay reacción: el gas simplemente deja de caber disuelto."),
+            ("La temperatura subió por la industria de la zona",
+             "El gráfico no registra causas: solo muestra la relación entre las dos variables medidas."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "dificil",
+        "Una disolución sobresaturada cristaliza de golpe al dejar caer en ella "
+        "un pequeño cristal de soluto. ¿Qué explica esa reacción?",
+        "El cristal da un punto de partida a la cristalización",
+        "La sobresaturación es un estado inestable que necesita un "
+        "disparador.\n\n"
+        "1) La disolución tiene disuelto más soluto del que le corresponde a "
+        "esa temperatura.\n"
+        "2) Para cristalizar hacen falta núcleos donde las partículas empiecen "
+        "a ordenarse.\n"
+        "3) El cristal agregado cumple ese papel y desencadena la "
+        "cristalización de todo el exceso.\n\n"
+        "Un golpe o una partícula de polvo producen el mismo efecto: por eso "
+        "estas disoluciones se preparan sin mover el recipiente.",
+        [
+            ("El cristal agregado reacciona con el soluto disuelto",
+             "Es la misma sustancia: no hay reacción, solo un punto donde empezar a ordenarse."),
+            ("El cristal baja la temperatura de la disolución",
+             "Un cristal pequeño no cambia de manera apreciable la temperatura del líquido."),
+            ("El cristal aumenta la concentración por encima del límite de solubilidad",
+             "El límite ya estaba superado antes de agregarlo: eso es lo que define la sobresaturación."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "dificil",
+        "Una disolución contiene 30 gramos de sal en 100 gramos de agua a 60 "
+        "°C, temperatura a la que la solubilidad es 45 g. Al enfriar, ¿a partir "
+        "de qué momento empieza a cristalizar?",
+        "Cuando la solubilidad baja hasta 30 gramos",
+        "La cristalización empieza justo al alcanzarse la saturación.\n\n"
+        "1) A 60 °C caben 45 gramos y hay 30 disueltos: la disolución está "
+        "insaturada.\n"
+        "2) Al enfriar, el límite de solubilidad va bajando.\n"
+        "3) En cuanto ese límite llega a 30 gramos la disolución queda "
+        "saturada, y por debajo de esa temperatura el exceso cristaliza.\n\n"
+        "Ese punto se lee en la curva de solubilidad: es la temperatura donde "
+        "la curva pasa por los 30 gramos.",
+        [
+            ("Apenas comienza a enfriarse",
+             "Al comienzo la disolución está insaturada: todavía caben 15 gramos más."),
+            ("Cuando la solubilidad baja hasta 45 gramos",
+             "Ese es el límite de la temperatura inicial, cuando aún sobra capacidad."),
+            ("Solo si se agrega más sal durante el enfriamiento de la disolución",
+             "No hace falta agregar nada: basta que el límite baje por debajo de los 30 gramos."),
+        ],
+    ),
+    _q(
+        "cie_dilucion", "dificil",
+        "Al mezclar dos disoluciones del mismo soluto, ¿por qué la "
+        "concentración resultante nunca queda por encima de la mayor de las "
+        "dos?",
+        "Porque el resultado es un promedio pesado por los volúmenes",
+        "La mezcla reparte todo el soluto en todo el volumen.\n\n"
+        "1) Los moles totales son la suma de los aportes de ambas "
+        "disoluciones.\n"
+        "2) El volumen total también es la suma de ambos.\n"
+        "3) Ese cociente equivale a promediar las dos concentraciones dando a "
+        "cada una el peso de su volumen.\n\n"
+        "Un promedio pesado siempre queda entre los dos valores promediados: "
+        "por eso el resultado no puede superar al mayor ni quedar bajo el "
+        "menor.",
+        [
+            ("Porque parte del soluto precipita al mezclar",
+             "No precipita nada mientras no se supere la solubilidad."),
+            ("Porque las concentraciones se restan al mezclarse",
+             "No se restan: se suman los moles y se divide por el volumen total."),
+            ("Porque el volumen final es mayor que la suma",
+             "El volumen final es la suma de ambos, no mayor que ella."),
+        ],
+    ),
+]
