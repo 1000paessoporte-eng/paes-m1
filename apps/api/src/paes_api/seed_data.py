@@ -110185,3 +110185,1219 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Quimica - Reacciones quimicas: leyes ponderales y balance
+#
+# El temario abre el area con las tres leyes ponderales —conservacion de la
+# materia, proporciones definidas y proporciones multiples—, los componentes de
+# una reaccion (reactantes, productos, estados de agregacion) y el balance de
+# ecuaciones.
+#
+# Las quince dificiles insisten en una sola idea: la ley se cumple siempre, y
+# lo que falla cuando la balanza no cuadra es haber delimitado mal el sistema.
+# La vela que pierde masa y el hierro que la gana son el mismo caso visto por
+# los dos lados.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_leyes_ponderales", "facil",
+        "¿Qué establece la ley de conservación de la materia?",
+        "La masa total no cambia durante una reacción",
+        "Es la primera de las leyes ponderales y la base del balance.\n\n"
+        "1) En una reacción química los átomos se reordenan, pero no aparecen "
+        "ni desaparecen.\n"
+        "2) Por eso la masa de los reactantes es igual a la de los productos, "
+        "medida en un sistema cerrado.\n"
+        "3) Si un producto es un gas y el recipiente está abierto, ese gas "
+        "escapa y la masa parece disminuir.\n\n"
+        "Esa ley es la que obliga a que toda ecuación química tenga el mismo "
+        "número de átomos de cada elemento a ambos lados.",
+        [
+            ("La masa siempre aumenta",
+             "Solo parece aumentar cuando el sistema incorpora materia desde el exterior, como oxígeno del aire."),
+            ("La masa siempre disminuye",
+             "Solo parece disminuir cuando un producto gaseoso escapa del recipiente."),
+            ("La masa se transforma en energía durante el transcurso de cualquier reacción química",
+             "Esa conversión es relevante en reacciones nucleares, no en las químicas."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "facil",
+        "En una ecuación química, ¿qué son los reactantes?",
+        "Las sustancias que se transforman",
+        "La ecuación se lee de izquierda a derecha.\n\n"
+        "1) Los reactantes se escriben antes de la flecha: son las sustancias "
+        "presentes al comienzo.\n"
+        "2) Los productos se escriben después: son las sustancias que "
+        "resultan.\n"
+        "3) La flecha indica el sentido de la transformación.\n\n"
+        "Los átomos son los mismos a ambos lados: lo que cambia es cómo están "
+        "combinados.",
+        [
+            ("Las sustancias que se obtienen",
+             "Esas son los productos, que se escriben después de la flecha."),
+            ("Los átomos que no participan de la reacción",
+             "Los reactantes sí participan: son los que se transforman."),
+            ("Las sustancias que aceleran la reacción sin consumirse durante el proceso",
+             "Esa es la función de un catalizador, que no es un reactante."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "facil",
+        "¿Qué representa la flecha en una ecuación química?",
+        "El sentido de la transformación",
+        "La flecha organiza la lectura de la ecuación.\n\n"
+        "1) Separa los reactantes, a la izquierda, de los productos, a la "
+        "derecha.\n"
+        "2) Indica que las sustancias de la izquierda se transforman en las de "
+        "la derecha.\n"
+        "3) No es un signo igual: los compuestos cambian, aunque los átomos se "
+        "conserven.\n\n"
+        "Cuando la reacción ocurre en ambos sentidos se usa una doble flecha.",
+        [
+            ("Que ambos lados son idénticos",
+             "Los compuestos cambian: lo que se conserva es el número de átomos de cada elemento."),
+            ("La velocidad de la reacción",
+             "La velocidad no se representa con la flecha."),
+            ("La cantidad de energía que la reacción libera hacia el ambiente que la rodea",
+             "La energía se indica aparte, no con la flecha."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "facil",
+        "En una ecuación química, ¿qué indica el símbolo (g) junto a una "
+        "fórmula?",
+        "Que esa sustancia está en estado gaseoso",
+        "Los símbolos entre paréntesis informan el estado de agregación.\n\n"
+        "1) Se usan (s) para sólido, (l) para líquido y (g) para gaseoso.\n"
+        "2) El símbolo (ac) indica que la sustancia está disuelta en agua.\n"
+        "3) Ese dato permite anticipar qué se observará: un gas que burbujea o "
+        "un sólido que precipita.\n\n"
+        "No afecta al balance de la ecuación, pero sí a la interpretación de lo "
+        "que ocurre en el recipiente.",
+        [
+            ("Que es un gramo de esa sustancia",
+             "La cantidad se indica con los coeficientes, no con ese símbolo."),
+            ("Que la sustancia es un reactante",
+             "El lugar respecto de la flecha es lo que indica si es reactante o producto."),
+            ("Que la sustancia se encuentra disuelta en agua dentro del recipiente de la reacción",
+             "Ese caso se indica con (ac), de disolución acuosa."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "facil",
+        "¿Qué significa que una ecuación química esté balanceada?",
+        "Que hay igual número de átomos de cada elemento a ambos lados",
+        "El balance expresa la conservación de la materia.\n\n"
+        "1) Los átomos no se crean ni se destruyen durante la reacción.\n"
+        "2) Por eso cada elemento debe aparecer la misma cantidad de veces "
+        "antes y después de la flecha.\n"
+        "3) Se logra ajustando los coeficientes que anteceden a cada "
+        "fórmula.\n\n"
+        "Una ecuación sin balancear describe qué reacciona con qué, pero no "
+        "sirve para calcular cantidades.",
+        [
+            ("Que hay igual número de moléculas a ambos lados",
+             "El número de moléculas puede cambiar: lo que se conserva es el de átomos."),
+            ("Que los reactantes y los productos pesan lo mismo por separado",
+             "La masa total se conserva, pero cada sustancia por separado no pesa lo mismo."),
+            ("Que la reacción ocurre con la misma velocidad en ambos sentidos hasta alcanzar el equilibrio",
+             "Eso describe un equilibrio químico, que es un concepto distinto del balance de la ecuación."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "facil",
+        "¿Qué establece la ley de las proporciones definidas?",
+        "Un compuesto siempre tiene la misma proporción de elementos",
+        "La ley describe la composición constante de los compuestos.\n\n"
+        "1) Cualquier muestra de agua pura contiene hidrógeno y oxígeno en la "
+        "misma proporción de masa.\n"
+        "2) Da lo mismo de dónde provenga la muestra o cuánta sea: la "
+        "proporción no cambia.\n"
+        "3) Esa constancia es la que distingue a un compuesto de una mezcla.\n\n"
+        "Se le conoce también como ley de Proust, por el químico que la "
+        "estableció.",
+        [
+            ("Los compuestos pueden tener cualquier proporción",
+             "Esa variabilidad es propia de las mezclas, no de los compuestos."),
+            ("La masa de un compuesto siempre aumenta",
+             "La ley se refiere a la proporción entre elementos, no a la masa total."),
+            ("Dos elementos distintos siempre se combinan en una proporción de uno a uno entre ellos",
+             "Las proporciones varían de un compuesto a otro: lo constante es dentro de cada compuesto."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "facil",
+        "¿Qué es una reacción química?",
+        "Un proceso donde unas sustancias se transforman en otras",
+        "Lo definitorio es que cambia la identidad de las sustancias.\n\n"
+        "1) Se rompen enlaces de las sustancias iniciales y se forman enlaces "
+        "nuevos.\n"
+        "2) El resultado son sustancias distintas, con propiedades propias.\n"
+        "3) Los átomos son los mismos: lo que cambia es cómo están "
+        "combinados.\n\n"
+        "Fundir hielo o disolver sal no son reacciones químicas, porque las "
+        "sustancias conservan su identidad.",
+        [
+            ("Un cambio en el estado de agregación",
+             "Ese es un cambio físico: la sustancia sigue siendo la misma."),
+            ("Una mezcla de dos sustancias",
+             "Mezclar no implica que se formen sustancias nuevas."),
+            ("Una separación de los componentes de una mezcla mediante métodos como la filtración",
+             "Esos métodos son físicos y no transforman las sustancias."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "facil",
+        "¿Se pueden cambiar los subíndices de una fórmula al balancear una "
+        "ecuación?",
+        "No, porque eso cambiaría la sustancia",
+        "Los subíndices forman parte de la identidad del compuesto.\n\n"
+        "1) El subíndice indica cuántos átomos de cada elemento hay en el "
+        "compuesto.\n"
+        "2) Cambiarlo produce un compuesto distinto: pasar de H₂O a H₂O₂ "
+        "convierte agua en agua oxigenada.\n"
+        "3) El balance se logra ajustando los coeficientes, que indican cuántas "
+        "unidades de cada compuesto participan.\n\n"
+        "Es el error más frecuente al balancear, y produce ecuaciones que "
+        "cuadran en el papel pero describen otra reacción.",
+        [
+            ("Sí, siempre que la ecuación quede balanceada",
+             "Quedaría balanceada, pero describiendo sustancias distintas de las reales."),
+            ("Sí, pero solo en los productos",
+             "El problema es el mismo en cualquier lado de la ecuación."),
+            ("Sí, siempre que se cambien también los coeficientes para compensar esa modificación",
+             "Ninguna compensación arregla que el compuesto pase a ser otro."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "facil",
+        "¿Quién estableció experimentalmente la conservación de la masa en las "
+        "reacciones químicas?",
+        "Lavoisier",
+        "La ley se apoyó en mediciones cuidadosas en recipientes cerrados.\n\n"
+        "1) A fines del siglo XVIII, Lavoisier pesó los sistemas antes y "
+        "después de reaccionar.\n"
+        "2) Trabajando en recipientes cerrados comprobó que la masa total no "
+        "cambiaba.\n"
+        "3) Con eso descartó la idea de que la combustión liberaba una "
+        "sustancia que hacía perder masa.\n\n"
+        "La clave del experimento fue impedir que entrara o saliera materia del "
+        "sistema durante la medición.",
+        [
+            ("Dalton",
+             "Dalton propuso la teoría atómica, que explica la ley, pero no fue quien la estableció."),
+            ("Proust",
+             "Proust formuló la ley de las proporciones definidas."),
+            ("Rutherford, a partir de sus experimentos con laminas metalicas muy delgadas",
+             "Rutherford trabajó sobre la estructura del átomo, más de un siglo después."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "facil",
+        "En la ecuación 2H₂ + O₂ → 2H₂O, ¿qué representa el número 2 escrito "
+        "delante de H₂?",
+        "La cantidad de unidades de esa sustancia",
+        "El coeficiente indica cuántas unidades participan.\n\n"
+        "1) El coeficiente antecede a la fórmula completa y la multiplica "
+        "entera.\n"
+        "2) En este caso indica que participan dos moléculas de hidrógeno, o "
+        "dos moles de hidrógeno si se razona en cantidades de laboratorio.\n"
+        "3) Los subíndices, en cambio, indican los átomos dentro de cada "
+        "molécula.\n\n"
+        "Cambiar un coeficiente ajusta cantidades; cambiar un subíndice "
+        "cambiaría la sustancia.",
+        [
+            ("El número de átomos de hidrógeno en la molécula",
+             "Ese dato lo entrega el subíndice, no el coeficiente."),
+            ("La masa en gramos del hidrógeno",
+             "El coeficiente cuenta unidades, no masa."),
+            ("El número de enlaces que se forman entre los átomos de la molécula de hidrógeno",
+             "El coeficiente no informa sobre enlaces."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "facil",
+        "¿Cuál de estas observaciones sugiere que ocurrió una reacción química?",
+        "Se desprende un gas que antes no existía",
+        "Ciertas señales indican que se formaron sustancias nuevas.\n\n"
+        "1) La aparición de un gas, de un sólido que precipita o de un cambio "
+        "de color persistente sugiere una reacción.\n"
+        "2) También la liberación o absorción de calor que no proviene de una "
+        "fuente externa.\n"
+        "3) Ninguna de esas señales es concluyente por sí sola, pero varias "
+        "juntas lo son.\n\n"
+        "Fundir, disolver o evaporar no producen sustancias nuevas: son cambios "
+        "físicos.",
+        [
+            ("Un sólido se funde al calentarlo",
+             "La fusión es un cambio de estado, o sea un cambio físico."),
+            ("Un líquido se evapora",
+             "La evaporación tampoco produce sustancias nuevas."),
+            ("Una sustancia se disuelve por completo en agua y la mezcla queda transparente y uniforme",
+             "La disolución es un cambio físico: el soluto se recupera al evaporar el agua."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "¿Cómo queda balanceada la ecuación H₂ + O₂ → H₂O?",
+        "2H₂ + O₂ → 2H₂O",
+        "El balance se logra ajustando coeficientes hasta igualar los "
+        "átomos.\n\n"
+        "1) A la derecha hay un oxígeno por molécula de agua, y a la izquierda "
+        "vienen de a dos: hace falta un coeficiente 2 en el agua.\n"
+        "2) Con 2H₂O quedan 4 hidrógenos a la derecha, así que a la izquierda "
+        "se necesitan 2H₂.\n"
+        "3) Verificando: 4 hidrógenos y 2 oxígenos a cada lado.\n\n"
+        "Nunca se tocan los subíndices: H₂O sigue siendo H₂O y lo que cambia es "
+        "cuántas moléculas hay.",
+        [
+            ("H₂ + O₂ → H₂O₂",
+             "Cambia el subíndice y convierte el agua en agua oxigenada, que es otra sustancia."),
+            ("H₂ + O₂ → 2H₂O",
+             "A la izquierda quedan 2 hidrógenos y a la derecha 4: no está balanceada."),
+            ("2H₂ + 2O₂ → 2H₂O, que iguala el número de moléculas presentes a cada lado de la ecuación",
+             "Igualar moléculas no es el criterio: con 2O₂ quedarían 4 oxígenos a la izquierda y 2 a la derecha."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "¿Cómo queda balanceada la ecuación N₂ + H₂ → NH₃?",
+        "N₂ + 3H₂ → 2NH₃",
+        "Conviene partir por el elemento que aparece en menos compuestos.\n\n"
+        "1) A la izquierda el nitrógeno viene de a dos, así que a la derecha "
+        "hacen falta 2NH₃.\n"
+        "2) Con 2NH₃ quedan 6 hidrógenos a la derecha, y a la izquierda vienen "
+        "de a dos: se necesitan 3H₂.\n"
+        "3) Verificando: 2 nitrógenos y 6 hidrógenos a cada lado.\n\n"
+        "Es la síntesis del amoníaco, una de las reacciones industriales más "
+        "importantes por su uso en fertilizantes.",
+        [
+            ("N₂ + H₂ → 2NH₃",
+             "A la izquierda quedan 2 hidrógenos y a la derecha 6."),
+            ("N₂ + 3H₂ → NH₃",
+             "El nitrógeno no cuadra: 2 a la izquierda y 1 a la derecha."),
+            ("2N₂ + 3H₂ → 2NH₃, aumentando el coeficiente del nitrógeno para asegurar que haya suficiente",
+             "Con 2N₂ quedan 4 nitrógenos a la izquierda y solo 2 a la derecha."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "¿Cómo queda balanceada la combustión CH₄ + O₂ → CO₂ + H₂O?",
+        "CH₄ + 2O₂ → CO₂ + 2H₂O",
+        "En una combustión conviene dejar el oxígeno para el final.\n\n"
+        "1) El carbono ya está balanceado: uno a cada lado.\n"
+        "2) Los 4 hidrógenos del metano exigen 2H₂O a la derecha.\n"
+        "3) Contando el oxígeno de la derecha: 2 del CO₂ más 2 de las dos aguas "
+        "dan 4, así que se necesitan 2O₂ a la izquierda.\n\n"
+        "Verificando: 1 carbono, 4 hidrógenos y 4 oxígenos a cada lado.",
+        [
+            ("CH₄ + O₂ → CO₂ + H₂O",
+             "Los hidrógenos y los oxígenos no cuadran a ambos lados."),
+            ("CH₄ + 2O₂ → CO₂ + H₂O",
+             "Con una sola agua quedan 2 hidrógenos a la derecha y 4 a la izquierda."),
+            ("CH₄ + 4O₂ → CO₂ + 2H₂O, para asegurar que haya oxígeno suficiente en la combustión",
+             "Con 4O₂ quedan 8 oxígenos a la izquierda y solo 4 a la derecha."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "¿Qué establece la ley de las proporciones múltiples?",
+        "Dos elementos pueden combinarse en varias proporciones distintas",
+        "La ley describe qué ocurre cuando dos elementos forman más de un "
+        "compuesto.\n\n"
+        "1) El carbono y el oxígeno forman monóxido de carbono y también "
+        "dióxido de carbono.\n"
+        "2) Para una misma masa de carbono, las masas de oxígeno de ambos "
+        "compuestos guardan una relación de números enteros sencillos.\n"
+        "3) En este caso, la relación es de 1 a 2.\n\n"
+        "Esa regularidad se explica muy bien con la idea de átomos que se "
+        "combinan de a unidades enteras.",
+        [
+            ("Un compuesto tiene siempre la misma composición",
+             "Esa es la ley de las proporciones definidas."),
+            ("La masa se conserva en toda reacción química",
+             "Esa es la ley de conservación de la materia."),
+            ("Dos elementos solo pueden combinarse formando un único compuesto entre ambos",
+             "Justamente lo contrario: la ley describe el caso de varios compuestos posibles."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "En un recipiente cerrado reaccionan 12 g de carbono con 32 g de "
+        "oxígeno y se forma dióxido de carbono. ¿Qué masa de producto se "
+        "obtiene?",
+        "44 g",
+        "La conservación de la masa entrega el resultado sin más datos.\n\n"
+        "1) La masa total antes de reaccionar es 12 g más 32 g, o sea 44 g.\n"
+        "2) En un recipiente cerrado no entra ni sale materia.\n"
+        "3) Por lo tanto la masa de los productos también es 44 g.\n\n"
+        "Si el recipiente estuviera abierto, el gas escaparía y la balanza "
+        "marcaría menos, sin que por eso se pierda materia.",
+        [
+            ("32 g",
+             "Toma solo la masa de uno de los reactantes."),
+            ("20 g",
+             "Resta las masas en lugar de sumarlas."),
+            ("384 g, que resulta de multiplicar las masas de los dos reactantes entre sí",
+             "Las masas se suman: multiplicarlas no tiene sentido físico."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "Un sistema cerrado contiene 50 g de reactantes. Tras la reacción se "
+        "recogen 18 g de un producto. ¿Qué masa tiene el otro producto?",
+        "32 g",
+        "El total debe seguir siendo el mismo.\n\n"
+        "1) La masa inicial del sistema es 50 g y no puede cambiar en un "
+        "recipiente cerrado.\n"
+        "2) Si un producto tiene 18 g, al resto le corresponden 50 menos 18.\n"
+        "3) El otro producto tiene entonces 32 g.\n\n"
+        "El razonamiento vale cualquiera sea la reacción: no hace falta conocer "
+        "las fórmulas para aplicar la conservación de la masa.",
+        [
+            ("18 g",
+             "Repite la masa del primer producto en lugar de calcular el resto."),
+            ("68 g",
+             "Suma en lugar de restar, y el total superaría la masa inicial."),
+            ("50 g, porque la masa total del sistema se conserva durante toda la reacción química",
+             "El total se conserva, pero está repartido entre los dos productos."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "¿Por qué la masa se conserva en una reacción química?",
+        "Porque los átomos se reordenan sin crearse ni destruirse",
+        "La explicación viene de la teoría atómica.\n\n"
+        "1) Una reacción rompe enlaces y forma otros nuevos.\n"
+        "2) Los átomos que participan son exactamente los mismos antes y "
+        "después: solo cambian de vecinos.\n"
+        "3) Como cada átomo conserva su masa, la suma total no cambia.\n\n"
+        "Por eso la ley de conservación y la teoría atómica se sostienen "
+        "mutuamente: una describe el hecho y la otra lo explica.",
+        [
+            ("Porque las reacciones no liberan energía",
+             "Muchas reacciones liberan energía y la masa igual se conserva."),
+            ("Porque los productos siempre son los mismos que los reactantes",
+             "Los productos son sustancias distintas: lo que se conserva son los átomos."),
+            ("Porque la cantidad de moléculas se mantiene constante durante toda la reacción química",
+             "El número de moléculas puede cambiar; lo que no cambia es el de átomos."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "¿Qué diferencia hay entre un coeficiente y un subíndice en una "
+        "ecuación química?",
+        "El coeficiente multiplica toda la fórmula",
+        "Cada número afecta a un nivel distinto.\n\n"
+        "1) El subíndice indica cuántos átomos de un elemento hay dentro del "
+        "compuesto, y forma parte de su identidad.\n"
+        "2) El coeficiente antecede a la fórmula y multiplica todos sus átomos "
+        "por igual.\n"
+        "3) En 2H₂O hay dos moléculas, cada una con dos hidrógenos y un "
+        "oxígeno: cuatro hidrógenos y dos oxígenos en total.\n\n"
+        "Al balancear solo se ajustan coeficientes, porque cambiar un subíndice "
+        "cambiaría la sustancia.",
+        [
+            ("El subíndice multiplica toda la fórmula",
+             "El subíndice afecta solo al átomo que le precede."),
+            ("Ambos indican lo mismo",
+             "Afectan a niveles distintos: uno al compuesto entero y otro a un elemento dentro de él."),
+            ("El coeficiente indica la masa en gramos y el subíndice, el número de átomos presentes",
+             "El coeficiente cuenta unidades de sustancia, no gramos."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "En la ecuación 2H₂O → 2H₂ + O₂, ¿cuántos átomos de oxígeno hay a cada "
+        "lado?",
+        "Dos a cada lado",
+        "El conteo verifica que la ecuación esté balanceada.\n\n"
+        "1) A la izquierda hay 2 moléculas de agua, cada una con un oxígeno: 2 "
+        "átomos.\n"
+        "2) A la derecha hay una molécula de O₂, que contiene 2 átomos de "
+        "oxígeno.\n"
+        "3) Ambos lados coinciden, y el hidrógeno también: 4 átomos a cada "
+        "lado.\n\n"
+        "Esta es la descomposición del agua por electrólisis, y explica que se "
+        "obtenga el doble de volumen de hidrógeno que de oxígeno.",
+        [
+            ("Uno a la izquierda y dos a la derecha",
+             "El coeficiente 2 del agua aporta dos átomos de oxígeno a la izquierda."),
+            ("Cuatro a cada lado",
+             "Cuatro es el número de átomos de hidrógeno, no de oxígeno."),
+            ("Dos a la izquierda y cuatro a la derecha, contando los dos átomos de cada molécula de hidrógeno",
+             "Las moléculas de hidrógeno no contienen oxígeno."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "Una vela arde y su masa disminuye. ¿Contradice eso la conservación de "
+        "la materia?",
+        "No, porque los productos gaseosos escapan al aire",
+        "El sistema medido no incluye a todos los participantes.\n\n"
+        "1) Al arder, la cera reacciona con el oxígeno del aire y produce "
+        "dióxido de carbono y vapor de agua.\n"
+        "2) Esos productos son gases y se dispersan, así que no quedan sobre la "
+        "balanza.\n"
+        "3) Si la combustión ocurriera en un recipiente cerrado y se pesara "
+        "todo, la masa total no cambiaría.\n\n"
+        "La ley se cumple siempre: lo que falla es delimitar mal el sistema que "
+        "se está midiendo.",
+        [
+            ("Sí, porque parte de la materia desaparece",
+             "La materia no desaparece: se transforma en gases que escapan."),
+            ("Sí, porque la cera se convierte en energía",
+             "La energía liberada proviene de los enlaces, y no de una conversión de masa apreciable."),
+            ("No, porque la cera se derrite y escurre fuera del recipiente donde se está midiendo",
+             "Parte se derrite, pero la disminución de masa se explica por los gases que se liberan."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "Un trozo de hierro expuesto al aire se oxida y su masa aumenta. ¿De "
+        "dónde proviene esa masa adicional?",
+        "Del oxígeno del aire que se incorpora",
+        "El aumento se explica sumando lo que entró al sistema.\n\n"
+        "1) La oxidación es una reacción entre el hierro y el oxígeno del "
+        "aire.\n"
+        "2) El óxido formado contiene átomos de hierro y de oxígeno, así que "
+        "pesa más que el hierro solo.\n"
+        "3) Si se pesara el aire consumido junto con el metal, la masa total no "
+        "habría cambiado.\n\n"
+        "El caso es simétrico al de la vela: en uno entra materia al sistema "
+        "medido y en el otro sale.",
+        [
+            ("Del agua que absorbe el metal",
+             "La humedad acelera el proceso, pero la masa incorporada es la del oxígeno."),
+            ("De la energía que el hierro recibe del ambiente",
+             "La energía no aporta masa apreciable en una reacción química."),
+            ("Del propio hierro, que se expande al reaccionar y por eso registra una masa mayor",
+             "Expandirse cambia el volumen, no la masa."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "En el agua, la proporción de masas entre oxígeno e hidrógeno es de 8 a "
+        "1. ¿Qué ley describe ese hecho?",
+        "La ley de las proporciones definidas",
+        "La constancia de esa proporción es el contenido de la ley.\n\n"
+        "1) Cualquier muestra de agua pura mantiene esa misma relación de "
+        "masas.\n"
+        "2) No importa el origen de la muestra ni su cantidad.\n"
+        "3) Eso es lo que afirma la ley de las proporciones definidas, también "
+        "llamada ley de Proust.\n\n"
+        "Si la proporción variara, el material no sería un compuesto sino una "
+        "mezcla.",
+        [
+            ("La ley de conservación de la materia",
+             "Esa ley se refiere a la masa total antes y después de reaccionar."),
+            ("La ley de las proporciones múltiples",
+             "Esa ley compara distintos compuestos formados por los mismos dos elementos."),
+            ("La ley de los volúmenes de combinación entre gases que participan de una misma reacción",
+             "Esa ley se refiere a volúmenes de gases, no a la composición constante de un compuesto."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "¿Cómo queda balanceada la ecuación Fe + O₂ → Fe₂O₃?",
+        "4Fe + 3O₂ → 2Fe₂O₃",
+        "Cuando los números no cuadran directo, conviene buscar el múltiplo "
+        "común.\n\n"
+        "1) El producto tiene 3 oxígenos y el reactante los aporta de a 2: el "
+        "mínimo común múltiplo es 6.\n"
+        "2) Con 3O₂ a la izquierda y 2Fe₂O₃ a la derecha quedan 6 oxígenos a "
+        "cada lado.\n"
+        "3) Esos 2Fe₂O₃ contienen 4 hierros, así que a la izquierda se "
+        "necesitan 4Fe.\n\n"
+        "Verificando: 4 hierros y 6 oxígenos a cada lado.",
+        [
+            ("2Fe + O₂ → Fe₂O₃",
+             "Quedan 2 oxígenos a la izquierda y 3 a la derecha."),
+            ("Fe + O₂ → Fe₂O₃",
+             "No cuadra ni el hierro ni el oxígeno."),
+            ("2Fe + 3O₂ → 2Fe₂O₃, ajustando solo el oxígeno porque es el elemento que aparece desbalanceado",
+             "Al ajustar el oxígeno hay que revisar el hierro: quedan 2 a la izquierda y 4 a la derecha."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "Cuando una fórmula aparece sin coeficiente en una ecuación balanceada, "
+        "¿qué se entiende?",
+        "Que su coeficiente es 1",
+        "El coeficiente 1 se omite por convención.\n\n"
+        "1) Escribir CH₄ equivale a escribir 1CH₄.\n"
+        "2) La omisión sigue la misma convención de las matemáticas, donde x "
+        "significa 1x.\n"
+        "3) Al contar átomos para verificar el balance hay que tener presente "
+        "ese 1 implícito.\n\n"
+        "No confundirlo con la ausencia de la sustancia: la fórmula está "
+        "escrita y participa de la reacción.",
+        [
+            ("Que su coeficiente es 0",
+             "Con coeficiente 0 la sustancia no participaría, y entonces no se escribiría."),
+            ("Que la sustancia no reacciona",
+             "Si aparece en la ecuación, participa de la reacción."),
+            ("Que su cantidad se determina experimentalmente en cada caso y por eso no se escribe",
+             "La omisión es una convención de escritura: el coeficiente es 1."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "¿Qué debe verificarse para saber si una ecuación química está "
+        "correctamente balanceada?",
+        "Contar los átomos de cada elemento a ambos lados",
+        "La verificación es un conteo sistemático.\n\n"
+        "1) Se elige un elemento y se cuentan sus átomos a la izquierda, "
+        "multiplicando subíndices por coeficientes.\n"
+        "2) Se hace lo mismo a la derecha y se comparan los totales.\n"
+        "3) Se repite con cada elemento presente en la ecuación.\n\n"
+        "Solo si todos los elementos coinciden la ecuación está balanceada: "
+        "basta que uno falle para que no lo esté.",
+        [
+            ("Contar el número de moléculas de cada lado",
+             "El número de moléculas puede diferir sin que la ecuación esté mal."),
+            ("Verificar que haya el mismo número de compuestos",
+             "El número de compuestos no tiene relación con el balance."),
+            ("Comprobar que los coeficientes sean todos números enteros distintos entre sí",
+             "Los coeficientes pueden repetirse: lo que importa es que los átomos cuadren."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "¿Cuántos átomos de oxígeno hay en 3Ca(OH)₂?",
+        "6 átomos",
+        "El paréntesis afecta a todo lo que encierra.\n\n"
+        "1) Dentro del paréntesis hay un oxígeno, y el subíndice 2 lo "
+        "multiplica: son 2 oxígenos por unidad.\n"
+        "2) El coeficiente 3 multiplica la fórmula completa.\n"
+        "3) El total es 3 por 2, o sea 6 átomos de oxígeno.\n\n"
+        "El mismo procedimiento da 6 hidrógenos y 3 átomos de calcio, y es el "
+        "conteo que hay que hacer al verificar un balance.",
+        [
+            ("2 átomos",
+             "Considera una sola unidad y omite el coeficiente 3."),
+            ("3 átomos",
+             "Toma el coeficiente y omite el subíndice del paréntesis."),
+            ("12 átomos, multiplicando el coeficiente por el subíndice y por el número de elementos presentes",
+             "El número de elementos no interviene: el cálculo es coeficiente por subíndice."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "¿Cómo queda balanceada la combustión C₂H₆ + O₂ → CO₂ + H₂O?",
+        "2C₂H₆ + 7O₂ → 4CO₂ + 6H₂O",
+        "Conviene balancear carbono, luego hidrógeno y dejar el oxígeno al "
+        "final.\n\n"
+        "1) Tomando 2C₂H₆ hay 4 carbonos, que exigen 4CO₂.\n"
+        "2) Esos 2C₂H₆ aportan 12 hidrógenos, que exigen 6H₂O.\n"
+        "3) A la derecha quedan 8 oxígenos del CO₂ más 6 de las aguas, o sea "
+        "14, que se consiguen con 7O₂.\n\n"
+        "Se parte de 2C₂H₆ porque con una sola molécula el oxígeno quedaría en "
+        "un número fraccionario.",
+        [
+            ("C₂H₆ + 3O₂ → 2CO₂ + 3H₂O",
+             "A la derecha quedan 7 oxígenos y a la izquierda 6: no cuadra."),
+            ("2C₂H₆ + 6O₂ → 4CO₂ + 6H₂O",
+             "Quedan 12 oxígenos a la izquierda y 14 a la derecha."),
+            ("C₂H₆ + 7O₂ → 4CO₂ + 6H₂O, dejando el hidrocarburo con coeficiente 1 para simplificar",
+             "Con un solo C₂H₆ hay 2 carbonos y no alcanzan para 4CO₂."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "Reaccionan 4 g de hidrógeno con 32 g de oxígeno en un recipiente "
+        "cerrado. ¿Qué masa de agua se forma?",
+        "36 g",
+        "La conservación de la masa entrega el resultado directamente.\n\n"
+        "1) La masa total antes de reaccionar es 4 g más 32 g.\n"
+        "2) En un recipiente cerrado no entra ni sale materia.\n"
+        "3) Por lo tanto se forman 36 g de agua.\n\n"
+        "Esas cantidades corresponden justo a la proporción del compuesto: no "
+        "sobra ninguno de los dos reactantes.",
+        [
+            ("32 g",
+             "Toma solo la masa del oxígeno y descarta la del hidrógeno."),
+            ("28 g",
+             "Resta las masas en lugar de sumarlas."),
+            ("128 g, que resulta de multiplicar la masa del oxígeno por la del hidrógeno empleado",
+             "Las masas de los reactantes se suman, no se multiplican."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "Si 3 g de un elemento A se combinan siempre con 8 g de otro elemento "
+        "B, ¿cuánto B se necesita para 6 g de A?",
+        "16 g",
+        "La proporción del compuesto se mantiene constante.\n\n"
+        "1) La relación entre A y B es de 3 a 8 en cualquier muestra del "
+        "compuesto.\n"
+        "2) Al duplicar la cantidad de A, de 3 g a 6 g, hay que duplicar "
+        "también la de B.\n"
+        "3) El resultado es 16 g de B.\n\n"
+        "Si se agregara más B que eso, el exceso quedaría sin reaccionar: la "
+        "proporción no se puede forzar.",
+        [
+            ("8 g",
+             "Mantiene la cantidad original de B pese a haber duplicado la de A."),
+            ("11 g",
+             "Suma la diferencia en lugar de aplicar la proporción."),
+            ("24 g, que resulta de multiplicar los 3 g de A por los 8 g de B de la proporción original",
+             "La proporción se mantiene multiplicando ambas cantidades por el mismo factor, que acá es 2."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "¿Qué caracteriza a una reacción de descomposición?",
+        "Un compuesto se separa en sustancias más simples",
+        "El nombre describe lo que ocurre con los reactantes.\n\n"
+        "1) Se parte de un solo compuesto y se obtienen dos o más sustancias.\n"
+        "2) Suele requerir un aporte de energía, como calor o corriente "
+        "eléctrica.\n"
+        "3) La electrólisis del agua es el ejemplo clásico: de agua se obtienen "
+        "hidrógeno y oxígeno.\n\n"
+        "La reacción inversa, en que varias sustancias forman una sola, es una "
+        "reacción de síntesis.",
+        [
+            ("Dos sustancias se combinan en una sola",
+             "Esa es una reacción de síntesis o combinación."),
+            ("Dos compuestos intercambian sus componentes",
+             "Ese caso corresponde a una reacción de sustitución doble."),
+            ("Una sustancia cambia de estado de agregación al recibir energía desde el exterior",
+             "Ese es un cambio físico y no una reacción química."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "En la ecuación 2H₂ + O₂ → 2H₂O, ¿cómo se interpreta en cantidades de "
+        "laboratorio?",
+        "Dos moles de hidrógeno reaccionan con uno de oxígeno",
+        "Los coeficientes se leen igual a escala molecular y a escala de "
+        "laboratorio.\n\n"
+        "1) A escala molecular, dos moléculas de hidrógeno reaccionan con una "
+        "de oxígeno.\n"
+        "2) Multiplicando todo por el mismo número enorme, la proporción no "
+        "cambia.\n"
+        "3) Por eso también se lee como dos moles de hidrógeno con un mol de "
+        "oxígeno para dar dos moles de agua.\n\n"
+        "Esa doble lectura es lo que permite pasar de la ecuación a cantidades "
+        "que se pueden pesar.",
+        [
+            ("Dos gramos de hidrógeno con uno de oxígeno",
+             "Los coeficientes cuentan unidades de sustancia, no gramos."),
+            ("Dos litros de hidrógeno con uno de agua",
+             "La lectura en volúmenes vale solo para gases y en las mismas condiciones."),
+            ("Dos átomos de hidrógeno reaccionan con un solo átomo de oxígeno para formar el agua",
+             "Los reactantes son moléculas de dos átomos: la lectura por átomos cambia las cantidades."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "¿Por qué un catalizador no aparece entre los reactantes de una "
+        "ecuación balanceada?",
+        "Porque no se consume durante la reacción",
+        "El catalizador participa sin transformarse.\n\n"
+        "1) Su función es acelerar la reacción facilitando el camino entre "
+        "reactantes y productos.\n"
+        "2) Al terminar, se recupera íntegro y en la misma cantidad.\n"
+        "3) Como no se consume ni se produce, no altera el balance de "
+        "átomos.\n\n"
+        "Por convención se anota sobre la flecha, para dejar constancia de que "
+        "está presente sin contarlo en el balance.",
+        [
+            ("Porque no participa de la reacción",
+             "Sí participa: sin él la reacción sería mucho más lenta."),
+            ("Porque su masa es despreciable",
+             "Puede usarse en cantidades apreciables; lo relevante es que se recupera."),
+            ("Porque se transforma en uno de los productos y por eso ya está contado en el lado derecho",
+             "No se transforma: se recupera tal como estaba al inicio."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "¿Cómo queda balanceada la neutralización HCl + NaOH → NaCl + H₂O?",
+        "Ya está balanceada tal como se escribe",
+        "A veces la ecuación cuadra sin necesidad de ajustes.\n\n"
+        "1) Hidrógeno: 1 del HCl más 1 del NaOH dan 2 a la izquierda, y el agua "
+        "aporta 2 a la derecha.\n"
+        "2) Cloro, sodio y oxígeno aparecen una vez a cada lado.\n"
+        "3) Por lo tanto todos los coeficientes son 1 y la ecuación ya está "
+        "balanceada.\n\n"
+        "Verificar siempre es parte del procedimiento: dar por hecho que hay "
+        "que ajustar algo lleva a introducir errores.",
+        [
+            ("2HCl + NaOH → NaCl + H₂O",
+             "Deja 2 cloros a la izquierda y solo 1 a la derecha."),
+            ("HCl + 2NaOH → NaCl + H₂O",
+             "Deja 2 sodios a la izquierda y 1 a la derecha."),
+            ("2HCl + 2NaOH → 2NaCl + 2H₂O, que también cuadra y por eso es la forma correcta de escribirla",
+             "Cuadra, pero los coeficientes deben ser los enteros más pequeños posibles."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "¿Para qué sirve, en la práctica, que una ecuación esté balanceada?",
+        "Para calcular cuánto reactante y cuánto producto hay",
+        "El balance es el punto de partida de todo cálculo químico.\n\n"
+        "1) Los coeficientes indican en qué proporción participan las "
+        "sustancias.\n"
+        "2) Con esa proporción y las masas molares se calcula cuánta masa de "
+        "cada una interviene.\n"
+        "3) Sin balancear, esa proporción sería incorrecta y todos los "
+        "resultados también.\n\n"
+        "Por eso balancear es el primer paso de cualquier problema de "
+        "estequiometría.",
+        [
+            ("Para que la ecuación se vea ordenada",
+             "El balance no es un asunto de presentación sino de conservación de la materia."),
+            ("Para saber la velocidad de la reacción",
+             "La velocidad depende de otros factores y no se lee de los coeficientes."),
+            ("Para determinar si la reacción libera o absorbe energía durante su transcurso",
+             "El balance de átomos no informa sobre la energía involucrada."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "El monóxido de carbono contiene 1,33 g de oxígeno por gramo de "
+        "carbono, y el dióxido, 2,66 g. ¿Qué ley ilustra esa relación?",
+        "La ley de las proporciones múltiples",
+        "La relación entre ambas cantidades es un número entero sencillo.\n\n"
+        "1) Para una misma masa de carbono, las masas de oxígeno son 1,33 g y "
+        "2,66 g.\n"
+        "2) El cociente entre ellas es exactamente 2.\n"
+        "3) Que la relación sea de números enteros pequeños es lo que afirma la "
+        "ley de las proporciones múltiples.\n\n"
+        "Se explica bien con átomos: el dióxido tiene dos oxígenos por carbono "
+        "donde el monóxido tiene uno.",
+        [
+            ("La ley de conservación de la materia",
+             "Esa ley compara masas antes y después de una reacción."),
+            ("La ley de las proporciones definidas",
+             "Esa ley se refiere a la composición constante dentro de un mismo compuesto."),
+            ("La ley de los volúmenes de combinación, que relaciona los volúmenes de los gases que reaccionan",
+             "Esa ley se refiere a volúmenes de gases y no a masas de compuestos distintos."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "En una ecuación aparece AgNO₃(ac) + NaCl(ac) → AgCl(s) + NaNO₃(ac). "
+        "¿Qué indica el símbolo (s)?",
+        "Que el cloruro de plata se forma como sólido",
+        "Los estados de agregación anticipan lo que se observa.\n\n"
+        "1) Los reactantes están disueltos en agua, como indica (ac).\n"
+        "2) El producto marcado con (s) no queda disuelto: aparece como un "
+        "sólido dentro del líquido.\n"
+        "3) Ese sólido que se forma en una disolución se llama precipitado.\n\n"
+        "La aparición de un precipitado es una de las señales de que ocurrió "
+        "una reacción química.",
+        [
+            ("Que la reacción ocurre en estado sólido",
+             "Los reactantes están en disolución acuosa, como indica su símbolo."),
+            ("Que ese compuesto es un catalizador",
+             "Un catalizador no figura como producto de la reacción."),
+            ("Que el compuesto se encuentra disuelto en agua junto con el resto de las sustancias",
+             "Ese caso se indica con (ac); el símbolo (s) señala un sólido."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "¿Qué caracteriza a una reacción de síntesis?",
+        "Dos o más sustancias forman un solo producto",
+        "El nombre indica que se construye un compuesto.\n\n"
+        "1) Se parte de dos o más reactantes y se obtiene una sola sustancia.\n"
+        "2) La formación de agua a partir de hidrógeno y oxígeno es el ejemplo "
+        "más conocido.\n"
+        "3) También lo es la formación de óxido cuando un metal reacciona con "
+        "oxígeno.\n\n"
+        "Es el proceso inverso de una descomposición, donde de un compuesto "
+        "resultan varias sustancias.",
+        [
+            ("Un compuesto se separa en varias sustancias",
+             "Esa es una reacción de descomposición."),
+            ("Dos compuestos intercambian componentes",
+             "Ese caso corresponde a una sustitución doble."),
+            ("Una sustancia se disuelve en otra formando una mezcla homogénea y estable en el tiempo",
+             "Disolver es un cambio físico y no una reacción química."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "Dos muestras de sal de mesa, una de una salina y otra fabricada en "
+        "laboratorio, tienen la misma proporción de sodio y cloro. ¿Qué ley se "
+        "verifica?",
+        "La de las proporciones definidas",
+        "La ley afirma que la composición no depende del origen.\n\n"
+        "1) Un compuesto tiene siempre la misma proporción de masas entre sus "
+        "elementos.\n"
+        "2) Esa proporción no cambia por el método de obtención ni por la "
+        "procedencia de la muestra.\n"
+        "3) Comprobarlo en muestras de origen distinto es una verificación "
+        "directa de la ley.\n\n"
+        "Si las proporciones hubieran diferido, alguna de las dos muestras no "
+        "sería el compuesto puro sino una mezcla.",
+        [
+            ("La de conservación de la materia",
+             "Esa ley compara masas antes y después de una reacción, no muestras de un compuesto."),
+            ("La de las proporciones múltiples",
+             "Esa ley compara compuestos distintos formados por los mismos elementos."),
+            ("Ninguna, porque la composición de un compuesto depende siempre del lugar donde fue obtenido",
+             "La independencia del origen es justamente lo que la ley establece."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "medio",
+        "¿Qué diferencia hay entre balancear una ecuación y escribir "
+        "correctamente las fórmulas?",
+        "Las fórmulas describen las sustancias y el balance, las cantidades",
+        "Son dos tareas distintas y en ese orden.\n\n"
+        "1) Primero hay que saber qué sustancias participan y escribir bien sus "
+        "fórmulas, con sus subíndices correctos.\n"
+        "2) Recién después se ajustan los coeficientes para que los átomos "
+        "cuadren.\n"
+        "3) Si las fórmulas están mal, ningún balance corrige el error: la "
+        "ecuación describirá otra reacción.\n\n"
+        "Por eso balancear no puede hacerse tocando subíndices: eso sería "
+        "reescribir las sustancias.",
+        [
+            ("Son exactamente lo mismo",
+             "Una define qué reacciona y la otra, en qué cantidades."),
+            ("El balance se hace antes de escribir las fórmulas",
+             "Sin las fórmulas no hay nada que balancear."),
+            ("Las fórmulas indican las cantidades y el balance describe las sustancias que participan",
+             "Invierte los roles de una y otro."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "dificil",
+        "¿Cómo comprobó Lavoisier que la masa se conserva en una combustión?",
+        "Pesando el sistema cerrado antes y después",
+        "El diseño del experimento es lo que hace válida la conclusión.\n\n"
+        "1) Si la combustión ocurre al aire libre, los gases producidos escapan "
+        "y la masa medida disminuye.\n"
+        "2) En un recipiente cerrado, esos gases quedan dentro del sistema que "
+        "se está pesando.\n"
+        "3) Al comparar la masa total antes y después y encontrarla igual, "
+        "queda establecida la conservación.\n\n"
+        "El aporte no fue solo la ley sino el criterio: delimitar bien el "
+        "sistema antes de medir.",
+        [
+            ("Observando el color de la llama",
+             "El color no aporta información sobre la masa del sistema."),
+            ("Midiendo el tiempo que duraba la combustión",
+             "La duración no permite concluir nada sobre la conservación de la masa."),
+            ("Pesando solo el combustible antes y después de que se consumiera por completo en el aire",
+             "Ese es el procedimiento que hace parecer que se pierde masa, porque los gases escapan."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "dificil",
+        "Se quiere comprobar la conservación de la masa en una reacción que "
+        "libera gas. ¿Qué montaje corresponde?",
+        "Hacerla en un recipiente cerrado sobre la balanza",
+        "El sistema medido debe contener a todos los participantes.\n\n"
+        "1) Si el gas escapa, la balanza registra menos masa y la comprobación "
+        "falla por diseño.\n"
+        "2) Con el recipiente cerrado, ese gas permanece dentro y su masa sigue "
+        "contabilizada.\n"
+        "3) Comparando la lectura antes y después se comprueba que el total no "
+        "cambió.\n\n"
+        "Conviene además pesar el recipiente cerrado con los reactantes "
+        "separados dentro, para no perder nada al mezclarlos.",
+        [
+            ("Hacerla en un vaso abierto y pesar el residuo",
+             "El gas escapa y la masa medida disminuye, sin que se pierda materia."),
+            ("Medir solo la masa del producto sólido obtenido",
+             "Ignora al gas, que es parte de los productos."),
+            ("Repetir la reacción varias veces y promediar las masas finales que registre la balanza",
+             "Promediar mediciones mal planteadas no corrige el problema del gas que escapa."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "dificil",
+        "¿Cómo queda balanceada la combustión C₃H₈ + O₂ → CO₂ + H₂O?",
+        "C₃H₈ + 5O₂ → 3CO₂ + 4H₂O",
+        "El orden carbono, hidrógeno y oxígeno resuelve el balance.\n\n"
+        "1) Los 3 carbonos del propano exigen 3CO₂.\n"
+        "2) Los 8 hidrógenos exigen 4H₂O.\n"
+        "3) A la derecha quedan 6 oxígenos del CO₂ más 4 de las aguas, o sea "
+        "10, que se consiguen con 5O₂.\n\n"
+        "Verificando: 3 carbonos, 8 hidrógenos y 10 oxígenos a cada lado.",
+        [
+            ("C₃H₈ + 3O₂ → 3CO₂ + 4H₂O",
+             "Quedan 6 oxígenos a la izquierda y 10 a la derecha."),
+            ("C₃H₈ + 5O₂ → 3CO₂ + 3H₂O",
+             "Con 3 aguas quedan 6 hidrógenos a la derecha y 8 a la izquierda."),
+            ("2C₃H₈ + 5O₂ → 3CO₂ + 4H₂O, duplicando el hidrocarburo para asegurar carbono suficiente",
+             "Al duplicar el propano habría 6 carbonos a la izquierda y solo 3 a la derecha."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "dificil",
+        "Un estudiante balancea H₂ + O₂ → H₂O escribiendo H₂ + O₂ → H₂O₂. ¿Qué "
+        "error cometió?",
+        "Cambió un subíndice y con eso cambió la sustancia",
+        "La ecuación queda cuadrada, pero describe otra reacción.\n\n"
+        "1) Contando átomos, la ecuación escrita efectivamente cuadra.\n"
+        "2) Pero H₂O₂ no es agua: es peróxido de hidrógeno, una sustancia "
+        "distinta con otras propiedades.\n"
+        "3) El balance se ajusta con coeficientes, que multiplican la fórmula "
+        "completa sin alterarla.\n\n"
+        "La forma correcta es 2H₂ + O₂ → 2H₂O, que cuadra sin cambiar ninguna "
+        "sustancia.",
+        [
+            ("No cometió ningún error, porque la ecuación cuadra",
+             "Cuadra, pero describe la formación de una sustancia distinta de la pedida."),
+            ("Olvidó agregar un catalizador",
+             "El catalizador no forma parte del balance ni corrige el error."),
+            ("Debió cambiar también el subíndice del hidrógeno para que la ecuación quedara correcta",
+             "Ningún cambio de subíndices es válido: eso reescribe las sustancias."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "dificil",
+        "En el agua, la proporción de masas es 8 g de oxígeno por cada gramo de "
+        "hidrógeno. ¿Cuánto oxígeno se combina con 10 g de hidrógeno?",
+        "80 g",
+        "La proporción se mantiene al escalar las cantidades.\n\n"
+        "1) La relación es de 8 g de oxígeno por cada gramo de hidrógeno.\n"
+        "2) Con 10 g de hidrógeno, el oxígeno necesario es 8 multiplicado por "
+        "10.\n"
+        "3) El resultado es 80 g de oxígeno, y se formarían 90 g de agua.\n\n"
+        "Si se agregara más oxígeno, el exceso quedaría sin reaccionar: la "
+        "proporción del compuesto no se puede alterar.",
+        [
+            ("8 g",
+             "Corresponde a un solo gramo de hidrógeno."),
+            ("18 g",
+             "Suma las cantidades en lugar de aplicar la proporción."),
+            ("1,25 g, que resulta de dividir los 10 g de hidrógeno por los 8 g de oxígeno de la proporción",
+             "La proporción se aplica multiplicando, no dividiendo."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "dificil",
+        "Una tabla registra: reactantes 25 g y 40 g; productos, uno de 48 g y "
+        "otro sin medir, en sistema cerrado. ¿Cuánto pesa el segundo producto?",
+        "17 g",
+        "El dato faltante se obtiene por conservación de la masa.\n\n"
+        "1) La masa total de reactantes es 25 más 40, o sea 65 g.\n"
+        "2) En sistema cerrado esa masa debe repartirse entre los productos.\n"
+        "3) Restando el producto conocido: 65 menos 48 da 17 g.\n\n"
+        "Este razonamiento permite completar datos experimentales faltantes sin "
+        "conocer las fórmulas de las sustancias involucradas.",
+        [
+            ("48 g",
+             "Repite el valor del producto ya medido."),
+            ("65 g",
+             "Es la masa total de los productos, no la del segundo."),
+            ("23 g, que resulta de restar los 25 g del primer reactante a los 48 g del producto medido",
+             "La conservación se aplica sobre los totales, no entre un reactante y un producto."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "dificil",
+        "Un estudiante escribe C₂H₄ + 3/2 O₂ → 2CO₂ + 2H₂O y le señalan el "
+        "coeficiente fraccionario. ¿Cómo se corrige?",
+        "Multiplicando todos los coeficientes por 2",
+        "Los coeficientes deben ser los enteros más pequeños posibles.\n\n"
+        "1) Un coeficiente fraccionario no es incorrecto en el conteo de "
+        "átomos, pero no representa unidades enteras de sustancia.\n"
+        "2) Multiplicando toda la ecuación por 2 desaparece la fracción y la "
+        "proporción se conserva.\n"
+        "3) La ecuación queda como 2C₂H₄ + 3O₂ → 4CO₂ + 4H₂O.\n\n"
+        "Multiplicar solo un término rompería el balance: la operación debe "
+        "aplicarse a todos los coeficientes por igual.",
+        [
+            ("Redondeando la fracción al entero más cercano",
+             "Redondear rompe el balance de átomos."),
+            ("Multiplicando solo el oxígeno por 2",
+             "Modificar un solo coeficiente descuadra el resto de la ecuación."),
+            ("Cambiando el subíndice del oxígeno para que el coeficiente resulte un número entero",
+             "Cambiar subíndices convierte al oxígeno en otra sustancia."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "dificil",
+        "La misma reacción se hace en un recipiente abierto y en uno cerrado, y "
+        "libera un gas. ¿Qué se espera de la masa medida en cada caso?",
+        "Disminuye en el abierto y se mantiene en el cerrado",
+        "Lo que cambia es el sistema medido, no la ley.\n\n"
+        "1) En el recipiente abierto el gas escapa y deja de estar sobre la "
+        "balanza, así que la lectura baja.\n"
+        "2) En el cerrado ese gas permanece dentro y la masa total se "
+        "mantiene.\n"
+        "3) En ambos casos la materia se conservó: lo que difiere es cuánto de "
+        "ella quedó incluido en la medición.\n\n"
+        "La comparación de ambos montajes es la mejor demostración escolar de "
+        "la ley de conservación.",
+        [
+            ("Disminuye en ambos casos",
+             "En el recipiente cerrado nada escapa, así que la masa se mantiene."),
+            ("Aumenta en el cerrado",
+             "No entra materia al sistema cerrado: la masa se mantiene igual."),
+            ("Se mantiene en ambos, porque la ley de conservación de la materia se cumple siempre",
+             "La ley se cumple siempre, pero en el recipiente abierto parte de la materia sale de la balanza."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "dificil",
+        "Se hacen reaccionar 10 g de un metal con 4 g de oxígeno y sobran 2 g "
+        "de metal sin reaccionar. ¿Qué masa de óxido se forma?",
+        "12 g",
+        "Solo la parte que reacciona forma producto.\n\n"
+        "1) Del metal, 2 g quedan sin reaccionar, así que participan 8 g.\n"
+        "2) Esos 8 g se combinan con los 4 g de oxígeno.\n"
+        "3) La masa del óxido es entonces 8 más 4, o sea 12 g.\n\n"
+        "Comprobando el total: 12 g de óxido más 2 g de metal sobrante dan los "
+        "14 g iniciales, así que la masa se conservó.",
+        [
+            ("14 g",
+             "Suma todo el metal inicial, incluidos los 2 g que no reaccionaron."),
+            ("10 g",
+             "Toma la masa inicial del metal y omite el oxígeno incorporado."),
+            ("6 g, que resulta de restar los dos gramos sobrantes a la masa total de los reactantes",
+             "El sobrante son 2 g y la resta correcta parte de 14 g, no del valor indicado."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "dificil",
+        "Alguien concluye que en una combustión al aire libre parte de la "
+        "materia desaparece, porque la balanza marca menos. ¿Cómo se evalúa?",
+        "Es incorrecta: los productos gaseosos salieron del sistema",
+        "La conclusión confunde lo medido con lo ocurrido.\n\n"
+        "1) La combustión produce dióxido de carbono y vapor de agua, que se "
+        "dispersan en el aire.\n"
+        "2) Esos productos siguen existiendo, pero ya no están sobre la "
+        "balanza.\n"
+        "3) Repitiendo la reacción en un recipiente cerrado, la masa total no "
+        "cambia.\n\n"
+        "Es un buen ejemplo de por qué hay que definir el sistema antes de "
+        "interpretar una medición.",
+        [
+            ("Es correcta, porque la balanza no miente",
+             "La balanza mide bien: lo que está mal es suponer que midió todo el sistema."),
+            ("Es correcta, porque la materia se transforma en energía",
+             "Esa conversión no ocurre de manera apreciable en una reacción química."),
+            ("Es incorrecta, porque en realidad la masa aumenta durante cualquier proceso de combustión",
+             "La masa total se conserva; lo que cambia es cuánto de ella queda dentro del sistema medido."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "dificil",
+        "En dos experimentos, 5 g y 15 g de un mismo compuesto se descomponen y "
+        "dan 4 g y 12 g de un elemento. ¿Qué muestra ese resultado?",
+        "Que la composición del compuesto es constante",
+        "La proporción se mantiene aunque cambien las cantidades.\n\n"
+        "1) En el primer caso la fracción es 4 sobre 5, o sea 0,8.\n"
+        "2) En el segundo es 12 sobre 15, que también da 0,8.\n"
+        "3) Que la proporción coincida pese a triplicar la muestra es "
+        "exactamente lo que afirma la ley de las proporciones definidas.\n\n"
+        "Si las proporciones hubieran diferido, el material no sería un "
+        "compuesto puro sino una mezcla.",
+        [
+            ("Que se trata de dos compuestos distintos",
+             "Justamente la proporción coincidente indica que es el mismo compuesto."),
+            ("Que la masa no se conserva",
+             "El resto de la masa corresponde al otro elemento del compuesto."),
+            ("Que el segundo experimento se realizó con una técnica más precisa que el primero",
+             "Los datos no informan sobre la técnica: lo que muestran es la constancia de la proporción."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "dificil",
+        "¿Cuál enunciado describe correctamente la ecuación 2H₂ + O₂ → 2H₂O en "
+        "términos de masa?",
+        "4 g de hidrógeno con 32 g de oxígeno dan 36 g de agua",
+        "Los coeficientes se traducen a masa usando las masas molares.\n\n"
+        "1) Dos moles de hidrógeno pesan 4 g, porque cada mol de H₂ pesa 2 g.\n"
+        "2) Un mol de oxígeno pesa 32 g.\n"
+        "3) Los dos moles de agua pesan 36 g, que coincide con la suma de los "
+        "reactantes.\n\n"
+        "La coincidencia no es casual: es la conservación de la masa "
+        "expresada en gramos.",
+        [
+            ("2 g de hidrógeno con 1 g de oxígeno dan 2 g de agua",
+             "Confunde los coeficientes con masas en gramos."),
+            ("2 g de hidrógeno con 32 g de oxígeno dan 34 g de agua",
+             "Los dos moles de hidrógeno pesan 4 g, no 2 g."),
+            ("4 g de hidrógeno con 32 g de oxígeno dan 32 g de agua, porque el oxígeno aporta toda la masa",
+             "La masa de los productos debe igualar la suma de los reactantes, o sea 36 g."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "dificil",
+        "Dos compuestos de nitrógeno y oxígeno contienen 0,57 g y 1,14 g de "
+        "oxígeno por gramo de nitrógeno. ¿Qué relación hay entre ellos?",
+        "Sus masas de oxígeno están en relación de 1 a 2",
+        "El cociente entre ambas cantidades es lo que la ley predice.\n\n"
+        "1) Dividiendo 1,14 por 0,57 se obtiene exactamente 2.\n"
+        "2) Una relación de números enteros pequeños es lo que establece la ley "
+        "de las proporciones múltiples.\n"
+        "3) Se explica con átomos: el segundo compuesto tiene el doble de "
+        "oxígeno por cada nitrógeno que el primero.\n\n"
+        "Ese tipo de regularidad fue una de las evidencias más fuertes a favor "
+        "de la teoría atómica.",
+        [
+            ("Son el mismo compuesto medido dos veces",
+             "Si fuera el mismo compuesto, la proporción sería idéntica en ambos casos."),
+            ("Uno de los dos análisis está equivocado",
+             "Ambos resultados son coherentes y su relación es justamente la que la ley predice."),
+            ("Sus masas de oxígeno están en una relación que no corresponde a números enteros sencillos",
+             "El cociente es exactamente 2, que es un número entero pequeño."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_leyes_ponderales", "dificil",
+        "¿Cuál de estas ecuaciones está correctamente balanceada?",
+        "2Mg + O₂ → 2MgO",
+        "La verificación consiste en contar cada elemento a ambos lados.\n\n"
+        "1) En la opción correcta hay 2 magnesios a la izquierda y 2 a la "
+        "derecha.\n"
+        "2) El oxígeno aporta 2 átomos a la izquierda, y los dos MgO suman "
+        "también 2 a la derecha.\n"
+        "3) Todos los elementos coinciden, así que la ecuación está "
+        "balanceada.\n\n"
+        "En las demás opciones basta encontrar un elemento que no cuadre para "
+        "descartarlas: no hace falta revisarlas enteras.",
+        [
+            ("Mg + O₂ → MgO",
+             "Hay 2 oxígenos a la izquierda y solo 1 a la derecha."),
+            ("H₂ + Cl₂ → HCl",
+             "Quedan 2 hidrógenos y 2 cloros a la izquierda, y solo 1 de cada uno a la derecha."),
+            ("Na + Cl₂ → NaCl₂, donde cada átomo de sodio se une a la molécula completa de cloro",
+             "El subíndice fue alterado: el compuesto real es NaCl y la fórmula escrita describe otra sustancia."),
+        ],
+    ),
+    _q(
+        "cie_leyes_ponderales", "dificil",
+        "¿Qué ensayo permitiría distinguir si un material es un compuesto o una "
+        "mezcla, usando las leyes ponderales?",
+        "Analizar la proporción de sus elementos en varias muestras",
+        "La constancia de la proporción es lo que distingue a un compuesto.\n\n"
+        "1) Se toman varias muestras del material, de distinto origen o "
+        "cantidad.\n"
+        "2) Se determina en cada una la proporción de masa entre sus "
+        "elementos.\n"
+        "3) Si la proporción se mantiene constante, se trata de un compuesto; "
+        "si varía, es una mezcla.\n\n"
+        "Ese fue el razonamiento con que se estableció la ley de las "
+        "proporciones definidas, y sigue siendo el criterio operativo.",
+        [
+            ("Pesar una sola muestra con la mayor precisión posible",
+             "Una sola muestra no permite comparar proporciones entre casos."),
+            ("Comprobar si el material se ve uniforme",
+             "Muchas mezclas homogéneas se ven perfectamente uniformes."),
+            ("Verificar que la masa se conserve al hacerlo reaccionar dentro de un recipiente cerrado",
+             "La masa se conserva en ambos casos: esa prueba no distingue compuesto de mezcla."),
+        ],
+    ),
+]
