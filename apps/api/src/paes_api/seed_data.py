@@ -115244,3 +115244,1225 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Quimica - Reacciones quimicas: soluciones y concentracion
+#
+# El temario abre tres lineas para este nodo: las caracteristicas de las
+# soluciones, las unidades de concentracion QUIMICAS (molar, molal, fraccion
+# molar) y las FISICAS (%m/m, %m/v, %v/v y ppm). El nodo cubre las seis, y las
+# dificiles insisten en la distincion que la prueba oficial castiga: la
+# molaridad se define sobre el volumen de la DISOLUCION, no sobre el del
+# disolvente que se uso para prepararla.
+#
+# Masas molares usadas: NaCl 58,5; NaOH 40; glucosa 180; HCl 36,5; agua 18;
+# etanol 46.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_soluciones", "facil",
+        "¿Qué es una disolución?",
+        "Una mezcla homogénea de dos o más sustancias",
+        "La disolución es un tipo particular de mezcla.\n\n"
+        "1) Sus componentes están mezclados a escala de partículas.\n"
+        "2) Por eso su composición es la misma en cualquier punto y no se "
+        "distinguen fases a simple vista ni al microscopio.\n"
+        "3) Eso la separa de una mezcla heterogénea, donde sí se reconocen "
+        "partes distintas.\n\n"
+        "Sus componentes no se separan por filtración ni por decantación, "
+        "porque el soluto pasa junto con el disolvente.",
+        [
+            ("Una mezcla heterogénea de dos sustancias",
+             "En una heterogénea se distinguen las fases; en la disolución, no."),
+            ("Una sustancia pura de composición fija",
+             "Una disolución tiene al menos dos componentes en proporción variable."),
+            ("Un compuesto de dos sustancias unidas",
+             "En una disolución no hay reacción: los componentes conservan su identidad."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "facil",
+        "En una disolución, ¿qué es el disolvente?",
+        "El componente que está en mayor cantidad",
+        "El disolvente es el medio en que se dispersa el soluto.\n\n"
+        "1) Es el componente presente en mayor proporción.\n"
+        "2) Suele imponer el estado de agregación de la disolución.\n"
+        "3) En las disoluciones acuosas ese papel lo cumple el agua.\n\n"
+        "El soluto, en cambio, es el componente que se dispersa y está en menor "
+        "proporción.",
+        [
+            ("El componente que está en menor cantidad",
+             "Ese es el soluto, no el disolvente."),
+            ("El componente sólido de la mezcla",
+             "El disolvente puede ser líquido, sólido o gaseoso: lo define la proporción."),
+            ("El componente que se deposita en el fondo cuando la mezcla queda en reposo",
+             "En una disolución nada se deposita: si algo sedimenta, no está disuelto."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "facil",
+        "¿Cómo se clasifica una disolución según el tamaño de sus partículas?",
+        "Como una mezcla homogénea",
+        "El tamaño de las partículas dispersas es lo que define la "
+        "clasificación.\n\n"
+        "1) En una disolución el soluto está disperso como iones o moléculas "
+        "sueltas.\n"
+        "2) Esas partículas son demasiado pequeñas para dispersar la luz o "
+        "sedimentar.\n"
+        "3) Por eso la mezcla se ve uniforme y se clasifica como homogénea.\n\n"
+        "Si las partículas fueran mayores, la mezcla sería un coloide o una "
+        "suspensión, y ahí sí se vería turbia.",
+        [
+            ("Como una suspensión",
+             "En una suspensión las partículas son grandes y sedimentan con el tiempo."),
+            ("Como un coloide",
+             "Un coloide dispersa la luz; una disolución verdadera, no."),
+            ("Como una mezcla heterogénea con dos fases claramente diferenciadas",
+             "En una disolución no hay fases distinguibles: es homogénea en todo su volumen."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "facil",
+        "¿Qué indica la concentración molar de una disolución?",
+        "Los moles de soluto por litro de disolución",
+        "La molaridad relaciona cantidad de sustancia con volumen.\n\n"
+        "1) El numerador son los moles de soluto disueltos.\n"
+        "2) El denominador es el volumen total de la disolución, en litros.\n"
+        "3) El cociente se expresa en mol/L y se abrevia con una M "
+        "mayúscula.\n\n"
+        "El volumen es el de la disolución terminada, no el del disolvente que "
+        "se usó para prepararla.",
+        [
+            ("Los gramos de soluto por litro",
+             "Esa es otra unidad; la molaridad usa moles y no gramos."),
+            ("Los moles de soluto por litro de agua",
+             "El denominador es el volumen de la DISOLUCIÓN, que no coincide con el del disolvente."),
+            ("La masa total dividida por el volumen",
+             "Ese cociente es la densidad, no la concentración molar."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "facil",
+        "¿En qué unidad se expresa la molaridad?",
+        "En mol/L",
+        "La unidad se lee directamente de la definición.\n\n"
+        "1) La molaridad es un cociente entre moles y litros.\n"
+        "2) Su unidad es entonces mol por litro.\n"
+        "3) Se abrevia con una M mayúscula: una disolución 2 M tiene 2 moles "
+        "por litro.\n\n"
+        "Seguir las unidades es la mejor defensa contra invertir el cociente: "
+        "si el resultado queda en L/mol, la división se hizo al revés.",
+        [
+            ("En g/L",
+             "Esa unidad corresponde a una concentración en masa, no a la molaridad."),
+            ("En mol/kg",
+             "Esa es la unidad de la molalidad, que usa la masa del disolvente."),
+            ("En gramos de soluto por cada cien gramos de disolución preparada",
+             "Eso corresponde al porcentaje masa-masa, una unidad física de concentración."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "facil",
+        "¿Qué indica una concentración expresada como %m/m?",
+        "Gramos de soluto por cada 100 g de disolución",
+        "Es una unidad física: compara masas con masas.\n\n"
+        "1) El numerador es la masa de soluto y el denominador, la masa total "
+        "de la disolución.\n"
+        "2) El cociente se multiplica por 100 para expresarlo como "
+        "porcentaje.\n"
+        "3) Una disolución al 10% m/m tiene 10 gramos de soluto en cada 100 "
+        "gramos de mezcla.\n\n"
+        "El denominador incluye al soluto: en esos 100 gramos hay 10 de soluto "
+        "y 90 de disolvente.",
+        [
+            ("Gramos de soluto por 100 g de disolvente",
+             "El denominador es la masa de la DISOLUCIÓN, que incluye al soluto."),
+            ("Moles de soluto por cada 100 g de disolución",
+             "El porcentaje masa-masa usa gramos de soluto, no moles."),
+            ("Mililitros de soluto por cada 100 mL",
+             "Eso corresponde al porcentaje volumen-volumen."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "facil",
+        "¿Qué indica una concentración expresada como %m/v?",
+        "Gramos de soluto por cada 100 mL de disolución",
+        "Es una unidad mixta: masa arriba y volumen abajo.\n\n"
+        "1) El numerador es la masa de soluto, en gramos.\n"
+        "2) El denominador es el volumen de la disolución, en mililitros.\n"
+        "3) Una disolución al 5% m/v tiene 5 gramos de soluto en cada 100 mL.\n\n"
+        "Es la unidad que aparece en la mayoría de los sueros y jarabes, porque "
+        "el volumen es lo que se mide al administrarlos.",
+        [
+            ("Gramos de soluto por cada 100 g de disolución",
+             "Ese es el porcentaje masa-masa, con masa en el denominador."),
+            ("Mililitros de soluto por cada 100 mL de disolución",
+             "Ese es el porcentaje volumen-volumen."),
+            ("Moles de soluto por cada cien mililitros de la disolución preparada",
+             "El numerador va en gramos: los moles corresponden a la molaridad."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "facil",
+        "En una disolución acuosa diluida, ¿qué significa una concentración de "
+        "1 ppm?",
+        "Un miligramo de soluto por litro",
+        "Las partes por millón sirven para concentraciones muy pequeñas.\n\n"
+        "1) Una parte por millón es un gramo de soluto por cada millón de "
+        "gramos de disolución.\n"
+        "2) Un millón de gramos de agua son mil litros, así que equivale a un "
+        "miligramo por litro.\n"
+        "3) Esa equivalencia vale mientras la disolución sea acuosa y diluida, "
+        "porque su densidad es cercana a 1 g/mL.\n\n"
+        "Es la unidad habitual para contaminantes: la norma chilena de arsénico "
+        "en agua potable está en 0,01 ppm.",
+        [
+            ("Un gramo de soluto por litro",
+             "Eso serían mil ppm: un gramo por litro es mil veces mayor."),
+            ("Un mol de soluto por millón de litros",
+             "Las ppm comparan masas, no moles."),
+            ("Un mililitro de soluto por cada millón de mililitros de disolución",
+             "Esa lectura vale para líquidos mezclados, pero la definición estándar compara masas."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "facil",
+        "¿Qué indica la molalidad de una disolución?",
+        "Los moles de soluto por kilogramo de disolvente",
+        "La molalidad se define sobre la masa y no sobre el volumen.\n\n"
+        "1) El numerador son los moles de soluto.\n"
+        "2) El denominador es la masa del disolvente, en kilogramos.\n"
+        "3) Su unidad es mol/kg y se abrevia con una m minúscula.\n\n"
+        "Como la masa no cambia con la temperatura y el volumen sí, la "
+        "molalidad no se altera al calentar la disolución.",
+        [
+            ("Los moles de soluto por litro de disolución",
+             "Esa es la molaridad, que se define sobre el volumen."),
+            ("Los gramos de soluto por kilogramo",
+             "El numerador va en moles, no en gramos."),
+            ("Moles de soluto por kg de disolución",
+             "El denominador es la masa del DISOLVENTE, sin contar el soluto."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "facil",
+        "¿Se pueden separar los componentes de una disolución por filtración?",
+        "No, el soluto pasa junto con el disolvente",
+        "El filtro solo retiene partículas mayores que sus poros.\n\n"
+        "1) En una disolución el soluto está disperso como iones o moléculas "
+        "sueltas.\n"
+        "2) Esas partículas son mucho menores que cualquier poro de un papel "
+        "filtro.\n"
+        "3) Por eso atraviesan el filtro junto con el disolvente.\n\n"
+        "Para separarlos hay que recurrir a la evaporación o a la destilación, "
+        "que aprovechan la diferencia de temperatura de ebullición.",
+        [
+            ("Sí, el filtro retiene el soluto",
+             "Solo retendría partículas grandes: el soluto disuelto pasa igual."),
+            ("Sí, si el soluto es un sólido",
+             "Un sólido disuelto está en forma de iones o moléculas y atraviesa el filtro."),
+            ("No, porque forman un compuesto nuevo",
+             "No hay reacción: los componentes conservan su identidad, solo están mezclados."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Se disuelven 0,5 moles de soluto y la disolución se completa hasta 2 "
+        "litros. ¿Cuál es su concentración molar?",
+        "0,25 mol/L",
+        "La molaridad es el cociente entre moles y litros.\n\n"
+        "1) Los moles de soluto son 0,5.\n"
+        "2) El volumen de la disolución es 2 litros.\n"
+        "3) El cociente 0,5 dividido por 2 da 0,25 mol/L.\n\n"
+        "El resultado es menor que uno porque el soluto está repartido en más "
+        "de un litro de disolución.",
+        [
+            ("0,5 mol/L",
+             "Repite los moles sin dividir por el volumen."),
+            ("4 mol/L",
+             "Invierte la división y calcula litros divididos por moles."),
+            ("1 mol/L, sumando los moles de soluto con los litros de la disolución",
+             "Moles y litros no se suman: la concentración es el cociente entre ambos."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Con NaCl de masa molar 58,5 g/mol, ¿cuál es la concentración de una "
+        "disolución con 58,5 gramos de sal en un litro?",
+        "1 mol/L",
+        "Los gramos se convierten a moles antes de dividir.\n\n"
+        "1) 58,5 gramos divididos por 58,5 g/mol dan exactamente 1 mol.\n"
+        "2) El volumen de la disolución es 1 litro.\n"
+        "3) La concentración es 1 dividido por 1, es decir, 1 mol/L.\n\n"
+        "Preparar un litro de disolución 1 M es el punto de partida de casi "
+        "cualquier trabajo cuantitativo en el laboratorio.",
+        [
+            ("58,5 mol/L",
+             "Toma los gramos como si ya fueran moles."),
+            ("0,5 mol/L",
+             "Corresponde a la mitad de la sal indicada, o al doble de volumen."),
+            ("2 mol/L, contando por separado el ion sodio y el ion cloruro de la sal",
+             "La concentración se refiere al compuesto disuelto, no a la suma de sus iones."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Se disuelven 4 gramos de hidróxido de sodio (40 g/mol) y se completa "
+        "hasta 0,5 litros. ¿Cuál es la concentración molar?",
+        "0,2 mol/L",
+        "Primero los moles, después el cociente.\n\n"
+        "1) 4 gramos divididos por 40 g/mol dan 0,1 moles.\n"
+        "2) El volumen de la disolución es 0,5 litros.\n"
+        "3) El cociente 0,1 dividido por 0,5 da 0,2 mol/L.\n\n"
+        "Dividir por un número menor que uno aumenta el resultado, que es lo "
+        "correcto: en un litro completo habría el doble de soluto.",
+        [
+            ("0,1 mol/L",
+             "Se detiene en los moles y no divide por el volumen."),
+            ("0,05 mol/L",
+             "Multiplica por 0,5 en vez de dividir por ese valor."),
+            ("8 mol/L, dividiendo los gramos de soluto por el volumen de la disolución",
+             "Los gramos deben pasarse a moles antes de dividir por el volumen."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "¿Cuántos moles de soluto contienen 250 mL de una disolución 2 mol/L?",
+        "0,5 moles",
+        "Los moles se recuperan multiplicando concentración por volumen.\n\n"
+        "1) El volumen en litros es 0,25.\n"
+        "2) La concentración es 2 mol/L.\n"
+        "3) El producto 2 por 0,25 da 0,5 moles de soluto.\n\n"
+        "Convertir los mililitros a litros antes de multiplicar es el paso que "
+        "más se olvida en este cálculo.",
+        [
+            ("2 moles",
+             "Repite la concentración sin multiplicarla por el volumen."),
+            ("500 moles",
+             "Multiplica por el volumen en mililitros sin convertirlo a litros."),
+            ("8 moles, dividiendo la concentración por el volumen expresado en litros",
+             "La operación es un producto: dividir invierte la relación."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "¿Qué masa de cloruro de sodio (58,5 g/mol) contienen 2 litros de una "
+        "disolución 0,5 mol/L?",
+        "58,5 g",
+        "El camino es concentración por volumen y después a gramos.\n\n"
+        "1) Los moles son 0,5 mol/L por 2 litros, es decir, 1 mol.\n"
+        "2) Un mol de cloruro de sodio pesa 58,5 gramos.\n"
+        "3) La muestra contiene entonces 58,5 gramos de sal.\n\n"
+        "La misma cantidad de sal en un litro daría una disolución 1 M: la "
+        "concentración depende del volumen y no solo del soluto.",
+        [
+            ("29,25 g",
+             "Corresponde a medio mol y la disolución contiene uno."),
+            ("117 g",
+             "Corresponde a dos moles, como si la concentración fuera 1 mol/L."),
+            ("0,5 g, tomando el valor de la concentración como si fuera una masa",
+             "La concentración se multiplica por el volumen y el resultado son moles, no gramos."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "¿Qué volumen de una disolución 0,2 mol/L contiene 0,1 moles de "
+        "soluto?",
+        "0,5 litros",
+        "El volumen se despeja del cociente de la molaridad.\n\n"
+        "1) La molaridad es moles divididos por litros.\n"
+        "2) Despejando, el volumen es moles divididos por molaridad.\n"
+        "3) El cociente 0,1 dividido por 0,2 da 0,5 litros.\n\n"
+        "Comprobación: medio litro de una disolución 0,2 M aporta 0,1 moles, "
+        "que es lo pedido.",
+        [
+            ("2 litros",
+             "Invierte la división y calcula 0,2 dividido por 0,1."),
+            ("0,02 litros",
+             "Multiplica ambos valores en vez de dividirlos."),
+            ("0,3 litros, sumando la concentración con los moles que se quieren obtener",
+             "Moles y molaridad no se suman: el volumen sale del cociente entre ambos."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Se disuelven 20 gramos de sal en 180 gramos de agua. ¿Cuál es la "
+        "concentración en %m/m?",
+        "10%",
+        "El denominador es la masa de la disolución completa.\n\n"
+        "1) La masa de la disolución es 20 más 180, es decir, 200 gramos.\n"
+        "2) La fracción de soluto es 20 dividido por 200, o sea 0,10.\n"
+        "3) Expresada como porcentaje, corresponde a un 10%.\n\n"
+        "Usar los 180 gramos de agua como denominador daría 11,1%, y ese es el "
+        "error más frecuente en esta unidad.",
+        [
+            ("11,1%",
+             "Divide por la masa del agua en vez de por la de la disolución completa."),
+            ("20%",
+             "Toma los gramos de soluto como si fueran directamente el porcentaje."),
+            ("9%, dividiendo la masa de soluto por la masa total y restando el disolvente",
+             "El cálculo es un cociente simple: 20 dividido por 200 da 10%."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Una disolución contiene 5 gramos de soluto en 100 mL. ¿Cuál es su "
+        "concentración en %m/v?",
+        "5%",
+        "El porcentaje masa-volumen se lee casi directamente.\n\n"
+        "1) La definición es gramos de soluto por cada 100 mL de disolución.\n"
+        "2) La disolución tiene exactamente 100 mL.\n"
+        "3) Los 5 gramos corresponden entonces a un 5% m/v.\n\n"
+        "Esa es la concentración de un suero glucosado al 5%, que aporta 50 "
+        "gramos de glucosa por litro.",
+        [
+            ("0,05%",
+             "Divide por 100 dos veces: el porcentaje ya incluye esa multiplicación."),
+            ("20%",
+             "Invierte el cociente y calcula 100 dividido por 5."),
+            ("500%, multiplicando los gramos de soluto por los mililitros de disolución",
+             "La operación es un cociente, no un producto."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Un preparado contiene 25 mL de alcohol en 100 mL de disolución. ¿Cuál "
+        "es su concentración en %v/v?",
+        "25%",
+        "El porcentaje volumen-volumen compara volúmenes.\n\n"
+        "1) El numerador es el volumen de soluto: 25 mL.\n"
+        "2) El denominador es el volumen de la disolución: 100 mL.\n"
+        "3) El cociente por cien da un 25% v/v.\n\n"
+        "Es la unidad de la graduación alcohólica: un vino de 12 grados tiene "
+        "12 mL de alcohol por cada 100 mL de bebida.",
+        [
+            ("2,5%",
+             "Desplaza la coma un lugar: el cociente 25 sobre 100 da 25%."),
+            ("75%",
+             "Corresponde al volumen del otro componente, no al del alcohol."),
+            ("125%, sumando el volumen de alcohol con el volumen total de la disolución",
+             "Los volúmenes no se suman: el porcentaje es el cociente entre ambos."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Se disuelven 0,5 moles de soluto en 500 gramos de disolvente. ¿Cuál es "
+        "la molalidad?",
+        "1 mol/kg",
+        "El denominador va en kilogramos de disolvente.\n\n"
+        "1) Los 500 gramos de disolvente son 0,5 kilogramos.\n"
+        "2) La molalidad es 0,5 moles divididos por 0,5 kilogramos.\n"
+        "3) El cociente da 1 mol/kg.\n\n"
+        "Nótese que el soluto no entra en el denominador: eso distingue la "
+        "molalidad de la molaridad.",
+        [
+            ("0,5 mol/kg",
+             "Olvida convertir los 500 gramos a kilogramos."),
+            ("0,001 mol/kg",
+             "Divide por los gramos sin convertirlos a kilogramos."),
+            ("2 mol/kg, dividiendo la masa del disolvente por los moles de soluto disueltos",
+             "Invierte el cociente: la molalidad es moles divididos por kilogramos."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Una disolución contiene 2 moles de soluto y 8 moles de disolvente. "
+        "¿Cuál es la fracción molar del soluto?",
+        "0,2",
+        "La fracción molar reparte el total de moles.\n\n"
+        "1) El total de moles de la disolución es 2 más 8, es decir, 10.\n"
+        "2) La fracción del soluto es 2 dividido por 10.\n"
+        "3) El cociente da 0,2.\n\n"
+        "La fracción molar no lleva unidad y siempre queda entre 0 y 1: la del "
+        "disolvente es 0,8 y ambas suman 1.",
+        [
+            ("0,25",
+             "Divide por los moles de disolvente en vez de por el total."),
+            ("2",
+             "Repite los moles de soluto sin dividir por el total."),
+            ("0,8, que corresponde a la proporción del disolvente dentro de la disolución",
+             "Esa es la fracción molar del disolvente, el complemento de la pedida."),
+        ],
+    ),
+]
+
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_soluciones", "medio",
+        "¿En qué se diferencian la molaridad y la molalidad de una misma "
+        "disolución?",
+        "En el denominador que usa cada una",
+        "Ambas comparten el numerador y cambian el denominador.\n\n"
+        "1) Las dos tienen en el numerador los moles de soluto.\n"
+        "2) La molaridad divide por el volumen de la disolución, en litros.\n"
+        "3) La molalidad divide por la masa del disolvente, en kilogramos.\n\n"
+        "Por eso la molalidad ignora el aporte del soluto al volumen y no se "
+        "altera al cambiar la temperatura.",
+        [
+            ("En el numerador que usa cada una",
+             "El numerador es el mismo en ambas: los moles de soluto."),
+            ("La molaridad usa gramos y la molalidad, moles",
+             "Las dos usan moles de soluto: lo que cambia es el denominador."),
+            ("La molalidad se aplica solo a disoluciones que tienen agua como disolvente",
+             "Se puede calcular con cualquier disolvente: basta conocer su masa."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "¿Por qué la molaridad de una disolución cambia al calentarla y la "
+        "molalidad no?",
+        "Porque el volumen cambia con la temperatura",
+        "La diferencia está en qué magnitud se dilata.\n\n"
+        "1) Al calentar, la disolución se expande y su volumen aumenta.\n"
+        "2) Los moles de soluto siguen siendo los mismos, así que el cociente "
+        "moles sobre litros disminuye.\n"
+        "3) La masa del disolvente, en cambio, no cambia con la temperatura, y "
+        "por eso la molalidad se mantiene.\n\n"
+        "Esa estabilidad es la razón por la que la molalidad se prefiere en los "
+        "estudios que involucran cambios de temperatura.",
+        [
+            ("Porque el soluto se descompone al calentarse",
+             "El soluto no se descompone: lo que cambia es el volumen que ocupa la disolución."),
+            ("Porque parte del soluto se evapora",
+             "Lo que se evapora, si acaso, es disolvente, y eso afectaría a las dos unidades."),
+            ("Porque la masa del disolvente aumenta cuando la disolución se calienta",
+             "La masa no cambia al calentar: justamente por eso la molalidad se mantiene."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Se disuelven 40 gramos de hidróxido de sodio (40 g/mol) y se completa "
+        "hasta 2 litros. ¿Cuál es la concentración molar?",
+        "0,5 mol/L",
+        "Los gramos coinciden con la masa molar, lo que simplifica el "
+        "cálculo.\n\n"
+        "1) 40 gramos divididos por 40 g/mol dan 1 mol.\n"
+        "2) El volumen de la disolución es 2 litros.\n"
+        "3) El cociente 1 dividido por 2 da 0,5 mol/L.\n\n"
+        "Repartir el mismo mol en cuatro litros daría 0,25 M: la concentración "
+        "depende tanto del soluto como del volumen.",
+        [
+            ("1 mol/L",
+             "Se detiene en los moles y no divide por los dos litros."),
+            ("2 mol/L",
+             "Invierte la división y calcula litros divididos por moles."),
+            ("40 mol/L, tomando los gramos de soluto como si ya estuvieran en moles",
+             "Los gramos deben dividirse por la masa molar antes de calcular la concentración."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "¿Qué masa de glucosa (180 g/mol) contienen 0,5 litros de una "
+        "disolución 0,2 mol/L?",
+        "18 g",
+        "Primero los moles y después la masa.\n\n"
+        "1) Los moles son 0,2 mol/L por 0,5 litros, es decir, 0,1 moles.\n"
+        "2) Un mol de glucosa pesa 180 gramos.\n"
+        "3) 0,1 moles pesan entonces 18 gramos.\n\n"
+        "Esa es aproximadamente la glucosa que aporta un vaso de 200 mL de "
+        "bebida azucarada.",
+        [
+            ("180 g",
+             "Corresponde a un mol completo y la disolución aporta una décima parte."),
+            ("36 g",
+             "Corresponde a 0,2 moles, como si el volumen fuera de un litro."),
+            ("0,1 g, tomando los moles calculados como si fueran directamente una masa",
+             "Los moles deben multiplicarse por la masa molar para obtener gramos."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "¿Qué masa de soluto contienen 400 gramos de una disolución al 15% "
+        "m/m?",
+        "60 g",
+        "El porcentaje se aplica sobre la masa total de la disolución.\n\n"
+        "1) El 15% m/m significa 15 gramos de soluto por cada 100 de "
+        "disolución.\n"
+        "2) La muestra tiene 400 gramos, cuatro veces esos 100.\n"
+        "3) Corresponden entonces 60 gramos de soluto.\n\n"
+        "Los 340 gramos restantes son disolvente, porque el denominador del "
+        "porcentaje incluye a los dos componentes.",
+        [
+            ("15 g",
+             "Corresponde a una muestra de 100 gramos y aquí son 400."),
+            ("340 g",
+             "Es la masa de disolvente, el complemento de la buscada."),
+            ("400 g, que es la masa completa de la disolución que se está analizando",
+             "Solo el 15% de esa masa es soluto: el resto es disolvente."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "¿Qué masa de agua contienen 250 gramos de una disolución acuosa al 8% "
+        "m/m?",
+        "230 g",
+        "El disolvente es el complemento del soluto.\n\n"
+        "1) El 8% de 250 gramos son 20 gramos de soluto.\n"
+        "2) La masa total de la disolución es 250 gramos.\n"
+        "3) La diferencia, 250 menos 20, deja 230 gramos de agua.\n\n"
+        "El denominador del porcentaje masa-masa es la disolución completa, así "
+        "que el disolvente se obtiene restando.",
+        [
+            ("20 g",
+             "Esa es la masa de soluto, no la de agua."),
+            ("250 g",
+             "Es la masa de la disolución completa, que incluye el soluto."),
+            ("92 g, aplicando el porcentaje complementario sobre el número cien",
+             "El porcentaje complementario, 92%, hay que aplicarlo sobre los 250 gramos."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Un agua contiene un contaminante a 3 ppm. ¿Qué masa de contaminante "
+        "hay en 2 litros?",
+        "6 miligramos",
+        "En agua, una parte por millón equivale a un miligramo por litro.\n\n"
+        "1) La concentración es 3 miligramos por litro.\n"
+        "2) La muestra tiene 2 litros.\n"
+        "3) El producto 3 por 2 da 6 miligramos.\n\n"
+        "Las ppm se usan justamente porque a esas concentraciones un resultado "
+        "en gramos por litro quedaría lleno de ceros.",
+        [
+            ("3 miligramos",
+             "Corresponde a un litro y la muestra tiene dos."),
+            ("6 gramos",
+             "Confunde miligramos con gramos: la diferencia es de mil veces."),
+            ("1,5 miligramos, repartiendo la concentración entre los dos litros de la muestra",
+             "La concentración se multiplica por el volumen, no se divide por él."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "¿Cuántos moles de soluto hay en 300 mL de una disolución 0,1 mol/L?",
+        "0,03 moles",
+        "El volumen se convierte a litros antes de multiplicar.\n\n"
+        "1) 300 mL son 0,3 litros.\n"
+        "2) La concentración es 0,1 mol/L.\n"
+        "3) El producto 0,1 por 0,3 da 0,03 moles.\n\n"
+        "Trabajar en mililitros sin convertir habría dado 30 moles, un resultado "
+        "mil veces mayor que el real.",
+        [
+            ("30 moles",
+             "Multiplica por el volumen en mililitros sin convertirlo a litros."),
+            ("0,1 moles",
+             "Repite la concentración sin multiplicarla por el volumen."),
+            ("3 moles, multiplicando la concentración por el volumen expresado en decilitros",
+             "La molaridad exige el volumen en litros: 300 mL son 0,3 L."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Se disuelven 9 gramos de glucosa (180 g/mol) y se completa hasta 250 "
+        "mL. ¿Cuál es la concentración molar?",
+        "0,2 mol/L",
+        "Dos conversiones antes del cociente.\n\n"
+        "1) 9 gramos divididos por 180 g/mol dan 0,05 moles.\n"
+        "2) 250 mL son 0,25 litros.\n"
+        "3) El cociente 0,05 dividido por 0,25 da 0,2 mol/L.\n\n"
+        "Es la concentración aproximada de glucosa de una bebida isotónica "
+        "comercial.",
+        [
+            ("0,05 mol/L",
+             "Se detiene en los moles y no divide por el volumen en litros."),
+            ("0,036 mol/L",
+             "Divide los gramos por los mililitros sin hacer ninguna de las dos conversiones."),
+            ("5 mol/L, dividiendo el volumen en litros por los moles de soluto disueltos",
+             "Invierte el cociente: la molaridad es moles divididos por litros."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "En una disolución de dos componentes, ¿cuánto suman las fracciones "
+        "molares del soluto y del disolvente?",
+        "1",
+        "Las fracciones molares reparten el total de moles.\n\n"
+        "1) Cada fracción es los moles de un componente divididos por el total "
+        "de moles.\n"
+        "2) Sumando ambas, el numerador pasa a ser el total.\n"
+        "3) El cociente del total por sí mismo da 1.\n\n"
+        "Por eso conocida una fracción molar la otra queda determinada: si el "
+        "soluto tiene 0,2, el disolvente tiene 0,8.",
+        [
+            ("100",
+             "La fracción molar no se expresa en porcentaje: su valor máximo es 1."),
+            ("Depende de la disolución",
+             "La suma es siempre 1: lo que cambia entre disoluciones es el reparto."),
+            ("El número de moles totales que contiene la disolución preparada",
+             "Ese total es el denominador de ambas fracciones, no el resultado de la suma."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Se toma la mitad de una disolución 0,4 mol/L. ¿Cuál es la "
+        "concentración de esa porción?",
+        "0,4 mol/L",
+        "La concentración es una propiedad de la disolución, no de la "
+        "porción.\n\n"
+        "1) Al tomar la mitad, se lleva la mitad de los moles de soluto.\n"
+        "2) También se lleva la mitad del volumen.\n"
+        "3) El cociente entre ambos no cambia, así que la concentración sigue "
+        "siendo 0,4 mol/L.\n\n"
+        "Lo que sí se reduce a la mitad es la cantidad total de soluto de esa "
+        "porción.",
+        [
+            ("0,2 mol/L",
+             "Divide la concentración a la mitad, pero el volumen también se redujo."),
+            ("0,8 mol/L",
+             "Duplicar la concentración exigiría quitar disolvente, no repartir la disolución."),
+            ("No se puede saber sin conocer el volumen inicial de la disolución",
+             "El volumen inicial no interviene: la concentración se conserva en cualquier porción."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "¿Qué masa de cloruro de sodio (58,5 g/mol) se necesita para preparar "
+        "500 mL de una disolución 0,2 mol/L?",
+        "5,85 g",
+        "El cálculo va de la concentración a los moles y de ahí a los "
+        "gramos.\n\n"
+        "1) 500 mL son 0,5 litros.\n"
+        "2) Los moles son 0,2 por 0,5, es decir, 0,1 moles.\n"
+        "3) Esos 0,1 moles pesan 0,1 por 58,5 = 5,85 gramos.\n\n"
+        "En el laboratorio esa masa se pesa, se disuelve en poca agua y recién "
+        "después se completa hasta la marca del matraz aforado.",
+        [
+            ("58,5 g",
+             "Corresponde a un mol completo y hacen falta 0,1 moles."),
+            ("11,7 g",
+             "Corresponde a 0,2 moles, como si el volumen fuera de un litro."),
+            ("0,1 g, tomando los moles calculados como si fueran directamente gramos",
+             "Los moles hay que multiplicarlos por la masa molar para llegar a la masa."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "¿Por qué una disolución de sal en agua conduce la electricidad y una "
+        "de azúcar no?",
+        "Porque la sal se separa en iones al disolverse",
+        "La conducción exige partículas con carga libres para moverse.\n\n"
+        "1) Al disolverse, el cloruro de sodio se separa en iones sodio y "
+        "cloruro.\n"
+        "2) Esos iones se desplazan por el líquido y transportan carga.\n"
+        "3) El azúcar, en cambio, se dispersa como moléculas neutras, que no "
+        "transportan carga.\n\n"
+        "Las dos son disoluciones verdaderas y ambas se ven transparentes: lo "
+        "que las distingue es la naturaleza de las partículas disueltas.",
+        [
+            ("Porque la sal es un sólido y el azúcar no",
+             "Los dos son sólidos antes de disolverse."),
+            ("Porque la sal se disuelve más rápido",
+             "La rapidez de disolución no tiene relación con la conducción eléctrica."),
+            ("Porque el azúcar forma una mezcla heterogénea",
+             "Las dos son homogéneas: la diferencia está en si hay iones libres."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Una disolución A tiene 0,5 moles en 1 litro y otra B, 0,8 moles en 2 "
+        "litros. ¿Cuál está más concentrada?",
+        "La disolución A",
+        "La comparación exige llevar ambas a la misma unidad.\n\n"
+        "1) La disolución A tiene 0,5 dividido por 1, es decir, 0,5 mol/L.\n"
+        "2) La disolución B tiene 0,8 dividido por 2, es decir, 0,4 mol/L.\n"
+        "3) La mayor concentración corresponde a A, pese a tener menos soluto "
+        "en total.\n\n"
+        "Comparar solo los moles habría señalado a B: la concentración es un "
+        "cociente y no una cantidad.",
+        [
+            ("La disolución B",
+             "Tiene más soluto en total, pero repartido en el doble de volumen."),
+            ("Ambas tienen la misma concentración",
+             "Sus cocientes son 0,5 y 0,4 mol/L: no coinciden."),
+            ("No se puede comparar sin conocer de qué soluto se trata en cada caso",
+             "La molaridad se compara igual entre solutos distintos: es moles por litro en ambos casos."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "A un vaso con disolución se le agrega más soluto y este se disuelve "
+        "por completo, sin que el volumen cambie de manera apreciable. ¿Qué "
+        "ocurre con la concentración?",
+        "Aumenta",
+        "El numerador crece y el denominador se mantiene.\n\n"
+        "1) La concentración es moles de soluto divididos por volumen.\n"
+        "2) Agregar soluto disuelto aumenta los moles.\n"
+        "3) Como el volumen prácticamente no cambia, el cociente crece.\n\n"
+        "La disolución pasa a estar más concentrada, y ese proceso tiene un "
+        "límite: la solubilidad del soluto a esa temperatura.",
+        [
+            ("Disminuye",
+             "Disminuiría si se agregara disolvente, no soluto."),
+            ("No cambia",
+             "No cambiaría si crecieran a la vez el soluto y el volumen en la misma proporción."),
+            ("Aumenta solo si el soluto agregado es distinto del que ya estaba disuelto",
+             "La concentración del soluto sube igual, sea el mismo o uno nuevo."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Una disolución de sulfato de cobre se ve azul y perfectamente "
+        "transparente. ¿Qué se concluye?",
+        "Es una mezcla homogénea coloreada",
+        "El color y la transparencia son propiedades independientes.\n\n"
+        "1) Que sea transparente indica que no hay partículas grandes que "
+        "dispersen la luz.\n"
+        "2) El color proviene de los iones disueltos, que absorben parte de la "
+        "luz que atraviesa el líquido.\n"
+        "3) Ambas cosas son compatibles con una disolución verdadera.\n\n"
+        "Una mezcla turbia, en cambio, delata partículas grandes: sería un "
+        "coloide o una suspensión, no una disolución.",
+        [
+            ("Es una suspensión",
+             "Una suspensión se ve turbia y sedimenta con el tiempo."),
+            ("El soluto no se disolvió del todo",
+             "Si quedara sin disolver se vería turbia o con depósito en el fondo."),
+            ("Es una mezcla heterogénea, porque el color revela dos fases distintas",
+             "El color no indica fases: proviene de los iones disueltos de manera uniforme."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "En un análisis de agua se informa una concentración de 5 mg/L. ¿A "
+        "cuántas ppm equivale?",
+        "5 ppm",
+        "En agua las dos unidades coinciden numéricamente.\n\n"
+        "1) Una parte por millón es un gramo de soluto por millón de gramos de "
+        "disolución.\n"
+        "2) Un litro de agua pesa aproximadamente mil gramos, así que un millón "
+        "de gramos son mil litros.\n"
+        "3) Un gramo repartido en mil litros es un miligramo por litro: 1 ppm "
+        "equivale a 1 mg/L.\n\n"
+        "La equivalencia vale porque la densidad del agua es cercana a 1 g/mL; "
+        "en otro disolvente habría que corregirla.",
+        [
+            ("0,005 ppm",
+             "Convierte los miligramos a gramos sin ajustar también el volumen."),
+            ("5.000 ppm",
+             "Multiplica por mil, como si un litro pesara un kilogramo de soluto."),
+            ("No se puede convertir sin conocer la masa molar del soluto disuelto",
+             "Ambas unidades comparan masas: la masa molar no interviene en la conversión."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "El aire limpio y seco es nitrógeno, oxígeno y otros gases mezclados de "
+        "manera uniforme. ¿Qué tipo de mezcla es?",
+        "Una disolución gaseosa",
+        "El estado de agregación no cambia la definición.\n\n"
+        "1) Una disolución es una mezcla homogénea, sea sólida, líquida o "
+        "gaseosa.\n"
+        "2) En el aire los gases están mezclados a escala de moléculas y su "
+        "composición es la misma en cualquier punto.\n"
+        "3) El nitrógeno, el más abundante, cumple el papel de disolvente.\n\n"
+        "El bronce es el caso equivalente en estado sólido: cobre y estaño "
+        "mezclados de manera uniforme.",
+        [
+            ("Una mezcla heterogénea",
+             "Los gases del aire no forman fases distinguibles."),
+            ("Una sustancia pura",
+             "El aire tiene varios componentes en proporción variable."),
+            ("Un coloide, porque sus partículas están dispersas en el medio",
+             "Un coloide tiene partículas grandes que dispersan la luz; en el aire seco no las hay."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "¿Cuántos moles de ácido clorhídrico hay en 200 mL de una disolución "
+        "0,5 mol/L?",
+        "0,1 moles",
+        "El producto entre concentración y volumen entrega los moles.\n\n"
+        "1) 200 mL son 0,2 litros.\n"
+        "2) La concentración es 0,5 mol/L.\n"
+        "3) El producto 0,5 por 0,2 da 0,1 moles.\n\n"
+        "Ese dato es el que se necesita para saber cuánta base hace falta para "
+        "neutralizar esa porción de ácido.",
+        [
+            ("0,5 moles",
+             "Repite la concentración sin multiplicarla por el volumen."),
+            ("100 moles",
+             "Multiplica por el volumen en mililitros sin convertirlo a litros."),
+            ("2,5 moles, dividiendo el volumen en litros por la concentración de la disolución",
+             "La operación es un producto entre concentración y volumen, no un cociente."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Se disuelven 0,25 moles de soluto y se completa hasta 500 mL. ¿Cuál es "
+        "la concentración molar?",
+        "0,5 mol/L",
+        "El volumen se lleva a litros antes de dividir.\n\n"
+        "1) 500 mL son 0,5 litros.\n"
+        "2) Los moles de soluto son 0,25.\n"
+        "3) El cociente 0,25 dividido por 0,5 da 0,5 mol/L.\n\n"
+        "El resultado es mayor que los moles porque el volumen es menor que un "
+        "litro: en un litro completo habría 0,5 moles.",
+        [
+            ("0,25 mol/L",
+             "Repite los moles sin dividir por el volumen en litros."),
+            ("0,125 mol/L",
+             "Multiplica por 0,5 en vez de dividir por ese valor."),
+            ("0,0005 mol/L, dividiendo los moles por el volumen expresado en mililitros",
+             "La molaridad exige el volumen en litros: 500 mL son 0,5 L."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Se disuelven 12 gramos de soluto en 48 gramos de agua. ¿Cuál es la "
+        "concentración en %m/m?",
+        "20%",
+        "El denominador es la masa de la disolución, no la del agua.\n\n"
+        "1) La masa de la disolución es 12 más 48, es decir, 60 gramos.\n"
+        "2) La fracción de soluto es 12 dividido por 60, o sea 0,20.\n"
+        "3) Expresada como porcentaje, corresponde a un 20%.\n\n"
+        "Dividir por los 48 gramos de agua habría dado 25%, y es el error más "
+        "frecuente en esta unidad.",
+        [
+            ("25%",
+             "Divide por la masa del agua en vez de por la de la disolución completa."),
+            ("12%",
+             "Toma los gramos de soluto como si fueran directamente el porcentaje."),
+            ("80%, que corresponde a la proporción de agua dentro de la disolución",
+             "Ese es el porcentaje del disolvente, el complemento del buscado."),
+        ],
+    ),
+]
+
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_soluciones", "dificil",
+        "Para preparar un litro de disolución se disuelve el soluto en poca "
+        "agua y solo al final se completa hasta la marca del matraz aforado. "
+        "¿Por qué no se agrega directamente un litro de agua?",
+        "Porque el soluto también ocupa volumen",
+        "La molaridad se define sobre el volumen de la disolución "
+        "terminada.\n\n"
+        "1) Al disolverse, el soluto se reparte entre las moléculas de agua y "
+        "aporta volumen propio.\n"
+        "2) Un litro de agua más el soluto da un volumen algo mayor que un "
+        "litro.\n"
+        "3) La disolución quedaría entonces menos concentrada que la "
+        "buscada.\n\n"
+        "Enrasar al final garantiza que el denominador del cálculo sea "
+        "exactamente el volumen que la definición exige.",
+        [
+            ("Porque el agua se evapora al disolver",
+             "La evaporación a temperatura ambiente es despreciable en este procedimiento."),
+            ("Porque el soluto tarda en disolverse",
+             "El tiempo de disolución no cambia el volumen final de la mezcla."),
+            ("Porque el matraz aforado mide con más precisión que una probeta graduada",
+             "Es cierto que mide mejor, pero la razón de fondo es que el soluto aporta volumen."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "dificil",
+        "Un estudiante calcula la molaridad dividiendo los moles por el volumen "
+        "de agua que usó, no por el de la disolución. ¿Qué le ocurre al "
+        "resultado?",
+        "Obtiene un valor mayor que el real",
+        "El denominador que usó es menor que el que corresponde.\n\n"
+        "1) El volumen de la disolución es mayor que el del agua, porque el "
+        "soluto también ocupa espacio.\n"
+        "2) Al dividir por un denominador menor, el cociente resulta mayor.\n"
+        "3) La concentración informada queda por encima de la verdadera.\n\n"
+        "En disoluciones muy diluidas la diferencia es despreciable, pero en "
+        "las concentradas puede ser de varios puntos porcentuales.",
+        [
+            ("Obtiene un valor menor que el real",
+             "Sería menor si el denominador fuera mayor, y el volumen de agua es el menor de los dos."),
+            ("Obtiene el valor correcto igual",
+             "Coincide solo si el soluto no aporta volumen, lo que nunca ocurre del todo."),
+            ("Obtiene un valor correcto pero expresado en molalidad en vez de molaridad",
+             "La molalidad usa la MASA del disolvente, no su volumen: tampoco es eso."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "dificil",
+        "Un grupo quiere comprobar que una disolución que preparó quedó "
+        "homogénea. ¿Qué procedimiento se lo permite?",
+        "Medir la concentración en muestras de distintas alturas del matraz",
+        "La homogeneidad significa igual composición en todo el volumen.\n\n"
+        "1) Si la disolución no estuviera homogénea, la concentración variaría "
+        "de un punto a otro.\n"
+        "2) Tomar porciones del fondo, del centro y de la superficie explora "
+        "justamente esa posibilidad.\n"
+        "3) Si las tres arrojan el mismo valor, la disolución es uniforme.\n\n"
+        "Mirar el líquido no basta: una disolución puede verse transparente y "
+        "seguir teniendo el soluto mal repartido si no se agitó.",
+        [
+            ("Observar si el líquido se ve transparente",
+             "La transparencia no garantiza que el soluto esté repartido de manera uniforme."),
+            ("Pesar el matraz antes y después",
+             "La masa total es la misma esté o no homogénea la disolución."),
+            ("Filtrar la disolución y comprobar que no queda residuo en el papel",
+             "Eso descarta soluto sin disolver, pero no dice nada sobre el reparto del que sí se disolvió."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "dificil",
+        "Se disuelven 11,7 gramos de cloruro de sodio (58,5 g/mol) y se "
+        "completa hasta 400 mL. ¿Cuál es la concentración molar?",
+        "0,5 mol/L",
+        "Dos conversiones antes del cociente final.\n\n"
+        "1) 11,7 gramos divididos por 58,5 g/mol dan 0,2 moles.\n"
+        "2) 400 mL son 0,4 litros.\n"
+        "3) El cociente 0,2 dividido por 0,4 da 0,5 mol/L.\n\n"
+        "Comprobación: un litro de esa disolución tendría 0,5 moles, es decir, "
+        "29,25 gramos de sal.",
+        [
+            ("0,2 mol/L",
+             "Se detiene en los moles y no divide por el volumen en litros."),
+            ("0,029 mol/L",
+             "Divide los gramos por los mililitros sin hacer ninguna conversión."),
+            ("2 mol/L, dividiendo el volumen en litros por los moles de soluto disueltos",
+             "Invierte el cociente: la molaridad es moles divididos por litros."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "dificil",
+        "Se disuelve 1 mol de soluto en 1 kilogramo de agua. ¿Cómo se comparan "
+        "la molalidad y la molaridad de esa disolución?",
+        "La molalidad es 1 y la molaridad, algo menor",
+        "Los dos denominadores no coinciden.\n\n"
+        "1) La molalidad es 1 mol dividido por 1 kilogramo de disolvente: vale "
+        "exactamente 1 mol/kg.\n"
+        "2) El volumen de la disolución es mayor que un litro, porque el soluto "
+        "aporta volumen propio.\n"
+        "3) Al dividir 1 mol por algo más de un litro, la molaridad queda por "
+        "debajo de 1 mol/L.\n\n"
+        "Las dos se acercan cuanto más diluida sea la disolución, y se separan "
+        "cuanto más concentrada.",
+        [
+            ("Las dos valen exactamente 1",
+             "Coincidirían solo si el soluto no aportara volumen a la disolución."),
+            ("La molaridad es 1 y la molalidad, menor",
+             "Es al revés: la molalidad es la que vale exactamente 1 en este caso."),
+            ("No se pueden comparar porque usan unidades distintas entre sí",
+             "Se comparan sin problema: ambas tienen los mismos moles en el numerador."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "dificil",
+        "La norma para un contaminante en agua potable es 0,05 ppm y una "
+        "muestra de 500 mL contiene 0,04 miligramos. ¿Cumple la norma?",
+        "No, la muestra llega a 0,08 ppm",
+        "La comparación exige llevar la medición a la misma unidad de la "
+        "norma.\n\n"
+        "1) La muestra es de 0,5 litros y contiene 0,04 miligramos.\n"
+        "2) La concentración es 0,04 dividido por 0,5, es decir, 0,08 mg/L, que "
+        "en agua equivale a 0,08 ppm.\n"
+        "3) Ese valor supera los 0,05 ppm de la norma, así que el agua NO "
+        "cumple.\n\n"
+        "Comparar los 0,04 miligramos directamente contra el 0,05 de la norma "
+        "es el error: son magnitudes distintas, una masa y una concentración.",
+        [
+            ("Sí, porque 0,04 es menor que 0,05",
+             "Compara una masa en miligramos contra una concentración en ppm: son magnitudes distintas."),
+            ("No se puede saber sin conocer el contaminante",
+             "Las ppm se calculan igual para cualquier soluto: basta la masa y el volumen."),
+            ("Sí, porque media muestra siempre contiene la mitad del límite permitido",
+             "La norma fija una concentración, que no depende del tamaño de la muestra."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "dificil",
+        "Un análisis informa que una disolución es 0,1 mol/L. Un estudiante "
+        "concluye que contiene 0,1 moles de soluto. ¿Qué falla?",
+        "La concentración no dice cuánto soluto hay en total",
+        "Una concentración es un cociente, no una cantidad.\n\n"
+        "1) El valor 0,1 mol/L indica cuántos moles hay POR CADA litro.\n"
+        "2) La cantidad total depende del volumen de la disolución, que el "
+        "enunciado no entrega.\n"
+        "3) En 2 litros habría 0,2 moles y en 250 mL, apenas 0,025.\n\n"
+        "Solo si la disolución fuera exactamente de un litro la conclusión "
+        "sería correcta, y eso no está dicho.",
+        [
+            ("El análisis está mal hecho",
+             "El análisis puede estar bien: el problema es lo que se concluye de él."),
+            ("Debió convertir los moles a gramos",
+             "El error no es de unidad: falta el volumen para conocer la cantidad total."),
+            ("La concentración molar no se puede usar para calcular moles de soluto",
+             "Sí se puede: basta multiplicarla por el volumen, que aquí no se entregó."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "dificil",
+        "Para estudiar cómo influye la concentración en la velocidad de una "
+        "reacción, un grupo prepara cuatro disoluciones más concentradas y a la "
+        "vez las calienta más. ¿Qué limita esa evidencia?",
+        "Cambiaron la concentración y la temperatura a la vez",
+        "Dos variables moviéndose juntas impiden atribuir el efecto.\n\n"
+        "1) El aumento de velocidad puede deberse a la mayor concentración.\n"
+        "2) También puede deberse a la temperatura, que acelera cualquier "
+        "reacción.\n"
+        "3) Como ambas subieron en cada ensayo, los datos no separan las dos "
+        "explicaciones.\n\n"
+        "El diseño correcto mantiene la temperatura fija en los cuatro ensayos y "
+        "varía solo la concentración.",
+        [
+            ("No repitieron cada ensayo",
+             "Repetir mejora la precisión, pero las dos variables seguirían confundidas."),
+            ("Usaron muy pocas concentraciones",
+             "Con veinte concentraciones el problema persistiría igual."),
+            ("La temperatura no influye en la velocidad de una reacción química",
+             "Sí influye, y mucho: por eso no se puede dejar variando junto con la concentración."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "dificil",
+        "Se mezclan 46 gramos de etanol (46 g/mol) con 54 gramos de agua (18 "
+        "g/mol). ¿Cuál es la fracción molar del etanol?",
+        "0,25",
+        "Las masas se convierten a moles antes de repartir.\n\n"
+        "1) 46 gramos de etanol son 1 mol y 54 gramos de agua son 3 moles.\n"
+        "2) El total de moles de la disolución es 4.\n"
+        "3) La fracción molar del etanol es 1 dividido por 4, es decir, "
+        "0,25.\n\n"
+        "En masa los dos componentes son casi iguales, pero en moles el agua "
+        "triplica al etanol: cada molécula de agua pesa mucho menos.",
+        [
+            ("0,46",
+             "Toma la razón entre las masas en gramos como si fuera de moles."),
+            ("0,33",
+             "Divide por los moles de agua en vez de por el total de moles."),
+            ("0,75, que corresponde a la proporción del agua dentro de la disolución",
+             "Esa es la fracción molar del agua, el complemento de la pedida."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "dificil",
+        "Un estudiante afirma que la disolución con más gramos de soluto es "
+        "siempre la más concentrada. ¿Es correcto?",
+        "No, la concentración depende también del volumen",
+        "La concentración es un cociente entre dos magnitudes.\n\n"
+        "1) Una disolución con mucho soluto repartido en mucho volumen puede "
+        "ser diluida.\n"
+        "2) Otra con poco soluto en poco volumen puede ser más concentrada.\n"
+        "3) Lo que decide es el cociente, no el numerador por sí solo.\n\n"
+        "Además, comparar gramos entre solutos distintos engaña: un gramo de "
+        "cada uno aporta números de moles muy diferentes.",
+        [
+            ("Sí, siempre se cumple",
+             "Solo se cumpliría si las dos disoluciones tuvieran el mismo volumen."),
+            ("Sí, si el soluto es el mismo",
+             "Tampoco: con el mismo soluto sigue decidiendo el volumen en que está repartido."),
+            ("No, porque la concentración se mide únicamente en unidades de masa",
+             "Se mide de varias maneras, y todas comparan soluto con disolución o disolvente."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "dificil",
+        "Un ácido comercial es 36,5% m/m y tiene densidad 1,2 g/mL. ¿Cuál es su "
+        "concentración molar? (HCl: 36,5 g/mol)",
+        "12 mol/L",
+        "La densidad es el puente entre la masa y el volumen.\n\n"
+        "1) Un litro de ese ácido pesa 1.000 mL por 1,2 g/mL, es decir, 1.200 "
+        "gramos.\n"
+        "2) El 36,5% de esos 1.200 gramos son 438 gramos de ácido puro.\n"
+        "3) Esos 438 gramos, divididos por 36,5 g/mol, dan 12 moles: la "
+        "concentración es 12 mol/L.\n\n"
+        "Sin la densidad el cálculo es imposible: el porcentaje masa-masa no "
+        "dice nada sobre el volumen que ocupa la disolución.",
+        [
+            ("36,5 mol/L",
+             "Toma el porcentaje como si fuera directamente la concentración molar."),
+            ("10 mol/L",
+             "Omite la densidad y calcula sobre 1.000 gramos en vez de 1.200."),
+            ("1,2 mol/L, tomando el valor de la densidad como si fuera la concentración",
+             "La densidad relaciona masa con volumen; hay que usarla dentro del cálculo, no como resultado."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "dificil",
+        "Se grafica la masa de soluto contra el volumen para varias porciones "
+        "de una misma disolución y resulta una recta que pasa por el origen. "
+        "¿Qué representa su pendiente?",
+        "La concentración de la disolución",
+        "La pendiente es el cociente entre las magnitudes de los ejes.\n\n"
+        "1) En el eje vertical va la masa de soluto y en el horizontal, el "
+        "volumen.\n"
+        "2) La pendiente es entonces masa de soluto por unidad de volumen, que "
+        "es una concentración.\n"
+        "3) Que la recta pase por el origen confirma que un volumen nulo "
+        "contiene soluto nulo.\n\n"
+        "Todas las porciones caen sobre la misma recta porque la concentración "
+        "no depende del tamaño de la porción.",
+        [
+            ("La masa molar del soluto",
+             "La masa molar relaciona gramos con moles, y en el gráfico no hay moles."),
+            ("La densidad de la disolución",
+             "La densidad compara la masa TOTAL con el volumen, no solo la del soluto."),
+            ("El volumen total que ocupa la disolución que se preparó al comienzo",
+             "Ese volumen es un punto del eje horizontal, no la pendiente de la recta."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "dificil",
+        "Un vaso contiene 200 mL de disolución 0,4 mol/L. Se evaporan 100 mL de "
+        "agua, sin que se pierda soluto. ¿Cuál es la nueva concentración?",
+        "0,8 mol/L",
+        "El soluto no se evapora, así que los moles se conservan.\n\n"
+        "1) Los moles iniciales son 0,4 mol/L por 0,2 litros, es decir, 0,08 "
+        "moles.\n"
+        "2) Tras la evaporación quedan 100 mL, o sea 0,1 litros.\n"
+        "3) La nueva concentración es 0,08 dividido por 0,1, es decir, 0,8 "
+        "mol/L.\n\n"
+        "Al reducir el volumen a la mitad la concentración se duplica: es el "
+        "principio con que se obtiene la sal en las salinas.",
+        [
+            ("0,4 mol/L",
+             "Se mantendría solo si el volumen no hubiera cambiado."),
+            ("0,2 mol/L",
+             "Divide la concentración a la mitad, y el volumen bajó, no subió."),
+            ("0,08 mol/L, que es la cantidad de moles de soluto que hay en el vaso",
+             "Esos son los moles: falta dividirlos por el nuevo volumen en litros."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "dificil",
+        "Un suero fisiológico está rotulado como 0,9% m/v. ¿Qué masa de sal "
+        "aporta una bolsa de un litro?",
+        "9 gramos",
+        "El porcentaje masa-volumen se lee por cada 100 mL.\n\n"
+        "1) El 0,9% m/v significa 0,9 gramos de sal por cada 100 mL de "
+        "suero.\n"
+        "2) Un litro son 1.000 mL, diez veces esos 100.\n"
+        "3) La bolsa aporta entonces 9 gramos de sal.\n\n"
+        "Esa concentración se elige porque coincide con la del plasma "
+        "sanguíneo, de modo que no altera el volumen de los glóbulos rojos.",
+        [
+            ("0,9 gramos",
+             "Corresponde a 100 mL y la bolsa tiene diez veces ese volumen."),
+            ("90 gramos",
+             "Multiplica por cien en vez de por diez."),
+            ("0,09 gramos, dividiendo el porcentaje entre los mililitros de la bolsa",
+             "El porcentaje se multiplica por el volumen, no se divide por él."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "dificil",
+        "¿Qué control conviene incorporar para comprobar que el color de una "
+        "disolución proviene del soluto y no del agua utilizada?",
+        "Medir el color de la misma agua sin soluto",
+        "El control quita del montaje aquello que se quiere poner a prueba.\n\n"
+        "1) La explicación alternativa es que el agua ya estuviera "
+        "coloreada.\n"
+        "2) Un ensayo idéntico, con la misma agua pero sin soluto, deja actuar "
+        "solo esa fuente.\n"
+        "3) Si esa muestra resulta incolora, el color proviene necesariamente "
+        "del soluto.\n\n"
+        "Repetir la preparación varias veces mide la reproducibilidad, pero no "
+        "descarta ninguna fuente alternativa de color.",
+        [
+            ("Preparar la disolución tres veces seguidas",
+             "Eso mide la reproducibilidad, no el origen del color."),
+            ("Usar el doble de soluto",
+             "Eso explora la relación entre color y concentración, no descarta el agua."),
+            ("Comparar el color con el de otra disolución preparada con un soluto distinto",
+             "Otra disolución introduce una variable más en vez de aislar la del agua."),
+        ],
+    ),
+]
