@@ -140,7 +140,14 @@ def test_cancelar_apaga_la_renovacion_sin_quitar_lo_pagado(
     assert resp.status_code == 200
 
     sub = db_session.execute(select(Subscription)).scalar_one()
-    assert sub.status == SubscriptionStatus.CANCELED
+    # Lo que se apaga es la RENOVACIÓN, y la suscripción sigue vigente hasta su
+    # fecha. Este test comprobaba `status == CANCELED` y pasaba en verde
+    # mientras el usuario perdía el acceso en el acto: `plan_actual` solo mira
+    # las ACTIVE. Comprobar el estado interno no servía de nada; lo que hay que
+    # comprobar es que la persona siga entrando.
+    assert sub.cancelada_al_terminar is True
+    assert sub.status == SubscriptionStatus.ACTIVE
+    assert client.get("/api/plan", headers=headers).json()["plan"] == "pro"
     # SQLite no guarda la zona horaria, así que se comparan los instantes.
     assert sub.expires_at.replace(tzinfo=UTC) == vence, "la fecha de término no se toca"
 

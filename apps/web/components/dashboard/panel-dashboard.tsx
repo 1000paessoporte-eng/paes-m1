@@ -17,6 +17,7 @@ import { ArbolModulo } from "@/components/dashboard/arbol-modulo";
 import { AnuncioPremio } from "@/components/premio/anuncio-premio";
 import { AnuncioPlanes } from "@/components/plan/anuncio-planes";
 import { AnunciosDiarios } from "@/components/dashboard/anuncios-diarios";
+import { FranjaPro } from "@/components/plan/franja-pro";
 import { Cuestionario } from "@/components/onboarding/cuestionario";
 import { MetaModulo } from "@/components/dashboard/meta-modulo";
 import { ProModulo } from "@/components/dashboard/pro-modulo";
@@ -193,11 +194,21 @@ export function PanelDashboard({
                 usados={plan.ensayos_usados}
                 limite={plan.ensayos_limite}
                 precio="$9.990 al mes"
+                plan={plan}
               />
             ) : null
           }
         />
       )}
+
+      {/* La franja de Pro va aparte del turno diario de avisos y con otra
+          regla: los avisos modales se le esconden a quien todavía no rinde
+          nada --su primera sesión es para probar la plataforma, no para
+          recibir ofertas-- pero esta no interrumpe nada y es justamente al
+          recién llegado a quien le sirve una prueba de tres días. Lo único que
+          la calla es el cuestionario, que se apropia de la pantalla entera. */}
+      {plan && (!onboarding || onboarding.respondido) && <FranjaPro plan={plan} />}
+
       <div className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
           {/* Bienvenida + acción principal */}

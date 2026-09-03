@@ -60,6 +60,17 @@ class Settings(BaseSettings):
     #: configurarlo, cobra en un ambiente falso en vez de cobrarle a una
     #: persona real.
     flow_base_url: str = "https://sandbox.flow.cl/api"
+    #: Identificador del plan de cobro recurrente en Flow, el que se creó una
+    #: sola vez con `scripts/crear_plan_flow.py`. Vacío desactiva la prueba
+    #: gratis por completo: la API rechaza /plan/trial y la web no la ofrece.
+    #: Va por entorno porque el plan del sandbox y el de producción son objetos
+    #: distintos con identificadores distintos.
+    flow_plan_pro_id: str = ""
+    #: Días de prueba antes del primer cobro. Se manda a Flow en cada
+    #: suscripción y es también lo que dice la pantalla, de modo que los dos
+    #: números salgan siempre del mismo lugar: si esto y la web se pudieran
+    #: contradecir, la web estaría mintiendo sobre un cobro.
+    trial_dias: int = 3
     #: Secreto compartido con el cron que dispara los recordatorios. Vacío deja
     #: el endpoint cerrado: sin él no hay forma de gatillar correos masivos.
     cron_secret: str = ""

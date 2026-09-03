@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { marcarMostrado } from "@/lib/anuncios";
+import type { MiPlan } from "@/lib/api";
+import { BotonTrial } from "@/components/plan/boton-trial";
 
 /**
  * El aviso del plan Pro para quien está en el plan Gratis.
@@ -24,10 +26,15 @@ export function AnuncioPlanes({
   usados,
   limite,
   precio,
+  plan,
 }: {
   usados: number;
   limite: number | null;
   precio: string;
+  //: El plan completo, para saber si a esta persona todavía le corresponde la
+  //: prueba gratis. Ofrecérsela a quien ya la usó es prometerle algo que el
+  //: siguiente clic le va a negar.
+  plan?: MiPlan | null;
 }) {
   const [abierto, setAbierto] = useState(false);
   const quieto = useReducedMotion();
@@ -55,6 +62,7 @@ export function AnuncioPlanes({
 
   const restantes = limite != null ? Math.max(0, limite - usados) : null;
   const sinCupo = restantes === 0;
+  const ofrecerTrial = Boolean(plan?.trial_disponible);
 
   return (
     <AnimatePresence>
@@ -106,9 +114,11 @@ export function AnuncioPlanes({
               id="titulo-planes"
               className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl"
             >
-              {sinCupo
-                ? "Te quedaste sin ensayos este mes"
-                : "Ensayos sin límite y todo tu progreso"}
+              {ofrecerTrial
+                ? `Prueba el plan Pro ${plan!.trial_dias} días gratis`
+                : sinCupo
+                  ? "Te quedaste sin ensayos este mes"
+                  : "Ensayos sin límite y todo tu progreso"}
             </h2>
 
             {limite != null && (
@@ -157,22 +167,49 @@ export function AnuncioPlanes({
               ))}
             </ul>
 
-            <div className="mt-5 flex flex-wrap items-center gap-3">
-              <Link
-                href="/planes"
-                onClick={cerrar}
-                className="btn-glow rounded-lg px-5 py-2.5 text-sm font-semibold text-accent-foreground"
-              >
-                Ver el plan Pro · {precio}
-              </Link>
-              <button
-                type="button"
-                onClick={cerrar}
-                className="rounded-lg border border-border px-4 py-2.5 text-sm font-medium transition-colors hover:bg-surface-hover"
-              >
-                Ahora no
-              </button>
-            </div>
+            {/* Con la prueba disponible, el botón la ofrece y arrastra
+                consigo sus condiciones --tarjeta, fecha del primer cobro,
+                monto--, que van pegadas al botón y no en una página aparte.
+                Sin prueba disponible, se cae al enlace de siempre: quien ya la
+                ocupó ve el precio, no una oferta que no puede tomar. */}
+            {ofrecerTrial ? (
+              <>
+                <BotonTrial dias={plan!.trial_dias} monto={plan!.trial_monto} />
+                <div className="mt-3 flex flex-wrap items-center gap-3">
+                  <Link
+                    href="/planes"
+                    onClick={cerrar}
+                    className="text-xs font-medium text-accent hover:underline"
+                  >
+                    Ver todos los planes
+                  </Link>
+                  <button
+                    type="button"
+                    onClick={cerrar}
+                    className="ml-auto rounded-lg border border-border px-4 py-2 text-xs font-medium transition-colors hover:bg-surface-hover"
+                  >
+                    Ahora no
+                  </button>
+                </div>
+              </>
+            ) : (
+              <div className="mt-5 flex flex-wrap items-center gap-3">
+                <Link
+                  href="/planes"
+                  onClick={cerrar}
+                  className="btn-glow rounded-lg px-5 py-2.5 text-sm font-semibold text-accent-foreground"
+                >
+                  Ver el plan Pro · {precio}
+                </Link>
+                <button
+                  type="button"
+                  onClick={cerrar}
+                  className="rounded-lg border border-border px-4 py-2.5 text-sm font-medium transition-colors hover:bg-surface-hover"
+                >
+                  Ahora no
+                </button>
+              </div>
+            )}
           </motion.div>
         </motion.div>
       )}
