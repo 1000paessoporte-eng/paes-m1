@@ -50042,8 +50042,8 @@ QUESTIONS_CIENCIAS = [
         "proporciones se leen de esos coeficientes.",
         [
             ("Para que la reacción ocurra más rápido", "La velocidad depende de las condiciones, no de cómo se escriba la ecuación."),
-            ("Para que los reactivos y productos tengan el mismo volumen", "El volumen puede cambiar; lo que se conserva es la cantidad de átomos."),
-            ("Porque así lo exige la notación química, sin otra razón", "Hay una razón física de fondo: la conservación de la masa."),
+            ("Para que ambos lados tengan el mismo volumen", "El volumen puede cambiar; lo que se conserva es la cantidad de átomos."),
+            ("Porque así lo exige la notación química", "Hay una razón física de fondo: la conservación de la masa."),
         ],
     ),
     _q(
@@ -111257,9 +111257,9 @@ QUESTIONS_CIENCIAS += [
         [
             ("Que hay igual número de moléculas a ambos lados",
              "El número de moléculas puede cambiar: lo que se conserva es el de átomos."),
-            ("Que los reactantes y los productos pesan lo mismo por separado",
+            ("Que cada sustancia pesa lo mismo por separado",
              "La masa total se conserva, pero cada sustancia por separado no pesa lo mismo."),
-            ("Que la reacción ocurre con la misma velocidad en ambos sentidos hasta alcanzar el equilibrio",
+            ("Que la reacción ocurre en ambos sentidos",
              "Eso describe un equilibrio químico, que es un concepto distinto del balance de la ecuación."),
         ],
     ),
@@ -111280,7 +111280,7 @@ QUESTIONS_CIENCIAS += [
              "Esa variabilidad es propia de las mezclas, no de los compuestos."),
             ("La masa de un compuesto siempre aumenta",
              "La ley se refiere a la proporción entre elementos, no a la masa total."),
-            ("Dos elementos distintos siempre se combinan en una proporción de uno a uno entre ellos",
+            ("Dos elementos se combinan siempre uno a uno",
              "Las proporciones varían de un compuesto a otro: lo constante es dentro de cada compuesto."),
         ],
     ),
@@ -111299,9 +111299,9 @@ QUESTIONS_CIENCIAS += [
         [
             ("Un cambio en el estado de agregación",
              "Ese es un cambio físico: la sustancia sigue siendo la misma."),
-            ("Una mezcla de dos sustancias",
+            ("Una mezcla de dos sustancias cualesquiera",
              "Mezclar no implica que se formen sustancias nuevas."),
-            ("Una separación de los componentes de una mezcla mediante métodos como la filtración",
+            ("Una separación de los componentes de una mezcla",
              "Esos métodos son físicos y no transforman las sustancias."),
         ],
     ),
@@ -111347,7 +111347,7 @@ QUESTIONS_CIENCIAS += [
              "Dalton propuso la teoría atómica, que explica la ley, pero no fue quien la estableció."),
             ("Proust",
              "Proust formuló la ley de las proporciones definidas."),
-            ("Rutherford, a partir de sus experimentos con laminas metalicas muy delgadas",
+            ("Rutherford, a partir de sus experimentos con láminas metálicas muy delgadas",
              "Rutherford trabajó sobre la estructura del átomo, más de un siglo después."),
         ],
     ),
@@ -111536,9 +111536,9 @@ QUESTIONS_CIENCIAS += [
         [
             ("Porque las reacciones no liberan energía",
              "Muchas reacciones liberan energía y la masa igual se conserva."),
-            ("Porque los productos siempre son los mismos que los reactantes",
+            ("Porque productos y reactantes son los mismos",
              "Los productos son sustancias distintas: lo que se conserva son los átomos."),
-            ("Porque la cantidad de moléculas se mantiene constante durante toda la reacción química",
+            ("Porque la cantidad de moléculas se mantiene",
              "El número de moléculas puede cambiar; lo que no cambia es el de átomos."),
         ],
     ),
@@ -112157,24 +112157,27 @@ QUESTIONS_CIENCIAS += [
     ),
     _q(
         "cie_leyes_ponderales", "dificil",
-        "Un estudiante escribe C₂H₄ + 3/2 O₂ → 2CO₂ + 2H₂O y le señalan el "
+        "Un estudiante balancea la combustión del acetileno como "
+        "$C_2H_2 + \\frac{5}{2}O_2 \\rightarrow 2CO_2 + H_2O$ y le señalan el "
         "coeficiente fraccionario. ¿Cómo se corrige?",
         "Multiplicando todos los coeficientes por 2",
-        "Los coeficientes deben ser los enteros más pequeños posibles.\n\n"
-        "1) Un coeficiente fraccionario no es incorrecto en el conteo de "
-        "átomos, pero no representa unidades enteras de sustancia.\n"
-        "2) Multiplicando toda la ecuación por 2 desaparece la fracción y la "
-        "proporción se conserva.\n"
-        "3) La ecuación queda como 2C₂H₄ + 3O₂ → 4CO₂ + 4H₂O.\n\n"
-        "Multiplicar solo un término rompería el balance: la operación debe "
-        "aplicarse a todos los coeficientes por igual.",
+        "La ecuación está bien balanceada; lo que molesta es la fracción.\n\n"
+        "1) Con 5/2 de oxígeno hay 5 átomos a la izquierda, y a la derecha hay "
+        "4 del dióxido más 1 del agua: también 5.\n"
+        "2) Multiplicar TODOS los coeficientes por el mismo número conserva el "
+        "balance, porque escala ambos lados por igual.\n"
+        "3) Con factor 2 la ecuación queda $2C_2H_2 + 5O_2 \\rightarrow 4CO_2 + "
+        "2H_2O$, ya sin fracciones.\n\n"
+        "Un coeficiente fraccionario no es un error de química, sino de "
+        "convención: se aceptan enteros para que la ecuación se lea como un "
+        "recuento de partículas.",
         [
             ("Redondeando la fracción al entero más cercano",
-             "Redondear rompe el balance de átomos."),
+             "Redondear rompe el balance: con 3O₂ quedarían 6 oxígenos a la izquierda y 5 a la derecha."),
             ("Multiplicando solo el oxígeno por 2",
              "Modificar un solo coeficiente descuadra el resto de la ecuación."),
-            ("Cambiando el subíndice del oxígeno para que el coeficiente resulte un número entero",
-             "Cambiar subíndices convierte al oxígeno en otra sustancia."),
+            ("Cambiando el subíndice del oxígeno para que el coeficiente resulte entero",
+             "Cambiar subíndices convierte al oxígeno molecular en otra sustancia."),
         ],
     ),
     _q(
@@ -112239,7 +112242,7 @@ QUESTIONS_CIENCIAS += [
              "La balanza mide bien: lo que está mal es suponer que midió todo el sistema."),
             ("Es correcta, porque la materia se transforma en energía",
              "Esa conversión no ocurre de manera apreciable en una reacción química."),
-            ("Es incorrecta, porque en realidad la masa aumenta durante cualquier proceso de combustión",
+            ("Es incorrecta: en realidad la masa aumenta",
              "La masa total se conserva; lo que cambia es cuánto de ella queda dentro del sistema medido."),
         ],
     ),
@@ -112351,7 +112354,7 @@ QUESTIONS_CIENCIAS += [
              "Una sola muestra no permite comparar proporciones entre casos."),
             ("Comprobar si el material se ve uniforme",
              "Muchas mezclas homogéneas se ven perfectamente uniformes."),
-            ("Verificar que la masa se conserve al hacerlo reaccionar dentro de un recipiente cerrado",
+            ("Verificar que la masa se conserve al reaccionar",
              "La masa se conserva en ambos casos: esa prueba no distingue compuesto de mezcla."),
         ],
     ),
@@ -112617,7 +112620,7 @@ QUESTIONS_CIENCIAS += [
             ("68 g/mol",
              "Cuenta un solo oxígeno en lugar de los tres que indica el subíndice."),
             ("116 g/mol",
-             "Multiplica por tres también el carbono, que aparece una sola vez."),
+             "Cuenta cuatro oxígenos en lugar de los tres que indica el subíndice."),
             ("52 g/mol, sumando únicamente las masas del calcio y del carbono del compuesto",
              "Deja fuera los tres oxígenos, que aportan casi la mitad de la masa."),
         ],
@@ -112777,7 +112780,7 @@ QUESTIONS_CIENCIAS += [
             ("29 g/mol",
              "Suma las masas atómicas sin multiplicarlas por los subíndices."),
             ("108 g/mol",
-             "Deja fuera el aporte del hidrógeno y de dos oxígenos."),
+             "Deja fuera el aporte de los seis carbonos, que suman 72 unidades."),
             ("168 g/mol, considerando que los doce hidrógenos no alcanzan a aportar masa apreciable",
              "Aportan 12 unidades, que sí cambian el resultado."),
         ],
@@ -112882,11 +112885,11 @@ QUESTIONS_CIENCIAS += [
         "más liviano de los tres, porque hay cuatro átomos.",
         [
             ("49 g/mol",
-             "Corresponde a la mitad del valor correcto, como si hubiera dos oxígenos."),
+             "Suma las masas atómicas de los tres elementos sin multiplicarlas por los subíndices."),
             ("50 g/mol",
              "Cuenta un solo oxígeno en lugar de los cuatro del subíndice."),
-            ("34 g/mol, sumando las masas atómicas de los tres elementos sin repetir ninguna",
-             "Ignora los subíndices, que indican cuántos átomos de cada elemento hay."),
+            ("34 g/mol, dejando fuera del cálculo los cuatro átomos de oxígeno",
+             "Los cuatro oxígenos aportan 64 unidades, casi dos tercios de la masa molar."),
         ],
     ),
     _q(
@@ -113030,7 +113033,7 @@ QUESTIONS_CIENCIAS += [
             ("15 g/mol",
              "Cuenta un solo hidrógeno en lugar de los tres del subíndice."),
             ("42 g/mol",
-             "Multiplica por tres también el nitrógeno, que aparece una sola vez."),
+             "Triplica el nitrógeno y deja fuera los tres hidrógenos."),
             ("14 g/mol, porque el nitrógeno es el único elemento que aporta masa apreciable",
              "Los tres hidrógenos aportan 3 unidades, que sí cambian el resultado."),
         ],
@@ -113357,7 +113360,7 @@ QUESTIONS_CIENCIAS += [
         "adherida al material de vidrio.",
         [
             ("22%",
-             "Corresponde a la fracción que faltó, no a la que se obtuvo."),
+             "Toma los 22 gramos que faltaron como si fueran directamente un porcentaje."),
             ("133%",
              "Invierte la razón y divide lo esperado por lo obtenido."),
             ("100%, porque la ley de conservación de la materia obliga a que nada se pierda",
@@ -114500,8 +114503,8 @@ QUESTIONS_CIENCIAS += [
         "Sobra 1 mol de ácido, porque el magnesio solo alcanzó a consumir 2 de "
         "los 3 disponibles.",
         [
-            ("44,8 litros",
-             "Calcula desde el ácido, que es el reactante en exceso."),
+            ("33,6 litros",
+             "Calcula desde el ácido, que es el reactante en exceso: 3 moles dan 1,5 de gas."),
             ("11,2 litros",
              "Divide el volumen molar por dos, tomando el coeficiente del ácido."),
             ("67,2 litros, que corresponden a los tres moles de ácido colocados en el matraz",
@@ -114755,9 +114758,9 @@ QUESTIONS_CIENCIAS += [
         "aunque ya no queden trozos de metal.",
         [
             ("22,4 litros",
-             "Corresponde a un mol de gas y el zinc solo alcanza para medio."),
+             "Calcula desde el ácido, que es el reactante en exceso: 2 moles dan 1 de gas."),
             ("44,8 litros",
-             "Calcula desde el ácido, que es el reactante en exceso."),
+             "Duplica el volumen molar, como si el zinc aportara dos moles de gas."),
             ("5,6 litros, que es la cuarta parte del volumen molar en condiciones normales",
              "El zinc aporta medio mol de gas, no un cuarto: son 11,2 litros."),
         ],
@@ -115515,7 +115518,7 @@ QUESTIONS_CIENCIAS += [
             ("CO",
              "Corresponde a una proporción de 1 a 1, y aquí es de 1 a 2."),
             ("C₂O₇",
-             "Usa los porcentajes redondeados como subíndices, sin pasarlos a moles."),
+             "Usa la razón entre los porcentajes, cercana a 2 y 7, en vez de la razón entre moles."),
             ("C₃O₈, conservando aproximadamente la razón entre los dos porcentajes dados",
              "La razón entre porcentajes es de masas: hay que dividir cada uno por su masa atómica."),
         ],
@@ -115558,8 +115561,8 @@ QUESTIONS_CIENCIAS += [
              "Cuenta un solo hidrógeno en lugar de los dos del subíndice."),
             ("180 g/mol",
              "Esa es la masa molar de la glucosa, un múltiplo de la empírica."),
-            ("46 g/mol, sumando las masas atómicas de los tres elementos sin repetir ninguna",
-             "El hidrógeno lleva subíndice 2, así que aporta 2 y no 1."),
+            ("46 g/mol, contando dos oxígenos en lugar del único que lleva la fórmula",
+             "El oxígeno de $CH_2O$ aporta 16 unidades, no 32."),
         ],
     ),
     _q(
@@ -115705,7 +115708,7 @@ QUESTIONS_CIENCIAS += [
             ("64%",
              "Ese es el porcentaje de la sal anhidra, el complemento del buscado."),
             ("18%",
-             "Corresponde a una sola molécula de agua y el hidrato tiene cinco."),
+             "Toma la masa molar de una sola agua, 18, como si fuera un porcentaje."),
             ("5%, que es el número de moléculas de agua que acompañan a cada unidad de fórmula",
              "Ese número es un subíndice, no un porcentaje de masa."),
         ],
@@ -116557,8 +116560,8 @@ QUESTIONS_CIENCIAS += [
              "Divide por la masa del agua en vez de por la de la disolución completa."),
             ("20%",
              "Toma los gramos de soluto como si fueran directamente el porcentaje."),
-            ("9%, dividiendo la masa de soluto por la masa total y restando el disolvente",
-             "El cálculo es un cociente simple: 20 dividido por 200 da 10%."),
+            ("90%, que corresponde a la proporción de agua dentro de la disolución",
+             "Ese es el porcentaje del disolvente, el complemento del buscado."),
         ],
     ),
     _q(
@@ -116614,10 +116617,10 @@ QUESTIONS_CIENCIAS += [
         "molalidad de la molaridad.",
         [
             ("0,5 mol/kg",
-             "Olvida convertir los 500 gramos a kilogramos."),
+             "Repite los moles de soluto sin dividir por la masa del disolvente."),
             ("0,001 mol/kg",
              "Divide por los gramos sin convertirlos a kilogramos."),
-            ("2 mol/kg, dividiendo la masa del disolvente por los moles de soluto disueltos",
+            ("1.000 mol/kg, dividiendo los gramos de disolvente por los moles de soluto",
              "Invierte el cociente: la molalidad es moles divididos por kilogramos."),
         ],
     ),
@@ -116989,7 +116992,7 @@ QUESTIONS_CIENCIAS += [
         "2) Un litro de agua pesa aproximadamente mil gramos, así que un millón "
         "de gramos son mil litros.\n"
         "3) Un gramo repartido en mil litros es un miligramo por litro: 1 ppm "
-        "equivale a 1 mg/L.\n\n"
+        "equivale a 1 mg/L, así que 5 mg/L son 5 ppm.\n\n"
         "La equivalencia vale porque la densidad del agua es cercana a 1 g/mL; "
         "en otro disolvente habría que corregirla.",
         [
@@ -117393,8 +117396,8 @@ QUESTIONS_CIENCIAS += [
              "Corresponde a 100 mL y la bolsa tiene diez veces ese volumen."),
             ("90 gramos",
              "Multiplica por cien en vez de por diez."),
-            ("0,09 gramos, dividiendo el porcentaje entre los mililitros de la bolsa",
-             "El porcentaje se multiplica por el volumen, no se divide por él."),
+            ("0,09 gramos, que resulta de dividir por diez en vez de multiplicar",
+             "El volumen de la bolsa es diez veces mayor que los 100 mL de referencia, así que la masa sube."),
         ],
     ),
     _q(
@@ -117747,7 +117750,7 @@ QUESTIONS_CIENCIAS += [
              "Ese es el volumen final que se quiere preparar, no el que hay que tomar."),
             ("250 mL",
              "Correspondería a diluir a la mitad, y la dilución es de cinco veces."),
-            ("2.500 mL, multiplicando el volumen final por la concentración de partida",
+            ("1.000 mL, multiplicando el volumen final por la concentración de partida",
              "El volumen inicial siempre es menor que el final en una dilución."),
         ],
     ),
@@ -117788,7 +117791,7 @@ QUESTIONS_CIENCIAS += [
              "Repite la concentración inicial, sin considerar el agua agregada."),
             ("0,25 mol/L",
              "Correspondería a diluir al doble, y aquí el volumen se quintuplicó."),
-            ("2,5 mol/L, dividiendo el volumen final por el volumen inicial de la muestra",
+            ("5 mol/L, dividiendo el volumen final por el volumen inicial de la muestra",
              "Ese cociente es el factor de dilución, no la concentración final."),
         ],
     ),
@@ -117807,8 +117810,8 @@ QUESTIONS_CIENCIAS += [
         [
             ("4 mol/L",
              "Suma las concentraciones sin dividir por el volumen total."),
-            ("1,5 mol/L",
-             "Promedia mal: el promedio de 1 y 3 es 2, no 1,5."),
+            ("3 mol/L",
+             "Toma la concentración de la disolución más concentrada, sin considerar la otra mitad."),
             ("0,4 mol/L, que corresponde al total de moles de soluto de la mezcla",
              "Esos son los moles: falta dividirlos por los 0,2 litros de la mezcla."),
         ],
@@ -117851,8 +117854,8 @@ QUESTIONS_CIENCIAS += [
              "Corresponde a 100 gramos de agua y aquí hay 250."),
             ("250 g",
              "Es la masa de agua, no la de sal que se puede disolver en ella."),
-            ("14,4 g, dividiendo la masa de agua por el valor de la solubilidad indicada",
-             "La solubilidad se multiplica por la proporción de agua, no se divide por ella."),
+            ("14,4 g, que resulta de dividir la solubilidad por la proporción de agua",
+             "La solubilidad se multiplica por esa proporción, no se divide por ella."),
         ],
     ),
     _q(
@@ -118315,7 +118318,7 @@ QUESTIONS_CIENCIAS += [
             ("Medir el tiempo que tarda en disolverse",
              "El tiempo informa sobre la velocidad, no sobre el límite de solubilidad."),
             ("Agregar sal hasta que deje de disolverse",
-             "La temperatura es un dato del ensayo, no la solubilidad: falta pesar la sal disuelta."),
+             "Con eso se llega a la saturación, pero falta pesar la sal que quedó disuelta."),
         ],
     ),
     _q(
