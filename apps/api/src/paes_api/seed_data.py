@@ -78414,6 +78414,961 @@ LESSONS: dict[str, dict] = {
             "queda positivo. Sin paréntesis, $-x^4$ significa otra cosa."
         ),
     },
+    "cie_celula_tipos": {
+        "intro": (
+            "Todas las células comparten membrana, citoplasma y material "
+            "genético. Lo que las diferencia —tener núcleo o no, tener pared o "
+            "no— explica por qué una bacteria, una neurona y una hoja se "
+            "comportan tan distinto."
+        ),
+        "theory": (
+            "**Procarionte y eucarionte: la diferencia es el núcleo.** La "
+            "célula procarionte (bacterias) tiene su ADN suelto en el "
+            "citoplasma, en una zona llamada nucleoide, y no tiene organelos "
+            "con membrana. La eucarionte guarda su ADN dentro de un núcleo con "
+            "envoltura y tiene organelos.\n\n"
+            "**Animal y vegetal: tres diferencias.** La vegetal tiene pared "
+            "celular de celulosa, cloroplastos y una vacuola central grande. La "
+            "animal no tiene ninguna de las tres, y en cambio tiene centríolos. "
+            "Las dos son eucariontes.\n\n"
+            "**Cada organelo hace una cosa.** La mitocondria libera energía "
+            "desde la glucosa; el cloroplasto la capta desde la luz; el retículo "
+            "rugoso, con ribosomas pegados, fabrica proteínas para exportar; el "
+            "Golgi las empaqueta; el lisosoma digiere.\n\n"
+            "**La forma sigue a la función.** Una neurona es larga porque "
+            "conduce señales a distancia; una célula muscular tiene muchas "
+            "mitocondrias porque gasta mucha energía; un glóbulo rojo humano "
+            "pierde su núcleo para llevar más hemoglobina."
+        ),
+        "example_statement": (
+            "Al microscopio se observa una célula con pared celular, núcleo "
+            "definido y sin cloroplastos. ¿De qué tipo de célula se trata?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Miro primero si tiene núcleo definido. Lo tiene, así que es eucarionte y quedan descartadas las bacterias.",
+                "porque": "El núcleo es el criterio que separa los dos grandes grupos. Conviene usarlo primero porque parte el problema en dos de una sola vez.",
+            },
+            {
+                "accion": "Miro la pared celular. La tiene, así que no es una célula animal.",
+                "porque": "La pared aparece en vegetales y en hongos, pero nunca en animales. Es un descarte seguro, no una pista débil.",
+            },
+            {
+                "accion": "Miro los cloroplastos. No los tiene, así que tampoco es una célula vegetal fotosintética: es una célula de hongo.",
+                "porque": "La pared sola no basta para decir 'vegetal'. La de los hongos es de quitina y la de las plantas, de celulosa, y solo las segundas traen cloroplastos.",
+            },
+        ],
+        "common_error": (
+            "Usar la pared celular como sinónimo de célula vegetal. Los hongos "
+            "también tienen pared, y las bacterias también. Lo que solo tienen "
+            "las células vegetales, entre estos tres, son los cloroplastos."
+        ),
+    },
+    "cie_nervioso": {
+        "intro": (
+            "El sistema nervioso es el que convierte un estímulo en una "
+            "respuesta. Entender cómo viaja esa señal explica desde por qué "
+            "sacas la mano del fuego antes de pensarlo hasta cómo actúa una "
+            "droga."
+        ),
+        "theory": (
+            "**La neurona tiene tres partes con tres papeles.** Las dendritas "
+            "reciben la señal, el cuerpo la integra y el axón la conduce hasta "
+            "el terminal. La señal viaja siempre en ese sentido.\n\n"
+            "**Dentro de la neurona la señal es eléctrica; entre neuronas, "
+            "química.** En la sinapsis el impulso llega al terminal, se liberan "
+            "neurotransmisores al espacio sináptico y estos se unen a receptores "
+            "de la neurona siguiente. Por eso la sinapsis tiene un sentido "
+            "único.\n\n"
+            "**Central y periférico.** El sistema nervioso central es encéfalo y "
+            "médula espinal; el periférico son los nervios que llevan "
+            "información hacia el centro (vía sensitiva) y órdenes desde él (vía "
+            "motora).\n\n"
+            "**El arco reflejo se salta el encéfalo.** Receptor, neurona "
+            "sensitiva, médula, neurona motora, músculo. Por eso la respuesta "
+            "ocurre antes de que la persona sea consciente del estímulo: la "
+            "señal llega al encéfalo después.\n\n"
+            "**Las drogas actúan en la sinapsis.** Algunas imitan al "
+            "neurotransmisor, otras bloquean su receptor y otras impiden que se "
+            "recapte, dejándolo actuando más tiempo."
+        ),
+        "example_statement": (
+            "Una persona pisa una tachuela y retira el pie de inmediato; el "
+            "dolor lo siente un instante después. ¿Qué explica ese orden?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Identifico el circuito de la respuesta rápida: receptor de la piel, neurona sensitiva, médula espinal, neurona motora y músculo.",
+                "porque": "Ese circuito es el arco reflejo, y su rasgo definitorio es que se cierra en la médula sin subir al encéfalo.",
+            },
+            {
+                "accion": "Cuento las conexiones de cada camino: el reflejo cruza pocas sinapsis y la vía consciente sube además hasta la corteza cerebral.",
+                "porque": "Cada sinapsis suma tiempo, porque la señal debe convertirse de eléctrica a química y de vuelta. Menos sinapsis significa respuesta más rápida.",
+            },
+            {
+                "accion": "Concluyo que el pie se retira por el reflejo medular y el dolor aparece cuando la señal alcanza el encéfalo.",
+                "porque": "El orden observado no es casualidad ni error de percepción: refleja dos caminos de longitud distinta que salen del mismo estímulo.",
+            },
+        ],
+        "common_error": (
+            "Creer que el encéfalo ordena retirar el pie y que solo es muy "
+            "rápido. En un reflejo el encéfalo no participa de la orden: se "
+            "entera después. Por eso el reflejo persiste incluso cuando la "
+            "médula queda desconectada del cerebro."
+        ),
+    },
+    "cie_reproduccion": {
+        "intro": (
+            "La reproducción humana combina dos procesos que conviene no "
+            "mezclar: la formación de los gametos, que ocurre en las gónadas, y "
+            "el ciclo que prepara al útero para un posible embarazo."
+        ),
+        "theory": (
+            "**Los gametos se forman por meiosis y son haploides.** Cada uno "
+            "aporta 23 cromosomas, y al unirse restituyen los 46 de la célula "
+            "somática. Sin esa reducción el número se duplicaría en cada "
+            "generación.\n\n"
+            "**Espermatogénesis y ovogénesis no son simétricas.** De cada célula "
+            "precursora se forman cuatro espermatozoides funcionales, pero un "
+            "solo óvulo: las otras tres células quedan como cuerpos polares, "
+            "porque el óvulo concentra las reservas.\n\n"
+            "**El ciclo menstrual dura unos 28 días y tiene dos mitades.** En la "
+            "primera madura un folículo y el endometrio se engrosa; alrededor "
+            "del día 14 ocurre la ovulación; en la segunda, el cuerpo lúteo "
+            "mantiene el endometrio. Si no hay fecundación, el endometrio se "
+            "desprende: eso es la menstruación.\n\n"
+            "**Cuatro hormonas.** La FSH hace madurar el folículo y la LH dispara "
+            "la ovulación; los estrógenos engrosan el endometrio y la "
+            "progesterona lo mantiene.\n\n"
+            "**La fecundación ocurre en la trompa de Falopio**, no en el útero. "
+            "El cigoto se divide mientras baja y se implanta en el endometrio "
+            "unos días después."
+        ),
+        "example_statement": (
+            "En un ciclo regular de 28 días, ¿en qué momento es más probable "
+            "que la fecundación tenga éxito y por qué?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Ubico la ovulación alrededor del día 14, contando desde el primer día de la menstruación.",
+                "porque": "La segunda mitad del ciclo es la más constante, de unos 14 días. Contar hacia atrás desde el final es más fiable que contar hacia adelante desde el inicio.",
+            },
+            {
+                "accion": "Considero que el óvulo sobrevive alrededor de un día y los espermatozoides, varios días dentro del tracto femenino.",
+                "porque": "La ventana fértil no es un instante: se extiende hacia los días PREVIOS a la ovulación, porque los espermatozoides pueden estar esperando.",
+            },
+            {
+                "accion": "Concluyo que la probabilidad es mayor en los días que rodean al 14, con más peso en los anteriores.",
+                "porque": "Después de la ovulación la ventana se cierra rápido, y esa asimetría es justamente lo que hace poco confiables los métodos basados solo en el calendario.",
+            },
+        ],
+        "common_error": (
+            "Suponer que la fecundación ocurre en el útero. Ocurre en la trompa "
+            "de Falopio; lo que ocurre en el útero, varios días después, es la "
+            "implantación."
+        ),
+    },
+    "cie_natalidad_its": {
+        "intro": (
+            "Los métodos de control de la natalidad y la prevención de "
+            "infecciones son dos objetivos distintos, y no todos los métodos "
+            "sirven para ambos. Distinguirlos es lo que esta unidad pide."
+        ),
+        "theory": (
+            "**Métodos de barrera.** El preservativo impide el contacto entre "
+            "los fluidos y los gametos. Es el único método que además reduce el "
+            "riesgo de infecciones de transmisión sexual.\n\n"
+            "**Métodos hormonales.** Píldora, implante e inyectable aportan "
+            "hormonas que impiden la ovulación. Son muy eficaces contra el "
+            "embarazo y no ofrecen ninguna protección frente a infecciones.\n\n"
+            "**Dispositivo intrauterino.** Actúa dentro del útero dificultando "
+            "la fecundación y la implantación. Tampoco protege de "
+            "infecciones.\n\n"
+            "**Métodos basados en el calendario.** Estiman los días fértiles a "
+            "partir de ciclos anteriores. Su eficacia es baja porque el ciclo "
+            "varía y los espermatozoides sobreviven varios días.\n\n"
+            "**Las ITS se transmiten por fluidos o por contacto.** Algunas son "
+            "bacterianas y se tratan con antibióticos (sífilis, gonorrea); otras "
+            "son virales y el tratamiento controla pero no elimina el virus "
+            "(VIH, herpes). Muchas cursan sin síntomas visibles durante largos "
+            "períodos, y por eso la ausencia de síntomas no descarta una "
+            "infección."
+        ),
+        "example_statement": (
+            "Una persona usa un método hormonal muy eficaz y concluye que está "
+            "protegida frente a infecciones de transmisión sexual. ¿Es correcta "
+            "esa conclusión?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Separo los dos objetivos: evitar el embarazo y evitar la transmisión de una infección.",
+                "porque": "Son problemas biológicos distintos. El primero depende de impedir la fecundación; el segundo, de impedir el contacto con fluidos infectados.",
+            },
+            {
+                "accion": "Reviso cómo actúa el método hormonal: impide la ovulación, es decir, actúa sobre el ciclo de la persona.",
+                "porque": "Un método que actúa sobre el ciclo no interpone ninguna barrera física, así que no puede modificar la transmisión de un agente infeccioso.",
+            },
+            {
+                "accion": "Concluyo que la protección frente a infecciones no existe y que solo el preservativo la aporta.",
+                "porque": "Esa es la razón por la que se recomienda la combinación de métodos: uno cubre el embarazo y el otro, la transmisión.",
+            },
+        ],
+        "common_error": (
+            "Confundir eficacia anticonceptiva con protección frente a "
+            "infecciones. Un método puede ser casi perfecto para lo primero y "
+            "completamente inútil para lo segundo."
+        ),
+    },
+    "cie_ciclo_celular": {
+        "intro": (
+            "Una célula pasa la mayor parte de su vida creciendo y copiando su "
+            "ADN, y solo un rato dividiéndose. Entender ese reparto explica "
+            "tanto la cicatrización como el cáncer."
+        ),
+        "theory": (
+            "**El ciclo tiene dos grandes partes.** La interfase ocupa casi todo "
+            "el tiempo y se divide en G1 (crecimiento), S (duplicación del ADN) "
+            "y G2 (preparación). La fase M es la división propiamente tal.\n\n"
+            "**La duplicación ocurre en S, no en la mitosis.** Al terminar S "
+            "cada cromosoma tiene dos cromátidas hermanas idénticas, unidas por "
+            "el centrómero. La mitosis solo las separa.\n\n"
+            "**Cuatro fases en la mitosis.** En profase los cromosomas se "
+            "condensan y desaparece la envoltura nuclear; en metafase se alinean "
+            "en el centro; en anafase las cromátidas se separan hacia los polos; "
+            "en telofase se forman los dos núcleos. Después la citocinesis parte "
+            "el citoplasma.\n\n"
+            "**El resultado son dos células idénticas a la original**, con el "
+            "mismo número de cromosomas. Eso distingue la mitosis de la "
+            "meiosis.\n\n"
+            "**Hay puntos de control.** Si el ADN está dañado, el ciclo se "
+            "detiene para repararlo. Cuando esos controles fallan, la célula se "
+            "divide sin freno: ese es el origen del cáncer."
+        ),
+        "example_statement": (
+            "Una célula humana con 46 cromosomas se encuentra en metafase "
+            "mitótica. ¿Cuántos cromosomas y cuántas cromátidas hay en ese "
+            "momento?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Recuerdo que la duplicación ya ocurrió en la fase S, antes de que empezara la mitosis.",
+                "porque": "En metafase el ADN está duplicado desde hace rato. Buscar la duplicación dentro de la mitosis es el error de partida más frecuente.",
+            },
+            {
+                "accion": "Cuento los cromosomas: siguen siendo 46, porque cada uno está formado por dos cromátidas unidas por su centrómero.",
+                "porque": "El número de cromosomas se cuenta por centrómeros, no por cromátidas. Mientras las cromátidas sigan unidas, cuentan como un solo cromosoma.",
+            },
+            {
+                "accion": "Cuento las cromátidas: 46 por 2 dan 92 cromátidas.",
+                "porque": "Recién en anafase, cuando los centrómeros se separan, esas 92 cromátidas pasan a contarse como 92 cromosomas repartidos entre dos polos.",
+            },
+        ],
+        "common_error": (
+            "Creer que el número de cromosomas se duplica al duplicarse el ADN. "
+            "Lo que se duplica son las cromátidas: los 46 cromosomas siguen "
+            "siendo 46 hasta que la anafase separa los centrómeros."
+        ),
+    },
+    "cie_evolucion": {
+        "intro": (
+            "La evolución no es una historia que haya que creer: es una "
+            "conclusión que se sostiene en evidencias medibles y que se explica "
+            "con un mecanismo concreto, la selección natural."
+        ),
+        "theory": (
+            "**Cuatro tipos de evidencia.** El registro fósil muestra formas "
+            "intermedias y su orden en el tiempo; la anatomía comparada muestra "
+            "estructuras homólogas; el desarrollo embrionario muestra etapas "
+            "compartidas; y la biología molecular compara secuencias de ADN y "
+            "proteínas.\n\n"
+            "**Homólogo y análogo no son lo mismo.** Órganos homólogos tienen el "
+            "mismo origen y distinta función (el brazo humano y el ala del "
+            "murciélago): indican ancestro común. Órganos análogos tienen la "
+            "misma función y distinto origen (el ala del insecto y la del ave): "
+            "indican convergencia, no parentesco.\n\n"
+            "**La selección natural necesita tres condiciones**: que haya "
+            "variabilidad entre los individuos, que esa variabilidad sea "
+            "heredable y que influya en cuántos descendientes deja cada uno.\n\n"
+            "**La variabilidad es previa al ambiente.** Las mutaciones ocurren al "
+            "azar y el ambiente solo selecciona entre las que ya existen. El "
+            "ambiente no produce la variante que conviene.\n\n"
+            "**Además de la selección hay deriva génica**, un cambio al azar en "
+            "las frecuencias que pesa mucho en poblaciones pequeñas."
+        ),
+        "example_statement": (
+            "Tras años de uso de un antibiótico, una población bacteriana pasa "
+            "a ser mayoritariamente resistente. ¿Qué explicación es correcta?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Reviso si existía variabilidad antes del antibiótico: en la población había bacterias resistentes y no resistentes, por mutaciones al azar.",
+                "porque": "Sin variabilidad previa no hay nada que seleccionar. Este es el paso que decide entre la explicación correcta y la lamarckiana.",
+            },
+            {
+                "accion": "Aplico el filtro: el antibiótico elimina a las sensibles y deja vivas a las resistentes.",
+                "porque": "El ambiente no crea la resistencia: solo determina cuáles de las variantes ya presentes dejan descendencia.",
+            },
+            {
+                "accion": "Considero la herencia: las sobrevivientes se dividen y transmiten la resistencia, de modo que su proporción crece generación tras generación.",
+                "porque": "El cambio ocurre en la POBLACIÓN a lo largo de generaciones, no dentro de una bacteria individual. Ninguna bacteria se volvió resistente.",
+            },
+        ],
+        "common_error": (
+            "Decir que las bacterias 'se hicieron resistentes' por estar "
+            "expuestas al antibiótico. La resistencia ya existía en algunas por "
+            "mutación azarosa; el antibiótico solo eliminó al resto."
+        ),
+    },
+    "cie_fotosintesis": {
+        "intro": (
+            "La fotosíntesis y la respiración celular son las dos caras del "
+            "mismo flujo de energía: una guarda energía solar en glucosa y la "
+            "otra la libera. Casi toda la energía que usa la vida pasa por ahí."
+        ),
+        "theory": (
+            "**Fotosíntesis: seis de cada uno.** Seis moléculas de dióxido de "
+            "carbono y seis de agua, con energía luminosa, dan una de glucosa y "
+            "seis de oxígeno. Ocurre en los cloroplastos.\n\n"
+            "**Tiene dos etapas.** La fase luminosa, en las membranas del "
+            "tilacoide, capta la luz, libera el oxígeno que viene del AGUA y "
+            "produce ATP. La fase oscura, en el estroma, usa ese ATP para fijar "
+            "el dióxido de carbono en glucosa; no necesita oscuridad, solo no "
+            "necesita luz directa.\n\n"
+            "**Respiración celular: la reacción inversa.** Glucosa y oxígeno dan "
+            "dióxido de carbono, agua y energía en forma de ATP. Ocurre "
+            "principalmente en la mitocondria.\n\n"
+            "**Las plantas hacen las dos cosas.** Respiran todo el día y "
+            "fotosintetizan solo con luz. De día la fotosíntesis supera a la "
+            "respiración, y por eso el balance neto es liberar oxígeno.\n\n"
+            "**El oxígeno liberado proviene del agua**, no del dióxido de "
+            "carbono. Se comprobó marcando el oxígeno del agua con un isótopo y "
+            "siguiéndolo hasta el gas liberado."
+        ),
+        "example_statement": (
+            "Una planta se mantiene en oscuridad total durante varios días. "
+            "¿Qué ocurre con el intercambio de gases y por qué?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Reviso qué proceso necesita luz. La fotosíntesis se detiene sin luz; la respiración celular no depende de ella.",
+                "porque": "Los dos procesos son independientes. Suponer que la planta 'apaga todo' en la oscuridad lleva directo a la respuesta equivocada.",
+            },
+            {
+                "accion": "Determino el balance: sin fotosíntesis, la planta solo respira, así que consume oxígeno y libera dióxido de carbono.",
+                "porque": "De día ese consumo también existe, pero queda oculto porque la fotosíntesis produce más oxígeno del que la respiración gasta.",
+            },
+            {
+                "accion": "Concluyo que la planta se comporta como un consumidor neto de oxígeno mientras dure la oscuridad.",
+                "porque": "Con los días agota además sus reservas de glucosa, que solo puede reponer fotosintetizando: por eso termina muriendo.",
+            },
+        ],
+        "common_error": (
+            "Creer que las plantas respiran solo de noche. Respiran siempre; lo "
+            "que ocurre solo con luz es la fotosíntesis, y de día su producción "
+            "de oxígeno tapa el consumo de la respiración."
+        ),
+    },
+    "cie_roce": {
+        "intro": (
+            "Casi todos los problemas de mecánica se resuelven dibujando bien "
+            "las fuerzas que actúan sobre un cuerpo. Peso, normal, tensión, "
+            "elástica y roce son las cinco que aparecen una y otra vez."
+        ),
+        "theory": (
+            "**El peso apunta siempre hacia abajo** y vale $P = m \\cdot g$, con "
+            "$g$ cercano a 10 m/s². No depende de la superficie ni de la "
+            "inclinación.\n\n"
+            "**La normal es perpendicular a la superficie**, no siempre vertical. "
+            "En un plano horizontal sin otras fuerzas verticales coincide en "
+            "magnitud con el peso; en un plano inclinado es menor, porque solo "
+            "equilibra la componente perpendicular.\n\n"
+            "**La normal y el peso no son un par de acción y reacción.** Actúan "
+            "sobre el MISMO cuerpo. La reacción al peso es la atracción que el "
+            "cuerpo ejerce sobre la Tierra.\n\n"
+            "**El roce se opone al movimiento relativo** y vale $f = \\mu \\cdot "
+            "N$. Depende del coeficiente y de la normal, no del área de "
+            "contacto. El roce estático máximo es algo mayor que el cinético: "
+            "por eso cuesta más empezar a mover un mueble que mantenerlo en "
+            "movimiento.\n\n"
+            "**La fuerza elástica sigue la ley de Hooke**, $F = k \\cdot x$, "
+            "donde $x$ es el estiramiento respecto de la posición natural del "
+            "resorte."
+        ),
+        "example_statement": (
+            "Un bloque de 10 kg se arrastra por una superficie horizontal con un "
+            "coeficiente de roce cinético de 0,3. ¿Cuánto vale la fuerza de "
+            "roce? (g = 10 m/s²)"
+        ),
+        "example_steps": [
+            {
+                "accion": "Calculo la normal. En una superficie horizontal, sin fuerzas verticales extra, la normal iguala al peso: 10 kg por 10 m/s² dan 100 N.",
+                "porque": "El roce se calcula desde la normal, no desde el peso. Coinciden en este caso, pero dejan de hacerlo apenas hay una inclinación o una fuerza oblicua.",
+            },
+            {
+                "accion": "Aplico la fórmula del roce: 0,3 multiplicado por 100 N da 30 N.",
+                "porque": "El coeficiente no tiene unidad: es una razón entre dos fuerzas. Por eso el resultado sale directamente en newtons.",
+            },
+            {
+                "accion": "Verifico que el área de contacto no aparece en ningún paso del cálculo.",
+                "porque": "Apoyar el bloque de canto o de plano no cambia la fuerza de roce, aunque la intuición diga lo contrario.",
+            },
+        ],
+        "common_error": (
+            "Calcular el roce con el peso cuando el plano está inclinado. Ahí la "
+            "normal es menor que el peso, y usar el peso sobreestima el roce."
+        ),
+    },
+    "cie_cosmologia": {
+        "intro": (
+            "Los modelos del sistema solar y del universo son un caso claro de "
+            "cómo la ciencia cambia: no porque alguien tuviera mejor "
+            "imaginación, sino porque aparecieron observaciones que el modelo "
+            "anterior no podía explicar."
+        ),
+        "theory": (
+            "**Del geocentrismo al heliocentrismo.** El modelo de Ptolomeo ponía "
+            "la Tierra en el centro y explicaba el movimiento retrógrado de los "
+            "planetas con epiciclos. Copérnico puso al Sol en el centro, y "
+            "Galileo aportó observaciones decisivas: las fases de Venus y las "
+            "lunas de Júpiter, que giraban en torno a algo que no era la "
+            "Tierra.\n\n"
+            "**Kepler corrigió las órbitas.** No son circulares sino elípticas, "
+            "con el Sol en uno de los focos. Su tercera ley relaciona el período "
+            "con la distancia: $T^2 = a^3$ cuando el período va en años y la "
+            "distancia en unidades astronómicas.\n\n"
+            "**Newton explicó por qué.** La gravitación universal da la causa "
+            "del movimiento que Kepler había descrito.\n\n"
+            "**El universo está en expansión.** Hubble observó que las galaxias "
+            "se alejan y que las más lejanas lo hacen más rápido. Ese "
+            "corrimiento al rojo, junto con la radiación de fondo de microondas, "
+            "sostiene el modelo del Big Bang.\n\n"
+            "**La expansión no tiene centro.** No es que las galaxias se alejen "
+            "de un punto: es el espacio entre ellas el que se estira."
+        ),
+        "example_statement": (
+            "Un planeta orbita el Sol a 4 unidades astronómicas. ¿Cuánto dura su "
+            "año?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Uso la tercera ley de Kepler en su forma simple: el período al cuadrado es igual a la distancia al cubo.",
+                "porque": "Esa forma sin constantes solo vale con el período en años terrestres y la distancia en unidades astronómicas. Con otras unidades hay que reponer la constante.",
+            },
+            {
+                "accion": "Calculo el cubo de la distancia: 4 elevado a 3 da 64.",
+                "porque": "Ese 64 es el período AL CUADRADO, no el período. Detenerse aquí es el error más frecuente del ejercicio.",
+            },
+            {
+                "accion": "Saco la raíz cuadrada de 64 y obtengo 8 años.",
+                "porque": "El resultado es coherente con la ley: al cuadruplicar la distancia el año se multiplica por ocho, no por cuatro.",
+            },
+        ],
+        "common_error": (
+            "Suponer que el período crece en proporción directa con la "
+            "distancia. La relación no es lineal: duplicar la distancia "
+            "multiplica el período por algo menos de tres."
+        ),
+    },
+    "cie_ondas_fenomenos": {
+        "intro": (
+            "Reflexión, refracción, difracción y efecto Doppler son cuatro cosas "
+            "distintas que le pueden pasar a una onda. Reconocer cuál es cuál a "
+            "partir de una descripción es lo que la prueba pide."
+        ),
+        "theory": (
+            "**Reflexión: la onda vuelve.** El ángulo de incidencia es igual al "
+            "de reflexión, medidos desde la perpendicular a la superficie. La "
+            "rapidez no cambia porque el medio es el mismo.\n\n"
+            "**Refracción: la onda cambia de medio y se desvía.** Al pasar a un "
+            "medio donde viaja más lento se acerca a la perpendicular. **La "
+            "frecuencia NO cambia** —la impone la fuente—; lo que cambian son la "
+            "rapidez y la longitud de onda.\n\n"
+            "**Difracción: la onda rodea un obstáculo o se abre al pasar por una "
+            "rendija.** Es apreciable cuando la abertura es comparable a la "
+            "longitud de onda; por eso las ondas largas de radio rodean cerros y "
+            "la luz visible, no.\n\n"
+            "**Efecto Doppler: cambia la frecuencia percibida** cuando la fuente "
+            "y el observador se acercan o se alejan. Al acercarse, la frecuencia "
+            "sube; al alejarse, baja. En astronomía se ve como corrimiento al "
+            "azul o al rojo.\n\n"
+            "**Para todas ellas vale $v = \\lambda \\cdot f$.**"
+        ),
+        "example_statement": (
+            "Un rayo de luz pasa del aire al agua y se desvía acercándose a la "
+            "perpendicular. ¿Qué le ocurre a su frecuencia y a su longitud de "
+            "onda?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Identifico el fenómeno: la onda cambia de medio y se desvía, así que es refracción.",
+                "porque": "El cambio de medio es la marca de la refracción. Si volviera al mismo medio sería reflexión, y ahí no cambiaría nada más que la dirección.",
+            },
+            {
+                "accion": "Fijo la frecuencia: no cambia, porque la determina la fuente que emitió la luz.",
+                "porque": "El medio no puede alterar cuántas oscilaciones por segundo llegan: si lo hiciera, se acumularían o se perderían crestas en la frontera.",
+            },
+            {
+                "accion": "Aplico la relación entre rapidez, longitud de onda y frecuencia: si la rapidez baja y la frecuencia se mantiene, la longitud de onda debe disminuir.",
+                "porque": "En esa igualdad la frecuencia es la constante del problema, así que rapidez y longitud de onda están obligadas a cambiar juntas.",
+            },
+        ],
+        "common_error": (
+            "Decir que en la refracción cambia la frecuencia. La impone la "
+            "fuente y se conserva al cambiar de medio; lo que cambian son la "
+            "rapidez y la longitud de onda."
+        ),
+    },
+    "cie_optica": {
+        "intro": (
+            "Espejos y lentes se resuelven con la misma ecuación y con tres "
+            "rayos que siempre se comportan igual. Lo que decide el resultado es "
+            "dónde está el objeto respecto del foco."
+        ),
+        "theory": (
+            "**Espejo plano: imagen virtual, del mismo tamaño**, a la misma "
+            "distancia detrás del espejo y con izquierda y derecha invertidas. "
+            "Para verse de cuerpo entero basta un espejo de la mitad de la "
+            "estatura.\n\n"
+            "**Espejos curvos.** En un espejo cóncavo la distancia focal es la "
+            "mitad del radio de curvatura. Si el objeto está más lejos que el "
+            "foco, la imagen es real e invertida; si está más cerca, es virtual, "
+            "derecha y mayor. El espejo convexo siempre da imagen virtual, "
+            "derecha y menor, y por eso se usa como retrovisor.\n\n"
+            "**Lentes.** La convergente se comporta como el espejo cóncavo y la "
+            "divergente, como el convexo.\n\n"
+            "**La ecuación es una sola**: el inverso de la distancia focal es la "
+            "suma de los inversos de las distancias del objeto y de la imagen. "
+            "El aumento es el cociente entre el tamaño de la imagen y el del "
+            "objeto.\n\n"
+            "**La potencia de una lente**, en dioptrías, es el inverso de la "
+            "distancia focal expresada en metros."
+        ),
+        "example_statement": (
+            "Un objeto se coloca a 30 cm de una lente convergente de 10 cm de "
+            "distancia focal. ¿A qué distancia se forma la imagen?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Escribo la ecuación de las lentes: el inverso de la imagen es el inverso del foco menos el inverso del objeto.",
+                "porque": "Despejar antes de reemplazar evita arrastrar fracciones dentro de fracciones, que es donde se pierde el signo.",
+            },
+            {
+                "accion": "Reemplazo: un décimo menos un treintavo da dos treintavos, es decir, un quinceavo.",
+                "porque": "Conviene llevar todo al mismo denominador antes de restar. Restar los denominadores en vez de las fracciones es el error clásico.",
+            },
+            {
+                "accion": "Invierto el resultado y obtengo 15 cm.",
+                "porque": "El inverso de un quinceavo es 15. Como el objeto estaba más lejos que el foco, la imagen resulta real e invertida, del otro lado de la lente.",
+            },
+        ],
+        "common_error": (
+            "Sumar directamente las distancias o restar los denominadores. La "
+            "ecuación relaciona los INVERSOS de las distancias, así que hay que "
+            "invertir al final para volver a centímetros."
+        ),
+    },
+    "cie_energia_electrica": {
+        "intro": (
+            "La cuenta de la luz, el grosor de un cable y el tamaño de un "
+            "automático se explican con dos fórmulas: la potencia eléctrica y la "
+            "energía consumida. Esta unidad es la parte de la física que se usa "
+            "todos los meses."
+        ),
+        "theory": (
+            "**Potencia: $P = V \\cdot I$.** Se mide en watt. Combinada con la "
+            "ley de Ohm da también $P = I^2 \\cdot R$, que explica por qué un "
+            "cable delgado se calienta: toda la potencia disipada se va en "
+            "calor.\n\n"
+            "**Energía: potencia por tiempo.** La compañía cobra en "
+            "kilowatt-hora, que es la energía de un artefacto de 1.000 W "
+            "funcionando una hora. Para calcularla se pasan los watt a kilowatt "
+            "y se multiplica por las horas.\n\n"
+            "**En la instalación domiciliaria los artefactos van en paralelo.** "
+            "Así todos reciben los mismos 220 V y cada uno se puede apagar sin "
+            "cortar a los demás. En serie, apagar uno cortaría todo el "
+            "circuito.\n\n"
+            "**El automático protege el cable, no el artefacto.** Corta cuando "
+            "la corriente total supera lo que el conductor tolera, que es lo que "
+            "ocurre al enchufar demasiados aparatos de alto consumo en el mismo "
+            "circuito.\n\n"
+            "**La conexión a tierra desvía la corriente de falla** hacia el "
+            "suelo en vez de hacia la persona que toca el artefacto."
+        ),
+        "example_statement": (
+            "Una estufa de 2.000 W funciona 3 horas diarias. ¿Cuánta energía "
+            "consume al día, en kilowatt-hora?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Paso la potencia a kilowatt: 2.000 W son 2 kW.",
+                "porque": "El kilowatt-hora exige la potencia en kilowatt. Multiplicar watt por horas da watt-hora, mil veces más que la cifra buscada.",
+            },
+            {
+                "accion": "Multiplico por el tiempo en horas: 2 kW por 3 h dan 6 kWh.",
+                "porque": "La energía es potencia por tiempo, y el kilowatt-hora está construido justamente como el producto de esas dos unidades.",
+            },
+            {
+                "accion": "Proyecto al mes: 6 kWh por 30 días dan 180 kWh, que es lo que aparece sumado en la boleta.",
+                "porque": "Ese salto es el que vuelve útil el cálculo: la boleta cobra energía acumulada, no la potencia del artefacto.",
+            },
+        ],
+        "common_error": (
+            "Multiplicar los watt por las horas y llamar kilowatt-hora al "
+            "resultado. Falta dividir por mil: 2.000 W durante 3 h son 6 kWh, no "
+            "6.000."
+        ),
+    },
+    "cie_tierra": {
+        "intro": (
+            "Chile entero está sobre un borde de placas, así que esta unidad "
+            "explica el paisaje que se ve por la ventana: la cordillera, los "
+            "volcanes y los terremotos son el mismo fenómeno visto de tres "
+            "maneras."
+        ),
+        "theory": (
+            "**La Tierra tiene capas.** Corteza, manto y núcleo. La litosfera, "
+            "que es la corteza más la parte rígida del manto, está fragmentada "
+            "en placas que se mueven sobre la astenosfera, más plástica.\n\n"
+            "**Tres tipos de borde.** En el divergente las placas se separan y "
+            "se crea corteza nueva, como en las dorsales oceánicas. En el "
+            "convergente una placa se hunde bajo la otra: eso es la subducción, "
+            "y forma fosas, cordilleras y volcanes. En el transformante las "
+            "placas se deslizan de lado.\n\n"
+            "**Chile está en un borde convergente**: la placa de Nazca subduce "
+            "bajo la sudamericana a unos 7 cm por año. De ahí salen la fosa "
+            "frente a la costa, la cordillera de los Andes y la cadena "
+            "volcánica.\n\n"
+            "**Los sismos liberan energía acumulada** en la zona de contacto. "
+            "Las ondas P son las más rápidas y llegan primero; las S llegan "
+            "después. Esa diferencia de tiempo permite calcular a qué distancia "
+            "ocurrió el sismo.\n\n"
+            "**Magnitud e intensidad no son lo mismo.** La magnitud es una sola "
+            "por sismo y mide la energía liberada; la intensidad varía según el "
+            "lugar y mide los efectos observados."
+        ),
+        "example_statement": (
+            "En una estación sismológica, la onda P llega 40 segundos antes que "
+            "la S. Si la P viaja a 8 km/s y la S a 4 km/s, ¿a qué distancia "
+            "ocurrió el sismo?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Escribo el tiempo de viaje de cada onda como la distancia dividida por su rapidez.",
+                "porque": "Las dos recorren la MISMA distancia. Esa es la única variable compartida y por eso conviene dejar todo en función de ella.",
+            },
+            {
+                "accion": "Planteo que la diferencia entre ambos tiempos es 40 segundos: la distancia dividida por 4 menos la distancia dividida por 8.",
+                "porque": "La onda lenta demora más, así que la resta va en ese orden. Invertirla da una distancia negativa y delata el error de inmediato.",
+            },
+            {
+                "accion": "Resuelvo: esa diferencia equivale a la distancia dividida por 8, así que la distancia es 40 por 8, es decir, 320 km.",
+                "porque": "Este es el principio con que se ubica el epicentro: con tres estaciones y sus distancias, la intersección de tres circunferencias lo determina.",
+            },
+        ],
+        "common_error": (
+            "Multiplicar los 40 segundos por la diferencia de rapideces. Lo que "
+            "vale 40 segundos es la diferencia de TIEMPOS, y hay que despejar la "
+            "distancia desde ahí."
+        ),
+    },
+    "cie_materia": {
+        "intro": (
+            "Antes de cualquier cálculo hay que saber con qué se está "
+            "trabajando: una sustancia pura o una mezcla. De esa clasificación "
+            "depende qué método sirve para separarla y qué propiedades tiene un "
+            "valor fijo."
+        ),
+        "theory": (
+            "**Sustancia pura o mezcla.** Una sustancia pura tiene composición "
+            "fija: puede ser un elemento (un solo tipo de átomo) o un compuesto "
+            "(dos o más elementos unidos en proporción constante). Una mezcla "
+            "tiene composición variable y sus componentes conservan sus "
+            "propiedades.\n\n"
+            "**Homogénea o heterogénea.** En la homogénea no se distinguen los "
+            "componentes ni al microscopio: son las disoluciones. En la "
+            "heterogénea se reconocen fases distintas.\n\n"
+            "**Cada método de separación aprovecha una propiedad.** La "
+            "filtración separa un sólido insoluble de un líquido; la decantación "
+            "aprovecha la diferencia de densidad; el tamizado, el tamaño de "
+            "grano; la destilación, la diferencia de temperatura de ebullición, "
+            "y es la única de estas cuatro que sirve para una disolución.\n\n"
+            "**Las propiedades intensivas no dependen de la cantidad**: "
+            "densidad, temperatura de fusión, temperatura de ebullición. Las "
+            "extensivas sí: masa y volumen. Por eso la densidad identifica un "
+            "material y la masa no.\n\n"
+            "**Densidad: masa dividida por volumen.** Un objeto flota en un "
+            "líquido si su densidad es menor que la de ese líquido."
+        ),
+        "example_statement": (
+            "Un objeto de 54 g se sumerge en una probeta con 25 mL de agua y el "
+            "nivel sube a 45 mL. ¿Cuál es su densidad?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Obtengo el volumen del objeto por diferencia: 45 mL menos 25 mL dan 20 mL.",
+                "porque": "El objeto desplaza exactamente su propio volumen. Es el método para medir el volumen de un cuerpo irregular, que no se puede calcular con una fórmula geométrica.",
+            },
+            {
+                "accion": "Divido la masa por ese volumen: 54 g entre 20 mL dan 2,7 g/mL.",
+                "porque": "La densidad es un cociente, no una resta ni una suma. Un mililitro equivale a un centímetro cúbico, así que el resultado también es 2,7 g/cm³.",
+            },
+            {
+                "accion": "Comparo con el agua, de densidad 1 g/mL, y concluyo que el objeto se hunde.",
+                "porque": "Ese valor corresponde además al aluminio, de modo que la densidad sirve para identificar el material sin destruir la muestra.",
+            },
+        ],
+        "common_error": (
+            "Tomar el volumen final de la probeta, 45 mL, como volumen del "
+            "objeto. Ese número incluye el agua que ya estaba: el volumen del "
+            "cuerpo es la diferencia."
+        ),
+    },
+    "cie_grupos_funcionales": {
+        "intro": (
+            "Un grupo funcional es la parte de la molécula que decide cómo se "
+            "comporta. Reconocerlo en una fórmula permite anticipar propiedades "
+            "sin memorizar compuesto por compuesto."
+        ),
+        "theory": (
+            "**Hidrocarburos: solo carbono e hidrógeno.** Los alcanos tienen "
+            "enlaces simples y fórmula general $C_nH_{2n+2}$; los alquenos "
+            "tienen un doble enlace y responden a $C_nH_{2n}$; los alquinos "
+            "tienen un triple y responden a $C_nH_{2n-2}$. Los aromáticos "
+            "contienen el anillo del benceno.\n\n"
+            "**Los grupos con oxígeno.** El alcohol lleva $-OH$; el aldehído, "
+            "$-CHO$ en un extremo de la cadena; la cetona, un $C=O$ en el "
+            "interior; el ácido carboxílico, $-COOH$; el éster resulta de un "
+            "ácido con un alcohol.\n\n"
+            "**Los grupos con nitrógeno.** La amina lleva $-NH_2$ y la amida "
+            "combina el carbonilo con el nitrógeno.\n\n"
+            "**La posición importa.** Aldehído y cetona tienen el mismo grupo "
+            "carbonilo: lo que los distingue es si está al final de la cadena o "
+            "en medio.\n\n"
+            "**La nomenclatura sigue la cadena principal.** El prefijo cuenta "
+            "los carbonos (met, et, prop, but) y la terminación indica el grupo "
+            "funcional: -ano, -eno, -ino, -ol, -al, -ona, -oico."
+        ),
+        "example_statement": (
+            "Un compuesto responde a la fórmula $CH_3-CH_2-OH$. ¿Qué grupo "
+            "funcional tiene y cómo se llama?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Cuento los carbonos de la cadena: son dos, así que el prefijo es 'et'.",
+                "porque": "El prefijo se decide antes que la terminación, porque depende solo de la cadena y no de qué grupo cuelgue de ella.",
+            },
+            {
+                "accion": "Identifico el grupo: hay un $-OH$ unido a un carbono, que es el grupo hidroxilo de los alcoholes.",
+                "porque": "El $-OH$ unido a carbono es alcohol; unido a un metal sería un hidróxido, un compuesto inorgánico con propiedades muy distintas.",
+            },
+            {
+                "accion": "Combino ambas cosas: prefijo 'et' más terminación '-ol' dan etanol.",
+                "porque": "Ese nombre ya anticipa propiedades: los alcoholes de cadena corta se disuelven bien en agua, porque el $-OH$ forma puentes de hidrógeno.",
+            },
+        ],
+        "common_error": (
+            "Confundir aldehído con cetona. Los dos tienen el grupo carbonilo; "
+            "el aldehído lo lleva en un carbono del extremo y la cetona, en uno "
+            "interno."
+        ),
+    },
+    "cie_leyes_ponderales": {
+        "intro": (
+            "Las leyes ponderales son la razón por la que una ecuación química "
+            "se balancea. No son una regla de escritura: son la consecuencia de "
+            "que los átomos no aparecen ni desaparecen."
+        ),
+        "theory": (
+            "**Conservación de la materia.** En un sistema cerrado, la masa de "
+            "los reactantes es igual a la de los productos. Si el recipiente "
+            "está abierto y se libera un gas, la balanza marca menos, pero la "
+            "materia no se perdió: salió del sistema.\n\n"
+            "**Proporciones definidas.** Un compuesto puro siempre tiene la "
+            "misma proporción en masa entre sus elementos. El agua es siempre 8 "
+            "gramos de oxígeno por cada gramo de hidrógeno, venga de donde "
+            "venga.\n\n"
+            "**Proporciones múltiples.** Cuando dos elementos forman más de un "
+            "compuesto, las masas de uno que se combinan con una masa fija del "
+            "otro están en razón de números enteros pequeños.\n\n"
+            "**Partes de una ecuación.** Los reactantes van antes de la flecha y "
+            "los productos, después. Los coeficientes indican proporciones y son "
+            "lo único que se puede modificar al balancear; los subíndices "
+            "definen el compuesto y cambiarlos cambia la sustancia.\n\n"
+            "**Cómo balancear.** Conviene dejar para el final los elementos que "
+            "aparecen en más de un compuesto, típicamente el oxígeno y el "
+            "hidrógeno."
+        ),
+        "example_statement": (
+            "Balancear la combustión $CH_4 + O_2 \\rightarrow CO_2 + H_2O$."
+        ),
+        "example_steps": [
+            {
+                "accion": "Empiezo por el carbono: hay uno a cada lado, así que queda equilibrado sin tocar nada.",
+                "porque": "Conviene partir por el elemento que aparece en un solo compuesto de cada lado: cualquier ajuste posterior no lo volverá a desequilibrar.",
+            },
+            {
+                "accion": "Sigo con el hidrógeno: hay 4 en el metano y 2 en cada agua, así que pongo coeficiente 2 al agua.",
+                "porque": "El hidrógeno también aparece en un solo compuesto de cada lado. Dejarlo para después del oxígeno obligaría a rehacer el trabajo.",
+            },
+            {
+                "accion": "Termino con el oxígeno: a la derecha hay 2 del dióxido más 2 de las dos aguas, o sea 4; pongo coeficiente 2 al oxígeno molecular.",
+                "porque": "El oxígeno va al final porque aparece en DOS productos: su cuenta depende de los coeficientes que ya se fijaron. La ecuación queda $CH_4 + 2O_2 \\rightarrow CO_2 + 2H_2O$.",
+            },
+        ],
+        "common_error": (
+            "Balancear cambiando subíndices, por ejemplo escribiendo $H_2O_2$ "
+            "para que cuadre el oxígeno. Eso convierte el agua en agua "
+            "oxigenada: solo se pueden mover los coeficientes."
+        ),
+    },
+    "cie_limitante": {
+        "intro": (
+            "Cuando dos reactantes no están en la proporción exacta de la "
+            "ecuación, uno se acaba antes. Ese es el que decide cuánto producto "
+            "se obtiene, y calcular con el otro es el error más caro de toda la "
+            "estequiometría."
+        ),
+        "theory": (
+            "**El limitante se agota; el otro sobra.** El reactivo limitante se "
+            "consume por completo y fija el máximo de producto. El reactivo en "
+            "exceso queda sin reaccionar dentro del recipiente.\n\n"
+            "**No se comparan masas ni moles crudos.** Los coeficientes de la "
+            "ecuación piden proporciones distintas de cada reactante, así que "
+            "hay que dividir los moles de cada uno por su coeficiente. El menor "
+            "de esos cocientes señala al limitante.\n\n"
+            "**El producto se calcula desde el limitante.** Se toma su cantidad "
+            "y se aplica la proporción de la ecuación hasta el producto que "
+            "interesa.\n\n"
+            "**El sobrante también se calcula desde el limitante.** Se determina "
+            "cuánto del otro reactante se consumió y se resta de lo que "
+            "había.\n\n"
+            "**Agregar más del reactivo en exceso no cambia nada.** Esa "
+            "insensibilidad es la prueba experimental de cuál de los dos está "
+            "limitando: se duplica uno solo y se observa si el producto aumenta."
+        ),
+        "example_statement": (
+            "Se hacen reaccionar 4 g de hidrógeno con 16 g de oxígeno según "
+            "$2H_2 + O_2 \\rightarrow 2H_2O$. ¿Qué masa de agua se forma?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Paso las masas a moles: 4 g de hidrógeno son 2 moles y 16 g de oxígeno son 0,5 moles.",
+                "porque": "La ecuación habla de moles, no de gramos. Comparar 4 con 16 sugeriría que el hidrógeno escasea, y es exactamente al revés.",
+            },
+            {
+                "accion": "Divido cada cantidad por su coeficiente: el hidrógeno da 2 entre 2, igual a 1; el oxígeno da 0,5 entre 1, igual a 0,5.",
+                "porque": "El cociente indica cuántas veces alcanza cada reactante para repetir la reacción completa. El menor manda: aquí limita el oxígeno.",
+            },
+            {
+                "accion": "Calculo el producto desde el limitante: 0,5 moles de oxígeno forman 1 mol de agua, es decir, 18 gramos.",
+                "porque": "Calcular desde el hidrógeno habría dado 36 gramos, el doble del real: por eso identificar el limitante va siempre antes que el cálculo del producto.",
+            },
+        ],
+        "common_error": (
+            "Suponer que limita el reactante con menos masa o con menos moles. "
+            "Lo que decide es el cociente entre moles y coeficiente, y puede "
+            "señalar al que aparentemente abunda."
+        ),
+    },
+    "cie_formulas": {
+        "intro": (
+            "El análisis porcentual y las fórmulas empírica y molecular son un "
+            "camino de ida y vuelta: de la fórmula a los porcentajes y de los "
+            "porcentajes de vuelta a la fórmula."
+        ),
+        "theory": (
+            "**Análisis porcentual.** El porcentaje en masa de un elemento es su "
+            "aporte dividido por la masa molar del compuesto, por cien. La suma "
+            "de todos los porcentajes da 100%.\n\n"
+            "**Fórmula empírica: la menor proporción entera** entre los átomos. "
+            "Se obtiene pasando cada porcentaje a moles —dividiendo por la masa "
+            "atómica— y dividiendo después todos los resultados por el menor de "
+            "ellos.\n\n"
+            "**Si queda un decimal, se multiplica.** Un 0,5 pide multiplicar "
+            "todos los valores por 2; un 0,33 o un 0,67, por 3. Redondear "
+            "cambiaría el compuesto.\n\n"
+            "**Fórmula molecular: la empírica por un factor entero.** Ese factor "
+            "es la masa molar dividida por la masa de la fórmula empírica, así "
+            "que **un análisis porcentual por sí solo nunca alcanza**: hace falta "
+            "además la masa molar.\n\n"
+            "**Compuestos distintos pueden compartir la empírica.** El "
+            "formaldehído, el ácido acético y la glucosa son todos $CH_2O$."
+        ),
+        "example_statement": (
+            "Un compuesto contiene 40% de carbono, 6,7% de hidrógeno y 53,3% de "
+            "oxígeno, y su masa molar es 180 g/mol. ¿Cuál es su fórmula "
+            "molecular?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Tomo 100 gramos de compuesto y paso cada porcentaje a moles: 40 entre 12 dan 3,33; 6,7 entre 1 dan 6,7; 53,3 entre 16 dan 3,33.",
+                "porque": "Tomar 100 gramos convierte los porcentajes en masas sin perder la proporción, y dividir por la masa atómica es lo que traduce masa a número de átomos.",
+            },
+            {
+                "accion": "Divido los tres valores por el menor, 3,33, y obtengo 1; 2 y 1: la fórmula empírica es $CH_2O$.",
+                "porque": "Dividir por el menor deja siempre un 1 en la fórmula, que es la referencia contra la que se leen los demás subíndices.",
+            },
+            {
+                "accion": "Calculo el factor: la masa de $CH_2O$ es 30, y 180 dividido por 30 da 6. Multiplico los subíndices y obtengo $C_6H_{12}O_6$.",
+                "porque": "Sin la masa molar el ejercicio se habría quedado en $CH_2O$, que también corresponde al formaldehído. El factor es lo que identifica a la glucosa.",
+            },
+        ],
+        "common_error": (
+            "Usar los porcentajes como subíndices y escribir algo como "
+            "$C_{40}H_7O_{53}$. Los porcentajes son masas: hay que dividirlos "
+            "por la masa atómica de cada elemento antes de compararlos."
+        ),
+    },
+    "cie_dilucion": {
+        "intro": (
+            "Diluir, mezclar y saturar son tres situaciones distintas que se "
+            "resuelven con la misma idea: seguir los moles de soluto, que no "
+            "cambian, y ver en qué volumen quedan repartidos."
+        ),
+        "theory": (
+            "**Diluir es agregar disolvente.** Los moles de soluto no cambian y "
+            "el volumen aumenta, así que la concentración baja. De ahí sale "
+            "$C_1V_1 = C_2V_2$: los dos productos son los mismos moles.\n\n"
+            "**Mezclar es sumar aportes.** Los moles de las dos disoluciones se "
+            "suman y los volúmenes también; la concentración final es el "
+            "cociente. Nunca queda por encima de la mayor de las dos "
+            "concentraciones ni por debajo de la menor.\n\n"
+            "**Las concentraciones no se suman.** Sumar 0,3 y 0,5 para obtener "
+            "0,8 es el error más frecuente de esta unidad: lo que se suma son "
+            "los moles.\n\n"
+            "**Solubilidad: el máximo que se disuelve** en una cantidad fija de "
+            "disolvente a una temperatura dada. Suele expresarse en gramos por "
+            "cada 100 gramos de agua. Superado ese valor, el exceso queda sin "
+            "disolver.\n\n"
+            "**Factores.** En la mayoría de los sólidos la solubilidad sube con "
+            "la temperatura; en los gases baja con la temperatura y sube con la "
+            "presión. La agitación y el tamaño de grano cambian la VELOCIDAD, "
+            "no el límite."
+        ),
+        "example_statement": (
+            "Se toman 100 mL de una disolución 2 mol/L y se completan con agua "
+            "hasta 400 mL. ¿Cuál es la nueva concentración?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Calculo los moles de soluto: 2 mol/L por 0,1 litros dan 0,2 moles.",
+                "porque": "Los moles son lo único que se conserva en una dilución. Trabajar con ellos evita tener que recordar en qué sentido va la proporción.",
+            },
+            {
+                "accion": "Tomo el volumen final, 0,4 litros, y divido: 0,2 entre 0,4 dan 0,5 mol/L.",
+                "porque": "El denominador es el volumen FINAL de la disolución, no el agua agregada. Usar los 300 mL de agua daría un resultado mayor que el real.",
+            },
+            {
+                "accion": "Verifico la coherencia: el volumen se multiplicó por cuatro y la concentración quedó en la cuarta parte.",
+                "porque": "Concentración y volumen son inversamente proporcionales al diluir, así que ese control de razonabilidad detecta de inmediato una multiplicación hecha al revés.",
+            },
+        ],
+        "common_error": (
+            "Al preguntar cuánta agua hay que agregar, responder con el volumen "
+            "FINAL de la disolución. El agua agregada es la diferencia entre el "
+            "volumen final y el inicial."
+        ),
+    },
 }
 
 

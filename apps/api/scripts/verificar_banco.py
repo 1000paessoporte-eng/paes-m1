@@ -83,6 +83,16 @@ EXCEPCIONES_DIFICULTAD = {
 # paso, esto no lo detecta. Detecta lo que importa más: que el ejemplo termine
 # donde debe terminar.
 RESULTADOS_LECCIONES: dict[str, Fraction] = {
+    # Lecciones de Ciencias escritas con la ampliacion a 600 por eje.
+    "cie_roce": Fraction(round(0.3 * 10 * 10)),          # f = 0,3 x 100 N = 30 N
+    "cie_cosmologia": Fraction(8),                       # T = raiz de 4^3 = 8 anos
+    "cie_optica": Fraction(1, Fraction(1, 10) - Fraction(1, 30)),  # imagen a 15 cm
+    "cie_energia_electrica": Fraction(2 * 3),            # 2 kW x 3 h = 6 kWh
+    "cie_tierra": Fraction(40 * 8 * 4, 8 - 4),           # 320 km
+    "cie_materia": Fraction(54, 45 - 25),                # 2,7 g/mL
+    "cie_ciclo_celular": Fraction(46 * 2),               # 92 cromatidas
+    "cie_limitante": Fraction(round(16 / 32 * 2 * 18)),  # 18 g de agua
+    "cie_formulas": Fraction(180, 12 + 2 + 16),          # factor 6
     # 6 pintores por 10 dias son 60 dias-pintor; repartidos entre 4 pintores dan 15 dias.
     "alg_proporcionalidad": Fraction(6 * 10, 4),
 
