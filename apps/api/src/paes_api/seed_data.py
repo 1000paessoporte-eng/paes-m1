@@ -69712,8 +69712,8 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "his_crisis_liberal_fte", "his_crisis_liberal", "medio",
-        "Durante la primera mitad del siglo XX surgieron en América Latina "
-        "liderazgos como los de Vargas en Brasil y Perón en Argentina. ¿Qué rasgo "
+        "Entre 1930 y 1955, América Latina vio aparecer liderazgos como los de "
+        "Vargas en Brasil y Perón en Argentina. ¿Qué rasgo "
         "compartieron estos gobiernos?",
         "La apelación directa a los sectores populares",
         "El vínculo entre el líder y las masas se estableció sin pasar por los "
@@ -69967,8 +69967,8 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "his_chile_xix_fte", "his_chile_xix", "medio",
-        "El crecimiento de las ciudades chilenas en el tránsito del siglo XIX al XX "
-        "estuvo asociado a la llegada de población rural. ¿Qué consecuencia tuvo "
+        "Hacia 1900, el crecimiento de las ciudades de Chile estuvo asociado a la "
+        "llegada de población venida del campo. ¿Qué consecuencia tuvo "
         "ese proceso?",
         "El hacinamiento en los conventillos urbanos",
         "La ciudad recibió más gente de la que podía alojar. El conventillo —piezas "

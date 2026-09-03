@@ -170,6 +170,11 @@ export function SiteFooter() {
             estimación referencial: el puntaje real depende de la forma rendida
             y del proceso de admisión.
           </p>
+          <p className="mt-2">
+            Todas las preguntas de la plataforma son de elaboración propia de
+            1000paes. Se ajustan al temario, al formato y al nivel que el DEMRE
+            publica, y no reproducen preguntas de pruebas oficiales.
+          </p>
           {EMAIL_CONTACTO && (
             <p className="mt-2">
               Contacto:{" "}

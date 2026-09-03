@@ -20,13 +20,22 @@ export default function TerminosPage() {
             <h2>1. Qué es 1000paes</h2>
             <p>
               1000paes es una plataforma de preparación para la PAES (Prueba
-              de Acceso a la Educación Superior) de Chile, con foco en
-              Competencia Matemática (M1 y M2): ensayos cronometrados,
-              puntaje estimado, revisión de cada pregunta y seguimiento de tu
+              de Acceso a la Educación Superior) de Chile: Competencia
+              Matemática M1 y M2, Competencia Lectora, Ciencias e Historia y
+              Ciencias Sociales. Ofrece ensayos cronometrados, puntaje
+              estimado, revisión de cada pregunta y seguimiento de tu
               progreso. <strong>1000paes no tiene relación con el DEMRE</strong>{" "}
               ni con ninguna institución oficial del proceso de admisión. El
               puntaje que entrega la plataforma es una estimación referencial
               y no garantiza el puntaje real que obtengas al rendir la PAES.
+            </p>
+            <p>
+              <strong>Las preguntas son de elaboración propia.</strong> Se
+              escriben ajustándose al temario, al formato y al nivel de
+              dificultad que el DEMRE publica, que es información pública
+              destinada precisamente a la preparación de quienes rinden la
+              prueba. No reproducen preguntas, textos ni figuras de las pruebas
+              oficiales, cuyos derechos pertenecen a la Universidad de Chile.
             </p>
           </section>
 
