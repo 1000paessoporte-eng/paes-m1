@@ -113945,3 +113945,1302 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Quimica - Reacciones quimicas: analisis porcentual y formulas
+#
+# El temario lo pide en dos lineas seguidas: "Analisis porcentual de compuestos
+# quimicos" y "Formula empirica y molecular". El nodo va en ese orden: primero
+# leer una formula como porcentajes, despues recorrer el camino inverso desde
+# los porcentajes hasta la formula, y por ultimo el paso de empirica a
+# molecular, que exige un dato extra —la masa molar— que ningun analisis
+# porcentual entrega.
+#
+# Masas atomicas usadas: H=1, C=12, N=14, O=16, Na=23, Mg=24, S=32, Cl=35,5,
+# Ca=40, Fe=56, Cu=63,5.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_formulas", "facil",
+        "¿Qué información entrega la fórmula empírica de un compuesto?",
+        "La menor proporción entera entre sus átomos",
+        "La empírica describe una razón, no un recuento.\n\n"
+        "1) Indica en qué proporción se combinan los elementos del compuesto.\n"
+        "2) Esa proporción se expresa con los números enteros más pequeños "
+        "posibles.\n"
+        "3) Por eso el peróxido de hidrógeno, $H_2O_2$, tiene fórmula empírica "
+        "HO.\n\n"
+        "Es lo que se obtiene directamente de un análisis porcentual, porque los "
+        "porcentajes informan proporciones y no cantidades absolutas.",
+        [
+            ("El número de átomos de cada molécula",
+             "Ese dato lo entrega la fórmula molecular, no la empírica."),
+            ("La masa molar del compuesto",
+             "La masa molar es un dato aparte, que la empírica no permite deducir."),
+            ("El orden en que los átomos se enlazan dentro de la molécula del compuesto",
+             "Esa información la dan las fórmulas desarrolladas, no la empírica."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "facil",
+        "¿Qué información entrega la fórmula molecular de un compuesto?",
+        "El número real de átomos por molécula",
+        "La molecular cuenta, la empírica proporciona.\n\n"
+        "1) Indica cuántos átomos de cada elemento hay en una molécula "
+        "completa.\n"
+        "2) Siempre es la fórmula empírica multiplicada por un número entero.\n"
+        "3) En la glucosa, la empírica es $CH_2O$ y la molecular, "
+        "$C_6H_{12}O_6$: el factor es 6.\n\n"
+        "Dos compuestos distintos pueden compartir la empírica, pero no la "
+        "molecular.",
+        [
+            ("La menor proporción entre los átomos",
+             "Esa es la fórmula empírica, que puede no coincidir con la molecular."),
+            ("El porcentaje en masa de cada elemento",
+             "El porcentaje se calcula A PARTIR de la fórmula: no es lo que la fórmula dice."),
+            ("La forma geométrica que adopta la molécula en el espacio tridimensional",
+             "La geometría no se lee en una fórmula molecular."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "facil",
+        "¿Qué entrega el análisis porcentual de un compuesto?",
+        "El porcentaje en masa de cada elemento",
+        "Es la descripción del compuesto en términos de masa.\n\n"
+        "1) Informa qué fracción de la masa total aporta cada elemento.\n"
+        "2) Se expresa en gramos de cada elemento por cada 100 gramos de "
+        "compuesto.\n"
+        "3) De ahí se puede reconstruir la fórmula empírica, pasando cada "
+        "porcentaje a moles.\n\n"
+        "Es una propiedad del compuesto y no de la muestra: no cambia por tomar "
+        "más o menos material.",
+        [
+            ("El número de átomos de cada elemento",
+             "El análisis entrega masas; los átomos aparecen recién al dividir por las masas atómicas."),
+            ("La masa molar del compuesto",
+             "Los porcentajes son proporciones: no permiten deducir la masa molar."),
+            ("La cantidad de cada elemento presente en la muestra que se analizó",
+             "Entrega proporciones, no cantidades: el porcentaje es el mismo para cualquier tamaño de muestra."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "facil",
+        "¿Cuál es la fórmula empírica del agua, $H_2O$?",
+        "H₂O",
+        "La empírica coincide con la molecular cuando los subíndices ya son "
+        "los menores posibles.\n\n"
+        "1) Los subíndices del agua son 2 y 1.\n"
+        "2) No existe un número entero mayor que 1 que divida a ambos.\n"
+        "3) Por lo tanto la proporción 2 a 1 ya es la mínima: la empírica es "
+        "$H_2O$.\n\n"
+        "Simplificar a HO sería incorrecto, porque 2 y 1 no tienen divisor "
+        "común.",
+        [
+            ("HO",
+             "Simplificar 2 a 1 daría 1 a 0,5, que no son enteros: la proporción mínima es 2 a 1."),
+            ("H₄O₂",
+             "Es un múltiplo de la fórmula, no la proporción más pequeña."),
+            ("OH, escribiendo primero el elemento que aporta la mayor parte de la masa",
+             "El orden de los símbolos no cambia el problema: la proporción sigue siendo 2 a 1."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "facil",
+        "¿Cuál es la fórmula empírica de la glucosa, $C_6H_{12}O_6$?",
+        "CH₂O",
+        "Se busca el divisor común de todos los subíndices.\n\n"
+        "1) Los subíndices son 6, 12 y 6.\n"
+        "2) El mayor número que divide a los tres es 6.\n"
+        "3) Dividiendo cada uno por 6 se obtiene 1, 2 y 1: la empírica es "
+        "$CH_2O$.\n\n"
+        "El factor 6 es justamente el que hay que conocer para volver de la "
+        "empírica a la molecular.",
+        [
+            ("C₃H₆O₃",
+             "Divide por 2 y no por 6: no llega a la proporción mínima."),
+            ("C₆H₁₂O₆",
+             "Es la fórmula molecular, que aún admite simplificación."),
+            ("CHO, dejando un solo átomo de cada elemento en la proporción final",
+             "El hidrógeno está en proporción de 2 a 1 respecto del carbono y no puede quedar en 1."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "facil",
+        "¿Cuál es la fórmula empírica del etano, $C_2H_6$?",
+        "CH₃",
+        "Los dos subíndices comparten el divisor 2.\n\n"
+        "1) Los subíndices son 2 y 6.\n"
+        "2) Dividiendo ambos por 2 se obtiene 1 y 3.\n"
+        "3) La fórmula empírica es entonces $CH_3$.\n\n"
+        "Esa empírica no corresponde a ninguna molécula real: $CH_3$ solo "
+        "existe como fragmento, lo que muestra que la empírica es una "
+        "proporción y no una partícula.",
+        [
+            ("C₂H₆",
+             "Es la fórmula molecular, que todavía se puede simplificar por 2."),
+            ("CH₂",
+             "Corresponde a una proporción de 1 a 2, y en el etano es de 1 a 3."),
+            ("C₄H₁₂, que mantiene la misma proporción entre carbono e hidrógeno",
+             "Mantiene la proporción, pero la empírica pide los enteros MÁS PEQUEÑOS."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "facil",
+        "En un análisis porcentual correcto, ¿cuánto debe sumar el porcentaje "
+        "de todos los elementos?",
+        "100%",
+        "Los porcentajes reparten la masa total del compuesto.\n\n"
+        "1) Cada porcentaje indica qué fracción de la masa aporta un "
+        "elemento.\n"
+        "2) Entre todos los elementos está toda la masa del compuesto.\n"
+        "3) Por eso la suma debe dar 100%, salvo diferencias pequeñas de "
+        "redondeo.\n\n"
+        "Esa suma es la primera comprobación de un análisis: si no da 100, "
+        "falta un elemento o hay un error de medición.",
+        [
+            ("Depende del compuesto",
+             "La suma es siempre 100%: lo que cambia entre compuestos es el reparto."),
+            ("La masa molar del compuesto",
+             "La masa molar se expresa en g/mol y no es un porcentaje."),
+            ("Tanto como elementos tenga el compuesto, multiplicado por cien",
+             "El total es 100% con dos elementos o con cinco: lo que cambia es cuánto aporta cada uno."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "facil",
+        "¿Qué dato adicional se necesita para pasar de la fórmula empírica a la "
+        "molecular?",
+        "La masa molar del compuesto",
+        "La empírica fija la proporción; falta la escala.\n\n"
+        "1) La molecular es la empírica multiplicada por un factor entero.\n"
+        "2) Ese factor se obtiene dividiendo la masa molar del compuesto por la "
+        "masa de la fórmula empírica.\n"
+        "3) Sin la masa molar no hay manera de saber si el factor es 1, 2 o "
+        "6.\n\n"
+        "Por eso un análisis porcentual, por preciso que sea, nunca alcanza por "
+        "sí solo para determinar la fórmula molecular.",
+        [
+            ("El porcentaje de cada elemento",
+             "Ese dato ya se usó para obtener la empírica y no aporta la escala."),
+            ("La densidad del compuesto sólido",
+             "La densidad de un sólido no permite deducir la masa molar."),
+            ("El número de elementos distintos que forman parte del compuesto analizado",
+             "Ese dato ya está contenido en la fórmula empírica."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "facil",
+        "¿Puede la fórmula molecular de un compuesto coincidir con su fórmula "
+        "empírica?",
+        "Sí, cuando el factor es 1",
+        "Coinciden si los subíndices ya son los menores posibles.\n\n"
+        "1) La molecular es siempre la empírica multiplicada por un entero.\n"
+        "2) Ese entero puede ser 1, y en ese caso ambas fórmulas son "
+        "idénticas.\n"
+        "3) Ocurre con el agua, el amoníaco y el dióxido de carbono, entre "
+        "muchos otros.\n\n"
+        "Que coincidan no es una excepción: es el caso más frecuente entre los "
+        "compuestos sencillos.",
+        [
+            ("No, siempre son distintas",
+             "En el agua y el amoníaco son la misma fórmula."),
+            ("Solo en los compuestos orgánicos",
+             "Ocurre igual en compuestos inorgánicos como el amoníaco."),
+            ("Sí, pero únicamente cuando el compuesto está formado por dos elementos",
+             "El número de elementos no interviene: lo que decide es si los subíndices son los menores."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "facil",
+        "¿Cuál es la fórmula empírica del peróxido de hidrógeno, $H_2O_2$?",
+        "HO",
+        "Ambos subíndices son 2 y admiten el mismo divisor.\n\n"
+        "1) Los subíndices son 2 y 2.\n"
+        "2) Dividiendo ambos por 2 se obtiene 1 y 1.\n"
+        "3) La fórmula empírica es HO.\n\n"
+        "El agua y el peróxido tienen los mismos elementos y empíricas "
+        "distintas: $H_2O$ y HO, lo que muestra que la proporción sí "
+        "distingue compuestos.",
+        [
+            ("H₂O₂",
+             "Es la fórmula molecular, que todavía se puede simplificar por 2."),
+            ("H₂O",
+             "Corresponde a otro compuesto, el agua, con una proporción distinta."),
+            ("H₄O₄, que conserva la proporción de uno a uno entre los dos elementos",
+             "Conserva la proporción, pero la empírica pide los enteros más pequeños."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "facil",
+        "Si un compuesto tiene 40% en masa de carbono, ¿qué significa esa "
+        "cifra?",
+        "40 gramos de carbono por cada 100 del compuesto",
+        "El porcentaje en masa se lee como una razón por cada cien gramos.\n\n"
+        "1) El 40% indica la fracción de la masa que aporta el carbono.\n"
+        "2) En 100 gramos de compuesto, 40 corresponden a carbono.\n"
+        "3) En 200 gramos serían 80, porque la proporción se mantiene.\n\n"
+        "No dice nada sobre el número de átomos: para eso hay que dividir por "
+        "la masa atómica del carbono.",
+        [
+            ("40 átomos de carbono por molécula",
+             "El porcentaje habla de masa, no de número de átomos."),
+            ("40 moles de carbono en la muestra",
+             "El porcentaje es una proporción, no una cantidad de moles."),
+            ("Que el carbono ocupa el 40% del volumen",
+             "El análisis porcentual se refiere a la masa y no al volumen."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "facil",
+        "El eteno, $C_2H_4$, y el propeno, $C_3H_6$, tienen la misma fórmula "
+        "empírica. ¿Qué se concluye de eso?",
+        "Que la empírica no identifica un compuesto",
+        "Compartir la proporción no significa ser la misma sustancia.\n\n"
+        "1) Los dos simplifican a $CH_2$, porque en ambos hay dos hidrógenos "
+        "por cada carbono.\n"
+        "2) Sus fórmulas moleculares, en cambio, son distintas.\n"
+        "3) Por eso también tienen masas molares y propiedades diferentes.\n\n"
+        "Para identificar un compuesto hace falta la fórmula molecular, y para "
+        "obtenerla, la masa molar.",
+        [
+            ("Que son el mismo compuesto",
+             "Tienen distinta fórmula molecular y distintas propiedades."),
+            ("Que uno de los dos está mal escrito",
+             "Ambas fórmulas son correctas: corresponden a compuestos distintos."),
+            ("Que tienen la misma masa molar por compartir la misma proporción de átomos",
+             "Sus masas molares son 28 y 42 g/mol: la proporción no fija la masa."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Con H = 1 y O = 16, ¿cuál es el porcentaje en masa de oxígeno en el "
+        "agua?",
+        "88,9%",
+        "El porcentaje compara el aporte del elemento con la masa molar "
+        "total.\n\n"
+        "1) La masa molar del agua es 18 g/mol y el oxígeno aporta 16.\n"
+        "2) La fracción es 16 dividido por 18, es decir, 0,889.\n"
+        "3) Expresada como porcentaje, corresponde a un 88,9%.\n\n"
+        "Que el oxígeno domine la masa pese a ser un solo átomo se debe a que "
+        "pesa dieciséis veces más que cada hidrógeno.",
+        [
+            ("11,1%",
+             "Ese es el porcentaje del hidrógeno, el complemento del buscado."),
+            ("50%",
+             "Repartiría la masa por mitades, ignorando la diferencia de masas atómicas."),
+            ("16%, tomando directamente el valor de la masa atómica del oxígeno",
+             "La masa atómica no es un porcentaje: hay que dividirla por la masa molar del compuesto."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Con C = 12 y O = 16, ¿cuál es el porcentaje en masa de carbono en el "
+        "dióxido de carbono?",
+        "27,3%",
+        "El carbono es un solo átomo frente a dos de oxígeno.\n\n"
+        "1) La masa molar del dióxido de carbono es 12 + 2 · 16 = 44 g/mol.\n"
+        "2) El carbono aporta 12 de esos 44.\n"
+        "3) La razón 12 dividido por 44 da 0,273, es decir, un 27,3%.\n\n"
+        "El 72,7% restante corresponde al oxígeno, que suma 32 unidades entre "
+        "sus dos átomos.",
+        [
+            ("72,7%",
+             "Ese es el porcentaje del oxígeno, el complemento del buscado."),
+            ("50%",
+             "Reparte la masa por mitades, sin considerar que hay dos oxígenos."),
+            ("12%, que corresponde al valor de la masa atómica del carbono",
+             "La masa atómica hay que dividirla por la masa molar del compuesto para obtener el porcentaje."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Con N = 14 y H = 1, ¿cuál es el porcentaje en masa de nitrógeno en el "
+        "amoníaco, $NH_3$?",
+        "82,4%",
+        "Los tres hidrógenos aportan poco frente al nitrógeno.\n\n"
+        "1) La masa molar del amoníaco es 14 + 3 · 1 = 17 g/mol.\n"
+        "2) El nitrógeno aporta 14 de esos 17.\n"
+        "3) La razón 14 dividido por 17 da 0,824, es decir, un 82,4%.\n\n"
+        "Ese porcentaje alto explica por qué el amoníaco es la base de la "
+        "mayoría de los fertilizantes nitrogenados.",
+        [
+            ("17,6%",
+             "Es el porcentaje del hidrógeno, el complemento del buscado."),
+            ("75%",
+             "Correspondería a una proporción de 3 a 1 en número de átomos, no en masa."),
+            ("14%, que es el valor de la masa atómica del nitrógeno del compuesto",
+             "Hay que dividir esa masa atómica por la masa molar del amoníaco."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Con Ca = 40, C = 12 y O = 16, ¿cuál es el porcentaje en masa de calcio "
+        "en el carbonato de calcio?",
+        "40%",
+        "La masa molar redonda hace directo el cálculo.\n\n"
+        "1) La masa molar del carbonato de calcio es 40 + 12 + 3 · 16 = 100 "
+        "g/mol.\n"
+        "2) El calcio aporta 40 de esos 100.\n"
+        "3) La razón 40 dividido por 100 da exactamente un 40%.\n\n"
+        "Ese dato es el que se usa para calcular cuánto calcio aporta un "
+        "suplemento fabricado con este compuesto.",
+        [
+            ("48%",
+             "Ese es el porcentaje de los tres oxígenos juntos."),
+            ("12%",
+             "Corresponde al carbono, no al calcio."),
+            ("33%, repartiendo la masa entre los tres elementos que forman el compuesto",
+             "El reparto no es equitativo: cada elemento aporta según su masa atómica y su subíndice."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Un compuesto contiene 40% de carbono, 6,7% de hidrógeno y 53,3% de "
+        "oxígeno. ¿Cuál es su fórmula empírica?",
+        "CH₂O",
+        "Los porcentajes se convierten a moles y se comparan.\n\n"
+        "1) Tomando 100 gramos: 40/12 = 3,33 moles de carbono; 6,7/1 = 6,7 de "
+        "hidrógeno; 53,3/16 = 3,33 de oxígeno.\n"
+        "2) Se divide cada valor por el menor, que es 3,33.\n"
+        "3) Los cocientes son 1, 2 y 1, así que la empírica es $CH_2O$.\n\n"
+        "Esa es la empírica de la glucosa, del formaldehído y del ácido "
+        "acético: la proporción sola no distingue entre ellos.",
+        [
+            ("C₄₀H₇O₅₃",
+             "Usa los porcentajes como subíndices, sin convertirlos a moles."),
+            ("CHO",
+             "Olvida dividir por el menor de los tres valores en moles."),
+            ("C₆H₁₂O₆, que es la fórmula de la glucosa, un compuesto con esa composición",
+             "Es una fórmula molecular compatible, pero la empírica pide los enteros más pequeños."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Un hidrocarburo contiene 75% de carbono y 25% de hidrógeno. ¿Cuál es "
+        "su fórmula empírica?",
+        "CH₄",
+        "El cambio a moles invierte la impresión que dan los porcentajes.\n\n"
+        "1) Tomando 100 gramos: 75/12 = 6,25 moles de carbono y 25/1 = 25 moles "
+        "de hidrógeno.\n"
+        "2) Dividiendo ambos por 6,25 se obtienen 1 y 4.\n"
+        "3) La fórmula empírica es $CH_4$.\n\n"
+        "Pese a que el carbono domina en masa, hay cuatro átomos de hidrógeno "
+        "por cada uno de carbono: cada hidrógeno pesa doce veces menos.",
+        [
+            ("C₃H",
+             "Toma la razón de masas 75 a 25 como si fuera una razón de átomos."),
+            ("CH₂",
+             "Corresponde a una proporción de 1 a 2, y aquí es de 1 a 4."),
+            ("C₇₅H₂₅, usando directamente los porcentajes como subíndices de la fórmula",
+             "Los porcentajes son masas: hay que dividirlos por la masa atómica antes de comparar."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Un hidrocarburo tiene fórmula empírica $CH_3$ y masa molar 30 g/mol. "
+        "¿Cuál es su fórmula molecular?",
+        "C₂H₆",
+        "El factor sale de comparar las dos masas.\n\n"
+        "1) La masa de la fórmula empírica es 12 + 3 · 1 = 15.\n"
+        "2) El factor es 30 dividido por 15, es decir, 2.\n"
+        "3) Multiplicando los subíndices por 2 se obtiene $C_2H_6$.\n\n"
+        "Ese compuesto es el etano, y la comprobación es directa: 2 · 12 más "
+        "6 · 1 dan los 30 g/mol del enunciado.",
+        [
+            ("CH₃",
+             "Es la fórmula empírica, cuya masa es 15 y no 30."),
+            ("C₃H₉",
+             "Multiplica por 3, lo que daría una masa molar de 45 g/mol."),
+            ("C₂H₆O, agregando un oxígeno para completar los 30 gramos por mol",
+             "El enunciado dice que es un hidrocarburo: solo tiene carbono e hidrógeno."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Un compuesto tiene fórmula empírica $CH_2$ y masa molar 42 g/mol. "
+        "¿Cuál es su fórmula molecular?",
+        "C₃H₆",
+        "Primero la masa de la empírica y después el factor.\n\n"
+        "1) La masa de $CH_2$ es 12 + 2 · 1 = 14.\n"
+        "2) El factor es 42 dividido por 14, es decir, 3.\n"
+        "3) Multiplicando los subíndices por 3 se obtiene $C_3H_6$.\n\n"
+        "Se trata del propeno, y la comprobación cierra: 3 · 12 más 6 · 1 dan "
+        "42 g/mol.",
+        [
+            ("C₂H₄",
+             "Corresponde a un factor 2 y una masa molar de 28 g/mol."),
+            ("CH₂",
+             "Es la fórmula empírica, cuya masa es 14 y no 42."),
+            ("C₄H₈, que también conserva la proporción de dos hidrógenos por carbono",
+             "Conserva la proporción, pero su masa molar sería 56 y no 42 g/mol."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Un compuesto tiene fórmula empírica $CH_2O$ y masa molar 180 g/mol. "
+        "¿Cuál es su fórmula molecular?",
+        "C₆H₁₂O₆",
+        "El factor multiplica los tres subíndices por igual.\n\n"
+        "1) La masa de $CH_2O$ es 12 + 2 + 16 = 30.\n"
+        "2) El factor es 180 dividido por 30, es decir, 6.\n"
+        "3) Multiplicando los subíndices por 6 se obtiene $C_6H_{12}O_6$.\n\n"
+        "Es la glucosa: el mismo análisis porcentual habría dado $CH_2O$ para "
+        "el formaldehído, que tiene masa molar 30 y factor 1.",
+        [
+            ("C₃H₆O₃",
+             "Corresponde a un factor 3 y una masa molar de 90 g/mol."),
+            ("CH₂O",
+             "Es la fórmula empírica, cuya masa es 30 y no 180."),
+            ("C₆H₆O₆, multiplicando por seis solo el carbono y el oxígeno del compuesto",
+             "El factor se aplica a los tres subíndices: el hidrógeno también se multiplica por 6."),
+        ],
+    ),
+]
+
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_formulas", "medio",
+        "Un hidrocarburo contiene 85,7% de carbono y 14,3% de hidrógeno. ¿Cuál "
+        "es su fórmula empírica?",
+        "CH₂",
+        "El paso a moles vuelve comparables los dos porcentajes.\n\n"
+        "1) Tomando 100 gramos: 85,7/12 = 7,14 moles de carbono y 14,3/1 = 14,3 "
+        "de hidrógeno.\n"
+        "2) Dividiendo ambos por 7,14 se obtienen 1 y 2.\n"
+        "3) La fórmula empírica es $CH_2$.\n\n"
+        "Esa proporción la comparten el eteno, el propeno y el buteno: para "
+        "distinguirlos hace falta la masa molar.",
+        [
+            ("C₆H",
+             "Toma la razón de masas como si fuera una razón entre números de átomos."),
+            ("CH₄",
+             "Corresponde a una proporción de 1 a 4, y aquí es de 1 a 2."),
+            ("C₈₆H₁₄, redondeando los porcentajes y usándolos como subíndices",
+             "Los porcentajes son masas y deben dividirse por la masa atómica antes de comparar."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Un compuesto tiene fórmula empírica CH y masa molar 78 g/mol. ¿Cuál es "
+        "su fórmula molecular?",
+        "C₆H₆",
+        "La masa de la empírica es pequeña y el factor, grande.\n\n"
+        "1) La masa de CH es 12 + 1 = 13.\n"
+        "2) El factor es 78 dividido por 13, es decir, 6.\n"
+        "3) Multiplicando ambos subíndices por 6 se obtiene $C_6H_6$.\n\n"
+        "Ese compuesto es el benceno, y la comprobación cierra: 6 · 12 más "
+        "6 · 1 dan los 78 g/mol.",
+        [
+            ("C₂H₂",
+             "Corresponde a un factor 2 y una masa molar de 26 g/mol."),
+            ("CH",
+             "Es la fórmula empírica, cuya masa es 13 y no 78."),
+            ("C₅H₆, ajustando solo el carbono hasta acercarse a los 78 gramos por mol",
+             "El factor se aplica a los dos subíndices por igual: no se ajusta uno solo."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "¿Qué masa de carbono hay en 44 gramos de dióxido de carbono? (C = 12, "
+        "O = 16)",
+        "12 g",
+        "Los 44 gramos corresponden justo a un mol.\n\n"
+        "1) La masa molar del dióxido de carbono es 44 g/mol, así que hay 1 mol "
+        "en la muestra.\n"
+        "2) Cada mol de compuesto contiene un mol de átomos de carbono.\n"
+        "3) Un mol de carbono pesa 12 gramos.\n\n"
+        "Los 32 gramos restantes son los dos átomos de oxígeno, que juntos "
+        "aportan casi tres cuartos de la masa.",
+        [
+            ("44 g",
+             "Es la masa del compuesto completo, que incluye el oxígeno."),
+            ("32 g",
+             "Corresponde a la masa de los dos oxígenos, no a la del carbono."),
+            ("22 g, repartiendo la masa del compuesto entre sus dos elementos por igual",
+             "El reparto no es equitativo: depende de la masa atómica y del subíndice de cada elemento."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Una muestra contiene 2,4 gramos de carbono y 0,6 gramos de hidrógeno. "
+        "¿Cuál es su fórmula empírica?",
+        "CH₃",
+        "Las masas se convierten a moles antes de compararlas.\n\n"
+        "1) 2,4 dividido por 12 da 0,2 moles de carbono.\n"
+        "2) 0,6 dividido por 1 da 0,6 moles de hidrógeno.\n"
+        "3) Dividiendo ambos por 0,2 se obtienen 1 y 3: la empírica es "
+        "$CH_3$.\n\n"
+        "El dato se puede dar en gramos o en porcentajes: el procedimiento es "
+        "el mismo, porque lo que importa es la proporción.",
+        [
+            ("C₄H",
+             "Toma la razón entre las masas, 2,4 a 0,6, como si fuera de átomos."),
+            ("CH₂",
+             "Corresponde a una proporción de 1 a 2, y aquí es de 1 a 3."),
+            ("C₂₄H₆, usando las masas en gramos como subíndices de la fórmula",
+             "Los gramos deben pasarse a moles: un gramo de hidrógeno son doce veces más átomos que uno de carbono."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Con H = 1, S = 32 y O = 16, ¿cuál es el porcentaje en masa de azufre en "
+        "el ácido sulfúrico?",
+        "32,7%",
+        "El azufre es un solo átomo dentro de una fórmula de siete.\n\n"
+        "1) La masa molar del ácido sulfúrico es 2 + 32 + 64 = 98 g/mol.\n"
+        "2) El azufre aporta 32 de esos 98.\n"
+        "3) La razón 32 dividido por 98 da 0,327, es decir, un 32,7%.\n\n"
+        "Los cuatro oxígenos aportan el 65,3% y los dos hidrógenos, apenas un "
+        "2%.",
+        [
+            ("65,3%",
+             "Ese es el porcentaje de los cuatro oxígenos juntos."),
+            ("50%",
+             "Repartiría la masa por mitades entre el azufre y el resto de la fórmula."),
+            ("32%, tomando directamente el valor de la masa atómica del azufre",
+             "Coincide por poco, pero el cálculo correcto divide 32 por la masa molar 98."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Con Fe = 56 y O = 16, ¿cuál es el porcentaje en masa de hierro en el "
+        "óxido $Fe_2O_3$?",
+        "70%",
+        "Los dos hierros dominan la masa del óxido.\n\n"
+        "1) La masa molar es 2 · 56 + 3 · 16 = 112 + 48 = 160 g/mol.\n"
+        "2) El hierro aporta 112 de esos 160.\n"
+        "3) La razón 112 dividido por 160 da 0,70, es decir, un 70%.\n\n"
+        "Ese porcentaje es el que decide si un mineral de hierro vale la pena "
+        "explotar: la ley del yacimiento se compara contra él.",
+        [
+            ("30%",
+             "Ese es el porcentaje de los tres oxígenos, el complemento del buscado."),
+            ("40%",
+             "Correspondería a una razón de 2 a 3 en número de átomos, no en masa."),
+            ("56%, que es el valor de la masa atómica del hierro del compuesto",
+             "La masa atómica hay que multiplicarla por 2 y dividirla por la masa molar del óxido."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "¿Cuál es la fórmula empírica del óxido $Fe_2O_3$?",
+        "Fe₂O₃",
+        "Los subíndices 2 y 3 no admiten divisor común.\n\n"
+        "1) La empírica exige los enteros más pequeños que conserven la "
+        "proporción.\n"
+        "2) El único número que divide a 2 y a 3 es el 1.\n"
+        "3) Por eso la fórmula ya es la empírica: $Fe_2O_3$.\n\n"
+        "Simplificar a FeO cambiaría la proporción y describiría otro "
+        "compuesto, que además existe y tiene propiedades distintas.",
+        [
+            ("FeO",
+             "Cambia la proporción de 2 a 3 por una de 1 a 1: describe otro compuesto."),
+            ("Fe₄O₆",
+             "Conserva la proporción, pero no son los enteros más pequeños."),
+            ("Fe₃O₂, invirtiendo los subíndices para dejar primero el número mayor",
+             "Invertir los subíndices cambia el compuesto: la proporción es de 2 hierros por 3 oxígenos."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Un compuesto contiene 27,3% de carbono y 72,7% de oxígeno. ¿Cuál es su "
+        "fórmula empírica?",
+        "CO₂",
+        "El cálculo reconstruye la fórmula desde los porcentajes.\n\n"
+        "1) Tomando 100 gramos: 27,3/12 = 2,27 moles de carbono y 72,7/16 = 4,54 "
+        "de oxígeno.\n"
+        "2) Dividiendo ambos por 2,27 se obtienen 1 y 2.\n"
+        "3) La fórmula empírica es $CO_2$.\n\n"
+        "Coincide con la molecular, porque los subíndices 1 y 2 ya son los "
+        "menores posibles.",
+        [
+            ("CO",
+             "Corresponde a una proporción de 1 a 1, y aquí es de 1 a 2."),
+            ("C₂O₇",
+             "Usa los porcentajes redondeados como subíndices, sin pasarlos a moles."),
+            ("C₃O₈, conservando aproximadamente la razón entre los dos porcentajes dados",
+             "La razón entre porcentajes es de masas: hay que dividir cada uno por su masa atómica."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "¿Qué masa de hierro se puede obtener de 160 gramos de $Fe_2O_3$ puro? "
+        "(Fe = 56, O = 16)",
+        "112 g",
+        "El porcentaje en masa se aplica sobre la muestra.\n\n"
+        "1) La masa molar del óxido es 160 g/mol, así que la muestra es 1 "
+        "mol.\n"
+        "2) Cada mol de óxido contiene 2 moles de átomos de hierro.\n"
+        "3) Dos moles de hierro pesan 2 · 56 = 112 gramos.\n\n"
+        "Los 48 gramos restantes son oxígeno, que en el alto horno se combina "
+        "con carbono y sale como gas.",
+        [
+            ("160 g",
+             "Es la masa del óxido completo, que incluye el oxígeno."),
+            ("56 g",
+             "Corresponde a un solo mol de hierro y el óxido aporta dos."),
+            ("80 g, repartiendo la masa del óxido en partes iguales entre sus dos elementos",
+             "El reparto depende de las masas atómicas y los subíndices: al hierro le corresponde el 70%."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "¿Cuál es la masa correspondiente a la fórmula empírica $CH_2O$? "
+        "(C = 12, H = 1, O = 16)",
+        "30 g/mol",
+        "Se calcula igual que una masa molar, con los subíndices de la "
+        "empírica.\n\n"
+        "1) El carbono aporta 12, el hidrógeno 2 · 1 = 2 y el oxígeno 16.\n"
+        "2) La suma de los tres es 30.\n"
+        "3) Esa es la masa de la fórmula empírica, en gramos por mol.\n\n"
+        "Es el valor por el que hay que dividir la masa molar del compuesto "
+        "para obtener el factor que lleva a la fórmula molecular.",
+        [
+            ("29 g/mol",
+             "Cuenta un solo hidrógeno en lugar de los dos del subíndice."),
+            ("180 g/mol",
+             "Esa es la masa molar de la glucosa, un múltiplo de la empírica."),
+            ("46 g/mol, sumando las masas atómicas de los tres elementos sin repetir ninguna",
+             "El hidrógeno lleva subíndice 2, así que aporta 2 y no 1."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "¿Cómo se obtiene el factor que convierte la fórmula empírica en "
+        "molecular?",
+        "Dividiendo la masa molar por la masa de la empírica",
+        "El factor es cuántas veces cabe la empírica dentro de la molécula "
+        "real.\n\n"
+        "1) La molecular es la empírica multiplicada por un entero.\n"
+        "2) Sus masas guardan esa misma relación: la masa molar es la de la "
+        "empírica multiplicada por el mismo entero.\n"
+        "3) Por eso el factor sale de dividir la masa molar por la masa de la "
+        "empírica.\n\n"
+        "El resultado debe ser un entero o muy cercano a uno; si no lo es, hay "
+        "un error en la empírica o en la masa molar.",
+        [
+            ("Multiplicando ambas masas entre sí",
+             "El producto no tiene sentido físico y daría un número enorme."),
+            ("Sumando ambas masas y dividiendo por dos",
+             "La suma no expresa cuántas veces cabe una dentro de la otra."),
+            ("Dividiendo la masa de la empírica por la masa molar",
+             "Invierte la división y da un número menor que uno."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Un óxido de nitrógeno contiene 46,7% de nitrógeno y 53,3% de oxígeno. "
+        "¿Cuál es su fórmula empírica?",
+        "NO",
+        "Los dos elementos aportan casi los mismos moles.\n\n"
+        "1) Tomando 100 gramos: 46,7/14 = 3,34 moles de nitrógeno y 53,3/16 = "
+        "3,33 de oxígeno.\n"
+        "2) Los dos valores son prácticamente iguales.\n"
+        "3) La proporción es de 1 a 1, así que la empírica es NO.\n\n"
+        "El nitrógeno aporta menos masa pese a tener los mismos átomos, porque "
+        "pesa 14 frente a los 16 del oxígeno.",
+        [
+            ("N₂O",
+             "Corresponde a una proporción de 2 a 1, y aquí los moles son casi iguales."),
+            ("NO₂",
+             "Corresponde a una proporción de 1 a 2, que daría 30% de nitrógeno."),
+            ("N₄₇O₅₃, tomando los porcentajes redondeados como subíndices de la fórmula",
+             "Los porcentajes son masas: hay que dividirlos por la masa atómica de cada elemento."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Un óxido de azufre contiene 40% de azufre y 60% de oxígeno. ¿Cuál es "
+        "su fórmula empírica?",
+        "SO₃",
+        "El oxígeno aporta el triple de moles pese a que su masa es solo el "
+        "50% mayor.\n\n"
+        "1) Tomando 100 gramos: 40/32 = 1,25 moles de azufre y 60/16 = 3,75 de "
+        "oxígeno.\n"
+        "2) Dividiendo ambos por 1,25 se obtienen 1 y 3.\n"
+        "3) La fórmula empírica es $SO_3$.\n\n"
+        "Ese compuesto es el trióxido de azufre, responsable de la lluvia ácida "
+        "al combinarse con el agua atmosférica.",
+        [
+            ("SO₂",
+             "Corresponde a una proporción de 1 a 2, que daría 50% de azufre."),
+            ("S₂O₃",
+             "Corresponde a una proporción de 2 a 3, que no coincide con los moles calculados."),
+            ("S₄O₆, que mantiene aproximadamente la razón entre los porcentajes indicados",
+             "La razón entre porcentajes es de masas, no de átomos: hay que dividir por las masas atómicas."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Un compuesto contiene 40% de carbono en masa. ¿Cuántos gramos de "
+        "carbono hay en 200 gramos de ese compuesto?",
+        "80 g",
+        "El porcentaje se mantiene al cambiar el tamaño de la muestra.\n\n"
+        "1) El 40% significa 40 gramos de carbono por cada 100 del "
+        "compuesto.\n"
+        "2) La muestra es de 200 gramos, el doble de esos 100.\n"
+        "3) Corresponden entonces 80 gramos de carbono.\n\n"
+        "El porcentaje es una propiedad del compuesto: tomar más muestra "
+        "aumenta la masa de carbono, pero no su proporción.",
+        [
+            ("40 g",
+             "Corresponde a una muestra de 100 gramos y aquí son 200."),
+            ("120 g",
+             "Es el complemento, es decir, la masa de todos los demás elementos."),
+            ("200 g, que es la masa completa de la muestra que se está analizando",
+             "Solo el 40% de esa masa es carbono: el resto son los otros elementos."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Un compuesto contiene 52,2% de carbono, 13% de hidrógeno y 34,8% de "
+        "oxígeno. ¿Cuál es su fórmula empírica?",
+        "C₂H₆O",
+        "Uno de los cocientes no da entero y hay que ajustar.\n\n"
+        "1) Tomando 100 gramos: 52,2/12 = 4,35 moles de carbono; 13/1 = 13 de "
+        "hidrógeno; 34,8/16 = 2,18 de oxígeno.\n"
+        "2) Dividiendo por el menor, 2,18, resultan 2; 6 y 1.\n"
+        "3) La fórmula empírica es $C_2H_6O$.\n\n"
+        "Corresponde al etanol, cuya fórmula molecular es la misma porque los "
+        "subíndices ya son los menores posibles.",
+        [
+            ("CH₃O",
+             "Divide mal: el cociente del carbono es 2, no 1."),
+            ("C₄H₁₂O₂",
+             "Conserva la proporción, pero no son los enteros más pequeños."),
+            ("C₅₂H₁₃O₃₅, usando los porcentajes redondeados como subíndices de la fórmula",
+             "Los porcentajes son masas y deben dividirse por la masa atómica de cada elemento."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Un compuesto tiene fórmula empírica $CH_2O$ y masa molar 60 g/mol. "
+        "¿Cuál es su fórmula molecular?",
+        "C₂H₄O₂",
+        "El factor resulta ser 2.\n\n"
+        "1) La masa de $CH_2O$ es 30.\n"
+        "2) El factor es 60 dividido por 30, es decir, 2.\n"
+        "3) Multiplicando los subíndices por 2 se obtiene $C_2H_4O_2$.\n\n"
+        "Es el ácido acético, el del vinagre: la misma empírica que la glucosa, "
+        "pero con factor 2 en vez de 6.",
+        [
+            ("CH₂O",
+             "Es la fórmula empírica, cuya masa es 30 y no 60."),
+            ("C₃H₆O₃",
+             "Corresponde a un factor 3 y una masa molar de 90 g/mol."),
+            ("C₂H₂O₂, multiplicando por dos solo el carbono y el oxígeno del compuesto",
+             "El factor se aplica a los tres subíndices, incluido el del hidrógeno."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "En el sulfato de cobre hidratado, $CuSO_4 \\cdot 5H_2O$, de masa molar "
+        "250 g/mol, ¿qué porcentaje de la masa corresponde al agua?",
+        "36%",
+        "Las cinco moléculas de agua se cuentan juntas.\n\n"
+        "1) Cada agua aporta 18, así que las cinco aportan 5 · 18 = 90.\n"
+        "2) La masa molar del hidrato completo es 250.\n"
+        "3) La razón 90 dividido por 250 da 0,36, es decir, un 36%.\n\n"
+        "Ese porcentaje es exactamente la masa que la muestra pierde al "
+        "calentarla hasta secarla por completo.",
+        [
+            ("64%",
+             "Ese es el porcentaje de la sal anhidra, el complemento del buscado."),
+            ("18%",
+             "Corresponde a una sola molécula de agua y el hidrato tiene cinco."),
+            ("5%, que es el número de moléculas de agua que acompañan a cada unidad de fórmula",
+             "Ese número es un subíndice, no un porcentaje de masa."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Un hidrocarburo contiene 92,3% de carbono y 7,7% de hidrógeno. ¿Cuál "
+        "es su fórmula empírica?",
+        "CH",
+        "Los moles de ambos elementos resultan casi iguales.\n\n"
+        "1) Tomando 100 gramos: 92,3/12 = 7,69 moles de carbono y 7,7/1 = 7,7 de "
+        "hidrógeno.\n"
+        "2) Los dos valores prácticamente coinciden.\n"
+        "3) La proporción es de 1 a 1, así que la empírica es CH.\n\n"
+        "El carbono aporta doce veces más masa que el hidrógeno pese a estar en "
+        "igual número de átomos, y eso explica el 92,3%.",
+        [
+            ("C₁₂H",
+             "Toma la razón entre las masas como si fuera una razón entre átomos."),
+            ("CH₂",
+             "Corresponde a una proporción de 1 a 2, que daría 85,7% de carbono."),
+            ("C₉₂H₈, redondeando los porcentajes y tomándolos como subíndices",
+             "Los porcentajes son masas: hay que dividirlos por la masa atómica de cada elemento."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Al dividir los moles por el menor de ellos se obtienen 1,5 y 1. ¿Qué "
+        "corresponde hacer para escribir la fórmula empírica?",
+        "Multiplicar ambos por 2",
+        "La empírica exige subíndices enteros.\n\n"
+        "1) Un subíndice de 1,5 no describe un número de átomos.\n"
+        "2) Multiplicar los dos valores por el mismo número no altera la "
+        "proporción.\n"
+        "3) Con el factor 2 los cocientes pasan a 3 y 2, que ya son "
+        "enteros.\n\n"
+        "Los factores habituales son 2 para las terminaciones en 0,5 y 3 para "
+        "las que terminan en 0,33 o 0,67.",
+        [
+            ("Redondear 1,5 a 2",
+             "Redondear cambia la proporción y describe otro compuesto."),
+            ("Redondear 1,5 a 1",
+             "También altera la proporción, y en el sentido contrario."),
+            ("Dividir ambos valores por 1,5 para dejar el primero en la unidad",
+             "Eso deja el segundo en 0,67, que tampoco es entero."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Con Na = 23 y Cl = 35,5, ¿cuál es el porcentaje en masa de sodio en el "
+        "cloruro de sodio?",
+        "39,3%",
+        "La fórmula tiene un átomo de cada elemento, así que decide la masa "
+        "atómica.\n\n"
+        "1) La masa molar del cloruro de sodio es 23 + 35,5 = 58,5 g/mol.\n"
+        "2) El sodio aporta 23 de esos 58,5.\n"
+        "3) La razón 23 dividido por 58,5 da 0,393, es decir, un 39,3%.\n\n"
+        "El cloro aporta el 60,7% restante: aunque haya un átomo de cada uno, "
+        "las masas no se reparten por mitades.",
+        [
+            ("60,7%",
+             "Ese es el porcentaje del cloro, el complemento del buscado."),
+            ("50%",
+             "Repartiría la masa por mitades, ignorando que el cloro pesa más."),
+            ("23%, que corresponde al valor de la masa atómica del sodio del compuesto",
+             "La masa atómica hay que dividirla por la masa molar del compuesto."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "¿Cuál es la fórmula empírica del buteno, $C_4H_8$?",
+        "CH₂",
+        "Ambos subíndices se dividen por 4.\n\n"
+        "1) Los subíndices son 4 y 8.\n"
+        "2) El mayor divisor común de ambos es 4.\n"
+        "3) Dividiendo se obtienen 1 y 2: la empírica es $CH_2$.\n\n"
+        "El eteno y el propeno tienen la misma empírica, de modo que un "
+        "análisis porcentual no los distingue del buteno.",
+        [
+            ("C₂H₄",
+             "Divide por 2 y no por 4: no llega a los enteros más pequeños."),
+            ("C₄H₈",
+             "Es la fórmula molecular, que todavía admite simplificación."),
+            ("CH₄, dejando el hidrógeno con el subíndice que tiene en los alcanos",
+             "La proporción del buteno es de 2 hidrógenos por carbono, no de 4."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Con H = 1, S = 32 y O = 16, ¿cuál es el porcentaje en masa de oxígeno "
+        "en el ácido sulfúrico?",
+        "65,3%",
+        "Los cuatro oxígenos suman más que el resto de la fórmula.\n\n"
+        "1) La masa molar del ácido sulfúrico es 98 g/mol.\n"
+        "2) Los cuatro oxígenos aportan 4 · 16 = 64.\n"
+        "3) La razón 64 dividido por 98 da 0,653, es decir, un 65,3%.\n\n"
+        "El azufre aporta 32,7% y los dos hidrógenos, apenas un 2%: la suma de "
+        "los tres cierra en 100%.",
+        [
+            ("32,7%",
+             "Ese es el porcentaje del azufre, no el del oxígeno."),
+            ("16,3%",
+             "Corresponde a un solo oxígeno y la fórmula tiene cuatro."),
+            ("64%, tomando directamente la suma de las masas atómicas de los oxígenos",
+             "Esa suma hay que dividirla por la masa molar 98 para obtener el porcentaje."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "Con C = 12, H = 1 y O = 16, ¿cuál es el porcentaje en masa de "
+        "hidrógeno en la glucosa, $C_6H_{12}O_6$?",
+        "6,7%",
+        "Los doce hidrógenos pesan poco pese a ser mayoría en número.\n\n"
+        "1) La masa molar de la glucosa es 180 g/mol.\n"
+        "2) Los doce hidrógenos aportan 12 · 1 = 12.\n"
+        "3) La razón 12 dividido por 180 da 0,067, es decir, un 6,7%.\n\n"
+        "El hidrógeno es la mitad de los átomos de la molécula y apenas un "
+        "quinceavo de su masa.",
+        [
+            ("12%",
+             "Toma la suma de las masas atómicas sin dividirla por la masa molar."),
+            ("50%",
+             "Corresponde a la proporción en número de ÁTOMOS, no en masa."),
+            ("40%, que es el porcentaje que aporta el carbono a la masa de la glucosa",
+             "Ese es el aporte del carbono; el hidrógeno aporta mucho menos."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "medio",
+        "¿Qué masa de calcio contienen 250 gramos de carbonato de calcio puro, "
+        "si el calcio representa el 40% de su masa?",
+        "100 g",
+        "El porcentaje se aplica sobre la masa de la muestra.\n\n"
+        "1) El 40% significa 40 gramos de calcio por cada 100 de compuesto.\n"
+        "2) La muestra es de 250 gramos, es decir, dos veces y media esos "
+        "100.\n"
+        "3) Corresponden entonces 100 gramos de calcio.\n\n"
+        "Ese cálculo es el que traduce la dosis de un suplemento de carbonato "
+        "en la cantidad de calcio que efectivamente aporta.",
+        [
+            ("40 g",
+             "Corresponde a una muestra de 100 gramos y aquí son 250."),
+            ("150 g",
+             "Es el complemento: la masa del carbono y de los oxígenos juntos."),
+            ("250 g, que es la masa completa del carbonato de calcio de la muestra",
+             "Solo el 40% de esa masa es calcio; el resto son carbono y oxígeno."),
+        ],
+    ),
+]
+
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_formulas", "dificil",
+        "Al quemar por completo un hidrocarburo se obtienen 8,8 gramos de "
+        "dióxido de carbono y 3,6 gramos de agua. ¿Cuál es su fórmula "
+        "empírica?",
+        "CH₂",
+        "Todo el carbono termina en el dióxido y todo el hidrógeno, en el "
+        "agua.\n\n"
+        "1) 8,8 gramos de dióxido de carbono son 0,2 moles, y cada uno aporta un "
+        "carbono: 0,2 moles de C.\n"
+        "2) 3,6 gramos de agua son 0,2 moles, y cada uno aporta dos hidrógenos: "
+        "0,4 moles de H.\n"
+        "3) La proporción 0,2 a 0,4 se simplifica a 1 a 2: la empírica es "
+        "$CH_2$.\n\n"
+        "El paso que más se olvida es duplicar los moles de agua: la molécula "
+        "trae dos hidrógenos, no uno.",
+        [
+            ("CH₄",
+             "Resulta de contar cuatro hidrógenos por molécula de agua en vez de dos."),
+            ("CH",
+             "Olvida duplicar los moles de agua para obtener los de hidrógeno."),
+            ("C₈H₃, tomando las masas de los productos como si fueran proporciones de átomos",
+             "Los gramos de los productos deben pasarse a moles antes de comparar."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "dificil",
+        "En el análisis de un hidrocarburo se mide el dióxido de carbono y el "
+        "agua producidos, en vez de analizar el compuesto directamente. ¿Qué "
+        "justifica ese diseño?",
+        "Los productos separan el carbono del hidrógeno en dos masas medibles",
+        "La combustión reparte los dos elementos en compuestos distintos.\n\n"
+        "1) En el compuesto original el carbono y el hidrógeno están mezclados "
+        "en una sola masa.\n"
+        "2) Al quemarlo, todo el carbono se va al dióxido y todo el hidrógeno, "
+        "al agua.\n"
+        "3) Pesando cada producto por separado se obtiene la masa de cada "
+        "elemento.\n\n"
+        "El montaje real usa dos absorbentes en serie, uno que retiene el agua "
+        "y otro que retiene el dióxido, y se pesan antes y después.",
+        [
+            ("La combustión es más rápida que otros análisis conocidos",
+             "La rapidez no es la razón: lo decisivo es que separa los elementos."),
+            ("Los productos pesan más que el compuesto original",
+             "Pesan más porque incorporan oxígeno, pero eso no es lo que hace útil el método."),
+            ("El compuesto original no se puede pesar",
+             "Sí se puede pesar: lo que no se puede es separar en él el carbono del hidrógeno."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "dificil",
+        "Un análisis porcentual entrega la fórmula empírica $CH_2O$. Un "
+        "estudiante concluye que el compuesto es glucosa. ¿Qué falla en esa "
+        "conclusión?",
+        "La empírica la comparten varios compuestos distintos",
+        "El análisis porcentual entrega una proporción, no una identidad.\n\n"
+        "1) El formaldehído, el ácido acético y la glucosa comparten la "
+        "empírica $CH_2O$.\n"
+        "2) Sus fórmulas moleculares son $CH_2O$, $C_2H_4O_2$ y "
+        "$C_6H_{12}O_6$.\n"
+        "3) Para distinguirlos hace falta la masa molar, que el análisis "
+        "porcentual no entrega.\n\n"
+        "El estudiante eligió uno de los candidatos sin ningún dato que "
+        "descarte los otros.",
+        [
+            ("El análisis porcentual estaba mal hecho",
+             "Puede estar perfectamente bien hecho: el problema es lo que se concluye de él."),
+            ("La glucosa no tiene esa fórmula empírica",
+             "Sí la tiene: $C_6H_{12}O_6$ simplifica a $CH_2O$."),
+            ("Faltó calcular el porcentaje de oxígeno",
+             "Ese porcentaje ya está incluido en el análisis que dio la fórmula empírica."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "dificil",
+        "Al quemar 4,6 gramos de un compuesto de carbono, hidrógeno y oxígeno "
+        "se obtienen 8,8 gramos de dióxido de carbono y 5,4 gramos de agua. "
+        "¿Cuál es su fórmula empírica?",
+        "C₂H₆O",
+        "El oxígeno del compuesto se obtiene por diferencia.\n\n"
+        "1) El dióxido aporta 0,2 moles de carbono, o sea 2,4 gramos; el agua "
+        "aporta 0,6 moles de hidrógeno, o sea 0,6 gramos.\n"
+        "2) La masa de oxígeno del compuesto es 4,6 menos 3,0, es decir, 1,6 "
+        "gramos, que son 0,1 moles.\n"
+        "3) Dividiendo 0,2; 0,6 y 0,1 por 0,1 resultan 2, 6 y 1: la empírica es "
+        "$C_2H_6O$.\n\n"
+        "El oxígeno no se puede medir en los productos, porque parte de él "
+        "proviene del aire con que se quemó la muestra.",
+        [
+            ("C₂H₆",
+             "Ignora el oxígeno del compuesto, que aparece al restar las masas."),
+            ("CH₃O",
+             "Divide mal: el cociente del carbono es 2 y no 1."),
+            ("C₂H₆O₂, contabilizando también el oxígeno que aportó el aire durante la combustión",
+             "Ese oxígeno no pertenece al compuesto: por eso se calcula por diferencia y no de los productos."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "dificil",
+        "Dos compuestos distintos entregan exactamente la misma composición "
+        "porcentual en un análisis. ¿Qué se puede afirmar?",
+        "Tienen la misma fórmula empírica",
+        "La composición porcentual determina la proporción de átomos.\n\n"
+        "1) Los porcentajes se convierten a moles y de ahí a una razón "
+        "entera.\n"
+        "2) Si los porcentajes coinciden, esa razón también coincide.\n"
+        "3) Por lo tanto ambos comparten la fórmula empírica, aunque sean "
+        "compuestos distintos.\n\n"
+        "Pueden diferir en la fórmula molecular, como el eteno y el propeno, o "
+        "tenerla igual y diferir en cómo se enlazan los átomos.",
+        [
+            ("Son el mismo compuesto",
+             "Compuestos distintos pueden compartir la composición porcentual."),
+            ("Tienen la misma masa molar",
+             "El eteno y el propeno comparten los porcentajes y sus masas molares son 28 y 42."),
+            ("Uno de los dos análisis contiene necesariamente un error de medición",
+             "Ambos pueden estar bien: la coincidencia de porcentajes es perfectamente posible."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "dificil",
+        "Cinco gramos de una sal hidratada se calientan hasta masa constante y "
+        "quedan 3,2 gramos de sal anhidra de masa molar 160 g/mol. ¿Cuántas "
+        "aguas acompañan a cada unidad de fórmula?",
+        "5 aguas",
+        "El subíndice del hidrato es una razón entre moles.\n\n"
+        "1) El agua perdida es 5,0 menos 3,2, es decir, 1,8 gramos, que son 0,1 "
+        "moles.\n"
+        "2) La sal anhidra son 3,2 divididos por 160, o sea 0,02 moles.\n"
+        "3) La razón 0,1 dividido por 0,02 da 5 aguas por unidad de fórmula.\n\n"
+        "Calentar hasta masa constante es esencial: si queda agua sin "
+        "evaporar, el subíndice sale menor que el real.",
+        [
+            ("2 aguas",
+             "Resulta de comparar las masas en gramos en vez de los moles."),
+            ("10 aguas",
+             "Duplica el resultado, como si cada agua aportara medio mol."),
+            ("1,8 aguas, que corresponden a los gramos de agua perdidos al calentar",
+             "Los gramos deben pasarse a moles y compararse con los moles de sal anhidra."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "dificil",
+        "Un estudiante escribe $C_{40}H_7O_{53}$ como fórmula empírica de un "
+        "compuesto con 40% de carbono, 6,7% de hidrógeno y 53,3% de oxígeno. "
+        "¿Qué error comete?",
+        "Usó los porcentajes de masa como si fueran de átomos",
+        "Los porcentajes reparten masa, y los subíndices cuentan átomos.\n\n"
+        "1) Un porcentaje alto puede corresponder a pocos átomos pesados o a "
+        "muchos livianos.\n"
+        "2) Para pasar de uno a otro hay que dividir cada porcentaje por la masa "
+        "atómica del elemento.\n"
+        "3) Hecho eso resultan 3,33; 6,7 y 3,33 moles, cuya razón es 1 a 2 a "
+        "1.\n\n"
+        "El caso del hidrógeno lo muestra con claridad: aporta apenas el 6,7% de "
+        "la masa y es el elemento más numeroso de la fórmula.",
+        [
+            ("Sumó mal los porcentajes del análisis",
+             "La suma da 100%: el problema es cómo los convirtió en subíndices."),
+            ("Olvidó calcular la masa molar del compuesto",
+             "La masa molar hace falta para la fórmula molecular, no para la empírica."),
+            ("Redondeó el porcentaje del hidrógeno",
+             "El redondeo es menor: el error de fondo es no haber pasado los porcentajes a moles."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "dificil",
+        "Un hidrocarburo gaseoso tiene fórmula empírica $CH_2$ y una densidad "
+        "de 1,25 g/L en condiciones normales. ¿Cuál es su fórmula molecular?",
+        "C₂H₄",
+        "La densidad de un gas permite llegar a la masa molar.\n\n"
+        "1) En condiciones normales un mol ocupa 22,4 litros, así que la masa "
+        "molar es 1,25 · 22,4 = 28 g/mol.\n"
+        "2) La masa de la empírica $CH_2$ es 14.\n"
+        "3) El factor es 28 dividido por 14, es decir, 2: la molecular es "
+        "$C_2H_4$.\n\n"
+        "Medir la densidad de un gas es una de las pocas formas prácticas de "
+        "obtener su masa molar sin conocer de antemano su fórmula.",
+        [
+            ("CH₂",
+             "Es la fórmula empírica, cuya masa es 14 y no 28."),
+            ("C₃H₆",
+             "Corresponde a un factor 3 y una masa molar de 42 g/mol."),
+            ("C₁,₂₅H₂,₅, aplicando la densidad directamente como factor de la fórmula empírica",
+             "La densidad hay que multiplicarla por el volumen molar para obtener la masa molar."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "dificil",
+        "Tras dividir por el menor, los cocientes de un análisis quedan en 1 y "
+        "1,33. ¿Cómo se obtienen los subíndices de la fórmula empírica?",
+        "Multiplicando ambos por 3",
+        "El decimal indica cuál es el factor que falta.\n\n"
+        "1) El valor 1,33 corresponde a cuatro tercios.\n"
+        "2) Multiplicar los dos cocientes por 3 conserva la proporción y elimina "
+        "el decimal.\n"
+        "3) Los subíndices quedan en 3 y 4.\n\n"
+        "El decimal 0,5 pide multiplicar por 2; el 0,33 y el 0,67, por 3; el "
+        "0,25 y el 0,75, por 4.",
+        [
+            ("Redondeando 1,33 a 1",
+             "Redondear cambia la proporción y describe un compuesto distinto."),
+            ("Multiplicando ambos por 2",
+             "Daría 2 y 2,67, que sigue sin ser entero."),
+            ("Dividiendo ambos cocientes por 1,33 para dejar el segundo en la unidad",
+             "Eso deja el primero en 0,75, que tampoco es entero."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "dificil",
+        "¿Qué información aporta la fórmula molecular que la empírica no "
+        "entrega?",
+        "Cuántos átomos hay realmente en cada molécula",
+        "La empírica fija la proporción y la molecular, la escala.\n\n"
+        "1) La empírica dice en qué razón se combinan los elementos.\n"
+        "2) La molecular dice cuántas veces se repite esa razón dentro de una "
+        "molécula.\n"
+        "3) Por eso la molecular determina la masa molar y la empírica no.\n\n"
+        "Ninguna de las dos informa cómo se enlazan los átomos: para eso hacen "
+        "falta las fórmulas desarrolladas.",
+        [
+            ("Cómo se enlazan los átomos entre sí",
+             "Ninguna de las dos fórmulas entrega la conectividad: eso lo hace la fórmula desarrollada."),
+            ("El porcentaje en masa de cada elemento",
+             "Ese dato se puede calcular igual desde la fórmula empírica."),
+            ("La geometría de la molécula en el espacio",
+             "La geometría no se deduce de una fórmula molecular."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "dificil",
+        "En un análisis por combustión se pesa primero el absorbente de agua y "
+        "después el de dióxido de carbono. ¿Por qué ese orden importa?",
+        "El absorbente de dióxido también retendría el agua",
+        "El orden de los absorbentes es parte del diseño, no un detalle.\n\n"
+        "1) El primer absorbente debe capturar solo el agua.\n"
+        "2) El material que retiene dióxido de carbono retiene además vapor de "
+        "agua.\n"
+        "3) Si estuviera primero, sumaría ambas masas y el carbono saldría "
+        "sobreestimado.\n\n"
+        "Poner el agua primero deja pasar el dióxido intacto, y así cada aumento "
+        "de masa corresponde a un solo producto.",
+        [
+            ("El agua se evapora si se pesa al final",
+             "El absorbente retiene el agua; el problema es la selectividad, no la evaporación."),
+            ("El dióxido de carbono pesa más que el agua",
+             "Sus masas molares no tienen relación con el orden de los absorbentes."),
+            ("La combustión produce primero el agua",
+             "Los dos productos se forman a la vez: el orden es del montaje, no de la reacción."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "dificil",
+        "Una muestra de óxido de hierro trae 10% de arena que no se descuenta "
+        "antes del análisis. ¿Qué le ocurre al porcentaje de hierro calculado?",
+        "Sale menor que el real",
+        "La impureza infla la masa total sin aportar hierro.\n\n"
+        "1) El porcentaje es la masa de hierro dividida por la masa de la "
+        "muestra.\n"
+        "2) La arena aumenta el denominador y no toca el numerador.\n"
+        "3) El cociente resulta entonces menor que el porcentaje real del "
+        "óxido.\n\n"
+        "El efecto es proporcional a la impureza: con 10% de arena, un óxido de "
+        "70% de hierro se mide como 63%.",
+        [
+            ("Sale mayor que el real",
+             "Saldría mayor si la impureza aportara hierro, y la arena no lo hace."),
+            ("No cambia",
+             "La masa de la muestra crece y la de hierro no: el cociente baja."),
+            ("Sale correcto, porque la arena no participa de ninguna reacción química",
+             "No hace falta que reaccione: basta con que sume masa a la muestra pesada."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "dificil",
+        "Tres muestras de distinto tamaño de un mismo compuesto puro se "
+        "analizan y entregan la misma composición porcentual. ¿Qué ley "
+        "ilustran?",
+        "La ley de las proporciones definidas",
+        "El resultado no depende del tamaño de la muestra.\n\n"
+        "1) La ley establece que un compuesto puro tiene siempre la misma "
+        "proporción en masa entre sus elementos.\n"
+        "2) Eso es exactamente lo que muestran las tres muestras.\n"
+        "3) Por eso la composición porcentual sirve para identificar un "
+        "compuesto y no para describir una muestra.\n\n"
+        "Si una de las tres hubiera dado porcentajes distintos, la conclusión "
+        "sería que no es el mismo compuesto o que no está puro.",
+        [
+            ("La ley de conservación de la materia",
+             "Esa ley compara reactantes con productos, y aquí no hubo reacción."),
+            ("La ley de las proporciones múltiples",
+             "Esa compara DOS compuestos distintos formados por los mismos elementos."),
+            ("La ley del volumen molar de los gases en condiciones normales de presión",
+             "Esa se refiere a gases y volúmenes, no a la composición en masa de un compuesto."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "dificil",
+        "Si se duplica el tamaño de la muestra analizada, ¿qué ocurre con la "
+        "fórmula empírica obtenida?",
+        "No cambia",
+        "La empírica describe al compuesto, no a la muestra.\n\n"
+        "1) Al duplicar la muestra se duplican las masas de todos los "
+        "elementos.\n"
+        "2) Al pasarlas a moles, todos los valores se duplican por igual.\n"
+        "3) La razón entre ellos queda intacta, así que la fórmula es la "
+        "misma.\n\n"
+        "Lo que sí mejora con una muestra mayor es la precisión: los errores de "
+        "pesada pesan relativamente menos.",
+        [
+            ("Se duplican los subíndices",
+             "Los subíndices salen de una razón, y la razón no cambia al escalar la muestra."),
+            ("Se reducen a la mitad",
+             "Tampoco: la razón entre los moles es independiente del tamaño de la muestra."),
+            ("Cambia solo si el compuesto contiene más de dos elementos distintos",
+             "El número de elementos no interviene: la razón se conserva en todos los casos."),
+        ],
+    ),
+    _q(
+        "cie_formulas", "dificil",
+        "Un estudiante afirma que la fórmula molecular siempre tiene subíndices "
+        "mayores que la empírica. ¿Es correcto?",
+        "No, coinciden cuando el factor vale 1",
+        "El factor entero puede ser uno.\n\n"
+        "1) La molecular es la empírica multiplicada por un entero.\n"
+        "2) Ese entero es 1 siempre que los subíndices de la molécula ya sean "
+        "los menores posibles.\n"
+        "3) En ese caso ambas fórmulas son idénticas, como en el agua o el "
+        "amoníaco.\n\n"
+        "La afirmación correcta es que los subíndices de la molecular nunca son "
+        "MENORES que los de la empírica.",
+        [
+            ("Sí, siempre son mayores",
+             "En el agua y el dióxido de carbono las dos fórmulas coinciden."),
+            ("No, a veces son menores",
+             "Nunca son menores: la molecular es la empírica multiplicada por un entero positivo."),
+            ("Sí, salvo en los compuestos que están formados por un solo elemento químico",
+             "También coinciden en compuestos de dos o tres elementos, como el agua o el amoníaco."),
+        ],
+    ),
+]
