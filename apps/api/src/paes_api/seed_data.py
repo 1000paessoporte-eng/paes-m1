@@ -112693,3 +112693,1255 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Quimica - Reacciones quimicas: reactivo limitante y en exceso
+#
+# El temario lo nombra dentro de estequiometria: "Reactivo limitante y en
+# exceso en diversas reacciones quimicas". El nodo insiste en el paso que la
+# prueba oficial castiga: la comparacion NO se hace entre masas ni entre moles
+# crudos, sino entre moles divididos por su coeficiente.
+#
+# Masas atomicas usadas: H=1, C=12, N=14, O=16, Na=23, Mg=24, Al=27, S=32,
+# Cl=35,5, Fe=56, Zn=65.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_limitante", "facil",
+        "¿Qué es el reactivo limitante de una reacción química?",
+        "El que se consume por completo primero",
+        "El limitante es el que pone el techo a la reacción.\n\n"
+        "1) Los reactantes se consumen en la proporción que fijan los "
+        "coeficientes de la ecuación.\n"
+        "2) Uno de ellos se agota antes que el otro, y en ese momento la "
+        "reacción se detiene.\n"
+        "3) Ese reactante que se acaba primero es el limitante.\n\n"
+        "Todo el cálculo de producto se hace a partir de él: el otro reactante "
+        "sobra y no aporta nada más.",
+        [
+            ("El que sobra al terminar",
+             "Ese es el reactivo en exceso, no el limitante."),
+            ("El que se agrega en mayor masa",
+             "La masa por sí sola no decide: lo que decide es la proporción de la ecuación."),
+            ("El que hace más lenta la reacción porque tarda en mezclarse con el resto",
+             "El limitante define cuánto producto se forma, no a qué velocidad ocurre."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "facil",
+        "¿Qué es el reactivo en exceso de una reacción química?",
+        "El que sobra cuando la reacción termina",
+        "El exceso es lo que queda sin reaccionar en el recipiente.\n\n"
+        "1) La reacción se detiene cuando el limitante se agota.\n"
+        "2) En ese instante todavía queda parte del otro reactante.\n"
+        "3) Esa porción sin reaccionar es el exceso, y sigue en el recipiente "
+        "junto al producto.\n\n"
+        "Reconocerlo importa al pesar: la masa final del recipiente incluye ese "
+        "sobrante y no solo el producto.",
+        [
+            ("El que se agota primero",
+             "Ese es el limitante, que es justamente el que no sobra."),
+            ("El que se agrega en menor masa",
+             "La masa no decide: un reactante liviano puede estar igualmente en exceso."),
+            ("El que se transforma en producto durante la primera etapa de la reacción",
+             "Ambos reactantes se transforman en producto; el exceso es el que además sobra."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "facil",
+        "¿Qué reactante determina la cantidad máxima de producto que se puede "
+        "obtener?",
+        "El reactivo limitante",
+        "El producto no puede formarse una vez agotado uno de los "
+        "reactantes.\n\n"
+        "1) Cada porción de producto exige los dos reactantes en la proporción "
+        "de la ecuación.\n"
+        "2) Cuando uno se acaba, la formación de producto se detiene aunque "
+        "sobre el otro.\n"
+        "3) Por eso el techo lo pone el que se agota primero: el limitante.\n\n"
+        "Calcular el producto a partir del reactante en exceso es el error más "
+        "frecuente en este tipo de ejercicios.",
+        [
+            ("El reactivo en exceso",
+             "Ese sobra, así que no puede ser el que impone el límite."),
+            ("El que tiene mayor masa molar",
+             "La masa molar convierte gramos en moles, pero no decide cuál limita."),
+            ("Los dos por igual, porque ambos participan de la reacción química",
+             "Ambos participan, pero solo el que se agota primero fija el máximo de producto."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "facil",
+        "Al terminar una reacción sobra parte de uno de los reactantes. ¿Qué "
+        "se puede afirmar de él?",
+        "Que estaba en exceso",
+        "El sobrante es la señal directa de cuál reactante no limitaba.\n\n"
+        "1) El limitante, por definición, se consume por completo.\n"
+        "2) Si un reactante todavía está presente al final, no se consumió "
+        "entero.\n"
+        "3) Entonces ese reactante estaba en exceso y el otro fue el "
+        "limitante.\n\n"
+        "Observar qué quedó en el recipiente basta para identificar el "
+        "limitante sin hacer ningún cálculo.",
+        [
+            ("Que era el reactivo limitante",
+             "El limitante se agota por completo: no puede ser el que sobra."),
+            ("Que la reacción se detuvo antes de tiempo",
+             "Que sobre el exceso es lo normal, no una señal de reacción interrumpida."),
+            ("Que la ecuación de la reacción no estaba correctamente balanceada",
+             "El sobrante aparece igual con la ecuación bien balanceada, si las cantidades no están en proporción."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "facil",
+        "Para armar un sándwich se necesitan un pan y una lámina de queso. Con "
+        "10 panes y 4 láminas de queso, ¿cuántos sándwiches se arman?",
+        "4 sándwiches",
+        "La analogía reproduce exactamente el razonamiento del limitante.\n\n"
+        "1) Cada sándwich consume un pan y una lámina.\n"
+        "2) Las láminas alcanzan para 4 sándwiches y los panes, para 10.\n"
+        "3) Se arman 4, porque el queso se acaba primero: es el limitante.\n\n"
+        "Los 6 panes que sobran son el exceso, y agregar más panes no aumentaría "
+        "el número de sándwiches.",
+        [
+            ("10 sándwiches",
+             "Cuenta con los panes, que son el ingrediente que sobra."),
+            ("14 sándwiches",
+             "Suma panes y láminas, en vez de aplicar la proporción de uno a uno."),
+            ("7 sándwiches, que es el promedio entre los panes y las láminas disponibles",
+             "El promedio no tiene sentido aquí: el tope lo pone el ingrediente que se agota primero."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "facil",
+        "¿Por qué no basta comparar las masas de los reactantes para saber cuál "
+        "limita?",
+        "Porque la proporción de la ecuación está en moles",
+        "La ecuación balanceada habla de partículas, no de gramos.\n\n"
+        "1) Los coeficientes indican cuántos moles de cada sustancia "
+        "reaccionan.\n"
+        "2) Un mol de una sustancia liviana pesa mucho menos que un mol de una "
+        "pesada.\n"
+        "3) Por eso hay que convertir cada masa a moles antes de comparar.\n\n"
+        "Cuatro gramos de hidrógeno son dos moles, mientras que cuatro gramos de "
+        "oxígeno son apenas un octavo de mol: la masa engaña.",
+        [
+            ("Porque las masas cambian durante la reacción",
+             "La masa total se conserva; el problema es que la proporción no está en gramos."),
+            ("Porque siempre limita el de menor masa",
+             "No hay tal regla: el de menor masa puede estar en exceso."),
+            ("Porque las balanzas de laboratorio no alcanzan la precisión que el cálculo requiere",
+             "La precisión no es el problema: el problema es comparar en la unidad equivocada."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "facil",
+        "Si se agrega más cantidad del reactivo limitante, manteniendo el otro "
+        "en exceso, ¿qué ocurre con el producto?",
+        "Aumenta",
+        "El producto sigue al limitante.\n\n"
+        "1) La cantidad de producto está determinada por el reactante que se "
+        "agota.\n"
+        "2) Al agregar más limitante, hay más material capaz de reaccionar.\n"
+        "3) Como el otro reactante sigue sobrando, ese aumento se traduce en más "
+        "producto.\n\n"
+        "El aumento continúa mientras el reactante que sobraba siga estando en "
+        "exceso.",
+        [
+            ("Se mantiene igual",
+             "Se mantendría si lo agregado fuera el reactivo en exceso."),
+            ("Disminuye",
+             "Agregar reactante nunca reduce la cantidad de producto."),
+            ("Aumenta solo si además se agrega la misma cantidad del otro reactante",
+             "No hace falta: el otro reactante ya está en exceso y sobra."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "facil",
+        "Si se agrega más cantidad del reactivo en exceso, ¿qué ocurre con la "
+        "cantidad de producto?",
+        "No cambia",
+        "Agregar más de lo que ya sobra no aporta nada.\n\n"
+        "1) El producto está limitado por el reactante que se agota.\n"
+        "2) Ese reactante sigue siendo el mismo y en la misma cantidad.\n"
+        "3) Por eso el producto no varía: lo único que crece es el sobrante.\n\n"
+        "Esa insensibilidad es justamente la prueba experimental de que ese "
+        "reactante está en exceso.",
+        [
+            ("Aumenta en la misma proporción",
+             "Aumentaría si el reactante agregado fuera el limitante."),
+            ("Disminuye",
+             "Agregar reactante no reduce el producto en ningún caso."),
+            ("Aumenta, pero solo hasta que ese reactante pase a ser el limitante",
+             "Un reactante que ya está en exceso no pasa a limitar por agregarle más."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "facil",
+        "¿Qué ocurre si los reactantes se mezclan exactamente en la proporción "
+        "que indica la ecuación?",
+        "Ambos se agotan al mismo tiempo",
+        "Es el caso límite entre los dos papeles.\n\n"
+        "1) La proporción de la mezcla coincide con la que exige la "
+        "reacción.\n"
+        "2) Entonces los dos reactantes se consumen al mismo ritmo relativo.\n"
+        "3) Al terminar, ninguno sobra: no hay reactivo en exceso.\n\n"
+        "Esa mezcla se llama estequiométrica y es la que aprovecha por completo "
+        "los dos reactantes.",
+        [
+            ("Sobra el de mayor masa molar",
+             "Con la proporción exacta no sobra ninguno, sea cual sea su masa molar."),
+            ("La reacción no ocurre",
+             "La reacción ocurre normalmente; lo particular es que no queda sobrante."),
+            ("Se forma el doble de producto que en cualquier otra mezcla de esos reactantes",
+             "El producto queda determinado por las cantidades, no por el hecho de que la mezcla sea exacta."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "facil",
+        "En $2H_2 + O_2 \\rightarrow 2H_2O$ se mezclan 2 moles de hidrógeno con "
+        "2 moles de oxígeno. ¿Cuál es el limitante?",
+        "El hidrógeno",
+        "La comparación se hace dividiendo cada cantidad por su coeficiente.\n\n"
+        "1) El hidrógeno tiene 2 moles y coeficiente 2: el cociente da 1.\n"
+        "2) El oxígeno tiene 2 moles y coeficiente 1: el cociente da 2.\n"
+        "3) Limita el de menor cociente, es decir, el hidrógeno.\n\n"
+        "Se forman 2 moles de agua y sobra un mol y medio de oxígeno.",
+        [
+            ("El oxígeno",
+             "Su cociente es 2, el mayor de los dos: sobra."),
+            ("Ninguno, porque hay la misma cantidad de moles",
+             "Igual número de moles no significa proporción exacta: los coeficientes son distintos."),
+            ("Los dos por igual, porque ambos aparecen del mismo lado de la ecuación",
+             "Estar del mismo lado no los iguala: el hidrógeno se agota primero."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "facil",
+        "Al terminar una reacción con un reactante en exceso, ¿qué contiene el "
+        "recipiente?",
+        "El producto y el sobrante del exceso",
+        "En el recipiente queda todo lo que no se consumió.\n\n"
+        "1) El limitante desapareció por completo: se convirtió en producto.\n"
+        "2) El producto formado permanece en el recipiente.\n"
+        "3) Junto a él queda la porción del otro reactante que no alcanzó a "
+        "reaccionar.\n\n"
+        "Por eso la masa final no corresponde solo al producto, algo que hay "
+        "que descontar antes de calcular un rendimiento.",
+        [
+            ("Solo el producto",
+             "El sobrante del reactivo en exceso también sigue ahí."),
+            ("Los dos reactantes y el producto",
+             "El limitante se consumió por completo: ya no está."),
+            ("Solo el sobrante del reactivo en exceso, porque el producto se separa solo",
+             "El producto no se separa por sí mismo: queda mezclado con el sobrante."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "facil",
+        "¿Es cierto que el reactivo limitante es siempre el que está presente "
+        "en menor masa?",
+        "No, depende de la proporción de la ecuación",
+        "La masa es solo uno de los tres datos que intervienen.\n\n"
+        "1) Para comparar hay que pasar cada masa a moles usando su masa "
+        "molar.\n"
+        "2) Después hay que dividir esos moles por el coeficiente de la "
+        "ecuación.\n"
+        "3) Recién ese cociente permite decidir, y puede favorecer al de menor "
+        "masa.\n\n"
+        "Cuatro gramos de hidrógeno alcanzan para reaccionar con 32 gramos de "
+        "oxígeno: el más liviano no es el limitante.",
+        [
+            ("Sí, siempre limita el de menor masa",
+             "La masa no basta: hay que pasar a moles y dividir por el coeficiente."),
+            ("Sí, salvo que ambos sean gases",
+             "El estado de agregación no altera cómo se identifica el limitante."),
+            ("No, porque el limitante es siempre el reactante de mayor masa molar",
+             "Tampoco la masa molar decide por sí sola: interviene junto con la masa y el coeficiente."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $2H_2 + O_2 \\rightarrow 2H_2O$ se mezclan 6 moles de hidrógeno con "
+        "2 moles de oxígeno. ¿Cuál es el reactivo limitante?",
+        "El oxígeno",
+        "Cada cantidad se divide por su coeficiente antes de comparar.\n\n"
+        "1) El hidrógeno: 6 moles divididos por el coeficiente 2 dan 3.\n"
+        "2) El oxígeno: 2 moles divididos por el coeficiente 1 dan 2.\n"
+        "3) El menor cociente corresponde al oxígeno, así que él se agota "
+        "primero.\n\n"
+        "Comparar los moles crudos habría señalado al oxígeno también, pero por "
+        "la razón equivocada: lo que decide es el cociente, no el número menor.",
+        [
+            ("El hidrógeno",
+             "Su cociente es 3, mayor que el del oxígeno: sobra."),
+            ("Ninguno de los dos",
+             "La proporción exacta sería 4 a 2, y aquí hay 6 de hidrógeno."),
+            ("Depende de la temperatura a la que se realice la mezcla dentro del recipiente",
+             "El limitante queda determinado por las cantidades y la ecuación, no por la temperatura."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $2H_2 + O_2 \\rightarrow 2H_2O$ reaccionan 6 moles de hidrógeno con "
+        "2 moles de oxígeno. ¿Cuántos moles de hidrógeno sobran?",
+        "2 moles",
+        "El consumo se calcula desde el limitante, que es el oxígeno.\n\n"
+        "1) Los 2 moles de oxígeno exigen 4 moles de hidrógeno, según la "
+        "proporción de 1 a 2.\n"
+        "2) Se disponía de 6 moles de hidrógeno.\n"
+        "3) La diferencia, 6 menos 4, deja 2 moles de hidrógeno sin "
+        "reaccionar.\n\n"
+        "Ese sobrante sigue en el recipiente junto a los 4 moles de agua "
+        "formados.",
+        [
+            ("4 moles",
+             "Esa es la cantidad de hidrógeno que se consume, no la que sobra."),
+            ("6 moles",
+             "Es todo el hidrógeno inicial: parte de él sí reaccionó."),
+            ("Ninguno, porque el hidrógeno se agota antes que el oxígeno en esta mezcla",
+             "El que se agota es el oxígeno: el hidrógeno está en exceso."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $N_2 + 3H_2 \\rightarrow 2NH_3$ se mezclan 2 moles de nitrógeno con "
+        "3 moles de hidrógeno. ¿Cuántos moles de amoníaco se forman?",
+        "2 moles",
+        "Primero se identifica el limitante y después se calcula el "
+        "producto.\n\n"
+        "1) Nitrógeno: 2 moles divididos por el coeficiente 1 dan 2.\n"
+        "2) Hidrógeno: 3 moles divididos por el coeficiente 3 dan 1, el menor, "
+        "así que el hidrógeno limita.\n"
+        "3) Con 3 moles de hidrógeno y una proporción de 3 a 2 se forman 2 "
+        "moles de amoníaco.\n\n"
+        "Sobra un mol de nitrógeno, porque solo se consumió uno de los dos "
+        "disponibles.",
+        [
+            ("4 moles",
+             "Calcula a partir del nitrógeno, que es el reactante en exceso."),
+            ("3 moles",
+             "Repite los moles de hidrógeno sin aplicar la proporción de 3 a 2."),
+            ("5 moles, sumando los moles de los dos reactantes que se colocaron en el recipiente",
+             "Los moles de reactantes no se suman: el producto se calcula desde el limitante."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $N_2 + 3H_2 \\rightarrow 2NH_3$ reaccionan 2 moles de nitrógeno con "
+        "3 moles de hidrógeno. ¿Cuánto nitrógeno queda sin reaccionar?",
+        "1 mol",
+        "El hidrógeno es el limitante y fija el consumo de nitrógeno.\n\n"
+        "1) Los 3 moles de hidrógeno consumen, en proporción de 3 a 1, un mol "
+        "de nitrógeno.\n"
+        "2) En el recipiente había 2 moles de nitrógeno.\n"
+        "3) Queda entonces 1 mol de nitrógeno sin reaccionar.\n\n"
+        "Ese mol sobrante es lo que hace que la masa final del recipiente no "
+        "corresponda solo al amoníaco.",
+        [
+            ("2 moles",
+             "Es todo el nitrógeno inicial: uno de esos moles sí reaccionó."),
+            ("3 moles",
+             "Corresponde a los moles de hidrógeno, que es el reactante que se agota."),
+            ("Ninguno, porque el nitrógeno es el reactante que se consume por completo",
+             "El que se consume por completo es el hidrógeno: el nitrógeno está en exceso."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $CH_4 + 2O_2 \\rightarrow CO_2 + 2H_2O$ se mezclan 3 moles de "
+        "metano con 4 moles de oxígeno. ¿Cuántos moles de dióxido de carbono se "
+        "forman?",
+        "2 moles",
+        "El oxígeno se agota antes que el metano.\n\n"
+        "1) Metano: 3 moles divididos por el coeficiente 1 dan 3.\n"
+        "2) Oxígeno: 4 moles divididos por el coeficiente 2 dan 2, el menor: "
+        "limita el oxígeno.\n"
+        "3) Con 4 moles de oxígeno y una proporción de 2 a 1 se forman 2 moles "
+        "de dióxido de carbono.\n\n"
+        "Sobra un mol de metano, que en un mechero real se traduce en "
+        "combustión incompleta y hollín.",
+        [
+            ("3 moles",
+             "Calcula desde el metano, que es el reactante en exceso."),
+            ("4 moles",
+             "Repite los moles de oxígeno sin aplicar la proporción de 2 a 1."),
+            ("1 mol, que corresponde al coeficiente del dióxido de carbono en la ecuación",
+             "Ese coeficiente fija la proporción, no la cantidad total formada."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $Zn + 2HCl \\rightarrow ZnCl_2 + H_2$ se mezclan 2 moles de zinc "
+        "con 2 moles de ácido clorhídrico. ¿Cuántos moles de hidrógeno se "
+        "producen?",
+        "1 mol",
+        "El ácido se agota primero pese a que hay igual número de moles.\n\n"
+        "1) Zinc: 2 moles divididos por el coeficiente 1 dan 2.\n"
+        "2) Ácido: 2 moles divididos por el coeficiente 2 dan 1, el menor, así "
+        "que el ácido limita.\n"
+        "3) Con 2 moles de ácido y una proporción de 2 a 1 se produce 1 mol de "
+        "hidrógeno.\n\n"
+        "Este caso muestra por qué no basta comparar moles: los dos partían con "
+        "2 y el que limita es el de mayor coeficiente.",
+        [
+            ("2 moles",
+             "Calcula desde el zinc, que es el reactante en exceso."),
+            ("4 moles",
+             "Multiplica por el coeficiente en vez de dividir por él."),
+            ("0,5 moles, repartiendo el mol de hidrógeno entre los dos moles de zinc disponibles",
+             "El zinc no divide el resultado: la proporción se toma del ácido, que es el limitante."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $2H_2 + O_2 \\rightarrow 2H_2O$ se hacen reaccionar 4 gramos de "
+        "hidrógeno con 16 gramos de oxígeno. ¿Qué masa de agua se forma?",
+        "18 g",
+        "Las masas se convierten a moles antes de comparar.\n\n"
+        "1) 4 gramos de hidrógeno son 2 moles, y 16 gramos de oxígeno son 0,5 "
+        "moles.\n"
+        "2) Los cocientes son 2/2 = 1 y 0,5/1 = 0,5: limita el oxígeno.\n"
+        "3) Medio mol de oxígeno forma 1 mol de agua, es decir, 18 gramos.\n\n"
+        "Sobra 1 mol de hidrógeno, o sea 2 gramos, que quedan en el recipiente "
+        "sin reaccionar.",
+        [
+            ("36 g",
+             "Calcula desde el hidrógeno, que es el reactante en exceso."),
+            ("20 g",
+             "Suma las masas de los reactantes, sin considerar que uno sobra."),
+            ("16 g, que es la masa de oxígeno colocada en el recipiente al comenzar",
+             "Esa es la masa del limitante, no la del agua formada: el agua incorpora además hidrógeno."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $2Mg + O_2 \\rightarrow 2MgO$ se queman 48 gramos de magnesio con "
+        "16 gramos de oxígeno. ¿Qué masa de óxido de magnesio se forma?",
+        "40 g",
+        "El oxígeno disponible es el que pone el techo.\n\n"
+        "1) 48 gramos de magnesio son 2 moles y 16 gramos de oxígeno son 0,5 "
+        "moles.\n"
+        "2) Los cocientes son 2/2 = 1 y 0,5/1 = 0,5: limita el oxígeno.\n"
+        "3) Medio mol de oxígeno forma 1 mol de óxido de magnesio, cuya masa "
+        "molar es 40 g/mol.\n\n"
+        "Los 24 gramos de magnesio que sobran quedan como metal sin quemar en "
+        "el crisol.",
+        [
+            ("80 g",
+             "Calcula desde el magnesio, que es el reactante en exceso."),
+            ("64 g",
+             "Suma las masas iniciales, sin descontar el magnesio que sobra."),
+            ("48 g, que es la masa de magnesio que se colocó dentro del crisol",
+             "Parte de ese magnesio no reacciona: el óxido formado pesa 40 gramos."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $2Mg + O_2 \\rightarrow 2MgO$ se queman 48 gramos de magnesio con "
+        "16 gramos de oxígeno. ¿Qué masa de magnesio queda sin quemar?",
+        "24 g",
+        "El limitante es el oxígeno y él fija cuánto magnesio reacciona.\n\n"
+        "1) Los 16 gramos de oxígeno son 0,5 moles.\n"
+        "2) En proporción de 1 a 2, esos 0,5 moles consumen 1 mol de magnesio, "
+        "es decir, 24 gramos.\n"
+        "3) De los 48 gramos iniciales quedan entonces 24 gramos sin quemar.\n\n"
+        "Ese magnesio metálico se distingue a simple vista del óxido: sigue "
+        "siendo brillante mientras el producto es un polvo blanco.",
+        [
+            ("48 g",
+             "Es todo el magnesio inicial: la mitad sí reaccionó."),
+            ("16 g",
+             "Corresponde a la masa de oxígeno, que se consume por completo."),
+            ("Nada, porque el magnesio se consume por completo durante la combustión",
+             "El que se consume por completo es el oxígeno: el magnesio está en exceso."),
+        ],
+    ),
+]
+
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_limitante", "medio",
+        "En $C + O_2 \\rightarrow CO_2$ se queman 24 gramos de carbono con 32 "
+        "gramos de oxígeno. ¿Qué masa de dióxido de carbono se forma?",
+        "44 g",
+        "El oxígeno alcanza para menos carbono del que hay.\n\n"
+        "1) 24 gramos de carbono son 2 moles y 32 gramos de oxígeno, 1 mol.\n"
+        "2) La proporción de la ecuación es de uno a uno, así que limita el "
+        "oxígeno.\n"
+        "3) Un mol de oxígeno forma 1 mol de dióxido de carbono: 44 gramos.\n\n"
+        "Los 12 gramos de carbono que sobran quedan como hollín, que es "
+        "justamente lo que se ve cuando una combustión ocurre con poco aire.",
+        [
+            ("88 g",
+             "Calcula desde el carbono, que es el reactante en exceso."),
+            ("56 g",
+             "Suma las masas iniciales, sin descontar el carbono que sobra."),
+            ("24 g, que es la masa de carbono que se colocó al comienzo del ensayo",
+             "Solo la mitad de ese carbono reacciona, y el producto incorpora además el oxígeno."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $2Na + Cl_2 \\rightarrow 2NaCl$ se mezclan 3 moles de sodio con 2 "
+        "moles de cloro. ¿Cuántos moles de sal se forman?",
+        "3 moles",
+        "El sodio se agota antes que el cloro.\n\n"
+        "1) Sodio: 3 moles divididos por el coeficiente 2 dan 1,5.\n"
+        "2) Cloro: 2 moles divididos por el coeficiente 1 dan 2.\n"
+        "3) Limita el sodio, y en proporción de 2 a 2 los 3 moles de sodio "
+        "forman 3 moles de sal.\n\n"
+        "Sobra medio mol de cloro, porque solo se consumió uno y medio de los "
+        "dos disponibles.",
+        [
+            ("4 moles",
+             "Calcula desde el cloro, que es el reactante en exceso."),
+            ("2 moles",
+             "Repite los moles de cloro sin aplicar la proporción de la ecuación."),
+            ("1,5 moles, que es el cociente entre los moles de sodio y su coeficiente",
+             "Ese cociente sirve para identificar al limitante, no para dar la cantidad de producto."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $Fe + S \\rightarrow FeS$ se calientan 56 gramos de hierro con 64 "
+        "gramos de azufre. ¿Qué masa de sulfuro de hierro se obtiene?",
+        "88 g",
+        "La proporción es de uno a uno, así que decide quién tiene menos "
+        "moles.\n\n"
+        "1) 56 gramos de hierro son 1 mol y 64 gramos de azufre, 2 moles.\n"
+        "2) Limita el hierro, que se agota cuando ha reaccionado un mol de "
+        "azufre.\n"
+        "3) Se forma 1 mol de sulfuro de hierro, de masa molar 88 g/mol.\n\n"
+        "El azufre sobrante se reconoce por su color amarillo entre el producto "
+        "gris oscuro.",
+        [
+            ("176 g",
+             "Calcula desde el azufre, que es el reactante en exceso."),
+            ("120 g",
+             "Suma las masas iniciales, sin descontar el azufre que sobra."),
+            ("64 g, que es la masa de azufre que se agregó al tubo de ensayo",
+             "Solo la mitad de ese azufre reacciona, y el producto incorpora además el hierro."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $Fe + S \\rightarrow FeS$ se calientan 56 gramos de hierro con 64 "
+        "gramos de azufre. ¿Qué masa de azufre queda sin reaccionar?",
+        "32 g",
+        "El hierro limita y fija cuánto azufre se consume.\n\n"
+        "1) El mol de hierro consume, en proporción de uno a uno, un mol de "
+        "azufre.\n"
+        "2) Un mol de azufre pesa 32 gramos.\n"
+        "3) De los 64 gramos iniciales sobran entonces 32 gramos.\n\n"
+        "Ese sobrante explica por qué la masa del contenido del tubo sigue "
+        "siendo 120 gramos aunque el producto pese 88.",
+        [
+            ("64 g",
+             "Es todo el azufre inicial: la mitad sí reaccionó."),
+            ("56 g",
+             "Corresponde a la masa de hierro, que se consume por completo."),
+            ("Nada, porque los dos reactantes reaccionan en proporción de uno a uno",
+             "La proporción es de uno a uno en MOLES, y había el doble de moles de azufre."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "¿Cuál es el procedimiento correcto para identificar el reactivo "
+        "limitante?",
+        "Dividir los moles de cada uno por su coeficiente",
+        "El cociente vuelve comparables cantidades que la ecuación pide en "
+        "proporciones distintas.\n\n"
+        "1) Se convierte la masa de cada reactante a moles con su masa molar.\n"
+        "2) Se divide cada cantidad de moles por el coeficiente que le "
+        "corresponde en la ecuación balanceada.\n"
+        "3) El reactante con el cociente menor es el limitante.\n\n"
+        "El cociente indica cuántas veces se podría repetir la reacción "
+        "completa con lo disponible de ese reactante.",
+        [
+            ("Comparar directamente las masas",
+             "Los gramos no son comparables: un mol de cada sustancia pesa distinto."),
+            ("Comparar directamente los moles",
+             "Solo sirve si los coeficientes son iguales; si no, hay que dividir por ellos."),
+            ("Multiplicar los moles de cada reactante por su coeficiente y comparar los resultados",
+             "Multiplicar invierte el criterio y señala como limitante al que sobra."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En la reacción $A + 2B \\rightarrow C$ se mezclan 4 moles de A con 4 "
+        "moles de B. ¿Cuántos moles de C se forman?",
+        "2 moles",
+        "Los coeficientes desiguales hacen que el que limita no sea el de menos "
+        "moles.\n\n"
+        "1) A: 4 moles divididos por el coeficiente 1 dan 4.\n"
+        "2) B: 4 moles divididos por el coeficiente 2 dan 2, el menor: limita "
+        "B.\n"
+        "3) Con 4 moles de B y una proporción de 2 a 1 se forman 2 moles de "
+        "C.\n\n"
+        "Sobran 2 moles de A, aunque los dos reactantes partieron con la misma "
+        "cantidad.",
+        [
+            ("4 moles",
+             "Calcula desde A, que es el reactante en exceso."),
+            ("8 moles",
+             "Multiplica por el coeficiente 2 en vez de dividir por él."),
+            ("6 moles, sumando los moles de A y de B que sí alcanzan a reaccionar",
+             "Los moles de reactantes no se suman: el producto sale de la proporción con el limitante."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $CaCO_3 + 2HCl \\rightarrow CaCl_2 + H_2O + CO_2$ se mezcla 1 mol "
+        "de carbonato con 1 mol de ácido. ¿Cuántos moles de gas se liberan?",
+        "0,5 moles",
+        "El ácido alcanza solo para la mitad del carbonato.\n\n"
+        "1) Carbonato: 1 mol dividido por el coeficiente 1 da 1.\n"
+        "2) Ácido: 1 mol dividido por el coeficiente 2 da 0,5, el menor: limita "
+        "el ácido.\n"
+        "3) Cada 2 moles de ácido liberan 1 mol de gas, así que 1 mol de ácido "
+        "libera 0,5 moles.\n\n"
+        "Al terminar quedan 0,5 moles de carbonato sin disolver en el fondo del "
+        "vaso.",
+        [
+            ("1 mol",
+             "Calcula desde el carbonato, que es el reactante en exceso."),
+            ("2 moles",
+             "Toma el coeficiente del ácido como si fuera la cantidad de gas."),
+            ("0,25 moles, dividiendo el mol de ácido entre los cuatro productos de la reacción",
+             "Los productos no se reparten el mol: cada uno tiene su propia proporción."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $2H_2 + O_2 \\rightarrow 2H_2O$ se hacen reaccionar 10 gramos de "
+        "hidrógeno con 64 gramos de oxígeno. ¿Qué masa de agua se forma?",
+        "72 g",
+        "El cálculo exige convertir ambas masas antes de comparar.\n\n"
+        "1) 10 gramos de hidrógeno son 5 moles y 64 gramos de oxígeno son 2 "
+        "moles.\n"
+        "2) Los cocientes son 5/2 = 2,5 y 2/1 = 2: limita el oxígeno.\n"
+        "3) Dos moles de oxígeno forman 4 moles de agua, que pesan 72 "
+        "gramos.\n\n"
+        "Sobran 2 gramos de hidrógeno, que corresponden a 1 mol sin reaccionar.",
+        [
+            ("90 g",
+             "Calcula desde el hidrógeno, que es el reactante en exceso."),
+            ("74 g",
+             "Suma las masas iniciales, sin descontar el hidrógeno que sobra."),
+            ("64 g, que es la masa de oxígeno con que se cargó el recipiente",
+             "Esa es la masa del limitante; el agua formada incorpora además el hidrógeno."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En un proceso industrial, uno de los reactantes es mucho más barato "
+        "que el otro. ¿Por qué conviene ponerlo en exceso?",
+        "Para consumir por completo el reactante caro",
+        "La decisión es económica y se apoya en el concepto de limitante.\n\n"
+        "1) El reactante que se agota es el que se aprovecha por entero.\n"
+        "2) Poner el barato en exceso obliga a que el caro sea el limitante.\n"
+        "3) Así el reactante costoso se convierte todo en producto y no queda "
+        "sin reaccionar.\n\n"
+        "Lo que sobra al final es el material barato, que muchas veces puede "
+        "recuperarse y volver a usarse.",
+        [
+            ("Para que la reacción libere más calor",
+             "El exceso no cambia el calor por unidad de producto formado."),
+            ("Para aumentar el número de productos",
+             "La ecuación fija cuáles son los productos, y el exceso no agrega otros."),
+            ("Para que los dos se agoten a la vez",
+             "Justamente lo contrario: el exceso garantiza que uno sobre."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "Dos ensayos parten con la misma cantidad del reactivo limitante, pero "
+        "el segundo lleva el doble del reactivo en exceso. ¿Qué se espera "
+        "observar?",
+        "La misma cantidad de producto en ambos",
+        "El producto depende solo del limitante.\n\n"
+        "1) En los dos ensayos el limitante es el mismo y está en igual "
+        "cantidad.\n"
+        "2) El reactante que se duplicó ya sobraba antes de duplicarlo.\n"
+        "3) Por eso la cantidad de producto no cambia: lo único que crece es el "
+        "sobrante final.\n\n"
+        "Ese par de ensayos es la forma más directa de demostrar cuál de los "
+        "dos reactantes está limitando.",
+        [
+            ("El doble de producto en el segundo",
+             "Se duplicaría si lo agregado fuera el limitante, y no lo es."),
+            ("La mitad de producto en el segundo",
+             "Agregar reactante no reduce el producto en ningún caso."),
+            ("Más producto en el segundo, pero menos del doble por la pérdida de material",
+             "No hay aumento alguno: el limitante sigue siendo el mismo y en la misma cantidad."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $4Al + 3O_2 \\rightarrow 2Al_2O_3$ se queman 54 gramos de aluminio "
+        "con 96 gramos de oxígeno. ¿Qué masa de óxido se forma? (Al = 27, "
+        "O = 16)",
+        "102 g",
+        "Los coeficientes 4 y 3 obligan a dividir antes de comparar.\n\n"
+        "1) 54 gramos de aluminio son 2 moles y 96 gramos de oxígeno, 3 "
+        "moles.\n"
+        "2) Los cocientes son 2/4 = 0,5 y 3/3 = 1: limita el aluminio.\n"
+        "3) Con 4 moles de aluminio por cada 2 de óxido, los 2 moles disponibles "
+        "forman 1 mol de óxido, de masa molar 102 g/mol.\n\n"
+        "Sobra oxígeno pese a que su cociente parecía holgado, lo que confirma "
+        "que comparar moles crudos habría dado el resultado equivocado.",
+        [
+            ("204 g",
+             "Calcula desde el oxígeno, que es el reactante en exceso."),
+            ("150 g",
+             "Suma las masas iniciales, sin descontar el oxígeno que sobra."),
+            ("54 g, que es la masa de aluminio que se colocó al comienzo del ensayo",
+             "El óxido formado incorpora además el oxígeno, así que pesa más que el aluminio de partida."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $4Al + 3O_2 \\rightarrow 2Al_2O_3$ se queman 54 gramos de aluminio "
+        "con 96 gramos de oxígeno. ¿Qué masa de oxígeno sobra?",
+        "48 g",
+        "El aluminio limita y fija cuánto oxígeno se consume.\n\n"
+        "1) Los 54 gramos de aluminio son 2 moles.\n"
+        "2) En proporción de 4 a 3, esos 2 moles consumen 1,5 moles de oxígeno, "
+        "es decir, 48 gramos.\n"
+        "3) De los 96 gramos iniciales sobran entonces 48 gramos.\n\n"
+        "Comprobación por masas: 54 más 48 dan los 102 gramos de óxido "
+        "formados, tal como exige la conservación de la materia.",
+        [
+            ("96 g",
+             "Es todo el oxígeno inicial: la mitad sí reaccionó."),
+            ("54 g",
+             "Corresponde a la masa de aluminio, que se consume por completo."),
+            ("24 g, que es la cuarta parte del oxígeno colocado en el recipiente",
+             "El consumo es de 1,5 moles, o sea 48 gramos: sobra la mitad, no tres cuartos."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $N_2 + 3H_2 \\rightarrow 2NH_3$ se mezclan 28 gramos de nitrógeno "
+        "con 3 gramos de hidrógeno. ¿Qué masa de amoníaco se obtiene?",
+        "17 g",
+        "El hidrógeno es escaso pese a que su masa parece pequeña por otra "
+        "razón.\n\n"
+        "1) 28 gramos de nitrógeno son 1 mol y 3 gramos de hidrógeno son 1,5 "
+        "moles.\n"
+        "2) Los cocientes son 1/1 = 1 y 1,5/3 = 0,5: limita el hidrógeno.\n"
+        "3) Con 3 moles de hidrógeno por cada 2 de amoníaco, 1,5 moles forman 1 "
+        "mol de amoníaco: 17 gramos.\n\n"
+        "Sobran 14 gramos de nitrógeno, la mitad del colocado al comienzo.",
+        [
+            ("34 g",
+             "Calcula desde el nitrógeno, que es el reactante en exceso."),
+            ("31 g",
+             "Suma las masas iniciales, sin descontar el nitrógeno que sobra."),
+            ("3 g, que es la masa de hidrógeno que se introdujo en el reactor",
+             "Esa es la masa del limitante; el amoníaco incorpora además el nitrógeno."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $S + O_2 \\rightarrow SO_2$ se queman 32 gramos de azufre con 64 "
+        "gramos de oxígeno. ¿Qué masa de dióxido de azufre se forma?",
+        "64 g",
+        "La proporción es de uno a uno y el azufre aporta menos moles.\n\n"
+        "1) 32 gramos de azufre son 1 mol y 64 gramos de oxígeno, 2 moles.\n"
+        "2) Limita el azufre, que se agota tras consumir un mol de oxígeno.\n"
+        "3) Se forma 1 mol de dióxido de azufre, cuya masa molar es 64 "
+        "g/mol.\n\n"
+        "Que el producto y el oxígeno inicial pesen lo mismo es una "
+        "coincidencia numérica, no una regla.",
+        [
+            ("128 g",
+             "Calcula desde el oxígeno, que es el reactante en exceso."),
+            ("96 g",
+             "Suma las masas iniciales, sin descontar el oxígeno que sobra."),
+            ("32 g, que es la masa de azufre colocada dentro del recipiente cerrado",
+             "El producto incorpora además un mol de oxígeno, así que pesa el doble."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $S + O_2 \\rightarrow SO_2$ se queman 32 gramos de azufre con 64 "
+        "gramos de oxígeno. ¿Qué masa de oxígeno queda sin reaccionar?",
+        "32 g",
+        "El azufre limita y determina el consumo de oxígeno.\n\n"
+        "1) El mol de azufre consume, en proporción de uno a uno, un mol de "
+        "oxígeno.\n"
+        "2) Ese mol de oxígeno pesa 32 gramos.\n"
+        "3) De los 64 gramos iniciales sobran entonces 32 gramos.\n\n"
+        "La comprobación cierra: 32 gramos de azufre más 32 de oxígeno dan los "
+        "64 gramos del producto.",
+        [
+            ("64 g",
+             "Es todo el oxígeno inicial: la mitad sí reaccionó."),
+            ("16 g",
+             "Corresponde a media masa molar de oxígeno molecular y no al sobrante."),
+            ("Nada, porque el oxígeno es el reactante que se consume por completo",
+             "El que se consume por completo es el azufre: el oxígeno está en exceso."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En la reacción $A + 3B \\rightarrow 2C$ se mezclan 3 moles de A con 6 "
+        "moles de B. ¿Cuántos moles de C se obtienen?",
+        "4 moles",
+        "El coeficiente 3 de B lo convierte en el limitante.\n\n"
+        "1) A: 3 moles divididos por el coeficiente 1 dan 3.\n"
+        "2) B: 6 moles divididos por el coeficiente 3 dan 2, el menor: limita "
+        "B.\n"
+        "3) Con 3 moles de B por cada 2 de C, los 6 moles de B forman 4 moles "
+        "de C.\n\n"
+        "Queda 1 mol de A sin reaccionar, porque solo se consumieron 2 de los "
+        "3 disponibles.",
+        [
+            ("6 moles",
+             "Calcula desde A, que es el reactante en exceso."),
+            ("2 moles",
+             "Se detiene en el cociente del limitante y no aplica la proporción con C."),
+            ("9 moles, sumando los moles de los dos reactantes colocados en el recipiente",
+             "Los moles de reactantes no se suman para obtener el producto."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "Para unir dos piezas se necesitan un perno y dos tuercas. Con 20 "
+        "pernos y 50 tuercas, ¿cuántas uniones se completan?",
+        "20 uniones",
+        "El modelo mecánico reproduce el cálculo del limitante.\n\n"
+        "1) Los pernos alcanzan para 20 uniones, una por perno.\n"
+        "2) Las tuercas alcanzan para 25 uniones, porque cada una necesita "
+        "dos.\n"
+        "3) El menor de los dos valores es 20, así que los pernos limitan.\n\n"
+        "Sobran 10 tuercas, que son las 50 iniciales menos las 40 usadas en las "
+        "20 uniones.",
+        [
+            ("25 uniones",
+             "Cuenta con las tuercas, que son las piezas que sobran."),
+            ("50 uniones",
+             "Toma el número de tuercas como si cada una formara una unión."),
+            ("35 uniones, que es el promedio entre las piezas de los dos tipos disponibles",
+             "El promedio no aplica: el tope lo pone la pieza que se agota primero."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "En $Mg + 2HCl \\rightarrow MgCl_2 + H_2$ se hacen reaccionar 24 gramos "
+        "de magnesio con 3 moles de ácido. ¿Qué volumen de hidrógeno se recoge "
+        "en condiciones normales?",
+        "22,4 litros",
+        "El magnesio es el limitante y fija los moles de gas.\n\n"
+        "1) 24 gramos de magnesio son 1 mol, con cociente 1/1 = 1.\n"
+        "2) El ácido tiene 3 moles y coeficiente 2, con cociente 1,5: sobra.\n"
+        "3) Un mol de magnesio libera 1 mol de hidrógeno, que ocupa 22,4 litros "
+        "en condiciones normales.\n\n"
+        "Sobra 1 mol de ácido, porque el magnesio solo alcanzó a consumir 2 de "
+        "los 3 disponibles.",
+        [
+            ("44,8 litros",
+             "Calcula desde el ácido, que es el reactante en exceso."),
+            ("11,2 litros",
+             "Divide el volumen molar por dos, tomando el coeficiente del ácido."),
+            ("67,2 litros, que corresponden a los tres moles de ácido colocados en el matraz",
+             "Los moles de ácido no se convierten uno a uno en moles de hidrógeno: la proporción es de 2 a 1."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "Un estudiante calcula el producto de una reacción a partir del "
+        "reactante en exceso. ¿Qué le ocurre a su resultado?",
+        "Sobreestima la cantidad de producto",
+        "El exceso, por definición, alcanza para más producto del que se puede "
+        "formar.\n\n"
+        "1) El reactante en exceso sobra: hay más del necesario.\n"
+        "2) Calcular con él supone que todo ese material reacciona.\n"
+        "3) Como en realidad se agota antes el otro, el valor obtenido es mayor "
+        "que el real.\n\n"
+        "El control es simple: verificar que el reactante usado en el cálculo "
+        "sea el de menor cociente entre moles y coeficiente.",
+        [
+            ("Subestima la cantidad de producto",
+             "Subestimaría si usara menos material del que reacciona, y aquí usa más."),
+            ("Obtiene el valor correcto igual",
+             "Solo coincidiría si la mezcla fuera exactamente estequiométrica."),
+            ("Obtiene el valor correcto, pero expresado en moles en vez de en gramos",
+             "No es un problema de unidades: el número mismo queda por encima del real."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "Se agrega cada vez más de un reactante A a una cantidad fija de B. La "
+        "cantidad de producto sube y después se estabiliza. ¿Qué explica esa "
+        "meseta?",
+        "B pasó a ser el reactivo limitante",
+        "El cambio de pendiente marca el cambio de papeles.\n\n"
+        "1) Al comienzo A es escaso, así que cada porción agregada produce más "
+        "producto.\n"
+        "2) En algún punto A alcanza la proporción exacta y B empieza a "
+        "agotarse antes.\n"
+        "3) Desde ahí B limita, y agregar más A ya no cambia el resultado: la "
+        "curva se aplana.\n\n"
+        "El punto donde la curva se quiebra corresponde a la mezcla "
+        "estequiométrica de los dos reactantes.",
+        [
+            ("La reacción se volvió más lenta",
+             "El gráfico muestra cantidad de producto, no velocidad."),
+            ("A dejó de reaccionar con B",
+             "A sigue siendo capaz de reaccionar; lo que falta es B."),
+            ("Se alcanzó el máximo de producto que la ecuación balanceada permite formar",
+             "La ecuación no impone un tope propio: el tope lo pone la cantidad de B disponible."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "¿Puede un mismo reactante ser limitante en un ensayo y estar en exceso "
+        "en otro?",
+        "Sí, según las cantidades que se mezclen",
+        "El papel de limitante no es una propiedad de la sustancia.\n\n"
+        "1) Quién limita depende de cuántos moles hay de cada reactante y de "
+        "los coeficientes.\n"
+        "2) Cambiar las cantidades iniciales cambia los cocientes.\n"
+        "3) Por eso el mismo reactante puede limitar en un ensayo y sobrar en "
+        "otro.\n\n"
+        "Es un papel que se asigna a la mezcla, no a la sustancia.",
+        [
+            ("No, cada sustancia tiene un papel fijo",
+             "El papel depende de la mezcla, no de la identidad de la sustancia."),
+            ("No, salvo que se cambie la ecuación",
+             "La ecuación se mantiene: basta cambiar las cantidades iniciales."),
+            ("Sí, pero solo si se modifica la temperatura a la que se lleva a cabo el ensayo",
+             "La temperatura no interviene: lo que decide son las cantidades y los coeficientes."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "medio",
+        "Tres ensayos de $2H_2 + O_2 \\rightarrow 2H_2O$ parten con: I) 4 moles "
+        "de hidrógeno y 2 de oxígeno; II) 4 y 1; III) 2 y 3. ¿En cuál no sobra "
+        "ningún reactante?",
+        "En el ensayo I",
+        "No sobra nada solo cuando la mezcla está en la proporción de la "
+        "ecuación.\n\n"
+        "1) La ecuación exige 2 moles de hidrógeno por cada mol de oxígeno.\n"
+        "2) El ensayo I tiene 4 y 2, que es exactamente esa proporción: los dos "
+        "reactantes se agotan al mismo tiempo.\n"
+        "3) En el II la razón es 4 a 1, así que sobra hidrógeno; en el III es 2 "
+        "a 3, y sobra oxígeno.\n\n"
+        "Una mezcla así se llama estequiométrica y es la que aprovecha por "
+        "completo los dos reactantes.",
+        [
+            ("En el ensayo II",
+             "Con 4 y 1 hacen falta solo 2 moles de hidrógeno: sobran 2."),
+            ("En el ensayo III",
+             "Con 2 y 3 basta 1 mol de oxígeno: sobran 2."),
+            ("En ninguno, porque siempre queda algo de reactante sin transformar",
+             "Con la proporción exacta los dos reactantes se agotan a la vez y no queda sobrante."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "dificil",
+        "Un grupo quiere determinar experimentalmente cuál de dos reactantes "
+        "limita una reacción. ¿Qué procedimiento se lo permite?",
+        "Repetir el ensayo duplicando solo uno de los dos reactantes",
+        "La prueba consiste en ver a cuál de los dos responde el producto.\n\n"
+        "1) Se hace un ensayo de referencia y se mide el producto obtenido.\n"
+        "2) Se repite duplicando un solo reactante y se vuelve a medir.\n"
+        "3) Si el producto aumenta, el reactante duplicado era el limitante; si "
+        "no cambia, estaba en exceso.\n\n"
+        "Duplicar los dos a la vez no serviría: el producto aumentaría igual y "
+        "no se sabría cuál de los dos lo provocó.",
+        [
+            ("Pesar los dos reactantes antes de empezar",
+             "Las masas iniciales no bastan: hay que pasarlas a moles y dividirlas por los coeficientes."),
+            ("Medir la temperatura durante la reacción",
+             "La temperatura informa sobre el calor liberado, no sobre cuál reactante se agota."),
+            ("Duplicar los dos reactantes a la vez",
+             "Con los dos duplicados el producto sube igual y no se distingue cuál de ellos limitaba."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "dificil",
+        "En $2H_2 + O_2 \\rightarrow 2H_2O$ se hacen reaccionar 8 gramos de "
+        "hidrógeno con 32 gramos de oxígeno en un recipiente cerrado. ¿Qué masa "
+        "total contiene el recipiente al terminar?",
+        "40 g",
+        "En un recipiente cerrado la masa total no cambia.\n\n"
+        "1) El oxígeno limita: 1 mol frente a 4 moles de hidrógeno, con "
+        "cocientes 1 y 2.\n"
+        "2) Se forman 2 moles de agua, 36 gramos, y sobran 2 moles de "
+        "hidrógeno, 4 gramos.\n"
+        "3) La suma da 40 gramos, exactamente los 8 más 32 colocados al "
+        "comienzo.\n\n"
+        "Que sobre un reactante no altera la conservación de la materia: el "
+        "sobrante sigue dentro del recipiente y sigue pesando.",
+        [
+            ("36 g",
+             "Contabiliza solo el agua formada y olvida el hidrógeno que sobró."),
+            ("32 g",
+             "Corresponde a la masa de oxígeno inicial, que es apenas una parte del contenido."),
+            ("44 g, sumando el agua formada con los ocho gramos de hidrógeno iniciales",
+             "Parte de ese hidrógeno ya está dentro del agua: contarlo dos veces sobrepasa la masa inicial."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "dificil",
+        "Una muestra de 100 gramos de caliza con 80% de carbonato de calcio se "
+        "trata con 1 mol de ácido, según $CaCO_3 + 2HCl \\rightarrow CaCl_2 + "
+        "H_2O + CO_2$. ¿Qué masa de gas se libera? ($CaCO_3$: 100 g/mol)",
+        "22 g",
+        "Hay que descontar la impureza antes de decidir quién limita.\n\n"
+        "1) El 80% de 100 gramos son 80 gramos de carbonato, es decir, 0,8 "
+        "moles.\n"
+        "2) Los cocientes son 0,8/1 = 0,8 para el carbonato y 1/2 = 0,5 para el "
+        "ácido: limita el ácido.\n"
+        "3) Cada 2 moles de ácido liberan 1 mol de gas, así que 1 mol libera 0,5 "
+        "moles: 22 gramos.\n\n"
+        "Queda carbonato sin disolver en el fondo, además del material inerte "
+        "que nunca iba a reaccionar.",
+        [
+            ("35,2 g",
+             "Calcula desde el carbonato, que en esta mezcla está en exceso."),
+            ("44 g",
+             "Supone un mol completo de gas, y el ácido solo alcanza para medio."),
+            ("80 g, que es la masa de carbonato de calcio realmente presente en la muestra",
+             "Esa es la masa del reactante disponible, no la del gas que llega a formarse."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "dificil",
+        "Un estudiante afirma que la masa del producto siempre es igual a la "
+        "suma de las masas de los dos reactantes. ¿Es correcto?",
+        "No, cuando uno está en exceso parte de su masa queda sin reaccionar",
+        "La conservación de la materia se cumple, pero no como él la "
+        "aplica.\n\n"
+        "1) La masa total del sistema cerrado sí se conserva.\n"
+        "2) Esa masa total incluye el producto y el sobrante del reactivo en "
+        "exceso.\n"
+        "3) Por eso el producto pesa la suma de los reactantes solo cuando la "
+        "mezcla es exactamente estequiométrica.\n\n"
+        "En cualquier otro caso, el producto pesa menos que esa suma, y la "
+        "diferencia es justamente lo que sobró.",
+        [
+            ("Sí, siempre se cumple en cualquier reacción",
+             "Solo se cumple si ninguno de los dos reactantes sobra."),
+            ("No, porque parte de la masa se pierde en el proceso",
+             "Nada se pierde en un sistema cerrado: lo que falta quedó como sobrante."),
+            ("Sí, salvo cuando la reacción libera un gas al aire",
+             "Un gas que escapa también explica la diferencia, pero el caso general es el sobrante."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "dificil",
+        "Un estudiante compara 10 gramos de hidrógeno con 60 gramos de oxígeno "
+        "y concluye que el hidrógeno limita porque pesa menos. ¿Qué falla en su "
+        "razonamiento?",
+        "Comparó masas en vez de moles divididos por su coeficiente",
+        "La masa no es la magnitud que la ecuación pone en proporción.\n\n"
+        "1) Los coeficientes de la ecuación hablan de moles, no de gramos.\n"
+        "2) 10 gramos de hidrógeno son 5 moles, mientras que 60 gramos de "
+        "oxígeno son menos de 2.\n"
+        "3) Dividiendo por los coeficientes de $2H_2 + O_2$ resultan 2,5 y "
+        "1,875: el que limita es el oxígeno.\n\n"
+        "El hidrógeno es tan liviano que una masa pequeña equivale a muchos "
+        "moles, y ahí se rompe la intuición basada en el peso.",
+        [
+            ("Usó mal las masas molares de los reactantes",
+             "Las masas molares no aparecen en su razonamiento: comparó gramos directamente."),
+            ("Olvidó balancear la ecuación de la reacción",
+             "La ecuación puede estar bien balanceada y el error persiste igual."),
+            ("Confundió el limitante con el producto",
+             "No hay tal confusión: el problema es la magnitud que eligió para comparar."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "dificil",
+        "El nitrógeno se convierte en amoníaco según $N_2 + 3H_2 \\rightarrow "
+        "2NH_3$ y este en monóxido según $4NH_3 + 5O_2 \\rightarrow 4NO + "
+        "6H_2O$. En la primera etapa hay 1 mol de nitrógeno y 6 de hidrógeno; "
+        "en la segunda, oxígeno de sobra. ¿Cuántos moles de monóxido se "
+        "obtienen?",
+        "2 moles",
+        "Cada etapa tiene su propio limitante.\n\n"
+        "1) En la primera, los cocientes son 1/1 = 1 y 6/3 = 2: limita el "
+        "nitrógeno, y se forman 2 moles de amoníaco.\n"
+        "2) En la segunda el oxígeno está en exceso, así que limita el "
+        "amoníaco disponible.\n"
+        "3) La proporción entre amoníaco y monóxido es de 4 a 4, de modo que "
+        "los 2 moles dan 2 moles de monóxido.\n\n"
+        "El hidrógeno sobrante de la primera etapa no interviene en la segunda: "
+        "queda fuera del cálculo.",
+        [
+            ("4 moles",
+             "Calcula desde el hidrógeno, que en la primera etapa está en exceso."),
+            ("1 mol",
+             "Repite los moles de nitrógeno sin aplicar la proporción de 1 a 2 de la primera etapa."),
+            ("6 moles, tomando el coeficiente del agua que aparece en la segunda ecuación",
+             "Ese coeficiente rige la formación de agua, no la de monóxido de nitrógeno."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "dificil",
+        "En $Zn + 2HCl \\rightarrow ZnCl_2 + H_2$ se hacen reaccionar 32,5 "
+        "gramos de zinc (Zn = 65) con 2 moles de ácido. ¿Qué volumen de gas se "
+        "recoge en condiciones normales?",
+        "11,2 litros",
+        "El zinc se agota antes que el ácido.\n\n"
+        "1) 32,5 gramos de zinc son 0,5 moles, con cociente 0,5/1 = 0,5.\n"
+        "2) El ácido aporta 2 moles, con cociente 2/2 = 1: limita el zinc.\n"
+        "3) Medio mol de zinc libera medio mol de hidrógeno, que ocupa 11,2 "
+        "litros en condiciones normales.\n\n"
+        "Sobra 1 mol de ácido, así que la disolución final sigue siendo ácida "
+        "aunque ya no queden trozos de metal.",
+        [
+            ("22,4 litros",
+             "Corresponde a un mol de gas y el zinc solo alcanza para medio."),
+            ("44,8 litros",
+             "Calcula desde el ácido, que es el reactante en exceso."),
+            ("5,6 litros, que es la cuarta parte del volumen molar en condiciones normales",
+             "El zinc aporta medio mol de gas, no un cuarto: son 11,2 litros."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "dificil",
+        "Cuatro ensayos parten con la misma masa de B y masas crecientes de A. "
+        "El producto obtenido es 5, 10, 12 y 12 gramos. ¿Qué muestran los "
+        "datos?",
+        "A limita en los dos primeros ensayos y B en los dos últimos",
+        "El quiebre de la serie marca el cambio de limitante.\n\n"
+        "1) Entre el primero y el segundo ensayo el producto se duplica al "
+        "aumentar A: ahí A es el limitante.\n"
+        "2) Entre el tercero y el cuarto el producto ya no cambia pese a que A "
+        "sigue subiendo.\n"
+        "3) Eso indica que B se agotó primero y pasó a ser el limitante.\n\n"
+        "El valor de 12 gramos es el máximo que la cantidad fija de B permite "
+        "obtener, por mucho A que se agregue.",
+        [
+            ("B limita en los cuatro ensayos por igual",
+             "Si B limitara desde el comienzo, el producto no habría subido de 5 a 10 gramos."),
+            ("A limita en los cuatro ensayos por igual",
+             "Si A limitara siempre, el producto habría seguido subiendo en el cuarto ensayo."),
+            ("Los datos tienen un error de medición",
+             "El aplanamiento es lo esperable cuando el otro reactante se agota: no es un error de medición."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "dificil",
+        "En un ensayo con reactivo limitante identificado, el cálculo predice "
+        "40 gramos de producto y se obtienen 34. ¿Qué se puede concluir?",
+        "El rendimiento fue de 85%",
+        "El rendimiento se calcula siempre sobre lo que el limitante "
+        "permitía.\n\n"
+        "1) El máximo teórico es 40 gramos, fijado por el reactivo limitante.\n"
+        "2) La razón entre lo obtenido y lo predicho es 34 dividido por 40, es "
+        "decir, 0,85.\n"
+        "3) Expresado como porcentaje, corresponde a un 85%.\n\n"
+        "Los 6 gramos faltantes no contradicen la conservación de la materia: "
+        "quedaron como reactante sin reaccionar o se perdieron en el manejo.",
+        [
+            ("El reactivo limitante fue otro",
+             "Un limitante distinto cambiaría el máximo teórico, pero el enunciado dice que ya se identificó."),
+            ("El rendimiento fue de 15%",
+             "Ese es el porcentaje que faltó, no el que se obtuvo."),
+            ("La ley de conservación de la materia no se cumplió en ese ensayo",
+             "La ley se cumple siempre: lo que falta quedó sin reaccionar o se perdió al manipular."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "dificil",
+        "Se agrega ácido a un trozo de metal hasta que deja de burbujear, y "
+        "queda metal sin disolver en el fondo. ¿Qué se concluye?",
+        "El ácido fue el reactivo limitante",
+        "Lo que sobra identifica al que estaba en exceso.\n\n"
+        "1) Las burbujas cesan cuando uno de los reactantes se agota.\n"
+        "2) Como todavía queda metal, el metal no fue el que se agotó.\n"
+        "3) Entonces el ácido se consumió por completo y fue el limitante.\n\n"
+        "Agregar más ácido reanudaría el burbujeo, y esa es la comprobación "
+        "experimental de la conclusión.",
+        [
+            ("El metal fue el reactivo limitante",
+             "El limitante se consume por completo, y aquí queda metal en el fondo."),
+            ("La reacción se detuvo por falta de temperatura",
+             "Si fuera temperatura, agregar más ácido no reanudaría el burbujeo, y sí lo hace."),
+            ("Los dos reactantes se agotaron al mismo tiempo dentro del recipiente",
+             "Si así fuera no quedaría metal sin disolver en el fondo."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "dificil",
+        "Un grupo mide el gas liberado en cuatro ensayos y cambia a la vez la "
+        "masa de metal y la concentración del ácido. Obtiene más gas en cada "
+        "ensayo. ¿Qué limita esa evidencia?",
+        "No se sabe cuál de los dos cambios produjo el aumento",
+        "Con dos variables moviéndose juntas el efecto no se puede "
+        "atribuir.\n\n"
+        "1) El aumento del gas puede deberse a que había más metal disponible.\n"
+        "2) También puede deberse a que el ácido más concentrado dejó de ser el "
+        "limitante.\n"
+        "3) Como ambos cambiaron en cada ensayo, los datos no distinguen entre "
+        "las dos explicaciones.\n\n"
+        "El diseño correcto fija la concentración del ácido y varía solo la "
+        "masa de metal, o al revés.",
+        [
+            ("Los ensayos fueron demasiado pocos para concluir",
+             "Con veinte ensayos las dos variables seguirían confundidas entre sí."),
+            ("No midieron la masa del gas recogido",
+             "El volumen recogido es una medida válida de la cantidad de gas liberado."),
+            ("La concentración del ácido no influye",
+             "Sí influye: determina cuántos moles de ácido hay y, por lo tanto, si el ácido limita."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "dificil",
+        "¿Qué control conviene incorporar para comprobar que el gas recogido "
+        "proviene de la reacción entre el metal y el ácido?",
+        "Repetir el montaje con ácido pero sin metal",
+        "El control quita del montaje justamente aquello que se quiere poner a "
+        "prueba.\n\n"
+        "1) La explicación alternativa es que el gas venga del ácido o del aire "
+        "del matraz.\n"
+        "2) Un montaje idéntico sin metal deja actuar solo esa fuente "
+        "alternativa.\n"
+        "3) Si no se recoge gas, la única fuente posible es la reacción entre "
+        "ambos.\n\n"
+        "Repetir el ensayo completo varias veces mide la reproducibilidad, pero "
+        "no descarta ninguna fuente alternativa.",
+        [
+            ("Repetir el ensayo tres veces con las mismas cantidades",
+             "Eso mide la reproducibilidad, no el origen del gas."),
+            ("Usar un metal distinto",
+             "Cambiar el metal explora otra reacción, no descarta la fuente alternativa."),
+            ("Aumentar la masa de metal manteniendo la cantidad de ácido del montaje original",
+             "Eso identifica al limitante, pero no comprueba de dónde proviene el gas."),
+        ],
+    ),
+    _q(
+        "cie_limitante", "dificil",
+        "Al graficar la masa de producto contra la masa de A, con B fijo, se "
+        "obtiene una recta que sube y luego una horizontal. ¿Qué representa el "
+        "punto donde ambas se encuentran?",
+        "La mezcla en que ninguno de los dos reactantes sobra",
+        "El quiebre marca el cambio de reactante limitante.\n\n"
+        "1) En el tramo que sube, A es escaso: cada gramo agregado produce más "
+        "producto.\n"
+        "2) En el tramo horizontal, B ya se agota antes y agregar A no cambia "
+        "nada.\n"
+        "3) Justo en el quiebre los dos se consumen por completo: es la mezcla "
+        "estequiométrica.\n\n"
+        "Ese punto permite determinar experimentalmente la proporción de la "
+        "reacción sin conocer de antemano la ecuación balanceada.",
+        [
+            ("El momento de mayor velocidad de reacción",
+             "El gráfico relaciona masas, no velocidades: el tiempo no aparece en ningún eje."),
+            ("La masa molar del producto formado",
+             "La masa molar no se lee en un quiebre: sería una pendiente, no un punto."),
+            ("El punto en que A deja de reaccionar con B",
+             "A sigue siendo capaz de reaccionar: lo que falta desde ahí es B."),
+        ],
+    ),
+]
