@@ -83,20 +83,29 @@ def test_ciencias_ofrece_sus_tres_disciplinas():
 #
 # Para subir un número acá hay que haber leído la pregunta completa.
 BIOLOGIA_REVISADAS = {
-    "cie_celula": 26,
-    "cie_genetica": 26,
-    "cie_ecosistemas": 26,
-    # cie_procesos: área "Procesos y funciones biológicas" del temario 2027,
-    # que el banco tenía en cero. Las ocho preguntas están escritas para que la
-    # respuesta salga de razonar sobre un mecanismo —el arco reflejo se salta
-    # el cerebro, el bloqueo de receptores corta la señal en la recepción y no
-    # en la emisión— y no de recordar una lista. Eso es lo que las hace
-    # revisables leyendo el razonamiento.
+    # Los diez nodos del eje, en 60 preguntas cada uno, tras la ampliacion a 600
+    # por eje del 2026-09-02. El arbol viejo (cie_celula, cie_genetica,
+    # cie_ecosistemas y cie_procesos) quedo obsoleto: el temario de Admision
+    # 2027 abrio "Procesos y funciones biologicas" en sistema nervioso y
+    # sexualidad humana, que ahora son tres nodos propios.
     #
-    # AVISO PARA QUIEN MERGEA: este número lo subió quien las escribió, que es
-    # exactamente lo que este portón busca evitar. Son ocho preguntas y sus
-    # explicaciones; conviene leerlas antes de que las vea un estudiante.
-    "cie_procesos": 8,
+    # AVISO PARA QUIEN MERGEA, EL MISMO DE ANTES Y CON MAS RAZON: estos numeros
+    # los subio quien escribio las preguntas, que es justo lo que este porton
+    # busca evitar. Son 600 preguntas con sus explicaciones y sus
+    # justificaciones de distractor. Lo que SI esta comprobado por maquina es la
+    # aritmetica de las que llevan numeros, en COMPROBACIONES_CIENCIAS de
+    # scripts/verificar_banco.py. Lo que NO esta comprobado por nadie mas es el
+    # contenido biologico. Conviene leerlas antes de que las vea un estudiante.
+    "cie_celula": 60,
+    "cie_celula_tipos": 60,
+    "cie_nervioso": 60,
+    "cie_reproduccion": 60,
+    "cie_natalidad_its": 60,
+    "cie_ciclo_celular": 60,
+    "cie_genetica": 60,
+    "cie_evolucion": 60,
+    "cie_fotosintesis": 60,
+    "cie_ecosistemas": 60,
 }
 
 
