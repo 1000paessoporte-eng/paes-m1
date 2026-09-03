@@ -58,18 +58,33 @@ def normalizar(texto: str) -> str:
     return " ".join(sin_tildes.lower().split())
 
 
-def buscar_carreras(db: Session, texto: str, limite: int = 20) -> list[Carrera]:
+def buscar_carreras(
+    db: Session,
+    texto: str,
+    limite: int = 20,
+    region: str | None = None,
+    comuna: str | None = None,
+) -> list[Carrera]:
     """Busca por nombre, universidad o sede, ignorando tildes.
 
     Cada palabra se exige por separado: "enfermeria concepcion" encuentra la
     carrera aunque en el dato la universidad vaya antes que la sede.
+
+    `region` y `comuna` acotan por ubicación y se pueden usar sin texto: filtrar
+    "todas las carreras de la Región de Los Ríos" es una consulta legítima. Se
+    comparan por igualdad con el valor tal como lo devuelve `ubicaciones`, que
+    sale del mismo dato, así que no hace falta normalizarlos.
     """
     palabras = [p for p in normalizar(texto).split() if p]
-    if not palabras:
+    if not palabras and not region and not comuna:
         return []
     consulta = select(Carrera)
     for palabra in palabras:
         consulta = consulta.where(Carrera.busqueda.like(f"%{palabra}%"))
+    if region:
+        consulta = consulta.where(Carrera.region == region)
+    if comuna:
+        consulta = consulta.where(Carrera.comuna == comuna)
     return list(
         db.execute(consulta.order_by(Carrera.universidad, Carrera.nombre).limit(limite))
         .scalars()

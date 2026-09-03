@@ -278,6 +278,8 @@ def seed_carreras(db) -> None:
             "universidad": fila["universidad"],
             "nombre": fila["carrera"],
             "sede": fila["sede"],
+            "region": fila.get("region"),
+            "comuna": fila.get("comuna"),
             "nem": fila.get("nem"),
             "ranking": fila.get("ranking"),
             "lectora": fila.get("lectora"),

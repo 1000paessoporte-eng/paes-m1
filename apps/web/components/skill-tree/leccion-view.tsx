@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { getSkillNode, type Lesson } from "@/lib/api";
 import { getClientToken } from "@/lib/auth";
+import { Resaltador } from "@/components/texto/resaltador";
 import { TextoRico } from "@/components/texto-rico";
 
 /**
@@ -90,11 +91,16 @@ export function LeccionView({
           Lo que hay que saber
         </h2>
         <div className="mt-4 leading-relaxed">
-          {/* La teoría en serif: junto con los textos de Lectora, son los dos
-              lugares del producto donde se lee de corrido. */}
-          <div className="font-lectura text-[1.02rem] leading-[1.65]">
-            <TextoRico texto={leccion.theory} />
-          </div>
+          {/* También se puede rayar. Es el otro lugar donde se lee de corrido y
+              donde alguien vuelve varias veces: lo marcado la primera vez es lo
+              que hace que la segunda visita sea corta. */}
+          <Resaltador key={leccion.node_code} id={`leccion-${leccion.node_code}`}>
+            {/* La teoría en serif: junto con los textos de Lectora, son los dos
+                lugares del producto donde se lee de corrido. */}
+            <div className="font-lectura text-[1.02rem] leading-[1.65]">
+              <TextoRico texto={leccion.theory} />
+            </div>
+          </Resaltador>
         </div>
       </section>
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BotonComprar } from "@/components/plan/boton-comprar";
+import { BotonTrial } from "@/components/plan/boton-trial";
 import { EMAIL_CONTACTO } from "@/lib/redes-sociales";
 /*
  * PRECIO DE LANZAMIENTO, NO "ANTES/AHORA"
@@ -193,7 +194,15 @@ const PLANES = [
  * de referencia para leer el otro. El anual dice cuánto se ahorra en meses,
  * que es como lo piensa un estudiante, y no solo el porcentaje.
  */
-function EscalaPro() {
+/** Lo que hay que saber de la prueba gratis para poder ofrecerla. */
+export interface OfertaTrial {
+  disponible: boolean;
+  dias: number;
+  //: Lo que se cobra al terminar, en pesos.
+  monto: number;
+}
+
+function EscalaPro({ trial }: { trial?: OfertaTrial | null }) {
   const opciones = [
     {
       id: "pro_mensual",
@@ -212,6 +221,33 @@ function EscalaPro() {
 
   return (
     <div className="mt-6 flex flex-col gap-2">
+      {/* La prueba va arriba de los precios y separada por una línea: es la
+          puerta de entrada y no una tercera opción de compra. Ponerla al mismo
+          nivel que "1 mes" y "1 año" obligaría a comparar tres cosas cuando lo
+          que se quiere es que la primera decisión sea barata. */}
+      {trial?.disponible && (
+        <div className="rounded-xl border border-accent bg-accent/5 p-3">
+          <div className="flex items-baseline justify-between gap-3">
+            <span className="text-sm font-medium">
+              Primeros {trial.dias} días
+            </span>
+            <span className="text-sm font-semibold">Gratis</span>
+          </div>
+          <BotonTrial
+            dias={trial.dias}
+            monto={trial.monto}
+            destino="/panel"
+            compacto
+          />
+        </div>
+      )}
+
+      {trial?.disponible && (
+        <p className="mt-1 mb-1 text-center text-xs text-muted">
+          o contrata directamente
+        </p>
+      )}
+
       {opciones.map((o) => (
         <div
           key={o.id}
@@ -237,6 +273,7 @@ function EscalaPro() {
 
 export function Planes({
   pagoDisponible = false,
+  trial = null,
   /**
    * Nivel del encabezado "Planes". En la portada es una sección entre otras
    * (h2, debajo del titular de la página); en /planes es el titular, así que
@@ -245,6 +282,10 @@ export function Planes({
   encabezado: Encabezado = "h2",
 }: {
   pagoDisponible?: boolean;
+  //: La prueba gratis, si el cobro recurrente está configurado. Llega desde la
+  //: API y no escrita a mano: si el plan recurrente no existe en Flow, la
+  //: página deja de anunciarla sola en vez de mandar a la gente a un error.
+  trial?: OfertaTrial | null;
   encabezado?: "h1" | "h2";
 }) {
   return (
@@ -265,7 +306,9 @@ export function Planes({
           </Encabezado>
           <p className="mt-3 text-sm text-muted">
             {pagoDisponible
-              ? "El plan Gratis es y seguirá siendo sin costo. Pro agrega ensayos sin límite y el análisis completo de tus errores."
+              ? trial?.disponible
+                ? `El plan Gratis es y seguirá siendo sin costo. Pro agrega ensayos sin límite, y puedes probarlo ${trial.dias} días sin pagar.`
+                : "El plan Gratis es y seguirá siendo sin costo. Pro agrega ensayos sin límite y el análisis completo de tus errores."
               : "Hoy todo lo que ves está disponible sin costo, y seguirá estándolo para el plan Gratis. Estos son los precios de los planes que vienen; avisaremos antes de que empiece a cobrarse."}
           </p>
           <p className="mt-2 text-xs text-muted">
@@ -346,7 +389,7 @@ export function Planes({
               </ul>
 
               {pagoDisponible && plan.nombre === "Pro" ? (
-                <EscalaPro />
+                <EscalaPro trial={trial} />
               ) : plan.nombre === "Colegios" && !plan.disponible ? (
                 /* Un colegio compra con orden de compra y factura, no con
                    tarjeta, así que acá no va un botón de pago: va la forma de

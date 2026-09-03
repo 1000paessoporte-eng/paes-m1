@@ -48,6 +48,7 @@ No es un banco de preguntas plano. Las piezas:
 | **Demo sin cuenta** | 🟢 Funcional | `/demo`: 5 preguntas, sin auth y sin persistir nada. |
 | **Panel de administración** | 🟢 Funcional | `/admin`: usuarios, entradas, visitas (incluidas anónimas) y uso del contenido. Solo cuentas con rol admin. |
 | **Cobros / planes** | 🟡 Funciona, sin encender | Pasarela **Flow** integrada (`modules/billing`): catálogo con el precio en el servidor, `/plan/pagar`, confirmación por webhook y diagnóstico para admin. Hay una compra real completada. Los topes del plan Gratis se informan pero **no bloquean** mientras `LIMITES_ACTIVOS` esté apagado -- salvo el de carreras en Mi meta, que sí corta. |
+| **Prueba gratis + suscripción** | 🟡 Código listo, falta crear el plan en Flow | 3 días de Pro con tarjeta inscrita y cobro automático mensual, sobre *Flow Suscripciones* (`customer/register` + `subscription/create`). Uno por cuenta. La fecha de término la manda Flow (`period_end`), nunca se calcula acá: `plan_actual` reconcilia cuando la fecha local vence y el cron `/api/plan/flow/reconciliar` barre a diario. Cancelar apaga la renovación en Flow **y** conserva el acceso hasta la fecha ya cobrada. Se enciende con `FLOW_PLAN_PRO_ID`, que se crea con `scripts/crear_plan_flow.py`. |
 
 ### Contenido actual
 

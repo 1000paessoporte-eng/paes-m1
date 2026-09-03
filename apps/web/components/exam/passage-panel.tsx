@@ -1,5 +1,6 @@
 import { cn } from "@paes-m1/utils";
 
+import { Resaltador } from "@/components/texto/resaltador";
 import { TextoRico } from "@/components/texto-rico";
 import type { ExamQuestion } from "@/lib/api";
 
@@ -38,15 +39,20 @@ export function PassagePanel({
         </span>
       </div>
 
-      {/* En serif y no en la sans de la interfaz. No es adorno: este es el
-          único bloque del ensayo que se lee de corrido, y una serif lo separa
-          del cromo que lo rodea --enunciado, alternativas, relojes-- además de
-          sostener mejor varios párrafos seguidos en pantalla. */}
-      <div className="font-lectura flex flex-col gap-3 text-[0.95rem] leading-[1.7]">
-        {passage.body.split("\n\n").map((parrafo, i) => (
-          <TextoRico key={i} texto={parrafo} />
-        ))}
-      </div>
+      {/* Se puede rayar, como en el papel. Aquí es donde más falta hacía: son
+          varias preguntas seguidas sobre el mismo texto, y sin poder marcar la
+          idea central hay que releerlo entero en cada una. */}
+      <Resaltador key={passage.id} id={`pasaje-${passage.id}`}>
+        {/* En serif y no en la sans de la interfaz. No es adorno: este es el
+            único bloque del ensayo que se lee de corrido, y una serif lo separa
+            del cromo que lo rodea --enunciado, alternativas, relojes-- además de
+            sostener mejor varios párrafos seguidos en pantalla. */}
+        <div className="font-lectura flex flex-col gap-3 text-[0.95rem] leading-[1.7]">
+          {passage.body.split("\n\n").map((parrafo, i) => (
+            <TextoRico key={i} texto={parrafo} />
+          ))}
+        </div>
+      </Resaltador>
 
       {passage.source_note && (
         <p className="mt-4 border-t border-border pt-3 text-xs text-muted">

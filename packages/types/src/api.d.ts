@@ -940,6 +940,165 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/plan/trial": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Iniciar Trial
+         * @description Empieza la prueba gratis: devuelve la URL donde Flow pide la tarjeta.
+         *
+         *     Este endpoint NO activa nada. Devuelve una dirección de Flow y hasta ahí
+         *     llega su efecto; el plan se enciende recién cuando Flow confirma la
+         *     inscripción en `/plan/trial/retorno`. La distinción es la misma que en el
+         *     pago: si acá se activara el plan, tomarlo sin dejar tarjeta sería cuestión
+         *     de llamar a esta URL.
+         *
+         *     Cada motivo de rechazo se le dice a la persona tal cual, porque son cosas
+         *     distintas y esconderlas tras un error genérico solo produce correos a
+         *     soporte: no está disponible, ya la usaste, o ya tienes plan.
+         */
+        post: operations["iniciar_trial_api_plan_trial_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/plan/trial/retorno": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Retorno Trial
+         * @description A donde Flow devuelve el navegador tras el formulario de la tarjeta.
+         *
+         *     Confirma de servidor a servidor y luego redirige a la pantalla del alumno.
+         *     Es el único camino que activa la prueba.
+         *
+         *     Acepta GET y POST porque Flow ha usado los dos según el ambiente, y el
+         *     token puede venir en el cuerpo o en la query. Un retorno que responde 405
+         *     deja a la persona con la tarjeta ya inscrita en Flow y sin plan acá: el
+         *     peor estado posible de los dos lados.
+         *
+         *     Nunca devuelve un error a la cara: pase lo que pase redirige a
+         *     `/plan/resultado`, que lee el plan real y explica lo que corresponda. Una
+         *     pantalla de error crudo de la API después de haber entregado una tarjeta es
+         *     exactamente donde alguien concluye que le cobraron mal.
+         */
+        get: operations["retorno_trial_api_plan_trial_retorno_get"];
+        put?: never;
+        /**
+         * Retorno Trial
+         * @description A donde Flow devuelve el navegador tras el formulario de la tarjeta.
+         *
+         *     Confirma de servidor a servidor y luego redirige a la pantalla del alumno.
+         *     Es el único camino que activa la prueba.
+         *
+         *     Acepta GET y POST porque Flow ha usado los dos según el ambiente, y el
+         *     token puede venir en el cuerpo o en la query. Un retorno que responde 405
+         *     deja a la persona con la tarjeta ya inscrita en Flow y sin plan acá: el
+         *     peor estado posible de los dos lados.
+         *
+         *     Nunca devuelve un error a la cara: pase lo que pase redirige a
+         *     `/plan/resultado`, que lee el plan real y explica lo que corresponda. Una
+         *     pantalla de error crudo de la API después de haber entregado una tarjeta es
+         *     exactamente donde alguien concluye que le cobraron mal.
+         */
+        post: operations["retorno_trial_api_plan_trial_retorno_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/plan/flow/suscripcion": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Webhook Suscripcion
+         * @description Aviso de Flow cuando cobra una cuota del plan recurrente.
+         *
+         *     Adelanta la reconciliación de esa suscripción, pero **el sistema no depende
+         *     de este aviso para estar correcto**, y eso es deliberado: el contenido
+         *     exacto de esta notificación no está documentado por Flow, así que colgar de
+         *     ella la fecha hasta la que alguien tiene acceso sería construir sobre algo
+         *     que puede cambiar sin avisar.
+         *
+         *     Las dos garantías reales están en otra parte: `plan_actual` le pregunta a
+         *     Flow en cuanto la fecha local vence —así nadie que pagó pierde acceso— y el
+         *     barrido diario reconcilia todo lo demás. Esto solo hace que el mes nuevo
+         *     aparezca en pantalla enseguida en vez de en la próxima lectura.
+         *
+         *     Responde 200 siempre salvo error interno: Flow reintenta ante cualquier
+         *     otra cosa y reintentar una reconciliación no aporta nada, porque es
+         *     idempotente por construcción.
+         */
+        post: operations["webhook_suscripcion_api_plan_flow_suscripcion_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/plan/flow/reconciliar": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Reconciliar
+         * @description Barrido diario: pone al día todas las suscripciones recurrentes.
+         *
+         *     Lo que la reconciliación perezosa de `plan_actual` no cubre es el caso de
+         *     quien deja de pagar y no vuelve a entrar: su suscripción quedaría ACTIVE
+         *     para siempre en esta base y las cifras internas contarían como Pro a gente
+         *     que ya no lo es. Esto existe para eso, no para el acceso.
+         *
+         *     Mismo esquema de autenticación que los recordatorios: secreto compartido,
+         *     GET aceptado porque los cron de Vercel disparan GET con `Authorization:
+         *     Bearer`, y 404 cuando el secreto no está configurado --una tarea que habla
+         *     con la pasarela de pago no se deja abierta por comodidad.
+         */
+        get: operations["reconciliar_api_plan_flow_reconciliar_get"];
+        put?: never;
+        /**
+         * Reconciliar
+         * @description Barrido diario: pone al día todas las suscripciones recurrentes.
+         *
+         *     Lo que la reconciliación perezosa de `plan_actual` no cubre es el caso de
+         *     quien deja de pagar y no vuelve a entrar: su suscripción quedaría ACTIVE
+         *     para siempre en esta base y las cifras internas contarían como Pro a gente
+         *     que ya no lo es. Esto existe para eso, no para el acceso.
+         *
+         *     Mismo esquema de autenticación que los recordatorios: secreto compartido,
+         *     GET aceptado porque los cron de Vercel disparan GET con `Authorization:
+         *     Bearer`, y 404 cuando el secreto no está configurado --una tarea que habla
+         *     con la pasarela de pago no se deja abierta por comodidad.
+         */
+        post: operations["reconciliar_api_plan_flow_reconciliar_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/demo/questions": {
         parameters: {
             query?: never;
@@ -1021,13 +1180,39 @@ export interface paths {
         };
         /**
          * Buscar Carreras
-         * @description Busca carreras por nombre, universidad o sede. Público.
+         * @description Busca carreras por nombre, universidad o sede, y filtra por ubicación. Público.
          *
          *     Es la pregunta con la que la gente llega de verdad —cuánto puntaje
          *     necesita para la carrera que quiere—, y hasta ahora el buscador vivía
-         *     detrás del login. Va ANTES de `/{codigo}`, como el resto.
+         *     detrás del login. `region` y `comuna` acotan el resultado, y sirven solas:
+         *     se puede pedir "todas las de tal comuna" sin escribir nada. Va ANTES de
+         *     `/{codigo}`, como el resto.
          */
         get: operations["buscar_carreras_api_carreras_buscar_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/carreras/ubicaciones": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Listar Ubicaciones
+         * @description Las regiones y comunas con carreras, para poblar el filtro de ubicación.
+         *
+         *     Va ANTES de `/{codigo}`: si no, FastAPI leería "ubicaciones" como el código
+         *     de una carrera. Las comunas viajan agrupadas bajo su región porque el
+         *     selector de comuna depende de la región elegida.
+         */
+        get: operations["listar_ubicaciones_api_carreras_ubicaciones_get"];
         put?: never;
         post?: never;
         delete?: never;
@@ -1621,6 +1806,19 @@ export interface components {
             /** Token */
             token: string;
         };
+        /** Body_webhook_suscripcion_api_plan_flow_suscripcion_post */
+        Body_webhook_suscripcion_api_plan_flow_suscripcion_post: {
+            /**
+             * Subscriptionid
+             * @default
+             */
+            subscriptionId: string;
+            /**
+             * Token
+             * @default
+             */
+            token: string;
+        };
         /**
          * BreakdownItemOut
          * @description Desempeño agrupado por eje, nodo o dificultad.
@@ -1657,6 +1855,29 @@ export interface components {
         CanjearIn: {
             /** Codigo */
             codigo: string;
+        };
+        /**
+         * CarreraBusquedaOut
+         * @description Una fila de resultados del buscador.
+         *
+         *     Es el `CarreraCatalogoOut` más la ubicación: el catálogo entero (1.855
+         *     filas para el sitemap) no la carga para no engordar un payload que solo
+         *     nombra y enlaza, pero un resultado de búsqueda sí la muestra —dónde queda
+         *     la carrera es justo lo que el filtro por región y comuna deja ver.
+         */
+        CarreraBusquedaOut: {
+            /** Codigo */
+            codigo: string;
+            /** Universidad */
+            universidad: string;
+            /** Nombre */
+            nombre: string;
+            /** Sede */
+            sede: string;
+            /** Region */
+            region?: string | null;
+            /** Comuna */
+            comuna?: string | null;
         };
         /**
          * CarreraCatalogoOut
@@ -1729,6 +1950,10 @@ export interface components {
             nombre: string;
             /** Sede */
             sede: string;
+            /** Region */
+            region?: string | null;
+            /** Comuna */
+            comuna?: string | null;
             /** Nem */
             nem?: number | null;
             /** Ranking */
@@ -2333,6 +2558,8 @@ export interface components {
             pace: components["schemas"]["Pace"];
             /** Axes */
             axes?: string[];
+            /** Skill Nodes */
+            skill_nodes?: string[];
             /**
              * Oficial
              * @default false
@@ -2646,6 +2873,33 @@ export interface components {
             carreras_limite: number;
             /** Limites Activos */
             limites_activos: boolean;
+            /**
+             * En Trial
+             * @default false
+             */
+            en_trial: boolean;
+            /**
+             * Cancelada Al Terminar
+             * @default false
+             */
+            cancelada_al_terminar: boolean;
+            /**
+             * Trial Disponible
+             * @default false
+             */
+            trial_disponible: boolean;
+            /**
+             * Trial Dias
+             * @default 0
+             */
+            trial_dias: number;
+            /**
+             * Trial Monto
+             * @default 0
+             */
+            trial_monto: number;
+            /** Tarjeta */
+            tarjeta?: string | null;
         };
         /** NodeDiagnosisOut */
         NodeDiagnosisOut: {
@@ -2952,6 +3206,21 @@ export interface components {
             pago_disponible: boolean;
             /** Productos */
             productos: components["schemas"]["ProductoOut"][];
+            /**
+             * Trial Disponible
+             * @default false
+             */
+            trial_disponible: boolean;
+            /**
+             * Trial Dias
+             * @default 0
+             */
+            trial_dias: number;
+            /**
+             * Trial Monto
+             * @default 0
+             */
+            trial_monto: number;
         };
         /**
          * ProgressStatus
@@ -2986,6 +3255,20 @@ export interface components {
             /** Alternatives */
             alternatives: components["schemas"]["AlternativeSafeOut"][];
         };
+        /**
+         * RegionConComunasOut
+         * @description Una región y las comunas donde hay carreras, para armar el filtro.
+         *
+         *     El selector de comuna depende de la región elegida, así que las comunas
+         *     viajan agrupadas bajo su región y no como una lista plana: mostrar las 346
+         *     comunas del país cuando en una región hay tres sería ruido, no ayuda.
+         */
+        RegionConComunasOut: {
+            /** Region */
+            region: string;
+            /** Comunas */
+            comunas: string[];
+        };
         /** RegisterIn */
         RegisterIn: {
             /**
@@ -2999,11 +3282,27 @@ export interface components {
             name: string;
         };
         /**
+         * RepasoNodoOut
+         * @description Un tema flojo, con lo necesario para que la pantalla lo nombre.
+         */
+        RepasoNodoOut: {
+            /** Code */
+            code: string;
+            /** Name */
+            name: string;
+            /** Axis Label */
+            axis_label: string;
+            /** Accuracy */
+            accuracy: number;
+            /** Attempts */
+            attempts: number;
+        };
+        /**
          * RepasoOut
-         * @description Sugerencia para el boton "Ensayo de repaso": los ejes de los nodos
-         *     donde el estudiante rinde peor, reusando el mismo progreso del Arbol de
-         *     Habilidades. has_data en False significa que todavia no hay suficientes
-         *     respuestas para sugerir nada (usuario nuevo).
+         * @description Sugerencia para el boton "Reforzar mis temas debiles": los temas donde el
+         *     estudiante rinde peor, reusando el mismo progreso del Arbol de Habilidades.
+         *     has_data en False significa que todavia no hay suficientes respuestas para
+         *     sugerir nada (usuario nuevo).
          */
         RepasoOut: {
             /** Has Data */
@@ -3012,6 +3311,8 @@ export interface components {
             axes: string[];
             /** Axis Labels */
             axis_labels: string[];
+            /** Nodes */
+            nodes?: components["schemas"]["RepasoNodoOut"][];
         };
         /** ResetPasswordIn */
         ResetPasswordIn: {
@@ -3247,6 +3548,14 @@ export interface components {
              */
             token_type: string;
             user: components["schemas"]["UserOut"];
+        };
+        /**
+         * TrialOut
+         * @description A dónde hay que mandar a la persona para que inscriba su tarjeta.
+         */
+        TrialOut: {
+            /** Url */
+            url: string;
         };
         /** UnirseIn */
         UnirseIn: {
@@ -4885,6 +5194,167 @@ export interface operations {
             };
         };
     };
+    iniciar_trial_api_plan_trial_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["TrialOut"];
+                };
+            };
+        };
+    };
+    retorno_trial_api_plan_trial_retorno_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown;
+                };
+            };
+        };
+    };
+    retorno_trial_api_plan_trial_retorno_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown;
+                };
+            };
+        };
+    };
+    webhook_suscripcion_api_plan_flow_suscripcion_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/x-www-form-urlencoded": components["schemas"]["Body_webhook_suscripcion_api_plan_flow_suscripcion_post"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown;
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    reconciliar_api_plan_flow_reconciliar_get: {
+        parameters: {
+            query?: never;
+            header?: {
+                authorization?: string;
+                "x-cron-secret"?: string;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        [key: string]: number;
+                    };
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    reconciliar_api_plan_flow_reconciliar_post: {
+        parameters: {
+            query?: never;
+            header?: {
+                authorization?: string;
+                "x-cron-secret"?: string;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        [key: string]: number;
+                    };
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
     get_demo_questions_api_demo_questions_get: {
         parameters: {
             query?: {
@@ -4973,6 +5443,8 @@ export interface operations {
         parameters: {
             query?: {
                 q?: string;
+                region?: string;
+                comuna?: string;
             };
             header?: never;
             path?: never;
@@ -4986,7 +5458,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": components["schemas"]["CarreraCatalogoOut"][];
+                    "application/json": components["schemas"]["CarreraBusquedaOut"][];
                 };
             };
             /** @description Validation Error */
@@ -4996,6 +5468,26 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    listar_ubicaciones_api_carreras_ubicaciones_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["RegionConComunasOut"][];
                 };
             };
         };

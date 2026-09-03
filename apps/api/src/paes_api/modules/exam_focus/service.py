@@ -37,6 +37,7 @@ from paes_api.modules.exam_focus.schemas import (
     ExamResultOut,
     ExamReviewOut,
     NodeDiagnosisOut,
+    RepasoNodoOut,
     RepasoOut,
     ReviewAlternativeOut,
     ReviewQuestionOut,
@@ -156,6 +157,34 @@ def get_options(db: Session, subject: Subject = Subject.M1) -> ExamOptionsOut:
     )
 
 
+#: Cuántos temas entran en un ensayo de refuerzo.
+#:
+#: Con dos, un ensayo de veinte preguntas son diez de cada uno y se vuelve
+#: repetitivo. Con cuatro hay cinco por tema, que alcanza para ver si el
+#: problema sigue ahí sin que el ensayo sea una sola cosa machacada.
+TEMAS_DE_REFUERZO = 4
+
+
+def _flojera(nodo) -> float:
+    """Qué tan flojo está un tema, corrigiendo por cuántas respuestas hay detrás.
+
+    Ordenar por acierto a secas tiene un problema estadístico que se nota en
+    seguida: un tema donde el alumno respondió UNA pregunta y la falló da 0% y
+    se pone primero, por delante de uno con veinte respuestas y 35% de acierto.
+    El primero es mala suerte; el segundo es un problema real, y es el que hay
+    que practicar.
+
+    Se corrige con suavizado de Laplace: se cuenta como si cada tema trajera de
+    fábrica un acierto y un error. Con 0 de 1, da 1/3; con 7 de 20, da 8/22 =
+    0,36. Así el tema con veinte respuestas queda por delante, que es lo
+    correcto, y un tema con una sola respuesta tiene que estar MUY mal para
+    adelantarlo. No hace falta un mínimo de intentos ni un caso especial: la
+    fórmula sola se encarga.
+    """
+    aciertos = nodo.accuracy * nodo.attempts
+    return (aciertos + 1) / (nodo.attempts + 2)
+
+
 def get_repaso(db: Session, user_id: int, subject: Subject = Subject.M1) -> RepasoOut:
     """Sugerencia para "Ensayo de repaso": los ejes de los 2 nodos con peor
     accuracy entre los que el usuario ya intento, reusando el mismo progreso
@@ -167,9 +196,10 @@ def get_repaso(db: Session, user_id: int, subject: Subject = Subject.M1) -> Repa
     tree = skill_tree_service.get_user_skill_tree(db, user_id, subject)
     attempted = [n for n in tree if n.attempts > 0]
     if not attempted:
-        return RepasoOut(has_data=False, axes=[], axis_labels=[])
+        return RepasoOut(has_data=False, axes=[], axis_labels=[], nodes=[])
 
-    weakest = sorted(attempted, key=lambda n: n.accuracy)[:2]
+    weakest = sorted(attempted, key=_flojera)[:TEMAS_DE_REFUERZO]
+
     axes: list[str] = []
     for node in weakest:
         if node.axis.value not in axes:
@@ -179,6 +209,16 @@ def get_repaso(db: Session, user_id: int, subject: Subject = Subject.M1) -> Repa
         has_data=True,
         axes=axes,
         axis_labels=[AXIS_LABELS[a] for a in axes],
+        nodes=[
+            RepasoNodoOut(
+                code=n.code,
+                name=n.name,
+                axis_label=AXIS_LABELS[n.axis.value],
+                accuracy=n.accuracy,
+                attempts=n.attempts,
+            )
+            for n in weakest
+        ],
     )
 
 
@@ -433,6 +473,46 @@ def _seleccionar_por_texto(
     return elegidas
 
 
+def _repartir_entre_temas(
+    pool: list[Question], codigos: list[str], count: int
+) -> list[Question]:
+    """El ensayo de refuerzo: solo estos temas, en partes iguales.
+
+    No se reparte por eje como el ensayo normal. Aquí los temas ya vienen
+    elegidos uno a uno --son los que el alumno lleva peor-- y lo que importa es
+    que ninguno se quede fuera: con veinte preguntas y cuatro temas salen cinco
+    de cada uno. Si a un tema le faltan preguntas en el banco, lo que sobra se
+    reparte entre los demás en vez de dejar el ensayo corto.
+    """
+    pedidos = set(codigos)
+    por_tema: dict[str, list[Question]] = defaultdict(list)
+    for q in pool:
+        if q.skill_node.code in pedidos:
+            por_tema[q.skill_node.code].append(q)
+    if not por_tema:
+        return []
+
+    for preguntas in por_tema.values():
+        random.shuffle(preguntas)
+
+    elegidas: list[Question] = []
+    restantes = list(por_tema.keys())
+    # Rondas: una pregunta por tema hasta llenar el cupo. Repartir así --y no
+    # calculando cuotas-- hace que la sobra de un tema sin material la absorban
+    # los otros sin ningún caso especial.
+    while len(elegidas) < count and restantes:
+        for codigo in list(restantes):
+            if len(elegidas) >= count:
+                break
+            disponibles = por_tema[codigo]
+            if disponibles:
+                elegidas.append(disponibles.pop())
+            else:
+                restantes.remove(codigo)
+    random.shuffle(elegidas)
+    return elegidas
+
+
 def _select_questions(
     pool: list[Question],
     axes: list[str],
@@ -440,6 +520,7 @@ def _select_questions(
     subject: Subject = Subject.M1,
     recientes: dict[int, int] | None = None,
     figuras: dict[str, int] | None = None,
+    skill_nodes: list[str] | None = None,
 ) -> list[Question]:
     """Reparte la cantidad pedida entre los ejes según el temario oficial.
 
@@ -460,6 +541,13 @@ def _select_questions(
     a depender del tamaño del banco por la puerta de atrás: M1 tiene cinco veces
     más preguntas que M2, así que un ensayo de M2 traía 56 de M1 y 9 propias.
     """
+    # El refuerzo manda sobre todo lo demás: si se pidieron temas concretos, el
+    # ensayo es exactamente esos temas. Va antes que Lectora a propósito --un
+    # refuerzo de Lectora también tiene que ser de los temas pedidos-- aunque
+    # eso signifique renunciar al reparto por texto.
+    if skill_nodes:
+        return _repartir_entre_temas(pool, skill_nodes, count)
+
     # Competencia Lectora no se reparte por eje: se reparte por texto.
     if subject is Subject.LECTORA:
         return _seleccionar_por_texto(pool, count, recientes)
@@ -631,6 +719,9 @@ def start_attempt(db: Session, user: User, config: ExamConfigIn) -> ExamAttempt:
                 ].preguntas_oficiales,
                 "pace": Pace.OFICIAL,
                 "axes": [],
+                # El formato oficial es la prueba entera: un refuerzo por temas
+                # dejaría de serlo.
+                "skill_nodes": [],
             }
         )
     pool = _all_questions(db, config.subject)
@@ -647,8 +738,26 @@ def start_attempt(db: Session, user: User, config: ExamConfigIn) -> ExamAttempt:
     # física lleve un diagrama, entra sola.
     figuras = _figuras_recientes(db, user.id)
     chosen = _select_questions(
-        pool, valid_axes, config.question_count, config.subject, recientes, figuras
+        pool,
+        valid_axes,
+        config.question_count,
+        config.subject,
+        recientes,
+        figuras,
+        config.skill_nodes,
     )
+
+    # Los temas del refuerzo NO se guardan en el intento: el ensayo ya es sus
+    # preguntas, que sí quedan guardadas. Lo que se guarda son los ejes a los
+    # que pertenecen, que es lo que el historial necesita para decir de qué iba.
+    # Guardar los temas pediría una columna nueva, y una migración en esta base
+    # ya tumbó el login dos veces por mucho menos.
+    if config.skill_nodes and not valid_axes:
+        valid_axes = []
+        for q in chosen:
+            eje = q.skill_node.axis.value
+            if eje not in valid_axes:
+                valid_axes.append(eje)
 
     attempt = ExamAttempt(
         user_id=user.id,
