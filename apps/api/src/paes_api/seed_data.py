@@ -22735,7 +22735,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "alg_funciones_trig", "medio",
+        "alg_funciones_trig", "facil",
         "¿Cuál es el valor de sen(90°)?",
         "1",
         "Conviene ubicarlo en el círculo unitario.\n\n"
@@ -121358,6 +121358,3136 @@ QUESTIONS += [
              "El monto prestado es igual, pero los intereses se acumulan durante más tiempo."),
             ("A 15 años el dividendo es menor, porque hay menos cuotas que pagar",
              "Menos cuotas significa cuotas MÁS altas: la deuda se reparte en menos partes."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Algebra: casos de un sistema 2x2
+#
+# El temario pide exactamente "casos en los cuales un sistema tiene una unica
+# solucion, infinitas soluciones o no tiene solucion". El nodo tenia 10
+# preguntas.
+#
+# El criterio que ordena todo el nodo es comparar las tres razones entre
+# coeficientes: si a1/a2 no es b1/b2 hay solucion unica; si las tres coinciden
+# hay infinitas; y si coinciden las dos primeras pero no la tercera, no hay
+# solucion. Se plantea numerico, con parametro, en lenguaje de rectas y en
+# contexto.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "alg_sistemas_casos", "facil",
+        "¿Cuántas soluciones tiene el sistema x − y = 2 ; x + y = 6?",
+        "Una única solución",
+        "Las dos rectas tienen pendientes distintas, así que se cortan en un "
+        "punto.\n\n"
+        "1) Sumando ambas ecuaciones: 2x = 8, de donde x = 4.\n"
+        "2) Reemplazando en la segunda: 4 + y = 6, así que y = 2.\n"
+        "3) El par (4, 2) es la única solución.\n\n"
+        "Se podía anticipar sin resolver: los coeficientes de x son iguales "
+        "pero los de y no, así que las razones difieren y el corte es único.",
+        [
+            ("Infinitas soluciones",
+             "Las dos ecuaciones tendrían que ser múltiplos una de la otra, y no lo son."),
+            ("Ninguna solución",
+             "Eso ocurriría con rectas paralelas, y estas tienen pendientes distintas."),
+            ("Dos soluciones, una por cada ecuación del sistema",
+             "Un sistema lineal 2x2 nunca tiene exactamente dos soluciones: o una, o ninguna, o infinitas."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "facil",
+        "¿Cuántas soluciones tiene el sistema 2x + 6y = 8 ; x + 3y = 4?",
+        "Infinitas soluciones",
+        "La primera ecuación es exactamente el doble de la segunda.\n\n"
+        "1) Multiplicando la segunda por 2 se obtiene 2x + 6y = 8, que es la "
+        "primera.\n"
+        "2) Las dos ecuaciones describen la misma recta.\n"
+        "3) Todo punto de esa recta es solución, así que hay infinitas.\n\n"
+        "Las tres razones coinciden: 2/1 = 6/3 = 8/4 = 2. Ese es el sello de un "
+        "sistema con infinitas soluciones.",
+        [
+            ("Una única solución",
+             "Habría un solo corte si las rectas fueran distintas, y aquí son la misma."),
+            ("Ninguna solución",
+             "Serían paralelas distintas: coincidirían las dos primeras razones pero no la tercera."),
+            ("Ocho soluciones, tantas como indica el término independiente",
+             "El término independiente no cuenta soluciones: son infinitas."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "facil",
+        "¿Cuántas soluciones tiene el sistema 5x − y = 3 ; 10x − 2y = 9?",
+        "Ninguna solución",
+        "Los coeficientes son proporcionales pero los términos independientes "
+        "no.\n\n"
+        "1) Multiplicando la primera por 2: 10x − 2y = 6.\n"
+        "2) La segunda dice que esa misma expresión vale 9.\n"
+        "3) No puede valer 6 y 9 a la vez, así que el sistema es "
+        "incompatible.\n\n"
+        "En el plano son dos rectas paralelas distintas: nunca se cortan.",
+        [
+            ("Una única solución",
+             "Las pendientes son iguales, así que las rectas no se cortan."),
+            ("Infinitas soluciones",
+             "Serían la misma recta, y el término independiente lo impide: 6 contra 9."),
+            ("Una solución para cada valor de x que se elija libremente",
+             "No hay ningún par que satisfaga ambas ecuaciones a la vez."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "facil",
+        "En un sistema 2x2, ¿qué significa geométricamente que no tenga "
+        "solución?",
+        "Las rectas son paralelas y distintas",
+        "Cada ecuación lineal es una recta en el plano.\n\n"
+        "1) Una solución del sistema es un punto que pertenece a las dos "
+        "rectas.\n"
+        "2) Si las rectas son paralelas y distintas, no comparten ningún "
+        "punto.\n"
+        "3) Por lo tanto el sistema no tiene solución.\n\n"
+        "Las otras dos posibilidades son cortarse en un punto, con solución "
+        "única, o ser la misma recta, con infinitas.",
+        [
+            ("Las rectas se cortan en un punto",
+             "Ese es justamente el caso de solución única."),
+            ("Las rectas coinciden por completo",
+             "Ese es el caso de infinitas soluciones."),
+            ("Una de las dos ecuaciones no representa una recta en el plano",
+             "Toda ecuación lineal en dos variables representa una recta."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "facil",
+        "¿Qué nombre recibe un sistema que no tiene solución?",
+        "Incompatible",
+        "La clasificación depende de cuántas soluciones existan.\n\n"
+        "1) Sin solución: sistema incompatible.\n"
+        "2) Con una única solución: compatible determinado.\n"
+        "3) Con infinitas soluciones: compatible indeterminado.\n\n"
+        "«Compatible» dice si hay alguna solución; «determinado» dice si esa "
+        "solución es una sola.",
+        [
+            ("Compatible determinado",
+             "Ese es el sistema con una única solución."),
+            ("Compatible indeterminado",
+             "Ese es el sistema con infinitas soluciones."),
+            ("Homogéneo, porque sus términos independientes se anulan entre sí",
+             "Homogéneo se refiere a que los términos independientes sean cero, y ese sistema siempre tiene solución."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "facil",
+        "Un sistema 2x2 tiene una única solución. ¿Qué se puede afirmar de las "
+        "pendientes de sus rectas?",
+        "Son distintas entre sí",
+        "Dos rectas se cortan exactamente cuando sus inclinaciones "
+        "difieren.\n\n"
+        "1) Si las pendientes son distintas, las rectas no son paralelas.\n"
+        "2) Dos rectas no paralelas del plano se cortan en exactamente un "
+        "punto.\n"
+        "3) Ese punto de corte es la única solución del sistema.\n\n"
+        "El coeficiente de posición no interviene: cualquiera que sea, las "
+        "rectas se cortarán mientras las pendientes difieran.",
+        [
+            ("Son iguales",
+             "Con pendientes iguales las rectas son paralelas: o no hay solución, o hay infinitas."),
+            ("Son opuestas",
+             "Basta con que sean distintas: no necesitan ser opuestas."),
+            ("Una de ellas es cero necesariamente",
+             "No hace falta: dos rectas inclinadas con distinta pendiente también se cortan."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "facil",
+        "¿Cuántas soluciones tiene el sistema y = 2x + 1 ; y = 2x + 5?",
+        "Ninguna",
+        "Las dos rectas tienen la misma pendiente y distinto corte con el eje "
+        "Y.\n\n"
+        "1) Ambas tienen pendiente 2, así que son paralelas.\n"
+        "2) Sus coeficientes de posición son 1 y 5: son rectas distintas.\n"
+        "3) Dos paralelas distintas no se cortan, así que no hay solución.\n\n"
+        "En forma directa: igualando, 2x + 1 = 2x + 5 lleva a 1 = 5, que es "
+        "falso para cualquier x.",
+        [
+            ("Una",
+             "Para cortarse necesitarían pendientes distintas, y las dos valen 2."),
+            ("Infinitas",
+             "Serían la misma recta, y los coeficientes de posición lo impiden."),
+            ("Cuatro, que es la diferencia entre los dos coeficientes de posición",
+             "Esa diferencia mide la separación entre las rectas, no un número de soluciones."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "facil",
+        "¿Cuántas soluciones tiene el sistema y = 3x − 2 ; 2y = 6x − 4?",
+        "Infinitas",
+        "La segunda ecuación es el doble de la primera.\n\n"
+        "1) Dividiendo la segunda por 2 se obtiene y = 3x − 2.\n"
+        "2) Es exactamente la primera ecuación.\n"
+        "3) Las dos describen la misma recta, así que todo punto de ella es "
+        "solución.\n\n"
+        "Que dos ecuaciones se vean distintas no significa que lo sean: "
+        "conviene simplificarlas antes de concluir.",
+        [
+            ("Una",
+             "Para tener una sola solución las rectas tendrían que ser distintas."),
+            ("Ninguna",
+             "Serían paralelas distintas, y aquí son la misma recta."),
+            ("Dos, una por cada forma en que está escrita la ecuación",
+             "La forma en que se escribe no cambia el conjunto solución."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "facil",
+        "Si un sistema 2x2 es compatible indeterminado, ¿qué ocurre con sus "
+        "ecuaciones?",
+        "Una es múltiplo de la otra",
+        "Que haya infinitas soluciones significa que las dos rectas "
+        "coinciden.\n\n"
+        "1) Dos ecuaciones describen la misma recta cuando una se obtiene "
+        "multiplicando la otra por un número distinto de cero.\n"
+        "2) En ese caso las tres razones entre coeficientes coinciden.\n"
+        "3) La segunda ecuación no aporta información nueva.\n\n"
+        "Por eso el sistema queda con una sola condición y una variable libre: "
+        "hay infinitos pares que la cumplen.",
+        [
+            ("Las dos son idénticas letra por letra",
+             "No hace falta: basta que una sea múltiplo de la otra, como x + y = 2 y 3x + 3y = 6."),
+            ("Sus términos independientes son iguales",
+             "Pueden ser distintos: lo que importa es que estén en la misma proporción que los coeficientes."),
+            ("Una de las dos tiene todos sus coeficientes iguales a cero",
+             "Eso daría una ecuación trivial; el caso general es que una sea múltiplo de la otra."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "facil",
+        "Al resolver un sistema por reducción se llega a 0 = 7. ¿Qué se "
+        "concluye?",
+        "El sistema no tiene solución",
+        "Una igualdad falsa señala que las condiciones se contradicen.\n\n"
+        "1) La manipulación algebraica es válida, así que si hubiera solución "
+        "el resultado sería una igualdad verdadera.\n"
+        "2) 0 = 7 es falso para cualquier valor de las variables.\n"
+        "3) Por lo tanto no existe ningún par que satisfaga las dos "
+        "ecuaciones.\n\n"
+        "Si en cambio se hubiera llegado a 0 = 0, la conclusión sería la "
+        "contraria: infinitas soluciones.",
+        [
+            ("El sistema tiene infinitas soluciones",
+             "Ese es el caso en que se llega a 0 = 0, una igualdad siempre verdadera."),
+            ("Hubo un error de cálculo, porque eso no puede ocurrir",
+             "Sí puede ocurrir, y es la señal de que el sistema es incompatible."),
+            ("La solución es x = 0 e y = 7, leyendo directamente la igualdad final",
+             "Esa igualdad no contiene variables: no entrega ninguna solución."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "Al resolver un sistema por reducción se llega a 0 = 0. ¿Qué se "
+        "concluye?",
+        "El sistema tiene infinitas soluciones",
+        "Una igualdad siempre verdadera indica que una ecuación no aportaba "
+        "nada nuevo.\n\n"
+        "1) Al eliminar ambas variables no quedó ninguna condición sobre "
+        "ellas.\n"
+        "2) Eso significa que la segunda ecuación era múltiplo de la primera.\n"
+        "3) Todos los puntos de esa única recta son solución.\n\n"
+        "Para describirlas se deja una variable libre: por ejemplo, todos los "
+        "pares de la forma (t, 5 − t) si la ecuación era x + y = 5.",
+        [
+            ("El sistema no tiene solución",
+             "Ese es el caso en que se llega a una igualdad falsa, como 0 = 7."),
+            ("La solución es x = 0 e y = 0",
+             "La igualdad 0 = 0 no impone ningún valor a las variables."),
+            ("Hay exactamente una solución y es el origen del plano cartesiano",
+             "El origen es solución solo si pertenece a la recta; y en todo caso no es la única."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "¿Para qué valor de k el sistema x + 2y = 5 ; 3x + ky = 12 NO tiene "
+        "solución única?",
+        "k = 6",
+        "La solución deja de ser única cuando las razones de coeficientes "
+        "coinciden.\n\n"
+        "1) La razón de los coeficientes de x es 3/1 = 3.\n"
+        "2) Para que las rectas sean paralelas, la de los coeficientes de y "
+        "debe valer lo mismo: k/2 = 3.\n"
+        "3) Despejando: k = 6.\n\n"
+        "Con k = 6 el sistema queda paralelo. Además, como 12/5 no vale 3, las "
+        "rectas son distintas y no hay ninguna solución.",
+        [
+            ("k = 2",
+             "Repite el coeficiente de y de la primera ecuación, sin aplicar la proporción."),
+            ("k = 3",
+             "Es la razón entre los coeficientes de x, no el valor de k."),
+            ("k = 12, tomando el término independiente de la segunda ecuación",
+             "El término independiente decide si no hay solución o si hay infinitas, pero no el paralelismo."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "¿Para qué valor de k el sistema 2x + 3y = 8 ; 6x + 9y = k tiene "
+        "INFINITAS soluciones?",
+        "k = 24",
+        "Las tres razones deben coincidir.\n\n"
+        "1) La razón de los coeficientes es 6/2 = 3 y también 9/3 = 3.\n"
+        "2) Para que las ecuaciones describan la misma recta, el término "
+        "independiente debe seguir la misma proporción: k/8 = 3.\n"
+        "3) Despejando: k = 24.\n\n"
+        "Con cualquier otro valor de k las rectas quedan paralelas distintas y "
+        "el sistema no tiene solución.",
+        [
+            ("k = 8",
+             "Repite el término independiente de la primera ecuación, sin escalarlo por 3."),
+            ("k = 3",
+             "Es la razón de proporcionalidad, no el valor de k."),
+            ("Cualquier valor, porque los coeficientes ya son proporcionales",
+             "Los coeficientes lo son, pero el término independiente decide entre infinitas y ninguna."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "¿Para qué valores de k el sistema kx + 2y = 4 ; 2x + y = 3 tiene "
+        "solución única?",
+        "Para todo k distinto de 4",
+        "La solución es única salvo cuando las rectas resultan paralelas.\n\n"
+        "1) Hay paralelismo si k/2 = 2/1, es decir, si k = 4.\n"
+        "2) Para cualquier otro valor las pendientes difieren y las rectas se "
+        "cortan.\n"
+        "3) Por lo tanto la solución es única para todo k ≠ 4.\n\n"
+        "Conviene revisar el caso excluido: con k = 4 las razones de los "
+        "términos independientes dan 4/3, distinto de 2, así que ahí no hay "
+        "solución.",
+        [
+            ("Solo para k = 4",
+             "Con k = 4 es el único caso en que la solución NO es única."),
+            ("Para todo k distinto de 2",
+             "El paralelismo aparece en k = 4, no en k = 2."),
+            ("Para ningún valor, porque el sistema siempre resulta paralelo",
+             "Solo resulta paralelo en un valor: en los demás se cortan."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "El sistema 4x − 2y = 6 ; 2x − y = 3, ¿qué tipo de sistema es?",
+        "Compatible indeterminado",
+        "Se comparan las tres razones entre coeficientes.\n\n"
+        "1) 4/2 = 2, −2/−1 = 2 y 6/3 = 2.\n"
+        "2) Las tres coinciden, así que las ecuaciones describen la misma "
+        "recta.\n"
+        "3) El sistema tiene infinitas soluciones: es compatible "
+        "indeterminado.\n\n"
+        "Comprobación: multiplicando la segunda ecuación por 2 se obtiene "
+        "exactamente la primera.",
+        [
+            ("Compatible determinado",
+             "Requeriría razones distintas entre los coeficientes, y aquí las tres coinciden."),
+            ("Incompatible",
+             "Las dos primeras razones coincidirían pero la tercera no; aquí coinciden las tres."),
+            ("Ninguno de los tres, porque la segunda ecuación tiene coeficientes negativos",
+             "El signo de los coeficientes no altera la clasificación."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "Dos rectas de un sistema tienen pendiente 4 y coeficientes de posición "
+        "−1 y −1. ¿Cuántas soluciones tiene el sistema?",
+        "Infinitas",
+        "Con igual pendiente e igual coeficiente de posición, las rectas "
+        "coinciden.\n\n"
+        "1) Ambas son y = 4x − 1.\n"
+        "2) Son la misma recta escrita dos veces.\n"
+        "3) Todos sus puntos son solución.\n\n"
+        "Si los coeficientes de posición hubieran diferido, aunque fuera en una "
+        "milésima, no habría ninguna solución.",
+        [
+            ("Una",
+             "Se cortarían en un punto solo si las pendientes fueran distintas."),
+            ("Ninguna",
+             "Serían paralelas distintas, y aquí el coeficiente de posición coincide."),
+            ("Dos, porque hay dos rectas en el sistema planteado",
+             "El número de rectas no es el número de soluciones."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "Un sistema 2x2 con términos independientes iguales a cero, ¿puede ser "
+        "incompatible?",
+        "No: siempre admite al menos la solución (0, 0)",
+        "Un sistema homogéneo nunca se queda sin solución.\n\n"
+        "1) Al reemplazar x = 0 e y = 0, ambas ecuaciones quedan 0 = 0.\n"
+        "2) Por lo tanto el origen siempre es solución.\n"
+        "3) El sistema puede tener solo esa solución, o infinitas si las rectas "
+        "coinciden, pero nunca ninguna.\n\n"
+        "En el plano, las dos rectas pasan obligatoriamente por el origen: "
+        "aunque tengan distinta pendiente, ahí se cruzan.",
+        [
+            ("Sí, si las pendientes son iguales",
+             "Con pendientes iguales y ambas pasando por el origen, las rectas coinciden: infinitas soluciones."),
+            ("Sí, si los coeficientes son distintos",
+             "Coeficientes distintos dan pendientes distintas, y las rectas se cortan en el origen."),
+            ("Sí, siempre que las dos ecuaciones no sean múltiplos entre sí",
+             "En ese caso hay una única solución, que es el origen: sigue siendo compatible."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "Una tienda vende dos tipos de entradas. El sistema que modela la venta "
+        "resulta incompatible. ¿Qué significa en el contexto?",
+        "Los datos entregados se contradicen entre sí",
+        "Un sistema sin solución señala que las condiciones no pueden "
+        "cumplirse a la vez.\n\n"
+        "1) Cada ecuación traduce una condición del enunciado.\n"
+        "2) Que no exista solución significa que ningún par de valores cumple "
+        "ambas.\n"
+        "3) En el contexto, los datos del problema son inconsistentes: hay un "
+        "error en ellos o la situación descrita no puede ocurrir.\n\n"
+        "Es una conclusión útil, no un fracaso: el modelo detectó que el "
+        "enunciado se contradice.",
+        [
+            ("Que la solución tiene números negativos",
+             "Una solución negativa existe: el sistema sería compatible aunque el resultado no tenga sentido físico."),
+            ("Que hay más de una combinación posible de precios",
+             "Ese sería un sistema con infinitas soluciones, no uno incompatible."),
+            ("Que faltó plantear una tercera ecuación para poder resolverlo",
+             "Con dos incógnitas bastan dos ecuaciones: el problema es que se contradicen."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "¿Cuántas soluciones tiene el sistema 3x + 5y = 1 ; 6x + 10y = 2?",
+        "Infinitas",
+        "Se comparan las tres razones.\n\n"
+        "1) 6/3 = 2, 10/5 = 2 y 2/1 = 2.\n"
+        "2) Las tres coinciden.\n"
+        "3) Las ecuaciones describen la misma recta: hay infinitas "
+        "soluciones.\n\n"
+        "Que los números sean pequeños no cambia el criterio: lo que decide es "
+        "la proporción entre ellos.",
+        [
+            ("Una",
+             "Habría corte único si alguna de las dos primeras razones difiriera."),
+            ("Ninguna",
+             "La tercera razón también vale 2, así que las rectas coinciden en vez de ser paralelas distintas."),
+            ("Dos, porque los términos independientes son 1 y 2",
+             "Los términos independientes no cuentan soluciones: entran en la comparación de razones."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "¿Qué condición sobre los coeficientes garantiza que el sistema "
+        "ax + by = c ; dx + ey = f tenga solución única?",
+        "Que a · e sea distinto de b · d",
+        "Es la condición de que las pendientes difieran, escrita sin "
+        "fracciones.\n\n"
+        "1) Las rectas son paralelas cuando a/d = b/e.\n"
+        "2) Multiplicando en cruz, esa igualdad es a · e = b · d.\n"
+        "3) La solución es única exactamente cuando esa igualdad NO se cumple.\n\n"
+        "Esa diferencia a · e − b · d es el determinante del sistema: si vale "
+        "cero, no hay solución única.",
+        [
+            ("Que c sea distinto de f",
+             "Los términos independientes deciden entre ninguna e infinitas, no la unicidad."),
+            ("Que a · e sea igual a b · d",
+             "Es la condición contraria: esa igualdad es la que produce rectas paralelas."),
+            ("Que todos los coeficientes sean distintos de cero",
+             "Un coeficiente nulo es perfectamente posible: y = 3 junto con x = 2 tiene solución única."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "El sistema x + y = 10 ; x + y = 10 se resuelve. ¿Cuántas soluciones "
+        "tiene?",
+        "Infinitas",
+        "La segunda ecuación repite exactamente a la primera.\n\n"
+        "1) No aporta ninguna condición nueva.\n"
+        "2) Queda una sola ecuación con dos incógnitas.\n"
+        "3) Cualquier par que sume 10 es solución: (0, 10), (3, 7), (5,5, 4,5) "
+        "y así infinitamente.\n\n"
+        "Para tener solución única hacen falta dos condiciones independientes, "
+        "y aquí solo hay una.",
+        [
+            ("Una",
+             "Una sola ecuación con dos incógnitas no determina un punto."),
+            ("Ninguna",
+             "La ecuación es perfectamente satisfacible: hay muchos pares que suman 10."),
+            ("Diez, tantas como indica el término independiente del sistema",
+             "El término independiente no cuenta soluciones."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "¿Para qué valor de m el sistema mx − y = 4 ; 6x − 2y = 8 tiene "
+        "infinitas soluciones?",
+        "m = 3",
+        "Las tres razones deben coincidir.\n\n"
+        "1) La razón de los coeficientes de y es −2/−1 = 2.\n"
+        "2) La de los términos independientes es 8/4 = 2.\n"
+        "3) Para que la de los coeficientes de x también valga 2 hace falta "
+        "6/m = 2, es decir, m = 3.\n\n"
+        "Comprobación: con m = 3 la segunda ecuación es exactamente el doble de "
+        "la primera.",
+        [
+            ("m = 6",
+             "Repite el coeficiente de la segunda ecuación sin dividirlo por la proporción 2."),
+            ("m = 2",
+             "Es la razón de proporcionalidad, no el valor de m."),
+            ("m = 12, multiplicando el coeficiente por la razón en vez de dividirlo",
+             "La razón 6/m debe valer 2, así que m es 3 y no 12."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "Dos rectas de un sistema se cortan en el punto (2, −1). ¿Qué tipo de "
+        "sistema es?",
+        "Compatible determinado",
+        "Un único punto de corte significa una única solución.\n\n"
+        "1) El par (2, −1) satisface ambas ecuaciones.\n"
+        "2) Como las rectas se cortan en un solo punto, no hay otro par que lo "
+        "haga.\n"
+        "3) El sistema es compatible, porque hay solución, y determinado, "
+        "porque es única.\n\n"
+        "Que la solución tenga una coordenada negativa no cambia la "
+        "clasificación.",
+        [
+            ("Compatible indeterminado",
+             "Ese caso exige que las rectas coincidan por completo, no que se corten en un punto."),
+            ("Incompatible",
+             "Un sistema incompatible no tiene ningún punto en común."),
+            ("Compatible determinado solo si las dos coordenadas fueran positivas",
+             "El signo de las coordenadas no interviene en la clasificación."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "Al graficar un sistema se obtienen dos rectas que parecen muy cercanas "
+        "pero no idénticas. ¿Qué se puede concluir del gráfico solo?",
+        "Que conviene verificar algebraicamente antes de decidir",
+        "Un gráfico tiene precisión limitada.\n\n"
+        "1) Dos rectas con pendientes 2 y 2,01 se ven prácticamente iguales en "
+        "un dibujo.\n"
+        "2) Sin embargo se cortan en algún punto, aunque muy lejos del "
+        "origen.\n"
+        "3) Solo la comparación de coeficientes decide con certeza entre "
+        "paralelas y casi paralelas.\n\n"
+        "El gráfico sirve para orientarse y para comunicar, pero la "
+        "clasificación se justifica con los coeficientes.",
+        [
+            ("Que el sistema no tiene solución",
+             "Es una posibilidad, pero el gráfico no alcanza a distinguirla de un corte lejano."),
+            ("Que el sistema tiene infinitas soluciones",
+             "Eso exigiría que fueran la misma recta, y el enunciado dice que no lo son."),
+            ("Que el gráfico está mal hecho, porque dos rectas siempre se cortan",
+             "Dos rectas paralelas nunca se cortan: el gráfico puede estar perfectamente bien."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Algebra: casos de un sistema 2x2 (segunda tanda)
+#
+# Se cierra el nodo con los casos con parametro despejado, la lectura del
+# determinante y las situaciones de contexto donde el numero de soluciones es
+# lo que hay que interpretar.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "alg_sistemas_casos", "medio",
+        "¿Para qué valor de a el sistema ax + 3y = 7 ; 4x + 6y = 5 es "
+        "incompatible?",
+        "a = 2",
+        "Hay que forzar el paralelismo y comprobar que las rectas no "
+        "coincidan.\n\n"
+        "1) Las rectas son paralelas si 4/a = 6/3 = 2.\n"
+        "2) Despejando: 4 = 2a, es decir, a = 2.\n"
+        "3) Falta verificar que no coincidan: 5/7 no vale 2, así que son "
+        "paralelas distintas y el sistema no tiene solución.\n\n"
+        "Ese segundo paso no es adorno: si la razón de los términos "
+        "independientes también hubiera valido 2, el sistema tendría infinitas "
+        "soluciones en vez de ninguna.",
+        [
+            ("a = 4",
+             "Repite el coeficiente de la segunda ecuación sin dividirlo por la proporción 2."),
+            ("a = 8",
+             "Multiplica por la razón en vez de dividir: la condición es 4/a = 2, no 4 · 2 = a."),
+            ("No existe tal valor, porque los términos independientes son distintos",
+             "Justamente porque son distintos y no proporcionales, el sistema resulta incompatible en a = 2."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "El determinante de un sistema 2x2 vale 0. ¿Qué se puede afirmar?",
+        "El sistema no tiene solución única",
+        "El determinante mide si las pendientes difieren.\n\n"
+        "1) Un determinante distinto de cero garantiza rectas que se cortan en "
+        "un punto.\n"
+        "2) Si vale cero, las rectas son paralelas: o coinciden, o no se "
+        "encuentran nunca.\n"
+        "3) Por lo tanto no hay solución única, pero el determinante por sí "
+        "solo no distingue entre los dos casos restantes.\n\n"
+        "Para decidir hay que mirar los términos independientes.",
+        [
+            ("El sistema no tiene solución",
+             "Puede tenerlas: si las rectas coinciden hay infinitas."),
+            ("El sistema tiene infinitas soluciones",
+             "También podría no tener ninguna: el determinante nulo no distingue entre ambos casos."),
+            ("Las dos ecuaciones tienen todos sus coeficientes iguales a cero",
+             "Basta que sean proporcionales; no necesitan anularse."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "Se resuelve el sistema 7x + 2y = 5 ; 3x − y = 4 y se obtiene el "
+        "determinante. ¿Cuánto vale?",
+        "−13",
+        "El determinante es el producto cruzado de los coeficientes.\n\n"
+        "1) Se calcula como 7 · (−1) − 2 · 3.\n"
+        "2) Eso da −7 − 6 = −13.\n"
+        "3) Como es distinto de cero, el sistema tiene solución única.\n\n"
+        "El signo del determinante no importa para clasificar: lo único que se "
+        "revisa es si vale cero o no.",
+        [
+            ("−1",
+             "Resta los coeficientes en vez de multiplicarlos en cruz."),
+            ("13",
+             "Confunde el signo: 7 · (−1) es −7, no 7."),
+            ("1, calculando 7 · (−1) + 2 · 3 en vez de restar los productos",
+             "El determinante resta el segundo producto: 7 · (−1) − 2 · 3."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "En una feria, dos personas compran manzanas y peras. El sistema "
+        "resultante tiene infinitas soluciones. ¿Qué se puede decir de los "
+        "precios?",
+        "Los datos no alcanzan para determinarlos",
+        "Infinitas soluciones significa que las dos compras entregan la misma "
+        "información.\n\n"
+        "1) Si una compra es proporcional a la otra, la segunda ecuación no "
+        "aporta una condición nueva.\n"
+        "2) Queda una sola condición sobre dos precios.\n"
+        "3) Hay infinitas combinaciones de precios compatibles con lo "
+        "observado.\n\n"
+        "Ocurre, por ejemplo, cuando la segunda persona compró exactamente el "
+        "doble de cada fruta y pagó el doble.",
+        [
+            ("Ambos precios son iguales entre sí",
+             "No se deduce: los precios pueden ser muy distintos y aun así el sistema queda indeterminado."),
+            ("Los precios son necesariamente números enteros",
+             "El sistema no impone nada sobre el tipo de número."),
+            ("El problema está mal planteado y no tiene respuesta posible",
+             "Sí tiene respuestas: tiene demasiadas. Eso es distinto de no tener ninguna."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "¿Cuál de los siguientes sistemas tiene solución única?",
+        "x + y = 4 ; 2x − y = 5",
+        "Se revisa en cada caso si las razones de coeficientes coinciden.\n\n"
+        "1) En el sistema correcto, 2/1 = 2 pero −1/1 = −1.\n"
+        "2) Las razones difieren, así que las rectas no son paralelas.\n"
+        "3) Se cortan en un punto: la solución es única, y resulta ser "
+        "(3, 1).\n\n"
+        "En las demás opciones una ecuación es múltiplo de la otra en sus "
+        "coeficientes, así que la solución no puede ser única.",
+        [
+            ("x + y = 4 ; 3x + 3y = 12",
+             "La segunda es el triple de la primera: hay infinitas soluciones."),
+            ("x + y = 4 ; 2x + 2y = 9",
+             "Los coeficientes son proporcionales pero el término independiente no: no hay solución."),
+            ("2x + 4y = 6 ; x + 2y = 3",
+             "La primera es el doble de la segunda: infinitas soluciones."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "Un sistema 2x2 tiene solución única. Si se multiplica la segunda "
+        "ecuación por 5, ¿qué ocurre?",
+        "Sigue teniendo la misma solución única",
+        "Multiplicar una ecuación por un número distinto de cero no cambia sus "
+        "soluciones.\n\n"
+        "1) Un par que cumple 3x + y = 2 también cumple 15x + 5y = 10, y al "
+        "revés.\n"
+        "2) La recta que representa esa ecuación es exactamente la misma.\n"
+        "3) El punto de corte con la otra recta no se mueve.\n\n"
+        "Es la razón por la que el método de reducción es válido: reescala "
+        "ecuaciones sin alterar el conjunto solución.",
+        [
+            ("La solución se multiplica por 5",
+             "La solución no se escala: es un punto del plano que no se movió."),
+            ("Pasa a tener infinitas soluciones",
+             "Eso ocurriría si la ecuación reescalada coincidiera con la primera, y no es el caso."),
+            ("Deja de tener solución, porque las ecuaciones ya no son equivalentes",
+             "Sí son equivalentes: multiplicar por un número distinto de cero preserva las soluciones."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "¿Para qué valor de p el sistema 3x − py = 9 ; x − 2y = 3 tiene "
+        "infinitas soluciones?",
+        "p = 6",
+        "Las tres razones deben coincidir.\n\n"
+        "1) La razón de los coeficientes de x es 3/1 = 3.\n"
+        "2) La de los términos independientes es 9/3 = 3, que ya calza.\n"
+        "3) Falta que la de los coeficientes de y también valga 3: "
+        "(−p)/(−2) = 3, de donde p = 6.\n\n"
+        "Con p = 6 la primera ecuación es exactamente el triple de la segunda.",
+        [
+            ("p = 2",
+             "Repite el coeficiente de la segunda ecuación sin escalarlo por 3."),
+            ("p = 3",
+             "Es la razón de proporcionalidad, no el valor de p."),
+            ("p = 9, tomando el término independiente de la primera ecuación",
+             "El término independiente ya cumple la proporción; lo que falta es ajustar el coeficiente de y."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "Dos rectas de un sistema son perpendiculares. ¿Cuántas soluciones "
+        "tiene el sistema?",
+        "Exactamente una",
+        "Dos rectas perpendiculares nunca son paralelas.\n\n"
+        "1) Sus pendientes cumplen m₁ · m₂ = −1, así que son distintas.\n"
+        "2) Rectas con pendientes distintas se cortan en un punto.\n"
+        "3) Ese punto es la única solución.\n\n"
+        "La perpendicularidad es un caso particular de «pendientes distintas»: "
+        "no hace falta que lo sean para que haya solución única.",
+        [
+            ("Ninguna",
+             "Eso exige rectas paralelas, y dos perpendiculares nunca lo son."),
+            ("Infinitas",
+             "Exigiría que fueran la misma recta, imposible si son perpendiculares."),
+            ("Dos, una en cada punto donde se cruzan los ejes con las rectas",
+             "Los cortes con los ejes no son soluciones del sistema: lo es el corte entre las rectas."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "¿Cuántas soluciones tiene el sistema x/2 + y/3 = 1 ; 3x + 2y = 6?",
+        "Infinitas",
+        "Conviene amplificar la primera ecuación para comparar.\n\n"
+        "1) Multiplicando la primera por 6: 3x + 2y = 6.\n"
+        "2) Es exactamente la segunda ecuación.\n"
+        "3) Las dos describen la misma recta: hay infinitas soluciones.\n\n"
+        "Las fracciones esconden la proporcionalidad; el primer paso ante un "
+        "sistema con denominadores es siempre eliminarlos.",
+        [
+            ("Una",
+             "Lo parecería mirando las ecuaciones sin amplificar, pero son la misma recta."),
+            ("Ninguna",
+             "Al amplificar, el término independiente también calza: 6 contra 6."),
+            ("Seis, tantas como el mínimo común múltiplo de los denominadores",
+             "El común múltiplo sirve para amplificar, no para contar soluciones."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "Al resolver el sistema 2x + y = 7 ; 4x + 2y = 14 con el método de "
+        "sustitución, ¿qué se obtendrá?",
+        "Una identidad como 14 = 14",
+        "El sistema tiene ecuaciones proporcionales.\n\n"
+        "1) De la primera, y = 7 − 2x.\n"
+        "2) Reemplazando en la segunda: 4x + 2(7 − 2x) = 14.\n"
+        "3) Desarrollando: 4x + 14 − 4x = 14, es decir, 14 = 14.\n\n"
+        "La identidad confirma que la segunda ecuación no aportaba información: "
+        "el sistema tiene infinitas soluciones.",
+        [
+            ("El valor x = 7",
+             "Las variables se cancelan antes de poder despejar x."),
+            ("Una contradicción como 14 = 7",
+             "Eso pasaría si el término independiente no fuera proporcional, y aquí sí lo es."),
+            ("Un sistema equivalente de tres ecuaciones que hay que seguir resolviendo",
+             "La sustitución reduce el sistema; no genera ecuaciones adicionales."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "Un sistema 2x2 tiene infinitas soluciones. ¿Cómo se describen todas "
+        "ellas si la ecuación común es x + 2y = 8?",
+        "Como todos los pares (8 − 2t, t) con t real",
+        "Se deja una variable libre y se despeja la otra.\n\n"
+        "1) Se llama t al valor de y, que puede ser cualquier número real.\n"
+        "2) De x + 2y = 8 se obtiene x = 8 − 2t.\n"
+        "3) Cada valor de t entrega una solución distinta, y todas las "
+        "soluciones se obtienen así.\n\n"
+        "Comprobación con t = 3: el par es (2, 3), y en efecto 2 + 2 · 3 = 8.",
+        [
+            ("Como todos los pares (t, 8 − 2t) con t real",
+             "Invierte los roles: si x = t, entonces y = (8 − t)/2, no 8 − 2t."),
+            ("Como los pares (8, 0) y (0, 4) solamente",
+             "Son dos soluciones, los cortes con los ejes, pero hay infinitas más."),
+            ("Como todos los pares de números enteros que suman 8",
+             "Ni la suma es la condición ni las soluciones se limitan a los enteros."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "¿Cuál es la condición para que el sistema x + ky = 3 ; 2x + 8y = 6 "
+        "tenga infinitas soluciones?",
+        "k = 4",
+        "Las tres razones deben coincidir.\n\n"
+        "1) La razón de los coeficientes de x es 2/1 = 2.\n"
+        "2) La de los términos independientes es 6/3 = 2, que ya calza.\n"
+        "3) Falta 8/k = 2, de donde k = 4.\n\n"
+        "Con cualquier otro k las rectas se cortan y el sistema tiene solución "
+        "única: aquí nunca puede quedar incompatible, porque los términos "
+        "independientes ya están en proporción.",
+        [
+            ("k = 8",
+             "Repite el coeficiente de la segunda ecuación sin dividirlo por 2."),
+            ("k = 2",
+             "Es la razón de proporcionalidad, no el valor de k."),
+            ("k = 16, multiplicando el coeficiente por la razón en vez de dividirlo",
+             "La condición es 8/k = 2, así que k vale 4."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "Se sabe que un sistema 2x2 es compatible. ¿Qué NO se puede afirmar?",
+        "Que su solución es única",
+        "«Compatible» solo garantiza que existe al menos una solución.\n\n"
+        "1) Un sistema compatible determinado tiene exactamente una.\n"
+        "2) Uno compatible indeterminado tiene infinitas.\n"
+        "3) Sin más información no se puede distinguir entre ambos casos.\n\n"
+        "Lo que sí se puede afirmar es que las rectas tienen al menos un punto "
+        "en común.",
+        [
+            ("Que existe al menos una solución",
+             "Eso es exactamente lo que significa ser compatible."),
+            ("Que las rectas tienen al menos un punto en común",
+             "Es la lectura geométrica de tener solución: sí se puede afirmar."),
+            ("Que las dos rectas no son paralelas y distintas entre sí",
+             "Si lo fueran no habría solución, así que estar descartado sí se puede afirmar."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "dificil",
+        "¿Para qué valores de k el sistema kx + 4y = k ; x + ky = 2 tiene "
+        "solución única?",
+        "Para todo k distinto de 2 y de −2",
+        "Hay que anular el determinante y excluir esos valores.\n\n"
+        "1) El determinante es k · k − 4 · 1 = k² − 4.\n"
+        "2) Se anula cuando k² = 4, es decir, en k = 2 y en k = −2.\n"
+        "3) Para cualquier otro valor el determinante no es cero y la solución "
+        "es única.\n\n"
+        "El determinante cuadrático deja dos valores críticos en vez de uno: "
+        "conviene resolver la ecuación completa y no quedarse con la raíz "
+        "positiva.",
+        [
+            ("Para todo k distinto de 2",
+             "Olvida la raíz negativa: k = −2 también anula el determinante."),
+            ("Solo para k = 2 y k = −2",
+             "Son justamente los dos valores en que la solución NO es única."),
+            ("Para todo k distinto de 4, que es el otro coeficiente del sistema",
+             "El valor crítico sale de resolver k² − 4 = 0, no de leer un coeficiente."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "dificil",
+        "En el sistema 2x + ky = 6 ; 4x + 8y = k, ¿para qué valor de k el "
+        "sistema NO tiene solución?",
+        "k = 4",
+        "Primero se fuerza el paralelismo y después se revisa el término "
+        "independiente.\n\n"
+        "1) El determinante es 2 · 8 − k · 4 = 16 − 4k, y se anula en k = 4.\n"
+        "2) Con k = 4 el sistema queda 2x + 4y = 6 ; 4x + 8y = 4.\n"
+        "3) Las razones de los coeficientes valen 2, pero la de los términos "
+        "independientes es 4/6, distinta de 2: las rectas son paralelas y "
+        "distintas.\n\n"
+        "El parámetro aparece en dos lugares, así que conviene fijarlo con el "
+        "determinante y solo después mirar qué ocurre con el término "
+        "independiente.",
+        [
+            ("k = 12",
+             "Sale de igualar solo la razón de los términos independientes, pero con k = 12 el determinante no se anula y hay solución única."),
+            ("k = 2",
+             "Es la razón entre los coeficientes de x, no un valor de k que anule el determinante."),
+            ("Ningún valor de k lo consigue",
+             "Con k = 4 el sistema queda efectivamente sin solución."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "dificil",
+        "Se tiene el sistema (m − 1)x + 2y = 4 ; 3x + y = 2. ¿Cuál de las "
+        "siguientes afirmaciones es verdadera?",
+        "Con m = 7 el sistema tiene infinitas soluciones",
+        "Hay que comparar las tres razones, no solo las dos primeras.\n\n"
+        "1) Las rectas son paralelas si (m − 1)/3 = 2/1 = 2, de donde "
+        "m − 1 = 6 y m = 7.\n"
+        "2) Con m = 7 el sistema es 6x + 2y = 4 ; 3x + y = 2.\n"
+        "3) La razón de los términos independientes también vale 4/2 = 2, así "
+        "que las ecuaciones describen la misma recta.\n\n"
+        "Como las tres razones coinciden, m = 7 no deja el sistema sin "
+        "solución: le da infinitas. Para cualquier otro m la solución es única.",
+        [
+            ("Con m = 7 el sistema no tiene solución",
+             "Faltó revisar el término independiente: también está en proporción, así que las rectas coinciden."),
+            ("Con m = 3 el sistema tiene infinitas soluciones",
+             "Con m = 3 el determinante es 2 · 1 − 2 · 3 = −4, distinto de cero: la solución es única."),
+            ("El sistema tiene solución única para todo valor de m",
+             "En m = 7 el determinante se anula, así que ahí la solución deja de ser única."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "dificil",
+        "¿Cuál es el valor de a para que el sistema 3x − 2y = a ; 9x − 6y = 15 "
+        "tenga infinitas soluciones, y qué ocurre con los demás valores?",
+        "a = 5, y para cualquier otro valor no hay solución",
+        "Los coeficientes ya son proporcionales, así que solo decide el término "
+        "independiente.\n\n"
+        "1) La razón de los coeficientes es 9/3 = 3 y también −6/−2 = 3.\n"
+        "2) Para que las rectas coincidan hace falta 15/a = 3, de donde a = 5.\n"
+        "3) Con cualquier otro a las dos primeras razones siguen valiendo 3 "
+        "pero la tercera no, así que las rectas quedan paralelas distintas.\n\n"
+        "La solución única está descartada de antemano: los coeficientes son "
+        "proporcionales pase lo que pase con a.",
+        [
+            ("a = 5, y para cualquier otro valor la solución es única",
+             "Los coeficientes son proporcionales para todo a, así que nunca hay solución única."),
+            ("a = 15, y para cualquier otro valor no hay solución",
+             "Confunde el término independiente de la segunda ecuación con el de la primera: 15/a = 3 da a = 5."),
+            ("a = 3, porque esa es la razón entre los coeficientes del sistema",
+             "La razón vale 3, pero el valor de a que la respeta es 15/3 = 5."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "dificil",
+        "Se plantea el sistema x + y = 5 ; 2x + 2y = c. ¿Qué valores de c hacen "
+        "que el sistema sea compatible?",
+        "Solo c = 10",
+        "Los coeficientes son proporcionales, así que nunca hay solución "
+        "única.\n\n"
+        "1) La razón de los coeficientes es 2/1 = 2 en ambas variables.\n"
+        "2) El sistema es compatible únicamente si la tercera razón también "
+        "vale 2: c/5 = 2, de donde c = 10.\n"
+        "3) Con cualquier otro c las rectas son paralelas distintas y no hay "
+        "solución.\n\n"
+        "Con c = 10 el sistema es compatible indeterminado: tiene infinitas "
+        "soluciones, no una.",
+        [
+            ("Cualquier valor de c",
+             "Solo uno funciona: los demás dejan rectas paralelas distintas."),
+            ("Solo c = 5",
+             "Repite el término independiente de la primera ecuación sin escalarlo por 2."),
+            ("Todos los valores de c salvo 10, porque ese anula el sistema",
+             "Es exactamente al revés: c = 10 es el único que lo hace compatible."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "dificil",
+        "En una fábrica, dos máquinas producen piezas. El sistema que modela la "
+        "producción es 5x + 3y = 40 ; 10x + 6y = 80, donde x e y son las horas "
+        "de cada máquina. ¿Qué se concluye?",
+        "Hay infinitas combinaciones de horas compatibles con el dato",
+        "La segunda ecuación es el doble de la primera.\n\n"
+        "1) Multiplicando la primera por 2 se obtiene exactamente la segunda.\n"
+        "2) El sistema es compatible indeterminado.\n"
+        "3) Cualquier par de horas que cumpla 5x + 3y = 40 sirve: por ejemplo "
+        "(8, 0), (5, 5) o (2, 10).\n\n"
+        "En el contexto, las dos mediciones dijeron lo mismo: falta una "
+        "condición realmente nueva para fijar las horas de cada máquina.",
+        [
+            ("Cada máquina trabajó exactamente 5 horas",
+             "Es una de las infinitas soluciones, pero el sistema no la determina."),
+            ("Los datos son contradictorios y el sistema no tiene solución",
+             "Serían contradictorios si el término independiente no fuera 80: con 80 las ecuaciones coinciden."),
+            ("La producción total fue de 120 piezas entre las dos máquinas",
+             "El 120 no aparece en el planteamiento; los términos independientes son 40 y 80."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "dificil",
+        "El sistema (k + 1)x + 2y = 3 ; 2x + (k − 1)y = 1 tiene solución única "
+        "salvo para ciertos valores de k. ¿Cuáles son?",
+        "k = √5 y k = −√5",
+        "Se anula el determinante y se resuelve la ecuación resultante.\n\n"
+        "1) El determinante es (k + 1)(k − 1) − 2 · 2.\n"
+        "2) Desarrollando: k² − 1 − 4 = k² − 5.\n"
+        "3) Se anula cuando k² = 5, es decir, en k = √5 y en k = −√5.\n\n"
+        "La suma por diferencia deja el cálculo en una línea: (k + 1)(k − 1) es "
+        "k² − 1, sin necesidad de distribuir término a término.",
+        [
+            ("k = 5 y k = −5",
+             "Olvida extraer la raíz: de k² = 5 se sigue k = ±√5."),
+            ("k = 1 y k = −1",
+             "Son los valores que anulan cada factor por separado, pero el determinante resta además el producto 2 · 2."),
+            ("k = 3 y k = −3, que son los valores que anulan el término independiente",
+             "El término independiente no interviene en el determinante."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "dificil",
+        "Se sabe que el sistema ax + by = 0 ; cx + dy = 0 tiene una solución "
+        "distinta de (0, 0). ¿Qué se puede afirmar?",
+        "Tiene infinitas soluciones",
+        "Un sistema homogéneo con una solución no trivial no puede tener "
+        "solución única.\n\n"
+        "1) El origen siempre es solución de un sistema homogéneo.\n"
+        "2) Si además existe otra solución, hay al menos dos.\n"
+        "3) Un sistema lineal 2x2 nunca tiene exactamente dos soluciones: si "
+        "tiene más de una, tiene infinitas.\n\n"
+        "Equivale a decir que el determinante ad − bc vale cero: las dos rectas "
+        "pasan por el origen y coinciden.",
+        [
+            ("Tiene exactamente dos soluciones",
+             "Un sistema lineal nunca tiene exactamente dos: o una, o ninguna, o infinitas."),
+            ("No tiene solución",
+             "El origen siempre es solución de un sistema homogéneo."),
+            ("Su determinante es distinto de cero",
+             "Es al revés: un determinante no nulo obligaría a que la única solución fuera el origen."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "dificil",
+        "Dos rectas están dadas por y = (k − 2)x + 3 e y = 4x + k. ¿Para qué "
+        "valor de k el sistema formado por ellas NO tiene solución?",
+        "k = 6",
+        "Se igualan las pendientes y se verifica que los cortes con el eje Y "
+        "difieran.\n\n"
+        "1) Hay paralelismo si k − 2 = 4, es decir, k = 6.\n"
+        "2) Con k = 6 los coeficientes de posición son 3 y 6.\n"
+        "3) Son distintos, así que las rectas son paralelas distintas y no hay "
+        "solución.\n\n"
+        "Si los coeficientes de posición hubieran coincidido, el mismo valor de "
+        "k habría dado infinitas soluciones en lugar de ninguna.",
+        [
+            ("k = 4",
+             "Repite la pendiente de la segunda recta sin sumar el 2 que descuenta el paréntesis."),
+            ("k = 3",
+             "Toma el coeficiente de posición de la primera recta, que no interviene en el paralelismo."),
+            ("k = 2, porque ese valor anula el coeficiente de x en la primera recta",
+             "Con k = 2 la primera recta queda horizontal y la segunda no: se cortan."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "dificil",
+        "Al analizar el sistema 6x − 4y = 10 ; −3x + 2y = −5, un estudiante "
+        "afirma que no tiene solución porque los signos están cambiados. "
+        "¿Tiene razón?",
+        "No: el sistema tiene infinitas soluciones",
+        "Hay que comparar las razones, no los signos sueltos.\n\n"
+        "1) La razón de los coeficientes de x es −3/6 = −0,5.\n"
+        "2) La de los coeficientes de y es 2/(−4) = −0,5.\n"
+        "3) La de los términos independientes es −5/10 = −0,5.\n\n"
+        "Las tres coinciden, así que la segunda ecuación es la primera "
+        "multiplicada por −0,5: describen la misma recta y hay infinitas "
+        "soluciones.",
+        [
+            ("Sí: los signos opuestos impiden que haya solución",
+             "Una razón de proporcionalidad negativa es perfectamente válida."),
+            ("No: el sistema tiene una única solución",
+             "Las tres razones coinciden, así que las rectas no se cortan en un punto sino que coinciden."),
+            ("No se puede decidir sin resolver el sistema paso a paso",
+             "Basta comparar las tres razones entre coeficientes."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "dificil",
+        "Un sistema 2x2 con coeficientes enteros tiene infinitas soluciones. Si "
+        "se agrega una tercera ecuación 5x + y = 12, ¿qué puede ocurrir con el "
+        "nuevo sistema?",
+        "Puede tener una única solución o ninguna",
+        "La tercera ecuación agrega una condición que antes no existía.\n\n"
+        "1) Las dos primeras describen una sola recta, con infinitas "
+        "soluciones.\n"
+        "2) La tercera es otra recta: si corta a la primera, queda un único "
+        "punto común a las tres.\n"
+        "3) Si es paralela distinta a la primera, no hay ningún punto común.\n\n"
+        "Lo que ya no puede pasar es conservar las infinitas soluciones, salvo "
+        "que la tercera recta sea también la misma recta.",
+        [
+            ("Necesariamente conserva las infinitas soluciones",
+             "Solo si la tercera ecuación describiera esa misma recta, cosa que el enunciado no garantiza."),
+            ("Necesariamente queda sin solución",
+             "Si la tercera recta corta a la primera, queda exactamente una solución."),
+            ("Pasa a tener exactamente tres soluciones, una por ecuación",
+             "El número de ecuaciones no es el número de soluciones."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "dificil",
+        "Se afirma: «Si un sistema 2x2 tiene determinante cero, entonces no "
+        "tiene solución». ¿Es correcta la afirmación?",
+        "No, porque también puede tener infinitas soluciones",
+        "El determinante nulo descarta la unicidad, pero no la existencia.\n\n"
+        "1) Determinante cero significa que las rectas son paralelas.\n"
+        "2) Dos rectas paralelas pueden ser distintas, y entonces no hay "
+        "solución.\n"
+        "3) Pero también pueden coincidir, y entonces hay infinitas.\n\n"
+        "Un ejemplo del segundo caso: x + y = 1 junto con 2x + 2y = 2 tiene "
+        "determinante cero y todas las soluciones de la recta.",
+        [
+            ("Sí, el determinante cero siempre indica incompatibilidad",
+             "El contraejemplo x + y = 1 con 2x + 2y = 2 muestra que no."),
+            ("No, porque el determinante cero indica solución única",
+             "Es al revés: la solución única corresponde a determinante distinto de cero."),
+            ("No, porque el determinante nunca puede valer cero en un sistema real",
+             "Sí puede: basta que una ecuación sea múltiplo de la otra."),
+        ],
+    ),
+]
+
+
+QUESTIONS += [
+    _q(
+        "alg_sistemas_casos", "medio",
+        "Se sabe que el sistema 4x + 6y = 14 ; 6x + 9y = t es compatible. "
+        "¿Cuánto vale t?",
+        "21",
+        "Los coeficientes ya son proporcionales, así que el sistema solo puede "
+        "ser compatible si las rectas coinciden.\n\n"
+        "1) La razón entre coeficientes es 6/4 = 1,5 y también 9/6 = 1,5.\n"
+        "2) Como la razón es la misma en ambas variables, nunca hay solución "
+        "única: el sistema es paralelo pase lo que pase con t.\n"
+        "3) Para que sea compatible hace falta t/14 = 1,5, de donde t = 21.\n\n"
+        "Con t = 21 el sistema es compatible indeterminado: tiene infinitas "
+        "soluciones, todas las de la recta 2x + 3y = 7.",
+        [
+            ("14",
+             "Repite el término independiente de la primera ecuación sin escalarlo por 1,5."),
+            ("1,5",
+             "Es la razón de proporcionalidad, no el término independiente que se busca."),
+            ("28, duplicando el término independiente en vez de multiplicarlo por 1,5",
+             "La razón entre las ecuaciones es 1,5 y no 2: 14 · 1,5 = 21."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Algebra: funcion potencia f(x) = a * x^n
+#
+# El nodo cubre la forma del grafico segun la paridad de n y el signo de a, el
+# dominio y recorrido, la comparacion de crecimientos y el modelamiento de
+# magnitudes que dependen de una potencia (volumen, area, energia).
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "alg_funcion_potencia", "facil",
+        "¿Cuál es el valor de f(2) si f(x) = 3x⁴?",
+        "48",
+        "Se reemplaza y se respeta el orden de las operaciones.\n\n"
+        "1) Primero se eleva: 2⁴ = 16.\n"
+        "2) Después se multiplica por el coeficiente: 3 · 16 = 48.\n"
+        "3) Por lo tanto f(2) = 48.\n\n"
+        "El exponente afecta solo a la x, no al 3: elevar primero y multiplicar "
+        "después es lo que distingue 3x⁴ de (3x)⁴.",
+        [
+            ("24",
+             "Calcula 3 · 2 · 4 en vez de elevar 2 a la cuarta."),
+            ("1.296",
+             "Corresponde a (3 · 2)⁴, es decir, eleva también el coeficiente."),
+            ("81, elevando el coeficiente 3 a la cuarta potencia",
+             "El exponente afecta solo a la variable: la base que se eleva es 2."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "facil",
+        "¿Por qué punto pasa siempre el gráfico de f(x) = ax^n, cualquiera sea "
+        "el valor de a y de n natural?",
+        "Por el origen (0, 0)",
+        "Se evalúa la función en x = 0.\n\n"
+        "1) Con n natural, 0^n vale 0.\n"
+        "2) Entonces f(0) = a · 0 = 0.\n"
+        "3) El punto (0, 0) pertenece al gráfico sin importar cuánto valga a.\n\n"
+        "Es la diferencia con una función afín como y = 2x + 5, que corta el "
+        "eje Y en 5: la función potencia pura no tiene término constante.",
+        [
+            ("Por el punto (1, 1)",
+             "Solo si a = 1: en general f(1) = a, que puede ser cualquier número."),
+            ("Por el punto (0, a)",
+             "Ese es el corte de una función afín; aquí f(0) siempre vale 0."),
+            ("Por el punto (a, 0), donde a es el coeficiente de la función",
+             "El coeficiente no es una raíz: la única raíz de ax^n es x = 0."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "facil",
+        "El gráfico de f(x) = x⁴ es simétrico respecto de:",
+        "El eje Y",
+        "El exponente es par, así que la función es par.\n\n"
+        "1) Se evalúa en un valor y en su opuesto: f(−x) = (−x)⁴ = x⁴.\n"
+        "2) Entonces f(−x) = f(x) para todo x.\n"
+        "3) Cada punto tiene su reflejo al otro lado del eje Y.\n\n"
+        "Por ejemplo, f(2) y f(−2) valen los dos 16: el gráfico se dobla sobre "
+        "el eje Y y calza consigo mismo.",
+        [
+            ("El origen",
+             "Esa es la simetría de las potencias de exponente impar, como x³."),
+            ("El eje X",
+             "Ningún gráfico de función puede serlo: tendría dos imágenes para un mismo x."),
+            ("La recta y = x, porque la función es su propia inversa",
+             "x⁴ no es su propia inversa; su simetría es respecto del eje Y."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "facil",
+        "El gráfico de f(x) = x⁵ es simétrico respecto de:",
+        "El origen",
+        "El exponente es impar, así que la función es impar.\n\n"
+        "1) Se evalúa en el opuesto: f(−x) = (−x)⁵ = −x⁵.\n"
+        "2) Entonces f(−x) = −f(x) para todo x.\n"
+        "3) Cada punto tiene su reflejo al otro lado del origen, girado media "
+        "vuelta.\n\n"
+        "Por ejemplo, f(2) = 32 y f(−2) = −32: mismos valores absolutos, signos "
+        "opuestos.",
+        [
+            ("El eje Y",
+             "Esa es la simetría de las potencias de exponente par, como x⁴."),
+            ("El eje X",
+             "Ningún gráfico de función puede serlo."),
+            ("La recta x = 1, porque ahí la función vale 1",
+             "Que la función pase por (1, 1) no genera ninguna simetría."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "facil",
+        "¿Cuál es el dominio de la función f(x) = 5x³?",
+        "Todos los números reales",
+        "Una potencia de exponente natural se puede calcular con cualquier "
+        "número.\n\n"
+        "1) No hay divisiones, así que no se excluye ningún valor por "
+        "denominador nulo.\n"
+        "2) No hay raíces de índice par, así que tampoco se exigen valores no "
+        "negativos.\n"
+        "3) El dominio es todo el conjunto de los reales.\n\n"
+        "El recorrido, en cambio, sí depende del exponente: con exponente impar "
+        "abarca todos los reales, y con exponente par solo la mitad.",
+        [
+            ("Solo los números positivos",
+             "También se puede evaluar en negativos: f(−2) = −40."),
+            ("Solo los números enteros",
+             "Se puede evaluar en 0,5 o en √2 sin ninguna dificultad."),
+            ("Todos los reales salvo el cero, donde la función se indefine",
+             "En cero la función vale 0: está perfectamente definida."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "facil",
+        "¿Cuál es el recorrido de la función f(x) = x², con dominio en los "
+        "reales?",
+        "Los números reales mayores o iguales que cero",
+        "Un cuadrado nunca resulta negativo.\n\n"
+        "1) Para cualquier x real, x² ≥ 0.\n"
+        "2) El valor 0 se alcanza en x = 0.\n"
+        "3) Cualquier número positivo k se alcanza en x = √k, así que todos "
+        "ellos están en el recorrido.\n\n"
+        "Con exponente impar la situación cambia: x³ sí toma valores negativos, "
+        "y su recorrido es todo el conjunto de los reales.",
+        [
+            ("Todos los números reales",
+             "Los valores negativos no se alcanzan: ningún cuadrado es negativo."),
+            ("Solo los números positivos",
+             "Falta incluir el cero, que se alcanza en x = 0."),
+            ("Los números reales menores o iguales que cero",
+             "Ese sería el recorrido de −x², con el coeficiente negativo."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "facil",
+        "En la función f(x) = ax³, ¿qué ocurre con el gráfico si a es negativo?",
+        "Queda reflejado respecto del eje X",
+        "Multiplicar por un número negativo cambia el signo de todas las "
+        "imágenes.\n\n"
+        "1) Si a > 0, la función crece: valores positivos para x > 0.\n"
+        "2) Con a < 0, cada imagen cambia de signo.\n"
+        "3) El gráfico resultante es el reflejo del anterior respecto del eje "
+        "X: ahora decrece.\n\n"
+        "El punto (0, 0) no se mueve, porque su imagen es cero y el cero no "
+        "cambia de signo.",
+        [
+            ("Queda reflejado respecto del eje Y",
+             "Eso equivaldría a cambiar x por −x, no a cambiar el signo del coeficiente."),
+            ("Se desplaza hacia abajo",
+             "Un desplazamiento vertical requiere sumar una constante, no multiplicar por un número negativo."),
+            ("Deja de pasar por el origen del plano cartesiano",
+             "Sigue pasando: f(0) = 0 sea cual sea el signo de a."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "facil",
+        "¿Cuánto vale f(−3) si f(x) = x³?",
+        "−27",
+        "Un exponente impar conserva el signo de la base.\n\n"
+        "1) (−3)³ = (−3) · (−3) · (−3).\n"
+        "2) Los dos primeros factores dan 9, y 9 · (−3) = −27.\n"
+        "3) Por lo tanto f(−3) = −27.\n\n"
+        "Con un número impar de factores negativos, el resultado es negativo. "
+        "Con exponente par el signo se pierde: (−3)⁴ = 81.",
+        [
+            ("27",
+             "Ignora el signo: al haber tres factores negativos el resultado es negativo."),
+            ("−9",
+             "Corresponde a −3², que es distinto de (−3)³."),
+            ("−6, multiplicando la base por el exponente en vez de elevarla",
+             "Elevar al cubo es multiplicar la base tres veces por sí misma."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "facil",
+        "¿Cuál de estas funciones es una función potencia?",
+        "f(x) = 4x³",
+        "Una función potencia tiene la forma ax^n, con un único término.\n\n"
+        "1) f(x) = 4x³ es un coeficiente por una potencia de x.\n"
+        "2) No tiene término constante ni sumas de potencias distintas.\n"
+        "3) Cumple exactamente la forma pedida.\n\n"
+        "Las funciones con varios términos son polinómicas en general, pero no "
+        "funciones potencia.",
+        [
+            ("f(x) = 4x³ + 2",
+             "El término constante rompe la forma ax^n: el gráfico ya no pasa por el origen."),
+            ("f(x) = 3ˣ",
+             "Aquí la variable está en el exponente: es una función exponencial."),
+            ("f(x) = x³ + x², que suma dos potencias distintas de la variable",
+             "Una función potencia tiene un solo término."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "facil",
+        "¿Cuál es el valor de a en f(x) = ax² si se sabe que f(3) = 18?",
+        "2",
+        "Se reemplaza el dato y se despeja.\n\n"
+        "1) f(3) = a · 3² = 9a.\n"
+        "2) Igualando al valor conocido: 9a = 18.\n"
+        "3) Dividiendo por 9: a = 2.\n\n"
+        "Comprobación: con a = 2, f(3) = 2 · 9 = 18.",
+        [
+            ("6",
+             "Divide 18 por 3 en vez de por 3² = 9."),
+            ("9",
+             "Es el valor de 3², no el del coeficiente."),
+            ("18, tomando directamente el valor de la función como coeficiente",
+             "El coeficiente hay que despejarlo: 9a = 18 da a = 2."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "Si f(x) = x³ y g(x) = x⁵, ¿cuál de las dos toma un valor mayor en "
+        "x = 0,5?",
+        "f, porque el exponente menor da un valor mayor entre 0 y 1",
+        "Entre cero y uno, elevar reduce el número, y más cuanto mayor sea el "
+        "exponente.\n\n"
+        "1) f(0,5) = 0,125.\n"
+        "2) g(0,5) = 0,03125.\n"
+        "3) Como 0,125 es mayor, la función de exponente menor gana.\n\n"
+        "Para x > 1 la comparación se invierte: ahí el exponente mayor domina, "
+        "porque cada factor adicional es mayor que 1.",
+        [
+            ("g, porque un exponente mayor siempre entrega un valor mayor",
+             "Eso vale para x > 1; entre 0 y 1 ocurre lo contrario."),
+            ("Las dos valen lo mismo, porque la base es la misma",
+             "La base es la misma, pero los exponentes distintos dan valores distintos."),
+            ("No se puede comparar sin conocer los coeficientes de cada función",
+             "Ambas tienen coeficiente 1: basta evaluar."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "Si f(x) = x³ y g(x) = x⁵, ¿cuál de las dos toma un valor mayor en "
+        "x = 2?",
+        "g, porque el exponente mayor domina para valores sobre 1",
+        "Para bases mayores que 1, cada factor adicional agranda el "
+        "resultado.\n\n"
+        "1) f(2) = 8.\n"
+        "2) g(2) = 32.\n"
+        "3) Como 32 supera a 8, gana la función de exponente mayor.\n\n"
+        "Entre 0 y 1 la comparación se invierte, porque ahí cada factor "
+        "adicional achica el resultado.",
+        [
+            ("f, porque el exponente menor siempre entrega un valor mayor",
+             "Eso vale entre 0 y 1; para x mayor que 1 ocurre lo contrario."),
+            ("Las dos valen lo mismo, porque comparten la base",
+             "Con exponentes distintos los valores difieren: 8 contra 32."),
+            ("g solo si además su coeficiente es mayor que el de f",
+             "Ambas tienen coeficiente 1, y aun así g supera a f en x = 2."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "El volumen de un cubo en función de su arista es V(a) = a³. Si la "
+        "arista se duplica, ¿qué ocurre con el volumen?",
+        "Se multiplica por 8",
+        "Al duplicar la arista, el factor se eleva al cubo.\n\n"
+        "1) El nuevo volumen es (2a)³.\n"
+        "2) Desarrollando: 2³ · a³ = 8a³.\n"
+        "3) Es ocho veces el volumen original.\n\n"
+        "Es el efecto característico de una potencia cúbica: escalar la "
+        "variable por k multiplica la imagen por k³.",
+        [
+            ("Se duplica",
+             "Eso ocurriría si el volumen fuera proporcional a la arista, no a su cubo."),
+            ("Se multiplica por 6",
+             "Confunde el número de caras del cubo con el factor de escala."),
+            ("Se multiplica por 4, como ocurre con el área de cada cara",
+             "Ese es el factor para una magnitud cuadrática; el volumen es cúbico."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "En la función f(x) = ax⁴ con a > 0, ¿qué ocurre con las imágenes "
+        "cuando x se aleja del origen en cualquier dirección?",
+        "Crecen sin límite",
+        "El exponente par borra el signo y el coeficiente positivo conserva "
+        "el sentido.\n\n"
+        "1) Para x muy grande, x⁴ es enorme y positivo.\n"
+        "2) Para x muy negativo, x⁴ también es enorme y positivo, porque el "
+        "exponente es par.\n"
+        "3) En ambas direcciones las imágenes crecen sin tope.\n\n"
+        "El gráfico tiene forma de U muy abierta hacia arriba, con su punto más "
+        "bajo en el origen.",
+        [
+            ("Crecen hacia la derecha y decrecen hacia la izquierda",
+             "Ese es el comportamiento de un exponente impar, como x³ o x⁵."),
+            ("Se acercan a un valor fijo",
+             "Una función potencia de exponente natural no tiene asíntota horizontal."),
+            ("Decrecen sin límite en ambas direcciones",
+             "Eso ocurriría con a negativo; con a positivo las imágenes crecen."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "En la función f(x) = ax⁵ con a > 0, ¿qué ocurre con las imágenes "
+        "cuando x se aleja del origen en cualquier dirección?",
+        "Crecen sin límite hacia la derecha y decrecen sin límite hacia la izquierda",
+        "El exponente impar conserva el signo de la variable.\n\n"
+        "1) Para x muy grande y positivo, x⁵ es enorme y positivo.\n"
+        "2) Para x muy negativo, x⁵ es enorme y negativo.\n"
+        "3) Como a es positivo, ese comportamiento se mantiene.\n\n"
+        "El gráfico sube de izquierda a derecha atravesando el origen: es una "
+        "función creciente en todo su dominio.",
+        [
+            ("Crecen sin límite en ambas direcciones",
+             "Ese es el comportamiento de un exponente par, como x⁴."),
+            ("Se acercan a un valor fijo en ambos extremos",
+             "Una función potencia de exponente natural no tiene asíntota horizontal."),
+            ("Se mantienen siempre positivas, porque el coeficiente lo es",
+             "El coeficiente es positivo, pero x⁵ es negativo para x negativo."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "Los gráficos de f(x) = x² y g(x) = x³ se cortan en dos puntos. ¿Cuáles "
+        "son?",
+        "(0, 0) y (1, 1)",
+        "Se igualan las dos expresiones.\n\n"
+        "1) x² = x³ equivale a x³ − x² = 0.\n"
+        "2) Factorizando: x²(x − 1) = 0.\n"
+        "3) Las soluciones son x = 0 y x = 1, con imágenes 0 y 1.\n\n"
+        "Conviene factorizar en vez de dividir por x²: dividir haría perder la "
+        "solución x = 0.",
+        [
+            ("Solo (1, 1)",
+             "Pierde la solución x = 0, que aparece al factorizar en vez de dividir."),
+            ("(0, 0) y (−1, 1)",
+             "En x = −1 las funciones valen 1 y −1: no coinciden."),
+            ("(1, 1) y (2, 8), donde ambas funciones crecen con rapidez",
+             "En x = 2 valen 4 y 8: no se cortan ahí."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "Una función potencia de exponente 4 cumple f(3) = 405. ¿Cuál es su "
+        "coeficiente?",
+        "5",
+        "Se plantea la forma general y se despeja.\n\n"
+        "1) La función es f(x) = ax⁴.\n"
+        "2) Con el dato: a · 3⁴ = 405, es decir, 81a = 405.\n"
+        "3) Dividiendo por 81: a = 5.\n\n"
+        "Comprobación: f(x) = 5x⁴ entrega f(3) = 5 · 81 = 405.",
+        [
+            ("135",
+             "Divide 405 por 3 en vez de por 3⁴ = 81."),
+            ("81",
+             "Es el valor de 3⁴, no el coeficiente."),
+            ("405, leyendo el valor de la función como si fuera el coeficiente",
+             "El coeficiente aparece al despejar: 81a = 405 da a = 5."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "El área de un círculo en función de su radio es A(r) = πr². Si el "
+        "radio se triplica, ¿qué ocurre con el área?",
+        "Se multiplica por 9",
+        "Al escalar el radio, el factor se eleva al cuadrado.\n\n"
+        "1) La nueva área es π(3r)².\n"
+        "2) Desarrollando: π · 9r² = 9πr².\n"
+        "3) Es nueve veces el área original.\n\n"
+        "El coeficiente π no interviene en el factor de escala: lo que decide "
+        "es el exponente.",
+        [
+            ("Se triplica",
+             "Eso ocurriría si el área fuera proporcional al radio, no a su cuadrado."),
+            ("Se multiplica por 6",
+             "Ese factor corresponde al perímetro escalado dos veces, no al área."),
+            ("Se multiplica por 27, como si el área dependiera del cubo del radio",
+             "El área depende del cuadrado; el cubo describe el volumen de una esfera."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "¿Cuál de los siguientes puntos NO pertenece al gráfico de f(x) = 2x³?",
+        "(−1, 2)",
+        "Se evalúa la función en cada abscisa.\n\n"
+        "1) f(−1) = 2 · (−1)³ = 2 · (−1) = −2.\n"
+        "2) El punto del gráfico con abscisa −1 es (−1, −2).\n"
+        "3) Por lo tanto (−1, 2) no pertenece al gráfico.\n\n"
+        "El error típico es olvidar que el exponente impar deja el resultado "
+        "negativo.",
+        [
+            ("(0, 0)",
+             "Sí pertenece: f(0) = 0."),
+            ("(1, 2)",
+             "Sí pertenece: f(1) = 2 · 1 = 2."),
+            ("(2, 16)",
+             "Sí pertenece: f(2) = 2 · 8 = 16."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "Una función potencia de exponente par tiene coeficiente negativo. "
+        "¿Cuál es su recorrido?",
+        "Los números reales menores o iguales que cero",
+        "El exponente par entrega valores no negativos y el coeficiente los "
+        "invierte.\n\n"
+        "1) Con exponente par, x^n ≥ 0 para todo x.\n"
+        "2) Al multiplicar por un coeficiente negativo, todas las imágenes "
+        "quedan menores o iguales que cero.\n"
+        "3) El valor 0 se alcanza en x = 0, y no hay cota inferior.\n\n"
+        "El gráfico es una U invertida, con su punto más alto en el origen.",
+        [
+            ("Los números reales mayores o iguales que cero",
+             "Ese es el recorrido cuando el coeficiente es positivo."),
+            ("Todos los números reales",
+             "Ese es el recorrido de una potencia de exponente impar."),
+            ("Solo los números negativos, sin incluir el cero",
+             "El cero sí se alcanza, en x = 0."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "La energía cinética de un cuerpo cumple E(v) = 0,5 · m · v². Si la "
+        "rapidez aumenta de 10 a 30 m/s, ¿cuántas veces mayor es la energía?",
+        "9 veces",
+        "La energía depende del cuadrado de la rapidez.\n\n"
+        "1) La rapidez se multiplicó por 3, ya que 30 dividido por 10 es 3.\n"
+        "2) Como la dependencia es cuadrática, la energía se multiplica por "
+        "3² = 9.\n"
+        "3) Por lo tanto la energía final es nueve veces la inicial.\n\n"
+        "La masa no interviene porque no cambió: se simplifica al comparar las "
+        "dos energías.",
+        [
+            ("3 veces",
+             "Ese sería el factor si la energía dependiera linealmente de la rapidez."),
+            ("6 veces",
+             "Duplica el factor 3 en vez de elevarlo al cuadrado."),
+            ("20 veces, que es la diferencia entre las dos rapideces",
+             "Lo que importa es el cuociente entre las rapideces, no su diferencia."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "¿Cuál de estas funciones potencia crece más rápido para valores "
+        "grandes de x, todas con coeficiente 1?",
+        "f(x) = x⁶",
+        "Para x mayor que 1, el exponente mayor domina.\n\n"
+        "1) Cada unidad adicional en el exponente multiplica por otro factor "
+        "mayor que 1.\n"
+        "2) Con x = 10, x⁶ vale un millón mientras que x⁴ vale diez mil.\n"
+        "3) La brecha se agranda a medida que x crece.\n\n"
+        "El coeficiente puede cambiar quién va adelante para valores pequeños, "
+        "pero a la larga siempre gana el exponente mayor.",
+        [
+            ("f(x) = x²",
+             "Es la de crecimiento más lento entre las cuatro."),
+            ("f(x) = x³",
+             "Crece más rápido que x², pero mucho menos que x⁶."),
+            ("f(x) = x⁴",
+             "Crece rápido, pero x⁶ la supera para valores grandes de x."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "Si f(x) = −x⁴, ¿cuál es el valor máximo que alcanza la función?",
+        "0, en x = 0",
+        "La función es una U invertida con vértice en el origen.\n\n"
+        "1) Para todo x, x⁴ ≥ 0, así que −x⁴ ≤ 0.\n"
+        "2) El valor 0 se alcanza únicamente en x = 0.\n"
+        "3) Ese es entonces el máximo de la función.\n\n"
+        "No hay mínimo: al alejarse del origen las imágenes bajan sin tope.",
+        [
+            ("−1, en x = 1",
+             "Es un valor que alcanza la función, pero no el mayor: en x = 0 vale 0."),
+            ("No tiene máximo, porque decrece sin límite",
+             "Decrece sin límite hacia abajo, pero por arriba está acotada por 0."),
+            ("1, en x = −1, donde el signo negativo se cancela",
+             "El signo no se cancela: f(−1) = −(−1)⁴ = −1."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "Se sabe que f(x) = ax^n pasa por (2, 40) y por (1, 5). ¿Cuál es el "
+        "valor de n?",
+        "3",
+        "El punto de abscisa 1 entrega el coeficiente y el otro, el "
+        "exponente.\n\n"
+        "1) De f(1) = a · 1^n = a = 5, así que a = 5.\n"
+        "2) De f(2) = 5 · 2^n = 40 se sigue 2^n = 8.\n"
+        "3) Como 2³ = 8, el exponente es n = 3.\n\n"
+        "Evaluar en x = 1 es el atajo: cualquier potencia de 1 vale 1, así que "
+        "el valor de la función ahí es directamente el coeficiente.",
+        [
+            ("2",
+             "Con n = 2 se tendría f(2) = 5 · 4 = 20, no 40."),
+            ("4",
+             "Con n = 4 se tendría f(2) = 5 · 16 = 80, no 40."),
+            ("8, tomando el resultado de 2^n como si fuera el exponente",
+             "El 8 es la potencia; el exponente que la produce es 3."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "¿Es correcto afirmar que toda función potencia f(x) = ax^n con n "
+        "natural es creciente en todo su dominio?",
+        "No: con exponente par decrece a la izquierda del origen",
+        "El comportamiento depende de la paridad del exponente.\n\n"
+        "1) Con n impar y a positivo, la función crece en todo su dominio.\n"
+        "2) Con n par, en cambio, decrece para x negativo y crece para x "
+        "positivo.\n"
+        "3) Por ejemplo, x² baja de 4 a 1 al pasar de x = −2 a x = −1.\n\n"
+        "El signo del coeficiente invierte estas descripciones, pero no cambia "
+        "que la paridad del exponente es la que manda.",
+        [
+            ("Sí, todas las funciones potencia son crecientes",
+             "x² decrece a la izquierda del origen: el contraejemplo basta para descartarlo."),
+            ("No: ninguna función potencia es creciente en todo su dominio",
+             "x³ sí lo es: crece en todos los reales."),
+            ("Sí, siempre que el coeficiente sea distinto de cero",
+             "Con coeficiente positivo y exponente par tampoco es creciente en todo el dominio."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Algebra: funcion potencia (segunda tanda)
+#
+# Ecuaciones del tipo x^n = k, razones de escala, comparacion entre potencias
+# con coeficientes distintos y lectura de graficos.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "alg_funcion_potencia", "medio",
+        "¿Cuántas soluciones reales tiene la ecuación x⁴ = 16?",
+        "Dos: x = 2 y x = −2",
+        "Un exponente par no distingue el signo de la base.\n\n"
+        "1) 2⁴ = 16, así que x = 2 es solución.\n"
+        "2) (−2)⁴ también vale 16, así que x = −2 también lo es.\n"
+        "3) No hay más: la función x⁴ toma cada valor positivo exactamente dos "
+        "veces.\n\n"
+        "Geométricamente, la recta horizontal y = 16 corta al gráfico en forma "
+        "de U en dos puntos.",
+        [
+            ("Una: x = 2",
+             "Olvida la raíz negativa, que también cumple porque el exponente es par."),
+            ("Cuatro, tantas como indica el exponente",
+             "El exponente acota el número de soluciones, pero en los reales solo hay dos."),
+            ("Ninguna, porque 16 no es una potencia cuarta exacta",
+             "Sí lo es: 2⁴ = 16."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "¿Cuántas soluciones reales tiene la ecuación x⁵ = −32?",
+        "Una: x = −2",
+        "Un exponente impar conserva el signo, así que la función es "
+        "inyectiva.\n\n"
+        "1) (−2)⁵ = −32, así que x = −2 es solución.\n"
+        "2) La función x⁵ es creciente en todos los reales: nunca repite un "
+        "valor.\n"
+        "3) Por lo tanto esa solución es la única.\n\n"
+        "La diferencia con el caso par es justamente esa: x⁴ = 16 tiene dos "
+        "soluciones, pero x⁵ = −32 tiene una sola.",
+        [
+            ("Dos: x = 2 y x = −2",
+             "2⁵ = 32, con signo positivo: no cumple la ecuación."),
+            ("Ninguna, porque una potencia no puede ser negativa",
+             "Con exponente impar sí puede: (−2)⁵ = −32."),
+            ("Cinco, tantas como indica el exponente de la ecuación",
+             "En los números reales la ecuación tiene una sola solución."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "En la función f(x) = x³, ¿cuál es el cuociente f(3a) dividido por "
+        "f(a), con a distinto de cero?",
+        "27",
+        "Al escalar la variable, el factor se eleva al exponente.\n\n"
+        "1) f(3a) = (3a)³ = 27a³.\n"
+        "2) f(a) = a³.\n"
+        "3) El cuociente es 27a³ dividido por a³, es decir, 27.\n\n"
+        "El resultado no depende de a: en cualquier función potencia de "
+        "exponente n, multiplicar la variable por k multiplica la imagen por "
+        "k^n.",
+        [
+            ("3",
+             "Ese sería el factor si la función fuera lineal, no cúbica."),
+            ("9",
+             "Corresponde a un exponente 2: aquí el exponente es 3."),
+            ("3a², dejando la variable dentro del resultado",
+             "Los a³ se simplifican por completo: el cuociente es un número."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "La masa de una esfera de un mismo material es proporcional al cubo de "
+        "su radio. Si una esfera de radio 2 cm pesa 40 g, ¿cuánto pesa una del "
+        "mismo material de radio 4 cm?",
+        "320 g",
+        "Se compara el factor de escala elevado al cubo.\n\n"
+        "1) El radio se duplicó, ya que 4 dividido por 2 es 2.\n"
+        "2) Como la masa depende del cubo del radio, se multiplica por "
+        "2³ = 8.\n"
+        "3) La masa final es 40 · 8 = 320 g.\n\n"
+        "Es el mismo razonamiento que con el volumen de un cubo: duplicar la "
+        "medida lineal multiplica por ocho lo que depende del volumen.",
+        [
+            ("80 g",
+             "Duplica la masa, como si dependiera linealmente del radio."),
+            ("160 g",
+             "Multiplica por 4, que es el factor para una magnitud cuadrática como el área."),
+            ("120 g, triplicando la masa por tratarse de una potencia de exponente 3",
+             "El exponente no es el factor: el factor es 2³ = 8."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "¿Cuál de las siguientes afirmaciones sobre f(x) = 7x⁶ es correcta?",
+        "Es una función par",
+        "El exponente decide la paridad y el coeficiente no la altera.\n\n"
+        "1) f(−x) = 7 · (−x)⁶ = 7x⁶.\n"
+        "2) Entonces f(−x) = f(x) para todo x: la función es par.\n"
+        "3) Su gráfico es simétrico respecto del eje Y.\n\n"
+        "El coeficiente 7 solo estira el gráfico verticalmente: la simetría "
+        "depende únicamente de que el exponente sea par.",
+        [
+            ("Es una función impar",
+             "Sería impar con exponente impar; aquí f(−x) = f(x), no −f(x)."),
+            ("Su recorrido son todos los números reales",
+             "Con exponente par y coeficiente positivo, las imágenes nunca son negativas."),
+            ("No pasa por el origen, porque su coeficiente es distinto de 1",
+             "f(0) = 0 sea cual sea el coeficiente."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "Una función cumple f(5) = f(−5) y f(x) = ax^n con a distinto de cero. "
+        "¿Qué se puede afirmar del exponente n?",
+        "Es par",
+        "La igualdad describe una simetría respecto del eje Y.\n\n"
+        "1) f(−5) = a · (−5)^n.\n"
+        "2) Para que valga lo mismo que a · 5^n hace falta (−5)^n = 5^n.\n"
+        "3) Eso ocurre exactamente cuando n es par.\n\n"
+        "Con exponente impar la igualdad fallaría: f(5) y f(−5) tendrían signos "
+        "opuestos, y solo coincidirían si el coeficiente fuera cero.",
+        [
+            ("Es impar",
+             "Con exponente impar los valores serían opuestos, no iguales."),
+            ("Vale exactamente 5",
+             "El dato es la abscisa, no el exponente: 5 es impar y no cumpliría."),
+            ("Puede ser cualquiera, porque el coeficiente compensa la diferencia",
+             "El coeficiente es el mismo en ambos lados: no puede compensar nada."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "Se comparan f(x) = x² y g(x) = 2ˣ para x = 5. ¿Cuál toma el valor "
+        "mayor?",
+        "g, con 32 frente a 25",
+        "Hay que distinguir la función potencia de la exponencial.\n\n"
+        "1) f(5) = 5² = 25.\n"
+        "2) g(5) = 2⁵ = 32.\n"
+        "3) La exponencial es mayor en ese punto.\n\n"
+        "En la función potencia la variable está en la base; en la exponencial "
+        "está en el exponente, y por eso termina creciendo más rápido que "
+        "cualquier potencia.",
+        [
+            ("f, con 25 frente a 10",
+             "g(5) no es 2 · 5 = 10 sino 2⁵ = 32."),
+            ("Las dos valen 25, porque comparten los números 2 y 5",
+             "El orden importa: 5² = 25 pero 2⁵ = 32."),
+            ("f, porque una potencia siempre supera a una exponencial",
+             "Es al revés a la larga: la exponencial termina superando a cualquier potencia."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "El gráfico de una función potencia pasa por (−2, −24) y su exponente "
+        "es 3. ¿Cuál es la función?",
+        "f(x) = 3x³",
+        "Se plantea la forma general y se despeja el coeficiente.\n\n"
+        "1) f(x) = ax³, y f(−2) = a · (−8) = −8a.\n"
+        "2) Igualando al dato: −8a = −24.\n"
+        "3) Dividiendo por −8: a = 3.\n\n"
+        "Comprobación: 3 · (−2)³ = 3 · (−8) = −24.",
+        [
+            ("f(x) = −3x³",
+             "Con ese coeficiente f(−2) sería 24, con signo positivo."),
+            ("f(x) = 12x³",
+             "Divide −24 por −2 en vez de por (−2)³ = −8."),
+            ("f(x) = 24x³, tomando el valor de la función como coeficiente",
+             "El coeficiente hay que despejarlo: −8a = −24 da a = 3."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "¿Cuántos puntos de corte tiene el gráfico de f(x) = x⁴ con la recta "
+        "y = −3?",
+        "Ninguno",
+        "Las imágenes de una potencia de exponente par nunca son negativas.\n\n"
+        "1) Para todo x real, x⁴ ≥ 0.\n"
+        "2) La recta y = −3 está por completo bajo el eje X.\n"
+        "3) El gráfico nunca baja hasta ahí, así que no hay corte.\n\n"
+        "Con y = 3, en cambio, habría dos cortes; y con y = 0, uno solo, en el "
+        "origen.",
+        [
+            ("Uno",
+             "Habría uno solo si la recta fuera y = 0, que toca el gráfico en el origen."),
+            ("Dos",
+             "Dos cortes aparecen con rectas y = k con k positivo."),
+            ("Cuatro, tantos como indica el exponente de la función",
+             "El exponente acota el número de cortes, pero aquí no hay ninguno."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "Si f(x) = 0,5x⁴, ¿qué le ocurre al gráfico comparado con el de "
+        "g(x) = x⁴?",
+        "Queda más achatado, porque cada imagen se reduce a la mitad",
+        "El coeficiente estira o comprime el gráfico en dirección vertical.\n\n"
+        "1) Para cada x, f(x) es la mitad de g(x).\n"
+        "2) Los puntos del gráfico bajan hacia el eje X sin cambiar de lado.\n"
+        "3) La U resultante se ve más abierta o achatada.\n\n"
+        "Con un coeficiente mayor que 1 ocurriría lo contrario: el gráfico se "
+        "vería más estrecho.",
+        [
+            ("Queda más estrecho, porque el coeficiente es menor que 1",
+             "Un coeficiente menor que 1 reduce las imágenes, así que achata en vez de estrechar."),
+            ("Se desplaza media unidad hacia abajo",
+             "Un desplazamiento vertical se produce sumando una constante, no multiplicando."),
+            ("Se refleja respecto del eje X, porque el coeficiente cambia",
+             "La reflexión requiere un coeficiente negativo, y 0,5 es positivo."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "El costo de fabricar un envase cúbico es proporcional al área de su "
+        "superficie, que a su vez es 6a². Si la arista pasa de 5 cm a 10 cm, "
+        "¿cuántas veces mayor es el costo?",
+        "4 veces",
+        "El costo depende del cuadrado de la arista.\n\n"
+        "1) La arista se duplicó, ya que 10 dividido por 5 es 2.\n"
+        "2) Como la superficie depende del cuadrado, se multiplica por "
+        "2² = 4.\n"
+        "3) El costo final es cuatro veces el inicial.\n\n"
+        "El factor 6 y la constante de proporcionalidad no intervienen: se "
+        "simplifican al comparar los dos costos.",
+        [
+            ("2 veces",
+             "Ese sería el factor si el costo dependiera linealmente de la arista."),
+            ("8 veces",
+             "Ese es el factor de una magnitud cúbica, como el volumen del envase."),
+            ("6 veces, porque el cubo tiene seis caras que hay que fabricar",
+             "El número de caras ya está en la fórmula: lo que escala es el cuadrado de la arista."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "¿Para qué valores de x se cumple que x³ es mayor que x²?",
+        "Para x mayor que 1",
+        "Se compara restando y factorizando.\n\n"
+        "1) x³ > x² equivale a x³ − x² > 0.\n"
+        "2) Factorizando: x²(x − 1) > 0.\n"
+        "3) Como x² es positivo salvo en cero, el signo lo decide x − 1: la "
+        "desigualdad se cumple cuando x > 1.\n\n"
+        "Para x entre 0 y 1 ocurre lo contrario, y para x negativo el cubo es "
+        "negativo mientras el cuadrado es positivo.",
+        [
+            ("Para todo x positivo",
+             "Entre 0 y 1 falla: con x = 0,5 el cubo vale 0,125 y el cuadrado 0,25."),
+            ("Para todo x real",
+             "Con x negativo el cubo es negativo y el cuadrado positivo: nunca se cumple ahí."),
+            ("Para x menor que −1, donde el cubo crece en valor absoluto",
+             "Crece en valor absoluto pero hacia los negativos: sigue siendo menor que el cuadrado."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "Una función potencia con coeficiente positivo y exponente impar, "
+        "¿corta al eje X en cuántos puntos?",
+        "En uno solo",
+        "La única raíz de ax^n es x = 0.\n\n"
+        "1) Cortar el eje X significa que la imagen vale cero.\n"
+        "2) ax^n = 0 obliga a x^n = 0, porque a no es cero.\n"
+        "3) La única solución es x = 0.\n\n"
+        "Lo mismo vale con exponente par: la diferencia está en si el gráfico "
+        "atraviesa el eje o solo lo toca.",
+        [
+            ("En dos puntos",
+             "Eso ocurriría con una parábola trasladada, no con una función potencia pura."),
+            ("En ninguno",
+             "El origen siempre pertenece al gráfico."),
+            ("En tantos puntos como indique el exponente de la función",
+             "El exponente no multiplica las raíces: la única raíz es x = 0."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "dificil",
+        "Se comparan f(x) = 100x² y g(x) = x³. ¿A partir de qué valor de x la "
+        "función g supera a f?",
+        "A partir de x = 100",
+        "Se plantea la desigualdad y se simplifica.\n\n"
+        "1) Se busca x³ > 100x².\n"
+        "2) Para x positivo se puede dividir por x², que es positivo: x > 100.\n"
+        "3) Antes de ese valor gana f, y desde ahí gana g.\n\n"
+        "Es el punto clave de la comparación: un coeficiente grande adelanta a "
+        "la potencia menor solo por un tramo, pero el exponente mayor termina "
+        "imponiéndose.",
+        [
+            ("A partir de x = 10",
+             "En x = 10, f vale 10.000 y g vale 1.000: todavía gana f."),
+            ("A partir de x = 1",
+             "En x = 1, f vale 100 y g vale 1: la brecha es enorme a favor de f."),
+            ("Nunca, porque el coeficiente 100 mantiene siempre a f por delante",
+             "El coeficiente no alcanza: desde x = 100 el exponente mayor domina."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "dificil",
+        "El radio de una esfera aumenta un 20%. ¿En qué porcentaje aumenta su "
+        "volumen?",
+        "En un 72,8%",
+        "El volumen depende del cubo del radio.\n\n"
+        "1) El radio queda multiplicado por 1,2.\n"
+        "2) El volumen queda multiplicado por 1,2³ = 1,728.\n"
+        "3) Eso es un 172,8% del original, es decir, un aumento del 72,8%.\n\n"
+        "El error habitual es triplicar el porcentaje: un 20% más de radio no "
+        "es un 60% más de volumen, porque el aumento porcentual no se escala "
+        "linealmente.",
+        [
+            ("En un 60%",
+             "Triplica el porcentaje en vez de elevar el factor 1,2 al cubo."),
+            ("En un 20%",
+             "Ese es el aumento del radio, no el del volumen."),
+            ("En un 172,8%",
+             "Ese es el porcentaje que representa el volumen final respecto del inicial, no el aumento."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "dificil",
+        "Una función potencia cumple f(2) = 12 y f(4) = 96. ¿Cuál es su "
+        "exponente?",
+        "3",
+        "Se divide una condición por la otra para eliminar el coeficiente.\n\n"
+        "1) f(4) dividido por f(2) es 96/12 = 8.\n"
+        "2) Ese mismo cuociente vale (4/2)^n = 2^n.\n"
+        "3) De 2^n = 8 se sigue n = 3.\n\n"
+        "Dividir es lo que hace corto el problema: el coeficiente aparece en "
+        "los dos valores y desaparece en el cuociente. Con n = 3 el coeficiente "
+        "resulta ser 12/8 = 1,5.",
+        [
+            ("2",
+             "Con n = 2 el cuociente sería 2² = 4, y los datos exigen 8."),
+            ("4",
+             "Con n = 4 el cuociente sería 16, mucho mayor que el 8 que dan los datos."),
+            ("8, tomando el cuociente entre las imágenes como si fuera el exponente",
+             "El 8 es la potencia 2^n; el exponente que la produce es 3."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "dificil",
+        "Se sabe que f(x) = ax^n con a > 0 tiene un gráfico que decrece para "
+        "x < 0 y crece para x > 0. ¿Qué se puede afirmar de n?",
+        "Es par",
+        "Ese comportamiento corresponde a una U con vértice en el origen.\n\n"
+        "1) Con exponente impar y coeficiente positivo la función crece en todo "
+        "su dominio.\n"
+        "2) Con exponente par, en cambio, las imágenes bajan al acercarse al "
+        "origen desde la izquierda y suben al alejarse por la derecha.\n"
+        "3) El comportamiento descrito solo se da con n par.\n\n"
+        "El punto más bajo está en el origen, con imagen cero, y es el mínimo "
+        "de la función.",
+        [
+            ("Es impar",
+             "Con exponente impar y coeficiente positivo la función crece también a la izquierda del origen."),
+            ("Vale exactamente 1",
+             "Con n = 1 la función es una recta creciente en todo su dominio."),
+            ("No se puede saber sin conocer el valor exacto de a",
+             "El signo de a ya está dado, y con a positivo el comportamiento descrito exige n par."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "dificil",
+        "Dos cilindros semejantes tienen radios en razón 2 : 3. ¿En qué razón "
+        "están sus volúmenes?",
+        "8 : 27",
+        "En cuerpos semejantes, los volúmenes están en la razón de los cubos.\n\n"
+        "1) Todas las medidas lineales están en razón 2 : 3.\n"
+        "2) El volumen depende del producto de tres medidas lineales.\n"
+        "3) La razón de volúmenes es 2³ : 3³ = 8 : 27.\n\n"
+        "Con las áreas la razón sería 4 : 9, porque dependen de dos medidas "
+        "lineales en vez de tres.",
+        [
+            ("2 : 3",
+             "Esa es la razón de las medidas lineales, no la de los volúmenes."),
+            ("4 : 9",
+             "Esa es la razón de las áreas, que dependen del cuadrado."),
+            ("6 : 9, multiplicando cada término por 3 en vez de elevarlo al cubo",
+             "La razón de volúmenes eleva al cubo cada término: 8 : 27."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "dificil",
+        "¿Cuál es el conjunto solución de la inecuación x⁴ < 81?",
+        "Los x entre −3 y 3",
+        "El exponente par obliga a considerar los dos signos.\n\n"
+        "1) La igualdad x⁴ = 81 se cumple en x = 3 y en x = −3.\n"
+        "2) La función x⁴ decrece a la izquierda del origen y crece a la "
+        "derecha, con mínimo en x = 0.\n"
+        "3) Entre esos dos valores las imágenes están bajo 81, así que la "
+        "solución es −3 < x < 3.\n\n"
+        "Escribir solo x < 3 dejaría entrar valores como x = −10, cuya cuarta "
+        "potencia es 10.000.",
+        [
+            ("Los x menores que 3",
+             "Deja entrar valores muy negativos, como −10, cuya cuarta potencia supera 81."),
+            ("Los x mayores que −3",
+             "Deja entrar valores muy grandes, como 10, cuya cuarta potencia supera 81."),
+            ("Todos los reales salvo x = 3 y x = −3",
+             "Fuera de ese intervalo las imágenes superan 81, no solo en esos dos puntos."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "dificil",
+        "Si f(x) = ax⁵ y se sabe que f(−1) = 7, ¿cuánto vale f(2)?",
+        "−224",
+        "Primero se despeja el coeficiente y después se evalúa.\n\n"
+        "1) f(−1) = a · (−1)⁵ = −a, y ese valor es 7, así que a = −7.\n"
+        "2) La función es f(x) = −7x⁵.\n"
+        "3) f(2) = −7 · 32 = −224.\n\n"
+        "El paso delicado es el signo: (−1)⁵ vale −1, así que el coeficiente "
+        "resulta negativo aunque el dato sea positivo.",
+        [
+            ("224",
+             "Olvida que el coeficiente resulta negativo: (−1)⁵ es −1, no 1."),
+            ("−7",
+             "Es el valor del coeficiente, no el de f(2)."),
+            ("14, multiplicando el dato por 2 en vez de evaluar la función",
+             "Hay que reemplazar en f(x) = −7x⁵, y 2⁵ vale 32."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "dificil",
+        "El gráfico de una función potencia pasa por (3, −54). Si su exponente "
+        "es impar y su coeficiente es entero, ¿cuál de estas funciones puede "
+        "ser?",
+        "f(x) = −2x³",
+        "Se prueba con la forma general y se busca un coeficiente entero.\n\n"
+        "1) Con n = 3: a · 27 = −54 entrega a = −2, que es entero.\n"
+        "2) Con n = 5: a · 243 = −54 entrega un coeficiente fraccionario.\n"
+        "3) La única opción que cumple ambas condiciones es f(x) = −2x³.\n\n"
+        "Que el exponente sea impar explica el signo negativo de la imagen: con "
+        "exponente par la imagen habría sido positiva.",
+        [
+            ("f(x) = 2x³",
+             "Con ese coeficiente f(3) sería 54, con signo positivo."),
+            ("f(x) = −54x³",
+             "Tomaría el valor de la imagen como coeficiente: daría f(3) = −1.458."),
+            ("f(x) = −6x², cuyo coeficiente también es entero",
+             "Su exponente es par, y el enunciado pide exponente impar."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "dificil",
+        "Se afirma: «Si f y g son funciones potencia con el mismo exponente, "
+        "sus gráficos nunca se cortan salvo en el origen». ¿Es correcta la "
+        "afirmación?",
+        "Sí, salvo que tengan además el mismo coeficiente",
+        "Se igualan las dos expresiones.\n\n"
+        "1) Si f(x) = ax^n y g(x) = bx^n, igualar da ax^n = bx^n.\n"
+        "2) Eso equivale a (a − b)x^n = 0.\n"
+        "3) Con a distinto de b, la única solución es x = 0; y si a = b las "
+        "funciones coinciden y se cortan en todos sus puntos.\n\n"
+        "La salvedad es necesaria: sin ella la afirmación falla justo en el "
+        "caso en que las dos funciones son la misma.",
+        [
+            ("Sí, sin ninguna salvedad",
+             "Si los coeficientes coinciden las funciones son iguales y se cortan en todos sus puntos."),
+            ("No: siempre se cortan en dos puntos",
+             "Con coeficientes distintos el único corte es el origen."),
+            ("No: nunca se cortan, ni siquiera en el origen",
+             "El origen pertenece a toda función potencia, así que ahí siempre se cortan."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "dificil",
+        "Una impresora 3D fabrica figuras a escala. El material de una figura "
+        "de 6 cm de alto cuesta $ 4.500. ¿Cuánto cuesta el material de la misma "
+        "figura impresa a 9 cm de alto?",
+        "$ 15.187,5",
+        "El material es proporcional al volumen, que escala con el cubo de la "
+        "altura.\n\n"
+        "1) El factor de escala lineal es 9/6 = 1,5.\n"
+        "2) El volumen se multiplica por 1,5³ = 3,375.\n"
+        "3) El costo es 4.500 · 3,375 = 15.187,5 pesos.\n\n"
+        "La altura creció apenas un 50%, pero el material se triplicó con "
+        "creces: es el efecto de la dependencia cúbica.",
+        [
+            ("$ 6.750",
+             "Multiplica por 1,5, como si el material dependiera solo de la altura."),
+            ("$ 10.125",
+             "Multiplica por 1,5² = 2,25, que es el factor del área y no del volumen."),
+            ("$ 13.500, triplicando el costo por tratarse de una potencia de exponente 3",
+             "El exponente no es el factor: el factor es 1,5³ = 3,375."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "dificil",
+        "¿Cuál es el valor de x que cumple 4x³ = 500?",
+        "5",
+        "Se despeja la potencia y después se extrae la raíz.\n\n"
+        "1) Dividiendo por 4: x³ = 125.\n"
+        "2) La raíz cúbica de 125 es 5, porque 5 · 5 · 5 = 125.\n"
+        "3) Como el exponente es impar, esa es la única solución real.\n\n"
+        "El orden importa: hay que aislar la potencia antes de sacar la raíz, "
+        "porque el coeficiente no está elevado al cubo.",
+        [
+            ("125",
+             "Es el valor de x³, no el de x."),
+            ("7,94 aproximadamente",
+             "Corresponde a la raíz cúbica de 500, sin dividir antes por el coeficiente 4."),
+            ("15, dividiendo 500 por 4 y luego por 3 en vez de extraer la raíz",
+             "Dividir por el exponente no es lo mismo que extraer la raíz cúbica."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "dificil",
+        "Se tiene f(x) = x⁴ y g(x) = x². ¿En qué intervalo se cumple que f(x) "
+        "es menor que g(x)?",
+        "Entre −1 y 1, excluyendo el cero",
+        "Se compara restando y factorizando.\n\n"
+        "1) x⁴ < x² equivale a x⁴ − x² < 0.\n"
+        "2) Factorizando: x²(x² − 1) < 0.\n"
+        "3) Como x² es positivo salvo en cero, hace falta x² − 1 < 0, es decir, "
+        "−1 < x < 1; y en x = 0 las dos funciones valen 0, así que ahí no hay "
+        "desigualdad estricta.\n\n"
+        "Fuera de ese intervalo la comparación se invierte: para x mayor que 1 "
+        "o menor que −1, el exponente mayor domina.",
+        [
+            ("Entre 0 y 1 solamente",
+             "Por simetría, la desigualdad también se cumple entre −1 y 0."),
+            ("Para todo x negativo",
+             "Con x = −2 se tiene 16 contra 4: ahí f supera a g."),
+            ("Para todo x distinto de cero, porque el exponente mayor achica el valor",
+             "Solo lo achica entre −1 y 1; fuera de ese intervalo lo agranda."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Algebra: funciones trigonometricas
+#
+# Valores notables, amplitud y periodo de a*sen(bx)+c, ceros, paridad y
+# modelamiento de fenomenos periodicos.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "alg_funciones_trig", "facil",
+        "¿Cuál es el valor de sen(0°)?",
+        "0",
+        "Se lee en la circunferencia unitaria.\n\n"
+        "1) El seno de un ángulo corresponde a la altura del punto sobre la "
+        "circunferencia.\n"
+        "2) Con 0° el punto es (1, 0), que está sobre el eje X.\n"
+        "3) Su altura es 0, así que sen(0°) = 0.\n\n"
+        "El coseno en ese mismo punto vale 1, porque corresponde a la "
+        "coordenada horizontal.",
+        [
+            ("1",
+             "Ese es el valor de cos(0°), que corresponde a la coordenada horizontal."),
+            ("−1",
+             "Ese es el valor de cos(180°); el seno nunca vale −1 en 0°."),
+            ("Indefinido, porque no existe un triángulo con un ángulo de 0°",
+             "El seno se define para todo ángulo con la circunferencia unitaria, no solo con triángulos."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "facil",
+        "¿Cuál es el valor de cos(90°)?",
+        "0",
+        "Se lee en la circunferencia unitaria.\n\n"
+        "1) El coseno corresponde a la coordenada horizontal del punto.\n"
+        "2) Con 90° el punto es (0, 1), que está sobre el eje Y.\n"
+        "3) Su coordenada horizontal es 0, así que cos(90°) = 0.\n\n"
+        "En ese mismo punto el seno vale 1: seno y coseno intercambian sus "
+        "valores extremos entre 0° y 90°.",
+        [
+            ("1",
+             "Ese es el valor de sen(90°), la coordenada vertical del punto."),
+            ("−1",
+             "Ese es el valor de cos(180°), en el extremo opuesto de la circunferencia."),
+            ("90, porque el coseno devuelve la medida del ángulo",
+             "El coseno devuelve un número entre −1 y 1, no la medida del ángulo."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "facil",
+        "¿Cuál es el dominio de la función f(x) = sen x?",
+        "Todos los números reales",
+        "El seno está definido para cualquier ángulo.\n\n"
+        "1) A cada número real se le puede asociar un punto de la "
+        "circunferencia unitaria.\n"
+        "2) Ese punto siempre tiene una coordenada vertical.\n"
+        "3) Por lo tanto la función está definida en todos los reales.\n\n"
+        "El recorrido, en cambio, sí es acotado: el seno solo toma valores "
+        "entre −1 y 1.",
+        [
+            ("Solo los ángulos entre 0° y 360°",
+             "Los ángulos mayores se reducen dando vueltas: sen(400°) = sen(40°), y está definido."),
+            ("Solo los números entre −1 y 1",
+             "Ese es el recorrido de la función, no su dominio."),
+            ("Todos los reales salvo los múltiplos de 90°, donde se indefine",
+             "En esos ángulos el seno está perfectamente definido; la que se indefine ahí es la tangente."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "facil",
+        "¿Cuál es la amplitud de la función f(x) = 5 · sen x?",
+        "5",
+        "La amplitud es el valor absoluto del coeficiente que multiplica al "
+        "seno.\n\n"
+        "1) El seno varía entre −1 y 1.\n"
+        "2) Al multiplicar por 5, la función varía entre −5 y 5.\n"
+        "3) La amplitud, que es cuánto sube o baja respecto del centro, "
+        "vale 5.\n\n"
+        "La distancia total entre el máximo y el mínimo es el doble: 10.",
+        [
+            ("1",
+             "Esa es la amplitud del seno sin coeficiente."),
+            ("10",
+             "Es la diferencia entre el máximo y el mínimo, que vale el doble de la amplitud."),
+            ("2,5, dividiendo el coeficiente entre los dos extremos",
+             "La amplitud es directamente el coeficiente: no hay que dividirlo."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "facil",
+        "¿Cuál es el valor máximo que alcanza la función f(x) = 4 · sen x?",
+        "4",
+        "El máximo se alcanza cuando el seno vale 1.\n\n"
+        "1) El seno tiene su valor mayor en 1.\n"
+        "2) Entonces la función alcanza 4 · 1 = 4.\n"
+        "3) Ese es su máximo.\n\n"
+        "El mínimo es el opuesto, −4, y se alcanza cuando el seno vale −1.",
+        [
+            ("1",
+             "Ese es el máximo del seno, antes de multiplicar por el coeficiente."),
+            ("8",
+             "Es la diferencia entre el máximo y el mínimo, no el máximo."),
+            ("0, porque el seno se anula en el origen del gráfico",
+             "Se anula en algunos puntos, pero el máximo se busca donde vale 1."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "facil",
+        "¿Para qué ángulo entre 0° y 360° la función seno alcanza su valor "
+        "mínimo?",
+        "270°",
+        "Se busca el punto más bajo de la circunferencia unitaria.\n\n"
+        "1) El seno es la coordenada vertical del punto.\n"
+        "2) El punto más bajo de la circunferencia es (0, −1).\n"
+        "3) Ese punto corresponde a 270°, así que sen(270°) = −1.\n\n"
+        "El máximo, en cambio, está en 90°, donde el punto es (0, 1).",
+        [
+            ("90°",
+             "Ahí el seno alcanza su valor máximo, que es 1."),
+            ("180°",
+             "Ahí el seno vale 0: está de vuelta en el eje horizontal."),
+            ("360°, porque es donde termina la vuelta completa",
+             "En 360° el seno vale 0, igual que en 0°."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cuál es el valor de sen(30°)?",
+        "0,5",
+        "Es uno de los valores notables que conviene tener memorizados.\n\n"
+        "1) En un triángulo rectángulo con ángulos de 30°, 60° y 90°, el cateto "
+        "opuesto al de 30° mide la mitad de la hipotenusa.\n"
+        "2) El seno es el cuociente entre ese cateto y la hipotenusa.\n"
+        "3) Ese cuociente vale 1/2, es decir, 0,5.\n\n"
+        "El coseno de 30°, en cambio, vale aproximadamente 0,87, porque "
+        "corresponde al cateto largo.",
+        [
+            ("0,87 aproximadamente",
+             "Ese es el valor de cos(30°) o de sen(60°)."),
+            ("0,71 aproximadamente",
+             "Ese es el valor de sen(45°) y también de cos(45°)."),
+            ("30, porque el seno devuelve la medida del ángulo en grados",
+             "El seno devuelve un número entre −1 y 1."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Qué significa que la función seno sea periódica?",
+        "Que sus valores se repiten cada cierto intervalo fijo",
+        "La periodicidad describe una repetición regular.\n\n"
+        "1) Al dar una vuelta completa a la circunferencia se vuelve al mismo "
+        "punto.\n"
+        "2) Por eso sen(x + 360°) = sen(x) para todo ángulo x.\n"
+        "3) El gráfico repite exactamente la misma forma una y otra vez.\n\n"
+        "Es lo que hace útiles a estas funciones para modelar fenómenos "
+        "cíclicos: mareas, estaciones, latidos.",
+        [
+            ("Que sus valores siempre aumentan a medida que crece el ángulo",
+             "El seno sube y baja alternadamente: no es creciente."),
+            ("Que nunca toma dos veces el mismo valor",
+             "Es justo lo contrario: repite cada valor infinitas veces."),
+            ("Que su gráfico se puede dibujar sin levantar el lápiz del papel",
+             "Eso es la continuidad, que es una propiedad distinta de la periodicidad."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cuál es el período de la función f(x) = sen(3x)?",
+        "120°",
+        "El coeficiente que acompaña a la variable comprime el gráfico.\n\n"
+        "1) El período del seno básico es 360°.\n"
+        "2) En f(x) = sen(bx) el período es 360° dividido por b.\n"
+        "3) Con b = 3: 360° / 3 = 120°.\n\n"
+        "El gráfico completa tres ciclos en el mismo tramo en que el seno "
+        "básico completa uno.",
+        [
+            ("360°",
+             "Es el período del seno sin coeficiente interno; el 3 lo reduce a un tercio."),
+            ("1.080°",
+             "Multiplica por 3 en vez de dividir: el coeficiente comprime, no estira."),
+            ("3°, tomando directamente el coeficiente como período",
+             "El coeficiente divide al período de 360°, no lo reemplaza."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cuál es el período de la función f(x) = cos(x/2)?",
+        "720°",
+        "Un coeficiente menor que 1 estira el gráfico.\n\n"
+        "1) El período del coseno básico es 360°.\n"
+        "2) En f(x) = cos(bx) el período es 360° dividido por b, y aquí "
+        "b = 0,5.\n"
+        "3) Entonces el período es 360° / 0,5 = 720°.\n\n"
+        "Hace falta el doble de recorrido para completar un ciclo: el gráfico "
+        "se ve estirado horizontalmente.",
+        [
+            ("180°",
+             "Divide por 2 en vez de dividir por 0,5: el coeficiente interno es 1/2, no 2."),
+            ("360°",
+             "Es el período del coseno sin coeficiente interno."),
+            ("2°, tomando el denominador del argumento como período",
+             "El denominador estira el período de 360° al doble."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Entre qué valores varía la función f(x) = 2 + 3 · sen x?",
+        "Entre −1 y 5",
+        "El término constante desplaza el gráfico y el coeficiente fija la "
+        "amplitud.\n\n"
+        "1) El seno varía entre −1 y 1.\n"
+        "2) Al multiplicar por 3, la parte oscilante varía entre −3 y 3.\n"
+        "3) Sumando 2: la función varía entre 2 − 3 = −1 y 2 + 3 = 5.\n\n"
+        "El 2 es el valor central de la oscilación y el 3 es cuánto se aparta "
+        "de él hacia arriba y hacia abajo.",
+        [
+            ("Entre 2 y 5",
+             "Falta la parte baja: la función también desciende 3 unidades bajo el centro."),
+            ("Entre −3 y 3",
+             "Ignora el desplazamiento vertical de 2 unidades."),
+            ("Entre 0 y 6, sumando y restando el coeficiente al doble del centro",
+             "Hay que sumar y restar 3 al centro 2, lo que da −1 y 5."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿En qué ángulos entre 0° y 360° se anula la función seno?",
+        "En 0°, 180° y 360°",
+        "El seno se anula cuando el punto está sobre el eje horizontal.\n\n"
+        "1) El seno es la coordenada vertical del punto de la circunferencia "
+        "unitaria.\n"
+        "2) Esa coordenada vale cero en (1, 0) y en (−1, 0).\n"
+        "3) Esos puntos corresponden a 0°, 180° y, al cerrar la vuelta, 360°.\n\n"
+        "El coseno, en cambio, se anula en 90° y 270°, que son los puntos sobre "
+        "el eje vertical.",
+        [
+            ("En 90° y 270°",
+             "Ahí se anula el coseno; el seno alcanza sus valores extremos."),
+            ("En 45° y 225°",
+             "Ahí el seno vale aproximadamente 0,71 y −0,71."),
+            ("En ninguno, porque el seno siempre toma valores distintos de cero",
+             "Se anula tres veces en una vuelta completa."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "En el modelo T(h) = 15 + 7 · sen(h), ¿cuál es la temperatura media "
+        "alrededor de la cual oscila la función?",
+        "15 grados",
+        "El término constante marca el centro de la oscilación.\n\n"
+        "1) La parte 7 · sen(h) varía entre −7 y 7, con promedio cero.\n"
+        "2) El 15 desplaza toda la curva hacia arriba.\n"
+        "3) La función oscila alrededor de 15, entre 8 y 22 grados.\n\n"
+        "El 7 no cambia el centro: solo indica cuánto se aparta la temperatura "
+        "de ese valor medio.",
+        [
+            ("7 grados",
+             "Ese es la amplitud, es decir, cuánto se aparta la temperatura de su valor medio."),
+            ("22 grados",
+             "Ese es el máximo que alcanza la función, no su valor central."),
+            ("11 grados, que es el promedio entre los coeficientes 15 y 7",
+             "El centro es directamente el término constante: 15."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "facil",
+        "¿Cuál es el valor de sen(180°)?",
+        "0",
+        "Se lee en la circunferencia unitaria.\n\n"
+        "1) A 180° el punto de la circunferencia es (−1, 0).\n"
+        "2) El seno corresponde a la coordenada vertical.\n"
+        "3) Esa coordenada vale 0, así que sen(180°) = 0.\n\n"
+        "En ese mismo ángulo el coseno vale −1, que es su valor mínimo.",
+        [
+            ("1",
+             "Ese es el valor de sen(90°), no de sen(180°)."),
+            ("−1",
+             "Ese es el valor de cos(180°), la coordenada horizontal del punto."),
+            ("0,5, porque 180° es el doble de 90° y el seno se reparte",
+             "El seno no se reparte proporcionalmente: hay que leer el punto en la circunferencia."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "La función f(x) = cos x es par, es decir, cumple f(−x) = f(x). ¿Qué "
+        "significa eso para su gráfico?",
+        "Es simétrico respecto del eje Y",
+        "Una función par refleja sus valores a ambos lados del eje "
+        "vertical.\n\n"
+        "1) Que f(−x) = f(x) significa que el ángulo y su opuesto tienen el "
+        "mismo coseno.\n"
+        "2) Por ejemplo, cos(60°) y cos(−60°) valen los dos 0,5.\n"
+        "3) Cada punto del gráfico tiene su reflejo al otro lado del eje Y.\n\n"
+        "El seno, en cambio, es impar: sen(−x) = −sen(x), y su gráfico es "
+        "simétrico respecto del origen.",
+        [
+            ("Es simétrico respecto del origen",
+             "Esa es la simetría de una función impar, como el seno."),
+            ("Es simétrico respecto del eje X",
+             "Ningún gráfico de función puede serlo: tendría dos imágenes para un mismo valor."),
+            ("Se repite cada 360°, lo que es propio de las funciones pares",
+             "La periodicidad es otra propiedad: hay funciones pares que no son periódicas."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cuál es el valor de sen(−45°)?",
+        "−0,71 aproximadamente",
+        "El seno es una función impar.\n\n"
+        "1) sen(45°) vale aproximadamente 0,71.\n"
+        "2) Como el seno es impar, sen(−x) = −sen(x).\n"
+        "3) Entonces sen(−45°) es aproximadamente −0,71.\n\n"
+        "Geométricamente: el ángulo negativo se mide hacia abajo, así que el "
+        "punto queda bajo el eje horizontal y su altura es negativa.",
+        [
+            ("0,71 aproximadamente",
+             "Ese es el valor de sen(45°); el signo del ángulo también cambia el del seno."),
+            ("−0,5",
+             "Ese es el valor de sen(−30°), no de sen(−45°)."),
+            ("Indefinido, porque no existen ángulos negativos",
+             "Los ángulos negativos se miden en sentido horario y están perfectamente definidos."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cuál es el valor de cos(360°)?",
+        "1",
+        "Una vuelta completa devuelve al punto de partida.\n\n"
+        "1) El coseno tiene período 360°, así que cos(360°) = cos(0°).\n"
+        "2) A 0° el punto de la circunferencia es (1, 0).\n"
+        "3) Su coordenada horizontal es 1, así que cos(360°) = 1.\n\n"
+        "Lo mismo vale para cualquier múltiplo de 360°: el coseno siempre "
+        "regresa a 1.",
+        [
+            ("0",
+             "Ese es el valor de sen(360°), la coordenada vertical del punto."),
+            ("−1",
+             "Ese es el valor de cos(180°), en el extremo opuesto de la circunferencia."),
+            ("360, porque el coseno devuelve la medida del ángulo completo",
+             "El coseno devuelve un número entre −1 y 1."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "La corriente de un circuito se modela con I(t) = 12 · sen(t) amperes. "
+        "¿Cuál es el mayor valor absoluto de corriente que alcanza?",
+        "12 amperes",
+        "El coeficiente fija el valor extremo de la oscilación.\n\n"
+        "1) El seno varía entre −1 y 1.\n"
+        "2) Al multiplicar por 12, la corriente varía entre −12 y 12 amperes.\n"
+        "3) El mayor valor absoluto es entonces 12 amperes.\n\n"
+        "El signo indica el sentido en que circula la corriente: alterna entre "
+        "positivo y negativo, y por eso se llama corriente alterna.",
+        [
+            ("24 amperes",
+             "Es la diferencia entre el máximo y el mínimo, no el valor extremo."),
+            ("6 amperes",
+             "Divide el coeficiente por 2 sin motivo: la amplitud es directamente 12."),
+            ("0 amperes, porque la corriente alterna se anula en promedio",
+             "El promedio es cero, pero el enunciado pide el mayor valor absoluto."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cuántos ciclos completos hace la función f(x) = sen(4x) entre 0° y "
+        "360°?",
+        "4",
+        "El coeficiente interno cuenta los ciclos por vuelta.\n\n"
+        "1) El período de sen(4x) es 360° / 4 = 90°.\n"
+        "2) En 360° caben 360 / 90 = 4 períodos.\n"
+        "3) La función completa cuatro ciclos.\n\n"
+        "Es la lectura directa del coeficiente: en f(x) = sen(bx), b es el "
+        "número de ciclos por vuelta completa.",
+        [
+            ("1",
+             "Ese es el número de ciclos del seno sin coeficiente interno."),
+            ("90",
+             "Ese es el período en grados, no el número de ciclos."),
+            ("8, contando por separado la subida y la bajada de cada ciclo",
+             "Cada ciclo incluye su subida y su bajada: son cuatro en total."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "En la función f(x) = a · sen(bx) + c, ¿qué elemento del gráfico "
+        "controla el valor de c?",
+        "La altura de la línea central de la oscilación",
+        "Cada parámetro tiene un efecto distinto sobre el gráfico.\n\n"
+        "1) El coeficiente a fija la amplitud: cuánto sube y baja la curva.\n"
+        "2) El coeficiente b fija el período: cada cuánto se repite.\n"
+        "3) La constante c desplaza toda la curva verticalmente, y por eso "
+        "define la altura alrededor de la cual oscila.\n\n"
+        "Los valores extremos son entonces c + |a| y c − |a|.",
+        [
+            ("La amplitud de la oscilación",
+             "La amplitud la controla el coeficiente a, no la constante c."),
+            ("El período de la función",
+             "El período lo controla el coeficiente b que acompaña a la variable."),
+            ("El número de veces que la curva corta al eje X en cada vuelta",
+             "Ese número depende de b y de si c desplaza la curva fuera del eje."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cuál es el valor mínimo de la función f(x) = 20 − 6 · cos x?",
+        "14",
+        "El coeficiente negativo invierte cuál extremo del coseno da el "
+        "mínimo.\n\n"
+        "1) El coseno varía entre −1 y 1.\n"
+        "2) La expresión 20 − 6 · cos x es menor cuando cos x es mayor, es "
+        "decir, cuando vale 1.\n"
+        "3) Entonces el mínimo es 20 − 6 = 14.\n\n"
+        "El máximo se obtiene en el otro extremo: con cos x = −1 la función "
+        "vale 20 + 6 = 26.",
+        [
+            ("26",
+             "Ese es el máximo, que se alcanza cuando el coseno vale −1."),
+            ("20",
+             "Ese es el valor central de la oscilación, no el mínimo."),
+            ("−6, tomando el coeficiente negativo como valor mínimo",
+             "El coeficiente indica la amplitud; el mínimo se calcula restándolo del centro."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "Se sabe que sen(x) = 0,6 para cierto ángulo x del primer cuadrante. "
+        "¿Cuánto vale sen(180° − x)?",
+        "0,6",
+        "Los ángulos suplementarios tienen el mismo seno.\n\n"
+        "1) El punto asociado a 180° − x es el reflejo del punto de x respecto "
+        "del eje Y.\n"
+        "2) Esa reflexión conserva la coordenada vertical y cambia la "
+        "horizontal.\n"
+        "3) Como el seno es la coordenada vertical, sen(180° − x) = sen(x) = "
+        "0,6.\n\n"
+        "El coseno, en cambio, cambia de signo: cos(180° − x) = −cos(x).",
+        [
+            ("−0,6",
+             "El seno conserva su signo en el segundo cuadrante; el que cambia es el coseno."),
+            ("0,8",
+             "Ese es el valor de cos(x) para ese ángulo, no de sen(180° − x)."),
+            ("179,4, restando el valor del seno a los 180 grados del enunciado",
+             "No se restan grados con valores de seno: son magnitudes distintas."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "La altura de una marea se modela con h(t) = 4 + 2 · sen(t) metros. "
+        "¿Cuál es la diferencia entre la marea alta y la marea baja?",
+        "4 metros",
+        "La diferencia entre los extremos es el doble de la amplitud.\n\n"
+        "1) La marea alta es 4 + 2 = 6 metros.\n"
+        "2) La marea baja es 4 − 2 = 2 metros.\n"
+        "3) La diferencia es 6 − 2 = 4 metros.\n\n"
+        "El término constante no interviene en la diferencia: se cancela al "
+        "restar, y solo queda el doble del coeficiente que acompaña al seno.",
+        [
+            ("2 metros",
+             "Esa es la amplitud, es decir, la mitad de la diferencia entre los extremos."),
+            ("6 metros",
+             "Ese es el nivel de la marea alta, no la diferencia entre los extremos."),
+            ("8 metros, sumando el nivel central y el de la marea alta",
+             "La diferencia se obtiene restando marea baja de marea alta: 6 − 2 = 4."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cuál de estas funciones tiene el mismo gráfico que f(x) = sen x pero "
+        "reflejado respecto del eje X?",
+        "g(x) = −sen x",
+        "Reflejar respecto del eje X equivale a cambiar el signo de todas las "
+        "imágenes.\n\n"
+        "1) Cada punto (x, y) del gráfico pasa a ser (x, −y).\n"
+        "2) Eso se consigue multiplicando la función por −1.\n"
+        "3) La función resultante es g(x) = −sen x.\n\n"
+        "Curiosamente, como el seno es impar, ese mismo gráfico también se "
+        "obtiene con sen(−x): reflejar horizontalmente y verticalmente dan lo "
+        "mismo en este caso.",
+        [
+            ("g(x) = sen x + 1",
+             "Eso desplaza el gráfico una unidad hacia arriba, sin reflejarlo."),
+            ("g(x) = cos x",
+             "Es un desplazamiento horizontal de 90°, no una reflexión."),
+            ("g(x) = sen(2x), porque el coeficiente 2 invierte el sentido de la curva",
+             "El coeficiente interno comprime el gráfico horizontalmente: no lo refleja."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cuántas soluciones tiene la ecuación sen x = 0,5 entre 0° y 360°?",
+        "Dos",
+        "La recta horizontal y = 0,5 corta al gráfico dos veces por ciclo.\n\n"
+        "1) Una solución está en el primer cuadrante: x = 30°.\n"
+        "2) La otra es su suplementario: x = 180° − 30° = 150°.\n"
+        "3) En el resto de la vuelta el seno es negativo o menor que 0,5.\n\n"
+        "Lo mismo ocurre con cualquier valor entre −1 y 1 distinto de los "
+        "extremos: siempre hay dos soluciones por vuelta.",
+        [
+            ("Una",
+             "Faltaría la solución del segundo cuadrante, x = 150°."),
+            ("Ninguna",
+             "0,5 está dentro del recorrido del seno, así que sí se alcanza."),
+            ("Cuatro, dos en cada mitad de la vuelta completa",
+             "En la segunda mitad de la vuelta el seno es negativo: no llega a 0,5."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Algebra: funciones trigonometricas (segunda tanda)
+#
+# Cuadrantes, identidad fundamental, ecuaciones sencillas con seno y coseno,
+# y modelos periodicos que hay que reconstruir a partir de sus extremos.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cuál es el período de la función f(x) = 3 · cos(2x)?",
+        "180°",
+        "El coeficiente externo no interviene en el período.\n\n"
+        "1) El período del coseno básico es 360°.\n"
+        "2) El coeficiente que acompaña a la variable es 2, así que el período "
+        "es 360° / 2.\n"
+        "3) Eso da 180°.\n\n"
+        "El 3 solo estira el gráfico verticalmente: fija la amplitud, no cada "
+        "cuánto se repite la curva.",
+        [
+            ("120°",
+             "Divide por el coeficiente externo 3 en vez de por el interno 2."),
+            ("360°",
+             "Es el período sin coeficiente interno; el 2 lo reduce a la mitad."),
+            ("720°, multiplicando el período básico por el coeficiente interno",
+             "El coeficiente interno divide al período, no lo multiplica."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cuál es el valor de cos(60°)?",
+        "0,5",
+        "Es uno de los valores notables.\n\n"
+        "1) En un triángulo rectángulo con ángulos de 30°, 60° y 90°, el cateto "
+        "adyacente al de 60° mide la mitad de la hipotenusa.\n"
+        "2) El coseno es el cuociente entre ese cateto y la hipotenusa.\n"
+        "3) Ese cuociente vale 1/2, es decir, 0,5.\n\n"
+        "Es el mismo valor que sen(30°): seno y coseno se intercambian entre "
+        "ángulos complementarios.",
+        [
+            ("0,87 aproximadamente",
+             "Ese es el valor de sen(60°), que corresponde al cateto opuesto."),
+            ("0,71 aproximadamente",
+             "Ese es el valor de cos(45°)."),
+            ("1, porque el coseno alcanza su valor máximo en los ángulos agudos",
+             "El coseno vale 1 solo en 0°; en 60° ya bajó a 0,5."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿En qué cuadrante el seno es positivo y el coseno es negativo?",
+        "En el segundo",
+        "Cada cuadrante combina los signos de las dos coordenadas.\n\n"
+        "1) El seno es la coordenada vertical y el coseno, la horizontal.\n"
+        "2) En el segundo cuadrante los puntos están arriba y a la izquierda "
+        "del origen.\n"
+        "3) Entonces la coordenada vertical es positiva y la horizontal, "
+        "negativa.\n\n"
+        "Ese cuadrante abarca los ángulos entre 90° y 180°: por ejemplo, 120°, "
+        "donde el seno vale 0,87 y el coseno −0,5.",
+        [
+            ("En el primero",
+             "Ahí ambos son positivos: los puntos están arriba y a la derecha."),
+            ("En el tercero",
+             "Ahí ambos son negativos: los puntos están abajo y a la izquierda."),
+            ("En el cuarto, donde el ángulo ya pasó los 270 grados",
+             "Ahí el seno es negativo y el coseno positivo: es el caso opuesto."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cuál es el valor de cos(120°)?",
+        "−0,5",
+        "Se usa el ángulo de referencia y el signo del cuadrante.\n\n"
+        "1) 120° está en el segundo cuadrante, donde el coseno es negativo.\n"
+        "2) Su ángulo de referencia es 180° − 120° = 60°.\n"
+        "3) Como cos(60°) = 0,5, se concluye que cos(120°) = −0,5.\n\n"
+        "El seno de ese mismo ángulo sí es positivo: sen(120°) vale "
+        "aproximadamente 0,87.",
+        [
+            ("0,5",
+             "Ese es cos(60°); en el segundo cuadrante el coseno cambia de signo."),
+            ("−0,87 aproximadamente",
+             "Ese es el valor de cos(150°), cuyo ángulo de referencia es 30°."),
+            ("0,87 aproximadamente",
+             "Ese es el valor de sen(120°), no el del coseno."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cuál es el valor de tan(45°)?",
+        "1",
+        "La tangente es el cuociente entre seno y coseno.\n\n"
+        "1) sen(45°) y cos(45°) valen lo mismo, aproximadamente 0,71.\n"
+        "2) La tangente es su cuociente.\n"
+        "3) Al dividir un número por sí mismo se obtiene 1.\n\n"
+        "Geométricamente: en un triángulo rectángulo con dos ángulos de 45°, "
+        "los catetos son iguales, así que su razón vale 1.",
+        [
+            ("0,71 aproximadamente",
+             "Ese es el valor común del seno y del coseno, no el de su cuociente."),
+            ("0",
+             "La tangente vale 0 en 0° y en 180°, donde el seno se anula."),
+            ("45, porque la tangente devuelve la medida del ángulo",
+             "La tangente devuelve una razón entre catetos, no la medida del ángulo."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cuántas veces corta al eje X el gráfico de f(x) = 2 + sen x?",
+        "Ninguna",
+        "El desplazamiento vertical levanta toda la curva sobre el eje.\n\n"
+        "1) El seno varía entre −1 y 1.\n"
+        "2) Al sumar 2, la función varía entre 1 y 3.\n"
+        "3) Todos esos valores son positivos: la curva nunca llega al eje X.\n\n"
+        "Bastaría con un desplazamiento de 1 unidad para que la curva tocara el "
+        "eje en los puntos donde el seno vale −1.",
+        [
+            ("Una vez por cada vuelta completa",
+             "El gráfico se mantiene por completo sobre el eje X: no lo toca nunca."),
+            ("Dos veces por cada vuelta completa",
+             "Ese sería el número de cortes de sen x sin desplazamiento, en 0° y 180°."),
+            ("Infinitas veces, porque la función es periódica",
+             "La periodicidad repite la forma, pero esa forma nunca alcanza el eje X."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cuál es el recorrido de la función f(x) = 3 · cos x − 1?",
+        "El intervalo entre −4 y 2",
+        "Se escalan los extremos del coseno y después se desplazan.\n\n"
+        "1) El coseno varía entre −1 y 1.\n"
+        "2) Al multiplicar por 3, la parte oscilante varía entre −3 y 3.\n"
+        "3) Al restar 1: la función varía entre −4 y 2.\n\n"
+        "El centro de la oscilación es −1 y la amplitud es 3: los extremos son "
+        "−1 − 3 y −1 + 3.",
+        [
+            ("El intervalo entre −3 y 3",
+             "Ignora el desplazamiento vertical de una unidad hacia abajo."),
+            ("El intervalo entre −1 y 1",
+             "Ese es el recorrido del coseno sin coeficiente ni desplazamiento."),
+            ("El intervalo entre −2 y 4, sumando el desplazamiento en vez de restarlo",
+             "El desplazamiento es de −1, así que baja la curva: los extremos son −4 y 2."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "El volumen de aire en los pulmones se modela con "
+        "V(t) = 2,5 + 0,5 · sen(t) litros. ¿Cuál es el volumen mínimo?",
+        "2 litros",
+        "El mínimo se alcanza cuando el seno vale −1.\n\n"
+        "1) La parte oscilante 0,5 · sen(t) varía entre −0,5 y 0,5.\n"
+        "2) El mínimo de la función es 2,5 − 0,5.\n"
+        "3) Eso da 2 litros.\n\n"
+        "El máximo es el otro extremo, 3 litros, y la diferencia entre ambos es "
+        "1 litro: el volumen de aire que entra y sale en cada respiración.",
+        [
+            ("2,5 litros",
+             "Ese es el volumen medio alrededor del cual oscila la función."),
+            ("3 litros",
+             "Ese es el volumen máximo, que se alcanza cuando el seno vale 1."),
+            ("0,5 litros, tomando el coeficiente del seno como volumen mínimo",
+             "El coeficiente es la amplitud: hay que restarlo del valor central."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "De las funciones f(x) = sen(2x) y g(x) = sen(5x), ¿cuál tiene el "
+        "período mayor?",
+        "f, porque su coeficiente interno es menor",
+        "El período es inversamente proporcional al coeficiente interno.\n\n"
+        "1) El período de f es 360° / 2 = 180°.\n"
+        "2) El período de g es 360° / 5 = 72°.\n"
+        "3) Como 180° supera a 72°, f tiene el período mayor.\n\n"
+        "Un coeficiente interno grande comprime el gráfico: aprieta más ciclos "
+        "en el mismo tramo, así que cada ciclo dura menos.",
+        [
+            ("g, porque su coeficiente interno es mayor",
+             "Un coeficiente mayor acorta el período en vez de alargarlo."),
+            ("Las dos tienen el mismo período, porque ambas son funciones seno",
+             "El coeficiente interno cambia el período: 180° contra 72°."),
+            ("No se puede comparar sin conocer la amplitud de cada función",
+             "La amplitud no interviene en el período."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "Si sen(x) = 0,3, ¿cuánto vale sen(x + 360°)?",
+        "0,3",
+        "El seno tiene período 360°.\n\n"
+        "1) Sumar una vuelta completa devuelve al mismo punto de la "
+        "circunferencia.\n"
+        "2) Ese punto tiene la misma coordenada vertical.\n"
+        "3) Por lo tanto sen(x + 360°) = sen(x) = 0,3.\n\n"
+        "Lo mismo vale restando vueltas o sumando varias: el seno solo depende "
+        "de la posición final en la circunferencia.",
+        [
+            ("−0,3",
+             "Ese sería el valor de sen(x + 180°), media vuelta más adelante."),
+            ("360,3",
+             "Sumar grados al ángulo no suma nada al valor del seno."),
+            ("0, porque al completar la vuelta la función regresa a su origen",
+             "Regresa al mismo punto de partida, con el mismo valor 0,3, no a cero."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cuál es el máximo de la función f(x) = 7 · sen(5x)?",
+        "7",
+        "El coeficiente interno no afecta a los valores extremos.\n\n"
+        "1) sen(5x) sigue variando entre −1 y 1, igual que el seno básico.\n"
+        "2) Al multiplicar por 7, la función varía entre −7 y 7.\n"
+        "3) Su máximo es 7.\n\n"
+        "El 5 solo comprime el gráfico: hace que ese máximo se alcance con más "
+        "frecuencia, cinco veces por vuelta en vez de una.",
+        [
+            ("35",
+             "Multiplica los dos coeficientes; el interno no interviene en la amplitud."),
+            ("5",
+             "Es el coeficiente interno, que fija el período y no el máximo."),
+            ("1,4 aproximadamente, dividiendo el coeficiente externo por el interno",
+             "El máximo es directamente el coeficiente externo: 7."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "dificil",
+        "Si sen(x) = 0,6 y x está en el primer cuadrante, ¿cuánto vale cos(x)?",
+        "0,8",
+        "Se usa la identidad fundamental.\n\n"
+        "1) Se cumple sen²(x) + cos²(x) = 1.\n"
+        "2) Reemplazando: 0,36 + cos²(x) = 1, así que cos²(x) = 0,64.\n"
+        "3) Como x está en el primer cuadrante, el coseno es positivo: "
+        "cos(x) = 0,8.\n\n"
+        "El cuadrante es lo que decide el signo: en el segundo cuadrante la "
+        "misma identidad habría dado −0,8.",
+        [
+            ("0,4",
+             "Resta 0,6 a 1 en vez de aplicar la identidad con los cuadrados."),
+            ("−0,8",
+             "El valor absoluto es correcto, pero en el primer cuadrante el coseno es positivo."),
+            ("0,64, quedándose con el cuadrado del coseno sin extraer la raíz",
+             "0,64 es cos²(x); el coseno es su raíz cuadrada, 0,8."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "dificil",
+        "¿Cuáles son las soluciones de la ecuación 2 · sen x + 1 = 2 entre 0° y "
+        "360°?",
+        "30° y 150°",
+        "Se despeja el seno y se buscan los dos ángulos.\n\n"
+        "1) De 2 · sen x + 1 = 2 se obtiene 2 · sen x = 1, es decir, "
+        "sen x = 0,5.\n"
+        "2) En el primer cuadrante ese valor corresponde a 30°.\n"
+        "3) El seno también vale 0,5 en el suplementario: 180° − 30° = 150°.\n\n"
+        "En el resto de la vuelta el seno es negativo o no alcanza 0,5, así que "
+        "no hay más soluciones.",
+        [
+            ("Solo 30°",
+             "Falta la solución del segundo cuadrante, donde el seno también vale 0,5."),
+            ("30° y 210°",
+             "En 210° el seno vale −0,5, con signo negativo."),
+            ("60° y 120°, que son los ángulos cuyo seno vale aproximadamente 0,87",
+             "La ecuación pide seno igual a 0,5, no a 0,87."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "dificil",
+        "Un modelo periódico alcanza un máximo de 30 y un mínimo de 10. Si "
+        "tiene la forma f(t) = c + a · sen(bt), ¿cuánto valen a y c?",
+        "a = 10 y c = 20",
+        "El centro es el promedio de los extremos y la amplitud, su "
+        "semidiferencia.\n\n"
+        "1) El valor central es (30 + 10) / 2 = 20, así que c = 20.\n"
+        "2) La amplitud es (30 − 10) / 2 = 10, así que a = 10.\n"
+        "3) El modelo es f(t) = 20 + 10 · sen(bt), y en efecto oscila entre 10 "
+        "y 30.\n\n"
+        "El coeficiente b no queda determinado por los extremos: hace falta "
+        "conocer el período para fijarlo.",
+        [
+            ("a = 20 y c = 10",
+             "Intercambia los papeles: 20 es el centro y 10 la amplitud."),
+            ("a = 20 y c = 20",
+             "Con amplitud 20 la función bajaría hasta 0, no hasta 10."),
+            ("a = 30 y c = 10, tomando directamente el máximo y el mínimo como parámetros",
+             "Los parámetros salen del promedio y de la semidiferencia de los extremos."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "dificil",
+        "La altura de una cabina de noria se modela con "
+        "h(t) = 12 + 10 · sen(30° · t), con t en minutos. ¿Cuánto demora la "
+        "noria en dar una vuelta completa?",
+        "12 minutos",
+        "El período del modelo es el tiempo de una vuelta.\n\n"
+        "1) El período de sen(bt) es 360° dividido por b.\n"
+        "2) Aquí b = 30° por minuto, así que el período es 360 / 30.\n"
+        "3) Eso da 12 minutos.\n\n"
+        "La amplitud 10 y el centro 12 describen la altura, pero no el tiempo: "
+        "ese lo fija el coeficiente que acompaña a t.",
+        [
+            ("30 minutos",
+             "Toma el coeficiente como si fuera el período; en realidad lo divide."),
+            ("10 minutos",
+             "Ese es la amplitud en metros, no un tiempo."),
+            ("22 minutos, sumando el centro y la amplitud del modelo",
+             "Esos parámetros describen la altura, no la duración de la vuelta."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "dificil",
+        "¿Cuál es la amplitud, el período y el valor máximo de "
+        "f(x) = −2 · cos(3x) + 5?",
+        "Amplitud 2, período 120° y máximo 7",
+        "Cada parámetro se lee por separado.\n\n"
+        "1) La amplitud es el valor absoluto del coeficiente externo: |−2| = "
+        "2.\n"
+        "2) El período es 360° / 3 = 120°.\n"
+        "3) El máximo es el centro más la amplitud: 5 + 2 = 7, y se alcanza "
+        "cuando cos(3x) vale −1.\n\n"
+        "El signo negativo del coeficiente no cambia la amplitud ni los "
+        "extremos: solo invierte en qué puntos se alcanzan.",
+        [
+            ("Amplitud −2, período 120° y máximo 3",
+             "La amplitud es siempre positiva, y el máximo se obtiene sumando esa amplitud al centro."),
+            ("Amplitud 2, período 1.080° y máximo 7",
+             "El coeficiente interno divide al período de 360°, no lo multiplica."),
+            ("Amplitud 5, período 120° y máximo 7",
+             "El 5 es el centro de la oscilación; la amplitud es el coeficiente externo."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "dificil",
+        "Se afirma que sen(90° − x) es igual a cos(x) para todo ángulo x. ¿Es "
+        "correcta la afirmación?",
+        "Sí: seno y coseno se intercambian entre ángulos complementarios",
+        "Se comprueba con la circunferencia unitaria.\n\n"
+        "1) El punto asociado a 90° − x se obtiene reflejando el de x respecto "
+        "de la recta y = x.\n"
+        "2) Esa reflexión intercambia las dos coordenadas.\n"
+        "3) La coordenada vertical del nuevo punto es la horizontal del "
+        "original: sen(90° − x) = cos(x).\n\n"
+        "Comprobación con x = 30°: sen(60°) vale aproximadamente 0,87 y "
+        "cos(30°) también.",
+        [
+            ("No: sen(90° − x) es igual a −cos(x)",
+             "El signo no cambia: comprobando con x = 30° ambos lados dan 0,87."),
+            ("Solo es cierta cuando x está entre 0° y 90°",
+             "La identidad vale para todo ángulo, no solo para los agudos."),
+            ("No: la resta de ángulos no se puede repartir dentro del seno",
+             "No se está repartiendo la resta: es una identidad que se verifica en la circunferencia."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "dificil",
+        "La temperatura de un invernadero se modela con "
+        "T(t) = 22 + 5 · sen(15° · t), con t en horas desde la medianoche. ¿A "
+        "qué hora alcanza su temperatura máxima?",
+        "A las 6 de la mañana",
+        "El máximo se alcanza cuando el argumento del seno vale 90°.\n\n"
+        "1) La función es mayor cuando sen(15° · t) = 1.\n"
+        "2) Eso ocurre cuando 15° · t = 90°.\n"
+        "3) Despejando: t = 6, es decir, a las 6 de la mañana, con 27 grados.\n\n"
+        "El período del modelo es 360 / 15 = 24 horas, lo que calza con un "
+        "ciclo diario completo.",
+        [
+            ("A las 12 del mediodía",
+             "A esa hora el argumento vale 180° y el seno se anula: la temperatura vuelve a 22 grados."),
+            ("A las 3 de la mañana",
+             "Ahí el argumento vale 45° y el seno aún no llega a su máximo."),
+            ("A las 15 horas, leyendo el coeficiente del modelo como si fuera la hora",
+             "El coeficiente indica cuántos grados avanza el argumento por hora."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "dificil",
+        "¿Cuántas soluciones tiene la ecuación cos x = 1 entre 0° y 720°?",
+        "Tres",
+        "El coseno alcanza su máximo una vez por vuelta.\n\n"
+        "1) cos x = 1 se cumple en x = 0°.\n"
+        "2) Se repite cada 360°, así que también en 360° y en 720°.\n"
+        "3) En el intervalo cerrado de 0° a 720° hay tres soluciones.\n\n"
+        "Con un valor intermedio como cos x = 0,5 habría cuatro soluciones en "
+        "ese mismo intervalo: dos por vuelta.",
+        [
+            ("Dos",
+             "Olvida uno de los extremos del intervalo: hay soluciones en 0°, 360° y 720°."),
+            ("Cuatro",
+             "Ese es el número de soluciones para un valor intermedio, que se alcanza dos veces por vuelta."),
+            ("Infinitas, porque el coseno es una función periódica",
+             "Serían infinitas en todos los reales, pero el intervalo está acotado a dos vueltas."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "dificil",
+        "Un estudiante afirma que la función f(x) = sen(x) + cos(x) tiene "
+        "amplitud 2, porque suma las amplitudes. ¿Es correcta su afirmación?",
+        "No: el máximo de la suma es aproximadamente 1,41",
+        "Los dos sumandos no alcanzan su máximo en el mismo ángulo.\n\n"
+        "1) sen(x) vale 1 en 90°, pero ahí cos(x) vale 0.\n"
+        "2) cos(x) vale 1 en 0°, pero ahí sen(x) vale 0.\n"
+        "3) El mayor valor de la suma se alcanza en 45°, donde ambos valen "
+        "0,71: la suma llega a 1,41 aproximadamente.\n\n"
+        "Las amplitudes solo se sumarían si las dos funciones alcanzaran su "
+        "máximo simultáneamente, y aquí están desfasadas 90°.",
+        [
+            ("Sí: la amplitud de una suma es la suma de las amplitudes",
+             "Solo lo sería si ambas funciones alcanzaran el máximo en el mismo ángulo."),
+            ("No: el máximo de la suma es 1, igual que el de cada sumando",
+             "En 45° la suma alcanza 1,41, así que supera a cada sumando por separado."),
+            ("No: la suma de un seno y un coseno no es una función periódica",
+             "Sí lo es: la suma sigue repitiéndose cada 360°."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "dificil",
+        "¿Para qué valores de x entre 0° y 360° la función f(x) = sen x toma "
+        "valores negativos?",
+        "Entre 180° y 360°, sin incluir los extremos",
+        "El seno es la coordenada vertical del punto de la circunferencia.\n\n"
+        "1) Esa coordenada es negativa cuando el punto está bajo el eje "
+        "horizontal.\n"
+        "2) Eso ocurre en la mitad inferior de la circunferencia, entre 180° y "
+        "360°.\n"
+        "3) En 180° y en 360° el seno vale exactamente 0, así que esos extremos "
+        "quedan fuera.\n\n"
+        "En esa zona están el tercer y el cuarto cuadrante, que es donde el "
+        "gráfico del seno cae bajo el eje X.",
+        [
+            ("Entre 90° y 270°",
+             "En ese tramo el seno pasa de 1 a −1: es positivo en la primera mitad."),
+            ("Entre 0° y 180°",
+             "Ahí el seno es positivo: corresponde a la mitad superior de la circunferencia."),
+            ("Solo en 270°, donde el seno alcanza su valor mínimo",
+             "Ahí alcanza su mínimo, pero es negativo en todo el tramo entre 180° y 360°."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "dificil",
+        "Dos modelos de marea son P(t) = 6 + 2 · sen(t) y Q(t) = 6 + 2 · "
+        "cos(t), ambos en metros. ¿En qué se diferencian?",
+        "Solo en el instante en que alcanzan sus extremos",
+        "Seno y coseno tienen la misma forma con distinto punto de partida.\n\n"
+        "1) Ambos modelos tienen centro 6 y amplitud 2, así que varían entre 4 "
+        "y 8 metros.\n"
+        "2) Ambos tienen el mismo período.\n"
+        "3) Lo único distinto es el desfase: el coseno parte en su máximo y el "
+        "seno parte en el valor central.\n\n"
+        "Es un desfase de 90°: cos(t) coincide con sen(t + 90°).",
+        [
+            ("En su amplitud: la del coseno es mayor",
+             "Las dos tienen amplitud 2: el coeficiente externo es el mismo."),
+            ("En su período: el del coseno es la mitad",
+             "Ambos tienen período 360°: el coeficiente interno es 1 en los dos."),
+            ("En su valor medio: el del seno queda una unidad más abajo",
+             "El valor medio es 6 en los dos modelos."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "dificil",
+        "La profundidad de un canal se modela con D(t) = 8 + 3 · sen(t) metros. "
+        "¿Durante qué fracción de cada ciclo la profundidad supera los 8 "
+        "metros?",
+        "La mitad del ciclo",
+        "Superar el centro equivale a que el seno sea positivo.\n\n"
+        "1) D(t) > 8 equivale a 3 · sen(t) > 0, es decir, sen(t) > 0.\n"
+        "2) El seno es positivo en la mitad superior de la circunferencia, "
+        "entre 0° y 180°.\n"
+        "3) Ese tramo es exactamente la mitad de un ciclo completo de 360°.\n\n"
+        "La amplitud 3 no interviene: cualquier amplitud positiva daría la "
+        "misma respuesta, porque el umbral coincide con el centro.",
+        [
+            ("Un cuarto del ciclo",
+             "Ese sería el tramo entre el centro y el máximo, no todo el tramo sobre el centro."),
+            ("Tres cuartos del ciclo",
+             "El seno es positivo solo en la mitad del ciclo, no en tres cuartos."),
+            ("Todo el ciclo, porque la profundidad media ya es de 8 metros",
+             "Ocho metros es el centro: durante media vuelta la profundidad queda por debajo."),
         ],
     ),
 ]

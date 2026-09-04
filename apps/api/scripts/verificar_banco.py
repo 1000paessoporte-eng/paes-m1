@@ -57,6 +57,9 @@ DIFICULTADES = {"facil", "medio", "dificil"}
 # gemelas pueden llevar dificultades distintas. Cada fragmento identifica a la
 # pregunta que rompe la simetría, y va con el motivo por el que la rompe.
 EXCEPCIONES_DIFICULTAD = {
+    "se llega a 0 = 0": "una identidad obliga a concluir infinitas soluciones; la gemela con 0 = 7 es una contradiccion directa",
+    "valor de sen(30°)": "exige recordar el triangulo de 30-60-90; las gemelas se leen directo sobre un eje",
+    "valor de cos(120°)": "hay que reducir al angulo de referencia y decidir el signo del cuadrante; las gemelas estan sobre un eje",
     "valor aproximado de log 300": "hay que separar 300 en 3 por 100 y sumar dos logaritmos; la gemela aplica una sola propiedad",
     "x² + 12x + 36": "raíz doble: una única solución, no dos",
     "x² − 10x + 25": "raíz doble: una única solución, no dos",
