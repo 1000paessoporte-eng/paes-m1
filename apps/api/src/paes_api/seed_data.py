@@ -1291,7 +1291,8 @@ QUESTIONS = [
         "permutación, y el resultado sería distinto.",
         [
             ("15", "Calculó la combinación (6×5)/2=15, tratando ambos premios como si fueran idénticos, sin distinguir primer y segundo lugar."),
-            ("36", "Calculó 6² en lugar de 6×5, permitiendo que una misma persona ganara ambos premios."),
+            ("3",
+             "Dividió las personas por la cantidad de premios."),
             ("6", "Entregó solo la cantidad de participantes, sin calcular las formas de asignar los dos premios."),
         ],
     ),
@@ -2039,7 +2040,8 @@ QUESTIONS = [
         [
             ("5", "Sumó la cantidad de sabores y tipos de cono (3+2), en lugar de multiplicarlas."),
             ("3", "Consideró solo la cantidad de sabores disponibles, sin tomar en cuenta los tipos de cono."),
-            ("9", "Calculó 3² en lugar de multiplicar la cantidad de sabores por la cantidad de tipos de cono."),
+            ("2",
+             "Contó solo los tipos de cono disponibles."),
         ],
     ),
     _q(
@@ -2188,7 +2190,8 @@ QUESTIONS = [
         "2) Como son 3 meses y el interés simple no se acumula sobre sí mismo: "
         "2.000 × 3 = $6.000.",
         [
-            ("$2.000", "Calculó el interés de un solo mes y olvidó multiplicarlo por los 3 meses."),
+            ("$200.000",
+             "Multiplicó el capital por 2 en vez de por el 2%, sin dividir por cien."),
             ("$106.000", "Calculó el monto final (capital + interés) en lugar de solo el interés ganado."),
             ("$6.121", "Calculó interés compuesto (aplicando el 2% sobre el saldo acumulado cada mes) en lugar de interés simple, que siempre se calcula sobre el capital inicial."),
         ],
@@ -2238,7 +2241,8 @@ QUESTIONS = [
         [
             ("4", "Calculó log₂(16) en lugar de log₂(8): 2⁴=16, no 8."),
             ("6", "Multiplicó la base por el resultado esperado (2×3=6) en lugar de identificar el exponente."),
-            ("0,375", "Calculó 3/8 en lugar de identificar a qué exponente se eleva 2 para obtener 8."),
+            ("8",
+             "Repite el argumento del logaritmo en vez de entregar el exponente."),
         ],
     ),
     _q(
@@ -4017,7 +4021,8 @@ QUESTIONS += [
         "sucesivas e independientes.",
         [
             ("9", "Sumó las opciones en lugar de multiplicarlas."),
-            ("40", "Multiplicó y luego duplicó, como si el orden de los platos importara."),
+            ("4",
+             "Contó solo las entradas disponibles."),
             ("5", "Consideró solo uno de los dos grupos."),
         ],
     ),
@@ -4095,7 +4100,8 @@ QUESTIONS += [
         "2) Multiplica: 3 · 4 = 12 conjuntos distintos.",
         [
             ("7", "Sumó las prendas en lugar de multiplicar las opciones."),
-            ("24", "Multiplicó por 2 de más, como si el orden de las prendas importara."),
+            ("3",
+             "Contó solo las poleras disponibles."),
             ("4", "Consideró solo los pantalones."),
         ],
     ),
@@ -4310,7 +4316,8 @@ QUESTIONS += [
         [
             ("$210.000", "Entregó el monto final acumulado en lugar del interés ganado."),
             ("$100.000", "Calculó el 50% en vez del 5%, corriendo la coma decimal."),
-            ("$5.000", "Tomó el porcentaje como si fuera un monto fijo en pesos."),
+            ("$1.000.000",
+             "Multiplicó el capital por 5 en vez de por el 5%, sin dividir por cien."),
         ],
     ),
     _q(
@@ -4326,7 +4333,8 @@ QUESTIONS += [
         [
             ("$120.000", "Aplicó interés simple: 10% del capital inicial dos veces."),
             ("$110.000", "Calculó solo el primer año."),
-            ("$200.000", "Duplicó el capital, como si la tasa fuera del 100%."),
+            ("$100.000",
+             "Repite el capital inicial, sin agregar ningún interés."),
         ],
     ),
     _q(
@@ -4357,7 +4365,8 @@ QUESTIONS += [
         [
             ("12%", "Calculó la tasa del periodo completo sin dividirla por los 2 años."),
             ("6,5%", "Aplicó la fórmula del interés compuesto en un problema de interés simple."),
-            ("3%", "Dividió dos veces por el plazo."),
+            ("24%",
+             "Multiplicó la tasa por los años en vez de dividir el interés entre ellos."),
         ],
     ),
     _q(
@@ -4373,7 +4382,8 @@ QUESTIONS += [
         [
             ("$50.000", "Supuso que subir y bajar 10% se anulan entre sí."),
             ("$55.000", "Se detuvo tras el alza y no aplicó el descuento."),
-            ("$45.000", "Aplicó el descuento del 10% sobre el precio original y restó dos veces."),
+            ("$60.500",
+             "Aplicó dos alzas del 10% en vez de un alza y una rebaja."),
         ],
     ),
 
@@ -4390,7 +4400,8 @@ QUESTIONS += [
         [
             ("16", "Dividió 32 por 2 en lugar de buscar el exponente."),
             ("6", "Contó un exponente de más: 2⁶ = 64."),
-            ("2", "Entregó la base en lugar del exponente."),
+            ("32",
+             "Repite el argumento del logaritmo en vez de entregar el exponente."),
         ],
     ),
     _q(
@@ -4711,7 +4722,8 @@ QUESTIONS += [
         [
             ("234 cm", "Multiplicó por el cuadrado de la razón, que corresponde al área y no al perímetro."),
             ("120 cm", "Calculó el área de la figura ampliada en lugar del perímetro."),
-            ("26 cm", "Entregó el perímetro original sin aplicar la homotecia."),
+            ("468 cm",
+             "Duplica el perímetro ampliado, contando dos veces cada lado."),
         ],
     ),
 
@@ -4851,7 +4863,8 @@ QUESTIONS += [
         [
             ("4", "Promedió las desviaciones sin elevarlas al cuadrado, o entregó el promedio del conjunto."),
             ("8", "Sumó los cuadrados pero no dividió por la cantidad de datos."),
-            ("2", "Entregó la desviación estándar aproximada en lugar de la varianza."),
+            ("24",
+             "Multiplica la suma de cuadrados por la cantidad de datos en vez de dividirla."),
         ],
     ),
     _q(
@@ -5023,7 +5036,8 @@ QUESTIONS += [
         "2) Como la A aparece 2 veces, cada palabra se contó 2! = 2 veces.\n"
         "3) Divide: 24 ÷ 2 = 12.",
         [
-            ("24", "Trató las dos A como si fueran letras distintas."),
+            ("3",
+             "Contó las letras distintas en vez de sus ordenamientos."),
             ("6", "Dividió por 4 en lugar de por el factorial de las letras repetidas."),
             ("4", "Contó la cantidad de letras en vez de los ordenamientos."),
         ],
@@ -5057,7 +5071,8 @@ QUESTIONS += [
         "3) Multiplica: 10 · 4 = 40 comités distintos.",
         [
             ("14", "Sumó las opciones de cada grupo en lugar de multiplicarlas."),
-            ("80", "Contó los pares de hombres como ordenados, sin dividir por 2."),
+            ("9",
+             "Sumó los hombres y las mujeres del grupo."),
             ("20", "Usó 5 formas para elegir a los hombres, como si fuera una sola persona."),
         ],
     ),
@@ -5075,7 +5090,8 @@ QUESTIONS += [
         [
             ("8", "Usó 2³, considerando solo tres lanzamientos."),
             ("4", "Contó la cantidad de lanzamientos en vez de las secuencias posibles."),
-            ("32", "Usó 2⁵, un lanzamiento de más."),
+            ("2",
+             "Contó los resultados de un solo lanzamiento."),
         ],
     ),
     _q(
@@ -5090,7 +5106,8 @@ QUESTIONS += [
         "Significa que, repitiendo el experimento muchas veces, el promedio de éxitos "
         "por tanda tiende a 1.",
         [
-            ("0,2", "Entregó la probabilidad de éxito individual sin multiplicar por los intentos."),
+            ("10",
+             "Multiplicó los cinco intentos por 2 en vez de por 0,2."),
             ("5", "Entregó la cantidad de intentos en vez del valor esperado."),
             ("2,5", "Dividió los intentos por 2 en lugar de multiplicar por la probabilidad."),
         ],
@@ -5107,7 +5124,8 @@ QUESTIONS += [
         "3) Multiplica: 4 · 0,0625 = 0,25.\n\n"
         "Equivale a 4/16, coherente con que hay 16 secuencias posibles y 4 favorables.",
         [
-            ("0,0625", "Calculó la probabilidad de una secuencia específica sin multiplicar por las 4 formas posibles."),
+            ("0,9375",
+             "Es la probabilidad de obtener al menos un éxito, no exactamente dos."),
             ("0,5", "Usó la probabilidad de un solo intento."),
             ("0,75", "Sumó las probabilidades en lugar de aplicar el modelo binomial."),
         ],
@@ -5566,7 +5584,8 @@ QUESTIONS += [
         "3) Multiplica por los 3 años: 12.000 · 3 = 36.000.\n"
         "4) En fórmula: I = C · i · t = 300.000 · 0,04 · 3 = 36.000.",
         [
-            ("$12.000", "Calculó el interés de un solo año y no lo multiplicó por los 3."),
+            ("$360.000",
+             "Tomó la tasa como 40% en vez de 4%."),
             ("$336.000", "Entregó el monto final acumulado en lugar del interés generado."),
             ("$37.459", "Aplicó interés compuesto, que capitaliza los intereses año a año, en vez de interés simple."),
         ],
@@ -5584,7 +5603,8 @@ QUESTIONS += [
         [
             ("$530.000", "Consideró un solo año de intereses en lugar de dos."),
             ("$60.000", "Entregó únicamente el interés ganado, sin sumarle el capital inicial."),
-            ("$561.800", "Aplicó interés compuesto en lugar del interés simple que indica el enunciado."),
+            ("$30.000",
+             "Calculó el interés de un solo año y lo entregó como monto final."),
         ],
     ),
     _q(
@@ -5616,7 +5636,8 @@ QUESTIONS += [
         "4) Diferencia: 8.200 − 8.000 = 200. Ese monto es exactamente el 5% de los "
         "4.000 del primer año, es decir el interés que generaron los intereses.",
         [
-            ("$0", "Supuso que ambos sistemas rinden lo mismo; se diferencian desde el segundo período."),
+            ("$16.400",
+             "Suma los dos intereses en vez de restarlos."),
             ("$8.200", "Entregó el interés compuesto total en lugar de la diferencia entre ambos."),
             ("$8.000", "Entregó el interés simple total en lugar de la diferencia."),
         ],
@@ -5650,7 +5671,8 @@ QUESTIONS += [
         "4) Multiplicando por 100 queda 10%.",
         [
             ("$4.500", "Calculó bien el recargo en pesos, pero la pregunta pide el porcentaje."),
-            ("9,1%", "Dividió el recargo por el precio a crédito en lugar del precio al contado."),
+            ("$9.000",
+             "Duplica el recargo de $4.500, y además entrega pesos donde se pide un porcentaje."),
             ("36,7%", "Comparó el valor de una cuota con el precio al contado."),
         ],
     ),
@@ -5667,7 +5689,8 @@ QUESTIONS += [
         [
             ("32", "Dividió 64 por 2 en lugar de buscar el exponente."),
             ("8", "Calculó la raíz cuadrada de 64, que responde otra pregunta."),
-            ("5", "Contó una multiplicación de menos: 2⁵ da 32, no 64."),
+            ("64",
+             "Repite el argumento del logaritmo en vez de entregar el exponente."),
         ],
     ),
     _q(
@@ -5701,7 +5724,8 @@ QUESTIONS += [
         [
             ("20", "Multiplicó la base por el exponente en lugar de elevar."),
             ("10", "Confundió la base con el resultado buscado."),
-            ("1.000", "Usó un exponente 3 en lugar del 2 que da el enunciado."),
+            ("2",
+             "Repite el valor del logaritmo en vez del argumento."),
         ],
     ),
     _q(
@@ -5734,7 +5758,8 @@ QUESTIONS += [
         "entre 0 y 1.",
         [
             ("2,408", "Multiplicó por 8 en lugar de por el exponente 3."),
-            ("0,602", "Usó exponente 2, como si 8 fuera 2²."),
+            ("2,709",
+             "Multiplicó 0,301 por 9 en vez de por 3."),
             ("1,204", "Usó exponente 4, como si 8 fuera 2⁴."),
         ],
     ),
@@ -11681,7 +11706,8 @@ QUESTIONS += [
         "3) Multiplica: 9 · 4 = 36 conjuntos distintos.",
         [
             ("13", "Sumó las prendas en lugar de multiplicar las opciones."),
-            ("72", "Multiplicó por 2 de más, como si el orden de vestirse importara."),
+            ("5",
+             "Restó las corbatas a las camisas en vez de multiplicarlas."),
             ("9", "Contó solo las camisas."),
         ],
     ),
@@ -11727,7 +11753,8 @@ QUESTIONS += [
         "4) Hay 28 parejas posibles.",
         [
             ("56", "Contó los pares ordenados sin dividir por las repeticiones."),
-            ("16", "Multiplicó 8 · 2 en lugar de aplicar combinaciones."),
+            ("40.320",
+             "Calculó 8! en vez de las combinaciones de dos personas."),
             ("64", "Calculó 8², permitiendo elegir dos veces a la misma persona."),
         ],
     ),
@@ -11742,7 +11769,8 @@ QUESTIONS += [
         "4) Multiplica: 5 · 4 · 3 = 60 podios posibles.",
         [
             ("10", "Aplicó combinaciones, ignorando que las posiciones del podio se distinguen entre sí."),
-            ("125", "Calculó 5³, permitiendo que un corredor ocupe más de un lugar."),
+            ("5",
+             "Contó solo los corredores que participan."),
             ("15", "Multiplicó 5 · 3 en lugar de descontar los corredores ya ubicados."),
         ],
     ),
@@ -11755,7 +11783,8 @@ QUESTIONS += [
         "2) Como no se pueden repetir, para la segunda quedan 3.\n"
         "3) Multiplica: 4 · 3 = 12 números.",
         [
-            ("16", "Calculó 4², permitiendo repetir el dígito."),
+            ("4",
+             "Contó solo las cifras disponibles."),
             ("6", "Aplicó combinaciones, ignorando que el orden de las cifras importa."),
             ("8", "Sumó 4 + 4 en lugar de multiplicar las opciones."),
         ],
@@ -11802,7 +11831,8 @@ QUESTIONS += [
         [
             ("110", "Contó pares ordenados sin dividir por las repeticiones."),
             ("121", "Calculó 11², permitiendo repetir el mismo elemento."),
-            ("22", "Multiplicó 11 · 2 en lugar de aplicar combinaciones."),
+            ("2.048",
+             "Contó todos los subconjuntos posibles, no solo los de dos elementos."),
         ],
     ),
     _q(
@@ -11834,7 +11864,8 @@ QUESTIONS += [
         "4) Hay 35 comités posibles.",
         [
             ("840", "Contó los ordenamientos sin dividir por las repeticiones."),
-            ("28", "Usó el número de parejas en lugar de grupos de cuatro."),
+            ("5.040",
+             "Calculó 7! en vez de las combinaciones de cuatro personas."),
             ("2.401", "Calculó 7⁴, permitiendo repetir personas."),
         ],
     ),
@@ -11850,7 +11881,8 @@ QUESTIONS += [
         "4) Hay 252 equipos posibles.",
         [
             ("30.240", "Contó los ordenamientos sin dividir por las repeticiones."),
-            ("50", "Multiplicó 10 · 5 en lugar de aplicar combinaciones."),
+            ("3.628.800",
+             "Calculó 10! en vez de las combinaciones de cinco jugadores."),
             ("100.000", "Calculó 10⁵, permitiendo repetir jugadores."),
         ],
     ),
@@ -11897,7 +11929,8 @@ QUESTIONS += [
         [
             ("56", "Contó cada saludo dos veces, una por cada persona involucrada."),
             ("64", "Calculó 8², incluyendo el caso de una persona saludándose a sí misma."),
-            ("8", "Contó las personas en lugar de los saludos."),
+            ("40.320",
+             "Calculó 8!, que cuenta ordenamientos de las personas y no saludos."),
         ],
     ),
     _q(
@@ -11913,7 +11946,8 @@ QUESTIONS += [
         [
             ("49", "Calculó 7², como si solo hubiera dos posiciones."),
             ("42", "Multiplicó solo las dos primeras opciones."),
-            ("823.543", "Calculó 7⁷, permitiendo que una persona ocupe varios lugares."),
+            ("28",
+             "Sumó los siete primeros números naturales."),
         ],
     ),
     _q(
@@ -11929,7 +11963,8 @@ QUESTIONS += [
         [
             ("21", "Sumó las opciones de cada grupo en lugar de multiplicarlas."),
             ("45", "Aplicó combinaciones sobre las 10 personas juntas, sin respetar la composición pedida."),
-            ("360", "Contó los ordenamientos dentro de cada grupo, cuando los cargos no se distinguen."),
+            ("10",
+             "Sumó los hombres y las mujeres del grupo."),
         ],
     ),
 ]
@@ -16411,7 +16446,8 @@ QUESTIONS += [
         [
             ("8", "Sumó los resultados de cada objeto en lugar de multiplicarlos."),
             ("6", "Contó solo los resultados del dado."),
-            ("36", "Multiplicó 6 por 6, como si se lanzaran dos dados."),
+            ("3",
+             "Dividió las caras del dado por las de la moneda."),
         ],
     ),
     _q(
@@ -16510,7 +16546,8 @@ QUESTIONS += [
         [
             ("10", "Sumó las rutas de los dos tramos, que sería el caso si se pudiera elegir una sola."),
             ("3", "Contó solo el segundo tramo."),
-            ("49", "Multiplicó 7 por 7, usando dos veces las rutas del primer tramo."),
+            ("2",
+             "Contó los tramos del viaje en vez de las rutas posibles."),
         ],
     ),
     _q(
@@ -16524,7 +16561,8 @@ QUESTIONS += [
         "4) Hay 6 parejas distintas.",
         [
             ("12", "Contó los pares ordenados, sin descontar que cada pareja se repite dos veces."),
-            ("4", "Dio la cantidad de personas en lugar de la de parejas."),
+            ("24",
+             "Calculó 4!, que cuenta ordenamientos de las cuatro y no parejas."),
             ("8", "Multiplicó las personas por 2."),
         ],
     ),
@@ -16569,7 +16607,8 @@ QUESTIONS += [
         "4) Multiplica: 7 · 6 · 5 = 210.",
         [
             ("35", "Contó los grupos de 3 sin importar el orden, cuando los lugares del podio sí se distinguen."),
-            ("343", "Usó 7 opciones en los tres lugares, permitiendo que alguien ocupe dos puestos."),
+            ("7",
+             "Contó solo los corredores que participan."),
             ("21", "Multiplicó los corredores por los lugares del podio."),
         ],
     ),
@@ -16584,7 +16623,8 @@ QUESTIONS += [
         "4) Hay 56 subconjuntos de 3 elementos.",
         [
             ("336", "Contó los grupos ordenados, sin descontar las repeticiones."),
-            ("24", "Multiplicó los 8 elementos por los 3 del subconjunto."),
+            ("40.320",
+             "Calculó 8!, que ordena todo el conjunto en vez de elegir tres elementos."),
             ("512", "Elevó 8 al cubo, permitiendo repetir elementos dentro del subconjunto."),
         ],
     ),
@@ -16615,7 +16655,8 @@ QUESTIONS += [
         [
             ("30", "Contó cada partido dos veces, una por cada equipo."),
             ("36", "Multiplicó 6 por 6, incluyendo partidos de un equipo contra sí mismo."),
-            ("11", "Sumó los partidos de los dos primeros equipos."),
+            ("720",
+             "Calculó 6!, que cuenta ordenamientos de los equipos y no partidos."),
         ],
     ),
     _q(
@@ -16645,7 +16686,8 @@ QUESTIONS += [
         [
             ("132", "Contó las parejas ordenadas, como si los cargos se distinguieran."),
             ("144", "Multiplicó 12 por 12, permitiendo elegir dos veces a la misma persona."),
-            ("24", "Multiplicó los estudiantes por los 2 delegados."),
+            ("220",
+             "Calculó las combinaciones de tres delegados en vez de dos."),
         ],
     ),
     _q(
@@ -16659,7 +16701,8 @@ QUESTIONS += [
         "4) Multiplica: 5 · 4 · 3 = 60.",
         [
             ("10", "Contó los grupos de 3 colores sin importar el orden de las franjas."),
-            ("125", "Usó 5 opciones en las tres franjas, permitiendo repetir colores."),
+            ("3",
+             "Contó solo las franjas de la bandera."),
             ("15", "Multiplicó los colores por las franjas."),
         ],
     ),
@@ -16739,7 +16782,8 @@ QUESTIONS += [
         "3) Como cada selección de hombres se puede combinar con cualquiera de mujeres, se multiplican: 10 · 20 = 200.\n"
         "4) Se pueden armar 200 comités.",
         [
-            ("30", "Sumó las opciones de cada grupo en lugar de multiplicarlas."),
+            ("55.440",
+             "Contó las variaciones ordenadas de las once personas en cinco lugares."),
             ("462", "Eligió 5 personas del grupo completo de 11, sin respetar la composición pedida."),
             ("2.400", "Contó los ordenamientos dentro de cada grupo, cuando los cargos no se distinguen."),
         ],
@@ -16771,7 +16815,8 @@ QUESTIONS += [
         [
             ("90", "Contó cada brindis dos veces, una por cada participante."),
             ("100", "Multiplicó 10 por 10, incluyendo el brindis de alguien consigo mismo."),
-            ("19", "Sumó los brindis de las dos primeras personas."),
+            ("3.628.800",
+             "Calculó 10!, que cuenta ordenamientos de las personas y no brindis."),
         ],
     ),
     _q(
@@ -16816,7 +16861,8 @@ QUESTIONS += [
         [
             ("28", "Contó todos los segmentos entre vértices, sin descontar los 8 lados."),
             ("56", "Contó los segmentos ordenados, sin dividir por 2."),
-            ("16", "Multiplicó los lados por 2."),
+            ("64",
+             "Contó todos los pares ordenados de vértices, es decir, 8 · 8."),
         ],
     ),
     _q(
@@ -16844,7 +16890,8 @@ QUESTIONS += [
         "3) Son 6 resultados. Ojo: (3,4) y (4,3) son distintos, porque los dados se distinguen.\n"
         "4) Como el total de resultados es 36, la probabilidad de sumar 7 sería 6/36 = 1/6, la suma más probable de dos dados.",
         [
-            ("3", "Contó solo las parejas sin repetir el orden, cuando los dados se distinguen."),
+            ("36",
+             "Contó todos los resultados posibles al lanzar los dos dados."),
             ("7", "Usó el valor de la suma como si fuera la cantidad de resultados."),
             ("12", "Contó también los pares que suman otros valores cercanos."),
         ],
@@ -16861,7 +16908,8 @@ QUESTIONS += [
         [
             ("504", "Contó los repartos como si los tres premios fueran distintos entre sí."),
             ("729", "Elevó 9 al cubo, permitiendo que una persona reciba más de un premio."),
-            ("27", "Multiplicó las personas por los premios."),
+            ("362.880",
+             "Calculó 9!, que ordena a todas las personas en vez de elegir tres."),
         ],
     ),
     _q(
@@ -16876,7 +16924,8 @@ QUESTIONS += [
         [
             ("120", "Contó todos los números de 3 cifras distintas, sin exigir que superaran 500."),
             ("72", "Permitió repetir dígitos después de fijar la primera cifra."),
-            ("20", "Contó solo los que empiezan con 5, olvidando los que empiezan con 6."),
+            ("125",
+             "Contó también los números con cifras repetidas."),
         ],
     ),
 ]
@@ -21007,7 +21056,8 @@ QUESTIONS += [
         [
             ("2 veces", "Restó las magnitudes: en una escala logarítmica esa resta es un exponente, no un factor."),
             ("10 veces", "Ese es el salto entre dos magnitudes consecutivas, y acá hay dos saltos."),
-            ("1.000 veces", "Corresponde a tres puntos de diferencia, no a dos."),
+            ("1 vez",
+             "Supone que la magnitud no cambia la energía liberada."),
         ],
         imagen="/preguntas/mat-tabla-magnitudes.svg",
     ),
@@ -22984,7 +23034,8 @@ QUESTIONS += [
         [
             ("35°", "Ese es el ángulo inscrito; el arco es su doble."),
             ("17,5°", "Dividió en lugar de multiplicar: el arco es mayor que el inscrito."),
-            ("145°", "Restó de 180°, que corresponde a otra relación."),
+            ("8,75°",
+             "Dividió el ángulo inscrito por cuatro en vez de duplicarlo."),
         ],
     ),
     _q(
@@ -119877,8 +119928,8 @@ QUESTIONS += [
              "Devuelve la base en vez del argumento."),
             ("70",
              "Multiplica base por argumento, operación que no corresponde."),
-            ("1, porque el logaritmo y la potencia se anulan y dejan la unidad",
-             "No se anulan dejando 1: se cancelan devolviendo el argumento original."),
+            ("10.000.000",
+             "Elevó 10 a la séptima potencia en vez de cancelar el logaritmo."),
         ],
     ),
     _q(
@@ -120453,8 +120504,8 @@ QUESTIONS += [
         [
             ("$7.000",
              "Corresponde al 1%, no al 10%: corre la coma un lugar de más."),
-            ("$630.000",
-             "Es lo que queda DESPUÉS de descontar la cotización, no la cotización."),
+            ("$700",
+             "Corrió la coma dos lugares al calcular el 10%."),
             ("$10.000, porque la cotización es un monto fijo de diez mil pesos",
              "No es un monto fijo: es un porcentaje de la renta, así que sube con el sueldo."),
         ],
@@ -120686,8 +120737,8 @@ QUESTIONS += [
              "Corresponde al interés simple: aplica siempre el 10% sobre los 200.000 iniciales."),
             ("$220.000",
              "Es el monto al cabo del primer año, no de los tres."),
-            ("$600.000, multiplicando el capital por el número de años y la tasa",
-             "El interés compuesto multiplica por 1,1 tres veces, no triplica el capital."),
+            ("$66.200",
+             "Es el interés acumulado, no el monto final."),
         ],
     ),
     _q(
@@ -120765,8 +120816,8 @@ QUESTIONS += [
         [
             ("0,2%",
              "Corre la coma un lugar: 760 sobre 38.000 da 0,02, es decir, 2%."),
-            ("760%",
-             "Entrega la diferencia en pesos como si fuera un porcentaje."),
+            ("0,76%",
+             "Toma la diferencia de $760 y le corre la coma, sin dividirla por el valor inicial."),
             ("1,96%, dividiendo la diferencia por el valor final en vez del inicial",
              "La variación porcentual se calcula siempre sobre el valor INICIAL."),
         ],
@@ -120806,8 +120857,8 @@ QUESTIONS += [
              "Suma los porcentajes en vez de aplicarlos uno tras otro."),
             ("$520.000",
              "Es el sueldo tras el primer aumento, no tras los dos."),
-            ("$580.000, aplicando el segundo aumento sobre el monto del primer incremento",
-             "El segundo 4% se aplica sobre el sueldo completo de 520.000, no solo sobre el alza."),
+            ("$20.000",
+             "Entrega solo el aumento del primer año."),
         ],
     ),
     _q(
@@ -120994,8 +121045,8 @@ QUESTIONS += [
              "Corresponde al interés simple, sin capitalizar el primer año."),
             ("$260.000",
              "Es el monto tras el primer año solamente."),
-            ("$520.000, duplicando el capital por tratarse de dos años de inversión",
-             "Un 4% anual está muy lejos de duplicar un capital en dos años."),
+            ("$20.400",
+             "Es el interés acumulado, no el monto final."),
         ],
     ),
     _q(
@@ -121054,8 +121105,8 @@ QUESTIONS += [
         [
             ("$250.000",
              "Multiplica el primer aporte por cinco, sin considerar los aumentos."),
-            ("$450.000",
-             "Usa 90.000 como si fuera el aporte de todos los meses."),
+            ("$50.000",
+             "Repite el ahorro del primer mes."),
             ("$300.000, promediando el primer y el último aporte sin multiplicar por los meses",
              "Ese promedio es 70.000: falta multiplicarlo por los cinco meses."),
         ],
@@ -122888,8 +122939,8 @@ QUESTIONS += [
              "Ese sería el factor si la energía dependiera linealmente de la rapidez."),
             ("6 veces",
              "Duplica el factor 3 en vez de elevarlo al cuadrado."),
-            ("20 veces, que es la diferencia entre las dos rapideces",
-             "Lo que importa es el cuociente entre las rapideces, no su diferencia."),
+            ("1,5 veces",
+             "Toma la mitad del factor de escala de la rapidez."),
         ],
     ),
     _q(
@@ -123201,8 +123252,8 @@ QUESTIONS += [
         "El factor 6 y la constante de proporcionalidad no intervienen: se "
         "simplifican al comparar los dos costos.",
         [
-            ("2 veces",
-             "Ese sería el factor si el costo dependiera linealmente de la arista."),
+            ("16 veces",
+             "Eleva el factor de escala a la cuarta potencia en vez de al cuadrado."),
             ("8 veces",
              "Ese es el factor de una magnitud cúbica, como el volumen del envase."),
             ("6 veces, porque el cubo tiene seis caras que hay que fabricar",
@@ -123304,8 +123355,8 @@ QUESTIONS += [
         "los dos valores y desaparece en el cuociente. Con n = 3 el coeficiente "
         "resulta ser 12/8 = 1,5.",
         [
-            ("2",
-             "Con n = 2 el cuociente sería 2² = 4, y los datos exigen 8."),
+            ("12",
+             "Toma el valor de f(2) como si fuera el exponente."),
             ("4",
              "Con n = 4 el cuociente sería 16, mucho mayor que el 8 que dan los datos."),
             ("8, tomando el cuociente entre las imágenes como si fuera el exponente",
@@ -123876,8 +123927,8 @@ QUESTIONS += [
         "Es la lectura directa del coeficiente: en f(x) = sen(bx), b es el "
         "número de ciclos por vuelta completa.",
         [
-            ("1",
-             "Ese es el número de ciclos del seno sin coeficiente interno."),
+            ("360",
+             "Confunde los grados de una vuelta completa con la cantidad de ciclos."),
             ("90",
              "Ese es el período en grados, no el número de ciclos."),
             ("8, contando por separado la subida y la bajada de cada ciclo",
@@ -124031,8 +124082,8 @@ QUESTIONS += [
         "El 3 solo estira el gráfico verticalmente: fija la amplitud, no cada "
         "cuánto se repite la curva.",
         [
-            ("120°",
-             "Divide por el coeficiente externo 3 en vez de por el interno 2."),
+            ("1.080°",
+             "Multiplica el período de 360° por el coeficiente externo 3."),
             ("360°",
              "Es el período sin coeficiente interno; el 2 lo reduce a la mitad."),
             ("720°, multiplicando el período básico por el coeficiente interno",
@@ -124740,8 +124791,8 @@ QUESTIONS += [
         [
             ("175 cm",
              "Multiplica por 5 en vez de por 1/5: la razón reduce la figura."),
-            ("1,4 cm",
-             "Aplica el factor de las áreas, 1/25, en vez del de las longitudes."),
+            ("875 cm",
+             "Multiplica por 25, el factor de las áreas, en vez de por la razón 1/5."),
             ("30 cm, restando la razón al perímetro original",
              "El perímetro se multiplica por la razón: 35 · 0,2 = 7."),
         ],
@@ -124986,8 +125037,8 @@ QUESTIONS += [
              "Es el cuadrado de la razón, que sirve para comparar áreas y no perímetros."),
             ("36",
              "Es la diferencia entre los perímetros, que no entrega la razón."),
-            ("1,58 aproximadamente, extrayendo la raíz del cuociente entre perímetros",
-             "La raíz haría falta si los datos fueran áreas; con perímetros basta dividir."),
+            ("1.440",
+             "Multiplica los dos perímetros en vez de dividirlos."),
         ],
     ),
     _q(
@@ -125138,8 +125189,8 @@ QUESTIONS += [
         [
             ("13 m",
              "Suma 9 a la altura del poste, replicando la diferencia entre las sombras."),
-            ("6 m",
-             "Confunde la sombra del poste con la altura buscada."),
+            ("90 m",
+             "Multiplica las dos sombras entre sí en vez de usar su razón."),
             ("22,5 m, multiplicando la sombra del árbol por la razón entre las alturas",
              "La razón 2,5 se aplica a la altura del poste, que es 4 m."),
         ],
@@ -125156,8 +125207,8 @@ QUESTIONS += [
         "El atajo útil es que en una escala 1 : 200.000, cada centímetro del "
         "mapa equivale a 2 km.",
         [
-            ("1,4 km",
-             "Se equivoca en un factor de diez al convertir centímetros a kilómetros."),
+            ("1.400.000 cm",
+             "Deja el resultado en centímetros sin convertirlo a kilómetros."),
             ("140 km",
              "Se pasa en un factor de diez en la conversión de unidades."),
             ("28.571 cm, dividiendo por la escala en vez de multiplicar",

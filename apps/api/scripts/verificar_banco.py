@@ -2111,12 +2111,13 @@ def main() -> int:
             f"  {prueba}: {total} ordenables, {r[0]}/{r[1]}/{r[2]}/{r[3]}, "
             f"extremos {extremos:.0f}%"
         )
-        # Solo M1 es exigible hoy. M2 tiene el mismo sesgo sin corregir y es
-        # la prueba de menor prioridad del proyecto; cuando se arregle, sube
-        # el umbral aquí también.
-        if prueba == "M1" and extremos < 40:
+        # Exigible en las dos pruebas. M2 arrastraba el mismo sesgo sin
+        # corregir (61/143/108/49, 30% de extremos); se reparo cambiando el
+        # unico distractor menor —o mayor— que la correcta por un error de
+        # calculo del otro lado, y quedo en 49%.
+        if extremos < 40:
             fallas.append(
-                f"en M1 la correcta queda en el medio demasiado seguido "
+                f"en {prueba} la correcta queda en el medio demasiado seguido "
                 f"({r[0]}/{r[1]}/{r[2]}/{r[3]}, extremos {extremos:.0f}%); lo "
                 "esperable es 50% y bajo 40% descartar el mayor y el menor se "
                 "vuelve una estrategia rentable"
