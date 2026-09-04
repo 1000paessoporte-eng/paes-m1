@@ -529,7 +529,7 @@ COMPROBACIONES: dict[str, str] = {
     "desarrollo de un cilindro": f"{2 * 3.14 * 3**2 + 2 * 3.14 * 3 * 7:.1f}".replace(".", ","),
     "volumen de la piscina": str(10 * 6 * 2),
     "vector que traslada A hasta B": f"({7 - 2}, {4 - 1})",
-    "distancia real entre ellas": str(5 * 20 // 2),
+    "distancia entre las dos localidades está medida": str(5 * 20 // 2),
     "prefiere fútbol o básquetbol": f"{round((0.30 + 0.20) * 100)}%",
     "balanza de la figura está en equilibrio": f"{(5 + 5 + 2 - 2) // 2} kg",
     "conviene contratar el plan A": str(200),
@@ -1707,7 +1707,7 @@ COMPROBACIONES: dict[str, str] = {
         "4" if isclose(sqrt(8**2 - 4**2), 4 * sqrt(3)) else "?"
     ),
     "9 km hacia el norte": f"{int(sqrt(9**2 + 12**2))} km",
-    "hipotenusa mide 26 cm y un cateto mide 10 cm": f"{int(sqrt(26**2 - 10**2))} cm",
+    "hipotenusa mide 26 cm y un cateto mide 10 cm. ¿Cuánto mide el otro cateto": f"{int(sqrt(26**2 - 10**2))} cm",
     "diagonales que miden 16 cm y 12 cm": f"{int(sqrt(8**2 + 6**2))} cm",
     # --- transformaciones isométricas ---
     "punto (x, y) se refleja respecto del eje Y": "(−x, y)",
@@ -1826,7 +1826,7 @@ COMPROBACIONES: dict[str, str] = {
     "tríos de medidas NO puede formar un triángulo rectángulo": "6, 8, 12",
     "cateto opuesto a un ángulo mide 3 cm y la hipotenusa 5 cm": "3/5",
     "valor de tan 45°": "1",
-    "ángulo de elevación de 45°": f"{20} m",
+    "a 20 m de la base de un edificio, se observa su parte más alta": f"{20} m",
     "cubo de 8 cm de arista está lleno de agua": f"{8 ** 3 // (16 * 8)} cm",
     "recorre 120 kilómetros en 2 horas y otro recorre la misma distancia en 3": "3 : 2",
     "recta pasa por los puntos (2, 3) y (6, 11). ¿Cuál es la pendiente de cualquier": "−1/2",

@@ -124237,22 +124237,23 @@ QUESTIONS += [
     ),
     _q(
         "alg_funciones_trig", "dificil",
-        "Si sen(x) = 0,6 y x está en el primer cuadrante, ¿cuánto vale cos(x)?",
-        "0,8",
+        "Si sen(x) = 5/13 y x está en el primer cuadrante, ¿cuánto vale "
+        "cos(x)?",
+        "12/13",
         "Se usa la identidad fundamental.\n\n"
         "1) Se cumple sen²(x) + cos²(x) = 1.\n"
-        "2) Reemplazando: 0,36 + cos²(x) = 1, así que cos²(x) = 0,64.\n"
+        "2) Reemplazando: 25/169 + cos²(x) = 1, así que cos²(x) = 144/169.\n"
         "3) Como x está en el primer cuadrante, el coseno es positivo: "
-        "cos(x) = 0,8.\n\n"
+        "cos(x) = 12/13.\n\n"
         "El cuadrante es lo que decide el signo: en el segundo cuadrante la "
-        "misma identidad habría dado −0,8.",
+        "misma identidad habría dado −12/13.",
         [
-            ("0,4",
-             "Resta 0,6 a 1 en vez de aplicar la identidad con los cuadrados."),
-            ("−0,8",
+            ("8/13",
+             "Resta 5/13 a 1 en vez de aplicar la identidad con los cuadrados."),
+            ("−12/13",
              "El valor absoluto es correcto, pero en el primer cuadrante el coseno es positivo."),
-            ("0,64, quedándose con el cuadrado del coseno sin extraer la raíz",
-             "0,64 es cos²(x); el coseno es su raíz cuadrada, 0,8."),
+            ("144/169, quedándose con el cuadrado del coseno sin extraer la raíz",
+             "144/169 es cos²(x); el coseno es su raíz cuadrada, 12/13."),
         ],
     ),
     _q(
@@ -124488,6 +124489,3186 @@ QUESTIONS += [
              "El seno es positivo solo en la mitad del ciclo, no en tres cuartos."),
             ("Todo el ciclo, porque la profundidad media ya es de 8 metros",
              "Ocho metros es el centro: durante media vuelta la profundidad queda por debajo."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Geometria: homotecia
+#
+# Razon k, punto fijo, efecto sobre longitudes, areas y volumenes, homotecias
+# con centro fuera del origen y razones negativas.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "geo_homotecia", "facil",
+        "¿Qué punto de una homotecia nunca cambia de posición?",
+        "El centro de la homotecia",
+        "La homotecia mueve cada punto alejándolo o acercándolo al centro.\n\n"
+        "1) La imagen de un punto se obtiene multiplicando por k su distancia "
+        "al centro.\n"
+        "2) La distancia del centro a sí mismo es cero.\n"
+        "3) Multiplicar cero por k sigue dando cero, así que el centro queda "
+        "donde está.\n\n"
+        "Es el único punto fijo cuando k es distinto de 1: todos los demás se "
+        "desplazan sobre la recta que los une con el centro.",
+        [
+            ("El punto más alejado de la figura",
+             "También se mueve, y de hecho es el que más se desplaza."),
+            ("El origen del plano cartesiano",
+             "Solo si el centro está ahí; con otro centro el origen sí se mueve."),
+            ("Ninguno, porque la homotecia desplaza todos los puntos del plano",
+             "El centro permanece fijo por definición."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "facil",
+        "Se aplica al punto P(2, 5) una homotecia de centro en el origen y "
+        "razón 3. ¿Cuáles son las coordenadas de la imagen?",
+        "(6, 15)",
+        "Con centro en el origen basta multiplicar ambas coordenadas por la "
+        "razón.\n\n"
+        "1) La primera coordenada pasa a ser 3 · 2 = 6.\n"
+        "2) La segunda pasa a ser 3 · 5 = 15.\n"
+        "3) La imagen es el punto (6, 15).\n\n"
+        "El punto queda sobre la misma recta que pasa por el origen y por P, "
+        "pero tres veces más lejos.",
+        [
+            ("(5, 8)",
+             "Suma la razón a cada coordenada en vez de multiplicarla."),
+            ("(2/3, 5/3)",
+             "Divide por la razón: eso correspondería a una homotecia de razón 1/3."),
+            ("(6, 5), aplicando la razón solo a la primera coordenada",
+             "La homotecia afecta a las dos coordenadas por igual."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "facil",
+        "En una homotecia de razón k = 5, ¿qué le ocurre al tamaño de la "
+        "figura?",
+        "Se amplía",
+        "Una razón mayor que 1 aleja los puntos del centro.\n\n"
+        "1) Cada distancia al centro se multiplica por 5.\n"
+        "2) Los puntos quedan cinco veces más lejos que antes.\n"
+        "3) La figura resultante es una ampliación de la original.\n\n"
+        "Con razones entre 0 y 1 ocurre lo contrario: la figura se reduce sin "
+        "cambiar de forma.",
+        [
+            ("Se reduce",
+             "Eso ocurre con razones entre 0 y 1, como k = 0,5."),
+            ("Se mantiene igual",
+             "Solo con k = 1 la figura queda intacta."),
+            ("Se deforma, porque los lados largos crecen más que los cortos",
+             "Todos los lados se multiplican por el mismo factor: la forma se conserva."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "facil",
+        "En una homotecia de razón k = 0,5, ¿qué le ocurre al tamaño de la "
+        "figura?",
+        "Se reduce a la mitad",
+        "Una razón entre 0 y 1 acerca los puntos al centro.\n\n"
+        "1) Cada distancia al centro se multiplica por 0,5.\n"
+        "2) Los puntos quedan a la mitad de la distancia original.\n"
+        "3) Todas las longitudes de la figura se reducen a la mitad.\n\n"
+        "El área, en cambio, no se reduce a la mitad sino a la cuarta parte: "
+        "las áreas se escalan con el cuadrado de la razón.",
+        [
+            ("Se amplía al doble",
+             "Eso correspondería a k = 2, no a k = 0,5."),
+            ("Se mantiene igual",
+             "Solo con k = 1 la figura queda intacta."),
+            ("Se reduce a la cuarta parte en todas sus medidas",
+             "A la cuarta parte se reduce el área; las longitudes se reducen a la mitad."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "facil",
+        "¿Qué figura se obtiene al aplicar una homotecia a un triángulo?",
+        "Otro triángulo semejante al original",
+        "La homotecia conserva la forma y cambia solo el tamaño.\n\n"
+        "1) Los ángulos no se modifican.\n"
+        "2) Todos los lados se multiplican por el mismo factor.\n"
+        "3) El resultado cumple exactamente la definición de semejanza.\n\n"
+        "Por eso la homotecia es la herramienta natural para construir figuras "
+        "semejantes: garantiza la proporción entre todos los lados.",
+        [
+            ("Otro triángulo congruente al original",
+             "Solo si la razón vale 1 o −1: en general el tamaño cambia."),
+            ("Un cuadrilátero, porque se agrega un punto al aplicar la razón",
+             "La homotecia no agrega vértices: transforma cada uno en otro punto."),
+            ("Un triángulo con los mismos lados pero distintos ángulos",
+             "Es al revés: los ángulos se conservan y los lados cambian."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "facil",
+        "Se aplica al punto P(−4, 6) una homotecia de centro en el origen y "
+        "razón 1/2. ¿Cuáles son las coordenadas de la imagen?",
+        "(−2, 3)",
+        "Con centro en el origen se multiplican ambas coordenadas por la "
+        "razón.\n\n"
+        "1) La primera coordenada pasa a ser 0,5 · (−4) = −2.\n"
+        "2) La segunda pasa a ser 0,5 · 6 = 3.\n"
+        "3) La imagen es el punto (−2, 3).\n\n"
+        "El signo se conserva porque la razón es positiva: el punto se acerca "
+        "al origen sin cambiar de cuadrante.",
+        [
+            ("(−8, 12)",
+             "Multiplica por 2 en vez de por 1/2: esa razón amplía en vez de reducir."),
+            ("(2, −3)",
+             "Cambia los signos, cosa que solo ocurre con razones negativas."),
+            ("(−3,5 , 5,5), restando la razón a cada coordenada",
+             "La homotecia multiplica las coordenadas, no las resta."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "facil",
+        "¿Qué le ocurre a los ángulos de una figura al aplicarle una "
+        "homotecia?",
+        "Se mantienen iguales",
+        "La homotecia es una transformación de semejanza.\n\n"
+        "1) Todos los lados se multiplican por el mismo factor.\n"
+        "2) Los triángulos formados por la figura y su imagen son "
+        "semejantes.\n"
+        "3) En figuras semejantes los ángulos correspondientes miden lo "
+        "mismo.\n\n"
+        "Es lo que distingue una homotecia de una deformación: la figura crece "
+        "o se achica, pero no se estira en una sola dirección.",
+        [
+            ("Se multiplican por la razón",
+             "La razón afecta a las longitudes, no a las medidas angulares."),
+            ("Se duplican si la razón es mayor que 1",
+             "Los ángulos no dependen del tamaño de la figura."),
+            ("Se reducen cuando la figura se reduce, en la misma proporción",
+             "Una figura reducida conserva exactamente los mismos ángulos."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "facil",
+        "Un segmento mide 7 cm. Se le aplica una homotecia de razón 4. ¿Cuánto "
+        "mide su imagen?",
+        "28 cm",
+        "Las longitudes se multiplican por el valor absoluto de la razón.\n\n"
+        "1) La razón es 4.\n"
+        "2) La medida de la imagen es 7 · 4.\n"
+        "3) Eso da 28 cm.\n\n"
+        "Con el área ocurriría distinto: se multiplicaría por 4² = 16, no "
+        "por 4.",
+        [
+            ("11 cm",
+             "Suma la razón a la medida en vez de multiplicarla."),
+            ("112 cm",
+             "Multiplica por 4² = 16, que es el factor de las áreas y no el de las longitudes."),
+            ("1,75 cm, dividiendo la medida por la razón",
+             "Una razón mayor que 1 amplía: la imagen es más larga que el original."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "facil",
+        "¿Qué transformación es una homotecia de razón k = 1?",
+        "La identidad: la figura no cambia",
+        "Multiplicar por 1 no altera ninguna distancia.\n\n"
+        "1) Cada punto queda a la misma distancia del centro que antes.\n"
+        "2) Además queda en la misma dirección, porque la razón es positiva.\n"
+        "3) Cada punto coincide con su imagen: la figura permanece idéntica.\n\n"
+        "Con k = −1 la situación es distinta: la figura conserva su tamaño pero "
+        "queda girada media vuelta en torno al centro.",
+        [
+            ("Una simetría respecto del centro",
+             "Esa es la homotecia de razón −1, no de razón 1."),
+            ("Una ampliación al doble del tamaño",
+             "Esa sería la homotecia de razón 2."),
+            ("Una traslación de la figura hacia el centro de la homotecia",
+             "La homotecia no traslada: con k = 1 deja todo exactamente donde está."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "facil",
+        "En una homotecia, ¿cómo son entre sí un segmento de la figura original "
+        "y su imagen?",
+        "Paralelos",
+        "La homotecia conserva las direcciones.\n\n"
+        "1) Cada punto se desplaza sobre la recta que lo une con el centro.\n"
+        "2) Por el teorema de Thales, la recta que une dos imágenes es paralela "
+        "a la que une los originales.\n"
+        "3) Segmento e imagen resultan siempre paralelos.\n\n"
+        "Con razón negativa siguen siendo paralelos: cambia el sentido, pero no "
+        "la dirección.",
+        [
+            ("Perpendiculares",
+             "La homotecia no gira la figura, así que no aparecen ángulos rectos entre original e imagen."),
+            ("Siempre de la misma longitud",
+             "Solo si la razón vale 1 o −1: en general la longitud cambia."),
+            ("Siempre con un punto en común, que es el centro de la homotecia",
+             "El centro no tiene por qué pertenecer al segmento ni a su imagen."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Un círculo tiene radio 4 cm. Se le aplica una homotecia de razón 2,5. "
+        "¿Cuál es el radio de la imagen?",
+        "10 cm",
+        "El radio es una longitud, así que se multiplica por la razón.\n\n"
+        "1) La razón es 2,5.\n"
+        "2) El nuevo radio es 4 · 2,5.\n"
+        "3) Eso da 10 cm.\n\n"
+        "La imagen de un círculo por una homotecia es siempre otro círculo: la "
+        "forma no cambia.",
+        [
+            ("6,5 cm",
+             "Suma la razón al radio en vez de multiplicarla."),
+            ("25 cm",
+             "Multiplica por 2,5² = 6,25, que es el factor de las áreas."),
+            ("1,6 cm, dividiendo el radio por la razón",
+             "Una razón mayor que 1 amplía: el radio de la imagen es mayor."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Un pentágono tiene perímetro 35 cm. Se le aplica una homotecia de "
+        "razón 1/5. ¿Cuál es el perímetro de la imagen?",
+        "7 cm",
+        "El perímetro es una suma de longitudes, así que escala igual que "
+        "ellas.\n\n"
+        "1) Cada lado se multiplica por 1/5.\n"
+        "2) La suma de los lados también queda multiplicada por 1/5.\n"
+        "3) El nuevo perímetro es 35 · (1/5) = 7 cm.\n\n"
+        "El área, en cambio, se reduciría a 1/25 del original.",
+        [
+            ("175 cm",
+             "Multiplica por 5 en vez de por 1/5: la razón reduce la figura."),
+            ("1,4 cm",
+             "Aplica el factor de las áreas, 1/25, en vez del de las longitudes."),
+            ("30 cm, restando la razón al perímetro original",
+             "El perímetro se multiplica por la razón: 35 · 0,2 = 7."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Se aplica al punto P(3, 4) una homotecia de centro C(1, 2) y razón 2. "
+        "¿Cuáles son las coordenadas de la imagen?",
+        "(5, 6)",
+        "Con centro fuera del origen se multiplica el desplazamiento respecto "
+        "del centro.\n\n"
+        "1) El vector del centro al punto es (3 − 1, 4 − 2) = (2, 2).\n"
+        "2) Se multiplica por la razón: (4, 4).\n"
+        "3) Se suma al centro: (1 + 4, 2 + 4) = (5, 6).\n\n"
+        "Multiplicar directamente las coordenadas por 2 daría (6, 8), que es la "
+        "imagen con centro en el origen y no con centro en C.",
+        [
+            ("(6, 8)",
+             "Corresponde a una homotecia con centro en el origen, no en C(1, 2)."),
+            ("(4, 6)",
+             "Suma el vector una sola vez sin multiplicarlo por la razón."),
+            ("(2, 4), restando el centro al punto sin volver a sumarlo después",
+             "Falta el último paso: el resultado hay que trasladarlo de vuelta al centro."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Un rectángulo tiene área 20 cm². Se le aplica una homotecia de razón "
+        "4. ¿Cuál es el área de la imagen?",
+        "320 cm²",
+        "Las áreas se multiplican por el cuadrado de la razón.\n\n"
+        "1) La razón es 4, así que el factor de las áreas es 4² = 16.\n"
+        "2) El nuevo área es 20 · 16.\n"
+        "3) Eso da 320 cm².\n\n"
+        "La razón entre áreas es siempre el cuadrado de la razón entre "
+        "longitudes: es lo que hace que ampliar al doble cuadruplique la "
+        "superficie.",
+        [
+            ("80 cm²",
+             "Multiplica por la razón en vez de por su cuadrado."),
+            ("1.280 cm²",
+             "Multiplica por 4³ = 64, que es el factor de los volúmenes."),
+            ("24 cm², sumando la razón al área original",
+             "El área se multiplica por el cuadrado de la razón: 20 · 16 = 320."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Un cuerpo tiene volumen 5 cm³. Se le aplica una homotecia de razón 3. "
+        "¿Cuál es el volumen de la imagen?",
+        "135 cm³",
+        "Los volúmenes se multiplican por el cubo de la razón.\n\n"
+        "1) La razón es 3, así que el factor de los volúmenes es 3³ = 27.\n"
+        "2) El nuevo volumen es 5 · 27.\n"
+        "3) Eso da 135 cm³.\n\n"
+        "El patrón es el mismo en las tres dimensiones: longitudes por k, áreas "
+        "por k² y volúmenes por k³.",
+        [
+            ("15 cm³",
+             "Multiplica por la razón en vez de por su cubo."),
+            ("45 cm³",
+             "Multiplica por 3² = 9, que es el factor de las áreas."),
+            ("8 cm³, sumando la razón al volumen original",
+             "El volumen se multiplica por el cubo de la razón: 5 · 27 = 135."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Dos figuras homotéticas tienen áreas de 9 cm² y 81 cm². ¿Cuál es el "
+        "valor absoluto de la razón de la homotecia?",
+        "3",
+        "La razón entre áreas es el cuadrado de la razón de semejanza.\n\n"
+        "1) El cuociente entre las áreas es 81/9 = 9.\n"
+        "2) Ese cuociente es k².\n"
+        "3) Entonces |k| = 3, porque 3² = 9.\n\n"
+        "El enunciado pide el valor absoluto porque una razón de −3 produciría "
+        "exactamente la misma área: el cuadrado borra el signo.",
+        [
+            ("9",
+             "Ese es el cuociente entre las áreas, que corresponde a k²."),
+            ("72",
+             "Es la diferencia entre las áreas, que no entrega la razón."),
+            ("4,5, dividiendo el cuociente de las áreas por dos en vez de extraer la raíz",
+             "Para pasar de k² a k hay que extraer la raíz cuadrada, no dividir por dos."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "En una homotecia de razón −3 con centro en el origen, ¿en qué "
+        "cuadrante queda la imagen del punto P(2, 1)?",
+        "En el tercero",
+        "La razón negativa envía el punto al lado opuesto del centro.\n\n"
+        "1) La imagen es (−3 · 2, −3 · 1) = (−6, −3).\n"
+        "2) Sus dos coordenadas son negativas.\n"
+        "3) Ese punto está en el tercer cuadrante.\n\n"
+        "Una razón negativa combina una ampliación con una simetría respecto "
+        "del centro: por eso el punto salta al cuadrante opuesto.",
+        [
+            ("En el primero",
+             "Ahí está el punto original; la razón negativa lo envía al cuadrante opuesto."),
+            ("En el segundo",
+             "Ahí las coordenadas son negativa y positiva; la imagen tiene ambas negativas."),
+            ("En el cuarto, porque la razón negativa afecta solo a la segunda coordenada",
+             "La razón multiplica las dos coordenadas por igual."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Un plano de una casa está a escala 1 : 50. ¿Qué razón de homotecia "
+        "transforma el plano en la casa real?",
+        "50",
+        "La escala indica cuántas veces cabe el plano en la realidad.\n\n"
+        "1) La escala 1 : 50 significa que 1 cm en el plano equivale a 50 cm "
+        "reales.\n"
+        "2) Para pasar del plano a la casa hay que ampliar.\n"
+        "3) La razón de esa homotecia es 50.\n\n"
+        "La transformación inversa, de la casa al plano, tiene razón 1/50.",
+        [
+            ("1/50",
+             "Esa es la razón que va de la casa al plano, no del plano a la casa."),
+            ("−50",
+             "El signo negativo agregaría una simetría que el plano no tiene."),
+            ("2.500, que es el factor con que crece la superficie del plano",
+             "Ese es el factor de las áreas; la razón de la homotecia es 50."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Una homotecia de razón −1 con centro O, ¿qué transformación produce?",
+        "Una simetría central respecto de O",
+        "El valor absoluto 1 conserva el tamaño y el signo invierte el "
+        "sentido.\n\n"
+        "1) Cada punto queda a la misma distancia del centro que antes.\n"
+        "2) Pero queda al lado opuesto, sobre la misma recta.\n"
+        "3) Eso es exactamente una simetría respecto del punto O, o giro de "
+        "media vuelta.\n\n"
+        "La figura resultante es congruente con la original, no solo semejante.",
+        [
+            ("Una simetría respecto del eje X",
+             "Una simetría axial cambia solo una coordenada; aquí cambian las dos."),
+            ("Una reducción a la mitad del tamaño",
+             "El valor absoluto de la razón es 1, así que el tamaño no cambia."),
+            ("Una traslación de la figura al lado opuesto del centro",
+             "No es una traslación: la distancia recorrida por cada punto depende de dónde estaba."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Un triángulo tiene lados de 6, 8 y 10 cm. Su imagen por una homotecia "
+        "tiene un lado de 15 cm correspondiente al de 10 cm. ¿Cuánto miden los "
+        "otros dos lados de la imagen?",
+        "9 cm y 12 cm",
+        "Primero se calcula la razón y después se aplica a los demás lados.\n\n"
+        "1) La razón es 15/10 = 1,5.\n"
+        "2) El lado de 6 cm pasa a 6 · 1,5 = 9 cm.\n"
+        "3) El lado de 8 cm pasa a 8 · 1,5 = 12 cm.\n\n"
+        "Comprobación: los lados 9, 12 y 15 están en la misma proporción que 6, "
+        "8 y 10, que es la del triángulo rectángulo 3-4-5.",
+        [
+            ("11 cm y 13 cm",
+             "Suma 5 a cada lado, como si la transformación fuera una traslación de medidas."),
+            ("4 cm y 5,3 cm",
+             "Divide por 1,5 en vez de multiplicar: esa razón reduciría la figura."),
+            ("6 cm y 8 cm, porque solo cambia el lado mencionado en el enunciado",
+             "La homotecia escala todos los lados por el mismo factor."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "¿Cuál es la razón de la homotecia con centro en el origen que "
+        "transforma el punto (4, −6) en el punto (−10, 15)?",
+        "−2,5",
+        "Se compara cada coordenada de la imagen con la del original.\n\n"
+        "1) Con la primera coordenada: −10 / 4 = −2,5.\n"
+        "2) Con la segunda: 15 / (−6) = −2,5.\n"
+        "3) Las dos entregan el mismo valor, así que la razón es −2,5.\n\n"
+        "Que ambas coordenadas den el mismo cuociente confirma que la "
+        "transformación es efectivamente una homotecia con centro en el origen.",
+        [
+            ("2,5",
+             "Pierde el signo: los cuocientes son negativos porque cambia el cuadrante."),
+            ("−0,4",
+             "Invierte el cuociente: divide el original por la imagen en vez de al revés."),
+            ("−14, restando las coordenadas en vez de dividirlas",
+             "La razón se obtiene dividiendo la coordenada de la imagen por la del original."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Una fotografía de 10 cm por 15 cm se amplía con una homotecia de "
+        "razón 3. ¿Cuánto papel se necesita comparado con el original?",
+        "Nueve veces más",
+        "El papel es una superficie, así que escala con el cuadrado de la "
+        "razón.\n\n"
+        "1) La razón es 3, así que el factor de las áreas es 3² = 9.\n"
+        "2) El área original es 150 cm² y la ampliada, 30 · 45 = 1.350 cm².\n"
+        "3) El cuociente es 1.350 / 150 = 9.\n\n"
+        "Es un error frecuente al encargar ampliaciones: triplicar las medidas "
+        "no triplica el costo del papel, lo multiplica por nueve.",
+        [
+            ("Tres veces más",
+             "Ese es el factor de las longitudes, no el de la superficie."),
+            ("Seis veces más",
+             "Duplica el factor 3 en vez de elevarlo al cuadrado."),
+            ("Veintisiete veces más, que es el factor correspondiente al cubo de la razón",
+             "El cubo escala volúmenes; el papel es una superficie."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "¿Puede una homotecia tener razón 0?",
+        "No, porque entonces toda figura colapsaría en el centro",
+        "Con razón cero cada punto se lleva al centro.\n\n"
+        "1) La imagen de un punto es el centro más k veces el vector que los "
+        "une.\n"
+        "2) Con k = 0 ese vector se anula.\n"
+        "3) Todos los puntos tendrían la misma imagen: el centro, y la "
+        "transformación dejaría de ser una homotecia.\n\n"
+        "Por eso la definición exige que la razón sea distinta de cero.",
+        [
+            ("Sí, y la figura queda igual que la original",
+             "Con k = 1 la figura queda igual; con k = 0 se reduce a un punto."),
+            ("Sí, y la figura se invierte respecto del centro",
+             "Esa es la razón −1, no la razón 0."),
+            ("Sí, siempre que el centro esté fuera de la figura",
+             "La posición del centro no cambia el problema: con k = 0 todo colapsa igual."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Dos triángulos homotéticos tienen perímetros de 24 cm y 60 cm. ¿Cuál "
+        "es el valor absoluto de la razón?",
+        "2,5",
+        "El perímetro escala igual que las longitudes.\n\n"
+        "1) El cuociente entre los perímetros es 60/24.\n"
+        "2) Simplificando: 2,5.\n"
+        "3) Ese es directamente el valor absoluto de la razón.\n\n"
+        "Con las áreas no se podría leer tan directo: ahí habría que extraer "
+        "una raíz cuadrada antes.",
+        [
+            ("6,25",
+             "Es el cuadrado de la razón, que sirve para comparar áreas y no perímetros."),
+            ("36",
+             "Es la diferencia entre los perímetros, que no entrega la razón."),
+            ("1,58 aproximadamente, extrayendo la raíz del cuociente entre perímetros",
+             "La raíz haría falta si los datos fueran áreas; con perímetros basta dividir."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "El centro de una homotecia está en el punto medio entre una figura y "
+        "su imagen, y ambas tienen el mismo tamaño. ¿Cuál es la razón?",
+        "−1",
+        "Se combinan las dos condiciones del enunciado.\n\n"
+        "1) Que el tamaño no cambie obliga a que el valor absoluto de la razón "
+        "sea 1.\n"
+        "2) Que el centro esté entre la figura y su imagen indica que están en "
+        "lados opuestos.\n"
+        "3) Eso corresponde a una razón negativa: k = −1.\n\n"
+        "Con k = 1 la imagen coincidiría con la figura y no habría ningún punto "
+        "medio que separarlas.",
+        [
+            ("1",
+             "Con esa razón la imagen coincide con la figura original."),
+            ("2",
+             "Con esa razón la imagen sería el doble de grande."),
+            ("−2, porque el centro está a mitad de camino entre las dos figuras",
+             "Esa razón duplicaría el tamaño, y el enunciado dice que se conserva."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Geometria: homotecia (segunda tanda)
+#
+# Composicion de homotecias, busqueda del centro y de la razon a partir de
+# datos indirectos, y aplicaciones a escalas, maquetas y sombras.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "geo_homotecia", "medio",
+        "Se aplica al punto P(5, −1) una homotecia de centro C(1, 1) y "
+        "razón 3. ¿Cuáles son las coordenadas de la imagen?",
+        "(13, −5)",
+        "Se escala el vector que va del centro al punto.\n\n"
+        "1) El vector del centro al punto es (5 − 1, −1 − 1) = (4, −2).\n"
+        "2) Multiplicado por 3 queda (12, −6).\n"
+        "3) Sumado al centro: (1 + 12, 1 − 6) = (13, −5).\n\n"
+        "Multiplicar directamente las coordenadas daría (15, −3), que es la "
+        "imagen con centro en el origen y no en C.",
+        [
+            ("(15, −3)",
+             "Corresponde a una homotecia con centro en el origen."),
+            ("(9, −3)",
+             "Suma el vector una sola vez más, sin llegar a triplicarlo."),
+            ("(12, −6), que es el vector escalado sin volver a sumar el centro",
+             "Falta el último paso: trasladar el resultado de vuelta al centro."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Una maqueta de un automóvil está a escala 1 : 24. Si la maqueta mide "
+        "18 cm de largo, ¿cuánto mide el automóvil real?",
+        "4,32 m",
+        "Se amplía con la razón que indica la escala.\n\n"
+        "1) La escala 1 : 24 significa que el real es 24 veces la maqueta.\n"
+        "2) El largo real es 18 · 24 = 432 cm.\n"
+        "3) Convertido a metros: 4,32 m.\n\n"
+        "El resultado es razonable para un automóvil, lo que sirve de control "
+        "rápido del cálculo.",
+        [
+            ("0,75 m",
+             "Divide por 24 en vez de multiplicar: eso reduciría aún más la maqueta."),
+            ("42 cm",
+             "Suma 24 al largo de la maqueta en vez de multiplicarlo."),
+            ("103,68 m, multiplicando por 24² en vez de por 24",
+             "El cuadrado de la razón sirve para superficies, no para longitudes."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Un círculo de área 12π cm² se somete a una homotecia de razón 1/2. "
+        "¿Cuál es el área de la imagen?",
+        "3π cm²",
+        "Las áreas se multiplican por el cuadrado de la razón.\n\n"
+        "1) La razón es 1/2, así que el factor de las áreas es (1/2)² = 1/4.\n"
+        "2) El nuevo área es 12π · (1/4).\n"
+        "3) Eso da 3π cm².\n\n"
+        "Reducir a la mitad las longitudes deja apenas una cuarta parte de la "
+        "superficie.",
+        [
+            ("6π cm²",
+             "Aplica la razón directamente al área en vez de su cuadrado."),
+            ("24π cm²",
+             "Amplía en vez de reducir: la razón 1/2 achica la figura."),
+            ("1,5π cm², aplicando el cubo de la razón en lugar de su cuadrado",
+             "El cubo escala volúmenes; el área usa el cuadrado."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Dos cuerpos homotéticos tienen volúmenes de 16 cm³ y 128 cm³. ¿Cuál es "
+        "el valor absoluto de la razón?",
+        "2",
+        "La razón entre volúmenes es el cubo de la razón de semejanza.\n\n"
+        "1) El cuociente entre los volúmenes es 128/16 = 8.\n"
+        "2) Ese cuociente es k³.\n"
+        "3) La raíz cúbica de 8 es 2, así que |k| = 2.\n\n"
+        "Con áreas se habría extraído una raíz cuadrada; con volúmenes, una "
+        "raíz cúbica.",
+        [
+            ("8",
+             "Ese es el cuociente entre los volúmenes, que corresponde a k³."),
+            ("2,83 aproximadamente",
+             "Extrae la raíz cuadrada de 8, que es lo que corresponde a áreas y no a volúmenes."),
+            ("112, tomando la diferencia entre los dos volúmenes",
+             "La razón se obtiene dividiendo, no restando."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Una homotecia de centro en el origen lleva el punto (6, 9) al punto "
+        "(2, 3). ¿Cuál es su razón?",
+        "1/3",
+        "Se divide cada coordenada de la imagen por la del original.\n\n"
+        "1) Con la primera coordenada: 2/6 = 1/3.\n"
+        "2) Con la segunda: 3/9 = 1/3.\n"
+        "3) Las dos coinciden, así que la razón es 1/3.\n\n"
+        "El valor menor que 1 concuerda con lo que se observa: la imagen está "
+        "más cerca del origen que el punto original.",
+        [
+            ("3",
+             "Invierte el cuociente: la imagen es más pequeña, así que la razón es menor que 1."),
+            ("−1/3",
+             "El signo negativo cambiaría de cuadrante, y aquí ambos puntos están en el primero."),
+            ("4, que es la diferencia entre las primeras coordenadas",
+             "La razón se obtiene dividiendo las coordenadas, no restándolas."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Un poste de 4 m proyecta una sombra de 6 m. Al mismo tiempo, un árbol "
+        "proyecta una sombra de 15 m. ¿Cuánto mide el árbol?",
+        "10 m",
+        "Los dos triángulos formados por objeto y sombra son homotéticos.\n\n"
+        "1) La razón entre las sombras es 15/6 = 2,5.\n"
+        "2) Como los rayos de sol llegan con el mismo ángulo, esa razón "
+        "también vale para las alturas.\n"
+        "3) La altura del árbol es 4 · 2,5 = 10 m.\n\n"
+        "Es la aplicación clásica de la semejanza: se mide lo que se puede "
+        "alcanzar y se deduce lo que no.",
+        [
+            ("13 m",
+             "Suma 9 a la altura del poste, replicando la diferencia entre las sombras."),
+            ("6 m",
+             "Confunde la sombra del poste con la altura buscada."),
+            ("22,5 m, multiplicando la sombra del árbol por la razón entre las alturas",
+             "La razón 2,5 se aplica a la altura del poste, que es 4 m."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "En un mapa a escala 1 : 200.000, dos ciudades están a 7 cm. ¿Cuál es "
+        "la distancia real entre ellas?",
+        "14 km",
+        "Se amplía con la razón de la escala y se convierten las unidades.\n\n"
+        "1) La distancia real es 7 · 200.000 = 1.400.000 cm.\n"
+        "2) Un kilómetro tiene 100.000 cm.\n"
+        "3) Dividiendo: 1.400.000 / 100.000 = 14 km.\n\n"
+        "El atajo útil es que en una escala 1 : 200.000, cada centímetro del "
+        "mapa equivale a 2 km.",
+        [
+            ("1,4 km",
+             "Se equivoca en un factor de diez al convertir centímetros a kilómetros."),
+            ("140 km",
+             "Se pasa en un factor de diez en la conversión de unidades."),
+            ("28.571 cm, dividiendo por la escala en vez de multiplicar",
+             "El mapa es más pequeño que la realidad: hay que multiplicar."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "¿Cuál es la razón de la homotecia inversa a una de razón 4?",
+        "1/4",
+        "La inversa deshace exactamente lo que hizo la primera.\n\n"
+        "1) La primera homotecia multiplica cada distancia al centro por 4.\n"
+        "2) Para volver al punto original hay que dividir por 4.\n"
+        "3) Eso corresponde a una homotecia del mismo centro y razón 1/4.\n\n"
+        "Comprobación: aplicar las dos seguidas multiplica las distancias por "
+        "4 · (1/4) = 1, es decir, deja todo igual.",
+        [
+            ("−4",
+             "Esa homotecia conservaría el tamaño ampliado y además invertiría la figura."),
+            ("4",
+             "Repetir la misma razón amplía otra vez en vez de deshacer la ampliación."),
+            ("−1/4, porque la inversa debe invertir también el sentido",
+             "La homotecia original no invirtió el sentido, así que la inversa tampoco debe hacerlo."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Un cuadrado se transforma por una homotecia en otro cuadrado de área "
+        "cuatro veces mayor. ¿Cuál es el valor absoluto de la razón?",
+        "2",
+        "El factor de las áreas es el cuadrado de la razón.\n\n"
+        "1) El área se multiplicó por 4, así que k² = 4.\n"
+        "2) Extrayendo la raíz cuadrada: |k| = 2.\n"
+        "3) Los lados del cuadrado quedaron al doble.\n\n"
+        "Comprobación con números: un cuadrado de lado 3 tiene área 9, y uno de "
+        "lado 6 tiene área 36, que es cuatro veces más.",
+        [
+            ("4",
+             "Ese es el factor de las áreas, que corresponde a k²."),
+            ("16",
+             "Es el cuadrado del factor de las áreas: se elevó dos veces en vez de una."),
+            ("1,6 aproximadamente, que es la raíz cúbica del factor de las áreas",
+             "La raíz cúbica corresponde a volúmenes; para áreas se usa la raíz cuadrada."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Una recta de pendiente 3 se transforma por una homotecia de centro en "
+        "el origen y razón 5. ¿Cuál es la pendiente de su imagen?",
+        "3",
+        "La homotecia conserva las direcciones.\n\n"
+        "1) La imagen de una recta es otra recta paralela a ella.\n"
+        "2) Dos rectas paralelas tienen la misma pendiente.\n"
+        "3) Por lo tanto la pendiente sigue siendo 3.\n\n"
+        "Lo que sí puede cambiar es el coeficiente de posición: la recta se "
+        "aleja del origen sin inclinarse más.",
+        [
+            ("15",
+             "Multiplica la pendiente por la razón, pero la pendiente es un cuociente que no se escala."),
+            ("0,6",
+             "Divide la pendiente por la razón, cuando en realidad no cambia."),
+            ("−3, porque la homotecia invierte el sentido de la recta",
+             "Solo una razón negativa invierte el sentido, y aun así la pendiente no cambiaría."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Un envase cilíndrico de 500 mL se fabrica también en una versión "
+        "homotética con el doble de altura. ¿Cuánto contiene la versión grande?",
+        "4 litros",
+        "Al ser homotética, todas las medidas se duplican, no solo la "
+        "altura.\n\n"
+        "1) La razón de la homotecia es 2.\n"
+        "2) Los volúmenes se multiplican por 2³ = 8.\n"
+        "3) El nuevo contenido es 500 · 8 = 4.000 mL, es decir, 4 litros.\n\n"
+        "Es el punto que confunde: al escalar un envase completo, el radio "
+        "crece igual que la altura, y por eso el volumen se multiplica por ocho "
+        "y no por dos.",
+        [
+            ("1 litro",
+             "Duplica solo el volumen, como si únicamente creciera la altura."),
+            ("2 litros",
+             "Multiplica por 4, que es el factor de las superficies."),
+            ("8 litros, multiplicando el contenido original por 2⁴",
+             "El factor de los volúmenes es 2³ = 8, así que el resultado es 4 litros."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "En una homotecia con centro C, el punto P está a 12 cm de C y su "
+        "imagen a 30 cm, al mismo lado. ¿Cuál es la razón?",
+        "2,5",
+        "La razón es el cuociente entre las distancias al centro.\n\n"
+        "1) La distancia de la imagen al centro es 30 cm.\n"
+        "2) La del punto original es 12 cm.\n"
+        "3) El cuociente es 30/12 = 2,5, y es positivo porque están al mismo "
+        "lado.\n\n"
+        "Si la imagen hubiera quedado al lado opuesto del centro, la razón "
+        "sería −2,5.",
+        [
+            ("−2,5",
+             "El signo negativo corresponde a imágenes al lado opuesto del centro."),
+            ("0,4",
+             "Invierte el cuociente: divide el original por la imagen."),
+            ("18, que es la diferencia entre las dos distancias",
+             "La razón se obtiene dividiendo las distancias, no restándolas."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "¿Qué distingue a una homotecia de una traslación?",
+        "La homotecia cambia el tamaño y la traslación no",
+        "Las dos transformaciones conservan la forma, pero de modos "
+        "distintos.\n\n"
+        "1) Una traslación mueve todos los puntos la misma distancia y en la "
+        "misma dirección: la figura queda congruente.\n"
+        "2) Una homotecia acerca o aleja los puntos respecto de un centro, y "
+        "cada punto se mueve una distancia distinta.\n"
+        "3) La figura resultante es semejante pero, salvo con razón 1 o −1, no "
+        "congruente.\n\n"
+        "Otra diferencia práctica: la traslación no tiene puntos fijos y la "
+        "homotecia siempre deja fijo su centro.",
+        [
+            ("La homotecia gira la figura y la traslación no",
+             "Ninguna de las dos gira la figura; una razón negativa la invierte, que no es lo mismo."),
+            ("La traslación conserva los ángulos y la homotecia no",
+             "Ambas conservan los ángulos."),
+            ("La homotecia solo se puede aplicar a figuras planas y la traslación también a cuerpos",
+             "Las dos transformaciones existen en el plano y en el espacio."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Al aplicar una homotecia de razón 6 a un triángulo, uno de sus ángulos "
+        "medía 40°. ¿Cuánto mide el ángulo correspondiente en la imagen?",
+        "40°",
+        "La homotecia conserva las medidas angulares.\n\n"
+        "1) Todos los lados se multiplican por el mismo factor.\n"
+        "2) El triángulo imagen es semejante al original.\n"
+        "3) En figuras semejantes los ángulos correspondientes son iguales, así "
+        "que sigue midiendo 40°.\n\n"
+        "Que la figura sea seis veces más grande no la vuelve más ni menos "
+        "puntiaguda.",
+        [
+            ("240°",
+             "Multiplica el ángulo por la razón, pero los ángulos no se escalan."),
+            ("6,7° aproximadamente",
+             "Divide el ángulo por la razón, cuando en realidad no cambia."),
+            ("46°, sumando la razón a la medida original del ángulo",
+             "La razón no se suma a los ángulos: estos se conservan."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "dificil",
+        "Se aplica a una figura una homotecia de razón 2 y a la imagen "
+        "resultante otra de razón 3, ambas con el mismo centro. ¿Cuál es la "
+        "razón de la homotecia equivalente?",
+        "6",
+        "Las razones se multiplican al componer homotecias del mismo "
+        "centro.\n\n"
+        "1) La primera lleva cada distancia d a 2d.\n"
+        "2) La segunda lleva 2d a 3 · 2d = 6d.\n"
+        "3) El efecto total equivale a una única homotecia de razón 6.\n\n"
+        "Es lo que hace fácil deshacer una composición: la inversa de todo el "
+        "proceso es la homotecia de razón 1/6.",
+        [
+            ("5",
+             "Suma las razones, pero al componer se multiplican."),
+            ("1,5",
+             "Divide las razones, cuando lo que corresponde es multiplicarlas."),
+            ("9, elevando la segunda razón al cuadrado por aplicarse sobre una imagen ya ampliada",
+             "Basta multiplicar las dos razones: 2 · 3 = 6."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "dificil",
+        "Una homotecia con centro en el origen lleva el punto A(3, 1) al punto "
+        "A'(9, 3). ¿A qué punto lleva B(−2, 5)?",
+        "(−6, 15)",
+        "Primero se determina la razón y después se aplica al otro punto.\n\n"
+        "1) La razón es 9/3 = 3, y la segunda coordenada lo confirma: "
+        "3/1 = 3.\n"
+        "2) Se aplica a B: (3 · (−2), 3 · 5).\n"
+        "3) La imagen es (−6, 15).\n\n"
+        "La razón es única para toda la transformación: una vez calculada con "
+        "un punto, sirve para todos los demás.",
+        [
+            ("(−5, 8)",
+             "Suma 3 a cada coordenada en vez de multiplicarla."),
+            ("(6, 15)",
+             "Pierde el signo de la primera coordenada: la razón es positiva y −2 sigue negativo."),
+            ("(−0,67 , 1,67), dividiendo por la razón en vez de multiplicar",
+             "La homotecia amplía: la razón es 3 y hay que multiplicar."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "dificil",
+        "Una homotecia de razón 3 lleva el punto P(4, 2) al punto P'(6, 0). "
+        "¿Cuál es el centro de la homotecia?",
+        "(3, 3)",
+        "Se plantea la relación entre centro, punto e imagen.\n\n"
+        "1) La imagen cumple P' = C + 3 · (P − C), lo que equivale a "
+        "P' = 3P − 2C.\n"
+        "2) Despejando: 2C = 3P − P' = (12 − 6, 6 − 0) = (6, 6).\n"
+        "3) Entonces C = (3, 3).\n\n"
+        "Comprobación: el vector de C a P es (1, −1), y triplicado da (3, −3); "
+        "sumado a C entrega (6, 0), que es P'.",
+        [
+            ("(5, 1)",
+             "Es el punto medio entre P y P', que sería el centro solo si la razón fuera −1."),
+            ("(2, 4)",
+             "No cumple la relación: el vector desde ahí hasta P triplicado no llega a P'."),
+            ("(0, 0), porque toda homotecia tiene su centro en el origen",
+             "El centro puede estar en cualquier punto del plano."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "dificil",
+        "Un cuerpo homotético a otro tiene un área de superficie 2,25 veces "
+        "mayor. ¿Cuántas veces mayor es su volumen?",
+        "3,375 veces",
+        "Se pasa del factor de áreas a la razón y de ahí al factor de "
+        "volúmenes.\n\n"
+        "1) El factor de áreas es k² = 2,25, así que k = 1,5.\n"
+        "2) El factor de volúmenes es k³ = 1,5³.\n"
+        "3) Eso da 3,375.\n\n"
+        "El paso intermedio es imprescindible: no se puede saltar de un factor "
+        "de áreas a uno de volúmenes sin recuperar antes la razón lineal.",
+        [
+            ("2,25 veces",
+             "Repite el factor de las áreas, que no sirve para volúmenes."),
+            ("1,5 veces",
+             "Ese es la razón lineal, no el factor de los volúmenes."),
+            ("5,06 veces aproximadamente, elevando al cuadrado el factor de las áreas",
+             "Hay que recuperar primero k = 1,5 y después elevarlo al cubo."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "dificil",
+        "Una homotecia de razón −0,5 con centro en el origen se aplica al "
+        "triángulo de vértices (2, 0), (0, 4) y (−2, 2). ¿Cuáles son los "
+        "vértices de la imagen?",
+        "(−1, 0), (0, −2) y (1, −1)",
+        "Se multiplican todas las coordenadas por la razón.\n\n"
+        "1) (2, 0) pasa a (−1, 0).\n"
+        "2) (0, 4) pasa a (0, −2).\n"
+        "3) (−2, 2) pasa a (1, −1).\n\n"
+        "La razón negativa gira la figura media vuelta en torno al origen, y su "
+        "valor absoluto menor que 1 la reduce a la mitad.",
+        [
+            ("(1, 0), (0, 2) y (−1, 1)",
+             "Aplica el valor absoluto de la razón sin el signo negativo."),
+            ("(−4, 0), (0, −8) y (4, −4)",
+             "Multiplica por −2 en vez de por −0,5: amplía en vez de reducir."),
+            ("(−1, 0), (0, −2) y (−1, −1), cambiando el signo solo de la segunda coordenada",
+             "La razón multiplica ambas coordenadas: (−2, 2) pasa a (1, −1)."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "dificil",
+        "Dos circunferencias homotéticas tienen radios de 3 cm y 7,5 cm. Si el "
+        "centro de la homotecia está a 4 cm del centro de la circunferencia "
+        "pequeña, ¿a qué distancia está del centro de la grande?",
+        "10 cm",
+        "El centro de cada circunferencia también se transforma por la "
+        "homotecia.\n\n"
+        "1) La razón es 7,5/3 = 2,5.\n"
+        "2) La distancia del centro de la homotecia a cada centro se multiplica "
+        "por esa razón.\n"
+        "3) Entonces la distancia buscada es 4 · 2,5 = 10 cm.\n\n"
+        "El centro de una circunferencia se comporta como cualquier otro punto "
+        "de la figura: se aleja del centro de homotecia en la misma proporción.",
+        [
+            ("4,5 cm",
+             "Suma la diferencia de radios a la distancia, sin usar la razón."),
+            ("1,6 cm",
+             "Divide por la razón en vez de multiplicar: la circunferencia grande está más lejos."),
+            ("11,5 cm, sumando el radio mayor a la distancia original",
+             "El radio no se suma a la distancia: lo que escala es la distancia misma."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "dificil",
+        "Se afirma: «Si dos figuras son semejantes, entonces siempre existe una "
+        "homotecia que lleva una en la otra». ¿Es correcta la afirmación?",
+        "No: puede hacer falta además un giro o una simetría",
+        "La homotecia conserva las direcciones de los lados.\n\n"
+        "1) En una homotecia, cada lado y su imagen son paralelos.\n"
+        "2) Dos figuras semejantes pueden estar giradas una respecto de la "
+        "otra, con lados no paralelos.\n"
+        "3) En ese caso ninguna homotecia sola las relaciona: hace falta "
+        "componerla con un giro o una reflexión.\n\n"
+        "Lo que sí es cierto es lo contrario: toda homotecia produce figuras "
+        "semejantes.",
+        [
+            ("Sí, la semejanza y la homotecia son lo mismo",
+             "La homotecia produce semejanza, pero hay figuras semejantes que no son homotéticas entre sí."),
+            ("No: la homotecia solo funciona con triángulos",
+             "Se aplica a cualquier figura del plano o del espacio."),
+            ("Sí, siempre que las dos figuras tengan la misma orientación en el plano",
+             "Incluso con la misma orientación pueden estar giradas 180° sin que baste una homotecia positiva."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "dificil",
+        "Un escultor hace una réplica homotética de una estatua de 2 m de alto "
+        "que pesa 400 kg. La réplica mide 50 cm. Si es del mismo material y "
+        "maciza, ¿cuánto pesa?",
+        "6,25 kg",
+        "El peso es proporcional al volumen, que escala con el cubo de la "
+        "razón.\n\n"
+        "1) La razón es 50/200 = 0,25.\n"
+        "2) El factor de los volúmenes es 0,25³ = 0,015625.\n"
+        "3) El peso es 400 · 0,015625 = 6,25 kg.\n\n"
+        "Reducir la altura a la cuarta parte deja el peso en la sesentaicuatroava "
+        "parte: es la razón por la que las miniaturas resultan sorprendentemente "
+        "livianas.",
+        [
+            ("100 kg",
+             "Aplica la razón directamente al peso, como si dependiera solo de la altura."),
+            ("25 kg",
+             "Aplica el cuadrado de la razón, que corresponde a superficies."),
+            ("1,56 kg aproximadamente, aplicando la razón elevada a la cuarta potencia",
+             "El volumen escala con el cubo de la razón, no con la cuarta potencia."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "dificil",
+        "¿Cuál es la razón de la homotecia con centro en el origen que "
+        "transforma la circunferencia de ecuación x² + y² = 4 en la de "
+        "ecuación x² + y² = 36?",
+        "3",
+        "Se comparan los radios, no los términos independientes.\n\n"
+        "1) La primera circunferencia tiene radio 2, porque 4 es 2².\n"
+        "2) La segunda tiene radio 6, porque 36 es 6².\n"
+        "3) La razón es 6/2 = 3.\n\n"
+        "El error frecuente es dividir 36 por 4 y responder 9: eso es el factor "
+        "de las áreas, no la razón lineal.",
+        [
+            ("9",
+             "Es el cuociente entre los términos independientes, que corresponde al cuadrado de la razón."),
+            ("6",
+             "Es el radio de la circunferencia grande, no la razón."),
+            ("32, tomando la diferencia entre los términos independientes",
+             "La razón se obtiene comparando radios por división."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "dificil",
+        "Un triángulo tiene vértices A(0, 0), B(4, 0) y C(0, 3). Se le aplica "
+        "una homotecia de centro A y razón 2,5. ¿Cuál es el área de la imagen?",
+        "37,5 cm²",
+        "Se calcula el área original y se multiplica por el cuadrado de la "
+        "razón.\n\n"
+        "1) El triángulo es rectángulo en A, con catetos 4 y 3: su área es "
+        "6 cm².\n"
+        "2) El factor de las áreas es 2,5² = 6,25.\n"
+        "3) El área de la imagen es 6 · 6,25 = 37,5 cm².\n\n"
+        "Que el centro esté en un vértice no cambia el cálculo: ese vértice "
+        "queda fijo y los otros dos se alejan.",
+        [
+            ("15 cm²",
+             "Multiplica el área por la razón en vez de por su cuadrado."),
+            ("93,75 cm²",
+             "Multiplica por 2,5³, que es el factor de los volúmenes."),
+            ("60 cm², calculando el área con los catetos escalados pero sin dividir por dos",
+             "El área de un triángulo es la mitad del producto de sus catetos."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "dificil",
+        "Se afirma: «Una homotecia de razón −2 con centro O equivale a una "
+        "ampliación al doble seguida de un giro de 180° en torno a O». ¿Es "
+        "correcta la afirmación?",
+        "Sí, y el orden de las dos transformaciones no altera el resultado",
+        "La razón negativa se descompone en su valor absoluto y su signo.\n\n"
+        "1) El valor absoluto 2 duplica las distancias al centro.\n"
+        "2) El signo negativo envía cada punto al lado opuesto del centro, que "
+        "es exactamente un giro de media vuelta.\n"
+        "3) Componer ambas en cualquier orden entrega la misma imagen, porque "
+        "las dos tienen el mismo centro.\n\n"
+        "Es la lectura práctica de una razón negativa: amplía e invierte a la "
+        "vez.",
+        [
+            ("No: una razón negativa reduce la figura en vez de ampliarla",
+             "El tamaño lo fija el valor absoluto de la razón, que aquí es 2."),
+            ("Sí, pero solo si el giro se aplica antes de la ampliación",
+             "Ambas transformaciones comparten centro, así que conmutan."),
+            ("No: el giro de 180° tendría que hacerse en torno al origen y no en torno a O",
+             "El centro de la homotecia es O, y es en torno a ese punto que se produce la inversión."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Geometria: trigonometria en el triangulo rectangulo
+#
+# Definicion de las tres razones, valores notables, resolucion de triangulos
+# y aplicaciones con angulos de elevacion y de depresion.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "geo_trigonometria", "facil",
+        "En un triángulo rectángulo, ¿qué razón define el coseno de un ángulo "
+        "agudo?",
+        "El cateto adyacente dividido por la hipotenusa",
+        "Las tres razones se distinguen por qué lados comparan.\n\n"
+        "1) El seno compara el cateto opuesto con la hipotenusa.\n"
+        "2) El coseno compara el cateto adyacente con la hipotenusa.\n"
+        "3) La tangente compara los dos catetos entre sí.\n\n"
+        "Como la hipotenusa es siempre el lado mayor, tanto el seno como el "
+        "coseno de un ángulo agudo dan un número entre 0 y 1.",
+        [
+            ("El cateto opuesto dividido por la hipotenusa",
+             "Esa es la definición del seno."),
+            ("El cateto opuesto dividido por el cateto adyacente",
+             "Esa es la definición de la tangente."),
+            ("La hipotenusa dividida por el cateto adyacente",
+             "Es el cuociente invertido: daría un número mayor que 1."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "facil",
+        "En un triángulo rectángulo, ¿qué razón define la tangente de un ángulo "
+        "agudo?",
+        "El cateto opuesto dividido por el cateto adyacente",
+        "La tangente es la única de las tres razones que no usa la "
+        "hipotenusa.\n\n"
+        "1) Compara directamente los dos catetos.\n"
+        "2) Por eso puede tomar cualquier valor positivo, incluso mayor que 1.\n"
+        "3) Vale 1 cuando los dos catetos son iguales, es decir, con un ángulo "
+        "de 45°.\n\n"
+        "También se puede obtener dividiendo el seno por el coseno del mismo "
+        "ángulo.",
+        [
+            ("El cateto opuesto dividido por la hipotenusa",
+             "Esa es la definición del seno."),
+            ("El cateto adyacente dividido por la hipotenusa",
+             "Esa es la definición del coseno."),
+            ("La hipotenusa dividida por el cateto opuesto",
+             "Ese cuociente no corresponde a ninguna de las tres razones básicas."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "facil",
+        "En un triángulo rectángulo, el cateto adyacente a un ángulo mide 8 cm "
+        "y la hipotenusa mide 10 cm. ¿Cuál es el coseno de ese ángulo?",
+        "0,8",
+        "Se aplica directamente la definición.\n\n"
+        "1) El coseno es el cateto adyacente dividido por la hipotenusa.\n"
+        "2) Ese cuociente es 8/10.\n"
+        "3) Simplificando: 0,8.\n\n"
+        "Como la hipotenusa siempre supera a cada cateto, el resultado tenía "
+        "que ser menor que 1.",
+        [
+            ("1,25",
+             "Invierte el cuociente: divide la hipotenusa por el cateto."),
+            ("0,6",
+             "Ese sería el seno del mismo ángulo, si el otro cateto mide 6 cm."),
+            ("2, restando el cateto a la hipotenusa en vez de dividir",
+             "Las razones trigonométricas son cuocientes, no diferencias."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "facil",
+        "En un triángulo rectángulo, los catetos miden 5 cm y 5 cm. ¿Cuánto "
+        "vale la tangente de uno de sus ángulos agudos?",
+        "1",
+        "La tangente compara los dos catetos.\n\n"
+        "1) La tangente es el cateto opuesto dividido por el adyacente.\n"
+        "2) Ese cuociente es 5/5.\n"
+        "3) Eso da 1.\n\n"
+        "Que la tangente valga 1 confirma que los ángulos agudos miden 45° "
+        "cada uno: el triángulo es isósceles.",
+        [
+            ("5",
+             "Repite la medida del cateto en vez de calcular el cuociente."),
+            ("0,71 aproximadamente",
+             "Ese es el seno o el coseno de 45°, no la tangente."),
+            ("10, sumando los dos catetos en vez de dividirlos",
+             "La tangente es un cuociente entre catetos."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "facil",
+        "¿Cuál de las tres razones trigonométricas puede tomar valores mayores "
+        "que 1 en un triángulo rectángulo?",
+        "La tangente",
+        "Depende de qué lados compara cada razón.\n\n"
+        "1) Seno y coseno dividen un cateto por la hipotenusa, que es el lado "
+        "mayor: el resultado siempre queda entre 0 y 1.\n"
+        "2) La tangente divide un cateto por el otro.\n"
+        "3) Si el cateto opuesto es mayor que el adyacente, la tangente supera "
+        "a 1.\n\n"
+        "Por ejemplo, con catetos de 3 cm y 1 cm la tangente vale 3.",
+        [
+            ("El seno",
+             "El cateto opuesto nunca supera a la hipotenusa, así que el seno no pasa de 1."),
+            ("El coseno",
+             "El cateto adyacente nunca supera a la hipotenusa, así que el coseno no pasa de 1."),
+            ("Ninguna, porque todas comparan lados de un mismo triángulo",
+             "La tangente compara dos catetos, y uno puede ser bastante mayor que el otro."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "facil",
+        "¿Cuál es el valor de sen 45°?",
+        "√2 / 2",
+        "Se deduce del triángulo rectángulo isósceles.\n\n"
+        "1) Con catetos de 1 cm cada uno, la hipotenusa mide √2 cm por "
+        "Pitágoras.\n"
+        "2) El seno es el cateto opuesto dividido por la hipotenusa: 1/√2.\n"
+        "3) Racionalizando: √2/2, aproximadamente 0,71.\n\n"
+        "El coseno de 45° vale exactamente lo mismo, porque el triángulo es "
+        "simétrico respecto de sus dos catetos.",
+        [
+            ("1/2",
+             "Ese es el valor de sen 30°, no de sen 45°."),
+            ("√3 / 2",
+             "Ese es el valor de sen 60°."),
+            ("√2, que es la medida de la hipotenusa del triángulo isósceles",
+             "El seno es el cuociente entre el cateto y esa hipotenusa: 1/√2 = √2/2."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "facil",
+        "¿Cuál es el valor de cos 60°?",
+        "1/2",
+        "Se deduce del triángulo equilátero partido por la mitad.\n\n"
+        "1) Al cortar un triángulo equilátero de lado 2 por su altura queda uno "
+        "rectángulo con hipotenusa 2 y un cateto 1.\n"
+        "2) El ángulo de 60° tiene ese cateto de 1 como adyacente.\n"
+        "3) El coseno es 1/2.\n\n"
+        "Es el mismo valor que sen 30°: los ángulos complementarios "
+        "intercambian seno y coseno.",
+        [
+            ("√3 / 2",
+             "Ese es el valor de cos 30° o de sen 60°."),
+            ("√2 / 2",
+             "Ese es el valor de cos 45°."),
+            ("2, que es la medida de la hipotenusa en ese triángulo",
+             "El coseno es el cuociente entre el cateto adyacente y esa hipotenusa: 1/2."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "facil",
+        "En un triángulo rectángulo, un ángulo agudo mide 40°. ¿Cuánto mide el "
+        "otro ángulo agudo?",
+        "50°",
+        "Los ángulos agudos de un triángulo rectángulo son "
+        "complementarios.\n\n"
+        "1) Los tres ángulos suman 180°.\n"
+        "2) Uno de ellos es el recto, de 90°.\n"
+        "3) A los dos agudos les quedan 90°, así que el otro mide "
+        "90° − 40° = 50°.\n\n"
+        "Por eso sen 40° coincide con cos 50°: son razones del mismo lado "
+        "vistas desde los dos ángulos.",
+        [
+            ("140°",
+             "Resta 40° a 180° sin descontar el ángulo recto."),
+            ("40°",
+             "Solo serían iguales si el triángulo fuera isósceles, con dos ángulos de 45°."),
+            ("90°, porque en todo triángulo rectángulo hay dos ángulos rectos",
+             "Un triángulo tiene a lo más un ángulo recto."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "facil",
+        "¿Qué mide un ángulo de elevación?",
+        "La inclinación de la visual hacia arriba respecto de la horizontal",
+        "El ángulo se mide siempre desde la línea horizontal del "
+        "observador.\n\n"
+        "1) El observador imagina una línea horizontal a la altura de sus "
+        "ojos.\n"
+        "2) Si mira hacia un punto más alto, la visual se levanta sobre esa "
+        "línea.\n"
+        "3) El ángulo entre ambas es el ángulo de elevación.\n\n"
+        "Cuando el punto observado está más abajo, el mismo ángulo pasa a "
+        "llamarse de depresión.",
+        [
+            ("La altura del objeto observado",
+             "El ángulo es una medida angular, no una longitud."),
+            ("La inclinación de la visual hacia abajo respecto de la horizontal",
+             "Esa es la definición del ángulo de depresión."),
+            ("El ángulo entre la visual y la vertical que pasa por el observador",
+             "La referencia es la horizontal, no la vertical."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "facil",
+        "En un triángulo rectángulo, el cateto opuesto a un ángulo mide 7 cm y "
+        "el adyacente mide 24 cm. ¿Cuál es la tangente de ese ángulo?",
+        "7/24",
+        "Se aplica directamente la definición.\n\n"
+        "1) La tangente es el cateto opuesto dividido por el adyacente.\n"
+        "2) Ese cuociente es 7/24.\n"
+        "3) Aproximadamente 0,29.\n\n"
+        "Los lados 7, 24 y 25 forman un triángulo rectángulo exacto, así que la "
+        "hipotenusa mide 25 cm.",
+        [
+            ("24/7",
+             "Invierte el cuociente: sería la tangente del otro ángulo agudo."),
+            ("7/25",
+             "Ese es el seno del ángulo, que usa la hipotenusa."),
+            ("31, sumando los dos catetos en vez de dividirlos",
+             "La tangente es un cuociente entre los catetos."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "En un triángulo rectángulo, un ángulo agudo mide 60° y el cateto "
+        "adyacente a él mide 9 cm. ¿Cuánto mide la hipotenusa?",
+        "18 cm",
+        "Se usa el coseno, que relaciona ese cateto con la hipotenusa.\n\n"
+        "1) cos 60° = cateto adyacente dividido por hipotenusa.\n"
+        "2) Reemplazando: 0,5 = 9 / h.\n"
+        "3) Despejando: h = 9 / 0,5 = 18 cm.\n\n"
+        "Es coherente con el triángulo notable de 30-60-90: el cateto menor es "
+        "siempre la mitad de la hipotenusa.",
+        [
+            ("4,5 cm",
+             "Multiplica por 0,5 en vez de dividir: la hipotenusa es el lado mayor."),
+            ("15,6 cm aproximadamente",
+             "Usa el seno de 60° en vez del coseno."),
+            ("10,4 cm aproximadamente, dividiendo el cateto por sen 60°",
+             "El cateto de 9 cm es el adyacente, así que corresponde el coseno."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "En un triángulo rectángulo, un ángulo agudo mide 45° y el cateto "
+        "opuesto mide 7 cm. ¿Cuánto mide el otro cateto?",
+        "7 cm",
+        "Con 45° los dos catetos son iguales.\n\n"
+        "1) Si un ángulo agudo mide 45°, el otro también mide 45°.\n"
+        "2) El triángulo es isósceles, con los dos catetos de igual medida.\n"
+        "3) El otro cateto mide 7 cm.\n\n"
+        "Se puede confirmar con la tangente: tan 45° = 1, así que los dos "
+        "catetos tienen que coincidir.",
+        [
+            ("9,9 cm aproximadamente",
+             "Esa es la hipotenusa, que mide 7 · √2."),
+            ("4,95 cm aproximadamente",
+             "Divide por √2 en vez de reconocer que los catetos son iguales."),
+            ("3,5 cm, tomando la mitad del cateto conocido",
+             "La mitad correspondería a un ángulo de 30°, no de 45°."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "Una escalera de 5 m se apoya en una pared formando 60° con el suelo. "
+        "¿A qué altura de la pared llega?",
+        "4,33 m aproximadamente",
+        "La altura es el cateto opuesto al ángulo con el suelo.\n\n"
+        "1) sen 60° = altura dividida por la longitud de la escalera.\n"
+        "2) Reemplazando: 0,87 aproximadamente = h / 5.\n"
+        "3) Despejando: h = 5 · 0,87 = 4,33 m aproximadamente.\n\n"
+        "La escalera hace de hipotenusa, así que la altura alcanzada siempre es "
+        "menor que su longitud.",
+        [
+            ("2,5 m",
+             "Usa cos 60° = 0,5, que da la distancia de la base a la pared y no la altura."),
+            ("5,77 m aproximadamente",
+             "Divide en vez de multiplicar: la altura no puede superar la longitud de la escalera."),
+            ("8,66 m aproximadamente, multiplicando la escalera por √3",
+             "El factor correcto es sen 60° = √3/2, no √3."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "Una rampa sube 1,2 m de altura a lo largo de 8 m de recorrido "
+        "horizontal. ¿Cuál es la tangente de su ángulo de inclinación?",
+        "0,15",
+        "La tangente compara el desnivel con el avance horizontal.\n\n"
+        "1) El cateto opuesto al ángulo es la altura: 1,2 m.\n"
+        "2) El cateto adyacente es el avance horizontal: 8 m.\n"
+        "3) La tangente es 1,2 / 8 = 0,15.\n\n"
+        "Expresado como pendiente, es un 15%: la norma chilena de accesibilidad "
+        "exige valores bastante menores para rampas peatonales.",
+        [
+            ("6,67",
+             "Invierte el cuociente: divide el avance por la altura."),
+            ("0,148 aproximadamente",
+             "Usa la hipotenusa en vez del cateto adyacente: eso daría el seno."),
+            ("9,2, sumando la altura y el avance en vez de dividirlos",
+             "La tangente es el cuociente entre los dos catetos."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "Desde lo alto de un faro de 30 m, el ángulo de depresión hacia un bote "
+        "es de 45°. ¿A qué distancia horizontal está el bote de la base del "
+        "faro?",
+        "30 m",
+        "El ángulo de depresión es igual al de elevación desde el bote.\n\n"
+        "1) Se forma un triángulo rectángulo con cateto vertical 30 m y ángulo "
+        "de 45° en el bote.\n"
+        "2) tan 45° = altura dividida por distancia horizontal, y tan 45° = 1.\n"
+        "3) Entonces la distancia horizontal es igual a la altura: 30 m.\n\n"
+        "Con 45° el triángulo es isósceles: por cada metro de altura hay un "
+        "metro de distancia.",
+        [
+            ("15 m",
+             "Toma la mitad de la altura, que correspondería a un ángulo de 63° aproximadamente."),
+            ("42,4 m aproximadamente",
+             "Esa es la distancia en línea recta del faro al bote, no la horizontal."),
+            ("60 m, duplicando la altura del faro",
+             "Con 45° la distancia horizontal iguala a la altura, no la duplica."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "En un triángulo rectángulo, sen α = 0,28. ¿Qué se puede afirmar del "
+        "ángulo α?",
+        "Es agudo y menor que 30°",
+        "El seno crece con el ángulo entre 0° y 90°.\n\n"
+        "1) sen 30° vale 0,5.\n"
+        "2) Como 0,28 es menor que 0,5, el ángulo es menor que 30°.\n"
+        "3) Además es agudo, porque en un triángulo rectángulo los otros dos "
+        "ángulos siempre lo son.\n\n"
+        "El valor 0,28 corresponde aproximadamente a 16°.",
+        [
+            ("Es agudo y mayor que 60°",
+             "Con más de 60° el seno superaría 0,87."),
+            ("Es obtuso",
+             "En un triángulo rectángulo solo puede haber un ángulo no agudo, que es el de 90°."),
+            ("Mide exactamente 28°, porque el seno entrega la medida del ángulo",
+             "El seno entrega una razón entre lados, no la medida en grados."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "Un cable tensado va desde la punta de un poste de 12 m hasta el suelo, "
+        "formando 30° con la horizontal. ¿Cuánto mide el cable?",
+        "24 m",
+        "El cable es la hipotenusa del triángulo.\n\n"
+        "1) sen 30° = altura del poste dividida por la longitud del cable.\n"
+        "2) Reemplazando: 0,5 = 12 / c.\n"
+        "3) Despejando: c = 12 / 0,5 = 24 m.\n\n"
+        "Es el triángulo notable de 30-60-90: frente al ángulo de 30° siempre "
+        "queda la mitad de la hipotenusa.",
+        [
+            ("6 m",
+             "Multiplica por 0,5 en vez de dividir: el cable no puede ser más corto que el poste."),
+            ("13,9 m aproximadamente",
+             "Usa cos 30°, que corresponde al tramo horizontal y no a la altura."),
+            ("20,8 m aproximadamente, multiplicando la altura por √3",
+             "Ese factor entrega la distancia horizontal, no la longitud del cable."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "En un triángulo rectángulo con catetos de 9 cm y 12 cm, ¿cuál es el "
+        "seno del ángulo opuesto al cateto de 9 cm?",
+        "0,6",
+        "Primero se calcula la hipotenusa y después se aplica la "
+        "definición.\n\n"
+        "1) Por Pitágoras: la hipotenusa es la raíz de 81 + 144 = 225, es "
+        "decir, 15 cm.\n"
+        "2) El seno es el cateto opuesto dividido por la hipotenusa: 9/15.\n"
+        "3) Simplificando: 0,6.\n\n"
+        "El triángulo 9-12-15 es una ampliación del 3-4-5, así que las razones "
+        "son las mismas: 0,6, 0,8 y 0,75.",
+        [
+            ("0,75",
+             "Ese es la tangente del ángulo, que compara los dos catetos."),
+            ("0,8",
+             "Ese es el coseno de ese mismo ángulo, o el seno del otro."),
+            ("1,67 aproximadamente, dividiendo la hipotenusa por el cateto opuesto",
+             "El seno divide el cateto por la hipotenusa, no al revés."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "¿Cuál es la relación entre sen 25° y cos 65°?",
+        "Son iguales",
+        "Los ángulos complementarios intercambian seno y coseno.\n\n"
+        "1) Los dos ángulos suman 90°, así que son complementarios.\n"
+        "2) En un triángulo rectángulo son los dos ángulos agudos.\n"
+        "3) El cateto opuesto a uno es el adyacente al otro, así que "
+        "sen 25° = cos 65°.\n\n"
+        "La regla general es sen α = cos(90° − α), válida para cualquier "
+        "ángulo agudo.",
+        [
+            ("sen 25° es el doble de cos 65°",
+             "Son exactamente iguales: no hay factor entre ambos."),
+            ("Son opuestos entre sí",
+             "Ambos son positivos para ángulos agudos, y además coinciden."),
+            ("Su suma vale 1, porque los ángulos suman 90°",
+             "Lo que suma 1 es la suma de sus cuadrados, no la de los valores."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "Un avión despega con un ángulo constante de 15°. Tras recorrer "
+        "2.000 m en línea recta, ¿qué altura aproximada alcanzó? "
+        "(sen 15° ≈ 0,26)",
+        "520 m",
+        "La trayectoria del avión es la hipotenusa.\n\n"
+        "1) sen 15° = altura dividida por la distancia recorrida.\n"
+        "2) Reemplazando: 0,26 = h / 2.000.\n"
+        "3) Despejando: h = 2.000 · 0,26 = 520 m.\n\n"
+        "La altura ganada es bastante menor que la distancia recorrida, lo que "
+        "es esperable con un ángulo tan pequeño.",
+        [
+            ("1.932 m",
+             "Usa cos 15°, que entrega el avance horizontal y no la altura."),
+            ("7.692 m",
+             "Divide en vez de multiplicar: la altura no puede superar la distancia recorrida."),
+            ("30.000 m, multiplicando la distancia por la medida del ángulo",
+             "Los grados no se multiplican por distancias: hay que usar el seno."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "En un triángulo rectángulo, tan β = 1,5 y el cateto adyacente a β mide "
+        "10 cm. ¿Cuánto mide el cateto opuesto?",
+        "15 cm",
+        "Se despeja de la definición de tangente.\n\n"
+        "1) tan β = cateto opuesto dividido por cateto adyacente.\n"
+        "2) Reemplazando: 1,5 = x / 10.\n"
+        "3) Despejando: x = 15 cm.\n\n"
+        "Que la tangente supere a 1 anticipaba el resultado: el cateto opuesto "
+        "tenía que ser mayor que el adyacente.",
+        [
+            ("6,67 cm aproximadamente",
+             "Divide por la tangente en vez de multiplicar."),
+            ("11,5 cm",
+             "Suma la tangente al cateto en vez de multiplicarla."),
+            ("18 cm, que corresponde a la hipotenusa del triángulo",
+             "La pregunta pide el otro cateto, que mide 15 cm."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "¿Cuál es el valor de sen 90° y qué significa en un triángulo "
+        "rectángulo?",
+        "Vale 1, y corresponde al caso límite en que el cateto opuesto iguala a la hipotenusa",
+        "El seno crece hasta su tope en 90°.\n\n"
+        "1) A medida que el ángulo se acerca a 90°, el cateto opuesto se acerca "
+        "a la hipotenusa.\n"
+        "2) El cuociente entre ambos se acerca a 1.\n"
+        "3) En 90° la razón vale exactamente 1, aunque el triángulo ya "
+        "degenera.\n\n"
+        "Por eso ningún ángulo agudo tiene seno mayor que 1: la hipotenusa "
+        "siempre es el lado mayor.",
+        [
+            ("Vale 0, y corresponde al caso en que el cateto opuesto desaparece",
+             "Eso ocurre con sen 0°, no con sen 90°."),
+            ("Vale 90, porque el seno devuelve la medida del ángulo",
+             "El seno devuelve una razón entre lados."),
+            ("No está definido, porque no existe un triángulo rectángulo con dos ángulos rectos",
+             "El valor se define con la circunferencia unitaria y vale 1."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "Un cerro se observa desde dos puntos. Desde el más cercano, el ángulo "
+        "de elevación es mayor. ¿Qué se puede afirmar?",
+        "Cuanto más cerca está el observador, mayor es el ángulo de elevación",
+        "El ángulo depende del cuociente entre altura y distancia.\n\n"
+        "1) La tangente del ángulo es la altura del cerro dividida por la "
+        "distancia horizontal.\n"
+        "2) La altura no cambia, así que al reducir la distancia el cuociente "
+        "aumenta.\n"
+        "3) Un valor mayor de la tangente corresponde a un ángulo mayor.\n\n"
+        "Es lo que se percibe al caminar hacia una montaña: hay que levantar "
+        "cada vez más la vista.",
+        [
+            ("El ángulo de elevación no depende de la distancia",
+             "Depende, porque la tangente es el cuociente entre altura y distancia."),
+            ("Cuanto más cerca está el observador, menor es el ángulo",
+             "Es al revés: acercarse aumenta el cuociente y con él el ángulo."),
+            ("El ángulo solo cambia si además cambia la altura del cerro",
+             "También cambia al variar la distancia, con la altura fija."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "En un triángulo rectángulo con hipotenusa 20 cm, un ángulo agudo mide "
+        "30°. ¿Cuánto mide el cateto adyacente a ese ángulo?",
+        "17,3 cm aproximadamente",
+        "Se usa el coseno.\n\n"
+        "1) cos 30° = cateto adyacente dividido por hipotenusa.\n"
+        "2) Reemplazando: 0,87 aproximadamente = x / 20.\n"
+        "3) Despejando: x = 20 · 0,87 = 17,3 cm aproximadamente.\n\n"
+        "El cateto opuesto, en cambio, mide exactamente 10 cm: la mitad de la "
+        "hipotenusa, como corresponde al ángulo de 30°.",
+        [
+            ("10 cm",
+             "Ese es el cateto opuesto al ángulo de 30°, no el adyacente."),
+            ("23 cm aproximadamente",
+             "Divide en vez de multiplicar: ningún cateto supera a la hipotenusa."),
+            ("34,6 cm aproximadamente, multiplicando la hipotenusa por √3",
+             "El factor correcto es cos 30° = √3/2, no √3."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "Se sabe que cos θ = 12/13 en un triángulo rectángulo. ¿Cuánto vale "
+        "sen θ?",
+        "5/13",
+        "Se usa la identidad fundamental.\n\n"
+        "1) sen²θ + cos²θ = 1.\n"
+        "2) Reemplazando: sen²θ = 1 − 144/169 = 25/169.\n"
+        "3) Extrayendo la raíz y tomando el valor positivo, porque θ es agudo: "
+        "sen θ = 5/13.\n\n"
+        "Los lados 5, 12 y 13 forman un triángulo rectángulo exacto, así que el "
+        "resultado se podía anticipar.",
+        [
+            ("1/13",
+             "Resta 12/13 a 1 en vez de aplicar la identidad con los cuadrados."),
+            ("13/12",
+             "Invierte el coseno, que no entrega el seno."),
+            ("25/169, dejando el resultado sin extraer la raíz cuadrada",
+             "25/169 es sen²θ; el seno es su raíz, 5/13."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Geometria: trigonometria (segunda tanda)
+#
+# Resolucion completa de triangulos, area con seno, problemas con dos visuales
+# y verificacion de afirmaciones sobre proporcionalidad de angulos.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "geo_trigonometria", "medio",
+        "¿Cuál es el valor de tan 60°?",
+        "√3",
+        "Se deduce del triángulo equilátero partido por su altura.\n\n"
+        "1) Con lado 2, la mitad de la base mide 1 y la altura mide √3.\n"
+        "2) Frente al ángulo de 60° queda la altura y a su lado, la "
+        "semibase.\n"
+        "3) La tangente es √3 dividido por 1, es decir, √3, aproximadamente "
+        "1,73.\n\n"
+        "Es coherente con que el cateto opuesto sea mayor que el adyacente: la "
+        "tangente supera a 1.",
+        [
+            ("1",
+             "Ese es el valor de tan 45°, cuando los dos catetos son iguales."),
+            ("√3 / 2",
+             "Ese es el valor de sen 60°, que sí usa la hipotenusa."),
+            ("1/√3",
+             "Ese es el valor de tan 30°, con los catetos intercambiados."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "En un triángulo rectángulo isósceles, los catetos miden 6 cm cada uno. "
+        "¿Cuál es su perímetro?",
+        "20,5 cm aproximadamente",
+        "Falta la hipotenusa, que se obtiene por Pitágoras.\n\n"
+        "1) La hipotenusa es la raíz de 36 + 36 = 72, es decir, 6√2, "
+        "aproximadamente 8,49 cm.\n"
+        "2) El perímetro suma los tres lados: 6 + 6 + 8,49.\n"
+        "3) Eso da 20,5 cm aproximadamente.\n\n"
+        "En todo triángulo rectángulo isósceles la hipotenusa es el cateto "
+        "multiplicado por √2.",
+        [
+            ("12 cm",
+             "Suma solo los dos catetos y olvida la hipotenusa."),
+            ("18 cm",
+             "Toma la hipotenusa como si midiera igual que los catetos."),
+            ("24 cm, tomando 12 cm como medida de la hipotenusa",
+             "La hipotenusa mide 6√2, cerca de 8,5 cm, y no el doble del cateto."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "Un triángulo tiene dos lados de 8 cm y 10 cm que forman entre sí un "
+        "ángulo de 30°. ¿Cuál es su área?",
+        "20 cm²",
+        "El área se calcula con la fórmula que usa el seno del ángulo "
+        "comprendido.\n\n"
+        "1) El área es la mitad del producto de los dos lados por el seno del "
+        "ángulo entre ellos.\n"
+        "2) Reemplazando: 0,5 · 8 · 10 · sen 30°.\n"
+        "3) Como sen 30° = 0,5, el resultado es 0,5 · 80 · 0,5 = 20 cm².\n\n"
+        "La fórmula sirve para cualquier triángulo, no solo para los "
+        "rectángulos: el seno hace el papel de la altura.",
+        [
+            ("40 cm²",
+             "Olvida multiplicar por sen 30° = 0,5."),
+            ("80 cm²",
+             "Es el producto de los dos lados, sin dividir por dos ni aplicar el seno."),
+            ("120 cm², multiplicando los lados por la medida del ángulo",
+             "Los grados no se multiplican por longitudes: entra el seno del ángulo."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "Un mástil de 15 m proyecta una sombra de 15√3 m. ¿Cuál es el ángulo de "
+        "elevación del sol?",
+        "30°",
+        "La tangente compara la altura con la sombra.\n\n"
+        "1) tan θ = 15 dividido por 15√3.\n"
+        "2) Simplificando: 1/√3, aproximadamente 0,577.\n"
+        "3) Ese es el valor de tan 30°, así que el ángulo mide 30°.\n\n"
+        "La sombra es más larga que el mástil, lo que anticipa un ángulo menor "
+        "que 45°.",
+        [
+            ("60°",
+             "Con 60° la sombra sería más corta que el mástil, no más larga."),
+            ("45°",
+             "Con 45° la sombra mediría exactamente lo mismo que el mástil."),
+            ("15°, tomando la altura del mástil como medida del ángulo",
+             "La altura en metros no es la medida del ángulo en grados."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "Desde un mirador de 50 m de altura, el ángulo de depresión hacia una "
+        "casa es de 30°. ¿A qué distancia horizontal está la casa? "
+        "(tan 30° ≈ 0,577)",
+        "86,7 m aproximadamente",
+        "El ángulo de depresión equivale al de elevación desde la casa.\n\n"
+        "1) tan 30° = altura dividida por distancia horizontal.\n"
+        "2) Reemplazando: 0,577 = 50 / d.\n"
+        "3) Despejando: d = 50 / 0,577 = 86,7 m aproximadamente.\n\n"
+        "Con ángulos pequeños la distancia horizontal supera con holgura a la "
+        "altura, lo que concuerda con el resultado.",
+        [
+            ("28,9 m aproximadamente",
+             "Multiplica por la tangente en vez de dividir."),
+            ("25 m",
+             "Usa la razón de 30° como si fuera 0,5 y además multiplica en lugar de dividir."),
+            ("100 m, duplicando la altura del mirador",
+             "Duplicar correspondería a un ángulo cuya tangente valga 0,5, no 0,577."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "Una carretera tiene una pendiente del 8%. ¿Qué significa ese dato en "
+        "términos trigonométricos?",
+        "Que la tangente del ángulo de inclinación vale 0,08",
+        "El porcentaje de pendiente es el desnivel por cada 100 m "
+        "horizontales.\n\n"
+        "1) Un 8% significa 8 m de subida por cada 100 m de avance "
+        "horizontal.\n"
+        "2) La tangente es el cuociente entre esas dos medidas: 8/100.\n"
+        "3) Eso da 0,08, que corresponde a un ángulo cercano a 4,6°.\n\n"
+        "El error habitual es leer el 8% como si fuera el ángulo: la "
+        "inclinación real es mucho menor.",
+        [
+            ("Que el ángulo de inclinación mide 8°",
+             "Un ángulo de 8° tendría tangente 0,14, casi el doble."),
+            ("Que el seno del ángulo vale 8",
+             "El seno nunca supera a 1."),
+            ("Que la carretera sube 8 m por cada metro recorrido",
+             "Sube 8 m por cada 100 m, no por cada metro."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "Si sen θ = 0,8 y cos θ = 0,6, ¿cuánto vale tan θ?",
+        "1,33 aproximadamente",
+        "La tangente es el cuociente entre seno y coseno.\n\n"
+        "1) tan θ = sen θ dividido por cos θ.\n"
+        "2) Reemplazando: 0,8 / 0,6.\n"
+        "3) Eso da 4/3, aproximadamente 1,33.\n\n"
+        "Los valores dados son coherentes: 0,8² + 0,6² = 0,64 + 0,36 = 1, como "
+        "exige la identidad fundamental.",
+        [
+            ("0,75",
+             "Invierte el cuociente: divide el coseno por el seno."),
+            ("1,4",
+             "Suma seno y coseno en vez de dividirlos."),
+            ("0,48, multiplicando el seno por el coseno",
+             "La tangente es el cuociente entre ambos, no su producto."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "En un triángulo rectángulo, la hipotenusa mide 26 cm y un cateto mide "
+        "10 cm. ¿Cuál es el coseno del ángulo opuesto al cateto de 10 cm?",
+        "12/13",
+        "Primero se busca el otro cateto y después se aplica la "
+        "definición.\n\n"
+        "1) Por Pitágoras: el otro cateto es la raíz de 676 − 100 = 576, es "
+        "decir, 24 cm.\n"
+        "2) El coseno del ángulo opuesto al de 10 cm usa como adyacente el de "
+        "24 cm.\n"
+        "3) El coseno es 24/26 = 12/13.\n\n"
+        "El triángulo 10-24-26 es una ampliación del 5-12-13, así que las "
+        "razones coinciden con las de ese triángulo notable.",
+        [
+            ("5/13",
+             "Ese es el seno de ese mismo ángulo, que usa el cateto de 10 cm."),
+            ("13/12",
+             "Invierte el cuociente: daría un valor mayor que 1, imposible para un coseno."),
+            ("10/24, que es la tangente del ángulo",
+             "La pregunta pide el coseno, que compara el cateto adyacente con la hipotenusa."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "Una persona de 1,7 m de estatura observa la punta de un árbol con un "
+        "ángulo de elevación de 40°, desde 12 m de distancia. ¿Cuál es la "
+        "altura del árbol? (tan 40° ≈ 0,84)",
+        "11,8 m aproximadamente",
+        "Hay que sumar la altura de los ojos al resultado del triángulo.\n\n"
+        "1) El triángulo entrega solo el tramo de árbol por sobre los ojos: "
+        "12 · 0,84 = 10,08 m.\n"
+        "2) A eso hay que sumarle la estatura de la persona: 1,7 m.\n"
+        "3) La altura total es 10,08 + 1,7 = 11,8 m aproximadamente.\n\n"
+        "Olvidar ese último paso es el error más frecuente en este tipo de "
+        "problema: el vértice del ángulo está en los ojos, no en el suelo.",
+        [
+            ("10,1 m aproximadamente",
+             "Olvida sumar la estatura del observador."),
+            ("13,5 m aproximadamente",
+             "Suma la estatura antes de aplicar la tangente, en vez de después."),
+            ("20,4 m aproximadamente, multiplicando la distancia por la estatura",
+             "La estatura se suma al final; lo que multiplica a la distancia es la tangente."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "¿Cuál de estos valores es mayor: sen 20° o sen 70°?",
+        "sen 70°",
+        "El seno crece a medida que el ángulo agudo aumenta.\n\n"
+        "1) Entre 0° y 90°, un ángulo mayor deja un cateto opuesto mayor.\n"
+        "2) Por eso el seno crece con el ángulo en ese tramo.\n"
+        "3) Como 70° supera a 20°, sen 70° es mayor: 0,94 contra 0,34.\n\n"
+        "Con el coseno ocurre lo contrario: decrece a medida que el ángulo "
+        "agudo aumenta.",
+        [
+            ("sen 20°",
+             "El seno crece con el ángulo agudo, así que el de 20° es el menor."),
+            ("Son iguales, porque los dos ángulos son complementarios",
+             "Ser complementarios hace que sen 20° = cos 70°, no que los senos coincidan."),
+            ("No se pueden comparar sin conocer los lados del triángulo",
+             "El seno depende solo del ángulo, no del tamaño del triángulo."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "En un triángulo rectángulo, un ángulo mide 30° y el cateto opuesto "
+        "mide 5 cm. ¿Cuánto mide el otro cateto? (tan 30° ≈ 0,577)",
+        "8,66 cm aproximadamente",
+        "Se despeja de la tangente.\n\n"
+        "1) tan 30° = cateto opuesto dividido por cateto adyacente.\n"
+        "2) Reemplazando: 0,577 = 5 / x.\n"
+        "3) Despejando: x = 5 / 0,577 = 8,66 cm aproximadamente.\n\n"
+        "Que la tangente sea menor que 1 anticipaba el resultado: el cateto "
+        "adyacente tenía que ser mayor que el opuesto.",
+        [
+            ("2,89 cm aproximadamente",
+             "Multiplica por la tangente en vez de dividir."),
+            ("10 cm",
+             "Esa es la hipotenusa, que mide el doble del cateto opuesto a 30°."),
+            ("5 cm, suponiendo que los dos catetos son iguales",
+             "Los catetos solo son iguales con un ángulo de 45°."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "Un barco navega 40 km hacia el este y luego 30 km hacia el norte. "
+        "¿Cuál es la tangente del ángulo entre su rumbo final y la dirección "
+        "este?",
+        "0,75",
+        "Se arma un triángulo rectángulo con los dos tramos.\n\n"
+        "1) El tramo hacia el este es el cateto adyacente al ángulo: 40 km.\n"
+        "2) El tramo hacia el norte es el cateto opuesto: 30 km.\n"
+        "3) La tangente es 30/40 = 0,75.\n\n"
+        "El desplazamiento total en línea recta es de 50 km, porque los lados "
+        "forman el triángulo 30-40-50.",
+        [
+            ("1,33 aproximadamente",
+             "Invierte el cuociente: divide el tramo este por el tramo norte."),
+            ("0,6",
+             "Ese es el seno del ángulo, que usa el desplazamiento total de 50 km."),
+            ("70, sumando los dos tramos en vez de dividirlos",
+             "La tangente es un cuociente entre los dos catetos."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "Se afirma que en cualquier triángulo rectángulo se cumple "
+        "sen²α + cos²α = 1. ¿Por qué?",
+        "Porque equivale al teorema de Pitágoras dividido por el cuadrado de la hipotenusa",
+        "La identidad es una reescritura de Pitágoras.\n\n"
+        "1) El teorema dice que la suma de los cuadrados de los catetos es el "
+        "cuadrado de la hipotenusa.\n"
+        "2) Dividiendo toda la igualdad por el cuadrado de la hipotenusa, cada "
+        "término queda como una razón al cuadrado.\n"
+        "3) El resultado es exactamente sen²α + cos²α = 1.\n\n"
+        "Por eso la identidad vale para cualquier ángulo agudo, sin importar el "
+        "tamaño del triángulo.",
+        [
+            ("Porque el seno y el coseno de un ángulo agudo siempre suman 1",
+             "Su suma no vale 1: por ejemplo, 0,6 + 0,8 = 1,4. Lo que vale 1 es la suma de sus cuadrados."),
+            ("Porque los dos ángulos agudos de un triángulo rectángulo suman 90°",
+             "Eso explica la relación entre seno y coseno de ángulos complementarios, no esta identidad."),
+            ("Porque el área de un triángulo rectángulo siempre vale la mitad del producto de sus catetos",
+             "El área no interviene en la identidad."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "dificil",
+        "Desde un punto se ve la cima de una torre con un ángulo de elevación "
+        "de 45°. Al alejarse 20 m en línea recta, el ángulo baja a 30°. ¿Cuál "
+        "es la altura de la torre? (tan 30° ≈ 0,577)",
+        "27,3 m aproximadamente",
+        "Se plantean dos triángulos que comparten la altura.\n\n"
+        "1) Desde el primer punto: tan 45° = h/d, y como tan 45° = 1, se "
+        "tiene d = h.\n"
+        "2) Desde el segundo: tan 30° = h/(d + 20), es decir, "
+        "0,577 = h/(h + 20).\n"
+        "3) Resolviendo: 0,577h + 11,54 = h, así que 0,423h = 11,54 y "
+        "h = 27,3 m aproximadamente.\n\n"
+        "La clave es que la altura es la misma en ambos triángulos: eso permite "
+        "eliminar la distancia desconocida.",
+        [
+            ("20 m",
+             "Repite la distancia que se avanzó, que no es la altura."),
+            ("11,5 m aproximadamente",
+             "Corresponde a 20 · tan 30°, que sería la altura si el segundo punto estuviera a 20 m de la base."),
+            ("34,6 m aproximadamente, dividiendo directamente los 20 m por tan 30°",
+             "Ese cálculo ignora que la primera visual ya fija una distancia igual a la altura."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "dificil",
+        "Un rectángulo mide 12 cm de largo y 5 cm de ancho. ¿Cuál es el seno "
+        "del ángulo que forma su diagonal con el lado largo?",
+        "5/13",
+        "La diagonal parte el rectángulo en dos triángulos rectángulos.\n\n"
+        "1) Los catetos son los lados del rectángulo: 12 cm y 5 cm.\n"
+        "2) La diagonal es la hipotenusa: la raíz de 144 + 25 = 169, es decir, "
+        "13 cm.\n"
+        "3) El ángulo con el lado largo tiene como cateto opuesto el de 5 cm, "
+        "así que su seno es 5/13.\n\n"
+        "El coseno de ese mismo ángulo vale 12/13, y su tangente, 5/12.",
+        [
+            ("12/13",
+             "Ese es el coseno del ángulo, que usa el lado largo como cateto adyacente."),
+            ("5/12",
+             "Esa es la tangente del ángulo, que compara los dos lados sin usar la diagonal."),
+            ("13/5, invirtiendo el cuociente entre el lado corto y la diagonal",
+             "El seno nunca supera a 1, así que el cuociente correcto es 5/13."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "dificil",
+        "Desde lo alto de un acantilado de 80 m se observan dos botes alineados "
+        "con ángulos de depresión de 45° y 30°. ¿Cuál es la distancia entre los "
+        "botes? (tan 30° ≈ 0,577)",
+        "58,6 m aproximadamente",
+        "Cada ángulo entrega la distancia de un bote a la base.\n\n"
+        "1) Con 45°: la distancia es 80 / 1 = 80 m.\n"
+        "2) Con 30°: la distancia es 80 / 0,577 = 138,6 m aproximadamente.\n"
+        "3) La separación entre los botes es 138,6 − 80 = 58,6 m "
+        "aproximadamente.\n\n"
+        "El bote con menor ángulo de depresión es el más lejano: mientras más "
+        "lejos, más horizontal es la visual.",
+        [
+            ("138,6 m aproximadamente",
+             "Es la distancia del bote lejano a la base, no la separación entre los botes."),
+            ("80 m",
+             "Es la distancia del bote cercano a la base."),
+            ("218,6 m aproximadamente, sumando las dos distancias en vez de restarlas",
+             "Los botes están del mismo lado y alineados: la separación es la diferencia."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "dificil",
+        "Un estudiante afirma que si un ángulo de elevación se duplica, "
+        "entonces la altura observada también se duplica. ¿Es correcta su "
+        "afirmación?",
+        "No: al pasar de 30° a 60° la altura se triplica",
+        "La relación entre ángulo y altura no es proporcional.\n\n"
+        "1) A distancia fija d, la altura es d · tan θ.\n"
+        "2) tan 30° ≈ 0,577 y tan 60° ≈ 1,732.\n"
+        "3) El cuociente entre ambas es 3, no 2: la altura se triplica.\n\n"
+        "La tangente crece cada vez más rápido a medida que el ángulo se acerca "
+        "a 90°, así que ningún factor fijo sirve para todos los casos.",
+        [
+            ("Sí, porque la altura es proporcional al ángulo",
+             "La altura es proporcional a la tangente del ángulo, y la tangente no es proporcional al ángulo."),
+            ("No: al duplicar el ángulo la altura se reduce a la mitad",
+             "La altura aumenta al aumentar el ángulo, no disminuye."),
+            ("Sí, siempre que la distancia al objeto se mantenga constante",
+             "Aun con distancia constante el factor no es 2: de 30° a 60° la altura se triplica."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "dificil",
+        "Un triángulo isósceles tiene dos lados de 10 cm y un ángulo de 40° "
+        "entre ellos. ¿Cuál es su área? (sen 40° ≈ 0,643)",
+        "32,2 cm² aproximadamente",
+        "Se usa la fórmula del área con el seno del ángulo comprendido.\n\n"
+        "1) El área es la mitad del producto de los dos lados por el seno del "
+        "ángulo entre ellos.\n"
+        "2) Reemplazando: 0,5 · 10 · 10 · 0,643.\n"
+        "3) Eso da 32,2 cm² aproximadamente.\n\n"
+        "El triángulo no es rectángulo, pero la fórmula funciona igual: el seno "
+        "hace el papel de la altura relativa a uno de los lados.",
+        [
+            ("64,3 cm² aproximadamente",
+             "Olvida dividir por dos."),
+            ("50 cm²",
+             "Olvida multiplicar por el seno del ángulo comprendido."),
+            ("200 cm², multiplicando los lados por la medida del ángulo",
+             "Los grados no se multiplican por longitudes: entra el seno."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "dificil",
+        "En un triángulo rectángulo, la hipotenusa mide 20 cm y uno de los "
+        "catetos es el doble del otro. ¿Cuál es la tangente del ángulo menor?",
+        "0,5",
+        "Se aprovecha la relación entre catetos sin necesidad de calcularlos.\n\n"
+        "1) Si un cateto mide x, el otro mide 2x.\n"
+        "2) El ángulo menor es el opuesto al cateto menor, así que su tangente "
+        "es x dividido por 2x.\n"
+        "3) Eso da 0,5, sin que haga falta usar la hipotenusa.\n\n"
+        "El dato de los 20 cm sirve para calcular los lados, que resultan ser "
+        "cerca de 8,94 cm y 17,89 cm, pero no altera la razón.",
+        [
+            ("2",
+             "Esa es la tangente del ángulo mayor, con los catetos invertidos."),
+            ("0,45 aproximadamente",
+             "Corresponde al seno del ángulo menor, que sí depende de la hipotenusa."),
+            ("10, tomando la mitad de la hipotenusa como valor de la tangente",
+             "La hipotenusa no interviene en la tangente."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "dificil",
+        "Una antena está sobre un edificio de 25 m. Desde un punto a 40 m de la "
+        "base, el ángulo de elevación a la punta de la antena es de 50°. ¿Cuánto "
+        "mide la antena? (tan 50° ≈ 1,19)",
+        "22,6 m aproximadamente",
+        "Se calcula la altura total y se descuenta el edificio.\n\n"
+        "1) La altura total hasta la punta es 40 · 1,19 = 47,6 m "
+        "aproximadamente.\n"
+        "2) De esa altura, 25 m corresponden al edificio.\n"
+        "3) La antena mide 47,6 − 25 = 22,6 m aproximadamente.\n\n"
+        "El triángulo entrega siempre la altura total desde el suelo: hay que "
+        "restar lo que ya se conoce.",
+        [
+            ("47,6 m aproximadamente",
+             "Es la altura total hasta la punta, sin descontar el edificio."),
+            ("29,8 m aproximadamente",
+             "Aplica la tangente a los 25 m del edificio en vez de a la distancia."),
+            ("15 m, restando la distancia de 40 m a la altura del edificio",
+             "Distancia horizontal y altura no se restan entre sí."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "dificil",
+        "Si tan θ = 2,4 en un triángulo rectángulo, ¿cuánto vale sen θ?",
+        "12/13",
+        "Se reconstruye un triángulo compatible con esa tangente.\n\n"
+        "1) tan θ = 2,4 = 12/5, así que se puede tomar cateto opuesto 12 y "
+        "adyacente 5.\n"
+        "2) La hipotenusa es la raíz de 144 + 25 = 169, es decir, 13.\n"
+        "3) El seno es 12/13, aproximadamente 0,92.\n\n"
+        "Cualquier triángulo con esa tangente entrega el mismo seno: las "
+        "razones no dependen del tamaño.",
+        [
+            ("5/13",
+             "Ese es el coseno del ángulo, que usa el cateto adyacente."),
+            ("2,4",
+             "Ese es el valor de la tangente; el seno nunca supera a 1."),
+            ("12/5, repitiendo la razón de la tangente en forma de fracción",
+             "El seno divide el cateto opuesto por la hipotenusa, que vale 13."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "dificil",
+        "Dos calles se cruzan formando un ángulo de 60°. Una persona camina "
+        "300 m por una y 200 m por la otra desde el cruce. ¿Cuál es el área del "
+        "triángulo que encierran los dos tramos y la línea que los une? "
+        "(sen 60° ≈ 0,866)",
+        "25.980 m² aproximadamente",
+        "Se aplica la fórmula del área con el ángulo comprendido.\n\n"
+        "1) El área es la mitad del producto de los dos tramos por el seno del "
+        "ángulo entre ellos.\n"
+        "2) Reemplazando: 0,5 · 300 · 200 · 0,866.\n"
+        "3) Eso da 25.980 m² aproximadamente.\n\n"
+        "Ese resultado es cerca de 2,6 hectáreas, una superficie razonable para "
+        "una manzana grande.",
+        [
+            ("51.960 m² aproximadamente",
+             "Olvida dividir por dos."),
+            ("30.000 m²",
+             "Olvida multiplicar por el seno del ángulo comprendido."),
+            ("60.000 m², multiplicando los dos tramos sin más ajustes",
+             "Falta dividir por dos y multiplicar por el seno del ángulo."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "dificil",
+        "Se afirma: «En un triángulo rectángulo, si se conoce un ángulo agudo y "
+        "un lado, el triángulo queda completamente determinado». ¿Es correcta "
+        "la afirmación?",
+        "Sí, porque el otro ángulo se deduce y las razones entregan los demás lados",
+        "Con esos datos quedan fijados los tres ángulos y la escala.\n\n"
+        "1) El ángulo recto y el ángulo agudo conocido determinan el tercer "
+        "ángulo, por complementariedad.\n"
+        "2) Los tres ángulos fijan la forma del triángulo.\n"
+        "3) El lado conocido fija el tamaño, y las razones trigonométricas "
+        "entregan los otros dos lados.\n\n"
+        "Con solo los ángulos no bastaría: habría infinitos triángulos "
+        "semejantes de distinto tamaño.",
+        [
+            ("No: hacen falta al menos dos lados",
+             "Un lado más un ángulo agudo bastan; con dos lados también, pero no es la única vía."),
+            ("Sí, pero solo si el lado conocido es la hipotenusa",
+             "Sirve cualquiera de los tres lados: cambia la razón que se usa, no la conclusión."),
+            ("No: los ángulos determinan la forma pero nunca el tamaño",
+             "Los ángulos fijan la forma y el lado conocido fija el tamaño."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "dificil",
+        "Una cometa está sujeta por un hilo de 60 m que forma 35° con la "
+        "horizontal. Si quien la sujeta tiene la mano a 1,5 m del suelo, ¿a qué "
+        "altura vuela la cometa? (sen 35° ≈ 0,574)",
+        "35,9 m aproximadamente",
+        "Se calcula el tramo del triángulo y se suma la altura de la mano.\n\n"
+        "1) El hilo es la hipotenusa: la altura sobre la mano es "
+        "60 · 0,574 = 34,4 m aproximadamente.\n"
+        "2) La mano está a 1,5 m del suelo.\n"
+        "3) La altura total es 34,4 + 1,5 = 35,9 m aproximadamente.\n\n"
+        "Igual que con el ángulo de elevación medido desde los ojos, el vértice "
+        "del triángulo no está en el suelo y hay que corregirlo al final.",
+        [
+            ("34,4 m aproximadamente",
+             "Olvida sumar la altura a la que está la mano."),
+            ("49,1 m aproximadamente",
+             "Usa cos 35°, que entrega la distancia horizontal y no la altura."),
+            ("61,5 m, sumando la altura de la mano a toda la longitud del hilo",
+             "El hilo es la hipotenusa: hay que multiplicarlo por el seno antes de sumar."),
+        ],
+    ),
+]
+
+
+QUESTIONS += [
+    _q(
+        "geo_trigonometria", "dificil",
+        "Un tobogán recto de 9 m de largo baja desde una plataforma y forma "
+        "25° con el suelo. ¿Cuánto más largo tendría que ser para alcanzar la "
+        "misma altura con una inclinación de 15°? (sen 25° ≈ 0,423 y "
+        "sen 15° ≈ 0,259)",
+        "5,7 m más aproximadamente",
+        "La altura de la plataforma es la misma en los dos casos.\n\n"
+        "1) Con el tobogán actual: la altura es 9 · 0,423 = 3,81 m "
+        "aproximadamente.\n"
+        "2) Con 15°, el largo necesario cumple L · 0,259 = 3,81, así que "
+        "L = 14,7 m aproximadamente.\n"
+        "3) La diferencia es 14,7 − 9 = 5,7 m aproximadamente.\n\n"
+        "Bajar la inclinación obliga a alargar bastante la estructura: es el "
+        "mismo cálculo que ordena las normas de accesibilidad de rampas.",
+        [
+            ("14,7 m más aproximadamente",
+             "Ese es el largo total del tobogán nuevo, no cuánto habría que agregarle."),
+            ("3,8 m más aproximadamente",
+             "Esa es la altura de la plataforma, no la diferencia de largo."),
+            ("10 m más, suponiendo que bajar el ángulo a menos de la mitad duplica el largo",
+             "La relación no es proporcional al ángulo sino a su seno: el largo pasa de 9 a 14,7 m."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Geometria: circunferencia
+#
+# Angulos del centro, inscritos y semiinscritos, cuerdas, tangentes y
+# secantes, arcos y sectores circulares.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "geo_circunferencia", "facil",
+        "¿Qué nombre recibe el segmento que une dos puntos cualesquiera de una "
+        "circunferencia?",
+        "Cuerda",
+        "Los elementos de la circunferencia se distinguen por qué puntos "
+        "unen.\n\n"
+        "1) La cuerda une dos puntos de la circunferencia.\n"
+        "2) El radio une el centro con un punto de la circunferencia.\n"
+        "3) El diámetro es la cuerda particular que pasa por el centro.\n\n"
+        "Todo diámetro es cuerda, pero no toda cuerda es diámetro: el diámetro "
+        "es la cuerda más larga posible.",
+        [
+            ("Radio",
+             "El radio va del centro a un punto del borde, no de un punto del borde a otro."),
+            ("Arco",
+             "El arco es un tramo curvo de la circunferencia, no un segmento recto."),
+            ("Tangente",
+             "La tangente es una recta que toca la circunferencia en un solo punto."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "facil",
+        "¿Cuánto mide el ángulo que forma una recta tangente con el radio "
+        "trazado al punto de tangencia?",
+        "90°",
+        "La tangente toca la circunferencia en un solo punto.\n\n"
+        "1) Si el ángulo no fuera recto, la recta cortaría la circunferencia en "
+        "un segundo punto.\n"
+        "2) Eso la convertiría en secante y no en tangente.\n"
+        "3) Por lo tanto la tangente siempre es perpendicular al radio en el "
+        "punto de contacto.\n\n"
+        "Es la propiedad que permite resolver muchos problemas: aparece un "
+        "triángulo rectángulo listo para usar Pitágoras.",
+        [
+            ("45°",
+             "No hay razón para ese valor: la perpendicularidad es exacta."),
+            ("180°",
+             "Eso significaría que el radio y la tangente son la misma recta."),
+            ("Depende del tamaño de la circunferencia",
+             "El ángulo es recto en cualquier circunferencia, sea cual sea su radio."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "facil",
+        "¿Cuál es la cuerda más larga que se puede trazar en una "
+        "circunferencia?",
+        "El diámetro",
+        "El diámetro pasa por el centro.\n\n"
+        "1) Cualquier cuerda queda dentro del círculo.\n"
+        "2) La distancia máxima entre dos puntos del borde se alcanza cuando la "
+        "cuerda pasa por el centro.\n"
+        "3) Esa cuerda es el diámetro, que mide el doble del radio.\n\n"
+        "Cualquier otra cuerda queda a cierta distancia del centro, y mientras "
+        "más lejos esté, más corta es.",
+        [
+            ("El radio",
+             "El radio no es una cuerda: uno de sus extremos es el centro."),
+            ("La tangente",
+             "La tangente es una recta exterior que toca en un solo punto, no una cuerda."),
+            ("Cualquier cuerda que pase cerca del borde de la circunferencia",
+             "Esas son justamente las más cortas: mientras más lejos del centro, menor la cuerda."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "facil",
+        "En una circunferencia de radio 5 cm, ¿cuánto mide el diámetro?",
+        "10 cm",
+        "El diámetro es el doble del radio.\n\n"
+        "1) El diámetro va de un punto del borde a otro pasando por el "
+        "centro.\n"
+        "2) Ese recorrido son dos radios seguidos.\n"
+        "3) Por lo tanto mide 2 · 5 = 10 cm.\n\n"
+        "La relación funciona en los dos sentidos: conocido el diámetro, el "
+        "radio es su mitad.",
+        [
+            ("2,5 cm",
+             "Toma la mitad del radio en vez del doble."),
+            ("25 cm",
+             "Eleva el radio al cuadrado, que es lo que se usa para el área."),
+            ("31,4 cm, que es la longitud de la circunferencia completa",
+             "Esa es la medida del contorno, no la del diámetro."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "facil",
+        "Un ángulo del centro mide 70°. ¿Cuánto mide el arco que abarca?",
+        "70°",
+        "El ángulo del centro y su arco tienen la misma medida angular.\n\n"
+        "1) El arco se mide por el ángulo que lo subtiende desde el centro.\n"
+        "2) Ese ángulo mide 70°.\n"
+        "3) Por lo tanto el arco mide 70°.\n\n"
+        "Es la definición misma de medida angular de un arco: por eso una "
+        "circunferencia completa mide 360°.",
+        [
+            ("35°",
+             "Esa sería la medida de un ángulo inscrito que abarque el mismo arco."),
+            ("140°",
+             "Duplica la medida, cuando el ángulo del centro y su arco coinciden."),
+            ("290°, que es lo que le falta al arco para completar la vuelta",
+             "Ese es el arco mayor; el que abarca el ángulo mide 70°."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "facil",
+        "¿Qué es un sector circular?",
+        "La región del círculo limitada por dos radios y el arco entre ellos",
+        "Se trata de una porción del círculo, no de la circunferencia.\n\n"
+        "1) Dos radios parten desde el centro hacia dos puntos del borde.\n"
+        "2) Entre esos puntos queda un arco.\n"
+        "3) La región encerrada por los dos radios y el arco es el sector "
+        "circular.\n\n"
+        "Es la forma de una porción de pizza o de un trozo de gráfico circular.",
+        [
+            ("El tramo curvo de la circunferencia entre dos puntos",
+             "Eso es un arco: una línea, no una región."),
+            ("La región limitada por una cuerda y su arco",
+             "Esa región se llama segmento circular, no sector."),
+            ("El círculo completo, medido en grados en vez de en unidades de área",
+             "El sector es solo una parte del círculo."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "facil",
+        "¿Cómo son entre sí dos radios de una misma circunferencia?",
+        "Siempre miden lo mismo",
+        "El radio es la distancia constante del centro al borde.\n\n"
+        "1) Todos los puntos de la circunferencia están a la misma distancia "
+        "del centro.\n"
+        "2) Esa distancia es precisamente el radio.\n"
+        "3) Por lo tanto dos radios cualesquiera son congruentes.\n\n"
+        "Es lo que hace que aparezcan tantos triángulos isósceles en los "
+        "problemas de circunferencia: dos radios y una cuerda.",
+        [
+            ("Miden lo mismo solo si son perpendiculares",
+             "Miden lo mismo siempre, cualquiera sea el ángulo entre ellos."),
+            ("El más cercano a una cuerda es más corto",
+             "Todos los radios tienen la misma medida."),
+            ("Depende de si la circunferencia está inscrita o circunscrita a un polígono",
+             "El radio es constante en cualquier circunferencia."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "facil",
+        "En una circunferencia de radio 4 cm, ¿cuál es la longitud de la "
+        "circunferencia completa? (usa π ≈ 3,14)",
+        "25,12 cm",
+        "Se aplica la fórmula del perímetro.\n\n"
+        "1) La longitud es 2 · π · r.\n"
+        "2) Reemplazando: 2 · 3,14 · 4.\n"
+        "3) Eso da 25,12 cm.\n\n"
+        "Como control: la longitud siempre es algo más de tres veces el "
+        "diámetro, y aquí el diámetro es 8 cm.",
+        [
+            ("12,56 cm",
+             "Usa el radio como si fuera el diámetro: falta multiplicar por 2."),
+            ("50,24 cm",
+             "Usa el diámetro donde correspondía el radio, duplicando el resultado."),
+            ("16 cm, multiplicando el radio por cuatro sin usar π",
+             "La longitud de la circunferencia siempre lleva el factor π."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "facil",
+        "¿Cuántos puntos en común tiene una recta tangente con la "
+        "circunferencia?",
+        "Uno",
+        "Es lo que define a la tangente.\n\n"
+        "1) Una recta exterior no toca la circunferencia en ningún punto.\n"
+        "2) Una recta secante la corta en dos puntos.\n"
+        "3) La tangente es el caso intermedio: la toca en exactamente uno.\n\n"
+        "Ese punto único se llama punto de tangencia, y el radio trazado hacia "
+        "él es perpendicular a la recta.",
+        [
+            ("Ninguno",
+             "Esa es una recta exterior a la circunferencia."),
+            ("Dos",
+             "Esa es una recta secante."),
+            ("Infinitos, porque la recta se apoya sobre el borde curvo",
+             "Una recta y una circunferencia no pueden compartir más de dos puntos."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Un ángulo inscrito abarca un arco de 120°. ¿Cuánto mide el ángulo?",
+        "60°",
+        "El ángulo inscrito mide la mitad de su arco.\n\n"
+        "1) El arco abarcado mide 120°.\n"
+        "2) El ángulo inscrito es la mitad de esa medida.\n"
+        "3) Por lo tanto mide 60°.\n\n"
+        "Un ángulo del centro que abarcara ese mismo arco mediría los 120° "
+        "completos: la mitad es lo que distingue al inscrito.",
+        [
+            ("120°",
+             "Esa es la medida del arco y del ángulo del centro, no del inscrito."),
+            ("240°",
+             "Duplica el arco en vez de dividirlo por dos."),
+            ("30°, tomando la cuarta parte del arco abarcado",
+             "El ángulo inscrito es la mitad del arco, no la cuarta parte."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "En una circunferencia de radio 9 cm, ¿cuál es la longitud de un arco "
+        "de 60°? (usa π ≈ 3,14)",
+        "9,42 cm",
+        "El arco es la fracción de la circunferencia que le corresponde.\n\n"
+        "1) La circunferencia completa mide 2 · 3,14 · 9 = 56,52 cm.\n"
+        "2) El arco de 60° es la sexta parte de la vuelta, porque 60/360 = "
+        "1/6.\n"
+        "3) Su longitud es 56,52 / 6 = 9,42 cm.\n\n"
+        "El atajo es la fórmula directa: la longitud del arco es la fracción "
+        "del ángulo por la longitud total.",
+        [
+            ("56,52 cm",
+             "Es la circunferencia completa, sin tomar la fracción correspondiente."),
+            ("28,26 cm",
+             "Toma la mitad de la vuelta, que correspondería a un arco de 180°."),
+            ("60 cm, tomando la medida del ángulo como longitud del arco",
+             "Los grados miden la apertura, no la longitud en centímetros."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "En una circunferencia de radio 6 cm, ¿cuál es el área de un sector de "
+        "90°? (usa π ≈ 3,14)",
+        "28,26 cm²",
+        "El sector es la fracción del círculo que corresponde al ángulo.\n\n"
+        "1) El área del círculo completo es 3,14 · 36 = 113,04 cm².\n"
+        "2) Un sector de 90° es la cuarta parte de la vuelta.\n"
+        "3) Su área es 113,04 / 4 = 28,26 cm².\n\n"
+        "La lógica es la misma que con el arco: lo que cambia es que se reparte "
+        "el área en vez del perímetro.",
+        [
+            ("113,04 cm²",
+             "Es el área del círculo completo, sin tomar la cuarta parte."),
+            ("9,42 cm²",
+             "Es la longitud del arco de 90°, no el área del sector."),
+            ("56,52 cm², tomando la mitad del círculo en vez de la cuarta parte",
+             "Un ángulo de 90° corresponde a un cuarto de vuelta."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Dos cuerdas se cortan dentro de una circunferencia. Una queda dividida "
+        "en segmentos de 3 cm y 8 cm; la otra tiene un segmento de 4 cm. "
+        "¿Cuánto mide el otro segmento?",
+        "6 cm",
+        "Los productos de los segmentos de cada cuerda son iguales.\n\n"
+        "1) En la primera cuerda el producto es 3 · 8 = 24.\n"
+        "2) En la segunda debe valer lo mismo: 4 · x = 24.\n"
+        "3) Despejando: x = 6 cm.\n\n"
+        "Esa igualdad de productos se llama potencia del punto, y vale para "
+        "cualquier par de cuerdas que se corten en un punto interior.",
+        [
+            ("7 cm",
+             "Iguala las sumas de los segmentos en vez de los productos."),
+            ("12 cm",
+             "Toma la mitad de 24 en vez de dividirlo por el segmento conocido."),
+            ("24 cm, que es el valor del producto y no la medida del segmento",
+             "El producto es 24; el segmento sale de dividir 24 por 4."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Un triángulo está inscrito en una circunferencia y uno de sus lados es "
+        "el diámetro. ¿Qué tipo de triángulo es?",
+        "Rectángulo",
+        "Es la consecuencia directa del teorema de Thales para "
+        "circunferencias.\n\n"
+        "1) El diámetro abarca un arco de 180°.\n"
+        "2) El ángulo inscrito que lo abarca mide la mitad: 90°.\n"
+        "3) El triángulo tiene entonces un ángulo recto.\n\n"
+        "El vértice opuesto al diámetro puede estar en cualquier punto del "
+        "borde: el ángulo recto se conserva siempre.",
+        [
+            ("Equilátero",
+             "Sus lados no tienen por qué ser iguales: el vértice puede estar en cualquier punto."),
+            ("Obtusángulo",
+             "El ángulo que abarca el diámetro mide exactamente 90°, no más."),
+            ("Isósceles, porque dos de sus lados son radios de la circunferencia",
+             "Los lados del triángulo son cuerdas, no radios."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Desde un punto exterior se traza una tangente de 12 cm a una "
+        "circunferencia. Si la distancia del punto al centro es 13 cm, ¿cuál es "
+        "el radio?",
+        "5 cm",
+        "El radio, la tangente y la distancia al centro forman un triángulo "
+        "rectángulo.\n\n"
+        "1) El radio es perpendicular a la tangente en el punto de contacto.\n"
+        "2) La distancia al centro es la hipotenusa: 13 cm.\n"
+        "3) Por Pitágoras: el radio es la raíz de 169 − 144 = 25, es decir, "
+        "5 cm.\n\n"
+        "El triángulo 5-12-13 aparece con frecuencia en estos problemas, lo que "
+        "permite verificar el resultado de un vistazo.",
+        [
+            ("1 cm",
+             "Resta las medidas en vez de aplicar Pitágoras."),
+            ("17,7 cm aproximadamente",
+             "Suma los cuadrados en vez de restarlos: eso daría la hipotenusa."),
+            ("25 cm, quedándose con el resultado de la resta de cuadrados",
+             "25 es el cuadrado del radio; hay que extraer la raíz."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Dos ángulos inscritos abarcan arcos de 80° y 100° en la misma "
+        "circunferencia. ¿Cuánto suman los dos ángulos?",
+        "90°",
+        "Cada ángulo inscrito mide la mitad de su arco.\n\n"
+        "1) El primero mide 80/2 = 40°.\n"
+        "2) El segundo mide 100/2 = 50°.\n"
+        "3) La suma es 40 + 50 = 90°.\n\n"
+        "El atajo es sumar primero los arcos, 180°, y dividir esa suma por dos: "
+        "el resultado es el mismo.",
+        [
+            ("180°",
+             "Suma los arcos sin dividir cada ángulo por dos."),
+            ("45°",
+             "Divide la suma de arcos por cuatro en vez de por dos."),
+            ("360°, completando la vuelta con los dos arcos mencionados",
+             "Los arcos suman 180°, no 360°, y los ángulos son la mitad de eso."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Un cuadrilátero está inscrito en una circunferencia y uno de sus "
+        "ángulos mide 75°. ¿Cuánto mide el ángulo opuesto?",
+        "105°",
+        "Los ángulos opuestos de un cuadrilátero inscrito son "
+        "suplementarios.\n\n"
+        "1) Cada uno abarca el arco que el otro no cubre.\n"
+        "2) Entre los dos arcos completan la vuelta: 360°.\n"
+        "3) Como cada ángulo es la mitad de su arco, ambos suman 180°, así que "
+        "el opuesto mide 180 − 75 = 105°.\n\n"
+        "La propiedad solo vale si el cuadrilátero es inscriptible, es decir, "
+        "si sus cuatro vértices están sobre la circunferencia.",
+        [
+            ("75°",
+             "Serían iguales en un paralelogramo, pero en un cuadrilátero inscrito son suplementarios."),
+            ("15°",
+             "Aplica complementariedad, que exigiría sumar 90° y no 180°."),
+            ("285°, restando el ángulo dado a la vuelta completa",
+             "Lo que suma 360° son los arcos; los ángulos opuestos suman 180°."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "En una circunferencia, ¿qué relación hay entre una cuerda y la recta "
+        "que pasa por el centro y es perpendicular a ella?",
+        "Esa recta divide la cuerda en dos partes iguales",
+        "El centro está a igual distancia de los dos extremos de la cuerda.\n\n"
+        "1) Los dos radios trazados a los extremos de la cuerda son iguales.\n"
+        "2) Se forma un triángulo isósceles con la cuerda como base.\n"
+        "3) La altura desde el centro es también la mediana: corta la cuerda en "
+        "su punto medio.\n\n"
+        "La propiedad se usa mucho al revés: para encontrar el centro de un "
+        "arco basta trazar dos cuerdas y sus perpendiculares por el punto "
+        "medio.",
+        [
+            ("Esa recta es tangente a la circunferencia",
+             "Pasa por el centro, así que corta la circunferencia en dos puntos: es secante."),
+            ("Esa recta divide la cuerda en dos partes de razón 2 : 1",
+             "Las dos partes son exactamente iguales."),
+            ("No existe tal recta, salvo que la cuerda sea un diámetro",
+             "Existe siempre: es la perpendicular a la cuerda por el centro."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Un ángulo del centro mide 45° en una circunferencia de radio 8 cm. "
+        "¿Cuál es el área del sector correspondiente? (usa π ≈ 3,14)",
+        "25,12 cm²",
+        "El sector es la fracción del círculo que corresponde al ángulo.\n\n"
+        "1) El área del círculo es 3,14 · 64 = 200,96 cm².\n"
+        "2) Un ángulo de 45° corresponde a 45/360 = 1/8 de la vuelta.\n"
+        "3) El área del sector es 200,96 / 8 = 25,12 cm².\n\n"
+        "Coincide numéricamente con la longitud de una circunferencia de radio "
+        "4, pero se trata de magnitudes distintas: aquí son centímetros "
+        "cuadrados.",
+        [
+            ("200,96 cm²",
+             "Es el área del círculo completo, sin tomar la fracción."),
+            ("50,24 cm²",
+             "Toma la cuarta parte del círculo, que corresponde a 90° y no a 45°."),
+            ("6,28 cm², que es la longitud del arco correspondiente",
+             "Esa es una medida de longitud, no de área."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Dos circunferencias del mismo radio se cortan en dos puntos. ¿Qué "
+        "figura forman los dos centros y uno de los puntos de corte?",
+        "Un triángulo equilátero, si la distancia entre centros iguala al radio",
+        "Los lados del triángulo son dos radios y la distancia entre "
+        "centros.\n\n"
+        "1) El segmento de cada centro al punto de corte es un radio, y ambos "
+        "radios son iguales.\n"
+        "2) El triángulo es entonces isósceles en cualquier caso.\n"
+        "3) Si además la distancia entre los centros iguala al radio, los tres "
+        "lados coinciden y el triángulo es equilátero.\n\n"
+        "Esa construcción es la que se usa para trazar un ángulo de 60° con "
+        "regla y compás.",
+        [
+            ("Siempre un triángulo equilátero, sea cual sea la distancia entre centros",
+             "Solo lo es cuando esa distancia iguala al radio; si no, es isósceles."),
+            ("Siempre un triángulo rectángulo",
+             "El ángulo recto aparece solo en un caso particular, no siempre."),
+            ("Un triángulo escaleno, porque los tres lados tienen orígenes distintos",
+             "Dos de los lados son radios iguales, así que nunca es escaleno."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "¿Cuánto mide un ángulo semiinscrito formado por una cuerda y la "
+        "tangente en uno de sus extremos, si el arco que abarca mide 140°?",
+        "70°",
+        "El ángulo semiinscrito mide la mitad del arco que abarca.\n\n"
+        "1) El vértice está sobre la circunferencia, igual que en un ángulo "
+        "inscrito.\n"
+        "2) Uno de sus lados es la tangente y el otro, la cuerda.\n"
+        "3) La medida sigue la misma regla: la mitad del arco, es decir, "
+        "140/2 = 70°.\n\n"
+        "Es la misma relación que rige para los ángulos inscritos: cambiar una "
+        "cuerda por la tangente no altera el resultado.",
+        [
+            ("140°",
+             "Esa es la medida del arco; el ángulo semiinscrito es su mitad."),
+            ("35°",
+             "Divide el arco por cuatro en vez de por dos."),
+            ("110°, restando el arco a 250 grados",
+             "La regla es dividir el arco por dos: 140/2 = 70."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Una cuerda mide 16 cm en una circunferencia de radio 10 cm. ¿A qué "
+        "distancia del centro está la cuerda?",
+        "6 cm",
+        "La perpendicular desde el centro parte la cuerda por la mitad.\n\n"
+        "1) La mitad de la cuerda mide 8 cm.\n"
+        "2) Se forma un triángulo rectángulo con hipotenusa 10 cm, que es el "
+        "radio.\n"
+        "3) La distancia buscada es la raíz de 100 − 64 = 36, es decir, 6 cm.\n\n"
+        "Es otra aparición del triángulo 6-8-10, ampliación del clásico 3-4-5.",
+        [
+            ("8 cm",
+             "Es la mitad de la cuerda, no la distancia al centro."),
+            ("2 cm",
+             "Resta las medidas en vez de aplicar Pitágoras."),
+            ("12,8 cm aproximadamente, sumando los cuadrados en lugar de restarlos",
+             "La distancia al centro es un cateto: hay que restar."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "En una circunferencia, un arco mide 90°. ¿Cuánto mide el arco que le "
+        "falta para completar la vuelta?",
+        "270°",
+        "Los dos arcos determinados por dos puntos suman una vuelta "
+        "completa.\n\n"
+        "1) La circunferencia completa mide 360°.\n"
+        "2) Uno de los arcos mide 90°.\n"
+        "3) El otro mide 360 − 90 = 270°.\n\n"
+        "Al hablar de «el arco» que abarca un ángulo, se entiende siempre el "
+        "menor, salvo que el problema indique lo contrario.",
+        [
+            ("180°",
+             "Ese es el arco que completa una semicircunferencia, no una vuelta."),
+            ("45°",
+             "Es la mitad del arco dado, que no tiene relación con el arco complementario."),
+            ("360°, que es la medida de la circunferencia completa",
+             "A los 360° hay que descontarles los 90° del primer arco."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Dos tangentes trazadas desde un mismo punto exterior a una "
+        "circunferencia, ¿cómo son entre sí?",
+        "Tienen la misma longitud desde el punto hasta cada punto de tangencia",
+        "Se forman dos triángulos rectángulos congruentes.\n\n"
+        "1) Cada tangente es perpendicular al radio en su punto de contacto.\n"
+        "2) Los dos triángulos comparten la hipotenusa, que es la distancia del "
+        "punto al centro, y tienen radios iguales como cateto.\n"
+        "3) Por Pitágoras, los otros catetos también son iguales: las dos "
+        "tangentes miden lo mismo.\n\n"
+        "Esa igualdad es la base para inscribir circunferencias en polígonos.",
+        [
+            ("Siempre son perpendiculares entre sí",
+             "El ángulo entre ellas depende de qué tan lejos esté el punto del centro."),
+            ("La más cercana al centro es más corta",
+             "Ambas parten del mismo punto y miden exactamente lo mismo."),
+            ("Solo miden lo mismo si el punto está sobre un diámetro prolongado",
+             "La igualdad vale desde cualquier punto exterior."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "¿Cuál es la medida de un ángulo inscrito en una semicircunferencia?",
+        "90°",
+        "El arco abarcado es media vuelta.\n\n"
+        "1) Una semicircunferencia corresponde a un arco de 180°.\n"
+        "2) El ángulo inscrito mide la mitad de su arco.\n"
+        "3) Por lo tanto mide 180/2 = 90°.\n\n"
+        "Es la razón por la que todo triángulo inscrito que tenga el diámetro "
+        "como lado resulta rectángulo.",
+        [
+            ("180°",
+             "Esa es la medida del arco; el ángulo inscrito es su mitad."),
+            ("45°",
+             "Divide el arco por cuatro en vez de por dos."),
+            ("Depende de dónde esté el vértice sobre la semicircunferencia",
+             "El ángulo mide 90° cualquiera sea la posición del vértice."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Geometria: circunferencia (segunda tanda)
+#
+# Angulos interiores y exteriores, potencia de un punto, poligonos inscritos,
+# coronas y sectores, y circunferencias tangentes entre si.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "geo_circunferencia", "medio",
+        "Un hexágono regular está inscrito en una circunferencia de radio "
+        "7 cm. ¿Cuánto mide cada lado del hexágono?",
+        "7 cm",
+        "Cada lado del hexágono regular inscrito iguala al radio.\n\n"
+        "1) Los seis vértices reparten la vuelta en arcos de 60°.\n"
+        "2) Cada lado, junto con los dos radios a sus extremos, forma un "
+        "triángulo con un ángulo del centro de 60° y dos lados iguales.\n"
+        "3) Ese triángulo es equilátero, así que el lado mide lo mismo que el "
+        "radio: 7 cm.\n\n"
+        "Es la razón por la que un hexágono regular se construye apoyando el "
+        "compás seis veces con la misma abertura.",
+        [
+            ("3,5 cm",
+             "Toma la mitad del radio, sin advertir que el triángulo es equilátero."),
+            ("14 cm",
+             "Ese es el diámetro, que corresponde a la distancia entre vértices opuestos."),
+            ("12,1 cm aproximadamente, que es la distancia entre dos vértices no consecutivos",
+             "El lado une vértices consecutivos y mide igual que el radio."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Una rueda de 50 cm de diámetro da 100 vueltas completas. ¿Qué "
+        "distancia recorre? (usa π ≈ 3,14)",
+        "157 m",
+        "Cada vuelta avanza una longitud de circunferencia.\n\n"
+        "1) La circunferencia mide 3,14 · 50 = 157 cm.\n"
+        "2) En 100 vueltas recorre 157 · 100 = 15.700 cm.\n"
+        "3) Convertido a metros: 157 m.\n\n"
+        "Con el diámetro se usa π · d; con el radio habría que usar 2 · π · r, "
+        "que da lo mismo.",
+        [
+            ("15,7 m",
+             "Se equivoca en un factor de diez al convertir centímetros a metros."),
+            ("314 m",
+             "Usa el diámetro como si fuera el radio, duplicando el resultado."),
+            ("5.000 cm, multiplicando el diámetro por el número de vueltas sin usar π",
+             "Cada vuelta avanza la circunferencia completa, que incluye el factor π."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Un cuadrado está inscrito en una circunferencia de radio 6 cm. ¿Cuánto "
+        "mide su diagonal?",
+        "12 cm",
+        "La diagonal del cuadrado inscrito es el diámetro.\n\n"
+        "1) Los cuatro vértices están sobre la circunferencia.\n"
+        "2) Dos vértices opuestos quedan diametralmente enfrentados.\n"
+        "3) La diagonal que los une pasa por el centro y mide 2 · 6 = 12 cm.\n\n"
+        "A partir de ahí el lado se obtiene dividiendo la diagonal por √2: "
+        "cerca de 8,49 cm.",
+        [
+            ("6 cm",
+             "Ese es el radio, que es la mitad de la diagonal."),
+            ("8,49 cm aproximadamente",
+             "Ese es el lado del cuadrado, no su diagonal."),
+            ("24 cm, tomando el doble del diámetro",
+             "La diagonal es exactamente el diámetro: 12 cm."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Dos circunferencias de radios 4 cm y 6 cm son tangentes "
+        "exteriormente. ¿Cuál es la distancia entre sus centros?",
+        "10 cm",
+        "El punto de tangencia queda sobre el segmento que une los centros.\n\n"
+        "1) Del primer centro al punto de contacto hay 4 cm.\n"
+        "2) De ahí al segundo centro hay 6 cm.\n"
+        "3) La distancia total es 4 + 6 = 10 cm.\n\n"
+        "Si fueran tangentes interiormente, la distancia sería la resta: 2 cm.",
+        [
+            ("2 cm",
+             "Esa es la distancia en el caso de tangencia interior, no exterior."),
+            ("24 cm",
+             "Multiplica los radios en vez de sumarlos."),
+            ("5 cm, tomando el promedio de los dos radios",
+             "La distancia entre centros es la suma de los radios: 10 cm."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "En una circunferencia de radio 10 cm, ¿cuál es el perímetro de un "
+        "sector de 90°? (usa π ≈ 3,14)",
+        "35,7 cm",
+        "El perímetro del sector incluye el arco y los dos radios.\n\n"
+        "1) El arco de 90° mide la cuarta parte de la circunferencia: "
+        "62,8 / 4 = 15,7 cm.\n"
+        "2) Los dos radios aportan 10 + 10 = 20 cm.\n"
+        "3) El perímetro total es 15,7 + 20 = 35,7 cm.\n\n"
+        "Olvidar los radios es el error más frecuente: el sector es una región "
+        "cerrada, no solo el arco.",
+        [
+            ("15,7 cm",
+             "Es solo la longitud del arco, sin los dos radios que cierran el sector."),
+            ("20 cm",
+             "Son solo los dos radios, sin el arco."),
+            ("78,5 cm, que es el área del sector y no su perímetro",
+             "El área se mide en centímetros cuadrados; aquí se pide una longitud."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Una corona circular está formada por dos circunferencias "
+        "concéntricas de radios 3 cm y 5 cm. ¿Cuál es su área? "
+        "(usa π ≈ 3,14)",
+        "50,24 cm²",
+        "La corona es la diferencia entre los dos círculos.\n\n"
+        "1) El círculo grande tiene área 3,14 · 25 = 78,5 cm².\n"
+        "2) El chico tiene área 3,14 · 9 = 28,26 cm².\n"
+        "3) La corona mide 78,5 − 28,26 = 50,24 cm².\n\n"
+        "El atajo es restar primero los cuadrados: 3,14 · (25 − 9) = "
+        "3,14 · 16.",
+        [
+            ("6,28 cm²",
+             "Resta los radios antes de elevarlos al cuadrado: eso da un valor mucho menor."),
+            ("78,5 cm²",
+             "Es el área del círculo grande, sin descontar el hueco central."),
+            ("106,76 cm², sumando las áreas de los dos círculos en vez de restarlas",
+             "La corona es la región que queda entre ambos: hay que restar."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Un ángulo inscrito mide 25°. ¿Cuánto mide el ángulo del centro que "
+        "abarca el mismo arco?",
+        "50°",
+        "El ángulo del centro es el doble del inscrito.\n\n"
+        "1) El ángulo inscrito mide la mitad de su arco, así que el arco mide "
+        "50°.\n"
+        "2) El ángulo del centro mide lo mismo que el arco.\n"
+        "3) Por lo tanto mide 50°.\n\n"
+        "La regla funciona en los dos sentidos: del centro al inscrito se "
+        "divide por dos, y al revés se multiplica.",
+        [
+            ("12,5°",
+             "Divide por dos en vez de multiplicar: el ángulo del centro es el mayor."),
+            ("25°",
+             "Serían iguales solo si ambos fueran inscritos sobre el mismo arco."),
+            ("100°, multiplicando por cuatro la medida del ángulo inscrito",
+             "El factor entre inscrito y ángulo del centro es 2."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Dos circunferencias de radios distintos tienen arcos que miden 60° "
+        "cada uno. ¿Qué se puede afirmar sobre esos arcos?",
+        "Tienen la misma medida angular, pero distinta longitud",
+        "Grados y centímetros miden cosas distintas.\n\n"
+        "1) La medida angular de un arco depende solo del ángulo del centro que "
+        "lo abarca.\n"
+        "2) Su longitud, en cambio, es la fracción correspondiente de "
+        "2 · π · r.\n"
+        "3) Con radios distintos, esas longitudes difieren aunque el ángulo "
+        "coincida.\n\n"
+        "Es la misma diferencia que hay entre la apertura de un abanico y el "
+        "largo de su borde.",
+        [
+            ("Tienen la misma longitud",
+             "La longitud depende del radio, que aquí es distinto."),
+            ("Tienen distinta medida angular",
+             "Ambas miden 60°: eso es lo que dice el enunciado."),
+            ("El de la circunferencia menor es el más largo",
+             "Ocurre lo contrario: a mayor radio, mayor longitud del arco."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Se traza una cuerda y los dos radios hacia sus extremos. Si el ángulo "
+        "del centro mide 100°, ¿cuánto mide cada ángulo de la base del "
+        "triángulo formado?",
+        "40°",
+        "El triángulo es isósceles porque dos de sus lados son radios.\n\n"
+        "1) Los tres ángulos suman 180°.\n"
+        "2) El ángulo del centro ocupa 100°, así que a los otros dos les quedan "
+        "80°.\n"
+        "3) Como son iguales entre sí, cada uno mide 40°.\n\n"
+        "Los ángulos de la base son siempre iguales en esta construcción, sea "
+        "cual sea la medida del ángulo del centro.",
+        [
+            ("80°",
+             "Es lo que suman los dos ángulos de la base, no lo que mide cada uno."),
+            ("50°",
+             "Toma la mitad del ángulo del centro, que no es lo que corresponde."),
+            ("100°, repitiendo la medida del ángulo del centro",
+             "Un triángulo no puede tener dos ángulos de 100°: sumarían más de 180°."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Un arco mide 24 cm en una circunferencia de radio 12 cm. ¿Qué "
+        "fracción de la vuelta representa? (usa π ≈ 3,14)",
+        "Cerca de un tercio",
+        "Se compara con la longitud total de la circunferencia.\n\n"
+        "1) La circunferencia completa mide 2 · 3,14 · 12 = 75,36 cm.\n"
+        "2) La fracción es 24 / 75,36, aproximadamente 0,318.\n"
+        "3) Eso está muy cerca de 1/3, que vale 0,333.\n\n"
+        "En medida angular corresponde a unos 115°, algo menos que los 120° de "
+        "un tercio exacto.",
+        [
+            ("Cerca de la mitad",
+             "La mitad de la circunferencia mide unos 37,7 cm, bastante más que 24."),
+            ("Cerca de un cuarto",
+             "Un cuarto mide unos 18,8 cm, bastante menos que 24."),
+            ("Exactamente dos tercios de la vuelta completa",
+             "Dos tercios medirían unos 50 cm; el arco de 24 cm es cerca de un tercio."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "dificil",
+        "Dos cuerdas se cortan dentro de una circunferencia. Los arcos "
+        "opuestos que determinan miden 70° y 50°. ¿Cuánto mide el ángulo "
+        "formado en el punto de corte?",
+        "60°",
+        "El ángulo interior mide la semisuma de los arcos opuestos.\n\n"
+        "1) Los arcos opuestos suman 70 + 50 = 120°.\n"
+        "2) El ángulo interior es la mitad de esa suma.\n"
+        "3) Por lo tanto mide 60°.\n\n"
+        "Es una generalización del ángulo inscrito: si el vértice se mueve "
+        "hasta el borde, uno de los arcos se anula y queda la mitad del otro.",
+        [
+            ("120°",
+             "Es la suma de los arcos, sin dividirla por dos."),
+            ("10°",
+             "Toma la semidiferencia, que corresponde a un ángulo con vértice exterior."),
+            ("35°, que es la mitad del arco mayor solamente",
+             "Hay que promediar los dos arcos opuestos, no quedarse con uno."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "dificil",
+        "Desde un punto exterior se trazan dos secantes. Los arcos que quedan "
+        "entre ellas miden 100° y 40°. ¿Cuánto mide el ángulo en el punto "
+        "exterior?",
+        "30°",
+        "El ángulo exterior mide la semidiferencia de los arcos.\n\n"
+        "1) La diferencia entre los arcos es 100 − 40 = 60°.\n"
+        "2) El ángulo exterior es la mitad de esa diferencia.\n"
+        "3) Por lo tanto mide 30°.\n\n"
+        "El contraste con el caso interior es útil: con el vértice dentro se "
+        "promedian los arcos, y con el vértice fuera se restan antes de dividir "
+        "por dos.",
+        [
+            ("70°",
+             "Toma la semisuma, que corresponde a un vértice interior."),
+            ("60°",
+             "Es la diferencia entre los arcos, sin dividirla por dos."),
+            ("140°, sumando los dos arcos sin ajustarlos",
+             "El ángulo exterior es la mitad de la diferencia: 30°."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "dificil",
+        "Desde un punto exterior se traza una tangente de 6 cm y una secante. "
+        "El tramo externo de la secante mide 4 cm. ¿Cuánto mide la secante "
+        "completa?",
+        "9 cm",
+        "La potencia del punto relaciona tangente y secante.\n\n"
+        "1) El cuadrado de la tangente iguala al producto de la secante "
+        "completa por su tramo externo.\n"
+        "2) Reemplazando: 36 = 4 · s.\n"
+        "3) Despejando: s = 9 cm.\n\n"
+        "El tramo interior de la secante, es decir, la cuerda, mide entonces "
+        "9 − 4 = 5 cm.",
+        [
+            ("5 cm",
+             "Ese es el tramo interior de la secante, no su longitud total."),
+            ("36 cm",
+             "Es el cuadrado de la tangente, que hay que dividir por el tramo externo."),
+            ("24 cm, multiplicando la tangente por el tramo externo",
+             "La relación usa el cuadrado de la tangente: 36 = 4 · s."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "dificil",
+        "Un triángulo rectángulo de catetos 6 cm y 8 cm tiene una "
+        "circunferencia inscrita. ¿Cuál es su radio?",
+        "2 cm",
+        "En un triángulo rectángulo el radio inscrito es la semisuma de los "
+        "catetos menos la hipotenusa, dividida por dos.\n\n"
+        "1) La hipotenusa mide 10 cm, porque el triángulo es un 6-8-10.\n"
+        "2) El radio se calcula como (6 + 8 − 10) / 2.\n"
+        "3) Eso da 4/2 = 2 cm.\n\n"
+        "Se puede comprobar por áreas: el área del triángulo es 24 cm² y el "
+        "semiperímetro es 12 cm, y su cuociente vuelve a dar 2 cm.",
+        [
+            ("5 cm",
+             "Ese es el radio de la circunferencia circunscrita, que es la mitad de la hipotenusa."),
+            ("4 cm",
+             "Olvida dividir por dos al final del cálculo."),
+            ("3 cm, tomando la mitad del cateto menor",
+             "El radio inscrito depende de los tres lados, no solo de un cateto."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "dificil",
+        "En una circunferencia de radio 10 cm, una cuerda subtiende un ángulo "
+        "del centro de 60°. ¿Cuánto mide la cuerda?",
+        "10 cm",
+        "El triángulo formado por la cuerda y los dos radios es "
+        "equilátero.\n\n"
+        "1) Los dos radios miden 10 cm cada uno, así que el triángulo es "
+        "isósceles.\n"
+        "2) El ángulo entre ellos mide 60°, y los otros dos ángulos son iguales "
+        "y suman 120°, es decir, 60° cada uno.\n"
+        "3) Con los tres ángulos de 60° el triángulo es equilátero: la cuerda "
+        "mide 10 cm.\n\n"
+        "Es el mismo hecho que hace que el lado del hexágono regular inscrito "
+        "iguale al radio.",
+        [
+            ("5 cm",
+             "Toma la mitad del radio, sin advertir que el triángulo es equilátero."),
+            ("20 cm",
+             "Ese es el diámetro, que corresponde a un ángulo del centro de 180°."),
+            ("17,3 cm aproximadamente, que corresponde a un ángulo del centro de 120°",
+             "Con 60° la cuerda mide exactamente lo mismo que el radio."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "dificil",
+        "Un sector circular tiene 40 cm² de área en una circunferencia de radio "
+        "8 cm. ¿Cuánto mide su ángulo del centro? (usa π ≈ 3,14)",
+        "71,6° aproximadamente",
+        "Se compara el área del sector con la del círculo completo.\n\n"
+        "1) El círculo completo mide 3,14 · 64 = 200,96 cm².\n"
+        "2) La fracción que ocupa el sector es 40 / 200,96, aproximadamente "
+        "0,199.\n"
+        "3) El ángulo es esa fracción de 360°: 0,199 · 360 = 71,6° "
+        "aproximadamente.\n\n"
+        "El resultado es cercano a 72°, que es justo la quinta parte de la "
+        "vuelta.",
+        [
+            ("40°",
+             "Toma el área como si fuera la medida del ángulo en grados."),
+            ("143,2° aproximadamente",
+             "Duplica el resultado: omite dividir la fracción por el área total una vez."),
+            ("5°, dividiendo el área del sector por el radio",
+             "El ángulo sale de comparar el área del sector con la del círculo completo."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "dificil",
+        "Se afirma: «Si un cuadrilátero tiene sus ángulos opuestos "
+        "suplementarios, entonces se puede inscribir en una circunferencia». "
+        "¿Es correcta la afirmación?",
+        "Sí, esa condición es suficiente para que sea inscriptible",
+        "La propiedad vale en los dos sentidos.\n\n"
+        "1) Todo cuadrilátero inscrito tiene sus ángulos opuestos "
+        "suplementarios.\n"
+        "2) El recíproco también es cierto: si los ángulos opuestos suman 180°, "
+        "los cuatro vértices están sobre una misma circunferencia.\n"
+        "3) Por eso la condición sirve como criterio para decidir si un "
+        "cuadrilátero es inscriptible.\n\n"
+        "Un rectángulo cumple el criterio, y en efecto siempre se puede "
+        "inscribir; un rombo que no sea cuadrado, en cambio, no lo cumple.",
+        [
+            ("No: la condición es necesaria pero no suficiente",
+             "También es suficiente: el recíproco del teorema es válido."),
+            ("No: solo los cuadrados y rectángulos son inscriptibles",
+             "Cualquier cuadrilátero con ángulos opuestos suplementarios lo es, aunque sea irregular."),
+            ("Sí, pero únicamente si además tiene dos lados paralelos",
+             "El paralelismo no es requisito: basta la condición sobre los ángulos."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "dificil",
+        "Dos circunferencias concéntricas tienen radios 6 cm y 10 cm. Una "
+        "cuerda de la mayor es tangente a la menor. ¿Cuánto mide esa cuerda?",
+        "16 cm",
+        "El radio menor cae perpendicular sobre la cuerda en su punto "
+        "medio.\n\n"
+        "1) El radio de 6 cm llega perpendicular al punto de tangencia, que es "
+        "el punto medio de la cuerda.\n"
+        "2) Se forma un triángulo rectángulo con hipotenusa 10 cm y un cateto "
+        "de 6 cm.\n"
+        "3) La media cuerda mide la raíz de 100 − 36 = 64, es decir, 8 cm, así "
+        "que la cuerda completa mide 16 cm.\n\n"
+        "El paso que se olvida con más frecuencia es el último: el triángulo "
+        "entrega la mitad de la cuerda, no la cuerda entera.",
+        [
+            ("8 cm",
+             "Es la mitad de la cuerda: falta duplicarla."),
+            ("4 cm",
+             "Resta los radios en vez de aplicar Pitágoras."),
+            ("11,7 cm aproximadamente, sumando los cuadrados de los dos radios",
+             "El radio mayor es la hipotenusa: hay que restar, no sumar."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "dificil",
+        "En una circunferencia, un ángulo semiinscrito entre una tangente y una "
+        "cuerda mide 55°. ¿Cuánto mide el ángulo inscrito que abarca esa misma "
+        "cuerda desde el otro arco?",
+        "125°",
+        "El ángulo semiinscrito y el inscrito del arco opuesto son "
+        "suplementarios.\n\n"
+        "1) El semiinscrito de 55° abarca un arco de 110°.\n"
+        "2) El arco restante mide 360 − 110 = 250°.\n"
+        "3) El ángulo inscrito que lo abarca mide la mitad: 125°.\n\n"
+        "Comprobación: 55 + 125 = 180°, como corresponde a dos ángulos "
+        "suplementarios.",
+        [
+            ("55°",
+             "Serían iguales si ambos abarcaran el mismo arco, y aquí abarcan arcos complementarios."),
+            ("35°",
+             "Aplica complementariedad, que exigiría sumar 90° y no 180°."),
+            ("110°, que es la medida del arco abarcado por el semiinscrito",
+             "El ángulo inscrito buscado abarca el arco restante, de 250°."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "dificil",
+        "Un reloj de pared tiene 30 cm de diámetro. ¿Qué distancia recorre la "
+        "punta del minutero en 20 minutos? (usa π ≈ 3,14)",
+        "31,4 cm",
+        "La punta del minutero recorre un arco de la circunferencia que "
+        "describe.\n\n"
+        "1) El minutero mide 15 cm, que es el radio del reloj.\n"
+        "2) En 20 minutos recorre un tercio de la vuelta, porque 20/60 = 1/3.\n"
+        "3) La vuelta completa mide 2 · 3,14 · 15 = 94,2 cm, así que el tercio "
+        "es 31,4 cm.\n\n"
+        "El dato del diámetro hay que convertirlo primero en radio: usarlo tal "
+        "cual duplicaría el resultado.",
+        [
+            ("15,7 cm",
+             "Corresponde a un sexto de la vuelta, es decir, a 10 minutos y no a 20."),
+            ("94,2 cm",
+             "Es la vuelta completa, que el minutero recorre en una hora."),
+            ("20 cm, tomando los minutos como si fueran centímetros",
+             "El tiempo determina qué fracción de la vuelta se recorre, no la distancia directa."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "dificil",
+        "En una circunferencia de radio 5 cm, ¿cuál es el área del segmento "
+        "circular determinado por una cuerda que subtiende un ángulo del centro "
+        "de 90°? (usa π ≈ 3,14)",
+        "7,125 cm²",
+        "El segmento es el sector menos el triángulo.\n\n"
+        "1) El sector de 90° tiene área 3,14 · 25 / 4 = 19,625 cm².\n"
+        "2) El triángulo formado por los dos radios es rectángulo con catetos "
+        "de 5 cm: su área es 12,5 cm².\n"
+        "3) El segmento mide 19,625 − 12,5 = 7,125 cm².\n\n"
+        "El segmento circular es siempre la parte del sector que queda al otro "
+        "lado de la cuerda.",
+        [
+            ("19,625 cm²",
+             "Es el área del sector completo, sin descontar el triángulo."),
+            ("12,5 cm²",
+             "Es el área del triángulo, que hay que restar y no entregar como resultado."),
+            ("32,125 cm², sumando el sector y el triángulo en vez de restarlos",
+             "El segmento es la diferencia entre ambos."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "dificil",
+        "Dos circunferencias de radios 9 cm y 4 cm son tangentes interiormente. "
+        "¿Cuál es la distancia entre sus centros?",
+        "5 cm",
+        "En la tangencia interior el punto de contacto queda al mismo lado de "
+        "ambos centros.\n\n"
+        "1) La circunferencia pequeña está dentro de la grande y la toca en un "
+        "punto.\n"
+        "2) La distancia entre centros es la diferencia entre los radios.\n"
+        "3) Eso da 9 − 4 = 5 cm.\n\n"
+        "En la tangencia exterior la distancia sería la suma, 13 cm: distinguir "
+        "los dos casos es lo que decide el signo de la operación.",
+        [
+            ("13 cm",
+             "Esa es la distancia en el caso de tangencia exterior."),
+            ("36 cm",
+             "Multiplica los radios en vez de restarlos."),
+            ("6,5 cm, tomando el promedio de los dos radios",
+             "La distancia es la diferencia entre los radios: 5 cm."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "dificil",
+        "Un estudiante afirma que dos cuerdas de igual longitud en una misma "
+        "circunferencia están siempre a la misma distancia del centro. ¿Es "
+        "correcta su afirmación?",
+        "Sí, y el recíproco también es cierto",
+        "Cuerda y distancia al centro se determinan mutuamente.\n\n"
+        "1) La perpendicular desde el centro parte la cuerda por la mitad y "
+        "forma un triángulo rectángulo con el radio.\n"
+        "2) En ese triángulo, la hipotenusa es siempre el radio, así que la "
+        "media cuerda y la distancia al centro quedan ligadas por Pitágoras.\n"
+        "3) A cuerdas iguales corresponden distancias iguales, y a distancias "
+        "iguales, cuerdas iguales.\n\n"
+        "De ahí se sigue que la cuerda más larga, el diámetro, es la que está a "
+        "distancia cero del centro.",
+        [
+            ("No: la distancia depende de la posición de la cuerda",
+             "Depende solo de su longitud, porque el radio es constante."),
+            ("Sí, pero el recíproco no se cumple",
+             "El recíproco también vale: distancias iguales dan cuerdas iguales."),
+            ("No: solo los diámetros cumplen esa propiedad",
+             "La propiedad vale para cualquier par de cuerdas de igual longitud."),
         ],
     ),
 ]
