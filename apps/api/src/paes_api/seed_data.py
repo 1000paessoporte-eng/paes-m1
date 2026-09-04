@@ -133908,3 +133908,352 @@ QUESTIONS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Geometria con figura
+#
+# La geometria de M2 es la parte mas visual de la prueba y el banco tenia dos
+# figuras por nodo. Estas quince preguntas se escribieron ALREDEDOR de su
+# figura: el dato que hace falta esta en el dibujo y no repetido en el texto,
+# que es lo que distingue una pregunta con figura de una pregunta con adorno.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "geo_homotecia", "medio",
+        "En la figura, el triángulo A’B’C’ es la imagen del triángulo ABC por "
+        "una homotecia de centro O. Si el área del triángulo ABC es 5 cm², "
+        "¿cuál es el área del triángulo A’B’C’?",
+        "20 cm²",
+        "Primero se lee la razón en la figura y después se aplica a las "
+        "áreas.\n\n"
+        "1) El tramo OA mide 4 cm y el tramo AA’ otros 4 cm, así que OA’ mide "
+        "8 cm y la razón es 8/4 = 2.\n"
+        "2) Las áreas se multiplican por el cuadrado de la razón: 2² = 4.\n"
+        "3) El área de la imagen es 5 · 4 = 20 cm².\n\n"
+        "El error más frecuente es multiplicar el área por 2: ese factor "
+        "corresponde a las longitudes, no a las superficies.",
+        [
+            ("10 cm²",
+             "Multiplica el área por la razón en vez de por su cuadrado."),
+            ("40 cm²",
+             "Multiplica por 2³ = 8, que es el factor de los volúmenes."),
+            ("9 cm², sumando al área original el tramo de 4 cm que aparece en la figura",
+             "Un dato de longitud no se suma a un área."),
+        ],
+        imagen="/preguntas/mat-homotecia-triangulos-o.svg",
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "En la figura, la imagen se obtuvo de la figura original mediante una "
+        "homotecia de centro O. ¿Qué se puede afirmar de la razón de esa "
+        "homotecia?",
+        "Es negativa y su valor absoluto es 1",
+        "La posición y el tamaño de la imagen entregan las dos cosas.\n\n"
+        "1) La imagen quedó al lado opuesto del centro, así que la razón es "
+        "negativa.\n"
+        "2) La imagen tiene el mismo tamaño que el original, así que el valor "
+        "absoluto de la razón es 1.\n"
+        "3) La razón es entonces −1, que corresponde a una simetría respecto "
+        "del punto O.\n\n"
+        "Es el único caso en que una homotecia produce una figura congruente y "
+        "no solo semejante.",
+        [
+            ("Es positiva y su valor absoluto es 1",
+             "Con razón positiva la imagen quedaría del mismo lado del centro."),
+            ("Es negativa y su valor absoluto es 2",
+             "Con valor absoluto 2 la imagen sería el doble de grande, y en la figura mide lo mismo."),
+            ("Es cero, porque la imagen y el original están a la misma distancia del centro",
+             "Con razón cero toda la figura colapsaría en el centro."),
+        ],
+        imagen="/preguntas/mat-homotecia-lados-opuestos.svg",
+    ),
+    _q(
+        "geo_homotecia", "dificil",
+        "En la figura, los trazos AC y BD son paralelos. ¿Cuánto mide el trazo "
+        "OD?",
+        "15 cm",
+        "El paralelismo hace que los dos rayos queden divididos en la misma "
+        "proporción.\n\n"
+        "1) En el rayo de abajo, OA mide 6 cm y AB otros 4 cm, así que OB mide "
+        "10 cm.\n"
+        "2) La razón entre OB y OA es 10/6 = 5/3.\n"
+        "3) En el rayo de arriba vale la misma razón: OD = 9 · 5/3 = 15 cm.\n\n"
+        "Es el teorema de Thales leído como una homotecia de centro O: el "
+        "paralelismo de AC y BD es lo que garantiza la proporción.",
+        [
+            ("13 cm",
+             "Suma los 4 cm del tramo AB al trazo OC, en vez de aplicar la proporción."),
+            ("6 cm",
+             "Aplica la razón al revés: OD tiene que ser mayor que OC, no menor."),
+            ("22,5 cm, aplicando la razón entre OB y AB en vez de la razón entre OB y OA",
+             "La proporción compara cada tramo con el tramo completo desde O."),
+        ],
+        imagen="/preguntas/mat-homotecia-thales-rayos.svg",
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "En el triángulo rectángulo de la figura, ¿cuál es el valor de cos α?",
+        "0,8",
+        "El coseno compara el cateto adyacente con la hipotenusa.\n\n"
+        "1) El cateto adyacente a α mide 12 cm y el opuesto, 9 cm.\n"
+        "2) Por Pitágoras la hipotenusa mide la raíz de 144 + 81 = 225, es "
+        "decir, 15 cm.\n"
+        "3) El coseno es 12/15 = 0,8.\n\n"
+        "El triángulo 9-12-15 es una ampliación del 3-4-5, así que las razones "
+        "son 0,6, 0,8 y 0,75.",
+        [
+            ("0,6",
+             "Es el seno del ángulo, que usa el cateto opuesto de 9 cm."),
+            ("0,75",
+             "Es la tangente del ángulo, que compara los dos catetos."),
+            ("1,25",
+             "Invierte el cuociente; ningún coseno puede superar a 1."),
+        ],
+        imagen="/preguntas/mat-triangulo-cateto-9-12.svg",
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "La figura muestra un cable tensado desde la punta de una torre hasta "
+        "el suelo. ¿Cuánto mide el cable? (cos 40° ≈ 0,766)",
+        "23,5 m aproximadamente",
+        "El cable es la hipotenusa y el tramo del suelo, el cateto "
+        "adyacente.\n\n"
+        "1) cos 40° = distancia horizontal dividida por longitud del cable.\n"
+        "2) Reemplazando: 0,766 = 18 / c.\n"
+        "3) Despejando: c = 18 / 0,766 = 23,5 m aproximadamente.\n\n"
+        "El cable tiene que ser más largo que los 18 m del suelo: eso descarta "
+        "de entrada cualquier resultado menor.",
+        [
+            ("13,8 m aproximadamente",
+             "Multiplica por el coseno en vez de dividir: el cable no puede ser más corto que el suelo."),
+            ("15,1 m aproximadamente",
+             "Usa el seno de 40°, que corresponde a la altura de la torre y no al cable."),
+            ("11,6 m aproximadamente, que es la altura de la torre",
+             "La pregunta pide el cable, que es la hipotenusa del triángulo."),
+        ],
+        imagen="/preguntas/mat-torre-cable-tensado.svg",
+    ),
+    _q(
+        "geo_trigonometria", "dificil",
+        "En el triángulo isósceles de la figura, ¿cuánto mide la base PQ? "
+        "(sen 20° ≈ 0,342)",
+        "6,84 cm",
+        "La altura punteada parte el triángulo en dos rectángulos "
+        "iguales.\n\n"
+        "1) Esa altura también divide el ángulo del vértice en dos de 20° cada "
+        "uno.\n"
+        "2) En cada triángulo rectángulo, la mitad de la base es el cateto "
+        "opuesto al ángulo de 20°: 10 · 0,342 = 3,42 cm.\n"
+        "3) La base completa mide el doble: 6,84 cm.\n\n"
+        "El paso que se olvida es el último: el triángulo rectángulo entrega la "
+        "mitad de la base, no la base entera.",
+        [
+            ("3,42 cm",
+             "Es la mitad de la base: falta duplicarla."),
+            ("9,4 cm aproximadamente",
+             "Usa el coseno de 20°, que corresponde a la altura y no a la semibase."),
+            ("20 cm, sumando los dos lados iguales del triángulo",
+             "La base es más corta que los lados: el ángulo entre ellos es de solo 40°."),
+        ],
+        imagen="/preguntas/mat-isosceles-angulo-apice.svg",
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "En la figura, la recta que pasa por P toca la circunferencia solo en "
+        "T. ¿Cuánto mide el trazo PT?",
+        "12 cm",
+        "El radio llega perpendicular al punto de tangencia.\n\n"
+        "1) El triángulo OTP es rectángulo en T.\n"
+        "2) Su hipotenusa es OP, que mide 13 cm, y uno de sus catetos es el "
+        "radio de 5 cm.\n"
+        "3) Por Pitágoras: PT es la raíz de 169 − 25 = 144, es decir, 12 cm.\n\n"
+        "El triángulo 5-12-13 aparece con frecuencia en estos problemas y "
+        "permite verificar el resultado de un vistazo.",
+        [
+            ("8 cm",
+             "Resta las medidas en vez de aplicar Pitágoras."),
+            ("13,9 cm aproximadamente",
+             "Suma los cuadrados en vez de restarlos: eso daría una hipotenusa mayor."),
+            ("18 cm, sumando el radio a la distancia del centro al punto P",
+             "Radio y distancia son catetos e hipotenusa, no dos tramos que se sumen."),
+        ],
+        imagen="/preguntas/mat-tangente-desde-punto.svg",
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "En la figura, el cuadrilátero ABCD tiene sus cuatro vértices sobre la "
+        "circunferencia. ¿Cuánto mide el ángulo interior del vértice C?",
+        "85°",
+        "En un cuadrilátero inscrito los ángulos opuestos son "
+        "suplementarios.\n\n"
+        "1) Los vértices A y C son opuestos.\n"
+        "2) Sus ángulos suman 180°, porque entre los dos arcos que abarcan "
+        "completan la vuelta.\n"
+        "3) El ángulo de C mide 180 − 95 = 85°.\n\n"
+        "La propiedad vale solo porque los cuatro vértices están sobre la "
+        "circunferencia: en un cuadrilátero cualquiera no se cumple.",
+        [
+            ("95°",
+             "Serían iguales en un paralelogramo; en un cuadrilátero inscrito son suplementarios."),
+            ("190°",
+             "Duplica el ángulo dado, y además ningún ángulo interior de un cuadrilátero llega a tanto."),
+            ("265°, restando el ángulo dado a la vuelta completa",
+             "Lo que suma 360° son los arcos; los ángulos opuestos suman 180°."),
+        ],
+        imagen="/preguntas/mat-cuadrilatero-inscrito.svg",
+    ),
+    _q(
+        "geo_circunferencia", "dificil",
+        "En la figura, desde el punto P salen dos rectas secantes a la "
+        "circunferencia. ¿Cuánto mide el ángulo en P?",
+        "35°",
+        "El ángulo con vértice exterior mide la semidiferencia de los "
+        "arcos.\n\n"
+        "1) El arco lejano mide 110° y el cercano, 40°.\n"
+        "2) Su diferencia es 110 − 40 = 70°.\n"
+        "3) El ángulo en P es la mitad: 35°.\n\n"
+        "Con el vértice dentro de la circunferencia se promediarían los arcos; "
+        "con el vértice fuera se restan antes de dividir por dos.",
+        [
+            ("75°",
+             "Toma la semisuma, que corresponde a un vértice interior y no exterior."),
+            ("70°",
+             "Es la diferencia entre los arcos, sin dividirla por dos."),
+            ("150°, sumando los dos arcos sin ajustarlos",
+             "El ángulo exterior es la mitad de la diferencia entre los arcos."),
+        ],
+        imagen="/preguntas/mat-secantes-desde-exterior.svg",
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "La figura muestra una esfera que cabe justo dentro de un cubo. ¿Cuál "
+        "es el volumen de la esfera? (usa π ≈ 3,14)",
+        "523,33 cm³ aproximadamente",
+        "El diámetro de la esfera iguala a la arista del cubo.\n\n"
+        "1) La arista mide 10 cm, así que el radio de la esfera es 5 cm.\n"
+        "2) El radio al cubo es 125.\n"
+        "3) El volumen es (4/3) · 3,14 · 125 = 523,33 cm³ aproximadamente.\n\n"
+        "El cubo tiene 1.000 cm³, así que la esfera ocupa poco más de la mitad "
+        "de su interior.",
+        [
+            ("4.186,67 cm³ aproximadamente",
+             "Usa la arista como radio, lo que multiplica el resultado por ocho."),
+            ("1.000 cm³",
+             "Es el volumen del cubo completo, no el de la esfera."),
+            ("314 cm², que es el área de la superficie de la esfera",
+             "El volumen se mide en centímetros cúbicos, no cuadrados."),
+        ],
+        imagen="/preguntas/mat-esfera-inscrita-cubo.svg",
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "La figura muestra una media esfera apoyada sobre su base. ¿Cuál es el "
+        "área de su superficie curva? (usa π ≈ 3,14)",
+        "307,72 cm²",
+        "La superficie curva es la mitad de la de una esfera completa.\n\n"
+        "1) El trazo acotado es el radio de la base, que mide 7 cm.\n"
+        "2) La esfera completa tendría 4 · 3,14 · 49 = 615,44 cm² de "
+        "superficie.\n"
+        "3) La media esfera aporta la mitad: 307,72 cm².\n\n"
+        "Si se pidiera la superficie total del cuerpo habría que sumar además "
+        "el círculo de la base, que mide 153,86 cm².",
+        [
+            ("615,44 cm²",
+             "Es el área de la esfera completa, sin tomar la mitad."),
+            ("153,86 cm²",
+             "Es el área del círculo de la base, no de la superficie curva."),
+            ("461,58 cm², que corresponde a la superficie curva más la base",
+             "El enunciado pide solo la parte curva de la media esfera."),
+        ],
+        imagen="/preguntas/mat-media-esfera-radio-7.svg",
+    ),
+    _q(
+        "geo_esfera", "dificil",
+        "La figura muestra una esfera cortada por un plano. ¿Cuál es el área "
+        "del círculo que deja a la vista el corte? (usa π ≈ 3,14)",
+        "113,04 cm²",
+        "El radio del corte sale de un triángulo rectángulo.\n\n"
+        "1) La hipotenusa es el radio de la esfera, 10 cm, y un cateto es la "
+        "distancia del centro al plano, 8 cm.\n"
+        "2) El radio del círculo es la raíz de 100 − 64 = 36, es decir, 6 cm.\n"
+        "3) Su área es 3,14 · 36 = 113,04 cm².\n\n"
+        "Si el plano pasara por el centro, el corte sería el círculo máximo y "
+        "su área subiría a 314 cm².",
+        [
+            ("314 cm²",
+             "Corresponde al círculo máximo, que se obtiene solo si el plano pasa por el centro."),
+            ("36 cm²",
+             "Es el cuadrado del radio del corte, sin multiplicar por π."),
+            ("200,96 cm², usando los 8 cm como radio del círculo",
+             "Los 8 cm son la distancia al plano, que en el triángulo es un cateto."),
+        ],
+        imagen="/preguntas/mat-esfera-corte-plano.svg",
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿Cuál es la ecuación de la recta que aparece en la figura?",
+        "y = 2x + 4",
+        "Se calcula la pendiente con los dos puntos marcados y después el "
+        "coeficiente de posición.\n\n"
+        "1) La variación vertical entre (−1, 2) y (2, 8) es 8 − 2 = 6, y la "
+        "horizontal es 2 − (−1) = 3.\n"
+        "2) La pendiente es 6/3 = 2.\n"
+        "3) Reemplazando el punto (2, 8): 8 = 2 · 2 + n, así que n = 4.\n\n"
+        "Comprobación con el otro punto: 2 · (−1) + 4 = 2, que es la ordenada "
+        "de ese punto.",
+        [
+            ("y = 2x + 2",
+             "Toma la ordenada del primer punto como coeficiente de posición."),
+            ("y = 0,5x + 2,5",
+             "Invierte el cuociente al calcular la pendiente."),
+            ("y = 3x + 6, tomando la variación horizontal como pendiente",
+             "La pendiente es el cuociente entre las dos variaciones: 6/3 = 2."),
+        ],
+        imagen="/preguntas/mat-recta-por-dos-puntos.svg",
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "Las rectas L₁ y L₂ de la figura corresponden a las dos ecuaciones de "
+        "un sistema. ¿Cuál es la solución del sistema?",
+        "(3, 4)",
+        "La solución de un sistema es el punto donde se cortan sus rectas.\n\n"
+        "1) Cada ecuación del sistema es una de las rectas dibujadas.\n"
+        "2) Un par es solución del sistema si cumple las dos ecuaciones, es "
+        "decir, si pertenece a las dos rectas.\n"
+        "3) El único punto que cumple eso es P, de coordenadas (3, 4).\n\n"
+        "Que las rectas se corten en un solo punto indica además que el sistema "
+        "es compatible determinado.",
+        [
+            ("(4, 3)",
+             "Invierte las coordenadas del punto de corte."),
+            ("(0, 1) y (0, 10), que son los cortes de cada recta con el eje Y",
+             "Esos puntos pertenecen a una recta cada uno, no a las dos."),
+            ("No tiene solución, porque las rectas tienen pendientes distintas",
+             "Pendientes distintas garantizan justamente que exista un punto de corte."),
+        ],
+        imagen="/preguntas/mat-dos-rectas-corte-p.svg",
+    ),
+    _q(
+        "geo_rectas", "dificil",
+        "¿Cuál es el área de la región sombreada en la figura?",
+        "12 unidades cuadradas",
+        "La región es un triángulo rectángulo cuyos catetos están sobre los "
+        "ejes.\n\n"
+        "1) Un cateto va del origen a (6, 0) y mide 6 unidades.\n"
+        "2) El otro va del origen a (0, 4) y mide 4 unidades.\n"
+        "3) El área es 6 · 4 / 2 = 12 unidades cuadradas.\n\n"
+        "El ángulo recto está garantizado porque los ejes son perpendiculares "
+        "entre sí: no hace falta comprobarlo.",
+        [
+            ("24 unidades cuadradas",
+             "Olvida dividir por dos el producto de los catetos."),
+            ("10 unidades cuadradas",
+             "Suma los dos cortes en vez de multiplicarlos."),
+            ("7,2 unidades cuadradas, que es el largo del lado inclinado de la región",
+             "Ese lado mide poco más de 7 unidades, pero es una longitud y no un área."),
+        ],
+        imagen="/preguntas/mat-recta-triangulo-ejes.svg",
+    ),
+]

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 380" width="500" height="380" role="img">
+  <title>Un triángulo arriba a la derecha y su imagen abajo a la izquierda, del mismo tamaño y girada media vuelta. El punto O queda justo entre ambas, y cada vértice está unido con su imagen por una recta que pasa por O</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="300" y1="110" x2="200" y2="270" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="390" y1="150" x2="110" y2="230" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="330" y1="230" x2="170" y2="150" stroke="#d4d4d8" stroke-width="1"/>
+    <polygon points="300,110 390,150 330,230" fill="none" stroke="#111827" stroke-width="2"/>
+    <polygon points="200,270 110,230 170,150" fill="none" stroke="#111827" stroke-width="2"/>
+    <circle cx="250" cy="190" r="4" fill="#111827"/>
+    <text x="250" y="182" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">O</text>
+    <text x="345" y="100" text-anchor="middle" font-size="13" fill="#111827">figura original</text>
+    <text x="155" y="290" text-anchor="middle" font-size="13" fill="#111827">imagen</text>
+  </g>
+</svg>

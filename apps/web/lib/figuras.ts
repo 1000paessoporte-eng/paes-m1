@@ -645,6 +645,75 @@ export const DESCRIPCION_FIGURA: Record<string, string> = {
     "línea punteada en la media. La zona que va desde una desviación estándar " +
     "bajo la media hasta una sobre ella está sombreada.",
 
+  // Geometría de M2
+  "/preguntas/mat-homotecia-triangulos-o.svg":
+    "Un punto O a la izquierda. Desde O salen tres rayos: sobre ellos está " +
+    "primero el triángulo ABC, pequeño, y más lejos el triángulo A’B’C’, más " +
+    "grande y con la misma forma. El tramo que va de O al vértice A está " +
+    "acotado en 4 centímetros y el tramo que va de A a A’ mide otros 4 " +
+    "centímetros.",
+  "/preguntas/mat-homotecia-lados-opuestos.svg":
+    "Un triángulo arriba a la derecha, rotulado como figura original, y otro " +
+    "abajo a la izquierda rotulado como imagen. Los dos tienen el mismo tamaño " +
+    "y el de abajo está girado media vuelta. El punto O queda entre ambos, y " +
+    "cada vértice está unido con su imagen por una recta que pasa por O.",
+  "/preguntas/mat-homotecia-thales-rayos.svg":
+    "Desde el punto O salen dos rayos. Sobre el de abajo están los puntos A y " +
+    "B, en ese orden; sobre el de arriba, los puntos C y D. Los trazos AC y BD " +
+    "son paralelos entre sí. El tramo OA mide 6 centímetros, el tramo AB mide " +
+    "4 centímetros y el tramo OC mide 9 centímetros.",
+  "/preguntas/mat-triangulo-cateto-9-12.svg":
+    "Triángulo rectángulo apoyado en el suelo. El cateto horizontal mide 12 " +
+    "centímetros y el cateto vertical de la derecha mide 9 centímetros. El " +
+    "ángulo alfa está en el vértice de la izquierda, entre el cateto " +
+    "horizontal y la hipotenusa.",
+  "/preguntas/mat-torre-cable-tensado.svg":
+    "Una torre vertical apoyada en el suelo. Desde su punta baja un cable " +
+    "tensado hasta un punto del suelo que está a 18 metros de la base, y el " +
+    "cable forma un ángulo de 40 grados con el suelo.",
+  "/preguntas/mat-isosceles-angulo-apice.svg":
+    "Triángulo isósceles con el vértice arriba y la base PQ abajo. Los dos " +
+    "lados iguales miden 10 centímetros cada uno y el ángulo entre ellos, en " +
+    "el vértice de arriba, mide 40 grados. Una línea punteada baja desde ese " +
+    "vértice hasta el punto medio de la base.",
+  "/preguntas/mat-tangente-desde-punto.svg":
+    "Circunferencia de centro O. Desde el punto exterior P sale una recta que " +
+    "toca la circunferencia en el punto T. El radio OT mide 5 centímetros y " +
+    "llega perpendicular a esa recta. La distancia de O a P, dibujada con " +
+    "línea punteada, mide 13 centímetros.",
+  "/preguntas/mat-cuadrilatero-inscrito.svg":
+    "Circunferencia con un cuadrilátero ABCD inscrito: sus cuatro vértices " +
+    "están sobre el borde. El ángulo interior del vértice A mide 95 grados.",
+  "/preguntas/mat-secantes-desde-exterior.svg":
+    "Circunferencia y un punto P a su derecha, fuera de ella. Desde P salen " +
+    "dos rectas que atraviesan la circunferencia. El arco que queda al otro " +
+    "lado, el más lejano a P, mide 110 grados, y el arco cercano a P mide 40 " +
+    "grados.",
+  "/preguntas/mat-esfera-inscrita-cubo.svg":
+    "Un cubo dibujado en perspectiva con una esfera en su interior que toca " +
+    "las seis caras. La arista del cubo está acotada en 10 centímetros.",
+  "/preguntas/mat-media-esfera-radio-7.svg":
+    "Media esfera apoyada sobre su base circular, con la base dibujada en " +
+    "perspectiva con línea punteada. Un trazo va del centro de la base al " +
+    "borde y está acotado en 7 centímetros.",
+  "/preguntas/mat-esfera-corte-plano.svg":
+    "Una esfera cortada por un plano horizontal que deja a la vista un " +
+    "círculo. El radio de la esfera está acotado en 10 centímetros y la " +
+    "distancia del centro de la esfera al plano de corte, en 8 centímetros.",
+  "/preguntas/mat-recta-por-dos-puntos.svg":
+    "Plano cartesiano con una recta que pasa por dos puntos marcados sobre " +
+    "ella: el de coordenadas menos uno coma dos y el de coordenadas dos coma " +
+    "ocho.",
+  "/preguntas/mat-dos-rectas-corte-p.svg":
+    "Plano cartesiano con dos rectas: la recta L uno sube y la recta L dos " +
+    "baja. Se cortan en el punto P, que queda sobre el cruce de las líneas de " +
+    "la grilla correspondientes a x igual a tres e y igual a cuatro.",
+  "/preguntas/mat-recta-triangulo-ejes.svg":
+    "Plano cartesiano con una recta que corta al eje x en el punto de " +
+    "coordenadas seis coma cero y al eje y en el punto cero coma cuatro. La " +
+    "región encerrada entre la recta y los dos ejes está sombreada y forma un " +
+    "triángulo.",
+
   // ---------- Historia y Ciencias Sociales ----------
   "/preguntas/his-tabla-fuentes.svg":
     "Tabla que compara dos fuentes. La fuente 1 es una carta personal escrita " +

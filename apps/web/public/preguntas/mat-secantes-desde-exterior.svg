@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="560" height="420" role="img">
+  <title>Circunferencia y un punto P a su derecha, fuera de ella. Desde P salen dos rectas secantes que atraviesan la circunferencia. El arco lejano, el que queda al otro lado, mide 110 grados y el arco cercano a P mide 40 grados</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <circle cx="230" cy="210" r="120" fill="none" stroke="#111827" stroke-width="2"/>
+    <line x1="470" y1="210" x2="161.2" y2="111.7" stroke="#111827" stroke-width="2"/>
+    <line x1="470" y1="210" x2="161.2" y2="308.3" stroke="#111827" stroke-width="2"/>
+    <circle cx="470" cy="210" r="4" fill="#111827"/>
+    <circle cx="161.2" cy="111.7" r="4" fill="#111827"/>
+    <circle cx="161.2" cy="308.3" r="4" fill="#111827"/>
+    <circle cx="342.8" cy="169" r="4" fill="#111827"/>
+    <circle cx="342.8" cy="251" r="4" fill="#111827"/>
+    <text x="151.2" y="101.7" text-anchor="end" font-size="14" font-weight="700" fill="#111827">A</text>
+    <text x="151.2" y="326.3" text-anchor="end" font-size="14" font-weight="700" fill="#111827">B</text>
+    <text x="354.8" y="161" text-anchor="start" font-size="14" font-weight="700" fill="#111827">C</text>
+    <text x="354.8" y="269" text-anchor="start" font-size="14" font-weight="700" fill="#111827">D</text>
+    <text x="482" y="216" text-anchor="start" font-size="14" font-weight="700" fill="#111827">P</text>
+    <text x="134" y="216" text-anchor="middle" font-size="13" fill="#111827">110°</text>
+    <text x="312" y="216" text-anchor="middle" font-size="13" fill="#111827">40°</text>
+  </g>
+</svg>

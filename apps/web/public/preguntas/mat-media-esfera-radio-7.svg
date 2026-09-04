@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 340" width="520" height="340" role="img">
+  <title>Media esfera apoyada sobre su base circular, con la base dibujada en perspectiva con línea punteada. Un trazo va del centro de la base al borde y está acotado en 7 centímetros</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <path d="M 400 260 A 150 150 0 0 0 100 260" fill="none" stroke="#111827" stroke-width="2"/>
+    <line x1="100" y1="260" x2="400" y2="260" stroke="#111827" stroke-width="2"/>
+    <ellipse cx="250" cy="260" rx="150" ry="26" fill="none" stroke="#d4d4d8" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <line x1="250" y1="260" x2="400" y2="260" stroke="#d4d4d8" stroke-width="1.5"/>
+    <circle cx="250" cy="260" r="4" fill="#111827"/>
+    <text x="325" y="248" text-anchor="middle" font-size="13" fill="#111827">7 cm</text>
+  </g>
+</svg>
