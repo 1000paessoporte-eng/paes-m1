@@ -8648,17 +8648,19 @@ QUESTIONS += [
     ),
     _q(
         "alg_funciones", "medio",
-        "¿Cuál es la pendiente de la recta que pasa por los puntos (−2, 1) y (2, 9)?",
-        "2",
-        "La fórmula funciona igual con coordenadas negativas, cuidando los signos.\n\n"
+        "¿Cuál es la pendiente de la recta que pasa por los puntos (−2, 1) y (2, −7)?",
+        "−2",
+        "La fórmula funciona igual con coordenadas negativas, y el signo del "
+        "resultado dice hacia dónde va la recta.\n\n"
         "1) Aplica m = (y₂ − y₁)/(x₂ − x₁).\n"
-        "2) Numerador: 9 − 1 = 8.\n"
+        "2) Numerador: −7 − 1 = −8.\n"
         "3) Denominador: 2 − (−2) = 2 + 2 = 4. Restar un negativo equivale a sumar.\n"
-        "4) Pendiente: 8/4 = 2.",
+        "4) Pendiente: −8/4 = −2. El signo negativo significa que la recta baja "
+        "de izquierda a derecha: al avanzar en x, la y disminuye.",
         [
-            ("8", "Calculó solo la diferencia de las y sin dividir."),
-            ("4", "Restó mal el denominador, tratando 2 − (−2) como 2 − 2 y ajustando el resultado."),
-            ("0,5", "Invirtió la fórmula, dividiendo el avance en x por el avance en y."),
+            ("2", "Perdió el signo del numerador: −7 − 1 da −8, no 8."),
+            ("−8", "Calculó solo la diferencia de las y sin dividir por la de las x."),
+            ("−0,5", "Invirtió la fórmula, dividiendo el avance en x por el avance en y."),
         ],
     ),
     _q(
@@ -8948,17 +8950,21 @@ QUESTIONS += [
     ),
     _q(
         "alg_funciones", "medio",
-        "¿Cuál es la pendiente de la recta que pasa por los puntos (3, −2) y (7, 6)?",
-        "2",
-        "La fórmula es la misma, cuidando el signo de la coordenada negativa.\n\n"
+        "¿Cuál es la pendiente de la recta que pasa por los puntos (3, −2) y (7, −2)?",
+        "0",
+        "Cuando las dos ordenadas coinciden, el numerador se anula.\n\n"
         "1) Aplica m = (y₂ − y₁)/(x₂ − x₁).\n"
-        "2) Numerador: 6 − (−2) = 6 + 2 = 8. Restar un negativo equivale a sumar.\n"
+        "2) Numerador: −2 − (−2) = −2 + 2 = 0.\n"
         "3) Denominador: 7 − 3 = 4.\n"
-        "4) Pendiente: 8/4 = 2.",
+        "4) Pendiente: 0/4 = 0. Una pendiente cero corresponde a una recta "
+        "horizontal: la y no cambia por más que avance la x.\n\n"
+        "No hay que confundirla con la pendiente indefinida de una recta "
+        "vertical, donde lo que se anula es el denominador.",
         [
-            ("1", "Calculó el numerador como 6 − 2, sin aplicar la resta de un negativo."),
-            ("8", "Calculó solo el avance vertical sin dividir."),
-            ("0,5", "Invirtió la fórmula de la pendiente."),
+            ("4", "Corresponde al denominador, que es el avance horizontal."),
+            ("−4", "Calculó el numerador como −2 − 2 en vez de −2 − (−2)."),
+            ("Indefinida, porque la recta no tiene inclinación",
+             "La pendiente indefinida es la de una recta VERTICAL, donde se anula el denominador."),
         ],
     ),
     _q(
@@ -97155,25 +97161,28 @@ QUESTIONS_CIENCIAS += [
     ),
     _q(
         "cie_nervioso", "facil",
-        "Una persona toca una superficie muy caliente y retira la mano antes de "
-        "sentir el dolor. ¿Qué explica esa rapidez?",
-        "La respuesta se resuelve en la médula, sin pasar por el cerebro",
-        "Es la característica del arco reflejo.\n\n"
-        "1) El receptor de la piel envía la señal por una neurona sensitiva "
-        "hasta la médula espinal.\n"
-        "2) En la médula, la señal pasa directamente a una neurona motora que "
-        "ordena la contracción del músculo.\n"
-        "3) Ese circuito corto ahorra el tiempo que tomaría llegar al cerebro y "
-        "volver.\n\n"
-        "La señal también sube al cerebro, y por eso se siente el dolor un "
-        "instante después: para entonces la mano ya se retiró.",
+        "Ante un susto, el corazón se acelera y las pupilas se dilatan sin que "
+        "la persona lo decida. ¿Qué parte del sistema nervioso produce esa "
+        "respuesta?",
+        "El sistema nervioso autónomo, en su división simpática",
+        "Esa respuesta no pasa por la voluntad.\n\n"
+        "1) El sistema nervioso autónomo regula funciones que no se controlan "
+        "de manera consciente: latido, respiración, digestión y diámetro de la "
+        "pupila.\n"
+        "2) Su división simpática prepara al organismo para una reacción rápida: "
+        "acelera el corazón, dilata las pupilas y desvía sangre hacia los "
+        "músculos.\n"
+        "3) La división parasimpática hace lo contrario y predomina en reposo, "
+        "cuando el organismo digiere y se recupera.\n\n"
+        "Las dos divisiones actúan siempre, y lo que cambia según la situación "
+        "es cuál de las dos predomina.",
         [
-            ("El cerebro procesa la señal más rápido cuando hay peligro",
-             "El cerebro no interviene en la respuesta refleja: por eso es tan rápida."),
-            ("El calor hace que el músculo se contraiga por sí solo",
-             "El músculo no responde directamente al calor: la contracción la ordena una neurona motora."),
-            ("Los nervios de la mano conducen más rápido que los del resto del cuerpo",
-             "La velocidad de conducción es comparable: lo que acorta el tiempo es la longitud del circuito."),
+            ("El sistema nervioso autónomo, en su división parasimpática",
+             "Esa división predomina en reposo: baja el ritmo cardíaco en vez de acelerarlo."),
+            ("La corteza cerebral, que ordena conscientemente la reacción",
+             "La respuesta ocurre sin decisión consciente: es más rápida que cualquier orden voluntaria."),
+            ("El sistema nervioso somático, el mismo que mueve los músculos del esqueleto",
+             "El somático controla los movimientos voluntarios; el corazón y la pupila no dependen de él."),
         ],
     ),
     _q(
