@@ -133270,17 +133270,17 @@ QUESTIONS += [
         "alg_funcion_potencia", "medio",
         "Se quiere determinar el exponente n de la función potencia "
         "f(x) = a · xⁿ, con n natural.",
-        "f(2) = 8 y f(4) = 64",
+        "f(2) = 8 y f(4) = 32",
         "n es par, menor que 4, y la función no es constante",
         3,
         "Ambas condiciones dejan un único exponente posible.\n\n"
-        "1) El cuociente f(4) dividido por f(2) vale 8 y equivale a 2ⁿ, así que "
-        "n = 3.\n"
+        "1) El cuociente f(4) dividido por f(2) vale 4 y equivale a 2ⁿ, así que "
+        "n = 2.\n"
         "2) Los naturales pares menores que 4 son 0 y 2, y el 0 daría una "
         "función constante: queda n = 2.\n"
         "3) Cada condición determina un exponente por sí sola.\n\n"
-        "Las dos condiciones son incompatibles entre sí, pero eso no altera la "
-        "pregunta: cada una, por separado, basta para responder.",
+        "Las dos condiciones coinciden en el mismo exponente, pero eso no era "
+        "necesario: para responder basta con que cada una lo determine.",
         [
             "Alcanza, pero la condición (2) también deja un solo exponente posible.",
             "Alcanza, pero la condición (1) también deja un solo exponente posible.",
@@ -133679,8 +133679,8 @@ QUESTIONS += [
         "son perpendiculares.\n\n"
         "El producto de las pendientes es el criterio, y necesita las dos.",
         [
-            "Con una sola pendiente no se sabe nada de la otra recta.",
-            "Con una sola pendiente no se sabe nada de la otra recta.",
+            "Conocer la pendiente de una recta no dice nada sobre la otra.",
+            "Vale lo mismo al revés: una sola pendiente no describe el par.",
             None,
             "Ninguna de las dos alcanza sola: el criterio usa ambas pendientes.",
             "No hace falta más información: juntas permiten aplicar el criterio.",
