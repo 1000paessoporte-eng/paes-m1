@@ -79310,6 +79310,7 @@ LESSONS: dict[str, dict] = {
             "**El orden de las operaciones** manda sobre todo lo anterior: "
             "primero paréntesis, después multiplicaciones y divisiones, y al "
             "final sumas y restas."
+            "\n\n[figura:/preguntas/mat-recta-racionales.svg]"
         ),
         "example_statement": "Calcula $\\frac{5}{6} - \\frac{2}{9}$.",
         "example_steps": [
@@ -79394,6 +79395,7 @@ LESSONS: dict[str, dict] = {
             "**Proporcionalidad directa**: si una cantidad crece, la otra crece "
             "en la misma razón, y $\\frac{a}{b}$ se mantiene constante. En la "
             "**inversa**, el producto $a \\cdot b$ es el que se mantiene."
+            "\n\n[figura:/preguntas/mat-grilla-porcentaje.svg]"
         ),
         "example_statement": (
             "Una bicicleta cuesta $\\$20.000$. En marzo sube un 20% y en abril, "
@@ -79437,6 +79439,7 @@ LESSONS: dict[str, dict] = {
             "**Trinomio de la forma** $x^2 + bx + c$: se buscan dos números que "
             "multiplicados den $c$ y sumados den $b$. Para $x^2 + 5x + 6$ son 2 y "
             "3, así que queda $(x+2)(x+3)$."
+            "\n\n[figura:/preguntas/mat-rectangulo-expresion.svg]"
         ),
         "example_statement": "Factoriza completamente $2x^2 - 8$.",
         "example_steps": [
@@ -79487,6 +79490,7 @@ LESSONS: dict[str, dict] = {
             "$y = 3x + 5$ no lo es, aunque crezca igual de parejo. La prueba "
             "rápida: en una proporcionalidad directa, si $x$ vale 0 entonces "
             "$y$ vale 0."
+            "\n\n[figura:/preguntas/mat-proporcionalidad-inversa.svg]"
         ),
         "example_statement": (
             "Seis pintores terminan un edificio en 10 días. Trabajando al mismo "
@@ -79536,6 +79540,7 @@ LESSONS: dict[str, dict] = {
             "desigualdad se da vuelta: de $-2x < 6$ se pasa a $x > -3$.\n\n"
             "**Siempre conviene verificar**: reemplazar la solución en la "
             "ecuación original y comprobar que los dos lados dan lo mismo."
+            "\n\n[figura:/preguntas/mat-proporcionalidad-directa.svg]"
         ),
         "example_statement": "Resuelve $3(x - 2) + 4 = 2x + 7$.",
         "example_steps": [
@@ -79583,6 +79588,7 @@ LESSONS: dict[str, dict] = {
             "coeficientes opuestos, y se suman para que desaparezca.\n\n"
             "**La solución es un par $(x, y)$**, no un solo número, y tiene que "
             "cumplir LAS DOS ecuaciones. Siempre se verifica en ambas."
+            "\n\n[figura:/preguntas/mat-sistema-rectas.svg]"
         ),
         "example_statement": "Resuelve el sistema $x + y = 12$ ; $x - y = 2$.",
         "example_steps": [
@@ -79626,6 +79632,7 @@ LESSONS: dict[str, dict] = {
             "**Por factorización**: si la ecuación se puede escribir como "
             "$(x - p)(x - q) = 0$, entonces $x = p$ o $x = q$, porque un producto "
             "solo da cero si alguno de sus factores es cero."
+            "\n\n[figura:/preguntas/mat-parabola-vertice.svg]"
         ),
         "example_statement": "Resuelve $x^2 - 5x + 6 = 0$.",
         "example_steps": [
@@ -79669,6 +79676,7 @@ LESSONS: dict[str, dict] = {
             "parábola: abre hacia arriba si $a > 0$ y hacia abajo si $a < 0$.\n\n"
             "**Vértice**: está en $x = -\\dfrac{b}{2a}$, y ahí ocurre el mínimo "
             "(si abre hacia arriba) o el máximo (si abre hacia abajo)."
+            "\n\n[figura:/preguntas/mat-tabla-funcion.svg]"
         ),
         "example_statement": (
             "Una recta pasa por los puntos $(1, 5)$ y $(3, 11)$. Encuentra su "
@@ -79714,6 +79722,7 @@ LESSONS: dict[str, dict] = {
             "**Trapecio**: área $= \\dfrac{(B + b) \\cdot h}{2}$.\n\n"
             "**Figuras compuestas**: se descomponen en figuras conocidas y se "
             "suman o restan sus áreas."
+            "\n\n[figura:/preguntas/mat-paralelogramo-altura.svg]"
         ),
         "example_statement": (
             "Un jardín rectangular mide 8 m por 5 m y tiene en el centro una "
@@ -79758,6 +79767,7 @@ LESSONS: dict[str, dict] = {
             "**Tríos pitagóricos** que conviene reconocer de memoria: "
             "(3, 4, 5), (5, 12, 13), (8, 15, 17) y sus múltiplos, como "
             "(6, 8, 10)."
+            "\n\n[figura:/lecciones/geo-pitagoras-catetos.svg]"
         ),
         "example_statement": (
             "Una escalera de 13 m se apoya en un muro vertical y su base está a "
@@ -79801,6 +79811,7 @@ LESSONS: dict[str, dict] = {
             "$(x, y) \\to (-y, x)$. En 180°: $(x, y) \\to (-x, -y)$.\n\n"
             "**Las tres conservan** las longitudes de los lados y la medida de "
             "los ángulos: la figura resultante es congruente con la original."
+            "\n\n[figura:/preguntas/mat-traslacion-cuadricula.svg]"
         ),
         "example_statement": (
             "El punto $P(-3, 4)$ se refleja respecto del eje $Y$ y el resultado "
@@ -79846,6 +79857,7 @@ LESSONS: dict[str, dict] = {
             "de operar hay que dejar ambas medidas en la misma unidad.\n\n"
             "**Para triángulos basta el criterio AA**: si dos ángulos coinciden, "
             "el tercero también, y los lados quedan forzosamente proporcionales."
+            "\n\n[figura:/preguntas/mat-triangulos-semejantes.svg]"
         ),
         "example_statement": (
             "Dos triángulos son semejantes con razón $2 : 5$. Si el área del menor "
@@ -79892,6 +79904,7 @@ LESSONS: dict[str, dict] = {
             "$= 4\\pi r^2$.\n\n"
             "**Las unidades cambian de exponente**: el área va en unidades "
             "cuadradas y el volumen en cúbicas. Y $1$ litro $= 1000$ cm³."
+            "\n\n[figura:/preguntas/mat-cilindro-cotas.svg]"
         ),
         "example_statement": (
             "Un tarro cilíndrico tiene 10 cm de radio y 20 cm de altura. ¿Cuál "
@@ -79947,6 +79960,7 @@ LESSONS: dict[str, dict] = {
             "mediana, $Q_3$ y máximo—. La caja va de $Q_1$ a $Q_3$, así que "
             "**dentro de la caja está siempre la mitad de los datos**, sea "
             "ancha o angosta."
+            "\n\n[figura:/preguntas/mat-cajon-puntajes.svg]"
         ),
         "example_statement": (
             "Ocho estudiantes registraron cuántos minutos estudiaron ayer: "
@@ -80004,6 +80018,7 @@ LESSONS: dict[str, dict] = {
             "**Cuándo usar cuál**: si hay un dato muy alejado del resto (un "
             "sueldo enorme entre sueldos normales), la mediana representa mejor "
             "al grupo que la media."
+            "\n\n[figura:/preguntas/mat-histograma-edades.svg]"
         ),
         "example_statement": (
             "Las notas de un estudiante son 4, 5, 5, 6 y 10. Calcula la media y "
@@ -80051,6 +80066,7 @@ LESSONS: dict[str, dict] = {
             "comité de dos personas no.\n\n"
             "**Y recuerda que $0! = 1$**, que es lo que hace que las fórmulas "
             "sigan funcionando cuando se eligen todos los elementos."
+            "\n\n[figura:/preguntas/mat-casilleros-cifras.svg]"
         ),
         "example_statement": (
             "De un grupo de 6 personas se debe elegir un comité de 2, sin "
@@ -80096,6 +80112,7 @@ LESSONS: dict[str, dict] = {
             "**Con o sin reposición**: si el objeto extraído no se devuelve, el "
             "total cambia para la segunda extracción y los eventos dejan de ser "
             "independientes."
+            "\n\n[figura:/preguntas/mat-venn-deportes.svg]"
         ),
         "example_statement": (
             "Una bolsa tiene 5 bolitas rojas y 3 azules. Se sacan dos sin "
@@ -81130,6 +81147,7 @@ LESSONS: dict[str, dict] = {
             "**Las operaciones pueden cambiar de conjunto.** La suma de dos "
             "irracionales puede ser racional: $(2+\\sqrt{2}) + (2-\\sqrt{2}) = 4$. "
             "Por eso no se puede afirmar el resultado sin calcular."
+            "\n\n[figura:/preguntas/mat-recta-real-puntos.svg]"
         ),
         "example_statement": (
             "Clasifica cada número como racional o irracional: "
@@ -81176,6 +81194,7 @@ LESSONS: dict[str, dict] = {
             "datos. Si es cero, todos los datos son idénticos. Sumar una "
             "constante a todos los datos NO cambia la dispersión; multiplicarlos "
             "por una constante sí."
+            "\n\n[figura:/preguntas/mat-tabla-desviacion.svg]"
         ),
         "example_statement": (
             "Calcula la desviación estándar del conjunto: 2, 4, 4, 4, 5, 5, 7, 9."
@@ -81219,6 +81238,7 @@ LESSONS: dict[str, dict] = {
             "**Las unidades delatan el error.** La superficie va en unidades "
             "cuadradas y el volumen en cúbicas. Si el resultado quedó en cm² "
             "cuando se pedía volumen, el procedimiento estaba equivocado."
+            "\n\n[figura:/preguntas/mat-esfera-radio.svg]"
         ),
         "example_statement": (
             "Una esfera tiene 12 cm de diámetro. Calcula su volumen en términos "
@@ -81263,6 +81283,7 @@ LESSONS: dict[str, dict] = {
             "**Áreas y volúmenes.** Las longitudes se multiplican por $k$, las "
             "áreas por $k^2$ y los volúmenes por $k^3$. Es el error más caro de "
             "esta unidad."
+            "\n\n[figura:/preguntas/mat-homotecia-razon.svg]"
         ),
         "example_statement": (
             "Un triángulo de área 12 cm² se somete a una homotecia de razón "
@@ -81306,6 +81327,7 @@ LESSONS: dict[str, dict] = {
             "**Restricciones.** La base debe ser positiva y distinta de 1, y el "
             "argumento debe ser ESTRICTAMENTE positivo. No existe el logaritmo "
             "de cero ni de un número negativo."
+            "\n\n[figura:/preguntas/mat-grafico-logaritmo.svg]"
         ),
         "example_statement": (
             "Si $\\log 2 = 0{,}30$ y $\\log 3 = 0{,}48$, calcula $\\log 12$."
@@ -81349,6 +81371,7 @@ LESSONS: dict[str, dict] = {
             "**Los factores multiplicativos son el atajo.** Aumentar un 15% es "
             "multiplicar por 1,15; descontar un 15% es multiplicar por 0,85. "
             "Encadenar operaciones se vuelve una sola multiplicación."
+            "\n\n[figura:/preguntas/mat-interes-simple-compuesto.svg]"
         ),
         "example_statement": (
             "Un producto cuesta $10.000. Primero sube un 20% y después el nuevo "
@@ -81395,6 +81418,7 @@ LESSONS: dict[str, dict] = {
             "**Identidad fundamental.** $\\sin^2\\alpha + \\cos^2\\alpha = 1$. "
             "Sale del teorema de Pitágoras y permite obtener una razón "
             "conociendo la otra."
+            "\n\n[figura:/preguntas/mat-triangulo-trigonometria.svg]"
         ),
         "example_statement": (
             "Desde un punto en el suelo, a 20 m de la base de un edificio, se "
@@ -81441,6 +81465,7 @@ LESSONS: dict[str, dict] = {
             "**Intersección.** El punto donde se cruzan dos rectas es la "
             "solución del sistema formado por sus ecuaciones. Si son paralelas "
             "distintas, no hay solución."
+            "\n\n[figura:/preguntas/mat-recta-pendiente.svg]"
         ),
         "example_statement": (
             "Determina la ecuación de la recta perpendicular a "
@@ -81485,6 +81510,7 @@ LESSONS: dict[str, dict] = {
             "**Cuerdas que se cortan.** Si dos cuerdas se intersecan dentro de "
             "la circunferencia, los productos de sus segmentos son iguales: "
             "$a \\cdot b = c \\cdot d$."
+            "\n\n[figura:/preguntas/mat-cuerdas-circunferencia.svg]"
         ),
         "example_statement": (
             "En una circunferencia, un ángulo del centro mide 80°. ¿Cuánto mide "
@@ -81530,6 +81556,7 @@ LESSONS: dict[str, dict] = {
             "**Éxito es lo que uno defina.** Puede ser sacar cara, fallar un "
             "tiro o que una pieza salga defectuosa. Lo importante es fijar qué "
             "es éxito ANTES de escribir $p$, y no cambiarlo a mitad de camino."
+            "\n\n[figura:/preguntas/mat-barras-binomial.svg]"
         ),
         "example_statement": (
             "Se lanza una moneda equilibrada 5 veces. ¿Cuál es la probabilidad "
@@ -81573,6 +81600,7 @@ LESSONS: dict[str, dict] = {
             "**El orden importa.** $P(A|B)$ y $P(B|A)$ son cosas distintas y "
             "rara vez coinciden. Confundirlas es un error clásico, y las "
             "alternativas de la prueba suelen incluir las dos."
+            "\n\n[figura:/preguntas/mat-arbol-condicional.svg]"
         ),
         "example_statement": (
             "En un curso, el 60% practica algún deporte, el 30% toca un "
@@ -81665,6 +81693,7 @@ LESSONS: dict[str, dict] = {
             "**Cómo leer un gráfico.** La amplitud es la mitad de la distancia "
             "entre el máximo y el mínimo. El período es lo que la curva demora "
             "en volver a empezar. Con esos dos datos se reconstruye la función."
+            "\n\n[figura:/preguntas/mat-grafico-seno.svg]"
         ),
         "example_statement": (
             "Determina la amplitud y el período de la función "
@@ -81709,6 +81738,7 @@ LESSONS: dict[str, dict] = {
             "**Todas pasan por el origen** cuando no hay término constante, y a "
             "mayor exponente el crecimiento es más brusco para $|x| > 1$ y más "
             "aplanado para $|x| < 1$."
+            "\n\n[figura:/preguntas/mat-grafico-exponencial.svg]"
         ),
         "example_statement": (
             "Sin graficar, determina si $f(x) = -2x^4$ es par o impar, y hacia "

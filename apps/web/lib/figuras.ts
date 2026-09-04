@@ -12,6 +12,16 @@
  * reemplazo de mirarla, no un atajo para resolver la pregunta.
  */
 export const DESCRIPCION_FIGURA: Record<string, string> = {
+  // ---------- Figuras de las lecciones ----------
+  // Las de `/preguntas/` se reusan en la teoría del Árbol de Habilidades y ya
+  // tienen su descripción más abajo. Acá van solo las dibujadas para explicar,
+  // que no ilustran ninguna pregunta.
+  "/lecciones/geo-pitagoras-catetos.svg":
+    "Triángulo rectángulo con el ángulo recto abajo a la izquierda, marcado con " +
+    "un cuadradito. El lado horizontal está rotulado a y el vertical b: son los " +
+    "catetos. El lado inclinado que une sus extremos está rotulado c y es la " +
+    "hipotenusa, el lado opuesto al ángulo recto.",
+
   // ---------- Física ----------
   "/preguntas/fis-posicion-tiempo-tramos.svg":
     "Gráfico de posición contra tiempo con cuatro tramos rectos rotulados. En P la " +
