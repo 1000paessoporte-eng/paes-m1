@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" width="460" height="300" role="img">
+  <title>Triángulo rectángulo con el ángulo recto abajo a la izquierda. El lado horizontal está rotulado a, el vertical b, y el lado inclinado que une sus extremos es la hipotenusa c, opuesta al ángulo recto</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <!-- El triángulo. Vértices: (90,240) recto, (330,240), (90,80). -->
+    <path d="M90 240 L330 240 L90 80 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+
+    <!-- La marca del ángulo recto: el cuadradito, que es lo que dice cuál es. -->
+    <path d="M90 214 L116 214 L116 240" fill="none" stroke="#111827" stroke-width="2"/>
+
+    <!-- Los catetos, rotulados sobre su lado. -->
+    <text x="210" y="266" text-anchor="middle" font-size="17" font-weight="700" fill="#111827">a</text>
+    <text x="72" y="166" text-anchor="end" font-size="17" font-weight="700" fill="#111827">b</text>
+
+    <!-- La hipotenusa, al otro lado de la línea inclinada. -->
+    <text x="222" y="148" text-anchor="middle" font-size="17" font-weight="700" fill="#111827">c</text>
+
+    <!-- Y decir en palabras cuál es cuál: el dibujo solo no basta si el
+         estudiante todavía no sabe qué nombre lleva cada lado. -->
+    <text x="210" y="288" text-anchor="middle" font-size="13" fill="#4b5563">catetos: a y b</text>
+    <text x="330" y="120" text-anchor="middle" font-size="13" fill="#4b5563">hipotenusa: c</text>
+    <path d="M300 130 L252 156" stroke="#9ca3af" stroke-width="1.5" fill="none"/>
+  </g>
+</svg>

@@ -1,5 +1,7 @@
 import katex from "katex";
 
+import { DESCRIPCION_FIGURA } from "@/lib/figuras";
+
 /**
  * Renderiza el texto de enunciados, alternativas y explicaciones.
  *
@@ -131,12 +133,48 @@ function renderizarTabla(bloque: string): string {
   return `<div class="my-3 overflow-x-auto"><table class="border-collapse text-sm"><thead><tr>${th}</tr></thead><tbody>${tbody}</tbody></table></div>`;
 }
 
+/**
+ * Una figura dentro del texto: `[figura:/lecciones/geo-pitagoras.svg]`.
+ *
+ * La teoría de geometría no se puede explicar sin dibujo. "La hipotenusa es el
+ * lado opuesto al ángulo recto" es una frase que solo entiende quien ya sabe
+ * cuál es; con el triángulo al lado, se ve.
+ *
+ * Va por el texto y no por una columna nueva en `lessons` a propósito. Una
+ * columna significa una migración, y en esta base una migración ya tumbó el
+ * login dos veces (`03-trampas.md` §1). Además así la figura se pone DONDE
+ * corresponde --entre dos párrafos, junto a la propiedad que ilustra-- y no
+ * siempre al principio, que es lo único que permitiría un campo suelto. Y sirve
+ * igual en el enunciado del ejemplo o en el error típico.
+ */
+const FIGURA = /^\[figura:\s*([^\]]+)\]$/;
+
+/** Solo rutas del propio repositorio. El texto viene del banco y no de un
+ *  usuario, pero esto acaba en dangerouslySetInnerHTML: se valida igual. */
+const RUTA_SEGURA = /^\/(lecciones|preguntas)\/[a-z0-9-]+\.svg$/;
+
+function renderizarFigura(ruta: string): string {
+  if (!RUTA_SEGURA.test(ruta)) return "";
+  const alt = DESCRIPCION_FIGURA[ruta] ?? "Figura de la lección";
+  // Mismo trato que la figura de una pregunta: fondo blanco siempre, también
+  // en modo oscuro. Son dibujos de línea negra sobre transparente, y en oscuro
+  // desaparecerían. Ver components/exam/figura-pregunta.tsx.
+  return (
+    `<figure class="my-4 overflow-x-auto rounded-xl border border-border bg-white p-3">` +
+    `<img src="${escaparHtml(ruta)}" alt="${escaparHtml(alt)}" loading="lazy" ` +
+    `class="mx-auto h-auto max-w-full" />` +
+    `</figure>`
+  );
+}
+
 function construirHtml(texto: string): string {
   return texto
     .split(/\n\s*\n/)
     .map((bloque) => {
       const limpio = bloque.trim();
       if (!limpio) return "";
+      const figura = limpio.match(FIGURA);
+      if (figura) return renderizarFigura(figura[1].trim());
       if (esTabla(limpio)) return renderizarTabla(limpio);
       const contenido = limpio
         .split("\n")
