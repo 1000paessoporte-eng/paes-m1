@@ -27,6 +27,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from paes_api.seed_data import (
+    _SD_ALTERNATIVAS,
     LESSONS,
     PASSAGES,
     PASSAGES_HISTORIA,
@@ -1334,7 +1335,7 @@ COMPROBACIONES: dict[str, str] = {
     "sube un 10% y luego se le aplica un descuento del 10%": f"${int(50000 * 1.1 * 0.9):,}".replace(",", "."),
     "log₂ 32": str(5 if 2**5 == 32 else None),
     "log 100 + log 1.000": str(2 + 3),
-    "log x = 3": f"{10**3:,}".replace(",", "."),
+    "Si log x = 3 en base 10": f"{10**3:,}".replace(",", "."),
     "log₃ 81 − log₃ 9": str(4 - 2),
     "el valor de log₅ 1?": "0",
     "¿cuál es el valor de f(−1)?": str((-1) ** 5),
@@ -2005,7 +2006,17 @@ def main() -> int:
             fallas.append(f"nodo inexistente '{q['skill_node']}': {stem[:60]}")
         if q["difficulty"] not in DIFICULTADES:
             fallas.append(f"dificultad inválida '{q['difficulty']}': {stem[:60]}")
-        if len(alts) != 4:
+        # Suficiencia de datos es el unico formato con cinco alternativas: son
+        # las mismas cinco siempre, porque el item no pide resolver sino
+        # decidir si la informacion alcanza. Cualquier otro item con cinco
+        # alternativas es un error.
+        if stem.startswith("Suficiencia de datos."):
+            if [a["text"] for a in alts] != list(_SD_ALTERNATIVAS):
+                fallas.append(
+                    f"suficiencia de datos con alternativas fuera del formato "
+                    f"fijo: {stem[:60]}"
+                )
+        elif len(alts) != 4:
             fallas.append(f"tiene {len(alts)} alternativas, deben ser 4: {stem[:60]}")
         if len(correctas) != 1:
             fallas.append(f"tiene {len(correctas)} correctas, debe ser 1: {stem[:60]}")

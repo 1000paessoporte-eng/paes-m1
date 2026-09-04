@@ -513,6 +513,80 @@ def _repartir_entre_temas(
     return elegidas
 
 
+#: La prueba oficial de M2 trae 5 ítems de suficiencia de datos entre sus 55
+#: preguntas. No se resuelven: se decide si la información entregada alcanza.
+#: Es un formato propio de M2 y el reparto por eje no lo protege, porque esos
+#: ítems viven mezclados con el resto del banco de matemática. Sin cuota, un
+#: ensayo de M2 traía menos de uno: el pool de matemática es cincuenta veces
+#: más grande que ese subconjunto.
+SUFICIENCIA_POR_PRUEBA = 5
+LARGO_OFICIAL_M2 = 55
+
+
+def _es_suficiencia(q) -> bool:
+    return getattr(q, "stem", "").startswith("Suficiencia de datos.")
+
+
+def _aplicar_cuota_suficiencia(
+    disponibles: list[Question],
+    elegidas: list[Question],
+    subject: Subject,
+    count: int,
+) -> list[Question]:
+    """Deja en el ensayo la proporción de suficiencia de datos de la prueba real.
+
+    El canje respeta el eje: se saca una pregunta del mismo eje que la que
+    entra, para no deshacer el reparto que acaba de calcularse. Si el eje no
+    tiene de dónde sacar, se recurre a cualquiera; y si no hay ítems de
+    suficiencia suficientes en el pool, el ensayo sale con los que haya.
+    """
+    if subject is not Subject.M2:
+        return elegidas
+    objetivo = round(count * SUFICIENCIA_POR_PRUEBA / LARGO_OFICIAL_M2)
+    dentro = [q for q in elegidas if _es_suficiencia(q)]
+    if len(dentro) == objetivo:
+        return elegidas
+
+    ids = {q.id for q in elegidas}
+    resultado = list(elegidas)
+
+    if len(dentro) > objetivo:
+        # Sobran: se cambian por preguntas normales del mismo eje.
+        sobrantes = dentro[objetivo:]
+        reemplazos = [
+            q for q in disponibles if q.id not in ids and not _es_suficiencia(q)
+        ]
+        random.shuffle(reemplazos)
+        for fuera in sobrantes:
+            eje = fuera.skill_node.axis.value
+            entra = next(
+                (q for q in reemplazos if q.skill_node.axis.value == eje),
+                None,
+            ) or (reemplazos[0] if reemplazos else None)
+            if entra is None:
+                break
+            reemplazos.remove(entra)
+            resultado[resultado.index(fuera)] = entra
+        return resultado
+
+    # Faltan: entran ítems de suficiencia y sale una pregunta normal del
+    # mismo eje por cada uno.
+    candidatos = [
+        q for q in disponibles if q.id not in ids and _es_suficiencia(q)
+    ]
+    random.shuffle(candidatos)
+    for entra in candidatos[: objetivo - len(dentro)]:
+        eje = entra.skill_node.axis.value
+        normales = [q for q in resultado if not _es_suficiencia(q)]
+        if not normales:
+            break
+        fuera = next(
+            (q for q in normales if q.skill_node.axis.value == eje), normales[0]
+        )
+        resultado[resultado.index(fuera)] = entra
+    return resultado
+
+
 def _select_questions(
     pool: list[Question],
     axes: list[str],
@@ -592,6 +666,7 @@ def _select_questions(
             _repartir_por_prueba(group, quota[axis], axis, incluidas, figuras)
         )
 
+    chosen = _aplicar_cuota_suficiencia(available, chosen, subject, count)
     random.shuffle(chosen)
     return chosen
 

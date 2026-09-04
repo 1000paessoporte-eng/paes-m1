@@ -160,6 +160,56 @@ def _q(
     }
 
 
+#: Las cinco alternativas fijas de un ítem de suficiencia de datos, en el
+#: orden y con la redacción del temario de M2.
+_SD_ALTERNATIVAS = (
+    "(1) por sí sola",
+    "(2) por sí sola",
+    "Ambas juntas, (1) y (2)",
+    "Cada una por sí sola, (1) ó (2)",
+    "Se requiere información adicional",
+)
+
+
+def _qsd(
+    skill_node: str,
+    difficulty: str,
+    pregunta: str,
+    uno: str,
+    dos: str,
+    correcta: int,
+    explanation: str,
+    justificaciones: list[str | None],
+):
+    """Arma un ítem de SUFICIENCIA DE DATOS, el formato propio de M2.
+
+    Son 5 de las 55 preguntas de la prueba y no se resuelven: se decide si la
+    información alcanza. Por eso tienen CINCO alternativas fijas y no cuatro,
+    y por eso el enunciado nunca pide un valor sino si los datos bastan.
+
+    `correcta` es el índice dentro de `_SD_ALTERNATIVAS` y `justificaciones`
+    trae los cinco textos en el mismo orden, con None en la posición de la
+    correcta.
+    """
+    alts = []
+    for i, texto in enumerate(_SD_ALTERNATIVAS):
+        alts.append(
+            {
+                "text": texto,
+                "is_correct": i == correcta,
+                "justification": None if i == correcta else justificaciones[i],
+            }
+        )
+    return {
+        "skill_node": skill_node,
+        "difficulty": difficulty,
+        "stem": f"Suficiencia de datos. {pregunta}\n\n(1) {uno}\n(2) {dos}",
+        "image_url": None,
+        "explanation": explanation,
+        "alternatives": alts,
+    }
+
+
 QUESTIONS = [
     # ---------- NÚMEROS ----------
     _q(
@@ -132920,6 +132970,941 @@ QUESTIONS += [
              "Cuenta solo el caso de ningún defectuoso."),
             ("0,2627 aproximadamente",
              "Es el complemento: la probabilidad de que haya dos o más defectuosos."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Suficiencia de datos
+#
+# Cinco de las 55 preguntas de M2 son de este formato y el banco no tenia
+# ninguna. No se resuelve el problema: se decide si la informacion entregada
+# alcanza para resolverlo. Las cinco alternativas son siempre las mismas.
+#
+# El error tipico es resolver de mas: basta con establecer que la respuesta
+# queda determinada, sin calcularla.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    # ---------- NÚMEROS ----------
+    _qsd(
+        "num_reales", "medio",
+        "Se quiere determinar el valor de x.",
+        "x² = 49",
+        "x es un número negativo",
+        2,
+        "Ninguna de las dos condiciones fija el valor por sí sola.\n\n"
+        "1) De x² = 49 se sigue que x es 7 o −7: hay dos posibilidades.\n"
+        "2) Saber solo que x es negativo deja infinitos valores.\n"
+        "3) Juntas descartan el 7 y dejan un único valor: x = −7.\n\n"
+        "No hace falta calcular nada más: basta con verificar que las dos "
+        "condiciones juntas dejan una sola posibilidad.",
+        [
+            "Deja dos valores posibles, 7 y −7, sin poder elegir entre ellos.",
+            "Los números negativos son infinitos: la condición no fija ninguno.",
+            None,
+            "Ninguna de las dos alcanza sola: (1) deja dos valores y (2) deja infinitos.",
+            "No hace falta más información: juntas dejan un único valor.",
+        ],
+    ),
+    _qsd(
+        "num_reales", "medio",
+        "Se quiere saber si el número n es racional.",
+        "n = 0,3333… con el 3 repitiéndose indefinidamente",
+        "n = √16",
+        3,
+        "Cada condición identifica al número y permite clasificarlo.\n\n"
+        "1) Un decimal periódico siempre se puede escribir como fracción: en "
+        "este caso 1/3, que es racional.\n"
+        "2) √16 vale 4, que también es racional.\n"
+        "3) Cualquiera de las dos por separado responde la pregunta.\n\n"
+        "La pregunta es de clasificación, no de valor: basta con reconocer el "
+        "tipo de número.",
+        [
+            "Alcanza, pero la condición (2) también resuelve la pregunta por sí sola.",
+            "Alcanza, pero la condición (1) también resuelve la pregunta por sí sola.",
+            "No hace falta juntarlas: cada una responde por separado.",
+            None,
+            "No hace falta más información: cada condición ya responde.",
+        ],
+    ),
+    _qsd(
+        "num_reales", "dificil",
+        "Se quiere determinar el valor de 2a + 2b.",
+        "a + b = 7",
+        "a − b = 1",
+        0,
+        "La expresión pedida es un múltiplo de la suma.\n\n"
+        "1) De a + b = 7 se sigue que 2a + 2b = 2 · 7 = 14.\n"
+        "2) La diferencia a − b no permite obtener la suma por sí sola.\n"
+        "3) Por lo tanto la condición (1) basta y la (2) no.\n\n"
+        "El error frecuente es buscar los valores de a y de b: la expresión "
+        "pedida no los necesita por separado.",
+        [
+            None,
+            "La diferencia no determina la suma: a − b = 1 se cumple con infinitos pares.",
+            "La condición (2) sobra: (1) ya resuelve el problema.",
+            "La condición (2) no basta por sí sola.",
+            "La condición (1) ya alcanza para responder.",
+        ],
+    ),
+    _qsd(
+        "num_logaritmos", "medio",
+        "Se quiere determinar el valor de log_b 81, con b positivo y distinto "
+        "de 1.",
+        "b = 3",
+        "b² = 9 y b es positivo",
+        3,
+        "Ambas condiciones fijan el mismo valor de la base.\n\n"
+        "1) Con b = 3 el logaritmo vale 4, porque 3⁴ = 81.\n"
+        "2) De b² = 9 con b positivo se sigue también b = 3.\n"
+        "3) Cualquiera de las dos determina la base y con ella el "
+        "logaritmo.\n\n"
+        "La restricción «b positivo» es la que descarta el −3 en la segunda "
+        "condición.",
+        [
+            "Alcanza, pero la condición (2) también fija la base por sí sola.",
+            "Alcanza, pero la condición (1) también fija la base por sí sola.",
+            "No hace falta juntarlas: cada una fija la base.",
+            None,
+            "No hace falta más información: cada condición fija la base.",
+        ],
+    ),
+    _qsd(
+        "num_logaritmos", "medio",
+        "Se quiere determinar el valor de x.",
+        "x es un múltiplo de 100",
+        "log x = 3, en base 10",
+        1,
+        "Solo la segunda condición fija un valor.\n\n"
+        "1) Los múltiplos de 100 son infinitos: 100, 200, 300 y así.\n"
+        "2) De log x = 3 se sigue x = 10³ = 1.000, un único valor.\n"
+        "3) Por lo tanto la condición (2) basta y la (1) no.\n\n"
+        "Que 1.000 sea además múltiplo de 100 no agrega nada: la primera "
+        "condición no descarta ningún otro múltiplo.",
+        [
+            "Los múltiplos de 100 son infinitos: la condición no fija ninguno.",
+            None,
+            "La condición (1) sobra: (2) ya determina el valor.",
+            "La condición (1) no basta por sí sola.",
+            "La condición (2) ya alcanza para responder.",
+        ],
+    ),
+    _qsd(
+        "num_logaritmos", "dificil",
+        "Se quiere determinar el valor aproximado de log 6.",
+        "log 2 ≈ 0,301",
+        "log 3 ≈ 0,477",
+        2,
+        "El logaritmo de un producto es la suma de los logaritmos.\n\n"
+        "1) Como 6 = 2 · 3, se cumple log 6 = log 2 + log 3.\n"
+        "2) Con un solo sumando conocido no se puede completar la suma.\n"
+        "3) Con los dos, log 6 ≈ 0,301 + 0,477 = 0,778.\n\n"
+        "No hace falta hacer la suma para responder: basta con reconocer que "
+        "las dos condiciones juntas la determinan.",
+        [
+            "Falta el logaritmo de 3 para completar la descomposición de 6.",
+            "Falta el logaritmo de 2 para completar la descomposición de 6.",
+            None,
+            "Ninguna de las dos alcanza sola: el 6 se descompone en 2 por 3.",
+            "No hace falta más información: juntas determinan el valor.",
+        ],
+    ),
+    _qsd(
+        "num_financiera", "medio",
+        "Se quiere determinar el interés simple que genera un capital.",
+        "El capital es $500.000 y la tasa es del 4% anual",
+        "El plazo de la inversión es de 3 años",
+        2,
+        "El interés simple depende de tres datos: capital, tasa y plazo.\n\n"
+        "1) La primera condición entrega capital y tasa, pero no el plazo.\n"
+        "2) La segunda entrega solo el plazo.\n"
+        "3) Con las dos juntas quedan los tres datos y el interés queda "
+        "determinado.\n\n"
+        "No hace falta calcular los $60.000: basta con verificar que ningún "
+        "dato queda libre.",
+        [
+            "Falta el plazo: sin él el interés no queda determinado.",
+            "Falta el capital y la tasa: el plazo solo no alcanza.",
+            None,
+            "Ninguna de las dos alcanza sola: cada una deja datos libres.",
+            "No hace falta más información: juntas entregan los tres datos.",
+        ],
+    ),
+    _qsd(
+        "num_financiera", "medio",
+        "Se quiere determinar el precio original de un artículo.",
+        "El descuento aplicado fue de $12.000",
+        "Con un 20% de descuento el artículo cuesta $48.000",
+        1,
+        "Solo la segunda condición permite recuperar el precio.\n\n"
+        "1) Un descuento de $12.000 puede corresponder a cualquier precio "
+        "original: no dice qué porcentaje representa.\n"
+        "2) Si el precio con 20% de descuento es $48.000, el original cumple "
+        "0,8 · P = 48.000, así que queda determinado.\n"
+        "3) Por lo tanto la condición (2) basta y la (1) no.\n\n"
+        "El precio resulta ser $60.000, pero no hacía falta calcularlo para "
+        "responder.",
+        [
+            "Un mismo descuento en pesos corresponde a infinitos precios originales.",
+            None,
+            "La condición (1) sobra: (2) ya determina el precio.",
+            "La condición (1) no basta por sí sola.",
+            "La condición (2) ya alcanza para responder.",
+        ],
+    ),
+    _qsd(
+        "num_financiera", "dificil",
+        "Se quiere determinar la tasa de interés simple anual de una "
+        "inversión.",
+        "Un capital de $400.000 genera $60.000 de interés en 3 años",
+        "El capital es $400.000 y genera $20.000 de interés en un año",
+        3,
+        "Las dos condiciones entregan los tres datos necesarios.\n\n"
+        "1) Con capital, interés y plazo, la tasa se despeja: 60.000 dividido "
+        "por 400.000 y por 3 años entrega un 5% anual.\n"
+        "2) La segunda condición entrega lo mismo para un año: 20.000 dividido "
+        "por 400.000 da un 5%.\n"
+        "3) Cualquiera de las dos por separado determina la tasa.\n\n"
+        "Que ambas den el mismo resultado es coherente, pero no era necesario "
+        "comprobarlo para responder.",
+        [
+            "Alcanza, pero la condición (2) también determina la tasa por sí sola.",
+            "Alcanza, pero la condición (1) también determina la tasa por sí sola.",
+            "No hace falta juntarlas: cada una determina la tasa.",
+            None,
+            "No hace falta más información: cada condición basta.",
+        ],
+    ),
+    # ---------- ÁLGEBRA ----------
+    _qsd(
+        "alg_sistemas_casos", "medio",
+        "Se quiere saber si el sistema ax + by = c ; dx + ey = f tiene solución "
+        "única.",
+        "a · e − b · d = 12",
+        "c = f",
+        0,
+        "La unicidad de la solución la decide el determinante.\n\n"
+        "1) La expresión a · e − b · d es el determinante del sistema, y al ser "
+        "distinta de cero la solución es única.\n"
+        "2) Los términos independientes no intervienen en la unicidad: deciden "
+        "entre «ninguna» e «infinitas» cuando el determinante se anula.\n"
+        "3) Por lo tanto la condición (1) basta y la (2) no.\n\n"
+        "No hace falta conocer los coeficientes uno por uno: alcanza con el "
+        "valor del determinante.",
+        [
+            None,
+            "Los términos independientes no deciden si la solución es única.",
+            "La condición (2) sobra: el determinante ya resuelve la pregunta.",
+            "La condición (2) no basta por sí sola.",
+            "La condición (1) ya alcanza para responder.",
+        ],
+    ),
+    _qsd(
+        "alg_sistemas_casos", "medio",
+        "Se quiere determinar el valor de k en el sistema 2x + ky = 5 ; "
+        "4x + 6y = 9, sabiendo que el sistema no tiene solución.",
+        "Las dos rectas del sistema son paralelas",
+        "k = 3",
+        3,
+        "Ambas condiciones fijan el mismo valor.\n\n"
+        "1) Que sean paralelas exige 4/2 = 6/k, de donde k = 3.\n"
+        "2) La segunda condición entrega el valor directamente.\n"
+        "3) Cualquiera de las dos determina k.\n\n"
+        "El enunciado ya garantiza que el sistema no tiene solución, así que "
+        "solo falta identificar el valor del parámetro.",
+        [
+            "Alcanza, pero la condición (2) también fija el valor por sí sola.",
+            "Alcanza, pero la condición (1) también fija el valor por sí sola.",
+            "No hace falta juntarlas: cada una fija el valor.",
+            None,
+            "No hace falta más información: cada condición fija k.",
+        ],
+    ),
+    _qsd(
+        "alg_sistemas_casos", "dificil",
+        "Se quiere determinar cuántas soluciones tiene un sistema de dos "
+        "ecuaciones lineales con dos incógnitas.",
+        "Las dos rectas tienen la misma pendiente",
+        "Las dos rectas pasan por el punto (1, 2)",
+        2,
+        "Cada condición deja dos casos abiertos y juntas dejan uno solo.\n\n"
+        "1) Con la misma pendiente las rectas son paralelas: pueden no tener "
+        "solución o tener infinitas.\n"
+        "2) Compartir un punto descarta que no haya solución, pero deja abierto "
+        "si hay una o infinitas.\n"
+        "3) Juntas obligan a que sean la misma recta: hay infinitas "
+        "soluciones.\n\n"
+        "Es un buen ejemplo de dos condiciones que se complementan: ninguna "
+        "sirve sola y la combinación cierra el caso.",
+        [
+            "Deja abierto si las rectas coinciden o si son paralelas distintas.",
+            "Deja abierto si las rectas se cortan solo ahí o si coinciden.",
+            None,
+            "Ninguna de las dos alcanza sola: cada una deja dos casos abiertos.",
+            "No hace falta más información: juntas dejan un solo caso.",
+        ],
+    ),
+    _qsd(
+        "alg_funcion_potencia", "medio",
+        "Se quiere determinar el coeficiente a de la función f(x) = a · xⁿ.",
+        "f(1) = 6",
+        "n = 3",
+        0,
+        "Evaluar en x = 1 aísla el coeficiente.\n\n"
+        "1) Cualquier potencia de 1 vale 1, así que f(1) = a · 1 = a = 6.\n"
+        "2) Conocer el exponente no dice nada sobre el coeficiente.\n"
+        "3) Por lo tanto la condición (1) basta y la (2) no.\n\n"
+        "El valor del exponente sería necesario para evaluar la función en "
+        "otro punto, pero no para identificar el coeficiente.",
+        [
+            None,
+            "El exponente no determina el coeficiente: son parámetros independientes.",
+            "La condición (2) sobra: (1) ya entrega el coeficiente.",
+            "La condición (2) no basta por sí sola.",
+            "La condición (1) ya alcanza para responder.",
+        ],
+    ),
+    _qsd(
+        "alg_funcion_potencia", "medio",
+        "Se quiere determinar el exponente n de la función potencia "
+        "f(x) = a · xⁿ, con n natural.",
+        "f(2) = 8 y f(4) = 64",
+        "n es par, menor que 4, y la función no es constante",
+        3,
+        "Ambas condiciones dejan un único exponente posible.\n\n"
+        "1) El cuociente f(4) dividido por f(2) vale 8 y equivale a 2ⁿ, así que "
+        "n = 3.\n"
+        "2) Los naturales pares menores que 4 son 0 y 2, y el 0 daría una "
+        "función constante: queda n = 2.\n"
+        "3) Cada condición determina un exponente por sí sola.\n\n"
+        "Las dos condiciones son incompatibles entre sí, pero eso no altera la "
+        "pregunta: cada una, por separado, basta para responder.",
+        [
+            "Alcanza, pero la condición (2) también deja un solo exponente posible.",
+            "Alcanza, pero la condición (1) también deja un solo exponente posible.",
+            "No hace falta juntarlas: cada una deja un exponente único.",
+            None,
+            "No hace falta más información: cada condición deja un solo valor.",
+        ],
+    ),
+    _qsd(
+        "alg_funcion_potencia", "dificil",
+        "Se quiere saber si la función f(x) = a · xⁿ es creciente en todo su "
+        "dominio, con n natural.",
+        "a > 0",
+        "n es impar",
+        2,
+        "El comportamiento depende del signo del coeficiente y de la paridad "
+        "del exponente.\n\n"
+        "1) Con a positivo pero exponente par, la función decrece a la "
+        "izquierda del origen: no es creciente en todo su dominio.\n"
+        "2) Con exponente impar pero coeficiente negativo, la función decrece "
+        "en todo su dominio.\n"
+        "3) Juntas garantizan que la función crece en todos los reales.\n\n"
+        "Ninguna de las dos condiciones basta por sí sola, y ambas son "
+        "necesarias.",
+        [
+            "Con exponente par la función decrece a la izquierda del origen.",
+            "Con coeficiente negativo la función decrece en todo su dominio.",
+            None,
+            "Ninguna de las dos alcanza sola: hacen falta las dos condiciones.",
+            "No hace falta más información: juntas resuelven la pregunta.",
+        ],
+    ),
+    _qsd(
+        "alg_funciones_trig", "medio",
+        "Se quiere determinar la amplitud de la función "
+        "f(x) = a · sen(bx) + c.",
+        "El valor máximo de f es 9 y el mínimo es 1",
+        "c = 5",
+        0,
+        "La amplitud es la semidiferencia entre los valores extremos.\n\n"
+        "1) Con máximo 9 y mínimo 1, la amplitud es (9 − 1) / 2 = 4.\n"
+        "2) El término constante marca el centro de la oscilación, no cuánto "
+        "se aparta de él.\n"
+        "3) Por lo tanto la condición (1) basta y la (2) no.\n\n"
+        "El valor de c se puede deducir de la primera condición, pero no al "
+        "revés.",
+        [
+            None,
+            "El término constante marca el centro, no la amplitud.",
+            "La condición (2) sobra: (1) ya entrega la amplitud.",
+            "La condición (2) no basta por sí sola.",
+            "La condición (1) ya alcanza para responder.",
+        ],
+    ),
+    _qsd(
+        "alg_funciones_trig", "medio",
+        "Se quiere determinar el período de la función f(x) = a · sen(bx), con "
+        "b positivo.",
+        "b = 6",
+        "La función completa 6 ciclos entre 0° y 360°",
+        3,
+        "Ambas condiciones fijan el mismo período.\n\n"
+        "1) Con b = 6 el período es 360° dividido por 6, es decir, 60°.\n"
+        "2) Completar 6 ciclos en una vuelta significa exactamente que cada "
+        "ciclo dura 60°.\n"
+        "3) Cualquiera de las dos determina el período.\n\n"
+        "El coeficiente a no interviene: fija la amplitud y no el período.",
+        [
+            "Alcanza, pero la condición (2) también fija el período por sí sola.",
+            "Alcanza, pero la condición (1) también fija el período por sí sola.",
+            "No hace falta juntarlas: cada una fija el período.",
+            None,
+            "No hace falta más información: cada condición fija el período.",
+        ],
+    ),
+    _qsd(
+        "alg_funciones_trig", "dificil",
+        "Se quiere determinar el valor de sen θ.",
+        "cos θ = 0,6",
+        "θ está en el primer cuadrante",
+        2,
+        "La identidad fundamental deja dos signos posibles.\n\n"
+        "1) De cos θ = 0,6 se sigue sen²θ = 0,64, así que sen θ es 0,8 o "
+        "−0,8.\n"
+        "2) Saber solo el cuadrante no fija ningún valor.\n"
+        "3) Juntas descartan el negativo: en el primer cuadrante el seno es "
+        "positivo, así que sen θ = 0,8.\n\n"
+        "Es el patrón habitual de estos ítems: una condición entrega el valor "
+        "absoluto y la otra, el signo.",
+        [
+            "Deja dos valores posibles, 0,8 y −0,8, sin poder elegir entre ellos.",
+            "El cuadrante fija el signo, pero no el valor.",
+            None,
+            "Ninguna de las dos alcanza sola: una da el valor y la otra el signo.",
+            "No hace falta más información: juntas fijan el valor.",
+        ],
+    ),
+    # ---------- GEOMETRÍA ----------
+    _qsd(
+        "geo_homotecia", "medio",
+        "Se quiere determinar la razón de una homotecia.",
+        "Un lado del original mide 6 cm y su correspondiente en la imagen mide 15 cm",
+        "El área de la imagen es 6,25 veces la del original",
+        0,
+        "La razón lleva signo y solo una condición lo determina.\n\n"
+        "1) El cuociente entre el lado de la imagen y el del original entrega "
+        "directamente la razón: 15/6 = 2,5.\n"
+        "2) La razón entre áreas es el cuadrado de la razón, así que 6,25 deja "
+        "dos posibilidades: 2,5 y −2,5.\n"
+        "3) Por lo tanto la condición (1) basta y la (2) no.\n\n"
+        "Elevar al cuadrado borra el signo: por eso los datos de área nunca "
+        "distinguen una homotecia directa de una invertida.",
+        [
+            None,
+            "El cuadrado borra el signo: la razón podría ser 2,5 o −2,5.",
+            "La condición (2) sobra: (1) ya determina la razón con su signo.",
+            "La condición (2) no basta por sí sola.",
+            "La condición (1) ya alcanza para responder.",
+        ],
+    ),
+    _qsd(
+        "geo_homotecia", "medio",
+        "Se quiere determinar el área de la imagen de un triángulo por una "
+        "homotecia.",
+        "El área del triángulo original es 12 cm²",
+        "La razón de la homotecia es 3",
+        2,
+        "El área de la imagen depende del área original y del cuadrado de la "
+        "razón.\n\n"
+        "1) Conocer solo el área original no dice cuánto se amplía.\n"
+        "2) Conocer solo la razón no dice de qué área se parte.\n"
+        "3) Juntas determinan el resultado: 12 · 3² = 108 cm².\n\n"
+        "No hacía falta llegar al número: bastaba con verificar que ningún "
+        "dato quedaba libre.",
+        [
+            "Falta la razón: sin ella no se sabe cuánto se amplía la figura.",
+            "Falta el área original: la razón sola no entrega un área.",
+            None,
+            "Ninguna de las dos alcanza sola: cada una deja un dato libre.",
+            "No hace falta más información: juntas determinan el área.",
+        ],
+    ),
+    _qsd(
+        "geo_homotecia", "dificil",
+        "Se quiere determinar el perímetro de la imagen de un cuadrado por una "
+        "homotecia.",
+        "La razón de la homotecia es 4",
+        "El área del cuadrado original es menor que 25 cm²",
+        4,
+        "Ninguna condición fija el tamaño del cuadrado original.\n\n"
+        "1) La razón indica cuánto se amplía, pero no de qué medida se parte.\n"
+        "2) Que el área sea menor que 25 cm² deja infinitos cuadrados "
+        "posibles.\n"
+        "3) Ni siquiera juntas determinan un perímetro: un cuadrado de lado 2 y "
+        "otro de lado 4 cumplen ambas condiciones y dan perímetros distintos.\n\n"
+        "Una desigualdad rara vez basta en este formato: acota el valor, pero "
+        "no lo determina.",
+        [
+            "La razón no dice de qué cuadrado se parte.",
+            "Una desigualdad deja infinitos cuadrados posibles.",
+            "Tampoco juntas: los lados 2 y 4 cumplen ambas y dan perímetros distintos.",
+            "Ninguna de las dos determina el perímetro, ni siquiera juntas.",
+            None,
+        ],
+    ),
+    _qsd(
+        "geo_trigonometria", "medio",
+        "Se quiere determinar la altura de un edificio.",
+        "Desde un punto en el suelo a 30 m de la base, el ángulo de elevación "
+        "hacia la parte más alta es de 40°",
+        "El edificio tiene 12 pisos",
+        0,
+        "La primera condición arma un triángulo rectángulo completo.\n\n"
+        "1) Con la distancia horizontal y el ángulo de elevación, la altura es "
+        "30 · tan 40°: queda determinada.\n"
+        "2) El número de pisos no fija la altura, porque no se sabe cuánto mide "
+        "cada uno.\n"
+        "3) Por lo tanto la condición (1) basta y la (2) no.\n\n"
+        "No hacía falta calcular los 25,2 m: bastaba con reconocer que el "
+        "triángulo queda determinado.",
+        [
+            None,
+            "Sin saber la altura de cada piso, el número de pisos no fija nada.",
+            "La condición (2) sobra: (1) ya determina la altura.",
+            "La condición (2) no basta por sí sola.",
+            "La condición (1) ya alcanza para responder.",
+        ],
+    ),
+    _qsd(
+        "geo_trigonometria", "medio",
+        "Se quiere determinar la medida de uno de los catetos de un triángulo "
+        "rectángulo.",
+        "La hipotenusa mide 20 cm",
+        "Uno de los ángulos agudos mide 35°",
+        2,
+        "Hacen falta un lado y un ángulo para resolver el triángulo.\n\n"
+        "1) La hipotenusa sola admite infinitos triángulos rectángulos.\n"
+        "2) El ángulo solo fija la forma, no el tamaño.\n"
+        "3) Juntas determinan el triángulo completo, y con él cualquiera de sus "
+        "catetos.\n\n"
+        "Es la regla general: un lado más un ángulo agudo determinan por "
+        "completo un triángulo rectángulo.",
+        [
+            "La hipotenusa sola admite infinitos triángulos rectángulos.",
+            "El ángulo fija la forma pero no el tamaño del triángulo.",
+            None,
+            "Ninguna de las dos alcanza sola: una da tamaño y la otra, forma.",
+            "No hace falta más información: juntas resuelven el triángulo.",
+        ],
+    ),
+    _qsd(
+        "geo_trigonometria", "dificil",
+        "Se quiere determinar el área de un triángulo.",
+        "Dos de sus lados miden 8 cm y 10 cm",
+        "Dos de sus lados miden 8 cm y 10 cm y forman entre sí un ángulo de 30°",
+        1,
+        "El área con dos lados exige conocer el ángulo entre ellos.\n\n"
+        "1) Dos lados sin el ángulo comprendido admiten infinitos triángulos, "
+        "desde uno casi plano hasta uno casi rectángulo.\n"
+        "2) Con el ángulo, el área queda determinada por la mitad del producto "
+        "de los lados por su seno.\n"
+        "3) Por lo tanto la condición (2) basta y la (1) no.\n\n"
+        "El área resulta ser 20 cm², pero no hacía falta calcularla para "
+        "responder.",
+        [
+            "Sin el ángulo entre ellos, dos lados admiten infinitas áreas.",
+            None,
+            "La condición (1) sobra: está contenida en la (2).",
+            "La condición (1) no basta por sí sola.",
+            "La condición (2) ya alcanza para responder.",
+        ],
+    ),
+    _qsd(
+        "geo_circunferencia", "medio",
+        "Se quiere determinar la longitud de un arco de circunferencia.",
+        "El ángulo del centro que lo abarca mide 45°",
+        "El radio de la circunferencia mide 8 cm",
+        2,
+        "La longitud del arco depende del ángulo y del radio.\n\n"
+        "1) El ángulo indica qué fracción de la vuelta ocupa el arco, pero no "
+        "su medida en centímetros.\n"
+        "2) El radio fija el tamaño de la circunferencia, pero no qué tramo se "
+        "toma.\n"
+        "3) Juntas determinan la longitud del arco.\n\n"
+        "Es la diferencia entre la medida angular de un arco, que solo depende "
+        "del ángulo, y su longitud, que también depende del radio.",
+        [
+            "El ángulo da la fracción de vuelta, no la longitud en centímetros.",
+            "El radio da el tamaño de la circunferencia, no qué tramo se toma.",
+            None,
+            "Ninguna de las dos alcanza sola: hacen falta el ángulo y el radio.",
+            "No hace falta más información: juntas determinan la longitud.",
+        ],
+    ),
+    _qsd(
+        "geo_circunferencia", "medio",
+        "Se quiere determinar la medida de un ángulo inscrito en una "
+        "circunferencia.",
+        "El radio de la circunferencia mide 5 cm",
+        "El arco que abarca el ángulo mide 120°",
+        1,
+        "La medida de un ángulo inscrito depende solo de su arco.\n\n"
+        "1) El radio fija el tamaño de la circunferencia, pero los ángulos no "
+        "dependen del tamaño.\n"
+        "2) El ángulo inscrito mide la mitad de su arco: 120/2 = 60°.\n"
+        "3) Por lo tanto la condición (2) basta y la (1) no.\n\n"
+        "Dos circunferencias de radios muy distintos tienen ángulos inscritos "
+        "iguales si abarcan arcos de la misma medida angular.",
+        [
+            "El tamaño de la circunferencia no cambia la medida de sus ángulos.",
+            None,
+            "La condición (1) sobra: el arco ya determina el ángulo.",
+            "La condición (1) no basta por sí sola.",
+            "La condición (2) ya alcanza para responder.",
+        ],
+    ),
+    _qsd(
+        "geo_circunferencia", "dificil",
+        "Se quiere determinar la medida del ángulo que forman dos cuerdas al "
+        "cortarse dentro de una circunferencia.",
+        "Uno de los arcos opuestos que determinan mide 70°",
+        "El radio de la circunferencia mide 9 cm",
+        4,
+        "El ángulo interior es la semisuma de los dos arcos opuestos.\n\n"
+        "1) Conocer un solo arco deja el otro libre, y con él el ángulo.\n"
+        "2) El radio no interviene: los ángulos no dependen del tamaño de la "
+        "circunferencia.\n"
+        "3) Ni siquiera juntas determinan el ángulo: falta la medida del "
+        "segundo arco.\n\n"
+        "Un dato de longitud casi nunca ayuda en una pregunta de ángulos "
+        "dentro de la circunferencia.",
+        [
+            "Falta el segundo arco opuesto para poder promediar.",
+            "El radio no interviene en la medida de los ángulos.",
+            "Tampoco juntas: sigue faltando la medida del segundo arco.",
+            "Ninguna de las dos determina el ángulo, ni siquiera juntas.",
+            None,
+        ],
+    ),
+    _qsd(
+        "geo_esfera", "medio",
+        "Se quiere determinar el volumen de una esfera.",
+        "El área de su superficie es 100π cm²",
+        "Su diámetro mide 10 cm",
+        3,
+        "Cualquier dato que fije el radio determina el volumen.\n\n"
+        "1) De 4πr² = 100π se sigue r = 5 cm, y con el radio el volumen queda "
+        "determinado.\n"
+        "2) Un diámetro de 10 cm entrega el mismo radio de 5 cm.\n"
+        "3) Cualquiera de las dos condiciones basta.\n\n"
+        "La esfera queda determinada por un único parámetro: por eso tantos "
+        "datos distintos resultan equivalentes.",
+        [
+            "Alcanza, pero la condición (2) también fija el radio por sí sola.",
+            "Alcanza, pero la condición (1) también fija el radio por sí sola.",
+            "No hace falta juntarlas: cada una fija el radio.",
+            None,
+            "No hace falta más información: cada condición fija el radio.",
+        ],
+    ),
+    _qsd(
+        "geo_esfera", "medio",
+        "Se quiere determinar el radio de una esfera.",
+        "La esfera cabe justo dentro de un cubo",
+        "Su volumen es 36π cm³",
+        1,
+        "Solo la segunda condición fija una medida.\n\n"
+        "1) Que quepa justo dentro de un cubo relaciona el diámetro con la "
+        "arista, pero sin conocer la arista no fija ningún valor.\n"
+        "2) De (4/3)πr³ = 36π se sigue r³ = 27, así que r = 3 cm.\n"
+        "3) Por lo tanto la condición (2) basta y la (1) no.\n\n"
+        "Las condiciones que solo relacionan dos incógnitas entre sí no "
+        "determinan ninguna de las dos.",
+        [
+            "Relaciona el radio con la arista, pero no fija ninguna de las dos.",
+            None,
+            "La condición (1) sobra: el volumen ya determina el radio.",
+            "La condición (1) no basta por sí sola.",
+            "La condición (2) ya alcanza para responder.",
+        ],
+    ),
+    _qsd(
+        "geo_esfera", "dificil",
+        "Se quiere determinar cuántas veces mayor es el volumen de una esfera "
+        "que el de otra.",
+        "El radio de la primera es el doble del de la segunda",
+        "El área de superficie de la primera es 4 veces la de la segunda",
+        3,
+        "Ambas condiciones entregan la misma razón entre radios.\n\n"
+        "1) Si el radio se duplica, el volumen se multiplica por 2³ = 8.\n"
+        "2) Un área 4 veces mayor implica una razón de radios igual a 2, porque "
+        "las áreas van con el cuadrado; el volumen vuelve a quedar 8 veces "
+        "mayor.\n"
+        "3) Cualquiera de las dos condiciones responde.\n\n"
+        "La pregunta pide una razón, no un valor: por eso no hace falta conocer "
+        "ningún radio concreto.",
+        [
+            "Alcanza, pero la condición (2) también entrega la razón por sí sola.",
+            "Alcanza, pero la condición (1) también entrega la razón por sí sola.",
+            "No hace falta juntarlas: cada una entrega la razón entre radios.",
+            None,
+            "No hace falta más información: cada condición entrega la razón.",
+        ],
+    ),
+    _qsd(
+        "geo_rectas", "medio",
+        "Se quiere determinar la ecuación de una recta.",
+        "La recta tiene pendiente 3",
+        "La recta pasa por los puntos (1, 2) y (3, 8)",
+        1,
+        "Dos puntos determinan una recta; una pendiente sola, no.\n\n"
+        "1) Con pendiente 3 hay infinitas rectas paralelas entre sí.\n"
+        "2) Dos puntos distintos determinan una única recta, y de ella se "
+        "obtienen pendiente y coeficiente de posición.\n"
+        "3) Por lo tanto la condición (2) basta y la (1) no.\n\n"
+        "La recta resulta ser y = 3x − 1, pero no hacía falta escribirla para "
+        "responder.",
+        [
+            "Con esa pendiente hay infinitas rectas paralelas.",
+            None,
+            "La condición (1) sobra: los dos puntos ya determinan la recta.",
+            "La condición (1) no basta por sí sola.",
+            "La condición (2) ya alcanza para responder.",
+        ],
+    ),
+    _qsd(
+        "geo_rectas", "medio",
+        "Se quiere saber si dos rectas del plano son perpendiculares.",
+        "Una de ellas tiene pendiente 4",
+        "La otra tiene pendiente −0,25",
+        2,
+        "La condición de perpendicularidad involucra las dos pendientes.\n\n"
+        "1) Conocer una sola pendiente no dice nada sobre la otra recta.\n"
+        "2) Lo mismo ocurre con la segunda condición por separado.\n"
+        "3) Juntas permiten multiplicar: 4 · (−0,25) = −1, así que las rectas "
+        "son perpendiculares.\n\n"
+        "El producto de las pendientes es el criterio, y necesita las dos.",
+        [
+            "Con una sola pendiente no se sabe nada de la otra recta.",
+            "Con una sola pendiente no se sabe nada de la otra recta.",
+            None,
+            "Ninguna de las dos alcanza sola: el criterio usa ambas pendientes.",
+            "No hace falta más información: juntas permiten aplicar el criterio.",
+        ],
+    ),
+    _qsd(
+        "geo_rectas", "dificil",
+        "Se quiere determinar el área del triángulo que una recta forma con los "
+        "dos ejes coordenados.",
+        "La recta tiene pendiente −2",
+        "La recta pasa por el primer cuadrante",
+        4,
+        "Ninguna condición fija dónde corta la recta a los ejes.\n\n"
+        "1) Con pendiente −2 hay infinitas rectas paralelas, cada una con "
+        "cortes distintos.\n"
+        "2) Pasar por el primer cuadrante no acota ningún corte en "
+        "particular.\n"
+        "3) Ni siquiera juntas: y = −2x + 4 e y = −2x + 8 cumplen ambas y "
+        "forman triángulos de áreas distintas.\n\n"
+        "Para fijar el triángulo haría falta un punto concreto de la recta o "
+        "uno de sus cortes con los ejes.",
+        [
+            "Con esa pendiente hay infinitas rectas, cada una con cortes distintos.",
+            "Pasar por el primer cuadrante no fija ningún corte.",
+            "Tampoco juntas: y = −2x + 4 e y = −2x + 8 las cumplen y dan áreas distintas.",
+            "Ninguna de las dos determina el área, ni siquiera juntas.",
+            None,
+        ],
+    ),
+    # ---------- PROBABILIDAD ----------
+    _qsd(
+        "prob_dispersion", "medio",
+        "Se quiere determinar la desviación estándar de un conjunto de datos.",
+        "La media del conjunto es 20",
+        "La varianza del conjunto es 16",
+        1,
+        "La desviación estándar es la raíz de la varianza.\n\n"
+        "1) La media es una medida de posición: no dice nada sobre la "
+        "dispersión.\n"
+        "2) De la varianza se obtiene directamente la desviación estándar: la "
+        "raíz de 16 es 4.\n"
+        "3) Por lo tanto la condición (2) basta y la (1) no.\n\n"
+        "Dos conjuntos con la misma media pueden tener dispersiones muy "
+        "distintas: por eso la primera condición no aporta.",
+        [
+            "La media es una medida de posición y no dice nada sobre la dispersión.",
+            None,
+            "La condición (1) sobra: la varianza ya determina la desviación.",
+            "La condición (1) no basta por sí sola.",
+            "La condición (2) ya alcanza para responder.",
+        ],
+    ),
+    _qsd(
+        "prob_dispersion", "medio",
+        "Se quiere determinar el rango de un conjunto de datos.",
+        "El dato mayor del conjunto es 45",
+        "El dato menor del conjunto es 12",
+        2,
+        "El rango es la diferencia entre los dos extremos.\n\n"
+        "1) Conocer solo el mayor no permite restar nada.\n"
+        "2) Conocer solo el menor tampoco.\n"
+        "3) Juntas determinan el rango: 45 − 12 = 33.\n\n"
+        "Es de los pocos casos en que ambas condiciones son estrictamente "
+        "necesarias y ninguna sobra.",
+        [
+            "Falta el dato menor para poder calcular la diferencia.",
+            "Falta el dato mayor para poder calcular la diferencia.",
+            None,
+            "Ninguna de las dos alcanza sola: el rango necesita los dos extremos.",
+            "No hace falta más información: juntas determinan el rango.",
+        ],
+    ),
+    _qsd(
+        "prob_dispersion", "dificil",
+        "Se quiere determinar la varianza de un conjunto de cuatro datos.",
+        "Tres de los datos son 5, 7 y 9",
+        "La media del conjunto es mayor que 6",
+        4,
+        "El cuarto dato no queda determinado.\n\n"
+        "1) Con tres datos conocidos falta el cuarto, y sin él no hay ni media "
+        "ni varianza.\n"
+        "2) Una desigualdad sobre la media no fija un valor: solo acota el "
+        "cuarto dato.\n"
+        "3) Ni siquiera juntas: con cuarto dato 11 la media es 8, y con 15 es "
+        "9; ambas cumplen y dan varianzas distintas.\n\n"
+        "Para responder haría falta el cuarto dato o el valor exacto de la "
+        "media.",
+        [
+            "Falta el cuarto dato: sin él no hay varianza.",
+            "Una desigualdad acota la media pero no la fija.",
+            "Tampoco juntas: los cuartos datos 11 y 15 cumplen y dan varianzas distintas.",
+            "Ninguna de las dos determina la varianza, ni siquiera juntas.",
+            None,
+        ],
+    ),
+    _qsd(
+        "prob_condicional", "medio",
+        "Se quiere determinar la probabilidad de A dado B.",
+        "P(A y B) = 0,12",
+        "P(B) = 0,4",
+        2,
+        "La probabilidad condicional es un cuociente entre esas dos "
+        "cantidades.\n\n"
+        "1) El numerador solo no permite dividir.\n"
+        "2) El denominador solo tampoco.\n"
+        "3) Juntas determinan el resultado: 0,12 dividido por 0,4 es 0,3.\n\n"
+        "Es la definición misma de probabilidad condicional: hacen falta la "
+        "conjunta y la de la condición.",
+        [
+            "Falta P(B): sin el denominador no se puede dividir.",
+            "Falta P(A y B): sin el numerador no se puede dividir.",
+            None,
+            "Ninguna de las dos alcanza sola: el cuociente necesita ambas.",
+            "No hace falta más información: juntas determinan el cuociente.",
+        ],
+    ),
+    _qsd(
+        "prob_condicional", "medio",
+        "Se quiere saber si dos sucesos A y B son independientes.",
+        "P(A) = 0,5 , P(B) = 0,2 y P(A y B) = 0,1",
+        "P(A | B) = P(A)",
+        3,
+        "Ambas condiciones permiten aplicar un criterio de independencia.\n\n"
+        "1) Con los tres valores se comprueba que 0,5 · 0,2 = 0,1: los sucesos "
+        "son independientes.\n"
+        "2) La segunda condición es directamente la definición de "
+        "independencia.\n"
+        "3) Cualquiera de las dos responde la pregunta.\n\n"
+        "Los dos criterios son equivalentes: uno usa el producto y el otro, la "
+        "probabilidad condicional.",
+        [
+            "Alcanza, pero la condición (2) también responde por sí sola.",
+            "Alcanza, pero la condición (1) también responde por sí sola.",
+            "No hace falta juntarlas: cada una aplica un criterio completo.",
+            None,
+            "No hace falta más información: cada condición responde.",
+        ],
+    ),
+    _qsd(
+        "prob_condicional", "dificil",
+        "Se quiere determinar P(A y B).",
+        "P(A) = 0,4 y P(B) = 0,5",
+        "Los sucesos A y B no son excluyentes",
+        4,
+        "Multiplicar las probabilidades exige independencia, y nadie la "
+        "afirma.\n\n"
+        "1) Conocer P(A) y P(B) no determina la intersección: puede valer desde "
+        "0 hasta 0,4 según cómo se relacionen los sucesos.\n"
+        "2) Saber que no son excluyentes solo garantiza que la intersección no "
+        "es cero.\n"
+        "3) Ni siquiera juntas la determinan: 0,2 y 0,3 son ambos valores "
+        "compatibles con las dos condiciones.\n\n"
+        "El error más común en este ítem es multiplicar 0,4 por 0,5 sin que "
+        "nadie haya dicho que los sucesos son independientes.",
+        [
+            "Sin independencia, esas dos probabilidades no determinan la intersección.",
+            "Solo garantiza que la intersección no es cero.",
+            "Tampoco juntas: 0,2 y 0,3 son ambos compatibles con las dos condiciones.",
+            "Ninguna de las dos determina la intersección, ni siquiera juntas.",
+            None,
+        ],
+    ),
+    _qsd(
+        "prob_binomial", "medio",
+        "Se quiere determinar el número esperado de éxitos de un experimento "
+        "binomial.",
+        "El experimento se repite 40 veces",
+        "La probabilidad de éxito en cada repetición es 0,15",
+        2,
+        "El valor esperado es el producto de los dos parámetros.\n\n"
+        "1) Conocer solo la cantidad de repeticiones no permite multiplicar.\n"
+        "2) Conocer solo la probabilidad tampoco.\n"
+        "3) Juntas determinan el resultado: 40 · 0,15 = 6 éxitos.\n\n"
+        "Ambos parámetros son necesarios y ninguno sobra.",
+        [
+            "Falta la probabilidad de éxito para poder multiplicar.",
+            "Falta la cantidad de repeticiones para poder multiplicar.",
+            None,
+            "Ninguna de las dos alcanza sola: el producto necesita ambas.",
+            "No hace falta más información: juntas determinan el producto.",
+        ],
+    ),
+    _qsd(
+        "prob_binomial", "medio",
+        "Se quiere determinar la varianza de una distribución binomial.",
+        "n = 60 y p = 0,5",
+        "n = 60 y el número esperado de éxitos es 30",
+        3,
+        "Ambas condiciones entregan los dos parámetros.\n\n"
+        "1) Con n y p la varianza es n · p · (1 − p) = 60 · 0,5 · 0,5 = 15.\n"
+        "2) De n = 60 y un valor esperado de 30 se despeja p = 0,5, y se llega "
+        "a la misma varianza.\n"
+        "3) Cualquiera de las dos condiciones basta.\n\n"
+        "El valor esperado y la probabilidad de éxito son intercambiables "
+        "cuando se conoce n.",
+        [
+            "Alcanza, pero la condición (2) también entrega los dos parámetros.",
+            "Alcanza, pero la condición (1) también entrega los dos parámetros.",
+            "No hace falta juntarlas: cada una entrega n y p.",
+            None,
+            "No hace falta más información: cada condición entrega los parámetros.",
+        ],
+    ),
+    _qsd(
+        "prob_binomial", "dificil",
+        "Se quiere determinar la probabilidad de obtener exactamente 3 caras al "
+        "lanzar una moneda equilibrada.",
+        "La moneda se lanza más de 4 veces",
+        "La moneda se lanza 5 veces",
+        1,
+        "Hace falta saber exactamente cuántas veces se lanza.\n\n"
+        "1) «Más de 4 veces» deja infinitas posibilidades, y la probabilidad "
+        "cambia con cada una.\n"
+        "2) Con 5 lanzamientos la probabilidad queda determinada: hay C(5, 3) = "
+        "10 secuencias favorables entre 32 posibles.\n"
+        "3) Por lo tanto la condición (2) basta y la (1) no.\n\n"
+        "El resultado es 10/32 = 5/16, pero no hacía falta calcularlo para "
+        "responder.",
+        [
+            "Una desigualdad deja infinitos valores de n, con probabilidades distintas.",
+            None,
+            "La condición (1) sobra: está contenida en la (2).",
+            "La condición (1) no basta por sí sola.",
+            "La condición (2) ya alcanza para responder.",
         ],
     ),
 ]
