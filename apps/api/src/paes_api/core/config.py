@@ -1,6 +1,7 @@
+import warnings
 from functools import lru_cache
 
-from pydantic import field_validator
+from pydantic import field_validator, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -8,11 +9,53 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
     environment: str = "development"
+    #: Firma los JWT de sesion. El valor por defecto sirve para desarrollo y
+    #: NO puede llegar a produccion: quien lo conozca puede firmar un token de
+    #: cualquier usuario, incluido uno con is_admin. Lo protege el validador de
+    #: mas abajo, que revienta al arrancar en vez de servir con la puerta
+    #: abierta. Hoy la variable esta bien puesta en Vercel; esto es para el dia
+    #: que alguien levante otro entorno y se le olvide.
     secret_key: str = "change-me"
     #: Client ID de la app de Google (OAuth 2.0). Vacío desactiva el login con
     #: Google: la API rechaza /auth/google y la web no muestra el botón.
     google_client_id: str = ""
     database_url: str = "postgresql+psycopg://paes:paes@localhost:5432/paes_m1"
+
+    @model_validator(mode="after")
+    def _clave_de_produccion(self):
+        """En produccion, la clave de firma tiene que ser de verdad.
+
+        Fallar al arrancar es incomodo; servir con una clave publica es que
+        cualquiera entre como cualquiera. De las dos, esta es la buena.
+        """
+        if self.environment.lower() != "production":
+            return self
+
+        # Solo se REVIENTA por el valor por defecto, que esta escrito en un
+        # repo publico y por tanto lo conoce cualquiera. Una clave corta pero
+        # propia es mas debil, no publica: ahi se avisa y se sigue.
+        #
+        # La diferencia no es un matiz. En Vercel esta variable esta marcada
+        # Sensitive y NO se puede volver a leer, ni por su dueño: si el corte
+        # fuera por longitud y la de produccion resultara corta, este validador
+        # dejaria la API sin arrancar y el sitio caido, para arreglar algo que
+        # no estaba roto. Tumbar produccion no puede ser el precio de una
+        # heuristica.
+        if self.secret_key == "change-me":
+            raise ValueError(
+                "SECRET_KEY sigue siendo la de por defecto y environment="
+                "production. Ese valor esta en el repo publico: quien lo lea "
+                "puede firmar un token de cualquier usuario, incluido uno de "
+                "admin. Pon una clave propia antes de desplegar."
+            )
+        if len(self.secret_key) < 32:
+            warnings.warn(
+                f"SECRET_KEY tiene {len(self.secret_key)} caracteres. Para "
+                "firmar sesiones conviene al menos 32. No se detiene el "
+                "arranque para no dejar el sitio caido, pero cambiala.",
+                stacklevel=2,
+            )
+        return self
 
     @field_validator("database_url")
     @classmethod
