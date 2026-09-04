@@ -1024,7 +1024,7 @@ COMPROBACIONES: dict[str, str] = {
     "bandera de 3 franjas": str(5 * 4 * 3),
     "4 cifras se pueden formar usando solo los dígitos 1, 2 y 3": str(3**4),
     # Permutaciones con elementos repetidos: se divide por cada repetición.
-    "letras de la palabra COCO": str(factorial(4) // (factorial(2) * factorial(2))),
+    "letras de la palabra CACAO": str(factorial(5) // (factorial(2) * factorial(2))),
     "letras de la palabra BANANA": str(factorial(6) // (factorial(3) * factorial(2))),
     # Combinaciones: no importa el orden.
     "parejas distintas se pueden formar con 4 personas": str(comb(4, 2)),
@@ -1652,7 +1652,7 @@ COMPROBACIONES: dict[str, str] = {
     "(6, 8) se refleja respecto del origen": f"({-6 + 2}, {-8 - 3})",
     # --- cuerpos geométricos ---
     "cuánto cabe dentro de ella": "x · y · z",
-    "pintar por fuera una caja cúbica de arista a": "6a²",
+    "área total de un cubo de 4 cm de arista": f"{6 * 4 ** 2} cm²",
     "cubitos de arista a/3": "3³",
     "estanque cilíndrico tiene radio r y altura h": "π · r² · h",
     "otro cilindro del doble de radio y la misma altura": f"{20 * 2**2} minutos",
@@ -1685,7 +1685,10 @@ COMPROBACIONES: dict[str, str] = {
     "mediana de 15, 22, 8, 19, 30, 12 y 25": str(sorted([15, 22, 8, 19, 30, 12, 25])[3]),
     "cuatro personas ganan $400.000": f"${(4 * 400000 + 2000000) // 5:,}".replace(",", "."),
     "rango de los datos 3,5": f"{9.8 - 3.5:.1f}".replace(".", ","),
-    "dato exactamente igual a la media": "No cambia",
+    # Aqui habia una comprobacion de "dato exactamente igual a la media". Esa
+    # pregunta era un duplicado de la version facil del mismo nodo y se
+    # reescribio: la nueva compara media contra mediana y su respuesta correcta
+    # es una frase, no un valor, asi que no admite recomprobacion aritmetica.
     "promedio de 3, 5, 7, 9 y 11": str((3 + 5 + 7 + 9 + 11) // 5),
     # --- técnicas de conteo ---
     "ordenar 3 personas en una fila": str(factorial(3)),

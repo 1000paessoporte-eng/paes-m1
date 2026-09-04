@@ -10971,18 +10971,22 @@ QUESTIONS += [
     ),
     _q(
         "geo_solidos", "facil",
-        "Se quiere pintar por fuera una caja cúbica de arista a. ¿Cuál de las siguientes expresiones representa la superficie a pintar?",
-        "6a²",
-        "Un cubo tiene seis caras cuadradas iguales.\n\n"
-        "1) Cada cara es un cuadrado de lado a, con área a².\n"
-        "2) Como hay seis, la superficie total es 6a².\n"
-        "3) Comprueba con arista 4: 6 · 16 = 96 centímetros cuadrados.\n"
-        "4) Fíjate en las unidades: pintar cubre superficie, así que el "
-        "resultado va en unidades cuadradas y no cúbicas.",
+        "¿Cuál es el área total de un cubo de 4 cm de arista?",
+        "96 cm²",
+        "El área total suma las seis caras del cubo.\n\n"
+        "1) Cada cara es un cuadrado de 4 cm de lado, así que mide 4 · 4 = 16 "
+        "cm².\n"
+        "2) El cubo tiene 6 caras iguales.\n"
+        "3) El total es 6 · 16 = 96 cm².\n\n"
+        "Ojo con la unidad: el área va en centímetros cuadrados. El volumen de "
+        "ese mismo cubo sería 64 cm³, que es otra cosa.",
         [
-            ("a³", "Ese es el volumen: lo que cabe adentro, no lo que se pinta afuera."),
-            ("6a", "Multiplica una sola longitud por 6 y queda en unidades de longitud."),
-            ("4a²", "Cuenta cuatro caras y olvida la de arriba y la de abajo."),
+            ("64 cm²",
+             "Ese es el VOLUMEN del cubo, 4³, y además corresponde a centímetros cúbicos."),
+            ("24 cm²",
+             "Multiplica las seis caras por la arista en vez de por el área de cada cara."),
+            ("16 cm², que es lo que mide una de las caras del cubo",
+             "Es el área de una sola cara: faltan las otras cinco."),
         ],
     ),
     _q(
@@ -11580,18 +11584,24 @@ QUESTIONS += [
     ),
     _q(
         "prob_estadistica_desc", "dificil",
-        "Si a un conjunto de datos se le agrega un nuevo dato exactamente igual a la media, ¿qué ocurre con la media?",
-        "No cambia",
-        "Conviene razonarlo con la suma total.\n\n"
-        "1) Si la media de n datos es m, la suma total es n · m.\n"
-        "2) Al agregar un dato de valor m, la nueva suma es n · m + m = (n + 1) · m.\n"
-        "3) La nueva cantidad de datos es n + 1.\n"
-        "4) La nueva media es (n + 1) · m dividido por (n + 1), o sea m. Se mantiene "
-        "igual.",
+        "En el conjunto 4, 5, 6, 7 y 8 se reemplaza el 8 por 100. ¿Qué ocurre "
+        "con la media y con la mediana?",
+        "La media sube mucho y la mediana no cambia",
+        "El cambio afecta a las dos medidas de manera muy distinta.\n\n"
+        "1) La mediana es el valor central de los datos ordenados: era 6 y sigue "
+        "siendo 6, porque el 100 reemplaza al mayor y no mueve el centro.\n"
+        "2) La media suma todos los valores: pasa de 30/5 = 6 a 122/5 = 24,4.\n"
+        "3) Un solo dato extremo arrastra la media y deja intacta la mediana.\n\n"
+        "Por eso, cuando hay valores atípicos, la mediana describe mejor al "
+        "grupo: es la razón por la que los ingresos se informan con mediana y no "
+        "con promedio.",
         [
-            ("Aumenta", "El dato agregado no está por encima de la media, así que no la empuja hacia arriba."),
-            ("Disminuye", "El dato agregado no está por debajo de la media."),
-            ("Se duplica", "Agregar un dato no multiplica la media; a lo sumo la desplaza."),
+            ("Las dos suben en la misma proporción",
+             "La mediana no se mueve: sigue siendo el valor central, que es 6."),
+            ("La mediana sube y la media no cambia",
+             "Es al revés: la media es la que incorpora el valor extremo."),
+            ("Ninguna de las dos cambia, porque solo se modificó un dato de cinco",
+             "Basta un dato para mover la media: pasa de 6 a 24,4."),
         ],
     ),
     _q(
@@ -16663,17 +16673,24 @@ QUESTIONS += [
     ),
     _q(
         "prob_combinatoria", "medio",
-        "¿De cuántas formas distintas se pueden ordenar las letras de la palabra COCO?",
-        "6",
-        "La palabra tiene dos letras repetidas, y cada repetición reduce la cantidad de órdenes distinguibles.\n\n"
-        "1) Si las 4 letras fueran todas distintas, habría 4 · 3 · 2 · 1 = 24 órdenes.\n"
-        "2) Pero la C aparece dos veces y se puede intercambiar consigo misma de 2 formas, y lo mismo pasa con la O.\n"
-        "3) Divide por ambas repeticiones: 24 ÷ (2 · 2) = 24 ÷ 4 = 6.\n"
-        "4) Hay 6 ordenaciones distinguibles: COCO, COOC, CCOO, OCCO, OCOC y OOCC.",
+        "¿De cuántas formas distintas se pueden ordenar las letras de la palabra "
+        "CACAO? (la C se repite 2 veces y la A también)",
+        "30",
+        "Cada grupo de letras repetidas divide por su propio factorial.\n\n"
+        "1) Si las cinco letras fueran distintas habría 5! = 120 ordenamientos.\n"
+        "2) La C aparece dos veces e intercambiarlas no produce una palabra "
+        "nueva, así que hay que dividir por 2!; con la A ocurre lo mismo, y se "
+        "divide otra vez por 2!.\n"
+        "3) El resultado es 120 ÷ (2 · 2) = 30 ordenamientos distintos.\n\n"
+        "La regla general es dividir el factorial del total por el factorial de "
+        "cada grupo de letras repetidas, uno por uno.",
         [
-            ("24", "Trató las cuatro letras como si todas fueran distintas."),
-            ("12", "Descontó la repetición de una sola de las dos letras."),
-            ("4", "Dio la cantidad de letras en vez de la de ordenaciones."),
+            ("120",
+             "Es 5! sin descontar ninguna repetición, así que cuenta cada palabra cuatro veces."),
+            ("60",
+             "Descuenta solo una de las dos letras repetidas: falta dividir otra vez por 2."),
+            ("5, que es la cantidad de letras que tiene la palabra",
+             "El número de letras no es el número de ordenamientos posibles."),
         ],
     ),
     _q(
@@ -55790,20 +55807,25 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ninez", "civ_ddhh", "medio",
-        "¿Por qué el texto sostiene que ratificar la Convención no basta?",
-        "Sin leyes, instituciones y presupuesto no se puede exigir",
-        "El texto reconoce que ratificar un tratado obliga al Estado, de modo que "
-        "el problema no es de fuerza jurídica.\nLo que falta después es la "
-        "maquinaria que convierte una declaración en algo reclamable: normas "
-        "internas que la desarrollen, organismos que la apliquen y recursos que la "
-        "financien.\nEs el mismo razonamiento que aparece en cualquier derecho "
-        "prestacional: entre el texto que lo declara y la persona que lo ejerce hay "
-        "una distancia que se cubre con decisiones concretas, no con la firma.",
+        "civ_ninez", "civ_ddhh", "facil",
+        "Un colegio elimina todos los recreos para agregar horas de clases. "
+        "¿Qué derecho reconocido por la Convención se ve afectado?",
+        "El derecho al juego y al descanso",
+        "La Convención no protege solo lo que parece grave o urgente.\n\n"
+        "Entre los derechos que el texto enumera están los de identidad y "
+        "nacionalidad, vivir en familia, educación y salud, y también los de "
+        "juego y descanso. Eliminar todos los recreos suprime justamente el "
+        "tiempo de juego y descanso dentro de la jornada.\n\n"
+        "Que la medida busque más horas de clases no la justifica: un derecho no "
+        "se compensa sacrificando otro. Que el juego figure junto a la salud y "
+        "la educación es deliberado.",
         [
-            ("Porque la Convención no obliga a los Estados que la firman", "El texto afirma que ratificar sí obliga."),
-            ("Porque debe ratificarse otra vez cada cierto número de años", "El texto no plantea ninguna renovación periódica."),
-            ("Porque solo rige para los países que la redactaron", "Obliga a todos los Estados que la ratifican."),
+            ("El derecho a la educación",
+             "La medida agrega horas de clases: el derecho afectado es el otro."),
+            ("El derecho a ser oído",
+             "Se incumpliría además si no se consultara, pero lo suprimido es el tiempo de juego y descanso."),
+            ("Ninguno, porque la Convención no menciona el tiempo libre de los estudiantes",
+             "Sí lo menciona: el juego y el descanso figuran entre los derechos que reconoce."),
         ],
     ),
     _ql(
@@ -72673,22 +72695,6 @@ QUESTIONS_HISTORIA = [
     ),
     # ---------- Dos miradas sobre la oficina salitrera ----------
     _ql(
-        "fuentes_salitre", "his_fuentes", "facil",
-        "¿A quién atribuye la Fuente 1 las quejas de los trabajadores?",
-        "A agitadores venidos de fuera",
-        "El informe lo dice de manera explícita: «Las quejas provienen de "
-        "agitadores venidos de fuera, ajenos por completo a la vida de la "
-        "pampa».\n\n"
-        "Y agrega que el personal «en su mayoría cumple sin reparos».\n\n"
-        "Es una explicación que traslada el descontento a un origen externo, "
-        "en vez de atribuirlo a las condiciones de la oficina.",
-        [
-            ("A los administradores de la casa matriz", "El informe defiende a la administración."),
-            ("A la mayoría del personal de la oficina", "Sostiene que el personal cumple sin reparos."),
-            ("A las condiciones de la pulpería", "El informe presenta la pulpería como un beneficio."),
-        ],
-    ),
-    _ql(
         "fuentes_salitre", "his_fuentes", "medio",
         "¿Qué elemento mencionan ambas fuentes, pero con valoraciones "
         "opuestas?",
@@ -73626,17 +73632,25 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "civ_ninez", "civ_ddhh", "facil",
-        "Según el texto, ¿qué predominaba antes de la Convención de 1989?",
-        "Que eran objeto de protección y otros decidían por ellos",
-        "El texto describe el enfoque anterior con precisión: alguien decidía «en "
-        "su nombre y sin consultarlos».\n\nProtección había, pero desde una "
-        "posición pasiva: el niño era destinatario de decisiones ajenas, no titular "
-        "de derechos propios.\n\nEl cambio de la Convención no fue agregar "
-        "protección sino cambiar quién es el titular.",
+        "Un juez debe decidir con quién vivirá un niño y escoge la alternativa "
+        "que resulta más cómoda para los adultos involucrados. ¿Qué principio "
+        "de la Convención incumple?",
+        "El interés superior del niño",
+        "El principio ordena cuál consideración pesa más al decidir.\n\n"
+        "El texto establece que, ante cualquier decisión que afecte a un niño, "
+        "debe primar lo que resulte mejor para él por sobre otras "
+        "consideraciones. La comodidad de los adultos es justamente una de esas "
+        "otras consideraciones.\n\n"
+        "Al elegir por comodidad ajena, el juez invierte el orden que la "
+        "Convención exige. No significa que el niño decida: significa que su "
+        "bienestar es el criterio con que decide quien tiene que hacerlo.",
         [
-            ("Que los niños tenían los mismos derechos que los adultos", "El reconocimiento como sujetos de derecho vino con la Convención."),
-            ("Que no existía ninguna forma de protección a la infancia", "Sí existía, pero desde otro enfoque."),
-            ("Que cada país regulaba la infancia sin ninguna referencia común", "El texto no plantea ese punto."),
+            ("El derecho a ser oído",
+             "Se incumpliría si no se le hubiera preguntado; acá el problema es el criterio de la decisión."),
+            ("El derecho a la identidad",
+             "La identidad se refiere al nombre y la nacionalidad, que no están en discusión."),
+            ("Ninguno, porque decidir dónde vive un niño corresponde solo a los adultos",
+             "La decisión la toman los adultos, pero la Convención les fija el criterio con que deben tomarla."),
         ],
     ),
     _ql(
