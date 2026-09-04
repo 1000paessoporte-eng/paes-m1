@@ -1,3 +1,4 @@
+import warnings
 from functools import lru_cache
 
 from pydantic import field_validator, model_validator
@@ -27,13 +28,32 @@ class Settings(BaseSettings):
         Fallar al arrancar es incomodo; servir con una clave publica es que
         cualquiera entre como cualquiera. De las dos, esta es la buena.
         """
-        insegura = self.secret_key == "change-me" or len(self.secret_key) < 32
-        if self.environment.lower() == "production" and insegura:
+        if self.environment.lower() != "production":
+            return self
+
+        # Solo se REVIENTA por el valor por defecto, que esta escrito en un
+        # repo publico y por tanto lo conoce cualquiera. Una clave corta pero
+        # propia es mas debil, no publica: ahi se avisa y se sigue.
+        #
+        # La diferencia no es un matiz. En Vercel esta variable esta marcada
+        # Sensitive y NO se puede volver a leer, ni por su dueño: si el corte
+        # fuera por longitud y la de produccion resultara corta, este validador
+        # dejaria la API sin arrancar y el sitio caido, para arreglar algo que
+        # no estaba roto. Tumbar produccion no puede ser el precio de una
+        # heuristica.
+        if self.secret_key == "change-me":
             raise ValueError(
-                "SECRET_KEY no esta configurada (o es demasiado corta) y "
-                "environment=production. Con la clave por defecto, cualquiera "
-                "puede firmar un token de cualquier usuario. Ponla en las "
-                "variables de entorno antes de desplegar."
+                "SECRET_KEY sigue siendo la de por defecto y environment="
+                "production. Ese valor esta en el repo publico: quien lo lea "
+                "puede firmar un token de cualquier usuario, incluido uno de "
+                "admin. Pon una clave propia antes de desplegar."
+            )
+        if len(self.secret_key) < 32:
+            warnings.warn(
+                f"SECRET_KEY tiene {len(self.secret_key)} caracteres. Para "
+                "firmar sesiones conviene al menos 32. No se detiene el "
+                "arranque para no dejar el sitio caido, pero cambiala.",
+                stacklevel=2,
             )
         return self
 

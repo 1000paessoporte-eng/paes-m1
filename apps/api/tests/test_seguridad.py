@@ -27,9 +27,17 @@ class TestClaveDeFirma:
         with pytest.raises(ValidationError, match="SECRET_KEY"):
             Settings(environment="production", secret_key="change-me")
 
-    def test_una_clave_corta_tampoco(self) -> None:
-        with pytest.raises(ValidationError, match="SECRET_KEY"):
-            Settings(environment="production", secret_key="corta")
+    def test_una_clave_corta_avisa_pero_no_tumba_el_sitio(self) -> None:
+        """Corta no es lo mismo que publica.
+
+        La de por defecto la conoce cualquiera que lea el repo; una corta y
+        propia solo es mas debil. Y como en Vercel esta variable no se puede
+        volver a leer, cortar el arranque por longitud podria dejar el sitio
+        caido para arreglar algo que no estaba roto.
+        """
+        with pytest.warns(UserWarning, match="SECRET_KEY"):
+            s = Settings(environment="production", secret_key="corta")
+        assert s.secret_key == "corta"
 
     def test_una_clave_de_verdad_si(self) -> None:
         s = Settings(environment="production", secret_key="x" * 64)
