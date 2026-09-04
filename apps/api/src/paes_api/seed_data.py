@@ -22818,7 +22818,7 @@ QUESTIONS += [
         [
             ("Sí: duplicar el ángulo duplica el seno", "Con 30° y 60° los valores son 0,5 y 0,87: no se duplica."),
             ("Sí, pero solo para ángulos menores que 90°", "El contraejemplo de 30° y 60° está justamente en ese rango."),
-            ("No: sen(30°) + sen(30°) da 0,5", "Sumar 0,5 dos veces da 1, no 0,5."),
+            ("No: sen(30°) + sen(30°) da 0,5, que tampoco coincide con sen(60°)", "Sumar 0,5 dos veces da 1, no 0,5."),
         ],
     ),
     _q(
@@ -126125,8 +126125,8 @@ QUESTIONS += [
         [
             ("12 cm",
              "Suma solo los dos catetos y olvida la hipotenusa."),
-            ("18 cm",
-             "Toma la hipotenusa como si midiera igual que los catetos."),
+            ("14,5 cm aproximadamente",
+             "Suma la hipotenusa con un solo cateto y olvida el otro."),
             ("24 cm, tomando 12 cm como medida de la hipotenusa",
              "La hipotenusa mide 6√2, cerca de 8,5 cm, y no el doble del cateto."),
         ],
@@ -126219,7 +126219,7 @@ QUESTIONS += [
     _q(
         "geo_trigonometria", "medio",
         "Si sen θ = 0,8 y cos θ = 0,6, ¿cuánto vale tan θ?",
-        "1,33 aproximadamente",
+        "4/3",
         "La tangente es el cuociente entre seno y coseno.\n\n"
         "1) tan θ = sen θ dividido por cos θ.\n"
         "2) Reemplazando: 0,8 / 0,6.\n"
@@ -126228,7 +126228,7 @@ QUESTIONS += [
         "exige la identidad fundamental.",
         [
             ("0,75",
-             "Invierte el cuociente: divide el coseno por el seno."),
+             "Invierte el cuociente: divide el coseno por el seno, y da 3/4."),
             ("1,4",
              "Suma seno y coseno en vez de dividirlos."),
             ("0,48, multiplicando el seno por el coseno",
@@ -127669,6 +127669,3061 @@ QUESTIONS += [
              "El recíproco también vale: distancias iguales dan cuerdas iguales."),
             ("No: solo los diámetros cumplen esa propiedad",
              "La propiedad vale para cualquier par de cuerdas de igual longitud."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Geometria: esfera
+#
+# Volumen y area, medias esferas, esferas inscritas y circunscritas, razones
+# de escala y aplicaciones con capacidad y densidad.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "geo_esfera", "facil",
+        "¿Qué figura se obtiene al cortar una esfera con un plano?",
+        "Un círculo",
+        "Toda sección plana de una esfera es circular.\n\n"
+        "1) Los puntos de la sección están sobre la esfera y sobre el plano.\n"
+        "2) Todos ellos quedan a la misma distancia del punto del plano más "
+        "cercano al centro.\n"
+        "3) Esa condición describe exactamente un círculo.\n\n"
+        "El corte más grande posible se obtiene con un plano que pase por el "
+        "centro, y se llama círculo máximo: su radio es el de la esfera.",
+        [
+            ("Una elipse",
+             "Las elipses aparecen al cortar un cono o un cilindro en diagonal, no una esfera."),
+            ("Un cuadrado",
+             "La esfera no tiene ninguna cara plana ni arista."),
+            ("Otra esfera de menor tamaño",
+             "El corte es una figura plana, no un cuerpo."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "facil",
+        "¿Cuántas caras planas tiene una esfera?",
+        "Ninguna",
+        "La superficie de la esfera es completamente curva.\n\n"
+        "1) Todos sus puntos están a la misma distancia del centro.\n"
+        "2) Una cara plana tendría puntos a distintas distancias del centro.\n"
+        "3) Por lo tanto no puede haber ninguna cara plana.\n\n"
+        "Tampoco tiene aristas ni vértices: es el cuerpo geométrico más simple "
+        "en ese sentido.",
+        [
+            ("Una",
+             "La esfera no tiene ninguna cara plana; ni siquiera una base como el cono."),
+            ("Dos",
+             "Ese sería el caso del cilindro, con sus dos bases circulares."),
+            ("Infinitas, porque cada punto de la superficie forma una cara",
+             "Un punto no es una cara: la superficie es curva en todas partes."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "facil",
+        "Una esfera tiene 10 cm de diámetro. ¿Cuánto mide su radio?",
+        "5 cm",
+        "El radio es la mitad del diámetro.\n\n"
+        "1) El diámetro atraviesa la esfera pasando por el centro.\n"
+        "2) Ese recorrido son dos radios seguidos.\n"
+        "3) Entonces el radio mide 10 / 2 = 5 cm.\n\n"
+        "Es un paso que conviene hacer siempre antes de aplicar las fórmulas: "
+        "tanto el volumen como el área se expresan en función del radio.",
+        [
+            ("10 cm",
+             "Repite el diámetro: el radio es su mitad."),
+            ("20 cm",
+             "Duplica el diámetro en vez de dividirlo."),
+            ("3,14 cm, dividiendo el diámetro por π",
+             "El radio se obtiene dividiendo el diámetro por 2, no por π."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "facil",
+        "En la fórmula del volumen de una esfera, ¿a qué potencia aparece "
+        "elevado el radio?",
+        "Al cubo",
+        "El volumen es una magnitud de tres dimensiones.\n\n"
+        "1) La fórmula es cuatro tercios de π por el radio al cubo.\n"
+        "2) El exponente 3 refleja que el volumen ocupa tres dimensiones.\n"
+        "3) El área de la superficie, en cambio, usa el radio al cuadrado.\n\n"
+        "Ese contraste explica por qué duplicar el radio multiplica el área por "
+        "4 y el volumen por 8.",
+        [
+            ("Al cuadrado",
+             "Ese es el exponente en la fórmula del área de la superficie."),
+            ("A la primera",
+             "El radio a la primera aparece en longitudes, como el diámetro."),
+            ("A la cuarta, porque la fórmula lleva un cuatro en el numerador",
+             "El 4 es parte del coeficiente 4/3, no un exponente."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "facil",
+        "¿Cuál es el volumen de una esfera de 3 cm de radio? (usa π ≈ 3,14)",
+        "113,04 cm³",
+        "Se aplica la fórmula del volumen.\n\n"
+        "1) El volumen es cuatro tercios de π por el radio al cubo.\n"
+        "2) El radio al cubo es 27.\n"
+        "3) Reemplazando: (4/3) · 3,14 · 27 = 113,04 cm³.\n\n"
+        "Un atajo útil: 27 dividido por 3 es 9, así que el cálculo queda "
+        "4 · 3,14 · 9.",
+        [
+            ("28,26 cm³",
+             "Corresponde a π · r², que es el área de un círculo y no un volumen."),
+            ("113,04 cm²",
+             "El valor numérico es correcto, pero el volumen se mide en centímetros cúbicos."),
+            ("339,12 cm³, olvidando dividir por tres en el coeficiente",
+             "La fórmula lleva cuatro tercios, no cuatro."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "facil",
+        "¿Qué se necesita conocer para calcular el volumen de una esfera?",
+        "Solo su radio",
+        "La esfera queda determinada por un único dato.\n\n"
+        "1) Todos sus puntos están a la misma distancia del centro.\n"
+        "2) Esa distancia es el radio.\n"
+        "3) Conocido el radio, quedan determinados el volumen, el área y "
+        "cualquier otra medida.\n\n"
+        "Es la diferencia con un cilindro o un prisma, que necesitan al menos "
+        "dos medidas independientes.",
+        [
+            ("Su radio y su altura",
+             "La esfera no tiene altura independiente: su medida vertical es el diámetro."),
+            ("Su radio y el área de su base",
+             "La esfera no tiene base: no hay ninguna cara plana."),
+            ("El diámetro y la longitud de su círculo máximo",
+             "Bastaría con cualquiera de los dos: ambos se deducen del radio."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "facil",
+        "¿Cuál es el área de la superficie de una esfera de 2 cm de radio? "
+        "(usa π ≈ 3,14)",
+        "50,24 cm²",
+        "Se aplica la fórmula del área.\n\n"
+        "1) El área es 4 · π · r².\n"
+        "2) El radio al cuadrado es 4.\n"
+        "3) Reemplazando: 4 · 3,14 · 4 = 50,24 cm².\n\n"
+        "Es exactamente cuatro veces el área del círculo máximo, que mide "
+        "12,56 cm².",
+        [
+            ("12,56 cm²",
+             "Corresponde al círculo máximo, no a toda la superficie de la esfera."),
+            ("33,49 cm³",
+             "Es el volumen de la esfera, y además se mide en unidades cúbicas."),
+            ("25,12 cm², usando 2πr en vez de 4πr²",
+             "2πr es la longitud de una circunferencia, no un área."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "facil",
+        "¿Cómo se llama el corte de una esfera que pasa por su centro?",
+        "Círculo máximo",
+        "Es la sección de mayor tamaño posible.\n\n"
+        "1) Toda sección plana de una esfera es un círculo.\n"
+        "2) Mientras más cerca del centro pase el plano, mayor es el radio de "
+        "ese círculo.\n"
+        "3) El máximo se alcanza cuando el plano pasa por el centro, y ahí el "
+        "radio de la sección iguala al de la esfera.\n\n"
+        "El ecuador de la Tierra es un círculo máximo; los paralelos, en "
+        "cambio, no lo son.",
+        [
+            ("Casquete esférico",
+             "Ese es el trozo de superficie que queda a un lado de un corte, no el corte mismo."),
+            ("Sector esférico",
+             "Ese es un cuerpo que se forma con el centro y un casquete."),
+            ("Diámetro, porque atraviesa la esfera de lado a lado",
+             "El diámetro es un segmento, no una superficie de corte."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "facil",
+        "¿Cuál es el volumen de una media esfera de radio r?",
+        "Dos tercios de π por r³",
+        "Se toma la mitad del volumen de la esfera completa.\n\n"
+        "1) La esfera completa mide cuatro tercios de π por r³.\n"
+        "2) La mitad de cuatro tercios es dos tercios.\n"
+        "3) Por lo tanto la media esfera mide dos tercios de π por r³.\n\n"
+        "Con el área hay que tener más cuidado: la mitad de la superficie "
+        "curva es 2πr², pero si la media esfera es un cuerpo cerrado hay que "
+        "sumar el círculo de la base.",
+        [
+            ("Cuatro tercios de π por r³",
+             "Ese es el volumen de la esfera completa."),
+            ("Un tercio de π por r³",
+             "Corresponde a la cuarta parte de la esfera, no a la mitad."),
+            ("Dos tercios de π por r², bajando el exponente al dividir por dos",
+             "Dividir por dos afecta al coeficiente, no al exponente."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Si el radio de una esfera se triplica, ¿qué ocurre con el área de su "
+        "superficie?",
+        "Se multiplica por 9",
+        "El área depende del cuadrado del radio.\n\n"
+        "1) El área es 4 · π · r².\n"
+        "2) Al reemplazar r por 3r queda 4 · π · 9r².\n"
+        "3) Eso es nueve veces el área original.\n\n"
+        "El volumen, en cambio, se multiplicaría por 27: el exponente decide el "
+        "factor de escala.",
+        [
+            ("Se triplica",
+             "Ese sería el factor si el área dependiera linealmente del radio."),
+            ("Se multiplica por 27",
+             "Ese es el factor del volumen, que depende del cubo del radio."),
+            ("Se multiplica por 6, porque el área ya lleva un factor 4 en su fórmula",
+             "El coeficiente 4 no interviene en el factor de escala: lo decide el exponente."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Una esfera tiene un volumen de 36π cm³. ¿Cuál es su radio?",
+        "3 cm",
+        "Se despeja el radio de la fórmula del volumen.\n\n"
+        "1) La fórmula es (4/3) · π · r³ = 36π.\n"
+        "2) Simplificando π y multiplicando por 3/4: r³ = 27.\n"
+        "3) La raíz cúbica de 27 es 3, así que el radio mide 3 cm.\n\n"
+        "Que el enunciado deje el resultado en función de π facilita el "
+        "despeje: no hay que arrastrar decimales.",
+        [
+            ("27 cm",
+             "Es el valor de r³: falta extraer la raíz cúbica."),
+            ("9 cm",
+             "Corresponde a la raíz cuadrada de 81, que no aparece en este cálculo."),
+            ("6 cm, que es el diámetro de la esfera",
+             "La pregunta pide el radio, que es la mitad del diámetro."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Una pelota de fútbol tiene 22 cm de diámetro. ¿Cuál es el área de su "
+        "superficie? (usa π ≈ 3,14)",
+        "1.519,76 cm² aproximadamente",
+        "Primero se pasa del diámetro al radio.\n\n"
+        "1) El radio es 22 / 2 = 11 cm.\n"
+        "2) El área es 4 · 3,14 · 11² = 4 · 3,14 · 121.\n"
+        "3) Eso da 1.519,76 cm² aproximadamente.\n\n"
+        "Usar el diámetro directamente en la fórmula cuadruplicaría el "
+        "resultado: es el error más común en este tipo de ejercicio.",
+        [
+            ("6.079,04 cm² aproximadamente",
+             "Usa el diámetro donde va el radio, lo que cuadruplica el resultado."),
+            ("379,94 cm² aproximadamente",
+             "Corresponde al área del círculo máximo, no a toda la superficie."),
+            ("5.575,3 cm³ aproximadamente, que es el volumen de la pelota",
+             "El volumen se mide en centímetros cúbicos; aquí se pide un área."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Una esfera está inscrita en un cilindro de igual radio y altura igual "
+        "al diámetro. ¿Qué fracción del volumen del cilindro ocupa la esfera?",
+        "Dos tercios",
+        "Se comparan las dos fórmulas con el mismo radio.\n\n"
+        "1) El volumen de la esfera es (4/3) · π · r³.\n"
+        "2) El cilindro tiene altura 2r, así que su volumen es "
+        "π · r² · 2r = 2π · r³.\n"
+        "3) El cuociente es (4/3) dividido por 2, es decir, 2/3.\n\n"
+        "Es un resultado clásico que ya conocía Arquímedes, y que pidió grabar "
+        "en su tumba.",
+        [
+            ("La mitad",
+             "La esfera ocupa más de la mitad del cilindro que la contiene ajustada."),
+            ("Tres cuartos",
+             "El cuociente exacto es 2/3, algo menor que tres cuartos."),
+            ("Toda su capacidad, porque la esfera toca al cilindro por todos lados",
+             "Toca las paredes y las dos tapas, pero quedan huecos en los bordes."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Un estanque esférico tiene 1,5 m de radio. ¿Cuántos litros de agua "
+        "puede contener? (usa π ≈ 3,14 y 1 m³ equivale a 1.000 litros)",
+        "14.130 litros aproximadamente",
+        "Se calcula el volumen y se convierte a litros.\n\n"
+        "1) El radio al cubo es 3,375.\n"
+        "2) El volumen es (4/3) · 3,14 · 3,375 = 14,13 m³ aproximadamente.\n"
+        "3) Convertido: 14,13 · 1.000 = 14.130 litros.\n\n"
+        "Como control, el estanque cabe en un cubo de 3 m de arista, que "
+        "contendría 27.000 litros: el resultado es coherente.",
+        [
+            ("14,13 litros",
+             "Olvida la conversión de metros cúbicos a litros."),
+            ("28.260 litros aproximadamente",
+             "Duplica el resultado: usa el diámetro donde correspondía el radio en un paso."),
+            ("4.710 litros aproximadamente, aplicando π · r³ sin el coeficiente 4/3",
+             "La fórmula del volumen lleva el factor cuatro tercios."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Dos esferas tienen radios de 2 cm y 6 cm. ¿En qué razón están sus "
+        "áreas de superficie?",
+        "1 : 9",
+        "Las áreas están en la razón de los cuadrados de los radios.\n\n"
+        "1) La razón entre los radios es 2 : 6, es decir, 1 : 3.\n"
+        "2) Las áreas dependen del cuadrado del radio.\n"
+        "3) La razón entre áreas es 1² : 3² = 1 : 9.\n\n"
+        "Los volúmenes, en cambio, estarían en razón 1 : 27.",
+        [
+            ("1 : 3",
+             "Esa es la razón entre los radios, no entre las áreas."),
+            ("1 : 27",
+             "Esa es la razón entre los volúmenes, que usan el cubo."),
+            ("1 : 4, elevando al cuadrado solo el radio menor",
+             "Hay que elevar los dos términos de la razón: 1² : 3²."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Una bola de acero de 3 cm de radio se funde para hacer bolas de 1 cm "
+        "de radio. ¿Cuántas bolas pequeñas se obtienen?",
+        "27",
+        "El volumen total se conserva y depende del cubo del radio.\n\n"
+        "1) La razón entre los radios es 3 : 1.\n"
+        "2) La razón entre los volúmenes es 3³ : 1³ = 27 : 1.\n"
+        "3) Con el mismo material se obtienen 27 bolas pequeñas.\n\n"
+        "El coeficiente 4π/3 aparece en los dos volúmenes y se simplifica: solo "
+        "importa la razón entre los radios.",
+        [
+            ("3",
+             "Aplica la razón entre los radios en vez de la razón entre los volúmenes."),
+            ("9",
+             "Aplica el cuadrado de la razón, que corresponde a superficies."),
+            ("81, elevando la razón entre radios a la cuarta potencia",
+             "El volumen escala con el cubo: 3³ = 27."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "El área de la superficie de una esfera es 100π cm². ¿Cuál es su radio?",
+        "5 cm",
+        "Se despeja de la fórmula del área.\n\n"
+        "1) La fórmula es 4 · π · r² = 100π.\n"
+        "2) Simplificando π y dividiendo por 4: r² = 25.\n"
+        "3) Extrayendo la raíz cuadrada: r = 5 cm.\n\n"
+        "Se puede comprobar hacia adelante: 4π · 25 = 100π, como pedía el "
+        "enunciado.",
+        [
+            ("25 cm",
+             "Es el valor de r²: falta extraer la raíz cuadrada."),
+            ("10 cm",
+             "Corresponde al diámetro, o a olvidar dividir por 4."),
+            ("2,9 cm aproximadamente, extrayendo la raíz cúbica en vez de la cuadrada",
+             "El área usa el cuadrado del radio, así que corresponde la raíz cuadrada."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Una esfera está inscrita en un cubo de arista 12 cm. ¿Cuál es el "
+        "volumen de la esfera? (usa π ≈ 3,14)",
+        "904,32 cm³",
+        "El diámetro de la esfera inscrita iguala a la arista del cubo.\n\n"
+        "1) El diámetro es 12 cm, así que el radio es 6 cm.\n"
+        "2) El radio al cubo es 216.\n"
+        "3) El volumen es (4/3) · 3,14 · 216 = 904,32 cm³.\n\n"
+        "El cubo tiene 1.728 cm³, así que la esfera ocupa poco más de la mitad "
+        "de su interior.",
+        [
+            ("7.234,56 cm³",
+             "Usa la arista como radio, lo que multiplica el resultado por ocho."),
+            ("1.728 cm³",
+             "Es el volumen del cubo completo, no el de la esfera."),
+            ("452,16 cm³, tomando la mitad del volumen correcto",
+             "El resultado de la fórmula es 904,32 cm³, sin dividir por dos."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Una cúpula tiene forma de media esfera de 5 m de radio. ¿Cuál es el "
+        "área de su superficie curva? (usa π ≈ 3,14)",
+        "157 m²",
+        "La superficie curva es la mitad de la de una esfera completa.\n\n"
+        "1) El área de la esfera completa es 4 · 3,14 · 25 = 314 m².\n"
+        "2) La media esfera aporta la mitad de esa superficie curva.\n"
+        "3) Eso da 157 m².\n\n"
+        "Si además se quisiera cubrir el piso circular de la base habría que "
+        "sumar π · r² = 78,5 m².",
+        [
+            ("314 m²",
+             "Es el área de la esfera completa, sin tomar la mitad."),
+            ("78,5 m²",
+             "Es el área del círculo de la base, no de la superficie curva."),
+            ("235,5 m², que corresponde a la superficie curva más la base",
+             "El enunciado pide solo la parte curva de la cúpula."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Una esfera de 4 cm de radio se sumerge por completo en un estanque "
+        "lleno hasta el borde. ¿Cuánta agua se derrama? (usa π ≈ 3,14)",
+        "267,95 cm³ aproximadamente",
+        "El agua desplazada iguala al volumen del cuerpo sumergido.\n\n"
+        "1) El radio al cubo es 64.\n"
+        "2) El volumen es (4/3) · 3,14 · 64.\n"
+        "3) Eso da 267,95 cm³ aproximadamente.\n\n"
+        "Es el principio que Arquímedes usó para medir volúmenes de cuerpos "
+        "irregulares: el desplazamiento no depende de la forma.",
+        [
+            ("200,96 cm²",
+             "Es el área de la superficie de la esfera, y además en unidades cuadradas."),
+            ("64 cm³",
+             "Es el radio al cubo, sin aplicar el coeficiente de la fórmula."),
+            ("803,84 cm³, olvidando dividir por tres el coeficiente",
+             "La fórmula lleva cuatro tercios, no cuatro."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Una esfera de radio 6 cm y un cubo de arista 6 cm, ¿cuál tiene mayor "
+        "volumen? (usa π ≈ 3,14)",
+        "La esfera, con 904,32 cm³ contra 216 cm³",
+        "Se calculan ambos volúmenes y se comparan.\n\n"
+        "1) La esfera mide (4/3) · 3,14 · 216 = 904,32 cm³.\n"
+        "2) El cubo mide 6³ = 216 cm³.\n"
+        "3) La esfera tiene bastante más volumen.\n\n"
+        "El resultado no sorprende: la esfera de radio 6 tiene 12 cm de "
+        "diámetro y no cabría dentro de ese cubo.",
+        [
+            ("El cubo, con 216 cm³ contra 113,04 cm³",
+             "El volumen de la esfera de radio 6 es 904,32 cm³, no 113,04."),
+            ("Tienen el mismo volumen, porque comparten la medida 6 cm",
+             "Compartir una medida no implica igual volumen: las fórmulas son distintas."),
+            ("No se pueden comparar, porque uno tiene caras planas y el otro no",
+             "El volumen se puede comparar entre cuerpos de cualquier forma."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Un globo esférico se infla hasta que su volumen se duplica. ¿Qué pasa "
+        "con su radio?",
+        "Se multiplica por la raíz cúbica de 2, cerca de 1,26",
+        "El volumen depende del cubo del radio.\n\n"
+        "1) Si el radio se multiplica por k, el volumen se multiplica por k³.\n"
+        "2) Para que el volumen se duplique hace falta k³ = 2.\n"
+        "3) Entonces k es la raíz cúbica de 2, aproximadamente 1,26.\n\n"
+        "El radio crece apenas un 26%: es la razón por la que inflar un globo "
+        "al doble de aire casi no cambia su aspecto.",
+        [
+            ("Se duplica",
+             "Duplicar el radio multiplicaría el volumen por ocho."),
+            ("Se multiplica por la raíz cuadrada de 2",
+             "La raíz cuadrada corresponde a áreas; el volumen usa la cúbica."),
+            ("Se mantiene igual, porque solo cambia la cantidad de aire",
+             "Más aire ocupa más espacio: el radio necesariamente aumenta."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "¿Cuántas veces mayor es el área de la superficie de una esfera que el "
+        "área de su círculo máximo?",
+        "Cuatro veces",
+        "Se comparan las dos fórmulas.\n\n"
+        "1) El área de la esfera es 4 · π · r².\n"
+        "2) El área del círculo máximo es π · r².\n"
+        "3) El cuociente entre ambas es exactamente 4.\n\n"
+        "Es una relación que ayuda a recordar la fórmula: la superficie de una "
+        "esfera equivale a cuatro de sus círculos máximos.",
+        [
+            ("Dos veces",
+             "Ese sería el caso si la esfera fuera equivalente a dos discos, y no lo es."),
+            ("Tres veces",
+             "El cuociente exacto es 4, no 3."),
+            ("π veces, porque ambas fórmulas incluyen ese factor",
+             "El factor π se simplifica al comparar: el cuociente es 4."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Una esfera de plomo tiene 2 cm de radio y el plomo tiene una densidad "
+        "de 11,3 g/cm³. ¿Cuál es su masa aproximada? (usa π ≈ 3,14)",
+        "378 g aproximadamente",
+        "Primero el volumen y después la masa.\n\n"
+        "1) El volumen es (4/3) · 3,14 · 8 = 33,49 cm³ aproximadamente.\n"
+        "2) La masa es el volumen por la densidad.\n"
+        "3) Eso da 33,49 · 11,3 = 378 g aproximadamente.\n\n"
+        "El orden importa: la densidad se aplica sobre el volumen ya calculado, "
+        "no sobre el radio.",
+        [
+            ("33,5 g aproximadamente",
+             "Entrega el volumen en gramos, sin multiplicar por la densidad."),
+            ("90,4 g aproximadamente",
+             "Aplica la densidad al área de la superficie en vez de al volumen."),
+            ("22,6 g, multiplicando el radio por la densidad",
+             "La masa se obtiene del volumen, no del radio."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Se afirma que una esfera y un cubo con el mismo volumen tienen la "
+        "misma área de superficie. ¿Es correcta la afirmación?",
+        "No: entre todos los cuerpos de igual volumen, la esfera es la de menor superficie",
+        "La forma influye en cuánta superficie hace falta para encerrar un "
+        "volumen.\n\n"
+        "1) A igual volumen, un cuerpo con esquinas necesita más superficie que "
+        "uno redondeado.\n"
+        "2) La esfera es el caso extremo: minimiza la superficie para un "
+        "volumen dado.\n"
+        "3) Por lo tanto el cubo tiene más área que la esfera de igual "
+        "volumen.\n\n"
+        "Es la razón por la que las burbujas de jabón adoptan forma esférica: "
+        "así minimizan la tensión superficial.",
+        [
+            ("Sí: a igual volumen corresponde igual superficie",
+             "La superficie depende de la forma, no solo del volumen."),
+            ("No: el cubo es el que tiene menor superficie",
+             "Es al revés: la esfera minimiza la superficie."),
+            ("Sí, siempre que ambos cuerpos sean macizos",
+             "Ser macizos no cambia la relación entre forma y superficie."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Geometria: esfera (segunda tanda)
+#
+# Casquetes, esferas huecas, cuerpos compuestos, esferas circunscritas y
+# problemas de escala con porcentajes.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "geo_esfera", "medio",
+        "Una esfera tiene un volumen de 288π cm³. ¿Cuál es su diámetro?",
+        "12 cm",
+        "Se despeja el radio y después se duplica.\n\n"
+        "1) De (4/3) · π · r³ = 288π se obtiene r³ = 288 · 3/4 = 216.\n"
+        "2) La raíz cúbica de 216 es 6, así que el radio mide 6 cm.\n"
+        "3) El diámetro es el doble: 12 cm.\n\n"
+        "El último paso es el que se olvida con más frecuencia: la fórmula "
+        "entrega el radio, no el diámetro.",
+        [
+            ("6 cm",
+             "Ese es el radio; el diámetro es su doble."),
+            ("216 cm",
+             "Es el valor de r³, sin extraer la raíz cúbica."),
+            ("24 cm, duplicando el diámetro en vez del radio",
+             "El radio mide 6 cm, así que el diámetro es 12 cm."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Dos esferas tienen volúmenes de 64 cm³ y 216 cm³. ¿En qué razón están "
+        "sus radios?",
+        "2 : 3",
+        "Los volúmenes están en la razón de los cubos de los radios.\n\n"
+        "1) La razón entre volúmenes es 64 : 216, que simplificada es "
+        "8 : 27.\n"
+        "2) Esa razón es el cubo de la razón entre radios.\n"
+        "3) Extrayendo raíces cúbicas: 2 : 3.\n\n"
+        "Las áreas de superficie estarían en razón 4 : 9, que es el cuadrado de "
+        "la razón entre radios.",
+        [
+            ("8 : 27",
+             "Esa es la razón entre los volúmenes simplificada, no entre los radios."),
+            ("4 : 9",
+             "Esa es la razón entre las áreas de superficie."),
+            ("64 : 216, dejando la razón entre volúmenes sin transformar",
+             "Hay que extraer la raíz cúbica de cada término."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Pintar una cúpula semiesférica de 4 m de radio cuesta $ 3.000 por "
+        "metro cuadrado de superficie curva. ¿Cuánto cuesta pintarla? "
+        "(usa π ≈ 3,14)",
+        "$ 301.440",
+        "Se calcula la superficie curva y se multiplica por el precio.\n\n"
+        "1) La media esfera tiene superficie curva 2 · π · r² = "
+        "2 · 3,14 · 16 = 100,48 m².\n"
+        "2) El costo es 100,48 · 3.000.\n"
+        "3) Eso da $ 301.440.\n\n"
+        "El enunciado precisa «superficie curva», así que no se agrega el "
+        "círculo de la base.",
+        [
+            ("$ 602.880",
+             "Usa la superficie de la esfera completa en vez de la mitad."),
+            ("$ 150.720",
+             "Toma la mitad de la superficie curva, dividiendo dos veces."),
+            ("$ 37.680, que corresponde a pintar solo el piso circular de la base",
+             "El enunciado pide la superficie curva de la cúpula."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Una pelota de 5 cm de radio se guarda en una caja cúbica ajustada. "
+        "¿Qué porcentaje del volumen de la caja queda vacío? (usa π ≈ 3,14)",
+        "Cerca de un 48%",
+        "Se comparan el volumen de la esfera y el del cubo.\n\n"
+        "1) La arista del cubo es el diámetro: 10 cm, así que el cubo mide "
+        "1.000 cm³.\n"
+        "2) La esfera mide (4/3) · 3,14 · 125 = 523,3 cm³ aproximadamente.\n"
+        "3) Queda vacío 1.000 − 523,3 = 476,7 cm³, es decir, cerca del 48% del "
+        "cubo.\n\n"
+        "El porcentaje no depende del tamaño: cualquier esfera ajustada dentro "
+        "de un cubo deja libre esa misma fracción.",
+        [
+            ("Cerca de un 52%",
+             "Ese es el porcentaje que ocupa la pelota, no el que queda vacío."),
+            ("Cerca de un 25%",
+             "Subestima el hueco: las ocho esquinas del cubo dejan bastante más espacio."),
+            ("Un 0%, porque la pelota toca las seis caras de la caja",
+             "Tocar las caras no significa llenar el cubo: las esquinas quedan vacías."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Un balón esférico se infla y su radio aumenta un 10%. ¿En qué "
+        "porcentaje aumenta su volumen?",
+        "En un 33,1%",
+        "El volumen escala con el cubo del factor de aumento.\n\n"
+        "1) El radio queda multiplicado por 1,1.\n"
+        "2) El volumen queda multiplicado por 1,1³ = 1,331.\n"
+        "3) Eso representa un aumento del 33,1%.\n\n"
+        "Triplicar el porcentaje daría 30%, un valor cercano pero incorrecto: "
+        "el efecto compuesto agrega ese 3,1% adicional.",
+        [
+            ("En un 30%",
+             "Triplica el porcentaje en vez de elevar el factor 1,1 al cubo."),
+            ("En un 10%",
+             "Ese es el aumento del radio, no el del volumen."),
+            ("En un 133,1%",
+             "Ese es el porcentaje que representa el volumen final respecto del inicial, no el aumento."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Una media esfera maciza de 3 cm de radio, ¿cuál es el área total de su "
+        "superficie, incluyendo la base? (usa π ≈ 3,14)",
+        "84,78 cm²",
+        "Se suman la superficie curva y el círculo de la base.\n\n"
+        "1) La superficie curva es 2 · 3,14 · 9 = 56,52 cm².\n"
+        "2) El círculo de la base mide 3,14 · 9 = 28,26 cm².\n"
+        "3) El total es 56,52 + 28,26 = 84,78 cm².\n\n"
+        "El atajo es notar que el total equivale a 3 · π · r², es decir, tres "
+        "veces el círculo de la base.",
+        [
+            ("56,52 cm²",
+             "Es solo la superficie curva, sin el círculo de la base."),
+            ("113,04 cm²",
+             "Es la superficie de la esfera completa."),
+            ("28,26 cm², que corresponde únicamente al círculo de la base",
+             "Falta sumar la superficie curva de la media esfera."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "El radio de la Tierra es aproximadamente 6.370 km. ¿Cuál es "
+        "aproximadamente la longitud del ecuador? (usa π ≈ 3,14)",
+        "40.000 km aproximadamente",
+        "El ecuador es un círculo máximo de la esfera terrestre.\n\n"
+        "1) Su longitud es 2 · π · r.\n"
+        "2) Reemplazando: 2 · 3,14 · 6.370 = 40.003,6 km.\n"
+        "3) Es decir, unos 40.000 km.\n\n"
+        "No es coincidencia: el metro se definió originalmente como la "
+        "diezmillonésima parte del cuadrante terrestre, lo que deja el meridiano "
+        "en 40.000 km.",
+        [
+            ("12.740 km",
+             "Ese es el diámetro de la Tierra, no la longitud del ecuador."),
+            ("20.000 km aproximadamente",
+             "Corresponde a media vuelta al planeta."),
+            ("127.400 km aproximadamente, multiplicando el radio por veinte",
+             "El factor correcto es 2π, cercano a 6,28."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Una naranja se modela como una esfera de 4 cm de radio, con una "
+        "cáscara de 0,5 cm de espesor. ¿Cuál es el radio de la parte "
+        "comestible?",
+        "3,5 cm",
+        "El espesor se descuenta del radio total.\n\n"
+        "1) El radio exterior mide 4 cm.\n"
+        "2) La cáscara ocupa 0,5 cm medidos hacia adentro.\n"
+        "3) El radio interior es 4 − 0,5 = 3,5 cm.\n\n"
+        "El volumen comestible no es proporcionalmente tan grande: cerca del "
+        "67% del total, porque el volumen depende del cubo del radio.",
+        [
+            ("4,5 cm",
+             "Suma el espesor en vez de restarlo: la cáscara va hacia adentro."),
+            ("3 cm",
+             "Descuenta el espesor dos veces, como si se restara de ambos lados del radio."),
+            ("8 cm, tomando el diámetro exterior de la naranja",
+             "La pregunta pide un radio, y además hay que descontar la cáscara."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Si el radio de una esfera se reduce a la mitad, ¿qué fracción del "
+        "volumen original le queda?",
+        "Un octavo",
+        "El volumen depende del cubo del radio.\n\n"
+        "1) El radio queda multiplicado por 1/2.\n"
+        "2) El volumen queda multiplicado por (1/2)³ = 1/8.\n"
+        "3) Le queda un octavo del volumen original.\n\n"
+        "El área de superficie, en cambio, quedaría en un cuarto: usa el "
+        "cuadrado en vez del cubo.",
+        [
+            ("Un medio",
+             "Ese sería el caso si el volumen dependiera linealmente del radio."),
+            ("Un cuarto",
+             "Ese es el factor de las áreas de superficie."),
+            ("Un dieciseisavo, aplicando la cuarta potencia al factor de reducción",
+             "El volumen escala con el cubo: (1/2)³ = 1/8."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Se llena de agua la mitad de un estanque esférico de 2 m de radio. "
+        "¿Cuántos metros cúbicos de agua contiene? (usa π ≈ 3,14)",
+        "16,75 m³ aproximadamente",
+        "Se calcula el volumen completo y se toma la mitad.\n\n"
+        "1) El volumen de la esfera es (4/3) · 3,14 · 8 = 33,49 m³ "
+        "aproximadamente.\n"
+        "2) La mitad de ese volumen es 16,75 m³ aproximadamente.\n"
+        "3) Eso equivale a unos 16.750 litros.\n\n"
+        "La mitad del volumen corresponde exactamente al agua que llega hasta "
+        "el círculo máximo del estanque.",
+        [
+            ("33,49 m³ aproximadamente",
+             "Es el estanque lleno por completo, no la mitad."),
+            ("8,37 m³ aproximadamente",
+             "Toma la cuarta parte en vez de la mitad."),
+            ("4 m³, tomando la mitad del radio elevado al cubo",
+             "Hay que aplicar la fórmula completa antes de dividir por dos."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Si el área de la superficie de una esfera se cuadruplica, ¿qué pasa "
+        "con su radio?",
+        "Se duplica",
+        "El área depende del cuadrado del radio.\n\n"
+        "1) Si el radio se multiplica por k, el área se multiplica por k².\n"
+        "2) Para que el área se cuadruplique hace falta k² = 4.\n"
+        "3) Entonces k = 2: el radio se duplica.\n\n"
+        "El volumen, en ese mismo cambio, quedaría multiplicado por ocho.",
+        [
+            ("Se cuadruplica",
+             "Ese es el factor del área, no el del radio."),
+            ("Se multiplica por 8",
+             "Ese es el factor del volumen cuando el radio se duplica."),
+            ("Se multiplica por 16, elevando al cuadrado el factor del área",
+             "Hay que extraer la raíz cuadrada de 4, no elevarlo."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "dificil",
+        "Una esfera está circunscrita a un cubo de arista 4 cm, es decir, pasa "
+        "por sus ocho vértices. ¿Cuál es el radio de la esfera?",
+        "3,46 cm aproximadamente",
+        "El diámetro de la esfera es la diagonal del cubo.\n\n"
+        "1) La diagonal de un cubo de arista a mide a · √3.\n"
+        "2) Con a = 4: la diagonal mide 4√3, cerca de 6,93 cm.\n"
+        "3) El radio es la mitad: 2√3, aproximadamente 3,46 cm.\n\n"
+        "Es el caso opuesto al de la esfera inscrita, donde el diámetro iguala "
+        "a la arista y el radio sería 2 cm.",
+        [
+            ("2 cm",
+             "Ese es el radio de la esfera inscrita, cuyo diámetro iguala a la arista."),
+            ("6,93 cm aproximadamente",
+             "Esa es la diagonal del cubo, que corresponde al diámetro y no al radio."),
+            ("2,83 cm aproximadamente, que es la mitad de la diagonal de una cara",
+             "Hay que usar la diagonal del cubo completo, que incluye las tres dimensiones."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "dificil",
+        "Una esfera hueca tiene radio exterior 5 cm y radio interior 4 cm. "
+        "¿Cuál es el volumen del material que la forma? (usa π ≈ 3,14)",
+        "255,39 cm³ aproximadamente",
+        "Se resta el volumen interior del exterior.\n\n"
+        "1) La esfera exterior mide (4/3) · 3,14 · 125 = 523,33 cm³ "
+        "aproximadamente.\n"
+        "2) El hueco interior mide (4/3) · 3,14 · 64 = 267,95 cm³ "
+        "aproximadamente.\n"
+        "3) El material ocupa 523,33 − 267,95 = 255,38 cm³, es decir, unos "
+        "255,45 cm³ según el redondeo.\n\n"
+        "El atajo es restar primero los cubos: (4/3) · 3,14 · (125 − 64).",
+        [
+            ("523,33 cm³ aproximadamente",
+             "Es la esfera exterior completa, sin descontar el hueco."),
+            ("4,19 cm³ aproximadamente",
+             "Resta los radios antes de elevarlos al cubo."),
+            ("791,28 cm³ aproximadamente, sumando los dos volúmenes en vez de restarlos",
+             "El material es lo que queda entre ambas superficies: hay que restar."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "dificil",
+        "Un helado tiene forma de cono de 4 cm de radio y 10 cm de altura, "
+        "coronado por media esfera del mismo radio. ¿Cuál es su volumen total? "
+        "(usa π ≈ 3,14)",
+        "301,44 cm³",
+        "Se suman los volúmenes de las dos partes.\n\n"
+        "1) El cono mide (1/3) · 3,14 · 16 · 10 = 167,47 cm³ "
+        "aproximadamente.\n"
+        "2) La media esfera mide (2/3) · 3,14 · 64 = 133,97 cm³ "
+        "aproximadamente.\n"
+        "3) El total es 167,47 + 133,97 = 301,44 cm³.\n\n"
+        "Las dos partes comparten el radio, pero cada una tiene su propia "
+        "fórmula: no basta con una sola.",
+        [
+            ("167,47 cm³ aproximadamente",
+             "Es solo el cono, sin la media esfera que lo corona."),
+            ("133,97 cm³ aproximadamente",
+             "Es solo la media esfera, sin el cono."),
+            ("435,41 cm³ aproximadamente, sumando la esfera completa en vez de la mitad",
+             "Sobre el cono va media esfera, no una esfera entera."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "dificil",
+        "Un plano corta una esfera de 13 cm de radio a 5 cm del centro. ¿Cuál "
+        "es el radio del círculo que se forma?",
+        "12 cm",
+        "El radio de la esfera, la distancia al plano y el radio del corte "
+        "forman un triángulo rectángulo.\n\n"
+        "1) La hipotenusa es el radio de la esfera: 13 cm.\n"
+        "2) Un cateto es la distancia del centro al plano: 5 cm.\n"
+        "3) El otro cateto es el radio del corte: la raíz de 169 − 25 = 144, es "
+        "decir, 12 cm.\n\n"
+        "Con distancia cero el corte sería el círculo máximo, de 13 cm de "
+        "radio; a medida que el plano se aleja, el círculo se achica.",
+        [
+            ("8 cm",
+             "Resta las medidas en vez de aplicar Pitágoras."),
+            ("13 cm",
+             "Ese sería el radio solo si el plano pasara por el centro."),
+            ("13,9 cm aproximadamente, sumando los cuadrados en lugar de restarlos",
+             "El radio del corte es un cateto: hay que restar."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "dificil",
+        "Tres pelotas idénticas de 3 cm de radio se guardan apiladas en un tubo "
+        "cilíndrico ajustado. ¿Qué porcentaje del volumen del tubo ocupan? "
+        "(usa π ≈ 3,14)",
+        "Cerca de un 67%",
+        "Se comparan los volúmenes de las pelotas y del cilindro.\n\n"
+        "1) Cada pelota mide (4/3) · 3,14 · 27 = 113,04 cm³, así que las tres "
+        "suman 339,12 cm³.\n"
+        "2) El tubo tiene radio 3 cm y altura 18 cm, es decir, tres diámetros: "
+        "su volumen es 3,14 · 9 · 18 = 508,68 cm³.\n"
+        "3) El cuociente es 339,12 / 508,68 = 0,667, es decir, cerca del 67%.\n\n"
+        "Es el mismo dos tercios que aparece con una sola esfera inscrita en su "
+        "cilindro: apilar más pelotas no cambia la proporción.",
+        [
+            ("Cerca de un 52%",
+             "Ese es el porcentaje que ocupa una esfera dentro de un cubo ajustado, no dentro de un cilindro."),
+            ("Cerca de un 33%",
+             "Ese es el porcentaje que queda vacío, no el que ocupan las pelotas."),
+            ("Un 100%, porque las pelotas tocan las paredes y las tapas del tubo",
+             "Quedan huecos entre las pelotas y en los bordes: ocupan dos tercios."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "dificil",
+        "Se afirma: «Si dos esferas tienen la misma área de superficie, "
+        "entonces tienen el mismo volumen». ¿Es correcta la afirmación?",
+        "Sí, porque el área determina el radio y el radio determina el volumen",
+        "Las tres magnitudes están ligadas por el mismo parámetro.\n\n"
+        "1) De 4πr² se despeja un único radio positivo.\n"
+        "2) Dos esferas con la misma área tienen entonces el mismo radio.\n"
+        "3) Con igual radio, el volumen también coincide.\n\n"
+        "La esfera es especial en eso: en un cilindro, dos cuerpos de igual "
+        "superficie pueden tener volúmenes muy distintos, porque hay dos "
+        "medidas libres.",
+        [
+            ("No: el área y el volumen son independientes entre sí",
+             "En una esfera ambos dependen del mismo radio, así que no son independientes."),
+            ("No: podrían diferir en su espesor o en su densidad",
+             "Espesor y densidad no intervienen en el volumen geométrico de una esfera maciza."),
+            ("Sí, pero solo si además tienen el mismo círculo máximo",
+             "Tener la misma área ya implica igual radio, y por lo tanto igual círculo máximo."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "dificil",
+        "El área de un casquete esférico se calcula como 2 · π · r · h, donde r "
+        "es el radio de la esfera y h la altura del casquete. En una esfera de "
+        "10 cm de radio, ¿cuál es el área de un casquete de 4 cm de altura? "
+        "(usa π ≈ 3,14)",
+        "251,2 cm²",
+        "Se aplica la fórmula entregada.\n\n"
+        "1) El área es 2 · π · r · h.\n"
+        "2) Reemplazando: 2 · 3,14 · 10 · 4.\n"
+        "3) Eso da 251,2 cm².\n\n"
+        "Como control, la esfera completa mide 1.256 cm², así que el casquete "
+        "ocupa la quinta parte: coherente con una altura de 4 cm sobre un "
+        "diámetro de 20 cm.",
+        [
+            ("125,6 cm²",
+             "Olvida el factor 2 de la fórmula."),
+            ("502,4 cm²",
+             "Usa el diámetro donde correspondía el radio."),
+            ("1.256 cm², que es la superficie de la esfera completa",
+             "El casquete es solo una parte de esa superficie."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "dificil",
+        "Una esfera de madera de densidad 0,6 g/cm³ y 5 cm de radio se sumerge "
+        "en agua. ¿Cuál es su masa? (usa π ≈ 3,14)",
+        "314 g aproximadamente",
+        "La masa se obtiene del volumen y la densidad.\n\n"
+        "1) El volumen es (4/3) · 3,14 · 125 = 523,33 cm³ aproximadamente.\n"
+        "2) La masa es el volumen por la densidad: 523,33 · 0,6.\n"
+        "3) Eso da 314 g aproximadamente.\n\n"
+        "El dato de que se sumerge en agua no interviene en el cálculo de la "
+        "masa: solo explicaría que la esfera flota, porque su densidad es menor "
+        "que 1 g/cm³.",
+        [
+            ("523 g aproximadamente",
+             "Entrega el volumen en gramos, sin multiplicar por la densidad."),
+            ("872 g aproximadamente",
+             "Divide por la densidad en vez de multiplicar."),
+            ("3 g, multiplicando el radio por la densidad",
+             "La masa se obtiene del volumen, no del radio."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "dificil",
+        "Una esfera de radio 6 cm se derrite y con el material se forma un "
+        "cilindro de 6 cm de radio. ¿Cuál es la altura del cilindro?",
+        "8 cm",
+        "El volumen se conserva.\n\n"
+        "1) La esfera mide (4/3) · π · 216 = 288π cm³.\n"
+        "2) El cilindro mide π · 36 · h.\n"
+        "3) Igualando: 36h = 288, así que h = 8 cm.\n\n"
+        "El factor π se simplifica en ambos lados, lo que evita arrastrar "
+        "decimales durante el cálculo.",
+        [
+            ("6 cm",
+             "Repite el radio, sin usar la conservación del volumen."),
+            ("12 cm",
+             "Corresponde al diámetro de la esfera, no a la altura del cilindro."),
+            ("24 cm, olvidando dividir por el área de la base del cilindro",
+             "La altura se obtiene dividiendo el volumen por π · r², que aquí es 36π."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "dificil",
+        "Una esfera y un cilindro tienen el mismo radio r y el cilindro tiene "
+        "altura 2r. ¿Cómo se comparan sus áreas de superficie lateral y total?",
+        "La superficie de la esfera iguala a la superficie lateral del cilindro",
+        "Se comparan las dos fórmulas.\n\n"
+        "1) La esfera tiene área 4 · π · r².\n"
+        "2) La superficie lateral del cilindro es 2 · π · r · h, con h = 2r, es "
+        "decir, 4 · π · r².\n"
+        "3) Ambas coinciden exactamente.\n\n"
+        "Ese resultado, junto con la razón 2 : 3 entre los volúmenes, es lo que "
+        "Arquímedes consideró su descubrimiento más notable.",
+        [
+            ("La superficie de la esfera es el doble de la lateral del cilindro",
+             "Son exactamente iguales: ambas valen 4πr²."),
+            ("La superficie de la esfera es la mitad de la lateral del cilindro",
+             "Coinciden; ninguna es la mitad de la otra."),
+            ("No se pueden comparar sin conocer el valor numérico de r",
+             "Ambas expresiones dependen de r del mismo modo, así que se comparan directamente."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "dificil",
+        "Un fabricante quiere duplicar la capacidad de un estanque esférico. "
+        "¿En qué porcentaje debe aumentar el radio, aproximadamente?",
+        "En un 26%",
+        "El volumen depende del cubo del radio.\n\n"
+        "1) Para duplicar el volumen hace falta que el radio se multiplique por "
+        "la raíz cúbica de 2.\n"
+        "2) Ese valor es aproximadamente 1,26.\n"
+        "3) Corresponde a un aumento del 26%.\n\n"
+        "El aumento parece pequeño frente al efecto: un cuarto más de radio "
+        "basta para duplicar la capacidad.",
+        [
+            ("En un 100%",
+             "Duplicar el radio multiplicaría el volumen por ocho, no por dos."),
+            ("En un 41%",
+             "Ese es el aumento necesario para duplicar un área, que usa la raíz cuadrada."),
+            ("En un 200%, porque hay que duplicar además el diámetro",
+             "Duplicar el volumen requiere apenas un 26% más de radio."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "dificil",
+        "Se comparan una esfera de radio 3 cm y otra de radio 6 cm. ¿Cuántas "
+        "veces mayor es la razón entre superficie y volumen de la esfera "
+        "pequeña respecto de la grande?",
+        "El doble",
+        "La razón entre superficie y volumen es inversamente proporcional al "
+        "radio.\n\n"
+        "1) Esa razón es 4πr² dividido por (4/3)πr³, lo que simplifica a "
+        "3/r.\n"
+        "2) Para r = 3 vale 1, y para r = 6 vale 0,5.\n"
+        "3) La de la esfera pequeña es el doble de la de la grande.\n\n"
+        "Es la razón por la que los animales pequeños pierden calor más rápido: "
+        "tienen mucha superficie por unidad de volumen.",
+        [
+            ("El cuádruple",
+             "Ese sería el factor si la razón dependiera del cuadrado del radio."),
+            ("La mitad",
+             "Es al revés: la esfera pequeña tiene mayor razón entre superficie y volumen."),
+            ("Ocho veces mayor, siguiendo la razón entre los volúmenes",
+             "La razón superficie sobre volumen es 3/r, así que el factor es 2."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Geometria: rectas en el plano
+#
+# Pendiente, coeficiente de posicion, ecuacion general, paralelismo y
+# perpendicularidad, intersecciones y distancias.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "geo_rectas", "facil",
+        "¿Cuál es el coeficiente de posición de la recta y = 5x − 4?",
+        "−4",
+        "En la forma y = mx + n, el coeficiente de posición es n.\n\n"
+        "1) El número que multiplica a x es la pendiente: 5.\n"
+        "2) El término sin x es el coeficiente de posición: −4.\n"
+        "3) Ese valor indica dónde la recta corta al eje Y.\n\n"
+        "La recta pasa entonces por el punto (0, −4).",
+        [
+            ("5",
+             "Ese es la pendiente, que indica la inclinación."),
+            ("4",
+             "Pierde el signo: el término es −4, no 4."),
+            ("1, que es el coeficiente que acompaña a la variable y",
+             "El coeficiente de posición es el término independiente de la ecuación."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "facil",
+        "¿En qué punto corta al eje Y la recta y = −2x + 7?",
+        "(0, 7)",
+        "El corte con el eje Y ocurre cuando x vale cero.\n\n"
+        "1) Reemplazando x = 0: y = −2 · 0 + 7 = 7.\n"
+        "2) El punto de corte es (0, 7).\n"
+        "3) Ese valor coincide con el coeficiente de posición de la recta.\n\n"
+        "Para el corte con el eje X habría que hacer y = 0, lo que da x = 3,5.",
+        [
+            ("(7, 0)",
+             "Invierte las coordenadas: ese punto está sobre el eje X."),
+            ("(0, −2)",
+             "Toma la pendiente en vez del coeficiente de posición."),
+            ("(3,5 , 0), que es el corte con el eje X",
+             "La pregunta pide el corte con el eje Y."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "facil",
+        "¿Qué indica el signo negativo de la pendiente de una recta?",
+        "Que la recta es decreciente",
+        "La pendiente mide cuánto sube o baja la recta al avanzar.\n\n"
+        "1) Con pendiente positiva, al aumentar x aumenta y.\n"
+        "2) Con pendiente negativa, al aumentar x disminuye y.\n"
+        "3) La recta baja de izquierda a derecha: es decreciente.\n\n"
+        "Con pendiente cero la recta es horizontal: ni sube ni baja.",
+        [
+            ("Que la recta está bajo el eje X",
+             "Una recta decreciente puede estar por completo sobre el eje X."),
+            ("Que la recta es horizontal",
+             "Eso corresponde a pendiente cero, no negativa."),
+            ("Que la recta no corta al eje Y",
+             "Toda recta no vertical corta al eje Y, sea cual sea el signo de su pendiente."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "facil",
+        "¿Cuál es la pendiente de la recta y = 7?",
+        "0",
+        "La ecuación no tiene término en x.\n\n"
+        "1) Se puede escribir como y = 0 · x + 7.\n"
+        "2) El coeficiente que acompaña a x es 0.\n"
+        "3) La recta es horizontal: su altura no cambia al avanzar.\n\n"
+        "Una recta vertical, en cambio, no tiene pendiente definida: su "
+        "ecuación es del tipo x = k.",
+        [
+            ("7",
+             "Ese es el coeficiente de posición, es decir, la altura de la recta."),
+            ("1",
+             "Correspondería a y = x + 7, que es una recta inclinada."),
+            ("No está definida, porque falta el término en x",
+             "La pendiente no definida corresponde a rectas verticales, no horizontales."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "facil",
+        "¿Qué representa la ecuación x = 4 en el plano cartesiano?",
+        "Una recta vertical que pasa por (4, 0)",
+        "La ecuación fija la primera coordenada y deja libre la segunda.\n\n"
+        "1) Todos los puntos con primera coordenada 4 la cumplen: (4, 0), "
+        "(4, 1), (4, −7) y así.\n"
+        "2) Esos puntos forman una recta vertical.\n"
+        "3) Corta al eje X en el punto (4, 0).\n\n"
+        "No se puede escribir en la forma y = mx + n, porque su pendiente no "
+        "está definida.",
+        [
+            ("Una recta horizontal que pasa por (0, 4)",
+             "Esa es la recta y = 4, con los roles de las variables intercambiados."),
+            ("El punto (4, 0) solamente",
+             "La ecuación no fija la segunda coordenada: hay infinitos puntos."),
+            ("Una recta de pendiente 4 que pasa por el origen",
+             "Esa sería y = 4x, que sí es una recta inclinada."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "facil",
+        "¿Cuál es la pendiente de la recta y = −x + 2?",
+        "−1",
+        "La pendiente es el coeficiente que acompaña a x.\n\n"
+        "1) La expresión −x equivale a −1 · x.\n"
+        "2) Por lo tanto la pendiente es −1.\n"
+        "3) La recta desciende una unidad por cada unidad que avanza.\n\n"
+        "Forma un ángulo de 135° con el eje X: es la bisectriz del segundo y "
+        "cuarto cuadrante, desplazada.",
+        [
+            ("1",
+             "Pierde el signo negativo que acompaña a la x."),
+            ("2",
+             "Ese es el coeficiente de posición, no la pendiente."),
+            ("0, porque no aparece ningún número delante de la x",
+             "Cuando no se escribe el coeficiente, se entiende que vale 1, y aquí es −1."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "facil",
+        "El punto (2, 5), ¿pertenece a la recta y = 2x + 1?",
+        "Sí, porque al reemplazar se obtiene una igualdad verdadera",
+        "Se comprueba sustituyendo las coordenadas.\n\n"
+        "1) Se reemplaza x = 2 en la ecuación: y = 2 · 2 + 1 = 5.\n"
+        "2) El valor obtenido coincide con la segunda coordenada del punto.\n"
+        "3) Por lo tanto el punto pertenece a la recta.\n\n"
+        "El punto (2, 6), en cambio, no pertenecería: la ecuación entrega 5 y "
+        "no 6.",
+        [
+            ("No, porque 5 no es múltiplo de 2",
+             "La pertenencia no depende de divisibilidad sino de satisfacer la ecuación."),
+            ("No, porque la pendiente es 2 y el punto tiene abscisa 2",
+             "Que coincidan esos números no impide nada: hay que reemplazar y comparar."),
+            ("Solo si la recta se desplazara una unidad hacia arriba en el plano",
+             "No hace falta desplazarla: el punto ya cumple la ecuación."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "facil",
+        "¿Cómo se llama la forma y = mx + n de la ecuación de una recta?",
+        "Forma principal o explícita",
+        "Cada forma se distingue por cómo aparecen las variables.\n\n"
+        "1) En la forma principal, la variable y aparece despejada.\n"
+        "2) Los dos parámetros se leen directamente: m es la pendiente y n el "
+        "coeficiente de posición.\n"
+        "3) Por eso es la más cómoda para graficar.\n\n"
+        "La forma general, Ax + By + C = 0, no permite leer la pendiente de "
+        "inmediato, pero sirve también para rectas verticales.",
+        [
+            ("Forma general",
+             "La forma general es Ax + By + C = 0, con todo al mismo lado."),
+            ("Forma punto-pendiente",
+             "Esa es y − y₁ = m(x − x₁), que usa un punto conocido de la recta."),
+            ("Forma simétrica, porque trata a las dos variables por igual",
+             "Justamente no las trata igual: la y está despejada."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿Cuál es la pendiente de la recta que pasa por los puntos (1, 3) y "
+        "(5, 11)?",
+        "2",
+        "La pendiente es el cuociente entre las variaciones.\n\n"
+        "1) La variación vertical es 11 − 3 = 8.\n"
+        "2) La variación horizontal es 5 − 1 = 4.\n"
+        "3) La pendiente es 8 / 4 = 2.\n\n"
+        "El orden en que se tomen los puntos no importa, siempre que se respete "
+        "en el numerador y en el denominador.",
+        [
+            ("0,5",
+             "Invierte el cuociente: divide la variación horizontal por la vertical."),
+            ("8",
+             "Es solo la variación vertical, sin dividir por la horizontal."),
+            ("14, sumando las dos segundas coordenadas de los puntos",
+             "La pendiente compara variaciones, no sumas de coordenadas."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿Cuál es la ecuación de la recta de pendiente 3 que pasa por el punto "
+        "(2, 1)?",
+        "y = 3x − 5",
+        "Se usa la forma principal y se despeja el coeficiente de posición.\n\n"
+        "1) La recta es y = 3x + n.\n"
+        "2) Reemplazando el punto: 1 = 3 · 2 + n, es decir, 1 = 6 + n.\n"
+        "3) Despejando: n = −5, así que la recta es y = 3x − 5.\n\n"
+        "Comprobación: con x = 2 la ecuación entrega 6 − 5 = 1, que es la "
+        "segunda coordenada del punto.",
+        [
+            ("y = 3x + 5",
+             "Cambia el signo del coeficiente de posición: reemplazando daría 11 y no 1."),
+            ("y = 3x + 1",
+             "Toma la segunda coordenada del punto como coeficiente de posición."),
+            ("y = 2x + 3, intercambiando la pendiente con la abscisa del punto",
+             "La pendiente es 3 y el punto es (2, 1): no se intercambian."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿Cuál es la pendiente de la recta 2x + 4y − 8 = 0?",
+        "−0,5",
+        "Se despeja y para llevarla a la forma principal.\n\n"
+        "1) De 2x + 4y − 8 = 0 se obtiene 4y = −2x + 8.\n"
+        "2) Dividiendo por 4: y = −0,5x + 2.\n"
+        "3) La pendiente es −0,5.\n\n"
+        "El atajo general es que en Ax + By + C = 0 la pendiente vale −A/B, lo "
+        "que aquí da −2/4.",
+        [
+            ("2",
+             "Toma el coeficiente de x sin despejar ni cambiar el signo."),
+            ("0,5",
+             "Pierde el signo negativo que aparece al despejar."),
+            ("−2, cambiando el signo del coeficiente sin dividir por el de y",
+             "Hay que dividir además por el coeficiente de y, que es 4."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿Cuál es la distancia entre los puntos (1, 2) y (4, 6)?",
+        "5",
+        "Se aplica el teorema de Pitágoras a las diferencias de "
+        "coordenadas.\n\n"
+        "1) La diferencia horizontal es 4 − 1 = 3.\n"
+        "2) La diferencia vertical es 6 − 2 = 4.\n"
+        "3) La distancia es la raíz de 9 + 16 = 25, es decir, 5.\n\n"
+        "Es otra aparición del triángulo 3-4-5, que aquí queda formado por el "
+        "segmento y sus proyecciones sobre los ejes.",
+        [
+            ("7",
+             "Suma las dos diferencias en vez de aplicar Pitágoras."),
+            ("25",
+             "Es el valor bajo la raíz: falta extraerla."),
+            ("1, restando las dos diferencias entre sí",
+             "La distancia se obtiene con la raíz de la suma de los cuadrados."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿Cuál es el punto medio del segmento que une (−2, 3) y (6, 9)?",
+        "(2, 6)",
+        "El punto medio promedia cada coordenada por separado.\n\n"
+        "1) La primera coordenada es (−2 + 6) / 2 = 2.\n"
+        "2) La segunda es (3 + 9) / 2 = 6.\n"
+        "3) El punto medio es (2, 6).\n\n"
+        "Comprobación rápida: el punto medio debe quedar entre los dos "
+        "extremos en ambas coordenadas, y así ocurre.",
+        [
+            ("(4, 6)",
+             "Resta las primeras coordenadas en vez de promediarlas."),
+            ("(2, 12)",
+             "Suma las segundas coordenadas sin dividir por dos."),
+            ("(8, 12), sumando las coordenadas sin promediar ninguna",
+             "El punto medio requiere dividir cada suma por dos."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿En qué punto se cortan las rectas y = 2x + 1 e y = −x + 7?",
+        "(2, 5)",
+        "Se igualan las dos expresiones.\n\n"
+        "1) De 2x + 1 = −x + 7 se obtiene 3x = 6, así que x = 2.\n"
+        "2) Reemplazando en la primera: y = 2 · 2 + 1 = 5.\n"
+        "3) El punto de corte es (2, 5).\n\n"
+        "Comprobación con la segunda recta: −2 + 7 = 5, el mismo valor.",
+        [
+            ("(5, 2)",
+             "Invierte las coordenadas del punto de corte."),
+            ("(1, 7)",
+             "Toma los coeficientes de posición de las dos rectas como si fueran el punto."),
+            ("(3, 4), promediando las pendientes y los coeficientes",
+             "El punto de corte se obtiene resolviendo el sistema, no promediando."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "Una recta pasa por (0, 4) y tiene pendiente −2. ¿Cuál es su ecuación?",
+        "y = −2x + 4",
+        "El punto entregado está sobre el eje Y.\n\n"
+        "1) Como la primera coordenada es 0, el punto da directamente el "
+        "coeficiente de posición: n = 4.\n"
+        "2) La pendiente es −2.\n"
+        "3) La ecuación es y = −2x + 4.\n\n"
+        "Es el caso más rápido: cuando el punto conocido está sobre el eje Y no "
+        "hace falta despejar nada.",
+        [
+            ("y = 4x − 2",
+             "Intercambia la pendiente con el coeficiente de posición."),
+            ("y = −2x − 4",
+             "Cambia el signo del coeficiente de posición, que es positivo."),
+            ("y = 2x + 4, omitiendo el signo negativo de la pendiente",
+             "La pendiente es −2, así que la recta desciende."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿Cuál es la ecuación de la recta paralela a y = −3x + 2 que pasa por "
+        "(1, 4)?",
+        "y = −3x + 7",
+        "Las paralelas conservan la pendiente.\n\n"
+        "1) La pendiente de la recta dada es −3, y la paralela tiene la "
+        "misma.\n"
+        "2) Reemplazando el punto: 4 = −3 · 1 + n, es decir, 4 = −3 + n.\n"
+        "3) Despejando: n = 7, así que la recta es y = −3x + 7.\n\n"
+        "El coeficiente de posición distinto es lo que asegura que sean "
+        "paralelas y no la misma recta.",
+        [
+            ("y = −3x + 2",
+             "Repite la recta original, que no pasa por el punto (1, 4)."),
+            ("y = (1/3)x + 4",
+             "Esa pendiente correspondería a una perpendicular, no a una paralela."),
+            ("y = −3x + 1, tomando la abscisa del punto como coeficiente de posición",
+             "El coeficiente hay que despejarlo: da 7."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿Cuál es la ecuación de la recta perpendicular a y = 2x − 1 que pasa "
+        "por el origen?",
+        "y = −0,5x",
+        "Las pendientes de rectas perpendiculares multiplican −1.\n\n"
+        "1) La pendiente dada es 2, así que la perpendicular tiene pendiente "
+        "−1/2.\n"
+        "2) Como pasa por el origen, su coeficiente de posición es 0.\n"
+        "3) La ecuación es y = −0,5x.\n\n"
+        "Comprobación: 2 · (−0,5) = −1, como exige la condición de "
+        "perpendicularidad.",
+        [
+            ("y = 2x",
+             "Repite la pendiente original: esa recta sería paralela, no perpendicular."),
+            ("y = 0,5x",
+             "Invierte la pendiente pero olvida cambiarle el signo."),
+            ("y = −2x, cambiando solo el signo de la pendiente original",
+             "Hay que invertirla además: la perpendicular tiene pendiente −1/2."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿En qué punto corta al eje X la recta y = 4x − 12?",
+        "(3, 0)",
+        "El corte con el eje X ocurre cuando y vale cero.\n\n"
+        "1) Se plantea 0 = 4x − 12.\n"
+        "2) Despejando: 4x = 12, así que x = 3.\n"
+        "3) El punto de corte es (3, 0).\n\n"
+        "El corte con el eje Y, en cambio, es (0, −12), que se lee directamente "
+        "del coeficiente de posición.",
+        [
+            ("(0, 3)",
+             "Invierte las coordenadas: ese punto está sobre el eje Y."),
+            ("(−12, 0)",
+             "Toma el coeficiente de posición como si fuera la abscisa del corte."),
+            ("(0, −12), que es el corte con el eje Y",
+             "La pregunta pide el corte con el eje X."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "Dos rectas tienen pendientes 3 y −1/3. ¿Cómo son entre sí?",
+        "Perpendiculares",
+        "Se multiplica una pendiente por la otra.\n\n"
+        "1) El producto es 3 · (−1/3).\n"
+        "2) Eso da −1.\n"
+        "3) La condición de perpendicularidad se cumple exactamente.\n\n"
+        "Para ser paralelas tendrían que tener la misma pendiente, y aquí "
+        "difieren.",
+        [
+            ("Paralelas",
+             "Serían paralelas con pendientes iguales, y estas son distintas."),
+            ("Coincidentes",
+             "Serían la misma recta, lo que exige igual pendiente e igual coeficiente de posición."),
+            ("Se cortan en un punto, pero no formando un ángulo recto entre ellas",
+             "El producto de las pendientes es exactamente −1, así que el ángulo sí es recto."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "Una recta tiene ecuación 3x − y + 6 = 0. ¿Cuál es su forma principal?",
+        "y = 3x + 6",
+        "Se despeja la variable y.\n\n"
+        "1) De 3x − y + 6 = 0 se obtiene −y = −3x − 6.\n"
+        "2) Multiplicando por −1: y = 3x + 6.\n"
+        "3) La pendiente es 3 y el coeficiente de posición, 6.\n\n"
+        "El paso donde se pierden los signos es el segundo: conviene "
+        "multiplicar toda la igualdad por −1 y no solo un término.",
+        [
+            ("y = −3x − 6",
+             "Olvida multiplicar toda la igualdad por −1 al final."),
+            ("y = 3x − 6",
+             "Cambia el signo del término independiente sin motivo."),
+            ("y = −3x + 6, cambiando el signo solo de la pendiente",
+             "Al multiplicar por −1 cambian todos los términos a la vez."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "Una recta pasa por (0, 0) y (4, 3). ¿Cuál es su ecuación?",
+        "y = 0,75x",
+        "Se calcula la pendiente y se usa que pasa por el origen.\n\n"
+        "1) La pendiente es (3 − 0) / (4 − 0) = 0,75.\n"
+        "2) Como pasa por el origen, el coeficiente de posición es 0.\n"
+        "3) La ecuación es y = 0,75x.\n\n"
+        "Toda recta que pasa por el origen tiene la forma y = mx: es una "
+        "relación de proporcionalidad directa.",
+        [
+            ("y = 1,33x",
+             "Invierte el cuociente al calcular la pendiente."),
+            ("y = 0,75x + 3",
+             "Agrega un coeficiente de posición, pero la recta pasa por el origen."),
+            ("y = 4x + 3, tomando las coordenadas del segundo punto como parámetros",
+             "La pendiente sale del cuociente entre las variaciones."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿Cuál es la distancia entre los puntos (−3, 1) y (1, 1)?",
+        "4",
+        "Los dos puntos están a la misma altura.\n\n"
+        "1) La diferencia vertical es 1 − 1 = 0.\n"
+        "2) La diferencia horizontal es 1 − (−3) = 4.\n"
+        "3) La distancia es la raíz de 16 + 0, es decir, 4.\n\n"
+        "Cuando el segmento es horizontal o vertical basta restar las "
+        "coordenadas que cambian: no hace falta la fórmula completa.",
+        [
+            ("2",
+             "Suma las abscisas en vez de restarlas: −3 + 1 da −2, no la distancia."),
+            ("16",
+             "Es el cuadrado de la distancia: falta extraer la raíz."),
+            ("5, aplicando el triángulo 3-4-5 aunque la diferencia vertical sea cero",
+             "Con diferencia vertical cero la distancia es solo la horizontal: 4."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "En la recta y = mx + n, ¿qué le ocurre al gráfico si aumenta n y m "
+        "permanece igual?",
+        "La recta se desplaza hacia arriba sin cambiar su inclinación",
+        "Cada parámetro controla un aspecto distinto.\n\n"
+        "1) La pendiente m fija la inclinación, y no cambió.\n"
+        "2) El coeficiente n fija dónde corta el eje Y.\n"
+        "3) Al aumentar n, ese corte sube y toda la recta se traslada "
+        "verticalmente.\n\n"
+        "La recta resultante es paralela a la original: comparten pendiente y "
+        "no se cortan nunca.",
+        [
+            ("La recta se inclina más",
+             "La inclinación depende de m, que no cambió."),
+            ("La recta se desplaza hacia la derecha",
+             "Aumentar n produce un desplazamiento vertical, no horizontal."),
+            ("La recta gira en torno al punto en que corta al eje X del plano",
+             "Un giro cambiaría la pendiente; aquí solo hay traslación."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿Cuál es la ecuación de la recta que pasa por (2, 7) y (5, 13)?",
+        "y = 2x + 3",
+        "Se calcula la pendiente y después el coeficiente de posición.\n\n"
+        "1) La pendiente es (13 − 7) / (5 − 2) = 6/3 = 2.\n"
+        "2) Reemplazando el primer punto: 7 = 2 · 2 + n, así que n = 3.\n"
+        "3) La ecuación es y = 2x + 3.\n\n"
+        "Comprobación con el segundo punto: 2 · 5 + 3 = 13, correcto.",
+        [
+            ("y = 2x + 7",
+             "Toma la ordenada del primer punto como coeficiente de posición."),
+            ("y = 0,5x + 6",
+             "Invierte el cuociente al calcular la pendiente."),
+            ("y = 6x + 3, tomando la variación vertical como pendiente",
+             "La pendiente es el cuociente entre las variaciones: 6/3 = 2."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "Se sabe que dos rectas distintas tienen la misma pendiente. ¿Cuántos "
+        "puntos en común tienen?",
+        "Ninguno",
+        "Rectas con la misma pendiente son paralelas.\n\n"
+        "1) Al tener igual inclinación, mantienen siempre la misma separación "
+        "vertical.\n"
+        "2) Como el enunciado dice que son distintas, esa separación no es "
+        "cero.\n"
+        "3) Por lo tanto nunca se encuentran: no comparten ningún punto.\n\n"
+        "Si además tuvieran el mismo coeficiente de posición serían la misma "
+        "recta, y compartirían todos sus puntos.",
+        [
+            ("Uno",
+             "Un único punto en común corresponde a rectas de pendientes distintas."),
+            ("Infinitos",
+             "Eso ocurriría si fueran la misma recta, y el enunciado dice que son distintas."),
+            ("Dos, uno en cada extremo del plano cartesiano",
+             "Dos rectas distintas nunca comparten exactamente dos puntos."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Geometria: rectas en el plano (segunda tanda)
+#
+# Modelos lineales en contexto, mediatrices, colinealidad, triangulos
+# formados con los ejes y rectas con parametro.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "geo_rectas", "medio",
+        "El costo de producir x unidades es C(x) = 2.500x + 40.000 pesos. ¿Qué "
+        "representa el 40.000?",
+        "El costo fijo, que se paga aunque no se produzca nada",
+        "Cada parámetro del modelo lineal tiene un significado.\n\n"
+        "1) El coeficiente 2.500 multiplica a x: es lo que cuesta cada unidad "
+        "adicional.\n"
+        "2) El término 40.000 no depende de x.\n"
+        "3) Reemplazando x = 0 se obtiene C(0) = 40.000: es el costo que existe "
+        "aun sin producción.\n\n"
+        "En el gráfico corresponde al coeficiente de posición: la altura a la "
+        "que la recta corta el eje vertical.",
+        [
+            ("El costo de cada unidad producida",
+             "Ese es el coeficiente 2.500, que acompaña a la variable."),
+            ("El número máximo de unidades que se alcanzan a producir en el mes",
+             "El modelo no impone ningún tope de producción."),
+            ("La ganancia obtenida al vender toda la producción",
+             "El modelo describe costos, no ganancias."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿Cuál de estas rectas es paralela a 6x − 2y + 5 = 0?",
+        "y = 3x − 1",
+        "Se compara la pendiente después de despejar.\n\n"
+        "1) De 6x − 2y + 5 = 0 se obtiene 2y = 6x + 5.\n"
+        "2) Dividiendo por 2: y = 3x + 2,5, así que la pendiente es 3.\n"
+        "3) La recta paralela debe tener también pendiente 3: y = 3x − 1.\n\n"
+        "El coeficiente de posición distinto garantiza que sean paralelas y no "
+        "la misma recta.",
+        [
+            ("y = −3x + 1",
+             "Tiene pendiente −3, así que corta a la recta dada en vez de ser paralela."),
+            ("y = (1/3)x + 5",
+             "Esa pendiente daría una recta oblicua, no paralela."),
+            ("y = 6x − 2, tomando los coeficientes de la forma general como pendiente",
+             "Hay que despejar y primero: la pendiente es 6/2 = 3."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿Cuál es la pendiente de la recta que pasa por (−4, 5) y (2, −7)?",
+        "−2",
+        "Se restan las coordenadas en el mismo orden.\n\n"
+        "1) La variación vertical es −7 − 5 = −12.\n"
+        "2) La variación horizontal es 2 − (−4) = 6.\n"
+        "3) La pendiente es −12 / 6 = −2.\n\n"
+        "El signo negativo es coherente con los datos: al aumentar la abscisa, "
+        "la ordenada bajó.",
+        [
+            ("2",
+             "Pierde el signo: la ordenada disminuye al aumentar la abscisa."),
+            ("−0,5",
+             "Invierte el cuociente entre las variaciones."),
+            ("−6, restando las coordenadas sin dividir",
+             "La pendiente es el cuociente entre las dos variaciones."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿Cuál es la ecuación de la recta horizontal que pasa por (5, −3)?",
+        "y = −3",
+        "Una recta horizontal mantiene constante la ordenada.\n\n"
+        "1) Todos sus puntos tienen la misma segunda coordenada.\n"
+        "2) El punto dado tiene ordenada −3.\n"
+        "3) La ecuación es y = −3.\n\n"
+        "La recta vertical por ese mismo punto sería x = 5.",
+        [
+            ("x = 5",
+             "Esa es la recta vertical que pasa por el punto."),
+            ("y = 5",
+             "Toma la abscisa del punto en vez de su ordenada."),
+            ("y = 5x − 3, combinando ambas coordenadas en una ecuación inclinada",
+             "Una recta horizontal no tiene término en x."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "El punto (−2, 7) se refleja respecto del eje Y. ¿Cuáles son las "
+        "coordenadas de su imagen?",
+        "(2, 7)",
+        "La reflexión respecto del eje Y cambia el signo de la abscisa.\n\n"
+        "1) La distancia al eje Y se conserva, pero el punto pasa al otro "
+        "lado.\n"
+        "2) La abscisa −2 pasa a ser 2.\n"
+        "3) La ordenada no cambia: sigue siendo 7.\n\n"
+        "Respecto del eje X ocurriría lo contrario: cambiaría el signo de la "
+        "ordenada.",
+        [
+            ("(−2, −7)",
+             "Esa es la reflexión respecto del eje X, que cambia la ordenada."),
+            ("(2, −7)",
+             "Esa es la simetría respecto del origen, que cambia ambos signos."),
+            ("(7, −2), intercambiando las dos coordenadas del punto",
+             "Intercambiar coordenadas corresponde a reflejar respecto de la recta y = x."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "Una recta corta al eje X en (6, 0) y al eje Y en (0, 3). ¿Cuál es su "
+        "pendiente?",
+        "−0,5",
+        "Se calcula con los dos puntos de corte.\n\n"
+        "1) La variación vertical es 0 − 3 = −3.\n"
+        "2) La variación horizontal es 6 − 0 = 6.\n"
+        "3) La pendiente es −3 / 6 = −0,5.\n\n"
+        "El signo negativo era previsible: la recta baja desde el eje Y hacia "
+        "el eje X.",
+        [
+            ("0,5",
+             "Pierde el signo: la recta es decreciente."),
+            ("2",
+             "Invierte el cuociente y además pierde el signo."),
+            ("−2, dividiendo la variación horizontal por la vertical",
+             "La pendiente divide la variación vertical por la horizontal."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿Pertenece el punto (3, −2) a la recta 4x + 5y − 2 = 0?",
+        "Sí, porque al reemplazar la igualdad se cumple",
+        "Se sustituyen las coordenadas en la ecuación.\n\n"
+        "1) Reemplazando: 4 · 3 + 5 · (−2) − 2.\n"
+        "2) Eso da 12 − 10 − 2 = 0.\n"
+        "3) La igualdad se cumple, así que el punto pertenece a la recta.\n\n"
+        "Con la forma general basta comprobar que el resultado sea cero: no "
+        "hace falta despejar y.",
+        [
+            ("No, porque el resultado da 24",
+             "El cálculo correcto es 12 − 10 − 2, que da 0."),
+            ("No, porque una de las coordenadas es negativa",
+             "Las coordenadas negativas son perfectamente admisibles."),
+            ("Solo si se cambia el signo del término independiente",
+             "No hace falta cambiar nada: el punto ya satisface la ecuación."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿Cuál es la distancia entre los puntos (−1, −4) y (2, 0)?",
+        "5",
+        "Se aplica la fórmula de distancia con cuidado en los signos.\n\n"
+        "1) La diferencia horizontal es 2 − (−1) = 3.\n"
+        "2) La diferencia vertical es 0 − (−4) = 4.\n"
+        "3) La distancia es la raíz de 9 + 16 = 25, es decir, 5.\n\n"
+        "Al elevar al cuadrado el signo desaparece, así que el orden en que se "
+        "resten los puntos no altera el resultado.",
+        [
+            ("1",
+             "Suma las coordenadas en vez de restarlas: −1 + 2 no es la diferencia buscada."),
+            ("7",
+             "Suma las dos diferencias en vez de aplicar Pitágoras."),
+            ("25, dejando el resultado sin extraer la raíz cuadrada",
+             "La distancia es la raíz de esa suma de cuadrados."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "Dos rectas tienen pendientes 4 y 0,25. ¿Son perpendiculares?",
+        "No, porque el producto de sus pendientes es 1 y no −1",
+        "Se aplica la condición de perpendicularidad.\n\n"
+        "1) El producto de las pendientes es 4 · 0,25 = 1.\n"
+        "2) La condición exige que ese producto valga −1.\n"
+        "3) Como no se cumple, las rectas se cortan pero no en ángulo recto.\n\n"
+        "La perpendicular a la primera tendría pendiente −0,25: el signo es "
+        "tan importante como el valor recíproco.",
+        [
+            ("Sí, porque una pendiente es el recíproco de la otra",
+             "Falta el cambio de signo: hace falta el recíproco negativo."),
+            ("Sí, porque el producto de sus pendientes es 1",
+             "La condición exige que el producto sea −1, no 1."),
+            ("No, porque las dos pendientes son positivas y eso las hace paralelas",
+             "Pendientes positivas distintas no son paralelas: se cortan."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "Un taxi cobra $ 400 de bajada de bandera más $ 150 por cada 200 "
+        "metros. ¿Cuál es la pendiente del modelo que relaciona los 200 metros "
+        "recorridos con el costo?",
+        "150",
+        "La pendiente es lo que aumenta el costo por cada unidad de la "
+        "variable.\n\n"
+        "1) La variable cuenta tramos de 200 metros.\n"
+        "2) Cada tramo agrega $ 150 al total.\n"
+        "3) Esa es exactamente la pendiente del modelo.\n\n"
+        "El monto de $ 400 es el coeficiente de posición: lo que se paga antes "
+        "de avanzar el primer tramo.",
+        [
+            ("400",
+             "Ese es el coeficiente de posición, o costo inicial del viaje."),
+            ("550",
+             "Es lo que se paga tras el primer tramo, no la variación por tramo."),
+            ("200, que es la cantidad de metros de cada tramo",
+             "La pendiente mide el aumento del costo, no la longitud del tramo."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "dificil",
+        "¿Cuál es el área del triángulo que forma la recta y = −2x + 8 con los "
+        "dos ejes coordenados?",
+        "16 unidades cuadradas",
+        "Los catetos son los cortes con los ejes.\n\n"
+        "1) El corte con el eje Y es (0, 8), así que un cateto mide 8.\n"
+        "2) El corte con el eje X se obtiene con y = 0: x = 4, así que el otro "
+        "cateto mide 4.\n"
+        "3) El área es 8 · 4 / 2 = 16 unidades cuadradas.\n\n"
+        "El triángulo es rectángulo porque los ejes son perpendiculares entre "
+        "sí: los cortes hacen de catetos.",
+        [
+            ("32 unidades cuadradas",
+             "Olvida dividir por dos el producto de los catetos."),
+            ("12 unidades cuadradas",
+             "Suma los cortes en vez de multiplicarlos."),
+            ("8 unidades cuadradas, tomando solo el corte con el eje Y",
+             "El área necesita las dos medidas, y además dividir por dos."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "dificil",
+        "¿Cuál es la ecuación de la mediatriz del segmento que une (2, 1) y "
+        "(8, 5)?",
+        "y = −1,5x + 10,5",
+        "La mediatriz pasa por el punto medio y es perpendicular al "
+        "segmento.\n\n"
+        "1) El punto medio es ((2 + 8)/2 , (1 + 5)/2) = (5, 3).\n"
+        "2) La pendiente del segmento es (5 − 1)/(8 − 2) = 2/3, así que la "
+        "mediatriz tiene pendiente −3/2 = −1,5.\n"
+        "3) Reemplazando el punto medio: 3 = −1,5 · 5 + n, de donde n = 10,5.\n\n"
+        "Comprobación: la mediatriz debe pasar por (5, 3), y en efecto "
+        "−7,5 + 10,5 = 3.",
+        [
+            ("y = (2/3)x + 3",
+             "Usa la pendiente del segmento en vez de su perpendicular."),
+            ("y = −1,5x + 3",
+             "Toma la ordenada del punto medio como coeficiente de posición."),
+            ("y = −1,5x, olvidando que la mediatriz debe pasar por el punto medio",
+             "Esa recta pasa por el origen y no por (5, 3)."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "dificil",
+        "¿Están alineados los puntos (1, 2), (3, 6) y (6, 12)?",
+        "Sí, porque las pendientes entre pares consecutivos coinciden",
+        "Tres puntos están alineados si las pendientes entre ellos son "
+        "iguales.\n\n"
+        "1) Entre el primero y el segundo: (6 − 2)/(3 − 1) = 2.\n"
+        "2) Entre el segundo y el tercero: (12 − 6)/(6 − 3) = 2.\n"
+        "3) Al coincidir, los tres puntos están sobre la misma recta, que es "
+        "y = 2x.\n\n"
+        "Basta comparar dos pendientes: si esas dos coinciden, la tercera "
+        "también lo hará.",
+        [
+            ("No, porque las abscisas no están igualmente espaciadas",
+             "El espaciamiento no importa: lo que decide es la igualdad de pendientes."),
+            ("No, porque las pendientes son 2 y 3",
+             "Ambas pendientes valen 2: el segundo cálculo es 6/3 = 2."),
+            ("Sí, pero solo si además la recta pasara por el origen del plano",
+             "Que pase por el origen es una coincidencia de este caso, no un requisito."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "dificil",
+        "¿Cuál es la ecuación de la recta perpendicular a y = (2/3)x + 1 que "
+        "pasa por (4, −2)?",
+        "y = −1,5x + 4",
+        "Se invierte la pendiente con signo cambiado y se ajusta al punto.\n\n"
+        "1) La pendiente dada es 2/3, así que la perpendicular tiene pendiente "
+        "−3/2 = −1,5.\n"
+        "2) Reemplazando el punto: −2 = −1,5 · 4 + n, es decir, −2 = −6 + n.\n"
+        "3) Despejando: n = 4, así que la recta es y = −1,5x + 4.\n\n"
+        "Comprobación de la perpendicularidad: (2/3) · (−3/2) = −1.",
+        [
+            ("y = (2/3)x − 4,67",
+             "Conserva la pendiente original: esa recta sería paralela."),
+            ("y = 1,5x − 8",
+             "Invierte la pendiente pero olvida cambiarle el signo."),
+            ("y = −1,5x − 2, tomando la ordenada del punto como coeficiente de posición",
+             "El coeficiente hay que despejarlo: da 4."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "dificil",
+        "¿Para qué valor de k las rectas y = (k + 1)x + 3 e y = 5x − 2 son "
+        "paralelas?",
+        "k = 4",
+        "Las paralelas tienen la misma pendiente.\n\n"
+        "1) La condición es k + 1 = 5.\n"
+        "2) Despejando: k = 4.\n"
+        "3) Con ese valor las rectas son y = 5x + 3 e y = 5x − 2, que en efecto "
+        "son paralelas distintas.\n\n"
+        "Los coeficientes de posición son distintos, así que no llegan a "
+        "coincidir: son paralelas de verdad y no la misma recta.",
+        [
+            ("k = 5",
+             "Olvida restar el 1: la condición es k + 1 = 5."),
+            ("k = 6",
+             "Suma el 1 en vez de restarlo al despejar."),
+            ("k = −0,2, aplicando la condición de perpendicularidad",
+             "El enunciado pide paralelismo, que exige pendientes iguales."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "dificil",
+        "Los puntos A(0, 0), B(4, 0), C(5, 3) y D(1, 3) forman un "
+        "cuadrilátero. ¿De qué tipo es?",
+        "Un paralelogramo",
+        "Se comparan las pendientes de los lados opuestos.\n\n"
+        "1) AB y DC son horizontales: ambas tienen pendiente 0.\n"
+        "2) BC tiene pendiente (3 − 0)/(5 − 4) = 3, y AD tiene pendiente "
+        "(3 − 0)/(1 − 0) = 3.\n"
+        "3) Los dos pares de lados opuestos son paralelos: es un "
+        "paralelogramo.\n\n"
+        "No es rectángulo, porque los lados contiguos no son perpendiculares: "
+        "0 · 3 no da −1.",
+        [
+            ("Un rectángulo",
+             "Los lados contiguos no son perpendiculares: el producto de pendientes no da −1."),
+            ("Un trapecio con un solo par de lados paralelos",
+             "Los dos pares de lados opuestos resultan paralelos."),
+            ("Un rombo, porque sus cuatro lados miden lo mismo",
+             "AB mide 4 y AD mide √10: los lados no son todos iguales."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "dificil",
+        "Una recta de pendiente 1 pasa por (3, 5). ¿Cuál es el ángulo que forma "
+        "con el eje X?",
+        "45°",
+        "La pendiente es la tangente del ángulo de inclinación.\n\n"
+        "1) Se cumple m = tan θ, donde θ es el ángulo con el eje X.\n"
+        "2) Con m = 1 se busca el ángulo cuya tangente vale 1.\n"
+        "3) Ese ángulo es 45°.\n\n"
+        "El punto (3, 5) no interviene: la inclinación depende solo de la "
+        "pendiente.",
+        [
+            ("30°",
+             "Su tangente vale cerca de 0,577, no 1."),
+            ("60°",
+             "Su tangente vale cerca de 1,73, no 1."),
+            ("90°, porque la pendiente 1 indica una subida completa",
+             "Con 90° la recta sería vertical y su pendiente no estaría definida."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "dificil",
+        "¿Cuál es la ecuación general de la recta que pasa por (3, 0) y "
+        "(0, −6)?",
+        "2x − y − 6 = 0",
+        "Se obtiene la forma principal y después se ordena todo a un "
+        "lado.\n\n"
+        "1) La pendiente es (−6 − 0)/(0 − 3) = 2, y el corte con el eje Y "
+        "es −6.\n"
+        "2) La forma principal es y = 2x − 6.\n"
+        "3) Pasando todo al mismo lado: 2x − y − 6 = 0.\n\n"
+        "Cualquier múltiplo de esa ecuación describe la misma recta: "
+        "4x − 2y − 12 = 0 también sería correcta.",
+        [
+            ("2x + y − 6 = 0",
+             "Cambia el signo del término en y al reordenar."),
+            ("x − 2y − 6 = 0",
+             "Intercambia los coeficientes de las dos variables."),
+            ("2x − y + 6 = 0, dejando el término independiente con signo positivo",
+             "Al pasar el −6 al otro lado el signo se conserva: queda −6."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "dificil",
+        "Un estudiante afirma que la recta que pasa por (2, 3) y (2, 9) tiene "
+        "pendiente cero. ¿Es correcta su afirmación?",
+        "No: la recta es vertical y su pendiente no está definida",
+        "La fórmula de la pendiente exige un denominador distinto de cero.\n\n"
+        "1) La variación horizontal es 2 − 2 = 0.\n"
+        "2) La pendiente sería 6 dividido por 0, y esa división no existe.\n"
+        "3) La recta es vertical, de ecuación x = 2, y su pendiente no está "
+        "definida.\n\n"
+        "La pendiente cero corresponde a rectas horizontales, donde lo que se "
+        "anula es la variación vertical.",
+        [
+            ("Sí, porque las abscisas son iguales",
+             "Abscisas iguales dan una recta vertical, cuya pendiente no existe."),
+            ("No: la pendiente vale 6",
+             "6 es la variación vertical, que habría que dividir por una variación horizontal nula."),
+            ("Sí, porque toda recta que no corta al eje Y tiene pendiente cero",
+             "Las rectas verticales no cortan al eje Y y su pendiente no está definida."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "dificil",
+        "Una empresa cobra según C(x) = 800x + 12.000. Si un cliente pagó "
+        "$ 36.000, ¿cuántas unidades compró?",
+        "30",
+        "Se despeja x del modelo lineal.\n\n"
+        "1) Se plantea 800x + 12.000 = 36.000.\n"
+        "2) Restando el costo fijo: 800x = 24.000.\n"
+        "3) Dividiendo: x = 30 unidades.\n\n"
+        "Descontar primero el costo fijo es el paso clave: dividir 36.000 por "
+        "800 daría 45, un valor incorrecto.",
+        [
+            ("45",
+             "Divide el total por el costo unitario sin descontar antes el costo fijo."),
+            ("48",
+             "Divide el total por 750, o mezcla los dos coeficientes del modelo."),
+            ("24.000, quedándose con el monto que corresponde a las unidades",
+             "Ese es el gasto variable en pesos; falta dividirlo por el costo unitario."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "dificil",
+        "¿Cuál es la distancia del punto (0, 0) a la recta 3x + 4y − 20 = 0?",
+        "4",
+        "Se aplica la fórmula de distancia de un punto a una recta.\n\n"
+        "1) La fórmula divide el valor absoluto de Ax + By + C por la raíz de "
+        "A² + B².\n"
+        "2) En el numerador: |3 · 0 + 4 · 0 − 20| = 20.\n"
+        "3) En el denominador: la raíz de 9 + 16 = 5, así que la distancia es "
+        "20/5 = 4.\n\n"
+        "Como control, el corte de la recta con el eje X es (20/3, 0), a unas "
+        "6,7 unidades del origen: la distancia perpendicular tiene que ser "
+        "menor, y lo es.",
+        [
+            ("20",
+             "Es el numerador de la fórmula, sin dividir por la raíz de A² + B²."),
+            ("5",
+             "Es el denominador de la fórmula, no la distancia."),
+            ("6,67 aproximadamente, que es la distancia al corte con el eje X",
+             "La distancia a una recta se mide perpendicularmente, no hasta un corte cualquiera."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "dificil",
+        "Dos rectas se cortan en (3, 4). Una tiene pendiente 2 y la otra "
+        "pendiente −1. ¿Cuánto vale la diferencia entre sus coeficientes de "
+        "posición?",
+        "9",
+        "Se obtiene cada coeficiente reemplazando el punto de corte.\n\n"
+        "1) Para la primera: 4 = 2 · 3 + n₁, así que n₁ = −2.\n"
+        "2) Para la segunda: 4 = −1 · 3 + n₂, así que n₂ = 7.\n"
+        "3) La diferencia entre ellos es 7 − (−2) = 9.\n\n"
+        "El punto de corte es el único que ambas rectas comparten, así que "
+        "sirve para determinar los dos coeficientes.",
+        [
+            ("5",
+             "Suma los coeficientes en vez de restarlos, o se equivoca con un signo."),
+            ("3",
+             "Toma la abscisa del punto de corte, que no es la diferencia buscada."),
+            ("−9, restando en el orden inverso y dejando el signo negativo",
+             "La diferencia entre 7 y −2 es 9; el enunciado pide su valor."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "dificil",
+        "Se afirma: «Si dos rectas tienen coeficientes de posición distintos, "
+        "entonces se cortan en algún punto». ¿Es correcta la afirmación?",
+        "No: si además tienen la misma pendiente, son paralelas y no se cortan",
+        "El coeficiente de posición solo descarta que sean la misma recta.\n\n"
+        "1) Coeficientes distintos garantizan que las rectas no coinciden.\n"
+        "2) Pero si las pendientes son iguales, las rectas son paralelas "
+        "distintas.\n"
+        "3) Dos paralelas distintas no tienen ningún punto en común.\n\n"
+        "Un contraejemplo: y = 2x + 1 e y = 2x + 5 tienen coeficientes "
+        "distintos y nunca se cortan.",
+        [
+            ("Sí: coeficientes distintos garantizan un punto de corte",
+             "El contraejemplo y = 2x + 1 con y = 2x + 5 lo desmiente."),
+            ("No: rectas con coeficientes distintos nunca se cortan",
+             "Sí pueden cortarse, siempre que sus pendientes difieran."),
+            ("Sí, siempre que las dos rectas atraviesen cuadrantes distintos del plano",
+             "Los cuadrantes no deciden nada: lo que importa es la pendiente."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Probabilidad: medidas de dispersion
+#
+# Rango, varianza y desviacion estandar, efecto de trasladar o reescalar los
+# datos, y comparacion de dos conjuntos con la misma media.
+#
+# Convencion del banco: la varianza se calcula dividiendo por n (varianza
+# poblacional), igual que en las preguntas que ya estaban.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "prob_dispersion", "facil",
+        "¿Cuál es el rango del conjunto de datos 3, 7, 12, 5, 9?",
+        "9",
+        "El rango es la diferencia entre el dato mayor y el menor.\n\n"
+        "1) El mayor es 12.\n"
+        "2) El menor es 3.\n"
+        "3) El rango es 12 − 3 = 9.\n\n"
+        "Es la medida de dispersión más simple, pero también la más frágil: un "
+        "solo dato extremo la cambia por completo.",
+        [
+            ("12",
+             "Es el dato mayor, no la diferencia entre los extremos."),
+            ("36",
+             "Es la suma de los cinco datos, que sirve para la media y no para el rango."),
+            ("7,2",
+             "Es el promedio de los datos, no su rango."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "facil",
+        "¿Qué mide la desviación estándar de un conjunto de datos?",
+        "Cuánto se apartan los datos de su promedio",
+        "Es una medida de dispersión, no de posición.\n\n"
+        "1) Primero se calcula cuánto se aleja cada dato del promedio.\n"
+        "2) Esas distancias se elevan al cuadrado, se promedian y se les extrae "
+        "la raíz.\n"
+        "3) El resultado indica cuán concentrados o esparcidos están los "
+        "datos.\n\n"
+        "Dos conjuntos pueden tener el mismo promedio y desviaciones muy "
+        "distintas: eso es exactamente lo que esta medida detecta.",
+        [
+            ("El valor central de los datos",
+             "Ese es el promedio o la mediana, que son medidas de posición."),
+            ("El dato que más se repite",
+             "Esa es la moda."),
+            ("La cantidad total de datos que se alcanzaron a observar",
+             "Ese es el tamaño de la muestra, que interviene en el cálculo pero no es lo que se mide."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "facil",
+        "¿Cuál es la media del conjunto 4, 8, 6, 2?",
+        "5",
+        "La media es la suma dividida por la cantidad de datos.\n\n"
+        "1) La suma es 4 + 8 + 6 + 2 = 20.\n"
+        "2) Hay 4 datos.\n"
+        "3) La media es 20 / 4 = 5.\n\n"
+        "Calcular la media es siempre el primer paso antes de la varianza: todo "
+        "el cálculo de dispersión se apoya en ella.",
+        [
+            ("6",
+             "Es el promedio entre el mayor y el menor, no la media de los cuatro datos."),
+            ("20",
+             "Es la suma de los datos, sin dividir por la cantidad."),
+            ("4",
+             "Es la cantidad de datos, no su promedio."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "facil",
+        "Si la varianza de un conjunto es 49, ¿cuál es su desviación estándar?",
+        "7",
+        "La desviación estándar es la raíz cuadrada de la varianza.\n\n"
+        "1) Se busca el número que elevado al cuadrado da 49.\n"
+        "2) Ese número es 7.\n"
+        "3) Por lo tanto la desviación estándar vale 7.\n\n"
+        "La ventaja de extraer la raíz es que el resultado queda en las mismas "
+        "unidades que los datos originales.",
+        [
+            ("24,5",
+             "Divide la varianza por dos en vez de extraer la raíz."),
+            ("49",
+             "Repite la varianza: la desviación estándar es su raíz cuadrada."),
+            ("2.401",
+             "Eleva la varianza al cuadrado en vez de extraerle la raíz."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "facil",
+        "¿Puede la desviación estándar de un conjunto de datos ser negativa?",
+        "No, nunca",
+        "El cálculo elimina los signos antes de promediar.\n\n"
+        "1) Las diferencias respecto de la media se elevan al cuadrado, así que "
+        "todas quedan positivas o nulas.\n"
+        "2) El promedio de esos cuadrados tampoco puede ser negativo.\n"
+        "3) La raíz cuadrada de un número no negativo es no negativa.\n\n"
+        "Vale cero solo en un caso: cuando todos los datos son iguales entre "
+        "sí.",
+        [
+            ("Sí, cuando los datos están bajo el promedio",
+             "Elevar al cuadrado borra el signo: esos datos también aportan positivo."),
+            ("Sí, cuando el conjunto tiene datos negativos",
+             "Los datos negativos son válidos y la dispersión sigue siendo no negativa."),
+            ("Sí, cuando el conjunto tiene menos de tres datos",
+             "El tamaño no cambia el signo del resultado."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "facil",
+        "En un conjunto donde todos los datos valen 7, ¿cuál es la varianza?",
+        "0",
+        "No hay ninguna diferencia respecto del promedio.\n\n"
+        "1) La media también vale 7.\n"
+        "2) Cada dato se aparta 0 de esa media.\n"
+        "3) El promedio de esos ceros es 0: la varianza es cero.\n\n"
+        "Es el único caso en que la dispersión se anula: cualquier variación "
+        "entre los datos la vuelve positiva.",
+        [
+            ("7",
+             "Repite el valor de los datos, que aquí coincide con la media y no con la dispersión."),
+            ("1",
+             "Ningún dato se aparta de la media, así que no hay dispersión que medir."),
+            ("49",
+             "Es el cuadrado del dato, que no interviene: lo que se eleva al cuadrado son las diferencias."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "facil",
+        "¿Cuál de estos conjuntos tiene menor dispersión?",
+        "9, 10, 10, 11",
+        "Se compara cuán agrupados están los datos.\n\n"
+        "1) En el conjunto correcto los datos van de 9 a 11: se apartan a lo "
+        "más una unidad de la media, que es 10.\n"
+        "2) En los otros conjuntos las diferencias respecto de la media son "
+        "mucho mayores.\n"
+        "3) Por lo tanto ese es el de menor dispersión.\n\n"
+        "Los cuatro conjuntos tienen media 10: lo único que los distingue es "
+        "cuánto se separan de ella.",
+        [
+            ("5, 10, 10, 15",
+             "Sus datos extremos se apartan cinco unidades de la media."),
+            ("2, 8, 12, 18",
+             "Sus datos se apartan hasta ocho unidades de la media."),
+            ("0, 5, 15, 20",
+             "Es el más disperso de los cuatro: llega a apartarse diez unidades."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "facil",
+        "Dos cursos tienen el mismo promedio, pero uno tiene mayor desviación "
+        "estándar. ¿Qué significa?",
+        "Sus notas están más repartidas",
+        "La desviación estándar mide la dispersión, no el nivel.\n\n"
+        "1) El promedio igual indica que el rendimiento medio coincide.\n"
+        "2) Una desviación mayor indica que hay más notas alejadas de ese "
+        "promedio.\n"
+        "3) En ese curso conviven notas altas y bajas; en el otro, notas "
+        "parecidas entre sí.\n\n"
+        "No dice cuál curso es mejor: dice cuál es más homogéneo.",
+        [
+            ("Ese curso obtuvo mejores notas",
+             "El promedio es el mismo en ambos: el nivel no cambia."),
+            ("Ese curso tiene más estudiantes",
+             "La desviación estándar no depende del tamaño del grupo."),
+            ("Ese curso tiene más notas repetidas",
+             "Notas repetidas reducirían la dispersión en vez de aumentarla."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "facil",
+        "¿Cuál es el rango del conjunto −4, 0, 6, 2?",
+        "10",
+        "El rango es la diferencia entre los extremos.\n\n"
+        "1) El dato mayor es 6.\n"
+        "2) El menor es −4.\n"
+        "3) El rango es 6 − (−4) = 10.\n\n"
+        "Restar un número negativo equivale a sumarlo: por eso el rango resulta "
+        "mayor que el dato más grande.",
+        [
+            ("2",
+             "Suma los extremos en vez de restarlos: 6 + (−4) da 2."),
+            ("6",
+             "Es el dato mayor, no la diferencia entre los extremos."),
+            ("4",
+             "Es el valor absoluto del dato menor, no el rango."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "facil",
+        "¿En qué unidades se expresa la desviación estándar de un conjunto de "
+        "estaturas medidas en centímetros?",
+        "En centímetros",
+        "La raíz cuadrada devuelve las unidades originales.\n\n"
+        "1) La varianza queda en centímetros cuadrados, porque las diferencias "
+        "se elevan al cuadrado.\n"
+        "2) La desviación estándar es la raíz de esa varianza.\n"
+        "3) Al extraer la raíz, las unidades vuelven a ser centímetros.\n\n"
+        "Es la razón principal para preferir la desviación estándar por sobre "
+        "la varianza al interpretar resultados.",
+        [
+            ("En centímetros cuadrados",
+             "Esas son las unidades de la varianza, antes de extraer la raíz."),
+            ("Sin unidades, porque es un porcentaje",
+             "No es un porcentaje: conserva las unidades de los datos."),
+            ("En metros, porque siempre se usa la unidad del sistema internacional",
+             "Conserva la unidad en que se midieron los datos, sea cual sea."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "¿Cuál es la varianza del conjunto 1, 2, 3, 4, 5?",
+        "2",
+        "Se promedian los cuadrados de las diferencias respecto de la "
+        "media.\n\n"
+        "1) La media es 15 / 5 = 3.\n"
+        "2) Las diferencias son −2, −1, 0, 1 y 2, y sus cuadrados 4, 1, 0, 1 y "
+        "4.\n"
+        "3) La varianza es (4 + 1 + 0 + 1 + 4) / 5 = 10/5 = 2.\n\n"
+        "La desviación estándar sería la raíz de 2, cerca de 1,41.",
+        [
+            ("1,41 aproximadamente",
+             "Es la desviación estándar, es decir, la raíz de la varianza."),
+            ("3",
+             "Es la media del conjunto, no su varianza."),
+            ("10",
+             "Es la suma de los cuadrados de las diferencias, sin dividir por la cantidad de datos."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "A todos los datos de un conjunto se les multiplica por 3. ¿Qué ocurre "
+        "con su desviación estándar?",
+        "Se multiplica por 3",
+        "Reescalar los datos reescala también sus distancias a la media.\n\n"
+        "1) La media queda multiplicada por 3.\n"
+        "2) Cada diferencia respecto de la media también queda multiplicada "
+        "por 3.\n"
+        "3) La desviación estándar, que promedia esas distancias, se multiplica "
+        "por 3.\n\n"
+        "La varianza, en cambio, quedaría multiplicada por 9: es el cuadrado "
+        "del factor.",
+        [
+            ("Se mantiene igual",
+             "Eso ocurre al sumar una constante, no al multiplicar por ella."),
+            ("Se multiplica por 9",
+             "Ese es el factor de la varianza, no el de la desviación estándar."),
+            ("Se divide por 3",
+             "Ampliar los datos aumenta la dispersión en vez de reducirla."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "¿Cuál es la desviación estándar del conjunto 2, 2, 6, 6?",
+        "2",
+        "Se calcula la media y después el promedio de los cuadrados.\n\n"
+        "1) La media es 16 / 4 = 4.\n"
+        "2) Cada dato se aparta 2 unidades de la media, así que todos los "
+        "cuadrados valen 4.\n"
+        "3) La varianza es 4 y la desviación estándar es su raíz: 2.\n\n"
+        "Cuando todos los datos están a la misma distancia de la media, la "
+        "desviación estándar coincide con esa distancia.",
+        [
+            ("4",
+             "Es la varianza, o la media del conjunto: no la desviación estándar."),
+            ("1,41 aproximadamente",
+             "Correspondería a una varianza de 2, y aquí la varianza es 4."),
+            ("16",
+             "Es la suma de los datos, que no interviene directamente en la dispersión."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "El conjunto A tiene desviación estándar 3 y el conjunto B tiene "
+        "varianza 4. ¿Cuál está más disperso?",
+        "A, porque su varianza es 9 contra 4",
+        "Hay que comparar las dos medidas en la misma escala.\n\n"
+        "1) La varianza de A es 3² = 9.\n"
+        "2) La varianza de B es 4.\n"
+        "3) Como 9 supera a 4, el conjunto A está más disperso.\n\n"
+        "También se podía comparar por desviación estándar: 3 contra 2, con la "
+        "misma conclusión.",
+        [
+            ("B, porque 4 es mayor que 3",
+             "Compara una varianza con una desviación estándar: son escalas distintas."),
+            ("Tienen la misma dispersión",
+             "La varianza de A es 9 y la de B es 4: no coinciden."),
+            ("No se pueden comparar, porque las medidas son distintas",
+             "Sí se pueden: basta llevar ambas a la misma medida."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "¿Cuál es la varianza del conjunto 10, 20, 30?",
+        "66,7 aproximadamente",
+        "Se promedian los cuadrados de las diferencias.\n\n"
+        "1) La media es 60 / 3 = 20.\n"
+        "2) Las diferencias son −10, 0 y 10, con cuadrados 100, 0 y 100.\n"
+        "3) La varianza es 200 / 3 = 66,7 aproximadamente.\n\n"
+        "Es el mismo patrón que en 1, 2, 3 pero con los datos multiplicados por "
+        "10: la varianza queda multiplicada por 100.",
+        [
+            ("20",
+             "Es la media del conjunto, no su varianza."),
+            ("8,16 aproximadamente",
+             "Es la desviación estándar, es decir, la raíz de la varianza."),
+            ("200",
+             "Es la suma de los cuadrados de las diferencias, sin dividir por la cantidad de datos."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "Un conjunto de datos tiene media 50 y desviación estándar 0. ¿Qué se "
+        "puede afirmar?",
+        "Todos los datos valen 50",
+        "Una dispersión nula obliga a que no haya diferencias.\n\n"
+        "1) La desviación estándar se anula solo si cada diferencia respecto de "
+        "la media es cero.\n"
+        "2) Eso significa que todos los datos coinciden con la media.\n"
+        "3) Como la media es 50, todos los datos valen 50.\n\n"
+        "No importa cuántos datos haya: el resultado es el mismo con tres o con "
+        "tres mil.",
+        [
+            ("La mitad de los datos vale más de 50 y la otra mitad menos",
+             "Eso describiría la mediana, y además implicaría dispersión distinta de cero."),
+            ("Los datos son todos distintos entre sí",
+             "Datos distintos producen dispersión positiva."),
+            ("No hay suficientes datos para calcular la dispersión",
+             "El cálculo se hizo y dio cero: eso es información, no falta de datos."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "En una fábrica, la duración de dos tipos de ampolleta tiene la misma "
+        "media pero el tipo A tiene menor desviación estándar. ¿Cuál conviene "
+        "comprar si se busca previsibilidad?",
+        "El tipo A, porque su duración es más constante",
+        "Menor dispersión significa resultados más parecidos entre sí.\n\n"
+        "1) Ambas duran lo mismo en promedio.\n"
+        "2) El tipo A tiene menos variación alrededor de esa media.\n"
+        "3) Es más probable que cada ampolleta dure cerca del promedio, lo que "
+        "hace previsible el recambio.\n\n"
+        "El tipo B tendría algunas ampolletas muy duraderas y otras que fallan "
+        "pronto.",
+        [
+            ("El tipo B, porque su mayor dispersión da más ampolletas duraderas",
+             "También da más ampolletas de vida corta: el promedio no cambia."),
+            ("Cualquiera, porque tienen la misma media",
+             "La media es igual, pero la previsibilidad depende de la dispersión."),
+            ("No se puede decidir sin conocer el precio de cada tipo",
+             "El criterio del enunciado es la previsibilidad, no el costo."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "¿Cuál es la desviación estándar del conjunto 5, 5, 5, 9?",
+        "1,73 aproximadamente",
+        "Se calcula la media y después el promedio de los cuadrados.\n\n"
+        "1) La media es 24 / 4 = 6.\n"
+        "2) Las diferencias son −1, −1, −1 y 3, con cuadrados 1, 1, 1 y 9.\n"
+        "3) La varianza es 12 / 4 = 3, y la desviación estándar es la raíz de "
+        "3, cerca de 1,73.\n\n"
+        "El dato aislado en 9 es el que aporta casi toda la dispersión: nueve "
+        "de los doce puntos del numerador.",
+        [
+            ("3",
+             "Es la varianza, no la desviación estándar."),
+            ("6",
+             "Es la media del conjunto."),
+            ("3,46 aproximadamente",
+             "Extrae la raíz de la suma de cuadrados sin promediarla antes."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "Un conjunto de datos tiene rango 0. ¿Qué se puede afirmar de su "
+        "desviación estándar?",
+        "También vale 0",
+        "Un rango nulo obliga a que todos los datos coincidan.\n\n"
+        "1) El rango es la diferencia entre el mayor y el menor.\n"
+        "2) Si vale cero, el mayor y el menor son iguales, así que todos los "
+        "datos lo son.\n"
+        "3) Sin variación entre los datos, la desviación estándar también "
+        "vale 0.\n\n"
+        "El recíproco también es cierto: desviación estándar cero implica rango "
+        "cero.",
+        [
+            ("Vale 1, porque hay un solo valor distinto",
+             "No hay valores distintos: todos los datos coinciden."),
+            ("Puede valer cualquier cosa, porque el rango no determina la dispersión",
+             "En este caso sí la determina: rango cero obliga a dispersión cero."),
+            ("No se puede calcular, porque no hay diferencias entre los datos",
+             "Sí se puede: el cálculo entrega exactamente cero."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "A todos los datos de un conjunto de notas se les suma 0,5 puntos. "
+        "¿Qué ocurre con la varianza?",
+        "Se mantiene igual",
+        "Trasladar los datos no cambia sus distancias relativas.\n\n"
+        "1) La media también aumenta 0,5 puntos.\n"
+        "2) Cada diferencia respecto de la media queda idéntica, porque el "
+        "aumento se cancela al restar.\n"
+        "3) La varianza, que solo depende de esas diferencias, no cambia.\n\n"
+        "Es una distinción clave: sumar una constante mueve el centro, "
+        "multiplicar por una constante cambia la escala.",
+        [
+            ("Aumenta en 0,5",
+             "El aumento afecta a la media, no a la dispersión."),
+            ("Aumenta en 0,25",
+             "Ese sería el cuadrado del aumento, que tampoco se suma a la varianza."),
+            ("Se duplica, porque todos los datos cambiaron de valor",
+             "Todos cambiaron por igual, así que sus distancias relativas no se alteran."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "En una prueba, el curso A tiene media 5,2 y desviación estándar 1,4; "
+        "el curso B tiene media 5,2 y desviación estándar 0,4. ¿Qué curso tiene "
+        "más notas cercanas al promedio?",
+        "El curso B",
+        "Una desviación menor concentra los datos alrededor de la media.\n\n"
+        "1) Ambos cursos tienen el mismo promedio.\n"
+        "2) El curso B tiene una desviación mucho menor: 0,4 contra 1,4.\n"
+        "3) Sus notas se apartan menos del 5,2, así que están más "
+        "concentradas.\n\n"
+        "En el curso A convivirían notas cercanas al 4 y al 6,5 con el mismo "
+        "promedio.",
+        [
+            ("El curso A",
+             "Su desviación es mayor, así que sus notas están más repartidas."),
+            ("Los dos por igual, porque tienen la misma media",
+             "La media coincide, pero la concentración la mide la desviación estándar."),
+            ("No se puede saber sin conocer cuántos estudiantes tiene cada curso",
+             "La desviación estándar ya resume la dispersión, sea cual sea el tamaño."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "En cuatro días una tienda vendió 12, 15, 18 y 15 helados. ¿Cuál "
+        "fue su venta promedio diaria?",
+        "15",
+        "Se suma lo vendido y se divide por los días.\n\n"
+        "1) La suma es 12 + 15 + 18 + 15 = 60 helados.\n"
+        "2) Fueron 4 días.\n"
+        "3) La media es 60 / 4 = 15.\n\n"
+        "Coincide con la mediana y con la moda: es un conjunto muy simétrico "
+        "alrededor de ese valor.",
+        [
+            ("14",
+             "Corresponde a promediar solo tres de los cuatro días."),
+            ("60",
+             "Es el total de los cuatro días, sin dividir por la cantidad de días."),
+            ("16,5",
+             "Es el promedio entre el mejor y el peor día, no el de los cuatro."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "Si dos conjuntos tienen la misma varianza, ¿tienen necesariamente la "
+        "misma media?",
+        "No: la varianza no dice nada sobre el centro de los datos",
+        "Son medidas independientes entre sí.\n\n"
+        "1) La varianza mide cuánto se apartan los datos de su propia media.\n"
+        "2) Ese cálculo no cambia si se trasladan todos los datos.\n"
+        "3) Por ejemplo, 1, 2, 3 y 101, 102, 103 tienen la misma varianza y "
+        "medias muy distintas.\n\n"
+        "Por eso al comparar dos grupos se informan ambas medidas: una da el "
+        "nivel y la otra, la homogeneidad.",
+        [
+            ("Sí, porque la varianza se calcula a partir de la media",
+             "La usa en el cálculo, pero el resultado no la determina."),
+            ("Sí, siempre que ambos conjuntos tengan la misma cantidad de datos",
+             "El contraejemplo 1, 2, 3 contra 101, 102, 103 tiene igual tamaño y medias distintas."),
+            ("No, pero solo si uno de los conjuntos tiene datos negativos",
+             "El signo de los datos no interviene: basta trasladarlos."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "¿Cuál es el rango intercuartílico si el primer cuartil vale 12 y el "
+        "tercer cuartil vale 27?",
+        "15",
+        "El rango intercuartílico es la diferencia entre ambos cuartiles.\n\n"
+        "1) El tercer cuartil vale 27.\n"
+        "2) El primero vale 12.\n"
+        "3) La diferencia es 27 − 12 = 15.\n\n"
+        "Esa medida deja fuera el 25% más bajo y el 25% más alto, así que "
+        "resiste bien la presencia de datos extremos.",
+        [
+            ("19,5",
+             "Es el promedio de los dos cuartiles, no su diferencia."),
+            ("39",
+             "Es la suma de los dos cuartiles."),
+            ("27",
+             "Es el tercer cuartil, sin descontar el primero."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "Un conjunto de 4 datos tiene media 10. Si tres de ellos son 6, 9 y 12, "
+        "¿cuál es el cuarto?",
+        "13",
+        "La suma total queda determinada por la media.\n\n"
+        "1) Con media 10 y 4 datos, la suma debe ser 40.\n"
+        "2) Los tres datos conocidos suman 6 + 9 + 12 = 27.\n"
+        "3) El cuarto es 40 − 27 = 13.\n\n"
+        "Es el razonamiento inverso al habitual: en vez de calcular la media a "
+        "partir de los datos, se recupera un dato a partir de la media.",
+        [
+            ("10",
+             "Repite la media, que no tiene por qué coincidir con ningún dato."),
+            ("9",
+             "Es el promedio de los tres datos conocidos, no el cuarto dato."),
+            ("40",
+             "Es la suma total de los cuatro datos, no el valor que falta."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Probabilidad: medidas de dispersion (segunda tanda)
+#
+# Tablas de frecuencia, efecto de datos extremos, comparacion relativa entre
+# grupos y transformaciones combinadas de los datos.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "prob_dispersion", "medio",
+        "¿Cuál es la desviación estándar del conjunto 3, 4, 5, 6, 7?",
+        "1,41 aproximadamente",
+        "Se calcula la media y después el promedio de los cuadrados.\n\n"
+        "1) La media es 25 / 5 = 5.\n"
+        "2) Las diferencias son −2, −1, 0, 1 y 2, con cuadrados 4, 1, 0, 1 y "
+        "4.\n"
+        "3) La varianza es 10 / 5 = 2, y la desviación estándar es la raíz de "
+        "2, cerca de 1,41.\n\n"
+        "Es el mismo resultado que para 1, 2, 3, 4, 5: sumar una constante no "
+        "cambia la dispersión.",
+        [
+            ("2",
+             "Es la varianza, no la desviación estándar."),
+            ("5",
+             "Es la media del conjunto."),
+            ("3,16 aproximadamente",
+             "Extrae la raíz de la suma de cuadrados sin dividirla antes por la cantidad de datos."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "¿Cuál es la media de los datos de la tabla: el valor 2 aparece 3 "
+        "veces, el valor 5 aparece 2 veces y el valor 8 aparece 5 veces?",
+        "5,6",
+        "Se ponderan los valores por sus frecuencias.\n\n"
+        "1) La suma total es 2 · 3 + 5 · 2 + 8 · 5 = 6 + 10 + 40 = 56.\n"
+        "2) La cantidad de datos es 3 + 2 + 5 = 10.\n"
+        "3) La media es 56 / 10 = 5,6.\n\n"
+        "Promediar solo los tres valores distintos daría 5, un resultado "
+        "distinto: las frecuencias importan.",
+        [
+            ("5",
+             "Promedia los tres valores distintos sin considerar cuántas veces aparece cada uno."),
+            ("15",
+             "Suma los tres valores distintos sin dividir ni ponderar."),
+            ("56",
+             "Es la suma total de los datos, sin dividir por la cantidad."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "dificil",
+        "Un conjunto tiene media 20 y desviación estándar 4. Otro tiene media "
+        "200 y desviación estándar 20. ¿Cuál es relativamente más disperso?",
+        "El primero, con un 20% frente a un 10%",
+        "Se compara la desviación con la media de cada grupo.\n\n"
+        "1) En el primero, 4 dividido por 20 es 0,20, es decir, un 20%.\n"
+        "2) En el segundo, 20 dividido por 200 es 0,10, es decir, un 10%.\n"
+        "3) El primero tiene mayor dispersión relativa, aunque su desviación "
+        "absoluta sea menor.\n\n"
+        "Esa razón entre desviación y media se llama coeficiente de variación y "
+        "permite comparar grupos de escalas distintas.",
+        [
+            ("El segundo, porque su desviación estándar es cinco veces mayor",
+             "En términos absolutos sí, pero relativo a su media es la mitad de dispersa."),
+            ("Los dos por igual, porque la razón entre media y desviación es la misma",
+             "No lo es: da 20% en uno y 10% en el otro."),
+            ("No se pueden comparar, porque tienen medias muy distintas",
+             "Justamente para eso sirve comparar la dispersión relativa."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "Al conjunto 4, 6, 8 se le agrega el dato 6, que es su media. ¿Qué "
+        "ocurre con la varianza?",
+        "Disminuye",
+        "El nuevo dato no aporta desviación, pero sí aumenta el "
+        "denominador.\n\n"
+        "1) La media sigue siendo 6, porque el dato agregado la iguala.\n"
+        "2) La suma de cuadrados no cambia: sigue siendo 4 + 0 + 4 = 8.\n"
+        "3) Pero ahora se divide por 4 en vez de por 3: la varianza baja de "
+        "2,67 a 2.\n\n"
+        "Agregar datos en el centro concentra el conjunto; agregarlos en los "
+        "extremos lo dispersa.",
+        [
+            ("Aumenta",
+             "El dato agregado no suma desviación y sí aumenta la cantidad de datos."),
+            ("Se mantiene igual",
+             "La suma de cuadrados no cambia, pero el denominador sí."),
+            ("Se anula, porque el dato coincide con la media",
+             "Los otros tres datos siguen apartándose de la media."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "¿Cuál medida de dispersión se ve más afectada por un solo dato "
+        "extremo?",
+        "El rango",
+        "El rango depende únicamente de los dos datos extremos.\n\n"
+        "1) Se calcula como la diferencia entre el mayor y el menor.\n"
+        "2) Un solo dato muy alejado cambia por completo ese cálculo.\n"
+        "3) La desviación estándar también se ve afectada, pero reparte el "
+        "efecto entre todos los datos.\n\n"
+        "El rango intercuartílico es el más robusto de los tres: descarta el "
+        "25% más bajo y el 25% más alto.",
+        [
+            ("El rango intercuartílico",
+             "Es justamente el más resistente a datos extremos."),
+            ("La desviación estándar",
+             "Se ve afectada, pero menos que el rango, porque promedia entre todos los datos."),
+            ("La varianza, porque eleva las diferencias al cuadrado",
+             "El efecto es fuerte, pero el rango depende solo del dato extremo y del otro extremo."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "¿Cuál es la varianza del conjunto 1, 1, 1, 5?",
+        "3",
+        "Se calcula la media y después el promedio de los cuadrados.\n\n"
+        "1) La media es 8 / 4 = 2.\n"
+        "2) Las diferencias son −1, −1, −1 y 3, con cuadrados 1, 1, 1 y 9.\n"
+        "3) La varianza es 12 / 4 = 3.\n\n"
+        "El dato aislado aporta 9 de los 12 puntos: los valores extremos pesan "
+        "mucho porque se elevan al cuadrado.",
+        [
+            ("2",
+             "Es la media del conjunto, no su varianza."),
+            ("1,73 aproximadamente",
+             "Es la desviación estándar, es decir, la raíz de la varianza."),
+            ("12",
+             "Es la suma de los cuadrados de las diferencias, sin dividir por la cantidad de datos."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "Tres cursos tienen desviaciones estándar de 0,8; 1,5 y 0,3 en la misma "
+        "prueba. ¿Cuál tuvo el rendimiento más parejo?",
+        "El de desviación 0,3",
+        "Menor desviación significa notas más agrupadas.\n\n"
+        "1) La desviación estándar mide cuánto se apartan las notas del "
+        "promedio del curso.\n"
+        "2) El valor más pequeño de los tres es 0,3.\n"
+        "3) Ese curso tiene las notas más concentradas alrededor de su "
+        "promedio.\n\n"
+        "El dato no dice cuál curso obtuvo mejores notas: para eso haría falta "
+        "conocer los promedios.",
+        [
+            ("El de desviación 1,5",
+             "Es el más disperso de los tres: sus notas están más repartidas."),
+            ("El de desviación 0,8",
+             "Es intermedio: hay uno más parejo, con 0,3."),
+            ("No se puede saber sin conocer los promedios de cada curso",
+             "La homogeneidad la mide la desviación, sin necesidad de los promedios."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "Un conjunto de 5 datos tiene media 8. Si se le agrega el dato 20, "
+        "¿cuál es la nueva media?",
+        "10",
+        "Se recompone la suma total antes de promediar.\n\n"
+        "1) Con media 8 y 5 datos, la suma es 40.\n"
+        "2) Al agregar el 20, la suma pasa a 60 y los datos a 6.\n"
+        "3) La nueva media es 60 / 6 = 10.\n\n"
+        "El dato agregado está sobre la media anterior, así que la arrastra "
+        "hacia arriba: era previsible que el resultado superara 8.",
+        [
+            ("8",
+             "La media cambia: el dato agregado está muy por sobre ella."),
+            ("14",
+             "Promedia la media anterior con el nuevo dato, sin pesar cuántos datos había."),
+            ("12",
+             "Sobreestima el efecto del dato nuevo, que se reparte entre seis observaciones."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "¿Cuál es el rango del conjunto 2,5; 3,8; 1,2 y 4,4?",
+        "3,2",
+        "El rango es la diferencia entre los extremos.\n\n"
+        "1) El dato mayor es 4,4.\n"
+        "2) El menor es 1,2.\n"
+        "3) El rango es 4,4 − 1,2 = 3,2.\n\n"
+        "Que los datos tengan decimales no cambia el procedimiento: se ubican "
+        "los extremos y se restan.",
+        [
+            ("5,6",
+             "Suma los dos extremos en vez de restarlos."),
+            ("2,975",
+             "Es la media del conjunto, no su rango."),
+            ("4,4",
+             "Es el dato mayor, sin descontar el menor."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "En un conjunto de datos, ¿puede la desviación estándar ser mayor que "
+        "la media?",
+        "Sí, cuando los datos están muy dispersos respecto de un promedio bajo",
+        "No hay ninguna relación fija entre ambas medidas.\n\n"
+        "1) La media mide el centro y la desviación, la dispersión.\n"
+        "2) Con datos como 0, 0 y 30, la media es 10 y la desviación supera "
+        "los 14.\n"
+        "3) Por lo tanto la desviación puede superar a la media sin "
+        "contradicción.\n\n"
+        "En esos casos el coeficiente de variación pasa del 100%, señal de que "
+        "el promedio no representa bien al conjunto.",
+        [
+            ("No, la desviación estándar de un conjunto siempre es menor que su media",
+             "El conjunto 0, 0, 30 lo desmiente: media 10 y desviación sobre 14."),
+            ("No, salvo que los datos sean todos negativos",
+             "El signo de los datos no impone ninguna relación entre las dos medidas."),
+            ("Sí, pero solo si el conjunto tiene exactamente dos datos",
+             "Ocurre también con más datos, como en 0, 0 y 30."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "A los datos de un conjunto con desviación estándar 6 se les divide por "
+        "2. ¿Cuál es la nueva desviación estándar?",
+        "3",
+        "Reescalar los datos reescala su dispersión en el mismo factor.\n\n"
+        "1) Dividir por 2 equivale a multiplicar por 0,5.\n"
+        "2) Cada distancia a la media queda multiplicada por 0,5.\n"
+        "3) La desviación estándar pasa de 6 a 3.\n\n"
+        "La varianza, en cambio, pasaría de 36 a 9: se divide por el cuadrado "
+        "del factor.",
+        [
+            ("6",
+             "Eso ocurriría al sumar o restar una constante, no al dividir."),
+            ("1,5",
+             "Divide por 4, que es el factor de la varianza y no el de la desviación."),
+            ("12",
+             "Multiplica en vez de dividir: reducir los datos reduce la dispersión."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "¿Qué información entrega la mediana que no entrega la desviación "
+        "estándar?",
+        "El valor que deja la mitad de los datos a cada lado",
+        "Son medidas de distinta naturaleza.\n\n"
+        "1) La mediana es una medida de posición: señala el centro del "
+        "ordenamiento.\n"
+        "2) La desviación estándar es una medida de dispersión: señala cuánto "
+        "se aparta el conjunto de su promedio.\n"
+        "3) Ninguna reemplaza a la otra.\n\n"
+        "Por eso un informe estadístico suele entregar al menos una medida de "
+        "cada tipo.",
+        [
+            ("Cuánto se apartan los datos de su centro",
+             "Eso es exactamente lo que mide la desviación estándar."),
+            ("El dato que más veces se repite",
+             "Esa es la moda, no la mediana."),
+            ("La cantidad de datos del conjunto que quedan sobre el promedio",
+             "La mediana no cuenta datos sobre el promedio sino que parte el ordenamiento por la mitad."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "Los datos 7 y 13 forman un conjunto. ¿Cuál es su desviación estándar?",
+        "3",
+        "Con dos datos, cada uno se aparta lo mismo de la media.\n\n"
+        "1) La media es (7 + 13) / 2 = 10.\n"
+        "2) Ambos datos se apartan 3 unidades, así que los cuadrados son 9 y "
+        "9.\n"
+        "3) La varianza es 18 / 2 = 9, y la desviación estándar es 3.\n\n"
+        "En todo conjunto de dos datos, la desviación estándar es la mitad de "
+        "la diferencia entre ellos.",
+        [
+            ("6",
+             "Es la diferencia entre los dos datos, que es el doble de la desviación."),
+            ("9",
+             "Es la varianza, no la desviación estándar."),
+            ("10",
+             "Es la media del conjunto."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "¿Cuál es la varianza del conjunto 2, 5, 5, 8, 10?",
+        "7,6",
+        "Se calcula la media y después el promedio de los cuadrados.\n\n"
+        "1) La media es 30 / 5 = 6.\n"
+        "2) Las diferencias son −4, −1, −1, 2 y 4, con cuadrados 16, 1, 1, 4 y "
+        "16.\n"
+        "3) La varianza es 38 / 5 = 7,6.\n\n"
+        "La desviación estándar sería cerca de 2,76: conviene dejarla como raíz "
+        "hasta el final para no arrastrar redondeos.",
+        [
+            ("2,76 aproximadamente",
+             "Es la desviación estándar, es decir, la raíz de la varianza."),
+            ("6",
+             "Es la media del conjunto."),
+            ("38",
+             "Es la suma de los cuadrados de las diferencias, sin dividir por la cantidad de datos."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "dificil",
+        "A los datos de un conjunto con media 12 y desviación estándar 5 se les "
+        "multiplica por 3 y luego se les suma 4. ¿Cuál es la nueva media y la "
+        "nueva desviación estándar?",
+        "Media 40 y desviación 15",
+        "Cada transformación afecta a una medida distinta.\n\n"
+        "1) Al multiplicar por 3, la media pasa a 36 y la desviación a 15.\n"
+        "2) Al sumar 4, la media pasa a 40 y la desviación no cambia.\n"
+        "3) El resultado es media 40 y desviación 15.\n\n"
+        "La regla general: la media sigue toda la transformación, la desviación "
+        "solo el factor multiplicativo.",
+        [
+            ("Media 40 y desviación 19",
+             "Suma el 4 también a la desviación, que no se ve afectada por traslaciones."),
+            ("Media 36 y desviación 15",
+             "Olvida sumar el 4 a la media."),
+            ("Media 40 y desviación 5",
+             "Olvida que multiplicar por 3 también triplica la desviación."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "dificil",
+        "Un conjunto de tres datos tiene media 6 y varianza 6. Dos de los datos "
+        "son 3 y 6. ¿Cuál es el tercero?",
+        "9",
+        "La media determina el dato que falta y la varianza sirve de "
+        "control.\n\n"
+        "1) Con media 6 y tres datos, la suma es 18.\n"
+        "2) Los datos conocidos suman 9, así que el tercero es 18 − 9 = 9.\n"
+        "3) Comprobación con la varianza: las diferencias son −3, 0 y 3, con "
+        "cuadrados 9, 0 y 9, y 18 / 3 = 6, tal como indica el enunciado.\n\n"
+        "Cuando dos datos y las dos medidas están dados, conviene usar la media "
+        "para despejar y la varianza para verificar.",
+        [
+            ("6",
+             "Repite la media: con ese dato la varianza daría 3 y no 6."),
+            ("12",
+             "Rompe la media: la suma pasaría a 21 en vez de 18."),
+            ("18",
+             "Es la suma total de los tres datos, no el dato que falta."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "dificil",
+        "Se elimina de un conjunto el dato más alejado de la media. ¿Qué ocurre "
+        "necesariamente con la desviación estándar?",
+        "Disminuye",
+        "Ese dato es el que más aporta a la suma de cuadrados.\n\n"
+        "1) Su diferencia respecto de la media es la mayor de todas, y al "
+        "elevarla al cuadrado el aporte se agranda aún más.\n"
+        "2) Al quitarlo, el promedio de los cuadrados restantes es menor que "
+        "el anterior.\n"
+        "3) La desviación estándar, que es su raíz, también baja.\n\n"
+        "El conjunto queda más homogéneo: por eso los informes suelen advertir "
+        "cuando se han eliminado datos atípicos.",
+        [
+            ("Aumenta",
+             "Quitar el dato más disperso concentra el conjunto en vez de esparcirlo."),
+            ("Se mantiene igual",
+             "El dato eliminado era el de mayor aporte a la dispersión."),
+            ("Se anula, porque desaparece la única fuente de dispersión",
+             "Los demás datos siguen apartándose de la media, salvo que fueran todos iguales."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "dificil",
+        "Un grupo de 10 personas tiene estatura media 170 cm y otro de 20 "
+        "personas tiene media 176 cm. ¿Cuál es la media de las 30 personas "
+        "juntas?",
+        "174 cm",
+        "Hay que ponderar por el tamaño de cada grupo.\n\n"
+        "1) El primer grupo suma 10 · 170 = 1.700 cm.\n"
+        "2) El segundo suma 20 · 176 = 3.520 cm.\n"
+        "3) La media conjunta es (1.700 + 3.520) / 30 = 5.220 / 30 = 174 cm.\n\n"
+        "Promediar 170 y 176 sin ponderar daría 173: el grupo más numeroso pesa "
+        "el doble.",
+        [
+            ("173 cm",
+             "Promedia las dos medias sin considerar que los grupos tienen distinto tamaño."),
+            ("176 cm",
+             "Es la media del grupo grande, no la conjunta."),
+            ("346 cm",
+             "Suma las dos medias sin promediarlas."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "dificil",
+        "En una distribución aproximadamente normal de media 500 y desviación "
+        "estándar 100, ¿qué porcentaje de los datos cae aproximadamente entre "
+        "400 y 600?",
+        "Cerca de un 68%",
+        "El intervalo abarca una desviación estándar a cada lado de la "
+        "media.\n\n"
+        "1) De 500 a 600 hay exactamente una desviación estándar, y lo mismo "
+        "hacia abajo.\n"
+        "2) En una distribución normal, ese tramo concentra alrededor del 68% "
+        "de los datos.\n"
+        "3) Por lo tanto cerca de dos tercios de los datos caen ahí.\n\n"
+        "Con dos desviaciones a cada lado, de 300 a 700, el porcentaje sube a "
+        "cerca del 95%.",
+        [
+            ("Cerca de un 95%",
+             "Ese porcentaje corresponde a dos desviaciones estándar a cada lado."),
+            ("Cerca de un 50%",
+             "Ese es el porcentaje bajo la media, no el del intervalo descrito."),
+            ("Cerca de un 99%",
+             "Ese porcentaje corresponde a tres desviaciones estándar a cada lado."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "dificil",
+        "Dos conjuntos tienen igual cantidad de datos. El primero es 10, 20, 30 "
+        "y el segundo, 18, 20, 22. ¿Cuántas veces mayor es la desviación "
+        "estándar del primero?",
+        "5 veces",
+        "Ambos conjuntos tienen la misma estructura, en distinta escala.\n\n"
+        "1) En el primero las diferencias respecto de la media 20 son −10, 0 y "
+        "10.\n"
+        "2) En el segundo son −2, 0 y 2.\n"
+        "3) Cada diferencia del primero es 5 veces la del segundo, así que su "
+        "desviación estándar también lo es.\n\n"
+        "No hace falta calcular las raíces: basta advertir que un conjunto es "
+        "el otro reescalado por 5 alrededor de la misma media.",
+        [
+            ("25 veces",
+             "Ese es el factor entre las varianzas, no entre las desviaciones estándar."),
+            ("2 veces",
+             "Compara los datos extremos sin considerar la distancia a la media."),
+            ("10 veces",
+             "Toma la mayor diferencia del primer conjunto como si fuera el factor."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "dificil",
+        "Se afirma: «Si dos conjuntos tienen el mismo rango, entonces tienen la "
+        "misma desviación estándar». ¿Es correcta la afirmación?",
+        "No: el rango solo mira los extremos y la desviación mira todos los datos",
+        "Dos conjuntos pueden compartir extremos y repartirse muy distinto "
+        "por dentro.\n\n"
+        "1) Los conjuntos 0, 5, 10 y 0, 0, 10 tienen ambos rango 10.\n"
+        "2) El primero tiene sus datos repartidos y el segundo, dos "
+        "concentrados en un extremo.\n"
+        "3) Sus desviaciones estándar son distintas: 4,08 contra 4,71 "
+        "aproximadamente.\n\n"
+        "El rango es fácil de calcular pero ignora todo lo que ocurre entre los "
+        "dos extremos.",
+        [
+            ("Sí, porque el rango determina cuánto se separan los datos",
+             "Determina cuánto se separan los extremos, no cómo se reparten los demás."),
+            ("No: la desviación estándar siempre es la mitad del rango",
+             "No hay tal relación fija; depende de cómo se distribuyan los datos."),
+            ("Sí, siempre que los dos conjuntos tengan exactamente la misma cantidad de datos",
+             "El contraejemplo 0, 5, 10 contra 0, 0, 10 tiene tres datos en ambos casos."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "dificil",
+        "Un conjunto de 4 datos tiene varianza 25. ¿Cuánto vale la suma de los "
+        "cuadrados de las diferencias respecto de la media?",
+        "100",
+        "Se despeja de la definición de varianza.\n\n"
+        "1) La varianza es esa suma dividida por la cantidad de datos.\n"
+        "2) Reemplazando: 25 = S / 4.\n"
+        "3) Despejando: S = 100.\n\n"
+        "El paso inverso es el que se usa siempre al calcular: primero se suma "
+        "y después se divide por la cantidad de datos.",
+        [
+            ("25",
+             "Repite la varianza, que ya está dividida por la cantidad de datos."),
+            ("6,25",
+             "Divide en vez de multiplicar por la cantidad de datos."),
+            ("5",
+             "Es la desviación estándar, no la suma de cuadrados."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "dificil",
+        "En una empresa, los sueldos tienen media $ 900.000 y mediana "
+        "$ 650.000. ¿Qué se puede concluir?",
+        "Hay algunos sueldos muy altos que empujan la media hacia arriba",
+        "La media es sensible a los valores extremos y la mediana no.\n\n"
+        "1) La mediana deja la mitad del personal bajo $ 650.000.\n"
+        "2) La media, bastante más alta, indica que la suma total está inflada "
+        "por sueldos grandes.\n"
+        "3) Esos pocos sueldos altos arrastran el promedio sin mover la "
+        "mediana.\n\n"
+        "Por eso al informar remuneraciones la mediana suele ser más "
+        "representativa que el promedio.",
+        [
+            ("La mayoría gana más de $ 900.000",
+             "La mediana indica lo contrario: la mitad gana menos de $ 650.000."),
+            ("Los sueldos están muy concentrados alrededor del promedio",
+             "Si lo estuvieran, media y mediana serían parecidas."),
+            ("Hubo un error de cálculo, porque media y mediana deberían coincidir",
+             "Coinciden solo en distribuciones simétricas: la diferencia es información válida."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "dificil",
+        "Un conjunto tiene datos 4, 4, 4, 4 y 24. ¿Qué medida representa mejor "
+        "al conjunto: la media o la mediana?",
+        "La mediana, porque el 24 distorsiona la media",
+        "Un solo dato extremo desplaza el promedio pero no el centro del "
+        "ordenamiento.\n\n"
+        "1) La media es 40 / 5 = 8, un valor que ningún dato alcanza salvo el "
+        "extremo.\n"
+        "2) La mediana es 4, que coincide con cuatro de los cinco datos.\n"
+        "3) La mediana describe mejor lo que ocurre en la mayoría del "
+        "conjunto.\n\n"
+        "Es el mismo argumento por el que se prefiere la mediana al informar "
+        "ingresos o precios de vivienda.",
+        [
+            ("La media, porque considera todos los datos",
+             "Los considera, pero el dato extremo la aleja del comportamiento típico."),
+            ("Las dos por igual, porque describen el mismo centro",
+             "Aquí difieren bastante: 8 contra 4."),
+            ("Ninguna, porque el conjunto tiene un dato repetido cuatro veces",
+             "La repetición no invalida las medidas: refuerza que la mediana representa al grupo."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "dificil",
+        "Se quiere comparar la dispersión del peso de recién nacidos, en "
+        "kilogramos, con la de adultos, también en kilogramos. ¿Qué medida "
+        "conviene usar?",
+        "El coeficiente de variación, que compara la desviación con la media de cada grupo",
+        "Las dos escalas son muy distintas aunque la unidad sea la misma.\n\n"
+        "1) Un recién nacido pesa alrededor de 3,3 kg y un adulto, unos "
+        "70 kg.\n"
+        "2) Una desviación de 0,5 kg es enorme en el primer grupo y "
+        "despreciable en el segundo.\n"
+        "3) Dividir la desviación por la media de cada grupo permite "
+        "compararlos en igualdad de condiciones.\n\n"
+        "La desviación estándar sola respondería siempre que los adultos son "
+        "más dispersos, aunque no sea la comparación relevante.",
+        [
+            ("La desviación estándar de cada grupo, comparada directamente",
+             "Ignora que las medias son muy distintas: siempre ganarían los adultos."),
+            ("El rango de cada grupo",
+             "Tiene el mismo problema de escala y además depende solo de los extremos."),
+            ("La varianza de cada grupo, porque al elevar al cuadrado amplifica las diferencias",
+             "Elevar al cuadrado agrava el problema de escala en vez de resolverlo."),
         ],
     ),
 ]

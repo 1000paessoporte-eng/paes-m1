@@ -577,7 +577,7 @@ COMPROBACIONES: dict[str, str] = {
     "Una pelota tiene 6 cm de radio": f"{round(4 / 3 * 3 * 6**3)} cm³",
     "estanque esférico tiene 3 m de radio": f"{4 * 3.14 * 3**2:.2f} m²".replace(".", ","),
     "Dos esferas tienen radios en razón 1 : 2": f"1 : {2**3}",
-    "tanque esférico de 2 m de radio": f"{round(4 / 3 * 3 * 2**3 * 1000):,} litros".replace(",", "."),
+    "Un tanque esférico de 2 m de radio se llena de agua": f"{round(4 / 3 * 3 * 2**3 * 1000):,} litros".replace(",", "."),
     "recta paralela a y = 3x − 7": "3",
     "recta perpendicular a y = 4x + 1": "−1/4",
     # --- Proporcionalidad (alg_proporcionalidad) ---
@@ -1074,7 +1074,7 @@ COMPROBACIONES: dict[str, str] = {
     # Con un dato extremo, la mediana representa mejor que la media.
     "300, 320, 340, 360 y 2.000": str(sorted([300, 320, 340, 360, 2000])[2]),
     # Escalar los datos escala la media en el mismo factor.
-    "se les multiplica por 3": f"Queda multiplicada por {3}",
+    "se les multiplica por 3, ¿qué ocurre con su media": f"Queda multiplicada por {3}",
     # --- técnicas de conteo: segunda tanda ---
     # Principio multiplicativo: una elección de cada grupo.
     "6 tipos de café y 4 tipos de queque": str(6 * 4),
