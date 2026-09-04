@@ -41,6 +41,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/premio`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE_URL}/terminos`, changeFrequency: "yearly", priority: 0.3 },
     { url: `${BASE_URL}/privacidad`, changeFrequency: "yearly", priority: 0.3 },
+    // La sección legal se indexa a propósito: declara públicamente el origen
+    // del contenido y abre el canal de reclamos de propiedad intelectual. Solo
+    // sirve como defensa si cualquiera puede encontrarla.
+    { url: `${BASE_URL}/legal`, changeFrequency: "yearly", priority: 0.3 },
   ];
 
   // Cada índice cae por su cuenta: que el catálogo no responda no puede dejar
