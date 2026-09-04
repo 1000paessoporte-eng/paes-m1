@@ -130727,3 +130727,2148 @@ QUESTIONS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Probabilidad condicional
+#
+# Definicion de P(A|B), independencia, extracciones sin reposicion, tablas de
+# doble entrada y arboles de probabilidad.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "prob_condicional", "facil",
+        "Se lanza un dado y se sabe que el resultado fue menor que 3. ¿Cuál es "
+        "la probabilidad de que haya sido un 1?",
+        "1/2",
+        "El dato reduce el conjunto de casos posibles.\n\n"
+        "1) Los resultados menores que 3 son 1 y 2: quedan solo dos casos "
+        "posibles.\n"
+        "2) De ellos, uno es favorable: el 1.\n"
+        "3) La probabilidad es 1/2.\n\n"
+        "Sin la información previa la respuesta habría sido 1/6: saber algo "
+        "cambia el espacio muestral.",
+        [
+            ("1/6",
+             "Es la probabilidad sin usar el dato de que el resultado fue menor que 3."),
+            ("1/3",
+             "Correspondería a tres casos posibles, y aquí solo quedan dos."),
+            ("2/6",
+             "Cuenta los dos resultados posibles sobre las seis caras, sin reducir el espacio muestral."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "facil",
+        "¿Qué significa la notación P(A | B)?",
+        "La probabilidad de que ocurra A sabiendo que ocurrió B",
+        "La barra separa el suceso de interés de la información conocida.\n\n"
+        "1) A la izquierda de la barra va el suceso cuya probabilidad se "
+        "busca.\n"
+        "2) A la derecha va la condición que ya se sabe cierta.\n"
+        "3) Se lee «probabilidad de A dado B».\n\n"
+        "El orden importa: P(A | B) y P(B | A) suelen ser valores distintos.",
+        [
+            ("La probabilidad de que ocurra B sabiendo que ocurrió A",
+             "Invierte los papeles: esa notación sería P(B | A)."),
+            ("La probabilidad de que ocurran A y B a la vez",
+             "Esa es P(A y B), que se escribe con una intersección y no con una barra."),
+            ("La probabilidad de que ocurra A o bien ocurra B",
+             "Esa es P(A o B), la probabilidad de la unión."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "facil",
+        "En una bolsa hay 5 fichas rojas y 5 azules. Se saca una roja y no se "
+        "devuelve. ¿Cuál es la probabilidad de que la siguiente sea roja?",
+        "4/9",
+        "Al no devolver la ficha cambian el numerador y el denominador.\n\n"
+        "1) Quedan 4 fichas rojas.\n"
+        "2) El total baja a 9 fichas.\n"
+        "3) La probabilidad es 4/9.\n\n"
+        "Con reposición la probabilidad se habría mantenido en 5/10: la "
+        "diferencia es exactamente lo que mide la probabilidad condicional.",
+        [
+            ("5/10",
+             "Ignora que se sacó una ficha roja y no se devolvió."),
+            ("5/9",
+             "Descuenta la ficha del total pero no de las rojas."),
+            ("4/10",
+             "Descuenta la ficha de las rojas pero no del total."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "facil",
+        "Se lanza una moneda dos veces y se sabe que la primera fue cara. "
+        "¿Cuál es la probabilidad de que la segunda también sea cara?",
+        "1/2",
+        "Los lanzamientos de una moneda son independientes.\n\n"
+        "1) El resultado del primer lanzamiento no altera la moneda.\n"
+        "2) En el segundo lanzamiento sigue habiendo dos resultados "
+        "igualmente probables.\n"
+        "3) La probabilidad es 1/2, igual que si no se supiera nada.\n\n"
+        "Es la definición de independencia: la información sobre un suceso no "
+        "cambia la probabilidad del otro.",
+        [
+            ("1/4",
+             "Esa es la probabilidad de obtener dos caras seguidas antes de lanzar."),
+            ("1/3",
+             "Correspondería a tres resultados posibles, y aquí hay dos."),
+            ("0, porque ya salió cara una vez y no puede repetirse",
+             "La moneda no tiene memoria: cara puede repetirse sin problema."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "facil",
+        "¿Cuándo se dice que dos sucesos A y B son independientes?",
+        "Cuando P(A | B) es igual a P(A)",
+        "La independencia significa que la información no cambia nada.\n\n"
+        "1) Si saber que ocurrió B no altera la probabilidad de A, entonces A "
+        "no depende de B.\n"
+        "2) Eso se escribe como P(A | B) = P(A).\n"
+        "3) Una condición equivalente es que P(A y B) sea el producto de "
+        "P(A) por P(B).\n\n"
+        "Cuando esa igualdad falla, los sucesos son dependientes: uno informa "
+        "sobre el otro.",
+        [
+            ("Cuando no pueden ocurrir a la vez",
+             "Esa es la definición de sucesos excluyentes, que es distinta."),
+            ("Cuando P(A) es igual a P(B)",
+             "Tener la misma probabilidad no dice nada sobre la relación entre ambos."),
+            ("Cuando la suma de sus probabilidades vale 1",
+             "Eso ocurre con sucesos complementarios, no necesariamente independientes."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "facil",
+        "En un curso de 30 estudiantes, 18 son mujeres. Si se elige una persona "
+        "al azar y resulta ser mujer, ¿cuál es la probabilidad de que además "
+        "use lentes, si 6 de las mujeres los usan?",
+        "1/3",
+        "El espacio muestral se reduce a las mujeres del curso.\n\n"
+        "1) La condición limita los casos posibles a las 18 mujeres.\n"
+        "2) De ellas, 6 usan lentes.\n"
+        "3) La probabilidad es 6/18 = 1/3.\n\n"
+        "El total de 30 estudiantes ya no interviene: la información recibida "
+        "lo dejó fuera.",
+        [
+            ("1/5",
+             "Divide las 6 mujeres con lentes por los 30 estudiantes, sin usar la condición."),
+            ("3/5",
+             "Es la proporción de mujeres en el curso, no la de mujeres con lentes."),
+            ("6/30",
+             "Usa el total del curso como denominador en vez de las 18 mujeres."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "facil",
+        "Se saca una carta de un naipe inglés de 52 y resulta ser de corazones. "
+        "¿Cuál es la probabilidad de que sea un as?",
+        "1/13",
+        "La condición reduce el mazo a una sola pinta.\n\n"
+        "1) Los corazones son 13 cartas.\n"
+        "2) Entre ellas hay un solo as.\n"
+        "3) La probabilidad es 1/13.\n\n"
+        "Sin la condición habría sido 4/52, que también da 1/13: en este caso "
+        "los sucesos resultan independientes.",
+        [
+            ("1/52",
+             "Correspondería a una carta específica del mazo completo, no al as de una pinta."),
+            ("4/52",
+             "Cuenta los cuatro ases sobre el mazo completo, sin reducir a corazones."),
+            ("1/4",
+             "Es la probabilidad de que la carta sea de corazones, no de que sea un as."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "facil",
+        "Si P(A) = 0,4 y P(B) = 0,5 y los sucesos son independientes, ¿cuál es "
+        "P(A y B)?",
+        "0,2",
+        "Con independencia, la probabilidad conjunta es el producto.\n\n"
+        "1) La regla dice que P(A y B) = P(A) · P(B).\n"
+        "2) Reemplazando: 0,4 · 0,5.\n"
+        "3) Eso da 0,2.\n\n"
+        "La multiplicación solo vale si los sucesos son independientes: en caso "
+        "contrario hay que usar la probabilidad condicional.",
+        [
+            ("0,9",
+             "Suma las probabilidades: eso corresponde a la unión de sucesos excluyentes."),
+            ("0,1",
+             "Resta las probabilidades, operación que no corresponde a ninguna regla."),
+            ("0,45",
+             "Promedia las dos probabilidades, cosa que tampoco corresponde."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "facil",
+        "En una caja hay 3 lápices azules y 7 rojos. Se saca uno y se devuelve. "
+        "¿Cuál es la probabilidad de que el segundo sea azul?",
+        "3/10",
+        "Devolver el lápiz restablece la situación inicial.\n\n"
+        "1) Al reponer, la caja vuelve a tener 10 lápices.\n"
+        "2) De ellos, 3 son azules.\n"
+        "3) La probabilidad es 3/10, sin importar qué salió la primera vez.\n\n"
+        "Con reposición las extracciones son independientes; sin ella, la "
+        "primera condiciona a la segunda.",
+        [
+            ("2/9",
+             "Corresponde al caso sin reposición y suponiendo que el primero fue azul."),
+            ("3/9",
+             "Descuenta un lápiz del total aunque este haya sido devuelto."),
+            ("7/10",
+             "Es la probabilidad de sacar un lápiz rojo."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "facil",
+        "Si dos sucesos son excluyentes y uno de ellos ocurrió, ¿cuál es la "
+        "probabilidad de que ocurra el otro?",
+        "0",
+        "Sucesos excluyentes no pueden darse a la vez.\n\n"
+        "1) Que sean excluyentes significa que no comparten ningún resultado.\n"
+        "2) Si uno ocurrió, el otro quedó descartado.\n"
+        "3) Su probabilidad condicional es 0.\n\n"
+        "Es un buen recordatorio de que excluyente e independiente son cosas "
+        "distintas: aquí saber uno determina por completo al otro.",
+        [
+            ("1",
+             "Sería la certeza de que ocurre, y en realidad quedó descartado."),
+            ("0,5",
+             "No hay razón para ese valor: los sucesos excluyentes se descartan entre sí."),
+            ("La misma que tenía antes, porque son sucesos independientes",
+             "Excluyente no es lo mismo que independiente: aquí la información cambia todo."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "En un curso, el 30% practica natación y el 12% practica natación y "
+        "toca guitarra. Si se elige a alguien que practica natación, ¿cuál es "
+        "la probabilidad de que toque guitarra?",
+        "40%",
+        "Se aplica la definición de probabilidad condicional.\n\n"
+        "1) La fórmula es P(guitarra | natación) = P(ambas) / P(natación).\n"
+        "2) Reemplazando: 0,12 / 0,30.\n"
+        "3) Eso da 0,40, es decir, un 40%.\n\n"
+        "El 12% se mide sobre todo el curso; el 40%, solo sobre quienes "
+        "practican natación.",
+        [
+            ("12%",
+             "Es la probabilidad conjunta, medida sobre todo el curso."),
+            ("18%",
+             "Resta los dos porcentajes en vez de dividirlos."),
+            ("36%",
+             "Multiplica los porcentajes en vez de dividirlos."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "En una urna hay 4 bolitas blancas y 6 negras. Se extraen dos sin "
+        "reposición. ¿Cuál es la probabilidad de que ambas sean blancas?",
+        "2/15",
+        "Se multiplica la primera probabilidad por la condicional.\n\n"
+        "1) La primera bolita es blanca con probabilidad 4/10.\n"
+        "2) Sabiendo eso, la segunda es blanca con probabilidad 3/9.\n"
+        "3) El producto es (4/10) · (3/9) = 12/90 = 2/15.\n\n"
+        "Con reposición el resultado habría sido (4/10)² = 4/25, algo mayor: "
+        "sacar una blanca deja menos blancas para la segunda.",
+        [
+            ("4/25",
+             "Corresponde al caso con reposición, donde la urna no cambia."),
+            ("2/5",
+             "Es la probabilidad de que solo la primera sea blanca."),
+            ("7/10",
+             "Suma las probabilidades en vez de multiplicarlas."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "Si P(A) = 0,6 y P(A y B) = 0,3, ¿cuál es P(B | A)?",
+        "0,5",
+        "Se aplica la definición.\n\n"
+        "1) P(B | A) = P(A y B) / P(A).\n"
+        "2) Reemplazando: 0,3 / 0,6.\n"
+        "3) Eso da 0,5.\n\n"
+        "El denominador es siempre la probabilidad de lo que ya se sabe: en "
+        "este caso, la de A.",
+        [
+            ("0,18",
+             "Multiplica las probabilidades en vez de dividirlas."),
+            ("0,3",
+             "Repite la probabilidad conjunta sin dividirla por P(A)."),
+            ("2",
+             "Invierte el cuociente; una probabilidad nunca supera a 1."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "En una empresa, el 70% de los empleados son de planta y el 40% del "
+        "total son de planta y tienen más de 5 años de antigüedad. Si se elige "
+        "un empleado de planta, ¿cuál es la probabilidad de que tenga más de 5 "
+        "años?",
+        "57,1% aproximadamente",
+        "Se divide la probabilidad conjunta por la de la condición.\n\n"
+        "1) La fórmula da 0,40 / 0,70.\n"
+        "2) Ese cuociente es 4/7.\n"
+        "3) En porcentaje, 57,1% aproximadamente.\n\n"
+        "El resultado supera al 40% original porque el denominador se achicó: "
+        "ya no se cuenta a toda la empresa.",
+        [
+            ("40%",
+             "Es la probabilidad conjunta, medida sobre toda la empresa."),
+            ("28% aproximadamente",
+             "Multiplica los porcentajes en vez de dividirlos."),
+            ("175% aproximadamente",
+             "Invierte el cuociente, y una probabilidad no puede pasar del 100%."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "Se lanzan dos dados y se sabe que la suma fue 8. ¿Cuál es la "
+        "probabilidad de que uno de ellos haya mostrado un 5?",
+        "2/5",
+        "Se enumeran los casos compatibles con la condición.\n\n"
+        "1) Las parejas que suman 8 son (2,6), (3,5), (4,4), (5,3) y (6,2): "
+        "cinco casos.\n"
+        "2) De ellos, dos incluyen un 5: (3,5) y (5,3).\n"
+        "3) La probabilidad es 2/5.\n\n"
+        "El total de 36 resultados posibles ya no interviene: la condición dejó "
+        "solo cinco.",
+        [
+            ("2/36",
+             "Usa el espacio muestral completo en vez de restringirlo a la suma 8."),
+            ("1/5",
+             "Cuenta un solo caso favorable, olvidando que (3,5) y (5,3) son distintos."),
+            ("1/6",
+             "Es la probabilidad de sacar un 5 en un dado, sin usar la condición."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "En una tabla, de 200 personas, 120 son adultos y 45 de ellos usan "
+        "bicicleta. Si se elige un adulto al azar, ¿cuál es la probabilidad de "
+        "que use bicicleta?",
+        "0,375",
+        "El espacio muestral se reduce a los adultos.\n\n"
+        "1) La condición limita los casos posibles a 120 personas.\n"
+        "2) De ellas, 45 usan bicicleta.\n"
+        "3) La probabilidad es 45/120 = 0,375.\n\n"
+        "Dividir por las 200 personas daría 0,225, que responde otra pregunta: "
+        "la de elegir a alguien que sea adulto y use bicicleta.",
+        [
+            ("0,225",
+             "Divide por el total de personas en vez de por los adultos."),
+            ("0,6",
+             "Es la proporción de adultos en el grupo, no la de ciclistas entre ellos."),
+            ("0,267 aproximadamente",
+             "Divide los adultos ciclistas por algún subtotal que no corresponde a la condición."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "Un test detecta una enfermedad. De 1.000 personas, 50 están enfermas y "
+        "el test da positivo en 45 de ellas. ¿Cuál es la probabilidad de que el "
+        "test dé positivo dado que la persona está enferma?",
+        "0,9",
+        "La condición es estar enfermo.\n\n"
+        "1) Los casos posibles se reducen a las 50 personas enfermas.\n"
+        "2) De ellas, en 45 el test dio positivo.\n"
+        "3) La probabilidad es 45/50 = 0,9.\n\n"
+        "Esa medida se llama sensibilidad del test, y no debe confundirse con "
+        "la probabilidad de estar enfermo dado un resultado positivo.",
+        [
+            ("0,045",
+             "Divide por las 1.000 personas en vez de por las 50 enfermas."),
+            ("0,05",
+             "Es la proporción de enfermos en el grupo, no la sensibilidad del test."),
+            ("0,1",
+             "Es la proporción de enfermos en que el test falla, es decir, el complemento."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "Si P(A) = 0,5, P(B) = 0,4 y P(A y B) = 0,2, ¿son A y B "
+        "independientes?",
+        "Sí, porque 0,5 · 0,4 da exactamente 0,2",
+        "Se comprueba la condición de independencia.\n\n"
+        "1) La regla exige que P(A y B) sea el producto de P(A) por P(B).\n"
+        "2) Ese producto es 0,5 · 0,4 = 0,2.\n"
+        "3) Coincide con el dato entregado, así que los sucesos son "
+        "independientes.\n\n"
+        "Otra forma de verlo: P(A | B) = 0,2 / 0,4 = 0,5, que es exactamente "
+        "P(A).",
+        [
+            ("No, porque P(A) y P(B) son distintas",
+             "Que las probabilidades difieran no impide la independencia."),
+            ("No, porque P(A y B) es menor que P(A)",
+             "La probabilidad conjunta siempre es menor o igual que cada una por separado."),
+            ("No se puede saber sin conocer P(A o B)",
+             "Con los tres datos entregados basta para verificar la condición."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "En una urna hay 5 bolitas verdes y 3 amarillas. Se sacan dos sin "
+        "reposición. Si la primera fue amarilla, ¿cuál es la probabilidad de "
+        "que la segunda sea verde?",
+        "5/7",
+        "Se descuenta solo la bolita que ya salió.\n\n"
+        "1) Las verdes siguen siendo 5, porque la que salió era amarilla.\n"
+        "2) El total baja de 8 a 7.\n"
+        "3) La probabilidad es 5/7.\n\n"
+        "El numerador no cambia y el denominador sí: por eso la probabilidad de "
+        "verde sube respecto del 5/8 inicial.",
+        [
+            ("5/8",
+             "Ignora que ya se sacó una bolita del total."),
+            ("4/7",
+             "Descuenta una bolita verde, aunque la que salió era amarilla."),
+            ("3/8",
+             "Es la probabilidad inicial de sacar una amarilla."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "Se lanzan dos dados. ¿Cuál es la probabilidad de obtener suma 7 "
+        "sabiendo que el primer dado mostró un 3?",
+        "1/6",
+        "La condición fija el primer dado y deja libre el segundo.\n\n"
+        "1) Con el primero en 3, para sumar 7 el segundo debe ser 4.\n"
+        "2) El segundo dado tiene seis resultados posibles.\n"
+        "3) La probabilidad es 1/6.\n\n"
+        "Curiosamente, la probabilidad de suma 7 sin condición también es 1/6: "
+        "es la única suma que no depende del primer dado.",
+        [
+            ("1/36",
+             "Usa el espacio muestral completo en vez de fijar el primer dado."),
+            ("6/36",
+             "Cuenta los seis casos de suma 7 sobre todo el espacio, sin usar la condición."),
+            ("1/3",
+             "Correspondería a tres resultados posibles en el segundo dado, y son seis."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "De un grupo de 50 personas, 20 hablan inglés, 15 hablan francés y 5 "
+        "hablan ambos idiomas. Si alguien habla inglés, ¿cuál es la "
+        "probabilidad de que hable francés?",
+        "0,25",
+        "La condición reduce el grupo a quienes hablan inglés.\n\n"
+        "1) Los casos posibles son las 20 personas que hablan inglés.\n"
+        "2) De ellas, 5 hablan también francés.\n"
+        "3) La probabilidad es 5/20 = 0,25.\n\n"
+        "En sentido inverso el resultado sería distinto: 5/15 = 0,33 "
+        "aproximadamente. La probabilidad condicional no es simétrica.",
+        [
+            ("0,1",
+             "Divide las 5 personas bilingües por las 50 del grupo completo."),
+            ("0,3",
+             "Es la proporción de personas que hablan francés en el grupo."),
+            ("0,333 aproximadamente",
+             "Es la probabilidad de hablar inglés dado que se habla francés: el condicional inverso."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "Una máquina produce piezas y el 5% sale defectuosa. Si se revisan dos "
+        "piezas de forma independiente, ¿cuál es la probabilidad de que ambas "
+        "sean defectuosas?",
+        "0,0025",
+        "Con independencia se multiplican las probabilidades.\n\n"
+        "1) Cada pieza es defectuosa con probabilidad 0,05.\n"
+        "2) La revisión de una no cambia la de la otra.\n"
+        "3) La probabilidad conjunta es 0,05 · 0,05 = 0,0025.\n\n"
+        "Es un cuarto de un por ciento: eventos poco probables se vuelven muy "
+        "improbables al exigirlos juntos.",
+        [
+            ("0,1",
+             "Suma las probabilidades en vez de multiplicarlas."),
+            ("0,05",
+             "Es la probabilidad de que una sola pieza sea defectuosa."),
+            ("0,025",
+             "Divide por dos en vez de multiplicar las dos probabilidades."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "¿Puede ocurrir que P(A | B) sea mayor que P(A)?",
+        "Sí, cuando saber que ocurrió B hace más probable a A",
+        "La condición puede subir o bajar la probabilidad.\n\n"
+        "1) Si A y B tienden a ocurrir juntos, saber que ocurrió B favorece "
+        "a A.\n"
+        "2) Por ejemplo, la probabilidad de que llueva sube si se sabe que el "
+        "cielo está nublado.\n"
+        "3) En ese caso P(A | B) supera a P(A).\n\n"
+        "También puede bajar, y si son independientes se queda igual: los tres "
+        "casos son posibles.",
+        [
+            ("No: condicionar siempre reduce la probabilidad",
+             "Puede reducirla, mantenerla o aumentarla según la relación entre los sucesos."),
+            ("No: P(A | B) siempre es igual a P(A)",
+             "Eso ocurre solo cuando los sucesos son independientes."),
+            ("Sí, pero solo si los sucesos son excluyentes entre sí",
+             "Con sucesos excluyentes la condicional es cero, es decir, menor."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "En una bolsa hay 2 bolitas rojas y 3 verdes. Se sacan dos sin "
+        "reposición. ¿Cuál es la probabilidad de sacar primero una roja y "
+        "después una verde?",
+        "3/10",
+        "Se multiplican la primera probabilidad y la condicional.\n\n"
+        "1) La primera es roja con probabilidad 2/5.\n"
+        "2) Sabiendo eso, quedan 3 verdes de 4 bolitas: la segunda es verde con "
+        "probabilidad 3/4.\n"
+        "3) El producto es (2/5) · (3/4) = 6/20 = 3/10.\n\n"
+        "El orden importa: la probabilidad de verde primero y roja después "
+        "resulta ser la misma, pero eso no siempre ocurre.",
+        [
+            ("6/25",
+             "Corresponde al caso con reposición, donde la bolsa no cambia."),
+            ("1/2",
+             "Suma en vez de multiplicar, o usa proporciones sin combinar."),
+            ("2/5",
+             "Es solo la probabilidad de que la primera sea roja."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "En un colegio, el 60% usa transporte público y de ellos el 25% llega "
+        "atrasado. ¿Qué porcentaje del total usa transporte público y llega "
+        "atrasado?",
+        "15%",
+        "Se multiplica la probabilidad de la condición por la condicional.\n\n"
+        "1) La regla dice que P(ambos) = P(transporte) · P(atraso | "
+        "transporte).\n"
+        "2) Reemplazando: 0,60 · 0,25.\n"
+        "3) Eso da 0,15, es decir, un 15%.\n\n"
+        "El 25% está medido solo entre quienes usan transporte público; el 15%, "
+        "sobre todo el colegio.",
+        [
+            ("25%",
+             "Es el porcentaje medido solo entre quienes usan transporte público."),
+            ("85%",
+             "Suma los dos porcentajes, operación que no corresponde."),
+            ("35%",
+             "Resta los porcentajes en vez de multiplicarlos."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Probabilidad condicional (segunda tanda)
+#
+# Probabilidad total, sucesos en cadena, complementos y el contraste entre
+# P(A|B) y P(B|A) que esta detras de los falsos positivos.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "prob_condicional", "medio",
+        "Si P(A | B) = 0,3, ¿cuánto vale la probabilidad de que NO ocurra A "
+        "sabiendo que ocurrió B?",
+        "0,7",
+        "El complemento se calcula dentro del mismo espacio "
+        "condicionado.\n\n"
+        "1) Una vez fijada la condición B, las probabilidades siguen sumando "
+        "1.\n"
+        "2) Entonces P(no A | B) = 1 − P(A | B).\n"
+        "3) Reemplazando: 1 − 0,3 = 0,7.\n\n"
+        "La regla del complemento sigue valiendo bajo condición: lo que cambia "
+        "es el conjunto sobre el que se mide.",
+        [
+            ("0,3",
+             "Repite la probabilidad dada en vez de tomar su complemento."),
+            ("0,6",
+             "Duplica el valor dado, operación que no corresponde."),
+            ("No se puede calcular sin conocer P(B)",
+             "El complemento dentro de la condición no requiere P(B)."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "Se lanza un dado y se sabe que el resultado fue par. ¿Cuál es la "
+        "probabilidad de que haya sido mayor que 3?",
+        "2/3",
+        "La condición deja tres resultados posibles.\n\n"
+        "1) Los resultados pares son 2, 4 y 6.\n"
+        "2) De ellos, dos son mayores que 3: el 4 y el 6.\n"
+        "3) La probabilidad es 2/3.\n\n"
+        "Sin la condición la respuesta habría sido 3/6 = 1/2: saber que el "
+        "resultado es par aumenta la probabilidad.",
+        [
+            ("1/2",
+             "Es la probabilidad sin usar el dato de que el resultado fue par."),
+            ("1/3",
+             "Cuenta un solo caso favorable, olvidando que 4 y 6 lo son."),
+            ("2/6",
+             "Usa las seis caras como denominador en vez de los tres pares."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "De un naipe de 52 cartas se extraen dos sin reposición. ¿Cuál es la "
+        "probabilidad de que ambas sean ases?",
+        "1/221",
+        "Se multiplica la primera probabilidad por la condicional.\n\n"
+        "1) La primera es as con probabilidad 4/52 = 1/13.\n"
+        "2) Sabiendo eso, quedan 3 ases entre 51 cartas: 3/51 = 1/17.\n"
+        "3) El producto es 1/13 · 1/17 = 1/221.\n\n"
+        "Con reposición habría sido 1/169: no devolver la carta hace el suceso "
+        "algo menos probable.",
+        [
+            ("1/169",
+             "Corresponde al caso con reposición, donde el mazo no cambia."),
+            ("1/13",
+             "Es solo la probabilidad de que la primera carta sea as."),
+            ("2/52",
+             "Suma casos en vez de multiplicar probabilidades."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "Una máquina produce piezas con un 4% de defectuosas. Si se revisan dos "
+        "de forma independiente, ¿cuál es la probabilidad de que ninguna sea "
+        "defectuosa?",
+        "0,9216",
+        "Se usa el complemento en cada pieza.\n\n"
+        "1) Cada pieza es correcta con probabilidad 0,96.\n"
+        "2) Las revisiones son independientes, así que se multiplican.\n"
+        "3) El resultado es 0,96 · 0,96 = 0,9216.\n\n"
+        "El complemento de este suceso, «al menos una defectuosa», tiene "
+        "probabilidad 0,0784.",
+        [
+            ("0,96",
+             "Es la probabilidad de que una sola pieza sea correcta."),
+            ("0,92",
+             "Resta el doble del porcentaje en vez de multiplicar los complementos."),
+            ("0,0016",
+             "Es la probabilidad de que ambas sean defectuosas."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "En una caja hay 6 bolitas: 2 rojas y 4 azules. Se extraen tres sin "
+        "reposición. ¿Cuál es la probabilidad de que las tres sean azules?",
+        "1/5",
+        "Se encadenan las tres probabilidades condicionales.\n\n"
+        "1) La primera es azul con probabilidad 4/6.\n"
+        "2) La segunda, con 3/5.\n"
+        "3) La tercera, con 2/4, y el producto es (4/6)·(3/5)·(2/4) = 24/120 = "
+        "1/5.\n\n"
+        "Cada extracción reduce tanto las azules disponibles como el total: por "
+        "eso las fracciones bajan en cadena.",
+        [
+            ("8/27",
+             "Corresponde al caso con reposición, donde la caja no cambia."),
+            ("2/3",
+             "Es solo la probabilidad de que la primera sea azul."),
+            ("1/2",
+             "Sobreestima: encadenar las tres condiciones da un valor bastante menor."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "Si P(B) = 0,4 y P(A | B) = 0,75, ¿cuál es P(A y B)?",
+        "0,3",
+        "Se despeja de la definición de probabilidad condicional.\n\n"
+        "1) La definición dice que P(A | B) = P(A y B) / P(B).\n"
+        "2) Multiplicando por P(B): P(A y B) = P(A | B) · P(B).\n"
+        "3) Reemplazando: 0,75 · 0,4 = 0,3.\n\n"
+        "Es la regla del producto, que sirve tanto para sucesos dependientes "
+        "como independientes.",
+        [
+            ("1,15",
+             "Suma las dos probabilidades; ninguna probabilidad puede superar a 1."),
+            ("1,875",
+             "Divide en vez de multiplicar, y el resultado excede a 1."),
+            ("0,75",
+             "Repite la probabilidad condicional sin multiplicarla por P(B)."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "En un semáforo, la probabilidad de encontrarlo en verde es 0,4. Si un "
+        "conductor pasa por dos semáforos independientes, ¿cuál es la "
+        "probabilidad de encontrar al menos uno en verde?",
+        "0,64",
+        "Conviene calcular el complemento.\n\n"
+        "1) La probabilidad de no encontrar verde en un semáforo es 0,6.\n"
+        "2) En los dos, por independencia, es 0,6 · 0,6 = 0,36.\n"
+        "3) «Al menos uno en verde» es el complemento: 1 − 0,36 = 0,64.\n\n"
+        "Sumar 0,4 + 0,4 daría 0,8 y contaría dos veces el caso en que ambos "
+        "están en verde.",
+        [
+            ("0,8",
+             "Suma las probabilidades y cuenta dos veces el caso de ambos en verde."),
+            ("0,16",
+             "Es la probabilidad de encontrar los dos en verde."),
+            ("0,4",
+             "Es la probabilidad de un solo semáforo en verde."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "En un grupo, el 80% aprueba matemática y el 60% aprueba matemática y "
+        "lenguaje. Si alguien aprobó matemática, ¿cuál es la probabilidad de "
+        "que también haya aprobado lenguaje?",
+        "0,75",
+        "Se divide la probabilidad conjunta por la de la condición.\n\n"
+        "1) La fórmula da 0,60 / 0,80.\n"
+        "2) Ese cuociente es 3/4.\n"
+        "3) Es decir, 0,75.\n\n"
+        "El 60% se mide sobre todo el grupo y el 75% solo sobre quienes "
+        "aprobaron matemática.",
+        [
+            ("0,6",
+             "Es la probabilidad conjunta, medida sobre todo el grupo."),
+            ("0,48",
+             "Multiplica los porcentajes en vez de dividirlos."),
+            ("0,2",
+             "Resta los porcentajes, operación que no corresponde."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "De una baraja se saca una carta y resulta ser roja. ¿Cuál es la "
+        "probabilidad de que sea una figura, si cada pinta tiene 3 figuras?",
+        "3/13",
+        "La condición reduce el mazo a las cartas rojas.\n\n"
+        "1) Las cartas rojas son 26, porque hay dos pintas rojas.\n"
+        "2) Entre ellas hay 6 figuras: 3 por pinta.\n"
+        "3) La probabilidad es 6/26 = 3/13.\n\n"
+        "Sin la condición habría sido 12/52, que también da 3/13: color y "
+        "figura son independientes en un naipe.",
+        [
+            ("3/26",
+             "Cuenta solo las figuras de una pinta sobre todas las cartas rojas."),
+            ("6/52",
+             "Usa el mazo completo como denominador en vez de las cartas rojas."),
+            ("1/2",
+             "Es la probabilidad de que la carta sea roja, no de que sea figura."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "Un test da negativo en 900 de las 950 personas sanas de un grupo. "
+        "¿Cuál es la probabilidad de que el test dé negativo dado que la "
+        "persona está sana?",
+        "0,947 aproximadamente",
+        "La condición es estar sano.\n\n"
+        "1) Los casos posibles se reducen a las 950 personas sanas.\n"
+        "2) De ellas, en 900 el test dio negativo.\n"
+        "3) La probabilidad es 900/950 = 0,947 aproximadamente.\n\n"
+        "Esa medida se llama especificidad. Su complemento, cerca del 5,3%, es "
+        "la tasa de falsos positivos.",
+        [
+            ("0,053 aproximadamente",
+             "Es la tasa de falsos positivos, es decir, el complemento."),
+            ("0,9 exactamente",
+             "Aproxima mal el cuociente: 900 dividido por 950 supera 0,94."),
+            ("1,056 aproximadamente",
+             "Invierte el cuociente, y una probabilidad no puede superar a 1."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "En una ruleta de 8 sectores iguales numerados del 1 al 8, se sabe que "
+        "salió un número mayor que 5. ¿Cuál es la probabilidad de que sea par?",
+        "2/3",
+        "La condición reduce el espacio a tres sectores.\n\n"
+        "1) Los números mayores que 5 son 6, 7 y 8.\n"
+        "2) De ellos, dos son pares: el 6 y el 8.\n"
+        "3) La probabilidad es 2/3.\n\n"
+        "Sin la condición la respuesta habría sido 4/8 = 1/2: la información "
+        "cambia el resultado.",
+        [
+            ("1/2",
+             "Es la probabilidad de sacar par sin usar la condición."),
+            ("3/8",
+             "Es la probabilidad de que el número sea mayor que 5."),
+            ("2/8",
+             "Usa los ocho sectores como denominador en vez de los tres posibles."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "Si A y B son independientes, ¿cuánto vale P(A | B) cuando "
+        "P(A) = 0,35?",
+        "0,35",
+        "La independencia significa que la condición no aporta "
+        "información.\n\n"
+        "1) Por definición, si A y B son independientes entonces "
+        "P(A | B) = P(A).\n"
+        "2) El dato entregado es P(A) = 0,35.\n"
+        "3) Por lo tanto P(A | B) también vale 0,35.\n\n"
+        "No hace falta conocer P(B): la independencia ya resuelve la pregunta.",
+        [
+            ("0,65",
+             "Es el complemento de P(A), que respondería otra pregunta."),
+            ("0,175",
+             "Divide P(A) por dos sin ningún fundamento."),
+            ("No se puede calcular sin conocer P(B)",
+             "Con independencia basta P(A): la condición no cambia nada."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "En una fábrica, la máquina A produce el 70% de las piezas y la B el "
+        "30%. Si se elige una pieza al azar y resulta ser de la máquina B, "
+        "¿cuál es la probabilidad de que sea defectuosa, si la B falla en un 5% "
+        "de sus piezas?",
+        "0,05",
+        "La condición ya fija de qué máquina viene la pieza.\n\n"
+        "1) Saber que es de la máquina B restringe el espacio a la producción "
+        "de esa máquina.\n"
+        "2) En esa producción, la tasa de falla es del 5%.\n"
+        "3) La probabilidad es 0,05.\n\n"
+        "El 30% de participación de la máquina B no interviene: serviría para "
+        "calcular la probabilidad conjunta, que es 0,015.",
+        [
+            ("0,015",
+             "Es la probabilidad conjunta de que la pieza sea de B y además defectuosa."),
+            ("0,3",
+             "Es la participación de la máquina B en la producción total."),
+            ("0,35",
+             "Suma la participación y la tasa de falla, operación que no corresponde."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "Se sabe que P(A) = 0,5, P(B) = 0,6 y que A y B son independientes. "
+        "¿Cuánto vale P(A o B)?",
+        "0,8",
+        "Se usa la regla de la unión y la independencia.\n\n"
+        "1) P(A o B) = P(A) + P(B) − P(A y B).\n"
+        "2) Con independencia, P(A y B) = 0,5 · 0,6 = 0,3.\n"
+        "3) Entonces P(A o B) = 0,5 + 0,6 − 0,3 = 0,8.\n\n"
+        "Restar la intersección evita contar dos veces los casos en que ambos "
+        "sucesos ocurren.",
+        [
+            ("1,1",
+             "Suma las probabilidades sin descontar la intersección, y excede a 1."),
+            ("0,3",
+             "Es la probabilidad de que ocurran ambos, no la de la unión."),
+            ("0,55",
+             "Promedia las dos probabilidades, cosa que no corresponde."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "dificil",
+        "En una población, el 1% tiene cierta enfermedad. Un test detecta al "
+        "99% de los enfermos, pero también da positivo en el 5% de los sanos. "
+        "Si una persona da positivo, ¿cuál es aproximadamente la probabilidad "
+        "de que esté enferma?",
+        "Cerca de un 17%",
+        "Se comparan los positivos verdaderos con todos los positivos.\n\n"
+        "1) De cada 10.000 personas, 100 están enfermas y 99 de ellas dan "
+        "positivo.\n"
+        "2) De las 9.900 sanas, un 5% da positivo: 495 personas.\n"
+        "3) La probabilidad es 99 / (99 + 495) = 99/594, cerca del 17%.\n\n"
+        "El resultado sorprende porque la enfermedad es rara: aunque el test "
+        "acierte casi siempre, los falsos positivos superan con creces a los "
+        "verdaderos.",
+        [
+            ("Cerca de un 99%",
+             "Ese es el porcentaje de enfermos que el test detecta, que es la condicional inversa."),
+            ("Cerca de un 95%",
+             "Confunde la tasa de aciertos entre sanos con la probabilidad buscada."),
+            ("Cerca de un 1%",
+             "Es la prevalencia de la enfermedad antes de conocer el resultado del test."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "dificil",
+        "Dos urnas: la A tiene 3 blancas y 1 negra; la B tiene 1 blanca y 3 "
+        "negras. Se elige una urna al azar y se saca una bolita. ¿Cuál es la "
+        "probabilidad de que sea blanca?",
+        "1/2",
+        "Se aplica la regla de la probabilidad total.\n\n"
+        "1) Cada urna se elige con probabilidad 1/2.\n"
+        "2) Desde A la bolita es blanca con probabilidad 3/4; desde B, con "
+        "1/4.\n"
+        "3) La probabilidad total es (1/2)(3/4) + (1/2)(1/4) = 3/8 + 1/8 = "
+        "1/2.\n\n"
+        "El resultado es el promedio de las dos condicionales porque ambas "
+        "urnas son igualmente probables.",
+        [
+            ("3/4",
+             "Es la probabilidad de blanca solo si se elige la urna A."),
+            ("3/8",
+             "Es la probabilidad de elegir la urna A y sacar blanca."),
+            ("1/4",
+             "Es la probabilidad de blanca solo si se elige la urna B."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "dificil",
+        "Con los datos de dos urnas donde la A tiene 3 blancas y 1 negra y la B "
+        "tiene 1 blanca y 3 negras, se elige una urna al azar, sale una bolita "
+        "blanca. ¿Cuál es la probabilidad de que provenga de la urna A?",
+        "3/4",
+        "Se comparan los caminos que llevan a una bolita blanca.\n\n"
+        "1) La probabilidad de elegir A y sacar blanca es (1/2)(3/4) = 3/8.\n"
+        "2) La de elegir B y sacar blanca es (1/2)(1/4) = 1/8.\n"
+        "3) La probabilidad buscada es (3/8) / (3/8 + 1/8) = 3/4.\n\n"
+        "Es una aplicación del teorema de Bayes: se invierte la condición "
+        "pesando cada camino por su probabilidad.",
+        [
+            ("1/2",
+             "Es la probabilidad de elegir la urna A antes de ver la bolita."),
+            ("3/8",
+             "Es la probabilidad conjunta de elegir A y sacar blanca, sin dividir por el total."),
+            ("1/4",
+             "Corresponde a la urna B, que es la menos probable dado el resultado."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "dificil",
+        "Se lanzan tres monedas y se sabe que al menos una fue cara. ¿Cuál es "
+        "la probabilidad de que las tres hayan sido cara?",
+        "1/7",
+        "La condición elimina un solo resultado del espacio muestral.\n\n"
+        "1) Los ocho resultados posibles incluyen uno sin ninguna cara.\n"
+        "2) La condición deja 7 casos posibles.\n"
+        "3) Solo uno de ellos tiene las tres caras, así que la probabilidad es "
+        "1/7.\n\n"
+        "Sin la condición la respuesta habría sido 1/8: descartar un caso sube "
+        "levemente la probabilidad.",
+        [
+            ("1/8",
+             "Es la probabilidad sin usar la condición de que al menos una fue cara."),
+            ("1/3",
+             "Correspondería a tres casos posibles, y la condición deja siete."),
+            ("1/2",
+             "Sobreestima mucho: hay siete casos compatibles y solo uno favorable."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "dificil",
+        "En un grupo, P(A) = 0,4, P(B) = 0,5 y P(A o B) = 0,7. ¿Son A y B "
+        "independientes?",
+        "Sí, porque P(A y B) resulta 0,2 y coincide con el producto",
+        "Primero se recupera la intersección y después se compara.\n\n"
+        "1) De P(A o B) = P(A) + P(B) − P(A y B) se obtiene "
+        "0,7 = 0,4 + 0,5 − P(A y B).\n"
+        "2) Despejando: P(A y B) = 0,2.\n"
+        "3) El producto P(A) · P(B) es 0,4 · 0,5 = 0,2: coincide, así que los "
+        "sucesos son independientes.\n\n"
+        "El dato de la unión no permitía concluir nada por sí solo: había que "
+        "pasar por la intersección.",
+        [
+            ("No, porque P(A o B) es distinto de P(A) + P(B)",
+             "Esa diferencia siempre existe cuando la intersección no es vacía; no decide independencia."),
+            ("No, porque P(A) y P(B) tienen valores distintos",
+             "Que las probabilidades difieran no impide la independencia."),
+            ("No se puede saber sin conocer P(A | B) directamente",
+             "Se puede deducir: P(A | B) = 0,2 / 0,5 = 0,4, que es P(A)."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "dificil",
+        "Una caja tiene 10 ampolletas, 3 de ellas falladas. Se prueban dos sin "
+        "reposición. ¿Cuál es la probabilidad de que al menos una esté fallada?",
+        "8/15",
+        "Conviene calcular el complemento.\n\n"
+        "1) La probabilidad de que ninguna esté fallada es (7/10)(6/9) = "
+        "42/90 = 7/15.\n"
+        "2) «Al menos una fallada» es el complemento de ese suceso.\n"
+        "3) La probabilidad es 1 − 7/15 = 8/15.\n\n"
+        "Calcular directamente exigiría sumar tres casos: una fallada primero, "
+        "una fallada segunda y ambas falladas. El complemento resuelve en un "
+        "paso.",
+        [
+            ("7/15",
+             "Es la probabilidad de que ninguna esté fallada, es decir, el complemento."),
+            ("1/15",
+             "Es la probabilidad de que ambas estén falladas."),
+            ("3/5",
+             "Suma las probabilidades individuales, contando dos veces el caso de ambas falladas."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "dificil",
+        "Se afirma: «Si dos sucesos son excluyentes, entonces son "
+        "independientes». ¿Es correcta la afirmación?",
+        "No: si son excluyentes y ambos posibles, son necesariamente dependientes",
+        "Ser excluyentes es una forma extrema de dependencia.\n\n"
+        "1) Si A y B son excluyentes, saber que ocurrió B garantiza que A no "
+        "ocurrió: P(A | B) = 0.\n"
+        "2) Para ser independientes haría falta que P(A | B) fuera igual a "
+        "P(A).\n"
+        "3) Eso solo pasaría si P(A) fuera cero, es decir, si A fuera "
+        "imposible.\n\n"
+        "La información que aporta la exclusión es máxima: por eso los dos "
+        "conceptos son casi opuestos.",
+        [
+            ("Sí: no poder ocurrir juntos es justamente ser independientes",
+             "Es lo contrario: no poder ocurrir juntos crea la máxima dependencia."),
+            ("Sí, siempre que ambos tengan la misma probabilidad",
+             "La igualdad de probabilidades no cambia el argumento."),
+            ("No: los sucesos excluyentes nunca tienen probabilidad definida",
+             "Sí la tienen; lo que ocurre es que su intersección es imposible."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "dificil",
+        "En un curso, el 40% son hombres y el 25% de los hombres juega ajedrez. "
+        "Entre las mujeres, el 10% juega ajedrez. Si se elige a alguien al azar, "
+        "¿cuál es la probabilidad de que juegue ajedrez?",
+        "16%",
+        "Se aplica la regla de la probabilidad total.\n\n"
+        "1) La rama de los hombres aporta 0,40 · 0,25 = 0,10.\n"
+        "2) La de las mujeres aporta 0,60 · 0,10 = 0,06.\n"
+        "3) La probabilidad total es 0,10 + 0,06 = 0,16, es decir, un 16%.\n\n"
+        "Promediar 25% y 10% daría 17,5%: hay que pesar cada grupo por su "
+        "tamaño, y las mujeres son mayoría.",
+        [
+            ("17,5%",
+             "Promedia los dos porcentajes sin pesar el tamaño de cada grupo."),
+            ("35%",
+             "Suma los porcentajes de cada grupo, operación que no corresponde."),
+            ("10%",
+             "Es solo el aporte de la rama de los hombres, o el porcentaje entre mujeres."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "dificil",
+        "Con los datos de un curso donde el 40% son hombres, el 25% de ellos "
+        "juega ajedrez y entre las mujeres lo hace el 10%, se elige a alguien "
+        "que juega ajedrez. ¿Cuál es la probabilidad de que sea hombre?",
+        "62,5%",
+        "Se compara la rama de los hombres con el total de jugadores.\n\n"
+        "1) La rama de los hombres aporta 0,40 · 0,25 = 0,10.\n"
+        "2) El total de jugadores es 0,10 + 0,60 · 0,10 = 0,16.\n"
+        "3) La probabilidad buscada es 0,10 / 0,16 = 0,625, es decir, un "
+        "62,5%.\n\n"
+        "Aunque los hombres sean minoría en el curso, son mayoría entre quienes "
+        "juegan ajedrez: la condición invierte la proporción.",
+        [
+            ("40%",
+             "Es la proporción de hombres en el curso, antes de saber que la persona juega ajedrez."),
+            ("25%",
+             "Es la proporción de jugadores entre los hombres: la condicional inversa."),
+            ("16%",
+             "Es la proporción de jugadores en todo el curso."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "dificil",
+        "Se extraen dos cartas de un naipe de 52 sin reposición. Si la primera "
+        "fue de corazones, ¿cuál es la probabilidad de que la segunda también "
+        "lo sea?",
+        "12/51",
+        "Se descuenta la carta que ya salió.\n\n"
+        "1) Los corazones bajan de 13 a 12.\n"
+        "2) El mazo baja de 52 a 51 cartas.\n"
+        "3) La probabilidad es 12/51, cerca de 0,235.\n\n"
+        "Es menor que el 13/52 = 0,25 inicial: haber sacado un corazón deja "
+        "menos corazones disponibles.",
+        [
+            ("13/52",
+             "Ignora que ya se extrajo una carta de corazones."),
+            ("13/51",
+             "Descuenta la carta del total pero no de los corazones."),
+            ("12/52",
+             "Descuenta la carta de los corazones pero no del total."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "dificil",
+        "Un estudiante afirma que P(A | B) y P(B | A) siempre valen lo mismo. "
+        "¿Es correcta su afirmación?",
+        "No: solo coinciden cuando P(A) y P(B) son iguales",
+        "Las dos condicionales comparten numerador pero no denominador.\n\n"
+        "1) P(A | B) es P(A y B) dividido por P(B).\n"
+        "2) P(B | A) es la misma intersección dividida por P(A).\n"
+        "3) Coinciden únicamente si los denominadores son iguales, es decir, "
+        "si P(A) = P(B).\n\n"
+        "Confundirlas es el error que hace parecer alarmante un test positivo "
+        "para una enfermedad rara.",
+        [
+            ("Sí: la barra indica una relación simétrica entre los sucesos",
+             "No lo es: el denominador cambia según cuál sea la condición."),
+            ("No: nunca pueden valer lo mismo",
+             "Coinciden cuando P(A) y P(B) son iguales."),
+            ("Sí, siempre que los dos sucesos sean independientes entre sí",
+             "Con independencia dan P(A) y P(B) respectivamente, que pueden diferir."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Modelo binomial y distribucion normal
+#
+# Condiciones de un experimento binomial, calculo de probabilidades con la
+# formula, media y varianza, y las propiedades de la curva normal que el
+# temario pide junto con el modelo binomial.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "prob_binomial", "facil",
+        "¿Cuál de estas condiciones NO se necesita para que un experimento sea "
+        "binomial?",
+        "Que la cantidad de repeticiones sea mayor que 10",
+        "El modelo binomial exige cuatro condiciones y ninguna es esa.\n\n"
+        "1) Debe haber un número fijo de repeticiones, cualquiera que sea.\n"
+        "2) Cada repetición debe tener solo dos resultados posibles.\n"
+        "3) La probabilidad de éxito debe ser constante y las repeticiones, "
+        "independientes.\n\n"
+        "Un experimento con dos repeticiones es tan binomial como uno con "
+        "doscientas.",
+        [
+            ("Que cada repetición tenga solo dos resultados posibles",
+             "Es una de las condiciones esenciales del modelo."),
+            ("Que la probabilidad de éxito sea la misma en cada repetición",
+             "También es esencial: si cambia, el modelo deja de aplicarse."),
+            ("Que las repeticiones sean independientes entre sí",
+             "Es otra de las condiciones esenciales."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "facil",
+        "Se lanza una moneda 4 veces. ¿Cuál es la probabilidad de obtener 4 "
+        "caras?",
+        "1/16",
+        "Hay una sola secuencia favorable entre todas las posibles.\n\n"
+        "1) Cada lanzamiento tiene 2 resultados, así que hay 2⁴ = 16 secuencias "
+        "posibles.\n"
+        "2) Solo una de ellas tiene las cuatro caras.\n"
+        "3) La probabilidad es 1/16.\n\n"
+        "Es el mismo valor que obtener cuatro sellos: la distribución es "
+        "simétrica cuando la moneda es equilibrada.",
+        [
+            ("1/4",
+             "Es la probabilidad de una sola cara en un lanzamiento elevado a la primera, no a la cuarta."),
+            ("4/16",
+             "Cuenta cuatro secuencias favorables, y solo hay una."),
+            ("1/8",
+             "Corresponde a tres lanzamientos, no a cuatro."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "facil",
+        "En un experimento binomial, ¿qué representa la letra p?",
+        "La probabilidad de éxito en cada repetición",
+        "Cada símbolo del modelo tiene un papel fijo.\n\n"
+        "1) La letra n indica cuántas veces se repite el experimento.\n"
+        "2) La letra p indica la probabilidad de éxito en cada repetición.\n"
+        "3) La letra k indica cuántos éxitos se quieren obtener.\n\n"
+        "La probabilidad de fracaso se escribe como 1 − p, y a veces se abrevia "
+        "como q.",
+        [
+            ("La cantidad de repeticiones del experimento",
+             "Esa es n."),
+            ("La cantidad de éxitos que se buscan",
+             "Esa es k."),
+            ("El promedio de éxitos esperados",
+             "Ese es el producto n · p, no p por sí solo."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "facil",
+        "¿Cuál es la forma del gráfico de una distribución normal?",
+        "Una curva simétrica con forma de campana",
+        "La curva normal tiene una forma característica.\n\n"
+        "1) Su punto más alto está en la media.\n"
+        "2) A ambos lados desciende de manera simétrica.\n"
+        "3) Nunca llega a tocar el eje horizontal: se acerca sin cortarlo.\n\n"
+        "Por esa simetría, la media, la mediana y la moda coinciden en el "
+        "centro.",
+        [
+            ("Una recta con pendiente positiva",
+             "Esa sería una relación lineal, no una distribución de probabilidad."),
+            ("Una curva creciente sin máximo",
+             "La curva normal tiene un máximo bien definido en la media."),
+            ("Un conjunto de barras separadas entre sí",
+             "Ese es el gráfico de una distribución discreta como la binomial."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "facil",
+        "En una distribución normal, ¿qué valor coincide con la media?",
+        "La mediana y la moda",
+        "La simetría de la curva iguala las tres medidas de centro.\n\n"
+        "1) La media está en el eje de simetría de la campana.\n"
+        "2) La mediana deja la mitad del área a cada lado, y por simetría cae "
+        "en ese mismo punto.\n"
+        "3) La moda es el valor más frecuente, que corresponde al punto más "
+        "alto: también ahí.\n\n"
+        "En distribuciones asimétricas las tres medidas se separan, y esa "
+        "separación es una señal de asimetría.",
+        [
+            ("Solo la moda",
+             "También coincide la mediana, por la simetría de la curva."),
+            ("La desviación estándar",
+             "La desviación mide dispersión, no posición: no tiene por qué coincidir."),
+            ("El valor máximo que alcanzan los datos",
+             "La curva normal no tiene un valor máximo: se extiende indefinidamente."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "facil",
+        "Se lanza una moneda 3 veces. ¿Cuál es la probabilidad de no obtener "
+        "ninguna cara?",
+        "1/8",
+        "Hay una sola secuencia sin caras entre las ocho posibles.\n\n"
+        "1) El total de secuencias es 2³ = 8.\n"
+        "2) La única sin caras es sello, sello y sello.\n"
+        "3) La probabilidad es 1/8.\n\n"
+        "El complemento, «al menos una cara», tiene probabilidad 7/8.",
+        [
+            ("3/8",
+             "Es la probabilidad de obtener exactamente una cara."),
+            ("1/3",
+             "Correspondería a tres casos posibles, y hay ocho."),
+            ("1/2",
+             "Es la probabilidad de sello en un solo lanzamiento."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "facil",
+        "En un experimento binomial con n = 10 y p = 0,3, ¿cuántos éxitos se "
+        "esperan en promedio?",
+        "3",
+        "El valor esperado de una binomial es el producto n · p.\n\n"
+        "1) La cantidad de repeticiones es 10.\n"
+        "2) La probabilidad de éxito es 0,3.\n"
+        "3) El promedio esperado es 10 · 0,3 = 3 éxitos.\n\n"
+        "No significa que siempre se obtengan 3: es el promedio si el "
+        "experimento se repitiera muchas veces.",
+        [
+            ("0,3",
+             "Es la probabilidad de éxito individual, no el promedio de éxitos."),
+            ("10",
+             "Es la cantidad de repeticiones."),
+            ("10,3",
+             "Suma los dos parámetros en vez de multiplicarlos."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "facil",
+        "Si en un experimento binomial la probabilidad de éxito es 0,25, ¿cuál "
+        "es la probabilidad de fracaso en cada repetición?",
+        "0,75",
+        "Éxito y fracaso son sucesos complementarios.\n\n"
+        "1) En cada repetición solo hay dos resultados posibles.\n"
+        "2) Sus probabilidades suman 1.\n"
+        "3) La de fracaso es 1 − 0,25 = 0,75.\n\n"
+        "Ese valor suele anotarse como q, y aparece elevado en la fórmula "
+        "binomial tantas veces como fracasos haya.",
+        [
+            ("0,25",
+             "Repite la probabilidad de éxito en vez de tomar su complemento."),
+            ("0,5",
+             "Solo sería el complemento si el éxito tuviera probabilidad 0,5."),
+            ("0,125",
+             "Divide 0,25 por 2 en vez de restarlo a 1."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "facil",
+        "¿Cuál de estas situaciones corresponde a un experimento binomial?",
+        "Lanzar un dado 10 veces y contar cuántas veces sale un 6",
+        "Hay que verificar las cuatro condiciones del modelo.\n\n"
+        "1) El número de repeticiones es fijo: 10 lanzamientos.\n"
+        "2) Cada lanzamiento tiene dos resultados de interés: sale 6 o no "
+        "sale.\n"
+        "3) La probabilidad es siempre 1/6 y los lanzamientos son "
+        "independientes.\n\n"
+        "Reducir seis resultados a dos categorías es perfectamente válido: lo "
+        "que importa es cómo se define el éxito.",
+        [
+            ("Sacar cartas de un mazo sin devolverlas y contar los ases",
+             "Sin reposición la probabilidad cambia en cada extracción."),
+            ("Medir la estatura de 10 personas",
+             "El resultado no es de dos categorías sino un valor continuo."),
+            ("Lanzar una moneda hasta que salga cara",
+             "El número de repeticiones no está fijado de antemano."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "facil",
+        "En una distribución normal, ¿qué porcentaje de los datos queda por "
+        "sobre la media?",
+        "Un 50%",
+        "La curva es simétrica respecto de la media.\n\n"
+        "1) El eje de simetría pasa exactamente por la media.\n"
+        "2) El área bajo la curva se reparte por igual a ambos lados.\n"
+        "3) Sobre la media queda entonces la mitad del total.\n\n"
+        "Es una consecuencia directa de la simetría y no depende de cuánto "
+        "valga la desviación estándar.",
+        [
+            ("Un 68%",
+             "Ese es el porcentaje dentro de una desviación estándar a cada lado."),
+            ("Un 95%",
+             "Ese es el porcentaje dentro de dos desviaciones estándar a cada lado."),
+            ("Un 100%",
+             "Sobre la media queda solo la mitad de los datos."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "Se lanza una moneda 4 veces. ¿Cuál es la probabilidad de obtener "
+        "exactamente 2 caras?",
+        "3/8",
+        "Se cuentan las secuencias favorables entre las posibles.\n\n"
+        "1) El total de secuencias es 2⁴ = 16.\n"
+        "2) Las que tienen exactamente dos caras son 6, porque hay 6 formas de "
+        "elegir en qué dos lanzamientos aparecen.\n"
+        "3) La probabilidad es 6/16 = 3/8.\n\n"
+        "Ese 6 es la combinatoria C(4, 2): el factor que la fórmula binomial "
+        "agrega para contar los ordenamientos.",
+        [
+            ("1/16",
+             "Es la probabilidad de una secuencia específica, sin contar las seis formas posibles."),
+            ("1/2",
+             "Es la probabilidad de cara en un solo lanzamiento."),
+            ("2/4",
+             "Toma la razón entre caras y lanzamientos, que no es una probabilidad binomial."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "Un jugador acierta un tiro libre con probabilidad 0,8. Si lanza dos "
+        "tiros independientes, ¿cuál es la probabilidad de acertar ambos?",
+        "0,64",
+        "Con independencia se multiplican las probabilidades.\n\n"
+        "1) Cada tiro se acierta con probabilidad 0,8.\n"
+        "2) Los dos tiros son independientes.\n"
+        "3) La probabilidad conjunta es 0,8 · 0,8 = 0,64.\n\n"
+        "Es menor que 0,8 porque exigir dos aciertos seguidos es más difícil "
+        "que exigir uno.",
+        [
+            ("0,8",
+             "Es la probabilidad de acertar un solo tiro."),
+            ("0,16",
+             "Multiplica la probabilidad de acertar por la de fallar: eso corresponde a acertar solo uno de los dos tiros."),
+            ("0,4",
+             "Divide por dos en vez de multiplicar las dos probabilidades."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "Un jugador acierta un tiro libre con probabilidad 0,8. Si lanza dos "
+        "tiros independientes, ¿cuál es la probabilidad de acertar exactamente "
+        "uno?",
+        "0,32",
+        "Hay dos maneras de acertar exactamente uno.\n\n"
+        "1) Acertar el primero y fallar el segundo: 0,8 · 0,2 = 0,16.\n"
+        "2) Fallar el primero y acertar el segundo: 0,2 · 0,8 = 0,16.\n"
+        "3) La suma de ambos casos es 0,32.\n\n"
+        "Olvidar el segundo orden es el error más frecuente: la fórmula "
+        "binomial lo incorpora con el factor C(2, 1) = 2.",
+        [
+            ("0,16",
+             "Cuenta un solo orden y olvida el otro."),
+            ("0,64",
+             "Es la probabilidad de acertar los dos tiros."),
+            ("0,8",
+             "Es la probabilidad de acertar un tiro cualquiera, sin considerar el segundo."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "En un experimento binomial con n = 20 y p = 0,5, ¿cuál es la varianza?",
+        "5",
+        "La varianza de una binomial es n · p · (1 − p).\n\n"
+        "1) La probabilidad de fracaso es 1 − 0,5 = 0,5.\n"
+        "2) Reemplazando: 20 · 0,5 · 0,5.\n"
+        "3) Eso da 5.\n\n"
+        "La desviación estándar sería la raíz de 5, cerca de 2,24 éxitos.",
+        [
+            ("10",
+             "Es el promedio de éxitos, es decir, n · p."),
+            ("2,24 aproximadamente",
+             "Es la desviación estándar, no la varianza."),
+            ("20",
+             "Es la cantidad de repeticiones del experimento."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "Se lanza un dado 3 veces. ¿Cuál es la probabilidad de no obtener "
+        "ningún 6?",
+        "125/216",
+        "Se multiplica la probabilidad de fracaso en cada lanzamiento.\n\n"
+        "1) En cada lanzamiento no sale 6 con probabilidad 5/6.\n"
+        "2) Los tres lanzamientos son independientes.\n"
+        "3) La probabilidad es (5/6)³ = 125/216, cerca de 0,58.\n\n"
+        "El complemento, «al menos un 6», tiene probabilidad 91/216, algo menos "
+        "de la mitad.",
+        [
+            ("5/6",
+             "Es la probabilidad de no sacar 6 en un solo lanzamiento."),
+            ("1/216",
+             "Es la probabilidad de obtener tres seises seguidos."),
+            ("91/216",
+             "Es la probabilidad de obtener al menos un 6, es decir, el complemento."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "¿Cuánto vale la combinatoria C(5, 2), que aparece en la fórmula "
+        "binomial para 5 repeticiones y 2 éxitos?",
+        "10",
+        "Cuenta de cuántas formas se pueden ubicar los dos éxitos.\n\n"
+        "1) La fórmula es 5! dividido por (2! · 3!).\n"
+        "2) Eso es 120 / (2 · 6) = 120/12.\n"
+        "3) El resultado es 10.\n\n"
+        "Ese factor multiplica a p² · q³ en la fórmula binomial: sin él se "
+        "contaría un solo orden.",
+        [
+            ("20",
+             "Corresponde a las variaciones, es decir, considerando el orden de los dos éxitos."),
+            ("7",
+             "Suma los dos números en vez de aplicar la fórmula."),
+            ("2,5",
+             "Divide los dos números en vez de aplicar la fórmula."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "En una distribución normal de media 60 y desviación estándar 8, "
+        "¿entre qué valores cae aproximadamente el 68% de los datos?",
+        "Entre 52 y 68",
+        "El 68% corresponde a una desviación estándar a cada lado.\n\n"
+        "1) Hacia abajo: 60 − 8 = 52.\n"
+        "2) Hacia arriba: 60 + 8 = 68.\n"
+        "3) Entre esos valores cae cerca del 68% de los datos.\n\n"
+        "Con dos desviaciones, entre 44 y 76, el porcentaje sube a cerca del "
+        "95%.",
+        [
+            ("Entre 44 y 76",
+             "Ese intervalo abarca dos desviaciones estándar y concentra cerca del 95%."),
+            ("Entre 59 y 61",
+             "Ese intervalo es mucho más angosto que una desviación estándar."),
+            ("Entre 36 y 84",
+             "Ese intervalo abarca tres desviaciones y concentra cerca del 99,7%."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "En una distribución normal de media 100 y desviación estándar 15, "
+        "¿cuál es el puntaje estandarizado de un dato que vale 130?",
+        "2",
+        "Se cuenta cuántas desviaciones estándar separan al dato de la "
+        "media.\n\n"
+        "1) La diferencia respecto de la media es 130 − 100 = 30.\n"
+        "2) Se divide por la desviación estándar: 30 / 15.\n"
+        "3) El resultado es 2: el dato está dos desviaciones sobre la media.\n\n"
+        "Ese valor se llama puntaje z, y permite comparar datos de "
+        "distribuciones distintas.",
+        [
+            ("30",
+             "Es la diferencia respecto de la media, sin dividir por la desviación."),
+            ("0,5",
+             "Invierte el cuociente: divide la desviación por la diferencia."),
+            ("8,67 aproximadamente",
+             "Divide el dato completo por la desviación en vez de restar antes la media."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "Un test de opción múltiple tiene 5 preguntas con 4 alternativas cada "
+        "una. Si se responde al azar, ¿cuál es la probabilidad de acertar "
+        "todas?",
+        "1/1.024",
+        "Se multiplica la probabilidad de acierto en cada pregunta.\n\n"
+        "1) Cada pregunta se acierta con probabilidad 1/4.\n"
+        "2) Las respuestas son independientes.\n"
+        "3) La probabilidad es (1/4)⁵ = 1/1.024.\n\n"
+        "Es menos de un caso en mil: responder al azar una prueba completa casi "
+        "nunca funciona.",
+        [
+            ("1/20",
+             "Multiplica el número de preguntas por el de alternativas en vez de elevar."),
+            ("1/4",
+             "Es la probabilidad de acertar una sola pregunta."),
+            ("5/1.024",
+             "Cuenta cinco casos favorables, y solo hay uno."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "En un experimento binomial con n = 6 y p = 1/2, ¿cuál es la "
+        "probabilidad de obtener exactamente 6 éxitos?",
+        "1/64",
+        "Hay una sola secuencia con todos los éxitos.\n\n"
+        "1) El total de secuencias posibles es 2⁶ = 64.\n"
+        "2) Solo una tiene los seis éxitos.\n"
+        "3) La probabilidad es 1/64.\n\n"
+        "La combinatoria C(6, 6) vale 1: cuando todos los resultados son "
+        "éxitos, hay un solo ordenamiento posible.",
+        [
+            ("6/64",
+             "Cuenta seis secuencias favorables, y solo hay una."),
+            ("1/6",
+             "Confunde la cantidad de repeticiones con el total de secuencias."),
+            ("1/12",
+             "Multiplica la cantidad de repeticiones por 2 en vez de elevar 2 a esa potencia."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "Una semilla germina con probabilidad 0,9. Si se plantan 3 semillas de "
+        "forma independiente, ¿cuál es la probabilidad de que germinen las "
+        "tres?",
+        "0,729",
+        "Se multiplican las tres probabilidades.\n\n"
+        "1) Cada semilla germina con probabilidad 0,9.\n"
+        "2) Las siembras son independientes.\n"
+        "3) La probabilidad es 0,9³ = 0,729.\n\n"
+        "Aunque cada semilla sea muy confiable, exigir que las tres germinen "
+        "baja la probabilidad a menos de tres cuartos.",
+        [
+            ("0,9",
+             "Es la probabilidad de que germine una sola semilla."),
+            ("0,3",
+             "Divide 0,9 por 3 en vez de elevarlo al cubo."),
+            ("0,81",
+             "Corresponde a dos semillas, no a tres."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "En una distribución binomial con n = 8 y p = 0,25, ¿cuál es el número "
+        "esperado de éxitos?",
+        "2",
+        "El valor esperado es el producto n · p.\n\n"
+        "1) Las repeticiones son 8.\n"
+        "2) La probabilidad de éxito es 0,25.\n"
+        "3) El promedio esperado es 8 · 0,25 = 2 éxitos.\n\n"
+        "Coincide con la intuición: si se acierta una de cada cuatro veces, en "
+        "ocho intentos se esperan dos aciertos.",
+        [
+            ("0,25",
+             "Es la probabilidad de éxito individual."),
+            ("8",
+             "Es la cantidad de repeticiones."),
+            ("4",
+             "Corresponde a una probabilidad de éxito de 0,5, no de 0,25."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "¿Qué diferencia hay entre la distribución binomial y la normal?",
+        "La binomial cuenta éxitos enteros y la normal describe una variable continua",
+        "Son modelos para tipos distintos de variable.\n\n"
+        "1) La binomial solo puede tomar valores enteros: 0, 1, 2 y así hasta "
+        "n.\n"
+        "2) La normal puede tomar cualquier valor real dentro de un rango.\n"
+        "3) Por eso una se grafica con barras y la otra con una curva "
+        "continua.\n\n"
+        "Cuando n es grande, la binomial se parece cada vez más a una normal: "
+        "esa es la base de muchas aproximaciones.",
+        [
+            ("La binomial es simétrica y la normal no",
+             "Es al revés: la normal siempre es simétrica y la binomial solo lo es con p = 0,5."),
+            ("La normal solo sirve para muestras pequeñas",
+             "Ocurre lo contrario: se usa sobre todo con muestras grandes."),
+            ("La binomial no tiene media ni desviación estándar",
+             "Sí las tiene: valen n · p y la raíz de n · p · q."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "Se lanza una moneda 5 veces. ¿Cuál es la probabilidad de obtener al "
+        "menos una cara?",
+        "31/32",
+        "Conviene calcular el complemento.\n\n"
+        "1) El total de secuencias es 2⁵ = 32.\n"
+        "2) La única sin ninguna cara es la de cinco sellos.\n"
+        "3) La probabilidad es 1 − 1/32 = 31/32.\n\n"
+        "Calcular directamente exigiría sumar los casos de 1, 2, 3, 4 y 5 "
+        "caras; el complemento lo resuelve en un paso.",
+        [
+            ("1/32",
+             "Es la probabilidad de no obtener ninguna cara, es decir, el complemento."),
+            ("5/32",
+             "Es la probabilidad de obtener exactamente una cara."),
+            ("1/2",
+             "Es la probabilidad de cara en un solo lanzamiento."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "En una distribución normal, ¿qué ocurre con la curva si aumenta la "
+        "desviación estándar y la media no cambia?",
+        "Se vuelve más ancha y más baja",
+        "El área total bajo la curva siempre vale 1.\n\n"
+        "1) Una desviación mayor significa datos más repartidos.\n"
+        "2) La curva se extiende hacia los lados.\n"
+        "3) Como el área total no cambia, el máximo tiene que bajar.\n\n"
+        "Con una desviación menor ocurre lo contrario: la campana se hace "
+        "angosta y alta.",
+        [
+            ("Se vuelve más angosta y más alta",
+             "Eso ocurre al disminuir la desviación estándar, no al aumentarla."),
+            ("Se desplaza hacia la derecha",
+             "Un desplazamiento horizontal se produce al cambiar la media."),
+            ("Deja de ser simétrica",
+             "La simetría se conserva sea cual sea la desviación estándar."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Modelo binomial y distribucion normal (segunda tanda)
+#
+# Aplicacion completa de la formula binomial, complementos, puntajes
+# estandarizados y lectura de la curva normal en contexto.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "prob_binomial", "medio",
+        "Se lanza un dado 3 veces. ¿Cuál es la probabilidad de obtener "
+        "exactamente un 6?",
+        "75/216",
+        "Se cuentan los tres órdenes posibles.\n\n"
+        "1) Una secuencia concreta con un 6 y dos no-seis tiene probabilidad "
+        "(1/6)(5/6)(5/6) = 25/216.\n"
+        "2) El 6 puede aparecer en cualquiera de los tres lanzamientos: hay 3 "
+        "órdenes.\n"
+        "3) La probabilidad es 3 · 25/216 = 75/216, cerca de 0,35.\n\n"
+        "Ese factor 3 es la combinatoria C(3, 1): sin él se contaría un solo "
+        "orden.",
+        [
+            ("25/216",
+             "Cuenta un solo orden y olvida los otros dos."),
+            ("1/6",
+             "Es la probabilidad de sacar un 6 en un solo lanzamiento."),
+            ("125/216",
+             "Es la probabilidad de no obtener ningún 6 en los tres lanzamientos."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "En un experimento binomial con n = 3 y p = 0,2, ¿cuál es la "
+        "probabilidad de obtener exactamente un éxito?",
+        "0,384",
+        "Se aplica la fórmula binomial.\n\n"
+        "1) La combinatoria C(3, 1) vale 3.\n"
+        "2) La parte de probabilidades es 0,2 · 0,8² = 0,2 · 0,64 = 0,128.\n"
+        "3) El resultado es 3 · 0,128 = 0,384.\n\n"
+        "Es el valor más alto de esta distribución: con p = 0,2 y tres "
+        "intentos, un éxito es lo más probable.",
+        [
+            ("0,128",
+             "Cuenta un solo orden y olvida el factor combinatorio 3."),
+            ("0,512",
+             "Es la probabilidad de no obtener ningún éxito."),
+            ("0,2",
+             "Es la probabilidad de éxito en una sola repetición."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "En un experimento binomial con n = 3 y p = 0,2, ¿cuál es la "
+        "probabilidad de no obtener ningún éxito?",
+        "0,512",
+        "Se multiplica la probabilidad de fracaso tres veces.\n\n"
+        "1) Cada repetición fracasa con probabilidad 0,8.\n"
+        "2) Las repeticiones son independientes.\n"
+        "3) La probabilidad es 0,8³ = 0,512.\n\n"
+        "El complemento, «al menos un éxito», vale 0,488: algo menos de la "
+        "mitad.",
+        [
+            ("0,384",
+             "Es la probabilidad de obtener exactamente un éxito."),
+            ("0,8",
+             "Es la probabilidad de fracaso en una sola repetición."),
+            ("0,008",
+             "Es la probabilidad de obtener los tres éxitos, que sería 0,2³."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "¿Cuánto vale la combinatoria C(6, 2)?",
+        "15",
+        "Se aplica la fórmula de combinaciones.\n\n"
+        "1) La fórmula es 6! dividido por (2! · 4!).\n"
+        "2) Eso es 720 / (2 · 24) = 720/48.\n"
+        "3) El resultado es 15.\n\n"
+        "Un atajo: C(6, 2) es (6 · 5) / (2 · 1), porque solo hacen falta los "
+        "dos primeros factores del numerador.",
+        [
+            ("30",
+             "Corresponde a las variaciones, es decir, considerando el orden de los dos elementos."),
+            ("12",
+             "Multiplica los dos números en vez de aplicar la fórmula."),
+            ("8",
+             "Suma los dos números en vez de aplicar la fórmula."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "En un experimento binomial con n = 50 y p = 0,02, ¿cuántos éxitos se "
+        "esperan?",
+        "1",
+        "El valor esperado es el producto n · p.\n\n"
+        "1) Las repeticiones son 50.\n"
+        "2) La probabilidad de éxito es 0,02.\n"
+        "3) El promedio esperado es 50 · 0,02 = 1 éxito.\n\n"
+        "Que se espere un éxito no significa que siempre ocurra exactamente "
+        "uno: es el promedio a la larga.",
+        [
+            ("0,02",
+             "Es la probabilidad de éxito individual."),
+            ("2",
+             "Corresponde a una probabilidad de 0,04, no de 0,02."),
+            ("50",
+             "Es la cantidad de repeticiones."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "En un experimento binomial con n = 100 y p = 0,5, ¿cuál es la "
+        "desviación estándar?",
+        "5",
+        "Se calcula la varianza y se le extrae la raíz.\n\n"
+        "1) La varianza es n · p · (1 − p) = 100 · 0,5 · 0,5 = 25.\n"
+        "2) La desviación estándar es su raíz cuadrada.\n"
+        "3) La raíz de 25 es 5.\n\n"
+        "Con 100 lanzamientos de moneda, lo habitual es obtener entre 45 y 55 "
+        "caras: una desviación a cada lado del promedio de 50.",
+        [
+            ("25",
+             "Es la varianza, no la desviación estándar."),
+            ("50",
+             "Es el número esperado de éxitos."),
+            ("10",
+             "Es la raíz de 100, que no corresponde a la varianza del experimento."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "En una distribución normal de media 500 y desviación estándar 50, "
+        "¿entre qué valores cae aproximadamente el 95% de los datos?",
+        "Entre 400 y 600",
+        "El 95% corresponde a dos desviaciones estándar a cada lado.\n\n"
+        "1) Hacia abajo: 500 − 2 · 50 = 400.\n"
+        "2) Hacia arriba: 500 + 2 · 50 = 600.\n"
+        "3) Entre esos valores cae cerca del 95% de los datos.\n\n"
+        "Con una sola desviación, entre 450 y 550, el porcentaje baja a cerca "
+        "del 68%.",
+        [
+            ("Entre 450 y 550",
+             "Ese intervalo abarca una desviación estándar y concentra cerca del 68%."),
+            ("Entre 350 y 650",
+             "Ese intervalo abarca tres desviaciones y concentra cerca del 99,7%."),
+            ("Entre 490 y 510",
+             "Ese intervalo es mucho más angosto que una desviación estándar."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "En una distribución normal de media 70 y desviación estándar 6, ¿cuál "
+        "es el puntaje estandarizado de un dato que vale 61?",
+        "−1,5",
+        "Se cuenta cuántas desviaciones separan al dato de la media.\n\n"
+        "1) La diferencia es 61 − 70 = −9.\n"
+        "2) Se divide por la desviación: −9 / 6.\n"
+        "3) El resultado es −1,5: el dato está una desviación y media bajo la "
+        "media.\n\n"
+        "El signo negativo indica que el dato está por debajo del promedio; el "
+        "valor absoluto, cuán lejos.",
+        [
+            ("1,5",
+             "Pierde el signo: el dato está bajo la media, no sobre ella."),
+            ("−9",
+             "Es la diferencia respecto de la media, sin dividir por la desviación."),
+            ("−0,67 aproximadamente",
+             "Invierte el cuociente: divide la desviación por la diferencia."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "Una fábrica produce piezas con un 10% de defectuosas. Si se revisan 4 "
+        "piezas, ¿cuál es la probabilidad de que al menos una sea defectuosa?",
+        "0,3439",
+        "Conviene calcular el complemento.\n\n"
+        "1) Cada pieza es correcta con probabilidad 0,9.\n"
+        "2) Que las cuatro sean correctas tiene probabilidad 0,9⁴ = 0,6561.\n"
+        "3) «Al menos una defectuosa» es el complemento: 1 − 0,6561 = "
+        "0,3439.\n\n"
+        "Sumar 0,1 cuatro veces daría 0,4 y contaría varias veces los casos con "
+        "más de una pieza defectuosa.",
+        [
+            ("0,4",
+             "Suma las probabilidades individuales y cuenta de más los casos repetidos."),
+            ("0,6561",
+             "Es la probabilidad de que ninguna sea defectuosa, es decir, el complemento."),
+            ("0,0001",
+             "Es la probabilidad de que las cuatro sean defectuosas."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "En una distribución binomial con n = 4 y p = 0,5, ¿qué relación hay "
+        "entre la probabilidad de 1 éxito y la de 3 éxitos?",
+        "Son iguales",
+        "Con p = 0,5 la distribución es simétrica.\n\n"
+        "1) La probabilidad de 1 éxito usa C(4, 1) = 4 y la de 3 usa "
+        "C(4, 3) = 4.\n"
+        "2) La parte de probabilidades es (0,5)⁴ en ambos casos.\n"
+        "3) Los dos resultados valen 4/16 = 1/4.\n\n"
+        "La simetría se pierde apenas p deja de valer 0,5: con p = 0,2, tres "
+        "éxitos son mucho menos probables que uno.",
+        [
+            ("La de 3 éxitos es el triple",
+             "La combinatoria C(4, 1) y C(4, 3) valen lo mismo: no hay factor 3."),
+            ("La de 1 éxito es mayor",
+             "Con p = 0,5 ambas coinciden exactamente."),
+            ("No se pueden comparar sin conocer cuántos fracasos hubo",
+             "Los fracasos quedan determinados por n y por la cantidad de éxitos."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "En una distribución normal, ¿qué porcentaje de los datos cae entre la "
+        "media y una desviación estándar sobre ella?",
+        "Cerca de un 34%",
+        "Se aprovecha la simetría de la curva.\n\n"
+        "1) Entre una desviación bajo la media y una sobre ella cae cerca del "
+        "68%.\n"
+        "2) Ese tramo se reparte por igual a ambos lados de la media.\n"
+        "3) Cada mitad concentra cerca del 34%.\n\n"
+        "Sumando el 50% que queda bajo la media, el 84% de los datos cae bajo "
+        "el valor situado a una desviación sobre ella.",
+        [
+            ("Cerca de un 68%",
+             "Ese es el porcentaje del intervalo completo, a ambos lados de la media."),
+            ("Cerca de un 50%",
+             "Ese es el porcentaje que queda sobre la media, sin tope superior."),
+            ("Cerca de un 95%",
+             "Ese porcentaje corresponde a dos desviaciones a cada lado."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "En una distribución binomial con n = 5, ¿cuánto suman las "
+        "probabilidades de obtener 0, 1, 2, 3, 4 y 5 éxitos?",
+        "1",
+        "Esos seis casos agotan todas las posibilidades.\n\n"
+        "1) En cinco repeticiones, la cantidad de éxitos es necesariamente un "
+        "número entre 0 y 5.\n"
+        "2) Los seis sucesos son excluyentes entre sí.\n"
+        "3) Sus probabilidades suman 1, como toda distribución completa.\n\n"
+        "Esa propiedad sirve de control: si al sumar los casos no da 1, hay un "
+        "error en algún término.",
+        [
+            ("5",
+             "Confunde la cantidad de repeticiones con la suma de probabilidades."),
+            ("6",
+             "Confunde la cantidad de casos posibles con la suma de probabilidades."),
+            ("0,5",
+             "Solo sumaría 0,5 si faltara la mitad de los casos."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "Los puntajes PAES se modelan con una distribución de media 500 y "
+        "desviación estándar 100. ¿Qué significa obtener 700 puntos?",
+        "Estar dos desviaciones estándar sobre la media",
+        "Se calcula el puntaje estandarizado.\n\n"
+        "1) La diferencia respecto de la media es 700 − 500 = 200.\n"
+        "2) Se divide por la desviación: 200 / 100 = 2.\n"
+        "3) El puntaje está dos desviaciones sobre la media.\n\n"
+        "En una distribución normal, eso deja al postulante por sobre cerca del "
+        "97,5% de quienes rindieron.",
+        [
+            ("Estar una desviación estándar sobre la media",
+             "Una desviación correspondería a 600 puntos."),
+            ("Haber respondido correctamente el 70% de la prueba",
+             "El puntaje estandarizado no es un porcentaje de aciertos."),
+            ("Estar exactamente en el promedio de quienes rindieron",
+             "El promedio corresponde a 500 puntos."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "En una distribución binomial con n = 10 y p = 0,5, ¿cuál es el número "
+        "de éxitos más probable?",
+        "5",
+        "Con p = 0,5 la distribución es simétrica y su máximo está al "
+        "centro.\n\n"
+        "1) El valor esperado es 10 · 0,5 = 5.\n"
+        "2) La simetría de la distribución ubica el valor más probable en ese "
+        "mismo punto.\n"
+        "3) Por lo tanto lo más probable es obtener 5 éxitos.\n\n"
+        "Aun así, la probabilidad de obtener exactamente 5 es de solo un 24,6%: "
+        "lo más probable no es lo habitual.",
+        [
+            ("10",
+             "Obtener los diez éxitos es el caso más improbable junto con obtener cero."),
+            ("0,5",
+             "Es la probabilidad de éxito individual, no una cantidad de éxitos."),
+            ("1",
+             "Con p = 0,5 los valores extremos son los menos probables."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "dificil",
+        "En un experimento binomial con n = 5 y p = 0,2, ¿cuál es la "
+        "probabilidad de obtener exactamente 2 éxitos?",
+        "0,2048",
+        "Se aplica la fórmula binomial completa.\n\n"
+        "1) La combinatoria C(5, 2) vale 10.\n"
+        "2) La parte de probabilidades es 0,2² · 0,8³ = 0,04 · 0,512 = "
+        "0,02048.\n"
+        "3) El resultado es 10 · 0,02048 = 0,2048.\n\n"
+        "El factor combinatorio es decisivo: sin él la respuesta sería diez "
+        "veces menor.",
+        [
+            ("0,02048",
+             "Cuenta un solo orden y olvida el factor combinatorio 10."),
+            ("0,04",
+             "Es solo la parte 0,2², sin los fracasos ni la combinatoria."),
+            ("0,4096",
+             "Duplica el resultado, como si la combinatoria valiera 20."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "dificil",
+        "Se lanza una moneda 4 veces. ¿Cuál es la probabilidad de obtener al "
+        "menos 3 caras?",
+        "5/16",
+        "Se suman los casos de 3 y de 4 caras.\n\n"
+        "1) Con exactamente 3 caras hay C(4, 3) = 4 secuencias.\n"
+        "2) Con 4 caras hay una sola.\n"
+        "3) En total 5 secuencias favorables de 16 posibles: 5/16.\n\n"
+        "«Al menos 3» incluye también el 4: olvidarlo es el error más "
+        "frecuente.",
+        [
+            ("4/16",
+             "Cuenta solo el caso de exactamente 3 caras."),
+            ("1/16",
+             "Cuenta solo el caso de 4 caras."),
+            ("11/16",
+             "Es el complemento, es decir, la probabilidad de obtener a lo más 2 caras."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "dificil",
+        "Un tratamiento funciona en el 60% de los casos. Si se aplica a 3 "
+        "pacientes de forma independiente, ¿cuál es la probabilidad de que "
+        "funcione en exactamente 2?",
+        "0,432",
+        "Se aplica la fórmula binomial.\n\n"
+        "1) La combinatoria C(3, 2) vale 3.\n"
+        "2) La parte de probabilidades es 0,6² · 0,4 = 0,36 · 0,4 = 0,144.\n"
+        "3) El resultado es 3 · 0,144 = 0,432.\n\n"
+        "Es el caso más probable de los cuatro posibles: supera incluso al de "
+        "los tres éxitos, que vale 0,216.",
+        [
+            ("0,144",
+             "Cuenta un solo orden y olvida el factor combinatorio 3."),
+            ("0,216",
+             "Es la probabilidad de que funcione en los tres pacientes."),
+            ("0,36",
+             "Es solo la parte 0,6², sin el fracaso ni la combinatoria."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "dificil",
+        "En una distribución normal de media 160 cm y desviación estándar "
+        "8 cm, ¿qué estatura deja bajo ella aproximadamente al 84% de las "
+        "personas?",
+        "168 cm",
+        "Se combinan la mitad de la curva con la mitad del intervalo "
+        "central.\n\n"
+        "1) Bajo la media queda el 50%.\n"
+        "2) Entre la media y una desviación sobre ella queda cerca del 34%.\n"
+        "3) Sumando, bajo 160 + 8 = 168 cm queda cerca del 84%.\n\n"
+        "El razonamiento inverso también sirve: bajo 152 cm queda cerca del "
+        "16%.",
+        [
+            ("152 cm",
+             "Bajo ese valor queda cerca del 16%, no del 84%."),
+            ("176 cm",
+             "Bajo ese valor queda cerca del 97,5%: son dos desviaciones sobre la media."),
+            ("160 cm",
+             "Bajo la media queda el 50% de las personas."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "dificil",
+        "Un estudiante afirma que al lanzar una moneda 10 veces siempre salen "
+        "5 caras, porque ese es el valor esperado. ¿Es correcta su afirmación?",
+        "No: 5 es solo el resultado más probable, con cerca de un 25% de ocurrir",
+        "El valor esperado es un promedio, no una garantía.\n\n"
+        "1) La probabilidad de obtener exactamente 5 caras es C(10, 5) dividido "
+        "por 2¹⁰, es decir, 252/1.024.\n"
+        "2) Ese valor es cerca de 0,246: apenas una de cada cuatro veces.\n"
+        "3) En las otras tres de cada cuatro se obtiene una cantidad "
+        "distinta.\n\n"
+        "El valor esperado describe el promedio de muchas repeticiones, no el "
+        "resultado de una sola.",
+        [
+            ("Sí: el valor esperado indica lo que ocurre en cada experimento",
+             "Indica el promedio a la larga, no el resultado de una repetición."),
+            ("No: obtener 5 caras es imposible con una moneda equilibrada",
+             "Es perfectamente posible, y de hecho es el resultado más probable."),
+            ("Sí, siempre que la moneda esté bien equilibrada y no tenga defectos",
+             "Aun con una moneda perfecta, el resultado varía de una tanda a otra."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "dificil",
+        "En un experimento binomial con n = 4 y p = 0,25, ¿cuál es la "
+        "probabilidad de obtener al menos un éxito?",
+        "0,6836 aproximadamente",
+        "Conviene usar el complemento.\n\n"
+        "1) Cada repetición fracasa con probabilidad 0,75.\n"
+        "2) Que las cuatro fracasen tiene probabilidad 0,75⁴ = 0,3164 "
+        "aproximadamente.\n"
+        "3) «Al menos un éxito» es el complemento: 1 − 0,3164 = 0,6836 "
+        "aproximadamente.\n\n"
+        "Sumar 0,25 cuatro veces daría exactamente 1, lo que revela de "
+        "inmediato que ese camino es incorrecto.",
+        [
+            ("0,3164 aproximadamente",
+             "Es la probabilidad de no obtener ningún éxito, es decir, el complemento."),
+            ("1 exactamente",
+             "Sale de sumar 0,25 cuatro veces, contando de más los casos repetidos."),
+            ("0,25 exactamente",
+             "Es la probabilidad de éxito en una sola repetición."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "dificil",
+        "Dos experimentos binomiales tienen n = 20. En el primero p = 0,1 y en "
+        "el segundo p = 0,9. ¿Qué relación hay entre sus desviaciones "
+        "estándar?",
+        "Son iguales",
+        "La varianza depende del producto p · (1 − p).\n\n"
+        "1) En el primero: 0,1 · 0,9 = 0,09.\n"
+        "2) En el segundo: 0,9 · 0,1 = 0,09.\n"
+        "3) Los productos coinciden, así que ambas varianzas valen 20 · 0,09 = "
+        "1,8 y las desviaciones también coinciden.\n\n"
+        "El producto p · (1 − p) es simétrico respecto de 0,5: es máximo ahí y "
+        "toma el mismo valor en p y en 1 − p.",
+        [
+            ("La del segundo es nueve veces mayor",
+             "El producto p · (1 − p) es el mismo en ambos casos."),
+            ("La del segundo es tres veces mayor",
+             "Las dos desviaciones coinciden exactamente."),
+            ("No se pueden comparar sin conocer el número esperado de éxitos",
+             "El número esperado difiere, pero la dispersión depende solo de n y del producto p · q."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "dificil",
+        "En una distribución normal de media 40 y desviación estándar 5, un "
+        "dato tiene puntaje estandarizado −2. ¿Cuál es el dato?",
+        "30",
+        "Se despeja el dato de la fórmula del puntaje.\n\n"
+        "1) La fórmula es z = (dato − media) / desviación.\n"
+        "2) Reemplazando: −2 = (x − 40) / 5, así que x − 40 = −10.\n"
+        "3) Despejando: x = 30.\n\n"
+        "El signo negativo indicaba desde el principio que el dato estaba bajo "
+        "la media.",
+        [
+            ("50",
+             "Ignora el signo negativo y suma en vez de restar."),
+            ("38",
+             "Resta el puntaje estandarizado directamente, sin multiplicarlo por la desviación."),
+            ("35",
+             "Corresponde a un puntaje estandarizado de −1, no de −2."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "dificil",
+        "Se lanza una moneda 6 veces. ¿Cuál es la probabilidad de obtener "
+        "exactamente 3 caras?",
+        "5/16",
+        "Se cuentan las secuencias favorables entre las posibles.\n\n"
+        "1) El total de secuencias es 2⁶ = 64.\n"
+        "2) Las que tienen exactamente tres caras son C(6, 3) = 20.\n"
+        "3) La probabilidad es 20/64 = 5/16, cerca de 0,31.\n\n"
+        "Aunque tres caras sea el resultado más probable, ocurre en menos de un "
+        "tercio de las tandas.",
+        [
+            ("1/2",
+             "Confunde la probabilidad de cara con la de obtener la mitad de caras."),
+            ("1/64",
+             "Es la probabilidad de una secuencia específica, sin contar las 20 posibles."),
+            ("3/6",
+             "Toma la razón entre caras y lanzamientos, que no es una probabilidad binomial."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "dificil",
+        "¿Para qué valor de p es máxima la varianza de una distribución "
+        "binomial con n fijo?",
+        "p = 0,5",
+        "La varianza depende del producto p · (1 − p).\n\n"
+        "1) Ese producto es una parábola invertida en función de p.\n"
+        "2) Su máximo está en el punto medio del intervalo entre 0 y 1.\n"
+        "3) Ese punto es p = 0,5, donde el producto vale 0,25.\n\n"
+        "Tiene sentido: cuando el éxito y el fracaso son igual de probables, el "
+        "resultado es lo más impredecible posible.",
+        [
+            ("p = 1",
+             "Ahí el producto vale 0 y la varianza se anula: el resultado es seguro."),
+            ("p = 0",
+             "Ahí el producto también vale 0 y la varianza se anula."),
+            ("p = 0,25",
+             "El producto vale 0,1875, menos que en p = 0,5."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "dificil",
+        "Se afirma: «Si n es grande, la distribución binomial se puede "
+        "aproximar por una normal». ¿Cuándo es razonable esa aproximación?",
+        "Cuando n · p y n · (1 − p) son ambos suficientemente grandes",
+        "La aproximación exige que la distribución no quede pegada a un "
+        "extremo.\n\n"
+        "1) Con n grande pero p muy pequeño, casi toda la probabilidad se "
+        "concentra en cero éxitos y la forma no es acampanada.\n"
+        "2) Lo mismo ocurre con p muy cercano a 1, en el otro extremo.\n"
+        "3) La regla práctica pide que tanto n · p como n · (1 − p) superen un "
+        "valor mínimo, habitualmente 10.\n\n"
+        "Cuando eso se cumple, la binomial toma la forma de campana y la "
+        "aproximación funciona bien.",
+        [
+            ("Siempre que n supere 30, sea cual sea el valor de p",
+             "Con p muy extremo la distribución no llega a tomar forma de campana."),
+            ("Solo cuando p vale exactamente 0,5",
+             "Con p = 0,5 la aproximación es mejor, pero no es el único caso en que sirve."),
+            ("Cuando la varianza n · p · (1 − p) es menor que 1",
+             "Una varianza tan pequeña indica lo contrario: la distribución está concentrada."),
+        ],
+    ),
+]
+
+
+QUESTIONS += [
+    _q(
+        "prob_binomial", "dificil",
+        "En un control de calidad se revisan 5 productos y se sabe que el 20% "
+        "sale defectuoso. ¿Cuál es la probabilidad de que a lo más uno sea "
+        "defectuoso?",
+        "0,7373 aproximadamente",
+        "Se suman los casos de cero y de un defectuoso.\n\n"
+        "1) Ninguno defectuoso: 0,8⁵ = 0,32768.\n"
+        "2) Exactamente uno: C(5, 1) · 0,2 · 0,8⁴ = 5 · 0,2 · 0,4096 = "
+        "0,4096.\n"
+        "3) La suma es 0,32768 + 0,4096 = 0,73728, cerca de 0,7373.\n\n"
+        "«A lo más uno» abarca dos casos: quedarse solo con uno de ellos deja "
+        "la respuesta a la mitad.",
+        [
+            ("0,4096 aproximadamente",
+             "Cuenta solo el caso de exactamente un defectuoso."),
+            ("0,3277 aproximadamente",
+             "Cuenta solo el caso de ningún defectuoso."),
+            ("0,2627 aproximadamente",
+             "Es el complemento: la probabilidad de que haya dos o más defectuosos."),
+        ],
+    ),
+]

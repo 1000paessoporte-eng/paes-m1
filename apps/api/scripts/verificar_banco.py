@@ -60,6 +60,7 @@ EXCEPCIONES_DIFICULTAD = {
     "se llega a 0 = 0": "una identidad obliga a concluir infinitas soluciones; la gemela con 0 = 7 es una contradiccion directa",
     "valor de sen(30°)": "exige recordar el triangulo de 30-60-90; las gemelas se leen directo sobre un eje",
     "valor de cos(120°)": "hay que reducir al angulo de referencia y decidir el signo del cuadrante; las gemelas estan sobre un eje",
+    "obtener exactamente 3 caras": "con seis lanzamientos la combinatoria C(6,3) ya no se enumera a mano; las gemelas se cuentan de cabeza",
     "valor aproximado de log 300": "hay que separar 300 en 3 por 100 y sumar dos logaritmos; la gemela aplica una sola propiedad",
     "x² + 12x + 36": "raíz doble: una única solución, no dos",
     "x² − 10x + 25": "raíz doble: una única solución, no dos",
@@ -684,8 +685,8 @@ COMPROBACIONES: dict[str, str] = {
     "letras de la palabra CASA": str(factorial(4) // factorial(2)),
     "4 personas en una fila": str(factorial(3) * factorial(2)),
     "5 hombres y 4 mujeres": str(comb(5, 2) * comb(4, 1)),
-    "moneda 4 veces": str(2**4),
-    "moneda 3 veces": str(Fraction(3, 8)),
+    "moneda 4 veces. ¿Cuántos resultados posibles": str(2**4),
+    "moneda 3 veces. ¿Cuál es la probabilidad de obtener exactamente 2 caras": str(Fraction(3, 8)),
     "5 intentos y probabilidad de éxito 0,2": str(int(5 * 0.2)),
     "4 veces con probabilidad de éxito 0,5": str(comb(4, 3) * 0.5**4).replace(".", ","),
     # --- reglas de las probabilidades: segunda tanda ---
