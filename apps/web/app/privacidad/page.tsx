@@ -65,7 +65,24 @@ export default function PrivacidadPage() {
                 Un proveedor de correo, únicamente para enviarte el enlace de
                 recuperación de contraseña cuando lo solicitas.
               </li>
+              <li>
+                Flow, la pasarela de pago, si contratas un plan. El pago ocurre
+                en su plataforma: 1000paes nunca recibe ni guarda los datos de
+                tu tarjeta.
+              </li>
             </ul>
+            <p>
+              No vendemos tus datos, no los cedemos con fines publicitarios ni
+              los usamos para entrenar modelos de inteligencia artificial.
+            </p>
+            <p>
+              <strong>Dónde se alojan.</strong> El sitio y la base de datos
+              funcionan sobre proveedores de infraestructura cuyos servidores
+              están fuera de Chile. Eso implica una transferencia internacional
+              de tus datos, que hacemos solo con los proveedores necesarios para
+              que la plataforma funcione y bajo sus compromisos contractuales de
+              seguridad y confidencialidad.
+            </p>
           </section>
 
           <section>
@@ -77,6 +94,22 @@ export default function PrivacidadPage() {
               la autorización correspondiente de los apoderados. Solo
               recogemos los datos mínimos necesarios para operar el árbol de
               habilidades y los ensayos de cada estudiante.
+            </p>
+            <p>
+              Buena parte de quienes preparan la PAES son menores de 18 años y
+              se registran por su cuenta. Si es tu caso,{" "}
+              <strong>
+                necesitas la autorización de tu madre, padre o apoderado
+              </strong>{" "}
+              para crear la cuenta, y en ningún caso te pedimos más datos de los
+              necesarios para estudiar: nunca RUT, dirección, teléfono ni datos
+              de salud.
+            </p>
+            <p>
+              <strong>Si eres madre, padre o apoderado</strong> y quieres saber
+              qué datos tenemos de tu hijo o hija, corregirlos o eliminarlos,
+              escríbenos y lo resolvemos sin trámites. Lo mismo si detectas una
+              cuenta o un cobro que no autorizaste.
             </p>
           </section>
 
@@ -119,6 +152,22 @@ export default function PrivacidadPage() {
                 1000paessoporte@gmail.com
               </a>
               .
+            </p>
+            <p>
+              La ley chilena te reconoce los derechos de{" "}
+              <strong>
+                acceso, rectificación, cancelación y oposición
+              </strong>{" "}
+              sobre tus datos personales, además de pedir que te los entreguemos
+              en un formato que puedas llevarte. Ejercerlos es gratuito y{" "}
+              <strong>respondemos dentro de 5 días hábiles</strong>. Si no
+              quedas conforme con nuestra respuesta, puedes reclamar ante la
+              autoridad de protección de datos que corresponda.
+            </p>
+            <p>
+              Si alguna vez ocurriera una brecha de seguridad que afecte tus
+              datos, te avisaremos por correo apenas la detectemos, contándote
+              qué pasó y qué hacer.
             </p>
           </section>
 

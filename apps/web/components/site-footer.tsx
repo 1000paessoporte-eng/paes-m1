@@ -116,6 +116,11 @@ export function SiteFooter() {
                   Política de privacidad
                 </Link>
               </li>
+              <li>
+                <Link href="/legal" className="-my-1.5 inline-block py-2 hover:text-foreground hover:underline">
+                  Información legal
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -173,7 +178,12 @@ export function SiteFooter() {
           <p className="mt-2">
             Todas las preguntas de la plataforma son de elaboración propia de
             1000paes. Se ajustan al temario, al formato y al nivel que el DEMRE
-            publica, y no reproducen preguntas de pruebas oficiales.
+            publica, y no reproducen preguntas de pruebas oficiales. El detalle
+            está en la{" "}
+            <Link href="/legal" className="hover:text-foreground hover:underline">
+              información legal
+            </Link>
+            .
           </p>
           {EMAIL_CONTACTO && (
             <p className="mt-2">

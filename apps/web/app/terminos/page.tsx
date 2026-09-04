@@ -47,6 +47,18 @@ export default function TerminosPage() {
               mantener tu contraseña en privado y de todo lo que ocurra bajo
               tu cuenta. Avísanos si sospechas que alguien más accedió a ella.
             </p>
+            <p>
+              <strong>Si eres menor de 18 años</strong> puedes usar la parte
+              gratuita de 1000paes, pero necesitas la autorización de tu madre,
+              padre o apoderado, y{" "}
+              <strong>
+                cualquier contratación de un plan de pago debe hacerla esa
+                persona adulta o contar con su autorización expresa
+              </strong>
+              . Si un apoderado detecta un cobro que no autorizó, basta con que
+              nos escriba: cancelamos el plan y devolvemos lo cobrado, sin
+              exigirle explicaciones ni trámites.
+            </p>
           </section>
 
           <section>
@@ -96,9 +108,26 @@ export default function TerminosPage() {
               a <a href="mailto:1000paessoporte@gmail.com" className="underline">1000paessoporte@gmail.com</a>.
             </p>
             <p>
+              <strong>El plan Pro se renueva automáticamente</strong> al final
+              de cada período —mensual o anual— por el mismo valor, hasta que lo
+              canceles. Te avisamos por correo antes de cada cobro anual y antes
+              del primer cobro que siga a un período de prueba gratuito. Si
+              contrataste una prueba gratuita, al terminar se cobra el plan
+              salvo que canceles antes; puedes hacerlo durante la prueba y
+              conservas el acceso hasta que termine.
+            </p>
+            <p>
+              <strong>Derecho a retracto.</strong> Como la contratación es por
+              medios electrónicos, tienes{" "}
+              <strong>10 días corridos desde el pago</strong> para arrepentirte
+              y pedir la devolución íntegra, sin dar explicaciones. Escríbenos y
+              lo hacemos. Este plazo se suma a la cancelación normal, que puedes
+              hacer cuando quieras desde tu perfil.
+            </p>
+            <p>
               No se realizan cobros sin tu consentimiento explícito. Si
               cambiamos los precios, el cambio no afecta a un período que ya
-              pagaste.
+              pagaste, y te avisaremos antes de que rija para el siguiente.
             </p>
           </section>
 
@@ -109,6 +138,23 @@ export default function TerminosPage() {
               plataforma son propiedad de 1000paes o de sus licenciantes. Puedes
               usarlos para tu preparación personal, pero no reproducirlos ni
               distribuirlos fuera de la plataforma sin autorización.
+            </p>
+            <p>
+              La plataforma también muestra{" "}
+              <strong>información pública de terceros</strong> —el temario, las
+              tablas de transformación de puntaje y la oferta de carreras con
+              sus vacantes y ponderaciones—, que se identifica como tal y se
+              enlaza a su publicación oficial. Esa información no es de
+              1000paes.
+            </p>
+            <p>
+              El detalle de qué usamos de fuentes oficiales, qué no usamos y
+              cómo lo comprobamos está en la{" "}
+              <Link href="/legal" className="text-accent hover:underline">
+                sección legal
+              </Link>
+              , junto con el canal para reclamar si crees que algún contenido
+              infringe un derecho tuyo.
             </p>
           </section>
 
