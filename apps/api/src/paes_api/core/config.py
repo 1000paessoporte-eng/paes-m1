@@ -1,6 +1,6 @@
 from functools import lru_cache
 
-from pydantic import field_validator
+from pydantic import field_validator, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -8,11 +8,34 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
     environment: str = "development"
+    #: Firma los JWT de sesion. El valor por defecto sirve para desarrollo y
+    #: NO puede llegar a produccion: quien lo conozca puede firmar un token de
+    #: cualquier usuario, incluido uno con is_admin. Lo protege el validador de
+    #: mas abajo, que revienta al arrancar en vez de servir con la puerta
+    #: abierta. Hoy la variable esta bien puesta en Vercel; esto es para el dia
+    #: que alguien levante otro entorno y se le olvide.
     secret_key: str = "change-me"
     #: Client ID de la app de Google (OAuth 2.0). Vacío desactiva el login con
     #: Google: la API rechaza /auth/google y la web no muestra el botón.
     google_client_id: str = ""
     database_url: str = "postgresql+psycopg://paes:paes@localhost:5432/paes_m1"
+
+    @model_validator(mode="after")
+    def _clave_de_produccion(self):
+        """En produccion, la clave de firma tiene que ser de verdad.
+
+        Fallar al arrancar es incomodo; servir con una clave publica es que
+        cualquiera entre como cualquiera. De las dos, esta es la buena.
+        """
+        insegura = self.secret_key == "change-me" or len(self.secret_key) < 32
+        if self.environment.lower() == "production" and insegura:
+            raise ValueError(
+                "SECRET_KEY no esta configurada (o es demasiado corta) y "
+                "environment=production. Con la clave por defecto, cualquiera "
+                "puede firmar un token de cualquier usuario. Ponla en las "
+                "variables de entorno antes de desplegar."
+            )
+        return self
 
     @field_validator("database_url")
     @classmethod

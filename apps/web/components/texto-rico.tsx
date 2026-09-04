@@ -17,7 +17,17 @@ import { DESCRIPCION_FIGURA } from "@/lib/figuras";
  */
 
 function escaparHtml(s: string): string {
-  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  // Las comillas también. Antes solo se escapaban & < >, que basta para texto
+  // suelto pero NO dentro de un atributo: `alt="..."` se cierra con una comilla
+  // y a partir de ahí se pueden agregar atributos, `onerror` incluido. La
+  // figura de una lección usa este escape en atributos, así que la diferencia
+  // dejó de ser teórica.
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 /**

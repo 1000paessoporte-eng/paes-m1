@@ -70,6 +70,53 @@ const nextConfig: NextConfig = {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=(), payment=()",
           },
+          // ── Content-Security-Policy ──────────────────────────────────
+          //
+          // Es la cabecera que más importa acá, y la razón es concreta: el
+          // token de sesión vive en una cookie que SÍ puede leer JavaScript
+          // (decisión consciente, ver apps/api/src/paes_api/core/security.py).
+          // Con eso, un XSS no es "sale un alert": es la sesión del estudiante
+          // en manos de otro.
+          //
+          // La pieza clave contra eso es `connect-src 'self'`: aunque alguien
+          // lograra inyectar código y leer el token, el navegador no lo deja
+          // mandarlo a ningún servidor que no sea el nuestro. Sin salida, el
+          // robo no se completa.
+          //
+          // `script-src` lleva 'unsafe-inline' porque Next inyecta scripts en
+          // línea para hidratar y el tema se aplica con uno antes de pintar.
+          // Quitarlo pide nonces por petición, y eso es incompatible con las
+          // páginas prerenderizadas, que acá son casi todas. Aun así el resto
+          // de directivas sostienen lo importante.
+          {
+            key: "Content-Security-Policy",
+            value: [
+              "default-src 'self'",
+              // Sin esto, inyectar <base> secuestra TODAS las rutas relativas.
+              "base-uri 'self'",
+              // Nada de Flash, applets ni embeds: vía clásica de ejecución.
+              "object-src 'none'",
+              // Un formulario inyectado no puede mandar datos fuera. El pago
+              // no se rompe: Flow se abre navegando, no enviando un form.
+              "form-action 'self'",
+              // Lo mismo que X-Frame-Options, para navegadores que ya solo
+              // miran la CSP.
+              "frame-ancestors 'none'",
+              "img-src 'self' data: blob:",
+              // next/font descarga las tipografías en el build y las sirve
+              // desde el propio dominio: no hace falta abrir Google Fonts.
+              "font-src 'self' data:",
+              "style-src 'self' 'unsafe-inline'",
+              // Analytics y Speed Insights de Vercel se sirven desde el mismo
+              // dominio (/_vercel/...), así que 'self' los cubre.
+              "script-src 'self' 'unsafe-inline' https://accounts.google.com",
+              "connect-src 'self' https://accounts.google.com",
+              // El login con Google todavía está apagado, pero la directiva ya
+              // lo contempla: si se enciende y esto no está, falla en silencio.
+              "frame-src https://accounts.google.com",
+              "upgrade-insecure-requests",
+            ].join("; "),
+          },
         ],
       },
     ];

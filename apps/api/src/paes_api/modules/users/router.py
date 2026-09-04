@@ -80,7 +80,16 @@ def auth_config() -> AuthConfigOut:
 
 
 @router.post("/google", response_model=TokenOut)
-def login_with_google(payload: GoogleLoginIn, db: Session = Depends(get_db)) -> TokenOut:
+# Mismo trato que /login: es una puerta de entrada mas, y quedaba sin freno.
+@limiter.limit("5/minute")
+def login_with_google(
+    # `request` no se usa en el cuerpo: lo exige slowapi para poder contar por
+    # IP. Sin el parametro, el decorador revienta al importar el modulo y se
+    # cae la API entera al arrancar.
+    request: Request,
+    payload: GoogleLoginIn,
+    db: Session = Depends(get_db),
+) -> TokenOut:
     try:
         user = service.login_with_google(
             db, payload.credential, get_settings().google_client_id
