@@ -57,6 +57,7 @@ DIFICULTADES = {"facil", "medio", "dificil"}
 # gemelas pueden llevar dificultades distintas. Cada fragmento identifica a la
 # pregunta que rompe la simetría, y va con el motivo por el que la rompe.
 EXCEPCIONES_DIFICULTAD = {
+    "valor aproximado de log 300": "hay que separar 300 en 3 por 100 y sumar dos logaritmos; la gemela aplica una sola propiedad",
     "x² + 12x + 36": "raíz doble: una única solución, no dos",
     "x² − 10x + 25": "raíz doble: una única solución, no dos",
     "2x + 3y = 17": "hay que amplificar las dos ecuaciones; la gemela se reduce directo",
@@ -1331,7 +1332,7 @@ COMPROBACIONES: dict[str, str] = {
     "log 100 + log 1.000": str(2 + 3),
     "log x = 3": f"{10**3:,}".replace(",", "."),
     "log₃ 81 − log₃ 9": str(4 - 2),
-    "log₅ 1": "0",
+    "el valor de log₅ 1?": "0",
     "¿cuál es el valor de f(−1)?": str((-1) ** 5),
     "f(x) = 2x⁴": str(2 * 2**4),
     "f(x) = ax³ y f(2) = 24": str(24 // 2**3),
@@ -1374,7 +1375,7 @@ COMPROBACIONES: dict[str, str] = {
     "log 10.000": str(4 if 10**4 == 10000 else None),
     "Si log x = 2": str(10**2),
     "log₃ 9 + log₂ 8": str(2 + 3),
-    "log 2 ≈ 0,301": f"{3 * 0.301:.3f}".replace(".", ","),
+    "Si log 2 ≈ 0,301, ¿cuál es el valor aproximado de log 8": f"{3 * 0.301:.3f}".replace(".", ","),
     # Con base 5 el enunciado contendría "log₅ 125", que arrastra el fragmento
     # "log₅ 1" de otra comprobación y lo dejaría calzando con dos preguntas.
     "log₂ 128 − log₂ 8": str(7 - 3),
@@ -1809,7 +1810,7 @@ COMPROBACIONES: dict[str, str] = {
     "se les sube la nota en 0,5 puntos": f"{5.0 + 0.5:.1f}".replace(".", ","),
     "de 30 estudiantes tiene promedio 5,0 y otro de 20": f"{(30 * 5 + 20 * 6) / 50:.1f}".replace(".", ","),
     "valor de |−7| + |3 − 8|": str(abs(-7) + abs(3 - 8)),
-    "interés simple del 2% mensual": f"${int(100000 * 0.02 * 3):,}".replace(",", "."),
+    "Si depositas $100.000, ¿cuánto interés ganas en 3 meses": f"${int(100000 * 0.02 * 3):,}".replace(",", "."),
     "crédito de consumo de $500.000": f"${int(500000 * (1 + 0.03 * 4)):,}".replace(",", "."),
     "valor de log₂(8)": str(int(log2(8))),
     "log(2) ≈ 0,301 y log(3) ≈ 0,477": f"{0.301 + 0.477:.3f}".replace(".", ","),

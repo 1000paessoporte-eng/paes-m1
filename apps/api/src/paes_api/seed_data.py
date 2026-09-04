@@ -118653,3 +118653,2711 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Numeros: el conjunto de los numeros reales
+#
+# El temario de Admision 2027 pide "operaciones en el conjunto de los numeros
+# reales" y "problemas que involucren el conjunto de los numeros reales en
+# diversos contextos". El nodo tenia 16 preguntas: se agotaba en una sesion.
+#
+# Se cubren orden y densidad, radicales y su simplificacion, racionalizacion,
+# valor absoluto, intervalos y aproximacion, siempre con la aritmetica exacta
+# antes que la calculadora, que es como la prueba las plantea.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "num_reales", "facil",
+        "¿Cuál de los siguientes números NO es racional?",
+        "√11",
+        "Un número es racional si se puede escribir como una fracción de "
+        "enteros.\n\n"
+        "1) 0,75 es 3/4 y −5 es −5/1: los dos son racionales.\n"
+        "2) √49 vale 7, que también es entero.\n"
+        "3) 11 no es un cuadrado perfecto, así que √11 tiene desarrollo decimal "
+        "infinito y no periódico: es irracional.\n\n"
+        "La raíz de un entero es racional solo cuando ese entero es un cuadrado "
+        "perfecto.",
+        [
+            ("√49",
+             "Vale exactamente 7, así que es entero y por lo tanto racional."),
+            ("0,75",
+             "Tiene desarrollo decimal finito, y todo decimal finito es una fracción."),
+            ("−5, porque los números negativos quedan fuera de los racionales",
+             "Los enteros negativos son racionales: −5 se escribe como −5/1."),
+        ],
+    ),
+    _q(
+        "num_reales", "facil",
+        "¿Cuál es el valor de √98 en su forma más simple?",
+        "7√2",
+        "Se busca el mayor cuadrado perfecto que divida al radicando.\n\n"
+        "1) 98 se descompone como 49 · 2.\n"
+        "2) La raíz de un producto es el producto de las raíces: √49 · √2.\n"
+        "3) √49 = 7, así que el resultado es 7√2.\n\n"
+        "Solo salen de la raíz los factores que son cuadrados perfectos: el 2 se "
+        "queda adentro.",
+        [
+            ("49√2",
+             "Saca el 49 sin extraerle la raíz: lo que sale es 7, no 49."),
+            ("2√49",
+             "Deja adentro el cuadrado perfecto y saca el factor que no lo es."),
+            ("√49 + √2, separando la suma de los dos factores del radicando",
+             "98 es un PRODUCTO, no una suma: la raíz no se reparte sobre sumas."),
+        ],
+    ),
+    _q(
+        "num_reales", "facil",
+        "¿Entre qué dos enteros consecutivos se encuentra √30?",
+        "Entre 5 y 6",
+        "Se acota el radicando entre dos cuadrados perfectos.\n\n"
+        "1) 25 es menor que 30 y 36 es mayor que 30.\n"
+        "2) Como la raíz conserva el orden, √25 < √30 < √36.\n"
+        "3) Es decir, 5 < √30 < 6.\n\n"
+        "El valor está más cerca de 5 que de 6, porque 30 está más cerca de 25 "
+        "que de 36.",
+        [
+            ("Entre 4 y 5",
+             "5² = 25 ya es menor que 30, así que la raíz supera a 5."),
+            ("Entre 6 y 7",
+             "6² = 36 supera a 30, así que la raíz queda por debajo de 6."),
+            ("Entre 14 y 15, que son los enteros cercanos a la mitad de 30",
+             "La mitad del radicando no tiene relación con su raíz cuadrada."),
+        ],
+    ),
+    _q(
+        "num_reales", "facil",
+        "¿Cuál es el valor de |−12| + |−3|?",
+        "15",
+        "El valor absoluto entrega la distancia al cero, siempre positiva.\n\n"
+        "1) |−12| = 12.\n"
+        "2) |−3| = 3.\n"
+        "3) La suma es 12 + 3 = 15.\n\n"
+        "El valor absoluto se aplica a cada término ANTES de sumar: por eso los "
+        "dos signos negativos desaparecen.",
+        [
+            ("−15",
+             "Conserva el signo negativo, que es justamente lo que el valor absoluto elimina."),
+            ("9",
+             "Resta en vez de sumar, como si uno de los dos siguiera siendo negativo."),
+            ("−9, sumando los dos números tal como vienen y sin aplicar el valor absoluto",
+             "Sin valor absoluto sería −15, no −9; y el ejercicio pide aplicarlo."),
+        ],
+    ),
+    _q(
+        "num_reales", "facil",
+        "¿Qué conjunto describe la expresión [3, 8[?",
+        "Los reales entre 3 y 8, con el 3 incluido",
+        "El corchete que abraza al número lo incluye; el que le da la espalda lo "
+        "excluye.\n\n"
+        "1) El corchete inicial abre hacia el interior, así que el 3 pertenece al "
+        "intervalo.\n"
+        "2) El corchete final abre hacia afuera, así que el 8 queda excluido.\n"
+        "3) El conjunto son todos los reales x tales que 3 ≤ x < 8.\n\n"
+        "El intervalo contiene infinitos números, no solo los enteros: 3,5 y "
+        "√50 también están dentro.",
+        [
+            ("Los reales entre 3 y 8, con el 8 incluido",
+             "Es al revés: el corchete final está invertido, así que el 8 queda fuera."),
+            ("Los enteros 3, 4, 5, 6 y 7 únicamente",
+             "Un intervalo real contiene infinitos números, no solo los enteros."),
+            ("Los reales entre 3 y 8, con ambos extremos incluidos",
+             "Ambos extremos entrarían si la notación fuera [3, 8]."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "¿Cuál es el resultado de racionalizar 8/√2?",
+        "4√2",
+        "Racionalizar es dejar la raíz fuera del denominador.\n\n"
+        "1) Se amplifica la fracción por √2: (8 · √2)/(√2 · √2).\n"
+        "2) El denominador queda √2 · √2 = 2.\n"
+        "3) La fracción es 8√2/2 = 4√2.\n\n"
+        "Multiplicar arriba y abajo por lo mismo no cambia el valor: solo cambia "
+        "cómo se escribe.",
+        [
+            ("8√2",
+             "Amplifica el numerador pero olvida que el denominador queda en 2."),
+            ("4",
+             "Simplifica el 8 con el 2 pero pierde el √2 del numerador."),
+            ("√8, escribiendo el numerador dentro de la misma raíz del denominador",
+             "8/√2 no equivale a √8: √8 vale 2√2 y el resultado correcto es 4√2."),
+        ],
+    ),
+    _q(
+        "num_reales", "facil",
+        "¿Cuál es el valor de (√3)⁴?",
+        "9",
+        "Una potencia de una raíz se resuelve por partes.\n\n"
+        "1) (√3)⁴ es (√3)² elevado al cuadrado.\n"
+        "2) (√3)² = 3.\n"
+        "3) Entonces el resultado es 3² = 9.\n\n"
+        "También se puede ver como 3 elevado a 4/2, que es 3² = 9.",
+        [
+            ("81",
+             "Eleva el 3 a la cuarta sin considerar que estaba bajo una raíz."),
+            ("12",
+             "Multiplica la base por el exponente en vez de elevarla."),
+            ("3√3, dejando dos factores fuera de la raíz y uno adentro",
+             "Ese valor corresponde a (√3)³, no a la cuarta potencia."),
+        ],
+    ),
+    _q(
+        "num_reales", "facil",
+        "Entre dos números reales distintos, ¿cuántos números reales hay?",
+        "Infinitos",
+        "Esa propiedad se llama densidad de los reales.\n\n"
+        "1) Dados dos reales distintos, su promedio siempre queda entre ambos.\n"
+        "2) Ese promedio es un real nuevo, y se puede repetir el procedimiento "
+        "con él y cualquiera de los extremos.\n"
+        "3) Como el proceso no termina nunca, entre dos reales hay infinitos "
+        "reales.\n\n"
+        "Los enteros no tienen esa propiedad: entre 3 y 4 no hay ningún entero.",
+        [
+            ("Ninguno, si son consecutivos",
+             "Los reales no tienen consecutivos: entre dos cualesquiera siempre hay otro."),
+            ("Solo los enteros que queden entre ellos",
+             "Además de los enteros hay infinitos decimales e irracionales."),
+            ("Depende de qué tan lejos estén uno del otro",
+             "La cantidad es infinita por cerca que estén: incluso entre 0 y 0,001."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "¿Cuál es el valor de √50 − √18?",
+        "2√2",
+        "Solo se pueden restar radicales que tengan el mismo radicando.\n\n"
+        "1) √50 = √(25 · 2) = 5√2.\n"
+        "2) √18 = √(9 · 2) = 3√2.\n"
+        "3) Ahora los dos tienen √2, así que se restan los coeficientes: "
+        "5√2 − 3√2 = 2√2.\n\n"
+        "Simplificar primero es lo que vuelve semejantes dos radicales que no "
+        "lo parecían.",
+        [
+            ("√32",
+             "Resta los radicandos: 50 − 18. La raíz no funciona así."),
+            ("8√2",
+             "Suma los coeficientes en vez de restarlos."),
+            ("2, porque al restar dos raíces el radical desaparece",
+             "El radical solo desaparece si los dos términos son idénticos y se anulan."),
+        ],
+    ),
+    _q(
+        "num_reales", "dificil",
+        "¿Cuál es el valor de (√7 + 3)(√7 − 3)?",
+        "−2",
+        "Es una suma por diferencia, que da la diferencia de los cuadrados.\n\n"
+        "1) El producto vale (√7)² − 3².\n"
+        "2) (√7)² = 7 y 3² = 9.\n"
+        "3) El resultado es 7 − 9 = −2.\n\n"
+        "Que el resultado sea negativo no es raro: el segundo cuadrado es mayor "
+        "que el primero.",
+        [
+            ("2",
+             "Resta en el orden equivocado: es 7 − 9, no 9 − 7."),
+            ("16",
+             "Suma los cuadrados en vez de restarlos."),
+            ("7 − 9 + 6√7, desarrollando también los términos cruzados del producto",
+             "En una suma por diferencia los términos cruzados se cancelan: +3√7 y −3√7."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "¿Cuál es el resultado de racionalizar 12/√6?",
+        "2√6",
+        "Se amplifica por la raíz del denominador.\n\n"
+        "1) (12 · √6)/(√6 · √6) deja el denominador en 6.\n"
+        "2) La fracción queda 12√6/6.\n"
+        "3) Simplificando 12 entre 6 se obtiene 2√6.\n\n"
+        "Conviene simplificar al final: hacerlo antes de racionalizar suele "
+        "llevar a perder el radical.",
+        [
+            ("12√6",
+             "Amplifica el numerador y olvida dividir por el 6 del denominador."),
+            ("2",
+             "Simplifica el coeficiente pero pierde el radical del numerador."),
+            ("√12, llevando el numerador dentro de la raíz del denominador",
+             "12/√6 no es √12: el resultado correcto, 2√6, vale cerca de 4,9."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "El área de un cuadrado es 50 cm². ¿Cuánto mide su lado?",
+        "5√2 cm",
+        "El lado es la raíz cuadrada del área.\n\n"
+        "1) Si el lado es L, entonces L² = 50.\n"
+        "2) L = √50.\n"
+        "3) Simplificando: √50 = √(25 · 2) = 5√2 cm, que es aproximadamente "
+        "7,07 cm.\n\n"
+        "Dejar la respuesta como 5√2 es más exacto que redondear a 7,07: la "
+        "prueba suele pedir la forma exacta.",
+        [
+            ("25 cm",
+             "Divide el área por 2 en vez de sacarle la raíz cuadrada."),
+            ("10√5 cm",
+             "Descompone mal el radicando: 50 es 25 · 2, no 100 · 5."),
+            ("12,5 cm, que es la cuarta parte del área del cuadrado",
+             "El lado no se obtiene dividiendo el área por 4: eso daría el área de un cuarto de la figura."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "¿Cuál es el valor de |5 − 12| − |−4|?",
+        "3",
+        "Cada valor absoluto se resuelve por separado antes de restar.\n\n"
+        "1) 5 − 12 = −7, y |−7| = 7.\n"
+        "2) |−4| = 4.\n"
+        "3) La resta es 7 − 4 = 3.\n\n"
+        "El valor absoluto se aplica a lo que hay DENTRO de las barras, incluida "
+        "la resta completa.",
+        [
+            ("11",
+             "Suma en vez de restar, o toma |5 − 12| como 5 + 12 menos algo."),
+            ("−3",
+             "Invierte el orden de la resta: es 7 − 4, no 4 − 7."),
+            ("1, aplicando el valor absoluto recién al final de toda la expresión",
+             "Cada barra encierra su propia expresión: no se puede dejar el valor absoluto para el final."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "¿A qué intervalo corresponde el conjunto de los reales x tales que "
+        "x ≥ −4?",
+        "[−4, +∞[",
+        "El infinito nunca se incluye, porque no es un número.\n\n"
+        "1) El −4 pertenece al conjunto, porque la desigualdad no es estricta: "
+        "por eso lleva corchete que lo incluye.\n"
+        "2) Hacia la derecha el conjunto no tiene tope.\n"
+        "3) Se escribe [−4, +∞[, con el corchete del infinito siempre "
+        "invertido.\n\n"
+        "Escribir [−4, +∞] sería un error: significaría que el infinito es un "
+        "elemento del conjunto.",
+        [
+            ("]−4, +∞[",
+             "Ese corchete excluye al −4, y la desigualdad lo incluye."),
+            ("[−4, +∞]",
+             "El infinito no es un número y nunca puede quedar incluido."),
+            ("]−∞, −4]",
+             "Ese es el conjunto de los x menores o iguales que −4, la desigualdad opuesta."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "Si a = √8 y b = √32, ¿cuál es el valor de b − a?",
+        "2√2",
+        "Conviene simplificar cada radical antes de restar.\n\n"
+        "1) √8 = √(4 · 2) = 2√2.\n"
+        "2) √32 = √(16 · 2) = 4√2.\n"
+        "3) La resta es 4√2 − 2√2 = 2√2.\n\n"
+        "Sin simplificar, √32 − √8 parece imposible de restar; simplificados, "
+        "los dos son múltiplos de √2.",
+        [
+            ("√24",
+             "Resta los radicandos, operación que la raíz no permite."),
+            ("6√2",
+             "Suma los coeficientes en vez de restarlos."),
+            ("2, porque al restar dos raíces del mismo tipo el radical se cancela",
+             "El radical solo se cancela si los coeficientes son iguales y la resta da cero."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "¿Cuál de estas expresiones representa un número racional?",
+        "√45 · √5",
+        "Un producto de raíces puede dar un resultado exacto aunque cada factor "
+        "sea irracional.\n\n"
+        "1) √45 · √5 = √225.\n"
+        "2) 225 es un cuadrado perfecto: √225 = 15.\n"
+        "3) El producto es entero y por lo tanto racional.\n\n"
+        "Que dos números sean irracionales no impide que su producto o su suma "
+        "sean racionales.",
+        [
+            ("√45 + √5",
+             "Vale 3√5 + √5 = 4√5, que sigue siendo irracional."),
+            ("√45 · √3",
+             "Vale √135 = 3√15, y 15 no es cuadrado perfecto: sigue siendo irracional."),
+            ("π ÷ 3, porque dividir por un entero elimina la parte irracional",
+             "Dividir un irracional por un entero distinto de cero deja un irracional."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "¿Cuál es el valor de (2√5)²?",
+        "20",
+        "Al elevar un producto se eleva cada factor.\n\n"
+        "1) (2√5)² = 2² · (√5)².\n"
+        "2) 2² = 4 y (√5)² = 5.\n"
+        "3) El producto es 4 · 5 = 20.\n\n"
+        "El error habitual es elevar solo la raíz y dejar el 2 intacto, lo que "
+        "daría 10.",
+        [
+            ("10",
+             "Eleva la raíz pero deja el coeficiente sin elevar: 2 · 5."),
+            ("40",
+             "Duplica de más: multiplica 2 · 4 · 5 en vez de 4 · 5."),
+            ("2√25, elevando solo el radicando y conservando el coeficiente",
+             "Al elevar al cuadrado también se eleva el coeficiente que está fuera de la raíz."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "Se sabe que √2 ≈ 1,414. ¿Cuál es el valor aproximado de 3√2?",
+        "≈4,242",
+        "El coeficiente multiplica al valor de la raíz.\n\n"
+        "1) 3√2 significa 3 multiplicado por √2.\n"
+        "2) Reemplazando: 3 · 1,414.\n"
+        "3) El producto es 4,242.\n\n"
+        "No hay que confundir 3√2 con √(3 · 2) = √6, que vale aproximadamente "
+        "2,449.",
+        [
+            ("≈2,449",
+             "Corresponde a √6, es decir, a haber metido el 3 dentro de la raíz."),
+            ("≈1,414",
+             "Repite el valor de √2 sin multiplicarlo por el coeficiente 3."),
+            ("≈0,471, dividiendo el valor de la raíz por el coeficiente",
+             "El 3 multiplica a la raíz: no la divide."),
+        ],
+    ),
+    _q(
+        "num_reales", "facil",
+        "¿Cuál es el valor de √(9 + 16)?",
+        "5",
+        "La raíz se aplica al resultado de la suma, no a cada sumando.\n\n"
+        "1) Primero se resuelve lo que hay dentro: 9 + 16 = 25.\n"
+        "2) Luego se saca la raíz: √25 = 5.\n\n"
+        "√9 + √16 daría 3 + 4 = 7, que es otro número: la raíz NO se reparte "
+        "sobre una suma. Solo se reparte sobre productos y cocientes.",
+        [
+            ("7",
+             "Reparte la raíz sobre la suma: √9 + √16. Esa propiedad no existe."),
+            ("25",
+             "Resuelve la suma pero olvida sacar la raíz."),
+            ("12,5, dividiendo el contenido de la raíz por dos",
+             "La raíz cuadrada no es dividir por dos: √25 es 5, no 12,5."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "Una tabla mide √72 metros de largo. ¿Cuál es su medida en forma "
+        "simplificada?",
+        "6√2 metros",
+        "Se extrae del radicando el mayor cuadrado perfecto.\n\n"
+        "1) 72 = 36 · 2.\n"
+        "2) √72 = √36 · √2.\n"
+        "3) √36 = 6, así que la medida es 6√2 metros, algo más de 8,48 m.\n\n"
+        "Descomponer con un cuadrado menor, como 4 · 18, también funciona pero "
+        "obliga a simplificar dos veces.",
+        [
+            ("36√2 metros",
+             "Saca el 36 de la raíz sin extraerle a su vez la raíz."),
+            ("2√6 metros",
+             "Corresponde a √24, no a √72."),
+            ("8,48 metros exactos, porque esa es la raíz de 72",
+             "8,48 es una APROXIMACIÓN: el valor exacto es 6√2, con infinitos decimales."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "¿Cuál de los siguientes números es el mayor?",
+        "√17",
+        "Conviene llevar todos a una forma comparable.\n\n"
+        "1) √17 está entre 4 y 5, porque 16 < 17 < 25; vale unos 4,12.\n"
+        "2) 4,1 es menor que ese valor por muy poco.\n"
+        "3) 41/10 es exactamente 4,1 y 2√4 vale 2 · 2 = 4.\n\n"
+        "Cuando dos candidatos quedan muy cerca, conviene elevar ambos al "
+        "cuadrado: 17 contra 16,81 decide sin ambigüedad.",
+        [
+            ("4,1",
+             "Vale 4,1 exacto, y √17 ≈ 4,123: la diferencia es pequeña pero real."),
+            ("41/10",
+             "Es exactamente 4,1, el mismo valor del decimal anterior."),
+            ("2√4, que al tener una raíz debe ser el mayor de todos",
+             "√4 = 2, así que la expresión vale 4: tener raíz no la hace grande."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "En la recta numérica, ¿qué representa |x − 3|?",
+        "La distancia entre x y 3",
+        "El valor absoluto de una diferencia mide separación.\n\n"
+        "1) La diferencia x − 3 puede ser positiva o negativa según dónde esté "
+        "x.\n"
+        "2) El valor absoluto descarta el signo y deja solo la magnitud.\n"
+        "3) Esa magnitud es exactamente cuánto hay que recorrer en la recta "
+        "para ir de 3 hasta x.\n\n"
+        "Por eso |x − 3| = 5 tiene dos soluciones: x = 8 y x = −2, los dos "
+        "puntos que están a cinco unidades del 3.",
+        [
+            ("La suma de x y 3",
+             "El valor absoluto no convierte una resta en una suma: solo quita el signo del resultado."),
+            ("El valor de x cuando es positivo",
+             "La expresión depende de la diferencia con 3, no solo del signo de x."),
+            ("La distancia entre x y el cero, corrida tres unidades",
+             "La distancia al cero es |x|; restar 3 cambia el punto de referencia, no desplaza el resultado."),
+        ],
+    ),
+]
+
+
+QUESTIONS += [
+    _q(
+        "num_reales", "medio",
+        "¿Cuál es el valor de √(45/5)?",
+        "3",
+        "La raíz sí se reparte sobre un cociente, pero conviene simplificar "
+        "primero.\n\n"
+        "1) Dentro de la raíz, 45 dividido por 5 da 9.\n"
+        "2) √9 = 3.\n\n"
+        "También se podía separar como √45/√5, que da 3√5/√5 = 3. Los dos "
+        "caminos llegan al mismo lugar, pero simplificar el radicando primero "
+        "evita arrastrar radicales.",
+        [
+            ("9",
+             "Resuelve la división pero olvida sacar la raíz."),
+            ("√40",
+             "Resta los valores en vez de dividirlos."),
+            ("3√5, dejando el resultado en función de la raíz de cinco",
+             "Ese sería el valor de √45; al dividir por √5 el radical se cancela."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "Una escalera apoyada en una pared alcanza una altura cuyo cuadrado "
+        "vale 20 m². ¿Cuánto mide esa altura en forma exacta?",
+        "2√5 metros",
+        "La altura es la raíz cuadrada de ese valor.\n\n"
+        "1) Si h² = 20, entonces h = √20.\n"
+        "2) 20 = 4 · 5, así que √20 = √4 · √5.\n"
+        "3) La altura exacta es 2√5 metros, algo más de 4,47 m.\n\n"
+        "En geometría conviene dejar el resultado exacto: si después hay que "
+        "elevarlo al cuadrado otra vez, el redondeo arrastra error.",
+        [
+            ("10 metros",
+             "Divide por dos en vez de sacar la raíz cuadrada."),
+            ("4√5 metros",
+             "Saca el 4 de la raíz sin extraerle su propia raíz."),
+            ("4,47 metros exactos, porque esa es la raíz de veinte",
+             "4,47 es una aproximación: el valor exacto tiene infinitos decimales."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "¿Cuál es el resultado de (√6)(√10)?",
+        "2√15",
+        "Se multiplican los radicandos y después se simplifica.\n\n"
+        "1) √6 · √10 = √60.\n"
+        "2) 60 = 4 · 15, y 4 es cuadrado perfecto.\n"
+        "3) √60 = √4 · √15 = 2√15.\n\n"
+        "Simplificar al final es lo que distingue una respuesta correcta de una "
+        "correcta pero mal presentada.",
+        [
+            ("√16",
+             "Suma los radicandos en vez de multiplicarlos."),
+            ("√60",
+             "El producto está bien, pero falta simplificar: 60 contiene el cuadrado 4."),
+            ("60, porque al multiplicar dos raíces el radical desaparece",
+             "El radical desaparece solo si el producto de los radicandos es un cuadrado perfecto."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "¿Cuál de las siguientes afirmaciones sobre los números reales es "
+        "verdadera?",
+        "Todo entero es también un número racional",
+        "Los conjuntos numéricos están encajados uno dentro de otro.\n\n"
+        "1) Cualquier entero n se escribe como la fracción n/1.\n"
+        "2) Por definición, eso lo hace racional.\n"
+        "3) La cadena completa es: naturales dentro de enteros, enteros dentro "
+        "de racionales, y racionales dentro de reales.\n\n"
+        "Los irracionales son reales que quedan FUERA de los racionales: juntos "
+        "completan la recta numérica.",
+        [
+            ("Todo número racional es entero",
+             "Es la implicación al revés: 1/2 es racional y no es entero."),
+            ("Un número puede ser racional e irracional a la vez",
+             "Son categorías excluyentes: o admite escribirse como fracción de enteros o no."),
+            ("Los irracionales quedan fuera del conjunto de los números reales",
+             "Los irracionales SON reales: junto con los racionales completan la recta."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "¿Cuál es el valor de |−2| · |3 − 7|?",
+        "8",
+        "Cada valor absoluto se resuelve antes de multiplicar.\n\n"
+        "1) |−2| = 2.\n"
+        "2) 3 − 7 = −4, y |−4| = 4.\n"
+        "3) El producto es 2 · 4 = 8.\n\n"
+        "El resultado de un producto de valores absolutos nunca es negativo, "
+        "porque ambos factores son positivos o cero.",
+        [
+            ("−8",
+             "Conserva algún signo negativo, que es lo que el valor absoluto elimina."),
+            ("2",
+             "Resuelve solo el primer factor y olvida multiplicar por el segundo."),
+            ("−2 · 4, dejando el primer factor con su signo original",
+             "El valor absoluto de −2 es 2: el signo desaparece antes de multiplicar."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "El conjunto ]−∞, 2[ ∪ ]2, +∞[ describe todos los reales excepto uno. "
+        "¿Cuál?",
+        "El 2",
+        "La unión cubre todo salvo el punto que ambos intervalos excluyen.\n\n"
+        "1) El primer intervalo llega hasta el 2 sin incluirlo.\n"
+        "2) El segundo parte del 2 sin incluirlo.\n"
+        "3) Entre los dos cubren toda la recta menos ese único punto.\n\n"
+        "Ese conjunto aparece, por ejemplo, como dominio de una función con un "
+        "denominador que se anula en x = 2.",
+        [
+            ("El 0",
+             "El 0 pertenece al primer intervalo, porque es menor que 2."),
+            ("Todos los negativos",
+             "Los negativos están todos dentro del primer intervalo."),
+            ("Ninguno, porque la unión de dos intervalos cubre siempre la recta completa",
+             "Solo la cubre si comparten al menos un punto o si alguno incluye la frontera."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "¿Cuál es el valor exacto de √0,25?",
+        "0,5",
+        "Conviene pasar el decimal a fracción.\n\n"
+        "1) 0,25 es 25/100, es decir, 1/4.\n"
+        "2) La raíz de un cociente es el cociente de las raíces: √1/√4.\n"
+        "3) El resultado es 1/2, o sea 0,5.\n\n"
+        "Ojo con la intuición: la raíz de un número entre 0 y 1 es MAYOR que el "
+        "número, no menor.",
+        [
+            ("0,05",
+             "Corre la coma un lugar de más: 0,05 al cuadrado da 0,0025."),
+            ("0,125",
+             "Divide por dos en vez de sacar la raíz cuadrada."),
+            ("0,0625, que es un valor menor porque la raíz siempre achica",
+             "Ese es 0,25 al cuadrado. Entre 0 y 1 la raíz AGRANDA el número."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "Se quiere ubicar √8 entre dos decimales con una cifra. ¿Entre cuáles "
+        "queda?",
+        "Entre 2,8 y 2,9",
+        "Se acota elevando al cuadrado los candidatos.\n\n"
+        "1) 2,8² = 7,84, que es menor que 8.\n"
+        "2) 2,9² = 8,41, que es mayor que 8.\n"
+        "3) Entonces 2,8 < √8 < 2,9.\n\n"
+        "Elevar al cuadrado los extremos es más rápido y más seguro que "
+        "estimar la raíz directamente.",
+        [
+            ("Entre 2,6 y 2,7",
+             "2,7² = 7,29, todavía por debajo de 8: la raíz es mayor."),
+            ("Entre 3,0 y 3,1",
+             "3² = 9 ya supera a 8, así que la raíz queda por debajo de 3."),
+            ("Entre 3,9 y 4,0, porque 8 está cerca de la mitad de 16",
+             "La mitad del radicando no dice nada sobre la raíz: √16 es 4 y √8 es cerca de 2,83."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "¿Cuál es el valor de 3√12 + √27?",
+        "9√3",
+        "Hay que simplificar cada radical antes de sumar.\n\n"
+        "1) √12 = 2√3, así que 3√12 = 3 · 2√3 = 6√3.\n"
+        "2) √27 = 3√3.\n"
+        "3) Los dos comparten √3: 6√3 + 3√3 = 9√3.\n\n"
+        "El coeficiente que ya venía fuera se multiplica por el que sale de la "
+        "raíz: ese es el paso que más se olvida.",
+        [
+            ("4√3",
+             "Suma 3√12 como si fuera 3√3, sin simplificar el radical primero."),
+            ("√39",
+             "Suma los radicandos, operación que la raíz no permite."),
+            ("3√39, sumando lo de adentro y conservando el coeficiente de afuera",
+             "Ni se suman los radicandos ni se conserva el coeficiente sin operar."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "Un terreno cuadrado tiene 200 m² de superficie. ¿Cuánto mide su "
+        "perímetro en forma exacta?",
+        "40√2 metros",
+        "Primero el lado y después el perímetro.\n\n"
+        "1) El lado es √200 = √(100 · 2) = 10√2 metros.\n"
+        "2) El perímetro de un cuadrado es cuatro veces el lado.\n"
+        "3) 4 · 10√2 = 40√2 metros, algo más de 56,6 m.\n\n"
+        "Multiplicar el coeficiente y dejar el radical intacto es lo correcto: "
+        "el 4 no entra en la raíz.",
+        [
+            ("800 metros",
+             "Multiplica el área por 4 en vez de multiplicar el LADO por 4."),
+            ("10√2 metros",
+             "Corresponde a un solo lado, no al perímetro completo."),
+            ("4√200 metros, dejando la raíz sin simplificar y multiplicada por cuatro",
+             "El valor es correcto pero no está simplificado: 4√200 es 40√2."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "¿Cuál es el resultado de (√5)³?",
+        "5√5",
+        "Se separa la potencia en un cuadrado y un factor suelto.\n\n"
+        "1) (√5)³ = (√5)² · √5.\n"
+        "2) (√5)² = 5.\n"
+        "3) El resultado es 5√5, algo más de 11,18.\n\n"
+        "Una potencia impar siempre deja un radical: solo las pares lo eliminan "
+        "por completo.",
+        [
+            ("125",
+             "Eleva el 5 al cubo, ignorando que estaba bajo una raíz."),
+            ("15",
+             "Multiplica la base por el exponente en vez de elevarla."),
+            ("√125, dejando toda la potencia dentro de la raíz sin simplificar",
+             "El valor es correcto pero incompleto: √125 se simplifica a 5√5."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "¿Qué desigualdad describe el intervalo ]−1, 4]?",
+        "−1 < x ≤ 4",
+        "Cada corchete se traduce en un tipo de desigualdad.\n\n"
+        "1) El corchete inicial invertido excluye al −1: la desigualdad es "
+        "estricta.\n"
+        "2) El corchete final incluye al 4: la desigualdad lleva el igual.\n"
+        "3) La condición completa es −1 < x ≤ 4.\n\n"
+        "El extremo abierto se escribe con < y el cerrado con ≤: eso es todo lo "
+        "que hay que recordar.",
+        [
+            ("−1 ≤ x < 4",
+             "Invierte cuál extremo se incluye: es el 4 el que entra, no el −1."),
+            ("−1 ≤ x ≤ 4",
+             "Incluiría ambos extremos, y el −1 está excluido."),
+            ("−1 < x < 4, dejando fuera los dos extremos del intervalo",
+             "El corchete final es cerrado, así que el 4 sí pertenece al conjunto."),
+        ],
+    ),
+    _q(
+        "num_reales", "dificil",
+        "¿Cuál es el valor de (3 + √2)²?",
+        "11 + 6√2",
+        "Es un cuadrado de binomio y hay que desarrollarlo completo.\n\n"
+        "1) (a + b)² = a² + 2ab + b².\n"
+        "2) a² = 9, b² = (√2)² = 2, y el término cruzado es 2 · 3 · √2 = 6√2.\n"
+        "3) Sumando: 9 + 2 + 6√2 = 11 + 6√2.\n\n"
+        "El término cruzado es el que más se olvida, y es justamente el que "
+        "conserva el radical en el resultado.",
+        [
+            ("11",
+             "Olvida el término cruzado 6√2, que es el único que lleva radical."),
+            ("9 + 2√2",
+             "Eleva mal el segundo término: (√2)² es 2, no 2√2, y falta el cruzado."),
+            ("5 + 6√2, sumando 3 y 2 en vez de elevar el 3 al cuadrado",
+             "El primer término se eleva al cuadrado: 3² = 9, no 3."),
+        ],
+    ),
+    _q(
+        "num_reales", "dificil",
+        "¿Cuál es el resultado de racionalizar 4/(√5 − 1)?",
+        "√5 + 1",
+        "Cuando el denominador es un binomio, se amplifica por su conjugado.\n\n"
+        "1) El conjugado de √5 − 1 es √5 + 1.\n"
+        "2) El denominador queda (√5)² − 1² = 5 − 1 = 4.\n"
+        "3) La fracción es 4(√5 + 1)/4 = √5 + 1.\n\n"
+        "El conjugado funciona porque convierte el denominador en una suma por "
+        "diferencia, y ahí los radicales se cancelan.",
+        [
+            ("√5 − 1",
+             "Amplifica por el mismo binomio en vez de por su conjugado, y el radical no se va."),
+            ("4√5 + 4",
+             "Olvida dividir por el 4 que queda en el denominador."),
+            ("4/(√5 + 1), cambiando el signo del denominador sin operar el resto",
+             "Cambiar el signo no racionaliza: hay que multiplicar arriba y abajo por el conjugado."),
+        ],
+    ),
+    _q(
+        "num_reales", "dificil",
+        "Si x es un número real cualquiera, ¿qué se puede afirmar siempre de "
+        "√(x²)?",
+        "Es igual a |x|",
+        "La raíz cuadrada devuelve siempre un valor no negativo.\n\n"
+        "1) Si x = 5, entonces √(5²) = √25 = 5, que coincide con x.\n"
+        "2) Si x = −5, entonces √((−5)²) = √25 = 5, que NO es x sino su "
+        "opuesto.\n"
+        "3) En ambos casos el resultado es la distancia de x al cero, es decir, "
+        "|x|.\n\n"
+        "Escribir √(x²) = x es válido solo si se sabe de antemano que x no es "
+        "negativo.",
+        [
+            ("Es igual a x",
+             "Falla para todo x negativo: √((−5)²) da 5 y no −5."),
+            ("Es igual a x²",
+             "Elevar y sacar raíz se cancelan: el resultado no queda al cuadrado."),
+            ("Puede ser positivo o negativo según el signo de x",
+             "La raíz cuadrada de un real siempre devuelve un valor no negativo."),
+        ],
+    ),
+    _q(
+        "num_reales", "dificil",
+        "Un estudiante afirma que √a + √b = √(a + b) para todos los reales no "
+        "negativos. ¿Cómo se evalúa?",
+        "Es falsa: basta un contraejemplo para descartarla",
+        "Una afirmación universal cae con un solo caso que no la cumpla.\n\n"
+        "1) Con a = 9 y b = 16: √9 + √16 = 3 + 4 = 7.\n"
+        "2) En cambio √(9 + 16) = √25 = 5.\n"
+        "3) Como 7 ≠ 5, la igualdad no vale en general.\n\n"
+        "Solo se cumple cuando uno de los dos es cero, que es el caso trivial. "
+        "La raíz se reparte sobre productos y cocientes, nunca sobre sumas.",
+        [
+            ("Es verdadera, porque la raíz se reparte sobre las operaciones",
+             "Se reparte sobre productos y cocientes, pero no sobre sumas ni restas."),
+            ("Es verdadera solo si a y b son cuadrados perfectos",
+             "El contraejemplo usa 9 y 16, que SON cuadrados perfectos, y falla igual."),
+            ("No se puede decidir sin probar con todos los pares de valores posibles",
+             "Para refutar una afirmación universal basta un contraejemplo: no hace falta probarlos todos."),
+        ],
+    ),
+    _q(
+        "num_reales", "dificil",
+        "¿Cuál es el valor de √(2 + √3) · √(2 − √3)?",
+        "1",
+        "Conviene juntar las dos raíces en una sola antes de operar.\n\n"
+        "1) El producto de raíces es la raíz del producto: √[(2 + √3)(2 − √3)].\n"
+        "2) Dentro hay una suma por diferencia: 2² − (√3)² = 4 − 3 = 1.\n"
+        "3) √1 = 1.\n\n"
+        "El radical anidado asusta, pero desaparece apenas se reconoce la suma "
+        "por diferencia.",
+        [
+            ("√3",
+             "Conserva el radical interior, que se cancela al multiplicar los conjugados."),
+            ("4",
+             "Se queda con 2² y olvida restar (√3)² = 3."),
+            ("2, porque los términos con raíz se cancelan y quedan los dos doses",
+             "Los doses no se suman: se multiplican dentro de la suma por diferencia, que da 4 − 3."),
+        ],
+    ),
+    _q(
+        "num_reales", "dificil",
+        "Se afirma que la suma de dos números irracionales es siempre "
+        "irracional. ¿Es correcto?",
+        "No: √2 y −√2 suman cero, que es racional",
+        "La afirmación es universal y basta un caso para refutarla.\n\n"
+        "1) √2 es irracional y −√2 también lo es.\n"
+        "2) Su suma es 0, que es un entero y por lo tanto racional.\n"
+        "3) Otro caso: (2 + √3) y (2 − √3) suman 4.\n\n"
+        "Lo mismo pasa con el producto: √2 · √2 = 2. Los irracionales no forman "
+        "un conjunto cerrado bajo las operaciones.",
+        [
+            ("Sí, porque la parte decimal infinita nunca se cancela",
+             "Sí puede cancelarse: eso es exactamente lo que ocurre con √2 y −√2."),
+            ("Sí, salvo cuando los dos son raíces del mismo número",
+             "El caso de 2 + √3 y 2 − √3 no son raíces del mismo número y suman 4."),
+            ("No, porque la suma de dos irracionales es siempre racional",
+             "Tampoco es siempre racional: √2 + √3 es irracional. No hay regla fija."),
+        ],
+    ),
+    _q(
+        "num_reales", "dificil",
+        "¿Para qué valores reales de x se cumple |x − 4| = 6?",
+        "x = 10 o x = −2",
+        "La ecuación pide los puntos que están a distancia 6 del número 4.\n\n"
+        "1) El valor absoluto no distingue el sentido, así que x − 4 puede valer "
+        "6 o −6.\n"
+        "2) Si x − 4 = 6, entonces x = 10.\n"
+        "3) Si x − 4 = −6, entonces x = −2.\n\n"
+        "En la recta numérica, 10 y −2 están exactamente a seis unidades del 4, "
+        "uno a cada lado.",
+        [
+            ("x = 10 únicamente",
+             "Considera solo el caso positivo y pierde la solución de la izquierda."),
+            ("x = 2 o x = −2",
+             "Resuelve como si la ecuación fuera |x| − 4 = 6 o similar."),
+            ("x = 24, porque el valor absoluto multiplica los dos números",
+             "El valor absoluto no multiplica: encierra una resta y le quita el signo."),
+        ],
+    ),
+    _q(
+        "num_reales", "dificil",
+        "Se quiere comparar √50 con 7 sin usar calculadora. ¿Qué procedimiento "
+        "lo decide?",
+        "Elevar ambos al cuadrado y comparar 50 con 49",
+        "Elevar al cuadrado conserva el orden entre números positivos.\n\n"
+        "1) Los dos números son positivos, así que comparar sus cuadrados "
+        "equivale a compararlos a ellos.\n"
+        "2) (√50)² = 50 y 7² = 49.\n"
+        "3) Como 50 > 49, se concluye que √50 > 7.\n\n"
+        "El método falla si alguno de los dos es negativo: ahí elevar al "
+        "cuadrado invierte el orden.",
+        [
+            ("Dividir 50 por 7 y ver si el cociente supera a 1",
+             "Ese cociente compara 50 con 7, no √50 con 7."),
+            ("Restar 7 a 50 y observar el signo del resultado",
+             "Esa resta compara el radicando con el 7, no la raíz."),
+            ("Comparar la mitad de 50 con 7, porque la raíz se aproxima dividiendo por dos",
+             "La raíz no es la mitad: √50 ≈ 7,07 y la mitad de 50 es 25."),
+        ],
+    ),
+    _q(
+        "num_reales", "dificil",
+        "Un cuadrado tiene 8 cm de diagonal. ¿Cuánto mide su lado?",
+        "4√2 cm",
+        "La diagonal de un cuadrado es el lado multiplicado por √2.\n\n"
+        "1) Por Pitágoras, d² = L² + L² = 2L².\n"
+        "2) Reemplazando: 64 = 2L², así que L² = 32.\n"
+        "3) L = √32 = 4√2 cm, algo más de 5,66 cm.\n\n"
+        "Comprobación: (4√2)² · 2 = 32 · 2 = 64, que es la diagonal al "
+        "cuadrado.",
+        [
+            ("8√2 cm",
+             "Multiplica la diagonal por √2 en vez de dividirla: eso agranda el lado."),
+            ("4 cm",
+             "Divide la diagonal por 2, que sería válido para el radio de una circunferencia, no para este caso."),
+            ("64 cm, que es el cuadrado de la diagonal del cuadrado",
+             "Ese valor es un área en cm², no una longitud."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "¿Cuál es el valor de la expresión (√18 − √8) ÷ √2?",
+        "1",
+        "Conviene simplificar el numerador antes de dividir.\n\n"
+        "1) √18 = 3√2 y √8 = 2√2.\n"
+        "2) La resta da 3√2 − 2√2 = √2.\n"
+        "3) Dividiendo: √2 ÷ √2 = 1.\n\n"
+        "También sale repartiendo la división: √18/√2 − √8/√2 = √9 − √4 = "
+        "3 − 2 = 1. Los dos caminos coinciden porque la raíz sí se reparte "
+        "sobre cocientes.",
+        [
+            ("√5",
+             "Resta los radicandos y luego divide, operaciones que la raíz no permite en ese orden."),
+            ("5",
+             "Corresponde a 18 − 8 dividido por 2, tratando las raíces como si no existieran."),
+            ("√2, olvidando el paso final de la división por la raíz de dos",
+             "Ese es el numerador ya simplificado: falta dividirlo, y al hacerlo da 1."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Numeros: logaritmos
+#
+# El temario pide "relacion entre potencias, raices y logaritmos, y sus
+# propiedades" y "problemas que involucren logaritmos en diversos contextos".
+# El nodo tenia 16 preguntas y casi todas eran evaluar un logaritmo exacto.
+# Se agregan las propiedades (producto, cociente, potencia), el cambio de base,
+# las ecuaciones y los contextos donde el logaritmo aparece de verdad: pH,
+# decibeles, magnitud sismica y crecimiento.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "num_logaritmos", "facil",
+        "¿Qué significa la expresión log₃ 81 = 4?",
+        "Que 3 elevado a 4 da 81",
+        "El logaritmo responde a qué exponente hay que elevar la base.\n\n"
+        "1) log₃ 81 pregunta: ¿a qué exponente elevo 3 para obtener 81?\n"
+        "2) 3⁴ = 81.\n"
+        "3) Por eso el logaritmo vale 4.\n\n"
+        "Logaritmo y potencia son la misma relación leída al revés: uno da el "
+        "resultado y el otro, el exponente.",
+        [
+            ("Que 4 elevado a 3 da 81",
+             "Intercambia base y exponente: 4³ = 64, no 81."),
+            ("Que 81 dividido por 3 da 4",
+             "Esa división da 27: el logaritmo no es una división."),
+            ("Que 3 multiplicado por 4 da 81, porque el logaritmo abrevia un producto",
+             "El producto daría 12: el logaritmo abrevia una potencia, no un producto."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "facil",
+        "¿Cuál es el valor de log₄ 16?",
+        "2",
+        "Se busca el exponente al que hay que elevar la base.\n\n"
+        "1) La pregunta es: ¿4 elevado a qué da 16?\n"
+        "2) 4² = 16.\n"
+        "3) Por lo tanto log₄ 16 = 2.\n\n"
+        "Conviene escribir el argumento como potencia de la base: es lo que "
+        "convierte el logaritmo en una lectura directa.",
+        [
+            ("4",
+             "Repite la base en vez de dar el exponente."),
+            ("8",
+             "Corresponde a la mitad de 16, no al exponente buscado."),
+            ("16, que es el número al que se le aplica el logaritmo",
+             "Ese es el argumento: el logaritmo devuelve el exponente, que es 2."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "facil",
+        "¿Cuál es el valor de log₇ 7?",
+        "1",
+        "Toda base elevada a 1 se devuelve a sí misma.\n\n"
+        "1) La pregunta es: ¿7 elevado a qué da 7?\n"
+        "2) 7¹ = 7.\n"
+        "3) Entonces log₇ 7 = 1.\n\n"
+        "La regla vale para cualquier base válida: log de la base, en su propia "
+        "base, siempre es 1.",
+        [
+            ("0",
+             "El logaritmo vale 0 cuando el argumento es 1, no cuando es la base."),
+            ("7",
+             "Repite el número en vez de dar el exponente."),
+            ("Indefinido, porque la base y el argumento no pueden coincidir",
+             "Sí pueden coincidir: es el caso más simple y da 1."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "facil",
+        "¿Cuál es el valor de log 1, en base 10?",
+        "0",
+        "Cualquier base elevada a 0 da 1.\n\n"
+        "1) La pregunta es: ¿10 elevado a qué da 1?\n"
+        "2) 10⁰ = 1.\n"
+        "3) Por lo tanto log 1 = 0.\n\n"
+        "Vale para cualquier base: el logaritmo de 1 siempre es cero.",
+        [
+            ("1",
+             "El logaritmo vale 1 cuando el argumento es la base, no cuando es 1."),
+            ("10",
+             "Confunde el resultado con la base del logaritmo."),
+            ("Indefinido, porque no existe un exponente que dé 1",
+             "Sí existe: el exponente cero. Lo indefinido es el logaritmo DE cero."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "facil",
+        "¿Cuál es el valor de log₂ 1024?",
+        "10",
+        "Conviene contar las duplicaciones.\n\n"
+        "1) Las potencias de 2 son 2, 4, 8, 16, 32, 64, 128, 256, 512, 1.024.\n"
+        "2) 1.024 es la décima de la lista.\n"
+        "3) Entonces log₂ 1024 = 10.\n\n"
+        "Es un valor que conviene tener a mano: 2¹⁰ = 1.024 es la base de que "
+        "un kilobyte sean 1.024 bytes y no 1.000.",
+        [
+            ("512",
+             "Es la potencia anterior de 2, no el exponente que se pide."),
+            ("2",
+             "Repite la base en lugar de dar el exponente."),
+            ("100, porque 1.024 tiene cuatro cifras y el logaritmo las cuenta",
+             "El logaritmo no cuenta cifras: devuelve el exponente de la base."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "facil",
+        "¿Por qué no existe el logaritmo de un número negativo en base 10?",
+        "Porque ninguna potencia de 10 da un negativo",
+        "El dominio del logaritmo son los números positivos.\n\n"
+        "1) 10 elevado a cualquier exponente real da siempre un resultado "
+        "positivo.\n"
+        "2) Con exponentes negativos da valores pequeños, como 10⁻³ = 0,001, "
+        "pero nunca negativos.\n"
+        "3) Como no hay exponente que produzca un negativo, el logaritmo no "
+        "está definido ahí.\n\n"
+        "Por la misma razón log 0 tampoco existe: no hay potencia de 10 que dé "
+        "cero exacto.",
+        [
+            ("Porque el resultado sería negativo",
+             "El logaritmo SÍ puede dar resultados negativos: log 0,01 = −2."),
+            ("Porque la base 10 es positiva y eso lo impide",
+             "La base positiva es justamente la causa, pero lo que falla es el ARGUMENTO negativo."),
+            ("Porque los logaritmos solo aceptan números enteros como argumento",
+             "Aceptan cualquier real positivo: log 2,5 existe perfectamente."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "facil",
+        "¿Cuál es el valor de log₆ 36?",
+        "2",
+        "Se escribe el argumento como potencia de la base.\n\n"
+        "1) 36 = 6².\n"
+        "2) El logaritmo devuelve ese exponente.\n"
+        "3) log₆ 36 = 2.\n\n"
+        "Si el argumento es el cuadrado de la base, el logaritmo siempre vale "
+        "2, sea cual sea la base.",
+        [
+            ("6",
+             "Repite la base en vez de entregar el exponente."),
+            ("18",
+             "Corresponde a la mitad de 36, que no es lo que el logaritmo mide."),
+            ("36, que es el número al que se aplica el logaritmo",
+             "Ese es el argumento: la respuesta es el exponente, que vale 2."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "facil",
+        "¿Cuál es el valor de log₂ (1/8)?",
+        "−3",
+        "Un argumento menor que 1 da logaritmo negativo.\n\n"
+        "1) 1/8 se escribe como 2⁻³.\n"
+        "2) El logaritmo devuelve ese exponente.\n"
+        "3) log₂ (1/8) = −3.\n\n"
+        "Regla útil: si el argumento está entre 0 y 1, el logaritmo es "
+        "negativo; si es mayor que 1, es positivo.",
+        [
+            ("3",
+             "Pierde el signo: 2³ da 8, no 1/8."),
+            ("1/3",
+             "Invierte el exponente en vez de cambiarle el signo."),
+            ("−8, que es el opuesto del denominador de la fracción",
+             "El logaritmo devuelve el exponente, no el número del denominador."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "Usando que log 5 ≈ 0,699, ¿cuál es el valor aproximado de log 25?",
+        "≈1,398",
+        "El logaritmo de una potencia baja el exponente al frente.\n\n"
+        "1) 25 = 5².\n"
+        "2) log 5² = 2 · log 5.\n"
+        "3) 2 · 0,699 = 1,398.\n\n"
+        "Esa propiedad es la que convierte multiplicaciones en sumas y "
+        "potencias en productos: es la razón de que existan los logaritmos.",
+        [
+            ("≈0,699",
+             "Repite el valor de log 5 sin duplicarlo."),
+            ("≈4,891",
+             "Multiplica por 7 o eleva el logaritmo, en vez de multiplicarlo por 2."),
+            ("≈0,489, elevando al cuadrado el valor de log 5",
+             "El exponente baja como FACTOR: no se eleva el logaritmo, se lo multiplica."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "Si log 2 ≈ 0,301 y log 7 ≈ 0,845, ¿cuál es el valor aproximado de "
+        "log 14?",
+        "≈1,146",
+        "El logaritmo de un producto es la suma de los logaritmos.\n\n"
+        "1) 14 = 2 · 7.\n"
+        "2) log 14 = log 2 + log 7.\n"
+        "3) 0,301 + 0,845 = 1,146.\n\n"
+        "Que el resultado supere a 1 es coherente: 14 es mayor que 10, y "
+        "log 10 = 1.",
+        [
+            ("≈0,254",
+             "Multiplica los dos logaritmos en vez de sumarlos."),
+            ("≈0,544",
+             "Los resta, que correspondería a log(7/2)."),
+            ("≈2,807, dividiendo el logaritmo mayor por el menor",
+             "Ese cociente no corresponde a ninguna propiedad del logaritmo."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "Si log 8 ≈ 0,903 y log 2 ≈ 0,301, ¿cuál es el valor de log 4?",
+        "≈0,602",
+        "El logaritmo de un cociente es la resta de los logaritmos.\n\n"
+        "1) 4 = 8/2.\n"
+        "2) log 4 = log 8 − log 2.\n"
+        "3) 0,903 − 0,301 = 0,602.\n\n"
+        "Comprobación: 4 = 2², así que log 4 también es 2 · 0,301 = 0,602. Las "
+        "dos vías coinciden.",
+        [
+            ("≈1,204",
+             "Suma los dos logaritmos, que correspondería a log 16."),
+            ("≈3",
+             "Divide 0,903 por 0,301: el cociente de logaritmos no es el logaritmo del cociente."),
+            ("≈0,272, multiplicando ambos valores entre sí",
+             "El producto de logaritmos no corresponde a ninguna propiedad."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "Resuelve la ecuación log₂ x = 5.",
+        "x = 32",
+        "Se pasa de forma logarítmica a forma exponencial.\n\n"
+        "1) log₂ x = 5 significa que 2 elevado a 5 da x.\n"
+        "2) 2⁵ = 32.\n"
+        "3) Entonces x = 32.\n\n"
+        "Comprobación: log₂ 32 pregunta a qué exponente elevar 2 para llegar a "
+        "32, y la respuesta es 5.",
+        [
+            ("x = 10",
+             "Multiplica base por exponente en vez de elevar."),
+            ("x = 25",
+             "Eleva el exponente a la base: 5², invirtiendo los papeles."),
+            ("x = 2,5, dividiendo el exponente por la base de la ecuación",
+             "La relación es exponencial, no una división."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "Resuelve la ecuación log₃ (x + 1) = 2.",
+        "x = 8",
+        "Primero se despeja el paréntesis completo.\n\n"
+        "1) La forma exponencial da 3² = x + 1.\n"
+        "2) 9 = x + 1.\n"
+        "3) Despejando: x = 8.\n\n"
+        "Conviene comprobar que el argumento quede positivo: x + 1 = 9 > 0, así "
+        "que la solución es válida.",
+        [
+            ("x = 9",
+             "Olvida restar el 1 del argumento."),
+            ("x = 5",
+             "Resuelve 3 · 2 en vez de 3 elevado a 2."),
+            ("x = 2, tomando el valor del logaritmo como si fuera la incógnita",
+             "El 2 es el resultado del logaritmo, no el valor de x."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "¿Cuál es el valor de log₅ 125 + log₂ 16?",
+        "7",
+        "Se resuelve cada logaritmo por separado y se suma.\n\n"
+        "1) 125 = 5³, así que log₅ 125 = 3.\n"
+        "2) 16 = 2⁴, así que log₂ 16 = 4.\n"
+        "3) La suma es 3 + 4 = 7.\n\n"
+        "La propiedad de la suma de logaritmos solo se aplica cuando comparten "
+        "base; acá las bases son distintas, así que se evalúan por separado.",
+        [
+            ("12",
+             "Multiplica los dos resultados en vez de sumarlos."),
+            ("log 141",
+             "Aplica la propiedad del producto, que exige que ambas bases coincidan."),
+            ("141, sumando directamente los argumentos de los dos logaritmos",
+             "Los argumentos no se suman: cada logaritmo se evalúa y después se suman los resultados."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "El pH de una solución se calcula como pH = −log[H⁺]. Si la "
+        "concentración de hidrogeniones es 10⁻⁵, ¿cuál es el pH?",
+        "5",
+        "El signo menos convierte el exponente negativo en un valor "
+        "positivo.\n\n"
+        "1) log(10⁻⁵) = −5.\n"
+        "2) El pH es el opuesto: −(−5).\n"
+        "3) Por lo tanto el pH vale 5.\n\n"
+        "Esa es la razón del signo menos en la fórmula: las concentraciones "
+        "reales son potencias negativas de diez y la escala se quiere "
+        "positiva.",
+        [
+            ("−5",
+             "Olvida el signo menos que la propia fórmula antepone."),
+            ("10",
+             "Confunde la base de la potencia con el resultado."),
+            ("0,00001, que es el valor de la concentración escrito como decimal",
+             "Ese es el argumento del logaritmo: el pH es el exponente cambiado de signo."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "¿Cuál es el valor de log₉ 3?",
+        "0,5",
+        "El argumento puede ser una raíz de la base.\n\n"
+        "1) La pregunta es: ¿9 elevado a qué da 3?\n"
+        "2) 3 es la raíz cuadrada de 9, es decir, 9^(1/2).\n"
+        "3) Entonces log₉ 3 = 1/2 = 0,5.\n\n"
+        "Cuando el argumento es menor que la base pero mayor que 1, el "
+        "logaritmo queda entre 0 y 1.",
+        [
+            ("2",
+             "Corresponde a log₃ 9, con la base y el argumento intercambiados."),
+            ("3",
+             "Repite el argumento en vez de entregar el exponente."),
+            ("6, que resulta de dividir 9 por 3 y sumarle la base",
+             "El logaritmo no combina base y argumento con sumas ni divisiones."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "¿Cuál es el valor de 10^(log 7)?",
+        "7",
+        "La potencia y el logaritmo de la misma base se cancelan.\n\n"
+        "1) log 7 es, por definición, el exponente al que hay que elevar 10 "
+        "para obtener 7.\n"
+        "2) Al elevar 10 a ese exponente se recupera exactamente 7.\n\n"
+        "Son operaciones inversas, como elevar al cuadrado y sacar raíz "
+        "cuadrada: aplicadas una tras otra devuelven el número de partida.",
+        [
+            ("10",
+             "Devuelve la base en vez del argumento."),
+            ("70",
+             "Multiplica base por argumento, operación que no corresponde."),
+            ("1, porque el logaritmo y la potencia se anulan y dejan la unidad",
+             "No se anulan dejando 1: se cancelan devolviendo el argumento original."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "La magnitud de un sismo en escala logarítmica crece de 5 a 7. ¿Cuántas "
+        "veces más energía libera, si cada grado multiplica la energía por 32?",
+        "1.024 veces",
+        "Cada grado multiplica, así que dos grados multiplican dos veces.\n\n"
+        "1) Subir un grado multiplica la energía por 32.\n"
+        "2) Subir dos grados la multiplica por 32 · 32.\n"
+        "3) 32² = 1.024 veces.\n\n"
+        "Ese crecimiento explosivo es lo que hace útil la escala logarítmica: "
+        "comprime en dos unidades una diferencia de mil veces.",
+        [
+            ("64 veces",
+             "Suma los dos factores en vez de multiplicarlos."),
+            ("2 veces",
+             "Toma la diferencia de magnitudes como si fuera la razón de energías."),
+            ("32 veces, porque cada grado multiplica por 32 sin importar cuántos suban",
+             "Cada grado multiplica otra vez: dos grados dan 32², no 32."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "¿Cuál de estas propiedades de los logaritmos es FALSA?",
+        "log(a + b) = log a + log b",
+        "El logaritmo convierte productos en sumas, no sumas en sumas.\n\n"
+        "1) La propiedad verdadera es log(a · b) = log a + log b.\n"
+        "2) Para la SUMA no existe ninguna propiedad equivalente.\n"
+        "3) Contraejemplo: log(10 + 10) = log 20 ≈ 1,301, mientras que "
+        "log 10 + log 10 = 2.\n\n"
+        "Es el error más común con logaritmos, y el contraejemplo lo cierra en "
+        "una línea.",
+        [
+            ("log(a · b) = log a + log b",
+             "Es verdadera: es la propiedad del producto."),
+            ("log(a/b) = log a − log b",
+             "Es verdadera: es la propiedad del cociente."),
+            ("log(aⁿ) = n · log a",
+             "Es verdadera: es la propiedad de la potencia."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "¿Entre qué dos enteros consecutivos se encuentra log 500, en base 10?",
+        "Entre 2 y 3",
+        "Se acota el argumento entre dos potencias de diez.\n\n"
+        "1) 100 < 500 < 1.000.\n"
+        "2) log 100 = 2 y log 1.000 = 3.\n"
+        "3) Como el logaritmo conserva el orden, 2 < log 500 < 3.\n\n"
+        "Regla práctica: el logaritmo en base 10 de un número de n cifras está "
+        "entre n − 1 y n.",
+        [
+            ("Entre 1 y 2",
+             "Ese rango corresponde a los números entre 10 y 100."),
+            ("Entre 5 y 6",
+             "Confunde el logaritmo con las centenas del argumento."),
+            ("Entre 499 y 501, que son los enteros que rodean al argumento",
+             "El logaritmo no queda cerca del argumento: lo comprime enormemente."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "Un capital se duplica cada año. ¿Cuál de las siguientes expresiones "
+        "permite calcular en cuántos años se multiplica por 32?",
+        "log₂ 32",
+        "El logaritmo despeja el exponente de una ecuación exponencial.\n\n"
+        "1) Si el capital se multiplica por 2ⁿ y se busca que llegue a 32, la "
+        "ecuación es 2ⁿ = 32.\n"
+        "2) Despejar n de un exponente es exactamente lo que hace el "
+        "logaritmo.\n"
+        "3) n = log₂ 32, que vale 5.\n\n"
+        "Comprobación: 2⁵ = 32, y en efecto son cinco duplicaciones.",
+        [
+            ("log₃₂ 2",
+             "Invierte base y argumento: daría un valor entre 0 y 1."),
+            ("32 ÷ 2",
+             "Esa división da 16, que no es el número de duplicaciones."),
+            ("32 · log 2, multiplicando el factor de crecimiento por el logaritmo de la base",
+             "Ese producto no despeja el exponente de la ecuación."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "¿Cuál es el valor de log₂ 3 + log₂ 5?",
+        "log₂ 15",
+        "Con la misma base, la suma de logaritmos es el logaritmo del "
+        "producto.\n\n"
+        "1) log₂ 3 + log₂ 5 = log₂ (3 · 5).\n"
+        "2) 3 · 5 = 15.\n"
+        "3) El resultado es log₂ 15, que está entre 3 y 4 porque 8 < 15 < 16.\n\n"
+        "No se puede simplificar más: 15 no es potencia de 2, así que el "
+        "resultado exacto queda expresado como logaritmo.",
+        [
+            ("log₂ 8",
+             "Suma los argumentos en vez de multiplicarlos."),
+            ("log₄ 15",
+             "Suma también las bases, que en esta propiedad se mantienen."),
+            ("15, porque al sumar dos logaritmos el logaritmo desaparece",
+             "El logaritmo no desaparece: el resultado es log₂ 15, cercano a 3,9."),
+        ],
+    ),
+]
+
+
+QUESTIONS += [
+    _q(
+        "num_logaritmos", "medio",
+        "¿Cuál es el valor de log₄ 64 · log₂ 8?",
+        "9",
+        "Se resuelve cada logaritmo y después se multiplica.\n\n"
+        "1) 64 = 4³, así que log₄ 64 = 3.\n"
+        "2) 8 = 2³, así que log₂ 8 = 3.\n"
+        "3) El producto es 3 · 3 = 9.\n\n"
+        "No existe una propiedad para el producto de dos logaritmos: hay que "
+        "evaluarlos y recién ahí multiplicar.",
+        [
+            ("6",
+             "Suma los dos resultados en vez de multiplicarlos."),
+            ("log 512",
+             "Aplica una propiedad que no existe: el producto de logaritmos no es el logaritmo de un producto."),
+            ("512, multiplicando directamente los dos argumentos",
+             "Los argumentos no se multiplican entre sí: cada logaritmo se evalúa por separado."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "La intensidad de un sonido en decibeles se calcula como 10 · log(I/I₀). "
+        "Si I es 1.000 veces I₀, ¿cuántos decibeles son?",
+        "30 dB",
+        "El cociente que entra al logaritmo es la razón entre intensidades.\n\n"
+        "1) I/I₀ = 1.000.\n"
+        "2) log 1.000 = 3.\n"
+        "3) Multiplicando por 10: 30 decibeles.\n\n"
+        "Cada vez que la intensidad se multiplica por diez, se suman 10 "
+        "decibeles: por eso 30 dB no es «el triple» de 10 dB sino cien veces "
+        "más intenso.",
+        [
+            ("3 dB",
+             "Olvida multiplicar por el factor 10 de la fórmula."),
+            ("1.000 dB",
+             "Entrega la razón de intensidades sin aplicarle el logaritmo."),
+            ("10.000 dB, multiplicando la razón de intensidades por el factor diez",
+             "El factor 10 multiplica al LOGARITMO de la razón, no a la razón misma."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "Si log₂ x = 3 y log₂ y = 4, ¿cuál es el valor de log₂ (x · y)?",
+        "7",
+        "El logaritmo del producto es la suma de los logaritmos.\n\n"
+        "1) log₂ (x · y) = log₂ x + log₂ y.\n"
+        "2) Reemplazando: 3 + 4 = 7.\n\n"
+        "Comprobación directa: x = 8 e y = 16, así que x · y = 128 = 2⁷. Los "
+        "dos caminos coinciden.",
+        [
+            ("12",
+             "Multiplica los dos logaritmos en vez de sumarlos."),
+            ("128",
+             "Entrega el valor del producto, no su logaritmo."),
+            ("1, restando los dos logaritmos como si el producto fuera un cociente",
+             "La resta corresponde al cociente: log₂(y/x) sí valdría 1."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "¿Cuál es el valor de log₃ (1/9)?",
+        "−2",
+        "Los argumentos menores que 1 dan logaritmos negativos.\n\n"
+        "1) 1/9 se escribe como 3⁻².\n"
+        "2) El logaritmo devuelve ese exponente.\n"
+        "3) log₃ (1/9) = −2.\n\n"
+        "Conviene fijarse en la posición del argumento respecto de 1: mayor da "
+        "positivo, menor da negativo, e igual a 1 da cero.",
+        [
+            ("2",
+             "Pierde el signo: 3² da 9, no 1/9."),
+            ("1/2",
+             "Invierte el exponente en lugar de cambiarle el signo."),
+            ("−9, tomando el denominador de la fracción con signo negativo",
+             "El logaritmo entrega el exponente, no el denominador."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "Si log 3 ≈ 0,477, ¿cuál es el valor aproximado de log 300?",
+        "≈2,477",
+        "Conviene separar el argumento en un producto con una potencia de "
+        "diez.\n\n"
+        "1) 300 = 3 · 100.\n"
+        "2) log 300 = log 3 + log 100.\n"
+        "3) 0,477 + 2 = 2,477.\n\n"
+        "Multiplicar por 100 suma exactamente 2 al logaritmo: por eso los "
+        "logaritmos decimales solo cambian en su parte entera al correr la "
+        "coma.",
+        [
+            ("≈1,431",
+             "Multiplica log 3 por 3 en vez de sumarle log 100."),
+            ("≈47,7",
+             "Multiplica el logaritmo por 100 en vez de sumarle su logaritmo."),
+            ("≈0,477, porque correr la coma no cambia el valor del logaritmo",
+             "Sí lo cambia: multiplicar por 100 suma 2 al logaritmo."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "Resuelve la ecuación log x + log 4 = log 20, en base 10.",
+        "x = 5",
+        "Se junta el lado izquierdo con la propiedad del producto.\n\n"
+        "1) log x + log 4 = log(4x).\n"
+        "2) Como log(4x) = log 20 y el logaritmo es inyectivo, 4x = 20.\n"
+        "3) Despejando: x = 5.\n\n"
+        "El paso clave es que si dos logaritmos de la misma base son iguales, "
+        "sus argumentos también lo son.",
+        [
+            ("x = 16",
+             "Resta 4 de 20 en vez de dividir."),
+            ("x = 80",
+             "Multiplica en vez de dividir al despejar."),
+            ("x = 24, restando los argumentos como si la suma de logaritmos fuera una suma común",
+             "La suma de logaritmos corresponde a un producto de argumentos, no a una suma."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "¿Cuál es el valor de log₈ 2?",
+        "1/3",
+        "El argumento es una raíz de la base.\n\n"
+        "1) La pregunta es: ¿8 elevado a qué da 2?\n"
+        "2) 2 es la raíz cúbica de 8, es decir, 8^(1/3).\n"
+        "3) Por lo tanto log₈ 2 = 1/3.\n\n"
+        "Vale la relación inversa: log₂ 8 = 3, y los dos logaritmos son "
+        "recíprocos entre sí.",
+        [
+            ("3",
+             "Corresponde a log₂ 8, con base y argumento intercambiados."),
+            ("4",
+             "Resulta de dividir 8 por 2, que no es lo que el logaritmo calcula."),
+            ("2, que es el argumento del logaritmo de la expresión",
+             "El logaritmo devuelve el exponente, que aquí es una fracción."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "Una población de bacterias se multiplica por 10 cada hora. ¿Qué "
+        "representa log 1.000 en ese contexto?",
+        "Las horas necesarias para multiplicarse por mil",
+        "El logaritmo despeja el tiempo de un crecimiento exponencial.\n\n"
+        "1) Tras t horas la población quedó multiplicada por 10ᵗ.\n"
+        "2) Para que ese factor sea 1.000 hace falta que 10ᵗ = 1.000.\n"
+        "3) Despejando: t = log 1.000 = 3 horas.\n\n"
+        "Es el uso más frecuente del logaritmo fuera de la escuela: cuando la "
+        "incógnita está en el exponente, el logaritmo la baja.",
+        [
+            ("La cantidad final de bacterias tras mil horas",
+             "El argumento 1.000 es el factor de crecimiento, no el tiempo."),
+            ("El número de bacterias que hay al comienzo",
+             "La población inicial no aparece en la expresión."),
+            ("La velocidad con que la población se multiplica cada hora",
+             "Esa velocidad es el factor 10, que aquí es la base del logaritmo."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "¿Cuál es el valor de log 0,001, en base 10?",
+        "−3",
+        "Los decimales menores que 1 son potencias negativas de diez.\n\n"
+        "1) 0,001 = 1/1.000 = 10⁻³.\n"
+        "2) El logaritmo devuelve ese exponente.\n"
+        "3) log 0,001 = −3.\n\n"
+        "Cada cero después de la coma resta una unidad al logaritmo, del mismo "
+        "modo que cada cero antes de la coma le suma una.",
+        [
+            ("3",
+             "Pierde el signo: 10³ es 1.000, no 0,001."),
+            ("0,001",
+             "Repite el argumento en lugar de entregar el exponente."),
+            ("−1.000, tomando el inverso del argumento con signo negativo",
+             "El logaritmo devuelve el exponente, que es −3."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "¿Qué relación hay entre log₂ 16 y la expresión 2⁴ = 16?",
+        "Son la misma relación escrita de dos maneras",
+        "Logaritmo y potencia son operaciones inversas.\n\n"
+        "1) La forma exponencial 2⁴ = 16 entrega el resultado a partir del "
+        "exponente.\n"
+        "2) La forma logarítmica log₂ 16 = 4 entrega el exponente a partir del "
+        "resultado.\n"
+        "3) Los tres números —base, exponente y resultado— son los mismos, y "
+        "solo cambia cuál se despeja.\n\n"
+        "Traducir de una forma a la otra es la maniobra que resuelve casi "
+        "cualquier ecuación logarítmica.",
+        [
+            ("No tienen relación: una es potencia y la otra, logaritmo",
+             "Son exactamente la misma relación, leída en dos sentidos."),
+            ("El logaritmo es el inverso multiplicativo de la potencia",
+             "Es la operación inversa, que no es lo mismo que el inverso multiplicativo."),
+            ("El logaritmo entrega el resultado y la potencia, el exponente",
+             "Es al revés: la potencia entrega el resultado y el logaritmo, el exponente."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "dificil",
+        "¿Cuál es el valor de log₂ 6 − log₂ 3?",
+        "1",
+        "La resta de logaritmos de igual base es el logaritmo del cociente.\n\n"
+        "1) log₂ 6 − log₂ 3 = log₂ (6/3).\n"
+        "2) 6/3 = 2.\n"
+        "3) log₂ 2 = 1.\n\n"
+        "Sin la propiedad habría que evaluar dos logaritmos que no son enteros; "
+        "con ella el ejercicio se resuelve en una línea.",
+        [
+            ("log₂ 3",
+             "Resta los argumentos en vez de dividirlos."),
+            ("2",
+             "Entrega el cociente de los argumentos, sin aplicarle el logaritmo."),
+            ("0,5, dividiendo los dos logaritmos entre sí en vez de restarlos",
+             "El cociente de logaritmos no corresponde a esta propiedad."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "dificil",
+        "Si 2ˣ = 40, ¿entre qué dos enteros consecutivos está x?",
+        "Entre 5 y 6",
+        "Se acota el 40 entre dos potencias de 2.\n\n"
+        "1) 2⁵ = 32 y 2⁶ = 64.\n"
+        "2) Como 32 < 40 < 64, el exponente está entre 5 y 6.\n"
+        "3) Formalmente, x = log₂ 40, que vale cerca de 5,32.\n\n"
+        "Acotar entre potencias conocidas es la forma de estimar un logaritmo "
+        "sin calculadora.",
+        [
+            ("Entre 4 y 5",
+             "2⁵ = 32 ya es menor que 40, así que el exponente supera a 5."),
+            ("Entre 6 y 7",
+             "2⁶ = 64 supera a 40, así que el exponente queda por debajo de 6."),
+            ("Entre 19 y 21, que son los enteros cercanos a la mitad de 40",
+             "La mitad del argumento no tiene relación con el exponente."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "¿Cuál es el valor de log₅ 5⁷?",
+        "7",
+        "El logaritmo cancela la potencia de su misma base.\n\n"
+        "1) Por la propiedad de la potencia, log₅ 5⁷ = 7 · log₅ 5.\n"
+        "2) log₅ 5 = 1.\n"
+        "3) El resultado es 7 · 1 = 7.\n\n"
+        "En general, el logaritmo en base a de a elevado a n siempre vale n: "
+        "son operaciones inversas.",
+        [
+            ("5",
+             "Devuelve la base en vez del exponente."),
+            ("35",
+             "Multiplica base por exponente en lugar de cancelar la potencia."),
+            ("78.125, que es el valor de cinco elevado a siete",
+             "Ese es el argumento del logaritmo: la respuesta es su exponente."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "dificil",
+        "Resuelve la ecuación log₂ (x + 3) + log₂ (x − 3) = 4.",
+        "x = 5",
+        "Se junta el lado izquierdo y después se verifica el dominio.\n\n"
+        "1) La suma de logaritmos da log₂ [(x + 3)(x − 3)] = log₂ (x² − 9).\n"
+        "2) La forma exponencial da x² − 9 = 2⁴ = 16, así que x² = 25.\n"
+        "3) Las raíces son 5 y −5, pero con x = −5 los argumentos quedan "
+        "negativos y el logaritmo no existe.\n\n"
+        "Por eso toda ecuación logarítmica exige comprobar las soluciones: la "
+        "manipulación algebraica puede producir raíces que el dominio "
+        "rechaza.",
+        [
+            ("x = 5 o x = −5",
+             "Con x = −5 los argumentos serían −2 y −8: el logaritmo no está definido ahí."),
+            ("x = 4",
+             "Resuelve x² − 9 = 4 en vez de igualar a 2⁴."),
+            ("x = 25, olvidando extraer la raíz cuadrada al despejar",
+             "x² vale 25, así que x vale 5: falta el último paso."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "dificil",
+        "Si log 2 ≈ 0,301, ¿cuántas cifras tiene el número 2⁵⁰?",
+        "16 cifras",
+        "El logaritmo decimal cuenta cifras.\n\n"
+        "1) log(2⁵⁰) = 50 · log 2 = 50 · 0,301 = 15,05.\n"
+        "2) Un número cuyo logaritmo está entre 15 y 16 se encuentra entre 10¹⁵ "
+        "y 10¹⁶.\n"
+        "3) Todo número en ese rango tiene 16 cifras.\n\n"
+        "La regla general: el número de cifras es la parte entera del logaritmo "
+        "más uno.",
+        [
+            ("15 cifras",
+             "Toma la parte entera del logaritmo sin sumarle 1."),
+            ("50 cifras",
+             "Confunde el exponente de la potencia con la cantidad de cifras."),
+            ("30 cifras, multiplicando el exponente por el valor de log 2 redondeado",
+             "Ese producto es 15,05, que es el logaritmo, no el número de cifras."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "dificil",
+        "¿Cuál es el valor de log₃ 5 · log₅ 9?",
+        "2",
+        "Los logaritmos encadenados se simplifican por cambio de base.\n\n"
+        "1) log₅ 9 se puede escribir como log₃ 9 / log₃ 5.\n"
+        "2) Al multiplicar por log₃ 5, ese factor se cancela.\n"
+        "3) Queda log₃ 9 = 2.\n\n"
+        "Es el mismo mecanismo por el que log_a b · log_b c = log_a c: las "
+        "bases intermedias se cancelan como en una cadena.",
+        [
+            ("1",
+             "Ese sería el resultado si los dos logaritmos fueran recíprocos, como log₃ 5 · log₅ 3."),
+            ("log₃ 45",
+             "Aplica la propiedad del producto, que rige para la SUMA de logaritmos de igual base."),
+            ("45, multiplicando directamente los dos argumentos",
+             "Los argumentos no se multiplican: la cadena cancela la base intermedia."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "dificil",
+        "Un medicamento reduce su concentración a la mitad cada 6 horas. ¿Qué "
+        "expresión da las horas necesarias para que quede la octava parte?",
+        "6 · log₂ 8",
+        "Primero se cuentan las semividas y después se convierten a horas.\n\n"
+        "1) Quedar en la octava parte significa haberse reducido a la mitad "
+        "tres veces, porque (1/2)³ = 1/8.\n"
+        "2) Ese número de semividas es log₂ 8 = 3.\n"
+        "3) Cada semivida dura 6 horas, así que el total es 6 · 3 = 18 horas.\n\n"
+        "El logaritmo entrega cuántas veces se repitió el proceso; el factor 6 "
+        "traduce esa cuenta a tiempo.",
+        [
+            ("8 · log₂ 6",
+             "Intercambia el papel del factor de reducción y el de la duración."),
+            ("6 ÷ log₂ 8",
+             "Divide donde corresponde multiplicar: daría 2 horas, menos que una sola semivida."),
+            ("6 · 8, multiplicando la duración de la semivida por la fracción restante",
+             "El 8 indica en cuánto se dividió la concentración, no cuántas semividas pasaron."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "dificil",
+        "Se afirma que log(a · b) siempre es mayor que log a. ¿Es correcto?",
+        "No: si b es menor que 1, el producto disminuye",
+        "La afirmación es universal y basta un contraejemplo.\n\n"
+        "1) log(a · b) = log a + log b.\n"
+        "2) Ese valor supera a log a solo si log b es positivo, es decir, si "
+        "b > 1.\n"
+        "3) Con b = 0,1 se tiene log b = −1, y el producto queda una unidad por "
+        "debajo.\n\n"
+        "Multiplicar no siempre agranda: por un número entre 0 y 1, achica.",
+        [
+            ("Sí, porque multiplicar siempre aumenta el argumento",
+             "Multiplicar por un número entre 0 y 1 lo disminuye."),
+            ("Sí, siempre que a y b sean positivos",
+             "Ser positivo no basta: 0,1 es positivo y hace disminuir el producto."),
+            ("No, porque el logaritmo de un producto no se puede comparar con el de un factor",
+             "Sí se puede comparar: la diferencia entre ambos es exactamente log b."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "Resuelve la ecuación 3^(2x) = 81.",
+        "x = 2",
+        "Conviene escribir ambos lados con la misma base.\n\n"
+        "1) 81 = 3⁴.\n"
+        "2) La ecuación queda 3^(2x) = 3⁴.\n"
+        "3) Con bases iguales, los exponentes se igualan: 2x = 4, así que "
+        "x = 2.\n\n"
+        "También sale con logaritmos: 2x = log₃ 81 = 4. Igualar bases es más "
+        "rápido cuando el argumento es una potencia exacta.",
+        [
+            ("x = 4",
+             "Se detiene en el exponente 2x = 4 sin despejar la x."),
+            ("x = 40,5",
+             "Divide 81 por 2, tratando el exponente como un factor."),
+            ("x = 27, dividiendo el argumento por la base de la potencia",
+             "La ecuación es exponencial: dividir no despeja el exponente."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "dificil",
+        "Dos sismos difieren en 1,5 grados de magnitud. Si cada grado multiplica "
+        "la energía por 32, ¿aproximadamente cuántas veces más energía libera el "
+        "mayor?",
+        "Unas 181 veces",
+        "El factor se eleva a la diferencia de magnitudes, aunque no sea "
+        "entera.\n\n"
+        "1) La razón de energías es 32 elevado a 1,5.\n"
+        "2) 32^1,5 es 32 · √32.\n"
+        "3) √32 ≈ 5,66, así que el producto es 32 · 5,66 ≈ 181.\n\n"
+        "Que el exponente sea fraccionario no cambia el método: la potencia de "
+        "exponente 1,5 es el número por su raíz cuadrada.",
+        [
+            ("48 veces",
+             "Multiplica 32 por 1,5 en vez de elevarlo a esa potencia."),
+            ("1.024 veces",
+             "Corresponde a una diferencia de 2 grados, no de 1,5."),
+            ("32 veces, porque la parte decimal de la magnitud no alcanza a sumar un grado",
+             "La parte decimal sí cuenta: aporta el factor √32, que multiplica por más de cinco."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "dificil",
+        "¿Cuál de las siguientes expresiones NO está definida?",
+        "log₁ 5",
+        "La base de un logaritmo tiene restricciones propias.\n\n"
+        "1) La base debe ser positiva y distinta de 1.\n"
+        "2) Con base 1, ninguna potencia da algo distinto de 1: 1ⁿ = 1 "
+        "siempre.\n"
+        "3) Por eso no existe exponente que lleve de 1 a 5, y log₁ 5 no está "
+        "definido.\n\n"
+        "Las otras tres sí existen: el argumento solo necesita ser positivo, y "
+        "puede ser decimal o menor que la base.",
+        [
+            ("log₅ 1",
+             "Está definido y vale 0, porque 5⁰ = 1."),
+            ("log 0,5",
+             "Está definido y vale cerca de −0,301: el argumento es positivo."),
+            ("log₂ 0,25",
+             "Está definido y vale −2, porque 2⁻² = 0,25."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "dificil",
+        "Un capital crece un 5% anual. ¿Qué expresión da los años necesarios "
+        "para que se duplique?",
+        "log 2 ÷ log 1,05",
+        "Es una ecuación exponencial resuelta por cambio de base.\n\n"
+        "1) Tras t años el capital quedó multiplicado por 1,05ᵗ.\n"
+        "2) Duplicarse significa 1,05ᵗ = 2.\n"
+        "3) Aplicando logaritmo a ambos lados: t · log 1,05 = log 2, de donde "
+        "t = log 2 / log 1,05, que da unos 14,2 años.\n\n"
+        "El cociente de logaritmos es la manera de escribir log₁,₀₅ 2 con una "
+        "calculadora que solo trae base 10.",
+        [
+            ("log 1,05 ÷ log 2",
+             "Invierte el cociente: daría 0,07 años, lo que es imposible."),
+            ("2 ÷ 1,05",
+             "Esa división da 1,9 y no despeja el exponente."),
+            ("log 2 · log 1,05, multiplicando ambos logaritmos en vez de dividirlos",
+             "El cambio de base es un cociente: multiplicar no despeja el exponente."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M2 - Numeros: matematica financiera
+#
+# El temario nombra tres contextos con nombre y apellido: "AFP y jubilacion,
+# creditos hipotecarios y credito de consumo". El nodo tenia 16 preguntas y
+# ninguna tocaba AFP ni credito hipotecario: eran casi todas interes simple
+# abstracto. Se agregan esos contextos, mas UF, CAE, cuota, amortizacion y la
+# comparacion entre ofertas, que es donde el contenido se vuelve util.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "num_financiera", "facil",
+        "En Chile la cotización obligatoria para la AFP es del 10% de la renta "
+        "imponible. Si una persona gana $700.000 imponibles, ¿cuánto se "
+        "destina a su cuenta individual?",
+        "$70.000",
+        "El porcentaje se aplica sobre la renta imponible.\n\n"
+        "1) El 10% significa diez de cada cien pesos.\n"
+        "2) El 10% de 700.000 es 700.000 · 0,10.\n"
+        "3) El resultado es $70.000 mensuales.\n\n"
+        "Esa cotización va a la cuenta de capitalización individual y se suma a "
+        "la rentabilidad que el fondo obtenga.",
+        [
+            ("$7.000",
+             "Corresponde al 1%, no al 10%: corre la coma un lugar de más."),
+            ("$630.000",
+             "Es lo que queda DESPUÉS de descontar la cotización, no la cotización."),
+            ("$10.000, porque la cotización es un monto fijo de diez mil pesos",
+             "No es un monto fijo: es un porcentaje de la renta, así que sube con el sueldo."),
+        ],
+    ),
+    _q(
+        "num_financiera", "facil",
+        "Un capital de $400.000 gana un 3% de interés simple anual. ¿Cuánto "
+        "interés genera en un año?",
+        "$12.000",
+        "El interés simple se calcula siempre sobre el capital inicial.\n\n"
+        "1) El 3% de 400.000 es 400.000 · 0,03.\n"
+        "2) El resultado es 12.000.\n"
+        "3) Como es un solo año, ese es el interés total.\n\n"
+        "En interés simple los años siguientes generan la misma cantidad, "
+        "porque el porcentaje nunca se aplica sobre los intereses acumulados.",
+        [
+            ("$1.200",
+             "Corresponde al 0,3%: corre la coma un lugar de más."),
+            ("$412.000",
+             "Es el monto acumulado, no el interés que se pregunta."),
+            ("$120.000, aplicando un 30% en vez del 3% indicado",
+             "El 3% de 400.000 es 12.000; 120.000 sería el 30%."),
+        ],
+    ),
+    _q(
+        "num_financiera", "facil",
+        "¿Qué diferencia hay entre el interés simple y el interés compuesto?",
+        "El compuesto también genera intereses sobre los intereses",
+        "La diferencia está sobre qué monto se aplica la tasa.\n\n"
+        "1) En el interés simple la tasa se aplica siempre sobre el capital "
+        "inicial.\n"
+        "2) En el compuesto se aplica sobre el capital más los intereses ya "
+        "acumulados.\n"
+        "3) Por eso el compuesto crece cada vez más rápido, mientras el simple "
+        "crece en cantidades iguales.\n\n"
+        "En un solo período los dos dan exactamente lo mismo: la diferencia "
+        "aparece desde el segundo en adelante.",
+        [
+            ("El compuesto usa una tasa más alta",
+             "Con la MISMA tasa el compuesto ya rinde más: no hace falta que sea mayor."),
+            ("El simple se aplica a créditos y el compuesto, a ahorros",
+             "Ambos se usan en los dos casos: lo que cambia es cómo se calculan."),
+            ("El compuesto se cobra por adelantado y el simple, al final del período",
+             "El momento del cobro es otra cosa: la diferencia está en la base de cálculo."),
+        ],
+    ),
+    _q(
+        "num_financiera", "facil",
+        "Una casa se vende en 3.000 UF y la UF vale $38.000. ¿Cuál es el precio "
+        "en pesos?",
+        "$114.000.000",
+        "La UF es una unidad de cuenta que se multiplica por su valor del "
+        "día.\n\n"
+        "1) El precio en pesos es 3.000 · 38.000.\n"
+        "2) El producto es 114.000.000.\n\n"
+        "Las propiedades se cotizan en UF porque esa unidad se reajusta con la "
+        "inflación: el precio en pesos cambia todos los días aunque el precio "
+        "en UF sea el mismo.",
+        [
+            ("$41.000",
+             "Suma las dos cantidades en vez de multiplicarlas."),
+            ("$11.400.000",
+             "Corre la coma un lugar: corresponde a 300 UF, no a 3.000."),
+            ("$38.000, que es lo que vale la unidad de fomento ese día",
+             "Ese es el valor de UNA UF: la casa cuesta tres mil de ellas."),
+        ],
+    ),
+    _q(
+        "num_financiera", "facil",
+        "Un artículo cuesta $60.000 y se ofrece con un 15% de descuento. "
+        "¿Cuánto se paga?",
+        "$51.000",
+        "Conviene calcular directamente el porcentaje que se paga.\n\n"
+        "1) Si se descuenta el 15%, se paga el 85%.\n"
+        "2) El 85% de 60.000 es 60.000 · 0,85.\n"
+        "3) El resultado es 51.000.\n\n"
+        "Comprobación por el otro camino: el 15% de 60.000 es 9.000, y "
+        "60.000 − 9.000 = 51.000.",
+        [
+            ("$9.000",
+             "Ese es el monto del descuento, no el precio final."),
+            ("$45.000",
+             "Descuenta un 25% en vez del 15% indicado."),
+            ("$69.000, sumando el descuento en lugar de restarlo del precio",
+             "Un descuento baja el precio: el resultado debe ser menor que 60.000."),
+        ],
+    ),
+    _q(
+        "num_financiera", "facil",
+        "Un crédito de consumo de $600.000 se paga en 10 cuotas iguales de "
+        "$72.000. ¿Cuánto se paga en total?",
+        "$720.000",
+        "El total pagado es la cuota multiplicada por el número de cuotas.\n\n"
+        "1) 10 cuotas de 72.000 suman 720.000.\n"
+        "2) El monto prestado era 600.000.\n"
+        "3) La diferencia, $120.000, es el costo del crédito.\n\n"
+        "Comparar el total pagado con el monto recibido es la manera más "
+        "directa de ver cuánto cuesta un crédito.",
+        [
+            ("$600.000",
+             "Es el monto prestado, no lo que se termina pagando."),
+            ("$120.000",
+             "Es el costo del crédito, es decir, la diferencia entre ambos."),
+            ("$72.000, que es lo que se paga cada mes durante el plazo pactado",
+             "Esa es una sola cuota: el total son las diez."),
+        ],
+    ),
+    _q(
+        "num_financiera", "facil",
+        "¿Qué indica la Carga Anual Equivalente (CAE) de un crédito?",
+        "El costo total anual del crédito, en porcentaje",
+        "La CAE reúne en un solo número todo lo que cuesta el crédito.\n\n"
+        "1) Además del interés, incorpora comisiones, seguros y gastos "
+        "asociados.\n"
+        "2) Lo expresa como un porcentaje anual, de modo que dos créditos con "
+        "plazos distintos se puedan comparar.\n"
+        "3) Por eso la ley obliga a informarla: sin ella, una tasa baja podría "
+        "esconder comisiones altas.\n\n"
+        "Entre dos créditos por el mismo monto y plazo, conviene el de menor "
+        "CAE, aunque su tasa de interés no sea la más baja.",
+        [
+            ("El monto de la cuota mensual",
+             "La cuota es un monto en pesos; la CAE es un porcentaje."),
+            ("La tasa de interés, sin comisiones ni seguros",
+             "Esa es la tasa de interés a secas: la CAE existe justamente para incluir lo demás."),
+            ("El plazo máximo en años que el banco permite para pagar el crédito",
+             "El plazo se mide en meses o años, no en porcentaje."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Un trabajador cotiza $80.000 mensuales en su AFP. Si mantiene ese "
+        "monto durante 30 años y se ignoran la rentabilidad y los descuentos, "
+        "¿cuánto acumula?",
+        "$28.800.000",
+        "Se cuentan todos los meses del período.\n\n"
+        "1) En 30 años hay 30 · 12 = 360 meses.\n"
+        "2) El total aportado es 360 · 80.000.\n"
+        "3) El producto es 28.800.000.\n\n"
+        "El cálculo real es mayor, porque el fondo obtiene rentabilidad; este "
+        "resultado es el piso, es decir, lo que se acumularía sin ninguna "
+        "ganancia.",
+        [
+            ("$2.400.000",
+             "Cuenta 30 aportes en vez de 360: usa años donde corresponden meses."),
+            ("$960.000",
+             "Calcula lo aportado en un solo año."),
+            ("$28.800, dividiendo el aporte mensual por el número de años cotizados",
+             "El aporte se acumula: se multiplica por los meses, no se divide."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Una persona acumula $36.000.000 en su AFP y se le calcula una pensión "
+        "para 20 años. Ignorando la rentabilidad, ¿cuál sería la pensión "
+        "mensual?",
+        "$150.000",
+        "El saldo se reparte entre todos los meses esperados.\n\n"
+        "1) En 20 años hay 240 meses.\n"
+        "2) La pensión es 36.000.000 dividido por 240.\n"
+        "3) El resultado es $150.000 mensuales.\n\n"
+        "Ese cálculo simplificado muestra por qué el saldo acumulado y la "
+        "expectativa de vida determinan la pensión: si los años esperados "
+        "aumentan, la mensualidad baja.",
+        [
+            ("$1.800.000",
+             "Reparte el saldo entre 20 años en vez de entre 240 meses."),
+            ("$300.000",
+             "Usa 120 meses, que corresponden a 10 años y no a 20."),
+            ("$36.000, corriendo la coma del saldo acumulado tres lugares",
+             "El saldo hay que dividirlo por el número de meses, no correrle la coma."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "La tasa de reemplazo compara la pensión con el último sueldo. Si "
+        "alguien ganaba $800.000 y su pensión es $240.000, ¿cuál es su tasa de "
+        "reemplazo?",
+        "30%",
+        "Es un cociente expresado como porcentaje.\n\n"
+        "1) Se divide la pensión por el sueldo: 240.000/800.000.\n"
+        "2) Ese cociente vale 0,30.\n"
+        "3) Expresado como porcentaje, 30%.\n\n"
+        "La tasa de reemplazo es el indicador que se usa para discutir si un "
+        "sistema previsional cumple su objetivo: mientras más baja, mayor la "
+        "caída de ingresos al jubilar.",
+        [
+            ("70%",
+             "Ese es el porcentaje que se PIERDE respecto del sueldo, no el que se reemplaza."),
+            ("33%",
+             "Invierte el cociente parcialmente: 800.000/240.000 da 3,33, no 0,33."),
+            ("$560.000, que es la diferencia entre el sueldo y la pensión recibida",
+             "La tasa de reemplazo es un porcentaje, no un monto en pesos."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Un crédito hipotecario se paga con un dividendo mensual de 12 UF "
+        "durante 20 años. ¿Cuántas UF se pagan en total?",
+        "2.880 UF",
+        "Se cuentan todos los dividendos del plazo.\n\n"
+        "1) En 20 años hay 240 meses.\n"
+        "2) El total es 240 · 12 UF.\n"
+        "3) El resultado son 2.880 UF.\n\n"
+        "Si la propiedad costó 2.000 UF, esas 880 UF de diferencia son el costo "
+        "del crédito a lo largo de las dos décadas.",
+        [
+            ("240 UF",
+             "Cuenta los meses pero olvida multiplicar por el valor del dividendo."),
+            ("144 UF",
+             "Calcula lo pagado en un solo año."),
+            ("2.400 UF, multiplicando el dividendo por doscientos meses redondeados",
+             "El plazo son 240 meses, no 200: la diferencia son 480 UF."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Un capital de $200.000 se invierte al 10% de interés compuesto anual "
+        "durante 3 años. ¿Cuál es el monto final?",
+        "$266.200",
+        "Cada año la tasa se aplica sobre el monto acumulado.\n\n"
+        "1) Al final del primer año: 200.000 · 1,1 = 220.000.\n"
+        "2) Al final del segundo: 220.000 · 1,1 = 242.000.\n"
+        "3) Al final del tercero: 242.000 · 1,1 = 266.200.\n\n"
+        "En interés simple habrían sido 260.000: los $6.200 de diferencia son "
+        "los intereses que generaron los propios intereses.",
+        [
+            ("$260.000",
+             "Corresponde al interés simple: aplica siempre el 10% sobre los 200.000 iniciales."),
+            ("$220.000",
+             "Es el monto al cabo del primer año, no de los tres."),
+            ("$600.000, multiplicando el capital por el número de años y la tasa",
+             "El interés compuesto multiplica por 1,1 tres veces, no triplica el capital."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Un banco ofrece un crédito con un interés simple del 2% mensual a 6 "
+        "meses sobre $400.000. ¿Cuál es el interés total?",
+        "$48.000",
+        "En interés simple cada mes genera lo mismo.\n\n"
+        "1) El 2% de 400.000 es 8.000 por mes.\n"
+        "2) Son 6 meses.\n"
+        "3) El interés total es 6 · 8.000 = 48.000.\n\n"
+        "También sale directo: 400.000 · 0,02 · 6. El total a pagar sería "
+        "$448.000.",
+        [
+            ("$8.000",
+             "Calcula un solo mes y no lo multiplica por el plazo."),
+            ("$448.000",
+             "Es el monto total a pagar, no el interés."),
+            ("$12.000, aplicando el 2% sobre el plazo en lugar de sobre el capital",
+             "La tasa se aplica sobre el capital: el plazo multiplica el resultado."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Dos créditos ofrecen el mismo monto: uno con CAE de 18% y otro con CAE "
+        "de 22%. ¿Cuál conviene y por qué?",
+        "El de 18%, porque su costo total anual es menor",
+        "La CAE está diseñada exactamente para esta comparación.\n\n"
+        "1) La CAE incorpora intereses, comisiones y seguros en un solo "
+        "porcentaje anual.\n"
+        "2) A igual monto y plazo, la menor CAE significa menor costo total.\n"
+        "3) Por eso conviene el de 18%.\n\n"
+        "La comparación es válida porque el monto y el plazo son iguales: con "
+        "plazos distintos hay que mirar además el total pagado.",
+        [
+            ("El de 22%, porque una CAE alta indica mejores condiciones",
+             "Es al revés: la CAE mide el costo, así que más alta es peor para quien pide el crédito."),
+            ("Da lo mismo: la CAE no afecta al monto que se recibe",
+             "No afecta lo que se recibe, pero sí lo que se termina pagando."),
+            ("El de 22%, porque incluye seguros que el otro cobraría aparte",
+             "La CAE ya incluye los seguros en ambos casos: por eso son comparables."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Un producto cuesta $120.000 al contado o en 6 cuotas de $23.000. "
+        "¿Cuánto se paga de más al comprar a crédito?",
+        "$18.000",
+        "Se compara el total a crédito con el precio al contado.\n\n"
+        "1) Seis cuotas de 23.000 suman 138.000.\n"
+        "2) El precio al contado es 120.000.\n"
+        "3) La diferencia es 138.000 − 120.000 = 18.000.\n\n"
+        "Ese sobreprecio equivale a un 15% del valor al contado, que es el "
+        "costo real de aplazar el pago.",
+        [
+            ("$23.000",
+             "Es el valor de una cuota, no el sobreprecio total."),
+            ("$138.000",
+             "Es el total pagado a crédito, no la diferencia."),
+            ("$3.000, restando el precio al contado a una sola de las seis cuotas",
+             "Hay que comparar el TOTAL de las cuotas con el precio al contado."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "El valor de la UF sube de $38.000 a $38.760 en un mes. ¿Cuál fue la "
+        "variación porcentual?",
+        "2%",
+        "La variación se calcula sobre el valor inicial.\n\n"
+        "1) La diferencia es 38.760 − 38.000 = 760.\n"
+        "2) Se divide por el valor inicial: 760/38.000 = 0,02.\n"
+        "3) Expresado como porcentaje, 2%.\n\n"
+        "La UF se reajusta con la inflación del mes anterior: por eso una deuda "
+        "en UF conserva su valor real aunque suban los precios.",
+        [
+            ("0,2%",
+             "Corre la coma un lugar: 760 sobre 38.000 da 0,02, es decir, 2%."),
+            ("760%",
+             "Entrega la diferencia en pesos como si fuera un porcentaje."),
+            ("1,96%, dividiendo la diferencia por el valor final en vez del inicial",
+             "La variación porcentual se calcula siempre sobre el valor INICIAL."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Una deuda de $900.000 se paga en 18 cuotas iguales sin interés. Si ya "
+        "se pagaron 7 cuotas, ¿cuánto falta?",
+        "$550.000",
+        "Se calcula la cuota y después lo que resta.\n\n"
+        "1) La cuota es 900.000/18 = 50.000.\n"
+        "2) Faltan 18 − 7 = 11 cuotas.\n"
+        "3) Lo que falta es 11 · 50.000 = 550.000.\n\n"
+        "También sale restando lo pagado: 7 · 50.000 = 350.000, y "
+        "900.000 − 350.000 = 550.000.",
+        [
+            ("$350.000",
+             "Es lo que ya se pagó, no lo que falta."),
+            ("$50.000",
+             "Es el valor de una cuota, no el saldo pendiente."),
+            ("$500.000, redondeando el saldo a la cifra más cercana en centenas de mil",
+             "El saldo exacto es 550.000: no corresponde redondear."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Un sueldo de $500.000 sube un 4% y al año siguiente vuelve a subir un "
+        "4%. ¿Cuál es el sueldo final?",
+        "$540.800",
+        "Los porcentajes sucesivos se multiplican, no se suman.\n\n"
+        "1) Tras el primer año: 500.000 · 1,04 = 520.000.\n"
+        "2) Tras el segundo: 520.000 · 1,04 = 540.800.\n\n"
+        "Sumar los porcentajes daría 8% y un sueldo de 540.000: la diferencia "
+        "de $800 es el 4% aplicado sobre el aumento del primer año.",
+        [
+            ("$540.000",
+             "Suma los porcentajes en vez de aplicarlos uno tras otro."),
+            ("$520.000",
+             "Es el sueldo tras el primer aumento, no tras los dos."),
+            ("$580.000, aplicando el segundo aumento sobre el monto del primer incremento",
+             "El segundo 4% se aplica sobre el sueldo completo de 520.000, no solo sobre el alza."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "¿Por qué una deuda expresada en UF puede crecer en pesos aunque no se "
+        "atrase ningún pago?",
+        "Porque la UF se reajusta con la inflación",
+        "La UF no es una moneda sino una unidad que se actualiza.\n\n"
+        "1) El saldo en UF disminuye con cada pago, tal como corresponde.\n"
+        "2) Pero cada UF vale más pesos cada mes, porque se reajusta según la "
+        "inflación.\n"
+        "3) Si la inflación es alta, el saldo en pesos puede subir aunque el "
+        "saldo en UF baje.\n\n"
+        "El objetivo de ese diseño es que la deuda conserve su valor real: el "
+        "banco recibe el mismo poder de compra que prestó.",
+        [
+            ("Porque el banco cobra intereses sobre intereses",
+             "Eso es el interés compuesto, que es un mecanismo distinto del reajuste."),
+            ("Porque la UF baja cuando sube el dólar",
+             "La UF sigue a la inflación interna, no al tipo de cambio."),
+            ("Porque las cuotas se recalculan cada mes según el saldo pendiente",
+             "El dividendo en UF suele ser fijo: lo que cambia es cuántos pesos vale esa UF."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Un capital de $150.000 al 8% de interés simple anual genera $36.000 de "
+        "interés. ¿Cuántos años estuvo invertido?",
+        "3 años",
+        "Se despeja el tiempo de la fórmula del interés simple.\n\n"
+        "1) El interés de un año es 150.000 · 0,08 = 12.000.\n"
+        "2) Se divide el interés total por el interés anual: 36.000/12.000.\n"
+        "3) El resultado son 3 años.\n\n"
+        "En interés simple el tiempo se despeja con una división porque cada "
+        "año aporta exactamente lo mismo.",
+        [
+            ("4 años",
+             "Usaría un interés anual de 9.000, que no corresponde al 8% de 150.000."),
+            ("8 años",
+             "Confunde la tasa porcentual con el número de años."),
+            ("12.000 años, tomando el interés de un año como si fuera el plazo",
+             "Ese valor son pesos, no años: hay que dividir el total por él."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "¿Cuál es la diferencia entre el interés compuesto y el simple para un "
+        "capital de $100.000 al 20% anual durante 2 años?",
+        "$4.000",
+        "Se calculan ambos y se restan.\n\n"
+        "1) Interés simple: 100.000 · 0,20 · 2 = 40.000.\n"
+        "2) Interés compuesto: 100.000 · 1,2² = 144.000, es decir, 44.000 de "
+        "interés.\n"
+        "3) La diferencia es 44.000 − 40.000 = 4.000.\n\n"
+        "Esos $4.000 son exactamente el 20% de los $20.000 ganados el primer "
+        "año: son los intereses de los intereses.",
+        [
+            ("$40.000",
+             "Es el interés simple completo, no la diferencia entre ambos."),
+            ("$44.000",
+             "Es el interés compuesto completo, no la diferencia."),
+            ("$144.000, que es el monto final acumulado con interés compuesto",
+             "Ese monto incluye el capital: la pregunta pide solo la diferencia entre ambos intereses."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Una tarjeta de crédito cobra un 3% mensual sobre el saldo impago. Si "
+        "una persona debe $200.000 y no paga nada durante 2 meses, ¿cuánto "
+        "debe?",
+        "$212.180",
+        "El interés de una tarjeta se capitaliza mes a mes.\n\n"
+        "1) Tras el primer mes: 200.000 · 1,03 = 206.000.\n"
+        "2) Tras el segundo: 206.000 · 1,03 = 212.180.\n\n"
+        "Con interés simple habrían sido 212.000: los $180 de diferencia "
+        "parecen poco en dos meses, pero a doce meses la brecha se vuelve "
+        "considerable.",
+        [
+            ("$212.000",
+             "Corresponde al interés simple: no capitaliza el interés del primer mes."),
+            ("$206.000",
+             "Es la deuda tras un solo mes."),
+            ("$206.180, sumando el interés del segundo mes solo sobre el interés acumulado",
+             "El segundo 3% se aplica sobre la deuda completa de 206.000, no solo sobre los 6.000."),
+        ],
+    ),
+]
+
+
+QUESTIONS += [
+    _q(
+        "num_financiera", "medio",
+        "Un fondo de AFP rinde un 5% anual. Si una cuenta tiene $10.000.000, "
+        "¿cuánto rinde en un año?",
+        "$500.000",
+        "La rentabilidad se aplica sobre el saldo acumulado.\n\n"
+        "1) El 5% de 10.000.000 es 10.000.000 · 0,05.\n"
+        "2) El resultado es 500.000.\n\n"
+        "Esa rentabilidad se suma al saldo, así que al año siguiente el 5% se "
+        "calcula sobre un monto mayor: el fondo funciona con interés "
+        "compuesto.",
+        [
+            ("$50.000",
+             "Corresponde al 0,5%: corre la coma un lugar de más."),
+            ("$10.500.000",
+             "Es el saldo final, no la rentabilidad del período."),
+            ("$2.000.000, aplicando un 20% en lugar del 5% señalado",
+             "El 5% de diez millones es medio millón; dos millones serían el 20%."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Una persona compara dos créditos de $1.000.000: el A se paga en 12 "
+        "cuotas de $95.000 y el B en 24 cuotas de $52.000. ¿Cuál cuesta menos "
+        "en total?",
+        "El A, con $140.000 de costo",
+        "Se compara el total pagado con el monto recibido.\n\n"
+        "1) Crédito A: 12 · 95.000 = 1.140.000, es decir, 140.000 de costo.\n"
+        "2) Crédito B: 24 · 52.000 = 1.248.000, es decir, 248.000 de costo.\n"
+        "3) El A cuesta menos, aunque su cuota mensual sea más alta.\n\n"
+        "Es el error clásico al elegir un crédito: mirar la cuota en vez del "
+        "total. Alargar el plazo baja la cuota y sube el costo.",
+        [
+            ("El B, porque su cuota mensual es más baja",
+             "La cuota más baja se logra alargando el plazo, y eso encarece el crédito."),
+            ("Los dos cuestan lo mismo, porque el monto prestado es igual",
+             "El monto prestado es igual, pero lo que se termina pagando no."),
+            ("El B, con $248.000 de costo total del crédito",
+             "El cálculo del costo está bien, pero 248.000 es MÁS que los 140.000 del A."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Un capital duplica su valor en 8 años con interés simple. ¿Cuál es la "
+        "tasa anual?",
+        "12,5%",
+        "Duplicarse significa ganar un interés igual al capital.\n\n"
+        "1) Si el capital es C, el interés ganado también es C.\n"
+        "2) En interés simple, C = C · i · 8, así que 1 = i · 8.\n"
+        "3) i = 1/8 = 0,125, es decir, 12,5% anual.\n\n"
+        "La tasa no depende del capital: cualquier monto se duplica en 8 años "
+        "con esa tasa.",
+        [
+            ("8%",
+             "Confunde el número de años con la tasa porcentual."),
+            ("100%",
+             "Ese es el crecimiento TOTAL en los ocho años, no la tasa anual."),
+            ("50%, porque el capital crece la mitad de su valor cada cuatro años",
+             "Crecer al 50% anual duplicaría el capital en dos años, no en ocho."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "El sueldo líquido de una persona es $560.000 después de descontar un "
+        "20% por previsión y salud. ¿Cuál era su sueldo bruto?",
+        "$700.000",
+        "El líquido es el 80% del bruto, así que hay que dividir.\n\n"
+        "1) Si se descuenta el 20%, queda el 80%.\n"
+        "2) 560.000 corresponde al 0,8 del bruto.\n"
+        "3) El bruto es 560.000/0,8 = 700.000.\n\n"
+        "El error frecuente es sumarle el 20% al líquido: eso daría 672.000, "
+        "porque el porcentaje se calcularía sobre la base equivocada.",
+        [
+            ("$672.000",
+             "Suma el 20% sobre el líquido; el descuento se calcula sobre el BRUTO."),
+            ("$580.000",
+             "Suma un 20% en pesos que no corresponde a ningún cálculo del problema."),
+            ("$448.000, descontando otro 20% al sueldo líquido ya rebajado",
+             "El descuento ya está aplicado: hay que deshacerlo, no repetirlo."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Una inversión de $250.000 al 4% de interés compuesto anual, ¿cuánto "
+        "vale al cabo de 2 años?",
+        "$270.400",
+        "Cada año multiplica por 1,04.\n\n"
+        "1) Primer año: 250.000 · 1,04 = 260.000.\n"
+        "2) Segundo año: 260.000 · 1,04 = 270.400.\n\n"
+        "Con interés simple habrían sido 270.000: los $400 extra son el 4% de "
+        "los 10.000 ganados el primer año.",
+        [
+            ("$270.000",
+             "Corresponde al interés simple, sin capitalizar el primer año."),
+            ("$260.000",
+             "Es el monto tras el primer año solamente."),
+            ("$520.000, duplicando el capital por tratarse de dos años de inversión",
+             "Un 4% anual está muy lejos de duplicar un capital en dos años."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Un crédito hipotecario de 2.500 UF se paga en 25 años con dividendos "
+        "mensuales de 14 UF. ¿Cuánto se paga por sobre el monto prestado?",
+        "1.700 UF",
+        "Se compara el total de dividendos con el monto del crédito.\n\n"
+        "1) En 25 años hay 300 meses.\n"
+        "2) El total pagado es 300 · 14 = 4.200 UF.\n"
+        "3) La diferencia es 4.200 − 2.500 = 1.700 UF.\n\n"
+        "En un crédito largo el costo financiero puede acercarse al monto "
+        "prestado: aquí equivale al 68% de la propiedad.",
+        [
+            ("4.200 UF",
+             "Es el total pagado, no lo que se paga POR SOBRE el crédito."),
+            ("2.500 UF",
+             "Es el monto prestado, no el costo del crédito."),
+            ("168 UF, restando el monto prestado al total de un solo año de dividendos",
+             "Hay que comparar con el total de los 300 meses, no con el de doce."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Un producto sube un 25% y después baja un 20% sobre el nuevo precio. "
+        "¿Qué ocurre con el precio original?",
+        "Vuelve exactamente al precio original",
+        "Los porcentajes sucesivos se multiplican.\n\n"
+        "1) Subir 25% multiplica por 1,25.\n"
+        "2) Bajar 20% multiplica por 0,80.\n"
+        "3) El efecto combinado es 1,25 · 0,80 = 1, es decir, ningún cambio.\n\n"
+        "No siempre ocurre: subir y bajar el MISMO porcentaje deja el precio "
+        "por debajo del original. Aquí coinciden porque 0,80 es exactamente el "
+        "inverso de 1,25.",
+        [
+            ("Queda un 5% por encima del original",
+             "Resulta de restar los porcentajes: 25 − 20. Los porcentajes sucesivos no se restan."),
+            ("Queda un 5% por debajo del original",
+             "Tampoco: el producto 1,25 · 0,80 da exactamente 1."),
+            ("Queda un 45% por encima, sumando ambas variaciones al precio inicial",
+             "Una de las variaciones es una baja: no se suman las dos como alzas."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Una persona ahorra $50.000 el primer mes y cada mes aumenta su ahorro "
+        "en $10.000. ¿Cuánto ahorra en total durante los primeros 5 meses?",
+        "$350.000",
+        "Los aportes forman una progresión aritmética.\n\n"
+        "1) Los montos son 50.000, 60.000, 70.000, 80.000 y 90.000.\n"
+        "2) Se pueden sumar de a pares: el primero con el último dan 140.000, "
+        "igual que el segundo con el cuarto.\n"
+        "3) El total es 5 · 70.000 = 350.000, donde 70.000 es el promedio.\n\n"
+        "Multiplicar el promedio por la cantidad de términos es el atajo para "
+        "sumar cualquier progresión aritmética.",
+        [
+            ("$250.000",
+             "Multiplica el primer aporte por cinco, sin considerar los aumentos."),
+            ("$450.000",
+             "Usa 90.000 como si fuera el aporte de todos los meses."),
+            ("$300.000, promediando el primer y el último aporte sin multiplicar por los meses",
+             "Ese promedio es 70.000: falta multiplicarlo por los cinco meses."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Un crédito de $800.000 tiene una comisión de apertura del 2% que se "
+        "descuenta al entregarlo. ¿Cuánto recibe efectivamente la persona?",
+        "$784.000",
+        "La comisión se descuenta del monto entregado.\n\n"
+        "1) El 2% de 800.000 es 16.000.\n"
+        "2) Lo que se recibe es 800.000 − 16.000 = 784.000.\n\n"
+        "La deuda, en cambio, sigue siendo por los $800.000: por eso la "
+        "comisión encarece el crédito más de lo que sugiere su tamaño, y por "
+        "eso la CAE la incorpora.",
+        [
+            ("$816.000",
+             "Suma la comisión en vez de descontarla del monto entregado."),
+            ("$16.000",
+             "Es el monto de la comisión, no lo que se recibe."),
+            ("$800.000, porque la comisión se paga junto con la primera cuota",
+             "En este caso se descuenta al momento de entregar el crédito, según dice el enunciado."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "¿Qué significa que una AFP tenga una comisión del 1,2% sobre la renta "
+        "imponible?",
+        "Se cobra sobre el sueldo, no sobre el fondo acumulado",
+        "La base de cálculo es lo que distingue esta comisión.\n\n"
+        "1) La comisión se aplica sobre la renta imponible del mes, igual que "
+        "la cotización.\n"
+        "2) No se descuenta del saldo acumulado en la cuenta individual.\n"
+        "3) Por eso quien deja de cotizar deja de pagar comisión, aunque "
+        "conserve su fondo.\n\n"
+        "Esa comisión es adicional al 10% de cotización: quien gana $700.000 "
+        "aporta $70.000 a su cuenta y paga $8.400 de comisión.",
+        [
+            ("Se descuenta cada mes del saldo total acumulado",
+             "La comisión se calcula sobre la renta del mes, no sobre el fondo."),
+            ("Es un cobro único al momento de jubilar",
+             "Se cobra mensualmente mientras la persona cotiza."),
+            ("Reemplaza al 10% de cotización obligatoria de cada trabajador",
+             "Es adicional: la cotización va a la cuenta y la comisión, a la administradora."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Un artículo con IVA incluido cuesta $23.800. Si el IVA es del 19%, "
+        "¿cuál es el precio neto?",
+        "$20.000",
+        "El precio con IVA es el neto multiplicado por 1,19.\n\n"
+        "1) Si N es el neto, entonces N · 1,19 = 23.800.\n"
+        "2) N = 23.800/1,19.\n"
+        "3) El resultado es 20.000.\n\n"
+        "El error habitual es restarle el 19% al precio final: eso daría "
+        "19.278, porque el porcentaje se calcularía sobre la base equivocada.",
+        [
+            ("$19.278",
+             "Descuenta el 19% del precio final; el IVA se calcula sobre el NETO."),
+            ("$4.522",
+             "Corresponde aproximadamente al IVA, no al precio neto."),
+            ("$28.322, aplicando el 19% sobre el precio que ya lo incluía",
+             "Ese cálculo suma el impuesto dos veces: el precio ya venía con IVA."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Una deuda crece un 5% mensual por mora. Si son $300.000 y pasan 3 "
+        "meses, ¿cuánto se debe?",
+        "$347.287,5",
+        "La mora se capitaliza mes a mes.\n\n"
+        "1) Primer mes: 300.000 · 1,05 = 315.000.\n"
+        "2) Segundo mes: 315.000 · 1,05 = 330.750.\n"
+        "3) Tercer mes: 330.750 · 1,05 = 347.287,5.\n\n"
+        "En interés simple habrían sido 345.000: la diferencia crece rápido "
+        "porque cada mes los intereses pasan a generar intereses.",
+        [
+            ("$345.000",
+             "Corresponde al interés simple: aplica siempre el 5% sobre los 300.000 iniciales."),
+            ("$315.000",
+             "Es la deuda tras un solo mes de mora."),
+            ("$450.000, aplicando un 50% de recargo por los tres meses de atraso",
+             "Un 5% mensual durante tres meses acumula cerca del 15,8%, no un 50%."),
+        ],
+    ),
+    _q(
+        "num_financiera", "dificil",
+        "Dos personas ahorran $100.000 al 6% de interés compuesto anual. Una "
+        "empieza 10 años antes que la otra. Sin aportes adicionales, ¿qué "
+        "explica mejor la diferencia final?",
+        "El interés compuesto crece más rápido mientras más tiempo actúa",
+        "En el interés compuesto el tiempo pesa más que el monto.\n\n"
+        "1) Cada año multiplica el saldo por 1,06.\n"
+        "2) Diez años más significan multiplicar diez veces adicionales: "
+        "1,06¹⁰ ≈ 1,79.\n"
+        "3) Quien empezó antes termina con casi el 80% más, con el mismo aporte "
+        "y la misma tasa.\n\n"
+        "Es la razón por la que las decisiones previsionales tempranas pesan "
+        "tanto: los primeros años son los que más multiplican.",
+        [
+            ("La que empezó después recibe una tasa menor",
+             "El enunciado dice que la tasa es la misma para ambas."),
+            ("La diferencia es exactamente 10 veces el interés de un año",
+             "Sería así en interés simple; en compuesto la diferencia es multiplicativa."),
+            ("No hay diferencia, porque el aporte inicial es idéntico en ambos casos",
+             "El aporte es igual, pero el tiempo durante el cual capitaliza no lo es."),
+        ],
+    ),
+    _q(
+        "num_financiera", "dificil",
+        "Un capital de $500.000 se invierte al 12% anual con capitalización "
+        "mensual. ¿Qué monto se tiene al cabo de un año?",
+        "Un poco más de $563.000",
+        "Capitalizar mensualmente aplica la doceava parte de la tasa cada "
+        "mes.\n\n"
+        "1) La tasa mensual es 12%/12 = 1%.\n"
+        "2) El factor de un año completo es 1,01¹², que vale cerca de 1,1268.\n"
+        "3) El monto es 500.000 · 1,1268 ≈ 563.400.\n\n"
+        "Con capitalización anual habrían sido 560.000: capitalizar más seguido "
+        "con la misma tasa nominal siempre rinde algo más.",
+        [
+            ("Exactamente $560.000",
+             "Ese es el resultado con capitalización ANUAL, sin los doce períodos."),
+            ("Exactamente $500.000, porque la capitalización mensual no cambia el total",
+             "Sí lo cambia: capitalizar más seguido produce un monto mayor."),
+            ("Más de $1.000.000, porque el 1% mensual se acumula doce veces",
+             "Acumularse doce veces al 1% da cerca de un 12,7% total, no un 100%."),
+        ],
+    ),
+    _q(
+        "num_financiera", "dificil",
+        "Una persona jubila con $48.000.000 y una expectativa de 25 años. Si en "
+        "vez de 25 la expectativa fuera 30 años, ¿qué ocurre con su pensión "
+        "mensual estimada?",
+        "Baja de $160.000 a unos $133.000",
+        "El mismo saldo repartido en más meses da una mensualidad menor.\n\n"
+        "1) Con 25 años son 300 meses: 48.000.000/300 = 160.000.\n"
+        "2) Con 30 años son 360 meses: 48.000.000/360 ≈ 133.333.\n"
+        "3) La pensión baja alrededor de un 17%.\n\n"
+        "Ese es el efecto que tiene el aumento de la esperanza de vida sobre "
+        "las pensiones de capitalización individual: el mismo ahorro debe "
+        "alcanzar para más años.",
+        [
+            ("Sube, porque el fondo tiene más tiempo para rentabilizar",
+             "En este cálculo simplificado no hay rentabilidad: el saldo solo se reparte."),
+            ("No cambia, porque el saldo acumulado es el mismo",
+             "El saldo es el mismo, pero se divide entre más meses."),
+            ("Baja a la mitad, porque el plazo aumentó en cinco años completos",
+             "Cinco años más sobre veinticinco es un 20% más de meses, no el doble."),
+        ],
+    ),
+    _q(
+        "num_financiera", "dificil",
+        "Un crédito ofrece «0% de interés en 12 cuotas», pero el precio al "
+        "contado es $450.000 y a crédito son 12 cuotas de $42.000. ¿Cómo se "
+        "evalúa esa oferta?",
+        "No es 0%: se paga $54.000 más que al contado",
+        "El costo puede estar escondido en el precio y no en la tasa.\n\n"
+        "1) El total a crédito es 12 · 42.000 = 504.000.\n"
+        "2) El precio al contado es 450.000.\n"
+        "3) La diferencia de 54.000 es el costo real, equivalente al 12% del "
+        "valor al contado.\n\n"
+        "Comparar el total pagado contra el precio al contado es la única forma "
+        "de detectar un interés disfrazado de precio.",
+        [
+            ("Es correcta: sin interés declarado, el crédito es gratis",
+             "El costo está en la diferencia de precio, no en una tasa declarada."),
+            ("No es 0%, y el costo es de $42.000",
+             "Ese es el valor de una cuota, no el sobreprecio total."),
+            ("Es correcta si el comprador paga todas las cuotas a tiempo",
+             "Aunque pague puntualmente, termina desembolsando $54.000 más."),
+        ],
+    ),
+    _q(
+        "num_financiera", "dificil",
+        "La inflación anual es del 6% y un depósito rinde un 4% anual. ¿Qué "
+        "ocurre con el poder de compra del ahorro?",
+        "Disminuye, porque los precios suben más que el ahorro",
+        "Lo que importa es la rentabilidad real, no la nominal.\n\n"
+        "1) El dinero crece un 4%.\n"
+        "2) Los precios suben un 6%.\n"
+        "3) Como los precios suben más rápido, con el saldo final se compra "
+        "menos que al comienzo: la rentabilidad real es negativa.\n\n"
+        "Es la razón por la que los instrumentos de largo plazo se expresan en "
+        "UF: así la rentabilidad que se informa ya está por sobre la "
+        "inflación.",
+        [
+            ("Aumenta, porque el saldo en pesos es mayor",
+             "El saldo nominal sube, pero cada peso compra menos que antes."),
+            ("Se mantiene, porque ambos porcentajes se compensan",
+             "No se compensan: 4% es menor que 6%, así que hay pérdida real."),
+            ("Aumenta un 10%, sumando la rentabilidad y la inflación del período",
+             "La inflación resta poder de compra: no se suma a la rentabilidad."),
+        ],
+    ),
+    _q(
+        "num_financiera", "dificil",
+        "Un capital al 10% de interés compuesto anual, ¿en cuántos años supera "
+        "el doble de su valor?",
+        "En 8 años",
+        "Se multiplica por 1,1 hasta pasar el 2.\n\n"
+        "1) Tras 7 años el factor es 1,1⁷ ≈ 1,949, todavía por debajo del "
+        "doble.\n"
+        "2) Tras 8 años es 1,1⁸ ≈ 2,144, que ya lo supera.\n"
+        "3) Por lo tanto son 8 años.\n\n"
+        "Existe una regla práctica: dividir 70 por la tasa da una buena "
+        "estimación. Con 10%, 70/10 = 7, y el valor exacto está entre 7 y 8.",
+        [
+            ("En 10 años",
+             "Toma la tasa como si fuera el número de años necesarios."),
+            ("En 2 años",
+             "Confunde el factor de duplicación con el plazo."),
+            ("En 20 años, porque hacen falta dos períodos de diez para duplicar",
+             "El interés compuesto duplica mucho antes: en ocho años ya supera el doble."),
+        ],
+    ),
+    _q(
+        "num_financiera", "dificil",
+        "Se comparan dos ofertas para un mismo producto de $300.000: pagar al "
+        "contado, o en 3 cuotas sin interés de $100.000 teniendo el dinero en "
+        "un depósito que rinde 1% mensual. ¿Qué conviene?",
+        "Pagar en cuotas, porque el dinero sigue rentando",
+        "Si el crédito no cobra interés y el dinero puede rendir, conviene "
+        "aplazar.\n\n"
+        "1) Pagando al contado se entregan los 300.000 de inmediato y dejan de "
+        "rentar.\n"
+        "2) Pagando en cuotas, los montos aún no pagados siguen ganando un 1% "
+        "mensual.\n"
+        "3) Como el crédito no cobra nada por ese aplazamiento, la rentabilidad "
+        "es ganancia neta.\n\n"
+        "El razonamiento cambia por completo si las cuotas tienen recargo: ahí "
+        "hay que comparar ese recargo con la rentabilidad.",
+        [
+            ("Pagar al contado, porque siempre es más barato",
+             "Lo es cuando el crédito cobra interés; aquí no cobra y el dinero renta mientras tanto."),
+            ("Da lo mismo: en ambos casos se pagan $300.000",
+             "El monto es el mismo, pero pagarlo después permite que el dinero rinda entre medio."),
+            ("Pagar en cuotas, porque así el precio total baja de los $300.000",
+             "El precio total no baja: lo que se gana es la rentabilidad del dinero aún no entregado."),
+        ],
+    ),
+    _q(
+        "num_financiera", "dificil",
+        "Una persona tiene una deuda de $1.000.000 al 3% mensual y un ahorro de "
+        "$1.000.000 que rinde 0,5% mensual. ¿Qué le conviene hacer?",
+        "Pagar la deuda con el ahorro",
+        "Conviene comparar las dos tasas.\n\n"
+        "1) La deuda le cuesta 30.000 al mes.\n"
+        "2) El ahorro le rinde 5.000 al mes.\n"
+        "3) Mantener ambos le hace perder 25.000 mensuales; pagar la deuda "
+        "elimina esa pérdida.\n\n"
+        "La regla general: mientras la tasa de la deuda supere a la del ahorro, "
+        "pagarla es la mejor inversión disponible.",
+        [
+            ("Mantener el ahorro, porque conviene tener liquidez",
+             "La liquidez tiene valor, pero perder 25.000 mensuales es un precio muy alto por ella."),
+            ("Da lo mismo, porque los montos son iguales",
+             "Los montos son iguales pero las tasas no: una cobra seis veces lo que la otra paga."),
+            ("Pagar la mitad de la deuda y dejar la otra mitad ahorrada",
+             "Cada peso que quede en la deuda sigue costando 3% contra un 0,5% de rendimiento."),
+        ],
+    ),
+    _q(
+        "num_financiera", "dificil",
+        "Un ahorro de $400.000 crece a $441.000 en dos años con interés "
+        "compuesto anual. ¿Cuál es la tasa?",
+        "5% anual",
+        "Se despeja el factor anual desde el crecimiento total.\n\n"
+        "1) El factor de los dos años es 441.000/400.000 = 1,1025.\n"
+        "2) Ese factor es el anual elevado al cuadrado.\n"
+        "3) Su raíz cuadrada es 1,05, así que la tasa anual es 5%.\n\n"
+        "Comprobación: 400.000 · 1,05 = 420.000 y 420.000 · 1,05 = 441.000.",
+        [
+            ("10,25% anual",
+             "Ese es el crecimiento TOTAL de los dos años, no la tasa de cada uno."),
+            ("5,125% anual",
+             "Divide el crecimiento total por dos; en interés compuesto hay que sacar la raíz."),
+            ("41.000% anual, tomando el interés ganado como si fuera un porcentaje",
+             "Los 41.000 son pesos, no un porcentaje."),
+        ],
+    ),
+    _q(
+        "num_financiera", "dificil",
+        "Un crédito hipotecario se puede tomar a 15 o a 25 años, con el mismo "
+        "monto y la misma tasa. ¿Qué se puede afirmar?",
+        "A 25 años el dividendo es menor y el costo total, mayor",
+        "El plazo mueve las dos cosas en sentidos opuestos.\n\n"
+        "1) Repartir la deuda en más meses reduce cada dividendo.\n"
+        "2) Pero durante todos esos meses adicionales se siguen pagando "
+        "intereses sobre el saldo pendiente.\n"
+        "3) Por eso el total pagado a 25 años supera al de 15, aunque cada mes "
+        "se pague menos.\n\n"
+        "La elección no es cuál es mejor sino cuál se puede sostener: un "
+        "dividendo alto que no se paga termina costando mucho más.",
+        [
+            ("A 25 años el dividendo y el costo total son menores",
+             "El dividendo baja, pero el costo total sube por los diez años extra de intereses."),
+            ("El costo total es el mismo, porque el monto prestado no cambia",
+             "El monto prestado es igual, pero los intereses se acumulan durante más tiempo."),
+            ("A 15 años el dividendo es menor, porque hay menos cuotas que pagar",
+             "Menos cuotas significa cuotas MÁS altas: la deuda se reparte en menos partes."),
+        ],
+    ),
+]
