@@ -139858,3 +139858,845 @@ QUESTIONS_HISTORIA += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Lectora - Idea central y aplicacion a un caso nuevo (tanda 1)
+#
+# lec_idea_central tenia 10 preguntas y lec_aplicar 12, sobre 87 textos. Eran
+# de lejos los dos nodos mas flacos del banco: quien reforzaba "idea central"
+# veia siempre las mismas diez. Cada texto recibe una pregunta de cada tipo.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_LECTORA += [
+    # ---------- 'Una medida sin patrón' ----------
+    _ql(
+        "talla_ropa", "lec_idea_central", "medio",
+        "¿Cuál es la idea central del texto sobre las tallas de ropa?",
+        "Que la talla no funciona como medida porque ninguna escala común la define",
+        "El texto abre con el caso de las tres poleras M y adelanta la "
+        "conclusión: «no hay ningún problema, porque la M no mide nada».\n"
+        "Todo lo que sigue sostiene esa afirmación: no existe un patrón "
+        "obligatorio, cada marca construye su molde y las etiquetas además se "
+        "agrandan con el tiempo dentro de una misma marca.\n"
+        "Las recomendaciones finales —mirar centímetros, medir una prenda "
+        "propia, contar con la devolución— se siguen de ahí: sirven porque "
+        "reemplazan una letra sin patrón por una unidad que sí lo tiene.",
+        [
+            ("Que las marcas de ropa engañan deliberadamente a sus compradores",
+             "El texto sostiene que cada marca es coherente consigo misma y ninguna está equivocada."),
+            ("Que conviene exigir una norma única de tallas para toda la industria",
+             "El texto dedica un apartado a explicar por qué esa norma ayudaría sin resolver el fondo."),
+            ("Que las tallas dejaron de servir cuando terminó la ropa hecha a medida",
+             "El texto sitúa el origen de las tallas justamente al terminar ese sistema."),
+        ],
+    ),
+    _ql(
+        "talla_ropa", "lec_aplicar", "dificil",
+        "Una tienda en línea publica junto a cada prenda su contorno de pecho y "
+        "de cintura en centímetros. Según el texto, ¿por qué esa práctica ayuda?",
+        "Porque el centímetro sí es un patrón y permite comparar con medidas propias",
+        "El texto distingue entre la letra y la unidad. La letra «depende de "
+        "quién la puso»; el centímetro, no.\n"
+        "Sobre las tablas de medidas es explícito: «Un centímetro sí es un "
+        "patrón, y compararlo con las medidas propias entrega información "
+        "real».\n"
+        "La práctica no elimina el problema de fondo —un cuerpo no cabe en un "
+        "número—, pero sustituye una escala privada por una compartida, que es "
+        "lo que el texto recomienda hacer.",
+        [
+            ("Porque obliga a la marca a usar el mismo molde que sus competidoras",
+             "Publicar medidas no cambia el molde con que la marca corta sus prendas."),
+            ("Porque permite prescindir de la devolución al comprar a distancia",
+             "El texto recomienda tratar la devolución como parte normal del proceso."),
+            ("Porque demuestra que la marca apunta a un público más amplio",
+             "El público objetivo no se deduce de que se publiquen las medidas."),
+        ],
+    ),
+    # ---------- 'La casa piloto' ----------
+    _ql(
+        "casa_piloto", "lec_idea_central", "dificil",
+        "¿Qué idea organiza el recuerdo que el narrador construye sobre esos "
+        "domingos?",
+        "Que aquellos domingos fueron algo real, aunque la compra nunca ocurriera",
+        "El narrador descarta primero la lectura que él mismo tuvo: «Durante un "
+        "tiempo eso me pareció triste, y creo que era la lectura fácil».\n"
+        "Lo que propone en cambio es que esos domingos «no eran un simulacro de "
+        "algo que no ocurrió: eran lo que efectivamente ocurrió», y lo respalda "
+        "con hechos concretos: la madre midió, la hermana anotó, él eligió "
+        "piezas.\n"
+        "El cierre lo formula sin resolver la tensión: «Las dos descripciones "
+        "son ciertas y no describen lo mismo».",
+        [
+            ("Que la familia se engañaba a sí misma para no admitir su situación",
+             "El narrador presenta esa lectura como la fácil y la deja atrás."),
+            ("Que el padre ocultó a sus hijos la verdadera situación económica",
+             "El relato no plantea ocultamiento: nadie dijo nunca que sí ni que no."),
+            ("Que visitar casas piloto sirvió para preparar la compra posterior",
+             "El departamento que el narrador compró veinte años después no aparece ligado a esas visitas."),
+        ],
+    ),
+    _ql(
+        "casa_piloto", "lec_aplicar", "dificil",
+        "Una familia planifica durante meses un viaje que finalmente no hace: "
+        "elige rutas, discute fechas, imagina lugares. Según el texto, ¿cómo "
+        "habría que describir esos meses?",
+        "Como algo que ocurrió de verdad, aunque el viaje no se realizara",
+        "El texto sostiene exactamente esa posición sobre los domingos en las "
+        "casas piloto: no fueron un ensayo de algo que no pasó, «eran lo que "
+        "efectivamente ocurrió».\n"
+        "El argumento se apoya en que las acciones fueron reales: medir un "
+        "living con los brazos, poner notas en una libreta, pelear por una "
+        "pieza. Nada de eso depende de que la compra se concretara.\n"
+        "Trasladado al viaje, lo que ocurrió fueron esos meses de conversación "
+        "compartida, que existen con independencia del itinerario que no se "
+        "cumplió.",
+        [
+            ("Como tiempo perdido, porque el viaje era la única finalidad posible",
+             "El texto rechaza medir la experiencia solo por el resultado que no llegó."),
+            ("Como un engaño que la familia se permitió para sentirse mejor",
+             "El narrador descarta esa lectura al hablar de sus propios domingos."),
+            ("Como una preparación útil para un viaje que se hará más adelante",
+             "El texto no justifica la experiencia por un resultado futuro."),
+        ],
+    ),
+    # ---------- 'El enlace que ya no lleva a ninguna parte' ----------
+    _ql(
+        "enlaces_perdidos", "lec_idea_central", "dificil",
+        "¿Cuál es la tesis que el texto sostiene sobre la conservación de lo "
+        "publicado en internet?",
+        "Que lo digital solo se conserva si alguien decide sostenerlo mes a mes",
+        "El texto cierra con la comparación que ordena todo lo anterior: el "
+        "papel se conservó «en buena medida por inercia», porque bastaba con "
+        "que nadie lo destruyera.\n"
+        "Con lo digital ocurre al revés: para que un documento siga disponible "
+        "en diez años «alguien tiene que estar decidiendo activamente "
+        "mantenerlo, mes a mes, pagando por ello».\n"
+        "Esa inversión es la que explica los casos que el texto describe antes: "
+        "medios que cierran, sitios que se rediseñan, dominios que nadie "
+        "renueva.",
+        [
+            ("Que internet conserva todo lo publicado y el problema es encontrarlo",
+             "El texto atribuye esa sensación a otro fenómeno y la corrige de entrada."),
+            ("Que los archivos automáticos ya resolvieron el problema de la pérdida",
+             "El texto sostiene que las tres soluciones funcionan y ninguna alcanza."),
+            ("Que todo lo publicado debería conservarse de manera indefinida",
+             "El texto dedica un apartado a advertir en sentido contrario."),
+        ],
+    ),
+    _ql(
+        "enlaces_perdidos", "lec_aplicar", "dificil",
+        "Una profesora arma una guía con enlaces a documentos oficiales y la "
+        "reutiliza cada año sin revisarla. Según el texto, ¿cuál es el riesgo "
+        "menos visible?",
+        "Que un enlace siga funcionando pero lleve a una versión distinta",
+        "El texto distingue dos formas de pérdida y advierte que la segunda es "
+        "«más incómoda que la primera, porque no deja error visible».\n"
+        "En esa segunda, la dirección responde y lo que hay del otro lado ya no "
+        "es lo mismo: el documento se actualizó, la cifra se corrigió, el "
+        "párrafo citado desapareció.\n"
+        "Y agrega el agravante que calza con el caso: «quien cita casi nunca "
+        "vuelve a revisar sus propios enlaces», de modo que el desajuste puede "
+        "instalarse sin que nadie se entere.",
+        [
+            ("Que los enlaces devuelvan un error y los estudiantes lo noten",
+             "El texto señala que un enlace roto al menos avisa que algo falta."),
+            ("Que los documentos oficiales dejen de publicarse en internet",
+             "El texto no plantea que las instituciones abandonen la publicación en línea."),
+            ("Que los estudiantes consulten archivos con copias fechadas de las páginas",
+             "Esa es una de las soluciones que el texto describe, no un riesgo."),
+        ],
+    ),
+    # ---------- 'El orden que nadie había elegido' ----------
+    _ql(
+        "orden_apellidos", "lec_idea_central", "dificil",
+        "Según el cierre del texto, ¿qué fue lo que la ley modificó realmente?",
+        "El estatuto de la pregunta, más que el orden de los apellidos",
+        "El texto reconoce que en la mayoría de los casos el orden «seguirá "
+        "siendo el mismo», de modo que el cambio no está ahí.\n"
+        "Lo que cambió lo formula así: «Antes había una manera de hacer las "
+        "cosas y ninguna alternativa; ahora hay una decisión que se puede tomar "
+        "y una opción por defecto para quien no la tome».\n"
+        "Y remata con la consecuencia de fondo: una costumbre que se sabe "
+        "elegible «ya no es del todo una costumbre: es una preferencia, y las "
+        "preferencias se pueden discutir».",
+        [
+            ("La inversión del orden de los apellidos para la mayoría de las familias",
+             "El texto señala que en la mayoría de los casos el orden seguirá siendo el mismo."),
+            ("La obligación de que la madre y el padre lleguen siempre a un acuerdo",
+             "El texto precisa que la ley no resuelve el desacuerdo: fija qué ocurre sin acuerdo."),
+            ("La eliminación del segundo apellido en el registro de los hijos",
+             "La ley no suprime ningún apellido: cambia el procedimiento para ordenarlos."),
+        ],
+    ),
+    _ql(
+        "orden_apellidos", "lec_aplicar", "dificil",
+        "Un trámite en línea deja marcada por defecto la casilla que autoriza "
+        "recibir publicidad. Según el texto, ¿qué habría que esperar?",
+        "Que la mayoría quede autorizando sin haberlo considerado nunca",
+        "El texto dedica un apartado a la regla que opera cuando nadie decide y "
+        "sostiene que «hace bastante más trabajo del que parece».\n"
+        "El argumento es general y no específico de los apellidos: «en "
+        "cualquier trámite, la mayoría de las personas no elige entre opciones: "
+        "acepta lo que viene puesto».\n"
+        "De ahí la consecuencia que el texto formula y que aplica igual al "
+        "caso: la alternativa la usará quien tenga una razón para manifestarse, "
+        "y el resto quedará bajo la opción por defecto.",
+        [
+            ("Que la mayoría desmarque la casilla al advertir que está marcada",
+             "El texto sostiene que la mayoría acepta lo que viene puesto."),
+            ("Que la casilla por defecto no tenga efecto sobre el resultado final",
+             "El texto afirma que la regla supletoria determina el resultado para la mayoría."),
+            ("Que quienes se manifiesten sean más que quienes acepten lo predefinido",
+             "El texto describe la relación inversa entre ambos grupos."),
+        ],
+    ),
+    # ---------- 'La entrada que valía más de lo que costaba' ----------
+    _ql(
+        "reventa_entradas", "lec_idea_central", "dificil",
+        "Según el texto, ¿cuál es la pregunta de fondo del debate sobre la "
+        "reventa?",
+        "Quién se queda con la diferencia entre lo que cuesta la entrada y lo que vale",
+        "El texto reformula el problema al cerrar: «La pregunta no es si la "
+        "reventa es moralmente aceptable, sino quién se queda con la "
+        "diferencia».\n"
+        "Los tres candidatos que enumera son el organizador, el revendedor y el "
+        "comprador que alcanzó a entrar al sitio, y sobre este último hace la "
+        "observación decisiva: el reparto lo decide la velocidad de conexión, "
+        "«que no es un criterio más justo que los otros dos: es solo uno que no "
+        "se anuncia».\n"
+        "Por eso concluye que el sistema ya está repartiendo con un criterio "
+        "aunque nadie lo haya escrito.",
+        [
+            ("Si conviene prohibir la reventa para proteger a los seguidores de siempre",
+             "El texto plantea que la prohibición no responde la pregunta de fondo."),
+            ("Cómo impedir que los sistemas automáticos compren antes que las personas",
+             "Ese es uno de los problemas descritos, no la pregunta que el texto identifica."),
+            ("Por qué los organizadores no fijan desde el inicio el precio máximo posible",
+             "El texto explica esa decisión, pero no la presenta como la discusión de fondo."),
+        ],
+    ),
+    _ql(
+        "reventa_entradas", "lec_aplicar", "dificil",
+        "Un hospital libera cada mañana un número limitado de horas médicas por "
+        "internet y se agotan en minutos. Según el texto, ¿qué habría que "
+        "reconocer sobre ese sistema?",
+        "Que ya reparte con un criterio, aunque nadie lo haya declarado",
+        "El texto lo formula como una observación general: «Un sistema donde "
+        "las entradas se agotan en minutos ya está repartiendo un beneficio "
+        "escaso con un criterio, aunque nadie lo haya escrito».\n"
+        "En el caso de las entradas ese criterio es la velocidad de conexión, y "
+        "el texto se niega a tratarlo como neutral: «no es un criterio más "
+        "justo que los otros dos: es solo uno que no se anuncia».\n"
+        "Aplicado a las horas médicas, el sistema no es que carezca de "
+        "criterio: tiene uno que no fue elegido ni discutido.",
+        [
+            ("Que reparte de manera neutral, porque no discrimina entre pacientes",
+             "El texto niega que repartir por velocidad sea un criterio neutral."),
+            ("Que la escasez desaparecería si se liberaran las horas más temprano",
+             "Cambiar el horario no altera la relación entre demanda y oferta."),
+            ("Que el problema se resuelve prohibiendo el uso de sistemas automáticos",
+             "El texto trata esa medida como parcial frente a la brecha de fondo."),
+        ],
+    ),
+    # ---------- 'El único contaminante que se va solo' ----------
+    _ql(
+        "ruido_ciudad", "lec_idea_central", "dificil",
+        "¿Qué problema central plantea el texto sobre el ruido urbano?",
+        "La distancia entre lo que un instrumento mide y lo que una persona sufre",
+        "El texto lo anuncia en su primer párrafo, con la perforación del "
+        "sábado y el zumbido de la autopista: dos situaciones que «podrían "
+        "arrojar cifras parecidas» y que «como experiencias no se parecen en "
+        "nada».\n"
+        "Y lo nombra de inmediato: «esa distancia entre lo que se mide y lo que "
+        "se sufre es el problema central de este asunto».\n"
+        "Los apartados siguientes desarrollan esa brecha: el promedio borra la "
+        "irrupción, el ruido no deja rastro para acreditarlo y el control sobre "
+        "la fuente cambia la molestia sin cambiar el decibel.",
+        [
+            ("La pérdida de audición que produce la exposición prolongada al ruido",
+             "El texto la menciona como el efecto más conocido y no el más frecuente."),
+            ("La falta de normas que fijen límites a los niveles sonoros permitidos",
+             "El texto describe normas existentes y discute su método de medición."),
+            ("La imposibilidad de exigir silencio en las ciudades contemporáneas",
+             "El texto plantea eso como advertencia final, no como problema central."),
+        ],
+    ),
+    _ql(
+        "ruido_ciudad", "lec_aplicar", "dificil",
+        "Una municipalidad reparte tapones para los oídos a los vecinos de una "
+        "autopista. Según el texto, ¿qué objeción cabe hacer a esa medida?",
+        "Que actúa sobre el receptor y traslada el esfuerzo a quien no causó el problema",
+        "El texto ordena las medidas según dónde actúan: sobre la fuente, sobre "
+        "el camino o sobre quien recibe.\n"
+        "Sobre los tapones es explícito: «sirven para quien los usa y no "
+        "resuelven nada para el resto del barrio».\n"
+        "Y explica por qué el orden no es casual: actuar sobre la fuente "
+        "beneficia a todos los afectados a la vez, mientras actuar sobre el "
+        "receptor «traslada el costo y el esfuerzo a quien no produjo el "
+        "problema».",
+        [
+            ("Que las barreras acústicas resultarían más económicas de instalar",
+             "El texto no compara los costos de una y otra medida."),
+            ("Que el ruido de la autopista no alcanza niveles que justifiquen actuar",
+             "El texto describe el zumbido continuo como un caso con efectos reales."),
+            ("Que los vecinos ya se acostumbraron y no perciben el zumbido",
+             "El texto advierte que acostumbrarse describe la conciencia y no el cuerpo."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Lectora - Idea central y aplicacion a un caso nuevo (tanda 2)
+# ---------------------------------------------------------------------------
+
+QUESTIONS_LECTORA += [
+    # ---------- 'El segundo lugar' ----------
+    _ql(
+        "segundo_lugar", "lec_idea_central", "dificil",
+        "¿Qué descubrimiento organiza el relato del narrador?",
+        "Que la rivalidad que ordenó su vida existió solo de un lado",
+        "El encuentro en la bencinera le muestra que en la cabeza de Iván no "
+        "hay ningún registro suyo: «Simplemente no estaba».\n"
+        "De ahí la formulación que el narrador da al asunto: «Todo el tiempo "
+        "hubo una sola persona en esa rivalidad, y era yo. Él estaba corriendo, "
+        "nada más».\n"
+        "Lo que queda abierto es la valoración: si el motivo funcionó veinte "
+        "años, «¿importa que estuviera hecho de una materia que solo yo "
+        "veía?». El narrador se inclina a pensar que no, sin quedar seguro.",
+        [
+            ("Que su rival lo despreció durante todos esos años de competencia",
+             "El narrador insiste en que no hubo desprecio ni ironía: no había recuerdo."),
+            ("Que dejar de correr fue el error que le impidió alcanzarlo",
+             "El relato no plantea el abandono del deporte como un error."),
+            ("Que su esfuerzo de veinte años no produjo ningún resultado real",
+             "El narrador enumera efectos verificables de ese esfuerzo."),
+        ],
+    ),
+    _ql(
+        "segundo_lugar", "lec_aplicar", "dificil",
+        "Una estudiante compite en silencio con una compañera que ni siquiera "
+        "sabe que existe esa competencia, y por eso estudia más. Según el "
+        "texto, ¿cómo habría que evaluar esa situación?",
+        "Como un motivo que produce efectos reales aunque exista en un solo lado",
+        "El narrador enfrenta exactamente ese problema y lo deja formulado como "
+        "pregunta: «Si un motivo funciona, si lo hace durante veinte años, si "
+        "produce todo lo que produjo, ¿importa que estuviera hecho de una "
+        "materia que solo yo veía?».\n"
+        "Su respuesta es tentativa: «Me inclino a pensar que no importa, o que "
+        "importa menos de lo que me gustaría».\n"
+        "Lo que no discute es que los efectos hayan sido reales: aprendió a "
+        "levantarse temprano y a insistir, y eso ocurrió con independencia de "
+        "lo que el otro supiera.",
+        [
+            ("Como un error que la estudiante debería corregir cuanto antes",
+             "El narrador no trata su propia experiencia como un error que hubiera que corregir."),
+            ("Como algo sin ningún efecto, porque la otra parte no participa",
+             "El texto insiste en que la rivalidad produjo efectos verificables."),
+            ("Como una competencia legítima que la compañera debería conocer",
+             "El texto no plantea que el otro deba enterarse para que el motivo funcione."),
+        ],
+    ),
+    # ---------- 'El pan del día siguiente' ----------
+    _ql(
+        "pan_duro", "lec_idea_central", "medio",
+        "¿Cuál es la afirmación central del texto sobre el pan del día "
+        "siguiente?",
+        "Que no se seca: su almidón se reordena y expulsa el agua que tenía dentro",
+        "El texto descarta primero la explicación corriente con dos "
+        "observaciones caseras: un pan en bolsa cerrada se endurece igual, y un "
+        "pan duro vuelve a estar blando en el horno.\n"
+        "Y entrega la explicación alternativa: al enfriarse, las moléculas del "
+        "almidón «comienzan a reordenarse de a poco y a volver a una "
+        "disposición más rígida», proceso llamado retrogradación.\n"
+        "La formulación que resume todo aparece en una sola línea: «el pan del "
+        "día siguiente no está seco, está reordenado».",
+        [
+            ("Que se seca más rápido cuando se guarda dentro de una bolsa plástica",
+             "El texto señala que la bolsa conserva la humedad y la miga se endurece igual."),
+            ("Que el refrigerador es el mejor lugar para conservarlo blando",
+             "El texto sostiene lo contrario: el frío del refrigerador acelera el endurecimiento."),
+            ("Que la corteza y la miga envejecen del mismo modo con el tiempo",
+             "El texto explica que ocurren en direcciones opuestas."),
+        ],
+    ),
+    _ql(
+        "pan_duro", "lec_aplicar", "dificil",
+        "Alguien guarda el pan en el refrigerador convencido de que el frío lo "
+        "conserva. Según el texto, ¿qué error está cometiendo?",
+        "Aplicar una regla general a un proceso que responde al revés",
+        "El texto describe ese caso de manera directa: «Peor le va a quien "
+        "busca conservarlo y lo pone en el refrigerador, convencido de que el "
+        "frío retrasa lo que sea».\n"
+        "Y nombra el error con precisión: «Está aplicando una regla general —el "
+        "frío conserva— a un proceso que responde al revés».\n"
+        "La razón es la retrogradación, que «avanza más rápido a temperaturas "
+        "de refrigerador que a temperatura ambiente».",
+        [
+            ("Exponer el pan a un aire seco que le extrae la humedad restante",
+             "El texto sostiene que el agua no es el problema de la miga."),
+            ("Impedir que la corteza mantenga su textura crujiente original",
+             "El texto no vincula el refrigerador con la corteza."),
+            ("Guardarlo antes de que termine de enfriarse por completo",
+             "El texto no plantea nada sobre el momento en que se guarda."),
+        ],
+    ),
+    # ---------- 'Los agujeros que no están' ----------
+    _ql(
+        "sesgo_sobreviviente", "lec_idea_central", "medio",
+        "¿Cuál es la idea central del texto sobre los aviones y sus impactos?",
+        "Que una muestra filtrada de antemano responde mal una pregunta sobre el conjunto",
+        "El caso de los aviones ilustra el mecanismo: los examinados eran los "
+        "que habían vuelto, de modo que los agujeros «señalaban dónde un avión "
+        "puede recibirlos y seguir volando».\n"
+        "El texto generaliza con los edificios antiguos, el abuelo fumador y "
+        "las biografías de empresarios: «la muestra no fue elegida al azar: fue "
+        "elegida por un filtro que actuó antes».\n"
+        "Y precisa dónde está la falla: «el problema aparece cuando se usa una "
+        "muestra filtrada para responder una pregunta que trata de todo el "
+        "conjunto, y ahí la falla no está en los datos sino en la pregunta que "
+        "se les hace».",
+        [
+            ("Que los datos de los bombarderos fueron mal recogidos por los técnicos",
+             "El texto insiste en que los datos estaban bien tomados."),
+            ("Que conviene desconfiar de toda conclusión basada en datos numéricos",
+             "El texto advierte que descartar sin mirar cuesta lo mismo que aceptar sin mirar."),
+            ("Que toda selección de casos constituye un sesgo que invalida el estudio",
+             "El texto dedica una advertencia a negar exactamente eso."),
+        ],
+    ),
+    _ql(
+        "sesgo_sobreviviente", "lec_aplicar", "dificil",
+        "Un colegio publica las técnicas de estudio de sus alumnos con mejor "
+        "puntaje. Según el texto, ¿qué pregunta habría que hacerse?",
+        "Qué hicieron quienes obtuvieron malos puntajes, porque puede haber sido lo mismo",
+        "El texto entrega ese caso entre sus ejemplos de detección: «Frente a "
+        "una técnica de estudio recomendada por quienes obtuvieron buenos "
+        "puntajes, la pregunta es qué hicieron los que obtuvieron malos "
+        "puntajes».\n"
+        "Y agrega la razón que vuelve pertinente la pregunta: «porque puede "
+        "haber sido lo mismo».\n"
+        "Es la versión escolar de la pregunta que desarma el sesgo: quién no "
+        "está en estos datos y por qué no está.",
+        [
+            ("Si los alumnos con buen puntaje recuerdan bien lo que hicieron",
+             "El texto no plantea un problema de memoria de los encuestados."),
+            ("Cuántos alumnos del colegio rindieron la prueba ese año",
+             "El tamaño del grupo no es la pregunta que el texto propone."),
+            ("Si esas técnicas se aplicaron durante todo el año escolar",
+             "La duración de la técnica no aparece en el criterio del texto."),
+        ],
+    ),
+    # ---------- 'Un carácter' ----------
+    _ql(
+        "un_caracter", "lec_idea_central", "dificil",
+        "¿Qué desplazamiento produce el relato a medida que avanza el "
+        "interrogatorio?",
+        "Pasa de la descripción física del reo a las razones que él expone",
+        "El texto abre con una descripción minuciosa y despiadada del acusado: "
+        "la barba, la nariz aplastada, las piernas torcidas, la ropa raída, los "
+        "grillos.\n"
+        "Al declarar, el reo desplaza la atención hacia otro terreno: el perro "
+        "que rescató, los diez años juntos, el disparo del caballero y la "
+        "pregunta que repite —«¿por qué vino a quitarme mi única riqueza?»—.\n"
+        "El cierre marca el efecto de ese desplazamiento: el juez «se cubre la "
+        "frente con las manos y parece reflexionar profundamente».",
+        [
+            ("Pasa de la declaración del reo a la sentencia que dicta el juez",
+             "El relato termina antes de cualquier sentencia."),
+            ("Pasa de la muerte del perro a la investigación policial del caso",
+             "El relato no incluye ninguna investigación policial."),
+            ("Pasa de la duda sobre la autoría a la confesión del acusado",
+             "El reo confiesa de inmediato, sin que exista duda previa."),
+        ],
+    ),
+    _ql(
+        "un_caracter", "lec_aplicar", "dificil",
+        "Un tribunal debe juzgar un caso en que los hechos están admitidos "
+        "desde el comienzo. Según lo que muestra el relato, ¿qué queda por "
+        "resolver?",
+        "Qué peso tiene lo que el acusado expone sobre sus razones",
+        "El reo admite la autoría sin rodeos y sin pedir clemencia: «Sí, señor, "
+        "yo lo maté», y agrega que sabía que lo fusilarían.\n"
+        "Lo que pide es otra cosa: «antes que me condenen, quiero decir algo a "
+        "Su Señoría», y él mismo anticipa que «a nadie importa lo que tengo que "
+        "decir».\n"
+        "El gesto final del juez —cubrirse la frente y reflexionar— muestra que "
+        "esa exposición no dejó las cosas donde estaban, aunque los hechos "
+        "nunca hayan estado en discusión.",
+        [
+            ("Determinar si el acusado es efectivamente el autor del hecho",
+             "El relato deja la autoría admitida desde la primera respuesta."),
+            ("Establecer la identidad y el origen familiar del acusado",
+             "Esas preguntas se hacen al inicio y quedan sin respuesta, sin ser el asunto."),
+            ("Decidir si el arma empleada corresponde a la que está sobre la mesa",
+             "El propio reo la identifica, y el relato no lo pone en duda."),
+        ],
+    ),
+    # ---------- 'El último kilómetro' ----------
+    _ql(
+        "ultimo_kilometro", "lec_idea_central", "medio",
+        "¿Cuál es la tesis del reportaje sobre el tramo final del reparto?",
+        "Que es el tramo más caro porque ahí se pierde la escala del viaje",
+        "El texto anuncia el dato que contradice la intuición: el trayecto de "
+        "miles de kilómetros cuesta menos que los últimos dos o tres, y sitúa "
+        "ese tramo entre el 41% y el 53% del costo total.\n"
+        "La explicación «no está en las distancias sino en la aritmética del "
+        "reparto»: el viaje anterior reparte cada kilómetro entre toda la "
+        "carga, mientras la camioneta lleva ochenta paquetes a ochenta "
+        "direcciones.\n"
+        "De ahí la formulación: «El costo deja de repartirse entre la carga y "
+        "pasa a repartirse entre las paradas».",
+        [
+            ("Que el reparto a domicilio debería reemplazarse por puntos de retiro",
+             "El texto describe esa alternativa como un traslado del costo, no como la solución."),
+            ("Que los compradores abusan del envío gratuito y encarecen el sistema",
+             "El texto declara que esas conductas no son irracionales y evita la acusación."),
+            ("Que las entregas fallidas son la principal causa del costo del reparto",
+             "El texto las presenta como una ineficiencia adicional, con cifras en disputa."),
+        ],
+    ),
+    _ql(
+        "ultimo_kilometro", "lec_aplicar", "dificil",
+        "Un municipio instala casilleros automáticos en las plazas para "
+        "reducir el reparto puerta a puerta. Según el texto, ¿qué habría que "
+        "reconocer sobre esa medida?",
+        "Que funciona trasladando el último trecho al comprador, que ahora camina",
+        "El texto agrupa las soluciones bajo una misma forma: «mover el último "
+        "tramo a un lugar donde vuelva a haber escala».\n"
+        "Y advierte que ninguna elimina el costo: «Todas funcionan y todas "
+        "trasladan algo». Sobre el casillero es explícito: «traslada el último "
+        "trecho al comprador, que ahora camina tres cuadras».\n"
+        "La conclusión que extrae vale para cualquiera de las medidas: «Elegir "
+        "entre ellas no es elegir cuál elimina el costo, sino quién lo asume».",
+        [
+            ("Que elimina el costo del último kilómetro para todas las partes",
+             "El texto sostiene que ninguna solución elimina el costo."),
+            ("Que resuelve el problema de las direcciones mal escritas en la ciudad",
+             "El texto atribuye las entregas fallidas a la nomenclatura urbana, sin vincularla al casillero."),
+            ("Que aumenta la congestión al concentrar vehículos en las plazas",
+             "El texto describe el casillero como una sola parada para treinta paquetes."),
+        ],
+    ),
+    # ---------- 'El afinador' ----------
+    _ql(
+        "afinador_piano", "lec_idea_central", "dificil",
+        "¿Qué comprende Sergio a partir del episodio con la niña del violín?",
+        "Que perdió parte de su oído sin poder notarlo y que nadie se lo dijo",
+        "La comprobación con el aparato le muestra dónde está el límite: «desde "
+        "cierta tecla en adelante, él ya no escuchaba el temblor. No es que lo "
+        "escuchara mal. No estaba».\n"
+        "El texto explica por qué eso no podía advertirse: un oído «se va yendo "
+        "de a poco, y lo hace en el único lugar donde uno no puede notarlo, que "
+        "es adentro de la propia cabeza».\n"
+        "Y agrega la segunda mitad del hallazgo, la que le costó más: en "
+        "cuarenta años nadie lo corrigió, porque «a un afinador con cincuenta "
+        "años de oficio no se le corrige».",
+        [
+            ("Que sus clientes venían engañándolo desde hacía varios años",
+             "El texto no plantea engaño: plantea que nadie lo corrigió."),
+            ("Que los aparatos de medición son más confiables que cualquier oído",
+             "Sergio sigue afinando a mano la primera parte del teclado."),
+            ("Que la niña del violín tenía mejor formación musical que él",
+             "El texto no compara la formación de ambos."),
+        ],
+    ),
+    _ql(
+        "afinador_piano", "lec_aplicar", "dificil",
+        "En una oficina, nadie corrige a la jefa con más años en el cargo. "
+        "Según lo que el texto muestra, ¿qué riesgo trae esa costumbre?",
+        "Que un error se sostenga durante años porque nadie está dispuesto a señalarlo",
+        "El texto ofrece el paralelo casi literal. Sergio descubre que en "
+        "cuarenta años «nadie le había dicho nunca que una nota estuviera mal», "
+        "y que durante mucho tiempo eso le pareció una medida de su trabajo.\n"
+        "Esa noche entiende que podía ser otra cosa: que a un afinador con "
+        "cincuenta años de oficio «no se le corrige, aunque uno escuche algo "
+        "raro».\n"
+        "Por eso la única que habló fue la niña del violín: «la primera persona "
+        "en la historia de su carrera que no sabía todavía que eso no se hace».",
+        [
+            ("Que la jefa pierda autoridad frente al resto de su equipo",
+             "El texto muestra el problema contrario: la autoridad impide la corrección."),
+            ("Que los errores se acumulen hasta volverse imposibles de reparar",
+             "Sergio corrige la nota apenas la comprueba: el problema es la demora en detectarla."),
+            ("Que quienes corrigen sean sancionados por su atrevimiento",
+             "El texto no describe ninguna sanción a quien corrige."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Lectora - Idea central y aplicacion a un caso nuevo (tanda 3)
+# ---------------------------------------------------------------------------
+
+QUESTIONS_LECTORA += [
+    # ---------- 'Una sola fila' ----------
+    _ql(
+        "fila_unica", "lec_idea_central", "medio",
+        "¿Qué sostiene el texto sobre la ventaja de la fila única?",
+        "Que impide que alguien atendiendo quede libre mientras hay gente esperando",
+        "El texto desarma primero la intuición de que el orden da lo mismo, y "
+        "localiza la falla: las cajas «pueden quedar desocupadas mientras "
+        "todavía hay gente esperando».\n"
+        "En la fila única eso no puede ocurrir, porque la siguiente persona "
+        "entra de inmediato a la caja que se desocupe. De ahí la formulación "
+        "que el texto elige: «no atiende más rápido a cada persona; lo que hace "
+        "es no desperdiciar a nadie que esté atendiendo».\n"
+        "A eso suma un segundo efecto: el orden de salida es el de llegada, lo "
+        "que elimina la espera que la gente considera ofensiva.",
+        [
+            ("Que reduce el tiempo que cada persona demora en ser atendida",
+             "El texto precisa que no atiende más rápido a cada persona."),
+            ("Que permite prescindir de quien administra el reparto de turnos",
+             "El texto señala que la fila única sí requiere que alguien lo administre."),
+            ("Que hace que la espera se vea más corta a quien llega al local",
+             "El texto advierte que una fila única se ve larga y puede espantar clientes."),
+        ],
+    ),
+    _ql(
+        "fila_unica", "lec_aplicar", "dificil",
+        "Un consultorio tiene cuatro boxes y una fila frente a cada uno. Según "
+        "el texto, ¿qué ganaría si juntara las cuatro filas en una?",
+        "Evitaría que un box quede libre mientras hay pacientes esperando",
+        "El texto identifica esa pérdida como el problema central de las filas "
+        "separadas: «Ese tiempo de caja vacía con gente esperando no se "
+        "recupera nunca».\n"
+        "Con una fila común, mientras quede alguien esperando ningún box queda "
+        "libre, porque el siguiente entra de inmediato al que se desocupe.\n"
+        "El texto agrega que la ventaja crece justamente cuando el lugar está "
+        "más lleno, y que además el orden de salida pasa a ser el de llegada.",
+        [
+            ("Reduciría el tiempo que cada atención toma dentro del box",
+             "La fila no altera la duración de cada atención."),
+            ("Permitiría atender a más pacientes con menos profesionales",
+             "El texto no plantea que se pueda reducir la cantidad de quienes atienden."),
+            ("Haría innecesario informar el tiempo estimado de espera",
+             "El texto presenta esa información como una medida útil en cualquier caso."),
+        ],
+    ),
+    # ---------- 'La información que se pierde en el color' ----------
+    _ql(
+        "color_redundancia", "lec_idea_central", "medio",
+        "¿Cuándo se vuelve un problema la dificultad para distinguir ciertos "
+        "colores, según el texto?",
+        "Cuando la información está codificada solo en el color y nada la repite",
+        "El texto observa que la mayoría de estas personas conduce, cocina y "
+        "trabaja sin dificultades, y de ahí formula la pregunta por el momento "
+        "exacto en que la diferencia importa.\n"
+        "Su respuesta es precisa: el problema aparece «cuando la información "
+        "está codificada SOLO en el color y no hay ninguna otra señal que la "
+        "repita».\n"
+        "El semáforo funciona como contraejemplo: usa el par difícil y sirve "
+        "para todos, porque la posición de la luz repite lo que dice el color.",
+        [
+            ("Cuando los colores empleados tienen una saturación demasiado baja",
+             "El texto advierte que subir la saturación no ayuda a quien confunde ese par."),
+            ("Cuando el documento se imprime en blanco y negro en vez de a color",
+             "El texto propone esa impresión como prueba para detectar el problema."),
+            ("Cuando quien mira el documento no conoce el significado de cada color",
+             "El texto no atribuye el problema al desconocimiento de la convención."),
+        ],
+    ),
+    _ql(
+        "color_redundancia", "lec_aplicar", "dificil",
+        "Un tablero de proyectos marca el estado de cada equipo con un círculo "
+        "verde, amarillo o rojo. Según el texto, ¿qué habría que agregar?",
+        "Un segundo dato que repita el estado, como un símbolo junto al círculo",
+        "El texto usa exactamente ese tablero entre sus casos que fallan, "
+        "porque el estado viaja únicamente en el color.\n"
+        "Y entrega la solución para ese caso: «Acompañar el círculo verde con "
+        "un visto y el rojo con una cruz».\n"
+        "El principio general es el mismo en todos sus ejemplos: «el color se "
+        "conserva y se le suma algo», de modo que no sea el único que lleva el "
+        "mensaje.",
+        [
+            ("Colores más intensos, para que la diferencia entre ellos se note",
+             "El texto señala que la confusión no depende de cuán vivo sea el color."),
+            ("Una leyenda aparte que explique qué significa cada color usado",
+             "El texto critica justamente las leyendas con cuadraditos de color."),
+            ("Reemplazar el rojo y el verde por dos colores completamente distintos",
+             "El texto no propone abandonar el color sino agregar una segunda señal."),
+        ],
+    ),
+    # ---------- 'El recreo largo' ----------
+    _ql(
+        "recreo_largo", "lec_idea_central", "dificil",
+        "Según la conclusión que saca Fernanda, ¿qué es lo que había que "
+        "aprender del episodio?",
+        "Que el recreo estuvo once años sin motivo y en una semana le apareció uno",
+        "El relato descubre que la razón original —el viaje en micro de la "
+        "señora Villagra— llevaba once años sin existir, y que nadie lo había "
+        "notado.\n"
+        "Fernanda formula la conclusión al salir: el recreo «estuvo once años "
+        "sin motivo y no se cayó, y bastó que alguien preguntara para que en "
+        "una semana le apareciera uno».\n"
+        "Y agrega la parte que desplaza el foco: «Que a lo mejor era eso lo que "
+        "había que aprender y no lo de la señora Villagra».",
+        [
+            ("Que la señora Villagra merecía ser recordada por el colegio entero",
+             "Fernanda desplaza expresamente el aprendizaje lejos de ese punto."),
+            ("Que las tradiciones escolares deben mantenerse aunque no se expliquen",
+             "El inspector rechaza «siempre ha sido así» como razón, y los alumnos construyen una."),
+            ("Que el inspector nuevo buscaba un pretexto para acortar el recreo",
+             "El inspector mantiene el horario después de escuchar a los alumnos."),
+        ],
+    ),
+    _ql(
+        "recreo_largo", "lec_aplicar", "dificil",
+        "Una oficina mantiene una reunión semanal que empezó por un motivo que "
+        "ya nadie recuerda. Según el relato, ¿qué convendría hacer?",
+        "Preguntar por qué existe y revisar qué depende hoy de ella",
+        "Los alumnos hacen exactamente ese recorrido. Primero preguntan y "
+        "descubren que nadie sabe; después buscan en las carpetas y encuentran "
+        "el motivo original, ya muerto.\n"
+        "Pero no se quedan ahí: arman una lista de lo que depende del recreo "
+        "hoy —el taller de radio, los que almuerzan temprano, la fila sin "
+        "empujones— y con eso van a hablar con el inspector.\n"
+        "El resultado es el que Fernanda destaca: la práctica se sostuvo no por "
+        "su origen sino por lo que se había construido encima.",
+        [
+            ("Eliminarla, porque una práctica sin motivo original no se justifica",
+             "El relato muestra que el recreo se sostuvo por motivos nuevos, no por el original."),
+            ("Mantenerla sin preguntar, para no arriesgar que alguien la suprima",
+             "Esa posición se discutió en el relato y perdió por frágil."),
+            ("Buscar en los archivos hasta encontrar quién la decidió y por qué",
+             "Los alumnos encontraron ese dato y aun así no fue lo que sostuvo la práctica."),
+        ],
+    ),
+    # ---------- 'Leer en pantalla' ----------
+    _ql(
+        "leer_pantalla", "lec_idea_central", "medio",
+        "Según el texto, ¿a qué se debe principalmente la desventaja de leer en "
+        "pantalla?",
+        "Al modo de leer que traemos hacia ella, no a la pantalla misma",
+        "El texto acota primero la magnitud: la ventaja del papel en "
+        "comprensión es pequeña y aparece sobre todo en textos expositivos y "
+        "bajo presión de tiempo.\n"
+        "Ese patrón es la pista que usa: «si el soporte por sí solo dañara la "
+        "comprensión, el efecto debería aparecer igual en todos los casos».\n"
+        "La explicación que ofrece es de hábito: en pantalla uno aprende a "
+        "mirar en diagonal y a saltar, y esa manera de leer «se activa por el "
+        "contexto» aunque el texto exija otra cosa.",
+        [
+            ("A que la pantalla cansa la vista más que el papel impreso",
+             "El texto no menciona la fatiga visual entre sus explicaciones."),
+            ("A que las generaciones nuevas leen menos que las anteriores",
+             "El texto señala que el efecto no ha desaparecido con las generaciones."),
+            ("A que los textos digitales suelen estar peor redactados",
+             "Las comparaciones que el texto cita usan el mismo texto en ambos soportes."),
+        ],
+    ),
+    _ql(
+        "leer_pantalla", "lec_aplicar", "dificil",
+        "Un estudiante decide imprimir todos sus apuntes para estudiar mejor. "
+        "Según el texto, ¿qué habría que decirle?",
+        "Que el soporte importa menos que cambiar el modo de leer",
+        "El texto declara expresamente lo que sus resultados no autorizan a "
+        "concluir: «No dice que haya que imprimirlo todo», y califica esa "
+        "recomendación de cara y desproporcionada frente a un efecto pequeño.\n"
+        "Lo que sí se sigue es más modesto: si el problema es el modo de leer "
+        "que traemos hacia la pantalla, «lo que hay que cambiar es el modo».\n"
+        "Y detalla ese modo: ir más lento, volver atrás, detenerse a resumir "
+        "sin mirar, preguntarse qué se está afirmando y con qué.",
+        [
+            ("Que imprimir es la única manera de compensar la desventaja medida",
+             "El texto rechaza esa conclusión de manera explícita."),
+            ("Que da lo mismo el soporte porque el efecto medido no existe",
+             "El texto sostiene que la diferencia aparece de manera consistente."),
+            ("Que el papel solo conviene para leer novelas y textos narrativos",
+             "El texto señala que en textos narrativos la diferencia casi desaparece."),
+        ],
+    ),
+    # ---------- 'La mina que está en el cajón' ----------
+    _ql(
+        "residuos_electronicos", "lec_idea_central", "dificil",
+        "¿Qué propone el texto como la discusión más productiva sobre los "
+        "aparatos electrónicos?",
+        "Discutir reglas verificables en vez de sospechar de las intenciones",
+        "El texto distingue dos versiones de la obsolescencia programada. La "
+        "fuerte —aparatos diseñados para fallar en una fecha— la considera "
+        "difícil de sostener en general.\n"
+        "La débil sí está documentada: baterías pegadas, tornillos especiales, "
+        "repuestos que no se venden, actualizaciones que dejan de llegar. "
+        "Ninguna hace que el equipo se rompa; todas encarecen repararlo.\n"
+        "De ahí su conclusión: exigir repuestos por un plazo mínimo, manuales y "
+        "baterías cambiables son «medidas aburridas, verificables y bastante "
+        "más eficaces que sospechar de un plan».",
+        [
+            ("Demostrar que los fabricantes programan la falla de sus aparatos",
+             "El texto considera esa versión difícil de sostener en general."),
+            ("Convencer a los consumidores de sentirse responsables del problema",
+             "El texto advierte que la culpa suele hacer de sustituto de la acción."),
+            ("Aumentar la capacidad industrial para procesar los aparatos usados",
+             "El texto menciona el problema de concentración, sin proponer eso como eje."),
+        ],
+    ),
+    _ql(
+        "residuos_electronicos", "lec_aplicar", "dificil",
+        "Alguien elige entre dos teléfonos y prefiere el más delgado. Según el "
+        "texto, ¿qué está eligiendo sin saberlo?",
+        "El modelo más difícil de reparar, por ser más pegado y menos modular",
+        "El texto advierte contra atribuirlo todo a la mala fe y ofrece otra "
+        "explicación para parte de esas decisiones de diseño.\n"
+        "La formula así: «Un aparato más delgado, más liviano y más barato es, "
+        "casi inevitablemente, un aparato más pegado y menos modular».\n"
+        "Y saca la consecuencia sobre quien compra: «El consumidor que elige el "
+        "modelo más delgado está eligiendo, sin saberlo, el más difícil de "
+        "reparar». Eso no exime al fabricante, pero mueve el punto de decisión.",
+        [
+            ("Un aparato programado para fallar en una fecha determinada",
+             "El texto considera poco sostenible esa versión de la obsolescencia."),
+            ("Un modelo que contiene menos metales valiosos en su interior",
+             "El texto no relaciona el grosor con la cantidad de metales."),
+            ("Un producto que no está cubierto por la ley de responsabilidad extendida",
+             "La ley incluye a los aparatos eléctricos y electrónicos sin distinguir modelos."),
+        ],
+    ),
+    # ---------- 'La cabeza ocupada' ----------
+    _ql(
+        "ansiedad_pruebas", "lec_idea_central", "medio",
+        "Según el texto, ¿qué le ocurre a quien no logra recordar en una prueba "
+        "algo que sabía el día anterior?",
+        "Los pensamientos sobre su desempeño ocupan el espacio donde debe pensar",
+        "El texto describe el mecanismo con precisión: resolver un problema "
+        "exige mantener información disponible mientras se opera con ella, y "
+        "ese espacio es limitado.\n"
+        "Los pensamientos sobre el propio desempeño —«voy a quedar mal», «no me "
+        "va a alcanzar el tiempo»— «ocupan exactamente el mismo espacio».\n"
+        "De ahí la formulación que ordena todo: «la ansiedad no borra lo que "
+        "uno sabe. Compite con ello». Y explica por qué la respuesta aparece en "
+        "el pasillo: ahí ese espacio quedó libre.",
+        [
+            ("El material estudiado se borra por efecto de la activación fisiológica",
+             "El texto sostiene que la ansiedad no borra lo aprendido: compite con ello."),
+            ("Los nervios revelan que no había estudiado lo suficiente",
+             "El texto desarma expresamente esa creencia."),
+            ("La preocupación mejora el rendimiento al estrechar la atención",
+             "Eso ocurre con una activación moderada, no con la que satura el espacio."),
+        ],
+    ),
+    _ql(
+        "ansiedad_pruebas", "lec_aplicar", "dificil",
+        "Un estudiante lleva cuatro minutos atascado en una pregunta y calcula "
+        "cuánto tiempo está perdiendo. Según el texto, ¿qué conviene hacer?",
+        "Saltar la pregunta y volver después, para liberar el espacio de pensar",
+        "El texto describe esa situación exacta: quien lleva cuatro minutos "
+        "atascado «suele estar haciendo dos cosas a la vez: intentar resolverla "
+        "y calcular cuánto le está costando».\n"
+        "Y evalúa la segunda tarea sin rodeos: «no aporta nada y consume el "
+        "mismo espacio que la primera».\n"
+        "De ahí la recomendación, formulada como corrección de una creencia: "
+        "«Saltarse una pregunta y volver después no es una derrota; es liberar "
+        "el lugar donde hay que pensar».",
+        [
+            ("Insistir en la pregunta hasta resolverla, para no perder el punto",
+             "El texto muestra que insistir mantiene ocupado el espacio de trabajo."),
+            ("Escribir durante unos minutos sobre lo que le preocupa de la prueba",
+             "El texto sitúa ese procedimiento antes de la prueba y lo describe como en estudio."),
+            ("Interpretar los nervios como señal de que le faltó preparación",
+             "El texto advierte que esa interpretación agrega una preocupación más."),
+        ],
+    ),
+]
