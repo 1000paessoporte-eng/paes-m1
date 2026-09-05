@@ -134257,3 +134257,913 @@ QUESTIONS += [
         imagen="/preguntas/mat-recta-triangulo-ejes.svg",
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# M1 - Medidas de posicion
+#
+# Era el unico nodo de M1 que seguia en 16 preguntas mientras el resto del eje
+# iba en 60. Cuartiles, mediana, percentiles, rango intercuartilico y lectura
+# del diagrama de cajon.
+#
+# Convencion del banco, la misma que ya usaban las preguntas que estaban: con
+# n par, cada mitad se toma completa y el cuartil es el promedio de sus dos
+# centrales; con n impar, la mediana queda FUERA de las dos mitades.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "prob_posicion", "facil",
+        "¿Qué indica la mediana de un conjunto de datos ordenados?",
+        "El valor que deja la mitad de los datos a cada lado",
+        "La mediana es una medida de posición, no de dispersión.\n\n"
+        "1) Se ordenan los datos de menor a mayor.\n"
+        "2) Se busca el valor que parte ese ordenamiento en dos mitades del "
+        "mismo tamaño.\n"
+        "3) Ese valor es la mediana.\n\n"
+        "A diferencia del promedio, un solo dato muy grande casi no la mueve: "
+        "por eso se prefiere al informar sueldos o precios de vivienda.",
+        [
+            ("El valor que más se repite",
+             "Esa es la moda."),
+            ("El promedio de todos los datos",
+             "Ese es la media, que sí se mueve cuando aparece un dato extremo."),
+            ("La diferencia entre el dato mayor y el menor",
+             "Ese es el rango, que mide dispersión y no posición."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "¿En cuántas partes iguales dividen los cuartiles a un conjunto de "
+        "datos ordenados?",
+        "En cuatro",
+        "El nombre lo dice: cuartiles reparten en cuartos.\n\n"
+        "1) Los cuartiles son tres: Q1, Q2 y Q3.\n"
+        "2) Esos tres cortes dejan cuatro grupos.\n"
+        "3) Cada grupo reúne el 25% de los datos.\n\n"
+        "Con la misma lógica, los deciles son nueve y reparten en diez partes; "
+        "los percentiles son noventa y nueve y reparten en cien.",
+        [
+            ("En tres",
+             "Tres es la cantidad de cuartiles, no la de grupos que dejan."),
+            ("En dos",
+             "En dos parte la mediana, que es solo uno de los tres cuartiles."),
+            ("En diez",
+             "En diez reparten los deciles, no los cuartiles."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "¿Qué porcentaje de los datos queda bajo el primer cuartil?",
+        "El 25%",
+        "El primer cuartil es el primero de los tres cortes.\n\n"
+        "1) Los cuartiles reparten los datos en cuatro grupos iguales.\n"
+        "2) Bajo Q1 queda solo el primero de esos grupos.\n"
+        "3) Eso corresponde al 25% de los datos.\n\n"
+        "Sobre Q3 queda el otro extremo, también un 25%, y entre ambos vive el "
+        "50% central.",
+        [
+            ("El 50%",
+             "Ese es el porcentaje que queda bajo la mediana, no bajo Q1."),
+            ("El 75%",
+             "Ese es el porcentaje que queda bajo Q3."),
+            ("El 100%",
+             "Bajo el dato mayor quedan todos, pero Q1 está mucho antes."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "¿Cuál es la mediana de los datos 3, 5, 7, 9 y 11?",
+        "7",
+        "Con una cantidad impar de datos, la mediana es el dato central.\n\n"
+        "1) Los datos ya están ordenados y son cinco.\n"
+        "2) El dato central es el tercero.\n"
+        "3) Ese dato es 7.\n\n"
+        "Quedan dos datos a cada lado, que es exactamente lo que la mediana "
+        "garantiza.",
+        [
+            ("5",
+             "Es el segundo dato: deja uno a la izquierda y tres a la derecha."),
+            ("9",
+             "Es el cuarto dato: deja tres a la izquierda y uno a la derecha."),
+            ("35",
+             "Es la suma de los cinco datos, que sirve para la media y no para la mediana."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "¿Cuál es la mediana de los datos 4, 8, 10 y 14?",
+        "9",
+        "Con una cantidad par de datos, la mediana promedia los dos "
+        "centrales.\n\n"
+        "1) Los datos ya están ordenados y son cuatro.\n"
+        "2) Los dos centrales son 8 y 10.\n"
+        "3) La mediana es (8 + 10) / 2 = 9.\n\n"
+        "La mediana no tiene por qué coincidir con ninguno de los datos: aquí "
+        "el 9 no aparece en el conjunto.",
+        [
+            ("8",
+             "Es solo el primero de los dos datos centrales."),
+            ("10",
+             "Es solo el segundo de los dos datos centrales."),
+            ("36",
+             "Es la suma de los cuatro datos, no su mediana."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "¿Con qué percentil coincide siempre la mediana de un conjunto de "
+        "datos?",
+        "Con el percentil 50",
+        "Ambas marcan el mismo punto del ordenamiento.\n\n"
+        "1) La mediana deja la mitad de los datos por debajo.\n"
+        "2) El percentil 50 se define exactamente así.\n"
+        "3) Por lo tanto son la misma medida con dos nombres.\n\n"
+        "También coincide con el segundo cuartil y con el quinto decil: los "
+        "tres nombran el centro del ordenamiento.",
+        [
+            ("Con el percentil 25",
+             "Ese percentil coincide con el primer cuartil, no con la mediana."),
+            ("Con el percentil 75",
+             "Ese percentil coincide con el tercer cuartil."),
+            ("Con el percentil 100",
+             "Ese punto correspondería al dato mayor del conjunto."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "En un diagrama de cajón, ¿qué representa la línea que está dentro de "
+        "la caja?",
+        "La mediana",
+        "Cada trazo del diagrama corresponde a una medida de posición.\n\n"
+        "1) Los extremos de la caja son el primer y el tercer cuartil.\n"
+        "2) La línea interior parte la caja en el segundo cuartil.\n"
+        "3) Ese segundo cuartil es la mediana.\n\n"
+        "Que la línea no quede al centro de la caja no es un error: indica que "
+        "los datos se reparten de manera asimétrica.",
+        [
+            ("La media",
+             "El diagrama de cajón no muestra el promedio: muestra cuartiles."),
+            ("El dato mayor",
+             "El dato mayor está en el extremo del bigote derecho, no dentro de la caja."),
+            ("El rango intercuartílico",
+             "El rango intercuartílico es el ancho de la caja, no una línea."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "¿Qué porcentaje de los datos queda BAJO el tercer cuartil?",
+        "El 75%",
+        "Q3 es el tercero de los cortes que reparten en cuartos.\n\n"
+        "1) Los cuartiles dejan cuatro grupos del 25% cada uno.\n"
+        "2) Bajo el tercer cuartil quedan los tres primeros grupos.\n"
+        "3) Eso suma 25 + 25 + 25 = 75% de los datos.\n\n"
+        "El 25% restante queda por encima: es el cuarto más alto del conjunto.",
+        [
+            ("El 25%",
+             "Ese es el porcentaje que queda SOBRE el tercer cuartil."),
+            ("El 50%",
+             "Ese es el porcentaje que queda bajo la mediana."),
+            ("El 33%",
+             "Los cuartiles reparten en cuatro grupos de 25%, no en tres."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿Cuál es el primer cuartil de los datos 1, 3, 5, 7, 9 y 11?",
+        "3",
+        "Se parte el conjunto por la mitad y se busca el centro de la mitad "
+        "baja.\n\n"
+        "1) Los seis datos se reparten en dos mitades: 1, 3, 5 y 7, 9, 11.\n"
+        "2) El primer cuartil es la mediana de la mitad baja.\n"
+        "3) Esa mitad es 1, 3, 5, y su centro es 3.\n\n"
+        "El tercer cuartil sale igual del otro lado: la mediana de 7, 9, 11, "
+        "que es 9.",
+        [
+            ("1",
+             "Es el dato menor del conjunto, no el primer cuartil."),
+            ("5",
+             "Es el tercer dato: queda dentro de la mitad baja pero no es su centro."),
+            ("6",
+             "Es la mediana del conjunto completo, es decir, el segundo cuartil."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "¿Qué es el rango intercuartílico de un conjunto de datos?",
+        "La diferencia entre el tercer cuartil y el primero",
+        "Mide cuán ancho es el 50% central del conjunto.\n\n"
+        "1) Entre Q1 y Q3 vive la mitad central de los datos.\n"
+        "2) Su diferencia indica cuánto espacio ocupa esa mitad.\n"
+        "3) En el diagrama de cajón corresponde al ancho de la caja.\n\n"
+        "Deja fuera el 25% más bajo y el 25% más alto, así que un dato extremo "
+        "no lo altera: es la medida de dispersión más resistente.",
+        [
+            ("La diferencia entre el dato mayor y el menor",
+             "Ese es el rango, que sí se ve alterado por un dato extremo."),
+            ("El promedio entre el primer y el tercer cuartil",
+             "El promedio de ambos indicaría el centro de la caja, no su ancho."),
+            ("La cantidad de datos que hay entre los dos cuartiles",
+             "Es una diferencia entre valores, no un conteo de datos."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "¿Entre qué dos cuartiles vive el 50% central de un conjunto de datos?",
+        "Entre el primero y el tercero",
+        "Los cuartiles del medio delimitan la mitad central.\n\n"
+        "1) Bajo el primer cuartil queda el 25% más bajo.\n"
+        "2) Sobre el tercero queda el 25% más alto.\n"
+        "3) Entre ambos queda el 50% restante, que es la mitad central.\n\n"
+        "En el diagrama de cajón ese tramo es justamente la caja, y su ancho "
+        "es el rango intercuartílico.",
+        [
+            ("Entre el primero y el segundo",
+             "Ese tramo va de Q1 a la mediana y cubre el 25%, no el 50%."),
+            ("Entre el segundo y el tercero",
+             "Ese tramo va de la mediana a Q3 y también cubre solo el 25%."),
+            ("Entre el dato menor y el primero",
+             "Ese tramo es el bigote izquierdo del diagrama y cubre el 25% más bajo."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿Cuál es el tercer cuartil de los datos 1, 3, 5, 7, 9 y 11?",
+        "9",
+        "El tercer cuartil es la mediana de la mitad alta.\n\n"
+        "1) Los seis datos se reparten en dos mitades: 1, 3, 5 y 7, 9, 11.\n"
+        "2) La mitad alta es 7, 9, 11.\n"
+        "3) Su dato central es 9.\n\n"
+        "Con el primer cuartil en 3, el rango intercuartílico de este conjunto "
+        "es 9 − 3 = 6.",
+        [
+            ("11",
+             "Es el dato mayor del conjunto, no el tercer cuartil."),
+            ("7",
+             "Es el primer dato de la mitad alta, pero no su centro."),
+            ("6",
+             "Es la mediana del conjunto completo."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿Cuál es la mediana de los datos 2, 3, 5, 8, 9, 10, 12 y 15?",
+        "8,5",
+        "Con ocho datos, la mediana promedia el cuarto y el quinto.\n\n"
+        "1) Los datos ya están ordenados.\n"
+        "2) Los dos centrales son 8 y 9.\n"
+        "3) La mediana es (8 + 9) / 2 = 8,5.\n\n"
+        "Cuatro datos quedan por debajo y cuatro por encima, como corresponde.",
+        [
+            ("8",
+             "Es solo el cuarto dato: deja tres por debajo y cuatro por encima."),
+            ("9",
+             "Es solo el quinto dato: deja cuatro por debajo y tres por encima."),
+            ("7,75",
+             "Es el promedio de los ocho datos, que es la media y no la mediana."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿Cuál es el primer cuartil de los datos 2, 3, 5, 8, 9, 10, 12 y 15?",
+        "4",
+        "El primer cuartil es la mediana de la mitad baja.\n\n"
+        "1) Con ocho datos, la mitad baja son los primeros cuatro: 2, 3, 5 y "
+        "8.\n"
+        "2) Su mediana promedia los dos centrales, 3 y 5.\n"
+        "3) El resultado es (3 + 5) / 2 = 4.\n\n"
+        "El tercer cuartil sale del otro lado: la mediana de 9, 10, 12 y 15, "
+        "que es 11.",
+        [
+            ("3",
+             "Es el segundo dato: queda en la mitad baja pero no es su centro."),
+            ("5",
+             "Es el tercer dato: también está en la mitad baja sin ser su centro."),
+            ("2",
+             "Es el dato menor del conjunto."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "En un conjunto de 400 datos, ¿cuántos quedan bajo el percentil 60?",
+        "240",
+        "El percentil indica qué porcentaje deja por debajo.\n\n"
+        "1) El percentil 60 deja bajo sí el 60% de los datos.\n"
+        "2) El 60% de 400 es 0,60 · 400.\n"
+        "3) Eso da 240 datos.\n\n"
+        "Sobre ese percentil quedan los 160 restantes, es decir, el 40%.",
+        [
+            ("60",
+             "Es el número del percentil, no la cantidad de datos."),
+            ("160",
+             "Es la cantidad de datos que quedan POR SOBRE el percentil 60."),
+            ("40",
+             "Es el porcentaje que queda por encima, no una cantidad de datos."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "En un diagrama de cajón, la caja va de 30 a 50. ¿Cuál es el rango "
+        "intercuartílico?",
+        "20",
+        "El ancho de la caja es el rango intercuartílico.\n\n"
+        "1) El extremo izquierdo de la caja es el primer cuartil: 30.\n"
+        "2) El extremo derecho es el tercer cuartil: 50.\n"
+        "3) La diferencia es 50 − 30 = 20.\n\n"
+        "Dentro de ese tramo vive el 50% central de los datos, cualquiera sea "
+        "el largo de los bigotes.",
+        [
+            ("40",
+             "Es el promedio entre los dos cuartiles, es decir, el centro de la caja."),
+            ("80",
+             "Es la suma de los dos cuartiles, que no corresponde a ninguna medida."),
+            ("50",
+             "Es el tercer cuartil, sin descontar el primero."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "Una estudiante quedó en el percentil 90 de su prueba. ¿Qué significa?",
+        "Que su puntaje superó al 90% de quienes rindieron",
+        "El percentil ubica a la persona dentro del grupo.\n\n"
+        "1) El percentil 90 deja bajo sí al 90% de los datos.\n"
+        "2) El puntaje de la estudiante está en ese punto del ordenamiento.\n"
+        "3) Por lo tanto superó al 90% de quienes rindieron.\n\n"
+        "No dice cuántas preguntas respondió bien: un 90% de aciertos y el "
+        "percentil 90 son cosas distintas.",
+        [
+            ("Que respondió correctamente el 90% de la prueba",
+             "El percentil compara con las demás personas, no cuenta aciertos."),
+            ("Que el 90% de quienes rindieron obtuvo un puntaje mayor",
+             "Es al revés: solo el 10% quedó por sobre ella."),
+            ("Que su puntaje fue 90 sobre 100",
+             "El percentil no es el puntaje: es la posición relativa."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "En un conjunto de datos la mediana es 12 y el primer cuartil es 8. "
+        "¿Qué porcentaje de los datos está entre 8 y 12?",
+        "El 25%",
+        "Entre Q1 y la mediana vive siempre un cuarto de los datos.\n\n"
+        "1) Bajo el primer cuartil queda el 25%.\n"
+        "2) Bajo la mediana queda el 50%.\n"
+        "3) Entre ambos valores queda la diferencia: el 25%.\n\n"
+        "Los valores concretos no importan: la respuesta sería la misma con "
+        "cualquier par de cuartil y mediana.",
+        [
+            ("El 50%",
+             "Ese es el porcentaje que queda entre el primer y el tercer cuartil."),
+            ("El 4%",
+             "Confunde la diferencia entre los valores, 12 − 8, con un porcentaje."),
+            ("El 75%",
+             "Ese es el porcentaje que queda bajo el tercer cuartil."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "En un conjunto de 60 datos, ¿cuántos son mayores que el tercer "
+        "cuartil?",
+        "15",
+        "Sobre Q3 queda el cuarto más alto del conjunto.\n\n"
+        "1) Los cuartiles reparten los 60 datos en cuatro grupos iguales.\n"
+        "2) Cada grupo tiene 60 / 4 = 15 datos.\n"
+        "3) Sobre el tercer cuartil queda uno de esos grupos: 15 datos.\n\n"
+        "Bajo Q3 quedan los otros tres grupos, es decir, 45 datos.",
+        [
+            ("45",
+             "Es la cantidad de datos que queda BAJO el tercer cuartil."),
+            ("30",
+             "Es la mitad de los datos, que corresponde a la mediana y no a Q3."),
+            ("3",
+             "Es el número del cuartil, no una cantidad de datos."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "¿Cuál es la mediana de los datos 10, 20, 30 y 40?",
+        "25",
+        "Con cuatro datos, la mediana promedia los dos centrales.\n\n"
+        "1) Los datos ya están ordenados.\n"
+        "2) Los dos centrales son 20 y 30.\n"
+        "3) La mediana es (20 + 30) / 2 = 25.\n\n"
+        "En este conjunto la mediana coincide con la media, porque los datos "
+        "están repartidos de manera simétrica.",
+        [
+            ("20",
+             "Es solo el primero de los dos datos centrales."),
+            ("30",
+             "Es solo el segundo de los dos datos centrales."),
+            ("100",
+             "Es la suma de los cuatro datos, no su mediana."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿Cuál es el tercer cuartil de los datos 10, 20, 30 y 40?",
+        "35",
+        "El tercer cuartil es la mediana de la mitad alta.\n\n"
+        "1) Con cuatro datos, la mitad alta son 30 y 40.\n"
+        "2) Su mediana promedia esos dos valores.\n"
+        "3) El resultado es (30 + 40) / 2 = 35.\n\n"
+        "El primer cuartil sale igual del otro lado: (10 + 20) / 2 = 15, así "
+        "que el rango intercuartílico es 20.",
+        [
+            ("40",
+             "Es el dato mayor del conjunto, no el tercer cuartil."),
+            ("30",
+             "Es el tercer dato, pero el cuartil promedia los dos de la mitad alta."),
+            ("25",
+             "Es la mediana del conjunto completo."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿En cuántas partes iguales dividen los deciles a un conjunto de datos "
+        "ordenados?",
+        "En diez",
+        "El nombre indica el reparto, igual que con los cuartiles.\n\n"
+        "1) Los deciles son nueve cortes: D1 hasta D9.\n"
+        "2) Esos nueve cortes dejan diez grupos.\n"
+        "3) Cada grupo reúne el 10% de los datos.\n\n"
+        "El quinto decil coincide con la mediana, con el segundo cuartil y con "
+        "el percentil 50: los cuatro nombran el mismo punto.",
+        [
+            ("En nueve",
+             "Nueve es la cantidad de deciles, no la de grupos que dejan."),
+            ("En cuatro",
+             "En cuatro reparten los cuartiles."),
+            ("En cien",
+             "En cien reparten los percentiles."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M1 - Medidas de posicion (segunda tanda)
+#
+# Lectura del diagrama de cajon, deteccion de datos atipicos con el criterio
+# de 1,5 veces el rango intercuartilico, y que le pasa a las medidas de
+# posicion cuando los datos se trasladan o se reescalan.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "prob_posicion", "medio",
+        "Un diagrama de cajón muestra mínimo 12, Q1 = 20, mediana 26, Q3 = 34 "
+        "y máximo 50. ¿Entre qué valores está el 50% central de los datos?",
+        "Entre 20 y 34",
+        "El 50% central es exactamente lo que encierra la caja.\n\n"
+        "1) El extremo izquierdo de la caja es Q1 = 20.\n"
+        "2) El extremo derecho es Q3 = 34.\n"
+        "3) Entre esos dos valores vive la mitad central del conjunto.\n\n"
+        "Los bigotes, que llegan a 12 y a 50, cubren el 25% más bajo y el 25% "
+        "más alto.",
+        [
+            ("Entre 12 y 50",
+             "Ese es el recorrido completo de los datos, es decir, el 100%."),
+            ("Entre 20 y 26",
+             "Ese tramo va de Q1 a la mediana y cubre el 25%, no el 50%."),
+            ("Entre 26 y 50",
+             "Ese tramo va de la mediana al máximo y cubre el 50% superior, no el central."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿Cuál es el primer cuartil de los datos 5, 5, 6, 8, 10, 12, 14 y 20?",
+        "5,5",
+        "El primer cuartil es la mediana de la mitad baja.\n\n"
+        "1) Con ocho datos, la mitad baja son los primeros cuatro: 5, 5, 6 y "
+        "8.\n"
+        "2) Su mediana promedia los dos centrales, 5 y 6.\n"
+        "3) El resultado es (5 + 6) / 2 = 5,5.\n\n"
+        "Que un valor se repita no altera el procedimiento: los datos "
+        "repetidos se cuentan todas las veces que aparecen.",
+        [
+            ("5",
+             "Es uno de los dos datos centrales de la mitad baja, pero el cuartil los promedia."),
+            ("6",
+             "Es el otro dato central de la mitad baja."),
+            ("9",
+             "Es la mediana del conjunto completo, no el primer cuartil."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿Cuál es el rango intercuartílico de los datos 5, 5, 6, 8, 10, 12, 14 "
+        "y 20?",
+        "7,5",
+        "Se calculan los dos cuartiles y se restan.\n\n"
+        "1) La mitad baja, 5, 5, 6 y 8, tiene mediana 5,5: ese es Q1.\n"
+        "2) La mitad alta, 10, 12, 14 y 20, tiene mediana 13: ese es Q3.\n"
+        "3) El rango intercuartílico es 13 − 5,5 = 7,5.\n\n"
+        "El rango completo, en cambio, es 20 − 5 = 15: el dato 20 lo estira, "
+        "pero no afecta a la caja.",
+        [
+            ("15",
+             "Es el rango completo, que va del dato menor al mayor."),
+            ("13",
+             "Es el tercer cuartil, sin descontar el primero."),
+            ("9,25",
+             "Es el promedio de los ocho datos, que no interviene en este cálculo."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "En un conjunto de 80 datos, ¿cuántos quedan entre el primer y el "
+        "tercer cuartil?",
+        "40",
+        "Entre Q1 y Q3 vive la mitad central del conjunto.\n\n"
+        "1) Los cuartiles reparten los 80 datos en cuatro grupos de 20.\n"
+        "2) Entre Q1 y Q3 quedan dos de esos grupos.\n"
+        "3) Eso da 20 + 20 = 40 datos.\n\n"
+        "Los otros 40 se reparten en partes iguales entre los dos extremos.",
+        [
+            ("20",
+             "Es la cantidad de datos de un solo grupo, no de los dos centrales."),
+            ("60",
+             "Es la cantidad de datos que queda bajo el tercer cuartil."),
+            ("2",
+             "Es la cantidad de grupos centrales, no de datos."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿Qué relación hay entre el percentil 25 y el primer cuartil?",
+        "Son la misma medida con dos nombres distintos",
+        "Ambos marcan el punto que deja bajo sí una cuarta parte de los "
+        "datos.\n\n"
+        "1) El primer cuartil deja bajo sí el 25% del conjunto.\n"
+        "2) El percentil 25 se define exactamente igual.\n"
+        "3) Por lo tanto coinciden siempre.\n\n"
+        "Lo mismo pasa con el percentil 75 y el tercer cuartil, y con el "
+        "percentil 50, la mediana y el segundo cuartil.",
+        [
+            ("El percentil 25 es la cuarta parte del primer cuartil",
+             "No hay ninguna operación entre ellos: son el mismo valor."),
+            ("El primer cuartil siempre es mayor",
+             "Coinciden exactamente, así que ninguno supera al otro."),
+            ("El percentil 25 se calcula con la media y el cuartil con la mediana",
+             "Ninguna de las dos medidas usa el promedio."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "A un conjunto de datos se le agrega un valor mucho mayor que todos "
+        "los demás. ¿Qué le ocurre a la mediana?",
+        "Cambia poco o nada, porque solo se corre un lugar en el ordenamiento",
+        "La mediana depende de la posición, no del valor de los datos "
+        "extremos.\n\n"
+        "1) Al agregar un dato el ordenamiento crece en uno y el centro se "
+        "desplaza una posición.\n"
+        "2) El nuevo centro es un dato vecino al anterior, así que el valor "
+        "cambia poco.\n"
+        "3) Que el dato agregado sea enorme no lo altera: la mediana no lo "
+        "mira.\n\n"
+        "La media, en cambio, sí se dispara: un solo dato grande arrastra la "
+        "suma total.",
+        [
+            ("Aumenta en la misma proporción que ese dato",
+             "La mediana no depende del valor del dato agregado."),
+            ("Se vuelve igual al dato agregado",
+             "El dato agregado queda en el extremo del ordenamiento, no en el centro."),
+            ("Deja de poder calcularse",
+             "Siempre se puede calcular: basta ordenar los datos."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "En un diagrama de cajón, el bigote izquierdo es mucho más largo que "
+        "el derecho. ¿Qué indica?",
+        "Que el 25% más bajo está más disperso que el 25% más alto",
+        "Cada bigote cubre un cuarto de los datos, sea cual sea su largo.\n\n"
+        "1) El bigote izquierdo va del dato menor hasta Q1: ahí vive el 25% más "
+        "bajo.\n"
+        "2) El derecho va de Q3 hasta el dato mayor: ahí vive el 25% más "
+        "alto.\n"
+        "3) Un bigote más largo cubre el mismo 25% pero repartido en un tramo "
+        "más ancho.\n\n"
+        "El largo habla de dispersión, no de cantidad: los cuatro grupos "
+        "siempre tienen el mismo número de datos.",
+        [
+            ("Que hay más datos bajos que altos",
+             "Los dos bigotes cubren siempre el 25% cada uno, cualquiera sea su largo."),
+            ("Que la mediana está mal calculada",
+             "Un diagrama asimétrico es perfectamente válido."),
+            ("Que el conjunto no tiene datos atípicos",
+             "El largo de los bigotes no decide por sí solo si hay datos atípicos."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "En una tabla de frecuencia acumulada, el 50% de los casos se alcanza "
+        "en el intervalo [30, 40). ¿Qué se puede afirmar?",
+        "Que la mediana está en ese intervalo",
+        "La frecuencia acumulada del 50% marca el centro del ordenamiento.\n\n"
+        "1) La mediana es el valor que deja la mitad de los datos por debajo.\n"
+        "2) Ese punto se alcanza dentro del intervalo [30, 40).\n"
+        "3) Por lo tanto la mediana está entre 30 y 40.\n\n"
+        "Con datos agrupados no se obtiene un valor exacto: la tabla entrega el "
+        "intervalo donde cae.",
+        [
+            ("Que la media vale 35",
+             "El promedio no se lee en la frecuencia acumulada, y no tiene por qué caer ahí."),
+            ("Que el primer cuartil está en ese intervalo",
+             "El primer cuartil se alcanza al 25% de la frecuencia acumulada."),
+            ("Que la mitad de los datos vale exactamente 35",
+             "El intervalo agrupa valores distintos entre 30 y 40."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "En un conjunto de 50 datos, ¿cuántos quedan bajo el percentil 80?",
+        "40",
+        "El percentil indica el porcentaje que deja por debajo.\n\n"
+        "1) El percentil 80 deja bajo sí el 80% de los datos.\n"
+        "2) El 80% de 50 es 0,80 · 50.\n"
+        "3) Eso da 40 datos.\n\n"
+        "Los 10 restantes quedan por encima: son el 20% más alto del conjunto.",
+        [
+            ("10",
+             "Es la cantidad de datos que queda POR SOBRE el percentil 80."),
+            ("80",
+             "Es el número del percentil, y además supera al total de datos."),
+            ("25",
+             "Es la mitad del conjunto, que corresponde a la mediana."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "En un diagrama de cajón, la línea interior está justo al centro de la "
+        "caja. ¿Qué indica?",
+        "Que el 50% central de los datos se reparte de manera simétrica",
+        "La posición de la mediana dentro de la caja habla del reparto "
+        "interno.\n\n"
+        "1) La caja va de Q1 a Q3 y la línea marca la mediana.\n"
+        "2) Si la línea está al centro, el tramo de Q1 a la mediana mide lo "
+        "mismo que el de la mediana a Q3.\n"
+        "3) El 50% central está repartido simétricamente.\n\n"
+        "No dice nada sobre los bigotes: el conjunto completo puede ser "
+        "asimétrico aunque la caja no lo sea.",
+        [
+            ("Que todos los datos son iguales",
+             "Si lo fueran, la caja tendría ancho cero."),
+            ("Que la mediana coincide con el promedio del conjunto",
+             "Puede ocurrir, pero el diagrama de cajón no muestra el promedio."),
+            ("Que no hay datos atípicos en el conjunto",
+             "La simetría de la caja no dice nada sobre los extremos."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "Dos cursos rinden la misma prueba. En el primero la caja del diagrama "
+        "va de 40 a 70 y en el segundo, de 50 a 60. ¿Qué se puede afirmar?",
+        "El primer curso tiene más dispersos sus puntajes centrales",
+        "El ancho de la caja mide la dispersión del 50% central.\n\n"
+        "1) El primer curso tiene rango intercuartílico 70 − 40 = 30.\n"
+        "2) El segundo tiene 60 − 50 = 10.\n"
+        "3) El primero triplica al segundo: su mitad central está mucho más "
+        "repartida.\n\n"
+        "El dato no dice cuál curso obtuvo mejores puntajes: para eso habría "
+        "que comparar las medianas.",
+        [
+            ("El segundo curso obtuvo mejores puntajes",
+             "El ancho de la caja no compara niveles: para eso está la mediana."),
+            ("Los dos cursos tienen la misma mediana",
+             "El diagrama descrito no entrega las medianas."),
+            ("El primer curso tiene más estudiantes",
+             "El ancho de la caja no depende del tamaño del curso."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿Qué mide el criterio de 1,5 veces el rango intercuartílico?",
+        "Sirve para decidir si un dato es atípico",
+        "Es la regla estándar para marcar valores fuera de lo esperable.\n\n"
+        "1) Se calcula el rango intercuartílico y se multiplica por 1,5.\n"
+        "2) Ese margen se descuenta de Q1 y se suma a Q3.\n"
+        "3) Los datos que caen fuera de esos límites se consideran atípicos.\n\n"
+        "El criterio se apoya en los cuartiles justamente porque estos no se "
+        "ven alterados por los datos extremos que se quiere detectar.",
+        [
+            ("Sirve para calcular la mediana de datos agrupados",
+             "La mediana se obtiene del ordenamiento, sin ese margen."),
+            ("Sirve para convertir cuartiles en percentiles",
+             "Cuartiles y percentiles se corresponden directamente, sin cálculo intermedio."),
+            ("Sirve para estimar la media cuando hay datos faltantes",
+             "El criterio no reemplaza datos: solo señala cuáles quedan fuera de rango."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "En un conjunto de datos, Q1 = 10 y Q3 = 22. ¿Es 45 un dato atípico "
+        "según el criterio de 1,5 veces el rango intercuartílico?",
+        "Sí, porque supera el límite de 40",
+        "Se calcula el límite superior y se compara.\n\n"
+        "1) El rango intercuartílico es 22 − 10 = 12.\n"
+        "2) El margen es 1,5 · 12 = 18.\n"
+        "3) El límite superior es 22 + 18 = 40, y 45 lo supera: es atípico.\n\n"
+        "El límite inferior sería 10 − 18 = −8, así que por abajo este conjunto "
+        "difícilmente tendría atípicos.",
+        [
+            ("No, porque está dentro del rango de los datos",
+             "El criterio no compara con el recorrido observado sino con el límite calculado."),
+            ("No, porque no supera el doble del tercer cuartil",
+             "El criterio usa 1,5 veces el rango intercuartílico, no el doble de Q3."),
+            ("Sí, porque cualquier dato sobre el tercer cuartil es atípico",
+             "Sobre Q3 está el 25% más alto del conjunto, y casi nada de eso es atípico."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "A todos los datos de un conjunto se les suma 7. ¿Qué ocurre con el "
+        "rango intercuartílico?",
+        "No cambia",
+        "Trasladar los datos mueve las posiciones pero no las distancias.\n\n"
+        "1) Al sumar 7, tanto Q1 como Q3 aumentan en 7.\n"
+        "2) El rango intercuartílico es su diferencia.\n"
+        "3) Los dos aumentos se cancelan al restar: la diferencia queda "
+        "igual.\n\n"
+        "La mediana y los cuartiles sí se desplazan 7 unidades: lo que no "
+        "cambia es cuán separados están entre sí.",
+        [
+            ("Aumenta en 7",
+             "Ese aumento lo tienen los cuartiles por separado, no su diferencia."),
+            ("Aumenta en 14",
+             "Sumar la misma constante a los dos cuartiles no ensancha la caja."),
+            ("Se reduce a la mitad",
+             "Trasladar los datos no altera ninguna medida de dispersión."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "A todos los datos de un conjunto se les multiplica por 4. ¿Qué ocurre "
+        "con el rango intercuartílico?",
+        "Se multiplica por 4",
+        "Reescalar los datos reescala también las distancias entre ellos.\n\n"
+        "1) Al multiplicar por 4, tanto Q1 como Q3 quedan multiplicados por "
+        "4.\n"
+        "2) El rango intercuartílico es su diferencia.\n"
+        "3) Esa diferencia también queda multiplicada por 4.\n\n"
+        "Es la diferencia con sumar una constante: trasladar no cambia la "
+        "dispersión, reescalar sí.",
+        [
+            ("No cambia",
+             "Eso ocurre al sumar una constante, no al multiplicar por ella."),
+            ("Se multiplica por 16",
+             "Ese sería el factor de la varianza, que eleva las diferencias al cuadrado."),
+            ("Aumenta en 4 unidades",
+             "El efecto es multiplicativo, no aditivo."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "En un conjunto de 200 datos, ¿cuántos quedan entre el percentil 30 y "
+        "el percentil 75?",
+        "90",
+        "Se resta el porcentaje acumulado de cada percentil.\n\n"
+        "1) Bajo el percentil 75 queda el 75% de los datos.\n"
+        "2) Bajo el percentil 30 queda el 30%.\n"
+        "3) Entre ambos queda el 45%, y el 45% de 200 es 90 datos.\n\n"
+        "El error frecuente es restar los números de percentil y quedarse en "
+        "45 sin aplicarlo al total.",
+        [
+            ("45",
+             "Es el porcentaje que queda entre ambos percentiles, no la cantidad de datos."),
+            ("105",
+             "Corresponde a un tramo del 52,5%, que no es el que dejan esos dos percentiles."),
+            ("150",
+             "Es la cantidad de datos que queda bajo el percentil 75."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "En una empresa, la mediana de los sueldos es $ 650.000 y el promedio "
+        "es $ 900.000. ¿Qué se puede concluir?",
+        "Hay sueldos altos que arrastran el promedio hacia arriba",
+        "La media se deja mover por los extremos y la mediana no.\n\n"
+        "1) La mediana deja a la mitad del personal bajo $ 650.000.\n"
+        "2) El promedio, bastante más alto, indica que la suma total está "
+        "inflada por algunos sueldos grandes.\n"
+        "3) Esos pocos sueldos arrastran la media sin mover la mediana.\n\n"
+        "Es la razón por la que los informes de remuneraciones suelen entregar "
+        "la mediana y no el promedio.",
+        [
+            ("La mayoría gana más de $ 900.000",
+             "La mediana dice lo contrario: la mitad gana menos de $ 650.000."),
+            ("Los sueldos están muy concentrados",
+             "Si lo estuvieran, media y mediana serían parecidas."),
+            ("Hubo un error, porque media y mediana deberían coincidir",
+             "Coinciden solo en distribuciones simétricas: la diferencia es información válida."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "¿Cuál es el tercer cuartil de los datos 4, 7, 7, 9, 11, 13, 16, 18 y "
+        "25?",
+        "17",
+        "Con nueve datos, la mediana queda FUERA de las dos mitades.\n\n"
+        "1) La mediana es el quinto dato: 11.\n"
+        "2) La mitad alta son los cuatro datos que le siguen: 13, 16, 18 y "
+        "25.\n"
+        "3) Su mediana promedia los dos centrales, 16 y 18, lo que da 17.\n\n"
+        "Con cantidad impar de datos, la mediana no se cuenta en ninguna de las "
+        "dos mitades: incluirla cambiaría el resultado.",
+        [
+            ("16",
+             "Es el séptimo dato: queda en la mitad alta, pero el cuartil promedia los dos centrales."),
+            ("18",
+             "Es el octavo dato, el otro de los dos centrales de la mitad alta."),
+            ("25",
+             "Es el dato mayor del conjunto."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "Un estudiante afirma que el percentil 50 es lo mismo que el promedio "
+        "de los datos. ¿Es correcta su afirmación?",
+        "No: el percentil 50 es la mediana, que puede diferir del promedio",
+        "Son dos medidas de centro que se calculan de manera distinta.\n\n"
+        "1) El percentil 50 deja la mitad de los datos por debajo: es la "
+        "mediana.\n"
+        "2) El promedio suma todos los valores y divide por la cantidad.\n"
+        "3) En el conjunto 1, 2, 3, 4 y 40 la mediana es 3 y el promedio es 10: "
+        "no coinciden.\n\n"
+        "Solo coinciden cuando los datos se reparten de manera simétrica, y eso "
+        "no está garantizado.",
+        [
+            ("Sí: ambos indican el centro del conjunto",
+             "Ambos son medidas de centro, pero el contraejemplo 1, 2, 3, 4, 40 los separa."),
+            ("Sí, siempre que la cantidad de datos sea impar",
+             "La paridad no influye: lo que decide es la simetría del reparto."),
+            ("No: el percentil 50 siempre es mayor que el promedio",
+             "Puede ser mayor, menor o igual según cómo se repartan los datos."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "En un conjunto de datos, el rango intercuartílico vale 0. ¿Qué se "
+        "puede afirmar?",
+        "Al menos la mitad central de los datos toma el mismo valor",
+        "Un rango intercuartílico nulo aplasta la caja en un punto.\n\n"
+        "1) El rango intercuartílico es Q3 menos Q1.\n"
+        "2) Si vale cero, entonces Q1 y Q3 coinciden.\n"
+        "3) Todo el 50% central está atrapado entre dos valores iguales, así "
+        "que todos esos datos son idénticos.\n\n"
+        "Los extremos pueden ser distintos: el conjunto 1, 7, 7, 7, 7, 7, 20 "
+        "tiene rango intercuartílico cero y un recorrido de 19.",
+        [
+            ("Todos los datos del conjunto son iguales",
+             "Los extremos pueden diferir: 1, 7, 7, 7, 7, 7, 20 es un contraejemplo."),
+            ("El conjunto tiene un solo dato",
+             "Con muchos datos repetidos en el centro ocurre lo mismo."),
+            ("Hubo un error de cálculo, porque el rango intercuartílico nunca es cero",
+             "Sí puede serlo, y es información válida sobre el conjunto."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "En una prueba de 500 postulantes, alguien quedó en el percentil 96. "
+        "¿Cuántos postulantes obtuvieron un puntaje mayor?",
+        "20",
+        "Sobre el percentil 96 queda el 4% del grupo.\n\n"
+        "1) Bajo el percentil 96 queda el 96% de los postulantes.\n"
+        "2) Por encima queda el 4% restante.\n"
+        "3) El 4% de 500 es 20 postulantes.\n\n"
+        "El percentil describe la posición relativa, así que la respuesta "
+        "depende del tamaño del grupo y no del puntaje obtenido.",
+        [
+            ("480",
+             "Es la cantidad de postulantes que quedó POR DEBAJO."),
+            ("96",
+             "Es el número del percentil, no una cantidad de personas."),
+            ("4",
+             "Es el porcentaje que queda por encima, no la cantidad de postulantes."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "Se comparan dos diagramas de cajón con la misma mediana. El primero "
+        "tiene bigotes largos y caja angosta; el segundo, bigotes cortos y caja "
+        "ancha. ¿Qué se puede afirmar?",
+        "El primero concentra su mitad central y dispersa sus extremos",
+        "Caja y bigotes describen tramos distintos del conjunto.\n\n"
+        "1) La caja angosta del primero indica que su 50% central está muy "
+        "junto.\n"
+        "2) Sus bigotes largos indican que el 25% más bajo y el 25% más alto se "
+        "extienden bastante.\n"
+        "3) En el segundo ocurre lo contrario: la mitad central está repartida "
+        "y los extremos, apretados.\n\n"
+        "Los dos conjuntos pueden tener el mismo recorrido total y la misma "
+        "mediana, y aun así repartirse de manera muy distinta.",
+        [
+            ("El primero tiene más datos que el segundo",
+             "El ancho de la caja y el largo de los bigotes no dependen de la cantidad de datos."),
+            ("El segundo tiene una mediana mayor",
+             "El enunciado dice que las medianas coinciden."),
+            ("El primero no tiene datos atípicos y el segundo sí",
+             "El diagrama descrito no permite concluir eso."),
+        ],
+    ),
+]

@@ -128,6 +128,34 @@ def _sub(formula: str) -> str:
     return formula.translate(str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉"))
 
 
+def _mediana(datos: list[float]) -> Fraction:
+    """Mediana de una lista ya ordenada, como Fraction para no perder el ,5."""
+    n = len(datos)
+    medio = n // 2
+    if n % 2:
+        return Fraction(datos[medio])
+    return Fraction(datos[medio - 1] + datos[medio], 2)
+
+
+def _cuartiles(datos: list[float]) -> tuple[Fraction, Fraction]:
+    """Primer y tercer cuartil con la convención del banco.
+
+    Con n par cada mitad se toma completa; con n impar la mediana queda FUERA
+    de las dos mitades. Es la convención que ya usaban las preguntas del nodo
+    y la que enseñan los textos escolares chilenos.
+    """
+    n = len(datos)
+    medio = n // 2
+    baja = datos[:medio]
+    alta = datos[medio + 1:] if n % 2 else datos[medio:]
+    return _mediana(baja), _mediana(alta)
+
+
+def _fmt(valor: Fraction) -> str:
+    """Un Fraction como lo escribe el banco: entero si lo es, si no decimal."""
+    if valor.denominator == 1:
+        return str(valor.numerator)
+    return f"{float(valor):g}"
 COMPROBACIONES_CIENCIAS: dict[str, str] = {
     # --- Ciencias: física, tanda de ampliación a 600 por eje (2026-08-28) ---
     # Energía-Tierra
@@ -498,6 +526,41 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
 
 # Enunciado (recortado) -> valor esperado, recalculado acá de forma independiente.
 COMPROBACIONES: dict[str, str] = {
+    # --- M1: medidas de posición ---
+    # `_mediana` y `_cuartiles` recalculan con la misma convención que usa el
+    # banco: con n par cada mitad se toma completa, con n impar la mediana
+    # queda fuera de las dos mitades.
+    "mediana de los datos 3, 5, 7, 9 y 11": _fmt(_mediana([3, 5, 7, 9, 11])),
+    "mediana de los datos 4, 8, 10 y 14": _fmt(_mediana([4, 8, 10, 14])),
+    "primer cuartil de los datos 1, 3, 5, 7, 9 y 11":
+        _fmt(_cuartiles([1, 3, 5, 7, 9, 11])[0]),
+    "tercer cuartil de los datos 1, 3, 5, 7, 9 y 11":
+        _fmt(_cuartiles([1, 3, 5, 7, 9, 11])[1]),
+    "mediana de los datos 2, 3, 5, 8, 9, 10, 12 y 15":
+        _fmt(_mediana([2, 3, 5, 8, 9, 10, 12, 15])),
+    "primer cuartil de los datos 2, 3, 5, 8, 9, 10, 12 y 15":
+        _fmt(_cuartiles([2, 3, 5, 8, 9, 10, 12, 15])[0]),
+    "conjunto de 400 datos, ¿cuántos quedan bajo el percentil 60":
+        str(round(400 * 0.60)),
+    "la caja va de 30 a 50": str(50 - 30),
+    "conjunto de 60 datos, ¿cuántos son mayores que el tercer cuartil":
+        str(60 // 4),
+    "mediana de los datos 10, 20, 30 y 40": _fmt(_mediana([10, 20, 30, 40])),
+    "tercer cuartil de los datos 10, 20, 30 y 40":
+        _fmt(_cuartiles([10, 20, 30, 40])[1]),
+    "primer cuartil de los datos 5, 5, 6, 8, 10, 12, 14 y 20":
+        _fmt(_cuartiles([5, 5, 6, 8, 10, 12, 14, 20])[0]),
+    "rango intercuartílico de los datos 5, 5, 6, 8, 10, 12, 14 y 20":
+        _fmt(_cuartiles([5, 5, 6, 8, 10, 12, 14, 20])[1]
+             - _cuartiles([5, 5, 6, 8, 10, 12, 14, 20])[0]),
+    "conjunto de 80 datos, ¿cuántos quedan entre el primer y el tercer cuartil":
+        str(80 // 2),
+    "conjunto de 50 datos, ¿cuántos quedan bajo el percentil 80":
+        str(round(50 * 0.80)),
+    "entre el percentil 30 y el percentil 75": str(round(200 * (0.75 - 0.30))),
+    "tercer cuartil de los datos 4, 7, 7, 9, 11, 13, 16, 18 y 25":
+        _fmt(_cuartiles([4, 7, 7, 9, 11, 13, 16, 18, 25])[1]),
+    "prueba de 500 postulantes": str(round(500 * (1 - 0.96))),
     # --- M2: logaritmos ---
     "¿Cuál es el valor de log₄ 16?": str(round(log2(16) / log2(4))),
     "¿Cuál es el valor de log₇ 7?": str(1),
