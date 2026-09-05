@@ -56114,7 +56114,7 @@ QUESTIONS_HISTORIA = [
         [
             ("Elecciones primarias y plebiscitos nacionales", "El texto no los incluye entre los mecanismos comunales."),
             ("Recursos judiciales ante la Corte de Apelaciones", "Esa es una vía de protección de derechos, no de participación comunal."),
-            ("Consultas obligatorias antes de cada decisión municipal", "El texto no describe ninguna consulta obligatoria."),
+            ("Consultas obligatorias antes de cada decisión que tome el municipio", "El texto no describe ninguna consulta obligatoria."),
         ],
     ),
     _ql(
@@ -65387,7 +65387,7 @@ QUESTIONS_HISTORIA = [
         [
             ("No amplió la previsión social ni la educación", "El texto afirma expresamente que amplió ambas."),
             ("Renunció a intervenir en el desarrollo industrial", "Creó una corporación de fomento para conducirlo."),
-            ("Suprimió los partidos políticos durante el período", "El texto describe elecciones competitivas y alternancia."),
+            ("Suprimió los partidos políticos y las elecciones durante todo el período", "El texto describe elecciones competitivas y alternancia."),
         ],
     ),
     _ql(
@@ -65836,7 +65836,7 @@ QUESTIONS_HISTORIA = [
         [
             ("Negar que existiera desocupación en el país", "El discurso la afirma, y la columna coincide en que era real."),
             ("Atribuir la crisis a potencias extranjeras", "Ninguna de las dos fuentes plantea una causa externa."),
-            ("Proponer medidas económicas sin financiamiento", "La objeción de la columna es política y no presupuestaria."),
+            ("Proponer medidas económicas sin indicar de dónde saldrá el financiamiento", "La objeción de la columna es política y no presupuestaria."),
         ],
     ),
     _ql(
@@ -72449,21 +72449,26 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ddhh", "civ_ddhh", "facil",
-        "Según el texto, ¿qué significa que los derechos humanos sean inalienables?",
-        "Que nadie puede renunciar a ellos ni ser despojado de ellos",
-        "El texto lo señala al cerrar el primer párrafo: son inalienables porque "
-        "nadie puede renunciar a ellos ni ser despojado de ellos.\nLa palabra "
-        "apunta a que un derecho humano no se transfiere ni se entrega, ni siquiera "
-        "con el acuerdo de quien lo tiene. Por eso el texto dice antes que el "
-        "Estado no los concede: no está en posición de darlos ni de quitarlos.\nQue "
-        "además no queden a disposición de lo que decida una mayoría es otra "
-        "propiedad, y el texto la afirma en la misma frase. Pero esa es su relación "
-        "con la democracia, no lo que significa la palabra inalienable.",
+        "civ_ddhh", "civ_ddhh", "dificil",
+        "Según el texto, ¿a qué se refieren los derechos de tercera "
+        "generación?",
+        "A derechos colectivos, en asuntos como el medio ambiente y la paz",
+        "El texto los presenta al cerrar la distinción por generaciones, "
+        "después de los civiles y políticos y de los económicos, sociales y "
+        "culturales.\n"
+        "Los describe como derechos colectivos y da dos ejemplos: el medio "
+        "ambiente y la paz. Su titular no es una persona aislada sino una "
+        "comunidad.\n"
+        "Esa diferencia de titularidad es la que los distingue de las dos "
+        "generaciones anteriores, que el texto describe por el tipo de "
+        "exigencia que dirigen al Estado.",
         [
-            ("Que ninguna ley puede limitar su ejercicio", "Ningún derecho es absoluto: la ley puede limitarlos de forma proporcional. Inalienable no significa ilimitado."),
-            ("Que se pierden si la persona comete un delito grave", "Es lo contrario de lo que dice el texto: no se ganan por mérito ni se pierden por conducta."),
-            ("Que solo los reconoce el país donde se nació", "Eso contradice la universalidad, que el texto afirma en la primera línea."),
+            ("A los derechos civiles y políticos, como la vida y la expresión",
+             "Esos son los derechos de primera generación según el texto."),
+            ("A los derechos económicos y sociales, como la educación y la salud",
+             "Esos son los de segunda generación."),
+            ("A los deberes ciudadanos que acompañan a los derechos reconocidos",
+             "El texto trata los deberes aparte, como contracara de los derechos."),
         ],
     ),
     _ql(
@@ -135183,7 +135188,7 @@ QUESTIONS_HISTORIA += [
         "his_duraciones", "his_temporal", "medio",
         "Según el texto, ¿por qué distintos historiadores pueden periodizar de "
         "manera distinta el mismo pasado?",
-        "Porque cada periodización se traza a partir de un criterio explícito, y los criterios pueden diferir",
+        "Porque cada periodización se traza a partir de un criterio explícito",
         "El texto define la periodización como una herramienta que divide el "
         "tiempo en etapas «según criterios definidos», y agrega que se traza a "
         "partir de un criterio explícito —político, económico, cultural—.\n"
@@ -135317,7 +135322,7 @@ QUESTIONS_HISTORIA += [
         "his_duraciones", "his_temporal", "dificil",
         "Según la lógica del texto, ¿por qué un contemporáneo difícilmente "
         "advierte un proceso de larga duración?",
-        "Porque la transformación avanza más lento que el tramo de tiempo que esa persona alcanza a observar",
+        "Porque el proceso avanza más lento de lo que una vida alcanza a observar",
         "El texto define la larga duración como transformaciones lentas que se "
         "extienden por siglos y añade que «resultan casi imperceptibles para "
         "quien los vive».\n"
@@ -135411,7 +135416,7 @@ QUESTIONS_HISTORIA += [
         "his_cambio_continuidad", "his_temporal", "medio",
         "Según el texto, ¿qué cambió y qué permaneció con las independencias "
         "americanas?",
-        "Cambió la soberanía y las instituciones políticas; permaneció la estructura de propiedad de la tierra",
+        "Cambió la soberanía; permaneció la propiedad de la tierra",
         "El texto separa con precisión los dos planos. Del lado del cambio "
         "enumera la soberanía —el poder dejó de residir en la Corona y pasó a "
         "repúblicas—, las instituciones políticas, los símbolos y el "
@@ -135562,7 +135567,7 @@ QUESTIONS_HISTORIA += [
         [
             ("Rechaza ambos derechos por igual",
              "Califica de prudente la concesión del voto municipal."),
-            ("Sostiene que el voto presidencial debe concederse antes que el municipal",
+            ("Sostiene que el voto presidencial debe concederse antes que el municipal en todo caso",
              "Plantea el orden inverso: el municipal ya está y el presidencial es lo que discute."),
             ("Afirma que ninguno de los dos derechos ha sido concedido todavía",
              "El texto da por concedido el voto municipal."),
@@ -135688,7 +135693,7 @@ QUESTIONS_HISTORIA += [
         "Un investigador quiere saber si las condiciones de vida en la pampa "
         "mejoraron entre 1900 y 1920. ¿Qué limitación tienen estas dos fuentes "
         "para responder esa pregunta?",
-        "Cubren solo dos años consecutivos, así que no permiten observar una tendencia de dos décadas",
+        "Cubren solo dos años consecutivos y no muestran ninguna tendencia",
         "Las fuentes son de 1907 y 1908. Aunque discrepan entre sí, ambas "
         "describen prácticamente el mismo momento: no hay distancia temporal "
         "suficiente para detectar mejora o deterioro.\n"
@@ -136012,7 +136017,7 @@ QUESTIONS_HISTORIA += [
         "«No hubo entendimiento que faltara: hubo una lengua que no quisimos "
         "hablar». ¿Qué operación realiza esa frase respecto de la primera "
         "fuente?",
-        "Refuta su explicación cambiando la falta de comprensión por una negativa deliberada",
+        "Refuta su explicación: cambia la falta de comprensión por una negativa",
         "El cronista atribuye la resistencia a que faltaba entendimiento y "
         "llama «ciegos» a quienes no aceptaron. La frase citada toma ese mismo "
         "término y lo devuelve invertido.\n"
@@ -136232,7 +136237,7 @@ QUESTIONS_HISTORIA += [
         "fuente_memoria", "his_critico", "medio",
         "¿Qué diferencia hay entre lo que pide la agrupación y lo que el "
         "editorial supone que pide?",
-        "El editorial supone que pide reabrir el caso y ella pide que se abra por primera vez",
+        "El editorial supone que pide reabrir y ella pide que se abra",
         "El editorial advierte contra «reabrir heridas», con lo que da por "
         "supuesto que el asunto ya estuvo abierto y se cerró.\n"
         "La declaración corrige esa suposición en su última línea: «No pedimos "
@@ -136409,7 +136414,7 @@ QUESTIONS_HISTORIA += [
         "De ahí el procedimiento que el texto propone: identificar quién, "
         "cuándo, para quién y con qué intención, y contrastar.",
         [
-            ("Que una fuente aislada siempre contiene errores de hecho",
+            ("Que una fuente aislada siempre contiene errores de hecho que hay que corregir",
              "El texto no atribuye errores a las fuentes por estar aisladas."),
             ("Que las fuentes deben leerse en su idioma original",
              "El idioma no aparece en el argumento del texto."),
@@ -136575,7 +136580,7 @@ QUESTIONS_HISTORIA += [
         "fuentes_salitre", "his_fuentes", "dificil",
         "Ambas fuentes mencionan la escuela de la oficina. ¿Qué revela ese "
         "punto de coincidencia?",
-        "Que el desacuerdo no es sobre su existencia sino sobre qué tan suficiente era",
+        "Que el desacuerdo no es sobre su existencia sino sobre su alcance",
         "El informe la presenta como parte de los servicios: «escuela para los "
         "hijos de los operarios». La carta no la niega: «La escuela existe y "
         "tiene un solo maestro para ciento veinte niños».\n"
@@ -137072,7 +137077,7 @@ QUESTIONS_HISTORIA += [
              "X tuvo la mayor desocupación, pero su valor exportado cayó a 39 y no a 22."),
             ("El país W, cuyo valor exportado cayó a 31",
              "Es la segunda caída más fuerte, por sobre la de Chile."),
-            ("El país Z, que mantuvo controles de cambio y aranceles altos",
+            ("El país Z, que mantuvo controles de cambio y aranceles altos todo el período",
              "Z registra la menor caída de las cinco economías."),
         ],
     ),
@@ -137116,6 +137121,2740 @@ QUESTIONS_HISTORIA += [
              "La nota indica que se mantuvieron en cinco durante todo el período."),
             ("Los Estados de Asia y África siguieron siendo minoría en 1975",
              "En 1975 eran 76 de 144, es decir, más de la mitad."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Historia - Estado-nacion y Chile en el siglo XIX
+#
+# Los nodos de contenido estaban en 52 mientras el resto del banco iba en 60.
+# Estas preguntas se apoyan en las fuentes que ya tenia cada nodo.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_HISTORIA += [
+    # ---------------- El Estado-nación en el siglo XIX ----------------
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "facil",
+        "Según el texto, ¿cuáles fueron los tres instrumentos principales de "
+        "construcción de la nación en el siglo XIX?",
+        "La escuela primaria, el servicio militar y el ferrocarril",
+        "El texto los enumera de manera directa y explica qué hizo cada uno. "
+        "La escuela primaria obligatoria enseñó a leer en una lengua única y "
+        "transmitió un relato del pasado nacional.\n"
+        "El servicio militar reunió durante meses a jóvenes de regiones "
+        "distintas bajo la misma disciplina, y el ferrocarril —junto al "
+        "telégrafo y el correo— acortó la distancia entre capital y "
+        "periferia.\n"
+        "El resultado que describe es una población que compartía calendario, "
+        "medidas, moneda y manuales donde antes había comarcas separadas.",
+        [
+            ("El parlamento, los partidos políticos y la prensa escrita",
+             "El texto no menciona esos tres elementos entre los instrumentos."),
+            ("La Iglesia, el ejército profesional y las aduanas",
+             "El texto habla de servicio militar obligatorio, no de ejército profesional."),
+            ("El comercio exterior, la banca y las sociedades científicas",
+             "Ninguno de los tres aparece en la enumeración del texto."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "medio",
+        "Según el texto, ¿qué costo tuvo la producción de una comunidad "
+        "nacional homogénea?",
+        "La supresión de las diferencias de lengua, religión y modo de vida",
+        "El texto lo plantea como una consecuencia lógica del programa: "
+        "«Producir una comunidad homogénea exige suprimir diferencias».\n"
+        "Y precisa cuáles fueron las suprimidas: las de quienes hablaban otra "
+        "lengua, practicaban otra religión o vivían de otro modo. En Europa "
+        "esas minorías quedaron descritas como obstáculos a la unidad "
+        "nacional.\n"
+        "En América el mismo razonamiento recayó sobre los pueblos indígenas, "
+        "declarados ciudadanos en el papel mientras se avanzaba sobre sus "
+        "territorios.",
+        [
+            ("El retraso de la industrialización en las regiones periféricas",
+             "El texto no vincula el proceso con el ritmo de la industrialización."),
+            ("La pérdida de autonomía de los parlamentos regionales",
+             "El texto no menciona parlamentos regionales entre los costos."),
+            ("El aumento del analfabetismo en las zonas rurales",
+             "El texto atribuye a la escuela obligatoria el efecto contrario."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "dificil",
+        "«Primero se constituyó el Estado y después este construyó la nación "
+        "que decía representar». ¿Qué idea corrige esa afirmación?",
+        "La de que la nación existía antes y el Estado solo vino a reconocerla",
+        "El texto advierte contra leer la nación «como un dato previo que el "
+        "Estado vino a reconocer», y sostiene que el orden de los factores fue "
+        "casi siempre el inverso.\n"
+        "El argumento se apoya en un dato del comienzo: en 1800 casi ningún "
+        "territorio europeo o americano cumplía las condiciones que el "
+        "principio nacional daba por supuestas, y el siglo XIX se dedicó a "
+        "producirlas.\n"
+        "Por eso el texto llama programa a lo que parecía una descripción: no "
+        "constataba una comunidad, se proponía fabricarla.",
+        [
+            ("La de que el Estado-nación fue un fenómeno exclusivamente europeo",
+             "El texto describe el mismo proceso en América."),
+            ("La de que la escuela obligatoria fracasó en su propósito",
+             "El texto la presenta como uno de los instrumentos que sí funcionaron."),
+            ("La de que las fronteras del siglo XIX eran estables",
+             "El texto sostiene lo contrario al hablar de fronteras pendientes de corrección."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "dificil",
+        "Según el texto, ¿por qué el principio nacional «fabricó conflictos "
+        "donde no los había»?",
+        "Porque si cada nación reclama un Estado, toda frontera queda pendiente de corrección",
+        "El texto desarrolla la consecuencia del principio: si a cada nación le "
+        "corresponde un Estado, entonces toda población que se considere nación "
+        "puede reclamar uno.\n"
+        "Y agrega el efecto sobre los límites: toda frontera que deje a "
+        "compatriotas del otro lado queda pendiente de corrección.\n"
+        "Sobre esa base sitúa buena parte de las guerras europeas del siglo XIX "
+        "y de las disputas limítrofes americanas, que se argumentaron "
+        "justamente en esos términos.",
+        [
+            ("Porque los Estados necesitaban justificar el servicio militar",
+             "El texto presenta el servicio militar como instrumento, no como causa de los conflictos."),
+            ("Porque el ferrocarril acercó territorios antes incomunicados",
+             "El ferrocarril aparece como herramienta de integración interna."),
+            ("Porque las minorías europeas reclamaron autonomía religiosa",
+             "El texto describe a las minorías como suprimidas, no como demandantes de autonomía."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "medio",
+        "Según la primera intervención, ¿qué dos requisitos debía fijar por "
+        "ahora la ley electoral?",
+        "Un censo de renta y la exigencia de saber leer",
+        "El diputado cierra su intervención con esa propuesta concreta: la ley "
+        "debe fijar «por ahora un censo de renta y la exigencia de saber "
+        "leer».\n"
+        "Los presenta como transitorios —«yo no excluyo a nadie para "
+        "siempre»— y los apoya en una idea de capacidad: el voto sería el "
+        "ejercicio de una función pública que exige aptitud en quien la "
+        "ejerce.\n"
+        "El orden que propone es explícito: «la escuela debe preceder al "
+        "sufragio».",
+        [
+            ("La mayoría de edad y el servicio militar cumplido",
+             "Ninguno de los dos aparece en la intervención."),
+            ("La residencia en la comuna y el pago de contribuciones",
+             "El texto menciona renta y lectura, no residencia."),
+            ("La propiedad de tierras y la pertenencia a una sociedad de socorros",
+             "Las sociedades de socorros no se mencionan en este debate."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "dificil",
+        "¿Qué objeción hace la segunda intervención al argumento de que «la "
+        "escuela debe preceder al sufragio»?",
+        "Que la escuela depende de un Congreso elegido por quienes ya votan",
+        "El segundo diputado no discute que la escuela sea deseable: discute "
+        "quién la construiría. «La escuela la decreta este Congreso, y este "
+        "Congreso lo eligen los que ya votan».\n"
+        "De ahí extrae la consecuencia: se pide al excluido que espere una "
+        "escuela «que solo construirán quienes no tienen ningún apuro en "
+        "construirla».\n"
+        "El argumento convierte una condición previa en un círculo: la "
+        "exclusión se justifica por una carencia que la propia exclusión "
+        "impide remediar.",
+        [
+            ("Que la escuela no mejora la capacidad de deliberar de los electores",
+             "El diputado no cuestiona el valor de la escuela sino la secuencia propuesta."),
+            ("Que el país carecía de recursos para financiar escuelas públicas",
+             "El financiamiento no aparece en la intervención."),
+            ("Que la alfabetización debía quedar a cargo de la Iglesia",
+             "La intervención no menciona a la Iglesia."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "dificil",
+        "«El censo de renta no mide capacidad alguna: mide fortuna». ¿Qué "
+        "efecto tiene esa frase sobre el argumento del primer diputado?",
+        "Muestra que el requisito propuesto no cumple el criterio que él mismo invocó",
+        "El primer diputado justifica la restricción por la capacidad: pide al "
+        "juez que conozca las leyes y al médico su ciencia, y de ahí concluye "
+        "que también al elector debe exigírsele aptitud.\n"
+        "La respuesta acepta ese criterio y muestra que el instrumento elegido "
+        "no lo aplica: la renta informa sobre el patrimonio y no sobre la "
+        "capacidad de deliberar.\n"
+        "El remate lo lleva al extremo: si la capacidad fuera realmente el "
+        "criterio, «examinaríamos a los propietarios uno por uno y a más de uno "
+        "dejaríamos fuera de esta sala».",
+        [
+            ("Demuestra que el primer diputado defendía intereses económicos propios",
+             "La respuesta discute la coherencia del argumento, no las intenciones de quien lo hace."),
+            ("Propone reemplazar el censo de renta por un examen de lectura",
+             "La intervención rechaza ambos requisitos, no propone sustituir uno por otro."),
+            ("Sostiene que la capacidad no debería exigirse a ningún funcionario",
+             "La objeción se refiere solo al requisito para votar."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_estado_nacion", "medio",
+        "Según las tablas, ¿qué relación se observa entre la instrucción "
+        "primaria obligatoria y el aumento de la alfabetización?",
+        "Los cuatro países la establecen entre 1870 y 1882 y todos mejoran hacia 1910",
+        "La tabla 2 fecha la instrucción primaria obligatoria: 1882 en A, 1877 "
+        "en B, 1871 en C y 1870 en D. Las cuatro fechas caen en una franja de "
+        "doce años.\n"
+        "La tabla 1 muestra que los cuatro países aumentan su alfabetización "
+        "entre 1850 y 1910: A de 58 a 96, B de 25 a 62, C de 61 a 98 y D de 47 "
+        "a 87.\n"
+        "El dato es consistente con lo que el nodo estudia: la escuela fue uno "
+        "de los instrumentos con que el Estado construyó la nación.",
+        [
+            ("Solo los países unificados antes de 1800 mejoran su alfabetización",
+             "B y C, unificados en 1861 y 1871, también mejoran."),
+            ("Los países que la establecieron antes alcanzaron menor alfabetización",
+             "C la estableció en 1871 y llegó al 98%, la cifra más alta de la tabla."),
+            ("La instrucción obligatoria no se aplicó en ninguno de los cuatro países",
+             "La tabla 2 entrega el año en que la estableció cada uno."),
+        ],
+    ),
+    # ---------------- Chile en el siglo XIX ----------------
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "facil",
+        "Según el texto, ¿qué declaró la ley de instrucción primaria de 1860?",
+        "Que la enseñanza primaria sería gratuita y estaría a cargo del Estado",
+        "El texto lo señala de manera directa al describir las instituciones "
+        "creadas por el Estado en formación.\n"
+        "Agrega de inmediato dos límites importantes: la asistencia siguió "
+        "siendo voluntaria durante décadas y la mayoría de la población "
+        "continuó sin saber leer.\n"
+        "Esa distancia entre la ley y su efecto es parte de lo que el texto "
+        "quiere mostrar: declarar un derecho no equivale a producirlo.",
+        [
+            ("Que la asistencia a la escuela sería obligatoria para todos",
+             "El texto precisa que la asistencia siguió siendo voluntaria durante décadas."),
+            ("Que la enseñanza quedaría a cargo de las municipalidades",
+             "El texto la pone a cargo del Estado."),
+            ("Que la enseñanza primaria pasaría a manos de la Iglesia",
+             "El traspaso que menciona el texto va en sentido contrario, y es posterior."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "medio",
+        "Según el texto, ¿qué traspasaron desde la Iglesia al Estado las leyes "
+        "laicas de 1883 y 1884?",
+        "Los cementerios y los registros de nacimientos, matrimonios y defunciones",
+        "El texto enumera con precisión lo traspasado y advierte que no eran "
+        "trámites menores.\n"
+        "La razón que da es de fondo: «definir quién nace, quién se casa y "
+        "quién muere es definir quién forma parte de la nación», y esa "
+        "atribución pasó a manos civiles.\n"
+        "El registro civil aparece así como un instrumento de construcción "
+        "estatal y no solo como una reforma administrativa.",
+        [
+            ("La enseñanza primaria y la formación de preceptores",
+             "Esas instituciones son de 1842 y 1860, y no provienen de un traspaso."),
+            ("La administración de los hospitales y las obras de beneficencia",
+             "El texto no menciona hospitales entre lo traspasado."),
+            ("El cobro de los derechos de aduana sobre el salitre",
+             "Los derechos aduaneros no tienen relación con las leyes laicas."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "dificil",
+        "Según el texto, ¿qué supone llamar «pacificación» a la ocupación de "
+        "la Araucanía?",
+        "Que existía un desorden previo que había que corregir",
+        "El texto dedica un párrafo entero al vocabulario. Sostiene que llamar "
+        "pacificación a una campaña militar «supone que había un desorden "
+        "previo que corregir», y llamar colonización a la entrega de tierras "
+        "supone que estaban disponibles.\n"
+        "En ambos casos, dice, el nombre elegido presenta como restablecimiento "
+        "de un orden natural lo que fue la incorporación forzada de un "
+        "territorio con población propia.\n"
+        "El proceso que describe ocurrió entre 1861 y 1883, y confinó al pueblo "
+        "mapuche en reducciones.",
+        [
+            ("Que el proceso se realizó sin intervención militar",
+             "El texto lo describe como un proceso militar y colonizador."),
+            ("Que las tierras fueron compradas a sus ocupantes",
+             "El texto habla de despojo, no de compra."),
+            ("Que la ocupación fue posterior a las leyes laicas",
+             "La ocupación va de 1861 a 1883 y las leyes laicas son de 1883 y 1884."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "medio",
+        "Según el informe de higiene, ¿qué condiciones registró el inspector "
+        "en el conventillo más numeroso?",
+        "Ciento cuarenta piezas con una sola llave de agua y dos letrinas comunes",
+        "El informe entrega la descripción con cifras: ciento cuarenta piezas "
+        "en torno a un patio de tierra, una sola llave de agua, dos letrinas "
+        "comunes y entre cuatro y siete personas por pieza.\n"
+        "El inspector vincula esas condiciones con la mortalidad infantil que "
+        "registran las parroquias del sector.\n"
+        "La descripción material es el punto en que ambas fuentes coinciden: lo "
+        "que discuten es la causa de esa miseria.",
+        [
+            ("Cuarenta piezas con agua corriente en cada una de ellas",
+             "El informe registra ciento cuarenta piezas y una sola llave de agua."),
+            ("Piezas individuales para cada familia obrera del sector",
+             "En cada pieza dormían entre cuatro y siete personas."),
+            ("Un patio pavimentado con servicio de recolección de residuos",
+             "El informe describe un patio de tierra y no menciona recolección."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "dificil",
+        "¿Qué explicación de la miseria propone el inspector además de las "
+        "condiciones materiales, y cómo responde la circular obrera?",
+        "El inspector atribuye parte de la miseria a los hábitos, y la circular responde con cifras",
+        "El informe reconoce las condiciones materiales pero agrega que el "
+        "problema «no se resolverá solo con ordenanzas de construcción»: "
+        "observa hábitos de intemperancia y desorden doméstico y recomienda una "
+        "vigilancia moral.\n"
+        "La circular responde a esa atribución de manera directa: «se ha "
+        "publicado que nuestra miseria proviene de nuestros vicios. Respondamos "
+        "con números».\n"
+        "Los números que entrega son el jornal estancado desde 1897 y el "
+        "arriendo del conventillo, que subió tres veces en seis años.",
+        [
+            ("El inspector culpa a los propietarios y la circular lo confirma",
+             "El inspector exige agua y desagüe a los propietarios, pero agrega la explicación por los hábitos."),
+            ("El inspector propone subir los jornales y la circular lo rechaza",
+             "El informe no menciona los salarios."),
+            ("Ambas fuentes coinciden en atribuir la miseria a la falta de escuelas",
+             "Ninguna de las dos menciona la escuela como causa."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "dificil",
+        "Según la circular, ¿para qué existía la sociedad de socorros mutuos?",
+        "Para reunir cuotas y cubrir médico y sepultura de sus socios",
+        "La circular lo declara de manera literal: «Por eso existimos: reunimos "
+        "una cuota semanal para que ningún socio quede sin médico ni sin "
+        "sepultura».\n"
+        "El motivo aparece en las líneas previas: se pagaba por día trabajado, "
+        "de modo que la enfermedad dejaba al obrero sin salario, y la muerte, "
+        "sin entierro si la sociedad no lo costeaba.\n"
+        "La organización mutual aparece así como una respuesta obrera a la "
+        "ausencia de cualquier seguro frente a esos riesgos.",
+        [
+            ("Para negociar colectivamente el valor del jornal con los patrones",
+             "La circular no menciona negociación de salarios."),
+            ("Para financiar escuelas nocturnas destinadas a los obreros",
+             "La educación no aparece entre los fines que declara la circular."),
+            ("Para presentar denuncias ante el inspector de higiene",
+             "La circular responde al informe, pero no señala esa función."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_chile_xix", "medio",
+        "Según la nota de la fuente, ¿qué territorios se incorporan a Chile "
+        "tras la Guerra del Pacífico?",
+        "Tarapacá y Antofagasta, entre 1879 y 1883",
+        "La nota lo indica de manera directa y el dato explica el giro que "
+        "muestran las tablas: el salitre pasa del 3% de las exportaciones en "
+        "1870 al 51% en 1890.\n"
+        "La segunda tabla registra el efecto fiscal del mismo cambio: los "
+        "derechos sobre el salitre pasan del 2% de los ingresos ordinarios en "
+        "1870 al 46% en 1890.\n"
+        "El territorio incorporado, entonces, no solo amplió el país: "
+        "reorganizó su economía y su hacienda pública.",
+        [
+            ("Valdivia y Llanquihue, colonizadas desde mediados de siglo",
+             "Esa colonización es anterior y no proviene de la Guerra del Pacífico."),
+            ("La Araucanía, ocupada entre 1861 y 1883",
+             "Ese proceso es interno y no resulta de la guerra."),
+            ("El estrecho de Magallanes, ocupado en 1843",
+             "Esa ocupación es muy anterior a la guerra."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Historia - Crisis del Estado liberal y orden de posguerra
+# ---------------------------------------------------------------------------
+
+QUESTIONS_HISTORIA += [
+    # ---------------- La crisis del Estado liberal ----------------
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "facil",
+        "Según el texto, ¿en qué consistió la salida totalitaria a la crisis "
+        "del Estado liberal?",
+        "En eliminar los partidos, la prensa independiente y las elecciones competitivas",
+        "El texto la describe en una frase: el totalitarismo «resolvió el "
+        "problema suprimiéndolo».\n"
+        "Lo suprimido fueron los partidos, la prensa independiente y las "
+        "elecciones competitivas, y en su lugar se presentó a la nación como un "
+        "cuerpo único sin conflictos legítimos en su interior.\n"
+        "Es la segunda de las tres salidas que el texto identifica, junto al "
+        "Estado de bienestar y al populismo latinoamericano.",
+        [
+            ("En ampliar los seguros sociales financiados con impuestos",
+             "Esa es la salida del Estado de bienestar según el texto."),
+            ("En industrializar sustituyendo importaciones desde el Estado",
+             "Ese rasgo corresponde al populismo latinoamericano."),
+            ("En restablecer los supuestos del Estado liberal del siglo XIX",
+             "El texto presenta las tres salidas como respuestas al fracaso de esos supuestos."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "medio",
+        "Según el texto, ¿cuál es la idea de fondo del Estado de bienestar?",
+        "Que ciertos riesgos no deben depender de la suerte individual",
+        "El texto la formula así al describir la primera de las tres salidas: "
+        "enfermar, envejecer o quedar sin trabajo son riesgos que no deben "
+        "quedar librados a la suerte de cada persona.\n"
+        "A eso suma un argumento económico: sostener la demanda con gasto "
+        "público estabiliza la economía en las crisis.\n"
+        "El texto precisa además lo que esa salida no abandonó: ni la "
+        "democracia representativa ni la propiedad privada.",
+        [
+            ("Que el Estado debe reemplazar a la propiedad privada",
+             "El texto señala que el Estado de bienestar no abandonó la propiedad privada."),
+            ("Que la nación debe expresarse a través de un liderazgo personal",
+             "Ese rasgo corresponde al populismo latinoamericano según el texto."),
+            ("Que los partidos y las elecciones deben suprimirse en la crisis",
+             "Esa es la salida totalitaria, no la del Estado de bienestar."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "medio",
+        "Según el texto, ¿qué tres rasgos reconocibles tuvo el populismo "
+        "latinoamericano entre 1930 y 1955?",
+        "Liderazgo personal, incorporación de trabajadores e industrialización dirigida",
+        "El texto enumera los tres. El liderazgo personal fuerte se dirige "
+        "directamente a las masas urbanas por radio y en concentraciones, sin "
+        "pasar por los partidos tradicionales.\n"
+        "La incorporación política alcanzó a trabajadores antes excluidos, con "
+        "derechos laborales y sindicatos ampliados.\n"
+        "Y la política económica sustituyó importaciones para depender menos de "
+        "los mercados externos que acababan de derrumbarse.",
+        [
+            ("Supresión de partidos, prensa controlada y elecciones anuladas",
+             "Esos son los rasgos que el texto asigna al totalitarismo."),
+            ("Seguros de desempleo, pensiones y educación financiados con impuestos",
+             "Esos corresponden al Estado de bienestar."),
+            ("Apertura comercial, tipos de cambio estables y crédito internacional",
+             "Esos elementos pertenecen al orden económico de posguerra."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "dificil",
+        "Según el texto, ¿por qué los gobiernos populistas son difíciles de "
+        "clasificar?",
+        "Porque ampliaron derechos efectivos y al mismo tiempo debilitaron los contrapesos",
+        "El texto lo plantea como una combinación incómoda: esos gobiernos "
+        "«hicieron a la vez dos cosas que solemos poner en veredas opuestas».\n"
+        "Por un lado ampliaron derechos efectivos a sectores que nunca los "
+        "habían tenido; por otro concentraron poder, debilitaron contrapesos "
+        "institucionales y trataron a la oposición como adversario "
+        "ilegítimo.\n"
+        "Y advierte sobre el atajo: reducirlos a una sola de esas mitades es "
+        "«la manera más rápida de no explicar por qué contaron con apoyo "
+        "popular real y duradero».",
+        [
+            ("Porque duraron muy poco tiempo y dejaron pocas fuentes",
+             "El texto los sitúa entre 1930 y 1955 y no menciona escasez de fuentes."),
+            ("Porque su programa económico fue idéntico al del Estado de bienestar",
+             "El texto los distingue: uno sustituye importaciones y el otro amplía seguros sociales."),
+            ("Porque suprimieron los partidos igual que los regímenes totalitarios",
+             "El texto dice que el liderazgo no pasaba por los partidos, no que los suprimiera."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "dificil",
+        "Según el texto, ¿qué caracterizó a la versión chilena del período?",
+        "Conducción estatal del desarrollo con elecciones competitivas",
+        "El texto describe el caso chileno al cerrar: el Estado asumió la "
+        "conducción del desarrollo industrial mediante una corporación de "
+        "fomento creada tras el terremoto de 1939.\n"
+        "A eso suma la ampliación de la educación y la previsión social.\n"
+        "Y precisa el marco político, que es lo que distingue el caso: todo "
+        "ello ocurrió «en un marco que mantuvo elecciones competitivas y "
+        "alternancia».",
+        [
+            ("La supresión de los partidos políticos durante la crisis",
+             "El texto indica que se mantuvieron elecciones competitivas."),
+            ("El retiro del Estado de la actividad industrial",
+             "El texto describe justamente la conducción estatal del desarrollo industrial."),
+            ("La renuncia a ampliar la previsión social hasta la posguerra",
+             "El texto señala que la previsión social se amplió en ese mismo período."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "medio",
+        "Según el discurso de 1933, ¿qué propone el dirigente respecto de los "
+        "partidos políticos?",
+        "Terminar con ellos, no fundar uno nuevo",
+        "El discurso lo declara de manera literal: «Yo no vengo a proponer otro "
+        "partido: vengo a terminar con ellos».\n"
+        "La justificación es la imagen de la nación como cuerpo: «no es la suma "
+        "de intereses que se disputan un reparto; es un cuerpo único, con una "
+        "sola voluntad, y un cuerpo no delibera consigo mismo».\n"
+        "De ahí se sigue el trato que anuncia para quien discrepe: no lo llama "
+        "adversario sino organismo debilitado desde adentro.",
+        [
+            ("Fundar un partido nuevo que reemplace a los existentes",
+             "El discurso rechaza expresamente esa posibilidad."),
+            ("Reformar el Parlamento manteniendo la competencia entre partidos",
+             "El discurso ataca la deliberación parlamentaria como tal."),
+            ("Convocar elecciones anticipadas para renovar las carteras",
+             "El discurso no propone ninguna elección."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "dificil",
+        "Según el periodista, ¿en qué punto exacto el discurso «salta a una "
+        "conclusión que no se sigue»?",
+        "Al pasar de constatar la crisis a culpar a la discusión misma",
+        "El columnista concede el punto de partida: la desocupación es real, la "
+        "miseria es real y el Parlamento fue efectivamente incapaz. Por eso, "
+        "dice, lo escuchan.\n"
+        "El salto ocurre después: de esa descripción exacta el discurso "
+        "concluye «que la culpa es de la discusión misma», que es una "
+        "conclusión distinta de la constatación.\n"
+        "La observación es de método: aceptar el diagnóstico no obliga a "
+        "aceptar el remedio que se propone a continuación.",
+        [
+            ("Al describir la desocupación como un problema real del país",
+             "El periodista concede expresamente que esa descripción es exacta."),
+            ("Al prometer trabajo y pan a la población desocupada",
+             "La promesa aparece después y el periodista la comenta aparte."),
+            ("Al señalar que el Parlamento negociaba carteras",
+             "El periodista reconoce que el Parlamento fue incapaz."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "dificil",
+        "«Un adversario se derrota en una elección; una enfermedad se "
+        "extirpa». ¿Qué advierte el periodista con esa distinción?",
+        "Que el cambio de vocabulario anticipa lo que después harán los decretos",
+        "El columnista pide reparar en la palabra elegida: el discurso «no dice "
+        "adversario, dice organismo debilitado desde adentro».\n"
+        "Ese desplazamiento cambia el tipo de respuesta que se vuelve "
+        "pensable. Con un adversario se compite; con una enfermedad no se "
+        "compite.\n"
+        "Y de ahí su advertencia sobre el orden en que ocurren las cosas: ese "
+        "desplazamiento del vocabulario «llegará antes que los decretos».",
+        [
+            ("Que el dirigente exagera la gravedad de la crisis económica",
+             "El periodista reconoce que la crisis es real."),
+            ("Que las elecciones seguirán celebrándose bajo el nuevo régimen",
+             "El periodista advierte lo contrario sobre las instituciones."),
+            ("Que la enfermedad del cuerpo social requiere atención médica",
+             "El periodista analiza la metáfora, no la suscribe."),
+        ],
+    ),
+    # ---------------- El nuevo orden mundial tras la Segunda Guerra ----------------
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "facil",
+        "Según el texto, ¿qué problema económico buscaba resolver la "
+        "conferencia internacional de 1944?",
+        "Que cada país enfrentara la crisis por su cuenta cerrando su mercado",
+        "El texto identifica el problema con la experiencia de los años "
+        "treinta: cuando cada país devalúa su moneda, cierra su mercado y sube "
+        "aranceles, «el resultado agregado empeora la situación de todos».\n"
+        "La respuesta fue un sistema de tipos de cambio estables y organismos "
+        "destinados a prestar a los países con dificultades de balanza de pagos "
+        "y a financiar la reconstrucción.\n"
+        "La idea, resume el texto, «era que un país en apuros tuviera algo que "
+        "hacer distinto de cerrarse».",
+        [
+            ("La falta de una moneda única para todo el continente europeo",
+             "El texto habla de tipos de cambio estables, no de moneda única."),
+            ("La ausencia de tribunales para juzgar crímenes económicos",
+             "Los tribunales que menciona el texto corresponden al tercer problema."),
+            ("El exceso de préstamos entre Estados durante la guerra",
+             "El texto propone crear organismos que presten, no reducir préstamos."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "medio",
+        "Según el texto, ¿en qué dos órganos descansa el diseño de la "
+        "organización mundial fundada en 1945?",
+        "Una asamblea con un voto por Estado y un consejo reducido con veto",
+        "El texto describe ambos: una asamblea donde cada Estado dispone de un "
+        "voto y un consejo reducido, con cinco miembros permanentes dotados de "
+        "veto, encargado de la seguridad internacional.\n"
+        "Explica también qué buscaba corregir ese diseño: el defecto de la "
+        "organización anterior, «que aprobaba resoluciones que nadie "
+        "ejecutaba».\n"
+        "Y anota el costo: una desigualdad escrita en el propio tratado, que "
+        "los Estados pequeños objetaron desde el primer día.",
+        [
+            ("Un tribunal internacional y una comisión de derechos humanos",
+             "Esos organismos no son los dos órganos que el texto describe."),
+            ("Una asamblea de delegados y un banco de reconstrucción",
+             "El banco pertenece al orden económico de 1944, no a este diseño."),
+            ("Un consejo de potencias vencedoras y una corte de arbitraje",
+             "El texto menciona la asamblea, no una corte de arbitraje."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "medio",
+        "Según el texto, ¿qué problema hacía difícil juzgar los crímenes del "
+        "régimen nazi?",
+        "Que fueron cometidos conforme a las leyes que ese mismo régimen dictó",
+        "El texto lo presenta como «el tercer problema, más difícil de "
+        "nombrar»: los crímenes habían sido cometidos en buena parte conforme "
+        "a la legalidad interna del propio régimen.\n"
+        "De ahí la dificultad que señala: «Si la legalidad interna de un Estado "
+        "era el criterio último, no había desde dónde juzgarlos».\n"
+        "Las dos innovaciones que siguieron rompieron con esa tradición: "
+        "juzgar a personas concretas por crímenes contra la humanidad y "
+        "establecer que obedecer órdenes no exime de responsabilidad.",
+        [
+            ("Que no existían pruebas documentales de lo ocurrido",
+             "El texto no plantea un problema de evidencia sino de criterio jurídico."),
+            ("Que los responsables habían muerto antes de los juicios",
+             "El texto señala que se juzgó a personas concretas."),
+            ("Que la organización mundial aún no se había fundado",
+             "La fundación de 1945 es anterior a la declaración de 1948 y no es el obstáculo descrito."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "dificil",
+        "Según el texto, ¿cuál fue el efecto real de la declaración universal "
+        "de derechos de 1948?",
+        "Instaló un lenguaje con el que acusar a un gobierno sin que invoque su ley interna",
+        "El texto pide medir bien su alcance y parte por lo que la declaración "
+        "no es: «No es un tratado obligatorio: no crea tribunales ni sanciones, "
+        "y su cumplimiento quedó entregado a la buena voluntad de cada "
+        "Estado».\n"
+        "Su efecto, sostiene, fue de otro orden: instaló un lenguaje común con "
+        "el que se puede acusar a un gobierno de violar derechos sin que este "
+        "pueda responder que se trata de un asunto interno.\n"
+        "Ese desplazamiento —de la soberanía absoluta a la soberanía con "
+        "límites— es lo que el período dejó instalado y lo que desde entonces "
+        "se discute.",
+        [
+            ("Creó tribunales internacionales con capacidad de sancionar Estados",
+             "El texto precisa que la declaración no crea tribunales ni sanciones."),
+            ("Obligó a los Estados firmantes a modificar su legislación interna",
+             "El texto señala que no es un tratado obligatorio."),
+            ("Reemplazó a los tribunales de posguerra en el juzgamiento de crímenes",
+             "Los tribunales de posguerra y la declaración son innovaciones distintas y paralelas."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "medio",
+        "Según el primer memorando, ¿por qué fracasó la organización "
+        "anterior?",
+        "Porque le faltó fuerza: aprobaba resoluciones que nadie ejecutaba",
+        "El memorando descarta de entrada una explicación habitual: «No le "
+        "faltó buena voluntad: le faltó fuerza».\n"
+        "El mecanismo del fracaso lo describe enseguida: quienes tenían "
+        "ejércitos no estaban obligados a usarlos y quienes votaban no los "
+        "tenían.\n"
+        "De ahí la conclusión que sostiene toda la propuesta: «Una asamblea "
+        "donde cada Estado pesa lo mismo producirá siempre mayorías que no "
+        "pueden cumplirse».",
+        [
+            ("Porque sus miembros carecían de voluntad de cooperar entre sí",
+             "El memorando descarta expresamente la falta de buena voluntad."),
+            ("Porque las potencias vencedoras se negaron a integrarla",
+             "El memorando no menciona ninguna negativa a integrarse."),
+            ("Porque no contaba con financiamiento suficiente para operar",
+             "El financiamiento no aparece en el diagnóstico."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "dificil",
+        "Según el segundo memorando, ¿cuál es la consecuencia práctica del "
+        "derecho a veto?",
+        "La organización actuará ante un Estado débil y quedará paralizada ante uno fuerte",
+        "El memorando del Estado pequeño acepta el diagnóstico y rechaza la "
+        "conclusión. Su objeción es sobre el efecto del mecanismo: cinco "
+        "Estados podrán detener cualquier decisión, «incluida aquella que los "
+        "tenga por objeto».\n"
+        "De ahí la consecuencia que enuncia y que es el centro de su "
+        "argumento: la organización quedará paralizada frente a la agresión de "
+        "un Estado fuerte, «que es exactamente el caso para el que se la "
+        "funda».\n"
+        "Aun así anuncia que firmará, dejando constancia de que se trata de un "
+        "tratado desigual.",
+        [
+            ("La organización perderá capacidad de aprobar resoluciones nuevas",
+             "La objeción no es sobre aprobar resoluciones sino sobre a quién pueden alcanzar."),
+            ("Los Estados pequeños quedarán excluidos de la asamblea general",
+             "El memorando no plantea exclusión de la asamblea."),
+            ("El consejo dejará de tener competencia en materias de seguridad",
+             "El memorando discute cómo decide el consejo, no su competencia."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "dificil",
+        "Ambos memorandos reconocen que la desigualdad entre Estados existe. "
+        "¿Qué conclusión distinta extrae cada uno?",
+        "Uno la incorpora al reglamento y el otro quiere someterla a regla",
+        "El primero sostiene que la desigualdad «ya existe y que no la crea el "
+        "reglamento», porque ninguna votación puede repartir divisiones "
+        "acorazadas entre quienes no las tienen. Por eso prefiere «una "
+        "organización imperfecta que funcione».\n"
+        "El segundo parte del mismo dato y llega al punto opuesto: «Existe, y "
+        "por eso mismo el derecho internacional tiene sentido: para someter a "
+        "regla lo que de otro modo resolvería la sola potencia».\n"
+        "El desacuerdo no es sobre los hechos sino sobre para qué sirve una "
+        "norma frente a una desigualdad de poder.",
+        [
+            ("Uno la considera transitoria y el otro permanente",
+             "Ninguno de los dos memorandos plantea que la desigualdad sea transitoria."),
+            ("Uno propone eliminarla y el otro mantenerla sin cambios",
+             "El segundo no propone eliminarla: propone someterla a regla."),
+            ("Uno se refiere a la desigualdad económica y el otro a la militar",
+             "Ambos discuten la desigualdad de fuerza militar."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Historia - Guerra Fria y sociedad chilena a mediados del siglo XX
+# ---------------------------------------------------------------------------
+
+QUESTIONS_HISTORIA += [
+    # ---------------- La Guerra Fría y América Latina ----------------
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "facil",
+        "Según el texto, ¿qué tuvo de particular el desenlace de la Guerra "
+        "Fría entre 1989 y 1991?",
+        "Uno de los dos bloques dejó de existir sin que mediara una guerra entre las potencias",
+        "El texto lo señala en su primer párrafo: durante cuarenta años el "
+        "mundo se ordenó en torno a dos bloques y entre 1989 y 1991 uno de "
+        "ellos dejó de existir.\n"
+        "Lo llamativo es cómo ocurrió: sin guerra entre las potencias. El texto "
+        "agrega que el desenlace «sorprendió a casi todos, incluidos los "
+        "servicios de inteligencia que llevaban décadas observándolo».\n"
+        "Esa sorpresa es parte del problema histórico: un colapso que nadie "
+        "anticipó exige explicar qué se estaba mirando mal.",
+        [
+            ("Los dos bloques se disolvieron simultáneamente por acuerdo mutuo",
+             "El texto indica que fue uno de los dos el que dejó de existir."),
+            ("El conflicto terminó con una guerra breve entre las potencias",
+             "El texto subraya que no medió guerra entre ellas."),
+            ("Los servicios de inteligencia lo habían anticipado con precisión",
+             "El texto dice que el desenlace los sorprendió."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "medio",
+        "Según el texto, ¿qué causas acumulativas explican el colapso del "
+        "bloque oriental?",
+        "Falta de innovación, gasto militar, intervenciones costosas y crisis interna",
+        "El texto ordena cuatro factores. La economía planificada había "
+        "industrializado rápido en las décadas centrales del siglo pero se "
+        "mostró incapaz de sostener innovación y variedad de consumo.\n"
+        "A eso suma el gasto militar exigido por la competencia, que absorbía "
+        "una parte creciente de recursos escasos, y las intervenciones para "
+        "sostener gobiernos aliados, costosas y desgastantes.\n"
+        "El cuarto factor es interno: la distancia entre el discurso oficial y "
+        "la vida cotidiana «era conocida por todos y ya no convencía a nadie».",
+        [
+            ("Una derrota militar directa frente a los ejércitos del bloque occidental",
+             "El texto insiste en que no hubo guerra entre las potencias."),
+            ("El agotamiento de sus recursos naturales exportables",
+             "El texto no menciona recursos naturales entre las causas."),
+            ("La negativa de sus aliados a integrarse al bloque",
+             "El texto habla de intervenciones para sostener aliados, no de negativas."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "dificil",
+        "Según el texto, ¿qué le dio el derrumbe del bloque oriental a un "
+        "conjunto de políticas económicas que ya se aplicaba desde antes?",
+        "La ausencia de un modelo rival con el cual compararlo",
+        "El texto enumera esas políticas: apertura comercial, privatización de "
+        "empresas públicas, desregulación de mercados y disciplina fiscal.\n"
+        "Y precisa que no eran nuevas: «Ese programa ya se aplicaba antes de "
+        "1989 en varios países, incluido Chile desde la década de 1970».\n"
+        "Lo que cambió, sostiene, fue el escenario: con un solo bloque en pie "
+        "pasaron a presentarse como la única alternativa disponible, porque "
+        "desapareció el término de comparación.",
+        [
+            ("Un respaldo militar que antes no tenían esas políticas",
+             "El texto no vincula el programa económico con respaldo militar."),
+            ("Su primera aplicación práctica en América Latina",
+             "El texto señala que Chile las aplicaba desde la década de 1970."),
+            ("La aprobación formal de la organización mundial",
+             "El texto no menciona ninguna aprobación de ese tipo."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "dificil",
+        "Según el texto, ¿por qué conviene resistir la lectura de que el "
+        "colapso «probó la superioridad de un sistema sobre otro»?",
+        "Porque un colapso solo muestra que ese modelo no era sostenible en esas condiciones",
+        "El texto plantea dos lecturas apresuradas y esta es la segunda. La "
+        "primera es que el fin de la Guerra Fría trajo el fin de los "
+        "conflictos, algo que los años noventa desmintieron.\n"
+        "Sobre la segunda es preciso: lo que un colapso demuestra es que el "
+        "modelo no era sostenible en esas condiciones.\n"
+        "Y agrega por qué prefiere esa formulación: es «más modesta y más útil» "
+        "que afirmar una superioridad general en todos los planos.",
+        [
+            ("Porque el bloque occidental también colapsó pocos años después",
+             "El texto no afirma nada semejante."),
+            ("Porque las causas del colapso siguen siendo desconocidas",
+             "El texto enumera varias causas acumulativas."),
+            ("Porque los años noventa no registraron conflictos armados",
+             "El texto sostiene lo contrario: fueron intensos en guerras."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "medio",
+        "Según la primera alocución, ¿por qué la ayuda económica no es "
+        "caridad?",
+        "Porque la miseria favorece al totalitarismo y evitarla protege la seguridad propia",
+        "El dirigente occidental encadena dos ideas. Primero, «la ayuda "
+        "económica y financiera es la condición de la estabilidad política».\n"
+        "Segundo, la razón de fondo: «La semilla del régimen totalitario prende "
+        "en la miseria y en la necesidad; crece cuando muere la esperanza de "
+        "una vida mejor».\n"
+        "De ahí la conclusión que cierra la alocución: sostener esa esperanza "
+        "«no es caridad: es la defensa de nuestra propia seguridad».",
+        [
+            ("Porque los países que la reciben deben devolverla con intereses",
+             "Esa objeción la plantea la segunda alocución, no la primera."),
+            ("Porque se entrega solo a los países que ya son estables",
+             "La alocución la propone justamente para los pueblos amenazados."),
+            ("Porque forma parte de una cruzada declarada contra el bloque contrario",
+             "La alocución declara expresamente que no propone una cruzada."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "dificil",
+        "«La libertad de imprenta es real para quien puede comprar una "
+        "imprenta». ¿Qué estrategia argumentativa emplea esa frase?",
+        "Acepta el valor invocado y discute si las condiciones permiten ejercerlo",
+        "La primera alocución enumera entre sus garantías la libertad de creer "
+        "y de expresarse. La respuesta no niega que sea deseable.\n"
+        "Lo que hace es desplazar la pregunta desde el derecho formal a su "
+        "ejercicio efectivo: una libertad que exige un medio material queda "
+        "reservada a quien dispone de ese medio.\n"
+        "La misma operación aparece antes en el texto, cuando llama elección "
+        "«a la que se hace entre dos partidos que defienden el mismo reparto».",
+        [
+            ("Niega que la libertad de expresión sea un valor deseable",
+             "La frase no discute el valor sino las condiciones de su ejercicio."),
+            ("Sostiene que la prensa debe quedar bajo control estatal",
+             "Esa conclusión no aparece en la frase citada."),
+            ("Propone subsidiar la compra de imprentas para los trabajadores",
+             "La alocución no plantea ninguna medida de ese tipo."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "dificil",
+        "Según la segunda alocución, ¿qué condiciones tendría la ayuda "
+        "económica ofrecida por el otro bloque?",
+        "Sería un préstamo que abre mercados y ata a quien lo recibe",
+        "La alocución oriental invita a mirar las condiciones y las enumera: "
+        "«no es un regalo sino un préstamo que abre mercados a quien lo "
+        "concede, ata al que lo recibe y le indica con quién puede "
+        "comerciar».\n"
+        "El argumento no niega que la ayuda exista: discute qué obtiene quien "
+        "la entrega.\n"
+        "Frente a eso propone otra cosa: que los medios de producción "
+        "pertenezcan a quienes trabajan y que la planificación reemplace al "
+        "desorden del mercado.",
+        [
+            ("Sería una donación sin contrapartida para el país receptor",
+             "La alocución sostiene expresamente que no es un regalo."),
+            ("Estaría condicionada a la celebración de elecciones libres",
+             "Las condiciones que enumera son comerciales, no electorales."),
+            ("Se entregaría solo a países del propio bloque oriental",
+             "La alocución comenta la ayuda que ofrece el bloque contrario."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "dificil",
+        "«Toda edificación exige disciplina mientras el enemigo esté a las "
+        "puertas». ¿Qué función cumple esa frase en la alocución?",
+        "Responde a la acusación de represión justificándola por la amenaza externa",
+        "La alocución llega a esa frase después de anticipar la objeción: "
+        "«Dicen que reprimimos».\n"
+        "La respuesta no niega el hecho sino que lo redescribe: «Nosotros "
+        "decimos que edificamos», y presenta la disciplina como requisito de "
+        "esa construcción.\n"
+        "La cláusula final —«mientras el enemigo esté a las puertas»— convierte "
+        "la restricción en algo transitorio y condicionado a una amenaza cuya "
+        "duración no se precisa.",
+        [
+            ("Reconoce que la represión fue un error del período inicial",
+             "La alocución no la presenta como error sino como condición de la edificación."),
+            ("Anuncia el fin de las restricciones una vez firmada la paz",
+             "No se menciona ninguna paz ni un plazo determinado."),
+            ("Atribuye la represión a decisiones del bloque contrario",
+             "La alocución asume la disciplina como propia."),
+        ],
+    ),
+    # ---------------- La sociedad chilena a mediados del siglo XX ----------------
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "facil",
+        "Según el texto, ¿por cuáles tres vías incorporó Chile nuevos grupos a "
+        "la vida política entre 1930 y 1970?",
+        "Ampliando quién votaba, cambiando cómo se votaba y reconociendo derechos",
+        "El texto las enuncia al comienzo y después dedica un párrafo a cada "
+        "una.\n"
+        "La primera es el padrón: el voto femenino en elecciones nacionales y "
+        "el fin de la exclusión de los analfabetos. La segunda es la cédula "
+        "única, que hizo secreto el sufragio de verdad.\n"
+        "La tercera ocurre fuera de las urnas: la sindicalización campesina "
+        "autorizada en 1967 y la reforma agraria, que alteró la estructura de "
+        "propiedad sobre la que descansaba el control del voto rural.",
+        [
+            ("Aumentando la frecuencia de las elecciones presidenciales",
+             "El texto advierte que democratizar «no es solo votar más seguido»."),
+            ("Creando nuevos partidos políticos de representación obrera",
+             "La fundación de partidos no aparece entre las vías que describe el texto."),
+            ("Trasladando el registro electoral desde la Iglesia al Estado",
+             "Ese traspaso corresponde a las leyes laicas del siglo XIX."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "medio",
+        "Según el texto, ¿qué problema resolvió la cédula única adoptada a "
+        "fines de los años cincuenta?",
+        "Que cada candidatura imprimiera su voto y se supiera qué votaba cada persona",
+        "El texto describe la práctica anterior: cada candidatura imprimía y "
+        "repartía su propio voto, «lo que permitía saber qué había votado una "
+        "persona y, en el campo, controlar el sufragio de los inquilinos».\n"
+        "La cédula única entregó al Estado la impresión de una papeleta con "
+        "todas las candidaturas, y los estudios electorales del período le "
+        "atribuyen un efecto rápido en zonas rurales.\n"
+        "El texto remata con una idea fuerte: «Un voto secreto en serio no es "
+        "un detalle de procedimiento: es la condición para que exista voto».",
+        [
+            ("Que las mujeres no pudieran votar en elecciones nacionales",
+             "Esa exclusión se resolvió por otra vía, la del padrón."),
+            ("Que los analfabetos no pudieran leer las papeletas",
+             "El texto no vincula la cédula única con el analfabetismo."),
+            ("Que los resultados de la elección demoraran semanas en conocerse",
+             "El texto no menciona el conteo ni los plazos."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "medio",
+        "Según el texto, ¿qué ocurrió con la sindicalización campesina después "
+        "de 1967?",
+        "Pasó de unos pocos miles a más de cien mil trabajadores organizados",
+        "El texto señala que la sindicalización campesina estuvo prohibida en "
+        "la práctica durante casi todo el período y se autorizó en 1967.\n"
+        "El efecto fue rápido: «en pocos años el número de trabajadores "
+        "agrícolas organizados pasó de unos pocos miles a más de cien mil».\n"
+        "El texto conecta ese cambio con la reforma agraria iniciada en 1962 y "
+        "profundizada desde 1967, que alteró la estructura de propiedad sobre "
+        "la que descansaba el control del voto rural.",
+        [
+            ("Se mantuvo prohibida hasta el final del período",
+             "El texto indica que fue autorizada en 1967."),
+            ("Se redujo por efecto de la reforma agraria",
+             "El texto presenta ambos procesos como convergentes, no opuestos."),
+            ("Quedó limitada a los trabajadores de la industria urbana",
+             "El texto se refiere expresamente a trabajadores agrícolas."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "dificil",
+        "Según el texto, ¿por qué la ampliación democrática «no fue una línea "
+        "recta»?",
+        "Porque entre 1948 y 1958 una ley proscribió a un partido y a sus militantes",
+        "El texto advierte contra idealizar el proceso y entrega el "
+        "contraejemplo: entre 1948 y 1958 rigió una ley que proscribió a un "
+        "partido, borró a sus militantes de los registros electorales y relegó "
+        "a dirigentes.\n"
+        "El dato convive con las tres vías de ampliación que el propio texto "
+        "describe, y por eso concluye que la ampliación «no alcanzó a todos al "
+        "mismo tiempo».\n"
+        "Es un buen ejemplo de proceso con avances y retrocesos simultáneos.",
+        [
+            ("Porque la cédula única se aplicó solo en las zonas urbanas",
+             "El texto le atribuye un efecto rápido justamente en zonas rurales."),
+            ("Porque las mujeres perdieron el voto municipal durante los años cincuenta",
+             "El texto describe una ampliación del voto femenino, no un retroceso."),
+            ("Porque la reforma agraria se suspendió entre 1962 y 1967",
+             "El texto la describe iniciada en 1962 y profundizada desde 1967."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "medio",
+        "Según la entrevista de 1957, ¿por qué la familia dejó el fundo?",
+        "Porque la mecanización redujo la necesidad de mano de obra",
+        "La entrevistada lo relata de manera directa: «Cuando entró la máquina "
+        "no hicieron falta tantas manos y nos avisaron que teníamos que "
+        "salir».\n"
+        "Antes describe el sistema en que vivían: su marido de inquilino, ella "
+        "en la casa patronal, y una regalía de tierra, leña y ración, con casi "
+        "nada de dinero.\n"
+        "El destino lo decidió una red familiar: llegaron porque «un primo "
+        "tenía sitio tomado en la loma».",
+        [
+            ("Porque el patrón les ofreció trabajo en la ciudad",
+             "El relato indica que les avisaron que debían salir, sin ninguna oferta."),
+            ("Porque buscaban acceder a la escuela para su hijo",
+             "La escuela aparece como una ventaja posterior, no como el motivo de la salida."),
+            ("Porque la pulpería del fundo cerró sus puertas",
+             "El relato menciona la pulpería como destino del poco dinero, sin señalar cierre."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "dificil",
+        "«Comemos peor que en el fundo, pero aquí el niño está en la escuela y "
+        "nadie viene a decirnos a qué hora hay que levantarse». ¿Qué muestra "
+        "esa frase sobre la migración?",
+        "Que el balance incluye pérdidas materiales y ganancias de autonomía",
+        "La frase reconoce un empeoramiento concreto —la comida— y no lo "
+        "disimula. Lo que hace es ponerlo junto a dos ganancias: la escuela "
+        "para el hijo y el fin del control patronal sobre la jornada.\n"
+        "Ese balance mixto es lo que hace útil el testimonio: la migración no "
+        "aparece como mejora ni como fracaso, sino como un cambio en qué se "
+        "tiene y qué se pierde.\n"
+        "El informe municipal, en cambio, mira el mismo proceso solo desde la "
+        "capacidad de la ciudad para absorberlo.",
+        [
+            ("Que las condiciones de vida mejoraron en todos los aspectos",
+             "La propia entrevistada dice que comen peor que en el fundo."),
+            ("Que la familia planeaba regresar al campo en poco tiempo",
+             "El relato no menciona ninguna intención de regresar."),
+            ("Que el trabajo urbano les dio ingresos estables",
+             "El relato indica que el marido hace pololos «no todos los meses»."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "dificil",
+        "Según el informe municipal de 1952, ¿qué observó la comisión sobre "
+        "las erradicaciones practicadas hasta entonces?",
+        "Que no disminuyeron la población del sector, porque llegaban otras familias",
+        "El informe cierra con esa constatación: «las erradicaciones "
+        "practicadas hasta ahora no han disminuido la población del sector: las "
+        "familias erradicadas han sido reemplazadas por otras en el término de "
+        "pocos meses».\n"
+        "El dato desmiente la eficacia de la medida que la propia comisión "
+        "venía aplicando, y por eso recomienda estudiar en cambio medidas de "
+        "contención del flujo y un plan de urbanización.\n"
+        "El diagnóstico previo apunta al origen: el crecimiento no viene del "
+        "aumento vegetativo sino de la llegada continua de familias del campo.",
+        [
+            ("Que lograron reducir a la mitad la población del sector",
+             "El informe afirma que no disminuyeron la población."),
+            ("Que las familias erradicadas regresaron a sus fundos de origen",
+             "El informe señala que fueron reemplazadas por otras familias."),
+            ("Que resolvieron el problema de abastecimiento de agua",
+             "El informe describe piletas insuficientes, sin mejora."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Historia - Dictadura, democracia y derechos humanos
+#
+# Nota de redaccion: en cada pregunta al menos un distractor mide mas que la
+# correcta. El banco de Historia venia subiendo la proporcion de items donde
+# la correcta es la alternativa mas larga, y esa es una filtracion que se
+# arregla escribiendo, no despues.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_HISTORIA += [
+    # ---------------- Dictadura militar y transición ----------------
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "facil",
+        "Según el comunicado oficial de 1984, ¿qué medidas contemplaba el "
+        "estado de sitio?",
+        "Restricción de reunión, censura, toque de queda y detenciones sin orden judicial",
+        "El comunicado enumera las cuatro medidas de manera consecutiva y sin "
+        "eufemismos: restricción del derecho de reunión, censura de los medios "
+        "de comunicación social, toque de queda desde las veintidós horas y la "
+        "facultad de disponer detenciones y traslados administrativos.\n"
+        "El rasgo decisivo de la última es que no requiere orden judicial, lo "
+        "que deja la privación de libertad fuera del control de un juez.\n"
+        "El texto las presenta como transitorias y dirigidas a grupos "
+        "minoritarios.",
+        [
+            ("Suspensión de las elecciones municipales y disolución del Congreso Nacional",
+             "El comunicado no menciona elecciones ni al Congreso entre sus medidas."),
+            ("Cierre de las universidades y prohibición de los sindicatos de trabajadores",
+             "Ninguna de esas dos medidas aparece en el comunicado citado."),
+            ("Requisición de bienes y control estatal de los precios de los alimentos",
+             "El comunicado no dispone medidas económicas de ningún tipo."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "medio",
+        "¿Qué dato concreto entrega la declaración de las organizaciones para "
+        "responder al comunicado?",
+        "Cuatrocientas once denuncias de detención en tres semanas",
+        "La declaración abre con esa cifra y agrega una distinción que importa: "
+        "en doscientos ochenta casos pudo establecerse el recinto donde se "
+        "encuentra la persona y en el resto no.\n"
+        "Esa incertidumbre es lo que declaran como motivo de la presentación: "
+        "«es esa incertidumbre lo que hoy nos convoca».\n"
+        "De ahí la petición final, deliberadamente mínima: la nómina completa "
+        "de detenidos y el lugar donde se encuentran.",
+        [
+            ("Un informe sobre el número de medios de comunicación censurados",
+             "La declaración no entrega cifras sobre censura de medios."),
+            ("El registro de las personas que infringieron el toque de queda",
+             "La declaración no menciona infracciones al toque de queda."),
+            ("Una lista de los recintos militares habilitados en la capital",
+             "La declaración pide esa información, no la entrega."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "dificil",
+        "«Se nos dirá que estas medidas son transitorias. Llevamos once años "
+        "oyéndolo». ¿Qué hace esa respuesta con el argumento oficial?",
+        "Lo confronta con su propia duración acumulada",
+        "El comunicado califica las disposiciones de transitorias, y esa "
+        "calificación es la que sostiene su aceptabilidad: una restricción "
+        "breve pesa distinto que una permanente.\n"
+        "La declaración no discute la palabra sino el hecho: once años de "
+        "medidas anunciadas siempre como transitorias vuelven dudosa la "
+        "calificación.\n"
+        "Es un argumento de tiempo y no de principio, y por eso resulta "
+        "difícil de responder desde el mismo vocabulario oficial.",
+        [
+            ("Sostiene que las medidas transitorias son inconstitucionales por definición",
+             "La declaración no argumenta sobre la constitucionalidad de la figura."),
+            ("Propone reemplazar el estado de sitio por otras medidas de excepción",
+             "La declaración no propone medidas alternativas de ninguna clase."),
+            ("Reconoce que las restricciones terminarán una vez pasada la crisis",
+             "La declaración cuestiona justamente esa expectativa."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "dificil",
+        "«Un derecho que puede suspenderse por comunicado, sin juez que lo "
+        "revise, no está suspendido: está entregado a quien lo suspende». ¿Qué "
+        "sostiene esa afirmación?",
+        "Que sin control judicial el derecho deja de existir como límite al poder",
+        "La distinción que hace la declaración es entre suspender y entregar. "
+        "Un derecho suspendido con control judicial sigue siendo un límite: "
+        "alguien puede revisar si la suspensión corresponde.\n"
+        "Sin ese control, la decisión sobre el derecho queda en manos de la "
+        "misma autoridad que lo restringe, y entonces el derecho ya no la "
+        "limita.\n"
+        "La petición final es coherente con esa idea: pedir la nómina y el "
+        "lugar de los detenidos es pedir que la decisión sea verificable.",
+        [
+            ("Que las suspensiones de derechos requieren siempre una ley del Congreso",
+             "La declaración exige revisión judicial, sin referirse al procedimiento legislativo."),
+            ("Que los derechos suspendidos deben restituirse dentro de un plazo fijo",
+             "La declaración no propone plazos para la restitución."),
+            ("Que la autoridad debe informar a la ciudadanía antes de suspenderlos",
+             "El comunicado sí informó: la objeción es sobre la falta de revisión."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "medio",
+        "Según el texto, ¿qué está establecido sobre el período y no se "
+        "discute historiográficamente?",
+        "El golpe, la dictadura de diecisiete años y las violaciones sistemáticas",
+        "El texto separa desde el comienzo los hechos establecidos de las "
+        "explicaciones en disputa.\n"
+        "Entre los primeros sitúa el golpe de Estado, los diecisiete años de "
+        "dictadura y las violaciones sistemáticas a los derechos humanos —"
+        "detención sin orden judicial, tortura, ejecución y desaparición "
+        "forzada, con organismos creados para esa tarea—.\n"
+        "Y precisa cómo se establecieron: por comisiones de verdad y por "
+        "sentencias judiciales.",
+        [
+            ("El peso relativo de cada factor en el quiebre democrático de 1973",
+             "Ese es justamente el punto que el texto sitúa en discusión."),
+            ("La responsabilidad de los partidos políticos en la polarización previa",
+             "Esa es una de las tres explicaciones en disputa, no un hecho establecido."),
+            ("La existencia de intervención extranjera en el financiamiento opositor",
+             "El texto la menciona dentro de la tercera explicación, no entre los hechos."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "dificil",
+        "¿En qué se diferencia la segunda explicación del quiebre de 1973 "
+        "respecto de la primera?",
+        "Pone el acento en los intereses afectados y no en la conversación política",
+        "La primera explicación atribuye el quiebre a la polarización interna: "
+        "un sistema de partidos fragmentado en tres bloques sin voluntad de "
+        "acuerdo, con instituciones de mediación que dejaron de ser "
+        "reconocidas.\n"
+        "La segunda desplaza el foco al conflicto social y económico: el "
+        "programa de reformas afectó intereses concretos y poderosos, y la "
+        "reacción incluyó desabastecimiento, paros de gremios y financiamiento "
+        "de la oposición.\n"
+        "El texto resume la diferencia: para la segunda, el quiebre «no fue un "
+        "accidente de la conversación política sino la defensa de un orden de "
+        "propiedad amenazado».",
+        [
+            ("Atribuye el quiebre exclusivamente a la intervención extranjera documentada",
+             "Ese elemento pertenece a la tercera explicación, la de la Guerra Fría."),
+            ("Sostiene que la democracia chilena no llegó a quebrarse realmente",
+             "El texto sitúa el golpe entre los hechos establecidos."),
+            ("Niega que las reformas en curso hayan afectado intereses concretos",
+             "La segunda explicación afirma exactamente lo contrario."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "dificil",
+        "Según el texto, ¿qué relación hay entre las tres explicaciones del "
+        "quiebre?",
+        "No son incompatibles: iluminan planos distintos y suelen combinarse",
+        "El texto lo dice de manera directa: cada explicación ilumina un plano "
+        "distinto y la mayoría de los trabajos recientes las combina, "
+        "discutiendo el peso relativo de cada factor.\n"
+        "Lo que sí las distingue, agrega, es dónde ponen la responsabilidad, y "
+        "por eso «la elección entre ellas nunca es solo técnica».\n"
+        "El texto cierra con una regla de método: explicar por qué ocurrió algo "
+        "no equivale a justificarlo.",
+        [
+            ("Se excluyen entre sí, de modo que aceptar una obliga a descartar las otras",
+             "El texto afirma expresamente que no son incompatibles."),
+            ("Coinciden en todo salvo en la fecha exacta en que comenzó el proceso",
+             "Las tres coinciden en la fecha y difieren en las causas."),
+            ("Corresponden a tres momentos sucesivos del mismo proceso histórico",
+             "El texto las presenta como planos simultáneos, no como etapas."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "dificil",
+        "«Explicar por qué ocurrió algo no equivale a justificarlo». ¿Qué "
+        "problema busca evitar esa regla?",
+        "Que la explicación del pasado reciente se lea como una defensa de lo ocurrido",
+        "El texto cierra con esa regla después de reconocer que las tres "
+        "explicaciones se distinguen por dónde ponen la responsabilidad, de "
+        "modo que elegir entre ellas nunca es solo técnico.\n"
+        "El riesgo que se sigue es de lectura: si explicar se confunde con "
+        "justificar, cualquier análisis de causas queda bajo sospecha de "
+        "aprobar el resultado.\n"
+        "Y el costo lo enuncia el propio texto: confundir ambas cosas «hace "
+        "imposible investigar el pasado reciente».",
+        [
+            ("Que los historiadores discutan el peso relativo de cada factor causal",
+             "El texto presenta esa discusión como el trabajo normal de la disciplina."),
+            ("Que se atribuya el quiebre a una sola de las tres explicaciones",
+             "Ese es otro problema, distinto del que la regla busca evitar."),
+            ("Que las comisiones de verdad revisen las sentencias judiciales",
+             "El texto no plantea ninguna relación de ese tipo."),
+        ],
+    ),
+    # ---------------- Democracia, participación y sufragio ----------------
+    _ql(
+        "civ_sufragio", "civ_democracia", "facil",
+        "Según el texto, ¿qué significa que el sufragio sea igualitario?",
+        "Que el voto de cada persona vale exactamente lo mismo que el de otra",
+        "El texto define los cuatro atributos del sufragio en Chile y precisa "
+        "cada uno. Igualitario significa que ninguna característica personal "
+        "hace pesar más un voto.\n"
+        "La enumeración es explícita: no pesan más la riqueza, la educación, el "
+        "sexo ni el origen.\n"
+        "Los otros tres atributos son universal —votan todos los ciudadanos "
+        "habilitados—, personal —nadie vota por otro— y secreto.",
+        [
+            ("Que todos los ciudadanos habilitados tienen derecho a votar en las elecciones",
+             "Esa es la definición de sufragio universal según el texto."),
+            ("Que ninguna persona puede votar en representación de otra persona",
+             "Esa es la definición de sufragio personal."),
+            ("Que nadie puede saber qué votó una persona y presionarla por ello",
+             "Esa es la definición de sufragio secreto."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio", "civ_democracia", "medio",
+        "Según el texto, ¿en qué se diferencia la democracia directa de la "
+        "representativa?",
+        "En la directa la ciudadanía decide y en la representativa elige a quien decide",
+        "El texto define ambas por quién toma la decisión. En la democracia "
+        "directa la ciudadanía decide ella misma sobre los asuntos, como en la "
+        "asamblea ateniense.\n"
+        "En la representativa elige autoridades que deciden en su nombre "
+        "durante un período, y les pide cuentas en la elección siguiente.\n"
+        "Chile es representativo como regla, pero contempla mecanismos de "
+        "participación directa como el plebiscito, comunal y nacional.",
+        [
+            ("En la directa se vota en la comuna y en la representativa a nivel nacional",
+             "El texto señala que el plebiscito existe en ambos niveles."),
+            ("En la directa los partidos presentan candidatos y en la otra no lo hacen",
+             "El texto asigna esa tarea a los partidos dentro del sistema representativo."),
+            ("En la directa el voto es obligatorio y en la representativa es voluntario",
+             "El texto indica que desde 2023 el voto es obligatorio para los habilitados."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio", "civ_democracia", "medio",
+        "Según el texto, ¿qué dos tareas cumplen los partidos políticos en el "
+        "sistema representativo?",
+        "Organizar corrientes de opinión y presentar candidatos a cargos electivos",
+        "El texto las enumera como tareas propias del sistema representativo. "
+        "La primera es organizar y representar corrientes de opinión, "
+        "canalizando demandas ciudadanas dispersas.\n"
+        "La segunda es seleccionar y presentar candidatos a los cargos de "
+        "elección popular.\n"
+        "Ninguna de las dos la cumple la sociedad civil organizada, que el "
+        "texto describe aparte como complemento y no sustituto de la "
+        "representación.",
+        [
+            ("Ejercer control social permanente y canalizar demandas territoriales",
+             "Esas son las funciones que el texto asigna a la sociedad civil organizada."),
+            ("Convocar plebiscitos comunales y administrar el registro electoral",
+             "El texto no atribuye ninguna de esas funciones a los partidos."),
+            ("Fiscalizar a las autoridades electas y revisar sus cuentas públicas",
+             "El texto sitúa la rendición de cuentas en la elección siguiente."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio", "civ_democracia", "dificil",
+        "Según el texto, ¿por qué la alternancia se considera un indicador de "
+        "salud democrática?",
+        "Porque muestra que las elecciones compiten y que el poder se entrega",
+        "El texto define alternancia como que un gobierno sea sucedido por la "
+        "oposición, y le atribuye tres significados.\n"
+        "Demuestra que las elecciones son competitivas de verdad, que quien "
+        "pierde acepta el resultado y que el poder se entrega pacíficamente.\n"
+        "Los tres apuntan a lo mismo: no basta con que haya elecciones, tiene "
+        "que ser posible perderlas y aceptarlo.",
+        [
+            ("Porque garantiza que cada corriente de opinión gobierne por turnos",
+             "El texto no plantea ningún turno garantizado entre corrientes."),
+            ("Porque obliga a los partidos a presentar candidatos en cada elección",
+             "Esa es una función permanente de los partidos, no un efecto de la alternancia."),
+            ("Porque asegura que las políticas del gobierno anterior se mantengan",
+             "El texto no vincula la alternancia con la continuidad de las políticas."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio", "civ_democracia", "dificil",
+        "Según el texto, ¿qué relación hay entre la sociedad civil organizada "
+        "y la representación electoral?",
+        "Es un complemento y no un sustituto de la representación",
+        "El texto lo afirma de manera literal después de enumerar juntas de "
+        "vecinos, sindicatos, centros de alumnos y fundaciones.\n"
+        "La razón que da es de alcance: la sociedad civil actúa en el día a día "
+        "del territorio, «donde el voto no llega», canalizando demandas y "
+        "ejerciendo control social de forma permanente.\n"
+        "La palabra permanente contrasta con el carácter periódico de la "
+        "elección, y ahí está la complementariedad.",
+        [
+            ("Reemplaza a los partidos cuando estos pierden apoyo ciudadano",
+             "El texto la presenta como complemento, no como reemplazo."),
+            ("Depende de los partidos políticos para canalizar sus demandas",
+             "El texto le atribuye capacidad propia de canalizar demandas."),
+            ("Solo puede actuar durante los períodos de campaña electoral",
+             "El texto describe su acción como permanente y cotidiana."),
+        ],
+    ),
+    _ql(
+        "fuente_voto_femenino", "civ_democracia", "medio",
+        "¿Qué función atribuye el parlamentario opositor a la mujer para "
+        "justificar su exclusión del voto presidencial?",
+        "Una función en el hogar que, según él, ningún hombre puede reemplazar",
+        "La intervención construye su argumento sin negar capacidades: «Nadie "
+        "discute la inteligencia ni las virtudes de la mujer chilena».\n"
+        "Lo que sostiene es que la política «es áspera y divide a las "
+        "familias», y que la mujer cumple en el hogar una función "
+        "irreemplazable de la que no conviene distraerla.\n"
+        "Sobre esa base acepta el voto municipal ya concedido y objeta "
+        "extenderlo a la elección presidencial.",
+        [
+            ("Una falta de preparación política que la escuela debería corregir antes",
+             "La intervención declara expresamente que no discute su inteligencia."),
+            ("Una responsabilidad económica que le impediría acudir a votar",
+             "El argumento es sobre el papel en el hogar, no sobre disponibilidad."),
+            ("Una condición legal que la Constitución vigente ya establecía",
+             "La intervención argumenta sobre conveniencia, no sobre norma vigente."),
+        ],
+    ),
+    _ql(
+        "fuente_voto_femenino", "civ_democracia", "dificil",
+        "«No pedimos entrar a la política: ya estamos en ella, soportando sus "
+        "efectos sin voz». ¿Qué idea de ciudadanía propone esa frase?",
+        "Que quien sufre las decisiones ya está en política y le falta la voz",
+        "La dirigenta llega a esa frase después de enumerar decisiones "
+        "cotidianas: el presupuesto del hogar, la educación de los hijos y el "
+        "precio del pan, «una decisión política tomada por hombres que nosotras "
+        "no elegimos».\n"
+        "Con eso desplaza el eje del debate: no discute si las mujeres deben "
+        "entrar a un ámbito ajeno, sostiene que ya están dentro y sin "
+        "representación.\n"
+        "La ciudadanía deja de ser un permiso de ingreso y pasa a ser el "
+        "reconocimiento de una condición existente.",
+        [
+            ("Que la ciudadanía debe reservarse a quienes ejercen cargos públicos",
+             "La intervención argumenta en sentido contrario."),
+            ("Que las decisiones del hogar deberían quedar fuera de la política",
+             "La intervención sostiene que ya son políticas."),
+            ("Que el voto municipal es suficiente para representar a las mujeres",
+             "La intervención pide extender el derecho, no conformarse con él."),
+        ],
+    ),
+    # ---------------- Derechos humanos y deberes ciudadanos ----------------
+    _ql(
+        "civ_ddhh", "civ_ddhh", "facil",
+        "Según el texto, ¿qué significa que los derechos humanos sean "
+        "universales?",
+        "Que corresponden a todas las personas por el solo hecho de serlo",
+        "El texto lo define así y precisa que no admiten distinción de "
+        "nacionalidad, sexo, religión, situación migratoria ni ninguna otra "
+        "condición.\n"
+        "Agrega dos consecuencias: no se ganan por mérito ni se otorgan como "
+        "premio, y por eso se dice que el Estado no los concede sino que los "
+        "reconoce.\n"
+        "La obligación estatal alcanza incluso a quien la sociedad rechaza, que "
+        "es donde la universalidad se pone realmente a prueba.",
+        [
+            ("Que todos los Estados del mundo los han incorporado a su legislación",
+             "El texto no afirma que todos los Estados los hayan incorporado."),
+            ("Que se aplican solo a los ciudadanos del país que los reconoce",
+             "El texto descarta expresamente la distinción por nacionalidad."),
+            ("Que su cumplimiento puede ser exigido ante tribunales internacionales",
+             "El texto no vincula la universalidad con la existencia de tribunales."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_ddhh", "medio",
+        "Según el texto, ¿qué significa que los derechos humanos sean "
+        "inalienables?",
+        "Que nadie puede renunciar a ellos ni ser despojado de ellos",
+        "El texto lo define en esos términos y agrega una precisión que es la "
+        "más exigente del párrafo: «no quedan a disposición de lo que una "
+        "mayoría decida».\n"
+        "Esa cláusula distingue los derechos humanos de otras decisiones "
+        "colectivas: una mayoría puede cambiar impuestos o programas, pero no "
+        "suprimir derechos.\n"
+        "Es también lo que explica por qué el Estado debe garantizarlos incluso "
+        "frente a quien la sociedad rechaza.",
+        [
+            ("Que solo pueden suspenderse mediante una ley aprobada por el Congreso",
+             "El texto los sustrae a la decisión de las mayorías, incluidas las legislativas."),
+            ("Que se pierden cuando una persona comete un delito grave",
+             "El texto sostiene que nadie puede ser despojado de ellos."),
+            ("Que su reconocimiento depende de los recursos del Estado",
+             "Esa condición el texto la aplica a la realización progresiva de otros derechos."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_ddhh", "medio",
+        "Según el texto, ¿qué contexto explica el contenido de la Declaración "
+        "Universal de 1948?",
+        "El Holocausto y la constatación de que un Estado podía aniquilar legalmente",
+        "El texto fecha la aprobación en 1948 por la Asamblea General, tres "
+        "años después del fin de la Segunda Guerra Mundial, y sostiene que ese "
+        "contexto explica su contenido.\n"
+        "La constatación que menciona es precisa y es la que obliga a un "
+        "criterio superior a la ley interna: un Estado podía aniquilar "
+        "legalmente a su propia población.\n"
+        "De ahí que la declaración afirme derechos que valen con independencia "
+        "de lo que disponga la ley del país donde se vive.",
+        [
+            ("La descolonización de Asia y África durante las décadas siguientes",
+             "Ese proceso es posterior y el texto no lo menciona como contexto."),
+            ("La creación de organismos financieros internacionales en 1944",
+             "El texto no vincula la declaración con el orden económico de posguerra."),
+            ("El inicio de la Guerra Fría entre los dos bloques de posguerra",
+             "El texto no menciona la Guerra Fría al explicar la declaración."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_ddhh", "dificil",
+        "Según el texto, ¿en qué se diferencian las exigencias de los derechos "
+        "de primera y de segunda generación?",
+        "Los primeros piden que el Estado se abstenga y los segundos, prestaciones",
+        "El texto describe los de primera generación —civiles y políticos, como "
+        "la vida, la libertad de expresión y el debido proceso— señalando que "
+        "exigen sobre todo abstención: que el Estado no censure ni detenga "
+        "arbitrariamente.\n"
+        "Los de segunda generación —económicos, sociales y culturales, como "
+        "educación y salud— exigen lo contrario: escuelas, hospitales, "
+        "profesionales y presupuesto.\n"
+        "Por eso el texto agrega que su realización es progresiva y depende de "
+        "los recursos disponibles.",
+        [
+            ("Los primeros son universales y los segundos solo rigen para los ciudadanos",
+             "El texto declara universales a los derechos humanos sin distinguir generaciones."),
+            ("Los primeros son colectivos y los segundos corresponden a cada persona",
+             "Los derechos colectivos son los de tercera generación según el texto."),
+            ("Los primeros se aprobaron en 1948 y los segundos en tratados posteriores",
+             "El texto no fecha por separado cada generación de derechos."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_ddhh", "dificil",
+        "Según el texto, ¿qué relación existe entre los deberes ciudadanos y "
+        "los derechos?",
+        "Los deberes son la contracara: sin recursos ni convivencia no hay garantía",
+        "El texto enumera los deberes —respetar la Constitución y las leyes, "
+        "pagar impuestos, respetar los derechos de los demás y cuidar los "
+        "bienes públicos— y los llama «la contracara de los derechos».\n"
+        "La razón que da es material y directa: para garantizar educación, "
+        "salud o seguridad, el Estado «necesita recursos y un marco de "
+        "convivencia respetado por todos».\n"
+        "La relación no es de intercambio —los derechos no se ganan cumpliendo "
+        "deberes—, sino de condición para que la garantía sea posible.",
+        [
+            ("Los derechos se otorgan a quienes cumplen previamente con sus deberes",
+             "El texto sostiene que los derechos no se ganan por mérito ni se otorgan como premio."),
+            ("Los deberes reemplazan a los derechos en períodos de crisis fiscal",
+             "El texto no plantea ninguna sustitución de ese tipo."),
+            ("Los deberes corresponden al Estado y los derechos a las personas",
+             "El texto atribuye los deberes a la ciudadanía."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Historia - Sociedad de la informacion, mercado y ajustes de nodos
+# ---------------------------------------------------------------------------
+
+QUESTIONS_HISTORIA += [
+    # ---------------- La democracia en la sociedad de la información ----------------
+    _ql(
+        "civ_info_desinformacion", "civ_informacion", "medio",
+        "Según el texto, ¿en qué se diferencia la desinformación de la "
+        "información engañosa?",
+        "La desinformación es falsa; la engañosa usa datos verdaderos mal ordenados",
+        "El texto distingue tres cosas que suelen confundirse. El error es una "
+        "afirmación falsa publicada sin intención de engañar, y se corrige.\n"
+        "La desinformación es contenido falso difundido a sabiendas, con un "
+        "propósito. La información engañosa, en cambio, usa datos verdaderos "
+        "ordenados de modo que produzcan una conclusión falsa.\n"
+        "Los ejemplos que da son precisos: una cifra real fuera de contexto, un "
+        "gráfico con la escala manipulada, una cita a la que se le quitó la "
+        "frase que la matizaba.",
+        [
+            ("La desinformación circula en redes y la engañosa en medios tradicionales",
+             "El texto no distingue ambas por el canal en que circulan."),
+            ("La desinformación se publica sin intención y la engañosa con propósito",
+             "Publicar sin intención de engañar es lo que el texto llama error."),
+            ("La desinformación se puede verificar y la información engañosa no",
+             "El texto señala que la engañosa resiste la verificación pieza por pieza."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "medio",
+        "¿Qué tres medidas propone la investigadora en la comisión?",
+        "Informar el criterio de ordenamiento, permitir auditarlo y responder por lo promovido",
+        "La investigadora las presenta como pedidos «mucho más modestos» que "
+        "obligar a borrar opiniones, cosa que declara no pedir.\n"
+        "Las dos primeras son de transparencia: informar con qué criterio se "
+        "ordenan los contenidos y permitir auditar ese criterio de forma "
+        "independiente.\n"
+        "La tercera es de responsabilidad, y viene acotada: responder cuando la "
+        "plataforma promueva activamente contenido que ya fue declarado falso "
+        "por un tribunal.",
+        [
+            ("Eliminar las opiniones falsas, sancionar a sus autores y cerrar cuentas",
+             "La investigadora declara expresamente que no pide borrar opiniones."),
+            ("Prohibir los sistemas automáticos de ordenamiento de contenidos",
+             "Su propuesta es transparentar y auditar ese sistema, no prohibirlo."),
+            ("Entregar a un organismo estatal la revisión previa de las publicaciones",
+             "Ninguna de sus propuestas contempla revisión previa."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "dificil",
+        "Según el abogado, ¿qué efecto produce obligar a las plataformas a "
+        "responder por lo que circula?",
+        "Que ante la duda borren, porque les sale más barato eliminar de más",
+        "El abogado describe el cálculo con precisión: a la empresa «le sale "
+        "más barato eliminar mil publicaciones legítimas que arriesgar una "
+        "sanción por una ilegítima».\n"
+        "Y agrega quién ejecuta ese cálculo: un sistema automático, en segundos "
+        "y sin que nadie revise el caso.\n"
+        "El perjudicado no es la empresa, que se protege, sino «quien denuncia "
+        "algo incómodo y ve su publicación desaparecer sin explicación ni "
+        "apelación».",
+        [
+            ("Que las plataformas dejen de ordenar los contenidos que muestran",
+             "El abogado no plantea que abandonen el ordenamiento."),
+            ("Que los tribunales asuman la revisión de cada publicación retirada",
+             "El abogado advierte justamente que nadie revisa los casos."),
+            ("Que las empresas contraten equipos humanos de revisión permanente",
+             "El abogado sostiene que el filtrado lo hará un sistema automático."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "dificil",
+        "¿En qué coinciden y en qué difieren las dos intervenciones de la "
+        "comisión?",
+        "Coinciden en el diagnóstico y en dos propuestas; difieren en la tercera",
+        "El abogado lo declara de entrada: «Comparto el diagnóstico y me "
+        "preocupa el remedio». La discrepancia no es sobre los hechos.\n"
+        "Sobre las propuestas es todavía más explícito al cerrar: de las tres, "
+        "«las dos primeras no tengo nada que objetar: transparencia y auditoría "
+        "independiente son exigibles hoy mismo».\n"
+        "La objeción se concentra en la tercera, la de responsabilidad por el "
+        "contenido promovido: «es la que abre una puerta que después no se "
+        "cierra».",
+        [
+            ("Coinciden en las tres propuestas y difieren en el diagnóstico inicial",
+             "El abogado comparte el diagnóstico y objeta una de las propuestas."),
+            ("Difieren en todo, porque uno defiende regular y el otro no regular",
+             "El abogado acepta dos de las tres medidas propuestas."),
+            ("Coinciden en que la autoridad debe poder retirar contenidos falsos",
+             "El abogado advierte contra entregar esa herramienta a la autoridad."),
+        ],
+    ),
+    _ql(
+        "civ_info_cifras", "civ_informacion", "medio",
+        "Según la tabla 2, ¿qué relación se observa entre la confianza "
+        "declarada y la verificación antes de compartir?",
+        "A mayor confianza declarada, menor porcentaje que verifica",
+        "La tabla ordena los cuatro grupos de edad y las dos columnas se mueven "
+        "en sentidos opuestos.\n"
+        "La confianza sube de 31% en el grupo más joven a 51% en el mayor, "
+        "mientras la verificación baja de 39% a 17% en el mismo recorrido.\n"
+        "La tercera columna acompaña esa lectura: quienes menos verifican son "
+        "también quienes menos declaran haber compartido algo falso, y la nota "
+        "advierte que puede ser porque no se enteraron.",
+        [
+            ("A mayor confianza declarada, mayor porcentaje que verifica",
+             "Las dos columnas se mueven en sentidos opuestos, no en el mismo."),
+            ("La confianza y la verificación se mantienen constantes entre grupos",
+             "Ambas varían más de veinte puntos entre el grupo menor y el mayor."),
+            ("Solo el grupo de 30 a 49 años muestra confianza y verificación altas",
+             "Ese grupo registra 38% de confianza y 33% de verificación, valores intermedios."),
+        ],
+    ),
+    # ---------------- Mercado: oferta, demanda y precios ----------------
+    _ql(
+        "eco_tabla_mercado", "eco_mercado", "facil",
+        "Según la tabla 1, ¿a qué precio se equilibran la cantidad demandada y "
+        "la ofrecida?",
+        "A $400 por caja, con 600 cajas",
+        "La tabla permite comparar las dos columnas fila por fila. A $200 la "
+        "demanda supera con creces a la oferta: 900 contra 300.\n"
+        "A medida que sube el precio, la demanda baja y la oferta sube, hasta "
+        "que ambas coinciden en 600 cajas cuando el precio es $400.\n"
+        "Sobre ese precio la relación se invierte: a $600 se ofrecen 900 cajas "
+        "y se demandan solo 300.",
+        [
+            ("A $300 por caja, donde la demanda es mayor que la oferta",
+             "A ese precio se demandan 750 cajas y se ofrecen 450: no hay equilibrio."),
+            ("A $500 por caja, donde la oferta supera a la cantidad demandada",
+             "A ese precio se ofrecen 750 cajas y se demandan 450."),
+            ("A $600 por caja, que es donde la oferta alcanza su valor máximo",
+             "Ese es el mayor valor de la oferta, pero la demanda cae a 300."),
+        ],
+    ),
+    _ql(
+        "eco_tabla_mercado", "eco_mercado", "medio",
+        "Según la tabla 2, ¿qué ocurre con la curva de oferta si una helada "
+        "arruina parte de la cosecha?",
+        "Se desplaza a la izquierda",
+        "La tabla asigna a cada cambio la curva afectada y la dirección del "
+        "desplazamiento, y la helada aparece expresamente como un caso de "
+        "oferta hacia la izquierda.\n"
+        "La nota explica qué significa: un desplazamiento a la derecha implica "
+        "ofrecer más a cada precio, de modo que a la izquierda es lo "
+        "contrario.\n"
+        "El caso opuesto también está en la tabla: si baja el precio del "
+        "combustible del transporte, la oferta se desplaza a la derecha.",
+        [
+            ("Se desplaza a la derecha, porque el precio del producto subirá",
+             "La tabla asigna ese desplazamiento a una baja en los costos, no a una helada."),
+            ("Se mantiene igual y solo se mueve un punto sobre la misma curva",
+             "Eso ocurre cuando cambia el precio del propio producto."),
+            ("Se desplaza la curva de demanda a la izquierda por el menor consumo",
+             "La helada afecta la producción, no las decisiones de los compradores."),
+        ],
+    ),
+    _ql(
+        "eco_tabla_mercado", "eco_mercado", "dificil",
+        "Según las notas de la fuente, ¿qué diferencia hay entre un cambio en "
+        "el precio del propio producto y los cambios de la tabla 2?",
+        "El precio mueve un punto sobre la curva; los otros la desplazan entera",
+        "La nota lo establece de manera directa: «Un cambio en el precio del "
+        "propio producto no desplaza ninguna curva: mueve un punto a lo largo "
+        "de ella».\n"
+        "Los cambios de la tabla 2 son de otra naturaleza: ingreso de los "
+        "hogares, clima, costo del transporte o percepción sobre la salud. "
+        "Ninguno es el precio del producto.\n"
+        "La distinción importa porque confundirlas lleva a decir que la demanda "
+        "«bajó» cuando en realidad solo se recorrió la misma curva.",
+        [
+            ("El precio desplaza ambas curvas y los otros cambios solo una",
+             "La nota señala que el precio no desplaza ninguna curva."),
+            ("El precio afecta la oferta y los otros cambios afectan la demanda",
+             "La tabla 2 incluye desplazamientos de ambas curvas."),
+            ("El precio produce efectos permanentes y los otros son transitorios",
+             "La fuente no distingue los cambios por su duración."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_mercado", "medio",
+        "Según el texto, ¿por qué el Estado regula la tarifa en un monopolio "
+        "natural?",
+        "Porque la competencia no puede existir, no porque no le guste",
+        "El texto explica primero qué hace natural a ese monopolio: hay "
+        "actividades donde tener una sola red resulta mucho más barato que "
+        "duplicarla, como agua potable, alcantarillado o distribución "
+        "eléctrica.\n"
+        "De ahí la consecuencia: «Nadie va a tender una segunda cañería para "
+        "competir con la primera», así que la competencia no aparecerá sola y "
+        "el único proveedor puede fijar el precio.\n"
+        "El texto cierra la idea con esa frase exacta sobre por qué se regula.",
+        [
+            ("Porque las empresas privadas no pueden operar redes de servicios",
+             "El texto no plantea ninguna incapacidad de las empresas para operar redes."),
+            ("Porque los usuarios no disponen de información sobre las tarifas",
+             "Ese problema corresponde a la información asimétrica, otra falla distinta."),
+            ("Porque el servicio se presta a quien no paga y no se puede cobrar",
+             "Ese rasgo describe a los bienes públicos, no al monopolio natural."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_mercado", "dificil",
+        "Según el texto, ¿qué efecto produce la información asimétrica cuando "
+        "nadie puede distinguir lo bueno de lo malo?",
+        "El comprador ofrece un precio promedio y los productos buenos se retiran",
+        "El texto describe primero la situación: una parte sabe mucho más que "
+        "la otra sobre lo que se vende, como el estado real de un auto usado o "
+        "la letra chica de un crédito.\n"
+        "Y advierte que el problema no se agota en que algunos salgan "
+        "perjudicados. Si nadie puede distinguir la calidad, el comprador "
+        "ofrece un precio promedio.\n"
+        "A ese precio, quien vende algo bueno prefiere no vender: los buenos "
+        "productos abandonan el mercado y queda lo peor.",
+        [
+            ("El precio sube hasta que solo los productos buenos quedan disponibles",
+             "El texto describe el movimiento inverso: son los buenos los que se retiran."),
+            ("El Estado debe proveer directamente el bien porque nadie lo ofrecerá",
+             "Esa conclusión corresponde a los bienes públicos."),
+            ("La competencia desaparece y queda un solo oferente en el mercado",
+             "Ese resultado describe al monopolio natural, no a esta falla."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_mercado", "dificil",
+        "¿Qué advertencia hace el texto al cerrar su repaso de las cuatro "
+        "fallas de mercado?",
+        "Que una falla muestra que intervenir puede mejorar, no que cualquier intervención mejore",
+        "El texto lo llama «un cierre honesto» y da tres ejemplos de "
+        "intervenciones que dejan la situación peor que antes: una tarifa mal "
+        "calculada, un subsidio que llega a quien no lo necesita o una "
+        "regulación escrita por los propios regulados.\n"
+        "La distinción que propone es de etapas: «Identificar la falla es el "
+        "primer paso; diseñar bien el remedio es otro problema».\n"
+        "Con eso evita que el diagnóstico funcione como justificación "
+        "automática de cualquier medida.",
+        [
+            ("Que las cuatro fallas descritas no se presentan en economías reales",
+             "El texto entrega ejemplos concretos de cada una."),
+            ("Que un mercado con muchos oferentes nunca asigna bien los recursos",
+             "El texto sostiene lo contrario al comenzar."),
+            ("Que el Estado debería abstenerse de intervenir en todos los casos",
+             "El texto admite que intervenir puede mejorar el resultado."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_mercado", "medio",
+        "Según la primera columna, ¿por qué la oferta de vivienda no corrige "
+        "sola el problema del arriendo?",
+        "Porque construir toma años y el suelo urbano no se fabrica",
+        "La columna concede que quien defiende el precio libre supone que la "
+        "oferta responderá, y responde que no ha ocurrido, con una razón "
+        "concreta.\n"
+        "Esa razón es de plazos y de límites físicos: construir vivienda toma "
+        "años y el suelo urbano no se puede producir.\n"
+        "Y agrega por qué el plazo importa: la familia que no puede pagar «no "
+        "aplaza su decisión», se va más lejos, se hacina o queda en la calle.",
+        [
+            ("Porque los propietarios se han organizado para no construir más",
+             "La columna no atribuye el problema a una coordinación entre propietarios."),
+            ("Porque el Estado prohíbe la construcción de viviendas nuevas",
+             "La columna no menciona ninguna prohibición."),
+            ("Porque los arrendatarios prefieren no cambiarse de comuna",
+             "La columna describe justamente que se van a vivir más lejos."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_mercado", "dificil",
+        "Según la segunda columna, ¿por qué un tope al arriendo perjudicaría a "
+        "las familias que dice proteger?",
+        "Porque al escasear la vivienda el arrendador elige a quien tiene contrato y aval",
+        "La columna describe primero el mecanismo: con el precio bajo el nivel "
+        "de equilibrio, más familias buscan arrendar y menos propietarios "
+        "ofrecen. Algunos venden, otros dejan la vivienda vacía y otros la "
+        "destinan a arriendo por días.\n"
+        "La escasez que antes se expresaba en precios altos pasa a expresarse "
+        "en «no encontrar nada», que la columna considera peor.\n"
+        "Y ahí aparece el efecto sobre a quién alcanza: cuando el arrendador "
+        "elige, quedan fuera las familias con menos respaldo.",
+        [
+            ("Porque el tope obliga a las familias a pagar un arriendo mayor",
+             "El tope fija un precio máximo, no uno mayor."),
+            ("Porque los propietarios deberán invertir más en mantener el inmueble",
+             "La columna sostiene lo contrario: el precio congelado desincentiva mantenerlo."),
+            ("Porque el subsidio directo dejaría de estar disponible para ellas",
+             "El subsidio aparece como propuesta alternativa, no como algo que se pierda."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_mercado", "dificil",
+        "¿Qué propone la segunda columna en lugar del tope al arriendo?",
+        "Un subsidio directo a las familias que lo necesitan",
+        "La columna cierra con esa alternativa después de sostener que el tope "
+        "destruye la oferta.\n"
+        "El argumento a favor es de precisión: el subsidio «llega a ellas sin "
+        "destruir la oferta», es decir, alcanza al grupo que se quiere proteger "
+        "sin alterar la cantidad de viviendas disponibles.\n"
+        "La columna acepta el objetivo declarado por la otra parte —que nadie "
+        "quede sin techo— y discute solo el instrumento.",
+        [
+            ("La construcción de viviendas públicas administradas por el Estado",
+             "La columna no menciona construcción pública entre sus propuestas."),
+            ("Un impuesto a las viviendas que permanezcan desocupadas",
+             "La columna menciona las viviendas vacías como efecto, no propone gravarlas."),
+            ("La liberalización del arriendo por días en toda la ciudad",
+             "La columna cita ese uso como consecuencia del tope, no como propuesta."),
+        ],
+    ),
+    # ---------------- ajustes de nodos que quedaron en 58 y 59 ----------------
+    _ql(
+        "chile_xix_exportaciones", "his_chile_xix", "dificil",
+        "Según la tabla 2, ¿qué ocurrió con los impuestos internos como fuente "
+        "de ingresos fiscales entre 1870 y 1910?",
+        "Cayeron del 37% al 18% del total de ingresos ordinarios",
+        "La tabla registra tres momentos: 37% en 1870, 21% en 1890 y 18% en "
+        "1910.\n"
+        "La caída no se debe a que el Estado recaudara menos por esa vía sino a "
+        "que otra fuente creció mucho más rápido: los derechos sobre el salitre "
+        "pasan del 2% al 53% en el mismo período.\n"
+        "El resultado es una hacienda pública cada vez más apoyada en un solo "
+        "producto de exportación, con el riesgo que la nota de la fuente "
+        "señala.",
+        [
+            ("Subieron del 18% al 37% al ampliarse la base tributaria interna",
+             "La tabla muestra el movimiento en sentido contrario."),
+            ("Se mantuvieron estables en torno a un tercio de los ingresos",
+             "Cayeron diecinueve puntos entre 1870 y 1910."),
+            ("Pasaron a ser la principal fuente de ingresos del fisco chileno",
+             "En 1910 la principal fuente eran los derechos sobre el salitre."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_posguerra", "medio",
+        "Según la tabla 1, ¿en qué quinquenio se concentró el mayor número de "
+        "independencias africanas?",
+        "Entre 1960 y 1964, con veinticuatro Estados",
+        "La columna de África recorre los seis quinquenios: 1, 2, 5, 24, 8 y "
+        "7.\n"
+        "El máximo, 24, corresponde a 1960-1964, y explica por sí solo la "
+        "mayor parte de los 30 Estados que acceden a la independencia en ese "
+        "quinquenio.\n"
+        "La nota final agrega un dato que ayuda a situarlo: la declaración "
+        "sobre la concesión de la independencia a los países coloniales fue "
+        "aprobada por la asamblea en 1960.",
+        [
+            ("Entre 1945 y 1949, cuando comenzó el proceso descolonizador",
+             "En ese quinquenio la tabla registra un solo Estado africano."),
+            ("Entre 1965 y 1969, con dieciséis Estados en total",
+             "Esos dieciséis incluyen Asia y el Caribe: África aporta ocho."),
+            ("Entre 1970 y 1975, cuando el proceso alcanzó su punto más alto",
+             "En ese quinquenio África registra siete Estados."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "medio",
+        "Según el informe municipal, ¿de dónde provenía el crecimiento del "
+        "sector de la quebrada?",
+        "De la llegada continua de familias del campo, no del aumento vegetativo",
+        "El informe lo establece de manera expresa al describir las unas mil "
+        "doscientas viviendas levantadas sin permiso.\n"
+        "La comisión atribuye la llegada a la expectativa de empleo industrial, "
+        "y agrega una observación que matiza esa expectativa: la ciudad «no "
+        "está en condiciones de ofrecer en la cantidad requerida».\n"
+        "Sobre esa base recomienda estudiar medidas de contención del flujo y "
+        "un plan de urbanización de los sectores ya consolidados.",
+        [
+            ("Del crecimiento natural de las familias que ya vivían en el sector",
+             "El informe descarta expresamente el aumento vegetativo."),
+            ("Del traslado de familias erradicadas desde otros sectores urbanos",
+             "El informe menciona erradicaciones desde el propio sector, no hacia él."),
+            ("De la llegada de trabajadores extranjeros contratados por la industria",
+             "El informe se refiere a familias provenientes del campo."),
+        ],
+    ),
+    _ql(
+        "fuente_participacion", "civ_democracia", "dificil",
+        "Según la segunda fuente, ¿qué consecuencia tiene para la "
+        "representación que la abstención se concentre en ciertos sectores?",
+        "Produce autoridades que responden a una parte del país y no al conjunto",
+        "La fuente construye el argumento en dos pasos. Primero constata que "
+        "la abstención «no se reparte parejo»: se concentra en los sectores con "
+        "menos ingresos y menos años de escolaridad.\n"
+        "Segundo, extrae la consecuencia institucional: «Un padrón que se "
+        "achica por ese lado produce autoridades que responden a una parte del "
+        "país y no al conjunto».\n"
+        "La objeción, entonces, no es sobre cuánta gente vota sino sobre a "
+        "quién termina representando el resultado.",
+        [
+            ("Reduce la legitimidad de las elecciones hasta hacerlas inválidas",
+             "La fuente no sostiene que las elecciones dejen de ser válidas."),
+            ("Obliga a repetir la elección cuando la participación es muy baja",
+             "La fuente no propone repetir ninguna elección."),
+            ("Aumenta el peso electoral de los sectores de mayores ingresos hasta duplicarlo",
+             "La fuente no cuantifica el peso relativo de ningún sector."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_ddhh", "medio",
+        "Según el texto, ¿qué deberes ciudadanos enumera como contracara de "
+        "los derechos?",
+        "Respetar la ley, pagar impuestos, respetar a los demás y cuidar lo público",
+        "El texto los enumera en ese orden al cerrar: respetar la Constitución "
+        "y las leyes, contribuir mediante el pago de impuestos, respetar los "
+        "derechos de los demás y cuidar los bienes públicos.\n"
+        "La razón por la que los llama contracara es material: para garantizar "
+        "educación, salud o seguridad, el Estado necesita recursos y un marco "
+        "de convivencia respetado por todos.\n"
+        "No se trata de un intercambio: el texto ya había establecido que los "
+        "derechos no se ganan por mérito.",
+        [
+            ("Votar en cada elección, informarse y participar en organizaciones",
+             "El texto no incluye esos elementos entre los deberes que enumera."),
+            ("Denunciar las violaciones de derechos y colaborar con la justicia",
+             "Ninguno de los dos aparece en la enumeración del texto."),
+            ("Prestar servicio militar y desempeñar cargos de elección popular",
+             "El texto no menciona ninguno de esos deberes."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_ddhh", "dificil",
+        "Según el texto, ¿por qué la obligación del Estado alcanza «incluso "
+        "frente a quien la sociedad rechaza»?",
+        "Porque los derechos no dependen del mérito ni de lo que decida una mayoría",
+        "El texto establece dos rasgos que juntos producen esa consecuencia. "
+        "Los derechos corresponden a toda persona por el solo hecho de serlo y "
+        "no se ganan por mérito ni se otorgan como premio.\n"
+        "Y son inalienables: nadie puede renunciar a ellos ni ser despojado de "
+        "ellos, y «no quedan a disposición de lo que una mayoría decida».\n"
+        "Si dependieran del mérito o del apoyo social, quien la sociedad "
+        "rechaza sería exactamente el primero en perderlos, y por eso el texto "
+        "menciona ese caso.",
+        [
+            ("Porque el Estado debe evitar conflictos con la opinión pública mayoritaria",
+             "El texto sustrae los derechos a la decisión de las mayorías, no busca evitar conflictos."),
+            ("Porque los tratados internacionales lo obligan a hacerlo así",
+             "El texto no funda esa obligación en tratados."),
+            ("Porque quien la sociedad rechaza suele ser inocente de lo que se le imputa",
+             "El texto no plantea nada sobre la inocencia de esa persona."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Historia - Sistema economico: los cuatro nodos que faltaban
+#
+# eco_indicadores tenia 51 de sus 52 preguntas SIN fuente, unico caso en el
+# banco de Historia. Se agrega una fuente discontinua propia con los cuatro
+# indicadores que el temario pide leer, y las ocho preguntas nuevas del nodo
+# se apoyan en ella.
+# ---------------------------------------------------------------------------
+
+PASSAGES_HISTORIA += [
+    {
+        "key": "eco_indicadores_tabla",
+        "title": "Cuatro indicadores de una economía, 2015-2024",
+        "kind": "discontinuo",
+        "source_note": (
+            "Tabla original de 1000paes con datos ficticios, construida a "
+            "partir del temario de Sistema económico para ejercitar lectura "
+            "de indicadores. No corresponde a cifras de ningún país real."
+        ),
+        "body": (
+            "**Tabla. Indicadores anuales del país de Aldarén.**\n\n"
+            "| Año | Variación del PIB | Inflación anual | Desocupación | Índice de Gini |\n"
+            "|---|---|---|---|---|\n"
+            "| 2015 | 2,3% | 4,4% | 6,3% | 0,50 |\n"
+            "| 2018 | 3,7% | 2,6% | 7,1% | 0,49 |\n"
+            "| 2020 | −5,8% | 3,0% | 10,8% | 0,51 |\n"
+            "| 2022 | 2,1% | 12,8% | 7,9% | 0,49 |\n"
+            "| 2024 | 1,6% | 4,2% | 8,5% | 0,48 |\n\n"
+            "Notas de la fuente:\n"
+            "— El PIB mide el valor de lo producido dentro del país en un "
+            "año. Su variación no indica cómo se reparte ese valor.\n"
+            "— La inflación anual se calcula sobre una canasta fija de bienes "
+            "y servicios, que no coincide con el consumo de cada hogar.\n"
+            "— La desocupación cuenta a quienes buscan trabajo activamente: "
+            "quien deja de buscar sale de la medición sin haber encontrado "
+            "empleo.\n"
+            "— El índice de Gini va de 0 a 1 y mide la desigualdad en la "
+            "distribución del ingreso: cuanto más alto, más desigual."
+        ),
+    },
+]
+
+QUESTIONS_HISTORIA += [
+    # ---------------- Indicadores y política económica ----------------
+    _ql(
+        "eco_indicadores_tabla", "eco_indicadores", "facil",
+        "Según la tabla, ¿en qué año el país registró una caída del PIB?",
+        "En 2020, con una variación de −5,8%",
+        "La columna de variación del PIB registra 2,3%, 3,7%, −5,8%, 2,1% y "
+        "1,6% en los cinco años de la tabla.\n"
+        "El único valor negativo es el de 2020, y una variación negativa "
+        "significa que el país produjo menos que el año anterior.\n"
+        "Ese mismo año la desocupación alcanza su valor más alto de la serie, "
+        "10,8%, lo que es coherente con una caída de la producción.",
+        [
+            ("En 2022, cuando la inflación alcanzó su valor más alto de la serie",
+             "En 2022 el PIB creció 2,1%: lo que subió fue la inflación."),
+            ("En 2024, porque su variación es la menor de los años positivos",
+             "1,6% es un crecimiento bajo, pero sigue siendo crecimiento."),
+            ("En 2015, cuando la desocupación registró su valor más bajo",
+             "En 2015 el PIB creció 2,3% y la desocupación fue la menor de la serie."),
+        ],
+    ),
+    _ql(
+        "eco_indicadores_tabla", "eco_indicadores", "medio",
+        "Según la tabla, ¿qué ocurrió con la desigualdad medida por el índice "
+        "de Gini entre 2015 y 2024?",
+        "Bajó levemente, de 0,50 a 0,48",
+        "La columna del Gini recorre 0,50, 0,49, 0,51, 0,49 y 0,48.\n"
+        "El movimiento total es de dos centésimas a la baja, con un repunte en "
+        "2020 que coincide con la caída del PIB y el alza de la "
+        "desocupación.\n"
+        "La nota precisa cómo se lee la escala: el índice va de 0 a 1 y cuanto "
+        "más alto, más desigual es la distribución del ingreso.",
+        [
+            ("Subió de manera sostenida durante todo el período",
+             "El valor final, 0,48, es menor que el inicial, 0,50."),
+            ("Se mantuvo exactamente igual en los cinco años registrados",
+             "Los valores van de 0,48 a 0,51: hay variación."),
+            ("Bajó a la mitad, desde 0,50 hasta cerca de 0,25 en 2024",
+             "El valor de 2024 es 0,48, no 0,25."),
+        ],
+    ),
+    _ql(
+        "eco_indicadores_tabla", "eco_indicadores", "medio",
+        "Según la tabla, ¿en qué año la inflación anual fue más alta y cuánto "
+        "alcanzó?",
+        "En 2022, con un 12,8%",
+        "La columna de inflación registra 4,4%, 2,6%, 3,0%, 12,8% y 4,2%.\n"
+        "El máximo, 12,8%, corresponde a 2022 y cuadruplica con creces el "
+        "valor del año más bajo de la serie, 2018.\n"
+        "Ese mismo año el PIB creció 2,1% y la desocupación bajó respecto de "
+        "2020: la inflación alta no coincide aquí con una caída de la "
+        "actividad.",
+        [
+            ("En 2020, cuando el PIB registró su única variación negativa",
+             "En 2020 la inflación fue 3,0%, una de las más bajas de la serie."),
+            ("En 2015, con un 4,4% que encabeza la serie completa",
+             "4,4% es el segundo valor más alto, no el mayor."),
+            ("En 2024, porque la inflación aumenta siempre con el paso del tiempo",
+             "En 2024 la inflación fue 4,2%, muy por debajo del 12,8% de 2022."),
+        ],
+    ),
+    _ql(
+        "eco_indicadores_tabla", "eco_indicadores", "dificil",
+        "Según las notas, ¿por qué la desocupación puede bajar sin que hayan "
+        "aumentado los empleos?",
+        "Porque quien deja de buscar trabajo sale de la medición",
+        "La nota define con precisión a quién cuenta el indicador: a quienes "
+        "buscan trabajo activamente.\n"
+        "De ahí se sigue el efecto que describe: quien se desanima y deja de "
+        "buscar «sale de la medición sin haber encontrado empleo». La tasa "
+        "baja y esa persona sigue sin trabajar.\n"
+        "Por eso la desocupación se lee junto a otros datos: por sí sola no "
+        "distingue entre quienes encontraron empleo y quienes dejaron de "
+        "buscarlo.",
+        [
+            ("Porque el indicador se calcula sobre la población total del país",
+             "La nota indica que cuenta solo a quienes buscan trabajo activamente."),
+            ("Porque las personas con empleo informal se cuentan como ocupadas",
+             "La nota no se refiere a la formalidad del empleo."),
+            ("Porque el cálculo se realiza una sola vez al año en cada país",
+             "La nota no menciona la frecuencia de la medición."),
+        ],
+    ),
+    _ql(
+        "eco_indicadores_tabla", "eco_indicadores", "dificil",
+        "Un analista afirma que el crecimiento del PIB en 2018 mejoró la "
+        "situación de todos los hogares. ¿Qué objeción permite la fuente?",
+        "Que el PIB mide lo producido y no cómo se reparte",
+        "La primera nota es explícita: el PIB mide el valor de lo producido "
+        "dentro del país en un año y «su variación no indica cómo se reparte "
+        "ese valor».\n"
+        "La tabla ofrece además el indicador que sí habla de reparto: el Gini "
+        "pasa de 0,50 en 2015 a 0,49 en 2018, una mejora mucho más discreta "
+        "que el 3,7% de crecimiento.\n"
+        "La objeción no es que el crecimiento sea irrelevante: es que un solo "
+        "indicador no permite concluir sobre todos los hogares.",
+        [
+            ("Que el PIB de 2018 fue menor que el de los años siguientes",
+             "3,7% es la mayor variación positiva de toda la serie."),
+            ("Que la inflación de ese año anuló cualquier mejora de ingresos",
+             "En 2018 la inflación fue 2,6%, la más baja de la serie."),
+            ("Que la desocupación de 2018 fue la más alta del período medido",
+             "La más alta fue la de 2020, con 10,8%."),
+        ],
+    ),
+    _ql(
+        "eco_indicadores_tabla", "eco_indicadores", "dificil",
+        "Según la segunda nota, ¿por qué una familia puede percibir una "
+        "inflación distinta de la que informa la tabla?",
+        "Porque la canasta fija con que se calcula no coincide con su consumo",
+        "La nota lo señala al describir el método: la inflación anual se "
+        "calcula sobre una canasta fija de bienes y servicios.\n"
+        "Esa canasta representa un consumo promedio, y ningún hogar consume "
+        "exactamente el promedio. Un hogar que destina buena parte de su "
+        "presupuesto a un producto que subió más que el resto experimentará "
+        "un alza mayor que la informada.\n"
+        "El indicador sigue siendo útil para comparar años entre sí: lo que no "
+        "es es una medida del costo de vida de cada familia en particular.",
+        [
+            ("Porque el cálculo excluye los servicios básicos del hogar",
+             "La nota habla de bienes y servicios, sin excluir a estos últimos."),
+            ("Porque la inflación se mide solo en las grandes ciudades del país",
+             "La nota no menciona ninguna restricción territorial."),
+            ("Porque el índice se actualiza cada varios años y queda desfasado",
+             "La nota no plantea un problema de actualización sino de composición."),
+        ],
+    ),
+    _ql(
+        "eco_indicadores_tabla", "eco_indicadores", "medio",
+        "Según la tabla, ¿qué ocurrió con la desocupación entre 2020 y 2024?",
+        "Bajó de 10,8% a 8,5%, sin volver al nivel de 2015",
+        "La columna registra 6,3%, 7,1%, 10,8%, 7,9% y 8,5%.\n"
+        "Desde el máximo de 2020 la serie baja a 7,9% en 2022 y vuelve a subir "
+        "a 8,5% en 2024, de modo que la recuperación no es continua.\n"
+        "El punto de partida de la serie, 6,3% en 2015, sigue siendo el valor "
+        "más bajo: en 2024 la desocupación está más de dos puntos por encima.",
+        [
+            ("Bajó de manera sostenida hasta quedar por debajo del nivel de 2015",
+             "En 2024 la desocupación es 8,5%, superior al 6,3% de 2015."),
+            ("Se mantuvo en torno al 10% durante todo el período posterior",
+             "Los valores de 2022 y 2024 son 7,9% y 8,5%."),
+            ("Subió de manera continua desde el año 2020 en adelante",
+             "Entre 2020 y 2022 bajó de 10,8% a 7,9%."),
+        ],
+    ),
+    _ql(
+        "eco_indicadores_tabla", "eco_indicadores", "dificil",
+        "¿Qué relación entre indicadores muestra la tabla para el año 2020?",
+        "Caída del PIB, desocupación máxima y el Gini más alto de la serie",
+        "El año 2020 concentra los tres registros extremos: la única variación "
+        "negativa del PIB, −5,8%; la desocupación más alta, 10,8%; y el Gini "
+        "más alto, 0,51.\n"
+        "La coincidencia es coherente: menos producción suele significar menos "
+        "empleo, y el desempleo tiende a golpear con más fuerza a los hogares "
+        "de menores ingresos, lo que amplía la desigualdad.\n"
+        "La inflación de ese año, en cambio, fue baja: 3,0%, lo que muestra "
+        "que los cuatro indicadores no se mueven siempre juntos.",
+        [
+            ("Caída del PIB acompañada de la inflación más alta del período",
+             "La inflación más alta fue la de 2022, con 12,8%."),
+            ("Crecimiento del PIB con desocupación y desigualdad a la baja",
+             "En 2020 el PIB cayó y los otros dos indicadores subieron."),
+            ("Los cuatro indicadores mejoraron respecto del año 2018",
+             "Los cuatro empeoraron o se mantuvieron respecto de 2018."),
+        ],
+    ),
+    # ---------------- Estado y mercado en la economía ----------------
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "medio",
+        "Según el texto, ¿qué transmiten los precios en un mercado "
+        "competitivo?",
+        "Información sobre escasez, sin que nadie deba reunirla ni comunicarla",
+        "El texto describe el mecanismo con un ejemplo: si aumenta la demanda "
+        "de un bien y la oferta no varía, su precio tiende a subir.\n"
+        "Ese aumento cumple dos funciones a la vez: indica a los productores "
+        "que conviene producir más y a los consumidores que conviene moderar "
+        "su consumo.\n"
+        "El rasgo que el texto destaca es que ocurre sin coordinación "
+        "deliberada: los precios transmiten la información «sin que nadie tenga "
+        "que reunirla ni comunicarla».",
+        [
+            ("Las decisiones que la autoridad económica comunica a los productores",
+             "El texto subraya que nadie comunica deliberadamente esa información."),
+            ("El costo exacto de producir cada bien en cada empresa del mercado",
+             "El texto no atribuye al precio esa función informativa."),
+            ("La cantidad de bienes que cada consumidor está dispuesto a comprar",
+             "El precio orienta esa decisión, pero no la transmite como dato."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "dificil",
+        "Según el texto, ¿por qué el costo de oportunidad existe aunque no se "
+        "pague dinero por él?",
+        "Porque usar un recurso en algo obliga a renunciar a otro uso posible",
+        "El texto lo deriva del problema económico básico: los recursos son "
+        "limitados y las necesidades no, de modo que no alcanza para todo.\n"
+        "De ahí la definición: usar un recurso en algo obliga a renunciar a "
+        "usarlo en otra cosa, y a ese sacrificio se lo llama costo de "
+        "oportunidad.\n"
+        "El texto agrega la precisión que la pregunta recoge: existe aunque no "
+        "medie ningún pago, porque lo que se pierde es la alternativa y no una "
+        "suma de dinero.",
+        [
+            ("Porque todo bien tiene un precio de mercado aunque no se transe",
+             "El texto no vincula el costo de oportunidad con la existencia de un precio."),
+            ("Porque los impuestos encarecen indirectamente cualquier decisión",
+             "El texto trata los impuestos en otro apartado, sin relación con este concepto."),
+            ("Porque los recursos naturales se agotan con cada uso que se les da",
+             "El agotamiento es otro asunto: el costo de oportunidad rige también con recursos renovables."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "dificil",
+        "Según el texto, ¿qué buscan los impuestos y las normas de emisión "
+        "frente a una externalidad negativa?",
+        "Incorporar el costo al precio en lugar de reemplazar el mercado",
+        "El texto explica primero el problema: como el precio no recoge los "
+        "costos que recaen sobre terceros, queda artificialmente bajo y se "
+        "produce más de lo que convendría.\n"
+        "De ahí que se justifiquen impuestos, normas de emisión o cobros por "
+        "contaminar. Y el texto precisa cuál es su lógica: «buscan incorporar "
+        "el costo al precio en lugar de reemplazar el mercado».\n"
+        "La distinción importa: la intervención corrige la señal de precios, no "
+        "sustituye el mecanismo que la produce.",
+        [
+            ("Prohibir la actividad productiva que genera la contaminación",
+             "El texto describe instrumentos que corrigen el precio, no prohibiciones."),
+            ("Transferir la producción del bien contaminante al sector público",
+             "El texto no propone que el Estado asuma la producción."),
+            ("Compensar directamente a quienes viven aguas abajo del río",
+             "El texto menciona impuestos, normas y cobros, no compensaciones directas."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "dificil",
+        "Según el texto, ¿por qué el impuesto al valor agregado se describe "
+        "como regresivo?",
+        "Porque absorbe una fracción mayor del presupuesto de quien menos tiene",
+        "El texto parte del dato formal: el IVA se aplica con la misma tasa a "
+        "todos, cualquiera sea su ingreso.\n"
+        "El efecto desigual aparece al mirar qué proporción del ingreso se "
+        "destina a consumo: los hogares de menores ingresos destinan casi todo "
+        "lo que reciben, mientras los de mayores ingresos ahorran una parte.\n"
+        "Como el impuesto grava el consumo y no el ahorro, termina absorbiendo "
+        "una fracción mayor del presupuesto de quien menos tiene, que es "
+        "exactamente lo contrario de un impuesto progresivo.",
+        [
+            ("Porque su tasa aumenta con el precio del producto adquirido",
+             "El texto señala que la tasa es la misma para todos."),
+            ("Porque los hogares de mayores ingresos están exentos de pagarlo",
+             "El texto no menciona exenciones para ningún grupo."),
+            ("Porque grava el ahorro y no el consumo de los hogares",
+             "El IVA grava el consumo: por eso el ahorro queda fuera de su alcance."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "medio",
+        "Según el texto, ¿por qué un bien del que nadie puede ser excluido no "
+        "se produce en el mercado?",
+        "Porque a cada uno le conviene no pagar y esperar que otros financien",
+        "El texto usa el alumbrado de una calle: beneficia a todo el que pasa, "
+        "haya pagado o no.\n"
+        "De esa imposibilidad de excluir se sigue el cálculo individual: a cada "
+        "uno le conviene no pagar y esperar que otros financien el bien.\n"
+        "Y el resultado agregado es el que explica la intervención: «Cuando "
+        "todos razonan así, el bien no se produce aunque todos lo quieran, y "
+        "por eso lo provee el Estado».",
+        [
+            ("Porque su costo de producción supera siempre el precio de mercado",
+             "El texto no atribuye el problema al costo de producción."),
+            ("Porque el Estado prohíbe a los privados proveer ese tipo de bienes",
+             "El texto no menciona ninguna prohibición."),
+            ("Porque su consumo por una persona impide el de las demás",
+             "El alumbrado que usa una persona no impide que otra lo use."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "medio",
+        "Según el texto, ¿qué hacen los gobiernos con el gasto público durante "
+        "una recesión y por qué?",
+        "Lo aumentan para sostener la demanda cuando el sector privado la retira",
+        "El texto describe la política fiscal como una respuesta al ciclo "
+        "económico.\n"
+        "Durante una recesión los gobiernos suelen aumentar el gasto público "
+        "«para sostener la demanda y el empleo cuando el sector privado los "
+        "está retirando».\n"
+        "La lógica es de compensación: el gasto estatal ocupa el lugar que deja "
+        "vacío la caída del gasto privado, en vez de sumarse a ella.",
+        [
+            ("Lo reducen para equilibrar el presupuesto fiscal del período",
+             "El texto describe el movimiento contrario."),
+            ("Lo mantienen constante para no alterar los precios del mercado",
+             "El texto vincula el gasto con la demanda, no con el nivel de precios."),
+            ("Lo trasladan íntegramente a subsidios directos a las empresas",
+             "El texto no especifica ese destino para el gasto adicional."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "dificil",
+        "Según el texto, ¿qué tensión aparece detrás de casi todas las "
+        "decisiones de política económica?",
+        "Que redistribuir puede alterar los incentivos de quienes producen o trabajan",
+        "El texto la enuncia al cerrar, después de repasar regulación, "
+        "provisión de servicios, inversión e impuestos.\n"
+        "La formulación es cuidadosa: redistribuir «puede» alterar los "
+        "incentivos de quienes producen, invierten o trabajan. No afirma que "
+        "siempre lo haga ni que por eso deba evitarse.\n"
+        "Es la misma cautela que el texto muestra al describir las fallas de "
+        "mercado: identificar un problema no equivale a tener resuelto el "
+        "remedio.",
+        [
+            ("Que los precios no logran transmitir información en ningún mercado",
+             "El texto sostiene que sí lo hacen en un mercado competitivo."),
+            ("Que el Estado no puede recaudar impuestos sin generar inflación",
+             "El texto no vincula la recaudación con la inflación."),
+            ("Que los bienes públicos compiten por los mismos recursos que la salud",
+             "El texto no plantea esa competencia entre destinos del gasto."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "medio",
+        "Según el texto, ¿qué mide el producto interno bruto y qué no indica?",
+        "Mide el valor de lo producido, pero no cómo se distribuye",
+        "El texto lo menciona junto a la inflación entre los fenómenos que se "
+        "vigilan de cerca.\n"
+        "Su definición es acotada: mide el valor de lo producido. Y la "
+        "limitación viene enseguida: «no indica cómo se distribuye».\n"
+        "Esa distinción es la que separa el crecimiento del desarrollo, y "
+        "explica por qué un país puede aumentar su producción sin que mejoren "
+        "las condiciones de vida de la mayoría.",
+        [
+            ("Mide el ingreso promedio de los hogares y su evolución anual",
+             "El texto lo define por el valor producido, no por el ingreso de los hogares."),
+            ("Mide la desigualdad en la distribución del ingreso del país",
+             "El texto señala expresamente que no indica la distribución."),
+            ("Mide el alza sostenida y generalizada del nivel de precios",
+             "Esa es la definición de inflación que entrega el mismo texto."),
+        ],
+    ),
+    # ---------------- Desarrollo, sociedad y medio ambiente ----------------
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "medio",
+        "Según el texto, ¿por qué la concentración exportadora en el cobre "
+        "expone al país?",
+        "Porque su precio se fija en mercados internacionales fuera de su control",
+        "El texto describe la exposición en los dos sentidos del ciclo: cuando "
+        "los precios suben, aumentan la inversión y la recaudación; cuando "
+        "caen, «el ajuste llega al presupuesto y al empleo».\n"
+        "Lo que hace especial esa exposición es la ausencia de control: los "
+        "precios se fijan en mercados internacionales.\n"
+        "El texto agrega una advertencia que matiza el diagnóstico: la "
+        "abundancia de recursos no garantiza el desarrollo, y la diferencia "
+        "suele estar en qué se hace con esa renta.",
+        [
+            ("Porque el cobre se agota más rápido que otros recursos naturales",
+             "El texto lo describe como no renovable, sin comparar velocidades de agotamiento."),
+            ("Porque la extracción emplea a una parte muy pequeña de la población",
+             "El texto no menciona la magnitud del empleo minero."),
+            ("Porque los mercados internacionales prohíben exportar otros productos",
+             "El texto no plantea ninguna restricción de ese tipo."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "dificil",
+        "Según el texto, ¿qué distingue a los países que aprovechan bien la "
+        "renta de sus recursos naturales?",
+        "Que la usan en educación, infraestructura y diversificación productiva",
+        "El texto recoge la advertencia de algunos autores: la abundancia de "
+        "recursos no garantiza el desarrollo.\n"
+        "La diferencia, dice, «suele estar en qué se hace con esa renta»: si "
+        "financia educación, infraestructura y diversificación, o si se consume "
+        "sin dejar capacidades instaladas.\n"
+        "La expresión «capacidades instaladas» es la clave: lo que distingue "
+        "un caso del otro es si el país queda en mejores condiciones cuando el "
+        "ciclo del recurso termina.",
+        [
+            ("Que mantienen el precio del recurso estable en el mercado mundial",
+             "El texto señala que ese precio se fija fuera del control del país."),
+            ("Que limitan la extracción para prolongar la vida de los yacimientos",
+             "El texto no plantea la restricción de la extracción como criterio."),
+            ("Que exportan el recurso ya procesado en vez de exportarlo en bruto",
+             "El texto no menciona el grado de procesamiento del recurso."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "dificil",
+        "Según el texto, ¿por qué las emisiones plantean «un problema de "
+        "coordinación particular»?",
+        "Porque afectan el clima global y ningún país obtiene solo el beneficio completo",
+        "El texto lo formula en esos términos al describir las fuentes "
+        "renovables incorporadas a la matriz eléctrica.\n"
+        "El problema es de reparto entre esfuerzo y beneficio: las emisiones "
+        "producidas en un país afectan el clima de todo el planeta, de modo "
+        "que quien reduce las suyas asume el costo completo y recibe solo una "
+        "fracción del beneficio.\n"
+        "Esa asimetría es lo que hace insuficiente la decisión individual de "
+        "cada país y explica por qué el asunto exige acuerdos.",
+        [
+            ("Porque las energías renovables resultan más caras de instalar",
+             "El texto no compara costos de instalación entre fuentes."),
+            ("Porque cada país mide sus emisiones con métodos distintos",
+             "El texto no plantea un problema de medición."),
+            ("Porque las emisiones se concentran en unos pocos países grandes",
+             "El texto no atribuye el problema a la concentración de las emisiones."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "dificil",
+        "Según el texto, ¿cómo se reparten los efectos de un proyecto "
+        "productivo entre el conjunto y la comunidad local?",
+        "El empleo y la recaudación benefician al conjunto; el costo ambiental recae en el lugar",
+        "El texto describe el reparto desigual al explicar los conflictos entre "
+        "proyectos productivos y comunidades locales por el uso del agua o del "
+        "territorio.\n"
+        "La asimetría es la que genera el conflicto: los beneficios se "
+        "distribuyen ampliamente mientras «el consumo de agua o el deterioro "
+        "del entorno recaen sobre quienes viven en el lugar».\n"
+        "Es la misma estructura de una externalidad: parte del costo la asume "
+        "quien no participa de la decisión.",
+        [
+            ("Ambos efectos se reparten de manera pareja en todo el territorio",
+             "El texto describe justamente un reparto desigual."),
+            ("El costo ambiental se distribuye y el empleo queda en la comuna",
+             "El texto plantea la relación inversa."),
+            ("El proyecto no genera efectos sobre la comunidad donde se instala",
+             "El texto describe conflictos concretos por agua y territorio."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "medio",
+        "Según el texto, ¿qué posiciones se enfrentan sobre la posibilidad de "
+        "crecer sin deteriorar el medio ambiente?",
+        "Una confía en la tecnología y la otra observa que el consumo total absorbe la mejora",
+        "El texto cierra planteando esa discusión sin tomar partido.\n"
+        "Quienes sostienen que sí es posible «apuestan a que la tecnología "
+        "reduzca el impacto por unidad producida».\n"
+        "Quienes lo dudan responden que esas mejoras «han quedado absorbidas "
+        "por el aumento del consumo total»: producir cada unidad contamina "
+        "menos, pero se producen muchas más unidades.",
+        [
+            ("Una propone detener el crecimiento y la otra acelerarlo al máximo",
+             "El texto no presenta ninguna posición que proponga detener el crecimiento."),
+            ("Una confía en la regulación estatal y la otra en los acuerdos internacionales",
+             "El texto contrasta tecnología y volumen de consumo, no instrumentos."),
+            ("Ambas coinciden en que el problema ya está resuelto con energías limpias",
+             "El texto presenta la discusión como abierta."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "medio",
+        "Según el texto, ¿qué efecto tiene la apertura comercial sobre "
+        "consumidores y productores locales?",
+        "Abarata los productos y obliga a los productores a competir con proveedores externos",
+        "El texto los menciona juntos porque son las dos caras del mismo "
+        "fenómeno.\n"
+        "Para los consumidores el efecto es de precio: la apertura abarata los "
+        "productos disponibles.\n"
+        "Para los productores locales el efecto es de competencia: deben "
+        "enfrentarse a proveedores externos que antes no llegaban a ese "
+        "mercado.",
+        [
+            ("Encarece los productos y protege a los productores nacionales",
+             "El texto describe el efecto contrario en ambos casos."),
+            ("Beneficia a los productores locales y perjudica a los consumidores",
+             "El texto plantea la relación inversa."),
+            ("No produce efectos apreciables sobre ninguno de los dos grupos",
+             "El texto describe efectos concretos sobre ambos."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "dificil",
+        "Según el texto, ¿qué detecta la medición de pobreza multidimensional "
+        "que la línea de ingreso no muestra?",
+        "Carencias en acceso a educación, salud, vivienda y trabajo",
+        "El texto la introduce como continuación de la distinción entre "
+        "crecimiento y desarrollo.\n"
+        "Su rasgo es incorporar más de una dimensión: además del ingreso, "
+        "considera el acceso a educación, salud, vivienda y trabajo.\n"
+        "Y por eso «detecta carencias que la sola línea de ingreso no "
+        "muestra»: un hogar puede superar el umbral de ingreso y seguir sin "
+        "acceso a servicios básicos.",
+        [
+            ("La distribución del ingreso entre los distintos grupos sociales",
+             "Esa dimensión la miden otros indicadores, como el índice de Gini."),
+            ("El crecimiento anual de la producción total del país",
+             "Ese es el PIB, que el texto trata en otro apartado."),
+            ("La proporción de exportaciones que provienen de recursos naturales",
+             "Ese dato no forma parte de la medición de pobreza."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "medio",
+        "Según el texto, ¿qué relación hay entre las brechas regionales y la "
+        "migración interna?",
+        "Las brechas en servicios y empleo alimentan el movimiento hacia otras zonas",
+        "El texto lo señala al describir el reparto desigual del desarrollo "
+        "dentro del país.\n"
+        "La secuencia que plantea es directa: el desarrollo no se distribuye "
+        "igual entre regiones, y «esas brechas en servicios y empleo alimentan "
+        "la migración interna».\n"
+        "La migración aparece así como una consecuencia del desarrollo "
+        "desigual y no como un fenómeno independiente de él.",
+        [
+            ("La migración interna produce las brechas entre regiones del país",
+             "El texto plantea la causalidad en el sentido contrario."),
+            ("Las brechas regionales desaparecen cuando aumenta la migración",
+             "El texto no atribuye ese efecto a la migración."),
+            ("No existe relación entre ambos fenómenos según el texto",
+             "El texto los vincula expresamente."),
+        ],
+    ),
+    # ---------------- El mundo del trabajo y los derechos laborales ----------------
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "medio",
+        "Según el texto, ¿en qué consiste la asimetría de la que nace el "
+        "derecho laboral?",
+        "En que la empresa pierde un candidato y el trabajador pierde su sustento",
+        "El texto reconoce que formalmente ambas partes concurren libremente al "
+        "contrato.\n"
+        "La desigualdad está en lo que cada una arriesga si el contrato no se "
+        "celebra, y ahí la diferencia es enorme: un candidato frente a un "
+        "sustento.\n"
+        "De esa asimetría, señala el texto, «se siguen sus reglas propias»: el "
+        "derecho laboral existe justamente porque las partes no negocian en "
+        "igualdad de condiciones.",
+        [
+            ("En que la empresa conoce la ley laboral y el trabajador no",
+             "El texto no funda la asimetría en el conocimiento de la ley."),
+            ("En que el contrato lo redacta siempre la parte empleadora",
+             "El texto no menciona quién redacta el contrato."),
+            ("En que la ley protege a la empresa frente al incumplimiento",
+             "El texto describe reglas que protegen al trabajador."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "dificil",
+        "Según el texto, ¿por qué los derechos laborales son irrenunciables "
+        "mientras dura la relación laboral?",
+        "Porque si pudieran renunciarse, quien necesita el empleo firmaría igual",
+        "El texto entrega el argumento en una sola línea, y es un argumento "
+        "sobre las consecuencias.\n"
+        "Si la renuncia fuera posible, «bastaría incluir la renuncia en el "
+        "contrato» y la protección desaparecería en la práctica para quien más "
+        "la necesita.\n"
+        "La irrenunciabilidad, entonces, no desconfía del trabajador: reconoce "
+        "que la asimetría inicial haría de esa renuncia una formalidad "
+        "inevitable.",
+        [
+            ("Porque el contrato es el que crea los derechos laborales",
+             "El texto sostiene lo contrario: los derechos están en la ley."),
+            ("Porque la ley impide modificar cualquier cláusula del contrato",
+             "El texto no plantea que ninguna cláusula pueda modificarse."),
+            ("Porque la empresa podría exigir su restitución más adelante",
+             "El texto no menciona esa posibilidad."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "dificil",
+        "Según el texto, ¿qué papel cumple el costo compartido de la huelga "
+        "dentro de la negociación colectiva?",
+        "Empuja al acuerdo, porque ambas partes pierden mientras dura",
+        "El texto sitúa la huelga dentro del proceso de negociación colectiva, "
+        "que a su vez sirve para compensar la asimetría inicial.\n"
+        "Lo decisivo es que el costo recae sobre las dos partes, y «ese costo "
+        "compartido es lo que empuja al acuerdo».\n"
+        "El texto agrega el efecto jurídico: la huelga legal suspende la "
+        "relación laboral sin extinguirla, de modo que el vínculo se retoma "
+        "una vez cerrado el conflicto.",
+        [
+            ("Traslada el conflicto a los tribunales para que lo resuelvan",
+             "El texto no menciona intervención judicial en la huelga."),
+            ("Termina la relación laboral de quienes participan en ella",
+             "El texto señala que la huelga legal suspende sin extinguir."),
+            ("Obliga a la empresa a aceptar todas las demandas presentadas",
+             "El texto describe un mecanismo que empuja al acuerdo, no una imposición."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "dificil",
+        "Según el texto, ¿por qué el trabajo mediante aplicaciones obliga a "
+        "definir si existe relación de dependencia?",
+        "Porque el trabajador elige cuándo conectarse pero la plataforma fija y evalúa",
+        "El texto describe una situación mixta. Del lado de la autonomía, el "
+        "trabajador elige cuándo conectarse.\n"
+        "Del lado de la subordinación, la plataforma fija tarifas, asigna "
+        "tareas y evalúa su desempeño, que son rasgos propios de una relación "
+        "de dependencia.\n"
+        "La calificación no es un debate abstracto: «de esa calificación "
+        "depende si le corresponden cotizaciones y jornada máxima».",
+        [
+            ("Porque las aplicaciones operan desde el extranjero y evaden la ley",
+             "El texto no plantea un problema de jurisdicción."),
+            ("Porque el trabajo por aplicaciones no genera ingresos estables",
+             "El texto no funda la discusión en la estabilidad del ingreso."),
+            ("Porque los trabajadores de plataformas no pueden sindicalizarse",
+             "El texto no menciona restricciones a la sindicalización."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "medio",
+        "Según el texto, ¿qué efecto tiene la automatización sobre el empleo?",
+        "Reduce tareas rutinarias y crea otras de diseño, supervisión y mantenimiento",
+        "El texto describe un efecto doble y no un saldo único.\n"
+        "La automatización afecta primero a las tareas rutinarias, y a la vez "
+        "genera demanda por trabajos de diseño, supervisión y mantenimiento.\n"
+        "De ahí la formulación del problema, que el texto plantea con "
+        "precisión: «el problema no es el número total de empleos sino la "
+        "transición entre unos y otros».",
+        [
+            ("Elimina empleos de manera neta sin generar ocupaciones nuevas",
+             "El texto señala que también crea demanda por otros trabajos."),
+            ("Aumenta el número total de empleos disponibles en la economía",
+             "El texto no afirma un saldo positivo: plantea el problema como transición."),
+            ("Afecta principalmente a los trabajos de supervisión y diseño",
+             "El texto los sitúa entre los que aumentan, no entre los afectados."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "dificil",
+        "Según el texto, ¿qué explica parte de la brecha de remuneraciones "
+        "entre hombres y mujeres?",
+        "El reparto desigual del trabajo doméstico y de cuidados, que no se remunera",
+        "El texto constata primero los dos hechos: la participación laboral de "
+        "las mujeres es menor y sus remuneraciones promedio también.\n"
+        "Y señala qué incide en esa diferencia: el reparto desigual del trabajo "
+        "doméstico y de cuidados.\n"
+        "Los dos efectos que menciona son concretos: ese trabajo «limita la "
+        "disponibilidad horaria e interrumpe trayectorias», además de no "
+        "remunerarse ni contabilizarse como trabajo.",
+        [
+            ("La menor calificación educativa promedio de las trabajadoras",
+             "El texto no menciona diferencias de calificación."),
+            ("La concentración del empleo femenino en el sector informal",
+             "El texto trata la informalidad aparte, sin vincularla a esta brecha."),
+            ("La imposibilidad legal de acceder a ciertos cargos de jefatura",
+             "El texto no plantea impedimentos legales de ese tipo."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "medio",
+        "Según el texto, ¿qué pierde quien se desempeña sin contrato ni "
+        "cotizaciones?",
+        "Cobertura de salud, seguro de cesantía y fondos para la vejez",
+        "El texto enumera las tres pérdidas de manera consecutiva al describir "
+        "el trabajo informal.\n"
+        "La lista no es casual: corresponde a las contingencias que la "
+        "seguridad social cubre reuniendo aportes de muchos para quienes "
+        "efectivamente las enfrentan.\n"
+        "Quedar fuera del sistema formal significa quedar fuera de ese "
+        "mecanismo completo, no solo de una de sus prestaciones.",
+        [
+            ("El derecho a negociar colectivamente y a declararse en huelga",
+             "El texto enumera prestaciones de seguridad social, no derechos colectivos."),
+            ("La posibilidad de reclamar por despido ante los tribunales",
+             "El texto no menciona el reclamo judicial entre lo que se pierde."),
+            ("El acceso a la formación técnica financiada por el empleador",
+             "El texto no menciona formación técnica."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "dificil",
+        "Según el texto, ¿cómo se instalaron muchas de las protecciones "
+        "laborales que hoy existen?",
+        "Por acción colectiva sostenida de movimientos sin facultad de legislar",
+        "El texto cierra con esa observación, que cambia el modo de leer todo "
+        "lo anterior: «Muchas de estas protecciones no existían».\n"
+        "Quienes las instalaron fueron movimientos sociales «sin facultad de "
+        "legislar ni representación propia», que consiguieron poner sus "
+        "demandas en la agenda mediante acción colectiva sostenida en el "
+        "tiempo.\n"
+        "El punto es que el catálogo de derechos laborales no es un punto de "
+        "partida sino un resultado histórico.",
+        [
+            ("Por iniciativa de los empleadores para retener trabajadores calificados",
+             "El texto atribuye las conquistas a movimientos sociales."),
+            ("Por tratados internacionales que los Estados debieron incorporar",
+             "El texto no menciona tratados internacionales."),
+            ("Por decisiones judiciales que interpretaron el contrato de trabajo",
+             "El texto no menciona la vía judicial."),
+        ],
+    ),
+    # ---------------- ajuste final de civ_informacion ----------------
+    _ql(
+        "civ_informacion_fte", "civ_informacion", "medio",
+        "Según el texto, ¿qué significa que no haya censura previa pero sí "
+        "responsabilidad posterior?",
+        "Que hay contenidos perseguibles una vez publicados, pero no impedibles antes",
+        "El texto distingue dos momentos que suelen confundirse.\n"
+        "La libertad de expresión impide que una autoridad autorice o bloquee "
+        "un contenido antes de su publicación, porque entonces las decisiones "
+        "colectivas se adoptarían sobre la base de lo que esa autoridad "
+        "permite decir.\n"
+        "Lo que sí admite es la responsabilidad posterior: publicado el "
+        "contenido, puede perseguirse conforme a la ley.",
+        [
+            ("Que ningún contenido puede ser perseguido una vez publicado",
+             "El texto admite expresamente la responsabilidad posterior."),
+            ("Que la autoridad revisa los contenidos antes de autorizarlos",
+             "Eso es exactamente lo que la ausencia de censura previa impide."),
+            ("Que los medios deben publicar todas las opiniones que reciben",
+             "El texto no impone a los medios ninguna obligación de publicar."),
+        ],
+    ),
+    _ql(
+        "civ_informacion_fte", "civ_informacion", "dificil",
+        "Según el texto, ¿por qué lo que un medio omite «difícilmente llega a "
+        "discutirse»?",
+        "Porque informar supone elegir y lo destacado ocupa la conversación pública",
+        "El texto parte de una restricción material: ocurren cada día muchos "
+        "más hechos de los que caben en un noticiario.\n"
+        "De ahí que informar suponga siempre elegir, y esa elección tiene "
+        "consecuencias: lo que un medio destaca «tiende a instalarse en la "
+        "conversación pública».\n"
+        "Lo omitido no queda refutado sino fuera del campo de la discusión, y "
+        "por eso el texto considera deseable que existan medios de "
+        "orientaciones distintas.",
+        [
+            ("Porque los medios están obligados a publicar solo información verificada",
+             "El texto no vincula la omisión con la verificación previa."),
+            ("Porque la audiencia rechaza los temas que no aparecen en televisión",
+             "El texto no atribuye la omisión a una preferencia de la audiencia."),
+            ("Porque la ley prohíbe difundir hechos no confirmados por la autoridad",
+             "El texto describe un sistema sin censura previa."),
+        ],
+    ),
+    _ql(
+        "civ_informacion_fte", "civ_informacion", "dificil",
+        "Según el texto, ¿por qué el discurso de un gobernante sobre su "
+        "gestión «sirve mal como comprobación» de los resultados?",
+        "Porque es válido pero no neutral: muestra qué quería proyectar",
+        "El texto lo trata dentro del paralelo con el trabajo del historiador, "
+        "para el cual toda fuente tiene un punto de vista.\n"
+        "Sobre ese discurso en particular es preciso: es válido, «pero no "
+        "neutral». Sirve para saber qué quería proyectar quien lo pronuncia y "
+        "con qué argumentos.\n"
+        "Lo que no puede hacer es comprobar los resultados que afirma, porque "
+        "el interés de quien lo emite forma parte de lo que dice.",
+        [
+            ("Porque los discursos políticos suelen contener afirmaciones falsas",
+             "El texto no supone que el discurso sea falso: señala que no es neutral."),
+            ("Porque una fuente primaria nunca permite comprobar resultados",
+             "El texto sostiene que ninguna clase de fuente es superior a otra."),
+            ("Porque fue producido después de los hechos que describe",
+             "La posterioridad no es el problema que el texto identifica."),
+        ],
+    ),
+]
+
+
+QUESTIONS_HISTORIA += [
+    _ql(
+        "civ_ddhh", "civ_ddhh", "facil",
+        "Según el texto, ¿en qué año se aprobó la Declaración Universal de los "
+        "Derechos Humanos y en qué organismo?",
+        "En 1948, en la Asamblea General de las Naciones Unidas",
+        "El texto entrega ambos datos y agrega el que permite entenderlos: la "
+        "aprobación ocurrió tres años después del fin de la Segunda Guerra "
+        "Mundial.\n"
+        "Ese contexto explica su contenido: nace como respuesta al Holocausto y "
+        "a la constatación de que un Estado podía aniquilar legalmente a su "
+        "propia población.\n"
+        "De ahí que la declaración afirme derechos que valen con independencia "
+        "de lo que disponga la ley del país donde se vive.",
+        [
+            ("En 1945, en la conferencia que fundó la organización mundial de posguerra",
+             "En 1945 se fundó la organización; la declaración es de tres años después."),
+            ("En 1948, en un tribunal internacional creado para juzgar crímenes de guerra",
+             "Los tribunales de posguerra son otra innovación, distinta de la declaración."),
+            ("En 1960, en la asamblea que aprobó la declaración sobre descolonización",
+             "Esa declaración es posterior y trata otro asunto."),
         ],
     ),
 ]
