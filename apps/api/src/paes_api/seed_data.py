@@ -135167,3 +135167,1563 @@ QUESTIONS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Historia - Pensamiento temporal
+#
+# Era uno de los cuatro nodos de habilidad que seguian bajo 60 mientras los de
+# contenido iban en 52. Las preguntas se apoyan en las fuentes que ya estaban:
+# los dos textos metodologicos sobre duraciones y sobre cambio y continuidad, y
+# dos pares de fuentes de contraste donde el cambio se puede fechar.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_HISTORIA += [
+    _ql(
+        "his_duraciones", "his_temporal", "medio",
+        "Según el texto, ¿por qué distintos historiadores pueden periodizar de "
+        "manera distinta el mismo pasado?",
+        "Porque cada periodización se traza a partir de un criterio explícito, y los criterios pueden diferir",
+        "El texto define la periodización como una herramienta que divide el "
+        "tiempo en etapas «según criterios definidos», y agrega que se traza a "
+        "partir de un criterio explícito —político, económico, cultural—.\n"
+        "De ahí se sigue lo que el texto afirma de inmediato: distintos "
+        "criterios producen distintas periodizaciones del mismo pasado. No es "
+        "que uno acierte y otro se equivoque; están cortando el tiempo con "
+        "reglas distintas.\n"
+        "Por eso el texto insiste en que la periodización es una construcción y "
+        "no un hecho: nadie se acostó en la Edad Media y despertó en la Edad "
+        "Moderna.",
+        [
+            ("Porque los documentos disponibles cambian de un archivo a otro",
+             "El texto no menciona la disponibilidad de documentos al explicar la periodización."),
+            ("Porque el tiempo histórico viene naturalmente dividido en etapas",
+             "El texto afirma lo contrario: el tiempo histórico es continuo y no viene cortado en pedazos."),
+            ("Porque los historiadores discrepan sobre las fechas exactas de los hechos",
+             "La diferencia no está en las fechas de los hechos sino en el criterio con que se agrupan."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "medio",
+        "Un proceso de cambio en las mentalidades que se extiende por varios "
+        "siglos, ¿en qué escala temporal lo ubicaría el texto?",
+        "En la larga duración",
+        "El texto ordena tres escalas y le asigna a cada una su extensión y sus "
+        "ejemplos. Los procesos de larga duración son «transformaciones lentas "
+        "que se extienden por siglos», y menciona expresamente los cambios en "
+        "las mentalidades.\n"
+        "El texto agrega un rasgo que ayuda a reconocerlos: resultan casi "
+        "imperceptibles para quien los vive. Nadie nota que su época está "
+        "cambiando de mentalidad mientras ocurre.\n"
+        "Las otras dos escalas quedan descartadas por su extensión: el "
+        "acontecimiento dura días o meses y la media duración abarca décadas.",
+        [
+            ("En la media duración",
+             "El texto la reserva para décadas, con ejemplos como una crisis económica."),
+            ("En el acontecimiento",
+             "El texto lo sitúa en días o meses, como una batalla o una elección."),
+            ("En la periodización",
+             "La periodización no es una escala temporal sino la herramienta que divide el tiempo en etapas."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "medio",
+        "¿Cuántos años abarca el período que va de 1810 a 1891, según la regla "
+        "que da el texto para calcular la extensión de un período?",
+        "81 años",
+        "El texto distingue dos operaciones que se confunden con facilidad. "
+        "Para ubicar un hecho en un siglo se toman las dos primeras cifras y se "
+        "suma uno; para medir la extensión de un período, en cambio, «se "
+        "obtiene restando el año inicial del final».\n"
+        "Aplicando esa segunda regla: 1891 − 1810 = 81 años.\n"
+        "La suma de uno pertenece solo al cálculo del siglo y no a la duración: "
+        "mezclarlas es el error que la última línea del texto busca evitar.",
+        [
+            ("82 años",
+             "Suma uno a la resta, que es la regla del siglo y no la de la extensión."),
+            ("80 años",
+             "Redondea el resultado en vez de aplicar la resta que indica el texto."),
+            ("19 años",
+             "Corresponde a la diferencia entre los siglos, no a la cantidad de años del período."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "medio",
+        "Según el texto, ¿qué significa que un mismo hecho pueda ser causa y "
+        "consecuencia a la vez?",
+        "Que su papel depende de cuál sea el proceso que se está analizando",
+        "El texto define causa como lo que contribuye a que un proceso ocurra y "
+        "consecuencia como lo que resulta de él, y agrega que un mismo hecho "
+        "puede ser ambas cosas «según el proceso analizado».\n"
+        "El ejemplo que entrega lo muestra: una crisis económica es "
+        "consecuencia de una guerra y, a la vez, causa de un cambio político "
+        "posterior. El hecho no cambió; cambió la pregunta que se le hace.\n"
+        "Por eso el papel causal no es una propiedad del hecho sino del recorte "
+        "que hace el historiador.",
+        [
+            ("Que el historiador no logra determinar el orden de los hechos",
+             "El orden está claro en el ejemplo del texto: la guerra precede a la crisis y la crisis al cambio político."),
+            ("Que las causas y las consecuencias son en el fondo lo mismo",
+             "El texto las define de manera distinta: una contribuye a que algo ocurra y la otra resulta de ello."),
+            ("Que los hechos históricos ocurren simultáneamente",
+             "El ejemplo del texto es una cadena en el tiempo, no una simultaneidad."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "medio",
+        "Un hecho ocurrió en 1789. Según la regla del texto, ¿a qué siglo "
+        "pertenece?",
+        "Al siglo XVIII",
+        "El texto da la regla rápida: se toman las dos primeras cifras del año "
+        "y se suma uno, salvo que el año termine exactamente en 00.\n"
+        "Las dos primeras cifras de 1789 son 17, y 17 + 1 = 18. El año no "
+        "termina en 00, así que la excepción no se aplica: el hecho pertenece "
+        "al siglo XVIII.\n"
+        "El desfase existe porque el primer siglo va del año 1 al 100: no hubo "
+        "año cero, y ese corrimiento se arrastra hasta hoy.",
+        [
+            ("Al siglo XVII",
+             "Toma las dos primeras cifras sin sumar uno, que es justamente el paso que la regla agrega."),
+            ("Al siglo XIX",
+             "El siglo XIX comienza en 1801, doce años después."),
+            ("Al siglo XVI",
+             "El siglo XVI termina en 1600, casi dos siglos antes."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "dificil",
+        "Un historiador sostiene que la Revolución Francesa «cambió Francia por "
+        "completo». ¿Qué objeción le haría el texto?",
+        "Que ningún proceso cambia todo, y que habría que precisar qué permaneció pese a la transformación",
+        "El texto formula el análisis de continuidades y cambios como una tarea "
+        "doble: identificar qué elementos se transformaron y cuáles "
+        "permanecieron. Y agrega una afirmación categórica: «Ningún proceso "
+        "cambia todo ni deja todo igual».\n"
+        "El ejemplo que ofrece apunta exactamente a este caso: una revolución "
+        "puede cambiar el régimen político y mantener intacta la estructura de "
+        "propiedad de la tierra.\n"
+        "La objeción no es que la revolución no haya sido importante, sino que "
+        "describirla solo como cambio total deja fuera la mitad del análisis.",
+        [
+            ("Que las revoluciones pertenecen a la escala del acontecimiento y no cambian nada",
+             "El texto no niega el cambio: niega que sea total."),
+            ("Que solo la larga duración produce cambios verdaderos",
+             "El texto no jerarquiza las escalas por importancia sino por velocidad."),
+            ("Que la afirmación sería válida solo si se demostrara con fuentes primarias",
+             "La objeción del texto es conceptual, no documental."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "dificil",
+        "Según la lógica del texto, ¿por qué un contemporáneo difícilmente "
+        "advierte un proceso de larga duración?",
+        "Porque la transformación avanza más lento que el tramo de tiempo que esa persona alcanza a observar",
+        "El texto define la larga duración como transformaciones lentas que se "
+        "extienden por siglos y añade que «resultan casi imperceptibles para "
+        "quien los vive».\n"
+        "La razón está en la relación entre la velocidad del proceso y la "
+        "duración de una vida: quien observa décadas no puede ver el movimiento "
+        "de algo que se despliega en siglos, del mismo modo que no se ve "
+        "moverse la manecilla de las horas.\n"
+        "De ahí que estas transformaciones solo se vuelvan visibles cuando el "
+        "historiador compara puntos muy separados en el tiempo.",
+        [
+            ("Porque las fuentes de esos procesos suelen haberse perdido",
+             "El texto no atribuye la dificultad a la conservación de las fuentes."),
+            ("Porque los procesos de larga duración no dejan huellas materiales",
+             "El texto menciona estructuras económicas y mentalidades, que sí dejan huellas."),
+            ("Porque los contemporáneos prefieren fijarse en los acontecimientos políticos",
+             "El texto explica la dificultad por la velocidad del proceso, no por la preferencia de quien observa."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "dificil",
+        "Se afirma que «la periodización descubre las divisiones que el tiempo "
+        "histórico ya tenía». ¿Qué diría el texto de esa afirmación?",
+        "Que la invierte: el tiempo es continuo y las divisiones las introduce quien analiza",
+        "El texto abre con una afirmación explícita: el tiempo histórico es "
+        "continuo y no viene cortado en pedazos. La periodización es «la "
+        "herramienta con que el historiador lo divide», no un hallazgo.\n"
+        "Por eso el texto agrega que es una construcción y no un hecho, y "
+        "remata con la imagen de que nadie se acostó en la Edad Media y "
+        "despertó en la Edad Moderna.\n"
+        "La afirmación citada trata como descubrimiento algo que el texto "
+        "presenta como decisión metodológica, y esa es exactamente la inversión "
+        "que corrige.",
+        [
+            ("Que es correcta, porque cada etapa histórica tiene rasgos propios",
+             "Que las etapas tengan rasgos propios no significa que las divisiones existan antes de trazarlas."),
+            ("Que es correcta solo para la historia política",
+             "El texto no exceptúa ningún criterio: menciona el político junto al económico y al cultural."),
+            ("Que es indiferente, porque el resultado del análisis no depende de la periodización",
+             "El texto sostiene lo contrario: distintos criterios producen distintas periodizaciones."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "dificil",
+        "Un estudiante calcula que del año 1501 al año 1600 hay 100 años y "
+        "concluye que ese período corresponde al siglo XVI. ¿Es consistente con "
+        "el texto?",
+        "Sí: el texto señala que el siglo XVI comprende de 1501 a 1600",
+        "El texto entrega ese tramo de manera literal al explicar por qué el "
+        "primer siglo va del año 1 al 100: «de modo que el siglo XVI comprende "
+        "de 1501 a 1600».\n"
+        "El cálculo de la extensión también calza con la regla del texto: "
+        "restar el año inicial del final da 99, y el período incluye ambos "
+        "extremos, lo que completa los cien años.\n"
+        "Es uno de los pocos casos en que las dos reglas del texto —la del "
+        "siglo y la de la extensión— se apoyan mutuamente en vez de "
+        "confundirse.",
+        [
+            ("No: el siglo XVI iría de 1500 a 1599",
+             "Ese tramo contradice la regla del texto, que hace terminar cada siglo en un año que acaba en 00."),
+            ("No: el siglo XVI iría de 1601 a 1700",
+             "Ese es el siglo XVII según la misma regla."),
+            ("Sí, pero solo si se ignora la excepción del año terminado en 00",
+             "La excepción es justamente lo que hace que 1600 cierre el siglo XVI."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "dificil",
+        "Dos historiadores analizan el mismo siglo: uno lo divide según los "
+        "gobiernos y otro según los ciclos de exportación. Según el texto, "
+        "¿cómo debe entenderse esa diferencia?",
+        "Como el resultado de haber usado criterios distintos, ambos legítimos si están explicitados",
+        "El texto sostiene que la periodización se traza a partir de un "
+        "criterio explícito —político, económico, cultural— y que por eso "
+        "distintos criterios producen distintas periodizaciones del mismo "
+        "pasado.\n"
+        "Los dos casos del enunciado corresponden a dos de esos criterios: el "
+        "político en el primero y el económico en el segundo. Ninguno "
+        "contradice al otro porque no están respondiendo la misma pregunta.\n"
+        "Lo que el texto exige no es que coincidan, sino que el criterio esté "
+        "declarado: sin eso, la división queda sin justificación.",
+        [
+            ("Como un desacuerdo que la evidencia debería resolver a favor de uno de los dos",
+             "El texto no plantea la diferencia como un problema de evidencia sino de criterio."),
+            ("Como una señal de que uno de los dos periodizó mal",
+             "El texto admite explícitamente que un mismo pasado admite varias periodizaciones."),
+            ("Como una diferencia irrelevante, porque el tiempo histórico es continuo",
+             "Que el tiempo sea continuo es la razón por la que el criterio importa, no por la que dejaría de importar."),
+        ],
+    ),
+    _ql(
+        "his_cambio_continuidad", "his_temporal", "medio",
+        "Según el texto, ¿qué cambió y qué permaneció con las independencias "
+        "americanas?",
+        "Cambió la soberanía y las instituciones políticas; permaneció la estructura de propiedad de la tierra",
+        "El texto separa con precisión los dos planos. Del lado del cambio "
+        "enumera la soberanía —el poder dejó de residir en la Corona y pasó a "
+        "repúblicas—, las instituciones políticas, los símbolos y el "
+        "vocabulario público.\n"
+        "Del lado de la permanencia señala que la estructura de propiedad de la "
+        "tierra se mantuvo prácticamente intacta y que la sociedad siguió "
+        "organizada de forma jerárquica.\n"
+        "El texto agrega un tercer elemento que no cambió: buena parte de la "
+        "población quedó fuera de la ciudadanía que la nueva república "
+        "proclamaba.",
+        [
+            ("Cambió la estructura de propiedad de la tierra; permaneció la soberanía",
+             "El texto dice exactamente lo contrario en ambos casos."),
+            ("Cambió todo el orden social; permaneció solo el vocabulario público",
+             "El texto ubica el vocabulario público entre lo que cambió, no entre lo que permaneció."),
+            ("No cambió nada relevante: la independencia fue solo un cambio de nombres",
+             "El texto reconoce un cambio real de soberanía e instituciones."),
+        ],
+    ),
+    _ql(
+        "his_cambio_continuidad", "his_temporal", "medio",
+        "Según el texto, ¿cuál de los siguientes elementos NO se mantuvo tras "
+        "las independencias americanas?",
+        "Los símbolos y el vocabulario público",
+        "El texto reparte los elementos en dos columnas. Del lado del cambio "
+        "enumera la soberanía, las instituciones políticas, los símbolos y el "
+        "vocabulario público.\n"
+        "Del lado de la permanencia sitúa la estructura de propiedad de la "
+        "tierra, la organización jerárquica de la sociedad y la exclusión de "
+        "mujeres, esclavos y pueblos originarios de la ciudadanía.\n"
+        "Que el vocabulario público cambiara mientras la exclusión permanecía "
+        "es justamente lo que el texto quiere hacer notar: cambió el modo de "
+        "nombrar antes que el modo de repartir.",
+        [
+            ("La estructura de propiedad de la tierra en el campo americano",
+             "El texto la sitúa entre lo que se mantuvo prácticamente intacto."),
+            ("La organización jerárquica de la sociedad heredada del período colonial",
+             "El texto señala que la sociedad siguió organizada de forma jerárquica."),
+            ("La exclusión de las mujeres respecto de la ciudadanía proclamada",
+             "El texto la menciona expresamente entre lo que permaneció."),
+        ],
+    ),
+    _ql(
+        "his_cambio_continuidad", "his_temporal", "medio",
+        "¿Qué pregunta propone el texto como especialmente útil frente a "
+        "cualquier proceso histórico?",
+        "¿Para quién cambió?",
+        "El texto la formula de manera literal y explica por qué la considera "
+        "útil: un mismo acontecimiento puede significar una transformación "
+        "completa para un grupo y prácticamente nada para otro.\n"
+        "La condición que agrega es exigente: esos dos grupos pueden vivir en "
+        "el mismo territorio y en el mismo año. La diferencia no es de época "
+        "sino de posición social.\n"
+        "La pregunta obliga a especificar el sujeto del cambio, que es lo que "
+        "una afirmación como «el país se transformó» deja sin decir.",
+        [
+            ("¿Cuándo empezó exactamente?",
+             "El texto no propone fijar el inicio sino identificar a quién alcanzó el cambio."),
+            ("¿Fue una ruptura o una continuidad?",
+             "El texto rechaza esa alternativa: describirlo solo de un modo o del otro sería igualmente falso."),
+            ("¿Qué fuentes lo registran?",
+             "La pregunta del texto es sobre los efectos del proceso, no sobre su documentación."),
+        ],
+    ),
+    _ql(
+        "his_cambio_continuidad", "his_temporal", "dificil",
+        "Según el texto, ¿por qué sería igualmente falso describir las "
+        "independencias americanas solo como ruptura o solo como continuidad?",
+        "Porque el proceso combinó transformaciones profundas con estructuras que siguieron funcionando",
+        "El texto muestra las dos caras del mismo proceso: cambió la soberanía "
+        "y el orden institucional, y al mismo tiempo se mantuvieron la "
+        "propiedad de la tierra, la jerarquía social y la exclusión de buena "
+        "parte de la población.\n"
+        "Describirlo solo como ruptura deja fuera todo lo segundo; describirlo "
+        "solo como continuidad deja fuera todo lo primero. Por eso el texto "
+        "dice que ambas descripciones son «igualmente falsas».\n"
+        "Lo que propone en su lugar es más exigente y menos vistoso: precisar "
+        "qué cambió, qué permaneció y a qué ritmo.",
+        [
+            ("Porque no existen fuentes suficientes para decidir entre las dos descripciones",
+             "El texto no plantea un problema de evidencia sino de descripción incompleta."),
+            ("Porque la independencia fue un acontecimiento y no un proceso",
+             "El texto la trata como un proceso con planos que se mueven a distinta velocidad."),
+            ("Porque los historiadores aún discuten la fecha en que terminó",
+             "La discusión de fechas no aparece en el argumento del texto."),
+        ],
+    ),
+    _ql(
+        "his_cambio_continuidad", "his_temporal", "dificil",
+        "Dos personas viven en la misma ciudad en 1820: una es propietaria de "
+        "tierras y la otra está esclavizada. Según el texto, ¿cómo debería "
+        "tratarse la afirmación «para ambas, la independencia lo cambió todo»?",
+        "Como una afirmación que el texto rechaza: el proceso alcanzó de modo desigual a cada grupo",
+        "El texto propone preguntar «¿para quién cambió?» precisamente porque "
+        "un mismo acontecimiento puede significar una transformación completa "
+        "para un grupo y prácticamente nada para otro que vivía en el mismo "
+        "territorio y en el mismo año.\n"
+        "El caso del enunciado es el que el texto describe: entre lo que "
+        "permaneció menciona la exclusión de esclavos, mujeres y pueblos "
+        "originarios de la ciudadanía que la república proclamaba.\n"
+        "La afirmación no es falsa por exagerada sino por indiferenciada: "
+        "atribuye a todos un cambio que solo alcanzó a algunos.",
+        [
+            ("Como correcta, porque la soberanía cambió para todo el territorio y sus habitantes",
+             "El texto distingue entre el cambio de soberanía y sus efectos sobre cada grupo."),
+            ("Como imposible de evaluar sin conocer las fuentes de la época",
+             "El texto entrega la clave conceptual sin necesidad de fuentes adicionales."),
+            ("Como correcta si se la limita al plano de las mentalidades",
+             "El texto ubica las mentalidades entre los planos más lentos, no entre los que cambiaron de inmediato."),
+        ],
+    ),
+    _ql(
+        "his_cambio_continuidad", "his_temporal", "dificil",
+        "Según el texto, ¿qué error comete quien sostiene que una revolución es "
+        "una ruptura total con el pasado?",
+        "Supone que todos los planos de la realidad se transforman a la misma velocidad",
+        "El texto abre afirmando que los procesos históricos rara vez son "
+        "rupturas totales, y que incluso los que se recuerdan como quiebres "
+        "conviven con estructuras que siguen funcionando.\n"
+        "La explicación que da es de ritmos: lo político puede transformarse en "
+        "meses, lo económico en décadas y las mentalidades en siglos. Quien "
+        "habla de ruptura total está aplicando el ritmo del plano más rápido a "
+        "todos los demás.\n"
+        "De ahí que el análisis histórico deba precisar no solo qué cambió sino "
+        "a qué ritmo lo hizo cada plano.",
+        [
+            ("Confunde una causa estructural con una causa inmediata del proceso",
+             "Esa distinción pertenece al análisis causal y no aparece en este texto."),
+            ("Aplica al pasado categorías y valores de su propia época",
+             "Ese es el anacronismo, un problema distinto del que plantea este texto."),
+            ("Toma una fuente secundaria como si fuera una fuente primaria",
+             "El texto no discute tipos de fuentes."),
+        ],
+    ),
+    _ql(
+        "fuente_voto_femenino", "his_temporal", "medio",
+        "Según la primera intervención, ¿qué distinción temporal establece el "
+        "parlamentario entre dos derechos ya concedidos y uno en discusión?",
+        "Acepta el voto municipal ya otorgado y discute la extensión al voto presidencial",
+        "La intervención termina con esa distinción de manera literal: "
+        "«Concederle el voto municipal fue prudente; extenderlo a la elección "
+        "presidencial es otra cosa».\n"
+        "El argumento supone una secuencia: un derecho ya reconocido en el "
+        "pasado y otro que se propone para el futuro, con la prudencia como "
+        "criterio para separar ambos momentos.\n"
+        "La segunda intervención responde justamente a esa idea de gradualidad "
+        "al observar que la espera lleva tanto tiempo como la República.",
+        [
+            ("Rechaza ambos derechos por igual",
+             "Califica de prudente la concesión del voto municipal."),
+            ("Sostiene que el voto presidencial debe concederse antes que el municipal",
+             "Plantea el orden inverso: el municipal ya está y el presidencial es lo que discute."),
+            ("Afirma que ninguno de los dos derechos ha sido concedido todavía",
+             "El texto da por concedido el voto municipal."),
+        ],
+    ),
+    _ql(
+        "fuente_voto_femenino", "his_temporal", "dificil",
+        "«Llevamos esperando desde que existe la República». ¿Qué operación "
+        "temporal realiza esa frase dentro del argumento?",
+        "Convierte la gradualidad prudente en una espera que ya lleva más de un siglo",
+        "El argumento de la primera intervención descansa en la prudencia: un "
+        "derecho ya se concedió y el otro puede esperar. La frase citada "
+        "responde midiendo esa espera con la escala más larga disponible, la de "
+        "la existencia misma de la República.\n"
+        "Al hacerlo desplaza el asunto de la escala del acontecimiento —una "
+        "votación concreta— a la de un proceso que lleva más de un siglo sin "
+        "resolverse.\n"
+        "Con eso la prudencia deja de parecer cautela y pasa a parecer "
+        "postergación sostenida en el tiempo, que es exactamente el efecto que "
+        "la oradora busca.",
+        [
+            ("Fija la fecha exacta en que se inició la demanda por el sufragio femenino",
+             "La frase no fecha nada: mide una duración para calificar la espera."),
+            ("Sostiene que el derecho ya fue concedido y solo falta aplicarlo",
+             "La intervención pide el derecho, no su aplicación."),
+            ("Traslada la discusión al terreno económico del precio del pan",
+             "La mención del precio del pan es un ejemplo previo, no el eje de esta frase."),
+        ],
+    ),
+    _ql(
+        "fuente_voto_femenino", "his_temporal", "dificil",
+        "Si se comparan las dos intervenciones, ¿qué elemento permanece igual "
+        "para ambas y cuál está en disputa?",
+        "Permanece el papel de la mujer en el hogar; se disputa si eso la excluye o la habilita para la política",
+        "Las dos intervenciones parten del mismo dato: la mujer administra el "
+        "hogar. El parlamentario lo describe como «una función que ningún "
+        "hombre puede reemplazar»; la dirigenta enumera lo mismo —presupuesto, "
+        "educación de los hijos, precio del pan—.\n"
+        "Lo que cambia es la conclusión. Para el primero, ese papel es una "
+        "razón para mantenerla fuera de la política; para la segunda, es la "
+        "prueba de que ya está dentro y solo le falta la voz.\n"
+        "El desacuerdo no es sobre los hechos sino sobre qué se sigue de ellos, "
+        "que es una forma habitual del debate político.",
+        [
+            ("Permanece el acuerdo sobre el derecho a voto; se disputa la fecha de su aplicación",
+             "La primera intervención se opone a extender el derecho, no discute solo su fecha."),
+            ("Permanece la valoración de la política como espacio deseable; se disputa quién entra",
+             "El parlamentario describe la política como áspera y divisiva, no como deseable."),
+            ("Permanece el diagnóstico económico; se disputa la responsabilidad del gobierno",
+             "El precio del pan aparece como ejemplo, y no hay diagnóstico económico compartido."),
+        ],
+    ),
+    _ql(
+        "fuentes_salitre", "his_temporal", "medio",
+        "Las dos fuentes están separadas por un año. ¿Qué permite esa cercanía "
+        "temporal al analizarlas?",
+        "Descartar que la diferencia entre ambas se deba a un cambio en las condiciones de la oficina",
+        "El informe del administrador es de 1907 y la carta del obrero, de "
+        "1908. Un año es un lapso demasiado breve como para que la vida de la "
+        "oficina se haya transformado entre uno y otro documento.\n"
+        "Por eso la discrepancia no puede atribuirse al paso del tiempo: ambas "
+        "fuentes describen, en lo esencial, la misma realidad material —"
+        "pulpería, escuela, agua, pago—.\n"
+        "Lo que las separa es la posición de quien escribe y el destinatario de "
+        "cada documento, no el momento en que fueron escritas.",
+        [
+            ("Confirmar que las condiciones mejoraron rápidamente entre un año y otro",
+             "Las fuentes describen los mismos elementos con valoraciones opuestas, no una mejora."),
+            ("Establecer cuál de las dos fue escrita primero y por lo tanto es más confiable",
+             "La anterioridad no otorga confiabilidad por sí sola."),
+            ("Determinar la duración total del ciclo salitrero",
+             "Dos documentos de años consecutivos no permiten medir un ciclo económico completo."),
+        ],
+    ),
+    _ql(
+        "fuentes_salitre", "his_temporal", "medio",
+        "Según la carta del obrero, ¿qué elemento del sistema de pago produce "
+        "un efecto que se acumula mes a mes?",
+        "El pago en fichas que solo sirven en la pulpería de la propia oficina",
+        "La carta describe el mecanismo con precisión: el pago «no viene en "
+        "dinero sino en fichas que solo sirven en la pulpería de la misma "
+        "oficina, y allí el precio lo ponen ellos».\n"
+        "El efecto acumulativo aparece en la frase siguiente: «Uno trabaja el "
+        "mes entero y termina debiendo». No es que el sueldo alcance justo; es "
+        "que el ciclo se cierra en deuda.\n"
+        "El administrador menciona la misma pulpería como un servicio, sin "
+        "referirse al sistema de pago que la hace obligatoria.",
+        [
+            ("La existencia de una escuela con un solo maestro para ciento veinte niños",
+             "La carta la menciona como carencia del servicio educativo, no como parte del sistema de pago."),
+            ("La llegada de trabajadores desde el sur en busca de trabajo seguro",
+             "Ese dato aparece en el informe del administrador y no describe un efecto acumulativo."),
+            ("La presencia de agitadores externos",
+             "Es la explicación del administrador para las quejas, y la carta la rechaza expresamente."),
+        ],
+    ),
+    _ql(
+        "fuentes_salitre", "his_temporal", "dificil",
+        "El administrador atribuye las quejas a «agitadores venidos de fuera». "
+        "¿Qué efecto tiene esa atribución sobre el modo de entender el "
+        "conflicto en el tiempo?",
+        "Lo presenta como importado y reciente en vez de acumulado en la propia oficina",
+        "El informe describe el malestar como algo traído desde afuera por "
+        "personas «ajenas por completo a la vida de la pampa». Con eso el "
+        "conflicto deja de tener raíces en el lugar y pasa a tener una fecha de "
+        "llegada.\n"
+        "La carta responde justamente a esa operación: «No somos agitados por "
+        "nadie, hermano: somos nosotros los que sabemos contar». El conflicto "
+        "no llegó de fuera; se acumuló mes a mes con el sistema de fichas.\n"
+        "La disputa, entonces, no es solo sobre quién tiene razón sino sobre "
+        "desde cuándo y dónde se origina el problema.",
+        [
+            ("Lo sitúa en la larga duración, como parte de la estructura económica de la pampa",
+             "Es lo contrario: la atribución a agitadores externos le quita profundidad temporal al conflicto."),
+            ("Lo fecha con precisión al identificar a los responsables",
+             "El informe no entrega fechas ni nombres: generaliza."),
+            ("Reconoce que el malestar venía acumulándose desde años anteriores en la pampa",
+             "El informe niega que el malestar provenga del personal de la oficina."),
+        ],
+    ),
+    _ql(
+        "fuentes_salitre", "his_temporal", "dificil",
+        "Un investigador quiere saber si las condiciones de vida en la pampa "
+        "mejoraron entre 1900 y 1920. ¿Qué limitación tienen estas dos fuentes "
+        "para responder esa pregunta?",
+        "Cubren solo dos años consecutivos, así que no permiten observar una tendencia de dos décadas",
+        "Las fuentes son de 1907 y 1908. Aunque discrepan entre sí, ambas "
+        "describen prácticamente el mismo momento: no hay distancia temporal "
+        "suficiente para detectar mejora o deterioro.\n"
+        "Responder por una tendencia de veinte años exige series de datos o "
+        "documentos repartidos a lo largo del período, no dos testimonios "
+        "contiguos.\n"
+        "Lo que estas fuentes sí permiten es contrastar dos miradas sobre un "
+        "mismo estado de cosas, que es una pregunta distinta y también "
+        "legítima.",
+        [
+            ("Ninguna de las dos menciona las condiciones de vida",
+             "Ambas se refieren a pulpería, escuela, agua y pago: es exactamente lo que describen."),
+            ("Provienen de la misma oficina, lo que impide cualquier comparación",
+             "Compartir el lugar es lo que hace comparables a las dos fuentes, no lo que lo impide."),
+            ("Son fuentes secundarias y no pueden usarse para estudiar el período",
+             "Ambas fueron producidas en la época estudiada: son fuentes primarias."),
+        ],
+    ),
+    _ql(
+        "his_cambio_continuidad", "his_temporal", "medio",
+        "Según el texto, ¿qué significa que las independencias americanas "
+        "convivieran con «estructuras que siguen funcionando»?",
+        "Que instituciones y relaciones anteriores al quiebre continuaron operando después de él",
+        "El texto abre señalando que incluso los procesos recordados como "
+        "quiebres —una revolución, una independencia— conviven con estructuras "
+        "que siguen funcionando.\n"
+        "El caso americano lo ilustra: la propiedad de la tierra se mantuvo "
+        "prácticamente intacta y la sociedad siguió organizada de forma "
+        "jerárquica, aunque la soberanía hubiera cambiado de manos.\n"
+        "Esa convivencia entre lo nuevo y lo que sigue es lo que hace "
+        "insuficiente describir el proceso con una sola palabra.",
+        [
+            ("Que la independencia fracasó en sus objetivos declarados",
+             "El texto reconoce cambios reales en soberanía e instituciones, así que no habla de fracaso."),
+            ("Que las estructuras coloniales fueron restauradas después del proceso",
+             "El texto habla de continuidad, no de restauración: nunca dejaron de operar."),
+            ("Que el proceso solo alcanzó a las capitales y no al territorio",
+             "El texto distingue por grupos sociales, no por regiones."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "medio",
+        "¿Qué relación establece el texto entre la escala temporal elegida y lo "
+        "que se puede observar?",
+        "Cada escala hace visibles unos fenómenos y deja fuera otros",
+        "El texto distingue tres escalas por su extensión —acontecimiento, "
+        "media duración y larga duración— y les asigna fenómenos distintos: una "
+        "batalla, una crisis económica, un cambio de mentalidad.\n"
+        "Esa correspondencia implica que la escala funciona como un filtro: "
+        "quien mira un año no verá una transformación de siglos, y quien mira "
+        "siglos perderá de vista la elección concreta.\n"
+        "Por eso la elección de escala no es un detalle técnico sino parte de "
+        "la pregunta que el historiador decide hacerse.",
+        [
+            ("La escala no influye: los mismos hechos aparecen en todas",
+             "El texto asigna fenómenos distintos a cada escala, así que sí influye."),
+            ("Solo la larga duración permite observar procesos verdaderos",
+             "El texto no jerarquiza las escalas por importancia sino por velocidad."),
+            ("La escala depende exclusivamente de las fuentes disponibles",
+             "El texto define las escalas por la velocidad del fenómeno, no por su documentación."),
+        ],
+    ),
+    _ql(
+        "his_cambio_continuidad", "his_temporal", "dificil",
+        "Un texto escolar afirma: «Con la independencia, América pasó a ser una "
+        "sociedad de ciudadanos iguales». ¿Qué corrección haría esta fuente?",
+        "Que la ciudadanía proclamada dejó fuera a mujeres, esclavos y pueblos originarios",
+        "El texto es explícito al enumerar lo que permaneció: «buena parte de "
+        "la población —mujeres, esclavos, pueblos originarios— quedó fuera de "
+        "la ciudadanía que la nueva república proclamaba».\n"
+        "La distancia entre lo proclamado y lo efectivo es justamente el punto: "
+        "el vocabulario público cambió y la exclusión no. Tomar la proclamación "
+        "por descripción es el error que la fuente corrige.\n"
+        "La pregunta «¿para quién cambió?» que el texto propone sirve "
+        "exactamente para detectar afirmaciones como la del enunciado.",
+        [
+            ("Que la igualdad se alcanzó recién con las reformas del siglo XX",
+             "El texto no fecha la llegada de la igualdad: señala la exclusión que la independencia mantuvo."),
+            ("Que la independencia no modificó las instituciones políticas",
+             "El texto sitúa las instituciones políticas entre lo que sí cambió."),
+            ("Que el concepto de ciudadanía es anacrónico para el siglo XIX",
+             "El propio texto usa el término al describir el período."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_temporal", "dificil",
+        "Según el texto, ¿en qué se distinguen una causa estructural y una "
+        "causa inmediata?",
+        "La estructural prepara el terreno durante años y la inmediata actúa como detonante",
+        "El texto introduce la distinción al explicar la multicausalidad: los "
+        "fenómenos sociales resultan de la combinación de factores políticos, "
+        "económicos, sociales y culturales.\n"
+        "Dentro de esa combinación separa dos tiempos: «causas estructurales, "
+        "que preparan el terreno durante años, y causas inmediatas, que actúan "
+        "como detonante».\n"
+        "La diferencia es de duración y de función, no de importancia: sin las "
+        "primeras el detonante no encuentra qué detonar.",
+        [
+            ("La estructural es política y la inmediata es económica",
+             "El texto no reparte las causas por ámbito sino por su temporalidad."),
+            ("La estructural se documenta con fuentes primarias y la inmediata con secundarias",
+             "El tipo de fuente no interviene en esta distinción."),
+            ("La estructural explica el hecho y la inmediata solo lo acompaña",
+             "El texto presenta el detonante como parte de la explicación, no como acompañamiento."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_temporal", "dificil",
+        "«El pasado no cambia, pero las preguntas que se le hacen sí». ¿Qué "
+        "consecuencia extrae el texto de esa afirmación?",
+        "Que aparecen temas nuevos de investigación sin que la disciplina se vuelva arbitraria",
+        "El texto usa esa frase para explicar por qué la historia se reescribe "
+        "con cada generación, y da ejemplos concretos: cuando la historiografía "
+        "empezó a interrogarse por la vida cotidiana, por el trabajo de las "
+        "mujeres o por los pueblos sin escritura, aparecieron temas enteros que "
+        "antes no se investigaban.\n"
+        "A eso suma dos factores materiales: archivos que se abren y técnicas "
+        "nuevas de análisis.\n"
+        "Y cierra la posible objeción de inmediato: «Eso no vuelve arbitraria "
+        "la disciplina: las afirmaciones siguen exigiendo evidencia».",
+        [
+            ("Que cada generación puede sostener sobre el pasado lo que le convenga",
+             "El texto descarta esa lectura: las afirmaciones siguen exigiendo evidencia."),
+            ("Que las investigaciones anteriores quedan invalidadas",
+             "El texto habla de temas que se agregan, no de trabajos que se anulan."),
+            ("Que conviene evitar preguntas nuevas para mantener la objetividad",
+             "El texto presenta las preguntas nuevas como una ganancia de la disciplina."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Historia - Pensamiento critico y analisis de fuentes
+#
+# Los otros dos nodos de habilidad que seguian bajo 60. Se apoyan en los dos
+# textos metodologicos que ya estaban y en los pares de fuentes de contraste,
+# que es donde el contraste entre versiones se puede trabajar sin salir del
+# banco.
+#
+# Cuidado con el largo: en este banco la correcta no puede medir mas de 1,35
+# veces el promedio de las cuatro, o el verificador la marca como delatada.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_HISTORIA += [
+    # ---------------- pensamiento crítico ----------------
+    _ql(
+        "his_oficio", "his_critico", "medio",
+        "Según el texto, ¿para qué sirve reconstruir el contexto histórico?",
+        "Para comprender por qué un hecho ocurrió y qué significó en su época",
+        "El texto define el contexto como el conjunto de condiciones "
+        "políticas, económicas, sociales y culturales que permiten comprender "
+        "por qué un hecho ocurrió y qué significó.\n"
+        "El ejemplo muestra su alcance: publicar un texto crítico bajo una "
+        "dictadura y hacerlo en democracia no son el mismo acto, aunque la "
+        "acción material sea idéntica.\n"
+        "Por eso el texto insiste en que reconstruir el contexto «no es un "
+        "adorno introductorio»: es lo que impide leer el pasado como si "
+        "hubiera ocurrido hoy.",
+        [
+            ("Para ubicar con exactitud la fecha en que ocurrió el hecho",
+             "El contexto explica el sentido del hecho, no fija su fecha."),
+            ("Para decidir si la fuente que lo relata es confiable o no",
+             "La evaluación de la fuente es otra operación del oficio."),
+            ("Para introducir el tema antes de entrar en el análisis mismo",
+             "El texto rechaza expresamente esa idea del contexto como adorno."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "medio",
+        "¿Qué quiere decir el texto al afirmar que los procesos históricos son "
+        "multicausales?",
+        "Que resultan de la combinación de factores políticos, económicos, sociales y culturales",
+        "El texto lo define en esos términos y lo ilustra con una revolución: "
+        "no se explica solo por el hambre, ni solo por las ideas, ni solo por "
+        "la debilidad del gobierno.\n"
+        "Lo que la vuelve posible, dice, es la convergencia de esos factores. "
+        "Ninguno basta por separado y ninguno es prescindible.\n"
+        "De esa idea se desprende la distinción que el texto agrega enseguida "
+        "entre causas estructurales y causas inmediatas.",
+        [
+            ("Que siempre existe una causa principal y varias secundarias",
+             "El texto habla de convergencia, no de una causa que domine a las demás."),
+            ("Que las causas de un proceso nunca pueden establecerse con certeza",
+             "El texto sostiene que sí se establecen, pero combinando factores."),
+            ("Que cada historiador elige la causa que le parece más importante",
+             "La multicausalidad describe el fenómeno, no la preferencia del investigador."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "medio",
+        "Según el texto, ¿por qué la misma acción puede significar cosas "
+        "opuestas en dos contextos distintos?",
+        "Porque el significado de un acto depende de las condiciones en que se realiza",
+        "El texto entrega el ejemplo con claridad: publicar un texto crítico "
+        "bajo una dictadura y hacerlo en democracia no son el mismo acto.\n"
+        "La acción material es idéntica —escribir y publicar—, pero el riesgo, "
+        "el destinatario y las consecuencias son distintos, y eso es parte de "
+        "lo que el acto significa.\n"
+        "De ahí que el texto trate el contexto como una condición de la "
+        "comprensión y no como información de fondo.",
+        [
+            ("Porque los historiadores interpretan los hechos según su ideología",
+             "El argumento del texto es sobre las condiciones del acto, no sobre quien lo estudia."),
+            ("Porque las fuentes de cada época se conservan de manera desigual",
+             "La conservación de fuentes no interviene en este pasaje."),
+            ("Porque el significado de las palabras cambia con el paso del tiempo",
+             "El texto habla del contexto del acto, no de la evolución del lenguaje."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "dificil",
+        "Alguien critica a un médico del siglo XVIII por no lavarse las manos "
+        "antes de operar. ¿Qué diría el texto de esa crítica?",
+        "Que incurre en anacronismo, porque juzga con un conocimiento posterior",
+        "El texto define el anacronismo como aplicar al pasado categorías, "
+        "valores o conocimientos de otra época, y agrega el caso exacto del "
+        "enunciado: reprochar a alguien no saber algo que en su tiempo aún no "
+        "había sido establecido.\n"
+        "La conclusión que saca es dura: esa crítica «no describe su "
+        "ignorancia: describe la confusión de quien juzga».\n"
+        "Lo que el texto pide en cambio es entender la época «según lo que "
+        "estaba disponible y era pensable en ella».",
+        [
+            ("Que es válida, porque la higiene siempre ha sido necesaria",
+             "El texto exige juzgar según lo que era pensable en la época, no según lo que hoy sabemos."),
+            ("Que confunde una causa estructural con una inmediata",
+             "Esa distinción pertenece al análisis causal, no al problema del anacronismo."),
+            ("Que exigiría contrastarla con al menos dos fuentes primarias",
+             "El problema no es de evidencia sino del criterio con que se juzga."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "dificil",
+        "Un estudiante concluye que, si la historia se reescribe, entonces "
+        "cualquier versión del pasado vale lo mismo. ¿Cómo responde el texto?",
+        "Distingue entre cambiar las preguntas y abandonar la exigencia de evidencia",
+        "El texto acepta la premisa: la historia se reescribe con cada "
+        "generación, porque el pasado no cambia pero las preguntas que se le "
+        "hacen sí.\n"
+        "Enseguida bloquea la conclusión: «Eso no vuelve arbitraria la "
+        "disciplina: las afirmaciones siguen exigiendo evidencia». Lo que "
+        "cambia es qué se busca y con qué herramientas.\n"
+        "La reescritura, entonces, amplía el temario de la disciplina sin "
+        "relajar su regla de prueba.",
+        [
+            ("Acepta la conclusión, porque toda interpretación es legítima",
+             "El texto la rechaza expresamente al exigir evidencia."),
+            ("Rechaza la premisa: sostiene que la historia no se reescribe",
+             "El texto afirma justamente que sí se reescribe con cada generación."),
+            ("Sostiene que solo las fuentes primarias permiten decidir",
+             "El texto no reduce la evidencia a un solo tipo de fuente."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "dificil",
+        "Según el texto, ¿qué factores explican que aparezcan temas históricos "
+        "que antes no se investigaban?",
+        "Preguntas nuevas, archivos que se abren y técnicas nuevas de análisis",
+        "El texto enumera los tres. Primero, las preguntas: cuando la "
+        "historiografía empezó a interrogarse por la vida cotidiana, por el "
+        "trabajo de las mujeres o por los pueblos sin escritura, aparecieron "
+        "temas enteros.\n"
+        "A eso suma dos condiciones materiales: archivos que se abren y "
+        "técnicas nuevas de análisis.\n"
+        "Los tres factores operan juntos: una pregunta nueva sin fuentes ni "
+        "métodos para responderla no llega a convertirse en investigación.",
+        [
+            ("El cambio de los hechos del pasado con el paso del tiempo",
+             "El texto afirma expresamente que el pasado no cambia."),
+            ("La sustitución de los historiadores de una generación por otra",
+             "El relevo generacional aparece como marco, no como explicación."),
+            ("La necesidad de corregir los errores de las investigaciones previas",
+             "El texto habla de temas que se agregan, no de trabajos que se corrigen."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_critico", "medio",
+        "¿Qué explicación da la primera fuente para el uso de la fuerza contra "
+        "los habitantes del valle?",
+        "Que algunos prefirieron resistir por falta de entendimiento",
+        "El cronista describe una secuencia en la que la violencia aparece "
+        "como último recurso: el capitán «les habló de paz y les ofreció "
+        "amparo», y solo algunos aceptaron.\n"
+        "A quienes no aceptaron los llama «ciegos aún» y justifica reducirlos "
+        "por las armas «como manda la razón cuando falta el entendimiento».\n"
+        "La explicación atribuye el conflicto a una carencia de los otros, no "
+        "a lo que la expedición fue a buscar.",
+        [
+            ("Que los habitantes atacaron primero a la expedición",
+             "El relato no menciona ningún ataque previo de los habitantes."),
+            ("Que la expedición necesitaba alimentos con urgencia",
+             "La petición de alimento aparece en la segunda fuente, no en esta."),
+            ("Que las autoridades de la Corona lo habían ordenado así",
+             "El cronista invoca el servicio de Dios y del rey, no una orden concreta."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_critico", "medio",
+        "Según la segunda fuente, ¿en qué orden ocurrieron las peticiones de "
+        "los recién llegados?",
+        "Primero alimento, después el oro y por último las tierras y la gente",
+        "El testimonio entrega la secuencia de manera explícita: «pidieron "
+        "alimento, y se lo dimos. Después pidieron el oro, y luego pidieron "
+        "las tierras y a nuestra gente para trabajarlas».\n"
+        "La progresión importa porque muestra un aumento sostenido de las "
+        "demandas, no un choque inicial.\n"
+        "La violencia aparece recién al final, cuando la respuesta fue "
+        "negativa: «Cuando dijimos que no, quemaron las siembras».",
+        [
+            ("Primero el oro, después las tierras y por último alimento",
+             "El relato sitúa el alimento al comienzo y el oro después."),
+            ("Primero las tierras, después la gente y por último el oro",
+             "El oro aparece antes que las tierras en el testimonio."),
+            ("Pidieron las tres cosas en la misma conversación inicial",
+             "El testimonio marca una progresión con «después» y «luego»."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_critico", "dificil",
+        "«No hubo entendimiento que faltara: hubo una lengua que no quisimos "
+        "hablar». ¿Qué operación realiza esa frase respecto de la primera "
+        "fuente?",
+        "Refuta su explicación cambiando la falta de comprensión por una negativa deliberada",
+        "El cronista atribuye la resistencia a que faltaba entendimiento y "
+        "llama «ciegos» a quienes no aceptaron. La frase citada toma ese mismo "
+        "término y lo devuelve invertido.\n"
+        "Donde el primero veía incapacidad, el segundo declara una decisión: "
+        "no es que no pudieran entender, es que no quisieron aceptar lo que se "
+        "les pedía.\n"
+        "Con eso el conflicto deja de ser un malentendido y pasa a ser una "
+        "disputa por el oro, las tierras y el trabajo.",
+        [
+            ("Confirma la versión del cronista con otras palabras",
+             "La invierte: donde el cronista veía ceguera, el testimonio ve una negativa consciente."),
+            ("Reconoce que hubo un problema de traducción entre ambas partes",
+             "La frase niega expresamente que faltara entendimiento."),
+            ("Atribuye el conflicto a la llegada de personas ajenas al valle",
+             "Esa explicación no aparece en ninguna de las dos fuentes."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_critico", "dificil",
+        "Un historiador quiere explicar el conflicto del valle. ¿Qué le aporta "
+        "usar las dos fuentes en vez de una sola?",
+        "Permite ver que ambas describen los mismos hechos con causas distintas",
+        "Las dos fuentes coinciden en lo material: hubo un encuentro, hubo "
+        "peticiones y hubo violencia. Lo que difiere es la causa que cada una "
+        "asigna.\n"
+        "El cronista la ubica en la falta de entendimiento de los otros; el "
+        "testimonio, en el aumento de las demandas hasta llegar a las tierras "
+        "y al trabajo de la gente.\n"
+        "Contrastarlas convierte una narración en un problema investigable: la "
+        "pregunta deja de ser qué pasó y pasa a ser por qué cada parte lo "
+        "cuenta así.",
+        [
+            ("Permite descartar la fuente menos confiable de las dos",
+             "El contraste no sirve para eliminar una versión sino para situar ambas."),
+            ("Permite establecer la fecha exacta del encuentro",
+             "Ninguna de las dos fuentes entrega fechas."),
+            ("Permite comprobar que los hechos narrados no ocurrieron",
+             "Ambas coinciden en que el encuentro y la violencia ocurrieron."),
+        ],
+    ),
+    _ql(
+        "fuente_memoria", "his_critico", "medio",
+        "¿Qué argumento usa el editorial para desaconsejar la revisión de los "
+        "hechos?",
+        "Que revisarlos reabre heridas que el tiempo estaría cerrando",
+        "El editorial construye su posición en tres pasos: califica lo "
+        "ocurrido de «lamentable pero inevitable», atribuye la actuación de "
+        "las autoridades a la crisis del país y concluye con el argumento del "
+        "tiempo.\n"
+        "Esa conclusión es la que sostiene la recomendación: insistir en "
+        "revisar aquellos días «solo reabre heridas que el tiempo ya está "
+        "cerrando».\n"
+        "El argumento no niega los hechos: sostiene que ocuparse de ellos "
+        "tiene un costo mayor que el beneficio.",
+        [
+            ("Que los hechos denunciados nunca llegaron a ocurrir",
+             "El editorial los reconoce y los llama un episodio lamentable."),
+            ("Que la investigación corresponde a los tribunales y no a la prensa",
+             "El editorial no plantea una cuestión de competencia."),
+            ("Que los responsables ya fueron identificados y sancionados",
+             "El editorial no menciona ninguna sanción ni identificación."),
+        ],
+    ),
+    _ql(
+        "fuente_memoria", "his_critico", "dificil",
+        "«El tiempo no cierra nada por sí solo: lo que cierra es la verdad». "
+        "¿Cómo funciona esa frase frente al editorial?",
+        "Acepta su metáfora del cierre y le cambia la condición que lo produce",
+        "El editorial sostiene que el tiempo está cerrando las heridas. La "
+        "declaración no rechaza la imagen: la conserva y discute qué es lo que "
+        "efectivamente cierra.\n"
+        "Con ese giro, la espera deja de ser un remedio y pasa a ser una "
+        "postergación. De ahí la conclusión: «Mientras no se sepa qué pasó y "
+        "quién lo decidió, no hay pasado que pase».\n"
+        "El cierre final —«no pedimos que se reabra nada, pedimos que por fin "
+        "se abra»— desarma también el verbo del editorial.",
+        [
+            ("Rechaza la metáfora del cierre por considerarla inadecuada",
+             "La declaración la conserva y la usa para su propio argumento."),
+            ("Sostiene que las heridas ya se cerraron con el paso de los años",
+             "Afirma lo contrario: sin verdad no hay cierre posible."),
+            ("Propone que el tribunal decida si corresponde investigar",
+             "La declaración no menciona ninguna instancia judicial."),
+        ],
+    ),
+    _ql(
+        "fuente_memoria", "his_critico", "dificil",
+        "¿Qué diferencia de posición explica mejor el contraste entre las dos "
+        "fuentes?",
+        "Una la escribe un medio al año siguiente y la otra una agrupación de familiares",
+        "El texto identifica a cada emisor y el momento de su intervención: un "
+        "editorial publicado al año siguiente de los hechos y una declaración "
+        "de familiares cuarenta años después.\n"
+        "La distancia temporal explica el tono, pero lo decisivo es la "
+        "relación con lo ocurrido: para el medio es un episodio del país; para "
+        "los familiares es un asunto sin resolver que los involucra "
+        "directamente.\n"
+        "Leer cada fuente sabiendo quién la produce y para qué es justamente "
+        "el procedimiento que exige el oficio.",
+        [
+            ("Una fue escrita por testigos directos y la otra por historiadores",
+             "Ninguna de las dos es obra de historiadores: son un medio y una agrupación."),
+            ("Una es una fuente primaria y la otra es secundaria",
+             "Ambas fueron producidas por actores de la época que describen, no por intérpretes posteriores."),
+            ("Una se apoya en documentos oficiales y la otra en testimonios orales",
+             "El texto no indica en qué se apoya cada una."),
+        ],
+    ),
+    _ql(
+        "fuente_participacion", "his_critico", "medio",
+        "Según la segunda fuente, ¿cuál es el problema del voto voluntario?",
+        "Que la abstención se concentra en los sectores de menores ingresos",
+        "La fuente desplaza la pregunta desde la cantidad a la composición: "
+        "«El problema del voto voluntario no es cuánta gente vota, sino quién "
+        "deja de votar».\n"
+        "Y responde de inmediato: la abstención no se reparte parejo, se "
+        "concentra en los sectores con menos ingresos y menos años de "
+        "escolaridad.\n"
+        "La consecuencia que extrae es política: un padrón que se achica por "
+        "ese lado produce autoridades que responden a una parte del país.",
+        [
+            ("Que reduce el total de votantes por debajo de la mitad",
+             "La fuente dice expresamente que el problema no es cuánta gente vota."),
+            ("Que obliga a las personas a votar bajo amenaza de multa",
+             "La multa aparece en la primera fuente y como rasgo del voto obligatorio."),
+            ("Que impide conocer la voluntad real de quienes acuden a votar",
+             "Ese es el argumento de la primera fuente, no de la segunda."),
+        ],
+    ),
+    _ql(
+        "fuente_participacion", "his_critico", "dificil",
+        "Las dos fuentes observan la misma baja participación. ¿Qué las lleva "
+        "a valorarla de manera opuesta?",
+        "Miran datos distintos: una a quien vota y la otra a quien se abstiene",
+        "La primera fuente se fija en quienes acuden: si el voto es "
+        "voluntario, quien vota lo hace por convicción, y de ahí concluye que "
+        "una participación menor puede indicar un electorado más consciente.\n"
+        "La segunda se fija en quienes no acuden y observa que la abstención "
+        "se concentra en los sectores de menores ingresos y escolaridad.\n"
+        "El mismo porcentaje admite las dos lecturas porque cada una lo "
+        "descompone de una manera distinta.",
+        [
+            ("Una usa cifras oficiales y la otra estimaciones propias sin fuente",
+             "Ninguna de las dos indica el origen de sus datos."),
+            ("Una se refiere a elecciones locales y la otra a nacionales",
+             "El tipo de elección no aparece en ninguna de las dos fuentes."),
+            ("Una defiende el voto obligatorio y la otra lo rechaza",
+             "La segunda fuente no propone volver al voto obligatorio: describe un efecto."),
+        ],
+    ),
+    _ql(
+        "fuente_participacion", "his_critico", "dificil",
+        "Un analista concluye que «la baja participación demuestra que el "
+        "electorado es más consciente». ¿Qué objeción le haría la segunda "
+        "fuente?",
+        "Que esa lectura ignora quiénes son los que dejaron de votar",
+        "La conclusión del analista repite el argumento de la primera fuente: "
+        "quien vota lo hace por convicción y no para evitar una multa.\n"
+        "La segunda fuente no discute esa motivación, sino lo que la "
+        "afirmación deja fuera: la abstención se concentra en los sectores con "
+        "menos ingresos y menos escolaridad.\n"
+        "De ahí que la conclusión resulte incompleta antes que falsa: describe "
+        "a quienes quedaron sin decir nada de quienes se fueron.",
+        [
+            ("Que la participación en realidad aumentó en el último período",
+             "Ninguna de las dos fuentes entrega esa información."),
+            ("Que el voto voluntario no existe en la legislación vigente",
+             "Las dos fuentes discuten sus efectos, así que lo dan por vigente."),
+            ("Que la conciencia política no puede medirse con encuestas",
+             "La objeción de la fuente es sobre la composición del padrón, no sobre la medición."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "medio",
+        "Según el texto, ¿qué distingue a las causas estructurales de las "
+        "inmediatas en una revolución?",
+        "Las estructurales operan durante años y las inmediatas actúan como detonante",
+        "El texto presenta ambas dentro de la explicación multicausal: la "
+        "revolución no se explica solo por el hambre, ni solo por las ideas, "
+        "ni solo por la debilidad del gobierno.\n"
+        "Dentro de esa convergencia distingue dos tiempos: causas "
+        "estructurales «que preparan el terreno durante años» y causas "
+        "inmediatas «que actúan como detonante».\n"
+        "La diferencia es de duración y función, no de importancia: sin "
+        "terreno preparado el detonante no encuentra qué encender.",
+        [
+            ("Las estructurales son económicas y las inmediatas son políticas",
+             "El texto no reparte las causas por ámbito sino por su temporalidad."),
+            ("Las estructurales las estudia el historiador y las inmediatas el testigo",
+             "El texto no asigna cada tipo de causa a un observador distinto."),
+            ("Las estructurales explican el hecho y las inmediatas solo lo ilustran",
+             "El texto trata el detonante como parte de la explicación."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "dificil",
+        "Un texto sostiene que la Revolución Francesa «se explica por el "
+        "hambre del pueblo». ¿Qué objeción le haría esta fuente?",
+        "Que reduce a un solo factor un proceso que el texto describe como multicausal",
+        "El texto usa exactamente ese ejemplo: una revolución «no se explica "
+        "solo por el hambre, ni solo por las ideas, ni solo por la debilidad "
+        "del gobierno».\n"
+        "Lo que la vuelve posible, sostiene, es la convergencia de factores "
+        "políticos, económicos, sociales y culturales.\n"
+        "La objeción no niega que el hambre haya influido: niega que baste "
+        "para explicar el proceso completo.",
+        [
+            ("Que el hambre es una causa inmediata y no una estructural",
+             "El texto no clasifica ese factor: objeta la reducción a uno solo."),
+            ("Que la afirmación es anacrónica respecto de su época",
+             "El anacronismo consiste en aplicar categorías de otra época, que no es el caso."),
+            ("Que faltaría contrastarla con una fuente primaria del período",
+             "La objeción del texto es conceptual y no documental."),
+        ],
+    ),
+    _ql(
+        "fuente_memoria", "his_critico", "medio",
+        "¿Qué diferencia hay entre lo que pide la agrupación y lo que el "
+        "editorial supone que pide?",
+        "El editorial supone que pide reabrir el caso y ella pide que se abra por primera vez",
+        "El editorial advierte contra «reabrir heridas», con lo que da por "
+        "supuesto que el asunto ya estuvo abierto y se cerró.\n"
+        "La declaración corrige esa suposición en su última línea: «No pedimos "
+        "que se reabra nada, pedimos que por fin se abra».\n"
+        "La corrección es de fondo: si nunca se supo qué pasó ni quién lo "
+        "decidió, no hubo cierre y por lo tanto no hay reapertura posible.",
+        [
+            ("El editorial pide sanciones y la agrupación pide reparación",
+             "Ninguna de las dos fuentes menciona sanciones ni reparación económica."),
+            ("El editorial habla del pasado y la agrupación del presente",
+             "Ambas discuten qué hacer hoy con lo ocurrido."),
+            ("El editorial pide investigar y la agrupación pide olvidar",
+             "Las posiciones son exactamente las inversas."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "medio",
+        "Según el texto, ¿qué se necesita para juzgar adecuadamente una "
+        "decisión tomada en el pasado?",
+        "Entender qué estaba disponible y qué era pensable en esa época",
+        "El texto cierra el párrafo sobre el anacronismo con esa exigencia "
+        "literal: cada época «debe entenderse según lo que estaba disponible y "
+        "era pensable en ella».\n"
+        "La condición es doble. No basta con lo material —los medios "
+        "existentes—: también cuenta el horizonte de lo que era posible "
+        "concebir en ese momento.\n"
+        "Sin esa reconstrucción, el juicio dice más sobre quien juzga que "
+        "sobre la decisión juzgada.",
+        [
+            ("Comparar la decisión con otras similares del mismo período",
+             "El texto no propone la comparación como criterio de juicio."),
+            ("Verificar que exista una fuente primaria que la registre",
+             "La exigencia del texto es de contexto, no de registro documental."),
+            ("Determinar si la decisión tuvo consecuencias positivas",
+             "El texto no evalúa las decisiones por su resultado."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_critico", "medio",
+        "¿Qué elemento aparece solo en la segunda fuente y no en la primera?",
+        "La quema de las siembras después de la negativa",
+        "El testimonio del habitante cierra con ese hecho: «Cuando dijimos que "
+        "no, quemaron las siembras».\n"
+        "El relato del cronista menciona que hubo que «reducirlos por las "
+        "armas», pero no describe ninguna acción concreta contra los bienes "
+        "del valle.\n"
+        "La diferencia importa porque el detalle específico es lo que permite "
+        "contrastar versiones: una fórmula general y un hecho concreto no "
+        "pesan igual.",
+        [
+            ("La entrega de alimento a los recién llegados",
+             "Ese hecho aparece solo en la segunda fuente, pero la pregunta admite un solo elemento y la quema es el que cierra el relato."),
+            ("El ofrecimiento de paz por parte del capitán",
+             "Ese elemento aparece únicamente en la primera fuente."),
+            ("La presencia de un gran número de habitantes en el valle",
+             "Ese dato lo entrega la primera fuente al describir el encuentro."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "dificil",
+        "¿Por qué el texto sostiene que reconstruir el contexto «no es un "
+        "adorno introductorio»?",
+        "Porque sin él se lee el pasado como si hubiera ocurrido en nuestra época",
+        "El texto entrega esa razón de manera literal al cerrar el párrafo: "
+        "reconstruir el contexto «es lo que impide leer el pasado como si "
+        "hubiera ocurrido en nuestra época».\n"
+        "El ejemplo previo lo respalda: publicar un texto crítico bajo una "
+        "dictadura y hacerlo en democracia no son el mismo acto.\n"
+        "Tratado como adorno, el contexto se cuenta y se olvida; tratado como "
+        "condición, decide qué significa cada hecho que viene después.",
+        [
+            ("Porque los lectores esperan una introducción antes del análisis",
+             "El texto rechaza justamente esa función decorativa del contexto."),
+            ("Porque permite citar más fuentes al comienzo del trabajo",
+             "La cantidad de fuentes no interviene en el argumento."),
+            ("Porque ayuda a fijar con precisión la fecha de los hechos",
+             "El contexto explica el sentido de los hechos, no su cronología."),
+        ],
+    ),
+    _ql(
+        "fuente_participacion", "his_critico", "medio",
+        "Según la primera fuente, ¿qué indicaría una participación electoral "
+        "menor?",
+        "Un electorado más consciente y no uno más indiferente",
+        "La fuente construye el argumento sobre la motivación: cuando el voto "
+        "es voluntario, quien acude «lo hace por convicción».\n"
+        "De ahí concluye que el resultado refleja la voluntad de quienes de "
+        "verdad quieren decidir, y no la de quienes votan solo para evitar una "
+        "multa.\n"
+        "La frase final resume la lectura: una participación menor «puede ser "
+        "señal de un electorado más consciente, no de uno más indiferente».",
+        [
+            ("Un problema de acceso a los locales de votación",
+             "La fuente no menciona dificultades de acceso."),
+            ("Una señal de desconfianza hacia las instituciones",
+             "La desconfianza no aparece en el argumento de esta fuente."),
+            ("Un padrón que responde solo a una parte del país",
+             "Esa es la conclusión de la segunda fuente, no de la primera."),
+        ],
+    ),
+    _ql(
+        "fuente_memoria", "his_critico", "dificil",
+        "Un investigador quiere estudiar cómo se recordó el hecho a lo largo "
+        "del tiempo. ¿Qué le permiten estas dos fuentes?",
+        "Comparar dos momentos del recuerdo separados por cuarenta años",
+        "El texto fecha cada intervención: el editorial se publicó al año "
+        "siguiente de los hechos y la declaración, cuarenta años después.\n"
+        "Esa distancia convierte al par en material útil para estudiar la "
+        "memoria: no solo qué se dijo, sino cómo cambió lo que se consideraba "
+        "decible.\n"
+        "Para reconstruir los hechos mismos, en cambio, harían falta otras "
+        "fuentes: ninguna de las dos los describe en detalle.",
+        [
+            ("Establecer con precisión qué ocurrió durante aquellos días",
+             "Ninguna de las dos fuentes describe los hechos en detalle."),
+            ("Determinar quiénes fueron los responsables de lo ocurrido",
+             "Esa es justamente la pregunta que la declaración señala como pendiente."),
+            ("Medir cuánta gente compartía cada una de las dos posturas",
+             "Las fuentes expresan posiciones, no su extensión en la población."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "dificil",
+        "Según el texto, ¿qué relación hay entre las preguntas nuevas y la "
+        "evidencia?",
+        "Las preguntas pueden renovarse, pero cada afirmación sigue exigiendo evidencia",
+        "El texto sostiene que el pasado no cambia y que lo que cambia son las "
+        "preguntas, los archivos disponibles y las técnicas de análisis.\n"
+        "Y agrega el límite de inmediato: «Eso no vuelve arbitraria la "
+        "disciplina: las afirmaciones siguen exigiendo evidencia».\n"
+        "La renovación, entonces, ocurre en el temario y en el método, no en "
+        "la regla de prueba, que permanece constante.",
+        [
+            ("Las preguntas nuevas reemplazan a la evidencia como criterio",
+             "El texto mantiene la exigencia de evidencia intacta."),
+            ("Solo las preguntas antiguas admiten verificación documental",
+             "El texto no distingue entre preguntas verificables y no verificables."),
+            ("La evidencia limita qué preguntas puede formular un historiador",
+             "El texto presenta las preguntas como abiertas y la evidencia como exigencia posterior."),
+        ],
+    ),
+    # ---------------- análisis de fuentes ----------------
+    _ql(
+        "his_tipos_fuentes", "his_fuentes", "medio",
+        "Según el texto, ¿en qué se diferencian las fuentes primarias de las "
+        "secundarias?",
+        "En la distancia respecto de los hechos, no en su calidad",
+        "El texto define las primarias como producidas en la época estudiada "
+        "—cartas, actas, fotografías, herramientas, edificios— y las "
+        "secundarias como elaboraciones posteriores que las interpretan.\n"
+        "Y agrega una precisión que corrige un error frecuente: «La diferencia "
+        "no está en la calidad sino en la distancia respecto de los hechos».\n"
+        "Una fuente primaria puede ser tendenciosa y una secundaria, "
+        "rigurosa: la clasificación no anticipa cuál es más confiable.",
+        [
+            ("En que las primarias son más confiables que las secundarias",
+             "El texto niega expresamente que la diferencia sea de calidad."),
+            ("En que las primarias son escritas y las secundarias orales",
+             "El soporte es otra clasificación, distinta de esta."),
+            ("En que las secundarias solo se usan cuando faltan primarias",
+             "El texto no plantea ninguna jerarquía de uso entre ambas."),
+        ],
+    ),
+    _ql(
+        "his_tipos_fuentes", "his_fuentes", "medio",
+        "Según el texto, ¿qué significa que «ninguna fuente habla sola»?",
+        "Que toda fuente fue producida por alguien, en un momento y con un propósito",
+        "El texto lo desarrolla en esos términos y agrega que esas condiciones "
+        "«forman parte de lo que dice»: no son un ruido que haya que descontar "
+        "sino información sobre el documento.\n"
+        "El ejemplo lo aclara: un informe escrito para justificar una decisión "
+        "ante un superior no es menos útil por eso, «simplemente hay que leerlo "
+        "sabiendo qué buscaba lograr».\n"
+        "De ahí el procedimiento que el texto propone: identificar quién, "
+        "cuándo, para quién y con qué intención, y contrastar.",
+        [
+            ("Que una fuente aislada siempre contiene errores de hecho",
+             "El texto no atribuye errores a las fuentes por estar aisladas."),
+            ("Que las fuentes deben leerse en su idioma original",
+             "El idioma no aparece en el argumento del texto."),
+            ("Que solo las fuentes orales requieren un intérprete",
+             "La advertencia del texto vale para toda fuente, no solo las orales."),
+        ],
+    ),
+    _ql(
+        "his_tipos_fuentes", "his_fuentes", "dificil",
+        "Según el texto, ¿en qué consiste el procedimiento básico del oficio "
+        "frente a una fuente?",
+        "Identificar quién, cuándo, para quién y con qué intención, y contrastar",
+        "El texto lo enuncia como cierre de todo el razonamiento anterior: "
+        "identificar quién produjo la fuente, cuándo, para quién y con qué "
+        "intención, y contrastarla con otras.\n"
+        "El contraste no es opcional. El texto lo justifica en la última "
+        "línea: «Una sola fuente rara vez basta, y dos que coinciden dicen más "
+        "que una que afirma».\n"
+        "Las cuatro preguntas iniciales sitúan el documento; el contraste "
+        "permite pesar lo que dice.",
+        [
+            ("Verificar que sea primaria antes de darle cualquier valor",
+             "El texto niega que lo primario garantice calidad."),
+            ("Comprobar que su autor haya sido testigo de los hechos",
+             "El texto no exige que el autor sea testigo directo."),
+            ("Traducirla y transcribirla antes de analizar su contenido",
+             "El texto no menciona traducción ni transcripción."),
+        ],
+    ),
+    _ql(
+        "his_tipos_fuentes", "his_fuentes", "dificil",
+        "Un investigador estudia una sociedad que no dejó documentos escritos. "
+        "Según el texto, ¿qué puede usar?",
+        "Fuentes materiales y orales, como objetos, restos, arquitectura y relatos",
+        "El texto plantea el problema y la salida en el mismo párrafo. "
+        "Privilegiar lo escrito deja fuera a las sociedades sin escritura, y "
+        "las fuentes materiales y orales «permiten acceder justamente a esos "
+        "sectores».\n"
+        "Entre las materiales enumera objetos, restos y arquitectura, que "
+        "aparecen también en su lista de fuentes primarias.\n"
+        "La ausencia de escritura, entonces, no deja al historiador sin "
+        "material: le cambia el tipo de vestigio con que trabaja.",
+        [
+            ("Solo fuentes secundarias escritas por otros investigadores",
+             "Las secundarias interpretan fuentes previas: no reemplazan la falta de vestigios."),
+            ("Documentos escritos por sociedades vecinas exclusivamente",
+             "El texto no propone limitar la investigación a fuentes externas."),
+            ("Ninguna, porque sin escritura no hay fuentes disponibles",
+             "El texto define la fuente como cualquier vestigio, no solo el escrito."),
+        ],
+    ),
+    _ql(
+        "his_tipos_fuentes", "his_fuentes", "dificil",
+        "«Dos que coinciden dicen más que una que afirma». ¿Qué principio del "
+        "oficio resume esa frase?",
+        "El del contraste: una sola fuente rara vez basta para sostener una afirmación",
+        "La frase cierra el párrafo dedicado al procedimiento y explica por "
+        "qué el contraste forma parte de él y no es un paso opcional.\n"
+        "El razonamiento es sencillo: si toda fuente fue producida con un "
+        "propósito, la coincidencia entre dos producidas por motivos distintos "
+        "es más difícil de explicar por ese propósito.\n"
+        "No garantiza la verdad, pero eleva el costo del error: es la forma "
+        "que toma la exigencia de evidencia en este oficio.",
+        [
+            ("El de la primacía: la fuente primaria pesa más que la secundaria",
+             "El texto niega expresamente que lo primario implique mayor calidad."),
+            ("El del contexto: cada fuente debe leerse en su época",
+             "Ese principio aparece en el texto sobre el oficio, no en esta frase."),
+            ("El de la cantidad: mientras más fuentes, más cierta la conclusión",
+             "El texto valora la coincidencia entre fuentes distintas, no el número."),
+        ],
+    ),
+    _ql(
+        "fuentes_salitre", "his_fuentes", "medio",
+        "¿Para quién fue escrito cada uno de los dos documentos de la oficina "
+        "salitrera?",
+        "El primero para la casa matriz y el segundo para un hermano",
+        "El texto identifica al destinatario de cada fuente en su "
+        "encabezado: un informe de un administrador «a la casa matriz» y una "
+        "carta de un obrero «a su hermano».\n"
+        "El destinatario condiciona lo que cada documento dice. Ante la casa "
+        "matriz conviene mostrar una oficina ordenada; ante un hermano que "
+        "pregunta, conviene responder sin adorno.\n"
+        "Identificar para quién se escribió es uno de los cuatro pasos del "
+        "procedimiento básico del oficio.",
+        [
+            ("El primero para los obreros y el segundo para las autoridades",
+             "El informe se dirige a la casa matriz y la carta a un familiar."),
+            ("Ambos para ser publicados en la prensa de la época",
+             "Ninguno de los dos documentos fue escrito para publicarse."),
+            ("El primero para un tribunal y el segundo para un sindicato",
+             "Ni tribunales ni sindicatos aparecen como destinatarios."),
+        ],
+    ),
+    _ql(
+        "fuentes_salitre", "his_fuentes", "dificil",
+        "Un historiador debe decidir cuál de las dos fuentes usar. Según el "
+        "oficio, ¿qué corresponde hacer?",
+        "Usar ambas, leyendo cada una a la luz de quién la escribió y para quién",
+        "Ninguna de las dos es descartable: las dos fueron producidas en la "
+        "época y describen los mismos elementos —pulpería, escuela, agua, "
+        "pago— desde posiciones opuestas.\n"
+        "El informe muestra qué necesitaba mostrar una administración ante su "
+        "casa matriz; la carta, qué experimentaba un trabajador. Ambas cosas "
+        "son parte de lo que hay que explicar.\n"
+        "Elegir una sola equivaldría a adoptar su punto de vista sin "
+        "advertirlo, que es lo contrario del contraste.",
+        [
+            ("Usar solo la carta, porque proviene de quien vivió las condiciones",
+             "Haber vivido algo no convierte un testimonio en versión única."),
+            ("Usar solo el informe, porque su autor tenía datos administrativos",
+             "Tener datos no exime del propósito con que se escribió el informe."),
+            ("Descartar ambas y buscar una fuente secundaria neutral",
+             "El texto no plantea la existencia de fuentes sin punto de vista."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_fuentes", "medio",
+        "¿Qué diferencia de producción hay entre las dos fuentes sobre el "
+        "encuentro en el valle?",
+        "Una la escribió un cronista de la expedición y la otra se transmitió oralmente",
+        "El texto identifica el origen de cada una: el primer relato "
+        "corresponde a «un cronista que acompañó a la expedición» y el segundo "
+        "es un «testimonio recogido a un habitante del valle, transmitido "
+        "oralmente y puesto por escrito generaciones después».\n"
+        "La diferencia no es solo de autor sino de recorrido: uno se escribió "
+        "en el momento y el otro pasó por varias generaciones antes de fijarse "
+        "por escrito.\n"
+        "Ese recorrido forma parte de lo que hay que considerar al leerlo, sin "
+        "que lo invalide.",
+        [
+            ("Una es un documento oficial y la otra una carta privada",
+             "Ninguno de los dos documentos es una carta ni una pieza oficial."),
+            ("Una fue escrita por un historiador y la otra por un testigo",
+             "El cronista acompañó la expedición: no es un historiador posterior."),
+            ("Ambas fueron redactadas el mismo año por encargo de la Corona",
+             "El segundo testimonio se puso por escrito generaciones después."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_fuentes", "dificil",
+        "El segundo testimonio se puso por escrito generaciones después. "
+        "¿Cómo debería tratarse ese dato?",
+        "Como una condición de producción que hay que considerar, sin descartar la fuente",
+        "El procedimiento del oficio pide identificar cuándo se produjo cada "
+        "fuente, y aquí la respuesta es doble: el hecho ocurrió en un momento "
+        "y la fijación por escrito, generaciones después.\n"
+        "Esa distancia puede introducir elaboración, pero también es la única "
+        "vía por la que una versión no escrita llegó a conservarse: "
+        "descartarla dejaría el episodio con un solo relato.\n"
+        "Lo que corresponde es leerla sabiendo su recorrido y contrastarla con "
+        "la otra fuente, que es lo que el oficio propone.",
+        [
+            ("Como motivo suficiente para preferir la crónica del expedicionario",
+             "La crónica también fue escrita con un propósito: la antigüedad no la vuelve neutral."),
+            ("Como prueba de que el testimonio fue inventado más tarde",
+             "La transmisión oral no equivale a invención."),
+            ("Como un detalle irrelevante para el análisis de la fuente",
+             "El cuándo es uno de los cuatro datos que el oficio exige identificar."),
+        ],
+    ),
+    _ql(
+        "fuentes_salitre", "his_fuentes", "dificil",
+        "Ambas fuentes mencionan la escuela de la oficina. ¿Qué revela ese "
+        "punto de coincidencia?",
+        "Que el desacuerdo no es sobre su existencia sino sobre qué tan suficiente era",
+        "El informe la presenta como parte de los servicios: «escuela para los "
+        "hijos de los operarios». La carta no la niega: «La escuela existe y "
+        "tiene un solo maestro para ciento veinte niños».\n"
+        "La coincidencia sobre el hecho y la discrepancia sobre su alcance es "
+        "justamente lo que hace productivo el contraste: el dato adicional de "
+        "la carta cambia lo que significa el mismo servicio.\n"
+        "Es un buen ejemplo de por qué dos fuentes que coinciden en algo dicen "
+        "más que una que afirma.",
+        [
+            ("Que una de las dos fuentes está faltando a la verdad",
+             "Ambas afirman que la escuela existe: la diferencia es de alcance."),
+            ("Que la escuela fue construida entre 1907 y 1908",
+             "Las dos fuentes la dan por existente, sin indicar cuándo se construyó."),
+            ("Que el administrador desconocía las condiciones de la escuela",
+             "El informe no niega el dato de la carta: simplemente no lo menciona."),
+        ],
+    ),
+]
+
+
+# Reemplazos de las cuatro preguntas que repetian un enunciado ya existente,
+# mas las dos que faltaban para dejar his_critico en 60.
+
+QUESTIONS_HISTORIA += [
+    _ql(
+        "his_tipos_fuentes", "his_fuentes", "facil",
+        "¿Qué ejemplos de fuentes primarias entrega el texto?",
+        "Cartas, actas, fotografías, herramientas y edificios",
+        "El texto define las primarias como producidas en la época estudiada y "
+        "entrega esa lista, que mezcla soportes muy distintos: papel, imagen, "
+        "objeto y construcción.\n"
+        "La variedad no es casual. Sirve para mostrar que lo primario no "
+        "coincide con lo escrito: una herramienta también es fuente.\n"
+        "Las secundarias, en cambio, las ejemplifica con un libro de historia "
+        "o un artículo académico, que son elaboraciones posteriores.",
+        [
+            ("Libros de historia y artículos académicos recientes",
+             "Esos son los ejemplos que el texto da de fuentes secundarias."),
+            ("Únicamente documentos oficiales conservados en archivos",
+             "El texto incluye fotografías, herramientas y edificios."),
+            ("Relatos orales transmitidos entre varias generaciones",
+             "Las fuentes orales aparecen en la clasificación por soporte."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "medio",
+        "Según el texto, ¿qué describe en realidad el reproche a alguien por "
+        "no saber algo que en su tiempo no estaba establecido?",
+        "La confusión de quien juzga, no la ignorancia de quien fue juzgado",
+        "El texto lo formula así al explicar el anacronismo: ese reproche «no "
+        "describe su ignorancia: describe la confusión de quien juzga».\n"
+        "El desplazamiento es deliberado. El juicio pretende hablar del pasado "
+        "y termina hablando del criterio con que se lo mira.\n"
+        "De ahí la exigencia que el texto plantea a continuación: entender "
+        "cada época según lo que estaba disponible y era pensable en ella.",
+        [
+            ("Una carencia real de conocimiento en la época estudiada",
+             "El texto sostiene que ese conocimiento aún no había sido establecido."),
+            ("La falta de fuentes que documenten lo que se sabía entonces",
+             "El problema que plantea el texto no es documental sino de criterio."),
+            ("Un error de método al reconstruir el contexto de la época",
+             "El contexto es el remedio que propone el texto, no el error que describe."),
+        ],
+    ),
+    _ql(
+        "his_tipos_fuentes", "his_fuentes", "medio",
+        "Además de por su distancia respecto de los hechos, ¿cómo clasifica el "
+        "texto las fuentes históricas?",
+        "Por su soporte: escritas, materiales y orales",
+        "El texto abre esa segunda clasificación de manera explícita: «Las "
+        "fuentes también se clasifican por su soporte».\n"
+        "Enumera las escritas, que reconoce como las más usadas; las "
+        "materiales, que incluyen objetos, restos y arquitectura; y las "
+        "orales.\n"
+        "La distinción importa porque cada soporte da acceso a sectores "
+        "distintos: privilegiar lo escrito deja fuera a quienes no escribían.",
+        [
+            ("Por su antigüedad: antiguas, modernas y contemporáneas",
+             "El texto no clasifica las fuentes por su antigüedad."),
+            ("Por su confiabilidad: verificadas y no verificadas",
+             "El texto niega que la clasificación anticipe la confiabilidad."),
+            ("Por su extensión: documentos breves y documentos largos",
+             "La extensión no aparece como criterio en el texto."),
+        ],
+    ),
+    _ql(
+        "his_tipos_fuentes", "his_fuentes", "medio",
+        "Un investigador cita un artículo académico publicado en 2010 sobre la "
+        "Colonia. Según el texto, ¿qué tipo de fuente está usando?",
+        "Una fuente secundaria, porque interpreta fuentes anteriores",
+        "El texto define las secundarias como «elaboraciones posteriores que "
+        "interpretan a las primeras», y menciona expresamente el libro de "
+        "historia y el artículo académico como ejemplos.\n"
+        "Lo que decide la categoría es la distancia respecto de los hechos, no "
+        "el prestigio del autor ni el rigor del trabajo.\n"
+        "El propio texto lo aclara: la diferencia entre primaria y secundaria "
+        "«no está en la calidad sino en la distancia».",
+        [
+            ("Una fuente primaria, porque fue escrita por un especialista",
+             "La condición de especialista no convierte un texto en fuente primaria."),
+            ("Una fuente material, porque el artículo es un objeto impreso",
+             "Las fuentes materiales son objetos, restos y arquitectura de la época estudiada."),
+            ("Una fuente primaria, porque cita documentos de la época",
+             "Citar documentos de la época es lo que hace una elaboración posterior."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "medio",
+        "Según el texto, ¿qué condiciones componen el contexto histórico de un "
+        "hecho?",
+        "Las políticas, económicas, sociales y culturales de su época",
+        "El texto lo define como «el conjunto de condiciones políticas, "
+        "económicas, sociales y culturales de la época» que permiten "
+        "comprender por qué un hecho ocurrió y qué significó.\n"
+        "Las cuatro dimensiones son las mismas que reaparecen cuando el texto "
+        "explica la multicausalidad, y no es casualidad: reconstruir el "
+        "contexto y explicar las causas son operaciones emparentadas.\n"
+        "Dejar fuera alguna de ellas empobrece la explicación aunque el relato "
+        "siga siendo correcto.",
+        [
+            ("Únicamente las decisiones de las autoridades de turno",
+             "El texto incluye condiciones económicas, sociales y culturales además de las políticas."),
+            ("Los antecedentes militares y diplomáticos del período",
+             "El texto no reduce el contexto a esos dos ámbitos."),
+            ("Las fuentes disponibles para estudiar ese hecho concreto",
+             "Las fuentes son el material del historiador, no el contexto del hecho."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "dificil",
+        "Dos generaciones de historiadores estudian el mismo siglo y publican "
+        "conclusiones distintas. Según el texto, ¿qué explica esa diferencia?",
+        "Cambiaron las preguntas, los archivos disponibles y las técnicas de análisis",
+        "El texto sostiene que la historia se reescribe con cada generación "
+        "porque «el pasado no cambia, pero las preguntas que se le hacen sí», "
+        "y suma dos factores materiales: archivos que se abren y técnicas "
+        "nuevas.\n"
+        "Da ejemplos concretos del giro en las preguntas: la vida cotidiana, "
+        "el trabajo de las mujeres, los pueblos sin escritura.\n"
+        "Y marca el límite de esa explicación: la disciplina no se vuelve "
+        "arbitraria, porque las afirmaciones siguen exigiendo evidencia.",
+        [
+            ("Una de las dos generaciones trabajó con fuentes falsas",
+             "El texto no atribuye la diferencia a fuentes defectuosas."),
+            ("Los hechos del siglo estudiado se conocieron con más detalle",
+             "El texto afirma que el pasado no cambia: lo que cambia es qué se le pregunta."),
+            ("La segunda generación abandonó la exigencia de evidencia",
+             "El texto sostiene expresamente lo contrario."),
+        ],
+    ),
+]
