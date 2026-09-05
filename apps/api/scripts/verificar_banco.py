@@ -27,6 +27,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from paes_api.seed_data import (
+    _SD_ALTERNATIVAS,
     LESSONS,
     PASSAGES,
     PASSAGES_HISTORIA,
@@ -57,6 +58,11 @@ DIFICULTADES = {"facil", "medio", "dificil"}
 # gemelas pueden llevar dificultades distintas. Cada fragmento identifica a la
 # pregunta que rompe la simetría, y va con el motivo por el que la rompe.
 EXCEPCIONES_DIFICULTAD = {
+    "se llega a 0 = 0": "una identidad obliga a concluir infinitas soluciones; la gemela con 0 = 7 es una contradiccion directa",
+    "valor de sen(30°)": "exige recordar el triangulo de 30-60-90; las gemelas se leen directo sobre un eje",
+    "valor de cos(120°)": "hay que reducir al angulo de referencia y decidir el signo del cuadrante; las gemelas estan sobre un eje",
+    "obtener exactamente 3 caras": "con seis lanzamientos la combinatoria C(6,3) ya no se enumera a mano; las gemelas se cuentan de cabeza",
+    "valor aproximado de log 300": "hay que separar 300 en 3 por 100 y sumar dos logaritmos; la gemela aplica una sola propiedad",
     "x² + 12x + 36": "raíz doble: una única solución, no dos",
     "x² − 10x + 25": "raíz doble: una única solución, no dos",
     "2x + 3y = 17": "hay que amplificar las dos ecuaciones; la gemela se reduce directo",
@@ -492,6 +498,418 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
 
 # Enunciado (recortado) -> valor esperado, recalculado acá de forma independiente.
 COMPROBACIONES: dict[str, str] = {
+    # --- M2: logaritmos ---
+    "¿Cuál es el valor de log₄ 16?": str(round(log2(16) / log2(4))),
+    "¿Cuál es el valor de log₇ 7?": str(1),
+    "¿Cuál es el valor de log 1, en base 10?": str(0),
+    "¿Cuál es el valor de log₂ 1024?": str(round(log2(1024))),
+    "¿Cuál es el valor de log₆ 36?": str(round(log2(36) / log2(6))),
+    "¿Cuál es el valor de log₂ (1/8)?": str(round(log2(1 / 8))),
+    "log 5 ≈ 0,699, ¿cuál es el valor aproximado de log 25": f"≈{2 * 0.699:.3f}",
+    "log 2 ≈ 0,301 y log 7 ≈ 0,845": f"≈{0.301 + 0.845:.3f}",
+    "log 8 ≈ 0,903 y log 2 ≈ 0,301": f"≈{0.903 - 0.301:.3f}",
+    "¿Cuál es el valor de log₅ 125 + log₂ 16?": str(3 + 4),
+    "concentración de hidrogeniones es 10⁻⁵": str(5),
+    "¿Cuál es el valor de log₉ 3?": str(log2(3) / log2(9)),
+    "¿Cuál es el valor de 10^(log 7)?": str(7),
+    "magnitud de un sismo en escala logarítmica crece de 5 a 7":
+        f"{32**2:,} veces",
+    "¿Cuál es el valor de log₄ 64 · log₂ 8?": str(3 * 3),
+    "Si I es 1.000 veces I₀": f"{round(10 * 3)} dB",
+    "Si log₂ x = 3 y log₂ y = 4": str(3 + 4),
+    "¿Cuál es el valor de log₃ (1/9)?": str(round(log2(1 / 9) / log2(3))),
+    "log 3 ≈ 0,477, ¿cuál es el valor aproximado de log 300": f"≈{0.477 + 2:.3f}",
+    "¿Cuál es el valor de log₈ 2?": str(Fraction(1, 3)),
+    "¿Cuál es el valor de log 0,001, en base 10?": str(-3),
+    "¿Cuál es el valor de log₂ 6 − log₂ 3?": str(round(log2(6) - log2(3))),
+    "¿Cuál es el valor de log₅ 5⁷?": str(7),
+    "¿cuántas cifras tiene el número 2⁵⁰": f"{int(50 * 0.301) + 1} cifras",
+    "¿Cuál es el valor de log₃ 5 · log₅ 9?": str(round(log2(9) / log2(3))),
+    # --- M2: educación financiera ---
+    "cotización obligatoria para la AFP es del 10": f"${round(700_000 * 0.10):,}",
+    "capital de $400.000 gana un 3% de interés simple anual":
+        f"${round(400_000 * 0.03):,}",
+    "casa se vende en 3.000 UF y la UF vale $38.000": f"${3000 * 38_000:,}",
+    "artículo cuesta $60.000 y se ofrece con un 15% de descuento":
+        f"${round(60_000 * 0.85):,}",
+    "crédito de consumo de $600.000 se paga en 10 cuotas": f"${10 * 72_000:,}",
+    "trabajador cotiza $80.000 mensuales en su AFP": f"${80_000 * 12 * 30:,}",
+    "acumula $36.000.000 en su AFP": f"${36_000_000 // (20 * 12):,}",
+    "dividendo mensual de 12 UF durante 20 años": f"{12 * 12 * 20:,} UF",
+    "capital de $200.000 se invierte al 10% de interés compuesto":
+        f"${round(200_000 * 1.1**3):,}",
+    "interés simple del 2% mensual a 6 meses sobre $400.000":
+        f"${round(400_000 * 0.02 * 6):,}",
+    "producto cuesta $120.000 al contado o en 6 cuotas de $23.000":
+        f"${6 * 23_000 - 120_000:,}",
+    "valor de la UF sube de $38.000 a $38.760":
+        f"{round((38_760 - 38_000) / 38_000 * 100)}%",
+    "deuda de $900.000 se paga en 18 cuotas iguales sin interés":
+        f"${900_000 - 7 * (900_000 // 18):,}",
+    "sueldo de $500.000 sube un 4% y al año siguiente":
+        f"${round(500_000 * 1.04**2):,}",
+    "diferencia entre el interés compuesto y el simple para un capital de $100.000":
+        f"${round(100_000 * 1.2**2 - 100_000) - round(100_000 * 0.2 * 2):,}",
+    "tarjeta de crédito cobra un 3% mensual": f"${round(200_000 * 1.03**2):,}",
+    "fondo de AFP rinde un 5% anual": f"${round(10_000_000 * 0.05):,}",
+    "capital duplica su valor en 8 años con interés simple": f"{100 / 8:.1f}%",
+    "sueldo líquido de una persona es $560.000": f"${round(560_000 / 0.8):,}",
+    "inversión de $250.000 al 4% de interés compuesto anual":
+        f"${round(250_000 * 1.04**2):,}",
+    "crédito hipotecario de 2.500 UF se paga en 25 años":
+        f"{14 * 12 * 25 - 2500:,} UF",
+    "ahorra $50.000 el primer mes y cada mes aumenta":
+        f"${sum(50_000 + 10_000 * k for k in range(5)):,}",
+    "crédito de $800.000 tiene una comisión de apertura del 2%":
+        f"${round(800_000 * 0.98):,}",
+    "artículo con IVA incluido cuesta $23.800": f"${round(23_800 / 1.19):,}",
+    "deuda crece un 5% mensual por mora": f"${300_000 * 1.05**3:,.1f}",
+    # --- M2: números reales con resultado numérico ---
+    "¿Cuál es el valor de |−12| + |−3|?": str(12 + 3),
+    "¿Cuál es el valor de (√3)⁴?": str(3**2),
+    "¿Cuál es el valor de (2√5)²?": str(2**2 * 5),
+    "¿Cuál es el valor de √(9 + 16)?": str(round(sqrt(9 + 16))),
+    "¿Cuál es el valor de |5 − 12| − |−4|?": str(abs(5 - 12) - abs(-4)),
+    "¿Cuál es el valor de |−2| · |3 − 7|?": str(2 * abs(3 - 7)),
+    "¿Cuál es el valor exacto de √0,25?": str(sqrt(0.25)),
+    "¿Cuál es el valor de √(45/5)?": str(round(sqrt(45 / 5))),
+    "¿Cuál es el valor de (√7 + 3)(√7 − 3)?": str(7 - 9),
+    "¿Cuál es el valor de √(2 + √3) · √(2 − √3)?":
+        str(round(sqrt((2 + sqrt(3)) * (2 - sqrt(3))))),
+    "¿Cuál es el valor de la expresión (√18 − √8) ÷ √2?":
+        str(round((sqrt(18) - sqrt(8)) / sqrt(2))),
+    # --- M2: probabilidad condicional ---
+    "se sabe que el resultado fue menor que 3": str(Fraction(1, 2)),
+    "En una bolsa hay 5 fichas rojas y 5 azules": str(Fraction(4, 9)),
+    "moneda dos veces y se sabe que la primera fue cara": str(Fraction(1, 2)),
+    "En un curso de 30 estudiantes, 18 son mujeres": str(Fraction(6, 18)),
+    "carta de un naipe inglés de 52 y resulta ser de corazones": str(Fraction(1, 13)),
+    "P(A) = 0,4 y P(B) = 0,5 y los sucesos son independientes": str(0.4 * 0.5),
+    "caja hay 3 lápices azules y 7 rojos": str(Fraction(3, 10)),
+    "dos sucesos son excluyentes y uno de ellos ocurrió": str(0),
+    "el 30% practica natación y el 12% practica natación y toca guitarra":
+        f"{round(0.12 / 0.30 * 100)}%",
+    "urna hay 4 bolitas blancas y 6 negras": str(Fraction(4, 10) * Fraction(3, 9)),
+    "Si P(A) = 0,6 y P(A y B) = 0,3": str(0.3 / 0.6),
+    "se sabe que la suma fue 8": str(Fraction(2, 5)),
+    "de 200 personas, 120 son adultos y 45 de ellos usan bicicleta": str(45 / 120),
+    "De 1.000 personas, 50 están enfermas y el test da positivo en 45": str(45 / 50),
+    "urna hay 5 bolitas verdes y 3 amarillas": str(Fraction(5, 7)),
+    "suma 7 sabiendo que el primer dado mostró": str(Fraction(1, 6)),
+    "50 personas, 20 hablan inglés, 15 hablan francés": str(5 / 20),
+    "el 5% sale defectuosa": str(round(0.05 * 0.05, 4)),
+    "bolsa hay 2 bolitas rojas y 3 verdes": str(Fraction(2, 5) * Fraction(3, 4)),
+    "el 60% usa transporte público y de ellos el 25% llega atrasado":
+        f"{round(0.60 * 0.25 * 100)}%",
+    "Si P(A | B) = 0,3": str(1 - 0.3),
+    "resultado fue par. ¿Cuál es la probabilidad de que haya sido mayor que 3":
+        str(Fraction(2, 3)),
+    "naipe de 52 cartas se extraen dos sin reposición":
+        str(Fraction(4, 52) * Fraction(3, 51)),
+    "piezas con un 4% de defectuosas": str(0.96 * 0.96),
+    "caja hay 6 bolitas: 2 rojas y 4 azules":
+        str(Fraction(4, 6) * Fraction(3, 5) * Fraction(2, 4)),
+    "Si P(B) = 0,4 y P(A | B) = 0,75": str(round(0.4 * 0.75, 2)),
+    "la probabilidad de encontrarlo en verde es 0,4": str(round(1 - 0.6 * 0.6, 2)),
+    "el 80% aprueba matemática y el 60% aprueba matemática y lenguaje":
+        str(round(0.60 / 0.80, 2)),
+    "saca una carta y resulta ser roja": str(Fraction(6, 26)),
+    "test da negativo en 900 de las 950 personas sanas": f"{900 / 950:.3f}",
+    "ruleta de 8 sectores iguales": str(Fraction(2, 3)),
+    "Si A y B son independientes, ¿cuánto vale P(A | B)": str(0.35),
+    "la máquina A produce el 70% de las piezas y la B el 30%": str(0.05),
+    "P(A) = 0,5, P(B) = 0,6 y que A y B son independientes":
+        str(round(0.5 + 0.6 - 0.5 * 0.6, 2)),
+    "Dos urnas: la A tiene 3 blancas y 1 negra":
+        str(Fraction(1, 2) * Fraction(3, 4) + Fraction(1, 2) * Fraction(1, 4)),
+    "Con los datos de dos urnas donde la A tiene 3 blancas":
+        str(Fraction(1, 2) * Fraction(3, 4)
+            / (Fraction(1, 2) * Fraction(3, 4) + Fraction(1, 2) * Fraction(1, 4))),
+    "tres monedas y se sabe que al menos una fue cara": str(Fraction(1, 8 - 1)),
+    "caja tiene 10 ampolletas, 3 de ellas falladas":
+        str(1 - Fraction(7, 10) * Fraction(6, 9)),
+    "el 40% son hombres y el 25% de los hombres juega ajedrez":
+        f"{round((0.40 * 0.25 + 0.60 * 0.10) * 100)}%",
+    "Con los datos de un curso donde el 40% son hombres":
+        f"{0.40 * 0.25 / (0.40 * 0.25 + 0.60 * 0.10) * 100:.1f}%",
+    "Si la primera fue de corazones": f"{13 - 1}/{52 - 1}",
+    # --- M2: modelo binomial y distribución normal ---
+    "moneda 4 veces. ¿Cuál es la probabilidad de obtener 4 caras": str(Fraction(1, 2**4)),
+    "moneda 3 veces. ¿Cuál es la probabilidad de no obtener ninguna cara":
+        str(Fraction(1, 2**3)),
+    "n = 10 y p = 0,3, ¿cuántos éxitos se esperan": str(round(10 * 0.3)),
+    "la probabilidad de éxito es 0,25, ¿cuál es la probabilidad de fracaso":
+        str(1 - 0.25),
+    "moneda 4 veces. ¿Cuál es la probabilidad de obtener exactamente 2 caras":
+        str(Fraction(comb(4, 2), 2**4)),
+    "dos tiros independientes, ¿cuál es la probabilidad de acertar ambos":
+        str(round(0.8 * 0.8, 2)),
+    "dos tiros independientes, ¿cuál es la probabilidad de acertar exactamente":
+        str(round(2 * 0.8 * 0.2, 2)),
+    "n = 20 y p = 0,5, ¿cuál es la varianza": str(round(20 * 0.5 * 0.5)),
+    "dado 3 veces. ¿Cuál es la probabilidad de no obtener ningún 6":
+        str(Fraction(5**3, 6**3)),
+    "combinatoria C(5, 2)": str(comb(5, 2)),
+    "media 100 y desviación estándar 15": str(round((130 - 100) / 15)),
+    "5 preguntas con 4 alternativas cada una":
+        f"{Fraction(1, 4**5).numerator}/{Fraction(1, 4**5).denominator:,}",
+    "n = 6 y p = 1/2, ¿cuál es la probabilidad de obtener exactamente 6 éxitos":
+        str(Fraction(1, 2**6)),
+    "semilla germina con probabilidad 0,9": str(round(0.9**3, 3)),
+    "n = 8 y p = 0,25, ¿cuál es el número esperado": str(round(8 * 0.25)),
+    "moneda 5 veces. ¿Cuál es la probabilidad de obtener al menos una cara":
+        str(1 - Fraction(1, 2**5)),
+    "dado 3 veces. ¿Cuál es la probabilidad de obtener exactamente un 6":
+        f"{comb(3, 1) * 5**2}/{6**3}",
+    "n = 3 y p = 0,2, ¿cuál es la probabilidad de obtener exactamente un éxito":
+        str(round(comb(3, 1) * 0.2 * 0.8**2, 3)),
+    "n = 3 y p = 0,2, ¿cuál es la probabilidad de no obtener ningún éxito":
+        str(round(0.8**3, 3)),
+    "combinatoria C(6, 2)": str(comb(6, 2)),
+    "n = 50 y p = 0,02, ¿cuántos éxitos se esperan": str(round(50 * 0.02)),
+    "n = 100 y p = 0,5, ¿cuál es la desviación estándar":
+        str(round(sqrt(100 * 0.5 * 0.5))),
+    "media 70 y desviación estándar 6": str((61 - 70) / 6),
+    "piezas con un 10% de defectuosas. Si se revisan 4 piezas":
+        str(round(1 - 0.9**4, 4)),
+    "n = 5, ¿cuánto suman las probabilidades": str(1),
+    "n = 10 y p = 0,5, ¿cuál es el número de éxitos más probable":
+        str(round(10 * 0.5)),
+    "n = 5 y p = 0,2, ¿cuál es la probabilidad de obtener exactamente 2 éxitos":
+        str(round(comb(5, 2) * 0.2**2 * 0.8**3, 4)),
+    "moneda 4 veces. ¿Cuál es la probabilidad de obtener al menos 3 caras":
+        str(Fraction(comb(4, 3) + comb(4, 4), 2**4)),
+    "tratamiento funciona en el 60% de los casos":
+        str(round(comb(3, 2) * 0.6**2 * 0.4, 3)),
+    "media 160 cm y desviación estándar 8 cm": f"{160 + 8} cm",
+    "n = 4 y p = 0,25, ¿cuál es la probabilidad de obtener al menos un éxito":
+        f"{1 - 0.75**4:.4f}",
+    "media 40 y desviación estándar 5, un dato tiene puntaje estandarizado":
+        str(round(40 + (-2) * 5)),
+    "moneda 6 veces. ¿Cuál es la probabilidad de obtener exactamente 3 caras":
+        str(Fraction(comb(6, 3), 2**6)),
+    "control de calidad se revisan 5 productos":
+        f"{0.8**5 + comb(5, 1) * 0.2 * 0.8**4:.4f}",
+    # --- M2: funciones trigonométricas ---
+    "¿Cuál es el valor de sen(0°)?": str(0),
+    "¿Cuál es el valor de cos(90°)?": str(0),
+    "amplitud de la función f(x) = 5 · sen x": str(5),
+    "valor máximo que alcanza la función f(x) = 4 · sen x": str(4),
+    "¿Cuál es el valor de sen(30°)?": str(1 / 2),
+    "modelo T(h) = 15 + 7 · sen(h)": f"{15} grados",
+    "¿Cuál es el valor de sen(180°)?": str(0),
+    "¿Cuál es el valor de cos(360°)?": str(1),
+    "corriente de un circuito se modela con I(t) = 12 · sen(t)": f"{12} amperes",
+    "ciclos completos hace la función f(x) = sen(4x)": str(360 // 90),
+    "valor mínimo de la función f(x) = 20 − 6 · cos x": str(20 - 6),
+    "Se sabe que sen(x) = 0,6 para cierto ángulo x del primer cuadrante": str(0.6),
+    "altura de una marea se modela con h(t) = 4 + 2 · sen(t)": f"{2 * 2} metros",
+    "¿Cuál es el valor de cos(60°)?": str(1 / 2),
+    "¿Cuál es el valor de cos(120°)?": str(-1 / 2),
+    "¿Cuál es el valor de tan(45°)?": str(1),
+    "volumen de aire en los pulmones se modela": f"{2.5 - 0.5:.0f} litros",
+    "Si sen(x) = 0,3, ¿cuánto vale sen(x + 360°)?": str(0.3),
+    "máximo de la función f(x) = 7 · sen(5x)": str(7),
+    "Si sen(x) = 5/13 y x está en el primer cuadrante":
+        str(Fraction(round(sqrt(13**2 - 5**2)), 13)),
+    "altura de una cabina de noria se modela con h(t) = 12 + 10 · sen(30° · t)":
+        f"{360 // 30} minutos",
+    # --- M2: medidas de dispersión ---
+    "rango del conjunto de datos 3, 7, 12, 5, 9": str(12 - 3),
+    "media del conjunto 4, 8, 6, 2": str((4 + 8 + 6 + 2) // 4),
+    "Si la varianza de un conjunto es 49": str(round(sqrt(49))),
+    "conjunto donde todos los datos valen 7": str(0),
+    "rango del conjunto −4, 0, 6, 2": str(6 - (-4)),
+    "varianza del conjunto 1, 2, 3, 4, 5":
+        str(round(sum((x - 3) ** 2 for x in (1, 2, 3, 4, 5)) / 5)),
+    "desviación estándar del conjunto 2, 2, 6, 6":
+        str(round(sqrt(sum((x - 4) ** 2 for x in (2, 2, 6, 6)) / 4))),
+    "varianza del conjunto 10, 20, 30":
+        f"{sum((x - 20) ** 2 for x in (10, 20, 30)) / 3:.1f}",
+    "desviación estándar del conjunto 5, 5, 5, 9":
+        f"{sqrt(sum((x - 6) ** 2 for x in (5, 5, 5, 9)) / 4):.2f}",
+    "En cuatro días una tienda vendió 12, 15, 18 y 15 helados":
+        str((12 + 15 + 18 + 15) // 4),
+    "rango intercuartílico si el primer cuartil vale 12": str(27 - 12),
+    "Si tres de ellos son 6, 9 y 12": str(4 * 10 - (6 + 9 + 12)),
+    "desviación estándar del conjunto 3, 4, 5, 6, 7":
+        f"{sqrt(sum((x - 5) ** 2 for x in (3, 4, 5, 6, 7)) / 5):.2f}",
+    "el valor 2 aparece 3 veces": f"{(2 * 3 + 5 * 2 + 8 * 5) / (3 + 2 + 5):.1f}",
+    "varianza del conjunto 1, 1, 1, 5":
+        str(round(sum((x - 2) ** 2 for x in (1, 1, 1, 5)) / 4)),
+    "Un conjunto de 5 datos tiene media 8. Si se le agrega el dato 20":
+        str((5 * 8 + 20) // 6),
+    "rango del conjunto 2,5; 3,8; 1,2 y 4,4": f"{4.4 - 1.2:.1f}",
+    "conjunto con desviación estándar 6 se les divide por 2": str(6 // 2),
+    "Los datos 7 y 13 forman un conjunto": str(round((13 - 7) / 2)),
+    "varianza del conjunto 2, 5, 5, 8, 10":
+        f"{sum((x - 6) ** 2 for x in (2, 5, 5, 8, 10)) / 5:.1f}",
+    "media 6 y varianza 6. Dos de los datos son 3 y 6": str(3 * 6 - (3 + 6)),
+    "estatura media 170 cm y otro de 20 personas":
+        f"{(10 * 170 + 20 * 176) // 30} cm",
+    "El primero es 10, 20, 30 y el segundo, 18, 20, 22": f"{10 // 2} veces",
+    "Un conjunto de 4 datos tiene varianza 25": str(25 * 4),
+    # --- M2: homotecia ---
+    "Un segmento mide 7 cm. Se le aplica una homotecia de razón 4": f"{7 * 4} cm",
+    "Un círculo tiene radio 4 cm": f"{4 * 2.5:.0f} cm",
+    "Un pentágono tiene perímetro 35 cm": f"{35 // 5} cm",
+    "Un rectángulo tiene área 20 cm²": f"{20 * 4**2} cm²",
+    "Un cuerpo tiene volumen 5 cm³": f"{5 * 3**3} cm³",
+    "Dos figuras homotéticas tienen áreas de 9 cm² y 81 cm²": str(round(sqrt(81 / 9))),
+    "Un plano de una casa está a escala 1 : 50": str(50),
+    "transforma el punto (4, −6) en el punto": str(-10 / 4),
+    "Dos triángulos homotéticos tienen perímetros de 24 cm y 60 cm": str(60 / 24),
+    "El centro de una homotecia está en el punto medio": str(-1),
+    "maqueta de un automóvil está a escala 1 : 24": f"{18 * 24 / 100:.2f} m",
+    "Dos cuerpos homotéticos tienen volúmenes de 16 cm³ y 128 cm³":
+        str(round((128 / 16) ** (1 / 3))),
+    "lleva el punto (6, 9) al punto (2, 3)": str(Fraction(2, 6)),
+    "Un poste de 4 m proyecta una sombra de 6 m": f"{round(4 * 15 / 6)} m",
+    "mapa a escala 1 : 200.000": f"{7 * 200_000 // 100_000} km",
+    "razón de la homotecia inversa a una de razón 4": str(Fraction(1, 4)),
+    "otro cuadrado de área cuatro veces mayor": str(round(sqrt(4))),
+    "Una recta de pendiente 3 se transforma por una homotecia": str(3),
+    "envase cilíndrico de 500 mL": f"{500 * 2**3 // 1000} litros",
+    "el punto P está a 12 cm de C y su imagen a 30 cm": str(30 / 12),
+    "homotecia de razón 2 y a la imagen resultante otra de razón 3": str(2 * 3),
+    "área de superficie 2,25 veces mayor": f"{2.25**1.5:.3f} veces",
+    "Dos circunferencias homotéticas tienen radios de 3 cm y 7,5 cm":
+        f"{round(4 * 7.5 / 3)} cm",
+    "réplica homotética de una estatua de 2 m de alto": f"{400 * (50 / 200) ** 3:.2f} kg",
+    "transforma la circunferencia de ecuación x² + y² = 4": str(round(sqrt(36) / sqrt(4))),
+    "vértices A(0, 0), B(4, 0) y C(0, 3)": f"{4 * 3 / 2 * 2.5**2:.1f} cm²",
+    "el triángulo A’B’C’ es la imagen del triángulo ABC": f"{5 * (8 // 4) ** 2} cm²",
+    "los trazos AC y BD son paralelos": f"{round(9 * (6 + 4) / 6)} cm",
+    # --- M2: trigonometría en el triángulo rectángulo ---
+    "cateto adyacente a un ángulo mide 8 cm y la hipotenusa mide 10 cm": str(8 / 10),
+    "los catetos miden 5 cm y 5 cm": str(5 // 5),
+    "¿Cuál es el valor de cos 60°?": str(Fraction(1, 2)),
+    "cateto opuesto a un ángulo mide 7 cm y el adyacente mide 24 cm":
+        str(Fraction(7, 24)),
+    "un ángulo agudo mide 60° y el cateto adyacente a él mide 9 cm":
+        f"{round(9 / 0.5)} cm",
+    "un ángulo agudo mide 45° y el cateto opuesto mide 7 cm": f"{7} cm",
+    "rampa sube 1,2 m de altura a lo largo de 8 m": str(1.2 / 8),
+    "faro de 30 m, el ángulo de depresión hacia un bote es de 45°": f"{30} m",
+    "cable tensado va desde la punta de un poste de 12 m": f"{round(12 / 0.5)} m",
+    "catetos de 9 cm y 12 cm, ¿cuál es el seno": str(9 / sqrt(9**2 + 12**2)),
+    "avión despega con un ángulo constante de 15°": f"{round(2000 * 0.26)} m",
+    "tan β = 1,5 y el cateto adyacente a β mide 10 cm": f"{round(1.5 * 10)} cm",
+    "cos θ = 12/13 en un triángulo rectángulo":
+        str(Fraction(round(sqrt(13**2 - 12**2)), 13)),
+    "dos lados de 8 cm y 10 cm que forman entre sí un ángulo de 30°":
+        f"{round(0.5 * 8 * 10 * 0.5)} cm²",
+    "Si sen θ = 0,8 y cos θ = 0,6": str(Fraction(8, 6)),
+    "hipotenusa mide 26 cm y un cateto mide 10 cm. ¿Cuál es el coseno":
+        str(Fraction(round(sqrt(26**2 - 10**2)), 26)),
+    "barco navega 40 km hacia el este": str(30 / 40),
+    "rectángulo mide 12 cm de largo y 5 cm de ancho":
+        str(Fraction(5, round(sqrt(12**2 + 5**2)))),
+    "hipotenusa mide 20 cm y uno de los catetos es el doble del otro": str(1 / 2),
+    "Si tan θ = 2,4 en un triángulo rectángulo": str(Fraction(12, 13)),
+    "En el triángulo rectángulo de la figura, ¿cuál es el valor de cos α":
+        str(12 / sqrt(12**2 + 9**2)),
+    "En el triángulo isósceles de la figura": f"{2 * 10 * 0.342:.2f} cm",
+    # --- M2: circunferencia ---
+    "circunferencia de radio 5 cm, ¿cuánto mide el diámetro": f"{5 * 2} cm",
+    "radio 4 cm, ¿cuál es la longitud de la circunferencia completa":
+        f"{2 * 3.14 * 4:.2f} cm",
+    "radio 9 cm, ¿cuál es la longitud de un arco de 60°":
+        f"{2 * 3.14 * 9 * 60 / 360:.2f} cm",
+    "radio 6 cm, ¿cuál es el área de un sector de 90°":
+        f"{3.14 * 6**2 * 90 / 360:.2f} cm²",
+    "Una queda dividida en segmentos de 3 cm y 8 cm": f"{3 * 8 // 4} cm",
+    "traza una tangente de 12 cm a una circunferencia":
+        f"{round(sqrt(13**2 - 12**2))} cm",
+    "ángulo del centro mide 45° en una circunferencia de radio 8 cm":
+        f"{3.14 * 8**2 * 45 / 360:.2f} cm²",
+    "cuerda mide 16 cm en una circunferencia de radio 10 cm":
+        f"{round(sqrt(10**2 - 8**2))} cm",
+    "hexágono regular está inscrito en una circunferencia de radio 7 cm": f"{7} cm",
+    "rueda de 50 cm de diámetro da 100 vueltas": f"{3.14 * 50 * 100 / 100:.0f} m",
+    "cuadrado está inscrito en una circunferencia de radio 6 cm": f"{6 * 2} cm",
+    "radios 4 cm y 6 cm son tangentes exteriormente": f"{4 + 6} cm",
+    "radio 10 cm, ¿cuál es el perímetro de un sector de 90°":
+        f"{2 * 3.14 * 10 / 4 + 2 * 10:.1f} cm",
+    "circunferencias concéntricas de radios 3 cm y 5 cm":
+        f"{3.14 * (5**2 - 3**2):.2f} cm²",
+    "traza una tangente de 6 cm y una secante": f"{6**2 // 4} cm",
+    "triángulo rectángulo de catetos 6 cm y 8 cm tiene una circunferencia inscrita":
+        f"{(6 + 8 - 10) // 2} cm",
+    "una cuerda subtiende un ángulo del centro de 60°": f"{10} cm",
+    "Dos circunferencias concéntricas tienen radios 6 cm y 10 cm":
+        f"{2 * round(sqrt(10**2 - 6**2))} cm",
+    "reloj de pared tiene 30 cm de diámetro": f"{2 * 3.14 * 15 * 20 / 60:.1f} cm",
+    "área del segmento circular determinado por una cuerda":
+        f"{3.14 * 5**2 / 4 - 5 * 5 / 2:.3f} cm²",
+    "radios 9 cm y 4 cm son tangentes interiormente": f"{9 - 4} cm",
+    "la recta que pasa por P toca la circunferencia solo en T":
+        f"{round(sqrt(13**2 - 5**2))} cm",
+    # --- M2: esfera ---
+    "Una esfera tiene 10 cm de diámetro": f"{10 // 2} cm",
+    "volumen de una esfera de 3 cm de radio": f"{4 / 3 * 3.14 * 3**3:.2f} cm³",
+    "área de la superficie de una esfera de 2 cm de radio": f"{4 * 3.14 * 2**2:.2f} cm²",
+    "esfera tiene un volumen de 36π cm³": f"{round((36 * 3 / 4) ** (1 / 3))} cm",
+    "Dos esferas tienen radios de 2 cm y 6 cm": f"{(2 // 2) ** 2} : {(6 // 2) ** 2}",
+    "bola de acero de 3 cm de radio se funde": str(3**3 // 1**3),
+    "área de la superficie de una esfera es 100π cm²": f"{round(sqrt(100 / 4))} cm",
+    "esfera está inscrita en un cubo de arista 12 cm": f"{4 / 3 * 3.14 * (12 / 2) ** 3:.2f} cm³",
+    "cúpula tiene forma de media esfera de 5 m de radio": f"{round(2 * 3.14 * 5**2)} m²",
+    "esfera tiene un volumen de 288π cm³": f"{round((288 * 3 / 4) ** (1 / 3)) * 2} cm",
+    "Dos esferas tienen volúmenes de 64 cm³ y 216 cm³":
+        str(Fraction(round(64 ** (1 / 3)), round(216 ** (1 / 3)))).replace("/", " : "),
+    "Pintar una cúpula semiesférica de 4 m de radio": f"$ {round(2 * 3.14 * 4**2 * 3000):,}",
+    "media esfera maciza de 3 cm de radio": f"{3 * 3.14 * 3**2:.2f} cm²",
+    "naranja se modela como una esfera de 4 cm de radio": f"{4 - 0.5:.1f} cm",
+    "helado tiene forma de cono de 4 cm de radio":
+        f"{1 / 3 * 3.14 * 4**2 * 10 + 2 / 3 * 3.14 * 4**3:.2f} cm³",
+    "plano corta una esfera de 13 cm de radio": f"{round(sqrt(13**2 - 5**2))} cm",
+    "área de un casquete esférico se calcula": f"{2 * 3.14 * 10 * 4:.1f} cm²",
+    "esfera de radio 6 cm se derrite": f"{round(4 / 3 * 6**3 / 6**2)} cm",
+    "media esfera apoyada sobre su base": f"{2 * 3.14 * 7**2:.2f} cm²",
+    "esfera cortada por un plano": f"{3.14 * (10**2 - 8**2):.2f} cm²",
+    # --- M2: rectas en el plano ---
+    "coeficiente de posición de la recta y = 5x − 4": str(-4),
+    "¿Cuál es la pendiente de la recta y = 7?": str(0),
+    "¿Cuál es la pendiente de la recta y = −x + 2?": str(-1),
+    "pendiente de la recta que pasa por los puntos (1, 3) y (5, 11)":
+        str((11 - 3) // (5 - 1)),
+    "pendiente de la recta 2x + 4y − 8 = 0": str(-2 / 4),
+    "distancia entre los puntos (1, 2) y (4, 6)":
+        str(round(sqrt((4 - 1) ** 2 + (6 - 2) ** 2))),
+    "distancia entre los puntos (−3, 1) y (1, 1)": str(1 - (-3)),
+    "pendiente de la recta que pasa por (−4, 5) y (2, −7)":
+        str((-7 - 5) // (2 - (-4))),
+    "recta corta al eje X en (6, 0) y al eje Y en (0, 3)": str((0 - 3) / (6 - 0)),
+    "distancia entre los puntos (−1, −4) y (2, 0)":
+        str(round(sqrt((2 - (-1)) ** 2 + (0 - (-4)) ** 2))),
+    "taxi cobra $ 400 de bajada de bandera": str(150),
+    "empresa cobra según C(x) = 800x + 12.000": str((36_000 - 12_000) // 800),
+    "distancia del punto (0, 0) a la recta 3x + 4y − 20 = 0":
+        str(round(abs(-20) / sqrt(3**2 + 4**2))),
+    "Dos rectas se cortan en (3, 4)": str((4 - (-1) * 3) - (4 - 2 * 3)),
+    "las rectas L1 y L2 son perpendiculares": str(Fraction(-1, 2)),
+    # --- M2: sistemas ---
+    "sistema 7x + 2y = 5 ; 3x − y = 4 y se obtiene el determinante":
+        str(7 * (-1) - 2 * 3),
+    "sistema 4x + 6y = 14 ; 6x + 9y = t es compatible": str(round(14 * 6 / 4)),
+    # --- M2: función potencia ---
+    "valor de f(2) si f(x) = 3x⁴": str(3 * 2**4),
+    "¿Cuánto vale f(−3) si f(x) = x³?": str((-3) ** 3),
+    "valor de a en f(x) = ax² si se sabe que f(3) = 18": str(18 // 3**2),
+    "función potencia de exponente 4 cumple f(3) = 405": str(405 // 3**4),
+    "energía cinética de un cuerpo cumple E(v)": f"{(30 // 10) ** 2} veces",
+    "f(x) = ax^n pasa por (2, 40) y por (1, 5)": str(round(log2(40 / 5))),
+    "cuociente f(3a) dividido por f(a)": str(3**3),
+    "masa de una esfera de un mismo material es proporcional al cubo":
+        f"{40 * (4 // 2) ** 3} g",
+    "costo de fabricar un envase cúbico es proporcional al área":
+        f"{(10 // 5) ** 2} veces",
+    "Una función potencia cumple f(2) = 12 y f(4) = 96": str(round(log2(96 / 12))),
+    "Dos cilindros semejantes tienen radios en razón 2 : 3": f"{2**3} : {3**3}",
+    "Si f(x) = ax⁵ y se sabe que f(−1) = 7": str(-7 * 2**5),
+    "impresora 3D fabrica figuras a escala": f"$ {4500 * (9 / 6) ** 3:,.1f}",
+    "valor de x que cumple 4x³ = 500": str(round((500 / 4) ** (1 / 3))),
     # --- Preguntas con figura (Historia) ---
     "se informa un grupo de 500": f"{round(500 * 0.42)} personas",
     "cuántos años pasaron entre la": f"{1989 - 1948} años",
@@ -525,7 +943,7 @@ COMPROBACIONES: dict[str, str] = {
     "desarrollo de un cilindro": f"{2 * 3.14 * 3**2 + 2 * 3.14 * 3 * 7:.1f}".replace(".", ","),
     "volumen de la piscina": str(10 * 6 * 2),
     "vector que traslada A hasta B": f"({7 - 2}, {4 - 1})",
-    "distancia real entre ellas": str(5 * 20 // 2),
+    "distancia entre las dos localidades está medida": str(5 * 20 // 2),
     "prefiere fútbol o básquetbol": f"{round((0.30 + 0.20) * 100)}%",
     "balanza de la figura está en equilibrio": f"{(5 + 5 + 2 - 2) // 2} kg",
     "conviene contratar el plan A": str(200),
@@ -573,7 +991,7 @@ COMPROBACIONES: dict[str, str] = {
     "Una pelota tiene 6 cm de radio": f"{round(4 / 3 * 3 * 6**3)} cm³",
     "estanque esférico tiene 3 m de radio": f"{4 * 3.14 * 3**2:.2f} m²".replace(".", ","),
     "Dos esferas tienen radios en razón 1 : 2": f"1 : {2**3}",
-    "tanque esférico de 2 m de radio": f"{round(4 / 3 * 3 * 2**3 * 1000):,} litros".replace(",", "."),
+    "Un tanque esférico de 2 m de radio se llena de agua": f"{round(4 / 3 * 3 * 2**3 * 1000):,} litros".replace(",", "."),
     "recta paralela a y = 3x − 7": "3",
     "recta perpendicular a y = 4x + 1": "−1/4",
     # --- Proporcionalidad (alg_proporcionalidad) ---
@@ -680,8 +1098,8 @@ COMPROBACIONES: dict[str, str] = {
     "letras de la palabra CASA": str(factorial(4) // factorial(2)),
     "4 personas en una fila": str(factorial(3) * factorial(2)),
     "5 hombres y 4 mujeres": str(comb(5, 2) * comb(4, 1)),
-    "moneda 4 veces": str(2**4),
-    "moneda 3 veces": str(Fraction(3, 8)),
+    "moneda 4 veces. ¿Cuántos resultados posibles": str(2**4),
+    "moneda 3 veces. ¿Cuál es la probabilidad de obtener exactamente 2 caras": str(Fraction(3, 8)),
     "5 intentos y probabilidad de éxito 0,2": str(int(5 * 0.2)),
     "4 veces con probabilidad de éxito 0,5": str(comb(4, 3) * 0.5**4).replace(".", ","),
     # --- reglas de las probabilidades: segunda tanda ---
@@ -1070,7 +1488,7 @@ COMPROBACIONES: dict[str, str] = {
     # Con un dato extremo, la mediana representa mejor que la media.
     "300, 320, 340, 360 y 2.000": str(sorted([300, 320, 340, 360, 2000])[2]),
     # Escalar los datos escala la media en el mismo factor.
-    "se les multiplica por 3": f"Queda multiplicada por {3}",
+    "se les multiplica por 3, ¿qué ocurre con su media": f"Queda multiplicada por {3}",
     # --- técnicas de conteo: segunda tanda ---
     # Principio multiplicativo: una elección de cada grupo.
     "6 tipos de café y 4 tipos de queque": str(6 * 4),
@@ -1329,9 +1747,9 @@ COMPROBACIONES: dict[str, str] = {
     "sube un 10% y luego se le aplica un descuento del 10%": f"${int(50000 * 1.1 * 0.9):,}".replace(",", "."),
     "log₂ 32": str(5 if 2**5 == 32 else None),
     "log 100 + log 1.000": str(2 + 3),
-    "log x = 3": f"{10**3:,}".replace(",", "."),
+    "Si log x = 3 en base 10": f"{10**3:,}".replace(",", "."),
     "log₃ 81 − log₃ 9": str(4 - 2),
-    "log₅ 1": "0",
+    "el valor de log₅ 1?": "0",
     "¿cuál es el valor de f(−1)?": str((-1) ** 5),
     "f(x) = 2x⁴": str(2 * 2**4),
     "f(x) = ax³ y f(2) = 24": str(24 // 2**3),
@@ -1374,7 +1792,7 @@ COMPROBACIONES: dict[str, str] = {
     "log 10.000": str(4 if 10**4 == 10000 else None),
     "Si log x = 2": str(10**2),
     "log₃ 9 + log₂ 8": str(2 + 3),
-    "log 2 ≈ 0,301": f"{3 * 0.301:.3f}".replace(".", ","),
+    "Si log 2 ≈ 0,301, ¿cuál es el valor aproximado de log 8": f"{3 * 0.301:.3f}".replace(".", ","),
     # Con base 5 el enunciado contendría "log₅ 125", que arrastra el fragmento
     # "log₅ 1" de otra comprobación y lo dejaría calzando con dos preguntas.
     "log₂ 128 − log₂ 8": str(7 - 3),
@@ -1703,7 +2121,7 @@ COMPROBACIONES: dict[str, str] = {
         "4" if isclose(sqrt(8**2 - 4**2), 4 * sqrt(3)) else "?"
     ),
     "9 km hacia el norte": f"{int(sqrt(9**2 + 12**2))} km",
-    "hipotenusa mide 26 cm y un cateto mide 10 cm": f"{int(sqrt(26**2 - 10**2))} cm",
+    "hipotenusa mide 26 cm y un cateto mide 10 cm. ¿Cuánto mide el otro cateto": f"{int(sqrt(26**2 - 10**2))} cm",
     "diagonales que miden 16 cm y 12 cm": f"{int(sqrt(8**2 + 6**2))} cm",
     # --- transformaciones isométricas ---
     "punto (x, y) se refleja respecto del eje Y": "(−x, y)",
@@ -1809,7 +2227,7 @@ COMPROBACIONES: dict[str, str] = {
     "se les sube la nota en 0,5 puntos": f"{5.0 + 0.5:.1f}".replace(".", ","),
     "de 30 estudiantes tiene promedio 5,0 y otro de 20": f"{(30 * 5 + 20 * 6) / 50:.1f}".replace(".", ","),
     "valor de |−7| + |3 − 8|": str(abs(-7) + abs(3 - 8)),
-    "interés simple del 2% mensual": f"${int(100000 * 0.02 * 3):,}".replace(",", "."),
+    "Si depositas $100.000, ¿cuánto interés ganas en 3 meses": f"${int(100000 * 0.02 * 3):,}".replace(",", "."),
     "crédito de consumo de $500.000": f"${int(500000 * (1 + 0.03 * 4)):,}".replace(",", "."),
     "valor de log₂(8)": str(int(log2(8))),
     "log(2) ≈ 0,301 y log(3) ≈ 0,477": f"{0.301 + 0.477:.3f}".replace(".", ","),
@@ -1822,7 +2240,7 @@ COMPROBACIONES: dict[str, str] = {
     "tríos de medidas NO puede formar un triángulo rectángulo": "6, 8, 12",
     "cateto opuesto a un ángulo mide 3 cm y la hipotenusa 5 cm": "3/5",
     "valor de tan 45°": "1",
-    "ángulo de elevación de 45°": f"{20} m",
+    "a 20 m de la base de un edificio, se observa su parte más alta": f"{20} m",
     "cubo de 8 cm de arista está lleno de agua": f"{8 ** 3 // (16 * 8)} cm",
     "recorre 120 kilómetros en 2 horas y otro recorre la misma distancia en 3": "3 : 2",
     "recta pasa por los puntos (2, 3) y (6, 11). ¿Cuál es la pendiente de cualquier": "−1/2",
@@ -2000,7 +2418,17 @@ def main() -> int:
             fallas.append(f"nodo inexistente '{q['skill_node']}': {stem[:60]}")
         if q["difficulty"] not in DIFICULTADES:
             fallas.append(f"dificultad inválida '{q['difficulty']}': {stem[:60]}")
-        if len(alts) != 4:
+        # Suficiencia de datos es el unico formato con cinco alternativas: son
+        # las mismas cinco siempre, porque el item no pide resolver sino
+        # decidir si la informacion alcanza. Cualquier otro item con cinco
+        # alternativas es un error.
+        if stem.startswith("Suficiencia de datos."):
+            if [a["text"] for a in alts] != list(_SD_ALTERNATIVAS):
+                fallas.append(
+                    f"suficiencia de datos con alternativas fuera del formato "
+                    f"fijo: {stem[:60]}"
+                )
+        elif len(alts) != 4:
             fallas.append(f"tiene {len(alts)} alternativas, deben ser 4: {stem[:60]}")
         if len(correctas) != 1:
             fallas.append(f"tiene {len(correctas)} correctas, debe ser 1: {stem[:60]}")
@@ -2106,12 +2534,13 @@ def main() -> int:
             f"  {prueba}: {total} ordenables, {r[0]}/{r[1]}/{r[2]}/{r[3]}, "
             f"extremos {extremos:.0f}%"
         )
-        # Solo M1 es exigible hoy. M2 tiene el mismo sesgo sin corregir y es
-        # la prueba de menor prioridad del proyecto; cuando se arregle, sube
-        # el umbral aquí también.
-        if prueba == "M1" and extremos < 40:
+        # Exigible en las dos pruebas. M2 arrastraba el mismo sesgo sin
+        # corregir (61/143/108/49, 30% de extremos); se reparo cambiando el
+        # unico distractor menor —o mayor— que la correcta por un error de
+        # calculo del otro lado, y quedo en 49%.
+        if extremos < 40:
             fallas.append(
-                f"en M1 la correcta queda en el medio demasiado seguido "
+                f"en {prueba} la correcta queda en el medio demasiado seguido "
                 f"({r[0]}/{r[1]}/{r[2]}/{r[3]}, extremos {extremos:.0f}%); lo "
                 "esperable es 50% y bajo 40% descartar el mayor y el menor se "
                 "vuelve una estrategia rentable"

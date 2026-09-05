@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400" role="img">
+  <title>Circunferencia con un cuadrilátero ABCD inscrito: sus cuatro vértices están sobre el borde. El ángulo interior del vértice A mide 95 grados</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <circle cx="250" cy="200" r="140" fill="none" stroke="#111827" stroke-width="2"/>
+    <polygon points="190.8,73.12 114.8,236.2 320,321.2 376.9,140.8" fill="none" stroke="#111827" stroke-width="2"/>
+    <circle cx="190.8" cy="73.12" r="4" fill="#111827"/>
+    <circle cx="114.8" cy="236.2" r="4" fill="#111827"/>
+    <circle cx="320" cy="321.2" r="4" fill="#111827"/>
+    <circle cx="376.9" cy="140.8" r="4" fill="#111827"/>
+    <text x="184.8" y="61.12" text-anchor="end" font-size="14" font-weight="700" fill="#111827">A</text>
+    <text x="102.8" y="242.2" text-anchor="end" font-size="14" font-weight="700" fill="#111827">B</text>
+    <text x="320" y="343.2" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">C</text>
+    <text x="388.9" y="134.8" text-anchor="start" font-size="14" font-weight="700" fill="#111827">D</text>
+    <text x="216.8" y="97.12" text-anchor="middle" font-size="13" fill="#111827">95°</text>
+  </g>
+</svg>

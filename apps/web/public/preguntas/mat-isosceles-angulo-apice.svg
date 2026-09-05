@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400" role="img">
+  <title>Triángulo isósceles con el vértice arriba y la base PQ abajo. Los dos lados iguales miden 10 centímetros cada uno y el ángulo entre ellos, en el vértice de arriba, mide 40 grados. Una línea punteada baja desde el vértice hasta el punto medio de la base</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <polygon points="250,70 188.4,239.1 311.6,239.1" fill="none" stroke="#111827" stroke-width="2"/>
+    <line x1="250" y1="70" x2="250" y2="239.1" stroke="#d4d4d8" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <polygon points="250,239.1 236,239.1 236,225.1 250,225.1" fill="none" stroke="#111827" stroke-width="1.5"/>
+    <path d="M 232.2 118.9 A 52 52 0 0 0 267.8 118.9" fill="none" stroke="#111827" stroke-width="2"/>
+    <text x="250" y="144" text-anchor="middle" font-size="13" fill="#111827">40°</text>
+    <text x="176" y="180" text-anchor="end" font-size="13" fill="#111827">10 cm</text>
+    <text x="324" y="180" text-anchor="start" font-size="13" fill="#111827">10 cm</text>
+    <circle cx="250" cy="70" r="4" fill="#111827"/>
+    <circle cx="188.4" cy="239.1" r="4" fill="#111827"/>
+    <circle cx="311.6" cy="239.1" r="4" fill="#111827"/>
+    <text x="176.4" y="245.1" text-anchor="end" font-size="14" font-weight="700" fill="#111827">P</text>
+    <text x="323.6" y="245.1" text-anchor="start" font-size="14" font-weight="700" fill="#111827">Q</text>
+  </g>
+</svg>
