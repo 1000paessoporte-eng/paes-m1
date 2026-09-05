@@ -136727,3 +136727,395 @@ QUESTIONS_HISTORIA += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Historia - Mapas, graficos y lineas de tiempo
+#
+# El ultimo nodo de habilidad bajo 60. Todas las preguntas leen las tablas que
+# ya estaban en el banco: se verifico cada cifra citada contra la fuente.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_HISTORIA += [
+    _ql(
+        "migracion_tabla", "his_representaciones", "medio",
+        "¿En qué año la población urbana de San Alberto superó por primera vez "
+        "a la rural?",
+        "En 2000",
+        "La tabla permite comparar las dos columnas año por año. En 1990 la "
+        "población rural era 8.100 y la urbana 4.300: la rural casi duplicaba "
+        "a la otra.\n"
+        "En 2000 la relación ya está invertida: 6.900 rurales frente a 8.900 "
+        "urbanos. Ese es el primer registro en que la urbana es mayor.\n"
+        "En los dos censos siguientes la distancia se amplía hasta llegar a "
+        "3.800 rurales frente a 24.900 urbanos.",
+        [
+            ("En 1990",
+             "Ese año la población rural era casi el doble de la urbana."),
+            ("En 2010",
+             "En 2010 la urbana ya superaba a la rural desde el registro anterior."),
+            ("En 2020",
+             "Es el último registro de la tabla, no el primero en que se invierte."),
+        ],
+    ),
+    _ql(
+        "migracion_tabla", "his_representaciones", "dificil",
+        "Entre 1990 y 2020 la población total de San Alberto creció y la rural "
+        "disminuyó. ¿Qué explicación es compatible con la tabla y sus notas?",
+        "Llegó población desde fuera y parte de la rural se trasladó a la zona urbana",
+        "La tabla muestra dos movimientos simultáneos: el total sube de 12.400 "
+        "a 28.700 y la población rural cae de 8.100 a 3.800.\n"
+        "La caída rural de 4.300 personas no alcanza a explicar por sí sola el "
+        "aumento urbano de 20.600: buena parte del crecimiento tuvo que venir "
+        "de fuera de la comuna.\n"
+        "Las notas aportan el contexto: agua potable urbana desde 1998 y camino "
+        "pavimentado a la capital regional desde 2005.",
+        [
+            ("Toda la población rural se trasladó a la zona urbana de la comuna",
+             "En 2020 quedaban 3.800 habitantes rurales, así que no se trasladó toda."),
+            ("La comuna perdió población total durante el período estudiado",
+             "El total pasó de 12.400 a 28.700 habitantes."),
+            ("El crecimiento urbano se explica solo por el aumento de la natalidad",
+             "La tabla no entrega datos de natalidad y el aumento supera la caída rural."),
+        ],
+    ),
+    _ql(
+        "empleo_sectores", "his_representaciones", "medio",
+        "Según la tabla, ¿en qué año el sector secundario alcanzó su mayor "
+        "participación en el empleo?",
+        "En 1980, con un 28%",
+        "La columna del sector secundario recorre cuatro valores: 20 en 1960, "
+        "28 en 1980, 26 en 2000 y 19 en 2020.\n"
+        "El máximo es 28 y corresponde a 1980. Después de ese año la "
+        "participación baja de manera sostenida hasta quedar por debajo del "
+        "punto de partida.\n"
+        "Es el único sector de la tabla que primero sube y después baja: el "
+        "primario cae siempre y el terciario sube siempre.",
+        [
+            ("En 1960, con un 20%",
+             "Ese es el primer valor de la serie, no el mayor."),
+            ("En 2000, con un 26%",
+             "En 2000 el sector ya había empezado a retroceder desde el 28% de 1980."),
+            ("En 2020, con un 19%",
+             "Ese es el valor más bajo de toda la serie."),
+        ],
+    ),
+    _ql(
+        "empleo_sectores", "his_representaciones", "dificil",
+        "Un estudiante concluye que entre 1960 y 2020 disminuyó la cantidad de "
+        "trabajadores del sector primario. ¿Qué problema tiene esa conclusión?",
+        "La tabla entrega porcentajes, no cantidades de trabajadores",
+        "El encabezado de la tabla es explícito: los valores son el porcentaje "
+        "del total de trabajadores ocupados en cada sector.\n"
+        "Un porcentaje puede caer del 55% al 11% mientras la cantidad absoluta "
+        "se mantiene o incluso sube, si el total de ocupados creció lo "
+        "suficiente en el mismo período.\n"
+        "Para afirmar algo sobre cantidades haría falta un dato que la tabla no "
+        "entrega: cuántos trabajadores había en cada año.",
+        [
+            ("La tabla no cubre el período completo que menciona el estudiante",
+             "La tabla va de 1960 a 2020, exactamente el período citado."),
+            ("El sector primario no incluye la actividad minera en esta tabla",
+             "La nota al pie incluye la minería dentro del sector primario."),
+            ("Los porcentajes de la tabla no suman cien en todos los años",
+             "Suman cien en los cuatro años registrados."),
+        ],
+    ),
+    _ql(
+        "empleo_sectores", "his_representaciones", "dificil",
+        "¿Qué transformación de largo plazo describe mejor la serie completa "
+        "de la tabla?",
+        "El paso de una economía centrada en el sector primario a una de servicios",
+        "Los extremos de la serie son elocuentes: el sector primario pasa del "
+        "55% al 11% del empleo y el terciario, del 25% al 70%.\n"
+        "El secundario cumple un papel intermedio: sube hasta el 28% en 1980 y "
+        "después retrocede al 19%, sin llegar nunca a ser el sector "
+        "mayoritario.\n"
+        "La nota al pie precisa qué actividades componen cada sector, y "
+        "confirma que el terciario reúne comercio y servicios.",
+        [
+            ("Una industrialización sostenida a lo largo de los sesenta años",
+             "El sector secundario termina el período por debajo de donde partió."),
+            ("El retroceso del comercio frente a la actividad agrícola",
+             "La tabla muestra exactamente el movimiento contrario."),
+            ("Un reparto cada vez más parejo entre los tres sectores",
+             "En 2020 el terciario concentra el 70% del empleo: el reparto es más desigual."),
+        ],
+    ),
+    _ql(
+        "tabla_alfabetizacion", "his_representaciones", "medio",
+        "Según la tabla, ¿qué grupo aumentó más su alfabetización entre 1930 y "
+        "2020?",
+        "Las mujeres rurales, que pasaron de 19% a 96%",
+        "Los cuatro grupos mejoran, pero no en la misma magnitud. Los hombres "
+        "urbanos suben de 62 a 99, es decir, 37 puntos.\n"
+        "Las mujeres rurales parten del valor más bajo de toda la tabla, 19%, y "
+        "llegan a 96%: 77 puntos de aumento, más del doble que cualquier otro "
+        "grupo.\n"
+        "Es el efecto habitual de partir desde muy abajo: el mismo avance "
+        "absoluto se nota mucho más en quien tenía menos.",
+        [
+            ("Los hombres urbanos, que pasaron de 62% a 99%",
+             "Ese aumento es de 37 puntos, la mitad del de las mujeres rurales."),
+            ("Las mujeres urbanas, que pasaron de 48% a 99%",
+             "Ese aumento es de 51 puntos, menor que el de las mujeres rurales."),
+            ("Los hombres rurales, que pasaron de 34% a 96%",
+             "Ese aumento es de 62 puntos, todavía menor que el de las mujeres rurales."),
+        ],
+    ),
+    _ql(
+        "tabla_alfabetizacion", "his_representaciones", "dificil",
+        "¿Qué advertencia introduce la nota sobre la caída de la población "
+        "rural entre 1930 y 1960?",
+        "Que parte de la mejora regional puede deberse al cambio en la composición",
+        "La nota informa que entre 1930 y 1960 la población rural de la región "
+        "cayó de 58% a 39% del total.\n"
+        "Si los grupos rurales tenían las tasas más bajas y su peso en el total "
+        "disminuye, el promedio regional sube aunque ningún grupo hubiera "
+        "mejorado. El efecto es de composición, no de política educativa.\n"
+        "La tabla protege contra ese error al informar cada grupo por separado, "
+        "y ahí se ve que todos mejoraron de verdad.",
+        [
+            ("Que las cifras rurales de 1930 fueron estimadas y no medidas",
+             "La nota sobre estimaciones se refiere a los menores de 15 años, no al ámbito rural."),
+            ("Que la región dejó de tener población rural después de 1960",
+             "La tabla sigue registrando grupos rurales hasta 2020."),
+            ("Que las tasas rurales y urbanas no son comparables entre sí",
+             "La tabla las presenta juntas precisamente para compararlas."),
+        ],
+    ),
+    _ql(
+        "tabla_alfabetizacion", "his_representaciones", "dificil",
+        "En 1930 la brecha entre hombres y mujeres era de 14 puntos en lo "
+        "urbano y de 15 en lo rural. ¿Qué muestra la tabla sobre esas dos "
+        "brechas hacia 2020?",
+        "Las dos prácticamente desaparecen, con valores iguales en cada ámbito",
+        "En 2020 la tabla registra 99% para hombres urbanos y 99% para mujeres "
+        "urbanas, y 96% para hombres rurales y 96% para mujeres rurales.\n"
+        "La brecha de género se cierra por completo en ambos ámbitos. Lo que "
+        "queda es una diferencia de 3 puntos entre lo urbano y lo rural, mucho "
+        "menor que los 28 puntos de 1930.\n"
+        "Cerrar la brecha de género antes que la territorial es un patrón "
+        "frecuente en las series de escolaridad.",
+        [
+            ("La brecha urbana se cierra y la rural se mantiene en 15 puntos",
+             "En 2020 hombres y mujeres rurales registran el mismo 96%."),
+            ("Ambas brechas se amplían respecto de los valores de 1930",
+             "Las dos se reducen hasta desaparecer."),
+            ("La brecha de género se cierra y la brecha urbano-rural también",
+             "Persiste una diferencia de 3 puntos entre lo urbano y lo rural."),
+        ],
+    ),
+    _ql(
+        "tabla_electoral", "his_representaciones", "medio",
+        "¿En cuál de las elecciones de la tabla se emitió la mayor cantidad de "
+        "votos?",
+        "En el plebiscito de 2020, con 23.000 votos",
+        "La columna de votos emitidos registra 22.000 en 2012, 15.400 en 2016, "
+        "23.000 en 2020 y 18.800 en 2021.\n"
+        "El máximo es 23.000 y corresponde al plebiscito. Conviene distinguir "
+        "esa columna de la de participación: el plebiscito tiene el mayor "
+        "número de votos y no el mayor porcentaje.\n"
+        "El porcentaje más alto, 55%, es el de 2012, con un padrón bastante "
+        "menor.",
+        [
+            ("En la municipal de 2012, con 22.000 votos",
+             "Es la segunda cifra más alta, aunque sí tiene el mayor porcentaje."),
+            ("En la municipal de 2021, con 18.800 votos",
+             "Queda por debajo de 2012 y del plebiscito."),
+            ("En la municipal de 2016, con 15.400 votos",
+             "Es la cifra más baja de la tabla."),
+        ],
+    ),
+    _ql(
+        "tabla_electoral", "his_representaciones", "dificil",
+        "La participación cae del 55% en 2012 al 35% en 2016. ¿Qué nota de la "
+        "tabla ayuda a interpretar esa caída?",
+        "Que desde 2012 la inscripción pasó a ser automática y amplió el padrón",
+        "La caída porcentual es fuerte, pero el padrón creció de 40.000 a "
+        "44.000 personas entre ambas elecciones.\n"
+        "La nota explica el cambio de regla: hasta 2012 la inscripción era "
+        "voluntaria y el voto obligatorio para los inscritos; desde entonces la "
+        "inscripción es automática.\n"
+        "Con inscripción voluntaria el padrón reunía sobre todo a quienes "
+        "querían votar. Al incorporar automáticamente al resto, el denominador "
+        "creció más rápido que los votos.",
+        [
+            ("Que el plebiscito de 2020 fue una consulta nacional",
+             "Esa nota explica el repunte de 2020, no la caída de 2016."),
+            ("Que en 2023 el voto volvió a ser obligatorio",
+             "Ese cambio es posterior al período que cubre la tabla."),
+            ("Que el padrón habilitado disminuyó entre ambas elecciones",
+             "El padrón creció de 40.000 a 44.000 personas."),
+        ],
+    ),
+    _ql(
+        "tabla_electoral", "his_representaciones", "dificil",
+        "Un análisis afirma que «el interés electoral de la comuna cayó de "
+        "manera sostenida entre 2012 y 2021». ¿Qué muestra la tabla?",
+        "Que la participación bajó, subió en 2020 y volvió a bajar",
+        "La serie de participación es 55%, 35%, 50% y 40%: no describe una "
+        "caída sostenida sino un movimiento con un repunte intermedio.\n"
+        "El repunte corresponde al plebiscito de 2020, que según la nota fue "
+        "una consulta nacional y no una elección de autoridades. El tipo de "
+        "elección influye en cuánta gente acude.\n"
+        "Describirla como caída sostenida obliga a ignorar el año en que la "
+        "participación subió quince puntos.",
+        [
+            ("Que la participación se mantuvo estable en torno al 45%",
+             "Los valores van del 35% al 55%: la variación es de veinte puntos."),
+            ("Que la participación subió en cada elección desde 2016",
+             "Bajó del 50% en 2020 al 40% en 2021."),
+            ("Que la caída se explica por la reducción del padrón",
+             "El padrón creció en cada uno de los registros de la tabla."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_representaciones", "medio",
+        "Según la tabla 2, ¿qué país estableció el servicio militar "
+        "obligatorio mucho antes de su unificación nacional?",
+        "El país C, con servicio desde 1814 y unificación en 1871",
+        "La tabla 1 fecha la unificación de C en 1871 y la tabla 2 sitúa su "
+        "servicio militar obligatorio en 1814: cincuenta y siete años antes.\n"
+        "El caso muestra que las herramientas de construcción estatal no "
+        "siguen siempre el mismo orden. En B, en cambio, la unificación de 1861 "
+        "precede al servicio de 1875.\n"
+        "El país D no aparece en esta comparación porque, según la nota, "
+        "mantuvo un ejército profesional voluntario durante todo el período.",
+        [
+            ("El país B, con servicio desde 1875 y unificación en 1861",
+             "En B el servicio militar es posterior a la unificación, no anterior."),
+            ("El país A, con servicio desde 1872",
+             "A se unificó antes de 1800, así que la tabla no permite ese contraste."),
+            ("El país D, que no estableció servicio militar obligatorio",
+             "La nota indica que D mantuvo un ejército profesional voluntario."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_representaciones", "dificil",
+        "¿Qué elemento común a los cuatro países señala la última nota de la "
+        "fuente?",
+        "Reemplazaron las lenguas regionales por una lengua nacional en la enseñanza",
+        "Las tablas muestran trayectorias distintas: unificaciones en fechas "
+        "muy distantes, niveles de alfabetización dispares y redes ferroviarias "
+        "de tamaños desiguales.\n"
+        "La nota final identifica lo que sí comparten: los cuatro Estados "
+        "reemplazaron en estas décadas las lenguas y dialectos regionales por "
+        "una lengua nacional única en la enseñanza pública.\n"
+        "Es un dato de peso para el tema del nodo: la escuela funcionó como "
+        "herramienta de homogeneización cultural en todos ellos.",
+        [
+            ("Todos alcanzaron una alfabetización superior al 95% en 1910",
+             "B llegó al 62% y D al 87% en esa fecha."),
+            ("Todos establecieron el servicio militar obligatorio en el período",
+             "El país D no lo estableció durante el período."),
+            ("Todos completaron su unificación nacional durante el siglo XIX",
+             "A y D se unificaron antes de 1800."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_representaciones", "medio",
+        "Según la tabla 1, ¿en qué año el salitre pasó a ser el principal "
+        "producto de exportación?",
+        "En 1890, con el 51% del valor total",
+        "La serie del salitre parte en 0% en 1850 y sube a 3% en 1870, cuando "
+        "la plata y el cobre concentraban el 52%.\n"
+        "En 1890 el salitre alcanza el 51% y la plata y el cobre caen al 28%: "
+        "ese es el año en que se convierte en el principal producto.\n"
+        "En 1910 la posición se refuerza hasta el 68%, mientras el trigo y la "
+        "harina bajan al 5%.",
+        [
+            ("En 1870, con el 3% del valor total",
+             "Ese año el salitre era todavía marginal frente a la plata y el cobre."),
+            ("En 1910, con el 68% del valor total",
+             "En 1910 ya era el principal desde el registro anterior."),
+            ("En 1850, cuando comenzó su explotación",
+             "En 1850 el salitre representaba el 0% de las exportaciones."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_representaciones", "dificil",
+        "Al comparar las dos tablas, ¿qué relación aparece entre las "
+        "exportaciones y los ingresos del fisco hacia 1910?",
+        "El fisco dependía de un producto cuyo precio se fijaba fuera del país",
+        "La tabla 1 muestra que en 1910 el salitre concentraba el 68% del valor "
+        "exportado, y la tabla 2 que los derechos sobre el salitre aportaban el "
+        "53% de los ingresos ordinarios del fisco.\n"
+        "La nota agrega el dato decisivo: el salitre se vendía casi por "
+        "completo a mercados europeos, que fijaban su precio.\n"
+        "La consecuencia es una hacienda pública expuesta: una caída del precio "
+        "externo se traslada de inmediato al presupuesto del Estado.",
+        [
+            ("El fisco redujo su dependencia de las aduanas entre 1870 y 1910",
+             "Los derechos sobre el salitre son también un ingreso aduanero, y crecieron."),
+            ("Los impuestos internos pasaron a ser la principal fuente de ingresos",
+             "Cayeron del 37% en 1870 al 18% en 1910."),
+            ("Las exportaciones se diversificaron a lo largo del período",
+             "Ocurrió lo contrario: se concentraron cada vez más en el salitre."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_representaciones", "dificil",
+        "Según las dos tablas, ¿qué país sufrió la mayor caída del valor "
+        "exportado en 1932 y cómo se explica?",
+        "Chile, cuyo valor exportado cayó a 22 por depender de dos productos mineros",
+        "La tabla 2 registra el valor exportado de 1932 con base 100 en 1929: "
+        "país W en 31, X en 39, Y en 52, Z en 64 y Chile en 22.\n"
+        "El 22 es la caída más pronunciada de las cinco economías. La nota "
+        "explica por qué: el valor exportado de Chile dependía casi por "
+        "completo de dos productos mineros cuyos precios se fijaban en mercados "
+        "extranjeros.\n"
+        "La producción industrial acompaña ese golpe: cae a 47 en 1932, también "
+        "la mayor caída de la tabla 1.",
+        [
+            ("El país X, cuya desocupación llegó al 30% en 1932",
+             "X tuvo la mayor desocupación, pero su valor exportado cayó a 39 y no a 22."),
+            ("El país W, cuyo valor exportado cayó a 31",
+             "Es la segunda caída más fuerte, por sobre la de Chile."),
+            ("El país Z, que mantuvo controles de cambio y aranceles altos",
+             "Z registra la menor caída de las cinco economías."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_representaciones", "dificil",
+        "¿Qué relación se observa entre el gasto público de 1938 y la "
+        "recuperación industrial de las economías de la tabla?",
+        "Los países con mayor aumento del gasto muestran también mayor recuperación",
+        "El país X combina el mayor aumento del gasto público —214 con base 100 "
+        "en 1929— con la mayor recuperación industrial, 126 en 1938.\n"
+        "En el otro extremo, el país Y aumenta el gasto a 141 y recupera hasta "
+        "114, y el país Z, con gasto en 133, llega a 118 desde una caída mucho "
+        "menor.\n"
+        "La nota final refuerza la lectura: los cuatro países no chilenos "
+        "aumentaron el gasto entre 1932 y 1938 mediante obras y programas de "
+        "empleo.",
+        [
+            ("Los países con mayor gasto público tuvieron peor recuperación",
+             "El país X reúne el mayor gasto y la mayor recuperación."),
+            ("El gasto público no varió entre las cinco economías del período",
+             "Los índices de 1938 van de 133 a 214: la variación es amplia."),
+            ("La recuperación dependió únicamente del nivel de desocupación",
+             "El país X tenía la desocupación más alta en 1932 y la mejor recuperación en 1938."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_representaciones", "dificil",
+        "Según la tabla 2, ¿qué cambio experimentó la composición de la "
+        "organización mundial entre 1945 y 1975?",
+        "Los miembros de Asia y África pasaron de ser 8 de 51 a ser 76 de 144",
+        "En 1945 la organización reunía 51 miembros, de los cuales 8 eran de "
+        "Asia y África: menos de un sexto del total.\n"
+        "En 1975 los miembros llegan a 144 y los de Asia y África, a 76: más de "
+        "la mitad de la asamblea.\n"
+        "La nota agrega por qué importa: en la asamblea general cada Estado "
+        "dispone de un voto, cualquiera sea su población o su territorio.",
+        [
+            ("El total de miembros se mantuvo estable y solo cambió su origen",
+             "El total pasó de 51 a 144 miembros."),
+            ("Los miembros con derecho a veto aumentaron junto con la asamblea",
+             "La nota indica que se mantuvieron en cinco durante todo el período."),
+            ("Los Estados de Asia y África siguieron siendo minoría en 1975",
+             "En 1975 eran 76 de 144, es decir, más de la mitad."),
+        ],
+    ),
+]
