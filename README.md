@@ -154,6 +154,10 @@ modules/colegios/      Plan Colegios: curso, código de seis letras, panel del
                        tiene los límites del plan Pro.
 modules/errores/       Errores de JavaScript reportados por el navegador,
                        agrupados por mensaje y ruta. Se ven en /admin.
+modules/correos/       Bienvenida al crear la cuenta y difusión (un correo
+                       escrito a mano a las cuentas registradas). Los correos
+                       de recuperar contraseña viven en modules/users y los
+                       recordatorios en modules/reminders.
 all_models.py          Import único de TODOS los modelos SQLAlchemy. Necesario
                        para resolver relaciones declaradas por string; lo usan
                        alembic/env.py, scripts/seed.py y main.py.
@@ -164,6 +168,47 @@ seed_data.py           SKILL_NODES (M1), SKILL_NODES_M2 y QUESTIONS
 (`start`/`get`/`answer`/`submit`) **nunca** exponen `is_correct` ni
 `distractor_justification` mientras el ensayo está en curso. Esos datos solo
 aparecen en `/review`, que exige el intento ya finalizado.
+
+### Correo
+
+Todo sale por SMTP (`core/email.py`). **Con `SMTP_HOST` vacío no se manda
+nada**: en desarrollo el mensaje queda en el log —cómodo, se prueba el flujo
+completo sin proveedor— y en producción `send_email` lanza `CorreoNoEnviado`,
+que es lo que hay que evitar: significa que nadie puede recuperar su
+contraseña. `GET /api/auth/diagnostico-correo` (admin) abre una conexión real
+al proveedor y dice si el correo saldría o no.
+
+Cuatro correos, dos naturalezas distintas:
+
+| Correo | Se dispara | Opt-out |
+|---|---|---|
+| Recuperar contraseña | `POST /auth/forgot-password` | no, es transaccional |
+| Bienvenida | al crear la cuenta (registro o primer login con Google) | sí |
+| Recordatorio de racha | cron diario 22:00 → `/api/reminders/run` | sí |
+| Difusión / anuncio | a mano, `scripts/enviar_correo.py` | sí |
+
+El opt-out es la casilla `users.recordatorios_email`, que se apaga desde
+`/perfil`, y el pie con el enlace para apagarlo lo agrega el código, no quien
+escribe el correo: la Ley 19.496 exige que toda comunicación promocional
+identifique al remitente y ofrezca darse de baja.
+
+**Mandar un anuncio** (la difusión no se puede deshacer, así que el orden es
+siempre este):
+
+```bash
+cd apps/api
+# 1. ¿A cuántos y a quiénes? No manda nada.
+uv run python scripts/enviar_correo.py --asunto "..." --cuerpo aviso.txt --prueba
+# 2. Cómo se ve al llegar.
+uv run python scripts/enviar_correo.py --asunto "..." --cuerpo aviso.txt --solo tu@correo.cl
+# 3. De verdad. --publico: todos | correo (cuentas con contraseña) | google
+uv run python scripts/enviar_correo.py --asunto "..." --cuerpo aviso.txt --publico correo
+```
+
+Es un script y no un botón en `/admin` por dos razones: las funciones de la API
+mueren a los 30 segundos (`vercel.json`) y una tanda con pausa entre correos no
+cabe ahí sin cortarse a la mitad; y un botón que le escribe a todos los
+usuarios es un botón que se aprieta sin querer.
 
 ### Administración y métricas
 
