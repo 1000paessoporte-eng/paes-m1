@@ -106,3 +106,23 @@ class TestAutorizacion:
     def test_sin_sesion_no_se_entra(self, client: TestClient) -> None:
         assert client.get("/api/admin/metrics").status_code == 401
         assert client.get("/api/exam/repaso").status_code == 401
+
+
+class TestDiagnosticoDeCorreo:
+    """El diagnóstico dice si el correo sale, pero no es para cualquiera: el
+    host y el usuario del SMTP no tienen por qué ser públicos."""
+
+    def test_una_cuenta_normal_no_lo_ve(self, client: TestClient, register_user) -> None:
+        normales, _ = register_user(email="curiosa-del-correo@milpaes.cl")
+        assert client.get("/api/admin/correo", headers=normales).status_code == 404
+
+    def test_sin_sesion_tampoco(self, client: TestClient) -> None:
+        assert client.get("/api/admin/correo").status_code == 401
+
+    def test_nunca_devuelve_la_contrasena(self) -> None:
+        from paes_api.core.email import diagnostico
+
+        e = diagnostico()
+        assert "tiene_password" in e, "tiene que decir SI hay contraseña"
+        assert "password" not in e, "pero nunca la contraseña"
+        assert "smtp_password" not in e
