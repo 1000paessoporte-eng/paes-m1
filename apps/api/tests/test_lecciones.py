@@ -7,6 +7,7 @@ paso del ejemplo traiga su porqué.
 
 import pytest
 from fastapi.testclient import TestClient
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from paes_api.modules.content.models import Lesson
@@ -85,6 +86,19 @@ def test_cada_paso_explica_por_que(codigo: str) -> None:
 
 
 @pytest.mark.parametrize("codigo", sorted(LESSONS))
+def test_los_ejemplos_extra_valen_lo_mismo_que_el_primero(codigo: str) -> None:
+    """Un segundo ejercicio resuelto se lee igual que el primero, así que se le
+    exige lo mismo: enunciado, al menos dos pasos, y el porqué en cada uno."""
+    for j, ejemplo in enumerate(LESSONS[codigo].get("extra_examples", []), 2):
+        assert ejemplo["statement"].strip(), f"{codigo}: ejemplo {j} sin enunciado"
+        pasos = ejemplo["steps"]
+        assert len(pasos) >= 2, f"{codigo}: ejemplo {j} tiene {len(pasos)} paso(s)"
+        for i, paso in enumerate(pasos, 1):
+            assert paso["accion"].strip(), f"{codigo}: ejemplo {j}, paso {i} sin acción"
+            assert paso["porque"].strip(), f"{codigo}: ejemplo {j}, paso {i} sin porqué"
+
+
+@pytest.mark.parametrize("codigo", sorted(LESSONS))
 def test_toda_leccion_advierte_el_error_comun(codigo: str) -> None:
     """La trampa en la que cae casi todo el mundo vale tanto como la teoría."""
     assert LESSONS[codigo].get("common_error", "").strip()
@@ -106,6 +120,45 @@ def test_leccion_se_lee_sin_sesion(client: TestClient, db_session: Session) -> N
     resp = client.get("/api/skill-tree/num_publico/leccion")
     assert resp.status_code == 200
     assert resp.json()["node_code"] == "num_publico"
+
+
+def test_la_leccion_entrega_sus_ejemplos_extra(
+    client: TestClient, db_session: Session
+) -> None:
+    """El segundo ejemplo viaja en la misma respuesta que el primero.
+
+    Si no llegara, la lección se vería completa y le faltaría justo el ejercicio
+    que enseña a reconocer el procedimiento en otra forma.
+    """
+    node = _sembrar_leccion(db_session, "num_con_dos_ejemplos")
+    leccion = db_session.execute(
+        select(Lesson).where(Lesson.skill_node_id == node.id)
+    ).scalar_one()
+    leccion.extra_examples = [
+        {
+            "statement": "Calcula 3 + 3.",
+            "steps": [
+                {"accion": "Sumo", "porque": "Es una suma"},
+                {"accion": "Obtengo 6", "porque": "3 + 3 = 6"},
+            ],
+        }
+    ]
+    db_session.commit()
+
+    body = client.get("/api/skill-tree/num_con_dos_ejemplos/leccion").json()
+    assert len(body["extra_examples"]) == 1
+    assert body["extra_examples"][0]["statement"] == "Calcula 3 + 3."
+    assert len(body["extra_examples"][0]["steps"]) == 2
+
+
+def test_una_leccion_sin_ejemplos_extra_los_entrega_vacios(
+    client: TestClient, db_session: Session
+) -> None:
+    """La mayoría de las lecciones trae uno solo, y la pantalla no debe romperse
+    por eso: llega la lista vacía, no `null`."""
+    _sembrar_leccion(db_session, "num_con_un_ejemplo")
+    body = client.get("/api/skill-tree/num_con_un_ejemplo/leccion").json()
+    assert body["extra_examples"] == []
 
 
 def test_indice_de_lecciones_solo_trae_las_escritas(

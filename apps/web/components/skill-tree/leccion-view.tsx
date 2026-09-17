@@ -119,35 +119,10 @@ export function LeccionView({
           <TextoRico texto={leccion.example_statement} />
         </div>
 
-        <ol className="mt-5 flex flex-col gap-4">
-          {leccion.example_steps.slice(0, visibles).map((paso, i) => (
-            <motion.li
-              key={i}
-              initial={quieto ? false : { opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="flex gap-3"
-            >
-              <span
-                className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-accent-foreground"
-                aria-hidden
-              >
-                {i + 1}
-              </span>
-              <div className="min-w-0 flex-1">
-                <div className="leading-relaxed">
-                  <TextoRico texto={paso.accion} />
-                </div>
-                {/* El porqué es la mitad que enseña: sin él, el paso es una
-                    receta que se copia y se olvida. */}
-                <div className="mt-2 border-l-2 border-border pl-3 text-sm text-muted">
-                  <span className="font-medium text-foreground">Por qué: </span>
-                  <TextoRico texto={paso.porque} inline />
-                </div>
-              </div>
-            </motion.li>
-          ))}
-        </ol>
+        <ListaDePasos
+          pasos={leccion.example_steps.slice(0, visibles)}
+          quieto={quieto}
+        />
 
         {faltan > 0 && (
           <div className="mt-5 flex flex-wrap items-center gap-3">
@@ -168,6 +143,19 @@ export function LeccionView({
           </div>
         )}
       </section>
+
+      {/* ── Los demás ejemplos ──────────────────────────────────────
+          Van después del primero y antes del error típico: el segundo
+          ejercicio es el que enseña a reconocer el procedimiento cuando viene
+          en otra forma, que es donde el alumno se cae. */}
+      {leccion.extra_examples.map((ejemplo, i) => (
+        <EjemploExtra
+          key={i}
+          numero={i + 2}
+          ejemplo={ejemplo}
+          quieto={quieto}
+        />
+      ))}
 
       {/* ── Error típico ────────────────────────────────────────────── */}
       {leccion.common_error && (
@@ -257,5 +245,111 @@ export function LeccionView({
         </Link>
       </p>
     </article>
+  );
+}
+
+/** Los pasos de un ejercicio resuelto: la acción y, debajo, su porqué.
+ *
+ * Compartido por el primer ejemplo y por los que vienen después, que se leen
+ * igual. Sin estado propio: cuántos pasos se ven lo decide quien lo usa. */
+function ListaDePasos({
+  pasos,
+  quieto,
+}: {
+  pasos: Lesson["example_steps"];
+  quieto: boolean | null;
+}) {
+  return (
+    <ol className="mt-5 flex flex-col gap-4">
+      {pasos.map((paso, i) => (
+        <motion.li
+          key={i}
+          initial={quieto ? false : { opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+          className="flex gap-3"
+        >
+          <span
+            className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-accent-foreground"
+            aria-hidden
+          >
+            {i + 1}
+          </span>
+          <div className="min-w-0 flex-1">
+            <div className="leading-relaxed">
+              <TextoRico texto={paso.accion} />
+            </div>
+            {/* El porqué es la mitad que enseña: sin él, el paso es una
+                receta que se copia y se olvida. */}
+            <div className="mt-2 border-l-2 border-border pl-3 text-sm text-muted">
+              <span className="font-medium text-foreground">Por qué: </span>
+              <TextoRico texto={paso.porque} inline />
+            </div>
+          </div>
+        </motion.li>
+      ))}
+    </ol>
+  );
+}
+
+/** Un ejercicio resuelto de los que vienen después del primero.
+ *
+ * Arranca cerrado, con el enunciado a la vista y los pasos escondidos: quien
+ * llegó hasta acá ya vio el procedimiento una vez, así que lo que corresponde
+ * ofrecerle es intentarlo solo antes de leer la resolución. */
+function EjemploExtra({
+  numero,
+  ejemplo,
+  quieto,
+}: {
+  numero: number;
+  ejemplo: Lesson["extra_examples"][number];
+  quieto: boolean | null;
+}) {
+  const total = ejemplo.steps.length;
+  const [visibles, setVisibles] = useState(0);
+  const faltan = total - visibles;
+  const id = `h-ejemplo-${numero}`;
+
+  return (
+    <section className="card-panel mt-5 p-6" aria-labelledby={id}>
+      <div className="flex flex-wrap items-baseline justify-between gap-3">
+        <h2 id={id} className="text-lg font-semibold tracking-tight">
+          Otro ejemplo
+        </h2>
+        {visibles > 0 && (
+          <span className="text-xs text-muted tabular-nums">
+            {visibles} de {total} pasos
+          </span>
+        )}
+      </div>
+
+      <div className="mt-4 rounded-xl border border-accent/30 bg-accent/5 p-4">
+        <TextoRico texto={ejemplo.statement} />
+      </div>
+
+      {visibles > 0 && <ListaDePasos pasos={ejemplo.steps.slice(0, visibles)} quieto={quieto} />}
+
+      {faltan > 0 && (
+        <div className="mt-5 flex flex-wrap items-center gap-3">
+          <button
+            type="button"
+            onClick={() => setVisibles((v) => v + 1)}
+            className="btn-glow rounded-lg px-4 py-2 text-sm font-semibold text-accent-foreground"
+          >
+            {visibles === 0 ? "Ver la resolución" : "Ver el paso siguiente"}
+          </button>
+          {visibles > 0 && (
+            <button
+              type="button"
+              onClick={() => setVisibles(total)}
+              className="text-sm text-muted underline-offset-4 hover:text-foreground hover:underline"
+            >
+              Mostrar los {faltan} que faltan
+            </button>
+          )}
+        </div>
+      )}
+    </section>
   );
 }

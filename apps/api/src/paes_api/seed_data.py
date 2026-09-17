@@ -74349,23 +74349,39 @@ LESSONS: dict[str, dict] = {
             "lo que sostiene la convivencia."
         ),
         "theory": (
-            "**Los derechos humanos son universales, inalienables e "
-            "indivisibles.** Universales porque los tiene toda persona por serlo; "
-            "inalienables porque no se pueden ceder ni quitar; indivisibles "
-            "porque no se pueden respetar unos y desconocer otros.\n\n"
-            "**El Estado no los concede: los reconoce.** No nacen de una ley que "
-            "los otorga, así que tampoco desaparecen si una ley los ignora. Esa "
-            "distinción aparece una y otra vez en las preguntas.\n\n"
-            "**Se suelen agrupar en generaciones.** Los civiles y políticos "
-            "(vida, libertad, voto), los económicos, sociales y culturales "
-            "(educación, salud, trabajo) y los colectivos (medio ambiente sano, "
-            "desarrollo). La agrupación es didáctica: ninguno vale menos que "
-            "otro. Los de segunda generación se realizan de forma progresiva, "
-            "porque dependen de recursos.\n\n"
-            "**A cada derecho corresponde un deber.** El derecho de uno se "
-            "sostiene en la obligación de los demás y del Estado de respetarlo. "
-            "La libertad de expresión convive con el deber de no calumniar, y "
-            "por eso casi ningún derecho es absoluto."
+            "**Los derechos humanos son universales, inalienables e indivisibles.** "
+            "Universales porque los tiene toda persona por serlo; inalienables porque "
+            "no se pueden ceder ni quitar; indivisibles porque no se pueden respetar "
+            "unos y desconocer otros. Se suman dos rasgos: son **interdependientes** "
+            "—el ejercicio de uno depende de los otros— e **imprescriptibles**: no "
+            "caducan con el tiempo.\\n\\n"
+            "**El Estado no los concede: los reconoce.** No nacen de una ley que los "
+            "otorga, así que tampoco desaparecen si una ley los ignora. Esa "
+            "distinción aparece una y otra vez en las preguntas.\\n\\n"
+            "**Se suelen agrupar en generaciones.**\\n\\n"
+            "| Generación | Qué incluye | Qué exige del Estado |\\n"
+            "|---|---|---|\\n"
+            "| Primera: civiles y políticos | vida, libertad, voto, debido proceso | "
+            "sobre todo abstenerse de vulnerarlos |\\n"
+            "| Segunda: económicos, sociales y culturales | educación, salud, "
+            "trabajo, vivienda | prestaciones y recursos, de forma progresiva |\\n"
+            "| Tercera: colectivos | medio ambiente sano, desarrollo, paz | "
+            "coordinación con otros Estados |\\n\\n"
+            "La agrupación es didáctica: ninguno vale menos que otro, y el orden es "
+            "histórico, no jerárquico.\\n\\n"
+            "**Las tres obligaciones del Estado**: respetar (no vulnerar), proteger "
+            "(impedir que terceros vulneren) y garantizar (crear las condiciones para "
+            "ejercerlos). La segunda es la que suele olvidarse: un Estado también "
+            "responde cuando no impide el abuso de un particular.\\n\\n"
+            "**A cada derecho corresponde un deber.** El derecho de uno se sostiene "
+            "en la obligación de los demás y del Estado de respetarlo. La libertad de "
+            "expresión convive con el deber de no calumniar, y por eso casi ningún "
+            "derecho es absoluto: cuando dos chocan, se ponderan según el caso.\\n\\n"
+            "**Cómo se hacen exigibles.** Además de las constituciones nacionales, "
+            "existen tratados que los Estados ratifican y sistemas regionales de "
+            "protección —en América, la Comisión y la Corte Interamericana de "
+            "Derechos Humanos—, ante los cuales una persona puede reclamar cuando ya "
+            "agotó la vía interna de su país."
         ),
         "example_statement": (
             "Una persona publica en redes sociales acusaciones falsas contra un "
@@ -74387,6 +74403,62 @@ LESSONS: dict[str, dict] = {
                 "porque": "No se trata de que un derecho \"gane\" siempre, sino de resolver el conflicto concreto atendiendo al daño causado y a la falsedad de lo publicado.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un municipio prohíbe toda manifestación en la plaza principal "
+                    "argumentando que molesta al comercio. ¿Qué derechos están en juego y "
+                    "cómo se analiza el caso?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico los derechos en tensión: la libertad de reunión y de "
+                            "expresión de quienes se manifiestan, y el derecho a desarrollar una "
+                            "actividad económica de los comerciantes."
+                        ),
+                        "porque": (
+                            "Los casos difíciles casi nunca son «un derecho contra ninguno». "
+                            "Reconocer el choque es el primer paso y es lo que la pregunta evalúa."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Recuerdo que ningún derecho es absoluto, pero que una restricción debe "
+                            "ser establecida por ley, perseguir un fin legítimo y ser proporcionada."
+                        ),
+                        "porque": (
+                            "Esos son los criterios con que se evalúa una limitación. Sin ellos, "
+                            "cualquier molestia bastaría para suprimir un derecho, que es justamente "
+                            "lo que no puede ocurrir."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Evalúo la medida: prohibir TODA manifestación en el lugar central no "
+                            "restringe el derecho, lo anula en la práctica, y por eso es "
+                            "desproporcionada."
+                        ),
+                        "porque": (
+                            "Una prohibición total no es una regulación. Medidas como exigir aviso "
+                            "previo, fijar horarios o resguardar accesos cumplirían el mismo fin "
+                            "afectando mucho menos el derecho."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que el Estado debe armonizar ambos derechos y no sacrificar uno "
+                            "completo, y que la decisión municipal es revisable ante los tribunales."
+                        ),
+                        "porque": (
+                            "La revisabilidad es la otra mitad de la respuesta: los derechos valen en "
+                            "la medida en que exista dónde reclamarlos cuando una autoridad los "
+                            "desconoce."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Tratar los derechos como permisos ilimitados: \"tengo derecho, "
             "entonces puedo\". Todos los derechos conviven con los de los demás, "
@@ -74401,23 +74473,42 @@ LESSONS: dict[str, dict] = {
             "problema es leerlos con cuidado, no recordar datos."
         ),
         "theory": (
-            "**Lee primero los ejes, la leyenda y las unidades.** Un gráfico mal "
-            "leído se responde con seguridad y se responde mal. Antes de mirar "
-            "la curva, fíjate qué mide cada eje y en qué unidad.\n\n"
+            "**Lee primero el título, los ejes, la leyenda y las unidades.** Un "
+            "gráfico mal leído se responde con seguridad y se responde mal. Antes de "
+            "mirar la curva, fíjate qué mide cada eje, en qué unidad y qué período "
+            "cubre.\\n\\n"
             "**Porcentaje y cantidad no son lo mismo.** Un grupo puede bajar su "
             "porcentaje mientras crece en número, si el total creció más. Muchas "
-            "alternativas incorrectas viven exactamente en esa confusión.\n\n"
-            "**Puntos porcentuales no son porcentaje.** Pasar de 20% a 30% es un "
-            "alza de diez PUNTOS porcentuales, pero de un 50%. Si la pregunta "
-            "dice «puntos», resta; si dice «en qué porcentaje», divide.\n\n"
-            "**En una pirámide de población, la forma es el mensaje.** Base "
-            "ancha significa población joven y alta natalidad; base angosta y "
-            "cima ancha, envejecimiento. Comparar dos pirámides del mismo país "
-            "es comparar dos momentos de su historia demográfica.\n\n"
+            "alternativas incorrectas viven exactamente en esa confusión.\\n\\n"
+            "**Puntos porcentuales no son porcentaje.** Pasar de $20\\%$ a $30\\%$ es "
+            "un alza de diez PUNTOS porcentuales, pero de un $50\\%$. Si la pregunta "
+            "dice «puntos», resta; si dice «en qué porcentaje varió», divide por el "
+            "valor inicial.\\n\\n"
+            "| Representación | Qué muestra bien | Qué se pregunta de ella |\\n"
+            "|---|---|---|\\n"
+            "| Gráfico de líneas | la evolución en el tiempo | tendencias, quiebres, "
+            "ritmos |\\n"
+            "| Barras | comparación entre categorías | cuál es mayor, cuánto más |\\n"
+            "| Circular | la composición de un total | qué parte pesa más |\\n"
+            "| Pirámide de población | la estructura por edad y sexo | "
+            "envejecimiento, natalidad |\\n"
+            "| Mapa temático | la distribución en el espacio | dónde se concentra |\\n"
+            "| Línea de tiempo | el orden y la simultaneidad | qué vino antes, qué "
+            "coincidió |\\n\\n"
+            "**En una pirámide de población, la forma es el mensaje.** Base ancha "
+            "significa población joven y alta natalidad; base angosta y cima ancha, "
+            "envejecimiento. Comparar dos pirámides del mismo país es comparar dos "
+            "momentos de su historia demográfica.\\n\\n"
             "**La escala puede exagerar o esconder.** Dos gráficos de los mismos "
-            "datos dan impresiones distintas si el eje vertical no parte de cero "
-            "o si cambia el rango. Cuando dos fuentes muestran la misma variable "
-            "y se ven distintas, mira la escala antes que los datos."
+            "datos dan impresiones distintas si el eje vertical no parte de cero o si "
+            "cambia el rango. Cuando dos fuentes muestran la misma variable y se ven "
+            "distintas, mira la escala antes que los datos.\\n\\n"
+            "**Un mapa también es una interpretación.** Qué se colorea, con qué "
+            "cortes y en qué proyección son decisiones: cambiar los rangos de una "
+            "leyenda puede hacer que un mismo dato se vea homogéneo o polarizado.\\n\\n"
+            "**Una tendencia no es una predicción.** Que una curva venga subiendo no "
+            "obliga a que siga subiendo, y extrapolar más allá del período "
+            "representado es el error que la prueba suele poner como alternativa."
         ),
         "example_statement": (
             "Un gráfico muestra la alfabetización de las mujeres rurales en "
@@ -74438,6 +74529,56 @@ LESSONS: dict[str, dict] = {
                 "porque": "Ese número también es correcto, pero responde otra pregunta. Está puesto ahí precisamente para quien no distinguió las dos operaciones.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un gráfico muestra que la población rural de un país pasó del $40\\%$ al "
+                    "$25\\%$ del total entre 1950 y 2000, mientras la población total creció "
+                    "de 6 a 15 millones. ¿Disminuyó la población rural?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Distingo qué mide el gráfico: porcentajes, no cantidades absolutas de "
+                            "personas."
+                        ),
+                        "porque": (
+                            "Es la distinción que decide la pregunta. Un porcentaje siempre se "
+                            "calcula sobre un total, y si el total cambia, el porcentaje puede "
+                            "moverse sin que la cantidad lo haga en el mismo sentido."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo la cantidad de 1950: el $40\\%$ de $6$ millones son $2{,}4$ "
+                            "millones de personas."
+                        ),
+                        "porque": (
+                            "Convertir el porcentaje en personas es el único modo de responder por la "
+                            "cantidad. El gráfico no lo muestra, pero el dato del total lo permite."
+                        ),
+                    },
+                    {
+                        "accion": "Calculo la de 2000: el $25\\%$ de $15$ millones son $3{,}75$ millones.",
+                        "porque": (
+                            "El porcentaje bajó quince puntos y la cantidad, en cambio, aumentó en "
+                            "más de un millón de personas. Las dos cosas son ciertas a la vez."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que la población rural CRECIÓ en número y disminuyó en "
+                            "proporción, porque la urbana creció mucho más rápido."
+                        ),
+                        "porque": (
+                            "Responder «disminuyó» leyendo solo el porcentaje es el error más "
+                            "frecuente en este tipo de gráfico, y es justamente la alternativa que la "
+                            "prueba ofrece."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Responder desde la impresión visual sin mirar la escala. Una curva "
             "que «se dispara» puede ser un alza de dos puntos en un eje que "
@@ -74453,24 +74594,37 @@ LESSONS: dict[str, dict] = {
             "sin que ninguno mienta."
         ),
         "theory": (
-            "**Casi ningún proceso tiene una sola causa.** Suelen combinarse "
-            "causas económicas, políticas, sociales y culturales. Una alternativa "
-            "que reduce un proceso grande a un único motivo casi siempre es el "
-            "distractor.\n\n"
-            "**Distingue causa estructural de causa inmediata.** La estructural "
-            "venía formándose hace tiempo y explica por qué el proceso era "
-            "posible; la inmediata es el detonante, y explica por qué ocurrió "
-            "justo entonces. Las dos son verdaderas y no compiten.\n\n"
-            "**Un mismo hecho puede ser causa y consecuencia.** El ferrocarril "
-            "es consecuencia de la industrialización y causa de la migración a "
-            "las ciudades. Depende del proceso desde el cual se lo mire.\n\n"
-            "**No juzgues el pasado con los criterios del presente.** Es lo que "
-            "se llama presentismo. Explicar por qué alguien pensaba así en su "
-            "época no es justificarlo: es entenderlo.\n\n"
-            "**Que la historia se reescriba no significa que sea opinable.** "
-            "Cada generación pregunta cosas nuevas y aparecen fuentes nuevas, "
-            "pero las interpretaciones siguen teniendo que sostenerse en "
-            "evidencia. Reescribirse no es inventarse."
+            "**Casi ningún proceso tiene una sola causa.** Suelen combinarse causas "
+            "económicas, políticas, sociales y culturales. Una alternativa que reduce "
+            "un proceso grande a un único motivo casi siempre es el distractor.\\n\\n"
+            "| Tipo de causa | Qué explica | Ejemplo |\\n"
+            "|---|---|---|\\n"
+            "| Estructural o profunda | por qué era posible | una economía "
+            "dependiente de un solo producto |\\n"
+            "| Coyuntural | por qué en ese momento | una caída brusca del precio |\\n"
+            "| Inmediata o detonante | por qué ese día | una decisión, un incidente |\\n\\n"
+            "Las tres pueden ser verdaderas a la vez y no compiten entre sí: "
+            "responden preguntas distintas.\\n\\n"
+            "**Un mismo hecho puede ser causa y consecuencia.** El ferrocarril es "
+            "consecuencia de la industrialización y causa de la migración a las "
+            "ciudades. Depende del proceso desde el cual se lo mire.\\n\\n"
+            "**Consecuencias buscadas y no buscadas.** Muchos efectos importantes no "
+            "estaban en el plan de nadie, y explicarlos por la intención de alguien "
+            "es una forma de simplificar el pasado.\\n\\n"
+            "**Que la historia se reescriba no significa que sea opinable.** Las "
+            "interpretaciones cambian porque aparecen fuentes nuevas, porque se hacen "
+            "preguntas nuevas o porque cambian los métodos. Lo que no cambia es la "
+            "exigencia de sostener cada afirmación con evidencia.\\n\\n"
+            "**Interpretación no es opinión.** Dos historiadores pueden discrepar "
+            "sobre el peso de una causa y ambos apoyarse en fuentes; ninguno puede "
+            "discrepar sobre si un hecho ocurrió cuando la evidencia lo establece.\\n\\n"
+            "**No juzgues el pasado con los criterios del presente.** Es lo que se "
+            "llama presentismo. Explicar por qué alguien pensaba así en su época no "
+            "es justificarlo: es entenderlo.\\n\\n"
+            "**Cuidado con dos atajos.** El determinismo, que hace parecer inevitable "
+            "lo que ocurrió —siempre hubo otros caminos posibles—, y la explicación "
+            "por un solo protagonista, que convierte un proceso colectivo en la "
+            "biografía de una persona."
         ),
         "example_statement": (
             "Un estudiante afirma: «los campesinos medievales eran ignorantes "
@@ -74491,6 +74645,60 @@ LESSONS: dict[str, dict] = {
                 "porque": "Entender por qué alguien creía algo en su época es distinto de darle la razón. Esa distinción es la que separa explicar de justificar.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un texto afirma: «la crisis de 1929 hundió la economía chilena porque el "
+                    "país vendía salitre». ¿Qué le falta a esa explicación?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Separo las causas por tipo: la caída del comercio mundial en 1929 es la "
+                            "causa coyuntural, el detonante externo."
+                        ),
+                        "porque": (
+                            "Es el hecho que responde «por qué justo entonces». Por sí solo no "
+                            "explica por qué el golpe fue tan duro en Chile y menos en otros países."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Identifico la causa estructural que el texto nombra sin desarrollar: una "
+                            "economía concentrada en un solo producto de exportación, con el "
+                            "presupuesto fiscal atado a él."
+                        ),
+                        "porque": (
+                            "Esa dependencia venía formándose desde el siglo XIX y es lo que explica "
+                            "por qué era posible un derrumbe de esa magnitud. La estructura explica "
+                            "la vulnerabilidad; la coyuntura, el momento."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Agrego un factor que el texto omite: el salitre ya venía perdiendo "
+                            "mercado frente al nitrato sintético desarrollado años antes."
+                        ),
+                        "porque": (
+                            "Una explicación multicausal no es una lista más larga por gusto: cada "
+                            "factor cubre algo que los otros no. Sin este, parecería que todo se "
+                            "explica por un año."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que la explicación no es falsa, pero es incompleta: reduce un "
+                            "proceso a una sola causa y a una sola fecha."
+                        ),
+                        "porque": (
+                            "Es exactamente el distractor típico de la prueba. La respuesta correcta "
+                            "suele ser la que combina una causa estructural con un detonante, no la "
+                            "que elige una de las dos."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Confundir explicar con justificar. Cuando una pregunta pide "
             "entender por qué un grupo actuó de cierta manera, no está pidiendo "
@@ -74509,29 +74717,43 @@ LESSONS: dict[str, dict] = {
         "theory": (
             "**Por qué existe el derecho laboral.** Las partes no negocian en "
             "igualdad: la empresa pierde un candidato, el trabajador pierde su "
-            "sustento. Esa asimetría explica por qué el derecho civil no "
-            "bastaba y por qué hay mínimos que no se pueden pactar a la baja.\n"
-            "**Contrato e irrenunciabilidad.** El contrato no crea los "
-            "derechos, que están en la ley: los hace verificables. Y son "
-            "irrenunciables durante la relación laboral, porque si no bastaría "
-            "con incluir la renuncia en el contrato.\n"
-            "**Organización colectiva.** Negociar en grupo equilibra el poder. "
-            "La huelga da fuerza a esa posición introduciendo un costo para "
-            "ambas partes; suspende la relación laboral, no la termina.\n"
-            "**Seguridad social.** Reúne aportes de muchos para cubrir a "
-            "quienes enfrentan la contingencia. Quien trabaja sin contrato "
-            "queda fuera: sin salud, sin seguro de cesantía y sin fondos para "
-            "la vejez. La informalidad de hoy es el problema previsional de "
-            "mañana.\n"
-            "**Brecha de género.** El trabajo doméstico y de cuidados no "
-            "remunerado recae mayoritariamente en mujeres, limita la "
-            "disponibilidad horaria e interrumpe trayectorias. Por eso las "
-            "políticas combinan medidas laborales con salas cuna y permisos "
-            "compartidos.\n"
-            "**Lo que viene cambiando.** La automatización reduce unas tareas y "
-            "crea otras: el problema es la transición, no el total de empleos. "
-            "Las plataformas obligan a definir si hay dependencia, y de eso "
-            "depende qué protecciones aplican."
+            "sustento. Esa asimetría explica por qué el derecho civil no bastaba y "
+            "por qué hay mínimos que no se pueden pactar a la baja.\\n\\n"
+            "**Contrato e irrenunciabilidad.** El contrato no crea los derechos, que "
+            "están en la ley: los hace verificables. Y son irrenunciables durante la "
+            "relación laboral, porque si no bastaría con incluir la renuncia en el "
+            "contrato para dejarlos sin efecto.\\n\\n"
+            "| Derecho | Qué asegura |\\n"
+            "|---|---|\\n"
+            "| Contrato escrito | deja constancia de funciones, jornada y "
+            "remuneración |\\n"
+            "| Jornada máxima y descansos | límite de horas y día de descanso semanal "
+            "|\\n"
+            "| Remuneración mínima | un piso que no se puede pactar a la baja |\\n"
+            "| Feriado anual | descanso pagado por año trabajado |\\n"
+            "| Protección de la maternidad | fuero y permisos |\\n"
+            "| Seguridad en el trabajo | prevención de riesgos y cobertura de "
+            "accidentes |\\n"
+            "| Libertad sindical | organizarse y negociar colectivamente |\\n\\n"
+            "**Organización colectiva.** Negociar en grupo equilibra el poder. La "
+            "huelga da fuerza a esa posición introduciendo un costo para ambas "
+            "partes; suspende la relación laboral, no la termina.\\n\\n"
+            "**Seguridad social.** Reúne aportes de muchos para cubrir a quienes "
+            "enfrentan una contingencia: enfermedad, accidente, cesantía, vejez. "
+            "Funciona por el número: el riesgo individual es impredecible, el "
+            "colectivo se puede estimar.\\n\\n"
+            "**Quien trabaja sin contrato queda fuera** del sistema: sin cotización "
+            "de salud, sin seguro de cesantía y sin fondos para la vejez. La "
+            "informalidad de hoy es el problema previsional de mañana, y afecta más a "
+            "quienes tienen menos capacidad de exigir un contrato.\\n\\n"
+            "**Cambios en el mundo del trabajo.** Plataformas digitales, trabajo a "
+            "honorarios y teletrabajo desdibujan la frontera entre trabajador "
+            "dependiente e independiente. La discusión no es si la tecnología cambia "
+            "el trabajo, sino qué protecciones acompañan a esas nuevas formas.\\n\\n"
+            "**Dónde se reclama.** La Dirección del Trabajo fiscaliza y media, y los "
+            "tribunales laborales resuelven los conflictos. Existen plazos para "
+            "reclamar, y dejarlos pasar es una de las formas más comunes de perder un "
+            "derecho que se tenía."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -74577,6 +74799,63 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una persona acepta un trabajo «a trato», sin contrato escrito, con la "
+                    "promesa de un sueldo mayor porque «así no se descuenta nada». ¿Qué está "
+                    "perdiendo, aunque reciba más dinero cada mes?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico lo que no se descuenta: las cotizaciones de salud, de "
+                            "pensiones y del seguro de cesantía."
+                        ),
+                        "porque": (
+                            "Lo que aparece como un sueldo mayor es en realidad el mismo costo sin "
+                            "las coberturas. El dinero extra es exactamente lo que se dejó de "
+                            "aportar."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Determino las consecuencias inmediatas: sin cotización de salud, una "
+                            "licencia médica no se paga; sin seguro de cesantía, el despido no tiene "
+                            "cobertura."
+                        ),
+                        "porque": (
+                            "El riesgo no desaparece por no estar cubierto: se traslada entero a la "
+                            "persona. La seguridad social funciona porque reparte entre muchos un "
+                            "riesgo que es impredecible para cada uno."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Sumo la consecuencia de largo plazo: sin fondos acumulados, la pensión "
+                            "futura será menor, y ese daño no se puede reparar después."
+                        ),
+                        "porque": (
+                            "Las lagunas previsionales no se recuperan. Es lo que hace que la "
+                            "informalidad de hoy sea el problema previsional de mañana."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Aclaro un punto jurídico: la ausencia de contrato escrito no elimina la "
+                            "relación laboral. Si hay subordinación, horario y remuneración, los "
+                            "derechos existen igual y se pueden reclamar ante la Dirección del "
+                            "Trabajo."
+                        ),
+                        "porque": (
+                            "El contrato hace verificable el vínculo; no lo crea. Lo que la "
+                            "informalidad quita no es el derecho, sino la facilidad para probarlo, y "
+                            "por eso importan los plazos para reclamar."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Tratar el contrato de trabajo como cualquier otro acuerdo entre "
             "partes libres. Si lo fuera, bastaría con que ambas firmaran para "
@@ -74592,28 +74871,42 @@ LESSONS: dict[str, dict] = {
             "entrena a mirar quién gana, quién paga y qué queda después."
         ),
         "theory": (
-            "**Crecimiento vs desarrollo.** El primero mide cuánto se produce; "
-            "el segundo pregunta por condiciones de vida y distribución. La "
-            "pobreza multidimensional aplica esa idea: mide ingreso Y acceso a "
-            "educación, salud, vivienda y trabajo.\n"
-            "**Renovable y no renovable.** El cobre no se repone a escala "
-            "humana: cada tonelada extraída es una menos. El sol y el viento no "
-            "se agotan con su uso.\n"
-            "**El riesgo de exportar pocos productos.** El precio se fija "
-            "afuera. Sube y todo mejora; baja y el ajuste llega al presupuesto "
-            "y al empleo. Por eso se discute diversificar y agregar valor.\n"
-            "**Abundancia no es desarrollo.** Hay países con enormes reservas y "
-            "malos indicadores sociales. Lo decisivo es qué se hace con la "
-            "renta: si deja capacidades instaladas o solo ingresos "
-            "transitorios.\n"
-            "**Sostenibilidad.** Satisfacer hoy sin comprometer el mañana. "
-            "Obliga a mirar el largo plazo y a preguntarse si el daño es "
-            "reversible. Las emisiones son un caso especial: afectan a todo el "
-            "planeta, así que ningún país resuelve el problema solo.\n"
-            "**Quién gana y quién paga.** En los conflictos socioambientales el "
-            "beneficio suele ser nacional y el costo, local. Esa asimetría "
-            "explica el conflicto mejor que suponer desinformación de alguna de "
-            "las partes."
+            "**Crecimiento y desarrollo no son lo mismo.** El crecimiento mide cuánto "
+            "se produce; el desarrollo pregunta por condiciones de vida, "
+            "oportunidades y distribución. Un país puede crecer varios años seguidos "
+            "sin que mejore la vida de la mayoría.\\n\\n"
+            "**La pobreza multidimensional** aplica esa idea: mide ingreso Y acceso a "
+            "educación, salud, vivienda, trabajo y redes. Una familia puede superar "
+            "la línea de ingreso y seguir sin acceso a salud oportuna.\\n\\n"
+            "**Renovable y no renovable.** El cobre no se repone a escala humana: "
+            "cada tonelada extraída es una menos. El sol y el viento no se agotan con "
+            "su uso, aunque instalar la infraestructura tenga sus propios costos "
+            "ambientales.\\n\\n"
+            "| Concepto | Qué dice |\\n"
+            "|---|---|\\n"
+            "| Sostenibilidad | satisfacer hoy sin comprometer las necesidades de "
+            "mañana |\\n"
+            "| Huella ecológica | cuántos recursos consume una población respecto de "
+            "lo que su territorio repone |\\n"
+            "| Desarrollo humano (IDH) | combina ingreso, educación y salud |\\n"
+            "| Matriz productiva | qué produce y exporta un país, y con cuánto valor "
+            "agregado |\\n\\n"
+            "**El riesgo de exportar pocos productos.** El precio se fija afuera. "
+            "Sube y todo mejora; baja y el ajuste llega al presupuesto y al empleo. "
+            "Por eso se discute diversificar y agregar valor: vender cobre refinado o "
+            "productos derivados no es lo mismo que vender concentrado.\\n\\n"
+            "**Abundancia no es desarrollo.** Hay países con enormes reservas y malos "
+            "indicadores sociales. Lo decisivo es qué se hace con la renta: si deja "
+            "capacidades instaladas —educación, infraestructura, instituciones— o "
+            "solo ingresos transitorios que se agotan con el yacimiento.\\n\\n"
+            "**El costo ambiental de producir.** Minería, agricultura de exportación "
+            "y energía compiten por agua y suelo con las comunidades que viven ahí. "
+            "Por eso existen la evaluación de impacto ambiental y la consulta a "
+            "comunidades: no eliminan el conflicto, lo ordenan.\\n\\n"
+            "**Sostenibilidad obliga a mirar el largo plazo** y a preguntarse si el "
+            "daño es reversible. Un bosque replantado vuelve en décadas; un acuífero "
+            "agotado o una especie extinta, no. Esa asimetría entre lo reversible y "
+            "lo irreversible es la que suele decidir las preguntas del eje."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -74660,6 +74953,62 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un país exporta un mineral que representa el 60% de sus exportaciones. "
+                    "El precio internacional se duplica durante cinco años. ¿Qué "
+                    "oportunidades y qué riesgos plantea ese auge?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico la oportunidad inmediata: más ingresos fiscales y más "
+                            "divisas, es decir, recursos que antes no existían."
+                        ),
+                        "porque": (
+                            "Un auge de precios en un producto que pesa el 60% de las exportaciones "
+                            "se traduce directamente en el presupuesto del Estado. Es la cara visible "
+                            "del ciclo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Distingo qué se puede hacer con esos ingresos: gastarlos en el momento, "
+                            "o invertirlos en capacidades que duren más que el auge —educación, "
+                            "infraestructura, diversificación—."
+                        ),
+                        "porque": (
+                            "Es la diferencia entre crecimiento y desarrollo. La renta de un recurso "
+                            "no renovable se agota; lo que se construya con ella puede quedar."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Nombro el riesgo: si el gasto permanente se ajusta al ingreso "
+                            "transitorio, cuando el precio baje habrá que recortar justo cuando la "
+                            "economía se debilita."
+                        ),
+                        "porque": (
+                            "El precio se fija afuera y el ciclo se revierte. Por eso existen los "
+                            "fondos de estabilización: guardar en el auge para sostener el gasto en "
+                            "la caída."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Agrego el riesgo de concentración: un auge puede desincentivar otras "
+                            "actividades y dejar al país más dependiente que antes."
+                        ),
+                        "porque": (
+                            "Mientras el mineral rinde, invertir en otra cosa parece menos atractivo. "
+                            "Así la bonanza puede terminar profundizando justamente la vulnerabilidad "
+                            "que convenía reducir."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Evaluar un proyecto o una política solo por su saldo agregado. La "
             "pregunta que este eje entrena es otra: quién recibe el beneficio, "
@@ -74675,29 +75024,47 @@ LESSONS: dict[str, dict] = {
             "preguntas del eje económico."
         ),
         "theory": (
-            "**Escasez y costo de oportunidad.** Los recursos son limitados y "
-            "las necesidades no, así que toda elección implica renunciar a "
-            "algo. Ese sacrificio existe aunque no se pague dinero.\n"
-            "**Qué hacen los precios.** En un mercado competitivo, más demanda "
-            "con igual oferta empuja el precio hacia arriba, y esa señal indica "
-            "a unos que produzcan más y a otros que consuman menos. El precio "
-            "transmite información sin que nadie la coordine.\n"
-            "**Cuándo falla el mercado.** Dos casos clásicos. BIEN PÚBLICO: "
-            "nadie puede ser excluido (el alumbrado), así que a todos les "
-            "conviene no pagar y el bien no se produce. EXTERNALIDAD: el costo "
-            "recae sobre terceros (la fábrica que contamina el río), así que el "
-            "precio no lo refleja.\n"
-            "**Qué hace el Estado.** Regula, provee, invierte y redistribuye. "
-            "PROGRESIVO: quien gana más paga una proporción mayor (impuesto a "
-            "la renta). REGRESIVO: misma tasa para todos, pero pesa más sobre "
-            "ingresos bajos porque ellos consumen casi todo lo que reciben "
-            "(IVA).\n"
-            "**Política fiscal y ciclo.** En recesión, más gasto público para "
-            "sostener demanda y empleo. Se llama contracíclica y exige ahorrar "
-            "en las expansiones.\n"
-            "**Cuidado con los indicadores.** El PIB mide cuánto se produce, no "
-            "cómo se reparte, ni el trabajo doméstico, ni el daño ambiental. "
-            "Saber qué deja fuera un indicador es parte de saber usarlo."
+            "**Escasez y costo de oportunidad.** Los recursos son limitados y las "
+            "necesidades no, así que toda elección implica renunciar a algo. Ese "
+            "sacrificio existe aunque no se pague dinero: el costo de oportunidad de "
+            "estudiar una tarde es lo mejor que se podría haber hecho con esa tarde.\\n\\n"
+            "**Qué hacen los precios.** En un mercado competitivo, más demanda con "
+            "igual oferta empuja el precio hacia arriba, y esa señal indica a unos "
+            "que produzcan más y a otros que consuman menos. El precio transmite "
+            "información sin que nadie la coordine.\\n\\n"
+            "**Cuándo falla el mercado.**\\n\\n"
+            "| Falla | En qué consiste | Ejemplo |\\n"
+            "|---|---|---|\\n"
+            "| Bien público | nadie puede ser excluido y a todos conviene no pagar | "
+            "alumbrado, defensa |\\n"
+            "| Externalidad negativa | el costo recae sobre terceros | una fábrica "
+            "que contamina un río |\\n"
+            "| Externalidad positiva | el beneficio se derrama a quien no pagó | "
+            "vacunarse, educarse |\\n"
+            "| Información asimétrica | una parte sabe más que la otra | quien vende "
+            "un auto usado |\\n"
+            "| Monopolio | un solo oferente fija el precio | un servicio sin "
+            "competencia |\\n\\n"
+            "En todos estos casos el precio no refleja el costo o el beneficio real, "
+            "y por eso el mercado produce de más o de menos.\\n\\n"
+            "**Qué hace el Estado.** Regula, provee, invierte y redistribuye. Cobra "
+            "impuestos para financiarlo, y la forma del impuesto importa tanto como "
+            "el monto:\\n\\n"
+            "- **progresivo**: quien gana más paga una proporción mayor (impuesto a "
+            "la renta);\\n"
+            "- **proporcional**: todos pagan la misma proporción;\\n"
+            "- **regresivo**: misma tasa para todos, pero pesa más sobre los ingresos "
+            "bajos, como ocurre con el IVA, porque quien gana poco consume casi todo "
+            "lo que gana.\\n\\n"
+            "**Gasto social y redistribución.** Los impuestos financian salud, "
+            "educación, pensiones y subsidios. Por eso la desigualdad se mide antes y "
+            "después de impuestos y transferencias: la diferencia entre ambas cifras "
+            "es cuánto redistribuye efectivamente ese Estado.\\n\\n"
+            "**También hay fallas del Estado.** Regular mal, capturar rentas o gastar "
+            "sin control son problemas reales, y por eso existen la Contraloría, la "
+            "transparencia y la evaluación de programas. Ni el mercado ni el Estado "
+            "funcionan solos: la pregunta de política pública es qué hace mejor cada "
+            "uno y con qué controles."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -74744,6 +75111,63 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una fábrica vierte residuos en un río y vende su producto barato. ¿Qué "
+                    "falla de mercado hay aquí y qué instrumentos tiene el Estado para "
+                    "corregirla?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico la falla: una externalidad negativa. El costo de la "
+                            "contaminación lo pagan quienes usan el río, no la fábrica ni sus "
+                            "clientes."
+                        ),
+                        "porque": (
+                            "El precio del producto refleja solo los costos que la empresa asume. Al "
+                            "quedar fuera el daño ambiental, el precio es artificialmente bajo y se "
+                            "produce de más."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Explico la consecuencia: como el producto se vende bajo su costo social, "
+                            "se consume más de lo que sería eficiente."
+                        ),
+                        "porque": (
+                            "La señal del precio está distorsionada. No es que el mercado funcione "
+                            "mal por descuido: funciona exactamente como debe con la información que "
+                            "tiene, y esa información está incompleta."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Nombro los instrumentos: regulación con límites de vertido y "
+                            "fiscalización, impuestos que incorporen el daño al precio, y "
+                            "responsabilidad por el daño causado."
+                        ),
+                        "porque": (
+                            "Los tres apuntan a lo mismo desde ángulos distintos: que el costo vuelva "
+                            "a quien lo genera. Un impuesto ambiental no busca recaudar, busca "
+                            "corregir el precio."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Agrego el contrapeso: la regulación necesita capacidad de fiscalizar, o "
+                            "queda escrita sin efecto."
+                        ),
+                        "porque": (
+                            "También hay fallas del Estado. Reconocerlo no invalida la intervención: "
+                            "obliga a preguntarse con qué controles se hace, que es la pregunta de "
+                            "política pública de verdad."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Suponer que si un mercado falla, la respuesta es reemplazarlo por "
             "el Estado. Las herramientas habituales frente a una externalidad "
@@ -74761,30 +75185,45 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**Qué hace un tribunal.** Resuelve conflictos aplicando el derecho "
-            "vigente y fundando su decisión. Fundar es lo que permite revisar: "
-            "si la sentencia expone su razonamiento, otro tribunal puede "
-            "examinarlo. Las instancias son limitadas; después el fallo queda "
-            "ejecutoriado.\n"
+            "vigente y fundando su decisión. Fundar es lo que permite revisar: si la "
+            "sentencia expone su razonamiento, otro tribunal puede examinarlo. Las "
+            "instancias son limitadas; después el fallo queda ejecutoriado y no se "
+            "puede volver a discutir lo mismo.\\n\\n"
             "**Independencia judicial.** Ni el Presidente ni el Congreso pueden "
-            "revisar los fundamentos de un fallo. Es la contrapartida de que "
-            "los jueces no sean elegidos: responden ante el derecho, no ante el "
-            "electorado ni ante el gobierno.\n"
-            "**Presunción de inocencia.** Prueba quien acusa. El imputado no "
-            "tiene que demostrar que no lo hizo, entre otras cosas porque "
-            "probar que algo no ocurrió suele ser imposible.\n"
-            "**La reforma procesal penal.** Antes un mismo juez investigaba, "
-            "acusaba y fallaba. Ahora: Ministerio Público investiga y acusa; "
-            "juez de garantía controla derechos; tribunal oral sentencia. La "
-            "imparcialidad deja de depender del carácter del juez y pasa a "
-            "estar en el diseño.\n"
-            "**Debido proceso.** Prueba lícita, posibilidad de controvertirla, "
-            "fallo fundado, defensa técnica. No impide condenar: fija cómo se "
-            "llega a una condena. Y se aplica a todos porque al decidir nadie "
-            "sabe todavía quién es culpable.\n"
-            "**Igualdad formal y acceso real.** La ley es la misma para todos, "
-            "pero hacerla valer exige tiempo, dinero y abogado. Defensoría "
-            "pública, corporaciones de asistencia judicial y procedimientos "
-            "simplificados apuntan a esa brecha."
+            "revisar los fundamentos de un fallo. Es la contrapartida de que los "
+            "jueces no sean elegidos: responden ante el derecho, no ante el "
+            "electorado ni ante el gobierno.\\n\\n"
+            "**Garantías del debido proceso**, que valen para cualquier persona "
+            "investigada:\\n\\n"
+            "| Garantía | Qué significa |\\n"
+            "|---|---|\\n"
+            "| Presunción de inocencia | prueba quien acusa; el imputado no debe "
+            "demostrar su inocencia |\\n"
+            "| Derecho a defensa | asistencia letrada desde el inicio, aunque no "
+            "pueda pagarla |\\n"
+            "| Juez imparcial | quien juzga no investiga ni acusa |\\n"
+            "| Derecho a ser oído | poder presentar pruebas y controvertir las de la "
+            "contraparte |\\n"
+            "| Plazo razonable | la causa no puede quedar abierta indefinidamente |\\n"
+            "| Derecho al recurso | poder pedir que otro tribunal revise |\\n\\n"
+            "**Por qué la presunción de inocencia.** Prueba quien acusa, entre otras "
+            "cosas porque demostrar que algo NO ocurrió suele ser imposible. No "
+            "significa creer que el imputado es inocente: significa que mientras no "
+            "se pruebe lo contrario, el Estado debe tratarlo como tal.\\n\\n"
+            "**La reforma procesal penal.** Antes un mismo juez investigaba, acusaba "
+            "y fallaba. Ahora: el Ministerio Público investiga y acusa, el juez de "
+            "garantía controla los derechos del imputado, el tribunal oral sentencia, "
+            "y la Defensoría Penal Pública provee abogado a quien no tiene. La "
+            "imparcialidad deja de depender de la virtud de una persona y pasa a "
+            "estar asegurada por el diseño.\\n\\n"
+            "**Igualdad ante la ley e igualdad real.** La ley rige para todos, pero "
+            "no todos llegan en las mismas condiciones a un juicio. Por eso existen "
+            "la defensa penal pública, las corporaciones de asistencia judicial y los "
+            "procedimientos simplificados: el acceso a la justicia es parte del "
+            "derecho, no un trámite previo.\\n\\n"
+            "**Justicia penal no es la única.** Los conflictos civiles, laborales, de "
+            "familia y vecinales tienen sus propios tribunales y procedimientos, y en "
+            "varios casos la mediación resuelve sin llegar a juicio."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -74832,6 +75271,60 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un noticiario presenta a una persona detenida como «el autor del robo», "
+                    "antes de que exista sentencia. ¿Qué principio se vulnera y por qué "
+                    "importa?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico el principio: la presunción de inocencia, que rige mientras "
+                            "no exista una sentencia condenatoria firme."
+                        ),
+                        "porque": (
+                            "Detenido, imputado y condenado son tres situaciones distintas. Tratar la "
+                            "primera como si fuera la tercera es exactamente lo que el principio "
+                            "prohíbe."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Precisar qué exige: que el Estado y, en su medida, los medios traten a "
+                            "la persona como inocente, y que sea la acusación la que deba probar."
+                        ),
+                        "porque": (
+                            "No se trata de creer en su inocencia, sino de la distribución de la "
+                            "carga de la prueba y del trato mientras el proceso ocurre."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Explico por qué importa: una condena mediática produce efectos —pérdida "
+                            "de trabajo, estigma— que no se reparan aunque después la persona sea "
+                            "absuelta."
+                        ),
+                        "porque": (
+                            "El daño ocurre antes de que el proceso termine, y por eso la garantía "
+                            "tiene que operar durante el juicio y no solo al final."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Señalo la tensión con la libertad de expresión: informar sobre una "
+                            "detención es legítimo; afirmar la culpabilidad sin sentencia, no."
+                        ),
+                        "porque": (
+                            "Los dos derechos conviven, y la solución no es prohibir la cobertura "
+                            "sino exigir precisión: «detenido como presunto autor» informa lo mismo "
+                            "sin condenar."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Pensar que las garantías del debido proceso protegen a los "
             "culpables y estorban a la justicia. Al momento de juzgar todavía "
@@ -74848,29 +75341,42 @@ LESSONS: dict[str, dict] = {
             "aplicar a un documento histórico."
         ),
         "theory": (
-            "**Libertad de expresión y pluralismo.** Sin censura previa, aunque "
-            "con responsabilidad posterior. Y como informar supone elegir qué "
-            "destacar, que existan medios de orientaciones distintas permite "
-            "comparar coberturas del mismo hecho.\n"
-            "**Error no es desinformación.** Lo que las separa es la INTENCIÓN. "
-            "El error se rectifica; la desinformación se produce sabiendo que "
-            "el contenido es falso.\n"
-            "**Cómo se evalúa una fuente.** Quién la produce, con qué respaldo, "
-            "con qué interés, y si otras fuentes independientes dicen lo mismo. "
-            "El alcance y el número de veces que algo se comparte no son "
-            "indicadores de veracidad.\n"
-            "**Primaria y secundaria.** La primaria es contemporánea al hecho "
-            "(carta, ley, fotografía); la secundaria lo interpreta después. "
-            "Ninguna es mejor: se cruzan.\n"
-            "**Toda fuente tiene punto de vista.** Un discurso oficial no se "
-            "descarta por interesado: se usa para lo que prueba (qué quería "
-            "proyectar) y no para lo que no prueba (si los resultados fueron "
-            "los que afirma).\n"
-            "**Algoritmos y regulación.** Las plataformas muestran más de lo "
-            "mismo y reducen la exposición a lo distinto. Y regular lo falso "
-            "obliga a designar a alguien que decida qué es falso: dos bienes "
-            "democráticos en tensión, sin solución que satisfaga a ambos por "
-            "completo."
+            "**Libertad de expresión y pluralismo.** Sin censura previa, aunque con "
+            "responsabilidad posterior: se puede responder por injurias o calumnias "
+            "después, no impedir la publicación antes. Y como informar supone elegir "
+            "qué destacar, que existan medios de orientaciones distintas permite "
+            "comparar coberturas del mismo hecho.\\n\\n"
+            "**Error no es desinformación.** Lo que las separa es la INTENCIÓN. El "
+            "error se rectifica; la desinformación se produce sabiendo que el "
+            "contenido es falso, y suele buscar un efecto.\\n\\n"
+            "| Concepto | Qué es |\\n"
+            "|---|---|\\n"
+            "| Error | dato equivocado sin intención de engañar; se corrige |\\n"
+            "| Desinformación | contenido falso difundido a sabiendas |\\n"
+            "| Información descontextualizada | dato verdadero presentado de modo que "
+            "induce a error |\\n"
+            "| Opinión | valoración legítima; no se verifica, se argumenta |\\n"
+            "| Publicidad encubierta | contenido pagado presentado como información |\\n\\n"
+            "**Cómo se evalúa una fuente**: quién la produce, con qué respaldo, con "
+            "qué interés, y si otras fuentes independientes dicen lo mismo. "
+            "Independientes significa que no se copian entre sí: tres medios que "
+            "reproducen el mismo cable no son tres confirmaciones.\\n\\n"
+            "**Lo verdadero también puede engañar.** Un dato correcto sacado de "
+            "contexto, un gráfico con eje truncado o una cifra sin su punto de "
+            "comparación pueden llevar a una conclusión falsa sin decir ninguna "
+            "mentira.\\n\\n"
+            "**Cómo circula hoy la desinformación.** Las plataformas ordenan lo que "
+            "se ve según lo que retiene la atención, y lo indignante retiene más que "
+            "lo matizado. Eso produce burbujas donde cada persona ve confirmada su "
+            "posición, y explica por qué una noticia falsa puede difundirse más "
+            "rápido que su desmentido.\\n\\n"
+            "**Qué hacer antes de compartir**: revisar la fecha —muchas informaciones "
+            "falsas son noticias viejas recirculadas—, buscar la fuente original, "
+            "desconfiar de los titulares que piden indignarse, y comprobar si algún "
+            "medio con estándares editoriales lo reporta.\\n\\n"
+            "**Responsabilidad de quien comparte.** Difundir algo falso, aunque sea "
+            "de buena fe, lo amplifica igual. En materia de información, el usuario "
+            "no es solo receptor: es parte de la cadena de distribución."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -74918,6 +75424,62 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Circula por redes sociales una foto real de una protesta con el texto "
+                    "«así está la ciudad hoy». La foto corresponde a una manifestación de "
+                    "hace seis años. ¿Es desinformación, aunque la imagen no esté manipulada?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Distingo los dos planos: la imagen es auténtica, pero la afirmación que "
+                            "la acompaña es falsa."
+                        ),
+                        "porque": (
+                            "La verificación no se agota en si el archivo fue editado. Una foto real "
+                            "puede sostener una afirmación falsa sin que nadie haya tocado un pixel."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Clasifico el caso: es información descontextualizada, el tipo más "
+                            "difícil de detectar porque cada elemento, por separado, resiste la "
+                            "comprobación."
+                        ),
+                        "porque": (
+                            "Quien revisa la foto la encuentra genuina y da por buena la publicación. "
+                            "El engaño está en la relación entre la imagen y la fecha, no en ninguna "
+                            "de las dos."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Decido si es desinformación según la intención: si quien publica sabía "
+                            "que la foto era antigua, sí; si se equivocó de buena fe, es un error que "
+                            "corresponde rectificar."
+                        ),
+                        "porque": (
+                            "Es la distinción del eje: lo que separa error de desinformación es saber "
+                            "que el contenido induce a error. En los dos casos el efecto sobre quien "
+                            "lo lee es el mismo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo con la verificación que correspondía: buscar la imagen por su "
+                            "fecha de origen antes de compartirla."
+                        ),
+                        "porque": (
+                            "Revisar la fecha es el chequeo más barato y el que más desinformación "
+                            "detiene, porque gran parte de lo que circula son contenidos viejos "
+                            "recirculados como actuales."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Creer que una fuente sesgada no sirve. Todas tienen un punto de "
             "vista, y el sesgo es información: dice qué le importaba a quien "
@@ -74933,29 +75495,42 @@ LESSONS: dict[str, dict] = {
             "también el criterio con que la prueba pide evaluar situaciones."
         ),
         "theory": (
-            "**Estado de derecho.** Gobernantes y gobernados bajo las mismas "
-            "normas. La autoridad solo puede hacer lo que la ley la faculta a "
-            "hacer, y sus actos son revisables. Nadie está por sobre la ley.\n"
-            "**Separación de poderes.** No es una división de tareas: es un "
-            "sistema de controles recíprocos. Hace el gobierno más lento a "
-            "propósito, porque la demora es el precio de que las decisiones "
-            "pasen por más de un filtro.\n"
-            "**Quién controla a quién.** El Congreso fiscaliza al Ejecutivo "
-            "(comisiones investigadoras, acusación constitucional). La "
-            "Contraloría revisa la legalidad de los actos administrativos. Los "
-            "tribunales resuelven conflictos jurídicos. La transparencia "
-            "habilita el control ciudadano.\n"
-            "**Jerarquía normativa.** La Constitución está por sobre las leyes, "
-            "y las leyes por sobre los reglamentos. Por eso reformarla exige "
-            "quórums altos: fija las reglas con que se dictan todas las demás "
-            "normas.\n"
-            "**Los límites de la mayoría.** Hay derechos que una votación no "
-            "puede suprimir, porque protegen a quien queda en minoría. Quien "
-            "hoy es mayoría puede ser minoría mañana.\n"
-            "**Votar no basta.** Hacen falta además libertad de expresión, "
-            "posibilidad real de competir, recuento transparente y órganos que "
-            "controlen al gobierno electo. Hay regímenes con elecciones "
-            "periódicas que no son democráticos."
+            "**Estado de derecho.** Gobernantes y gobernados bajo las mismas normas. "
+            "La autoridad solo puede hacer lo que la ley la faculta a hacer —y no "
+            "todo lo que la ley no le prohíbe, que es la regla para los "
+            "particulares—, y sus actos son revisables. Nadie está por sobre la ley.\\n\\n"
+            "**Separación de poderes.** No es una división de tareas: es un sistema "
+            "de controles recíprocos. Hace el gobierno más lento a propósito, porque "
+            "la demora es el precio de que las decisiones pasen por más de un filtro.\\n\\n"
+            "| Quién controla | A quién | Con qué |\\n"
+            "|---|---|---|\\n"
+            "| Congreso | Ejecutivo | comisiones investigadoras, acusación "
+            "constitucional, aprobación del presupuesto |\\n"
+            "| Presidente | Congreso | veto, urgencias legislativas |\\n"
+            "| Tribunal Constitucional | leyes y decretos | declara inaplicable o "
+            "inconstitucional una norma |\\n"
+            "| Contraloría | administración | toma de razón y auditoría del gasto "
+            "público |\\n"
+            "| Tribunales | actos de autoridad | recursos de protección y amparo |\\n"
+            "| Servicio Electoral | procesos electorales | registro, escrutinio, "
+            "financiamiento |\\n\\n"
+            "**La jerarquía de las normas.** La Constitución está sobre las leyes, y "
+            "las leyes sobre los reglamentos y decretos. Una norma inferior contraria "
+            "a una superior puede ser anulada, y ese orden es lo que hace que "
+            "«cumplir la ley» tenga un sentido preciso.\\n\\n"
+            "**Cómo se hace una ley, en corto**: iniciativa (mensaje del Presidente o "
+            "moción parlamentaria), discusión y votación en ambas cámaras, eventual "
+            "veto presidencial, promulgación y publicación en el Diario Oficial. "
+            "Ciertas materias exigen quórums más altos, justamente para que no "
+            "dependan de una mayoría circunstancial.\\n\\n"
+            "**Niveles de la administración.** El nivel nacional (ministerios), el "
+            "regional (gobiernos regionales, con gobernador electo) y el comunal "
+            "(municipios). Descentralizar es trasladar decisiones y recursos hacia "
+            "abajo, y es distinto de simplemente desconcentrar tareas.\\n\\n"
+            "**Probidad y transparencia.** El cargo público se ejerce en interés "
+            "general, no propio. La ley de transparencia permite pedir información a "
+            "los órganos del Estado sin explicar para qué, y esa posibilidad de "
+            "revisar es lo que vuelve exigible la probidad."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -75004,6 +75579,63 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un ministerio dicta un decreto que contradice lo que dice una ley "
+                    "vigente. ¿Qué mecanismos existen para corregirlo y qué principio está en "
+                    "juego?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico el principio: la jerarquía normativa. Un decreto es inferior "
+                            "a la ley, y no puede contradecirla."
+                        ),
+                        "porque": (
+                            "La pregunta no es si el decreto es conveniente, sino si podía dictarse. "
+                            "Una norma inferior contraria a una superior es inválida aunque su "
+                            "contenido parezca razonable."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Nombro el primer control: la Contraloría General de la República revisa "
+                            "la legalidad de los decretos mediante la toma de razón y puede "
+                            "representarlos."
+                        ),
+                        "porque": (
+                            "Es el control previo y administrativo. Su función es justamente impedir "
+                            "que una norma ilegal entre en vigencia, antes de que alguien tenga que "
+                            "litigar."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Nombro el control judicial: quien resulte afectado puede recurrir a los "
+                            "tribunales, y el Tribunal Constitucional puede pronunciarse sobre normas "
+                            "contrarias a la Constitución."
+                        ),
+                        "porque": (
+                            "Si el control previo falla, queda el posterior. Tener más de un "
+                            "mecanismo es el diseño, no la redundancia: es lo que significa que los "
+                            "actos de autoridad sean revisables."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que el Estado de derecho no consiste en que la autoridad no se "
+                            "equivoque, sino en que exista quién y cómo corregirla."
+                        ),
+                        "porque": (
+                            "Es la idea central del eje: lo que distingue a un Estado de derecho no "
+                            "es la infalibilidad, sino la existencia de controles efectivos sobre el "
+                            "poder."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Identificar democracia con regla de la mayoría sin más. Si todo "
             "pudiera decidirse por votación, quien queda en minoría dependería "
@@ -75020,33 +75652,48 @@ LESSONS: dict[str, dict] = {
             "hecho establecido y qué es una interpretación en disputa."
         ),
         "theory": (
-            "**Supresión del Estado de derecho.** Congreso disuelto, partidos "
-            "proscritos, registros electorales destruidos, censura de prensa, "
-            "Ejecutivo y Legislativo en el mismo órgano. No es solo un cambio "
-            "de gobierno: desaparecen los mecanismos para controlarlo y "
-            "sustituirlo.\n"
-            "**Derechos humanos: lo establecido.** Las comisiones de verdad y "
-            "los tribunales determinaron que las violaciones fueron "
-            "SISTEMÁTICAS y ejecutadas por organismos del Estado, no hechos "
-            "aislados. Esa distinción define la responsabilidad del Estado como "
-            "tal.\n"
-            "**El modelo económico.** Privatizaciones, apertura comercial, "
-            "desregulación financiera, plan laboral y capitalización individual "
-            "en pensiones. La industria queda expuesta a la competencia "
-            "externa. En 1982 la crisis obliga a intervenir la banca: ningún "
-            "modelo se aplica en estado puro.\n"
-            "**La Constitución de 1980.** Dejó mecanismos que limitaban a los "
-            "gobiernos electos posteriores: senadores designados, sistema "
-            "electoral desproporcionado, quórums altos. Se los llama enclaves "
-            "autoritarios.\n"
-            "**Cómo se salió.** Protestas desde 1983, reorganización de la "
-            "oposición, documentación de las violaciones. En 1988 el régimen es "
-            "derrotado en el plebiscito previsto por su propia Constitución; "
-            "elecciones en 1989 y traspaso en 1990.\n"
-            "**Lo que se discute.** No los hechos del 11 de septiembre, sino "
-            "sus causas: polarización interna, crisis económica, intervención "
-            "extranjera, fragilidad institucional. Ahí difieren las "
-            "interpretaciones historiográficas."
+            "**Supresión del Estado de derecho.** Tras el golpe de Estado del 11 de "
+            "septiembre de 1973: Congreso disuelto, partidos políticos proscritos, "
+            "registros electorales destruidos, censura de prensa, y funciones "
+            "ejecutivas y legislativas reunidas en el mismo órgano. No es solo un "
+            "cambio de gobierno: desaparecen los mecanismos para controlarlo y "
+            "sustituirlo.\\n\\n"
+            "**Derechos humanos: lo establecido.** Las comisiones de verdad —Informe "
+            "Rettig (1991), sobre ejecuciones y desapariciones, e Informe Valech "
+            "(2004 y 2011), sobre prisión política y tortura— y los tribunales "
+            "determinaron que las violaciones fueron SISTEMÁTICAS y ejecutadas por "
+            "organismos del Estado, no hechos aislados. Esa distinción define la "
+            "responsabilidad del Estado como tal, y no solo la de quienes ejecutaron.\\n\\n"
+            "| Hito | Año |\\n"
+            "|---|---|\\n"
+            "| Golpe de Estado | 1973 |\\n"
+            "| Constitución aprobada en plebiscito sin registros electorales ni "
+            "competencia | 1980 |\\n"
+            "| Crisis económica y protestas nacionales | 1982-1983 |\\n"
+            "| Plebiscito: gana el No con cerca del 56% | 1988 |\\n"
+            "| Elecciones presidenciales y parlamentarias | 1989 |\\n"
+            "| Traspaso del poder y retorno a la democracia | 1990 |\\n"
+            "| Informe Rettig | 1991 |\\n"
+            "| Informe Valech | 2004 y 2011 |\\n\\n"
+            "**El cambio económico.** Se aplicó un programa de liberalización: "
+            "apertura comercial, privatización de empresas públicas, reducción del "
+            "rol productivo del Estado y reformas a la previsión, la salud y la "
+            "educación. La crisis de 1982 obligó a un rescate estatal de la banca, "
+            "que muestra que el modelo no operó sin intervención.\\n\\n"
+            "**La transición fue pactada e institucional.** El cambio de régimen "
+            "ocurrió por las reglas de la propia Constitución de 1980, lo que explica "
+            "que buena parte de su marco institucional siguiera vigente después de "
+            "1990 y que su reforma haya sido un tema político por décadas.\\n\\n"
+            "**Verdad, justicia y memoria** son procesos distintos y posteriores: las "
+            "comisiones establecieron los hechos, los tribunales determinaron "
+            "responsabilidades penales —muchas décadas después—, y los sitios de "
+            "memoria buscan que lo ocurrido no se olvide.\\n\\n"
+            "**Cómo se responde en la prueba.** Sobre las violaciones a los derechos "
+            "humanos no hay dos versiones equivalentes: están establecidas por "
+            "informes oficiales y sentencias judiciales. Lo que sí admite debate "
+            "historiográfico son las causas del quiebre de 1973 y los efectos de las "
+            "reformas económicas, y ahí lo que se evalúa es sostener la afirmación "
+            "con la fuente que se tiene delante."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -75094,6 +75741,64 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Por qué los informes Rettig y Valech distinguen entre violaciones "
+                    "«sistemáticas» y hechos aislados, y qué consecuencia tiene esa "
+                    "distinción?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Defino sistemático: hechos repetidos según un patrón común, con métodos, "
+                            "recintos y organismos identificables, y no episodios sueltos de personas "
+                            "actuando por su cuenta."
+                        ),
+                        "porque": (
+                            "El criterio no es la cantidad sino el patrón: la existencia de "
+                            "organismos creados para eso y de procedimientos que se repiten en todo "
+                            "el país."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Identifico la consecuencia jurídica: la responsabilidad recae sobre el "
+                            "Estado como tal, y no solo sobre los individuos que ejecutaron."
+                        ),
+                        "porque": (
+                            "Si fueran hechos aislados, respondería cada autor por separado. Al ser "
+                            "sistemáticos, responde el aparato que los ordenó, los permitió y los "
+                            "encubrió."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Agrego la consecuencia en materia de reparación: el Estado asume medidas "
+                            "de reparación hacia las víctimas y sus familias."
+                        ),
+                        "porque": (
+                            "Reconocer responsabilidad estatal es lo que fundamenta pensiones, "
+                            "atención en salud y medidas de memoria, que se dirigen a un conjunto de "
+                            "víctimas y no caso a caso."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Distingo qué está establecido y qué se discute: los hechos y su carácter "
+                            "sistemático están determinados por informes oficiales y sentencias; las "
+                            "causas del quiebre de 1973 siguen siendo objeto de debate "
+                            "historiográfico."
+                        ),
+                        "porque": (
+                            "Confundir los dos planos es el error más grave al estudiar este período. "
+                            "Que la historia se reescriba no significa que los hechos establecidos "
+                            "sean opinables."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Confundir lo que está establecido con lo que está en discusión. El "
             "carácter sistemático de las violaciones a los derechos humanos, la "
@@ -75112,29 +75817,44 @@ LESSONS: dict[str, dict] = {
             "ritmo."
         ),
         "theory": (
-            "**Del campo a la ciudad.** El campo expulsaba (tierra concentrada) "
-            "y la ciudad atraía (trabajo asalariado, escuela, salud). El empleo "
-            "se desplazó de la agricultura hacia la industria y los servicios.\n"
-            "**Lo que la ciudad no pudo absorber.** Sin vivienda suficiente, "
-            "las familias ocuparon terrenos en la periferia y construyeron con "
-            "materiales precarios. De ahí nace el movimiento de pobladores, con "
-            "demandas propias de urbanización y títulos.\n"
-            "**La pobreza cambia de estatus.** Deja de ser desgracia privada "
-            "atendida por caridad y pasa a ser materia de política pública: "
-            "vivienda, salud, previsión, educación. Beneficencia entrega un "
-            "socorro; la política pública crea un derecho exigible.\n"
-            "**Democratización política.** Voto femenino pleno a fines de los "
-            "cuarenta, ejercido en la presidencial de 1952. Cédula única en "
-            "1958, que ataca el cohecho al hacer imposible verificar el voto "
-            "ajeno. Alfabetización creciente, que ampliaba el padrón porque "
-            "leer era requisito para votar hasta 1970.\n"
-            "**Pero no fue lineal.** Entre 1948 y 1958 se proscribió al Partido "
-            "Comunista. Se amplió por un lado y se restringió por otro: "
-            "describir el período como un avance continuo deja fuera lo que "
-            "explica sus tensiones.\n"
-            "**El campo.** Reforma agraria desde 1962 y sindicalización "
-            "campesina en 1967. Aun así, la estructura de la propiedad cambió "
-            "poco, y por eso más derechos convivieron con desigualdad profunda."
+            "**Del campo a la ciudad.** El campo expulsaba —tierra concentrada, "
+            "trabajo mal pagado— y la ciudad atraía: trabajo asalariado, escuela, "
+            "salud. El empleo se desplazó de la agricultura hacia la industria y los "
+            "servicios, y hacia mediados de siglo Chile pasó a ser un país "
+            "mayoritariamente urbano.\\n\\n"
+            "**Lo que la ciudad no pudo absorber.** Sin vivienda suficiente, las "
+            "familias ocuparon terrenos en la periferia y construyeron con materiales "
+            "precarios. De ahí nace el movimiento de pobladores, con demandas propias "
+            "de urbanización, agua potable y títulos de dominio.\\n\\n"
+            "**La pobreza cambia de estatus.** Deja de ser una desgracia privada "
+            "atendida por caridad y pasa a ser un problema público con instituciones "
+            "a cargo: cajas de previsión, servicio de salud, vivienda social. Es la "
+            "versión chilena del Estado de bienestar.\\n\\n"
+            "| Proceso | Cuándo | Qué implicó |\\n"
+            "|---|---|---|\\n"
+            "| Voto femenino en elecciones municipales | 1935 | primer reconocimiento "
+            "político |\\n"
+            "| Voto femenino en elecciones presidenciales | 1949 | sufragio pleno |\\n"
+            "| Creación del Servicio Nacional de Salud | 1952 | salud pública "
+            "unificada |\\n"
+            "| Reforma agraria | 1962-1973 | redistribución de la tierra, fin del "
+            "sistema de haciendas |\\n"
+            "| Nacionalización del cobre | 1971 | aprobada por unanimidad en el "
+            "Congreso |\\n\\n"
+            "**La ampliación de la ciudadanía** fue un proceso largo: sufragio "
+            "femenino, fin de la exclusión por analfabetismo, rebaja de la edad para "
+            "votar. Cada paso amplió quiénes contaban como parte del «pueblo» que la "
+            "Constitución invocaba.\\n\\n"
+            "**Décadas de reformas y de polarización.** Entre 1960 y 1973 se aceleran "
+            "los cambios —reforma agraria, sindicalización campesina, nacionalización "
+            "del cobre— en un clima de creciente polarización política, en el que "
+            "cada sector consideraba insuficiente o excesivo el ritmo del cambio.\\n\\n"
+            "**Cómo se estudia este período.** Las causas del quiebre de 1973 son "
+            "objeto de debate historiográfico, y la prueba no pide tomar partido: "
+            "pide reconocer que hubo factores internos —polarización, crisis "
+            "económica, ruptura de los acuerdos institucionales— y externos —Guerra "
+            "Fría, intervención de Estados Unidos—, y sostener lo que se afirme con "
+            "la fuente que se tenga delante."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -75180,6 +75900,59 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un gráfico muestra que la población urbana de Chile pasó del 50% en 1930 "
+                    "al 75% en 1970. ¿Qué procesos explican ese cambio y qué consecuencias "
+                    "tuvo en las ciudades?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico las causas de expulsión: concentración de la tierra, baja "
+                            "remuneración y escasas oportunidades en el mundo rural."
+                        ),
+                        "porque": (
+                            "Toda migración tiene un factor que empuja y otro que atrae. Nombrar solo "
+                            "uno deja la explicación a medias, que es el error frecuente."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Identifico las de atracción: empleo industrial y de servicios, y acceso "
+                            "a escuela y salud concentrado en las ciudades."
+                        ),
+                        "porque": (
+                            "El proceso coincide con la industrialización sustitutiva, que creó "
+                            "empleo urbano. Las dos cosas se refuerzan: hay causa económica y causa "
+                            "social."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Deduzco la consecuencia inmediata: la vivienda no creció al mismo ritmo, "
+                            "y aparecieron asentamientos precarios en la periferia."
+                        ),
+                        "porque": (
+                            "El dato del gráfico no dice esto, pero el proceso lo explica: ninguna "
+                            "ciudad podía absorber esa llegada en dos décadas. De ahí surge el "
+                            "movimiento de pobladores."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Señalo el cambio de largo plazo: el país deja de ser rural y las "
+                            "demandas sociales pasan a ser urbanas —vivienda, transporte, servicios—."
+                        ),
+                        "porque": (
+                            "Es un cambio estructural, de los que se miden en generaciones. Lo que se "
+                            "transforma no es solo dónde vive la gente, sino qué le exige al Estado."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Leer la democratización del período como una línea ascendente. En "
             "los mismos años conviven el primer voto femenino y la proscripción "
@@ -75198,26 +75971,46 @@ LESSONS: dict[str, dict] = {
             "confrontación ajena."
         ),
         "theory": (
-            "**Qué la define.** Confrontación entre Estados Unidos y la URSS "
-            "SIN guerra directa entre ellos. Los enfrentamientos armados "
-            "ocurrieron en terceros países alineados con cada bloque.\n"
-            "**Se peleó también fuera de lo militar.** Carrera espacial, "
-            "propaganda, cultura, deporte: cada logro se exhibía como prueba de "
-            "que un sistema era superior al otro. El Muro de Berlín (1961) es "
-            "la división vuelta hormigón.\n"
-            "**El giro latinoamericano.** La Revolución Cubana (1959) estimuló "
-            "movimientos de cambio profundo en toda la región, y Estados Unidos "
-            "respondió con la Alianza para el Progreso: ayuda y reformas para "
-            "evitar que la revolución se extendiera.\n"
-            "**Doctrina de seguridad nacional.** Su novedad es dónde ubica al "
-            "enemigo: DENTRO de la propia sociedad. Es la justificación que "
-            "invocaron las dictaduras militares de los sesenta y setenta, que "
-            "compartieron la violación sistemática de los derechos humanos.\n"
-            "**El final y lo que vino.** El derrumbe del bloque soviético "
-            "(1989-1991) terminó con el sistema bipolar. Después: apertura "
-            "comercial, privatizaciones y menor papel económico del Estado "
-            "—neoliberalismo—, junto con una globalización que integra los "
-            "mercados."
+            "**Qué la define.** Confrontación entre Estados Unidos y la Unión "
+            "Soviética, aproximadamente entre 1947 y 1991, SIN guerra directa entre "
+            "ellos. Los enfrentamientos armados ocurrieron en terceros países "
+            "alineados con cada bloque: Corea, Vietnam, Afganistán.\\n\\n"
+            "**Dos modelos en disputa.** No era solo una rivalidad entre potencias: "
+            "cada bloque proponía una forma de organizar la economía y la política "
+            "—economía de mercado y democracia liberal frente a economía planificada "
+            "y partido único—, y esa disputa se libró también dentro de cada país.\\n\\n"
+            "**Se peleó también fuera de lo militar.** Carrera espacial, propaganda, "
+            "cultura, deporte: cada logro se exhibía como prueba de que un sistema "
+            "era superior al otro.\\n\\n"
+            "| Hito | Año | Por qué importa |\\n"
+            "|---|---|---|\\n"
+            "| Plan Marshall y doctrina de contención | 1947 | ayuda económica como "
+            "herramienta de alineamiento |\\n"
+            "| OTAN y Pacto de Varsovia | 1949 / 1955 | los dos bloques militares |\\n"
+            "| Revolución Cubana | 1959 | un país socialista en el continente "
+            "americano |\\n"
+            "| Muro de Berlín | 1961 | la división vuelta hormigón |\\n"
+            "| Crisis de los misiles | 1962 | el momento más cerca de la guerra "
+            "nuclear |\\n"
+            "| Caída del Muro | 1989 | el fin del bloque soviético en Europa |\\n"
+            "| Disolución de la URSS | 1991 | el fin del período |\\n\\n"
+            "**El equilibrio del terror.** Ambas potencias tenían armas nucleares "
+            "suficientes para destruirse, y esa certeza mutua es lo que hizo "
+            "improbable el enfrentamiento directo. La disuasión explica la paradoja "
+            "de un conflicto largo sin batalla entre sus protagonistas.\\n\\n"
+            "**El giro latinoamericano.** La Revolución Cubana estimuló movimientos "
+            "de cambio profundo en toda la región. Estados Unidos respondió con la "
+            "Alianza para el Progreso —ayuda para reformas que evitaran otra Cuba— y, "
+            "cuando eso no bastó, con apoyo a gobiernos autoritarios anticomunistas. "
+            "Buena parte de las dictaduras del Cono Sur se inscribe en ese marco.\\n\\n"
+            "**La Doctrina de Seguridad Nacional** redefinió al enemigo: ya no era un "
+            "ejército extranjero, sino el «enemigo interno». Esa definición es la que "
+            "justificó la intervención militar en la política interna de varios "
+            "países de la región.\\n\\n"
+            "**Cuidado con explicarlo todo desde afuera.** El contexto internacional "
+            "condiciona, pero cada país tuvo sus propios conflictos, actores y "
+            "decisiones. Reducir procesos nacionales a una orden externa es el atajo "
+            "que la prueba suele poner como distractor."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -75265,6 +76058,57 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Por qué se llama «fría» a una guerra en la que murieron millones de "
+                    "personas en Corea, Vietnam y otros países?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Precisar a qué se refiere el adjetivo: «fría» describe la relación entre "
+                            "las dos superpotencias, que nunca combatieron directamente entre sí."
+                        ),
+                        "porque": (
+                            "El término no niega los muertos: describe una forma específica de "
+                            "conflicto. Leerlo como «guerra sin violencia» es el error que la "
+                            "pregunta busca."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Identifico dónde sí hubo guerra caliente: en terceros países alineados "
+                            "con cada bloque, como Corea, Vietnam y Afganistán."
+                        ),
+                        "porque": (
+                            "Son las llamadas guerras por delegación. La rivalidad se descargó en "
+                            "escenarios periféricos, con enorme costo humano local."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Explico por qué no se enfrentaron directamente: ambas potencias tenían "
+                            "armamento nuclear suficiente para destruirse mutuamente."
+                        ),
+                        "porque": (
+                            "La disuasión hizo demasiado caro el choque directo. Es la explicación "
+                            "estructural del carácter «frío» del conflicto entre ellas."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que el nombre describe la relación entre los protagonistas y no "
+                            "la experiencia de los países donde se combatió."
+                        ),
+                        "porque": (
+                            "Distinguir el punto de vista desde el que se nombra un proceso es parte "
+                            "del pensamiento histórico: para Vietnam esa guerra no tuvo nada de fría."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Explicar todo lo ocurrido en América Latina como consecuencia "
             "directa de la Guerra Fría, o negar por completo que influyera. Las "
@@ -75282,25 +76126,43 @@ LESSONS: dict[str, dict] = {
             "límites."
         ),
         "theory": (
-            "**La ONU y su diferencia con lo anterior.** Creada en 1945 para "
-            "mantener la paz y la seguridad. Frente a la Sociedad de Naciones, "
-            "que había fracasado, aportó un órgano con decisiones OBLIGATORIAS: "
-            "el Consejo de Seguridad. Cinco miembros permanentes tienen veto, "
-            "es decir, pueden bloquear cualquier resolución.\n"
-            "**La Declaración de 1948.** Afirma que todos nacen libres e "
-            "iguales en dignidad y derechos: eso es universalidad. Su efecto de "
-            "fondo es que el trato de un Estado a su población deja de ser "
-            "asunto puramente interno. Pero era una declaración, no un tratado: "
-            "por sí sola no creaba obligaciones exigibles.\n"
-            "**Núremberg.** La novedad no fue condenar a un país, sino juzgar a "
-            "PERSONAS por crímenes contra la humanidad.\n"
-            "**Descolonización.** Las potencias europeas salieron debilitadas "
-            "de la guerra, y sobre esa debilidad avanzaron las independencias "
-            "de Asia y África. Entre 1955 y 1975 cambia por completo el mapa "
-            "africano.\n"
-            "**Bipolaridad y no alineados.** Con dos superpotencias, cada "
-            "Estado debía alinearse o buscar una posición propia. Bandung "
-            "(1955) es esa tercera vía."
+            "**La ONU y su diferencia con lo anterior.** Creada en 1945 para mantener "
+            "la paz y la seguridad. Frente a la Sociedad de Naciones, que había "
+            "fracasado, aportó un órgano con decisiones OBLIGATORIAS: el Consejo de "
+            "Seguridad. Cinco miembros permanentes tienen veto, es decir, pueden "
+            "bloquear cualquier resolución, y esa regla explica buena parte de sus "
+            "parálisis posteriores.\\n\\n"
+            "**La Declaración Universal de 1948.** Afirma que todos nacen libres e "
+            "iguales en dignidad y derechos: eso es universalidad. Su efecto de fondo "
+            "es que el trato de un Estado a su propia población deja de ser un asunto "
+            "puramente interno.\\n\\n"
+            "**Por qué en ese momento.** La Segunda Guerra Mundial dejó decenas de "
+            "millones de muertos, el Holocausto mostró un exterminio planificado por "
+            "un Estado, y los juicios de Núremberg establecieron que hay crímenes que "
+            "se juzgan aunque fueran legales en el país donde ocurrieron.\\n\\n"
+            "| Institución o texto | Año | Qué aportó |\\n"
+            "|---|---|---|\\n"
+            "| ONU | 1945 | foro permanente y Consejo de Seguridad con decisiones "
+            "obligatorias |\\n"
+            "| Juicios de Núremberg | 1945-1946 | responsabilidad penal individual "
+            "por crímenes de guerra y contra la humanidad |\\n"
+            "| Declaración Universal | 1948 | catálogo común de derechos, con "
+            "vocación universal |\\n"
+            "| Convenios de Ginebra | 1949 | protección de civiles y prisioneros en "
+            "conflictos |\\n\\n"
+            "**La descolonización.** Entre las décadas de 1940 y 1970, Asia y África "
+            "accedieron a la independencia, y la ONU pasó de cincuenta y un miembros "
+            "a más del triple. El mapa político del mundo cambió más en treinta años "
+            "que en el siglo anterior.\\n\\n"
+            "**Un orden con dos caras.** Al mismo tiempo que se proclamaban los "
+            "derechos universales, el mundo se dividía en dos bloques enfrentados: "
+            "los mismos Estados que firmaron la Declaración sostuvieron regímenes "
+            "aliados que la vulneraban. Señalar esa contradicción es análisis "
+            "histórico, no opinión.\\n\\n"
+            "**De la declaración a la exigibilidad.** Una declaración no es un "
+            "tratado: obliga moral y políticamente. Por eso vinieron después los "
+            "pactos internacionales de 1966 y los sistemas regionales —como la Corte "
+            "Interamericana— que sí permiten reclamar ante un órgano."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -75349,6 +76211,62 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Por qué se dice que la Declaración Universal de 1948 cambió la relación "
+                    "entre soberanía y derechos humanos?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Recuerdo qué significaba soberanía antes: un Estado no reconocía "
+                            "autoridad por encima de sí, y lo que hiciera con su población era asunto "
+                            "interno."
+                        ),
+                        "porque": (
+                            "Sin ese punto de partida la Declaración parece una lista de buenas "
+                            "intenciones. Su novedad se mide contra la regla anterior."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Identifico el cambio: al afirmar que los derechos son universales, la "
+                            "comunidad internacional queda habilitada para pronunciarse sobre lo que "
+                            "ocurre dentro de un Estado."
+                        ),
+                        "porque": (
+                            "Universal significa que no dependen de la nacionalidad ni de la ley "
+                            "local. Por eso el trato a los propios ciudadanos deja de ser un asunto "
+                            "exclusivamente doméstico."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Conecto con Núremberg: allí ya se había establecido que obedecer la ley "
+                            "nacional no exime de responsabilidad por crímenes contra la humanidad."
+                        ),
+                        "porque": (
+                            "Los dos hechos van juntos y se refuerzan: uno fija responsabilidad penal "
+                            "individual; el otro, un catálogo de derechos que ningún Estado puede "
+                            "desconocer."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Matizo el alcance: una declaración no crea tribunales ni obliga como un "
+                            "tratado, y por eso hicieron falta los pactos de 1966 y los sistemas "
+                            "regionales."
+                        ),
+                        "porque": (
+                            "Una respuesta completa distingue el principio de su exigibilidad. "
+                            "Sostener que en 1948 los derechos quedaron garantizados es el error que "
+                            "la pregunta busca."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Suponer que porque un derecho está declarado en un documento "
             "internacional, existe un mecanismo que lo hace cumplir. "
@@ -75365,25 +76283,40 @@ LESSONS: dict[str, dict] = {
             "país, y ahí está lo que la prueba pregunta."
         ),
         "theory": (
-            "**Qué entra en crisis.** El Estado liberal del siglo XIX: garante "
-            "del orden y de los contratos, ausente de la economía. La crisis de "
-            "1929 lo dejó sin respuesta frente al desempleo masivo.\n"
+            "**Qué entra en crisis.** El Estado liberal del siglo XIX: garante del "
+            "orden y de los contratos, ausente de la economía. La crisis de 1929 lo "
+            "dejó sin respuesta frente al desempleo masivo, y en varios países la "
+            "respuesta vino antes de los movimientos autoritarios que del propio "
+            "liberalismo.\\n\\n"
+            "**La crisis de 1929.** El derrumbe bursátil en Nueva York arrastró al "
+            "comercio mundial: cayeron los precios de las materias primas y el "
+            "crédito internacional se cortó. Chile fue de los países más golpeados "
+            "por su dependencia del salitre.\\n\\n"
             "**La salida intervencionista.** Estados que sostienen la actividad "
-            "económica y asumen responsabilidades permanentes en salud, "
-            "previsión y educación: el Estado de bienestar.\n"
-            "**La salida latinoamericana.** Como el comercio exterior se "
-            "derrumbó, la región produjo internamente lo que antes importaba: "
-            "industrialización por sustitución de importaciones. En Chile, "
-            "Frente Popular en 1938 y CORFO en 1939. El Estado pasa de garante "
-            "del orden a agente económico.\n"
-            "**La salida totalitaria.** Partido único, líder supremo, "
-            "eliminación de la oposición, propaganda con una versión única de "
-            "la realidad. Su rasgo propio es la ambición TOTAL: controlar "
-            "escuela, trabajo, prensa, ocio y vida privada.\n"
-            "**Totalitarismo y populismo no son lo mismo.** Vargas y Perón "
-            "apelaron a las masas, concentraron poder y ampliaron derechos "
-            "sociales, pero no intentaron controlar la vida entera de la "
-            "sociedad. Esa es la diferencia que suele preguntarse."
+            "económica con obra pública y gasto —lo que después se asociaría a "
+            "Keynes— y que asumen responsabilidades permanentes en salud, previsión y "
+            "educación: el Estado de bienestar.\\n\\n"
+            "**La salida latinoamericana.** Como el comercio exterior se derrumbó, la "
+            "región produjo internamente lo que antes importaba: es la "
+            "industrialización por sustitución de importaciones (ISI), con aranceles, "
+            "crédito estatal y empresas públicas. En Chile su instrumento fue la "
+            "CORFO, creada en 1939 tras el terremoto de Chillán y bajo el gobierno "
+            "del Frente Popular.\\n\\n"
+            "| Antes de 1929 | Después |\\n"
+            "|---|---|\\n"
+            "| Estado árbitro, no productor | Estado empresario e inversor |\\n"
+            "| Crecer exportando materias primas | producir internamente lo que se "
+            "importaba |\\n"
+            "| Asistencia social por caridad | derechos sociales y previsión |\\n"
+            "| Librecambio | aranceles y protección |\\n\\n"
+            "**El costo del modelo ISI.** Funcionó mientras hubo mercado interno que "
+            "abastecer; con el tiempo mostró límites —industrias poco competitivas, "
+            "dependencia de la protección, presión sobre las cuentas fiscales— que "
+            "están detrás de los debates económicos de las décadas siguientes.\\n\\n"
+            "**No todas las salidas fueron democráticas.** En Europa, la crisis "
+            "alimentó el ascenso de regímenes fascistas que prometieron orden y "
+            "empleo suprimiendo libertades. Es el contraste que las preguntas suelen "
+            "poner: ante la misma crisis, respuestas políticas opuestas."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -75433,6 +76366,60 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Por qué la crisis de 1929 golpeó con más fuerza a Chile que a países de "
+                    "economía diversificada, y qué cambio de rol del Estado produjo?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico la causa estructural: el presupuesto fiscal y las "
+                            "exportaciones dependían en gran medida de un solo producto, el salitre, "
+                            "con precio fijado en el mercado internacional."
+                        ),
+                        "porque": (
+                            "Una economía concentrada traslada cualquier caída externa directamente "
+                            "al Estado y al empleo. La diversificación funciona como amortiguador, y "
+                            "Chile no lo tenía."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Sumo el factor previo: el nitrato sintético ya venía desplazando al "
+                            "salitre natural desde la Primera Guerra Mundial."
+                        ),
+                        "porque": (
+                            "La crisis encontró a la industria salitrera debilitada. Explicar el "
+                            "golpe solo por 1929 deja fuera la tendencia que lo hizo irreversible."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Describo el cambio: el Estado pasa de árbitro a productor e inversor, "
+                            "con la CORFO (1939) impulsando industria, electricidad y petróleo."
+                        ),
+                        "porque": (
+                            "Sin crédito externo ni demanda para el salitre, el impulso tenía que "
+                            "venir de adentro. Ese es el sentido concreto de la industrialización por "
+                            "sustitución de importaciones."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo señalando la continuidad: ese rol del Estado se mantuvo por "
+                            "décadas, más allá del gobierno que lo inició."
+                        ),
+                        "porque": (
+                            "Un cambio de este tipo es estructural, no coyuntural: sobrevive a los "
+                            "gobiernos. Distinguir eso es exactamente lo que evalúa la habilidad de "
+                            "continuidad y cambio."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Meter en el mismo saco a todo gobierno de los años treinta que "
             "concentre poder y hable de las masas. Un Estado que interviene la "
@@ -75450,29 +76437,46 @@ LESSONS: dict[str, dict] = {
             "del siglo."
         ),
         "theory": (
-            "**El orden portaliano y su vuelco.** La Constitución de 1833 dio a "
-            "Chile un Ejecutivo fuerte y una estabilidad institucional inusual "
-            "en la región. La guerra civil de 1891 invirtió el equilibrio: el "
-            "Congreso pasó a predominar sobre el Presidente.\n"
-            "**Una economía de pocos productos.** Trigo y plata primero, "
-            "salitre después. El auge del oro en California y Australia empujó "
-            "las exportaciones de trigo; la Guerra del Pacífico entregó a Chile "
-            "las salitreras y ató el presupuesto fiscal a ese mineral. Los "
-            "ferrocarriles se trazaron para llevar carga a los puertos, no para "
-            "conectar el país consigo mismo.\n"
-            "**El riesgo de esa estructura.** Cuando un país exporta pocos "
-            "productos, su ingreso depende de precios que se fijan afuera. Toda "
-            "pregunta sobre vulnerabilidad económica del período apunta ahí.\n"
-            "**Expansión del Estado hacia dentro.** La ocupación de la "
-            "Araucanía (1861-1883) incorporó territorio y despojó al pueblo "
-            "mapuche de gran parte de sus tierras. Las leyes laicas (1883-1884) "
-            "traspasaron al Estado los registros civiles que llevaba la "
-            "Iglesia.\n"
-            "**La cuestión social.** No es una guerra ni una ley: es el nombre "
-            "que se dio a las condiciones de vida de los trabajadores urbanos "
-            "—conventillos, jornadas largas, enfermedad—. Ante la ausencia de "
-            "previsión estatal, los trabajadores se organizaron en sociedades "
-            "de socorros mutuos."
+            "**El orden portaliano y su vuelco.** La Constitución de 1833 dio a Chile "
+            "un Ejecutivo fuerte, con amplias facultades y estados de excepción a la "
+            "mano, y una estabilidad institucional inusual en la región. Durante el "
+            "siglo el Congreso fue ganando terreno, y la guerra civil de 1891 "
+            "invirtió el equilibrio: se abre el período parlamentario, con predominio "
+            "del Congreso sobre el Presidente.\\n\\n"
+            "**Una economía de pocos productos.** Trigo y plata primero, salitre "
+            "después. El auge del oro en California y Australia empujó las "
+            "exportaciones de trigo a mediados de siglo; la Guerra del Pacífico "
+            "(1879-1883) entregó a Chile las salitreras de Tarapacá y Antofagasta, y "
+            "ató el presupuesto fiscal a ese mineral.\\n\\n"
+            "**El salitre financió al Estado.** Los derechos de exportación llegaron "
+            "a sostener buena parte del gasto público: obras, ferrocarriles y "
+            "escuelas. Esa dependencia es la cara positiva y la vulnerabilidad del "
+            "mismo modelo, y explica el golpe que vendría con el nitrato sintético y "
+            "la crisis de 1929.\\n\\n"
+            "| Proceso | Cuándo | Qué dejó |\\n"
+            "|---|---|---|\\n"
+            "| Constitución de 1833 | 1833 | Ejecutivo fuerte, estabilidad "
+            "institucional |\\n"
+            "| Ciclo del trigo y la plata | mediados de siglo | exportaciones, "
+            "primeros ferrocarriles |\\n"
+            "| Ocupación de la Araucanía | 1861-1883 | incorporación forzada del "
+            "territorio mapuche |\\n"
+            "| Guerra del Pacífico | 1879-1883 | provincias salitreras, renta fiscal "
+            "|\\n"
+            "| Guerra civil | 1891 | predominio del Congreso |\\n\\n"
+            "**La expansión territorial tuvo costos que las preguntas suelen pedir.** "
+            "La llamada «pacificación de la Araucanía» fue una ocupación militar que "
+            "despojó de tierras al pueblo mapuche y lo confinó a reducciones; la "
+            "colonización del sur trajo migrantes europeos a territorios que no "
+            "estaban vacíos.\\n\\n"
+            "**La cuestión social.** Hacia fin de siglo, el crecimiento de las "
+            "ciudades y de la minería produjo hacinamiento en conventillos, jornadas "
+            "extensas, trabajo infantil y alta mortalidad. De ahí surgen las primeras "
+            "organizaciones obreras —mancomunales, sociedades de socorros mutuos— y "
+            "las primeras leyes sociales del siglo XX.\\n\\n"
+            "**El Estado se hace presente a través del ferrocarril, la escuela y el "
+            "registro civil**, que es la forma concreta en que un Estado abstracto "
+            "llega a la vida de la gente."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -75522,6 +76526,63 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una tabla muestra que entre 1880 y 1900 los ingresos fiscales de Chile "
+                    "se triplicaron y que la participación de los derechos del salitre en "
+                    "esos ingresos pasó del 5% a más del 50%. ¿Qué conclusión permite "
+                    "sostener y cuál no?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Leo las dos variables: una es el monto total de ingresos y la otra, la "
+                            "composición de ese total."
+                        ),
+                        "porque": (
+                            "Son cosas distintas, igual que cantidad y porcentaje. El crecimiento del "
+                            "total y el cambio de composición cuentan dos partes de la misma "
+                            "historia."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Sostengo la conclusión directa: tras la Guerra del Pacífico, el Estado "
+                            "chileno pasó a financiarse principalmente con la exportación de un solo "
+                            "producto."
+                        ),
+                        "porque": (
+                            "Los dos datos apuntan a lo mismo y hay un hecho que los conecta: la "
+                            "incorporación de las provincias salitreras en 1883. La conclusión no "
+                            "necesita nada más."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Agrego lo que se sigue de ahí: esa dependencia hizo al presupuesto "
+                            "vulnerable a un precio que se fijaba afuera."
+                        ),
+                        "porque": (
+                            "Es una causa estructural, y es lo que explica por qué la crisis de 1929 "
+                            "golpeó a Chile con especial dureza. Una tabla de 1900 permite anticipar "
+                            "esa fragilidad."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Descarto la conclusión de que el nivel de vida de la población mejoró en "
+                            "la misma proporción."
+                        ),
+                        "porque": (
+                            "La tabla mide ingresos del Estado, no condiciones de vida. Justamente en "
+                            "esas décadas se agudiza la cuestión social, así que el dato fiscal no "
+                            "autoriza a hablar del bienestar de la gente."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Leer el crecimiento de las exportaciones del siglo XIX como "
             "desarrollo económico sin más. La prueba suele pedir justamente lo "
@@ -75540,25 +76601,40 @@ LESSONS: dict[str, dict] = {
         "theory": (
             "**Qué es un Estado-nación.** Un poder soberano que manda sobre un "
             "territorio de límites definidos y sobre quienes lo habitan, sin "
-            "reconocer autoridad por encima de sí. Es la combinación de dos "
-            "cosas: un Estado (el aparato que gobierna) y una nación (una "
-            "comunidad que se piensa a sí misma como una).\n"
-            "**El cambio de fundamento.** La monarquía justificaba el poder por "
-            "herencia y origen divino. La república lo funda en la soberanía "
-            "popular ejercida por representantes elegidos, y reparte las "
-            "funciones del Estado en poderes separados para que no vuelva a "
-            "concentrarse.\n"
-            "**Lo declarado y lo efectivo.** Este es el punto que más se "
-            "pregunta. Las constituciones declararon igualdad ante la ley, y al "
-            "mismo tiempo el voto quedó restringido por renta o alfabetización "
-            "y la tierra siguió concentrada. No es una contradicción que haya "
-            "que resolver: es el rasgo del período. La igualdad fue jurídica y "
-            "no social.\n"
-            "**La nación se construye.** Escuela pública, himno, bandera, "
-            "museos y fiestas patrias no son adorno: son las herramientas con "
-            "que el Estado fabricó un sentido de pertenencia que antes no "
-            "existía. Y definir quién pertenece define también quién queda "
-            "fuera: los pueblos indígenas quedaron al margen de ese proyecto."
+            "reconocer autoridad por encima de sí. Es la combinación de dos cosas: un "
+            "**Estado** (el aparato que gobierna: leyes, tribunales, ejército, "
+            "impuestos) y una **nación** (una comunidad que se piensa a sí misma como "
+            "una).\\n\\n"
+            "**El cambio de fundamento.** La monarquía absoluta justificaba el poder "
+            "por herencia y origen divino. La república lo funda en la soberanía "
+            "popular ejercida por representantes elegidos, y reparte las funciones "
+            "del Estado en poderes separados.\\n\\n"
+            "| Antes | Después |\\n"
+            "|---|---|\\n"
+            "| Súbditos | ciudadanos |\\n"
+            "| Poder por herencia y origen divino | poder por soberanía popular |\\n"
+            "| Privilegios por estamento | igualdad ante la ley |\\n"
+            "| Fueros y costumbres locales | constitución y códigos únicos |\\n"
+            "| Fronteras difusas | territorio delimitado |\\n\\n"
+            "**De dónde salen estas ideas.** De la Ilustración —separación de "
+            "poderes, contrato social, soberanía popular— y de las revoluciones que "
+            "las pusieron en práctica: la independencia de Estados Unidos (1776) y la "
+            "Revolución Francesa (1789), con su Declaración de los Derechos del "
+            "Hombre y del Ciudadano.\\n\\n"
+            "**La ciudadanía no nació universal.** En el siglo XIX el derecho a voto "
+            "era censitario: exigía propiedad, renta o alfabetización, y excluía a "
+            "las mujeres. La ampliación del sufragio es un proceso de más de un "
+            "siglo, y por eso «democracia» en 1830 no significa lo mismo que hoy.\\n\\n"
+            "**Cómo se construye una nación.** No basta con declarar la "
+            "independencia: hay que fabricar el sentimiento de pertenencia. La "
+            "escuela pública, el servicio militar, los símbolos patrios, una lengua "
+            "oficial y una historia nacional común cumplen esa función, y casi "
+            "siempre a costa de las identidades locales e indígenas.\\n\\n"
+            "**En América Latina el orden costó décadas.** Tras la independencia, las "
+            "nuevas repúblicas enfrentaron guerras civiles, disputas de límites, "
+            "caudillismo y economías desarticuladas. Chile fue una excepción relativa "
+            "en estabilidad institucional temprana, y esa excepción es justamente lo "
+            "que las preguntas suelen pedir explicar."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -75607,6 +76683,60 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una fuente de 1850 celebra la apertura de escuelas públicas «para formar "
+                    "chilenos». ¿Qué proceso histórico ilustra esa frase y por qué la escuela "
+                    "cumple ese papel?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico el proceso: la construcción del Estado-nación, en su "
+                            "dimensión de nación y no solo de aparato estatal."
+                        ),
+                        "porque": (
+                            "La frase no habla de administrar un territorio, sino de FORMAR personas "
+                            "que se sientan parte de algo. Esa es la dimensión nacional del proceso."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Explico el papel de la escuela: enseña una lengua, una historia y unos "
+                            "símbolos comunes a niños de regiones distintas."
+                        ),
+                        "porque": (
+                            "La pertenencia nacional no es natural ni heredada: se aprende. La "
+                            "escuela, el servicio militar y los símbolos patrios son las "
+                            "instituciones que la producen."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Noto la tensión: esa unificación se hace a costa de identidades locales "
+                            "e indígenas, que quedan fuera del relato común."
+                        ),
+                        "porque": (
+                            "Una respuesta completa reconoce el costo del proceso. Explicar por qué "
+                            "se hizo así no equivale a validarlo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Contextualizo la fuente: quien celebra la apertura de escuelas en 1850 "
+                            "es parte de la élite que dirige ese proceso, así que el documento "
+                            "muestra un propósito y no un resultado."
+                        ),
+                        "porque": (
+                            "La fuente prueba qué se quería lograr, no cuánta gente efectivamente "
+                            "asistió. Confundir la intención con el efecto es el error típico al usar "
+                            "fuentes oficiales."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Tomar la palabra igualdad de una constitución del siglo XIX como "
             "si significara lo mismo que hoy. En esos textos igualdad ante la "
@@ -75642,20 +76772,35 @@ LESSONS: dict[str, dict] = {
             "volver a mirar."
         ),
         "theory": (
-            "**La respuesta está escrita.** En estas preguntas no hay que "
-            "deducir nada: el dato aparece en el texto. Tu trabajo es "
-            "encontrarlo, no reconstruirlo.\n\n"
-            "**Lee primero la pregunta, después busca.** Saber qué buscas "
-            "convierte una relectura completa en una búsqueda dirigida. Es la "
-            "diferencia entre releer cuatro párrafos y mirar solo el que "
-            "importa.\n\n"
-            "**Los conectores te llevan al lugar.** «Por eso» y «así que» "
-            "anuncian una consecuencia; «en cambio» y «sin embargo», un "
-            "contraste; «por ejemplo», un caso. Si la pregunta pide una causa, "
-            "busca el conector que la marca.\n\n"
-            "**Los distractores suelen ser verdaderos.** Casi siempre son cosas "
-            "que el texto sí dice, pero que no responden lo que se preguntó. "
-            "Que una alternativa sea cierta no la hace correcta."
+            "**La respuesta está escrita.** En estas preguntas no hay que deducir "
+            "nada: el dato aparece en el texto. Tu trabajo es encontrarlo, no "
+            "reconstruirlo.\\n\\n"
+            "**Lee primero la pregunta, después busca.** Saber qué buscas convierte "
+            "una relectura completa en una búsqueda dirigida. Es la diferencia entre "
+            "releer cuatro párrafos y mirar solo el que importa.\\n\\n"
+            "**Qué tipo de dato se pide, y dónde suele estar:**\\n\\n"
+            "| Si la pregunta pide | Busca |\\n"
+            "|---|---|\\n"
+            "| Una cifra o una fecha | los números, que saltan a la vista |\\n"
+            "| Un nombre o un lugar | las mayúsculas |\\n"
+            "| Una definición | las comillas, la cursiva o «es decir» |\\n"
+            "| Una causa | «porque», «debido a», «ya que» |\\n"
+            "| Una consecuencia | «por eso», «así que», «de ahí que» |\\n"
+            "| Un contraste | «en cambio», «sin embargo», «pero» |\\n"
+            "| Un ejemplo | «por ejemplo», «como», los dos puntos |\\n\\n"
+            "**Los conectores te llevan al lugar.** No son adornos: son las señales "
+            "con que el texto marca qué está haciendo en cada línea.\\n\\n"
+            "**Cuidado con los cuantificadores y las negaciones.** «Todos» no es «la "
+            "mayoría», «siempre» no es «con frecuencia», y una pregunta que dice "
+            "«EXCEPTO» o «NO se menciona» invierte la tarea: hay que descartar las "
+            "tres que sí aparecen.\\n\\n"
+            "**Los distractores suelen ser verdaderos.** Casi siempre son cosas que "
+            "el texto sí dice, pero que no responden lo que se preguntó. Que una "
+            "alternativa sea cierta no la hace correcta: tiene que ser cierta **y** "
+            "responder la pregunta.\\n\\n"
+            "**Vuelve al texto siempre.** Responder de memoria después de una primera "
+            "lectura es el origen de casi todos los errores en este tipo de pregunta: "
+            "el recuerdo mezcla lo que el texto dijo con lo que uno supone."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -75681,6 +76826,50 @@ LESSONS: dict[str, dict] = {
                 "porque": "Que el alerce viva tres mil años es verdadero y está en el texto, pero no es lo que se preguntó. Ese es el distractor típico de estas preguntas.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Lee el texto y responde: según el texto, ¿cuál es la razón de que el "
+                    "servicio se suspenda en invierno?\\n\\n"
+                    "*El teleférico del cerro funciona de martes a domingo entre las 10 y las "
+                    "19 horas. El servicio se suspende cada julio por mantenimiento "
+                    "obligatorio de los cables, y también los días de viento sobre 60 km/h. "
+                    "En 2024 transportó a 180 mil visitantes, un 12% más que el año "
+                    "anterior.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Leo la pregunta primero: pide una CAUSA de la suspensión en invierno, "
+                            "así que voy a buscar un conector causal o una razón explícita."
+                        ),
+                        "porque": (
+                            "Saber qué tipo de dato se busca convierte la relectura en una búsqueda "
+                            "dirigida. Acá no interesan los horarios ni las cifras de visitantes."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Ubico la frase: «se suspende cada julio por mantenimiento obligatorio de "
+                            "los cables». El «por» marca la causa."
+                        ),
+                        "porque": (
+                            "Julio es el invierno chileno, así que esa es la suspensión que la "
+                            "pregunta nombra. La respuesta está literalmente escrita: no hay que "
+                            "deducir nada."
+                        ),
+                    },
+                    {
+                        "accion": "Descarto el viento sobre 60 km/h, aunque el texto lo mencione.",
+                        "porque": (
+                            "Es un distractor verdadero: el texto sí lo dice, pero no es la "
+                            "suspensión de invierno, sino una condición de cualquier día. Ser cierto "
+                            "no basta para ser la respuesta."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Responder de memoria sin volver al texto. Después de leerlo una "
             "vez uno cree recordarlo, y la alternativa que \"suena\" a lo que "
@@ -75695,19 +76884,36 @@ LESSONS: dict[str, dict] = {
             "reconocer la misma idea disfrazada de sinónimo."
         ),
         "theory": (
-            "**La prueba casi nunca repite las palabras del texto.** Si lo "
-            "hiciera, bastaría con hacer Ctrl+F. La pregunta dice «principal "
-            "motivo» donde el texto dice «lo que explica»; dice «disminuyó» "
-            "donde el texto dice «cayó a la mitad».\n\n"
-            "**Traduce la pregunta antes de buscar.** Cámbiale las palabras por "
-            "otras que signifiquen lo mismo y quédate con la idea. Eso es lo "
-            "que vas a rastrear en el texto.\n\n"
-            "**Ojo con el sinónimo que no lo es.** «Frecuente» no es lo mismo "
-            "que «regular»; «la mayoría» no es «todos»; «puede» no es «debe». "
-            "Los distractores viven justo en esa diferencia.\n\n"
+            "**La prueba casi nunca repite las palabras del texto.** Si lo hiciera, "
+            "bastaría con buscar la palabra. La pregunta dice «principal motivo» "
+            "donde el texto dice «lo que explica»; dice «disminuyó» donde el texto "
+            "dice «cayó a la mitad».\\n\\n"
+            "**Traduce la pregunta antes de buscar.** Cámbiale las palabras por otras "
+            "que signifiquen lo mismo y quédate con la idea. Eso es lo que vas a "
+            "rastrear en el texto.\\n\\n"
+            "**Las tres formas de decir lo mismo con otras palabras:**\\n\\n"
+            "- **sinónimo**: una palabra por otra equivalente (empezar / iniciar);\\n"
+            "- **hiperónimo**: una palabra más general que cubre a la otra (perro → "
+            "animal). Sirve para resumir, pero pierde precisión;\\n"
+            "- **nominalización**: convertir una acción en sustantivo («se construyó» "
+            "→ «la construcción»). Es la marca del lenguaje formal.\\n\\n"
+            "**Ojo con el sinónimo que no lo es.** Las alternativas se construyen "
+            "justo en esa diferencia:\\n\\n"
+            "| El texto dice | NO significa |\\n"
+            "|---|---|\\n"
+            "| la mayoría | todos |\\n"
+            "| puede | debe |\\n"
+            "| se asocia a | causa |\\n"
+            "| frecuente | regular |\\n"
+            "| algunos estudios | los estudios |\\n"
+            "| sugiere | demuestra |\\n\\n"
+            "**Los modalizadores cambian la fuerza de una afirmación.** «Quizás», "
+            "«podría», «en general» la debilitan; «sin duda», «siempre», "
+            "«necesariamente» la refuerzan. Una paráfrasis que cambia el modalizador "
+            "ya no dice lo mismo, aunque conserve todas las demás palabras.\\n\\n"
             "**Verifica en los dos sentidos.** Encontrado el pasaje, léelo y "
-            "pregúntate si dice exactamente lo que afirma la alternativa, ni "
-            "más ni menos. Una paráfrasis correcta no agrega nada."
+            "pregúntate si dice exactamente lo que afirma la alternativa, ni más ni "
+            "menos. Una paráfrasis correcta no agrega, no quita y no exagera."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -75733,6 +76939,63 @@ LESSONS: dict[str, dict] = {
                 "porque": "El texto dice expresamente que la feria «no compite por precio». Una alternativa que hable de precio usa una palabra del texto para afirmar lo contrario de lo que dice.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Cuál de estas afirmaciones parafrasea correctamente el fragmento?\\n\\n"
+                    "*Algunos estudios sugieren que dormir menos de seis horas podría "
+                    "asociarse a un menor rendimiento escolar, aunque los autores advierten "
+                    "que no midieron otros factores del entorno familiar.*\\n\\n"
+                    "A) Dormir poco causa mal rendimiento escolar.\\n"
+                    "B) Hay estudios que relacionan el poco sueño con un rendimiento más "
+                    "bajo, sin descartar otras causas."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Marco los modalizadores del original: «algunos estudios», «sugieren», "
+                            "«podría», «asociarse». Todos debilitan la afirmación."
+                        ),
+                        "porque": (
+                            "Son las palabras que fijan cuánta fuerza tiene lo que se dice. Una "
+                            "paráfrasis fiel tiene que conservar ese nivel de certeza, no solo el "
+                            "tema."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reviso la alternativa A: reemplaza «podría asociarse» por «causa» y "
+                            "borra el «algunos»."
+                        ),
+                        "porque": (
+                            "Asociación no es causa, y ese salto es el error más frecuente de la "
+                            "prueba. Además convierte unos estudios en un hecho establecido: dice "
+                            "bastante más de lo que dice el texto."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reviso la B: conserva la atribución a estudios, la relación en vez de la "
+                            "causa, y recoge la advertencia sobre otros factores."
+                        ),
+                        "porque": (
+                            "Dice lo mismo con otras palabras, sin agregar ni quitar fuerza. Esa es "
+                            "exactamente la definición de una buena paráfrasis."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que la correcta es la B, y que la A es el distractor típico: "
+                            "verdadero de tono, falso de contenido."
+                        ),
+                        "porque": (
+                            "La A suena razonable y por eso funciona como trampa. La pregunta no es "
+                            "si podría ser cierta, sino si el texto la sostiene."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Elegir la alternativa que repite palabras del texto. Cuando una "
             "opción usa las mismas palabras y las otras no, se siente correcta "
@@ -75748,20 +77011,38 @@ LESSONS: dict[str, dict] = {
             "se oponen."
         ),
         "theory": (
-            "**Identifica primero qué tipo de relación se pide.** Causa "
-            "(¿por qué ocurre?), consecuencia (¿qué produce?), contraste (¿en "
-            "qué se diferencian?), ejemplo (¿de qué es caso esto?). Cada tipo "
-            "se busca en un lugar distinto.\n\n"
-            "**Los dos extremos están en el texto; el vínculo puede no "
-            "estarlo.** El texto dice A en el párrafo dos y B en el cinco, y la "
-            "pregunta es qué tienen que ver. Tu trabajo es el puente.\n\n"
-            "**Cuidado con el orden y la causa.** Que algo aparezca antes en el "
-            "texto no lo convierte en la causa de lo que viene después. «Vino "
-            "después» y «fue por causa de» son cosas distintas.\n\n"
-            "**Cuando el texto es un reglamento, la relación es regla-caso.** "
-            "Te dan una situación concreta y hay que decidir qué artículo la "
-            "cubre. Lee la regla completa, incluidas sus excepciones, antes de "
-            "aplicarla."
+            "**Identifica primero qué tipo de relación se pide.** Causa (¿por qué "
+            "ocurre?), consecuencia (¿qué produce?), contraste (¿en qué se "
+            "diferencian?), ejemplo (¿de qué es caso esto?). Cada tipo se busca en un "
+            "lugar distinto.\\n\\n"
+            "| Relación | Conectores que la marcan |\\n"
+            "|---|---|\\n"
+            "| Causa | porque, ya que, debido a, puesto que |\\n"
+            "| Consecuencia | por eso, así que, de ahí que, en consecuencia |\\n"
+            "| Contraste | en cambio, sin embargo, no obstante, pero |\\n"
+            "| Adición | además, asimismo, también, incluso |\\n"
+            "| Ejemplo | por ejemplo, como, a saber |\\n"
+            "| Condición | si, siempre que, a menos que |\\n"
+            "| Concesión | aunque, si bien, a pesar de |\\n"
+            "| Reformulación | es decir, o sea, en otras palabras |\\n\\n"
+            "**Los dos extremos están en el texto; el vínculo puede no estarlo.** El "
+            "texto dice A en el párrafo dos y B en el cinco, y la pregunta es qué "
+            "tienen que ver. Tu trabajo es el puente.\\n\\n"
+            "**Cuidado con el orden y la causa.** Que algo aparezca antes en el texto "
+            "no lo convierte en la causa de lo que viene después. «Vino después» y "
+            "«fue por causa de» son cosas distintas, y la diferencia tiene nombre: "
+            "correlación no es causalidad.\\n\\n"
+            "**Las estructuras que más se repiten** son cuatro, y reconocerlas "
+            "adelanta dónde estará cada parte: problema-solución, causa-efecto, "
+            "comparación-contraste y general-particular.\\n\\n"
+            "**Cuando el texto es un reglamento, la relación es regla-caso.** Te dan "
+            "una situación concreta y hay que decidir qué artículo la cubre. Lee la "
+            "regla completa, incluidas sus excepciones, antes de aplicarla: la "
+            "excepción suele ser justo lo que la pregunta evalúa.\\n\\n"
+            "**Un mismo conector puede cambiar todo el sentido.** «Llovió y "
+            "suspendieron el partido» solo suma dos hechos; «suspendieron el partido "
+            "porque llovió» afirma una causa. La pregunta suele pedir exactamente esa "
+            "distinción."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -75787,6 +77068,62 @@ LESSONS: dict[str, dict] = {
                 "porque": "Los tres días son «sin costo», no un descuento. Contar los días entre el diez y el trece y multiplicarlos por cien es la trampa que espera la pregunta.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Qué relación establece el segundo párrafo con el primero?\\n\\n"
+                    "*La municipalidad amplió el horario de la biblioteca hasta las 21 horas "
+                    "y los préstamos aumentaron un 30% en tres meses.*\\n\\n"
+                    "*Sin embargo, el aumento se concentró en las dos semanas previas a los "
+                    "exámenes, cuando también se habilitó una sala de estudio en el mismo "
+                    "edificio.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Ubico el conector que abre el segundo párrafo: «sin embargo», que marca "
+                            "contraste."
+                        ),
+                        "porque": (
+                            "El conector inicial de un párrafo anuncia qué hace ese párrafo con el "
+                            "anterior. Acá avisa que lo que viene va a tensionar lo recién dicho, no "
+                            "a sumarse."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Identifico qué afirmación del primer párrafo se pone en duda: la idea "
+                            "implícita de que la ampliación del horario explica el alza de préstamos."
+                        ),
+                        "porque": (
+                            "El primer párrafo pone dos hechos juntos y deja sugerida una causa. El "
+                            "segundo no niega el alza: niega que su causa esté clara."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Veo cómo lo hace: aporta un dato que ofrece una explicación alternativa "
+                            "—la sala de estudio y la época de exámenes—."
+                        ),
+                        "porque": (
+                            "Que dos cosas ocurran juntas no prueba que una produzca la otra. El "
+                            "segundo párrafo introduce un tercer factor que podría explicar ambas."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo: el segundo párrafo matiza la relación causal insinuada en el "
+                            "primero, no la contradice ni la ejemplifica."
+                        ),
+                        "porque": (
+                            "Las alternativas típicas ofrecerían «la refuta» o «la ejemplifica». "
+                            "Ninguna calza: el texto no dice que el horario no influyera, dice que el "
+                            "dato no alcanza para afirmarlo."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Aplicar la regla general sin leer la excepción. Los reglamentos de "
             "esta prueba casi siempre traen un «salvo que» o un «excepto» "
@@ -75802,18 +77139,39 @@ LESSONS: dict[str, dict] = {
             "tiene ahí, en ese párrafo, para ese emisor."
         ),
         "theory": (
-            "**El contexto manda sobre el diccionario.** «Un problema de "
-            "escritorio» no habla de muebles. La alternativa que traduce la "
-            "expresión palabra por palabra casi nunca es la correcta.\n\n"
+            "**El contexto manda sobre el diccionario.** «Un problema de escritorio» "
+            "no habla de muebles. La alternativa que traduce la expresión palabra por "
+            "palabra casi nunca es la correcta.\\n\\n"
+            "**Denotación y connotación.** La denotación es el significado literal, "
+            "el del diccionario; la connotación es lo que la palabra arrastra además. "
+            "«Vivienda», «casa» y «hogar» denotan casi lo mismo y connotan cosas "
+            "distintas, y elegir una u otra ya es una decisión del emisor.\\n\\n"
+            "| Recurso | Qué hace | Ejemplo |\\n"
+            "|---|---|---|\\n"
+            "| Metáfora | nombra algo con el nombre de otra cosa | «la ciudad es una "
+            "olla a presión» |\\n"
+            "| Comparación | lo mismo, pero con «como» | «la discusión es como una "
+            "olla a presión» |\\n"
+            "| Metonimia | nombra por una parte o por algo asociado | «leí a Neruda» "
+            "|\\n"
+            "| Hipérbole | exagera a propósito | «te llamé mil veces» |\\n"
+            "| Ironía | dice lo contrario de lo que quiere decir | «qué gran idea», "
+            "tras un fracaso |\\n"
+            "| Eufemismo | suaviza algo incómodo | «reducción de personal» |\\n\\n"
             "**Lee la línea de antes y la de después.** El sentido de una frase "
-            "citada está sostenido por lo que la rodea. Si vuelves solo a la "
-            "frase, te quedas con lo que ya sabías.\n\n"
-            "**Pregúntate qué idea sostiene la frase.** El emisor no la puso "
-            "para adornar: está ahí para decir algo que en lenguaje directo "
-            "habría sido más largo. Reconstruye ese algo.\n\n"
+            "citada está sostenido por lo que la rodea. Si vuelves solo a la frase, "
+            "te quedas con lo que ya sabías.\\n\\n"
+            "**Pregúntate qué idea sostiene la frase.** El emisor no la puso para "
+            "adornar: está ahí para decir algo que en lenguaje directo habría sido "
+            "más largo, más débil o más incómodo.\\n\\n"
             "**Las comillas y la cursiva son un aviso.** Cuando el emisor "
-            "entrecomilla una expresión, casi siempre está marcando que no la "
-            "usa en su sentido habitual."
+            "entrecomilla una expresión, casi siempre está marcando que no la usa en "
+            "su sentido habitual: puede estar citando, tomando distancia o "
+            "ironizando.\\n\\n"
+            "**Para una palabra poco frecuente**, no adivines por parecido: mira qué "
+            "función cumple en la frase, si lo que la rodea la define, y si el texto "
+            "la contrapone a otra palabra que sí conoces. Una oposición explícita "
+            "(«no X, sino Y») es una definición disfrazada."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -75839,6 +77197,60 @@ LESSONS: dict[str, dict] = {
                 "porque": "Esa es la idea que la expresión resume. Una alternativa que hable de falta de presupuesto agrega algo que el texto no dice.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Qué quiere decir el emisor con la expresión subrayada?\\n\\n"
+                    "*El plan de reciclaje se anunció en marzo con una campaña en radio, "
+                    "afiches en cada esquina y una cuenta en redes sociales. Ocho meses "
+                    "después, los contenedores siguen esperando el camión que nunca pasó. Es "
+                    "reciclaje de vitrina.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Descarto el sentido literal: no se trata de reciclar vitrinas ni de un "
+                            "contenedor con vidrios."
+                        ),
+                        "porque": (
+                            "La alternativa literal es el distractor de entrada en este tipo de "
+                            "pregunta. Si el sentido literal bastara, la frase no cerraría un párrafo "
+                            "sobre un plan que no funcionó."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Leo lo que rodea la frase: hay campaña, afiches y redes sociales por un "
+                            "lado, y ningún camión por el otro."
+                        ),
+                        "porque": (
+                            "El contexto opone lo que se muestra con lo que efectivamente ocurre. La "
+                            "expresión es el cierre de esa oposición, así que tiene que recogerla."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reconstruyo la metáfora: una vitrina exhibe, no sirve para usar lo que "
+                            "hay adentro."
+                        ),
+                        "porque": (
+                            "La metáfora traslada esa propiedad al plan: existe para ser visto. Es lo "
+                            "que el emisor habría dicho en diez palabras más aburridas."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que significa que el plan fue hecho para mostrarse y no para "
+                            "funcionar, y que el tono del emisor es crítico."
+                        ),
+                        "porque": (
+                            "La expresión no es neutra: elegirla es tomar posición. Una pregunta por "
+                            "el tono del texto se responde con la misma frase."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Elegir la alternativa que parafrasea la expresión sin explicarla. "
             "«Que faltan camiones» repite la frase con otras palabras y no dice "
@@ -75855,17 +77267,36 @@ LESSONS: dict[str, dict] = {
         "theory": (
             "**Toda inferencia se apoya en una marca del texto.** Si no puedes "
             "señalar la línea que la sostiene, no es una inferencia: es una "
-            "suposición tuya.\n\n"
-            "**Lo razonable no es lo mismo que lo respaldado.** Muchos "
-            "distractores son perfectamente plausibles y no tienen apoyo en el "
-            "texto. La pregunta no es si podría ser cierto, sino si el texto "
-            "obliga a concluirlo.\n\n"
-            "**Los detalles que parecen decorativos suelen ser la marca.** Que "
-            "un personaje mire el reloj dos veces, que una cartilla dedique "
-            "media página a un punto menor: eso está puesto ahí a propósito.\n\n"
-            "**Cuidado con las inferencias demasiado grandes.** Del hecho de "
-            "que alguien no responda no se sigue que esté molesto. Prefiere la "
-            "conclusión más pequeña que el texto permita."
+            "suposición tuya.\\n\\n"
+            "**Inferir es sacar lo que el texto no dice pero implica.** Entre lo "
+            "explícito y lo inventado hay una franja estrecha, y ahí viven estas "
+            "preguntas.\\n\\n"
+            "| | Qué es | Ejemplo |\\n"
+            "|---|---|---|\\n"
+            "| Explícito | está escrito | «llegó tarde» |\\n"
+            "| Inferencia | el texto obliga a concluirlo | «llegó tarde otra vez» → "
+            "no es la primera |\\n"
+            "| Suposición | podría ser cierto, el texto no lo sostiene | «llegó "
+            "tarde» → es irresponsable |\\n\\n"
+            "**Lo razonable no es lo mismo que lo respaldado.** Muchos distractores "
+            "son perfectamente plausibles y no tienen apoyo en el texto. La pregunta "
+            "no es si podría ser cierto, sino si el texto obliga a concluirlo.\\n\\n"
+            "**Hay palabras que arrastran información sin decirla.** «Volvió a "
+            "postular» implica que ya lo había hecho; «dejó de fumar» implica que "
+            "fumaba; «incluso los más escépticos aceptaron» implica que había "
+            "escépticos. Son presuposiciones, y suelen ser la marca que sostiene la "
+            "inferencia correcta.\\n\\n"
+            "**Los detalles que parecen decorativos suelen ser la marca.** Que un "
+            "personaje mire el reloj dos veces, que una cartilla dedique media página "
+            "a un punto menor: eso está puesto ahí a propósito, sobre todo en los "
+            "textos literarios.\\n\\n"
+            "**Cuidado con las inferencias demasiado grandes.** Del hecho de que "
+            "alguien no responda no se sigue que esté molesto. Entre dos alternativas "
+            "que el texto permite, prefiere siempre la más pequeña: la que agrega "
+            "menos.\\n\\n"
+            "**Cómo verificar una inferencia**: formúlala, busca la línea que la "
+            "apoya y pregúntate si alguien podría leer el mismo texto y concluir lo "
+            "contrario sin contradecirlo. Si puede, la inferencia no estaba obligada."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -75889,6 +77320,62 @@ LESSONS: dict[str, dict] = {
                 "porque": "Que buscara trabajo es posible y el texto no lo respalda: también podría vender algo o buscar un arriendo. Esa alternativa mayor es el distractor.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Qué se puede inferir del fragmento?\\n\\n"
+                    "*Mi tía guardaba las bolsas del supermercado dobladas en un cajón, una "
+                    "dentro de otra, y lavaba los frascos de mermelada antes de botarlos. "
+                    "Cuando le regalaron una radio nueva, siguió usando la vieja hasta que "
+                    "dejó de encenderse. La nueva quedó en su caja, arriba del refrigerador, "
+                    "durante cuatro años.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Reúno las marcas: guarda bolsas, lava frascos antes de botarlos, usa la "
+                            "radio vieja hasta el final y no estrena la nueva en cuatro años."
+                        ),
+                        "porque": (
+                            "Una inferencia sólida se apoya en varias marcas que apuntan en la misma "
+                            "dirección, no en un detalle suelto que podría ser casual."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Busco qué tienen en común: todas muestran una relación cuidadosa con los "
+                            "objetos y una resistencia a desechar o reemplazar."
+                        ),
+                        "porque": (
+                            "El texto nunca dice que la tía sea ahorrativa ni que venga de una época "
+                            "de escasez. Lo muestra con conductas, que es como funciona la narración "
+                            "literaria."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Descarto las inferencias grandes: no se sigue que sea pobre, ni que "
+                            "desconfíe de la tecnología, ni que no le gustara el regalo."
+                        ),
+                        "porque": (
+                            "Son suposiciones plausibles sin marca que las sostenga. Que guarde la "
+                            "radio no dice nada sobre su opinión del aparato ni sobre su situación "
+                            "económica."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Me quedo con la conclusión más pequeña que el texto obliga: que para "
+                            "ella los objetos se usan hasta agotarlos, y lo nuevo se reserva."
+                        ),
+                        "porque": (
+                            "Entre dos inferencias compatibles con el texto, la correcta es la que "
+                            "agrega menos. Esa es la regla que separa leer de imaginar."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Completar el texto con una historia propia. El relato deja huecos "
             "y la cabeza los llena sola, casi siempre con lo más dramático. "
@@ -75903,20 +77390,34 @@ LESSONS: dict[str, dict] = {
             "entero. Todo lo que el emisor incluyó cumple un trabajo."
         ),
         "theory": (
-            "**Pregúntate qué pasaría si eso no estuviera.** Es la forma más "
-            "rápida de ver su función. Si al sacarlo el argumento queda sin "
-            "apoyo, su función era sostenerlo; si queda igual de claro pero más "
-            "seco, era ilustrarlo.\n\n"
-            "**Función no es contenido.** «Menciona el caso de una feria» "
-            "describe qué dice; «ilustra con un caso cotidiano una idea "
-            "abstracta» dice para qué sirve. La pregunta pide lo segundo.\n\n"
-            "**Los elementos más frecuentes tienen funciones típicas.** El "
-            "ejemplo concreta; la cita da autoridad; la comparación traduce lo "
-            "desconocido a lo conocido; la pregunta retórica instala un tema; "
-            "la objeción anticipada desarma una crítica antes de recibirla.\n\n"
+            "**Pregúntate qué pasaría si eso no estuviera.** Es la forma más rápida "
+            "de ver su función. Si al sacarlo el argumento queda sin apoyo, su "
+            "función era sostenerlo; si queda igual de claro pero más seco, era "
+            "ilustrarlo.\\n\\n"
+            "**Función no es contenido.** «Menciona el caso de una feria» describe "
+            "qué dice; «ilustra con un caso cotidiano una idea abstracta» dice para "
+            "qué sirve. La pregunta pide lo segundo, y por eso las alternativas "
+            "correctas suelen empezar con un verbo de acción: ejemplificar, refutar, "
+            "matizar, anticipar, cerrar.\\n\\n"
+            "| Recurso | Su función típica |\\n"
+            "|---|---|\\n"
+            "| Ejemplo | concreta una idea abstracta |\\n"
+            "| Cifra o estudio | respalda con evidencia |\\n"
+            "| Cita de un experto | da autoridad |\\n"
+            "| Comparación o analogía | traduce lo desconocido a lo conocido |\\n"
+            "| Pregunta retórica | instala un tema o interpela |\\n"
+            "| Objeción anticipada | desarma una crítica antes de recibirla |\\n"
+            "| Anécdota inicial | atrae y baja el tema a lo concreto |\\n"
+            "| Concesión | reconoce algo del otro lado para ganar credibilidad |\\n\\n"
             "**Mira dónde está puesto.** Un párrafo al principio suele abrir el "
-            "problema; al final, cerrar o abrir una proyección. La posición es "
-            "parte de la función."
+            "problema; al medio, desarrollarlo o matizarlo; al final, cerrar o "
+            "proyectar. La posición es parte de la función.\\n\\n"
+            "**En un texto argumentativo, distingue las piezas**: la tesis es lo que "
+            "se sostiene; los argumentos, las razones que la apoyan; los respaldos, "
+            "los datos que apoyan a esos argumentos; y el contraargumento, lo que el "
+            "emisor trae del otro lado para responderlo.\\n\\n"
+            "**Un mismo elemento puede cumplir dos funciones a la vez**, y la "
+            "pregunta pide la principal: la que se pierde si el elemento desaparece."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -75941,6 +77442,63 @@ LESSONS: dict[str, dict] = {
                 "porque": "Ese es el trabajo de la analogía. Una alternativa que diga que «demuestra» el problema confunde ilustrar con probar: una comparación no prueba nada.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Qué función cumple la pregunta con que se abre el segundo párrafo?\\n\\n"
+                    "*Las ciclovías de la comuna suman 14 kilómetros y el uso de la bicicleta "
+                    "creció un 40% en dos años.*\\n\\n"
+                    "*¿Pero de qué sirve una ciclovía que termina en medio de una avenida? "
+                    "Seis de los catorce kilómetros no conectan con ninguna otra vía, y los "
+                    "ciclistas deben bajarse a la calzada justo donde el tránsito es más "
+                    "denso.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico el recurso: es una pregunta retórica, porque el emisor no "
+                            "espera respuesta y él mismo la contesta en las líneas siguientes."
+                        ),
+                        "porque": (
+                            "Reconocer el recurso es el primer paso, pero no es la respuesta: la "
+                            "pregunta pide para qué sirve acá, no cómo se llama."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Pruebo a sacarla: sin ella, el párrafo seguiría entregando los mismos "
+                            "datos, pero perdería el giro respecto del párrafo anterior."
+                        ),
+                        "porque": (
+                            "La prueba de la eliminación muestra qué aporta un elemento. Acá lo que "
+                            "se pierde no es información, sino la marca de que el texto va a "
+                            "cuestionar lo recién dicho."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Miro su posición: abre el párrafo justo después de dos cifras "
+                            "favorables."
+                        ),
+                        "porque": (
+                            "Colocada ahí, la pregunta funciona como bisagra entre el dato optimista "
+                            "y la objeción. En otro lugar del texto cumpliría otra función."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que su función es introducir una objeción a la lectura "
+                            "optimista del primer párrafo, no informar ni pedir datos."
+                        ),
+                        "porque": (
+                            "Una alternativa que dijera «plantea una duda del autor sobre las cifras» "
+                            "describiría el contenido; la correcta nombra lo que la pregunta HACE "
+                            "dentro del texto."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Responder con lo que el elemento dice en vez de con lo que hace. "
             "Si tu respuesta se puede escribir sin usar un verbo como ilustrar, "
@@ -75955,21 +77513,37 @@ LESSONS: dict[str, dict] = {
             "qué ideas mandan y cuáles están al servicio de otras."
         ),
         "theory": (
-            "**Tema e idea central son distintos.** El tema se dice en dos "
-            "palabras («el reciclaje»); la idea central es una afirmación "
-            "completa («el reciclaje fracasa porque no hay quién recoja»). Si "
-            "tu respuesta no tiene verbo, es un tema.\n\n"
-            "**La idea central cubre todo el texto.** Pruébala contra cada "
-            "párrafo: si uno queda fuera, era la idea de una sección, no del "
-            "texto. Ese es el distractor más frecuente.\n\n"
-            "**Distingue lo que sostiene de lo que apoya.** Los ejemplos, las "
-            "cifras y las citas están al servicio de una afirmación. Una "
-            "alternativa que resuma un ejemplo está eligiendo una idea "
-            "subordinada.\n\n"
-            "**En una columna, busca la tesis; en un reportaje, el hallazgo.** "
-            "Cada tipo de texto pone su idea principal en otro lugar: la "
-            "columna la declara, muchas veces al cierre; el reportaje la "
-            "reparte entre los datos."
+            "**Tema e idea central son distintos.** El tema se dice en dos palabras "
+            "(«el reciclaje»); la idea central es una afirmación completa («el "
+            "reciclaje fracasa porque no hay quién recoja»). Si tu respuesta no tiene "
+            "verbo, es un tema.\\n\\n"
+            "| | Qué es | Cómo se formula |\\n"
+            "|---|---|---|\\n"
+            "| Tema | de qué trata | un sustantivo o una frase nominal |\\n"
+            "| Idea central | qué se afirma sobre el tema | una oración completa |\\n"
+            "| Tesis | la idea central de un texto argumentativo | una oración que "
+            "alguien podría discutir |\\n"
+            "| Idea secundaria | lo que sostiene o ilustra la central | ejemplos, "
+            "cifras, citas |\\n\\n"
+            "**La idea central cubre todo el texto.** Pruébala contra cada párrafo: "
+            "si uno queda fuera, era la idea de una sección, no del texto. Ese es el "
+            "distractor más frecuente, y suele ser una afirmación verdadera pero "
+            "parcial.\\n\\n"
+            "**Distingue lo que sostiene de lo que apoya.** Los ejemplos, las cifras "
+            "y las citas están al servicio de una afirmación. Una alternativa que "
+            "resuma un ejemplo está eligiendo una idea subordinada.\\n\\n"
+            "**Dónde suele estar.** En un texto expositivo, la idea central aparece "
+            "con frecuencia en el primer párrafo o en la oración temática de cada "
+            "sección; en una columna de opinión, muchas veces al cierre; en un "
+            "reportaje, repartida entre los datos, sin declararse.\\n\\n"
+            "**Cómo armarla si no está escrita**: resume cada párrafo en una frase, "
+            "mira qué tienen en común esas frases y escribe la afirmación que las "
+            "abarca. Ese es el procedimiento, y funciona incluso cuando ninguna "
+            "oración del texto la dice tal cual.\\n\\n"
+            "**Los cuatro errores que la prueba pone como alternativas**: demasiado "
+            "amplia (podría encabezar cualquier texto del tema), demasiado estrecha "
+            "(resume un párrafo), verdadera pero ajena (dice algo correcto que el "
+            "texto no sostiene) y contraria (invierte la postura del emisor)."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -75997,6 +77571,67 @@ LESSONS: dict[str, dict] = {
                 "porque": "Esta afirmación cubre los cuatro elementos del texto. Una que solo dijera «el clima no explica la diferencia» resume un paso y deja fuera el cierre.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Cuál es la idea central del texto?\\n\\n"
+                    "*Las áreas verdes de la ciudad no están mal distribuidas por azar. En "
+                    "las comunas del sector oriente hay más de veinte metros cuadrados por "
+                    "habitante; en varias del sector sur, menos de cinco.*\\n\\n"
+                    "*La diferencia no se explica solo por el suelo disponible: mantener un "
+                    "parque cuesta dinero municipal, y los municipios con menos ingresos son "
+                    "justamente los que tienen más habitantes por área verde.*\\n\\n"
+                    "*Mientras el financiamiento dependa de lo que cada comuna recaude, la "
+                    "brecha seguirá creciendo, por muchos árboles que se planten.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Resumo cada párrafo en una frase: (1) la distribución de áreas verdes es "
+                            "muy desigual; (2) la causa es el financiamiento municipal, no el "
+                            "espacio; (3) mientras no cambie el financiamiento, la brecha crecerá."
+                        ),
+                        "porque": (
+                            "Resumir párrafo por párrafo es el procedimiento que evita quedarse con "
+                            "el que más impresionó. Las tres frases, juntas, muestran hacia dónde va "
+                            "el texto."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Busco la afirmación que abarca las tres: la desigualdad de áreas verdes "
+                            "se explica por cómo se financian los municipios, y por eso no se corrige "
+                            "plantando árboles."
+                        ),
+                        "porque": (
+                            "Cubre los tres párrafos: el problema, su causa y su consecuencia. Una "
+                            "idea central tiene que poder sostener el texto entero, no una parte."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Descarto «hay desigualdad de áreas verdes entre comunas», que es "
+                            "verdadera pero se queda en el primer párrafo."
+                        ),
+                        "porque": (
+                            "Es el distractor estrecho: resume una sección y deja fuera la "
+                            "explicación, que es justamente lo que el texto agrega y lo que le da "
+                            "sentido."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Descarto también «las ciudades necesitan más áreas verdes», que podría "
+                            "encabezar cualquier texto del tema."
+                        ),
+                        "porque": (
+                            "Es el distractor amplio. Una idea central que serviría para otro texto "
+                            "distinto no identifica a este."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Elegir la idea del último párrafo. Suele sonar a conclusión y a "
             "veces lo es, pero muchas veces es solo el ejemplo final o una "
@@ -76011,20 +77646,36 @@ LESSONS: dict[str, dict] = {
             "para quién."
         ),
         "theory": (
-            "**El propósito se lee en el conjunto, no en una frase.** Una línea "
-            "puede sonar a denuncia dentro de un texto que explica. Decide "
-            "mirando qué hace el texto entero.\n\n"
+            "**El propósito se lee en el conjunto, no en una frase.** Una línea puede "
+            "sonar a denuncia dentro de un texto que explica. Decide mirando qué hace "
+            "el texto entero.\\n\\n"
+            "| Propósito | El texto | Marcas frecuentes |\\n"
+            "|---|---|---|\\n"
+            "| Informar | expone hechos | datos, fuentes, tercera persona |\\n"
+            "| Explicar | responde por qué o cómo | conectores causales, ejemplos |\\n"
+            "| Convencer | sostiene una postura | tesis, argumentos, adjetivación "
+            "valorativa |\\n"
+            "| Instruir | indica cómo hacer algo | imperativos, pasos numerados |\\n"
+            "| Promover | invita a actuar o a comprar | apelaciones directas, segunda "
+            "persona |\\n"
+            "| Narrar | cuenta hechos en el tiempo | verbos en pasado, secuencia |\\n\\n"
             "**Piensa en el destinatario.** El temario lo dice expresamente: la "
             "intención se determina «en función del destinatario». Una cartilla "
-            "escrita para un consumidor y un informe escrito para una autoridad "
-            "usan los mismos datos con propósitos distintos.\n\n"
-            "**Distingue el propósito del tema.** Informar sobre los "
-            "microplásticos y alertar sobre los microplásticos son propósitos "
-            "distintos con el mismo tema. Fíjate si el texto se limita a "
-            "exponer o si empuja hacia algo.\n\n"
-            "**El cierre suele delatar la intención.** Muchos textos guardan "
-            "para el final la pregunta, la recomendación o el llamado que "
-            "revela para qué se escribieron."
+            "escrita para un consumidor y un informe escrito para una autoridad usan "
+            "los mismos datos con propósitos distintos.\\n\\n"
+            "**Distingue el propósito del tema.** Informar sobre los microplásticos y "
+            "alertar sobre los microplásticos son propósitos distintos con el mismo "
+            "tema. Fíjate si el texto se limita a exponer o si empuja hacia algo.\\n\\n"
+            "**Las marcas de apelación delatan.** La segunda persona («usted puede»), "
+            "los imperativos, las preguntas dirigidas al lector y las recomendaciones "
+            "explícitas indican que el texto quiere producir una conducta, no solo "
+            "entregar información.\\n\\n"
+            "**El cierre suele delatar la intención.** Muchos textos guardan para el "
+            "final la pregunta, la recomendación o el llamado que revela para qué se "
+            "escribieron. Si el último párrafo pide algo, el texto no era puramente "
+            "informativo.\\n\\n"
+            "**Un texto puede tener más de un propósito**, y la pregunta pide el "
+            "principal: aquel sin el cual el texto no existiría."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -76049,6 +77700,63 @@ LESSONS: dict[str, dict] = {
                 "porque": "El cierre lo confirma: «no está obligado a mencionar nada de eso si usted no lo consulta». Todo el texto apunta a que el lector consulte.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Cuál es el propósito principal del texto y quién es su destinatario?\\n\\n"
+                    "*Antes de firmar un contrato de telefonía, revise tres cosas. Primero: "
+                    "cuánto dura el precio promocional y a cuánto sube después. Segundo: si "
+                    "el equipo queda en cuotas aparte del plan. Tercero: qué cobran por "
+                    "terminar el contrato antes de tiempo.*\\n\\n"
+                    "*Ninguna de las tres aparece en la publicidad. Las tres están en el "
+                    "contrato, y usted tiene derecho a leerlo completo antes de firmar.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Marco las señales de apelación: «revise», «usted tiene derecho», la "
+                            "enumeración en pasos."
+                        ),
+                        "porque": (
+                            "Los imperativos y la segunda persona muestran que el texto se dirige a "
+                            "alguien para que haga algo. Un texto solo informativo describiría el "
+                            "mercado en tercera persona."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Identifico al destinatario: una persona a punto de contratar, no una "
+                            "autoridad ni una empresa."
+                        ),
+                        "porque": (
+                            "El vocabulario es cotidiano, las tres cosas son las que ve un cliente y "
+                            "el derecho que se invoca es el suyo. El destinatario define el propósito "
+                            "tanto como el contenido."
+                        ),
+                    },
+                    {
+                        "accion": "Reviso el cierre: recuerda un derecho y refuerza la acción recomendada.",
+                        "porque": (
+                            "El cierre es donde el texto muestra para qué se escribió. Acá no cierra "
+                            "con un dato ni con una conclusión: cierra con una habilitación para "
+                            "actuar."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que el propósito principal es orientar al consumidor para que "
+                            "revise el contrato, y no informar sobre la industria ni denunciar a las "
+                            "empresas."
+                        ),
+                        "porque": (
+                            "Aunque el texto critique implícitamente la publicidad, esa crítica está "
+                            "al servicio de la recomendación. La denuncia sería el propósito si el "
+                            "texto terminara señalando responsables en vez de indicando qué hacer."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Confundir el propósito con el tema o con la opinión del emisor. "
             "«Hablar sobre los planes de internet» es el tema; «criticar a las "
@@ -76063,18 +77771,38 @@ LESSONS: dict[str, dict] = {
             "tarea pide leer esa posición."
         ),
         "theory": (
-            "**La postura está en la elección de palabras.** No es lo mismo "
-            "«medida», «ocurrencia» y «política pública» para referirse a lo "
-            "mismo. El adjetivo delata antes que la afirmación.\n\n"
-            "**Conceder no es estar de acuerdo.** Muchos emisores reconocen "
-            "primero lo que tiene de razonable la posición contraria y después "
-            "la rechazan. Si te quedas en la concesión, inviertes su postura.\n\n"
-            "**El tono es distinto de la postura.** Se puede estar a favor con "
-            "tono irónico y en contra con tono respetuoso. Si la pregunta dice "
-            "«actitud» o «tono», pide el cómo; si dice «posición», el qué.\n\n"
-            "**Busca los matices.** Casi nunca la respuesta es un apoyo total o "
-            "un rechazo total. Suele ser «apoya la medida pero desconfía de "
-            "cómo se aplica», y las alternativas extremas están para descartarse."
+            "**La postura está en la elección de palabras.** No es lo mismo «medida», "
+            "«ocurrencia» y «política pública» para referirse a lo mismo. El adjetivo "
+            "delata antes que la afirmación.\\n\\n"
+            "**Cómo se marca una postura en el texto:**\\n\\n"
+            "| Marca | Ejemplo | Qué revela |\\n"
+            "|---|---|---|\\n"
+            "| Adjetivación valorativa | «una decisión apresurada» | juicio del "
+            "emisor |\\n"
+            "| Verbos de actitud | «admite», «insiste», «reconoce» | distancia o "
+            "adhesión |\\n"
+            "| Modalizadores | «sin duda», «quizás», «apenas» | grado de certeza |\\n"
+            "| Comillas de distancia | la «solución» propuesta | desacuerdo o ironía "
+            "|\\n"
+            "| Selección de datos | qué cifra se destaca y cuál no | hacia dónde "
+            "empuja |\\n\\n"
+            "**Conceder no es estar de acuerdo.** Muchos emisores reconocen primero "
+            "lo que tiene de razonable la posición contraria y después la rechazan: "
+            "«es cierto que…, pero…». Si te quedas en la concesión, inviertes su "
+            "postura. El conector adversativo marca dónde empieza lo que el emisor "
+            "realmente sostiene.\\n\\n"
+            "**El tono es distinto de la postura.** Se puede estar a favor con tono "
+            "irónico y en contra con tono respetuoso. Si la pregunta dice «actitud» o "
+            "«tono», pide el cómo; si dice «posición», el qué. Tonos que conviene "
+            "poder nombrar: irónico, crítico, admirativo, nostálgico, cauteloso, "
+            "solemne, humorístico.\\n\\n"
+            "**Busca los matices.** Casi nunca la respuesta es un apoyo total o un "
+            "rechazo total. Suele ser «apoya la medida pero desconfía de cómo se "
+            "aplica», y las alternativas extremas están para descartarse.\\n\\n"
+            "**Un texto puede no tener postura**, y eso también es una respuesta: un "
+            "reportaje que entrega cifras sin adjetivos valorativos ni "
+            "recomendaciones está informando, y elegir una postura donde no la hay es "
+            "el error simétrico."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -76100,6 +77828,63 @@ LESSONS: dict[str, dict] = {
                 "porque": "No es rechazo —lo llama buena noticia— ni entusiasmo —dice que es la parte fácil—. Las alternativas que eligen un extremo ignoran la mitad del texto.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Cuál es la postura del emisor?\\n\\n"
+                    "*Nadie discute que el nuevo sistema de alerta funciona: los mensajes "
+                    "llegan en segundos y eso, en un terremoto, son vidas. Lo he defendido en "
+                    "esta misma columna.*\\n\\n"
+                    "*Dicho eso, un sistema que solo llega a los teléfonos deja fuera "
+                    "justamente a quienes más lo necesitan. En las comunas rurales que "
+                    "visité, la mitad de los adultos mayores no tiene un equipo compatible. "
+                    "La alerta perfecta que no suena donde hace falta sigue siendo una alerta "
+                    "a medias.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico la concesión inicial: el emisor reconoce que el sistema "
+                            "funciona y aclara que lo ha defendido antes."
+                        ),
+                        "porque": (
+                            "Es una concesión, no la postura. Quedarse en el primer párrafo llevaría "
+                            "a responder que el emisor está a favor sin reservas, que es el "
+                            "distractor más frecuente."
+                        ),
+                    },
+                    {
+                        "accion": "Ubico el giro: «dicho eso» abre lo que el emisor realmente sostiene.",
+                        "porque": (
+                            "El conector adversativo marca la bisagra. Lo que viene después de él es "
+                            "la posición que el texto defiende, y a lo que apunta el cierre."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Leo las marcas valorativas del segundo párrafo: «deja fuera justamente a "
+                            "quienes más lo necesitan», «una alerta a medias»."
+                        ),
+                        "porque": (
+                            "La adjetivación muestra el juicio. No dice que el sistema sea malo: dice "
+                            "que su cobertura es insuficiente, que es una crítica distinta y más "
+                            "precisa."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo: valora el sistema y critica su cobertura; no lo rechaza ni lo "
+                            "respalda sin reservas."
+                        ),
+                        "porque": (
+                            "La respuesta correcta en este tipo de pregunta casi siempre es la "
+                            "matizada. Las dos alternativas extremas —«lo rechaza» y «lo respalda "
+                            "plenamente»— están puestas para descartarse."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Quedarse con la primera frase. Los textos de opinión suelen abrir "
             "con la concesión, y quien lee rápido sale convencido de que el "
@@ -76114,18 +77899,37 @@ LESSONS: dict[str, dict] = {
             "forma también significan."
         ),
         "theory": (
-            "**El orden es una decisión.** Empezar por el caso concreto y "
-            "terminar en la regla no es lo mismo que al revés. Pregúntate qué "
-            "gana el texto con el orden que eligió.\n\n"
-            "**El registro indica para quién se escribió.** Un texto que "
-            "explica qué significa cada término está escrito para quien no los "
-            "conoce; uno que los usa sin explicar, para quien ya está adentro.\n\n"
-            "**El cierre es la posición más fuerte.** Lo último que se lee es "
-            "lo que queda. Si un relato termina en un gesto y no en una "
-            "explicación, eso es una decisión sobre qué quiere dejar abierto.\n\n"
-            "**La persona narrativa cambia lo que se puede saber.** Un narrador "
-            "en primera persona solo puede contar lo que él vio, y eso limita "
-            "—a propósito— lo que el lector conoce del resto."
+            "**El orden es una decisión.** Empezar por el caso concreto y terminar en "
+            "la regla no es lo mismo que al revés. Pregúntate qué gana el texto con "
+            "el orden que eligió.\\n\\n"
+            "| Tipo de texto | Su estructura típica |\\n"
+            "|---|---|\\n"
+            "| Narrativo | situación inicial, quiebre, desarrollo, desenlace |\\n"
+            "| Expositivo | introducción, desarrollo por subtemas, cierre |\\n"
+            "| Argumentativo | tesis, argumentos, contraargumento, conclusión |\\n"
+            "| Instructivo | materiales, pasos en orden, advertencias |\\n"
+            "| Noticioso | lo más importante primero, detalles después |\\n\\n"
+            "**El registro indica para quién se escribió.** Un texto que explica qué "
+            "significa cada término está escrito para quien no los conoce; uno que "
+            "los usa sin explicar, para quien ya está adentro. El registro formal, el "
+            "técnico y el coloquial no son mejores ni peores: son decisiones sobre el "
+            "destinatario.\\n\\n"
+            "**El cierre es la posición más fuerte.** Lo último que se lee es lo que "
+            "queda. Si un relato termina en un gesto y no en una explicación, eso es "
+            "una decisión sobre qué quiere dejar abierto.\\n\\n"
+            "**La persona narrativa cambia lo que se puede saber.** Un narrador en "
+            "primera persona solo puede contar lo que él vio, y eso limita —a "
+            "propósito— lo que el lector conoce del resto. Un narrador omnisciente "
+            "sabe lo que piensan todos; uno testigo, solo lo que observa desde "
+            "afuera.\\n\\n"
+            "**El tiempo del relato no es el tiempo de la historia.** Un texto puede "
+            "empezar por el final (in medias res), volver atrás (analepsis) o "
+            "adelantar lo que vendrá. Reordenar es una decisión que produce intriga, "
+            "contraste o ironía.\\n\\n"
+            "**Los textos discontinuos se leen distinto.** Infografías, tablas y "
+            "gráficos no se leen de corrido: primero el título, después las etiquetas "
+            "y las unidades, y recién ahí los datos. Lo que en un texto continuo hace "
+            "un conector, acá lo hacen la disposición, el color y el tamaño."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -76149,6 +77953,65 @@ LESSONS: dict[str, dict] = {
                 "porque": "Ese es el trabajo de la elección formal: la incertidumbre no está en los hechos, está en quién los cuenta. En tercera persona el relato podría haber resuelto el punto.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Qué efecto produce la estructura elegida en este fragmento?\\n\\n"
+                    "*El martes a las seis y media, la señora Ruiz encontró la puerta de la "
+                    "panadería cerrada con candado y un cartel escrito a mano.*\\n\\n"
+                    "*Don Luis la había abierto todos los días durante treinta y un años, "
+                    "incluido el día del terremoto, cuando repartió el pan gratis en la "
+                    "plaza. Nunca contrató a nadie. Decía que el horno se conocía con las "
+                    "manos y que las manos no se heredan.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Observo el orden: el texto empieza por el final —la panadería cerrada— y "
+                            "recién después cuenta los treinta y un años anteriores."
+                        ),
+                        "porque": (
+                            "Es una alteración del orden cronológico: primero el desenlace, después "
+                            "el pasado que lo explica. La historia no ocurrió en ese orden; el relato "
+                            "eligió contarlo así."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Pruebo el orden inverso: si empezara por los treinta y un años y "
+                            "terminara en el candado, el cierre sería el cierre de la panadería."
+                        ),
+                        "porque": (
+                            "Comparar con la versión alternativa es la forma de ver qué aporta la "
+                            "estructura elegida. En la versión cronológica el efecto sería de "
+                            "desenlace; acá es de misterio y luego de pérdida."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Identifico el efecto: el lector llega a la historia de don Luis sabiendo "
+                            "ya que terminó, así que cada detalle se lee como algo que se perdió."
+                        ),
+                        "porque": (
+                            "El pan repartido en el terremoto no tendría el mismo peso leído antes "
+                            "del candado. La estructura, y no las palabras, es lo que carga esos "
+                            "detalles."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Noto además que el cierre queda en una frase de don Luis y no en una "
+                            "explicación del narrador."
+                        ),
+                        "porque": (
+                            "Cerrar con la voz del personaje deja el sentido abierto: no explica por "
+                            "qué cerró la panadería. La posición final es la más fuerte, y el texto "
+                            "la usa para dejar resonando el oficio, no el desenlace."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Responder con lo que el texto cuenta en lugar de con lo que la "
             "forma produce. «Muestra que la casa estaba vacía» es contenido. La "
@@ -76164,19 +78027,34 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**Separa la afirmación de su respaldo.** Primero identifica qué se "
-            "sostiene; después, con qué. Muchas preguntas van justo al hueco "
-            "entre las dos cosas.\n\n"
-            "**Distingue dato de opinión.** «El consumo subió 12%» se puede "
+            "sostiene; después, con qué. Muchas preguntas van justo al hueco entre "
+            "las dos cosas.\\n\\n"
+            "**Distingue dato de opinión.** «El consumo subió $12\\%$» se puede "
             "verificar; «el consumo subió demasiado» es una valoración. Una "
-            "alternativa que presente una opinión como dato es incorrecta "
-            "aunque suene razonable.\n\n"
-            "**Un ejemplo no prueba una regla.** Si el texto sostiene algo "
-            "general y lo apoya en un caso, el apoyo es débil y la pregunta "
-            "suele ir por ahí.\n\n"
-            "**Fíjate en lo que el propio emisor reconoce.** Los textos "
-            "rigurosos avisan sus límites: «el estudio midió difusión, no "
-            "creencia». Esa línea suele ser la respuesta a qué no permite "
-            "concluir el texto."
+            "alternativa que presente una opinión como dato es incorrecta aunque "
+            "suene razonable.\\n\\n"
+            "| Cómo se debilita un respaldo | Qué revisar |\\n"
+            "|---|---|\\n"
+            "| Muestra pequeña o poco representativa | a cuántos y a quiénes se midió "
+            "|\\n"
+            "| Se confunde correlación con causa | si hay un tercer factor posible |\\n"
+            "| Un caso sostiene una regla general | cuántos casos, y si son típicos |\\n"
+            "| La fuente tiene interés en el resultado | quién financió o quién "
+            "difunde |\\n"
+            "| El dato es viejo o de otro contexto | cuándo y dónde se midió |\\n"
+            "| Se generaliza fuera del rango medido | qué dijeron exactamente los "
+            "autores |\\n\\n"
+            "**Un ejemplo no prueba una regla.** Si el texto sostiene algo general y "
+            "lo apoya en un caso, el apoyo es débil y la pregunta suele ir por ahí. "
+            "Un caso sí sirve para refutar una afirmación absoluta: para tumbar un "
+            "«siempre» basta un contraejemplo.\\n\\n"
+            "**Fíjate en lo que el propio emisor reconoce.** Los textos rigurosos "
+            "avisan sus límites: «el estudio midió difusión, no creencia». Esa línea "
+            "suele ser la respuesta a qué NO permite concluir el texto.\\n\\n"
+            "**Evaluar no es estar de acuerdo.** Un texto puede defender algo que uno "
+            "comparte y sostenerlo con evidencia débil. La pregunta es por la calidad "
+            "del respaldo, no por la simpatía de la conclusión: es la distinción más "
+            "difícil de esta unidad y la que más se evalúa."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -76202,6 +78080,61 @@ LESSONS: dict[str, dict] = {
                 "porque": "No se trata de decir que la conclusión sea falsa, sino que la evidencia presentada no la sostiene. Esa distinción es lo que se evalúa.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Qué debilidad tiene el respaldo que ofrece el texto?\\n\\n"
+                    "*Los cursos de meditación mejoran las notas. En nuestro colegio, los "
+                    "treinta estudiantes que se inscribieron voluntariamente en el taller "
+                    "subieron su promedio medio punto respecto del semestre anterior, "
+                    "mientras que el resto del curso se mantuvo igual.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Separo la afirmación general —«los cursos de meditación mejoran las "
+                            "notas»— del respaldo, que es un grupo de treinta estudiantes de un "
+                            "colegio."
+                        ),
+                        "porque": (
+                            "La afirmación es universal y el respaldo es un caso particular. Ese "
+                            "desajuste de alcance es lo primero que hay que medir al evaluar "
+                            "información."
+                        ),
+                    },
+                    {
+                        "accion": "Reviso cómo se formó el grupo: se inscribieron VOLUNTARIAMENTE.",
+                        "porque": (
+                            "Los que se inscriben solos pueden ser distintos del resto en algo que "
+                            "también afecta las notas: más motivación, más tiempo, más apoyo en la "
+                            "casa. El grupo no es comparable con el que no se inscribió."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Nombro el problema: la mejora podría deberse a esa diferencia previa y "
+                            "no a la meditación. Es correlación, no causa demostrada."
+                        ),
+                        "porque": (
+                            "Para atribuir la causa habría que asignar el taller al azar, de modo que "
+                            "los dos grupos se parezcan en todo lo demás. Sin eso, el dato es "
+                            "compatible con varias explicaciones."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que el respaldo es débil por la muestra pequeña y "
+                            "autoseleccionada, aunque la conclusión pudiera ser cierta."
+                        ),
+                        "porque": (
+                            "Evaluar el respaldo no es negar la afirmación. La meditación podría "
+                            "servir; lo que este texto no logra es demostrarlo, y esa es exactamente "
+                            "la distinción que la pregunta evalúa."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Juzgar si la afirmación es verdadera en vez de si está respaldada. "
             "Que dormir bien ayude a rendir puede ser cierto y aun así este "
@@ -76216,18 +78149,31 @@ LESSONS: dict[str, dict] = {
             "prueba de que entendiste, no de que recordaste."
         ),
         "theory": (
-            "**Primero extrae el criterio, después aplícalo.** No busques en el "
-            "texto la situación nueva, porque no está. Busca la regla, el "
-            "principio o el hallazgo, y recién ahí mira el caso.\n\n"
-            "**Comprueba que el caso cumpla todas las condiciones.** Si el "
-            "texto exige tres requisitos y el caso cumple dos, la respuesta "
-            "cambia. Las preguntas se construyen sobre el requisito que falta.\n\n"
-            "**No agregues criterios de tu experiencia.** Lo que tú harías o lo "
-            "que te parece razonable no cuenta. Solo cuenta lo que el texto "
-            "permite sostener.\n\n"
-            "**Si el texto marca un límite, respétalo.** Cuando un emisor dice "
-            "que su hallazgo vale para cierto rango, aplicarlo fuera de ese "
-            "rango es exactamente el error que la pregunta busca."
+            "**Primero extrae el criterio, después aplícalo.** No busques en el texto "
+            "la situación nueva, porque no está. Busca la regla, el principio o el "
+            "hallazgo, y recién ahí mira el caso.\\n\\n"
+            "**El procedimiento, en cuatro pasos:**\\n\\n"
+            "1) formular el criterio con tus palabras, como una regla;\\n"
+            "2) listar las condiciones que exige;\\n"
+            "3) comprobar el caso contra cada una;\\n"
+            "4) decidir solo con lo que el texto permite.\\n\\n"
+            "**Comprueba que el caso cumpla TODAS las condiciones.** Si el texto "
+            "exige tres requisitos y el caso cumple dos, la respuesta cambia. Las "
+            "preguntas se construyen sobre el requisito que falta, y ese requisito "
+            "suele estar en una cláusula secundaria de la regla.\\n\\n"
+            "**Condición necesaria no es lo mismo que suficiente.** Que un producto "
+            "supere el límite de azúcar es suficiente para llevar el sello; que no lo "
+            "supere no basta para descartarlo, porque puede superar el de sodio. Una "
+            "regla con varios caminos se cumple por cualquiera de ellos.\\n\\n"
+            "**Ojo con las excepciones.** «Salvo que», «excepto», «a menos que» "
+            "introducen los casos donde la regla general no se aplica, y son "
+            "justamente los que la prueba pone como caso nuevo.\\n\\n"
+            "**No agregues criterios de tu experiencia.** Lo que tú harías o lo que "
+            "te parece razonable no cuenta. Solo cuenta lo que el texto permite "
+            "sostener.\\n\\n"
+            "**Si el texto marca un límite, respétalo.** Cuando un emisor dice que su "
+            "hallazgo vale para cierto rango, cierta población o cierto período, "
+            "aplicarlo fuera de ahí es exactamente el error que la pregunta busca."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -76253,6 +78199,65 @@ LESSONS: dict[str, dict] = {
                 "porque": "Es la aplicación exacta del alcance que el texto fija. Ni niega el valor del sello ni lo extiende más allá de lo que mide.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Según el reglamento, ¿puede renovar su préstamo un usuario que lleva "
+                    "ocho días con un libro que otro usuario reservó ayer, y que además tiene "
+                    "una multa impaga de 2024?\\n\\n"
+                    "*El préstamo dura diez días y puede renovarse una vez por igual período, "
+                    "siempre que el ejemplar no esté reservado por otro usuario y que el "
+                    "solicitante no registre multas pendientes. Los usuarios con credencial "
+                    "de investigador quedan exentos del límite de renovaciones.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Extraigo el criterio y sus condiciones: se puede renovar si (a) no se ha "
+                            "renovado antes, (b) el ejemplar no está reservado y (c) el usuario no "
+                            "tiene multas pendientes."
+                        ),
+                        "porque": (
+                            "La regla está escrita con dos «que» encadenados, y cada uno es una "
+                            "condición independiente. Listarlas por separado es lo que impide pasar "
+                            "una por alto."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Comparo el caso con cada condición: los ocho días no son un obstáculo "
+                            "—el plazo es de diez—, pero el ejemplar SÍ está reservado y el usuario "
+                            "SÍ tiene una multa."
+                        ),
+                        "porque": (
+                            "El dato de los ocho días es el distractor: parece el relevante porque es "
+                            "el más concreto, y en realidad no incumple nada."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que no puede renovar, y que basta con que falle una de las "
+                            "condiciones."
+                        ),
+                        "porque": (
+                            "Las tres condiciones van unidas por «y»: son necesarias todas. Acá "
+                            "fallan dos, pero con una habría bastado."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reviso la excepción final: la exención de los investigadores es solo del "
+                            "LÍMITE de renovaciones, no de la reserva ni de las multas."
+                        ),
+                        "porque": (
+                            "Las excepciones tienen su propio alcance, y leerlas de más es el otro "
+                            "error clásico. Aunque el usuario fuera investigador, la reserva y la "
+                            "multa seguirían impidiendo la renovación."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Resolver el caso con sentido común en vez de con el texto. La "
             "situación nueva suele ser cotidiana y da la impresión de que uno "
@@ -76267,18 +78272,44 @@ LESSONS: dict[str, dict] = {
             "también lo que viene después."
         ),
         "theory": (
-            "**Para sumar o restar** hace falta el mismo denominador. Se busca "
-            "el mínimo común múltiplo de los denominadores, se amplifica cada "
-            "fracción hasta él y recién ahí se suman los numeradores. El "
-            "denominador NO se suma.\n\n"
+            "**Una fracción** $\\dfrac{a}{b}$ tiene un **numerador** $a$, que dice "
+            "cuántas partes se toman, y un **denominador** $b \\neq 0$, que dice en "
+            "cuántas partes se dividió el entero. **Amplificar** es multiplicar ambos "
+            "por un mismo número y **simplificar**, dividirlos: en los dos casos la "
+            "fracción vale lo mismo, y por eso $\\dfrac{2}{3}$, $\\dfrac{4}{6}$ y "
+            "$\\dfrac{20}{30}$ son la misma cantidad.\\n\\n"
+            "**Para sumar o restar** hace falta el mismo denominador. Se busca el "
+            "mínimo común múltiplo de los denominadores, se amplifica cada fracción "
+            "hasta él y recién ahí se suman los numeradores. El denominador NO se "
+            "suma.\\n\\n"
             "**Para multiplicar** no hace falta nada: numerador por numerador y "
-            "denominador por denominador.\n\n"
-            "**Para dividir** se multiplica por el inverso de la segunda: "
-            "$\\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\cdot \\frac{d}{c}$.\n\n"
-            "**El orden de las operaciones** manda sobre todo lo anterior: "
-            "primero paréntesis, después multiplicaciones y divisiones, y al "
-            "final sumas y restas."
-            "\n\n[figura:/preguntas/mat-recta-racionales.svg]"
+            "denominador por denominador. **Para dividir** se multiplica por el "
+            "inverso de la segunda: $\\dfrac{a}{b} \\div \\dfrac{c}{d} = \\dfrac{a}{b} "
+            "\\cdot \\dfrac{d}{c}$.\\n\\n"
+            "| Operación | Regla |\\n"
+            "|---|---|\\n"
+            "| $\\dfrac{a}{b} \\pm \\dfrac{c}{d}$ | $\\dfrac{ad \\pm bc}{bd}$, y después "
+            "se simplifica |\\n"
+            "| $\\dfrac{a}{b} \\cdot \\dfrac{c}{d}$ | $\\dfrac{ac}{bd}$ |\\n"
+            "| $\\dfrac{a}{b} \\div \\dfrac{c}{d}$ | $\\dfrac{ad}{bc}$ |\\n"
+            "| Comparar $\\dfrac{a}{b}$ con $\\dfrac{c}{d}$ | es mayor la del producto "
+            "cruzado mayor: $ad$ contra $bc$ |\\n\\n"
+            "**Comparar fracciones.** Con el mismo denominador, gana la de numerador "
+            "mayor; con el mismo numerador, gana la de denominador MENOR, porque el "
+            "entero se partió en menos pedazos. Si no coinciden ni uno ni otro, se "
+            "igualan denominadores o se multiplica en cruz.\\n\\n"
+            "**Fracción y decimal.** Un decimal finito se escribe sobre una potencia "
+            "de diez ($0{,}35 = \\frac{35}{100} = \\frac{7}{20}$). Un decimal "
+            "**periódico** también es racional: $0{,}\\overline{7} = \\dfrac{7}{9}$ y "
+            "$0{,}\\overline{27} = \\dfrac{27}{99} = \\dfrac{3}{11}$, porque el "
+            "denominador lleva tantos nueves como cifras tenga el período.\\n\\n"
+            "**Fracciones impropias y números mixtos.** $2\\frac{1}{4} = "
+            "\\dfrac{9}{4}$: se multiplica el entero por el denominador y se suma el "
+            "numerador. Conviene pasar a impropia antes de operar, nunca después.\\n\\n"
+            "**El orden de las operaciones** manda sobre todo lo anterior: primero "
+            "paréntesis, después potencias, luego multiplicaciones y divisiones, y al "
+            "final sumas y restas.\\n\\n"
+            "[figura:/preguntas/mat-recta-racionales.svg]"
         ),
         "example_statement": "Calcula $\\frac{5}{6} - \\frac{2}{9}$.",
         "example_steps": [
@@ -76299,6 +78330,53 @@ LESSONS: dict[str, dict] = {
                 "porque": "En la PAES las alternativas vienen simplificadas; una respuesta correcta sin simplificar puede no aparecer entre ellas.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": "Calcula $\\left(\\dfrac{3}{4} + \\dfrac{1}{6}\\right) \\div \\dfrac{11}{8}$.",
+                "steps": [
+                    {
+                        "accion": (
+                            "Resuelvo primero el paréntesis. El mínimo común múltiplo de $4$ y $6$ es "
+                            "$12$, así que $\\dfrac{3}{4} = \\dfrac{9}{12}$ y $\\dfrac{1}{6} = "
+                            "\\dfrac{2}{12}$."
+                        ),
+                        "porque": (
+                            "El orden de las operaciones exige el paréntesis antes que la división. Y "
+                            "para sumar hay que igualar denominadores: $12$ es el menor número al que "
+                            "llegan los dos."
+                        ),
+                    },
+                    {
+                        "accion": "Sumo los numeradores: $\\dfrac{9}{12} + \\dfrac{2}{12} = \\dfrac{11}{12}$.",
+                        "porque": (
+                            "Con el mismo denominador se suman solo los de arriba: los doceavos se "
+                            "cuentan como se cuentan manzanas, y el denominador dice de qué tamaño "
+                            "son."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Divido multiplicando por el inverso: $\\dfrac{11}{12} \\div \\dfrac{11}{8} "
+                            "= \\dfrac{11}{12} \\cdot \\dfrac{8}{11}$."
+                        ),
+                        "porque": (
+                            "Dividir por una fracción es multiplicar por la invertida. Se da vuelta "
+                            "la SEGUNDA, nunca la primera."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Simplifico antes de multiplicar: el $11$ se cancela arriba y abajo, y "
+                            "queda $\\dfrac{8}{12} = \\dfrac{2}{3}$."
+                        ),
+                        "porque": (
+                            "Simplificar antes evita trabajar con $88$ y $132$. Y el resultado es "
+                            "menor que $1$ porque se dividió por una fracción mayor que $1$."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Restar los denominadores entre sí: $\\frac{5}{6} - \\frac{2}{9} \\neq "
             "\\frac{3}{3}$. El denominador dice en cuántas partes se dividió el "
@@ -76312,18 +78390,39 @@ LESSONS: dict[str, dict] = {
             "Aparecen en notación científica, interés compuesto y funciones."
         ),
         "theory": (
-            "**Mismo base, se suman los exponentes** al multiplicar: "
-            "$a^m \\cdot a^n = a^{m+n}$. Al dividir se restan: "
-            "$\\frac{a^m}{a^n} = a^{m-n}$.\n\n"
-            "**Potencia de potencia**: se multiplican los exponentes, "
-            "$(a^m)^n = a^{m \\cdot n}$.\n\n"
-            "**Exponente negativo** significa recíproco, no número negativo: "
-            "$a^{-n} = \\frac{1}{a^n}$. Así, $2^{-3} = \\frac{1}{8}$, que es "
-            "positivo.\n\n"
-            "**Exponente cero**: $a^0 = 1$ para cualquier $a \\neq 0$.\n\n"
-            "**Raíces**: una raíz es una potencia de exponente fraccionario, "
-            "$\\sqrt[n]{a^m} = a^{m/n}$. Por eso $\\sqrt{a} = a^{1/2}$ y valen "
-            "las mismas propiedades."
+            "**Una potencia** $a^n$ es el producto de $n$ factores iguales a $a$: $a$ "
+            "es la **base** y $n$ el **exponente**. Las propiedades permiten operar "
+            "sin desarrollar nada, y todas exigen la MISMA base.\\n\\n"
+            "| Propiedad | Regla |\\n"
+            "|---|---|\\n"
+            "| Producto de igual base | $a^m \\cdot a^n = a^{m+n}$ |\\n"
+            "| Cociente de igual base | $\\dfrac{a^m}{a^n} = a^{m-n}$ |\\n"
+            "| Potencia de potencia | $(a^m)^n = a^{m \\cdot n}$ |\\n"
+            "| Potencia de un producto | $(ab)^n = a^n b^n$ |\\n"
+            "| Potencia de un cociente | $\\left(\\dfrac{a}{b}\\right)^n = "
+            "\\dfrac{a^n}{b^n}$ |\\n"
+            "| Exponente cero | $a^0 = 1$, con $a \\neq 0$ |\\n"
+            "| Exponente negativo | $a^{-n} = \\dfrac{1}{a^n}$ |\\n\\n"
+            "**El exponente negativo significa recíproco, no número negativo**: "
+            "$2^{-3} = \\dfrac{1}{8}$, que es positivo. Y "
+            "$\\left(\\dfrac{a}{b}\\right)^{-n} = \\left(\\dfrac{b}{a}\\right)^{n}$: el "
+            "signo menos da vuelta la fracción.\\n\\n"
+            "**El signo de la base.** $(-2)^4 = 16$ y $(-2)^3 = -8$: exponente par da "
+            "positivo, impar conserva el signo. Sin paréntesis es otra cosa, porque "
+            "$-2^4$ significa $-(2^4) = -16$.\\n\\n"
+            "**Raíces.** Una raíz es una potencia de exponente fraccionario: "
+            "$\\sqrt[n]{a^m} = a^{m/n}$, y por eso $\\sqrt{a} = a^{1/2}$ y valen las "
+            "mismas propiedades. La raíz de un producto se reparte ($\\sqrt{ab} = "
+            "\\sqrt{a}\\sqrt{b}$), pero la de una suma NO: $\\sqrt{9+16} = 5$, no $3+4$.\\n\\n"
+            "**Simplificar una raíz** es sacar los cuadrados perfectos: $\\sqrt{72} = "
+            "\\sqrt{36 \\cdot 2} = 6\\sqrt{2}$. Y **racionalizar** es sacar la raíz del "
+            "denominador multiplicando arriba y abajo por ella: $\\dfrac{3}{\\sqrt{2}} "
+            "= \\dfrac{3\\sqrt{2}}{2}$.\\n\\n"
+            "**Notación científica.** Todo número se escribe como $a \\times 10^n$ con "
+            "$1 \\leq a < 10$. El exponente positivo corre la coma a la derecha y el "
+            "negativo a la izquierda: $0{,}00043 = 4{,}3 \\times 10^{-4}$. Para "
+            "multiplicar se suman los exponentes, y es la forma en que la prueba "
+            "compara magnitudes muy distintas."
         ),
         "example_statement": "Calcula $\\dfrac{2^5 \\cdot 2^{-3}}{2^{-1}}$.",
         "example_steps": [
@@ -76340,6 +78439,45 @@ LESSONS: dict[str, dict] = {
                 "porque": "El resultado se pide como número, y $2^3$ significa $2 \\cdot 2 \\cdot 2$.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Escribe en notación científica el resultado de $(3 \\times 10^{5}) \\cdot "
+                    "(4 \\times 10^{-8})$."
+                ),
+                "steps": [
+                    {
+                        "accion": "Separo números y potencias: $(3 \\cdot 4) \\times (10^{5} \\cdot 10^{-8})$.",
+                        "porque": (
+                            "La multiplicación permite reordenar los factores, y así cada parte se "
+                            "resuelve con su propia regla: una es aritmética simple y la otra es la "
+                            "propiedad del producto de igual base."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Multiplico las potencias sumando exponentes: $10^{5 + (-8)} = 10^{-3}$, "
+                            "y los números dan $12$."
+                        ),
+                        "porque": (
+                            "Sumar $5$ y $-8$ da $-3$: el exponente negativo indica que el resultado "
+                            "es menor que uno, no que sea negativo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Queda $12 \\times 10^{-3}$, que todavía no está en notación científica: "
+                            "ajusto a $1{,}2 \\times 10^{-2}$."
+                        ),
+                        "porque": (
+                            "La notación científica exige un número entre $1$ y $10$ delante. Al "
+                            "correr la coma un lugar a la izquierda el número se divide por diez, así "
+                            "que el exponente sube en uno para compensar."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Creer que $2^{-3}$ es $-8$. El signo del exponente no pasa al "
             "resultado: indica que la potencia va al denominador. "
@@ -76353,17 +78491,37 @@ LESSONS: dict[str, dict] = {
             "los que más se repite en la prueba."
         ),
         "theory": (
-            "**El $p\\%$ de una cantidad** es multiplicarla por "
-            "$\\frac{p}{100}$. El 20% de 350 es $350 \\cdot 0{,}20 = 70$.\n\n"
-            "**Aumentar un $p\\%$** es multiplicar por $1 + \\frac{p}{100}$; "
-            "**descontar un $p\\%$**, por $1 - \\frac{p}{100}$. Subir 20% es "
-            "multiplicar por 1,2; bajar 15%, por 0,85.\n\n"
-            "**Los porcentajes sucesivos se multiplican, no se suman.** Subir "
-            "20% y luego bajar 20% NO devuelve al valor original.\n\n"
-            "**Proporcionalidad directa**: si una cantidad crece, la otra crece "
-            "en la misma razón, y $\\frac{a}{b}$ se mantiene constante. En la "
-            "**inversa**, el producto $a \\cdot b$ es el que se mantiene."
-            "\n\n[figura:/preguntas/mat-grilla-porcentaje.svg]"
+            "**Un porcentaje es una fracción de denominador $100$**: el $p\\%$ es "
+            "$\\dfrac{p}{100}$. Calcular el $p\\%$ de una cantidad es multiplicarla por "
+            "esa fracción: el $20\\%$ de $350$ es $350 \\cdot 0{,}20 = 70$.\\n\\n"
+            "**Los tres casos.** Toda pregunta de porcentaje es una de estas tres, y "
+            "se resuelven con la misma relación $\\text{parte} = \\text{total} \\cdot "
+            "\\dfrac{p}{100}$:\\n\\n"
+            "| Se pregunta | Cómo se obtiene |\\n"
+            "|---|---|\\n"
+            "| La parte | $\\text{total} \\cdot \\dfrac{p}{100}$ |\\n"
+            "| El porcentaje | $\\dfrac{\\text{parte}}{\\text{total}} \\cdot 100$ |\\n"
+            "| El total | $\\dfrac{\\text{parte} \\cdot 100}{p}$ |\\n\\n"
+            "**Factores multiplicativos.** Aumentar un $p\\%$ es multiplicar por $1 + "
+            "\\dfrac{p}{100}$; descontar un $p\\%$, por $1 - \\dfrac{p}{100}$. Subir "
+            "$20\\%$ es multiplicar por $1{,}2$; bajar $15\\%$, por $0{,}85$. Es el "
+            "atajo que convierte una cadena de cambios en una sola multiplicación.\\n\\n"
+            "**Los porcentajes sucesivos se multiplican, no se suman.** Subir $20\\%$ "
+            "y luego bajar $20\\%$ deja $1{,}2 \\cdot 0{,}8 = 0{,}96$, es decir un "
+            "$4\\%$ MENOS que al principio, porque cada porcentaje se aplica sobre una "
+            "base distinta.\\n\\n"
+            "**Volver atrás es dividir, no restar.** Si un precio con IVA del $19\\%$ "
+            "es $\\$11.900$, el neto es $\\dfrac{11.900}{1{,}19} = \\$10.000$. Restarle "
+            "el $19\\%$ al precio final da $\\$9.639$, que es otra cosa: el $19\\%$ "
+            "estaba calculado sobre el neto, no sobre el total.\\n\\n"
+            "**Porcentaje y puntos porcentuales.** Pasar de $20\\%$ a $30\\%$ es una "
+            "subida de diez PUNTOS porcentuales, pero de un $50\\%$. Si la pregunta "
+            "dice «puntos», se resta; si dice «en qué porcentaje varió», se divide "
+            "por el valor inicial.\\n\\n"
+            "**Variación porcentual**: $\\dfrac{\\text{valor final} - \\text{valor "
+            "inicial}}{\\text{valor inicial}} \\cdot 100$. El denominador es siempre el "
+            "valor de partida.\\n\\n"
+            "[figura:/preguntas/mat-grilla-porcentaje.svg]"
         ),
         "example_statement": (
             "Una bicicleta cuesta $\\$20.000$. En marzo sube un 20% y en abril, "
@@ -76384,6 +78542,52 @@ LESSONS: dict[str, dict] = {
                 "porque": "Subir 20% y bajar 15% no se cancelan: $1{,}20 \\cdot 0{,}85 = 1{,}02$, un alza neta del 2%.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una tienda vende un artículo en $\\$36.000$, precio que ya incluye un "
+                    "recargo del $20\\%$ sobre lo que le costó. ¿Cuánto le costó a la tienda?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico que el $20\\%$ está calculado sobre el costo, que es "
+                            "justamente el dato que falta, y no sobre los $\\$36.000$."
+                        ),
+                        "porque": (
+                            "Es el punto que decide el ejercicio: el porcentaje siempre se aplica "
+                            "sobre la base que nombra el enunciado. Acá la base es el costo, así que "
+                            "el precio de venta es el $120\\%$ de esa base."
+                        ),
+                    },
+                    {
+                        "accion": "Escribo la relación con el factor: $\\text{costo} \\cdot 1{,}20 = 36.000$.",
+                        "porque": (
+                            "Aumentar un $20\\%$ es multiplicar por $1{,}20$. Planteada así, la "
+                            "pregunta se convierte en una ecuación de un solo paso."
+                        ),
+                    },
+                    {
+                        "accion": "Despejo dividiendo: $\\text{costo} = \\dfrac{36.000}{1{,}20} = \\$30.000$.",
+                        "porque": (
+                            "Para deshacer una multiplicación se divide. Restarle el $20\\%$ a "
+                            "$36.000$ habría dado $\\$28.800$, que es la alternativa incorrecta que "
+                            "siempre aparece."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Compruebo hacia adelante: el $20\\%$ de $30.000$ es $6.000$, y $30.000 + "
+                            "6.000 = 36.000$."
+                        ),
+                        "porque": (
+                            "Rehacer el camino en el sentido del enunciado confirma la base elegida. "
+                            "Con $28.800$ no calzaría: su $20\\%$ es $5.760$ y la suma daría $34.560$."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Sumar y restar los porcentajes: creer que +20% y −15% dejan un +5% "
             "y responder $\\$21.000$. Los porcentajes se aplican uno sobre el "
@@ -76392,22 +78596,57 @@ LESSONS: dict[str, dict] = {
     },
     "alg_expresiones": {
         "intro": (
-            "Factorizar es escribir una suma como una multiplicación. Sirve para "
-            "simplificar fracciones algebraicas y para resolver ecuaciones: si un "
-            "producto es cero, alguno de sus factores es cero."
+            "Factorizar es escribir una suma como una multiplicación, y es la "
+            "herramienta con la que se simplifican fracciones algebraicas y se "
+            "resuelven ecuaciones: si un producto es cero, alguno de sus factores es "
+            "cero. Antes de factorizar hay que reconocer los productos notables, "
+            "porque son las mismas identidades leídas al revés."
         ),
         "theory": (
-            "**Factor común**: lo que se repite en todos los términos sale "
-            "afuera. $6x^2 + 9x = 3x(2x + 3)$.\n\n"
-            "**Diferencia de cuadrados**: "
-            "$a^2 - b^2 = (a+b)(a-b)$. Ojo: la SUMA de cuadrados no se factoriza "
-            "en los reales.\n\n"
-            "**Trinomio cuadrado perfecto**: "
-            "$a^2 \\pm 2ab + b^2 = (a \\pm b)^2$.\n\n"
-            "**Trinomio de la forma** $x^2 + bx + c$: se buscan dos números que "
-            "multiplicados den $c$ y sumados den $b$. Para $x^2 + 5x + 6$ son 2 y "
-            "3, así que queda $(x+2)(x+3)$."
-            "\n\n[figura:/preguntas/mat-rectangulo-expresion.svg]"
+            "**Un término algebraico** es el producto de un número, el *coeficiente*, "
+            "por potencias de letras, el *factor literal*: en $-5x^2y$ el coeficiente "
+            "es $-5$ y el factor literal es $x^2y$. Un **polinomio** es una suma de "
+            "términos y su **grado** es el mayor exponente que aparece. Dos términos "
+            "son **semejantes** si tienen el mismo factor literal, y solo esos se "
+            "pueden sumar: $3x^2 + 5x^2 = 8x^2$, mientras que $3x^2 + 5x$ no se "
+            "reduce.\\n\\n"
+            "**Productos notables.** Conviene reconocerlos de memoria, porque se usan "
+            "en los dos sentidos:\\n\\n"
+            "| Nombre | Identidad |\\n"
+            "|---|---|\\n"
+            "| Cuadrado de binomio | $(a \\pm b)^2 = a^2 \\pm 2ab + b^2$ |\\n"
+            "| Suma por diferencia | $(a+b)(a-b) = a^2 - b^2$ |\\n"
+            "| Cubo de binomio | $(a \\pm b)^3 = a^3 \\pm 3a^2b + 3ab^2 \\pm b^3$ |\\n"
+            "| Binomios con término común | $(x+p)(x+q) = x^2 + (p+q)x + pq$ |\\n"
+            "| Suma y diferencia de cubos | $a^3 \\pm b^3 = (a \\pm b)(a^2 \\mp ab + "
+            "b^2)$ |\\n\\n"
+            "El término que se olvida es el doble producto: $(a+b)^2$ **no** es $a^2 "
+            "+ b^2$. Ese $2ab$ es el que separa la respuesta correcta de casi todas "
+            "las incorrectas.\\n\\n"
+            "**Factorizar** es el camino inverso, y se busca siempre en este orden:\\n\\n"
+            "1) **Factor común**: lo que se repite en todos los términos sale afuera, "
+            "$6x^2 + 9x = 3x(2x + 3)$. Si no hay uno para todos, puede haberlo **por "
+            "grupos**: $ax + ay + bx + by = a(x+y) + b(x+y) = (a+b)(x+y)$.\\n"
+            "2) **Diferencia de cuadrados**: $a^2 - b^2 = (a+b)(a-b)$. La **suma** de "
+            "cuadrados no se factoriza en los reales.\\n"
+            "3) **Trinomio cuadrado perfecto**: $a^2 \\pm 2ab + b^2 = (a \\pm b)^2$. Se "
+            "reconoce cuando dos términos son cuadrados y el tercero es el doble "
+            "producto de sus raíces.\\n"
+            "4) **Trinomio** $x^2 + bx + c$: dos números que multiplicados den $c$ y "
+            "sumados den $b$. Para $x^2 + 5x + 6$ son $2$ y $3$, así que queda "
+            "$(x+2)(x+3)$.\\n"
+            "5) **Trinomio** $ax^2 + bx + c$: si no se ve a simple vista, se obtienen "
+            "las raíces $x_1$ y $x_2$ con la fórmula general y se escribe $a(x - "
+            "x_1)(x - x_2)$.\\n\\n"
+            "**Fracciones algebraicas.** Se simplifican factorizando arriba y abajo y "
+            "cancelando factores **completos**, nunca términos sueltos: $\\dfrac{x^2 - "
+            "4}{x + 2} = \\dfrac{(x+2)(x-2)}{x+2} = x - 2$, y eso vale solo si $x \\neq "
+            "-2$. El denominador no puede ser cero, y esa restricción se arrastra "
+            "aunque el factor haya desaparecido.\\n\\n"
+            "**Para qué sirve.** Por el **factor nulo**: si un producto es cero, "
+            "alguno de sus factores es cero. Por eso $x^2 - 4 = 0$ se resuelve como "
+            "$(x+2)(x-2) = 0$, de donde $x = -2$ o $x = 2$.\\n\\n"
+            "[figura:/preguntas/mat-rectangulo-expresion.svg]"
         ),
         "example_statement": "Factoriza completamente $2x^2 - 8$.",
         "example_steps": [
@@ -76424,10 +78663,64 @@ LESSONS: dict[str, dict] = {
                 "porque": "«Completamente» significa que ningún factor se puede seguir descomponiendo, y $x+2$ y $x-2$ ya no se pueden.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Simplifica $\\dfrac{x^2 + 5x + 6}{x^2 - 9}$ e indica para qué valores de "
+                    "$x$ vale la simplificación."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Factorizo el numerador: busco dos números que multiplicados den $6$ y "
+                            "sumados $5$, que son $2$ y $3$. Queda $(x+2)(x+3)$."
+                        ),
+                        "porque": (
+                            "Es el trinomio $x^2 + bx + c$, el cuarto caso de la lista. Con enteros "
+                            "chicos se ve más rápido que con la fórmula general."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Factorizo el denominador: $x^2 - 9$ es una diferencia de cuadrados con "
+                            "$a = x$ y $b = 3$, así que es $(x+3)(x-3)$."
+                        ),
+                        "porque": (
+                            "$9 = 3^2$ y los dos términos se están restando, que es exactamente la "
+                            "forma $a^2 - b^2$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Cancelo el factor $(x+3)$, que aparece completo arriba y abajo: queda "
+                            "$\\dfrac{x+2}{x-3}$."
+                        ),
+                        "porque": (
+                            "Se cancelan factores, nunca términos sueltos. Si el $(x+3)$ hubiera "
+                            "estado sumado y no multiplicado, no se podría tocar."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Anoto las restricciones del denominador original: $x \\neq -3$ y $x \\neq "
+                            "3$."
+                        ),
+                        "porque": (
+                            "El denominador de partida se anula en esos dos valores, y eso no cambia "
+                            "porque uno de los factores haya desaparecido al simplificar. La "
+                            "expresión simplificada solo equivale a la original donde la original "
+                            "existe."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
-            "Detenerse en $2(x^2 - 4)$ y darlo por factorizado, o intentar "
-            "factorizar $x^2 + 4$. La suma de cuadrados no tiene factorización "
-            "en los números reales."
+            "Cancelar términos en vez de factores: escribir $\\dfrac{x^2 - 4}{x} = x - "
+            "4$ tachando la $x$, o detenerse en $2(x^2 - 4)$ y darlo por factorizado. "
+            "Y el clásico de los productos notables: $(a+b)^2 = a^2 + b^2$, que se "
+            "olvida del doble producto. La suma de cuadrados, en cambio, no tiene "
+            "factorización en los números reales."
         ),
     },
     "alg_proporcionalidad": {
@@ -76438,27 +78731,48 @@ LESSONS: dict[str, dict] = {
             "magnitud sube, ¿la otra sube o baja?"
         ),
         "theory": (
-            "**Proporcionalidad directa.** Las dos magnitudes suben y bajan "
-            "juntas, y lo que se mantiene fijo es el COCIENTE: "
-            "$\\frac{y}{x} = k$, o lo que es lo mismo, $y = kx$. La constante "
-            "$k$ es el valor de una unidad: el precio de un kilo, los "
-            "kilómetros de un centímetro del mapa. Su gráfico es una recta que "
-            "pasa por el origen.\n\n"
-            "**Proporcionalidad inversa.** Una sube cuando la otra baja, y lo "
-            "que se mantiene fijo es el PRODUCTO: $x \\cdot y = k$, o sea "
-            "$y = \\frac{k}{x}$. La constante es el total del trabajo: los "
-            "días-persona de una obra, los kilómetros de un viaje. Su gráfico "
-            "es una curva que se acerca a los ejes sin tocarlos.\n\n"
-            "**Cómo saber cuál es cuál.** No basta con mirar si una sube y la "
-            "otra baja: hay que probar con los números. Divide un par y "
-            "después otro; si da lo mismo, es directa. Multiplica un par y "
-            "después otro; si da lo mismo, es inversa. Si ninguna de las dos "
-            "cosas se cumple para TODOS los pares, no hay proporcionalidad.\n\n"
-            "**Cuidado con la trampa del +.** $y = 3x$ es proporcional; "
-            "$y = 3x + 5$ no lo es, aunque crezca igual de parejo. La prueba "
-            "rápida: en una proporcionalidad directa, si $x$ vale 0 entonces "
-            "$y$ vale 0."
-            "\n\n[figura:/preguntas/mat-proporcionalidad-inversa.svg]"
+            "**Una razón** es el cociente entre dos cantidades, $a : b$ o "
+            "$\\dfrac{a}{b}$, y una **proporción** es la igualdad de dos razones, "
+            "$\\dfrac{a}{b} = \\dfrac{c}{d}$. De ahí sale la **propiedad fundamental**: "
+            "en toda proporción los productos cruzados son iguales, $a \\cdot d = b "
+            "\\cdot c$. Es la que justifica la regla de tres.\\n\\n"
+            "**Proporcionalidad directa.** Las dos magnitudes suben y bajan juntas, y "
+            "lo que se mantiene fijo es el COCIENTE: $\\dfrac{y}{x} = k$, o lo que es "
+            "lo mismo, $y = kx$. La constante $k$ es el valor de una unidad: el "
+            "precio de un kilo, los kilómetros que representa un centímetro del mapa. "
+            "Su gráfico es una recta que pasa por el origen.\\n\\n"
+            "**Proporcionalidad inversa.** Una sube cuando la otra baja, y lo que se "
+            "mantiene fijo es el PRODUCTO: $x \\cdot y = k$, o sea $y = \\dfrac{k}{x}$. "
+            "La constante es el total del trabajo: los días-persona de una obra, los "
+            "kilómetros de un viaje. Su gráfico es una hipérbola que se acerca a los "
+            "ejes sin tocarlos.\\n\\n"
+            "| | Directa | Inversa |\\n"
+            "|---|---|---|\\n"
+            "| Se conserva | el cociente $y/x$ | el producto $x \\cdot y$ |\\n"
+            "| Fórmula | $y = kx$ | $y = k/x$ |\\n"
+            "| Al duplicar $x$ | $y$ se duplica | $y$ se reduce a la mitad |\\n"
+            "| Gráfico | recta por el origen | hipérbola |\\n\\n"
+            "**Cómo saber cuál es cuál.** No basta con mirar si una sube y la otra "
+            "baja: hay que probar con los números. Divide un par y después otro; si "
+            "da lo mismo, es directa. Multiplica un par y después otro; si da lo "
+            "mismo, es inversa. Si ninguna de las dos cosas se cumple para TODOS los "
+            "pares, no hay proporcionalidad.\\n\\n"
+            "**Cuidado con la trampa del $+$.** $y = 3x$ es proporcional; $y = 3x + "
+            "5$ no lo es, aunque crezca igual de parejo. La prueba rápida: en una "
+            "proporcionalidad directa, si $x$ vale $0$ entonces $y$ vale $0$.\\n\\n"
+            "**Proporcionalidad compuesta.** Cuando intervienen tres magnitudes "
+            "—obreros, días y obra— se resuelve una variable a la vez: se fija una, "
+            "se ajusta la otra. El atajo seguro es la constante con significado, del "
+            "tipo «días-persona», porque es la cantidad que el problema conserva.\\n\\n"
+            "**Reparto proporcional.** Repartir $T$ en partes proporcionales a $a$, "
+            "$b$ y $c$ es multiplicar $T$ por $\\dfrac{a}{a+b+c}$, $\\dfrac{b}{a+b+c}$ "
+            "y $\\dfrac{c}{a+b+c}$. La suma de las partes tiene que devolver $T$: es "
+            "la comprobación de un segundo.\\n\\n"
+            "**Escalas y porcentajes son proporciones.** Una escala $1 : 50.000$ dice "
+            "que $1$ cm en el plano son $50.000$ cm reales, o sea $500$ m. Y un $p\\%$ "
+            "es la proporción $\\dfrac{p}{100}$, así que todo problema de porcentaje "
+            "se puede plantear como regla de tres.\\n\\n"
+            "[figura:/preguntas/mat-proporcionalidad-inversa.svg]"
         ),
         "example_statement": (
             "Seis pintores terminan un edificio en 10 días. Trabajando al mismo "
@@ -76482,6 +78796,45 @@ LESSONS: dict[str, dict] = {
                 "porque": "Comprobar el sentido del resultado caza al tiro el error más común, que es aplicar la regla de tres directa donde correspondía la inversa.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "En un mapa a escala $1 : 250.000$, dos ciudades están a $7$ cm de "
+                    "distancia. ¿Cuántos kilómetros las separan en la realidad?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Leo la escala como una proporcionalidad directa: cada $1$ cm del mapa "
+                            "son $250.000$ cm reales, así que la constante es $k = 250.000$."
+                        ),
+                        "porque": (
+                            "Al doble de distancia en el mapa le corresponde el doble de distancia "
+                            "real, y a $0$ cm le corresponden $0$ km: es el comportamiento de $y = "
+                            "kx$."
+                        ),
+                    },
+                    {
+                        "accion": "Multiplico: $7 \\cdot 250.000 = 1.750.000$ cm.",
+                        "porque": (
+                            "La constante es el valor de una unidad, así que el total se obtiene "
+                            "multiplicándola por cuántas unidades hay."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Paso a kilómetros dividiendo por $100.000$, porque $1$ km son $1.000$ m "
+                            "y cada metro son $100$ cm: $1.750.000 \\div 100.000 = 17{,}5$ km."
+                        ),
+                        "porque": (
+                            "La escala viene en centímetros y la pregunta pide kilómetros. Cambiar de "
+                            "unidad al final, y no a mitad de camino, evita arrastrar el error a los "
+                            "dos pasos anteriores."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Usar la regla de tres directa para todo. Frente a \"6 pintores en "
             "10 días, ¿y 4 pintores?\" la respuesta automática suele ser "
@@ -76497,18 +78850,42 @@ LESSONS: dict[str, dict] = {
             "despejar la incógnita."
         ),
         "theory": (
-            "**Lo que se hace a un lado se hace al otro.** Sumar, restar, "
-            "multiplicar o dividir por lo mismo a ambos lados mantiene la "
-            "igualdad.\n\n"
-            "**El orden conviene así**: primero se eliminan paréntesis, después "
-            "se juntan las incógnitas a un lado y los números al otro, y recién "
-            "al final se divide.\n\n"
-            "**Inecuaciones**: se resuelven igual, con UNA diferencia crítica. "
-            "Al multiplicar o dividir por un número **negativo**, el signo de "
-            "desigualdad se da vuelta: de $-2x < 6$ se pasa a $x > -3$.\n\n"
-            "**Siempre conviene verificar**: reemplazar la solución en la "
-            "ecuación original y comprobar que los dos lados dan lo mismo."
-            "\n\n[figura:/preguntas/mat-proporcionalidad-directa.svg]"
+            "**Una ecuación** es una igualdad con una incógnita, y **resolverla** es "
+            "encontrar el valor que la hace verdadera. Ese valor es su *solución*. "
+            "Distinto es una **identidad**, que se cumple para cualquier valor "
+            "($2(x+1) = 2x+2$), y una ecuación **sin solución**, que no se cumple "
+            "para ninguno ($x = x + 1$).\\n\\n"
+            "**Propiedades de la igualdad.** Lo que se hace a un lado se hace al "
+            "otro: se puede sumar o restar lo mismo en ambos lados, y multiplicar o "
+            "dividir ambos lados por un número distinto de cero. Multiplicar por cero "
+            "está prohibido, porque convierte cualquier ecuación en $0 = 0$.\\n\\n"
+            "**El orden conviene así**: primero se eliminan paréntesis, después se "
+            "juntan las incógnitas a un lado y los números al otro, y recién al final "
+            "se divide por el coeficiente.\\n\\n"
+            "**Con fracciones**, se multiplica toda la ecuación por el mínimo común "
+            "múltiplo de los denominadores y desaparecen de una vez. En $\\dfrac{x}{2} "
+            "+ \\dfrac{x}{3} = 5$ se multiplica por $6$ y queda $3x + 2x = 30$.\\n\\n"
+            "**Inecuaciones.** Se resuelven igual, con UNA diferencia crítica: al "
+            "multiplicar o dividir por un número **negativo**, el signo de "
+            "desigualdad se da vuelta. De $-2x < 6$ se pasa a $x > -3$.\\n\\n"
+            "| Símbolo | Se lee | Intervalo |\\n"
+            "|---|---|---|\\n"
+            "| $x < a$ | menor que | $(-\\infty, a)$ |\\n"
+            "| $x \\leq a$ | menor o igual | $(-\\infty, a]$ |\\n"
+            "| $x > a$ | mayor que | $(a, +\\infty)$ |\\n"
+            "| $a < x \\leq b$ | entre, con $b$ incluido | $(a, b]$ |\\n\\n"
+            "El paréntesis excluye el extremo y el corchete lo incluye. La solución "
+            "de una inecuación es un conjunto de números, no uno solo: por eso se "
+            "responde con un intervalo.\\n\\n"
+            "**Modelar el enunciado.** Casi siempre el trabajo está antes del "
+            "álgebra: decidir qué representa la incógnita y escribir la frase como "
+            "igualdad. «El doble de un número disminuido en tres» es $2x - 3$, "
+            "mientras que «el doble de un número disminuido en tres» entendido como "
+            "$2(x-3)$ es otra cosa: el paréntesis cambia el resultado.\\n\\n"
+            "**Siempre conviene verificar**: reemplazar la solución en la ecuación "
+            "original y comprobar que los dos lados dan lo mismo. Detecta cualquier "
+            "error de signo en diez segundos.\\n\\n"
+            "[figura:/preguntas/mat-proporcionalidad-directa.svg]"
         ),
         "example_statement": "Resuelve $3(x - 2) + 4 = 2x + 7$.",
         "example_steps": [
@@ -76533,6 +78910,50 @@ LESSONS: dict[str, dict] = {
                 "porque": "La verificación detecta cualquier error de signo en menos de diez segundos, y en la prueba vale lo mismo que resolver bien.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Resuelve la inecuación $4 - 3x \\geq 19$ y escribe la solución como "
+                    "intervalo."
+                ),
+                "steps": [
+                    {
+                        "accion": "Resto $4$ a los dos lados: $-3x \\geq 15$.",
+                        "porque": (
+                            "Sumar o restar lo mismo en ambos lados no altera una desigualdad, así "
+                            "que este paso es idéntico al de una ecuación."
+                        ),
+                    },
+                    {
+                        "accion": "Divido por $-3$ y DOY VUELTA el signo: $x \\leq -5$.",
+                        "porque": (
+                            "Dividir por un negativo invierte el orden de los números: $6 > 3$, pero "
+                            "$-6 < -3$. Si no se da vuelta el signo, la solución queda al revés y esa "
+                            "es justamente la alternativa incorrecta que se ofrece."
+                        ),
+                    },
+                    {
+                        "accion": "Escribo la solución como intervalo: $(-\\infty, -5]$.",
+                        "porque": (
+                            "El corchete en el $-5$ es porque la desigualdad incluye el igual: $x = "
+                            "-5$ sí cumple. Del otro lado va paréntesis porque el infinito no es un "
+                            "número que se pueda alcanzar."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Compruebo con un valor del intervalo, $x = -6$: $4 - 3(-6) = 4 + 18 = "
+                            "22$, y $22 \\geq 19$ es verdadero."
+                        ),
+                        "porque": (
+                            "En una inecuación la verificación se hace con cualquier número de la "
+                            "solución, no con uno solo puntual: si el elegido cumple y un número de "
+                            "afuera no cumple, el intervalo está bien orientado."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "En las inecuaciones, no dar vuelta el signo al dividir por un "
             "negativo. Si $-2x < 6$, dividir por −2 obliga a escribir $x > -3$, "
@@ -76546,17 +78967,41 @@ LESSONS: dict[str, dict] = {
             "donde se cruzan las dos rectas."
         ),
         "theory": (
-            "**Sustitución**: se despeja una incógnita en una ecuación y se "
-            "reemplaza en la otra. Conviene cuando alguna ya está casi "
-            "despejada.\n\n"
-            "**Igualación**: se despeja la MISMA incógnita en ambas y se igualan "
-            "las expresiones.\n\n"
-            "**Reducción (o suma y resta)**: se multiplican las ecuaciones por "
-            "los números necesarios para que una incógnita quede con "
-            "coeficientes opuestos, y se suman para que desaparezca.\n\n"
-            "**La solución es un par $(x, y)$**, no un solo número, y tiene que "
-            "cumplir LAS DOS ecuaciones. Siempre se verifica en ambas."
-            "\n\n[figura:/preguntas/mat-sistema-rectas.svg]"
+            "**Un sistema $2\\times 2$** son dos ecuaciones lineales con dos "
+            "incógnitas, y su solución es el par $(x, y)$ que cumple las dos a la "
+            "vez. Geométricamente, cada ecuación es una recta y la solución es el "
+            "punto donde se cortan.\\n\\n"
+            "**Sustitución**: se despeja una incógnita en una ecuación y se reemplaza "
+            "en la otra. Conviene cuando alguna ya está casi despejada, como en $y = "
+            "3x - 1$.\\n\\n"
+            "**Igualación**: se despeja la MISMA incógnita en las dos y se igualan "
+            "las expresiones resultantes.\\n\\n"
+            "**Reducción (o suma y resta)**: se multiplican las ecuaciones por los "
+            "números necesarios para que una incógnita quede con coeficientes "
+            "opuestos, y se suman para que desaparezca. Es el más rápido cuando los "
+            "coeficientes ya son parecidos.\\n\\n"
+            "Los tres métodos dan el mismo par; se elige por comodidad, no por "
+            "corrección.\\n\\n"
+            "**Cuántas soluciones hay.** Para $a_1x + b_1y = c_1$ y $a_2x + b_2y = "
+            "c_2$:\\n\\n"
+            "| Caso | Condición | Las rectas |\\n"
+            "|---|---|---|\\n"
+            "| Una solución | $\\dfrac{a_1}{a_2} \\neq \\dfrac{b_1}{b_2}$ | se cortan |\\n"
+            "| Infinitas | $\\dfrac{a_1}{a_2} = \\dfrac{b_1}{b_2} = \\dfrac{c_1}{c_2}$ | "
+            "son la misma |\\n"
+            "| Ninguna | $\\dfrac{a_1}{a_2} = \\dfrac{b_1}{b_2} \\neq \\dfrac{c_1}{c_2}$ "
+            "| son paralelas |\\n\\n"
+            "**Cómo se ve al resolver**: si al eliminar una incógnita queda $0 = 0$, "
+            "hay infinitas soluciones; si queda algo imposible como $0 = 5$, no hay "
+            "ninguna.\\n\\n"
+            "**Plantear el sistema** es la mitad del ejercicio. Dos frases del "
+            "enunciado dan dos ecuaciones: una suele ser el total de unidades y la "
+            "otra el total de dinero, de edades o de kilos. Conviene escribir primero "
+            "qué representa cada letra, con su unidad, y recién después armar las "
+            "ecuaciones.\\n\\n"
+            "**La solución es un par**, no un solo número, y tiene que cumplir LAS "
+            "DOS ecuaciones: siempre se verifica en ambas.\\n\\n"
+            "[figura:/preguntas/mat-sistema-rectas.svg]"
         ),
         "example_statement": "Resuelve el sistema $x + y = 12$ ; $x - y = 2$.",
         "example_steps": [
@@ -76577,6 +79022,68 @@ LESSONS: dict[str, dict] = {
                 "porque": "Verificar en la ecuación que no se usó para despejar es lo que detecta un error de reemplazo.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "En una feria se vendieron $30$ entradas, entre adultos a $\\$4.000$ y "
+                    "niños a $\\$2.500$, y se recaudaron $\\$97.500$. ¿Cuántas entradas de "
+                    "adulto se vendieron?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Defino las incógnitas con su unidad: $a$ es la cantidad de entradas de "
+                            "adulto y $n$ la de niños."
+                        ),
+                        "porque": (
+                            "Sin decidir esto primero, las dos ecuaciones se mezclan: una cuenta "
+                            "entradas y la otra pesos, y hay que saber cuál es cuál."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Escribo las dos ecuaciones: $a + n = 30$ por el total de entradas, y "
+                            "$4000a + 2500n = 97500$ por la recaudación."
+                        ),
+                        "porque": (
+                            "Cada frase del enunciado aporta una ecuación. La primera cuenta "
+                            "personas; la segunda, plata: son dos condiciones distintas sobre los "
+                            "mismos dos números."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Despejo $n = 30 - a$ en la primera y lo reemplazo en la segunda: $4000a "
+                            "+ 2500(30 - a) = 97500$."
+                        ),
+                        "porque": (
+                            "La primera ecuación ya está casi despejada, así que la sustitución es el "
+                            "camino más corto. Reemplazar deja una sola incógnita."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Desarrollo y despejo: $4000a + 75000 - 2500a = 97500$, o sea $1500a = "
+                            "22500$, de donde $a = 15$."
+                        ),
+                        "porque": (
+                            "El $2500$ multiplica a todo el paréntesis, incluido el $-a$. De ahí "
+                            "salen los $75.000$ que se restan a los $97.500$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo $n = 30 - 15 = 15$ y verifico en la ecuación del dinero: $4000 "
+                            "\\cdot 15 + 2500 \\cdot 15 = 60000 + 37500 = 97500$. Correcto."
+                        ),
+                        "porque": (
+                            "Verificar en la ecuación que no se usó para despejar es lo que detecta "
+                            "un error de reemplazo. Y la pregunta pedía solo los adultos: son $15$."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Encontrar $x$ y entregar eso como respuesta. La solución de un "
             "sistema 2x2 son los dos valores; una alternativa con el $x$ correcto "
@@ -76590,17 +79097,37 @@ LESSONS: dict[str, dict] = {
             "sube y baja: áreas, trayectorias, máximos."
         ),
         "theory": (
-            "**Forma general**: $ax^2 + bx + c = 0$, con $a \\neq 0$.\n\n"
-            "**Fórmula general**: "
-            "$x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$. Sirve siempre.\n\n"
-            "**El discriminante** $\\Delta = b^2 - 4ac$ dice cuántas soluciones "
-            "hay antes de calcularlas: si $\\Delta > 0$ hay dos, si "
-            "$\\Delta = 0$ hay una, y si $\\Delta < 0$ no hay solución "
-            "real.\n\n"
-            "**Por factorización**: si la ecuación se puede escribir como "
-            "$(x - p)(x - q) = 0$, entonces $x = p$ o $x = q$, porque un producto "
-            "solo da cero si alguno de sus factores es cero."
-            "\n\n[figura:/preguntas/mat-parabola-vertice.svg]"
+            "**Forma general**: $ax^2 + bx + c = 0$, con $a \\neq 0$. Si $a$ fuera "
+            "cero no habría término cuadrático y la ecuación sería lineal.\\n\\n"
+            "**Fórmula general**: $x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$. Sirve "
+            "siempre, y el $\\pm$ es el que produce las dos soluciones.\\n\\n"
+            "**El discriminante** $\\Delta = b^2 - 4ac$ dice cuántas hay antes de "
+            "calcularlas:\\n\\n"
+            "| Discriminante | Soluciones reales | La parábola |\\n"
+            "|---|---|---|\\n"
+            "| $\\Delta > 0$ | dos distintas | corta el eje $X$ en dos puntos |\\n"
+            "| $\\Delta = 0$ | una (doble) | toca el eje $X$ en el vértice |\\n"
+            "| $\\Delta < 0$ | ninguna | no toca el eje $X$ |\\n\\n"
+            "**Por factorización**: si la ecuación se puede escribir como $(x - p)(x "
+            "- q) = 0$, entonces $x = p$ o $x = q$, porque un producto solo da cero "
+            "si alguno de sus factores es cero. Con coeficientes enteros chicos es "
+            "más rápido y más seguro que la fórmula.\\n\\n"
+            "**Ecuaciones incompletas.** Cuando falta un término no hace falta la "
+            "fórmula: $ax^2 + bx = 0$ se factoriza como $x(ax + b) = 0$, de donde $x "
+            "= 0$ o $x = -\\dfrac{b}{a}$; y $ax^2 + c = 0$ se despeja como $x^2 = "
+            "-\\dfrac{c}{a}$, que tiene dos raíces opuestas o ninguna real.\\n\\n"
+            "**Suma y producto de las raíces.** Sin resolver nada, $x_1 + x_2 = "
+            "-\\dfrac{b}{a}$ y $x_1 \\cdot x_2 = \\dfrac{c}{a}$. Es la vía corta cuando "
+            "la pregunta pide la suma, el producto, o armar una ecuación a partir de "
+            "sus raíces: $x^2 - (x_1+x_2)x + x_1x_2 = 0$.\\n\\n"
+            "**Completar el cuadrado.** Sumando y restando "
+            "$\\left(\\dfrac{b}{2}\\right)^2$ la ecuación se reescribe como $(x + h)^2 = "
+            "k$. Es de donde sale la fórmula general y lo que permite ver el vértice "
+            "de la parábola.\\n\\n"
+            "**No toda solución sirve.** Si la incógnita es una longitud, una "
+            "cantidad de personas o un tiempo, la raíz negativa se descarta: la "
+            "ecuación no sabe de qué está hablando el problema.\\n\\n"
+            "[figura:/preguntas/mat-parabola-vertice.svg]"
         ),
         "example_statement": "Resuelve $x^2 - 5x + 6 = 0$.",
         "example_steps": [
@@ -76621,6 +79148,65 @@ LESSONS: dict[str, dict] = {
                 "porque": "Esta es la propiedad que hace útil factorizar, y es la que la prueba evalúa.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un terreno rectangular tiene $3$ metros más de largo que de ancho y su "
+                    "área es de $130\\ \\text{m}^2$. ¿Cuánto mide el ancho?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Llamo $x$ al ancho en metros; el largo es entonces $x + 3$, y el área es "
+                            "$x(x+3) = 130$."
+                        ),
+                        "porque": (
+                            "«Tres metros más de largo que de ancho» es una relación entre las dos "
+                            "medidas, así que con una sola incógnita quedan descritas ambas."
+                        ),
+                    },
+                    {
+                        "accion": "Ordeno la ecuación en la forma general: $x^2 + 3x - 130 = 0$.",
+                        "porque": (
+                            "La fórmula y el discriminante exigen que todo esté igualado a cero; con "
+                            "la ecuación sin ordenar, el $c$ se confunde con el área."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo el discriminante: $\\Delta = 3^2 - 4 \\cdot 1 \\cdot (-130) = 9 + "
+                            "520 = 529$, y $\\sqrt{529} = 23$."
+                        ),
+                        "porque": (
+                            "Restar un negativo suma, y ahí se cae la mitad de los cálculos. Que el "
+                            "discriminante sea un cuadrado perfecto avisa además que las raíces son "
+                            "enteras."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Aplico la fórmula: $x = \\dfrac{-3 \\pm 23}{2}$, así que $x = 10$ o $x = "
+                            "-13$."
+                        ),
+                        "porque": (
+                            "El $\\pm$ entrega las dos soluciones de la ecuación, y conviene "
+                            "escribirlas las dos antes de decidir cuál sirve."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Descarto $x = -13$ porque un ancho no puede ser negativo: el ancho es "
+                            "$10$ m y el largo $13$ m, con área $10 \\cdot 13 = 130$."
+                        ),
+                        "porque": (
+                            "La ecuación no sabe que $x$ es una longitud. El descarte lo hace el "
+                            "contexto, y la comprobación del área confirma que la raíz elegida es la "
+                            "correcta."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Entregar una sola solución. Una cuadrática con discriminante "
             "positivo tiene dos, y el enunciado suele pedir la suma, el producto "
@@ -76634,17 +79220,41 @@ LESSONS: dict[str, dict] = {
             "cambia de dirección una vez."
         ),
         "theory": (
+            "**Una función** asigna a cada valor de entrada exactamente un valor de "
+            "salida. El conjunto de entradas admitidas es el **dominio** y el de "
+            "salidas efectivas, el **recorrido**. La notación $f(3) = 11$ se lee «la "
+            "imagen de $3$ es $11$», y evaluar una función es reemplazar la letra por "
+            "el número.\\n\\n"
             "**Función lineal**: $f(x) = mx + n$. Su gráfico es una recta. La "
-            "**pendiente** $m$ dice cuánto sube $y$ cuando $x$ aumenta en 1: si "
-            "$m > 0$ la recta sube, si $m < 0$ baja. El **coeficiente de "
-            "posición** $n$ es donde corta al eje $Y$.\n\n"
-            "**Pendiente entre dos puntos**: "
-            "$m = \\dfrac{y_2 - y_1}{x_2 - x_1}$.\n\n"
-            "**Función cuadrática**: $f(x) = ax^2 + bx + c$. Su gráfico es una "
-            "parábola: abre hacia arriba si $a > 0$ y hacia abajo si $a < 0$.\n\n"
-            "**Vértice**: está en $x = -\\dfrac{b}{2a}$, y ahí ocurre el mínimo "
-            "(si abre hacia arriba) o el máximo (si abre hacia abajo)."
-            "\n\n[figura:/preguntas/mat-tabla-funcion.svg]"
+            "**pendiente** $m$ dice cuánto cambia $y$ cuando $x$ aumenta en $1$: si "
+            "$m > 0$ la recta sube, si $m < 0$ baja, y si $m = 0$ es horizontal. El "
+            "**coeficiente de posición** $n$ es donde corta al eje $Y$, es decir "
+            "$f(0)$.\\n\\n"
+            "**Pendiente entre dos puntos**: $m = \\dfrac{y_2 - y_1}{x_2 - x_1}$, el "
+            "cambio vertical dividido por el horizontal, en ese orden.\\n\\n"
+            "Dos rectas son **paralelas** si tienen la misma pendiente ($m_1 = m_2$) "
+            "y **perpendiculares** si el producto de sus pendientes es $-1$ ($m_1 "
+            "\\cdot m_2 = -1$).\\n\\n"
+            "**Función cuadrática**: $f(x) = ax^2 + bx + c$, con $a \\neq 0$. Su "
+            "gráfico es una parábola que abre hacia arriba si $a > 0$ y hacia abajo "
+            "si $a < 0$; mientras mayor es $|a|$, más angosta.\\n\\n"
+            "| Elemento | Dónde está |\\n"
+            "|---|---|\\n"
+            "| Vértice | $x_v = -\\dfrac{b}{2a}$, y $y_v = f(x_v)$ |\\n"
+            "| Eje de simetría | la recta vertical $x = -\\dfrac{b}{2a}$ |\\n"
+            "| Corte con el eje $Y$ | $(0, c)$ |\\n"
+            "| Cortes con el eje $X$ | las raíces de $ax^2+bx+c=0$ |\\n\\n"
+            "**El vértice es el máximo o el mínimo**: mínimo si la parábola abre "
+            "hacia arriba, máximo si abre hacia abajo. Toda pregunta de «la ganancia "
+            "máxima», «la altura máxima» o «el costo mínimo» se responde calculando "
+            "el vértice.\\n\\n"
+            "**Forma canónica**: $f(x) = a(x - h)^2 + k$, donde $(h, k)$ es "
+            "directamente el vértice. Se obtiene completando el cuadrado, y es la "
+            "forma en que el gráfico se lee sin calcular nada.\\n\\n"
+            "**Leer un gráfico o una tabla.** En una tabla, la función es lineal si a "
+            "incrementos iguales de $x$ le corresponden incrementos iguales de $y$; "
+            "si esas diferencias cambian de forma constante, es cuadrática.\\n\\n"
+            "[figura:/preguntas/mat-tabla-funcion.svg]"
         ),
         "example_statement": (
             "Una recta pasa por los puntos $(1, 5)$ y $(3, 11)$. Encuentra su "
@@ -76668,6 +79278,59 @@ LESSONS: dict[str, dict] = {
                 "porque": "Si el segundo punto no calzara, el error estaría en la pendiente.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una pelota lanzada hacia arriba alcanza una altura $h(t) = -5t^2 + 20t$ "
+                    "metros a los $t$ segundos. ¿Cuál es la altura máxima y en qué instante "
+                    "la alcanza?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico los coeficientes: $a = -5$ y $b = 20$. Como $a < 0$, la "
+                            "parábola abre hacia abajo y su vértice es un máximo."
+                        ),
+                        "porque": (
+                            "Si abriera hacia arriba el vértice sería el punto más bajo y la pregunta "
+                            "por un máximo no tendría respuesta finita. El signo de $a$ decide qué se "
+                            "está buscando."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo el instante del vértice: $t_v = -\\dfrac{b}{2a} = -\\dfrac{20}{2 "
+                            "\\cdot (-5)} = 2$ segundos."
+                        ),
+                        "porque": (
+                            "El vértice está en $-b/2a$, y acá el denominador es negativo: dos signos "
+                            "menos dan un tiempo positivo, que es el único que tiene sentido físico."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Evalúo la función en ese instante: $h(2) = -5 \\cdot 2^2 + 20 \\cdot 2 = "
+                            "-20 + 40 = 20$ metros."
+                        ),
+                        "porque": (
+                            "El $-b/2a$ entrega CUÁNDO, no CUÁNTO. La altura es la imagen de ese "
+                            "instante, así que hay que reemplazarlo en la función."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Compruebo con la simetría: $h(0) = 0$ y $h(4) = -80 + 80 = 0$, y el "
+                            "punto medio entre $0$ y $4$ es justamente $2$."
+                        ),
+                        "porque": (
+                            "La parábola es simétrica respecto del eje que pasa por el vértice, así "
+                            "que dos instantes con la misma altura tienen el vértice exactamente al "
+                            "medio. Es la comprobación más rápida de que el vértice quedó bien."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Invertir la pendiente y calcular $\\frac{x_2 - x_1}{y_2 - y_1}$. "
             "La pendiente es el cambio vertical dividido por el horizontal, en "
@@ -76681,16 +79344,40 @@ LESSONS: dict[str, dict] = {
             "enunciado para ver si se confunden."
         ),
         "theory": (
-            "**Rectángulo**: área $= a \\cdot b$, perímetro $= 2(a+b)$.\n\n"
-            "**Triángulo**: área $= \\dfrac{base \\cdot altura}{2}$. La altura "
-            "es perpendicular a la base, no el lado inclinado.\n\n"
-            "**Círculo**: área $= \\pi r^2$, perímetro (circunferencia) "
-            "$= 2\\pi r$. El diámetro es $2r$: si el enunciado da el diámetro, "
-            "hay que dividirlo entre 2 antes de usar la fórmula.\n\n"
-            "**Trapecio**: área $= \\dfrac{(B + b) \\cdot h}{2}$.\n\n"
-            "**Figuras compuestas**: se descomponen en figuras conocidas y se "
-            "suman o restan sus áreas."
-            "\n\n[figura:/preguntas/mat-paralelogramo-altura.svg]"
+            "**Perímetro** es la longitud del contorno y se mide en unidades de largo "
+            "(cm, m). **Área** es la superficie que encierra y se mide en unidades "
+            "cuadradas (cm², m²). Dos figuras con el mismo perímetro pueden tener "
+            "áreas muy distintas, así que una no se deduce de la otra.\\n\\n"
+            "**La altura es siempre perpendicular a la base**, nunca el lado "
+            "inclinado. En un paralelogramo o en un triángulo obtusángulo la altura "
+            "puede caer fuera de la figura, y sigue siendo la que va en la fórmula.\\n\\n"
+            "| Figura | Área | Perímetro |\\n"
+            "|---|---|---|\\n"
+            "| Cuadrado de lado $a$ | $a^2$ | $4a$ |\\n"
+            "| Rectángulo de lados $a$ y $b$ | $a \\cdot b$ | $2(a+b)$ |\\n"
+            "| Paralelogramo de base $b$ y altura $h$ | $b \\cdot h$ | $2(a+b)$ |\\n"
+            "| Triángulo | $\\dfrac{b \\cdot h}{2}$ | suma de los tres lados |\\n"
+            "| Triángulo equilátero de lado $a$ | $\\dfrac{\\sqrt{3}}{4}a^2$ | $3a$ |\\n"
+            "| Trapecio de bases $B$ y $b$ | $\\dfrac{(B+b) \\cdot h}{2}$ | suma de los "
+            "cuatro lados |\\n"
+            "| Rombo de diagonales $D$ y $d$ | $\\dfrac{D \\cdot d}{2}$ | $4a$ |\\n"
+            "| Polígono regular de perímetro $P$ y apotema $a$ | $\\dfrac{P \\cdot "
+            "a}{2}$ | $n \\cdot \\text{lado}$ |\\n"
+            "| Círculo de radio $r$ | $\\pi r^2$ | $2\\pi r$ |\\n\\n"
+            "**Radio y diámetro**: $d = 2r$. Si el enunciado da el diámetro hay que "
+            "dividirlo entre dos antes de entrar a las fórmulas del círculo. Es el "
+            "descuido más frecuente de esta unidad.\\n\\n"
+            "**Figuras compuestas.** Se descomponen en figuras conocidas y las áreas "
+            "se suman o se restan. Un marco, un pasillo o un jardín con una fuente "
+            "son siempre una resta: conviene marcar el corte en el dibujo antes de "
+            "calcular.\\n\\n"
+            "**Cambio de escala.** Si todas las longitudes se multiplican por $k$, el "
+            "perímetro se multiplica por $k$ y el área por $k^2$. Duplicar los lados "
+            "cuadruplica el área, y la alternativa que dice «el doble» está puesta "
+            "ahí a propósito.\\n\\n"
+            "**Unidades de área.** $1\\ \\text{m}^2 = 10.000\\ \\text{cm}^2$, no $100$: "
+            "al cambiar de unidad de área el factor va al cuadrado.\\n\\n"
+            "[figura:/preguntas/mat-paralelogramo-altura.svg]"
         ),
         "example_statement": (
             "Un jardín rectangular mide 8 m por 5 m y tiene en el centro una "
@@ -76711,6 +79398,48 @@ LESSONS: dict[str, dict] = {
                 "porque": "El pasto es lo que queda del rectángulo una vez sacada la fuente. Es una figura compuesta por resta.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un sitio tiene forma de trapecio: sus lados paralelos miden $14$ m y $8$ "
+                    "m, y la distancia entre ellos es de $6$ m. ¿Cuál es su área, y cuánto "
+                    "costaría cercarlo con malla a $\\$3.000$ el metro si los otros dos lados "
+                    "miden $7$ m cada uno?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Aplico la fórmula del trapecio: $A = \\dfrac{(14 + 8) \\cdot 6}{2} = "
+                            "\\dfrac{22 \\cdot 6}{2} = 66\\ \\text{m}^2$."
+                        ),
+                        "porque": (
+                            "La distancia entre los lados paralelos es la altura, y en el trapecio se "
+                            "multiplica por el promedio de las dos bases. Sumar las bases y dividir "
+                            "entre dos es exactamente eso."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Para la malla necesito el perímetro, que es otra magnitud: $14 + 8 + 7 + "
+                            "7 = 36$ m."
+                        ),
+                        "porque": (
+                            "El área no sirve para comprar malla: la malla se vende por metro lineal "
+                            "y rodea la figura. Acá los cuatro lados se suman tal cual, incluidos los "
+                            "inclinados que no entran en el área."
+                        ),
+                    },
+                    {
+                        "accion": "Calculo el costo: $36 \\cdot 3.000 = \\$108.000$.",
+                        "porque": (
+                            "El precio está dado por metro de contorno, así que se multiplica por el "
+                            "perímetro y no por los $66\\ \\text{m}^2$. Es la distinción que la "
+                            "pregunta está evaluando."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Confundir radio con diámetro. Si el enunciado dice «una fuente de 2 "
             "metros de diámetro», el radio es 1 y el área es la cuarta parte de "
@@ -76724,18 +79453,39 @@ LESSONS: dict[str, dict] = {
             "alturas y distancias."
         ),
         "theory": (
-            "**El teorema**: en un triángulo rectángulo, "
-            "$a^2 + b^2 = c^2$, donde $c$ es la **hipotenusa** —el lado opuesto "
-            "al ángulo recto, siempre el más largo— y $a$, $b$ son los "
-            "catetos.\n\n"
+            "**El teorema**: en un triángulo rectángulo, $a^2 + b^2 = c^2$, donde $c$ "
+            "es la **hipotenusa** —el lado opuesto al ángulo recto, siempre el más "
+            "largo— y $a$, $b$ son los **catetos**.\\n\\n"
             "**Solo vale si hay ángulo recto.** En un triángulo cualquiera no se "
-            "puede aplicar.\n\n"
-            "**Para buscar un cateto** se despeja restando: "
-            "$a = \\sqrt{c^2 - b^2}$.\n\n"
-            "**Tríos pitagóricos** que conviene reconocer de memoria: "
-            "(3, 4, 5), (5, 12, 13), (8, 15, 17) y sus múltiplos, como "
-            "(6, 8, 10)."
-            "\n\n[figura:/lecciones/geo-pitagoras-catetos.svg]"
+            "puede aplicar, y conviene comprobar que el enunciado o la figura lo "
+            "declaren.\\n\\n"
+            "**Para buscar un cateto** se despeja restando: $a = \\sqrt{c^2 - b^2}$. "
+            "Para la hipotenusa se suma: $c = \\sqrt{a^2 + b^2}$. Restar o sumar según "
+            "qué falte es la mitad del ejercicio.\\n\\n"
+            "**El recíproco también vale**, y sirve para clasificar: si se cumple "
+            "$a^2 + b^2 = c^2$ el triángulo ES rectángulo. Y comparando:\\n\\n"
+            "| Comparación (con $c$ el lado mayor) | El triángulo es |\\n"
+            "|---|---|\\n"
+            "| $a^2 + b^2 = c^2$ | rectángulo |\\n"
+            "| $a^2 + b^2 > c^2$ | acutángulo |\\n"
+            "| $a^2 + b^2 < c^2$ | obtusángulo |\\n\\n"
+            "**Tríos pitagóricos** que conviene reconocer de memoria: $(3, 4, 5)$, "
+            "$(5, 12, 13)$, $(8, 15, 17)$, $(7, 24, 25)$ y todos sus múltiplos, como "
+            "$(6, 8, 10)$. Reconocerlos ahorra la raíz.\\n\\n"
+            "**De dónde salen las fórmulas que ya usas.** Todas son Pitágoras "
+            "aplicado:\\n\\n"
+            "- diagonal de un rectángulo de lados $a$ y $b$: $d = \\sqrt{a^2+b^2}$;\\n"
+            "- diagonal de un cuadrado de lado $a$: $d = a\\sqrt{2}$;\\n"
+            "- altura de un triángulo equilátero de lado $a$: $h = "
+            "\\dfrac{\\sqrt{3}}{2}a$;\\n"
+            "- distancia entre dos puntos del plano: $d = \\sqrt{(x_2-x_1)^2 + "
+            "(y_2-y_1)^2}$;\\n"
+            "- diagonal de una caja de aristas $a$, $b$, $c$: $D = "
+            "\\sqrt{a^2+b^2+c^2}$.\\n\\n"
+            "**Comprobación de sentido.** La hipotenusa tiene que salir mayor que "
+            "cualquiera de los catetos y menor que su suma. Si no, hay un error de "
+            "planteo antes que de cálculo.\\n\\n"
+            "[figura:/lecciones/geo-pitagoras-catetos.svg]"
         ),
         "example_statement": (
             "Una escalera de 13 m se apoya en un muro vertical y su base está a "
@@ -76755,6 +79505,50 @@ LESSONS: dict[str, dict] = {
                 "porque": "Para buscar un cateto se RESTA, no se suma: la hipotenusa es la mayor y su cuadrado contiene a los otros dos.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una caja tiene $12$ cm de largo, $9$ cm de ancho y $8$ cm de alto. ¿Cabe "
+                    "dentro de ella una varilla rígida de $17$ cm?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "La medida más larga que admite la caja es su diagonal interior, así que "
+                            "calculo primero la diagonal de la base: $d = \\sqrt{12^2 + 9^2} = "
+                            "\\sqrt{144 + 81} = \\sqrt{225} = 15$ cm."
+                        ),
+                        "porque": (
+                            "La base es un rectángulo y su diagonal es la hipotenusa del triángulo "
+                            "rectángulo que forman el largo y el ancho. Acá aparece el trío $(9, 12, "
+                            "15)$, que es $(3,4,5)$ multiplicado por tres."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Uso esa diagonal como cateto con la altura: $D = \\sqrt{15^2 + 8^2} = "
+                            "\\sqrt{225 + 64} = \\sqrt{289} = 17$ cm."
+                        ),
+                        "porque": (
+                            "La diagonal de la base y la altura forman otro triángulo rectángulo, "
+                            "cuya hipotenusa es la diagonal del cuerpo. Es el mismo teorema aplicado "
+                            "dos veces, que es de donde sale $D = \\sqrt{a^2+b^2+c^2}$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Comparo: la varilla mide $17$ cm y la diagonal mide exactamente $17$ cm, "
+                            "así que cabe justo, en diagonal."
+                        ),
+                        "porque": (
+                            "Medida a medida la varilla no entra —es más larga que los $12$ cm del "
+                            "largo—, y por eso la pregunta no se responde mirando una sola arista: la "
+                            "caja admite hasta su diagonal interior."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Sumar cuando había que restar: dar $\\sqrt{13^2 + 5^2}$ como "
             "respuesta. Eso entrega un lado más largo que la escalera, lo que es "
@@ -76768,18 +79562,38 @@ LESSONS: dict[str, dict] = {
             "medida»."
         ),
         "theory": (
-            "**Traslación** según un vector $(a, b)$: cada punto se mueve $a$ "
-            "en horizontal y $b$ en vertical. El punto $(x, y)$ llega a "
-            "$(x+a,\\; y+b)$.\n\n"
-            "**Reflexión (simetría axial)**: respecto del eje $X$, "
-            "$(x, y) \\to (x, -y)$; respecto del eje $Y$, "
-            "$(x, y) \\to (-x, y)$. Cambia solo la coordenada del eje "
-            "perpendicular al espejo.\n\n"
-            "**Rotación en 90° antihorario** con centro en el origen: "
-            "$(x, y) \\to (-y, x)$. En 180°: $(x, y) \\to (-x, -y)$.\n\n"
-            "**Las tres conservan** las longitudes de los lados y la medida de "
-            "los ángulos: la figura resultante es congruente con la original."
-            "\n\n[figura:/preguntas/mat-traslacion-cuadricula.svg]"
+            "**Una isometría** es un movimiento que conserva las distancias: la "
+            "figura cambia de posición, no de forma ni de tamaño, así que la imagen "
+            "es **congruente** con la original. Son tres: traslación, reflexión y "
+            "rotación.\\n\\n"
+            "**Traslación** según un vector $(a, b)$: cada punto se mueve $a$ en "
+            "horizontal y $b$ en vertical, de modo que $(x, y) \\to (x+a,\\ y+b)$. No "
+            "tiene puntos fijos.\\n\\n"
+            "**Reflexión (simetría axial)**: el eje es un espejo y cambia solo la "
+            "coordenada perpendicular a él. Los puntos del eje quedan fijos.\\n\\n"
+            "**Rotación** con centro en el origen: gira la figura manteniendo fijo el "
+            "centro. El sentido positivo es el antihorario.\\n\\n"
+            "| Transformación | $(x, y)$ se convierte en |\\n"
+            "|---|---|\\n"
+            "| Traslación $(a,b)$ | $(x+a,\\ y+b)$ |\\n"
+            "| Reflexión en el eje $X$ | $(x,\\ -y)$ |\\n"
+            "| Reflexión en el eje $Y$ | $(-x,\\ y)$ |\\n"
+            "| Reflexión en la recta $y = x$ | $(y,\\ x)$ |\\n"
+            "| Rotación de $90^\\circ$ antihoraria | $(-y,\\ x)$ |\\n"
+            "| Rotación de $180^\\circ$ | $(-x,\\ -y)$ |\\n"
+            "| Rotación de $270^\\circ$ antihoraria | $(y,\\ -x)$ |\\n\\n"
+            "**Dos casos que se confunden.** La rotación de $180^\\circ$ es lo mismo "
+            "que la **simetría central** respecto del origen. Y girar $90^\\circ$ en "
+            "sentido horario equivale a girar $270^\\circ$ en sentido antihorario: la "
+            "tabla se lee igual.\\n\\n"
+            "**Composición.** Cuando se aplican varias transformaciones seguidas, "
+            "**el orden importa**: reflejar y después trasladar no da lo mismo que "
+            "trasladar y después reflejar. Se aplican una por una, en el orden que "
+            "dice el enunciado, anotando el punto intermedio.\\n\\n"
+            "**Qué se conserva.** Las tres mantienen longitudes y ángulos. La "
+            "reflexión, además, invierte la orientación: la figura queda «dada "
+            "vuelta», como en un espejo.\\n\\n"
+            "[figura:/preguntas/mat-traslacion-cuadricula.svg]"
         ),
         "example_statement": (
             "El punto $P(-3, 4)$ se refleja respecto del eje $Y$ y el resultado "
@@ -76799,6 +79613,48 @@ LESSONS: dict[str, dict] = {
                 "porque": "El orden importa: reflejar y después trasladar no da lo mismo que trasladar y después reflejar.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "El punto $A(2, -5)$ se rota $90^\\circ$ en sentido antihorario con centro "
+                    "en el origen y el resultado se refleja respecto de la recta $y = x$. "
+                    "¿Dónde termina?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Aplico la rotación: $(x, y) \\to (-y, x)$, así que $A(2, -5)$ pasa a $(5, "
+                            "2)$."
+                        ),
+                        "porque": (
+                            "El menos afecta a la coordenada que pasa al primer lugar. Como $y = -5$, "
+                            "su opuesto es $+5$, y por eso la imagen queda en el primer cuadrante."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reflejo ese punto en la recta $y = x$: $(x, y) \\to (y, x)$, de modo que "
+                            "$(5, 2)$ pasa a $(2, 5)$."
+                        ),
+                        "porque": (
+                            "Esa recta es la diagonal del plano, y reflejar en ella es intercambiar "
+                            "las coordenadas. No cambia ningún signo, solo el orden."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El punto final es $(2, 5)$, y compruebo que su distancia al origen sigue "
+                            "siendo la misma: $\\sqrt{2^2 + 5^2} = \\sqrt{29}$, igual que la de $A$."
+                        ),
+                        "porque": (
+                            "Las dos transformaciones son isometrías con el origen fijo, así que la "
+                            "distancia al origen no puede haber cambiado. Es la comprobación más "
+                            "rápida de que no se traspapeló un signo."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Cambiar la coordenada equivocada al reflejar. Respecto del eje $Y$ "
             "cambia la $x$; respecto del eje $X$ cambia la $y$. Conviene pensar "
@@ -76813,19 +79669,34 @@ LESSONS: dict[str, dict] = {
             "y a los volúmenes."
         ),
         "theory": (
-            "**La razón de semejanza** compara longitudes correspondientes. Si es "
-            "$r$, entonces cada lado del mayor mide $r$ veces el del menor.\n\n"
-            "**Los perímetros van en esa misma razón $r$**, porque un perímetro es "
-            "una suma de longitudes.\n\n"
-            "**Las áreas van en $r^2$** y **los volúmenes en $r^3$**. La razón es "
-            "que un área depende de dos dimensiones y un volumen de tres, y el "
-            "factor se aplica a cada una.\n\n"
+            "**Dos figuras son semejantes** si tienen los ángulos correspondientes "
+            "iguales y los lados correspondientes proporcionales. Tienen la misma "
+            "forma y distinto tamaño. Si además la razón es $1$, son **congruentes**.\\n\\n"
+            "**La razón de semejanza** $r$ compara longitudes correspondientes: cada "
+            "lado del mayor mide $r$ veces el del menor.\\n\\n"
+            "| Se compara | Va en razón |\\n"
+            "|---|---|\\n"
+            "| Lados, perímetros, alturas, radios | $r$ |\\n"
+            "| Áreas (total, lateral, de la base) | $r^2$ |\\n"
+            "| Volúmenes y capacidades | $r^3$ |\\n\\n"
+            "La razón es que un área depende de dos dimensiones y un volumen de tres, "
+            "y el factor se aplica a cada una.\\n\\n"
+            "**Criterios de semejanza de triángulos.** Basta con uno:\\n\\n"
+            "- **AA**: dos ángulos iguales. Es el más usado, porque el tercero queda "
+            "determinado;\\n"
+            "- **LAL**: dos lados proporcionales y el ángulo entre ellos igual;\\n"
+            "- **LLL**: los tres lados proporcionales.\\n\\n"
+            "**Teorema de Thales.** Toda recta paralela a un lado de un triángulo "
+            "corta a los otros dos en segmentos proporcionales, y forma con él un "
+            "triángulo semejante al original. Es lo que hay detrás de casi todos los "
+            "problemas de sombras, postes y escaleras.\\n\\n"
+            "**En el triángulo rectángulo.** La altura sobre la hipotenusa determina "
+            "dos triángulos semejantes al original, de donde sale $h^2 = p \\cdot q$: "
+            "la altura al cuadrado es el producto de las proyecciones de los catetos.\\n\\n"
             "**Una escala $1 : n$** dice que lo real es $n$ veces lo dibujado. De "
-            "plano a realidad se MULTIPLICA; de realidad a plano se DIVIDE. Antes "
-            "de operar hay que dejar ambas medidas en la misma unidad.\n\n"
-            "**Para triángulos basta el criterio AA**: si dos ángulos coinciden, "
-            "el tercero también, y los lados quedan forzosamente proporcionales."
-            "\n\n[figura:/preguntas/mat-triangulos-semejantes.svg]"
+            "plano a realidad se MULTIPLICA; de realidad a plano se DIVIDE. Antes de "
+            "operar hay que dejar ambas medidas en la misma unidad.\\n\\n"
+            "[figura:/preguntas/mat-triangulos-semejantes.svg]"
         ),
         "example_statement": (
             "Dos triángulos son semejantes con razón $2 : 5$. Si el área del menor "
@@ -76849,6 +79720,60 @@ LESSONS: dict[str, dict] = {
                 "porque": "Comprobación rápida: el mayor tiene lados 2,5 veces más largos, así que su área debe ser bastante más de 2,5 veces la del menor. Y 100 es 6,25 veces 16, que es exactamente $2{,}5^2$.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un poste proyecta una sombra de $4{,}5$ m a la misma hora en que una "
+                    "vara de $1{,}2$ m proyecta una sombra de $0{,}9$ m. ¿Cuánto mide el "
+                    "poste?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Reconozco dos triángulos rectángulos semejantes por el criterio AA: los "
+                            "dos tienen un ángulo recto y comparten el ángulo con que llega la luz "
+                            "del sol."
+                        ),
+                        "porque": (
+                            "«A la misma hora» es el dato que hace funcionar el problema: los rayos "
+                            "llegan con la misma inclinación a los dos objetos, así que los "
+                            "triángulos tienen dos ángulos iguales."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Escribo la proporción entre lados correspondientes: $\\dfrac{h}{4{,}5} = "
+                            "\\dfrac{1{,}2}{0{,}9}$."
+                        ),
+                        "porque": (
+                            "Altura con altura y sombra con sombra: lo que no puede mezclarse es la "
+                            "altura de uno con la sombra del otro en el mismo lado de la igualdad."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo la razón de la vara: $\\dfrac{1{,}2}{0{,}9} = \\dfrac{4}{3}$, y "
+                            "despejo: $h = 4{,}5 \\cdot \\dfrac{4}{3} = 6$ m."
+                        ),
+                        "porque": (
+                            "La razón dice que cada objeto mide un tercio más que su sombra. Aplicada "
+                            "a la sombra del poste entrega su altura."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reviso el sentido: $6$ m es mayor que la sombra de $4{,}5$ m, igual que "
+                            "la vara es mayor que su propia sombra."
+                        ),
+                        "porque": (
+                            "Si el resultado hubiera salido menor que la sombra, la proporción "
+                            "estaría invertida. Comparar la relación de los dos objetos caza ese "
+                            "error sin rehacer el cálculo."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Aplicarle a las áreas la razón de los lados sin elevarla al cuadrado, "
             "y responder $40\\ \\text{cm}^2$. La regla completa: longitudes en $r$, "
@@ -76862,17 +79787,37 @@ LESSONS: dict[str, dict] = {
             "capacidad, envases y pintura."
         ),
         "theory": (
-            "**Prisma o cubo**: volumen $= $ área de la base $\\times$ altura. "
-            "Para el cubo de arista $a$: $V = a^3$ y superficie $= 6a^2$.\n\n"
-            "**Cilindro**: $V = \\pi r^2 h$. Su superficie total es "
-            "$2\\pi r^2 + 2\\pi r h$: las dos tapas más el manto.\n\n"
-            "**Cono**: $V = \\dfrac{\\pi r^2 h}{3}$, un tercio del cilindro de "
-            "igual base y altura.\n\n"
-            "**Esfera**: $V = \\dfrac{4}{3}\\pi r^3$ y superficie "
-            "$= 4\\pi r^2$.\n\n"
-            "**Las unidades cambian de exponente**: el área va en unidades "
-            "cuadradas y el volumen en cúbicas. Y $1$ litro $= 1000$ cm³."
-            "\n\n[figura:/preguntas/mat-cilindro-cotas.svg]"
+            "**El volumen** mide cuánto cabe adentro y va en unidades cúbicas; el "
+            "**área de superficie** mide cuánto material se necesita para forrarlo y "
+            "va en unidades cuadradas. Cada pregunta pide una de las dos, y las "
+            "unidades de la respuesta delatan si se calculó la otra.\\n\\n"
+            "| Cuerpo | Volumen | Superficie total |\\n"
+            "|---|---|---|\\n"
+            "| Cubo de arista $a$ | $a^3$ | $6a^2$ |\\n"
+            "| Prisma / paralelepípedo | $A_{base} \\cdot h$ | suma de todas sus caras "
+            "|\\n"
+            "| Cilindro | $\\pi r^2 h$ | $2\\pi r^2 + 2\\pi r h$ |\\n"
+            "| Cono | $\\dfrac{\\pi r^2 h}{3}$ | $\\pi r^2 + \\pi r g$ |\\n"
+            "| Pirámide | $\\dfrac{A_{base} \\cdot h}{3}$ | base más las caras "
+            "laterales |\\n"
+            "| Esfera | $\\dfrac{4}{3}\\pi r^3$ | $4\\pi r^2$ |\\n\\n"
+            "**El tercio del cono y de la pirámide** no es un adorno: un cono cabe "
+            "exactamente tres veces en el cilindro de la misma base y altura, y lo "
+            "mismo vale para la pirámide y su prisma.\\n\\n"
+            "**La generatriz $g$** del cono es el lado inclinado, no la altura, y se "
+            "obtiene con Pitágoras: $g = \\sqrt{r^2 + h^2}$. Usar $h$ donde va $g$ es "
+            "el error habitual del área lateral.\\n\\n"
+            "**La superficie se calcula desarrollando el cuerpo.** El manto de un "
+            "cilindro, extendido, es un rectángulo de base $2\\pi r$ —el contorno del "
+            "círculo— y altura $h$. Dibujar la red evita tener que recordar la "
+            "fórmula.\\n\\n"
+            "**Unidades y capacidad.** $1$ litro $= 1.000\\ \\text{cm}^3$ y $1\\ "
+            "\\text{m}^3 = 1.000$ litros. Y al cambiar de unidad de volumen el factor "
+            "va al cubo: $1\\ \\text{m}^3 = 1.000.000\\ \\text{cm}^3$.\\n\\n"
+            "**Escala.** Si las aristas se multiplican por $k$, la superficie se "
+            "multiplica por $k^2$ y el volumen por $k^3$. Duplicar el radio de un "
+            "tarro multiplica por ocho lo que le cabe.\\n\\n"
+            "[figura:/preguntas/mat-cilindro-cotas.svg]"
         ),
         "example_statement": (
             "Un tarro cilíndrico tiene 10 cm de radio y 20 cm de altura. ¿Cuál "
@@ -76890,6 +79835,45 @@ LESSONS: dict[str, dict] = {
             {
                 "accion": "Si el enunciado pidiera litros: $6.280 \\div 1000 = 6{,}28$ litros.",
                 "porque": "Un litro equivale a 1000 cm³, y la prueba suele pedir el resultado en la unidad que no viene dada.",
+            },
+        ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un cono tiene $6$ cm de radio y $8$ cm de altura. Calcula su volumen y "
+                    "su área lateral en términos de $\\pi$."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Volumen: $V = \\dfrac{\\pi r^2 h}{3} = \\dfrac{\\pi \\cdot 36 \\cdot 8}{3} = "
+                            "96\\pi\\ \\text{cm}^3$."
+                        ),
+                        "porque": (
+                            "El exponente afecta solo al radio, y el tercio es lo que distingue al "
+                            "cono del cilindro de la misma base y altura, que mediría $288\\pi$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Para el área lateral necesito la generatriz: $g = \\sqrt{6^2 + 8^2} = "
+                            "\\sqrt{36 + 64} = \\sqrt{100} = 10$ cm."
+                        ),
+                        "porque": (
+                            "La generatriz es la hipotenusa del triángulo que forman el radio y la "
+                            "altura. Es más larga que la altura, así que usar los $8$ cm daría un "
+                            "manto más chico que el real."
+                        ),
+                    },
+                    {
+                        "accion": "Área lateral: $\\pi r g = \\pi \\cdot 6 \\cdot 10 = 60\\pi\\ \\text{cm}^2$.",
+                        "porque": (
+                            "El manto lleva la generatriz, no la altura. Y las unidades confirman el "
+                            "tipo de resultado: cm² para una superficie, cm³ para el volumen del "
+                            "primer paso."
+                        ),
+                    },
+                ],
             },
         ],
         "common_error": (
@@ -76910,25 +79894,36 @@ LESSONS: dict[str, dict] = {
             "gente gana menos que yo\"."
         ),
         "theory": (
-            "**Los cuartiles parten los datos ordenados en cuatro grupos "
-            "iguales.** $Q_1$ deja por debajo al 25% de los datos, $Q_2$ al "
-            "50% y $Q_3$ al 75%.\n\n"
-            "**$Q_2$ es siempre la mediana.** No es un dato nuevo: es el mismo "
-            "valor con otro nombre, y la prueba lo pregunta.\n\n"
-            "**Cómo se calculan**: se ordenan los datos y se parte por la "
-            "mitad. $Q_1$ es la mediana de la mitad de abajo y $Q_3$ la de la "
-            "mitad de arriba.\n\n"
-            "**Percentiles**: la misma idea con cien tramos. Estar en el "
-            "percentil 80 significa que el 80% de los datos está por debajo. "
-            "Es exactamente lo que dice tu puntaje PAES respecto del resto.\n\n"
-            "**Rango intercuartil** ($Q_3 - Q_1$): cuánto ocupa la mitad "
-            "central de los datos. Sirve para medir dispersión sin que un "
-            "valor extremo la infle.\n\n"
-            "**Diagrama de cajón**: dibuja cinco números —mínimo, $Q_1$, "
-            "mediana, $Q_3$ y máximo—. La caja va de $Q_1$ a $Q_3$, así que "
-            "**dentro de la caja está siempre la mitad de los datos**, sea "
-            "ancha o angosta."
-            "\n\n[figura:/preguntas/mat-cajon-puntajes.svg]"
+            "**Los cuartiles parten los datos ordenados en cuatro grupos iguales.** "
+            "$Q_1$ deja por debajo al $25\\%$ de los datos, $Q_2$ al $50\\%$ y $Q_3$ al "
+            "$75\\%$.\\n\\n"
+            "**$Q_2$ es siempre la mediana.** No es un dato nuevo: es el mismo valor "
+            "con otro nombre, y la prueba lo pregunta.\\n\\n"
+            "**Cómo se calculan**: se ordenan los datos y se parte por la mitad. "
+            "$Q_1$ es la mediana de la mitad de abajo y $Q_3$ la de la mitad de "
+            "arriba. Si la cantidad de datos es impar, el dato central no entra en "
+            "ninguna de las dos mitades.\\n\\n"
+            "**Percentiles**: la misma idea con cien tramos. Estar en el percentil "
+            "$80$ significa que el $80\\%$ de los datos está por debajo. Es "
+            "exactamente lo que dice tu puntaje PAES respecto del resto: un percentil "
+            "no es un porcentaje de logro ni una nota.\\n\\n"
+            "| Medida | Deja por debajo | Equivale a |\\n"
+            "|---|---|---|\\n"
+            "| $Q_1$ | $25\\%$ | percentil $25$ |\\n"
+            "| $Q_2$ | $50\\%$ | la mediana, percentil $50$ |\\n"
+            "| $Q_3$ | $75\\%$ | percentil $75$ |\\n\\n"
+            "**Rango intercuartil** ($IQR = Q_3 - Q_1$): cuánto ocupa la mitad "
+            "central de los datos. Sirve para medir dispersión sin que un valor "
+            "extremo la infle, a diferencia del rango.\\n\\n"
+            "**Diagrama de cajón**: dibuja cinco números —mínimo, $Q_1$, mediana, "
+            "$Q_3$ y máximo—. La caja va de $Q_1$ a $Q_3$, así que **dentro de la "
+            "caja está siempre la mitad de los datos**, sea ancha o angosta; los "
+            "bigotes cubren un $25\\%$ cada uno.\\n\\n"
+            "**Comparar dos cajones.** Una caja corrida hacia la derecha indica datos "
+            "más altos; una caja angosta, datos más parejos. Que un bigote sea largo "
+            "no significa que ahí haya más datos: significa que ese cuarto está más "
+            "disperso.\\n\\n"
+            "[figura:/preguntas/mat-cajon-puntajes.svg]"
         ),
         "example_statement": (
             "Ocho estudiantes registraron cuántos minutos estudiaron ayer: "
@@ -76957,6 +79952,55 @@ LESSONS: dict[str, dict] = {
                 "porque": "La mitad central del curso estudia dentro de una franja de doce minutos. Es la dispersión sin contar los extremos.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un diagrama de cajón de los puntajes de un curso muestra mínimo $410$, "
+                    "$Q_1 = 520$, mediana $610$, $Q_3 = 700$ y máximo $890$. Si el curso "
+                    "tiene $40$ estudiantes, ¿cuántos obtuvieron más de $700$ puntos, y "
+                    "cuánto vale el rango intercuartil?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "$Q_3 = 700$ deja por debajo al $75\\%$ de los datos, así que por encima "
+                            "queda el $25\\%$ restante."
+                        ),
+                        "porque": (
+                            "El tercer cuartil es, por definición, el corte que separa el cuarto "
+                            "superior. No hay que calcular nada con los puntajes: la posición ya está "
+                            "en el diagrama."
+                        ),
+                    },
+                    {
+                        "accion": "Calculo ese cuarto del curso: $40 \\cdot 0{,}25 = 10$ estudiantes.",
+                        "porque": (
+                            "Los cuartiles reparten la CANTIDAD de datos en cuatro partes iguales, no "
+                            "el rango de puntajes. Por eso cada tramo del cajón tiene diez "
+                            "estudiantes, aunque unos tramos se vean más largos que otros."
+                        ),
+                    },
+                    {
+                        "accion": "Rango intercuartil: $IQR = 700 - 520 = 180$ puntos.",
+                        "porque": (
+                            "Es cuánto ocupa la mitad central del curso. El rango total sería $890 - "
+                            "410 = 480$, casi el triple, porque lo estiran el mejor y el peor "
+                            "puntaje."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Interpreto: la mitad del curso está entre $520$ y $700$ puntos, y el "
+                            "bigote superior es más largo que el inferior."
+                        ),
+                        "porque": (
+                            "Un bigote largo arriba indica que el cuarto superior está más disperso, "
+                            "no que tenga más estudiantes: todos los tramos tienen diez."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Confundir una medida de posición con una de tendencia central. "
             "$Q_2$ y la mediana son el mismo número, pero $Q_1$ y $Q_3$ no "
@@ -76975,18 +80019,37 @@ LESSONS: dict[str, dict] = {
             "que evalúa la prueba."
         ),
         "theory": (
-            "**Media aritmética**: la suma de todos los datos dividida por "
-            "cuántos son. Le afectan mucho los valores extremos.\n\n"
-            "**Mediana**: el valor del medio con los datos ORDENADOS. Si la "
-            "cantidad de datos es par, es el promedio de los dos centrales. No "
-            "le afectan los extremos.\n\n"
-            "**Moda**: el dato que más se repite. Puede no existir o haber "
-            "varias.\n\n"
-            "**Rango**: la diferencia entre el mayor y el menor.\n\n"
-            "**Cuándo usar cuál**: si hay un dato muy alejado del resto (un "
-            "sueldo enorme entre sueldos normales), la mediana representa mejor "
-            "al grupo que la media."
-            "\n\n[figura:/preguntas/mat-histograma-edades.svg]"
+            "**Media aritmética**: la suma de todos los datos dividida por cuántos "
+            "son, $\\bar{x} = \\dfrac{\\sum x_i}{n}$. Le afectan mucho los valores "
+            "extremos, porque cada dato entra con todo su peso.\\n\\n"
+            "**Mediana**: el valor del medio con los datos ORDENADOS. Si la cantidad "
+            "de datos es par, es el promedio de los dos centrales. No le afectan los "
+            "extremos.\\n\\n"
+            "**Moda**: el dato que más se repite. Puede no existir, o haber dos "
+            "(bimodal) o más. Es la única que sirve para datos que no son números, "
+            "como el color más vendido.\\n\\n"
+            "**Rango**: la diferencia entre el mayor y el menor.\\n\\n"
+            "| Medida | Qué responde | La afectan los extremos |\\n"
+            "|---|---|---|\\n"
+            "| Media | el valor que reparte el total en partes iguales | sí, mucho |\\n"
+            "| Mediana | el valor que deja a la mitad por debajo | no |\\n"
+            "| Moda | el valor más frecuente | no |\\n\\n"
+            "**Cuándo usar cuál**: si hay un dato muy alejado del resto —un sueldo "
+            "enorme entre sueldos normales—, la mediana representa mejor al grupo que "
+            "la media. Por eso los ingresos de un país se informan con la mediana y "
+            "no con el promedio.\\n\\n"
+            "**Media en una tabla de frecuencias.** Cuando los datos vienen "
+            "agrupados, cada valor pesa según cuántas veces aparece: $\\bar{x} = "
+            "\\dfrac{\\sum x_i f_i}{\\sum f_i}$. Sumar los valores distintos y dividir "
+            "por cuántos son ignora las frecuencias y da otro número.\\n\\n"
+            "**Media ponderada.** Si cada nota tiene un porcentaje distinto, se "
+            "multiplica cada una por su peso y se divide por la suma de los pesos. Es "
+            "el cálculo del puntaje ponderado de admisión.\\n\\n"
+            "**Cómo se mueven al cambiar los datos.** Sumar una constante a todos los "
+            "datos sube la media, la mediana y la moda en esa misma cantidad. "
+            "Multiplicarlos por una constante multiplica las tres. Y agregar un dato "
+            "igual a la media deja la media intacta.\\n\\n"
+            "[figura:/preguntas/mat-histograma-edades.svg]"
         ),
         "example_statement": (
             "Las notas de un estudiante son 4, 5, 5, 6 y 10. Calcula la media y "
@@ -77006,6 +80069,53 @@ LESSONS: dict[str, dict] = {
                 "porque": "Un solo valor extremo arrastra la media pero no mueve la mediana, y por eso acá la mediana representa mejor el desempeño habitual.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "En una encuesta, $10$ hogares declararon cuántas personas viven en "
+                    "ellos: dos hogares con $1$ persona, tres con $2$, cuatro con $3$ y uno "
+                    "con $8$. Calcula la media y la mediana, y decide cuál representa mejor "
+                    "al grupo."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Calculo la media pesando cada valor por su frecuencia: $\\dfrac{1 \\cdot 2 "
+                            "+ 2 \\cdot 3 + 3 \\cdot 4 + 8 \\cdot 1}{10} = \\dfrac{2 + 6 + 12 + 8}{10} = "
+                            "2{,}8$."
+                        ),
+                        "porque": (
+                            "Los datos vienen agrupados: cada tamaño de hogar aparece varias veces y "
+                            "tiene que entrar tantas veces como se repite. Promediar $1$, $2$, $3$ y "
+                            "$8$ a secas daría $3{,}5$, que no es la media de los diez hogares."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Ordeno los diez datos: $1, 1, 2, 2, 2, 3, 3, 3, 3, 8$. Como son pares, "
+                            "la mediana es el promedio del quinto y el sexto: $\\dfrac{2 + 3}{2} = "
+                            "2{,}5$."
+                        ),
+                        "porque": (
+                            "Con $10$ datos no hay un único central, así que se promedian los dos del "
+                            "medio. Escribir la lista completa evita contar mal las repeticiones."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Comparo: la mediana ($2{,}5$) representa mejor al grupo que la media "
+                            "($2{,}8$), porque el hogar de $8$ personas tira el promedio hacia "
+                            "arriba."
+                        ),
+                        "porque": (
+                            "Nueve de los diez hogares tienen tres personas o menos. Un solo dato "
+                            "extremo mueve la media y deja intacta la mediana, que es exactamente la "
+                            "razón por la que existen las dos."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Calcular la mediana sin ordenar los datos. En la lista 10, 4, 5, 6, "
             "5 el valor central es 5, no el 5 que aparece tercero en el desorden: "
@@ -77019,22 +80129,36 @@ LESSONS: dict[str, dict] = {
             "casos posibles."
         ),
         "theory": (
-            "**Principio multiplicativo**: si una decisión tiene $m$ opciones y "
-            "otra independiente tiene $n$, juntas dan $m \\cdot n$ "
-            "posibilidades.\n\n"
-            "**Permutaciones** (importa el orden, se usan todos): $n! = n \\cdot "
-            "(n-1) \\cdots 2 \\cdot 1$.\n\n"
-            "**Variaciones**, también escritas $P(n,k)$ (importa el orden, se "
-            "eligen $k$ de $n$): "
-            "$\\dfrac{n!}{(n-k)!}$.\n\n"
-            "**Combinaciones** (NO importa el orden): "
-            "$\\binom{n}{k} = \\dfrac{n!}{k!\\,(n-k)!}$.\n\n"
+            "**Principio multiplicativo**: si una decisión tiene $m$ opciones y otra "
+            "independiente tiene $n$, juntas dan $m \\cdot n$ posibilidades. Es la "
+            "base de todo lo demás, y sirve incluso cuando ninguna fórmula calza: se "
+            "dibujan las casillas y se multiplica lo que puede ir en cada una.\\n\\n"
+            "**Principio aditivo**: si las opciones son excluyentes —o una cosa o la "
+            "otra, nunca ambas—, se SUMAN en vez de multiplicarse. La palabra «o» "
+            "suele marcar una suma y la «y», un producto.\\n\\n"
+            "| Situación | Fórmula | Ejemplo |\\n"
+            "|---|---|---|\\n"
+            "| Permutaciones de $n$ | $n!$ | ordenar $5$ libros: $120$ |\\n"
+            "| Variaciones de $k$ entre $n$ (importa el orden) | $\\dfrac{n!}{(n-k)!}$ "
+            "| podio de $3$ entre $8$ |\\n"
+            "| Combinaciones de $k$ entre $n$ (no importa) | $\\dbinom{n}{k} = "
+            "\\dfrac{n!}{k!(n-k)!}$ | comité de $2$ entre $6$ |\\n"
+            "| Con repetición permitida | $n^k$ | claves de $4$ dígitos: $10^4$ |\\n\\n"
             "**La pregunta que decide todo**: ¿cambia el resultado si altero el "
-            "orden? Un podio sí cambia (primero y segundo no son lo mismo); un "
-            "comité de dos personas no.\n\n"
-            "**Y recuerda que $0! = 1$**, que es lo que hace que las fórmulas "
-            "sigan funcionando cuando se eligen todos los elementos."
-            "\n\n[figura:/preguntas/mat-casilleros-cifras.svg]"
+            "orden? Un podio sí cambia —primero y segundo no son lo mismo—; un comité "
+            "de dos personas no. Si el orden importa, van variaciones o "
+            "permutaciones; si no, combinaciones.\\n\\n"
+            "**El factorial.** $n! = n \\cdot (n-1) \\cdots 2 \\cdot 1$, y $0! = 1$, que "
+            "es lo que hace que las fórmulas sigan funcionando cuando se eligen todos "
+            "los elementos. Crece muy rápido: $5! = 120$ pero $10! = 3.628.800$.\\n\\n"
+            "**Dos propiedades de las combinaciones** que ahorran cuentas: "
+            "$\\dbinom{n}{k} = \\dbinom{n}{n-k}$ —elegir quién entra es lo mismo que "
+            "elegir quién queda fuera— y $\\dbinom{n}{0} = \\dbinom{n}{n} = 1$.\\n\\n"
+            "**Restricciones.** Cuando el enunciado obliga a algo —«que empiece con "
+            "vocal», «que dos personas vayan juntas»— conviene contar primero las "
+            "posiciones obligadas y después el resto. Y para «al menos uno», casi "
+            "siempre es más corto contar el total y restar los casos que no cumplen.\\n\\n"
+            "[figura:/preguntas/mat-casilleros-cifras.svg]"
         ),
         "example_statement": (
             "De un grupo de 6 personas se debe elegir un comité de 2, sin "
@@ -77054,6 +80178,50 @@ LESSONS: dict[str, dict] = {
                 "porque": "El $4!$ del denominador cancela la parte baja del $6!$, así que basta multiplicar los dos primeros factores y dividir por $2!$.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Cuántos números de tres cifras distintas se pueden formar con los "
+                    "dígitos $1, 2, 3, 4, 5$? ¿Y cuántos de ellos son pares?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Para la primera pregunta el orden importa —$132$ y $231$ son números "
+                            "distintos— y no se repiten cifras: son variaciones de $3$ entre $5$, es "
+                            "decir $5 \\cdot 4 \\cdot 3 = 60$."
+                        ),
+                        "porque": (
+                            "Con el principio multiplicativo se ve mejor que con la fórmula: la "
+                            "primera casilla admite cinco dígitos, la segunda los cuatro que quedan y "
+                            "la tercera, tres."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Para que sea par, la ÚLTIMA cifra debe ser $2$ o $4$: dos opciones. "
+                            "Empiezo por ahí."
+                        ),
+                        "porque": (
+                            "La casilla con restricción se llena primero. Si se dejara para el final, "
+                            "la cantidad de dígitos disponibles dependería de lo elegido antes y ya "
+                            "no se podría multiplicar."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Fijada la última cifra, quedan cuatro dígitos para la primera casilla y "
+                            "tres para la segunda: $2 \\cdot 4 \\cdot 3 = 24$ números pares."
+                        ),
+                        "porque": (
+                            "El factor de la restricción va primero y los demás se completan con lo "
+                            "que sobra. De los $60$ números, $24$ son pares y $36$ impares, que calza "
+                            "con que haya tres dígitos impares disponibles para la última posición."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Usar variaciones donde correspondían combinaciones y responder 30. "
             "Ese número cuenta dos veces cada comité, una por cada orden posible "
@@ -77070,17 +80238,37 @@ LESSONS: dict[str, dict] = {
         "theory": (
             "**Definición clásica**: $P(A) = \\dfrac{\\text{casos "
             "favorables}}{\\text{casos posibles}}$, cuando todos los casos son "
-            "igualmente probables. Siempre está entre 0 y 1.\n\n"
-            "**Complemento**: $P(\\text{no } A) = 1 - P(A)$. Es el atajo para "
-            "cualquier pregunta que diga «al menos uno».\n\n"
-            "**Unión**: $P(A \\text{ o } B) = P(A) + P(B) - P(A \\text{ y } B)$. "
-            "Se resta la intersección para no contarla dos veces.\n\n"
-            "**Eventos independientes** (uno no afecta al otro): "
-            "$P(A \\text{ y } B) = P(A) \\cdot P(B)$.\n\n"
-            "**Con o sin reposición**: si el objeto extraído no se devuelve, el "
-            "total cambia para la segunda extracción y los eventos dejan de ser "
-            "independientes."
-            "\n\n[figura:/preguntas/mat-venn-deportes.svg]"
+            "igualmente probables. Siempre está entre $0$ y $1$: una probabilidad de "
+            "$1{,}3$ o de $-0{,}2$ es un error de cálculo, no un resultado.\\n\\n"
+            "| Regla | Fórmula | Cuándo |\\n"
+            "|---|---|---|\\n"
+            "| Complemento | $P(\\text{no } A) = 1 - P(A)$ | «al menos uno» |\\n"
+            "| Unión | $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$ | «A o B» |\\n"
+            "| Unión excluyente | $P(A \\cup B) = P(A) + P(B)$ | si no pueden ocurrir "
+            "juntos |\\n"
+            "| Intersección independiente | $P(A \\cap B) = P(A) \\cdot P(B)$ | uno no "
+            "afecta al otro |\\n"
+            "| Intersección dependiente | $P(A) \\cdot P(B|A)$ | sin reposición |\\n\\n"
+            "**Por qué se resta la intersección.** Al sumar $P(A)$ y $P(B)$, los "
+            "casos que cumplen las dos cosas se cuentan dos veces. En un diagrama de "
+            "Venn es la zona del medio, y por eso se descuenta una vez.\\n\\n"
+            "**Excluyentes no es lo mismo que independientes.** Excluyentes es que no "
+            "pueden ocurrir a la vez ($P(A \\cap B) = 0$); independientes es que uno "
+            "no cambia la probabilidad del otro. De hecho, dos eventos excluyentes "
+            "con probabilidad positiva nunca son independientes: si ocurre uno, el "
+            "otro pasa a ser imposible.\\n\\n"
+            "**Con o sin reposición.** Si el objeto extraído no se devuelve, el total "
+            "cambia para la segunda extracción y los eventos dejan de ser "
+            "independientes. Con reposición, cada extracción parte de cero.\\n\\n"
+            "**«Al menos uno» casi siempre se resuelve por complemento**: es más "
+            "corto calcular la probabilidad de que no ocurra ninguno y restarla de "
+            "$1$ que sumar todos los casos favorables.\\n\\n"
+            "**Probabilidad y frecuencia.** Lo anterior es la probabilidad teórica. "
+            "La **frecuencia relativa** es el resultado observado al repetir el "
+            "experimento, y se acerca a la teórica mientras más repeticiones haya: en "
+            "diez lanzamientos pueden salir siete caras sin que la moneda esté "
+            "cargada.\\n\\n"
+            "[figura:/preguntas/mat-venn-deportes.svg]"
         ),
         "example_statement": (
             "Una bolsa tiene 5 bolitas rojas y 3 azules. Se sacan dos sin "
@@ -77098,6 +80286,50 @@ LESSONS: dict[str, dict] = {
             {
                 "accion": "Multiplico las dos: $\\frac{5}{8} \\cdot \\frac{4}{7} = \\frac{20}{56} = \\frac{5}{14}$.",
                 "porque": "Para que ocurran los dos sucesos encadenados se multiplica la probabilidad del primero por la del segundo dado que ocurrió el primero.",
+            },
+        ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Se lanzan dos dados equilibrados. ¿Cuál es la probabilidad de obtener al "
+                    "menos un seis?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Uso el complemento: en vez de contar los casos con uno o dos seis, "
+                            "calculo la probabilidad de que NO salga ningún seis."
+                        ),
+                        "porque": (
+                            "«Al menos uno» abarca tres situaciones distintas —seis en el primero, en "
+                            "el segundo, o en ambos— y sumarlas obliga a descontar la intersección. "
+                            "El complemento es un solo cálculo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Cada dado tiene cinco caras que no son seis, y los lanzamientos son "
+                            "independientes: $P(\\text{ningún seis}) = \\dfrac{5}{6} \\cdot \\dfrac{5}{6} "
+                            "= \\dfrac{25}{36}$."
+                        ),
+                        "porque": (
+                            "Un dado no afecta al otro, así que las probabilidades se multiplican. No "
+                            "hay reposición que considerar: los dados no se gastan."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Resto de uno: $P(\\text{al menos un seis}) = 1 - \\dfrac{25}{36} = "
+                            "\\dfrac{11}{36}$."
+                        ),
+                        "porque": (
+                            "Los $36$ resultados posibles se reparten entre los $25$ sin ningún seis "
+                            "y los $11$ que tienen alguno. Sumar $\\dfrac{1}{6} + \\dfrac{1}{6}$ habría "
+                            "dado $\\dfrac{12}{36}$, contando dos veces el caso en que ambos dados "
+                            "salen seis."
+                        ),
+                    },
+                ],
             },
         ],
         "common_error": (
@@ -77125,32 +80357,38 @@ LESSONS: dict[str, dict] = {
             "de sustancias distintas."
         ),
         "theory": (
-            "**Tetravalencia.** El carbono tiene 4 electrones de valencia y "
-            "forma exactamente 4 enlaces covalentes. Como siempre le quedan "
-            "valencias para seguir uniéndose, arma cadenas de largo casi "
-            "ilimitado.\n\n"
-            "**Hibridación: se cuenta, no se memoriza.** Cuenta las REGIONES "
-            "de electrones alrededor del carbono, contando cada enlace "
-            "múltiple como una sola región:\n\n"
-            "| Regiones | Hibridación | Geometría | Ángulo |\n"
-            "|---|---|---|---|\n"
-            "| 4 | sp³ | tetraédrica | 109,5° |\n"
-            "| 3 | sp² | trigonal plana | 120° |\n"
-            "| 2 | sp | lineal | 180° |\n\n"
-            "**Longitud y energía de enlace van al revés.** Mientras más "
-            "pares de electrones se comparten, más se atraen los núcleos: el "
-            "enlace se acorta y cuesta más romperlo.\n\n"
-            "longitud: C–C > C=C > C≡C  ·  energía: C–C < C=C < C≡C\n\n"
-            "**Series homólogas.** Alcanos $C_nH_{2n+2}$ (solo simples), "
-            "alquenos $C_nH_{2n}$ (un doble), alquinos $C_nH_{2n-2}$ (un "
-            "triple).\n\n"
-            "**Grupos funcionales.** Son el átomo o grupo que le da a la "
-            "molécula sus propiedades: hidroxilo –OH (alcoholes), carbonilo "
-            "C=O entre dos carbonos (cetonas) o en el extremo (aldehídos), "
-            "carboxilo –COOH (ácidos), amino –NH₂ (aminas).\n\n"
-            "**Por qué la fórmula molecular no basta.** C₂H₆O es a la vez el "
-            "etanol y el dimetiléter. Para distinguirlos hace falta una "
-            "fórmula que muestre los enlaces: son isómeros."
+            "**Tetravalencia.** El carbono tiene $4$ electrones de valencia y forma "
+            "exactamente $4$ enlaces covalentes. Como siempre le quedan valencias "
+            "para seguir uniéndose, arma cadenas de largo casi ilimitado, lineales, "
+            "ramificadas o cerradas en ciclos.\\n\\n"
+            "**Hibridación: se cuenta, no se memoriza.** Cuenta las REGIONES de "
+            "electrones alrededor del carbono, contando cada enlace múltiple como una "
+            "sola región:\\n\\n"
+            "| Regiones | Hibridación | Geometría | Ángulo |\\n"
+            "|---|---|---|---|\\n"
+            "| $4$ | sp³ | tetraédrica | $109{,}5^\\circ$ |\\n"
+            "| $3$ | sp² | trigonal plana | $120^\\circ$ |\\n"
+            "| $2$ | sp | lineal | $180^\\circ$ |\\n\\n"
+            "**Longitud y energía de enlace van al revés.** Mientras más pares de "
+            "electrones se comparten, más se atraen los núcleos: el enlace se acorta "
+            "y cuesta más romperlo.\\n\\n"
+            "longitud: C–C > C=C > C≡C · energía: C–C < C=C < C≡C\\n\\n"
+            "**Enlaces sigma y pi.** Un enlace simple es un sigma; el doble es un "
+            "sigma y un pi; el triple, un sigma y dos pi. El enlace sigma permite el "
+            "giro de la cadena y el pi no, y de esa rigidez sale la isomería "
+            "cis-trans en los alquenos.\\n\\n"
+            "**Series homólogas.** Alcanos $C_nH_{2n+2}$ (solo simples), alquenos "
+            "$C_nH_{2n}$ (un doble), alquinos $C_nH_{2n-2}$ (un triple). Los miembros "
+            "de una serie se diferencian en un CH₂ y sus propiedades cambian de forma "
+            "gradual: a más carbonos, mayor temperatura de ebullición.\\n\\n"
+            "**Grupos funcionales.** Son el átomo o grupo que le da a la molécula sus "
+            "propiedades: hidroxilo $-$OH (alcoholes), carbonilo C$=$O entre dos "
+            "carbonos (cetonas) o en el extremo (aldehídos), carboxilo $-$COOH "
+            "(ácidos), amino $-$NH₂ (aminas).\\n\\n"
+            "**Por qué la fórmula molecular no basta.** C₂H₆O es a la vez el etanol y "
+            "el dimetiléter. Para distinguirlos hace falta una fórmula que muestre "
+            "los enlaces: son **isómeros**, misma fórmula molecular y distinta "
+            "estructura, y por eso uno es un líquido que se bebe y el otro un gas."
         ),
         "example_statement": (
             "Determina la hibridación y el ángulo de enlace de cada carbono "
@@ -77174,6 +80412,46 @@ LESSONS: dict[str, dict] = {
                 "porque": "Los dos carbonos del triple enlace quedan sp, y por eso ese tramo de la molécula es rígido y lineal.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un hidrocarburo de cadena abierta tiene $5$ carbonos y un solo doble "
+                    "enlace. Escribe su fórmula molecular, di a qué serie pertenece y qué "
+                    "hibridación tiene cada carbono."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Con un doble enlace y cadena abierta, la serie es la de los alquenos, "
+                            "cuya fórmula general es $C_nH_{2n}$."
+                        ),
+                        "porque": (
+                            "Cada serie homóloga tiene su fórmula general: un doble enlace «consume» "
+                            "dos hidrógenos respecto del alcano correspondiente."
+                        ),
+                    },
+                    {
+                        "accion": "Reemplazo $n = 5$: la fórmula molecular es $\\mathrm{C_5H_{10}}$.",
+                        "porque": (
+                            "El alcano de cinco carbonos sería $\\mathrm{C_5H_{12}}$. La diferencia de "
+                            "dos hidrógenos es exactamente el doble enlace."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Los dos carbonos del doble enlace tienen tres regiones de electrones "
+                            "cada uno, así que son sp² con ángulos de $120^\\circ$; los otros tres "
+                            "tienen cuatro regiones y son sp³, con $109{,}5^\\circ$."
+                        ),
+                        "porque": (
+                            "La hibridación se cuenta carbono por carbono, no por molécula. El doble "
+                            "enlace cuenta como UNA región, y por eso esos carbonos quedan con tres y "
+                            "no con cuatro."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Contar un doble o un triple enlace como dos o tres regiones. Se "
             "cuenta como UNA: lo que determina la geometría es hacia cuántas "
@@ -77192,22 +80470,38 @@ LESSONS: dict[str, dict] = {
             "ni por qué una planta se marchita."
         ),
         "theory": (
+            "**La teoría celular** sostiene tres cosas: todo ser vivo está formado "
+            "por células, la célula es la unidad funcional de la vida, y toda célula "
+            "proviene de otra célula preexistente.\\n\\n"
             "**La membrana es selectiva, no un colador.** Es una doble capa de "
-            "lípidos con proteínas incrustadas. Lo que es pequeño y sin carga "
-            "(oxígeno, dióxido de carbono) la cruza solo; lo que tiene carga o "
-            "es grande necesita una proteína que lo pase.\n\n"
-            "**Transporte pasivo: no gasta energía.** La sustancia va de donde "
-            "hay MÁS a donde hay MENOS, a favor del gradiente. Incluye la "
-            "difusión simple, la difusión facilitada (con proteína) y la "
-            "ósmosis, que es el caso del agua.\n\n"
-            "**Transporte activo: gasta ATP.** Va en contra del gradiente, de "
-            "donde hay menos a donde hay más. El ejemplo clásico es la bomba "
-            "sodio-potasio, que saca sodio y mete potasio aunque afuera ya haya "
-            "más sodio.\n\n"
-            "**Ósmosis: se mueve el AGUA, no el soluto.** El agua pasa hacia "
-            "donde hay más soluto. Un medio hipertónico tiene más soluto que la "
-            "célula y la deshidrata; uno hipotónico tiene menos y la hincha; uno "
-            "isotónico está en equilibrio y no la cambia."
+            "lípidos con proteínas incrustadas —el modelo del mosaico fluido—. Lo que "
+            "es pequeño y sin carga (oxígeno, dióxido de carbono) la cruza solo; lo "
+            "que tiene carga o es grande necesita una proteína que lo pase.\\n\\n"
+            "| Transporte | Gasta ATP | Dirección | Ejemplos |\\n"
+            "|---|---|---|---|\\n"
+            "| Difusión simple | no | a favor del gradiente | O₂, CO₂ |\\n"
+            "| Difusión facilitada | no | a favor del gradiente | glucosa, con "
+            "proteína |\\n"
+            "| Ósmosis | no | el agua, hacia donde hay más soluto | agua |\\n"
+            "| Transporte activo | sí | EN CONTRA del gradiente | bomba sodio-potasio "
+            "|\\n"
+            "| Endocitosis y exocitosis | sí | partículas grandes, en vesículas | "
+            "fagocitosis |\\n\\n"
+            "**A favor o en contra del gradiente** es la distinción que decide si hay "
+            "gasto de energía: bajar la pendiente es gratis, subirla cuesta ATP.\\n\\n"
+            "**Ósmosis: se mueve el AGUA, no el soluto.** El agua pasa hacia donde "
+            "hay más soluto, buscando igualar las concentraciones:\\n\\n"
+            "| Medio | Respecto de la célula | Le ocurre |\\n"
+            "|---|---|---|\\n"
+            "| Hipertónico | más soluto afuera | pierde agua y se arruga |\\n"
+            "| Isotónico | igual concentración | no cambia |\\n"
+            "| Hipotónico | menos soluto afuera | gana agua y se hincha |\\n\\n"
+            "**La pared celular cambia el desenlace.** Una célula animal en medio "
+            "hipotónico puede estallar; una vegetal, con su pared de celulosa, se "
+            "pone turgente y no revienta. Por eso las plantas se mantienen erguidas "
+            "por presión de agua, y se marchitan cuando la pierden.\\n\\n"
+            "**El suero fisiológico es isotónico a propósito**: si se inyectara agua "
+            "pura, los glóbulos rojos absorberían agua hasta romperse."
         ),
         "example_statement": (
             "Se colocan glóbulos rojos humanos en tres vasos: uno con agua "
@@ -77229,6 +80523,48 @@ LESSONS: dict[str, dict] = {
                 "porque": "El agua siempre viaja hacia donde hay más soluto, es decir hacia adentro. Y el glóbulo rojo no tiene pared celular que lo contenga, por eso estalla en vez de quedar turgente como una célula vegetal.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Se colocan trozos de papa en tres vasos: uno con agua destilada, uno con "
+                    "solución salina concentrada y uno isotónico. ¿Qué le pasa a cada trozo y "
+                    "por qué?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "En el agua destilada el medio es hipotónico: hay menos soluto afuera que "
+                            "dentro de las células, así que el agua entra y el trozo queda más rígido "
+                            "y algo más pesado."
+                        ),
+                        "porque": (
+                            "El agua se mueve hacia donde hay más soluto, y eso está dentro de la "
+                            "célula. La pared celular de la papa impide que estalle, así que en vez "
+                            "de romperse queda turgente."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "En la solución salina concentrada el medio es hipertónico: el agua sale "
+                            "de las células y el trozo queda blando y más liviano."
+                        ),
+                        "porque": (
+                            "Ahora hay más soluto afuera, así que el agua se va en esa dirección. Es "
+                            "el mismo principio por el que la sal conserva alimentos: deshidrata a "
+                            "los microorganismos."
+                        ),
+                    },
+                    {
+                        "accion": "En el vaso isotónico no hay cambio apreciable de masa ni de rigidez.",
+                        "porque": (
+                            "Las concentraciones están igualadas, así que entra y sale la misma "
+                            "cantidad de agua. Este vaso es el control del experimento: sin él no se "
+                            "podría atribuir el cambio de los otros dos a la ósmosis."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Creer que en la ósmosis se mueve el soluto para igualar las "
             "concentraciones. Se mueve el AGUA. La sal no sale del vaso hacia "
@@ -77242,20 +80578,37 @@ LESSONS: dict[str, dict] = {
             "misma idea contada tres veces."
         ),
         "theory": (
-            "**Tres partículas, dos lugares.** Protones (carga +) y neutrones "
-            "(sin carga) están en el núcleo; los electrones (carga −) giran "
-            "alrededor. El número atómico $Z$ es la cantidad de protones y es lo "
-            "que define al elemento: cambiarlo cambia el elemento.\n\n"
-            "**Número másico y isótopos.** El número másico $A$ es protones más "
-            "neutrones. Dos átomos del mismo elemento con distinto número de "
-            "neutrones son isótopos: mismo $Z$, distinto $A$.\n\n"
+            "**Tres partículas, dos lugares.** Protones (carga $+$) y neutrones (sin "
+            "carga) están en el núcleo; los electrones (carga $-$) ocupan la nube que "
+            "lo rodea. Casi toda la masa está en el núcleo: un electrón pesa unas "
+            "$1.800$ veces menos que un protón.\\n\\n"
+            "**El número atómico $Z$** es la cantidad de protones y es lo que define "
+            "al elemento: cambiarlo cambia el elemento. **El número másico $A$** es "
+            "protones más neutrones, así que $\\text{neutrones} = A - Z$.\\n\\n"
+            "| Concepto | Qué cambia | Qué se mantiene |\\n"
+            "|---|---|---|\\n"
+            "| Isótopos | el número de neutrones ($A$) | el elemento ($Z$) |\\n"
+            "| Iones | el número de electrones | protones y neutrones |\\n"
+            "| Elementos distintos | los protones ($Z$) | — |\\n\\n"
             "**Iones: se ganan o pierden ELECTRONES, nunca protones.** Un catión "
-            "perdió electrones y queda positivo; un anión ganó y queda negativo. "
-            "El número de protones no se toca.\n\n"
+            "perdió electrones y queda positivo; un anión ganó y queda negativo. La "
+            "carga es siempre $\\text{protones} - \\text{electrones}$.\\n\\n"
+            "**Los modelos, y qué corrigió cada uno.** Dalton propuso el átomo "
+            "indivisible; Thomson descubrió el electrón y lo imaginó incrustado en "
+            "una masa positiva; Rutherford, con la lámina de oro, descubrió que la "
+            "carga positiva está concentrada en un núcleo diminuto y el resto es "
+            "vacío; Bohr agregó que los electrones ocupan niveles de energía "
+            "definidos; el modelo actual reemplaza las órbitas por orbitales, zonas "
+            "de probabilidad.\\n\\n"
             "**Los electrones de valencia mandan.** Son los del último nivel y "
-            "explican con quién se une el átomo. En los grupos principales, el "
-            "número de grupo coincide con los electrones de valencia, y por eso "
-            "los elementos de una misma columna reaccionan parecido."
+            "explican con quién se une el átomo. En los grupos principales, el número "
+            "de grupo coincide con los electrones de valencia, y por eso los "
+            "elementos de una misma columna reaccionan parecido. Los gases nobles, "
+            "con su último nivel completo, casi no reaccionan.\\n\\n"
+            "**Cómo se ordena la tabla periódica.** Los elementos van por $Z$ "
+            "creciente; el **período** (fila) indica cuántos niveles de energía tiene "
+            "y el **grupo** (columna), los electrones de valencia. Hacia la derecha y "
+            "hacia arriba aumenta la electronegatividad y disminuye el radio atómico."
         ),
         "example_statement": (
             "Un ion tiene 16 protones, 18 neutrones y 18 electrones. Determina "
@@ -77275,6 +80628,42 @@ LESSONS: dict[str, dict] = {
                 "porque": "Hay más electrones que protones, lo que significa que el átomo GANÓ dos electrones: es un anión. Con 16 protones se trata del azufre, y el ion es el sulfuro.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "El ion $\\mathrm{Al}^{3+}$ tiene número atómico $13$ y número másico "
+                    "$27$. Determina cuántos protones, neutrones y electrones tiene."
+                ),
+                "steps": [
+                    {
+                        "accion": "Los protones son el número atómico: $13$, y no cambian por ser un ion.",
+                        "porque": (
+                            "El número de protones define al elemento. Si cambiara, dejaría de ser "
+                            "aluminio: un ion sigue siendo el mismo elemento, con otra carga."
+                        ),
+                    },
+                    {
+                        "accion": "Los neutrones son $A - Z = 27 - 13 = 14$.",
+                        "porque": (
+                            "El número másico cuenta las partículas del núcleo, que son protones más "
+                            "neutrones. Los electrones no entran en esa cuenta porque su masa es "
+                            "despreciable."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Los electrones: la carga $3+$ significa que perdió tres, así que tiene "
+                            "$13 - 3 = 10$."
+                        ),
+                        "porque": (
+                            "Una carga positiva se obtiene perdiendo electrones, nunca ganando "
+                            "protones. Con diez electrones, el ion queda con la configuración del "
+                            "neón, que es estable: por eso el aluminio forma justamente ese ion."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Restar mal la carga y decir $2+$. Más electrones que protones "
             "significa carga NEGATIVA, porque el electrón es el que aporta la "
@@ -77289,20 +80678,39 @@ LESSONS: dict[str, dict] = {
             "casi todo lo que la PAES pregunta de cinemática."
         ),
         "theory": (
-            "**Distancia y desplazamiento no son lo mismo.** La distancia es "
-            "todo el camino recorrido; el desplazamiento es la diferencia entre "
-            "la posición final y la inicial. Si vas y vuelves, recorriste "
-            "distancia pero tu desplazamiento es cero.\n\n"
-            "**Velocidad media.** Es el desplazamiento dividido por el tiempo: "
-            "$v = \\frac{\\Delta x}{\\Delta t}$. No es el promedio de las "
-            "velocidades salvo que los tramos duren lo mismo.\n\n"
-            "**MRU: velocidad constante.** La posición avanza parejo: "
-            "$x = x_0 + v\\,t$. En un gráfico posición-tiempo es una recta, y su "
-            "pendiente es la velocidad.\n\n"
-            "**MRUA: aceleración constante.** La velocidad cambia parejo: "
-            "$v = v_0 + a\\,t$ y $x = x_0 + v_0 t + \\frac{1}{2}a t^2$. En un "
-            "gráfico velocidad-tiempo es una recta cuya pendiente es la "
-            "aceleración, y el ÁREA bajo esa recta es el desplazamiento."
+            "**Distancia y desplazamiento no son lo mismo.** La distancia es todo el "
+            "camino recorrido y nunca disminuye; el desplazamiento es la diferencia "
+            "entre la posición final y la inicial, es un vector y puede ser cero. Si "
+            "vas y vuelves, recorriste distancia pero tu desplazamiento es cero.\\n\\n"
+            "Lo mismo separa **rapidez** de **velocidad**: la rapidez es distancia "
+            "sobre tiempo y la velocidad, desplazamiento sobre tiempo.\\n\\n"
+            "**Velocidad media.** $v = \\dfrac{\\Delta x}{\\Delta t}$. No es el promedio "
+            "de las velocidades salvo que los tramos duren lo mismo: si se recorren "
+            "distancias iguales a distinta velocidad, la media se calcula como "
+            "distancia total sobre tiempo total.\\n\\n"
+            "**Aceleración.** $a = \\dfrac{\\Delta v}{\\Delta t}$, en $\\text{m/s}^2$. Es "
+            "positiva o negativa según el sistema de referencia: una aceleración "
+            "negativa no significa «frenar», significa que apunta hacia el lado "
+            "negativo. Frena cuando apunta al revés de la velocidad.\\n\\n"
+            "| | MRU (velocidad constante) | MRUA (aceleración constante) |\\n"
+            "|---|---|---|\\n"
+            "| Velocidad | $v = $ constante | $v = v_0 + a\\,t$ |\\n"
+            "| Posición | $x = x_0 + v\\,t$ | $x = x_0 + v_0 t + \\dfrac{1}{2}a t^2$ |\\n"
+            "| Sin el tiempo | — | $v^2 = v_0^2 + 2a\\,\\Delta x$ |\\n"
+            "| Gráfico $x$-$t$ | recta | parábola |\\n"
+            "| Gráfico $v$-$t$ | horizontal | recta inclinada |\\n\\n"
+            "**Leer gráficos es la mitad de las preguntas.** En un gráfico "
+            "posición-tiempo la PENDIENTE es la velocidad. En uno velocidad-tiempo la "
+            "pendiente es la aceleración y el ÁREA bajo la curva es el "
+            "desplazamiento. Una recta horizontal en $x$-$t$ es un cuerpo detenido; "
+            "en $v$-$t$, uno que se mueve a velocidad constante.\\n\\n"
+            "**Caída libre.** Es un MRUA con $a = g \\approx 10\\ \\text{m/s}^2$ hacia "
+            "abajo, independiente de la masa: sin aire, una pluma y una piedra caen "
+            "igual. Al subir, el cuerpo frena con esa misma aceleración, y en el "
+            "punto más alto la velocidad es cero pero la aceleración sigue siendo "
+            "$g$.\\n\\n"
+            "**Las unidades tienen que calzar.** $1\\ \\text{m/s} = 3{,}6\\ "
+            "\\text{km/h}$: para pasar de km/h a m/s se divide por $3{,}6$."
         ),
         "example_statement": (
             "Un auto parte del reposo y acelera de manera constante hasta "
@@ -77323,6 +80731,57 @@ LESSONS: dict[str, dict] = {
                 "porque": "También sirve el área del gráfico velocidad-tiempo: un triángulo de base 5 s y altura 20 m/s da $\\frac{5 \\cdot 20}{2} = 50$ m. Llegar por los dos caminos es una buena forma de comprobar.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un ciclista va a $12$ m/s y frena uniformemente hasta detenerse en $60$ "
+                    "metros. ¿Cuánto vale su aceleración?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Elijo la ecuación que no usa el tiempo, porque el tiempo no es dato ni "
+                            "se pide: $v^2 = v_0^2 + 2a\\,\\Delta x$."
+                        ),
+                        "porque": (
+                            "De las tres ecuaciones del MRUA, esta relaciona velocidades con "
+                            "distancia. Usar otra obligaría a calcular primero el tiempo, con un paso "
+                            "extra donde equivocarse."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reemplazo con velocidad final cero: $0 = 12^2 + 2a \\cdot 60$, o sea $0 = "
+                            "144 + 120a$."
+                        ),
+                        "porque": (
+                            "«Hasta detenerse» significa $v = 0$, y es el dato que suele pasar "
+                            "desapercibido porque no viene con número en el enunciado."
+                        ),
+                    },
+                    {
+                        "accion": "Despejo: $a = -\\dfrac{144}{120} = -1{,}2\\ \\text{m/s}^2$.",
+                        "porque": (
+                            "El signo negativo indica que la aceleración apunta al revés del "
+                            "movimiento, que es lo que significa frenar. Su magnitud, $1{,}2\\ "
+                            "\\text{m/s}^2$, es lo que se informa como respuesta."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Compruebo con otra ecuación: si $v = v_0 + a t$, el ciclista demora $t = "
+                            "\\dfrac{12}{1{,}2} = 10$ s, y en ese tiempo recorre $\\dfrac{12 + 0}{2} "
+                            "\\cdot 10 = 60$ m."
+                        ),
+                        "porque": (
+                            "Con aceleración constante la distancia es la velocidad media por el "
+                            "tiempo, y la velocidad media es el promedio de la inicial y la final. "
+                            "Que devuelva los $60$ m del enunciado confirma el resultado."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Calcular la distancia como $v \\cdot t = 20 \\cdot 5 = 100$ m. Esa "
             "fórmula sirve solo si la velocidad es CONSTANTE. Acá el auto pasó "
@@ -77337,21 +80796,33 @@ LESSONS: dict[str, dict] = {
             "moles."
         ),
         "theory": (
-            "**El mol es un número, como la docena.** Un mol son "
-            "$6{,}02 \\times 10^{23}$ partículas (número de Avogadro). Se usa "
-            "porque las reacciones ocurren entre CANTIDADES de partículas, no "
-            "entre gramos.\n\n"
-            "**La masa molar convierte gramos en moles.** Es la masa de un mol, "
-            "en g/mol, y sale de sumar las masas atómicas de la tabla: "
-            "$n = \\frac{m}{M}$.\n\n"
+            "**El mol es un número, como la docena.** Un mol son $6{,}02 \\times "
+            "10^{23}$ partículas (número de Avogadro). Se usa porque las reacciones "
+            "ocurren entre CANTIDADES de partículas, no entre gramos.\\n\\n"
+            "**La masa molar convierte gramos en moles.** Es la masa de un mol, en "
+            "g/mol, y sale de sumar las masas atómicas de la tabla.\\n\\n"
+            "| Para pasar de | a | Se usa |\\n"
+            "|---|---|---|\\n"
+            "| masa (g) | moles | $n = \\dfrac{m}{M}$ |\\n"
+            "| moles | masa (g) | $m = n \\cdot M$ |\\n"
+            "| moles | partículas | $N = n \\cdot 6{,}02 \\times 10^{23}$ |\\n"
+            "| moles de gas en CNPT | volumen | $V = n \\cdot 22{,}4$ L |\\n\\n"
             "**La ecuación debe estar balanceada antes de calcular.** Los "
-            "coeficientes son la receta: dicen cuántos moles de cada cosa "
-            "participan. Usar una ecuación sin balancear da siempre un "
-            "resultado incorrecto.\n\n"
+            "coeficientes son la receta: dicen cuántos moles de cada cosa participan. "
+            "Usar una ecuación sin balancear da siempre un resultado incorrecto.\\n\\n"
             "**Los coeficientes son proporción de MOLES, no de gramos.** En "
-            "$2\\mathrm{H_2} + \\mathrm{O_2} \\rightarrow 2\\mathrm{H_2O}$, dos "
-            "moles de hidrógeno reaccionan con uno de oxígeno; en gramos esa "
-            "proporción es completamente distinta."
+            "$2\\mathrm{H_2} + \\mathrm{O_2} \\rightarrow 2\\mathrm{H_2O}$, dos moles de "
+            "hidrógeno reaccionan con uno de oxígeno; en gramos esa proporción es $4$ "
+            "a $32$, completamente distinta.\\n\\n"
+            "**El camino es siempre el mismo**: de los gramos del dato se pasa a "
+            "moles, de esos moles se cruza a los moles del compuesto que interesa "
+            "usando los coeficientes, y recién ahí se vuelve a gramos. Los tres "
+            "pasos, siempre en ese orden.\\n\\n"
+            "$$\\text{g de A} \\;\\to\\; \\text{mol de A} \\;\\to\\; \\text{mol de B} \\;\\to\\; "
+            "\\text{g de B}$$\\n\\n"
+            "**La masa se conserva, los moles no.** En la reacción del agua, $3$ "
+            "moles de reactantes dan $2$ de producto, pero los gramos de un lado y "
+            "del otro coinciden exactamente."
         ),
         "example_statement": (
             "¿Cuántos gramos de agua se forman al reaccionar completamente 4 g "
@@ -77372,6 +80843,52 @@ LESSONS: dict[str, dict] = {
                 "porque": "El resultado se pide en gramos, así que hay que volver con la masa molar del agua. El camino siempre es el mismo: gramos → moles → moles → gramos.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Qué masa de dióxido de carbono se produce al quemar $8$ g de metano "
+                    "según $\\mathrm{CH_4} + 2\\mathrm{O_2} \\rightarrow \\mathrm{CO_2} + "
+                    "2\\mathrm{H_2O}$? (Masas molares: CH₄ $= 16$ g/mol, CO₂ $= 44$ g/mol.)"
+                ),
+                "steps": [
+                    {
+                        "accion": "Paso los gramos de metano a moles: $n = \\dfrac{8}{16} = 0{,}5$ mol.",
+                        "porque": (
+                            "La ecuación relaciona moles, no gramos, así que este paso es obligatorio "
+                            "antes de usar cualquier coeficiente."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Uso la proporción de la ecuación: el coeficiente del metano y el del CO₂ "
+                            "son ambos $1$, así que se producen también $0{,}5$ mol de CO₂."
+                        ),
+                        "porque": (
+                            "La receta dice que cada molécula de metano da una de dióxido. Si el "
+                            "coeficiente hubiera sido $2$, habría que multiplicar por dos."
+                        ),
+                    },
+                    {
+                        "accion": "Vuelvo a gramos: $m = 0{,}5 \\cdot 44 = 22$ g de CO₂.",
+                        "porque": (
+                            "La respuesta se pide en masa, así que se cierra el camino con la masa "
+                            "molar del compuesto de llegada, que es distinta de la del de partida."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Compruebo la conservación: reaccionaron $8$ g de metano y $0{,}5 \\cdot 2 "
+                            "\\cdot 32 = 32$ g de oxígeno, o sea $40$ g; y se formaron $22$ g de CO₂ "
+                            "más $0{,}5 \\cdot 2 \\cdot 18 = 18$ g de agua, también $40$ g."
+                        ),
+                        "porque": (
+                            "La masa total tiene que calzar a ambos lados. Es la comprobación que "
+                            "detecta un coeficiente mal usado sin rehacer todo el ejercicio."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Aplicar la proporción de la ecuación directamente sobre los "
             "gramos: \"4 g de H₂ dan 4 g de agua\". Los coeficientes cuentan "
@@ -77386,22 +80903,38 @@ LESSONS: dict[str, dict] = {
             "camino; la materia da vueltas y vuelve."
         ),
         "theory": (
-            "**Los productores hacen la energía disponible.** Las plantas y "
-            "algas capturan energía luminosa y la convierten en materia "
-            "orgánica mediante la fotosíntesis. Todo lo demás del ecosistema "
-            "depende de eso.\n\n"
-            "**Niveles tróficos.** Productores, consumidores primarios "
-            "(herbívoros), secundarios (carnívoros que comen herbívoros), "
-            "terciarios, y descomponedores, que devuelven la materia al "
-            "suelo.\n\n"
-            "**La regla del 10%.** Solo alrededor de una décima parte de la "
-            "energía de un nivel pasa al siguiente; el resto se va en "
-            "respiración, movimiento y calor. Por eso las cadenas tróficas son "
-            "cortas y hay muchos menos depredadores que presas.\n\n"
-            "**La energía FLUYE, la materia CICLA.** La energía entra como luz "
-            "y sale como calor: no vuelve. El carbono, el nitrógeno y el agua, "
-            "en cambio, se reciclan una y otra vez entre los seres vivos y el "
-            "ambiente."
+            "**Los productores hacen la energía disponible.** Las plantas y algas "
+            "capturan energía luminosa y la convierten en materia orgánica mediante "
+            "la fotosíntesis. Todo lo demás del ecosistema depende de eso.\\n\\n"
+            "**Niveles tróficos.** Productores, consumidores primarios (herbívoros), "
+            "secundarios (carnívoros que comen herbívoros), terciarios, y "
+            "descomponedores, que devuelven la materia al suelo cerrando el ciclo.\\n\\n"
+            "**La regla del $10\\%$.** Solo alrededor de una décima parte de la "
+            "energía de un nivel pasa al siguiente; el resto se va en respiración, "
+            "movimiento y calor:\\n\\n"
+            "| Nivel | Energía disponible |\\n"
+            "|---|---|\\n"
+            "| Productores | $100\\%$ |\\n"
+            "| Consumidores primarios | $10\\%$ |\\n"
+            "| Consumidores secundarios | $1\\%$ |\\n"
+            "| Consumidores terciarios | $0{,}1\\%$ |\\n\\n"
+            "Por eso las cadenas tróficas rara vez pasan de cuatro o cinco eslabones "
+            "y hay muchos menos depredadores que presas.\\n\\n"
+            "**La energía FLUYE, la materia CICLA.** La energía entra como luz y sale "
+            "como calor: no vuelve, y por eso el ecosistema necesita un aporte "
+            "constante. El carbono, el nitrógeno y el agua, en cambio, se reciclan "
+            "una y otra vez entre los seres vivos y el ambiente.\\n\\n"
+            "**Cadena y red.** Una cadena trófica es una secuencia lineal; una red "
+            "trófica es el conjunto de todas las cadenas conectadas, y es lo que de "
+            "verdad ocurre: casi ningún animal come de una sola cosa. Por eso quitar "
+            "una especie afecta a varias a la vez.\\n\\n"
+            "**Bioacumulación.** Los contaminantes que no se degradan se concentran a "
+            "lo largo de la cadena, porque cada depredador acumula lo de todas sus "
+            "presas. Los niveles superiores son los más afectados, aunque el "
+            "contaminante esté diluido en el agua.\\n\\n"
+            "**Hábitat y nicho.** El hábitat es dónde vive una especie; el nicho, el "
+            "papel que cumple: qué come, cuándo está activa, con quién compite. Dos "
+            "especies pueden compartir hábitat y no competir si sus nichos difieren."
         ),
         "example_statement": (
             "En un ecosistema, los productores fijan 20.000 kJ de energía. "
@@ -77422,6 +80955,49 @@ LESSONS: dict[str, dict] = {
                 "porque": "De los 20.000 kJ iniciales queda el 1%. Ese desplome es justamente la razón de que casi ningún ecosistema tenga cinco o seis niveles tróficos.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "En un ecosistema los productores fijan $50.000$ kJ. Si se aplica la "
+                    "regla del $10\\%$, ¿cuánta energía llega a un consumidor terciario? ¿Y "
+                    "qué implica ese número?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Del productor al consumidor primario pasa el $10\\%$: $50.000 \\cdot 0{,}1 "
+                            "= 5.000$ kJ."
+                        ),
+                        "porque": (
+                            "El $90\\%$ restante se disipó como calor y en el propio metabolismo de la "
+                            "planta. No desapareció: dejó de estar disponible como alimento."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Al secundario pasa el $10\\%$ de eso: $500$ kJ. Y al terciario, otro "
+                            "$10\\%$: $50$ kJ."
+                        ),
+                        "porque": (
+                            "La regla se aplica escalón por escalón, no una sola vez. Tres saltos "
+                            "equivalen a multiplicar por $0{,}001$, o sea que llega la milésima "
+                            "parte."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Interpreto: el consumidor terciario dispone del $0{,}1\\%$ de la energía "
+                            "original, y por eso necesita un territorio enorme para sostenerse."
+                        ),
+                        "porque": (
+                            "Es la razón de que los grandes depredadores sean escasos y de que sean "
+                            "los primeros en desaparecer cuando el ecosistema se reduce: dependen de "
+                            "toda la pirámide que tienen debajo."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Aplicar el 10% una sola vez y responder 2.000 kJ. Hay que contar "
             "los SALTOS entre niveles, no los niveles: de productores a "
@@ -77435,20 +81011,43 @@ LESSONS: dict[str, dict] = {
             "las fuerzas y sumándolas bien."
         ),
         "theory": (
-            "**Primera ley (inercia).** Si la fuerza neta es cero, el cuerpo "
-            "sigue como estaba: quieto, o moviéndose en línea recta a velocidad "
-            "constante. Moverse NO requiere fuerza; cambiar el movimiento sí.\n\n"
+            "**Una fuerza es un vector**: tiene magnitud, dirección y sentido, y se "
+            "mide en newton ($1\\ \\text{N} = 1\\ \\text{kg} \\cdot \\text{m/s}^2$). Por "
+            "eso dos fuerzas no se suman como números sueltos: en la misma dirección "
+            "se suman o se restan según el sentido, y perpendiculares se componen con "
+            "Pitágoras.\\n\\n"
+            "**Primera ley (inercia).** Si la fuerza neta es cero, el cuerpo sigue "
+            "como estaba: quieto, o moviéndose en línea recta a velocidad constante. "
+            "Moverse NO requiere fuerza; cambiar el movimiento sí.\\n\\n"
             "**Segunda ley.** $F_{neta} = m\\,a$. La aceleración va en la misma "
-            "dirección que la fuerza neta y es proporcional a ella. Ojo con "
-            "\"neta\": es la SUMA de todas las fuerzas, no una sola.\n\n"
-            "**Tercera ley (acción y reacción).** Toda fuerza viene de a pares: "
-            "si A empuja a B, B empuja a A con la misma intensidad y sentido "
-            "contrario. Las dos fuerzas actúan sobre CUERPOS DISTINTOS, y por "
-            "eso no se anulan entre sí.\n\n"
-            "**Peso y masa son cosas distintas.** La masa (kg) es cuánta "
-            "materia hay y no cambia de lugar en lugar. El peso (N) es la "
-            "fuerza con que el planeta te atrae: $P = m\\,g$, y en la Luna es "
-            "menor aunque la masa sea la misma."
+            "dirección que la fuerza neta y es proporcional a ella. Ojo con «neta»: "
+            "es la SUMA de todas las fuerzas, no una sola. De aquí sale que con la "
+            "misma fuerza, el cuerpo de más masa acelera menos.\\n\\n"
+            "**Tercera ley (acción y reacción).** Toda fuerza viene de a pares: si A "
+            "empuja a B, B empuja a A con la misma intensidad y sentido contrario. "
+            "Las dos fuerzas actúan sobre CUERPOS DISTINTOS, y por eso no se anulan "
+            "entre sí.\\n\\n"
+            "**El diagrama de cuerpo libre** es el método, no un adorno: se aísla un "
+            "solo cuerpo, se dibujan todas las fuerzas que actúan SOBRE él —y ninguna "
+            "de las que él ejerce—, se elige un sistema de ejes y se suman por "
+            "separado en cada dirección.\\n\\n"
+            "| Situación | Qué se cumple |\\n"
+            "|---|---|\\n"
+            "| Equilibrio estático (en reposo) | $F_{neta} = 0$ y $v = 0$ |\\n"
+            "| Equilibrio dinámico (velocidad constante) | $F_{neta} = 0$ y $v \\neq "
+            "0$ |\\n"
+            "| Acelerando | $F_{neta} = m\\,a \\neq 0$ |\\n\\n"
+            "Que un cuerpo se mueva no significa que haya fuerza neta: un ascensor "
+            "que sube a velocidad constante tiene fuerza neta cero, igual que uno "
+            "detenido.\\n\\n"
+            "**En un plano inclinado** el peso se descompone en dos: $m g \\sin\\theta$ "
+            "paralela al plano, que es la que hace bajar al cuerpo, y $m g "
+            "\\cos\\theta$ perpendicular, que es la que la normal equilibra. Por eso en "
+            "una rampa más empinada el cuerpo acelera más y la normal es menor.\\n\\n"
+            "**Peso y masa son cosas distintas.** La masa (kg) es cuánta materia hay "
+            "y no cambia de lugar en lugar. El peso (N) es la fuerza con que el "
+            "planeta atrae: $P = m\\,g$, y en la Luna es menor aunque la masa sea la "
+            "misma."
         ),
         "example_statement": (
             "Sobre un bloque de 5 kg apoyado en una superficie horizontal sin "
@@ -77469,6 +81068,57 @@ LESSONS: dict[str, dict] = {
                 "porque": "La aceleración apunta siempre en la misma dirección que la fuerza neta. Dar la dirección es parte de la respuesta, no un adorno.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un ascensor de $400$ kg sube con una aceleración de $2\\ \\text{m/s}^2$. "
+                    "¿Qué tensión soporta el cable? (Usa $g = 10\\ \\text{m/s}^2$.)"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Hago el diagrama de cuerpo libre del ascensor: la tensión $T$ apunta "
+                            "hacia arriba y el peso $P = 400 \\cdot 10 = 4.000$ N hacia abajo."
+                        ),
+                        "porque": (
+                            "Son las únicas dos fuerzas que actúan sobre el ascensor. Lo que el "
+                            "ascensor ejerce sobre el cable es la reacción, y esa no entra en su "
+                            "propio diagrama."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Escribo la segunda ley tomando como positivo el sentido de la "
+                            "aceleración: $T - P = m\\,a$."
+                        ),
+                        "porque": (
+                            "Como el ascensor acelera hacia arriba, la fuerza neta apunta hacia "
+                            "arriba, así que la tensión tiene que superar al peso. El signo menos del "
+                            "peso viene de que apunta al revés."
+                        ),
+                    },
+                    {
+                        "accion": "Despejo: $T = m\\,a + P = 400 \\cdot 2 + 4.000 = 800 + 4.000 = 4.800$ N.",
+                        "porque": (
+                            "La tensión carga con el peso más lo que cuesta acelerar. Si el ascensor "
+                            "subiera a velocidad constante, la tensión sería exactamente el peso, "
+                            "$4.000$ N."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reviso el sentido del resultado: $4.800 > 4.000$, como corresponde a un "
+                            "ascensor que está acelerando hacia arriba."
+                        ),
+                        "porque": (
+                            "Si el ascensor frenara al subir —aceleración hacia abajo— la tensión "
+                            "saldría MENOR que el peso. El signo de la aceleración, y no la dirección "
+                            "del viaje, es lo que decide."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Creer que la acción y la reacción se anulan y que entonces nada se "
             "movería nunca. Actúan sobre cuerpos DISTINTOS: el suelo empuja al "
@@ -77483,20 +81133,40 @@ LESSONS: dict[str, dict] = {
             "orden se resuelven casi todas las preguntas de la prueba."
         ),
         "theory": (
-            "**Gen y alelo.** El gen es la instrucción para una característica; "
-            "los alelos son sus versiones. Cada persona tiene dos alelos de cada "
-            "gen, uno de cada progenitor.\n\n"
-            "**Genotipo y fenotipo.** El genotipo son los alelos que se tienen "
-            "(AA, Aa, aa); el fenotipo es lo que se ve. Dos genotipos distintos "
-            "pueden dar el mismo fenotipo.\n\n"
+            "**Gen y alelo.** El gen es la instrucción para una característica; los "
+            "alelos son sus versiones. Cada persona tiene dos alelos de cada gen, uno "
+            "de cada progenitor. Si los dos son iguales es **homocigoto** (AA o aa); "
+            "si son distintos, **heterocigoto** (Aa).\\n\\n"
+            "**Genotipo y fenotipo.** El genotipo son los alelos que se tienen; el "
+            "fenotipo es lo que se ve. Dos genotipos distintos pueden dar el mismo "
+            "fenotipo: AA y Aa se ven igual.\\n\\n"
             "**Dominante y recesivo.** El alelo dominante (mayúscula) se expresa "
-            "aunque venga solo; el recesivo (minúscula) necesita estar en las "
-            "DOS copias. Por eso un rasgo recesivo puede saltarse generaciones "
-            "sin desaparecer.\n\n"
-            "**El cuadro de Punnett cruza gametos.** Cada progenitor aporta un "
-            "alelo por gameto. Se ponen los del padre en las columnas, los de la "
-            "madre en las filas, y cada casilla es una combinación igual de "
-            "probable."
+            "aunque venga solo; el recesivo (minúscula) necesita estar en las DOS "
+            "copias. Por eso un rasgo recesivo puede saltarse generaciones sin "
+            "desaparecer: lo llevan portadores que no lo manifiestan.\\n\\n"
+            "**El cuadro de Punnett cruza gametos.** Cada progenitor aporta un alelo "
+            "por gameto. Se ponen los del padre en las columnas, los de la madre en "
+            "las filas, y cada casilla es una combinación igual de probable:\\n\\n"
+            "| Cruce | Genotipos | Fenotipos |\\n"
+            "|---|---|---|\\n"
+            "| AA × aa | $100\\%$ Aa | todos dominantes |\\n"
+            "| Aa × Aa | $1$ AA : $2$ Aa : $1$ aa | $3$ dominantes : $1$ recesivo |\\n"
+            "| Aa × aa | $1$ Aa : $1$ aa | $1 : 1$ |\\n\\n"
+            "**La proporción es probabilidad, no reparto garantizado.** Un cruce Aa × "
+            "Aa da $25\\%$ de probabilidad de descendencia recesiva en CADA hijo; "
+            "cuatro hijos pueden salir los cuatro dominantes sin que nada esté mal.\\n\\n"
+            "**No todo es dominancia completa.** En la **codominancia** se expresan "
+            "los dos alelos a la vez, como en el grupo sanguíneo AB; en la "
+            "**dominancia incompleta** aparece un fenotipo intermedio, como la flor "
+            "rosada de un cruce rojo por blanco.\\n\\n"
+            "**Herencia ligada al sexo.** Los genes del cromosoma X se heredan "
+            "distinto: un hombre (XY) tiene una sola copia, así que un alelo recesivo "
+            "se le expresa sin necesidad de estar duplicado. Es la razón de que el "
+            "daltonismo y la hemofilia sean mucho más frecuentes en hombres.\\n\\n"
+            "**Mutación y variabilidad.** Una mutación es un cambio en la secuencia "
+            "del ADN; puede ser neutra, perjudicial o ventajosa según el ambiente, y "
+            "es la fuente última de toda la variabilidad sobre la que actúa la "
+            "evolución."
         ),
         "example_statement": (
             "En arvejas, el color amarillo de la semilla (A) domina sobre el "
@@ -77517,6 +81187,57 @@ LESSONS: dict[str, dict] = {
                 "porque": "El verde es recesivo, y un recesivo solo se ve cuando están las dos copias. Las tres casillas con al menos una A salen amarillas: proporción fenotípica 3 : 1.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Dos personas de visión normal tienen un hijo daltónico. El daltonismo es "
+                    "recesivo y está ligado al cromosoma X. ¿Cuál es el genotipo de cada "
+                    "progenitor?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Escribo los genotipos posibles: la madre puede ser $X^A X^A$ o $X^A "
+                            "X^a$, y el padre, al tener un solo X, es $X^A Y$ porque ve normal."
+                        ),
+                        "porque": (
+                            "En la herencia ligada al X, el hombre no puede ser portador: con una "
+                            "sola copia, o tiene el alelo y lo expresa, o no lo tiene."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El hijo daltónico es $X^a Y$, y su Y solo pudo venir del padre, así que "
+                            "su $X^a$ vino de la madre."
+                        ),
+                        "porque": (
+                            "El sexo lo determina el cromosoma que aporta el padre. Como el padre le "
+                            "dio la Y, el único X del hijo es materno: ahí está la clave del "
+                            "ejercicio."
+                        ),
+                    },
+                    {
+                        "accion": "Concluyo que la madre es portadora, $X^A X^a$, y el padre $X^A Y$.",
+                        "porque": (
+                            "La madre ve normal porque su otro alelo es dominante, pero transmite el "
+                            "recesivo a la mitad de sus hijos. El padre no aportó nada al daltonismo "
+                            "del hijo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo el riesgo para los siguientes hijos varones: $50\\%$, y para las "
+                            "hijas, $0\\%$ de ser daltónicas pero $50\\%$ de ser portadoras."
+                        ),
+                        "porque": (
+                            "Las hijas reciben además el $X^A$ del padre, que las protege. Es "
+                            "exactamente por esto que el daltonismo es mucho más frecuente en hombres "
+                            "que en mujeres."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Confundir la proporción de genotipos con la de fenotipos. Los "
             "genotipos salen 1 : 2 : 1 (AA : Aa : aa), pero lo que se VE es "
@@ -77532,21 +81253,36 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**Los cuatro datos de una onda.** Amplitud (qué tan grande es la "
-            "oscilación), longitud de onda $\\lambda$ (distancia entre dos "
-            "crestas), frecuencia $f$ (oscilaciones por segundo, en hertz) y "
-            "período $T$ (lo que dura una oscilación). Frecuencia y período son "
-            "inversos: $T = \\frac{1}{f}$.\n\n"
-            "**La ecuación fundamental.** $v = \\lambda f$. La velocidad la pone "
-            "el MEDIO, no la fuente: en un mismo medio, si sube la frecuencia "
-            "baja la longitud de onda.\n\n"
-            "**Transversales y longitudinales.** En las transversales la "
-            "oscilación es perpendicular al avance (una cuerda, la luz). En las "
-            "longitudinales es paralela, con compresiones y rarefacciones: el "
-            "sonido es longitudinal.\n\n"
-            "**Qué se oye.** La frecuencia determina el TONO —más frecuencia, "
-            "más agudo— y la amplitud determina la INTENSIDAD, o sea el "
-            "volumen. El sonido necesita un medio material: en el vacío no se "
-            "propaga."
+            "oscilación), longitud de onda $\\lambda$ (distancia entre dos crestas), "
+            "frecuencia $f$ (oscilaciones por segundo, en hertz) y período $T$ (lo "
+            "que dura una oscilación). Frecuencia y período son inversos: $T = "
+            "\\dfrac{1}{f}$.\\n\\n"
+            "**La ecuación fundamental.** $v = \\lambda f$. La velocidad la pone el "
+            "MEDIO, no la fuente: en un mismo medio, si sube la frecuencia baja la "
+            "longitud de onda.\\n\\n"
+            "**Una onda transporta energía, no materia.** El corcho en el agua sube y "
+            "baja pero no viaja con la ola: lo que avanza es la perturbación.\\n\\n"
+            "**Transversales y longitudinales.** En las transversales la oscilación "
+            "es perpendicular al avance (una cuerda, la luz). En las longitudinales "
+            "es paralela, con compresiones y rarefacciones: el sonido es "
+            "longitudinal.\\n\\n"
+            "**Mecánicas y electromagnéticas.** Las mecánicas necesitan un medio "
+            "material —el sonido no se propaga en el vacío—; las electromagnéticas no "
+            "lo necesitan y en el vacío viajan todas a la misma velocidad, $c = 3 "
+            "\\times 10^8$ m/s.\\n\\n"
+            "| Espectro electromagnético | Frecuencia | Energía |\\n"
+            "|---|---|---|\\n"
+            "| Radio, microondas | menor | menor |\\n"
+            "| Infrarrojo, luz visible | intermedia | intermedia |\\n"
+            "| Ultravioleta, rayos X, gamma | mayor | mayor |\\n\\n"
+            "La energía de la radiación crece con la frecuencia, $E = h f$, y por eso "
+            "el ultravioleta daña la piel y la luz de una ampolleta no: no es "
+            "cuestión de intensidad, sino de frecuencia. Dentro del visible, el rojo "
+            "es el de menor frecuencia y el violeta el de mayor.\\n\\n"
+            "**Qué se oye.** La frecuencia determina el TONO —más frecuencia, más "
+            "agudo— y la amplitud determina la INTENSIDAD, o sea el volumen. El oído "
+            "humano capta aproximadamente entre $20$ Hz y $20.000$ Hz; bajo eso es "
+            "infrasonido y sobre eso, ultrasonido."
         ),
         "example_statement": (
             "Una onda sonora se propaga en el aire a 340 m/s con una frecuencia "
@@ -77567,6 +81303,49 @@ LESSONS: dict[str, dict] = {
                 "porque": "En $v = \\lambda f$ con $v$ fija, frecuencia y longitud de onda son inversamente proporcionales. La velocidad la pone el medio, y el medio sigue siendo el mismo aire.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una emisora transmite en $100$ MHz, es decir $1 \\times 10^{8}$ Hz. ¿Cuál "
+                    "es la longitud de onda de su señal, sabiendo que viaja a $3 \\times "
+                    "10^{8}$ m/s?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Despejo la longitud de onda de la ecuación fundamental: $\\lambda = "
+                            "\\dfrac{v}{f}$."
+                        ),
+                        "porque": (
+                            "La relación $v = \\lambda f$ vale para cualquier onda; acá se conocen la "
+                            "velocidad y la frecuencia, así que la incógnita se despeja dividiendo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reemplazo: $\\lambda = \\dfrac{3 \\times 10^{8}}{1 \\times 10^{8}} = 3$ "
+                            "metros."
+                        ),
+                        "porque": (
+                            "Al dividir potencias de la misma base se restan los exponentes, y acá se "
+                            "cancelan: queda un número del orden de las unidades. Por eso las antenas "
+                            "de radio FM miden metros y no kilómetros."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Compruebo el sentido: una emisora de $50$ MHz tendría una longitud de "
+                            "onda de $6$ m, el doble."
+                        ),
+                        "porque": (
+                            "En un mismo medio, frecuencia y longitud de onda son inversamente "
+                            "proporcionales. Si al bajar la frecuencia la longitud bajara también, la "
+                            "relación estaría mal aplicada."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Pensar que gritar más fuerte hace que el sonido viaje más rápido o "
             "que suba de tono. Gritar aumenta la AMPLITUD. La velocidad depende "
@@ -77581,19 +81360,33 @@ LESSONS: dict[str, dict] = {
             "mayor parte de lo que se pregunta."
         ),
         "theory": (
-            "**Ley de Ohm.** $V = I\\,R$: el voltaje es el empuje, la corriente "
-            "$I$ es cuánta carga pasa por segundo (amperes) y la resistencia $R$ "
-            "es cuánto se le opone el material (ohms).\n\n"
-            "**En serie: un solo camino.** La corriente es la MISMA en todos los "
-            "elementos y los voltajes se reparten. Las resistencias se suman: "
-            "$R_{eq} = R_1 + R_2$. Si se corta un punto, se apaga todo.\n\n"
-            "**En paralelo: varios caminos.** El voltaje es el MISMO en cada "
-            "rama y la corriente se reparte. La resistencia equivalente es menor "
-            "que la más pequeña: $\\frac{1}{R_{eq}} = \\frac{1}{R_1} + "
-            "\\frac{1}{R_2}$. Si se corta una rama, las otras siguen.\n\n"
-            "**Potencia.** $P = V\\,I$, y se mide en watts. Es la energía que el "
-            "circuito entrega por segundo, y es lo que determina cuánto consume "
-            "un aparato."
+            "**Qué es cada cosa.** La **corriente** $I$ es cuánta carga pasa por "
+            "segundo, $I = \\dfrac{Q}{t}$, y se mide en amperes. El **voltaje** $V$ es "
+            "el empuje que la mueve, en volts. La **resistencia** $R$ es cuánto se le "
+            "opone el material, en ohms.\\n\\n"
+            "**Ley de Ohm.** $V = I\\,R$. De ella salen $I = \\dfrac{V}{R}$ y $R = "
+            "\\dfrac{V}{I}$, que son la misma relación despejada.\\n\\n"
+            "| | En serie | En paralelo |\\n"
+            "|---|---|---|\\n"
+            "| Caminos | uno solo | varios |\\n"
+            "| Corriente | la MISMA en todos | se reparte |\\n"
+            "| Voltaje | se reparte | el MISMO en cada rama |\\n"
+            "| Resistencia equivalente | $R_1 + R_2$ | $\\dfrac{1}{R_{eq}} = "
+            "\\dfrac{1}{R_1} + \\dfrac{1}{R_2}$ |\\n"
+            "| Si se corta un punto | se apaga todo | las otras ramas siguen |\\n\\n"
+            "**En paralelo la resistencia equivalente es menor que la más pequeña**, "
+            "porque agregar caminos facilita el paso de la corriente. Con dos "
+            "resistencias iguales, la equivalente es la mitad de una.\\n\\n"
+            "**Potencia.** $P = V\\,I$, en watts. Combinada con la ley de Ohm da "
+            "también $P = I^2 R$ y $P = \\dfrac{V^2}{R}$, y las tres sirven según qué "
+            "datos haya.\\n\\n"
+            "**Los aparatos de medición.** El amperímetro se conecta en SERIE, porque "
+            "mide la corriente que lo atraviesa, y el voltímetro en PARALELO, porque "
+            "mide la diferencia entre dos puntos.\\n\\n"
+            "**De dónde sale el calor.** Toda la potencia disipada en una resistencia "
+            "se convierte en calor (efecto Joule), y como depende de $I^2$, duplicar "
+            "la corriente cuadruplica el calor. Es la razón de que un cable "
+            "sobrecargado se caliente antes que el artefacto."
         ),
         "example_statement": (
             "Dos resistencias de 6 Ω cada una se conectan en paralelo a una "
@@ -77614,6 +81407,56 @@ LESSONS: dict[str, dict] = {
                 "porque": "La batería ve la resistencia equivalente. Esos 4 A se reparten en 2 A por cada rama, porque las dos ramas son iguales.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Dos resistencias, de $4\\ \\Omega$ y $8\\ \\Omega$, se conectan en SERIE a "
+                    "una batería de $12$ V. Calcula la corriente del circuito y el voltaje en "
+                    "cada resistencia."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Sumo las resistencias, porque están en serie: $R_{eq} = 4 + 8 = 12\\ "
+                            "\\Omega$."
+                        ),
+                        "porque": (
+                            "En serie hay un solo camino y la corriente atraviesa las dos, así que "
+                            "los obstáculos se acumulan. En paralelo, en cambio, la equivalente "
+                            "habría sido menor que $4\\ \\Omega$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Aplico la ley de Ohm al circuito completo: $I = \\dfrac{V}{R_{eq}} = "
+                            "\\dfrac{12}{12} = 1$ A."
+                        ),
+                        "porque": (
+                            "Esa corriente es la misma en toda la serie: por la de $4\\ \\Omega$ y por "
+                            "la de $8\\ \\Omega$ pasa exactamente $1$ A."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo el voltaje de cada una: $V_1 = 1 \\cdot 4 = 4$ V y $V_2 = 1 \\cdot "
+                            "8 = 8$ V."
+                        ),
+                        "porque": (
+                            "En serie el voltaje se reparte en proporción a la resistencia: la mayor "
+                            "se lleva la mayor parte del empuje disponible."
+                        ),
+                    },
+                    {
+                        "accion": "Compruebo que la suma devuelva el voltaje de la batería: $4 + 8 = 12$ V.",
+                        "porque": (
+                            "En un circuito en serie los voltajes parciales tienen que sumar el "
+                            "total. Si no calzaran, habría un error en la resistencia equivalente o "
+                            "en la corriente."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Sumar las resistencias en paralelo como si fueran en serie y "
             "responder 12 Ω. En paralelo la resistencia BAJA, no sube: hay más "
@@ -77627,19 +81470,35 @@ LESSONS: dict[str, dict] = {
             "hay en cuánta disolución."
         ),
         "theory": (
-            "**Soluto, disolvente y disolución.** El soluto es lo que se "
-            "disuelve; el disolvente, lo que disuelve. La disolución es la suma "
-            "de los dos, y ese total es lo que casi siempre va en el "
-            "denominador.\n\n"
-            "**Porcentaje masa/masa.** $\\%\\,m/m = \\frac{m_{soluto}}"
-            "{m_{disolución}} \\times 100$. Ojo: en el denominador va la masa "
-            "TOTAL, no la del disolvente solo.\n\n"
-            "**Molaridad.** $M = \\frac{n_{soluto}}{V_{disolución}}$, con el "
-            "volumen en LITROS y la cantidad de soluto en moles. Es la unidad "
-            "que más se usa porque las reacciones ocurren entre moles.\n\n"
-            "**Diluir agrega disolvente y no cambia el soluto.** Por eso vale "
-            "$C_1 V_1 = C_2 V_2$: la cantidad de soluto antes y después es la "
-            "misma, solo está repartida en más volumen."
+            "**Soluto, disolvente y disolución.** El soluto es lo que se disuelve; el "
+            "disolvente, lo que disuelve. La disolución es la suma de los dos, y ese "
+            "total es lo que casi siempre va en el denominador.\\n\\n"
+            "| Unidad | Fórmula | Ojo con |\\n"
+            "|---|---|---|\\n"
+            "| Porcentaje masa/masa | $\\dfrac{m_{soluto}}{m_{disolución}} \\cdot 100$ "
+            "| el denominador es la masa TOTAL |\\n"
+            "| Porcentaje masa/volumen | "
+            "$\\dfrac{m_{soluto}\\,[\\text{g}]}{V_{disolución}\\,[\\text{mL}]} \\cdot 100$ "
+            "| mezcla dos unidades a propósito |\\n"
+            "| Molaridad | $M = \\dfrac{n_{soluto}}{V_{disolución}}$ | el volumen va "
+            "en LITROS |\\n"
+            "| Molalidad | $m = \\dfrac{n_{soluto}}{kg_{disolvente}}$ | acá sí va solo "
+            "el disolvente |\\n"
+            "| Partes por millón | $\\dfrac{mg_{soluto}}{kg_{disolución}}$ | para "
+            "cantidades muy pequeñas |\\n\\n"
+            "**La masa de la disolución es soluto más disolvente.** Disolver $20$ g "
+            "de sal en $180$ g de agua da $200$ g de disolución, no $180$: dividir "
+            "por la masa del agua es el error más frecuente de la unidad.\\n\\n"
+            "**Los volúmenes, en cambio, no siempre se suman.** Al mezclar alcohol y "
+            "agua el volumen final es algo menor que la suma, porque las moléculas se "
+            "acomodan entre sí. Por eso la molaridad se define sobre el volumen FINAL "
+            "medido, y en el laboratorio se completa con disolvente hasta el aforo.\\n\\n"
+            "**Concentrada y diluida son términos relativos**; saturada, en cambio, "
+            "es un límite físico: la disolución ya no admite más soluto a esa "
+            "temperatura.\\n\\n"
+            "**Diluir agrega disolvente y no cambia el soluto.** Por eso vale $C_1 "
+            "V_1 = C_2 V_2$: la cantidad de soluto antes y después es la misma, solo "
+            "está repartida en más volumen."
         ),
         "example_statement": (
             "Se disuelven 20 g de sal en 180 g de agua. ¿Cuál es la "
@@ -77657,6 +81516,39 @@ LESSONS: dict[str, dict] = {
             {
                 "accion": "Interpreto el resultado: en cada 100 g de esta disolución hay 10 g de sal.",
                 "porque": "Saber leer qué significa el número permite comprobar si es razonable y responder preguntas derivadas sin recalcular todo.",
+            },
+        ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Se disuelven $11{,}7$ g de cloruro de sodio (masa molar $58{,}5$ g/mol) "
+                    "y se completa con agua hasta $500$ mL de disolución. ¿Cuál es su "
+                    "molaridad?"
+                ),
+                "steps": [
+                    {
+                        "accion": "Paso el soluto a moles: $n = \\dfrac{11{,}7}{58{,}5} = 0{,}2$ mol.",
+                        "porque": (
+                            "La molaridad se define en moles por litro, así que los gramos hay que "
+                            "convertirlos primero con la masa molar."
+                        ),
+                    },
+                    {
+                        "accion": "Paso el volumen a litros: $500$ mL $= 0{,}5$ L.",
+                        "porque": (
+                            "Es el paso que más se olvida. Usar $500$ en el denominador daría "
+                            "$0{,}0004$ mol/L, mil veces menos de lo real."
+                        ),
+                    },
+                    {
+                        "accion": "Aplico la definición: $M = \\dfrac{0{,}2}{0{,}5} = 0{,}4$ mol/L.",
+                        "porque": (
+                            "El volumen que va en el denominador es el de la DISOLUCIÓN terminada, no "
+                            "el del agua agregada: por eso el enunciado dice «se completa hasta $500$ "
+                            "mL»."
+                        ),
+                    },
+                ],
             },
         ],
         "common_error": (
@@ -77682,23 +81574,43 @@ LESSONS: dict[str, dict] = {
             "Analizar fuentes es la habilidad central, y se entrena."
         ),
         "theory": (
-            "**Primaria o secundaria.** Una fuente primaria se produjo en la "
-            "época estudiada: una carta, una ley, una fotografía, un discurso. "
-            "Una secundaria la escribió alguien después analizando el período: "
-            "un libro de historia, un artículo. Ninguna es \"mejor\": sirven "
-            "para cosas distintas.\n\n"
-            "**Toda fuente tiene un autor con una posición.** Quién la escribió, "
-            "para quién y con qué intención cambia lo que dice. Un discurso "
-            "oficial y un panfleto opositor sobre el mismo hecho no se "
-            "contradicen por error: cada uno defiende algo.\n\n"
-            "**Distingue el HECHO de la INTERPRETACIÓN.** \"La producción "
-            "aumentó un 20%\" es un hecho. \"La política económica fue un "
-            "éxito\" es una interpretación de ese hecho. Las preguntas suelen "
-            "jugar exactamente con esa diferencia.\n\n"
-            "**Responde con la fuente, no con lo que sabes.** Aunque conozcas el "
-            "tema, la alternativa correcta es la que se sostiene en lo que el "
-            "documento muestra. Si necesitas un dato que la fuente no da, esa "
-            "alternativa está mal."
+            "**Primaria o secundaria.** Una fuente primaria se produjo en la época "
+            "estudiada: una carta, una ley, una fotografía, un discurso, un censo. "
+            "Una secundaria la escribió alguien después analizando el período: un "
+            "libro de historia, un artículo. Ninguna es «mejor»: sirven para cosas "
+            "distintas, y una secundaria bien hecha puede ser más confiable que una "
+            "primaria interesada.\\n\\n"
+            "| Tipo de fuente | Ejemplos | Sirve sobre todo para |\\n"
+            "|---|---|---|\\n"
+            "| Primaria escrita | leyes, cartas, prensa de la época, discursos | "
+            "saber qué se decía y cómo se decía |\\n"
+            "| Primaria material o visual | fotografías, objetos, planos, afiches | "
+            "ver condiciones de vida y símbolos |\\n"
+            "| Primaria cuantitativa | censos, registros de aduana, presupuestos | "
+            "medir magnitudes y tendencias |\\n"
+            "| Oral | entrevistas, testimonios | recoger la experiencia de quienes "
+            "vivieron el hecho |\\n"
+            "| Secundaria | libros y artículos de historiadores | interpretar, "
+            "comparar, situar en contexto |\\n\\n"
+            "**Toda fuente tiene un autor con una posición.** Quién la escribió, para "
+            "quién y con qué intención cambia lo que dice. Un discurso oficial y un "
+            "panfleto opositor sobre el mismo hecho no se contradicen por error: cada "
+            "uno defiende algo.\\n\\n"
+            "**Las cuatro preguntas que se le hacen a una fuente**: quién la produjo, "
+            "cuándo, para quién y con qué propósito. Responderlas es lo que la prueba "
+            "llama «contextualizar», y sin eso una cita queda flotando.\\n\\n"
+            "**Interesada no es lo mismo que falsa.** Un aviso publicitario de 1910 "
+            "puede mentir sobre el producto y ser una fuente excelente sobre qué se "
+            "consideraba deseable en 1910. La pregunta correcta no es «¿es verdad?», "
+            "sino «¿de qué es evidencia?».\\n\\n"
+            "**Corroborar es comparar.** Una afirmación sostenida por dos fuentes "
+            "independientes vale más que una repetida por dos que copian de la misma. "
+            "Cuando dos fuentes discrepan, el trabajo no es elegir la simpática: es "
+            "explicar por qué difieren.\\n\\n"
+            "**Los silencios también son evidencia.** Quién no aparece en los "
+            "documentos —mujeres, trabajadores, pueblos originarios— dice algo sobre "
+            "quién escribía y para quién. Por eso la historia reciente usa tanto la "
+            "fuente oral: recupera voces que los archivos no registraron."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n\n"
@@ -77724,6 +81636,65 @@ LESSONS: dict[str, dict] = {
                 "porque": "La fuente contrapone dos realidades en la misma ciudad. Esa desigualdad es lo que se puede sostener sin agregar nada de fuera del documento.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un estudiante investiga las condiciones de trabajo en las salitreras y "
+                    "encuentra dos documentos: el reglamento interno de una oficina, firmado "
+                    "por la administración en 1907, y una carta de un obrero a su familia del "
+                    "mismo año. ¿Cómo debe usar cada uno?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Clasifico: las dos son fuentes primarias, porque se produjeron en la "
+                            "época estudiada."
+                        ),
+                        "porque": (
+                            "Ser primaria no dice nada sobre su confiabilidad: dice cuándo se "
+                            "produjo. Las dos lo son, así que la distinción útil tiene que venir por "
+                            "otro lado."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Le hago a cada una las cuatro preguntas: el reglamento lo escribe la "
+                            "administración para los trabajadores, con el propósito de fijar "
+                            "obligaciones; la carta la escribe un obrero para su familia, sin destino "
+                            "público."
+                        ),
+                        "porque": (
+                            "Autor, destinatario e intención cambian lo que cada documento puede "
+                            "probar. Un reglamento muestra las reglas oficiales; una carta privada, "
+                            "cómo se vivían."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Defino de qué es evidencia cada uno: el reglamento prueba qué normas "
+                            "existían, no que se cumplieran; la carta prueba la experiencia de quien "
+                            "la escribió, no la de todos."
+                        ),
+                        "porque": (
+                            "Confundir la norma con la práctica es el error clásico. Y un testimonio "
+                            "individual no se puede generalizar a toda la pampa sin más respaldo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Corroboro: si la carta describe algo que el reglamento prohíbe, no hay "
+                            "contradicción que resolver sino una brecha entre norma y práctica que "
+                            "explicar, y conviene buscar una tercera fuente."
+                        ),
+                        "porque": (
+                            "Cuando dos fuentes discrepan, el trabajo del historiador no es elegir "
+                            "una, sino explicar por qué difieren. Muchas veces esa diferencia es el "
+                            "hallazgo."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Descartar una fuente por \"sesgada\". Todas las fuentes tienen un "
             "punto de vista, y el sesgo es información: dice qué le importaba a "
@@ -77739,21 +81710,40 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**Hecho y proceso.** Un hecho ocurre en una fecha; un proceso dura "
-            "décadas. La independencia se declara un día, pero la construcción "
-            "del Estado toma generaciones. Confundirlos lleva a respuestas "
-            "equivocadas sobre causas.\n\n"
-            "**Continuidad y cambio conviven.** En todo período hay cosas que "
-            "cambian y cosas que siguen igual. Las preguntas suelen pedir "
-            "identificar justamente cuál es cuál, no describir el período "
-            "entero.\n\n"
-            "**Causas y consecuencias son múltiples.** Un proceso histórico rara "
-            "vez tiene una sola causa. Suelen distinguirse causas estructurales "
-            "—de fondo y de larga data— y coyunturales, que son el detonante "
-            "inmediato.\n\n"
-            "**No juzgues el pasado con los valores de hoy.** Es el anacronismo, "
-            "y es el error de razonamiento más frecuente en esta prueba. Para "
-            "entender por qué alguien actuó como actuó hay que mirar lo que era "
-            "pensable en SU época."
+            "décadas. La independencia se declara un día, pero la construcción del "
+            "Estado toma generaciones. Confundirlos lleva a respuestas equivocadas "
+            "sobre causas.\\n\\n"
+            "| Escala | Qué abarca | Ejemplo |\\n"
+            "|---|---|---|\\n"
+            "| Acontecimiento (corta duración) | días o meses | una batalla, una "
+            "elección |\\n"
+            "| Coyuntura (media duración) | años o décadas | una crisis económica, un "
+            "gobierno |\\n"
+            "| Estructura (larga duración) | siglos | la urbanización, el cambio "
+            "demográfico |\\n\\n"
+            "**Cómo se cuentan los siglos.** El siglo XIX va de 1801 a 1900, porque "
+            "el primer siglo empezó en el año 1: para pasar de un año a su siglo se "
+            "toman las centenas y se suma uno, salvo en los años terminados en dos "
+            "ceros. Y en las fechas antes de Cristo el orden se invierte: el año 300 "
+            "a.C. es POSTERIOR al 500 a.C.\\n\\n"
+            "**Periodizar es una decisión, no un dato.** Los cortes —Edad Media, "
+            "Época Colonial, República— los pone el historiador para ordenar, y por "
+            "eso se discuten: cambiar dónde empieza un período es afirmar qué lo "
+            "define.\\n\\n"
+            "**Continuidad y cambio conviven.** En todo período hay cosas que cambian "
+            "y cosas que siguen igual. Las preguntas suelen pedir identificar "
+            "justamente cuál es cuál, no describir el período entero.\\n\\n"
+            "**Simultaneidad.** Procesos distintos ocurren a la vez en lugares "
+            "distintos, y una línea de tiempo con varios carriles sirve precisamente "
+            "para verlo: mientras en Europa ocurría una cosa, en América ocurría "
+            "otra, y a veces están conectadas.\\n\\n"
+            "**Ritmos distintos.** Un cambio político puede ser brusco y el social "
+            "lentísimo: se cambia una constitución en un año y las formas de vida "
+            "tardan generaciones. Por eso una fecha rara vez marca el comienzo real "
+            "de un proceso, solo su momento visible.\\n\\n"
+            "**Anacronismo y presentismo.** Poner en el pasado cosas que no existían "
+            "—o juzgarlo con los criterios de hoy— impide explicarlo. Entender por "
+            "qué alguien pensaba así en su época no es justificarlo."
         ),
         "example_statement": (
             "Un historiador afirma: «La urbanización de Chile no comenzó con la "
@@ -77775,6 +81765,61 @@ LESSONS: dict[str, dict] = {
                 "porque": "Es la forma en que la historiografía evita explicar procesos largos por un solo acontecimiento. Reconocer ese movimiento es lo que la pregunta evalúa.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Ordena estos elementos según su escala temporal y explica la diferencia: "
+                    "(1) la firma de un tratado en 1904; (2) el auge y la caída del salitre "
+                    "entre 1880 y 1930; (3) el paso de una población mayoritariamente rural a "
+                    "una urbana a lo largo del siglo XX."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "El primero es un acontecimiento: ocurre en una fecha precisa y se puede "
+                            "narrar en una línea."
+                        ),
+                        "porque": (
+                            "Los acontecimientos son los que tienen fecha exacta. Son los más fáciles "
+                            "de datar y los que menos explican por sí solos."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El segundo es una coyuntura: dura unas cinco décadas, tiene un auge y un "
+                            "declive, y se explica por precios y mercados."
+                        ),
+                        "porque": (
+                            "Una coyuntura abarca años o décadas y suele organizarse como ciclo. Es "
+                            "la escala en que se mueven las crisis económicas y los períodos de "
+                            "gobierno."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El tercero es una estructura de larga duración: se mide en generaciones "
+                            "y ningún año lo inaugura."
+                        ),
+                        "porque": (
+                            "Los cambios de larga duración son casi invisibles para quien los vive. "
+                            "Nadie recuerda el día en que el país se volvió urbano, porque no hubo "
+                            "tal día."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Relaciono las tres escalas: el ciclo del salitre atrajo población a las "
+                            "ciudades del norte, y eso alimentó el proceso urbano de larga duración."
+                        ),
+                        "porque": (
+                            "Las escalas no compiten: se encajan. Un acontecimiento se entiende "
+                            "dentro de su coyuntura, y una coyuntura, dentro de la estructura que la "
+                            "contiene."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Buscar UNA causa y una fecha exacta para todo. Los procesos "
             "históricos se superponen: cuando uno empieza, el anterior todavía "
@@ -77790,21 +81835,43 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**Soberanía popular y representación.** El poder reside en la "
-            "ciudadanía, que lo ejerce a través de representantes elegidos. Por "
-            "eso las elecciones periódicas y competitivas son el mínimo de "
-            "cualquier democracia.\n\n"
+            "ciudadanía, que lo ejerce a través de representantes elegidos. Por eso "
+            "las elecciones periódicas, competitivas e informadas son el mínimo de "
+            "cualquier democracia: sin alternativa real no hay elección, solo "
+            "ratificación.\\n\\n"
+            "**Democracia no es solo votar.** Supone también libertades de expresión, "
+            "reunión y asociación, medios plurales, y límites al poder de quien gana. "
+            "Una mayoría que suprime los derechos de una minoría no por eso actúa "
+            "democráticamente: la regla de mayoría decide dentro de un marco que no "
+            "puede borrar.\\n\\n"
             "**Separación de poderes.** El Ejecutivo administra y gobierna, el "
             "Legislativo hace las leyes y el Judicial las aplica y resuelve "
-            "conflictos. Que sean independientes es lo que impide que el poder "
-            "se concentre en una sola mano.\n\n"
-            "**En Chile el sistema es presidencial y el Congreso bicameral.** "
-            "Existe la Cámara de Diputadas y Diputados y el Senado; ambas "
-            "participan en la formación de la ley.\n\n"
-            "**Participar es más que votar.** También son participación los "
-            "plebiscitos, las organizaciones sociales, los sindicatos, las "
-            "juntas de vecinos y la deliberación pública. Una democracia con "
-            "alta participación electoral y nula vida asociativa es una "
-            "democracia débil."
+            "conflictos. Que sean independientes es lo que impide que el poder se "
+            "concentre en una sola mano.\\n\\n"
+            "| En Chile | Cómo funciona |\\n"
+            "|---|---|\\n"
+            "| Régimen | presidencial: el Presidente es jefe de Estado y de Gobierno "
+            "|\\n"
+            "| Congreso | bicameral: Cámara de Diputadas y Diputados, y Senado |\\n"
+            "| Voto | universal, secreto e igualitario, desde los 18 años |\\n"
+            "| Nivel local | alcaldes y concejales electos; el municipio administra "
+            "la comuna |\\n\\n"
+            "**Participación no se agota en el voto.** Incluye organizaciones "
+            "sociales, juntas de vecinos, sindicatos, consultas ciudadanas, cabildos "
+            "y movilización. Una democracia con alta participación electoral y sin "
+            "organización social es tan incompleta como la inversa.\\n\\n"
+            "**Representación y rendición de cuentas.** Elegir no es delegar en "
+            "blanco: el representante responde ante quienes lo eligieron, y las "
+            "elecciones periódicas son el mecanismo que hace efectiva esa "
+            "responsabilidad.\\n\\n"
+            "**Mayoría y minorías.** La decisión se toma por mayoría, pero el sistema "
+            "protege a las minorías con derechos garantizados, quórums especiales "
+            "para ciertas materias y tribunales que pueden invalidar una ley "
+            "contraria a la Constitución.\\n\\n"
+            "**Cuidado con confundir régimen y gobierno.** Cambiar de gobierno es "
+            "algo que ocurre dentro de la democracia; cambiar de régimen es cambiar "
+            "las reglas con que se gobierna. Las preguntas suelen apuntar exactamente "
+            "a esa diferencia."
         ),
         "example_statement": (
             "Un proyecto de ley es aprobado por el Congreso, pero el Presidente "
@@ -77825,6 +81892,59 @@ LESSONS: dict[str, dict] = {
                 "porque": "El diseño busca que ningún poder decida solo. La pregunta apunta a esa lógica de frenos mutuos, no al contenido del proyecto.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un país realiza elecciones cada cuatro años, pero un solo partido puede "
+                    "presentar candidatos, la prensa está bajo control estatal y los "
+                    "tribunales dependen del Ejecutivo. ¿Es una democracia? Justifica."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Reviso el primer requisito: hay elecciones periódicas, lo que por sí "
+                            "solo parecería cumplir el mínimo."
+                        ),
+                        "porque": (
+                            "Es el rasgo más visible de una democracia y por eso el más fácil de "
+                            "imitar. Quedarse aquí es el error que la pregunta pone a prueba."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reviso si son competitivas: con un solo partido habilitado, no hay "
+                            "alternativa real entre la cual elegir."
+                        ),
+                        "porque": (
+                            "Una elección sin competencia no transfiere el poder: lo ratifica. La "
+                            "posibilidad de que gane otro es parte de la definición, no un adorno."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reviso las libertades: con prensa controlada, la ciudadanía no puede "
+                            "informarse ni comparar, así que el voto no es informado."
+                        ),
+                        "porque": (
+                            "Sin pluralismo informativo, la decisión se toma con la información que "
+                            "entrega quien gobierna. La libertad de expresión no es un añadido a la "
+                            "democracia: es una condición para votar con sentido."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reviso la separación de poderes: tribunales dependientes del Ejecutivo "
+                            "eliminan el control sobre quien gobierna. Concluyo que no es una "
+                            "democracia pese a tener elecciones."
+                        ),
+                        "porque": (
+                            "Faltan tres de los cuatro elementos. La democracia es un conjunto de "
+                            "condiciones, y las elecciones son la más visible pero no la única."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Reducir la democracia al acto de votar. Votar es necesario pero no "
             "suficiente: sin separación de poderes, sin libertad de prensa y sin "
@@ -77839,23 +81959,48 @@ LESSONS: dict[str, dict] = {
             "evalúa acá."
         ),
         "theory": (
-            "**PIB.** Es el valor de todos los bienes y servicios FINALES "
-            "producidos dentro de un país en un período. Mide producción, no "
-            "bienestar: no dice cómo se reparte ni cuenta el trabajo no "
-            "remunerado ni el daño ambiental.\n\n"
+            "**PIB.** Es el valor de todos los bienes y servicios FINALES producidos "
+            "dentro de un país en un período. Se dice «finales» para no contar dos "
+            "veces: la harina que se usa para hacer pan ya está incluida en el precio "
+            "del pan.\\n\\n"
+            "**El PIB mide producción, no bienestar**: no dice cómo se reparte, no "
+            "cuenta el trabajo doméstico no remunerado ni el voluntariado, y no "
+            "descuenta el daño ambiental. Un desastre que obliga a reconstruir puede "
+            "incluso aumentarlo.\\n\\n"
             "**PIB per cápita.** Es el PIB dividido por la población. Sirve para "
-            "comparar países de distinto tamaño, pero es un PROMEDIO: puede "
-            "subir mientras la mayoría no mejora.\n\n"
-            "**Inflación.** Es el alza sostenida y generalizada de los precios. "
-            "En Chile la mide el IPC, que calcula el Instituto Nacional de "
-            "Estadísticas (INE) siguiendo una canasta de bienes y servicios "
-            "representativa. Si hay inflación, el dinero pierde poder "
-            "adquisitivo.\n\n"
-            "**Desempleo.** Es el porcentaje de la fuerza de trabajo que busca "
-            "empleo y no lo encuentra. Clave: quien no está buscando trabajo NO "
-            "cuenta como desempleado, sino que queda fuera de la fuerza de "
-            "trabajo. Por eso la tasa puede bajar sin que se hayan creado "
-            "empleos."
+            "comparar países de distinto tamaño, pero es un PROMEDIO: puede subir "
+            "mientras la mayoría no mejora. Y para comparar entre países hay que "
+            "corregir por el poder adquisitivo de cada moneda.\\n\\n"
+            "| Indicador | Qué mide | Su límite |\\n"
+            "|---|---|---|\\n"
+            "| PIB | producción total | no dice nada de distribución ni de bienestar "
+            "|\\n"
+            "| PIB per cápita | producción por habitante | es un promedio |\\n"
+            "| IPC / inflación | alza sostenida y general de precios | usa una "
+            "canasta promedio, no la de cada hogar |\\n"
+            "| Tasa de desempleo | desocupados sobre fuerza de trabajo | no cuenta a "
+            "quien dejó de buscar |\\n"
+            "| Coeficiente de Gini | desigualdad de ingresos (0 a 1) | no distingue "
+            "de dónde viene la desigualdad |\\n"
+            "| Pobreza multidimensional | ingreso más educación, salud, vivienda, "
+            "trabajo | depende de los umbrales que se fijen |\\n"
+            "| IDH | ingreso, educación y salud combinados | promedia dimensiones muy "
+            "distintas |\\n\\n"
+            "**Inflación.** Es el alza sostenida y generalizada de los precios. En "
+            "Chile la mide el IPC, que calcula el Instituto Nacional de Estadísticas "
+            "sobre una canasta representativa. Que baje la inflación no significa que "
+            "bajen los precios: significa que suben más lento.\\n\\n"
+            "**Por qué importa.** La inflación erosiona el poder adquisitivo de quien "
+            "tiene ingresos fijos, y por eso existen unidades reajustables como la "
+            "UF. Comparar dos sueldos de años distintos sin corregir por inflación es "
+            "comparar cosas que no son iguales.\\n\\n"
+            "**Desempleo: quién cuenta.** Solo se considera desocupado a quien no "
+            "tiene trabajo y está buscándolo activamente. Quien se cansó de buscar "
+            "sale de la fuerza de trabajo y deja de aparecer en la tasa, que entonces "
+            "puede bajar sin que haya mejorado nada.\\n\\n"
+            "**Ningún indicador solo alcanza.** Un país puede crecer con desigualdad "
+            "alta, o tener baja inflación con desempleo elevado. Leerlos juntos, y "
+            "con su definición a la vista, es lo que la prueba evalúa."
         ),
         "example_statement": (
             "En un país el PIB creció 4% durante el año, pero la población "
@@ -77875,6 +82020,61 @@ LESSONS: dict[str, dict] = {
                 "porque": "Es exactamente el caso que estas preguntas quieren evaluar: crecimiento agregado no significa mejora por persona.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un país informa que su PIB creció 5% y que su tasa de desempleo bajó de "
+                    "9% a 7%. Un analista sostiene que «por lo tanto, la población está "
+                    "mejor». ¿Qué le falta a esa conclusión?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Reviso qué mide el PIB: producción total, sin decir nada sobre cómo se "
+                            "reparte."
+                        ),
+                        "porque": (
+                            "El crecimiento es compatible con que la mejora se concentre en pocos. "
+                            "Sin un indicador de distribución —Gini, pobreza— no se puede afirmar "
+                            "nada sobre «la población»."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reviso la caída del desempleo: habría que ver si se debe a más empleo o "
+                            "a personas que dejaron de buscar y salieron de la fuerza de trabajo."
+                        ),
+                        "porque": (
+                            "La tasa solo cuenta a quienes buscan activamente. Una baja puede "
+                            "reflejar desaliento en vez de contratación, y en ese caso significa lo "
+                            "contrario de lo que parece."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Pregunto por la inflación: si los precios subieron más que los sueldos, "
+                            "el ingreso real pudo caer aunque la economía creciera."
+                        ),
+                        "porque": (
+                            "Lo que importa para el bolsillo es el ingreso real, no el nominal. Un "
+                            "alza de sueldos menor que la inflación es una pérdida de poder "
+                            "adquisitivo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que los dos datos son buenas señales pero insuficientes: para "
+                            "hablar de bienestar hacen falta indicadores de distribución, calidad del "
+                            "empleo e ingreso real."
+                        ),
+                        "porque": (
+                            "Ningún indicador solo describe el bienestar. La conclusión no es falsa, "
+                            "es prematura, y esa diferencia es la que la pregunta evalúa."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Confundir crecimiento del PIB con mejora en el bienestar de la "
             "gente. El PIB puede crecer con toda la ganancia concentrada en unos "
@@ -77889,18 +82089,42 @@ LESSONS: dict[str, dict] = {
             "cantidad, y ese es todo el modelo."
         ),
         "theory": (
-            "**Ley de la demanda.** A mayor precio, los consumidores compran "
-            "MENOS. La curva de demanda tiene pendiente negativa.\n\n"
-            "**Ley de la oferta.** A mayor precio, los productores quieren "
-            "vender MÁS. La curva de oferta tiene pendiente positiva.\n\n"
-            "**Equilibrio.** Es donde las dos curvas se cruzan: la cantidad que "
-            "se quiere comprar es igual a la que se quiere vender. Si el precio "
-            "está por sobre el de equilibrio sobra producto; si está por debajo, "
-            "falta.\n\n"
-            "**Distingue moverse SOBRE la curva de MOVER la curva.** Un cambio "
-            "de precio mueve a lo largo de la curva. Un cambio en otra cosa "
-            "—ingreso, moda, costo de producción, cantidad de vendedores— "
-            "DESPLAZA la curva entera. Esta distinción es la que más se pregunta."
+            "**Ley de la demanda.** A mayor precio, los consumidores compran MENOS. "
+            "La curva de demanda tiene pendiente negativa.\\n\\n"
+            "**Ley de la oferta.** A mayor precio, los productores quieren vender "
+            "MÁS. La curva de oferta tiene pendiente positiva.\\n\\n"
+            "**Equilibrio.** Es donde las dos curvas se cruzan: la cantidad que se "
+            "quiere comprar es igual a la que se quiere vender. Si el precio está por "
+            "sobre el de equilibrio sobra producto —excedente—; si está por debajo, "
+            "falta —escasez—, y en ambos casos el precio tiende a corregirse.\\n\\n"
+            "**Distingue moverse SOBRE la curva de MOVER la curva.** Es la distinción "
+            "que más se pregunta:\\n\\n"
+            "| Qué cambió | Qué ocurre |\\n"
+            "|---|---|\\n"
+            "| El precio del propio producto | movimiento a lo largo de la curva |\\n"
+            "| El ingreso de los hogares | se desplaza la demanda |\\n"
+            "| El precio de un sustituto o complemento | se desplaza la demanda |\\n"
+            "| Gustos, modas, población | se desplaza la demanda |\\n"
+            "| El costo de producción o la tecnología | se desplaza la oferta |\\n"
+            "| Un factor climático sobre la cosecha | se desplaza la oferta |\\n\\n"
+            "**Cómo se lee un desplazamiento.** Si la demanda se desplaza a la "
+            "derecha con la oferta quieta, suben el precio y la cantidad. Si es la "
+            "oferta la que se desplaza a la derecha, el precio baja y la cantidad "
+            "sube. Conviene dibujarlo: una flecha bien puesta responde la pregunta "
+            "sin cálculos.\\n\\n"
+            "**Bienes sustitutos y complementarios.** Dos bienes son sustitutos si "
+            "uno reemplaza al otro —té y café—, así que al subir el precio de uno "
+            "aumenta la demanda del otro. Son complementarios si se consumen juntos "
+            "—autos y bencina—, y ahí ocurre lo contrario.\\n\\n"
+            "**Elasticidad.** Mide cuánto responde la cantidad a un cambio de precio. "
+            "La demanda es **inelástica** cuando el bien es de primera necesidad o no "
+            "tiene sustitutos: aunque suba el precio, se sigue comprando casi lo "
+            "mismo. Es **elástica** cuando hay alternativas fáciles.\\n\\n"
+            "**Precios fijados por la autoridad.** Un precio máximo bajo el "
+            "equilibrio produce escasez y filas; un precio mínimo sobre el equilibrio "
+            "produce excedente. El caso más discutido de precio mínimo es el salario "
+            "mínimo, precisamente porque el bien en cuestión es el trabajo de una "
+            "persona."
         ),
         "example_statement": (
             "Una sequía destruye buena parte de la cosecha de trigo de un país. "
@@ -77919,6 +82143,61 @@ LESSONS: dict[str, dict] = {
             {
                 "accion": "Con la demanda sin cambios y menos oferta, el nuevo equilibrio queda con MAYOR precio y MENOR cantidad.",
                 "porque": "El cruce de las dos curvas se desplaza hacia arriba y a la izquierda. Es el resultado típico de un shock negativo de oferta.",
+            },
+        ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una helada destruye parte de la cosecha de paltas y, al mismo tiempo, no "
+                    "cambia nada en el bolsillo de los consumidores. ¿Qué pasa con el precio "
+                    "y la cantidad transada?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico qué curva se mueve: la helada afecta lo que hay disponible "
+                            "para vender, así que desplaza la OFERTA, no la demanda."
+                        ),
+                        "porque": (
+                            "Los factores que afectan la producción mueven la oferta. El enunciado "
+                            "aclara además que el ingreso de los hogares no cambió, para descartar la "
+                            "demanda."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Determino la dirección: hay menos producto a cada precio, así que la "
+                            "oferta se desplaza a la IZQUIERDA."
+                        ),
+                        "porque": (
+                            "Izquierda significa menor cantidad ofrecida a cada precio posible. Es el "
+                            "error habitual: el desplazamiento no depende de si el precio sube, sino "
+                            "de cuánto hay para vender."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Leo el nuevo equilibrio: con la demanda quieta, el cruce se produce a un "
+                            "precio MAYOR y una cantidad MENOR."
+                        ),
+                        "porque": (
+                            "Al haber menos producto, quienes más lo valoran pagan más y el resto se "
+                            "retira. Dibujar las dos curvas y correr una hace visible el resultado "
+                            "sin ningún cálculo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Aclaro qué NO ocurrió: la demanda no cambió, aunque se compren menos "
+                            "paltas."
+                        ),
+                        "porque": (
+                            "Se compran menos porque el precio subió, y eso es un movimiento SOBRE la "
+                            "curva de demanda, no un desplazamiento de ella. Es justamente la "
+                            "distinción que la pregunta evalúa."
+                        ),
+                    },
+                ],
             },
         ],
         "common_error": (
@@ -77942,21 +82221,41 @@ LESSONS: dict[str, dict] = {
             "todo el ejercicio."
         ),
         "theory": (
-            "**Los conjuntos están encajados.** Naturales $\\subset$ enteros "
-            "$\\subset$ racionales $\\subset$ reales. Cada uno contiene al "
-            "anterior, así que todo natural es también entero, racional y real.\n\n"
-            "**Racional o irracional.** Un racional se puede escribir como "
-            "fracción de enteros; su decimal termina o se repite "
-            "periódicamente. Un irracional no: su decimal es infinito y sin "
-            "período. Son irracionales $\\pi$, $e$ y las raíces no exactas como "
-            "$\\sqrt{2}$.\n\n"
-            "**Cuidado con las raíces.** $\\sqrt{9} = 3$ es racional; "
-            "$\\sqrt{10}$ es irracional. Que aparezca una raíz no hace "
-            "irracional al número: hay que ver si es exacta.\n\n"
+            "**Los conjuntos están encajados.** Naturales $\\subset$ enteros $\\subset$ "
+            "racionales $\\subset$ reales. Cada uno contiene al anterior, así que todo "
+            "natural es también entero, racional y real, y una pregunta por «a qué "
+            "conjunto pertenece» suele admitir varias respuestas verdaderas a la vez.\\n\\n"
+            "| Conjunto | Qué incluye | Ejemplos |\\n"
+            "|---|---|---|\\n"
+            "| $\\mathbb{N}$ naturales | para contar | $1,\\ 2,\\ 3$ |\\n"
+            "| $\\mathbb{Z}$ enteros | con negativos y el cero | $-4,\\ 0,\\ 7$ |\\n"
+            "| $\\mathbb{Q}$ racionales | los que son fracción de enteros | "
+            "$\\dfrac{3}{5},\\ -2{,}75,\\ 0{,}\\overline{3}$ |\\n"
+            "| irracionales | decimal infinito sin período | $\\pi,\\ e,\\ \\sqrt{2}$ |\\n"
+            "| $\\mathbb{R}$ reales | todos los de la recta numérica | todos los "
+            "anteriores |\\n\\n"
+            "**Racional o irracional.** Un racional se puede escribir como fracción "
+            "de enteros, y su decimal termina o se repite periódicamente. Un "
+            "irracional no: su decimal es infinito y sin período.\\n\\n"
+            "**Cuidado con las raíces.** $\\sqrt{9} = 3$ es racional; $\\sqrt{10}$ es "
+            "irracional. Que aparezca una raíz no hace irracional al número: hay que "
+            "ver si es exacta.\\n\\n"
             "**Las operaciones pueden cambiar de conjunto.** La suma de dos "
-            "irracionales puede ser racional: $(2+\\sqrt{2}) + (2-\\sqrt{2}) = 4$. "
-            "Por eso no se puede afirmar el resultado sin calcular."
-            "\n\n[figura:/preguntas/mat-recta-real-puntos.svg]"
+            "irracionales puede ser racional: $(2+\\sqrt{2}) + (2-\\sqrt{2}) = 4$, y "
+            "$\\sqrt{2} \\cdot \\sqrt{2} = 2$. Por eso no se puede afirmar el resultado "
+            "sin calcular. En cambio, un racional distinto de cero por un irracional "
+            "siempre da irracional.\\n\\n"
+            "**Entre dos reales siempre hay otro** —basta el promedio—, y por eso no "
+            "existe «el número siguiente» a $0{,}5$ en los reales, como sí existe el "
+            "siguiente de $5$ en los enteros. Es la propiedad de densidad.\\n\\n"
+            "**Ubicar un irracional.** $\\sqrt{20}$ está entre $4$ y $5$ porque $4^2 = "
+            "16$ y $5^2 = 25$, y más cerca de $4{,}5$ porque $4{,}5^2 = 20{,}25$. "
+            "Acotar entre cuadrados perfectos resuelve casi todas las preguntas de "
+            "orden sin calculadora.\\n\\n"
+            "**Valor absoluto.** $|x|$ es la distancia de $x$ al cero, así que nunca "
+            "es negativo: $|-7| = 7$. En la recta, $|a - b|$ es la distancia entre "
+            "$a$ y $b$.\\n\\n"
+            "[figura:/preguntas/mat-recta-real-puntos.svg]"
         ),
         "example_statement": (
             "Clasifica cada número como racional o irracional: "
@@ -77977,6 +82276,60 @@ LESSONS: dict[str, dict] = {
                 "porque": "Un irracional no deja de serlo al multiplicarlo o dividirlo por un racional no nulo. Solo puede \"perder\" su irracionalidad al combinarse con otro irracional.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Ordena de menor a mayor: $\\sqrt{30}$, $\\;5{,}4$, $\\;\\dfrac{16}{3}$ y "
+                    "$\\;\\pi + 2$."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Acoto la raíz entre cuadrados perfectos: $5^2 = 25$ y $6^2 = 36$, así "
+                            "que $\\sqrt{30}$ está entre $5$ y $6$; como $5{,}5^2 = 30{,}25$, es un "
+                            "poco menor que $5{,}5$."
+                        ),
+                        "porque": (
+                            "Comparar con cuadrados conocidos evita la calculadora y da precisión "
+                            "suficiente para ordenar. El cuadrado de $5{,}5$ se pasa apenas, así que "
+                            "la raíz queda justo por debajo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Paso la fracción a decimal: $\\dfrac{16}{3} = 5{,}\\overline{3}$, es decir "
+                            "$5{,}33\\ldots$"
+                        ),
+                        "porque": (
+                            "Es un decimal periódico, así que la fracción es racional. Y en decimal "
+                            "se compara directamente con los otros tres números."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Estimo el irracional: $\\pi \\approx 3{,}14$, así que $\\pi + 2 \\approx "
+                            "5{,}14$."
+                        ),
+                        "porque": (
+                            "Sumar un racional a un irracional lo deja irracional, pero eso no impide "
+                            "ubicarlo: para ordenar basta una aproximación de dos decimales."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Ordeno con los valores obtenidos: $\\pi + 2 \\approx 5{,}14$, luego "
+                            "$\\dfrac{16}{3} \\approx 5{,}33$, luego $5{,}4$ y por último $\\sqrt{30} "
+                            "\\approx 5{,}48$."
+                        ),
+                        "porque": (
+                            "Los cuatro caen entre $5$ y $5{,}5$, que es la razón de que la pregunta "
+                            "se vea difícil: sin llevar todo a decimal, la intuición no alcanza para "
+                            "distinguirlos."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Creer que todo decimal infinito es irracional. $0{,}333\\ldots$ "
             "tiene infinitos decimales y es $\\frac{1}{3}$, perfectamente "
@@ -77990,20 +82343,34 @@ LESSONS: dict[str, dict] = {
             "ser completamente distintos."
         ),
         "theory": (
-            "**Rango.** Es el máximo menos el mínimo. Es la medida más simple y "
-            "la más frágil: un solo dato extremo la dispara.\n\n"
+            "**Rango.** Es el máximo menos el mínimo. Es la medida más simple y la "
+            "más frágil: un solo dato extremo la dispara.\\n\\n"
             "**Varianza.** Es el promedio de los cuadrados de las desviaciones "
-            "respecto de la media: $\\sigma^2 = \\frac{\\sum (x_i - "
-            "\\bar{x})^2}{n}$. Se elevan al cuadrado para que las desviaciones "
-            "negativas no cancelen a las positivas.\n\n"
-            "**Desviación estándar.** Es la raíz de la varianza. Se usa porque "
-            "queda en las MISMAS unidades que los datos, y por eso se puede "
-            "comparar directamente con el promedio.\n\n"
-            "**Cómo se lee.** A mayor desviación estándar, más dispersos los "
-            "datos. Si es cero, todos los datos son idénticos. Sumar una "
-            "constante a todos los datos NO cambia la dispersión; multiplicarlos "
-            "por una constante sí."
-            "\n\n[figura:/preguntas/mat-tabla-desviacion.svg]"
+            "respecto de la media: $\\sigma^2 = \\dfrac{\\sum (x_i - \\bar{x})^2}{n}$. Se "
+            "elevan al cuadrado para que las desviaciones negativas no cancelen a las "
+            "positivas: sin el cuadrado, la suma de las desviaciones da cero siempre.\\n\\n"
+            "**Desviación estándar.** Es la raíz de la varianza, $\\sigma = "
+            "\\sqrt{\\sigma^2}$. Se usa porque queda en las MISMAS unidades que los "
+            "datos, y por eso se puede comparar directamente con el promedio.\\n\\n"
+            "**Cómo se calcula, en orden**: se obtiene la media; se resta la media a "
+            "cada dato; se elevan al cuadrado esas diferencias; se promedian; y se "
+            "saca la raíz.\\n\\n"
+            "| Si a todos los datos se les... | La media | La desviación estándar |\\n"
+            "|---|---|---|\\n"
+            "| suma una constante $c$ | sube en $c$ | no cambia |\\n"
+            "| multiplica por una constante $k$ | se multiplica por $k$ | se "
+            "multiplica por $|k|$ |\\n\\n"
+            "Sumar una constante mueve todo el conjunto sin separarlo, así que la "
+            "dispersión se mantiene; multiplicar sí estira las distancias.\\n\\n"
+            "**Cómo se lee.** A mayor desviación estándar, más dispersos los datos. "
+            "Si es cero, todos los datos son idénticos. Dos cursos con el mismo "
+            "promedio pueden tener desviaciones muy distintas, y eso es justamente lo "
+            "que la pregunta suele estar comparando.\\n\\n"
+            "**Coeficiente de variación.** Es $\\dfrac{\\sigma}{\\bar{x}}$, y sirve para "
+            "comparar dispersiones de conjuntos con promedios muy distintos: una "
+            "desviación de $5$ es enorme si la media es $10$ y despreciable si la "
+            "media es $10.000$.\\n\\n"
+            "[figura:/preguntas/mat-tabla-desviacion.svg]"
         ),
         "example_statement": (
             "Calcula la desviación estándar del conjunto: 2, 4, 4, 4, 5, 5, 7, 9."
@@ -78022,6 +82389,56 @@ LESSONS: dict[str, dict] = {
                 "porque": "Falta la raíz para volver a las unidades originales. Quedarse en 4 es responder la varianza, que es otra cosa.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Dos cursos rindieron la misma prueba. En el curso A los puntajes fueron "
+                    "$50, 50, 50, 50$ y en el B, $20, 40, 60, 80$. Calcula la media y la "
+                    "desviación estándar de cada uno."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Media del curso A: $\\dfrac{50 \\cdot 4}{4} = 50$. Media del curso B: "
+                            "$\\dfrac{20+40+60+80}{4} = \\dfrac{200}{4} = 50$."
+                        ),
+                        "porque": (
+                            "Los dos cursos tienen exactamente el mismo promedio, que es lo que hace "
+                            "útil el ejercicio: con ese solo número los cursos parecen iguales."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Desviación del curso A: todas las diferencias con la media son cero, así "
+                            "que la varianza es cero y $\\sigma = 0$."
+                        ),
+                        "porque": (
+                            "Una desviación estándar de cero significa que no hay dispersión: todos "
+                            "los datos son idénticos. Es el único caso en que eso ocurre."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Para el curso B calculo las desviaciones: $-30, -10, 10, 30$; las elevo "
+                            "al cuadrado: $900, 100, 100, 900$; y promedio: $\\dfrac{2000}{4} = 500$."
+                        ),
+                        "porque": (
+                            "Sin elevar al cuadrado, las desviaciones sumarían cero y el cálculo no "
+                            "diría nada. Los cuadrados además castigan más a los datos lejanos, que "
+                            "es lo que interesa medir."
+                        ),
+                    },
+                    {
+                        "accion": "Saco la raíz: $\\sigma = \\sqrt{500} \\approx 22{,}4$ puntos.",
+                        "porque": (
+                            "La varianza quedó en «puntos al cuadrado», que no significa nada; la "
+                            "raíz la devuelve a puntos y permite decir que el curso B se desvía unos "
+                            "$22$ puntos del promedio, mientras el A no se desvía nada."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Entregar la varianza cuando se pidió la desviación estándar. Son "
             "el mismo cálculo con un paso de diferencia, y las alternativas casi "
@@ -78034,20 +82451,35 @@ LESSONS: dict[str, dict] = {
             "siempre entregan el diámetro y la fórmula pide el radio."
         ),
         "theory": (
-            "**Las dos fórmulas.** Superficie: $A = 4\\pi r^2$. Volumen: "
-            "$V = \\frac{4}{3}\\pi r^3$. La superficie va con el cuadrado del "
-            "radio y el volumen con el cubo.\n\n"
-            "**Radio y diámetro.** $d = 2r$, así que $r = \\frac{d}{2}$. Si el "
-            "enunciado da el diámetro, dividir antes de reemplazar no es "
-            "opcional.\n\n"
-            "**Cómo escalan.** Si el radio se duplica, la superficie se "
-            "cuadruplica ($2^2$) y el volumen se hace ocho veces mayor ($2^3$). "
-            "Es la razón por la que las preguntas de comparación se resuelven "
-            "sin calcular nada.\n\n"
+            "**Las dos fórmulas.** Superficie: $A = 4\\pi r^2$. Volumen: $V = "
+            "\\dfrac{4}{3}\\pi r^3$. La superficie va con el cuadrado del radio y el "
+            "volumen con el cubo, y esa diferencia de exponente explica casi todo lo "
+            "que la prueba pregunta sobre esferas.\\n\\n"
+            "**Radio y diámetro.** $d = 2r$, así que $r = \\dfrac{d}{2}$. Si el "
+            "enunciado da el diámetro, dividir antes de reemplazar no es opcional.\\n\\n"
+            "**Cómo escalan.** Si el radio se multiplica por $k$, la superficie se "
+            "multiplica por $k^2$ y el volumen por $k^3$:\\n\\n"
+            "| El radio | La superficie | El volumen |\\n"
+            "|---|---|---|\\n"
+            "| se duplica | $\\times 4$ | $\\times 8$ |\\n"
+            "| se triplica | $\\times 9$ | $\\times 27$ |\\n"
+            "| se reduce a la mitad | $\\div 4$ | $\\div 8$ |\\n\\n"
+            "Por eso las preguntas de comparación se responden sin calcular ningún "
+            "volumen: basta la razón de los radios elevada al exponente que "
+            "corresponda.\\n\\n"
+            "**La esfera y su cilindro.** Una esfera ocupa exactamente dos tercios "
+            "del cilindro más ajustado que la contiene, el de radio $r$ y altura "
+            "$2r$. Es la relación que descubrió Arquímedes y sirve para estimar sin "
+            "calculadora.\\n\\n"
+            "**Media esfera.** Un casquete de media esfera tiene volumen "
+            "$\\dfrac{2}{3}\\pi r^3$, y si se pide su superficie hay que decidir si "
+            "incluye la tapa circular: la media superficie esférica es $2\\pi r^2$, y "
+            "con la tapa son $3\\pi r^2$.\\n\\n"
             "**Las unidades delatan el error.** La superficie va en unidades "
-            "cuadradas y el volumen en cúbicas. Si el resultado quedó en cm² "
-            "cuando se pedía volumen, el procedimiento estaba equivocado."
-            "\n\n[figura:/preguntas/mat-esfera-radio.svg]"
+            "cuadradas y el volumen en cúbicas. Si el resultado quedó en cm² cuando "
+            "se pedía volumen, el procedimiento estaba equivocado antes que el "
+            "número.\\n\\n"
+            "[figura:/preguntas/mat-esfera-radio.svg]"
         ),
         "example_statement": (
             "Una esfera tiene 12 cm de diámetro. Calcula su volumen en términos "
@@ -78067,6 +82499,41 @@ LESSONS: dict[str, dict] = {
                 "porque": "Dividir 216 por 3 antes de multiplicar por 4 evita trabajar con números grandes. Y el resultado va en cm³, que confirma que es un volumen.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Dos pelotas son esféricas: la primera tiene $3$ cm de radio y la "
+                    "segunda, $9$ cm. ¿Cuántas veces más material se necesita para forrar la "
+                    "segunda, y cuántas veces más aire le cabe?"
+                ),
+                "steps": [
+                    {
+                        "accion": "Calculo la razón entre los radios: $k = \\dfrac{9}{3} = 3$.",
+                        "porque": (
+                            "Toda la comparación sale de este número. Calcular las dos superficies y "
+                            "los dos volúmenes por separado lleva al mismo resultado con cuatro veces "
+                            "más cuentas."
+                        ),
+                    },
+                    {
+                        "accion": "El material es superficie, así que va con $k^2$: $3^2 = 9$ veces más.",
+                        "porque": (
+                            "Forrar es cubrir el exterior, y la superficie depende de dos "
+                            "dimensiones. La segunda pelota necesita nueve veces el material de la "
+                            "primera, no tres."
+                        ),
+                    },
+                    {
+                        "accion": "El aire que cabe es volumen, así que va con $k^3$: $3^3 = 27$ veces más.",
+                        "porque": (
+                            "La capacidad depende de las tres dimensiones. Un radio tres veces mayor "
+                            "da una pelota veintisiete veces más voluminosa, que es lo que hace tan "
+                            "distinta una pelota de tenis de una de basquetbol."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Usar el diámetro como si fuera el radio. Como el volumen depende "
             "de $r^3$, el error no duplica el resultado: lo multiplica por ocho. "
@@ -78080,19 +82547,31 @@ LESSONS: dict[str, dict] = {
             "sombra o una fotocopia ampliada sigue siendo \"la misma\" figura."
         ),
         "theory": (
-            "**Centro y razón.** Una homotecia queda definida por un centro $O$ "
-            "y una razón $k$. Cada punto $P$ va a $P'$ sobre la recta $OP$, de "
-            "modo que $\\overline{OP'} = k \\cdot \\overline{OP}$.\n\n"
-            "**Qué hace la razón.** Si $|k| > 1$ la figura se agranda; si "
-            "$0 < |k| < 1$ se achica. Si $k$ es NEGATIVO, la imagen queda al "
-            "otro lado del centro, invertida.\n\n"
-            "**Qué se conserva y qué no.** Se conservan los ángulos y el "
-            "paralelismo: la figura resultante es SEMEJANTE a la original. No se "
-            "conservan las longitudes, que se multiplican por $|k|$.\n\n"
-            "**Áreas y volúmenes.** Las longitudes se multiplican por $k$, las "
-            "áreas por $k^2$ y los volúmenes por $k^3$. Es el error más caro de "
-            "esta unidad."
-            "\n\n[figura:/preguntas/mat-homotecia-razon.svg]"
+            "**Centro y razón.** Una homotecia queda definida por un centro $O$ y una "
+            "razón $k \\neq 0$. Cada punto $P$ va a un $P'$ que está sobre la recta "
+            "$OP$, de modo que $\\overline{OP'} = k \\cdot \\overline{OP}$.\\n\\n"
+            "**En coordenadas**, con centro en el origen es una multiplicación: $(x, "
+            "y) \\to (kx,\\ ky)$. Con centro en $O(a, b)$ se mueve el punto, se escala "
+            "y se devuelve: $P' = \\big(a + k(x-a),\\ b + k(y-b)\\big)$.\\n\\n"
+            "| Razón $k$ | Qué pasa |\\n"
+            "|---|---|\\n"
+            "| $k > 1$ | la figura se agranda, del mismo lado del centro |\\n"
+            "| $0 < k < 1$ | se achica, del mismo lado |\\n"
+            "| $k = 1$ | no cambia nada |\\n"
+            "| $k < 0$ | pasa al otro lado del centro, invertida |\\n\\n"
+            "**Qué se conserva y qué no.** Se conservan los ángulos, el paralelismo y "
+            "la forma: la imagen es SEMEJANTE a la original, con razón de semejanza "
+            "$|k|$. No se conservan las longitudes, que se multiplican por $|k|$.\\n\\n"
+            "**El centro es el único punto fijo** cuando $k \\neq 1$: es el único que "
+            "no se mueve, y por eso todas las rectas que unen un punto con su imagen "
+            "pasan por él. Ubicarlo en un dibujo es cruzar dos de esas rectas.\\n\\n"
+            "**Áreas y volúmenes.** Las longitudes se multiplican por $|k|$, las "
+            "áreas por $k^2$ y los volúmenes por $|k|^3$. Es el error más caro de "
+            "esta unidad.\\n\\n"
+            "**No es una isometría.** A diferencia de trasladar, rotar o reflejar, "
+            "una homotecia cambia el tamaño: la figura resultante es semejante, pero "
+            "no congruente, salvo que $|k| = 1$.\\n\\n"
+            "[figura:/preguntas/mat-homotecia-razon.svg]"
         ),
         "example_statement": (
             "Un triángulo de área 12 cm² se somete a una homotecia de razón "
@@ -78112,6 +82591,52 @@ LESSONS: dict[str, dict] = {
                 "porque": "Si se hubiera pedido el volumen de un cuerpo homotético, el factor habría sido $3^3 = 27$. La regla es siempre la misma: una dimensión, un exponente.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Al punto $P(6, -4)$ se le aplica una homotecia de centro en el origen y "
+                    "razón $k = -\\dfrac{1}{2}$. ¿Cuáles son las coordenadas de su imagen y en "
+                    "qué cuadrante queda?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Con centro en el origen, multiplico ambas coordenadas por $k$: $P' = "
+                            "\\left(6 \\cdot \\left(-\\dfrac{1}{2}\\right),\\ -4 \\cdot "
+                            "\\left(-\\dfrac{1}{2}\\right)\\right) = (-3,\\ 2)$."
+                        ),
+                        "porque": (
+                            "La homotecia con centro en el origen es una multiplicación, y el signo "
+                            "de $k$ se aplica a las dos coordenadas por igual: por eso la segunda, "
+                            "que era negativa, queda positiva."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "$P$ estaba en el cuarto cuadrante y $P'$ queda en el segundo, es decir "
+                            "al otro lado del centro."
+                        ),
+                        "porque": (
+                            "Una razón negativa manda la imagen al lado opuesto del centro. Con $k$ "
+                            "positivo la imagen habría quedado en el mismo cuarto cuadrante, más "
+                            "cerca del origen."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Compruebo el tamaño: la distancia de $P$ al origen es $\\sqrt{36+16} = "
+                            "\\sqrt{52}$ y la de $P'$ es $\\sqrt{9+4} = \\sqrt{13}$, exactamente la "
+                            "mitad."
+                        ),
+                        "porque": (
+                            "$|k| = \\dfrac{1}{2}$ dice que las longitudes se reducen a la mitad, y "
+                            "$\\sqrt{52} = 2\\sqrt{13}$ lo confirma. Si la figura tuviera área, esta se "
+                            "reduciría a la cuarta parte."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Multiplicar el área directamente por $k$ y responder 36 cm². La "
             "razón vale para longitudes. Para área va $k^2$ y para volumen $k^3$."
@@ -78124,19 +82649,36 @@ LESSONS: dict[str, dict] = {
             "propiedades que salen de ahí."
         ),
         "theory": (
-            "**La definición.** $\\log_b a = c$ significa exactamente "
-            "$b^c = a$. Pasar de una forma a la otra resuelve la mayoría de los "
-            "ejercicios.\n\n"
-            "**Las tres propiedades.** $\\log(xy) = \\log x + \\log y$; "
-            "$\\log\\frac{x}{y} = \\log x - \\log y$; "
-            "$\\log x^n = n\\log x$. El logaritmo convierte multiplicaciones en "
-            "sumas y potencias en productos: para eso se inventó.\n\n"
-            "**Dos valores que hay que saber de memoria.** $\\log_b 1 = 0$ "
-            "porque $b^0 = 1$, y $\\log_b b = 1$ porque $b^1 = b$.\n\n"
-            "**Restricciones.** La base debe ser positiva y distinta de 1, y el "
-            "argumento debe ser ESTRICTAMENTE positivo. No existe el logaritmo "
-            "de cero ni de un número negativo."
-            "\n\n[figura:/preguntas/mat-grafico-logaritmo.svg]"
+            "**La definición.** $\\log_b a = c$ significa exactamente $b^c = a$: el "
+            "logaritmo es el exponente. Pasar de una forma a la otra resuelve la "
+            "mayoría de los ejercicios.\\n\\n"
+            "| Propiedad | Regla |\\n"
+            "|---|---|\\n"
+            "| Producto | $\\log(xy) = \\log x + \\log y$ |\\n"
+            "| Cociente | $\\log\\dfrac{x}{y} = \\log x - \\log y$ |\\n"
+            "| Potencia | $\\log x^n = n\\log x$ |\\n"
+            "| Raíz | $\\log \\sqrt[n]{x} = \\dfrac{1}{n}\\log x$ |\\n"
+            "| Cambio de base | $\\log_b a = \\dfrac{\\log a}{\\log b}$ |\\n\\n"
+            "El logaritmo convierte multiplicaciones en sumas y potencias en "
+            "productos: para eso se inventó.\\n\\n"
+            "**Dos valores que hay que saber de memoria.** $\\log_b 1 = 0$ porque $b^0 "
+            "= 1$, y $\\log_b b = 1$ porque $b^1 = b$. De ahí también $\\log 10 = 1$, "
+            "$\\log 100 = 2$ y $\\log 1000 = 3$ en base diez.\\n\\n"
+            "**Restricciones.** La base debe ser positiva y distinta de $1$, y el "
+            "argumento **estrictamente positivo**. No existe el logaritmo de cero ni "
+            "de un número negativo, y por eso toda solución de una ecuación "
+            "logarítmica hay que verificarla en la ecuación original.\\n\\n"
+            "**Ecuaciones exponenciales.** Si las bases se pueden igualar, se igualan "
+            "los exponentes: $2^x = 32 = 2^5$ da $x = 5$. Si no, se aplica logaritmo "
+            "a ambos lados y se baja el exponente con la propiedad de la potencia.\\n\\n"
+            "**Ecuaciones logarítmicas.** Se juntan los logaritmos en uno solo con "
+            "las propiedades y se vuelve a la forma exponencial. Las soluciones que "
+            "dejen un argumento negativo o cero se descartan.\\n\\n"
+            "**Para qué sirven en la vida real.** Las escalas logarítmicas comprimen "
+            "rangos enormes: la magnitud Richter, el pH y los decibeles. Por eso un "
+            "sismo de magnitud $7$ libera unas $32$ veces más energía que uno de $6$, "
+            "y no un séptimo más.\\n\\n"
+            "[figura:/preguntas/mat-grafico-logaritmo.svg]"
         ),
         "example_statement": (
             "Si $\\log 2 = 0{,}30$ y $\\log 3 = 0{,}48$, calcula $\\log 12$."
@@ -78155,6 +82697,42 @@ LESSONS: dict[str, dict] = {
                 "porque": "El exponente baja como factor multiplicando. Reemplazar recién al final evita arrastrar decimales por todo el desarrollo.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": "Resuelve la ecuación $3^{2x - 1} = 81$.",
+                "steps": [
+                    {
+                        "accion": "Escribo el $81$ como potencia de la misma base: $81 = 3^4$.",
+                        "porque": (
+                            "Con las dos bases iguales la ecuación se resuelve sin logaritmos. "
+                            "Reconocer las potencias chicas de $2$, $3$ y $5$ ahorra todo el "
+                            "procedimiento largo."
+                        ),
+                    },
+                    {
+                        "accion": "Igualo los exponentes: $2x - 1 = 4$.",
+                        "porque": (
+                            "Si dos potencias de la misma base son iguales, sus exponentes lo son. Es "
+                            "la definición de logaritmo usada al revés."
+                        ),
+                    },
+                    {
+                        "accion": "Despejo: $2x = 5$, entonces $x = \\dfrac{5}{2}$.",
+                        "porque": (
+                            "Queda una ecuación lineal común. Que la solución no sea entera no tiene "
+                            "nada de raro: el exponente puede ser cualquier real."
+                        ),
+                    },
+                    {
+                        "accion": "Verifico: $3^{2 \\cdot 2{,}5 - 1} = 3^{4} = 81$.",
+                        "porque": (
+                            "Reemplazar en la ecuación original detecta al tiro un error de signo en "
+                            "el despeje, que es donde se cae este tipo de ejercicio."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Inventar propiedades que no existen, como $\\log(x+y) = \\log x + "
             "\\log y$. El logaritmo convierte PRODUCTOS en sumas, no sumas en "
@@ -78169,18 +82747,36 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**Interés simple.** El interés se calcula siempre sobre el capital "
-            "inicial: $I = C \\cdot i \\cdot t$, y el monto final es $C + I$. "
-            "Crece de forma lineal.\n\n"
-            "**Interés compuesto.** El interés se suma al capital y desde ahí "
-            "genera más interés: $M = C(1 + i)^t$. Crece de forma exponencial, y "
-            "por eso a largo plazo la diferencia con el simple es enorme.\n\n"
-            "**Aumentos y descuentos sucesivos NO se suman.** Un alza del 20% "
-            "seguida de una baja del 20% no deja el precio igual: queda en "
-            "$1{,}20 \\cdot 0{,}80 = 0{,}96$, un 4% MENOS que al principio.\n\n"
-            "**Los factores multiplicativos son el atajo.** Aumentar un 15% es "
-            "multiplicar por 1,15; descontar un 15% es multiplicar por 0,85. "
-            "Encadenar operaciones se vuelve una sola multiplicación."
-            "\n\n[figura:/preguntas/mat-interes-simple-compuesto.svg]"
+            "inicial: $I = C \\cdot i \\cdot t$, y el monto final es $M = C(1 + i\\,t)$. "
+            "Crece de forma lineal, porque cada período aporta lo mismo.\\n\\n"
+            "**Interés compuesto.** El interés se suma al capital y desde ahí genera "
+            "más interés: $M = C(1 + i)^t$. Crece de forma exponencial, y por eso a "
+            "largo plazo la diferencia con el simple es enorme.\\n\\n"
+            "| | Simple | Compuesto |\\n"
+            "|---|---|---|\\n"
+            "| Monto final | $C(1 + i\\,t)$ | $C(1+i)^t$ |\\n"
+            "| El interés se calcula sobre | el capital inicial | el saldo acumulado "
+            "|\\n"
+            "| Crecimiento | lineal | exponencial |\\n\\n"
+            "En las dos fórmulas $i$ va en decimal ($5\\% \\to 0{,}05$) y **el tiempo "
+            "tiene que estar en la misma unidad que la tasa**: con una tasa mensual, "
+            "$t$ se cuenta en meses. Es el error más frecuente de la unidad.\\n\\n"
+            "**Aumentos y descuentos sucesivos NO se suman.** Un alza del $20\\%$ "
+            "seguida de una baja del $20\\%$ deja $1{,}20 \\cdot 0{,}80 = 0{,}96$, un "
+            "$4\\%$ MENOS que al principio.\\n\\n"
+            "**Los factores multiplicativos son el atajo.** Aumentar un $15\\%$ es "
+            "multiplicar por $1{,}15$; descontar un $15\\%$, por $0{,}85$. Encadenar "
+            "operaciones se vuelve una sola multiplicación, y el orden de los "
+            "factores no altera el resultado: aplicar primero el descuento o primero "
+            "el recargo da lo mismo.\\n\\n"
+            "**Volver al precio original es dividir.** Si el final es $\\$11.900$ con "
+            "IVA del $19\\%$, el neto es $\\dfrac{11.900}{1{,}19} = \\$10.000$, no el "
+            "final menos su $19\\%$.\\n\\n"
+            "**Comparar alternativas.** Para decidir entre dos ofertas de crédito o "
+            "de ahorro se calcula el monto final de cada una con su propia fórmula y "
+            "recién ahí se comparan: una tasa más baja con más períodos puede "
+            "terminar costando más.\\n\\n"
+            "[figura:/preguntas/mat-interes-simple-compuesto.svg]"
         ),
         "example_statement": (
             "Un producto cuesta $10.000. Primero sube un 20% y después el nuevo "
@@ -78200,6 +82796,45 @@ LESSONS: dict[str, dict] = {
                 "porque": "El factor total es $1{,}20 \\cdot 0{,}75 = 0{,}90$, o sea una baja neta del 10%: no del 5% que daría restar 25 menos 20.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Se depositan $\\$200.000$ a un $10\\%$ de interés compuesto anual. ¿Cuánto "
+                    "hay a los dos años, y cuánto más que con interés simple a la misma tasa?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Aplico la fórmula del compuesto: $M = 200.000 \\cdot (1 + 0{,}10)^2 = "
+                            "200.000 \\cdot 1{,}21 = \\$242.000$."
+                        ),
+                        "porque": (
+                            "La tasa entra en decimal y el exponente es la cantidad de períodos. "
+                            "$1{,}1^2 = 1{,}21$, no $1{,}2$: ahí está todo el efecto del interés "
+                            "sobre el interés."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo el interés simple: $I = 200.000 \\cdot 0{,}10 \\cdot 2 = "
+                            "\\$40.000$, así que el monto sería $\\$240.000$."
+                        ),
+                        "porque": (
+                            "En el simple cada año aporta lo mismo, $\\$20.000$, porque siempre se "
+                            "calcula sobre los $\\$200.000$ iniciales y nunca sobre lo ya ganado."
+                        ),
+                    },
+                    {
+                        "accion": "Comparo: el compuesto entrega $\\$2.000$ más.",
+                        "porque": (
+                            "Esos $\\$2.000$ son exactamente el $10\\%$ de los $\\$20.000$ ganados el "
+                            "primer año. En dos años la diferencia es chica; en veinte, el compuesto "
+                            "llega a $\\$1.345.500$ y el simple a $\\$600.000$."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Sumar y restar los porcentajes: \"subió 20 y bajó 25, entonces bajó "
             "5%\". Los porcentajes sucesivos se MULTIPLICAN, porque cada uno se "
@@ -78213,21 +82848,37 @@ LESSONS: dict[str, dict] = {
             "que no se pueden medir directamente."
         ),
         "theory": (
-            "**Las tres razones.** Respecto de un ángulo agudo $\\alpha$: "
-            "$\\sin\\alpha = \\frac{\\text{cateto opuesto}}{\\text{hipotenusa}}$, "
-            "$\\cos\\alpha = \\frac{\\text{cateto adyacente}}{\\text{hipotenusa}}$, "
-            "$\\tan\\alpha = \\frac{\\text{opuesto}}{\\text{adyacente}}$.\n\n"
-            "**Opuesto y adyacente dependen del ángulo.** El mismo cateto es "
-            "opuesto para un ángulo y adyacente para el otro. Marcar el ángulo "
-            "antes de nombrar los lados evita casi todos los errores.\n\n"
-            "**Valores que conviene saber.** $\\sin 30° = \\frac{1}{2}$, "
-            "$\\cos 60° = \\frac{1}{2}$, "
-            "$\\sin 45° = \\cos 45° = \\frac{\\sqrt{2}}{2}$, "
-            "$\\tan 45° = 1$, $\\sin 60° = \\cos 30° = \\frac{\\sqrt{3}}{2}$.\n\n"
-            "**Identidad fundamental.** $\\sin^2\\alpha + \\cos^2\\alpha = 1$. "
-            "Sale del teorema de Pitágoras y permite obtener una razón "
-            "conociendo la otra."
-            "\n\n[figura:/preguntas/mat-triangulo-trigonometria.svg]"
+            "**Las tres razones.** Respecto de un ángulo agudo $\\alpha$ de un "
+            "triángulo rectángulo:\\n\\n"
+            "$$\\sin\\alpha = \\dfrac{\\text{opuesto}}{\\text{hipotenusa}}, \\quad "
+            "\\cos\\alpha = \\dfrac{\\text{adyacente}}{\\text{hipotenusa}}, \\quad "
+            "\\tan\\alpha = \\dfrac{\\text{opuesto}}{\\text{adyacente}}$$\\n\\n"
+            "**Opuesto y adyacente dependen del ángulo.** El mismo cateto es opuesto "
+            "para un ángulo y adyacente para el otro. Marcar el ángulo antes de "
+            "nombrar los lados evita casi todos los errores.\\n\\n"
+            "**Cuál usar.** Se elige la razón que relaciona lo que se tiene con lo "
+            "que se busca: con los dos catetos en juego, tangente; si aparece la "
+            "hipotenusa, seno o coseno según el cateto que sea.\\n\\n"
+            "| $\\alpha$ | $30^\\circ$ | $45^\\circ$ | $60^\\circ$ |\\n"
+            "|---|---|---|---|\\n"
+            "| $\\sin$ | $\\dfrac{1}{2}$ | $\\dfrac{\\sqrt{2}}{2}$ | "
+            "$\\dfrac{\\sqrt{3}}{2}$ |\\n"
+            "| $\\cos$ | $\\dfrac{\\sqrt{3}}{2}$ | $\\dfrac{\\sqrt{2}}{2}$ | "
+            "$\\dfrac{1}{2}$ |\\n"
+            "| $\\tan$ | $\\dfrac{\\sqrt{3}}{3}$ | $1$ | $\\sqrt{3}$ |\\n\\n"
+            "**Ángulos complementarios.** $\\sin\\alpha = \\cos(90^\\circ - \\alpha)$: el "
+            "seno de uno es el coseno del otro, porque el cateto opuesto a uno es el "
+            "adyacente al otro. Eso explica la simetría de la tabla.\\n\\n"
+            "**Identidad fundamental.** $\\sin^2\\alpha + \\cos^2\\alpha = 1$. Sale del "
+            "teorema de Pitágoras y permite obtener una razón conociendo la otra. Y "
+            "$\\tan\\alpha = \\dfrac{\\sin\\alpha}{\\cos\\alpha}$.\\n\\n"
+            "**Elevación y depresión.** El ángulo de **elevación** se mide desde la "
+            "horizontal hacia arriba, y el de **depresión**, desde la horizontal "
+            "hacia abajo. Son iguales entre sí cuando se miran dos puntos entre "
+            "ellos, porque son ángulos alternos internos entre paralelas: el error "
+            "típico es marcar el de depresión dentro del triángulo, donde va su "
+            "complemento.\\n\\n"
+            "[figura:/preguntas/mat-triangulo-trigonometria.svg]"
         ),
         "example_statement": (
             "Desde un punto en el suelo, a 20 m de la base de un edificio, se "
@@ -78248,6 +82899,57 @@ LESSONS: dict[str, dict] = {
                 "porque": "El resultado tiene sentido: el edificio es más alto que la distancia al punto de observación, tal como se espera con un ángulo mayor que 45°.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una rampa de $30$ metros de largo sube con un ángulo de $30^\\circ$ "
+                    "respecto del suelo. ¿Qué altura alcanza?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico los lados: los $30$ m de la rampa son la HIPOTENUSA, porque "
+                            "es el lado inclinado, y la altura es el cateto opuesto al ángulo de "
+                            "$30^\\circ$."
+                        ),
+                        "porque": (
+                            "La rampa no es un cateto: es el camino inclinado que va del suelo al "
+                            "punto alto, o sea el lado opuesto al ángulo recto que forman el suelo y "
+                            "la vertical."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Con opuesto e hipotenusa, la razón que corresponde es el seno: $\\sin "
+                            "30^\\circ = \\dfrac{h}{30}$."
+                        ),
+                        "porque": (
+                            "La tangente serviría si conociera el largo horizontal, que no es dato. "
+                            "Elegir la razón según los lados que están en juego es lo que decide el "
+                            "ejercicio."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reemplazo el valor de la tabla y despejo: $h = 30 \\cdot \\dfrac{1}{2} = "
+                            "15$ m."
+                        ),
+                        "porque": (
+                            "$\\sin 30^\\circ$ vale exactamente un medio, así que la altura es la mitad "
+                            "del largo de la rampa: un resultado que conviene recordar porque aparece "
+                            "seguido."
+                        ),
+                    },
+                    {
+                        "accion": "Reviso el sentido: $15$ m es menor que los $30$ m de la rampa.",
+                        "porque": (
+                            "Un cateto siempre mide menos que la hipotenusa. Si el resultado hubiera "
+                            "salido mayor, la razón elegida estaría invertida."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Usar seno o coseno cuando no se conoce la hipotenusa. Si el "
             "problema entrega los dos catetos —o pide uno teniendo el otro—, la "
@@ -78261,20 +82963,34 @@ LESSONS: dict[str, dict] = {
             "intersección."
         ),
         "theory": (
-            "**Forma principal.** $y = mx + n$, donde $m$ es la pendiente y $n$ "
-            "el coeficiente de posición, que es donde la recta corta al eje "
-            "$y$.\n\n"
-            "**Pendiente entre dos puntos.** "
-            "$m = \\frac{y_2 - y_1}{x_2 - x_1}$. Si $m > 0$ la recta sube; si "
-            "$m < 0$ baja; si $m = 0$ es horizontal. Una recta vertical no tiene "
-            "pendiente definida.\n\n"
-            "**Paralelas y perpendiculares.** Dos rectas son paralelas si "
-            "$m_1 = m_2$, y perpendiculares si $m_1 \\cdot m_2 = -1$, es decir "
-            "si una pendiente es el inverso multiplicativo negativo de la otra.\n\n"
-            "**Intersección.** El punto donde se cruzan dos rectas es la "
-            "solución del sistema formado por sus ecuaciones. Si son paralelas "
-            "distintas, no hay solución."
-            "\n\n[figura:/preguntas/mat-recta-pendiente.svg]"
+            "**Forma principal.** $y = mx + n$, donde $m$ es la **pendiente** y $n$ "
+            "el **coeficiente de posición**, que es donde la recta corta al eje $Y$. "
+            "También aparece la **forma general** $Ax + By + C = 0$ y la "
+            "**punto-pendiente** $y - y_1 = m(x - x_1)$, que es la más cómoda cuando "
+            "se conocen un punto y la pendiente.\\n\\n"
+            "**Pendiente entre dos puntos.** $m = \\dfrac{y_2 - y_1}{x_2 - x_1}$, el "
+            "cambio vertical dividido por el horizontal. Si $m > 0$ la recta sube; si "
+            "$m < 0$ baja; si $m = 0$ es horizontal ($y = n$). Una recta **vertical** "
+            "no tiene pendiente definida y se escribe $x = a$.\\n\\n"
+            "| Relación | Condición |\\n"
+            "|---|---|\\n"
+            "| Paralelas | $m_1 = m_2$ (y $n_1 \\neq n_2$) |\\n"
+            "| Perpendiculares | $m_1 \\cdot m_2 = -1$ |\\n"
+            "| Coincidentes | $m_1 = m_2$ y $n_1 = n_2$ |\\n\\n"
+            "Para la perpendicular hay que invertir la fracción **y** cambiarle el "
+            "signo: la perpendicular a una recta de pendiente $2$ tiene pendiente "
+            "$-\\dfrac{1}{2}$, no $-2$.\\n\\n"
+            "**Intersección.** El punto donde se cruzan dos rectas es la solución del "
+            "sistema formado por sus ecuaciones. Si son paralelas distintas no hay "
+            "solución, y si son coincidentes hay infinitas.\\n\\n"
+            "**Dos puntos, dos fórmulas que se usan todo el tiempo:**\\n\\n"
+            "- distancia: $d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$;\\n"
+            "- punto medio: $M = \\left(\\dfrac{x_1+x_2}{2},\\ "
+            "\\dfrac{y_1+y_2}{2}\\right)$.\\n\\n"
+            "**Leer la pendiente de un gráfico.** Se cuentan los cuadraditos: cuánto "
+            "sube por cada uno que avanza. Y el coeficiente de posición se lee "
+            "directo donde la recta cruza el eje vertical, sin calcular nada.\\n\\n"
+            "[figura:/preguntas/mat-recta-pendiente.svg]"
         ),
         "example_statement": (
             "Determina la ecuación de la recta perpendicular a "
@@ -78294,6 +83010,55 @@ LESSONS: dict[str, dict] = {
                 "porque": "La pendiente sola define infinitas rectas paralelas entre sí; el punto es lo que elige una. Por eso hacen falta los dos datos.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una recta pasa por $A(-2, 1)$ y $B(4, 9)$. Determina su ecuación, el "
+                    "punto medio de $\\overline{AB}$ y la distancia entre ambos puntos."
+                ),
+                "steps": [
+                    {
+                        "accion": "Pendiente: $m = \\dfrac{9 - 1}{4 - (-2)} = \\dfrac{8}{6} = \\dfrac{4}{3}$.",
+                        "porque": (
+                            "Restar un negativo suma: el denominador es $6$, no $2$. Ahí se pierde la "
+                            "mitad de los ejercicios con puntos en distintos cuadrantes."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Uso la forma punto-pendiente con $A$: $y - 1 = \\dfrac{4}{3}(x + 2)$, que "
+                            "ordenada queda $y = \\dfrac{4}{3}x + \\dfrac{11}{3}$."
+                        ),
+                        "porque": (
+                            "Con un punto y la pendiente la recta queda determinada. Elegir $A$ o $B$ "
+                            "da la misma ecuación; conviene el de números más chicos."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Punto medio: $M = \\left(\\dfrac{-2+4}{2},\\ \\dfrac{1+9}{2}\\right) = (1,\\ "
+                            "5)$."
+                        ),
+                        "porque": (
+                            "El punto medio es el promedio de cada coordenada por separado. Y "
+                            "compruebo que pertenece a la recta: $\\dfrac{4}{3} \\cdot 1 + "
+                            "\\dfrac{11}{3} = \\dfrac{15}{3} = 5$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Distancia: $d = \\sqrt{(4+2)^2 + (9-1)^2} = \\sqrt{36 + 64} = \\sqrt{100} = "
+                            "10$."
+                        ),
+                        "porque": (
+                            "Es Pitágoras sobre el triángulo que forman el avance horizontal y el "
+                            "vertical. Los catetos $6$ y $8$ dan el trío $(6, 8, 10)$, así que la "
+                            "raíz sale exacta."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Usar $-2$ como pendiente perpendicular en vez de $-\\frac{1}{2}$. "
             "La condición es que el PRODUCTO sea $-1$: hay que invertir la "
@@ -78306,20 +83071,34 @@ LESSONS: dict[str, dict] = {
             "se aplican una y otra vez, y que se reconocen por el dibujo."
         ),
         "theory": (
-            "**Ángulo del centro y ángulo inscrito.** Un ángulo del centro mide "
-            "lo mismo que su arco. Un ángulo inscrito mide la MITAD de su arco, "
-            "y por lo tanto la mitad del ángulo del centro que abarca el mismo "
-            "arco.\n\n"
-            "**Consecuencia clásica.** Todo ángulo inscrito en una "
-            "semicircunferencia es recto, porque abarca un arco de 180° y mide "
-            "su mitad.\n\n"
-            "**La tangente es perpendicular al radio** en el punto de contacto. "
-            "Es la propiedad que convierte muchos problemas de circunferencia en "
-            "problemas de triángulo rectángulo.\n\n"
-            "**Cuerdas que se cortan.** Si dos cuerdas se intersecan dentro de "
-            "la circunferencia, los productos de sus segmentos son iguales: "
-            "$a \\cdot b = c \\cdot d$."
-            "\n\n[figura:/preguntas/mat-cuerdas-circunferencia.svg]"
+            "**Los elementos.** El **radio** va del centro a la circunferencia; la "
+            "**cuerda** une dos puntos de ella; el **diámetro** es la cuerda que pasa "
+            "por el centro y mide $2r$; el **arco** es un trozo de la curva; el "
+            "**sector** es la porción de círculo entre dos radios, como una tajada de "
+            "pizza.\\n\\n"
+            "**Ángulo del centro y ángulo inscrito.** Un ángulo del centro mide lo "
+            "mismo que su arco. Un ángulo inscrito mide la MITAD de su arco, y por lo "
+            "tanto la mitad del ángulo del centro que abarca el mismo arco.\\n\\n"
+            "**Consecuencias que se preguntan una y otra vez:**\\n\\n"
+            "- todo ángulo inscrito en una semicircunferencia es recto, porque abarca "
+            "un arco de $180^\\circ$;\\n"
+            "- dos ángulos inscritos que abarcan el mismo arco son iguales;\\n"
+            "- en un cuadrilátero inscrito, los ángulos opuestos suman $180^\\circ$.\\n\\n"
+            "**La tangente es perpendicular al radio** en el punto de contacto. Es la "
+            "propiedad que convierte muchos problemas de circunferencia en problemas "
+            "de triángulo rectángulo. Además, los dos segmentos tangentes trazados "
+            "desde un mismo punto exterior miden lo mismo.\\n\\n"
+            "**Cuerdas que se cortan.** Si dos cuerdas se intersecan dentro de la "
+            "circunferencia, los productos de sus segmentos son iguales: $a \\cdot b = "
+            "c \\cdot d$.\\n\\n"
+            "**Arco y sector.** Para un ángulo del centro de $\\alpha$ grados:\\n\\n"
+            "| Se pide | Fórmula |\\n"
+            "|---|---|\\n"
+            "| Longitud del arco | $\\dfrac{\\alpha}{360^\\circ} \\cdot 2\\pi r$ |\\n"
+            "| Área del sector | $\\dfrac{\\alpha}{360^\\circ} \\cdot \\pi r^2$ |\\n\\n"
+            "Las dos son la misma idea: la fracción de vuelta que ocupa el ángulo, "
+            "aplicada al perímetro o al área completos.\\n\\n"
+            "[figura:/preguntas/mat-cuerdas-circunferencia.svg]"
         ),
         "example_statement": (
             "En una circunferencia, un ángulo del centro mide 80°. ¿Cuánto mide "
@@ -78339,6 +83118,46 @@ LESSONS: dict[str, dict] = {
                 "porque": "Todos los ángulos inscritos que abarcan ese mismo arco miden 40°, sin importar dónde esté su vértice sobre la circunferencia.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "En una circunferencia de $9$ cm de radio, un sector tiene un ángulo del "
+                    "centro de $40^\\circ$. Calcula el área del sector y la longitud de su "
+                    "arco, en términos de $\\pi$."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Calculo qué fracción de la vuelta completa representa el ángulo: "
+                            "$\\dfrac{40^\\circ}{360^\\circ} = \\dfrac{1}{9}$."
+                        ),
+                        "porque": (
+                            "Todo el ejercicio se apoya en esta fracción: el sector es esa parte del "
+                            "círculo y el arco, esa parte del contorno. Reducirla primero deja las "
+                            "dos cuentas siguientes en una multiplicación simple."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Área del sector: $\\dfrac{1}{9} \\cdot \\pi \\cdot 9^2 = \\dfrac{81\\pi}{9} = "
+                            "9\\pi\\ \\text{cm}^2$."
+                        ),
+                        "porque": (
+                            "El área del círculo completo es $81\\pi$, y el sector es un noveno de "
+                            "ella. El radio se eleva al cuadrado antes de aplicar la fracción."
+                        ),
+                    },
+                    {
+                        "accion": "Longitud del arco: $\\dfrac{1}{9} \\cdot 2\\pi \\cdot 9 = 2\\pi$ cm.",
+                        "porque": (
+                            "El contorno completo mide $18\\pi$, y el arco es un noveno. Fíjate que "
+                            "acá el radio va sin elevar: el arco es una longitud, no una superficie, "
+                            "y por eso sus unidades son cm y no cm²."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Invertir la relación y duplicar en vez de dividir. El del CENTRO "
             "es el grande y el INSCRITO es la mitad. La regla mnemotécnica: el "
@@ -78353,19 +83172,32 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**Cuándo aplica.** Se necesitan cuatro condiciones: número FIJO de "
-            "repeticiones $n$, solo dos resultados por repetición (éxito o "
-            "fracaso), probabilidad $p$ constante, y repeticiones "
-            "independientes.\n\n"
-            "**La fórmula.** $P(X = k) = C(n,k)\\, p^k (1-p)^{n-k}$. El "
-            "combinatorio cuenta en cuántos ÓRDENES distintos pueden ocurrir "
-            "esos $k$ éxitos.\n\n"
-            "**Esperanza y varianza.** $E(X) = n\\,p$ y "
-            "$\\mathrm{Var}(X) = n\\,p\\,(1-p)$. La esperanza es el número de "
-            "éxitos que se espera en promedio.\n\n"
-            "**Éxito es lo que uno defina.** Puede ser sacar cara, fallar un "
-            "tiro o que una pieza salga defectuosa. Lo importante es fijar qué "
-            "es éxito ANTES de escribir $p$, y no cambiarlo a mitad de camino."
-            "\n\n[figura:/preguntas/mat-barras-binomial.svg]"
+            "repeticiones $n$, solo dos resultados por repetición (éxito o fracaso), "
+            "probabilidad $p$ constante, y repeticiones independientes. Si el "
+            "enunciado saca bolitas sin reposición, $p$ cambia y el modelo ya no "
+            "sirve.\\n\\n"
+            "**La fórmula.** $P(X = k) = \\dbinom{n}{k}\\, p^k\\,(1-p)^{n-k}$. Cada "
+            "parte hace algo distinto:\\n\\n"
+            "| Parte | Qué aporta |\\n"
+            "|---|---|\\n"
+            "| $\\dbinom{n}{k}$ | en cuántos órdenes distintos pueden ocurrir los $k$ "
+            "éxitos |\\n"
+            "| $p^k$ | que los $k$ éxitos ocurran |\\n"
+            "| $(1-p)^{n-k}$ | que los demás intentos fallen |\\n\\n"
+            "**Esperanza y varianza.** $E(X) = n\\,p$ y $\\mathrm{Var}(X) = "
+            "n\\,p\\,(1-p)$, con $\\sigma = \\sqrt{n\\,p\\,(1-p)}$. La esperanza es el "
+            "número de éxitos que se espera en promedio, y no tiene por qué ser un "
+            "entero: en $5$ lanzamientos de moneda se esperan $2{,}5$ caras.\\n\\n"
+            "**Éxito es lo que uno defina.** Puede ser sacar cara, fallar un tiro o "
+            "que una pieza salga defectuosa. Lo importante es fijar qué es éxito "
+            "ANTES de escribir $p$, y no cambiarlo a mitad de camino.\\n\\n"
+            "**«Al menos» y «a lo más».** $P(X \\geq 1) = 1 - P(X = 0)$, que es el "
+            "atajo de siempre. Para «a lo más dos» hay que sumar $P(X=0)$, $P(X=1)$ y "
+            "$P(X=2)$: la fórmula entrega un valor exacto por vez.\\n\\n"
+            "**La forma de la distribución.** Con $p = 0{,}5$ es simétrica; con $p$ "
+            "chico se carga hacia la izquierda. El valor más probable está siempre "
+            "cerca de $n\\,p$, lo que permite descartar alternativas sin calcular.\\n\\n"
+            "[figura:/preguntas/mat-barras-binomial.svg]"
         ),
         "example_statement": (
             "Se lanza una moneda equilibrada 5 veces. ¿Cuál es la probabilidad "
@@ -78385,6 +83217,56 @@ LESSONS: dict[str, dict] = {
                 "porque": "Con $p = 0{,}5$ los exponentes se juntan en $(0{,}5)^5 = \\frac{1}{32}$, así que la probabilidad es $\\frac{10}{32}$. Comprobarlo como fracción confirma el resultado.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un jugador de básquetbol encesta el $80\\%$ de sus tiros libres. Si lanza "
+                    "$4$ tiros, ¿cuál es la probabilidad de que falle exactamente uno? ¿Y "
+                    "cuántos aciertos se esperan?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Defino el éxito como encestar, con $p = 0{,}8$, $n = 4$ y $k = 3$ "
+                            "aciertos, porque fallar exactamente uno es acertar exactamente tres."
+                        ),
+                        "porque": (
+                            "Traducir el enunciado antes de escribir la fórmula es la mitad del "
+                            "ejercicio: «falla uno» y «acierta tres» son el mismo suceso, y con $p = "
+                            "0{,}8$ conviene contar los aciertos."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo el combinatorio: $\\dbinom{4}{3} = 4$, que son los cuatro tiros "
+                            "en que puede caer la falla."
+                        ),
+                        "porque": (
+                            "El fallo puede ser el primero, el segundo, el tercero o el cuarto. Sin "
+                            "este factor se estaría calculando la probabilidad de una sola secuencia."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Aplico la fórmula: $P = 4 \\cdot (0{,}8)^3 \\cdot (0{,}2)^1 = 4 \\cdot "
+                            "0{,}512 \\cdot 0{,}2 = 0{,}4096$."
+                        ),
+                        "porque": (
+                            "Los tres aciertos aportan $(0{,}8)^3$ y el fallo, $0{,}2$. El resultado, "
+                            "cerca del $41\\%$, es el más probable de todos los casos posibles."
+                        ),
+                    },
+                    {
+                        "accion": "La esperanza es $E(X) = n\\,p = 4 \\cdot 0{,}8 = 3{,}2$ aciertos.",
+                        "porque": (
+                            "Es el promedio a la larga, no un resultado posible de una tanda: nadie "
+                            "encesta $3{,}2$ tiros. Que esté entre $3$ y $4$ confirma que el caso de "
+                            "tres aciertos es de los más probables."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Olvidar el combinatorio y calcular solo $(0{,}5)^5$. Eso da la "
             "probabilidad de UNA secuencia específica, como cara-cara-cara-sello-sello. "
@@ -78398,18 +83280,29 @@ LESSONS: dict[str, dict] = {
             "cálculo, y ese es todo el asunto."
         ),
         "theory": (
-            "**La definición.** $P(A|B) = \\frac{P(A \\cap B)}{P(B)}$, con "
-            "$P(B) > 0$. Se lee \"probabilidad de A dado B\".\n\n"
-            "**Saber algo reduce el espacio muestral.** Al condicionar, ya no se "
-            "considera todo lo posible sino solo los casos donde ocurrió $B$. "
-            "Por eso $B$ pasa al denominador.\n\n"
-            "**Independencia.** $A$ y $B$ son independientes si "
-            "$P(A|B) = P(A)$, es decir si saber que ocurrió $B$ no cambia nada. "
-            "En ese caso $P(A \\cap B) = P(A)\\cdot P(B)$.\n\n"
-            "**El orden importa.** $P(A|B)$ y $P(B|A)$ son cosas distintas y "
-            "rara vez coinciden. Confundirlas es un error clásico, y las "
-            "alternativas de la prueba suelen incluir las dos."
-            "\n\n[figura:/preguntas/mat-arbol-condicional.svg]"
+            "**La definición.** $P(A|B) = \\dfrac{P(A \\cap B)}{P(B)}$, con $P(B) > 0$. "
+            "Se lee «probabilidad de $A$ dado $B$».\\n\\n"
+            "**Saber algo reduce el espacio muestral.** Al condicionar ya no se "
+            "considera todo lo posible, sino solo los casos donde ocurrió $B$. Por "
+            "eso $B$ pasa al denominador: se convirtió en el nuevo universo.\\n\\n"
+            "**Con una tabla de doble entrada** la fórmula casi no hace falta: "
+            "$P(A|B)$ es la casilla de $A$ y $B$ dividida por el TOTAL de la fila o "
+            "columna de $B$, no por el total general.\\n\\n"
+            "**Regla del producto.** Despejando: $P(A \\cap B) = P(B) \\cdot P(A|B)$. "
+            "Es lo que se usa en los árboles: se multiplica a lo largo de una rama.\\n\\n"
+            "**Independencia.** $A$ y $B$ son independientes si $P(A|B) = P(A)$, es "
+            "decir si saber que ocurrió $B$ no cambia nada. En ese caso $P(A \\cap B) "
+            "= P(A) \\cdot P(B)$.\\n\\n"
+            "**El orden importa.** $P(A|B)$ y $P(B|A)$ son cosas distintas y rara vez "
+            "coinciden: la probabilidad de tener fiebre dado que hay gripe es "
+            "altísima, y la de tener gripe dado que hay fiebre, mucho menor. Las "
+            "alternativas de la prueba suelen incluir las dos.\\n\\n"
+            "**Diagramas de árbol.** Cada nivel es una etapa y cada rama lleva su "
+            "probabilidad. Para la de un camino completo se multiplica a lo largo de "
+            "la rama; para un suceso que ocurre por varios caminos, se suman las "
+            "ramas. Las probabilidades que salen de un mismo nodo suman siempre $1$, "
+            "y esa es la comprobación de que el árbol está bien armado.\\n\\n"
+            "[figura:/preguntas/mat-arbol-condicional.svg]"
         ),
         "example_statement": (
             "En un curso, el 60% practica algún deporte, el 30% toca un "
@@ -78431,6 +83324,57 @@ LESSONS: dict[str, dict] = {
                 "porque": "El denominador es la probabilidad de la CONDICIÓN, porque el universo ahora son solo quienes practican deporte. Nota que $P(D|I) = \\frac{0{,}20}{0{,}30} = 66{,}7\\%$: distinto, como se anticipaba.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "En un curso de $40$ estudiantes, $24$ son mujeres. De ellas, $18$ "
+                    "aprobaron la prueba, y en total aprobaron $28$ estudiantes. Si se elige "
+                    "a alguien que aprobó, ¿cuál es la probabilidad de que sea mujer?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico qué condiciona a qué: se sabe que la persona aprobó, así que "
+                            "el universo pasa a ser los $28$ que aprobaron."
+                        ),
+                        "porque": (
+                            "La condición es lo que va después de la barra y define el nuevo "
+                            "denominador. Si la pregunta hubiera sido al revés —elegir una mujer y "
+                            "preguntar si aprobó—, el denominador serían las $24$ mujeres."
+                        ),
+                    },
+                    {
+                        "accion": "Cuento los casos que cumplen las dos cosas: $18$ mujeres aprobadas.",
+                        "porque": (
+                            "El numerador de una probabilidad condicional es siempre la intersección: "
+                            "las personas que son mujeres Y aprobaron."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo: $P(\\text{mujer}\\,|\\,\\text{aprobó}) = \\dfrac{18}{28} = "
+                            "\\dfrac{9}{14} \\approx 0{,}64$."
+                        ),
+                        "porque": (
+                            "Dividir por los $40$ del curso daría $0{,}45$, que responde otra "
+                            "pregunta: la probabilidad de elegir a una mujer aprobada entre todos, "
+                            "sin saber nada de antemano."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Compruebo que no son independientes: $P(\\text{mujer}) = \\dfrac{24}{40} = "
+                            "0{,}6$ y $P(\\text{mujer}|\\text{aprobó}) \\approx 0{,}64$."
+                        ),
+                        "porque": (
+                            "Saber que aprobó cambia la probabilidad, aunque sea poco, así que los "
+                            "dos sucesos no son independientes. Si ambas hubieran dado $0{,}6$, lo "
+                            "serían."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Dividir por el evento equivocado. En $P(A|B)$ el denominador es "
             "SIEMPRE $P(B)$, lo que está después de la barra: es la información "
@@ -78444,21 +83388,39 @@ LESSONS: dict[str, dict] = {
             "lo que esta unidad entrena."
         ),
         "theory": (
-            "**Interpretación geométrica.** Cada ecuación es una recta. Una "
-            "solución = las rectas se cortan; infinitas = son la MISMA recta; "
-            "ninguna = son paralelas distintas.\n\n"
-            "**El criterio de los coeficientes.** Para "
-            "$a_1x + b_1y = c_1$ y $a_2x + b_2y = c_2$: si "
-            "$\\frac{a_1}{a_2} \\neq \\frac{b_1}{b_2}$ hay solución única. Si "
-            "las tres razones son iguales, hay infinitas. Si las de $a$ y $b$ "
-            "coinciden pero la de $c$ no, no hay solución.\n\n"
-            "**Qué significa cada caso.** Solución única: las pendientes son "
-            "distintas. Infinitas: una ecuación es múltiplo de la otra, así que "
-            "no aporta información nueva. Ninguna: mismas pendientes, distinto "
-            "corte con el eje.\n\n"
-            "**Cómo se ve al resolver.** Si al eliminar una incógnita queda "
-            "$0 = 0$, hay infinitas soluciones. Si queda algo imposible como "
-            "$0 = 5$, no hay ninguna."
+            "**Interpretación geométrica.** Cada ecuación de un sistema $2\\times 2$ "
+            "es una recta, y la cantidad de soluciones es la cantidad de puntos en "
+            "común: una solución si se cortan, infinitas si son la MISMA recta, "
+            "ninguna si son paralelas distintas. No hay un cuarto caso; dos rectas "
+            "del plano no pueden cortarse en exactamente dos puntos.\\n\\n"
+            "**El criterio de los coeficientes.** Para $a_1x + b_1y = c_1$ y $a_2x + "
+            "b_2y = c_2$:\\n\\n"
+            "| Razones | Soluciones | Nombre |\\n"
+            "|---|---|---|\\n"
+            "| $\\dfrac{a_1}{a_2} \\neq \\dfrac{b_1}{b_2}$ | una | compatible "
+            "determinado |\\n"
+            "| $\\dfrac{a_1}{a_2} = \\dfrac{b_1}{b_2} = \\dfrac{c_1}{c_2}$ | infinitas | "
+            "compatible indeterminado |\\n"
+            "| $\\dfrac{a_1}{a_2} = \\dfrac{b_1}{b_2} \\neq \\dfrac{c_1}{c_2}$ | ninguna "
+            "| incompatible |\\n\\n"
+            "La razón de los términos independientes es la que separa «infinitas» de "
+            "«ninguna»: con los mismos coeficientes de $x$ e $y$, el $c$ decide si es "
+            "la misma recta o una paralela.\\n\\n"
+            "**En forma de función.** Si las dos ecuaciones se escriben como $y = mx "
+            "+ n$, el criterio se lee directo: pendientes distintas, una solución; "
+            "misma pendiente y mismo $n$, infinitas; misma pendiente y distinto $n$, "
+            "ninguna.\\n\\n"
+            "**Qué significa cada caso.** Solución única: las dos ecuaciones aportan "
+            "información distinta. Infinitas: una es múltiplo de la otra, así que la "
+            "segunda no agrega nada y el sistema queda indeterminado. Ninguna: las "
+            "condiciones se contradicen y no existe ningún par que las cumpla.\\n\\n"
+            "**Cómo se ve al resolver.** Si al eliminar una incógnita queda $0 = 0$, "
+            "hay infinitas soluciones. Si queda algo imposible como $0 = 5$, no hay "
+            "ninguna. Que desaparezcan las dos incógnitas no es un error de cálculo: "
+            "es el resultado.\\n\\n"
+            "**Con un parámetro.** Cuando un coeficiente es una letra, la pregunta es "
+            "para qué valor de esa letra ocurre cada caso. Se plantea la igualdad o "
+            "la desigualdad de razones que corresponda y se despeja el parámetro."
         ),
         "example_statement": (
             "Determina para qué valor de $k$ el sistema "
@@ -78479,6 +83441,56 @@ LESSONS: dict[str, dict] = {
                 "porque": "Con $k = 6$ la segunda ecuación es exactamente el doble de la primera, así que no aporta información nueva y el sistema queda indeterminado.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Para qué valor de $m$ el sistema $3x - my = 4$ ; $6x - 10y = 9$ NO "
+                    "tiene solución?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "«Sin solución» significa rectas paralelas distintas: las razones de $a$ "
+                            "y $b$ tienen que ser iguales, y la de $c$ distinta."
+                        ),
+                        "porque": (
+                            "Es la tercera fila de la tabla. Si la razón de los términos "
+                            "independientes también coincidiera, el sistema tendría infinitas "
+                            "soluciones en vez de ninguna."
+                        ),
+                    },
+                    {
+                        "accion": "Calculo la razón conocida: $\\dfrac{3}{6} = \\dfrac{1}{2}$.",
+                        "porque": (
+                            "Los coeficientes de $x$ son los dos datos numéricos que no dependen del "
+                            "parámetro, así que fijan la razón que las otras deben respetar."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Impongo la misma razón en los coeficientes de $y$: $\\dfrac{-m}{-10} = "
+                            "\\dfrac{1}{2}$, o sea $2m = 10$ y $m = 5$."
+                        ),
+                        "porque": (
+                            "Los signos menos están en ambos coeficientes y se cancelan al formar la "
+                            "razón. Con $m = 5$ el lado izquierdo de la segunda ecuación es "
+                            "exactamente el doble del de la primera."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Compruebo que la razón de los independientes sea distinta: $\\dfrac{4}{9} "
+                            "\\neq \\dfrac{1}{2}$, así que con $m = 5$ el sistema es incompatible."
+                        ),
+                        "porque": (
+                            "Este paso es el que confirma el caso. Con $m = 5$ la segunda ecuación "
+                            "diría $6x - 10y = 8$ si fuera múltiplo de la primera, y dice $9$: son "
+                            "dos rectas paralelas que nunca se cruzan."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Revisar solo los coeficientes de $x$ e $y$ y olvidar el término "
             "independiente. Esa comparación distingue infinitas soluciones de "
@@ -78491,18 +83503,42 @@ LESSONS: dict[str, dict] = {
             "una curva que se repite. Sirven para modelar todo lo que oscila."
         ),
         "theory": (
-            "**Son periódicas.** $\\sin x$ y $\\cos x$ se repiten cada $2\\pi$. "
-            "Ambas toman valores entre $-1$ y $1$, nunca fuera de ese rango.\n\n"
-            "**La forma general.** En $y = a\\sin(bx) + d$: $|a|$ es la "
-            "AMPLITUD (qué tanto sube y baja desde el eje), $b$ afecta el "
-            "PERÍODO según $T = \\frac{2\\pi}{|b|}$, y $d$ desplaza la curva "
-            "verticalmente.\n\n"
-            "**La diferencia entre ambas.** $\\sin 0 = 0$ y $\\cos 0 = 1$: son "
-            "la misma curva desfasada en $\\frac{\\pi}{2}$.\n\n"
-            "**Cómo leer un gráfico.** La amplitud es la mitad de la distancia "
-            "entre el máximo y el mínimo. El período es lo que la curva demora "
-            "en volver a empezar. Con esos dos datos se reconstruye la función."
-            "\n\n[figura:/preguntas/mat-grafico-seno.svg]"
+            "**Del triángulo a la circunferencia.** En un triángulo rectángulo $\\sin "
+            "\\alpha$ es el cateto opuesto sobre la hipotenusa y $\\cos \\alpha$ el "
+            "adyacente sobre la hipotenusa. En la circunferencia de radio $1$, el "
+            "punto que corresponde al ángulo $\\alpha$ tiene coordenadas $(\\cos "
+            "\\alpha, \\sin \\alpha)$: de ahí sale que ambas funciones vivan entre $-1$ "
+            "y $1$, y que valga siempre la identidad $\\sin^2\\alpha + \\cos^2\\alpha = "
+            "1$.\\n\\n"
+            "**Grados y radianes.** Media vuelta son $180^\\circ = \\pi$ rad, así que "
+            "para pasar de grados a radianes se multiplica por $\\dfrac{\\pi}{180}$ y "
+            "al revés por $\\dfrac{180}{\\pi}$.\\n\\n"
+            "| Ángulo | $0$ | $\\dfrac{\\pi}{6}$ | $\\dfrac{\\pi}{4}$ | $\\dfrac{\\pi}{3}$ "
+            "| $\\dfrac{\\pi}{2}$ |\\n"
+            "|---|---|---|---|---|---|\\n"
+            "| $\\sin$ | $0$ | $\\dfrac{1}{2}$ | $\\dfrac{\\sqrt{2}}{2}$ | "
+            "$\\dfrac{\\sqrt{3}}{2}$ | $1$ |\\n"
+            "| $\\cos$ | $1$ | $\\dfrac{\\sqrt{3}}{2}$ | $\\dfrac{\\sqrt{2}}{2}$ | "
+            "$\\dfrac{1}{2}$ | $0$ |\\n\\n"
+            "**Son periódicas.** $\\sin x$ y $\\cos x$ se repiten cada $2\\pi$, y esa "
+            "repetición es lo que las hace servir para modelar cualquier cosa que "
+            "oscile: mareas, temperatura a lo largo del año, corriente alterna.\\n\\n"
+            "**La forma general.** En $y = a\\sin(bx) + d$:\\n\\n"
+            "- $|a|$ es la **amplitud**, cuánto sube y baja desde el centro;\\n"
+            "- $b$ fija el **período** según $T = \\dfrac{2\\pi}{|b|}$;\\n"
+            "- $d$ desplaza la curva **verticalmente**, y el recorrido pasa a ser $[d "
+            "- |a|,\\ d + |a|]$.\\n\\n"
+            "**La diferencia entre ambas.** $\\sin 0 = 0$ y $\\cos 0 = 1$: son la misma "
+            "curva desfasada en $\\dfrac{\\pi}{2}$, es decir $\\cos x = \\sin\\left(x + "
+            "\\dfrac{\\pi}{2}\\right)$.\\n\\n"
+            "**La tangente** es $\\tan x = \\dfrac{\\sin x}{\\cos x}$. No está acotada, "
+            "su período es $\\pi$ —la mitad— y no existe donde $\\cos x = 0$, o sea en "
+            "$\\dfrac{\\pi}{2}$ y cada $\\pi$ después.\\n\\n"
+            "**Cómo leer un gráfico.** La amplitud es la mitad de la distancia entre "
+            "el máximo y el mínimo; el centro $d$ es el promedio de ambos; y el "
+            "período es lo que la curva demora en volver a empezar. Con esos tres "
+            "datos se reconstruye la función completa.\\n\\n"
+            "[figura:/preguntas/mat-grafico-seno.svg]"
         ),
         "example_statement": (
             "Determina la amplitud y el período de la función "
@@ -78522,6 +83558,59 @@ LESSONS: dict[str, dict] = {
                 "porque": "Un $b$ mayor que 1 COMPRIME la curva: se repite más seguido. Es contraintuitivo, porque el número es más grande y el período más chico.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una función tiene la forma $y = a\\sin(bx) + d$. Su máximo es $7$, su "
+                    "mínimo es $1$ y se repite cada $4\\pi$. Determina $a$, $b$ y $d$."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "La amplitud es la mitad de la distancia entre máximo y mínimo: $a = "
+                            "\\dfrac{7 - 1}{2} = 3$."
+                        ),
+                        "porque": (
+                            "El seno recorre dos unidades completas, de $-1$ a $1$, y la amplitud es "
+                            "cuánto vale cada una de esas unidades en la función. Por eso se divide "
+                            "entre dos y no se resta a secas."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El desplazamiento vertical es el promedio de máximo y mínimo: $d = "
+                            "\\dfrac{7 + 1}{2} = 4$."
+                        ),
+                        "porque": (
+                            "La curva oscila alrededor de $d$: sube $|a|$ por encima y baja $|a|$ por "
+                            "debajo. Con $d = 4$ y $a = 3$ se llega justo a $7$ y a $1$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Del período despejo $b$: si $T = \\dfrac{2\\pi}{|b|} = 4\\pi$, entonces "
+                            "$|b| = \\dfrac{2\\pi}{4\\pi} = \\dfrac{1}{2}$."
+                        ),
+                        "porque": (
+                            "Un período MÁS largo que $2\\pi$ exige un $b$ menor que $1$: el parámetro "
+                            "no es el período, es lo que lo comprime o lo estira."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "La función es $y = 3\\sin\\left(\\dfrac{x}{2}\\right) + 4$, y compruebo en "
+                            "$x = \\pi$: $3\\sin\\left(\\dfrac{\\pi}{2}\\right) + 4 = 3 \\cdot 1 + 4 = 7$, "
+                            "el máximo."
+                        ),
+                        "porque": (
+                            "Evaluar donde el seno vale $1$ tiene que devolver exactamente el máximo "
+                            "declarado. Si no calzara, el error estaría en la amplitud o en el "
+                            "desplazamiento."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Creer que $b$ es el período. $b$ es la frecuencia angular: el "
             "período se obtiene dividiendo $2\\pi$ por él. Con $b = 2$ el "
@@ -78535,19 +83624,36 @@ LESSONS: dict[str, dict] = {
             "coeficiente."
         ),
         "theory": (
-            "**Exponente par.** La curva es simétrica respecto del eje $y$ "
-            "(función par): $f(-x) = f(x)$. Ambos extremos apuntan en la misma "
-            "dirección, como en la parábola $y = x^2$.\n\n"
-            "**Exponente impar.** La curva es simétrica respecto del origen "
-            "(función impar): $f(-x) = -f(x)$. Los extremos apuntan en "
-            "direcciones opuestas, como en $y = x^3$.\n\n"
-            "**El signo de $a$ refleja.** Si $a < 0$ la curva se da vuelta "
-            "verticalmente. Si $|a| > 1$ se estira; si $0 < |a| < 1$ se "
-            "aplasta.\n\n"
-            "**Todas pasan por el origen** cuando no hay término constante, y a "
-            "mayor exponente el crecimiento es más brusco para $|x| > 1$ y más "
-            "aplanado para $|x| < 1$."
-            "\n\n[figura:/preguntas/mat-grafico-exponencial.svg]"
+            "**Una función potencia** es $f(x) = a\\,x^n$ con $a \\neq 0$ y $n$ entero. "
+            "Todo su comportamiento depende de dos cosas: si el exponente es par o "
+            "impar, y qué signo tiene el coeficiente.\\n\\n"
+            "**Exponente par.** La curva es simétrica respecto del eje $Y$ (función "
+            "**par**): $f(-x) = f(x)$. Ambos extremos apuntan en la misma dirección, "
+            "como en $y = x^2$. Su recorrido no cubre los dos signos: con $a > 0$ "
+            "nunca toma valores negativos.\\n\\n"
+            "**Exponente impar.** La curva es simétrica respecto del origen (función "
+            "**impar**): $f(-x) = -f(x)$. Los extremos apuntan en direcciones "
+            "opuestas, como en $y = x^3$, y el recorrido son todos los reales.\\n\\n"
+            "| | $n$ par | $n$ impar |\\n"
+            "|---|---|---|\\n"
+            "| Simetría | eje $Y$ | origen |\\n"
+            "| $f(-x)$ | $f(x)$ | $-f(x)$ |\\n"
+            "| Extremos | misma dirección | direcciones opuestas |\\n"
+            "| Recorrido (con $a>0$) | $[0, +\\infty)$ | todos los reales |\\n\\n"
+            "**El coeficiente.** Si $a < 0$ la curva se refleja verticalmente. Si "
+            "$|a| > 1$ se estira y si $0 < |a| < 1$ se aplasta, pero ninguna de las "
+            "dos cosas cambia la simetría: esa la decide el exponente.\\n\\n"
+            "**Todas pasan por el origen** cuando no hay término constante, y todas "
+            "pasan por $(1, a)$. A mayor exponente, el crecimiento es más brusco para "
+            "$|x| > 1$ y más aplanado para $|x| < 1$: entre $0$ y $1$, $x^3$ va por "
+            "DEBAJO de $x^2$, y después de $1$ lo supera.\\n\\n"
+            "**Exponente negativo.** $f(x) = a\\,x^{-n} = \\dfrac{a}{x^n}$ ya no es una "
+            "parábola ni una cúbica: es una hipérbola, no está definida en $x = 0$ y "
+            "se acerca a los ejes sin tocarlos. Su dominio excluye el cero.\\n\\n"
+            "**Par, impar o ninguna de las dos.** La mayoría de las funciones no es "
+            "ni par ni impar: $f(x) = x^2 + x$ no cumple ninguna de las dos "
+            "igualdades. La prueba siempre es la misma: calcular $f(-x)$ y comparar.\\n\\n"
+            "[figura:/preguntas/mat-grafico-exponencial.svg]"
         ),
         "example_statement": (
             "Sin graficar, determina si $f(x) = -2x^4$ es par o impar, y hacia "
@@ -78567,6 +83673,47 @@ LESSONS: dict[str, dict] = {
                 "porque": "Sin el signo menos los dos extremos subirían, como en $y = x^4$. El $-2$ invierte la curva y además la estira verticalmente.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Dada $f(x) = 4x^3$, decide si es par o impar y compara $f(0{,}5)$ con "
+                    "$g(0{,}5)$, donde $g(x) = 4x^2$."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Evalúo en $-x$: $f(-x) = 4(-x)^3 = -4x^3 = -f(x)$, así que $f$ es impar "
+                            "y su gráfico es simétrico respecto del origen."
+                        ),
+                        "porque": (
+                            "Un exponente IMPAR conserva el signo de la base: $(-x)^3 = -x^3$. Por "
+                            "eso la función devuelve el valor opuesto y no el mismo, que es lo que "
+                            "distingue impar de par."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo $f(0{,}5) = 4 \\cdot 0{,}125 = 0{,}5$ y $g(0{,}5) = 4 \\cdot "
+                            "0{,}25 = 1$."
+                        ),
+                        "porque": (
+                            "$0{,}5^3 = 0{,}125$ y $0{,}5^2 = 0{,}25$: elevar un número entre $0$ y "
+                            "$1$ lo hace más chico, y mientras mayor el exponente, más chico queda."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que $f(0{,}5) < g(0{,}5)$: entre $0$ y $1$ la cúbica va por "
+                            "debajo de la cuadrática."
+                        ),
+                        "porque": (
+                            "Es lo contrario de lo que pasa después de $1$, donde $x^3$ supera a "
+                            "$x^2$. El cruce ocurre exactamente en $x = 1$, donde ambas valen $4$."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Aplicar mal el exponente al signo: escribir $(-x)^4 = -x^4$. El "
             "paréntesis incluye el signo, y elevado a una potencia par siempre "
@@ -78581,23 +83728,38 @@ LESSONS: dict[str, dict] = {
             "comportan tan distinto."
         ),
         "theory": (
-            "**Procarionte y eucarionte: la diferencia es el núcleo.** La "
-            "célula procarionte (bacterias) tiene su ADN suelto en el "
-            "citoplasma, en una zona llamada nucleoide, y no tiene organelos "
-            "con membrana. La eucarionte guarda su ADN dentro de un núcleo con "
-            "envoltura y tiene organelos.\n\n"
-            "**Animal y vegetal: tres diferencias.** La vegetal tiene pared "
-            "celular de celulosa, cloroplastos y una vacuola central grande. La "
-            "animal no tiene ninguna de las tres, y en cambio tiene centríolos. "
-            "Las dos son eucariontes.\n\n"
-            "**Cada organelo hace una cosa.** La mitocondria libera energía "
-            "desde la glucosa; el cloroplasto la capta desde la luz; el retículo "
-            "rugoso, con ribosomas pegados, fabrica proteínas para exportar; el "
-            "Golgi las empaqueta; el lisosoma digiere.\n\n"
-            "**La forma sigue a la función.** Una neurona es larga porque "
-            "conduce señales a distancia; una célula muscular tiene muchas "
-            "mitocondrias porque gasta mucha energía; un glóbulo rojo humano "
-            "pierde su núcleo para llevar más hemoglobina."
+            "**Procarionte y eucarionte: la diferencia es el núcleo.** La célula "
+            "procarionte (bacterias) tiene su ADN suelto en el citoplasma, en una "
+            "zona llamada nucleoide, y no tiene organelos con membrana. La eucarionte "
+            "guarda su ADN dentro de un núcleo con envoltura y tiene organelos. La "
+            "procarionte además es mucho más pequeña.\\n\\n"
+            "| | Procarionte | Eucarionte animal | Eucarionte vegetal |\\n"
+            "|---|---|---|---|\\n"
+            "| Núcleo | no | sí | sí |\\n"
+            "| Pared celular | sí, de peptidoglicano | no | sí, de celulosa |\\n"
+            "| Cloroplastos | no | no | sí |\\n"
+            "| Vacuola central | no | pequeñas o ninguna | grande |\\n"
+            "| Centríolos | no | sí | no |\\n"
+            "| Mitocondrias | no | sí | sí |\\n\\n"
+            "Las dos eucariontes comparten núcleo, mitocondrias, retículo y Golgi: "
+            "las diferencias son las tres primeras filas, no la existencia de "
+            "organelos.\\n\\n"
+            "**Cada organelo hace una cosa.** La mitocondria libera energía desde la "
+            "glucosa; el cloroplasto la capta desde la luz; el retículo rugoso, con "
+            "ribosomas pegados, fabrica proteínas para exportar; el liso sintetiza "
+            "lípidos; el Golgi empaqueta y despacha; el lisosoma digiere; el núcleo "
+            "guarda la información.\\n\\n"
+            "**Los ribosomas son la excepción**: no tienen membrana y están tanto en "
+            "procariontes como en eucariontes, porque toda célula necesita fabricar "
+            "proteínas.\\n\\n"
+            "**La ruta de una proteína de exportación** conecta cuatro organelos en "
+            "orden: núcleo (se transcribe) → retículo rugoso (se sintetiza) → Golgi "
+            "(se modifica y empaqueta) → vesícula hacia la membrana.\\n\\n"
+            "**La forma sigue a la función.** Una neurona es larga porque conduce "
+            "señales a distancia; una célula muscular tiene muchas mitocondrias "
+            "porque gasta mucha energía; un glóbulo rojo humano pierde su núcleo para "
+            "llevar más hemoglobina; una célula del intestino tiene microvellosidades "
+            "para absorber más."
         ),
         "example_statement": (
             "Al microscopio se observa una célula con pared celular, núcleo "
@@ -78617,6 +83779,49 @@ LESSONS: dict[str, dict] = {
                 "porque": "La pared sola no basta para decir 'vegetal'. La de los hongos es de quitina y la de las plantas, de celulosa, y solo las segundas traen cloroplastos.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Se observan al microscopio dos células: la primera tiene pared celular "
+                    "pero no núcleo definido; la segunda tiene núcleo, pared y vacuola "
+                    "grande. ¿Qué tipo es cada una?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "La primera no tiene núcleo definido, así que es procarionte: una "
+                            "bacteria."
+                        ),
+                        "porque": (
+                            "El núcleo es el criterio que separa los dos grandes tipos. La pared "
+                            "celular no sirve para clasificar por sí sola, porque también la tienen "
+                            "las plantas y los hongos."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "La segunda tiene núcleo, así que es eucarionte; y como tiene pared y una "
+                            "vacuola central grande, es vegetal."
+                        ),
+                        "porque": (
+                            "Esos dos rasgos, más los cloroplastos, son los que distinguen a la "
+                            "vegetal de la animal. Una célula animal con núcleo nunca tendría pared."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que la pared celular no basta para clasificar: hay que mirar el "
+                            "núcleo primero y los organelos después."
+                        ),
+                        "porque": (
+                            "El orden importa. Quedarse en la pared llevaría a decir que las dos son "
+                            "del mismo tipo, cuando la diferencia entre ellas es la más profunda que "
+                            "existe entre células."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Usar la pared celular como sinónimo de célula vegetal. Los hongos "
             "también tienen pared, y las bacterias también. Lo que solo tienen "
@@ -78631,25 +83836,39 @@ LESSONS: dict[str, dict] = {
             "droga."
         ),
         "theory": (
-            "**La neurona tiene tres partes con tres papeles.** Las dendritas "
-            "reciben la señal, el cuerpo la integra y el axón la conduce hasta "
-            "el terminal. La señal viaja siempre en ese sentido.\n\n"
-            "**Dentro de la neurona la señal es eléctrica; entre neuronas, "
-            "química.** En la sinapsis el impulso llega al terminal, se liberan "
-            "neurotransmisores al espacio sináptico y estos se unen a receptores "
-            "de la neurona siguiente. Por eso la sinapsis tiene un sentido "
-            "único.\n\n"
-            "**Central y periférico.** El sistema nervioso central es encéfalo y "
-            "médula espinal; el periférico son los nervios que llevan "
-            "información hacia el centro (vía sensitiva) y órdenes desde él (vía "
-            "motora).\n\n"
-            "**El arco reflejo se salta el encéfalo.** Receptor, neurona "
-            "sensitiva, médula, neurona motora, músculo. Por eso la respuesta "
-            "ocurre antes de que la persona sea consciente del estímulo: la "
-            "señal llega al encéfalo después.\n\n"
-            "**Las drogas actúan en la sinapsis.** Algunas imitan al "
-            "neurotransmisor, otras bloquean su receptor y otras impiden que se "
-            "recapte, dejándolo actuando más tiempo."
+            "**La neurona tiene tres partes con tres papeles.** Las dendritas reciben "
+            "la señal, el cuerpo la integra y el axón la conduce hasta el terminal. "
+            "La señal viaja siempre en ese sentido.\\n\\n"
+            "**Dentro de la neurona la señal es eléctrica; entre neuronas, química.** "
+            "En la sinapsis el impulso llega al terminal, se liberan "
+            "neurotransmisores al espacio sináptico y estos se unen a receptores de "
+            "la neurona siguiente. Por eso la sinapsis tiene un sentido único.\\n\\n"
+            "**El impulso es todo o nada.** Si el estímulo no alcanza el umbral, no "
+            "hay impulso; si lo alcanza, el impulso es siempre del mismo tamaño. Lo "
+            "que codifica la intensidad no es la amplitud sino la FRECUENCIA de los "
+            "impulsos y cuántas neuronas se activan.\\n\\n"
+            "**La mielina acelera la conducción.** Es una vaina que recubre el axón y "
+            "obliga al impulso a saltar entre nodos; por eso una fibra mielinizada "
+            "conduce mucho más rápido, y por eso las enfermedades desmielinizantes "
+            "enlentecen las respuestas.\\n\\n"
+            "| División | Qué incluye | Qué hace |\\n"
+            "|---|---|---|\\n"
+            "| Central | encéfalo y médula espinal | integra y decide |\\n"
+            "| Periférico sensitivo (aferente) | nervios hacia el centro | lleva "
+            "información |\\n"
+            "| Periférico motor (eferente) | nervios desde el centro | lleva órdenes "
+            "|\\n"
+            "| Autónomo simpático | — | prepara para la acción: acelera el corazón |\\n"
+            "| Autónomo parasimpático | — | reposo y digestión: lo desacelera |\\n\\n"
+            "**El arco reflejo se salta el encéfalo.** Receptor, neurona sensitiva, "
+            "médula, neurona motora, músculo. Por eso la respuesta ocurre antes de "
+            "que la persona sea consciente del estímulo: la señal llega al encéfalo "
+            "después, y esa demora es lo que salva la mano.\\n\\n"
+            "**Las drogas actúan en la sinapsis.** Algunas imitan al neurotransmisor, "
+            "otras bloquean su receptor y otras impiden que se recapte, dejándolo "
+            "actuando más tiempo. El consumo sostenido lleva a **tolerancia** —la "
+            "misma dosis hace menos efecto, porque la neurona reduce sus receptores— "
+            "y a dependencia."
         ),
         "example_statement": (
             "Una persona pisa una tachuela y retira el pie de inmediato; el "
@@ -78669,6 +83888,50 @@ LESSONS: dict[str, dict] = {
                 "porque": "El orden observado no es casualidad ni error de percepción: refleja dos caminos de longitud distinta que salen del mismo estímulo.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una persona toca una superficie caliente y retira la mano antes de "
+                    "sentir dolor. Ordena el recorrido de la señal y explica por qué el dolor "
+                    "llega después."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "El receptor de la piel detecta el calor y la neurona sensitiva lleva la "
+                            "señal hasta la médula espinal."
+                        ),
+                        "porque": (
+                            "El receptor convierte un estímulo físico en impulso nervioso. La vía "
+                            "sensitiva siempre va desde la periferia hacia el sistema nervioso "
+                            "central."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "En la médula, una interneurona conecta directamente con la neurona "
+                            "motora, que ordena al músculo contraerse y retirar la mano."
+                        ),
+                        "porque": (
+                            "Ese atajo es el arco reflejo: la respuesta se decide en la médula, sin "
+                            "esperar al encéfalo. Menos sinapsis significa menos tiempo, y acá el "
+                            "tiempo es tejido quemado."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "En paralelo, la señal sube por la médula hasta el encéfalo, y recién ahí "
+                            "se hace consciente el dolor."
+                        ),
+                        "porque": (
+                            "El camino al encéfalo es más largo y tiene más relevos, así que llega "
+                            "después. Por eso primero se retira la mano y después duele, y no al "
+                            "revés."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Creer que el encéfalo ordena retirar el pie y que solo es muy "
             "rápido. En un reflejo el encéfalo no participa de la orden: se "
@@ -78683,25 +83946,38 @@ LESSONS: dict[str, dict] = {
             "el ciclo que prepara al útero para un posible embarazo."
         ),
         "theory": (
-            "**Los gametos se forman por meiosis y son haploides.** Cada uno "
-            "aporta 23 cromosomas, y al unirse restituyen los 46 de la célula "
-            "somática. Sin esa reducción el número se duplicaría en cada "
-            "generación.\n\n"
+            "**Los gametos se forman por meiosis y son haploides.** Cada uno aporta "
+            "$23$ cromosomas, y al unirse restituyen los $46$ de la célula somática. "
+            "Sin esa reducción el número se duplicaría en cada generación.\\n\\n"
+            "**La meiosis genera variabilidad de tres formas**: el entrecruzamiento "
+            "intercambia trozos entre cromosomas homólogos, la repartición de los "
+            "homólogos es al azar, y la unión de dos gametos cualesquiera agrega una "
+            "tercera lotería. Por eso dos hermanos no son iguales.\\n\\n"
             "**Espermatogénesis y ovogénesis no son simétricas.** De cada célula "
-            "precursora se forman cuatro espermatozoides funcionales, pero un "
-            "solo óvulo: las otras tres células quedan como cuerpos polares, "
-            "porque el óvulo concentra las reservas.\n\n"
-            "**El ciclo menstrual dura unos 28 días y tiene dos mitades.** En la "
-            "primera madura un folículo y el endometrio se engrosa; alrededor "
-            "del día 14 ocurre la ovulación; en la segunda, el cuerpo lúteo "
-            "mantiene el endometrio. Si no hay fecundación, el endometrio se "
-            "desprende: eso es la menstruación.\n\n"
-            "**Cuatro hormonas.** La FSH hace madurar el folículo y la LH dispara "
-            "la ovulación; los estrógenos engrosan el endometrio y la "
-            "progesterona lo mantiene.\n\n"
-            "**La fecundación ocurre en la trompa de Falopio**, no en el útero. "
-            "El cigoto se divide mientras baja y se implanta en el endometrio "
-            "unos días después."
+            "precursora se forman cuatro espermatozoides funcionales, pero un solo "
+            "óvulo: las otras tres células quedan como cuerpos polares, porque el "
+            "óvulo concentra las reservas. Además, la producción de espermatozoides "
+            "es continua desde la pubertad, mientras que los ovocitos están todos "
+            "presentes desde antes del nacimiento.\\n\\n"
+            "**El ciclo menstrual dura unos $28$ días y tiene dos mitades.** En la "
+            "primera madura un folículo y el endometrio se engrosa; alrededor del día "
+            "$14$ ocurre la ovulación; en la segunda, el cuerpo lúteo mantiene el "
+            "endometrio. Si no hay fecundación, el endometrio se desprende: eso es la "
+            "menstruación.\\n\\n"
+            "| Hormona | La produce | Qué hace |\\n"
+            "|---|---|---|\\n"
+            "| FSH | hipófisis | hace madurar el folículo |\\n"
+            "| LH | hipófisis | su alza dispara la ovulación |\\n"
+            "| Estrógenos | folículo | engrosan el endometrio |\\n"
+            "| Progesterona | cuerpo lúteo | mantiene el endometrio |\\n\\n"
+            "**La fecundación ocurre en la trompa de Falopio**, no en el útero. El "
+            "cigoto se divide mientras baja y se implanta en el endometrio unos días "
+            "después.\\n\\n"
+            "**La ventana fértil es más ancha que el día de la ovulación.** Los "
+            "espermatozoides sobreviven hasta unos cinco días en el tracto y el "
+            "ovocito, alrededor de veinticuatro horas: por eso una relación varios "
+            "días ANTES de ovular puede terminar en embarazo, y por eso los métodos "
+            "de calendario fallan tanto."
         ),
         "example_statement": (
             "En un ciclo regular de 28 días, ¿en qué momento es más probable "
@@ -78721,6 +83997,61 @@ LESSONS: dict[str, dict] = {
                 "porque": "Después de la ovulación la ventana se cierra rápido, y esa asimetría es justamente lo que hace poco confiables los métodos basados solo en el calendario.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una persona con ciclos regulares de $28$ días tuvo su última "
+                    "menstruación el día $1$ del mes. ¿Alrededor de qué día ovula y qué días "
+                    "abarca su ventana fértil?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "La ovulación ocurre unos $14$ días ANTES de la siguiente menstruación, "
+                            "así que en un ciclo de $28$ días cae alrededor del día $14$."
+                        ),
+                        "porque": (
+                            "La segunda mitad del ciclo es la más constante, de unos $14$ días. "
+                            "Contar desde el final y no desde el inicio es lo que hace útil la "
+                            "estimación cuando el ciclo no mide exactamente $28$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "La ventana fértil empieza unos cinco días antes, es decir cerca del día "
+                            "$9$."
+                        ),
+                        "porque": (
+                            "Los espermatozoides sobreviven hasta unos cinco días en el tracto "
+                            "reproductor, así que una relación del día $9$ todavía puede coincidir "
+                            "con el ovocito del día $14$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Y termina alrededor del día $15$, porque el ovocito sobrevive cerca de "
+                            "veinticuatro horas."
+                        ),
+                        "porque": (
+                            "La ventana es asimétrica: se extiende mucho más hacia atrás que hacia "
+                            "adelante, y esa asimetría es justamente lo que el método del calendario "
+                            "suele estimar mal."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que la ventana fértil va aproximadamente del día $9$ al $15$, y "
+                            "que la estimación falla si el ciclo se corre."
+                        ),
+                        "porque": (
+                            "Un ciclo que se adelanta unos días mueve toda la ventana. Por eso este "
+                            "método tiene una eficacia baja comparado con los métodos de barrera u "
+                            "hormonales."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Suponer que la fecundación ocurre en el útero. Ocurre en la trompa "
             "de Falopio; lo que ocurre en el útero, varios días después, es la "
@@ -78734,24 +84065,36 @@ LESSONS: dict[str, dict] = {
             "sirven para ambos. Distinguirlos es lo que esta unidad pide."
         ),
         "theory": (
-            "**Métodos de barrera.** El preservativo impide el contacto entre "
-            "los fluidos y los gametos. Es el único método que además reduce el "
-            "riesgo de infecciones de transmisión sexual.\n\n"
-            "**Métodos hormonales.** Píldora, implante e inyectable aportan "
-            "hormonas que impiden la ovulación. Son muy eficaces contra el "
-            "embarazo y no ofrecen ninguna protección frente a infecciones.\n\n"
-            "**Dispositivo intrauterino.** Actúa dentro del útero dificultando "
-            "la fecundación y la implantación. Tampoco protege de "
-            "infecciones.\n\n"
-            "**Métodos basados en el calendario.** Estiman los días fértiles a "
-            "partir de ciclos anteriores. Su eficacia es baja porque el ciclo "
-            "varía y los espermatozoides sobreviven varios días.\n\n"
+            "**Los métodos se distinguen por cómo actúan y por qué protegen.**\\n\\n"
+            "| Método | Cómo actúa | ¿Protege de ITS? |\\n"
+            "|---|---|---|\\n"
+            "| Preservativo | barrera física | **sí** |\\n"
+            "| Píldora, implante, inyectable | impiden la ovulación | no |\\n"
+            "| Dispositivo intrauterino | dificulta fecundación e implantación | no |\\n"
+            "| Calendario, temperatura basal | estiman los días fértiles | no |\\n"
+            "| Esterilización quirúrgica | cierra las vías | no |\\n\\n"
+            "**El preservativo es el único que hace las dos cosas**: es la razón por "
+            "la que se recomienda el doble método —uno hormonal para el embarazo y "
+            "preservativo para las infecciones— y no basta con elegir el más eficaz "
+            "de una sola columna.\\n\\n"
+            "**Eficacia teórica y eficacia real.** La teórica supone un uso perfecto; "
+            "la real incluye los olvidos y los errores de uso, y es siempre menor. La "
+            "diferencia es enorme en los métodos que dependen de la constancia "
+            "diaria.\\n\\n"
+            "**Los métodos basados en el calendario tienen eficacia baja** porque el "
+            "ciclo varía y los espermatozoides sobreviven varios días: la ventana "
+            "fértil es más ancha de lo que la cuenta sugiere.\\n\\n"
             "**Las ITS se transmiten por fluidos o por contacto.** Algunas son "
-            "bacterianas y se tratan con antibióticos (sífilis, gonorrea); otras "
-            "son virales y el tratamiento controla pero no elimina el virus "
-            "(VIH, herpes). Muchas cursan sin síntomas visibles durante largos "
-            "períodos, y por eso la ausencia de síntomas no descarta una "
-            "infección."
+            "bacterianas y se tratan con antibióticos (sífilis, gonorrea, clamidia); "
+            "otras son virales y el tratamiento controla pero no elimina el virus "
+            "(VIH, herpes, VPH).\\n\\n"
+            "**Muchas cursan sin síntomas durante largos períodos**, y por eso la "
+            "ausencia de síntomas no descarta una infección: la única forma de "
+            "saberlo es el examen. Una infección asintomática se transmite igual.\\n\\n"
+            "**Hay dos vacunas relevantes**: la del VPH, que previene la mayoría de "
+            "los cánceres cervicouterinos asociados al virus, y la de la hepatitis B. "
+            "Contra el VIH no existe vacuna, pero sí tratamiento que vuelve la carga "
+            "viral indetectable e intransmisible."
         ),
         "example_statement": (
             "Una persona usa un método hormonal muy eficaz y concluye que está "
@@ -78772,6 +84115,57 @@ LESSONS: dict[str, dict] = {
                 "porque": "Esa es la razón por la que se recomienda la combinación de métodos: uno cubre el embarazo y el otro, la transmisión.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una persona usa píldoras anticonceptivas correctamente y concluye que no "
+                    "necesita preservativo con una pareja nueva. ¿Qué error hay en ese "
+                    "razonamiento?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Reconozco que el razonamiento mezcla dos riesgos distintos: el embarazo "
+                            "y las infecciones de transmisión sexual."
+                        ),
+                        "porque": (
+                            "Un método puede ser excelente para uno y nulo para el otro. La eficacia "
+                            "siempre se declara respecto de algo, no en abstracto."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "La píldora impide la ovulación, así que actúa sobre el embarazo y no "
+                            "ofrece ninguna barrera frente a fluidos o contacto."
+                        ),
+                        "porque": (
+                            "Su mecanismo es hormonal y ocurre dentro del cuerpo de quien la toma; no "
+                            "interfiere en absoluto con la transmisión de un virus o una bacteria."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El preservativo sigue siendo necesario, porque es el único método que "
+                            "reduce el riesgo de ITS."
+                        ),
+                        "porque": (
+                            "Es el doble método: uno para cada riesgo. Sumar dos métodos hormonales "
+                            "no cubre el hueco, porque ninguno actúa sobre la transmisión."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Agrego que la ausencia de síntomas en la pareja no descarta una "
+                            "infección."
+                        ),
+                        "porque": (
+                            "Muchas ITS son asintomáticas por largos períodos y se transmiten igual. "
+                            "«Se ve sano» no es información clínica; un examen sí lo es."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Confundir eficacia anticonceptiva con protección frente a "
             "infecciones. Un método puede ser casi perfecto para lo primero y "
@@ -78785,23 +84179,35 @@ LESSONS: dict[str, dict] = {
             "tanto la cicatrización como el cáncer."
         ),
         "theory": (
-            "**El ciclo tiene dos grandes partes.** La interfase ocupa casi todo "
-            "el tiempo y se divide en G1 (crecimiento), S (duplicación del ADN) "
-            "y G2 (preparación). La fase M es la división propiamente tal.\n\n"
-            "**La duplicación ocurre en S, no en la mitosis.** Al terminar S "
-            "cada cromosoma tiene dos cromátidas hermanas idénticas, unidas por "
-            "el centrómero. La mitosis solo las separa.\n\n"
-            "**Cuatro fases en la mitosis.** En profase los cromosomas se "
-            "condensan y desaparece la envoltura nuclear; en metafase se alinean "
-            "en el centro; en anafase las cromátidas se separan hacia los polos; "
-            "en telofase se forman los dos núcleos. Después la citocinesis parte "
-            "el citoplasma.\n\n"
-            "**El resultado son dos células idénticas a la original**, con el "
-            "mismo número de cromosomas. Eso distingue la mitosis de la "
-            "meiosis.\n\n"
-            "**Hay puntos de control.** Si el ADN está dañado, el ciclo se "
-            "detiene para repararlo. Cuando esos controles fallan, la célula se "
-            "divide sin freno: ese es el origen del cáncer."
+            "**El ciclo tiene dos grandes partes.** La interfase ocupa casi todo el "
+            "tiempo y se divide en G1 (crecimiento), S (duplicación del ADN) y G2 "
+            "(preparación). La fase M es la división propiamente tal.\\n\\n"
+            "**La duplicación ocurre en S, no en la mitosis.** Al terminar S cada "
+            "cromosoma tiene dos cromátidas hermanas idénticas, unidas por el "
+            "centrómero. La mitosis solo las separa.\\n\\n"
+            "| Fase | Qué ocurre |\\n"
+            "|---|---|\\n"
+            "| Profase | los cromosomas se condensan y desaparece la envoltura "
+            "nuclear |\\n"
+            "| Metafase | se alinean en el centro, en el plano ecuatorial |\\n"
+            "| Anafase | las cromátidas hermanas se separan hacia los polos |\\n"
+            "| Telofase | se forman los dos núcleos nuevos |\\n"
+            "| Citocinesis | se parte el citoplasma en dos células |\\n\\n"
+            "**Cuántos cromosomas hay en cada momento.** El número de cromosomas lo "
+            "fija la cantidad de centrómeros, no de cromátidas: una célula humana en "
+            "metafase tiene $46$ cromosomas con $92$ cromátidas, y en anafase, al "
+            "separarse, pasa a tener momentáneamente $92$ cromosomas antes de "
+            "repartirse en dos células de $46$.\\n\\n"
+            "**El resultado son dos células idénticas a la original**, con el mismo "
+            "número de cromosomas. Eso distingue la mitosis de la meiosis, que "
+            "produce cuatro células con la mitad.\\n\\n"
+            "**Para qué sirve cada una.** La mitosis hace crecer al organismo, repara "
+            "tejidos y reemplaza células muertas; la meiosis forma gametos.\\n\\n"
+            "**Hay puntos de control.** Si el ADN está dañado, el ciclo se detiene "
+            "para repararlo; si el daño es irreparable, la célula se autodestruye "
+            "(apoptosis). Cuando esos controles fallan, la célula se divide sin "
+            "freno: ese es el origen del cáncer, y por eso los tumores se describen "
+            "como un problema de regulación del ciclo, no de velocidad."
         ),
         "example_statement": (
             "Una célula humana con 46 cromosomas se encuentra en metafase "
@@ -78822,6 +84228,50 @@ LESSONS: dict[str, dict] = {
                 "porque": "Recién en anafase, cuando los centrómeros se separan, esas 92 cromátidas pasan a contarse como 92 cromosomas repartidos entre dos polos.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una célula de un organismo con $12$ cromosomas termina la fase S. "
+                    "¿Cuántos cromosomas y cuántas cromátidas tiene entonces, y cuántos "
+                    "cromosomas tendrá cada célula hija al terminar la mitosis?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Al terminar S sigue teniendo $12$ cromosomas, pero cada uno con dos "
+                            "cromátidas: $24$ cromátidas en total."
+                        ),
+                        "porque": (
+                            "La fase S duplica el ADN, no el número de cromosomas. Las dos copias "
+                            "quedan unidas por un centrómero, y mientras estén unidas cuentan como un "
+                            "solo cromosoma."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "En anafase las cromátidas se separan, y ahí cada una pasa a contar como "
+                            "un cromosoma independiente: $24$ por un instante."
+                        ),
+                        "porque": (
+                            "Al soltarse del centrómero común, cada cromátida tiene el suyo. Es el "
+                            "único momento del ciclo en que la célula duplica su número de "
+                            "cromosomas."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Tras la citocinesis, cada célula hija queda con $12$ cromosomas de una "
+                            "cromátida cada uno."
+                        ),
+                        "porque": (
+                            "Los $24$ se reparten en partes iguales, así que las hijas tienen el "
+                            "mismo número que la célula original. Esa constancia es lo que define a "
+                            "la mitosis frente a la meiosis."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Creer que el número de cromosomas se duplica al duplicarse el ADN. "
             "Lo que se duplica son las cromátidas: los 46 cromosomas siguen "
@@ -78839,20 +84289,38 @@ LESSONS: dict[str, dict] = {
             "intermedias y su orden en el tiempo; la anatomía comparada muestra "
             "estructuras homólogas; el desarrollo embrionario muestra etapas "
             "compartidas; y la biología molecular compara secuencias de ADN y "
-            "proteínas.\n\n"
-            "**Homólogo y análogo no son lo mismo.** Órganos homólogos tienen el "
-            "mismo origen y distinta función (el brazo humano y el ala del "
-            "murciélago): indican ancestro común. Órganos análogos tienen la "
-            "misma función y distinto origen (el ala del insecto y la del ave): "
-            "indican convergencia, no parentesco.\n\n"
-            "**La selección natural necesita tres condiciones**: que haya "
-            "variabilidad entre los individuos, que esa variabilidad sea "
-            "heredable y que influya en cuántos descendientes deja cada uno.\n\n"
+            "proteínas: mientras más parecidas, más cercano el parentesco.\\n\\n"
+            "**Homólogo y análogo no son lo mismo.**\\n\\n"
+            "| | Homólogos | Análogos |\\n"
+            "|---|---|---|\\n"
+            "| Origen | el mismo | distinto |\\n"
+            "| Función | distinta | la misma |\\n"
+            "| Ejemplo | brazo humano y ala de murciélago | ala de insecto y ala de "
+            "ave |\\n"
+            "| Indican | ancestro común (divergencia) | convergencia por ambiente "
+            "similar |\\n\\n"
+            "**Las tres condiciones de la selección natural**: que haya variabilidad "
+            "entre los individuos, que esa variabilidad sea heredable, y que influya "
+            "en cuántos descendientes deja cada uno. Si falta cualquiera de las tres, "
+            "no hay selección.\\n\\n"
             "**La variabilidad es previa al ambiente.** Las mutaciones ocurren al "
-            "azar y el ambiente solo selecciona entre las que ya existen. El "
-            "ambiente no produce la variante que conviene.\n\n"
-            "**Además de la selección hay deriva génica**, un cambio al azar en "
-            "las frecuencias que pesa mucho en poblaciones pequeñas."
+            "azar y el ambiente solo selecciona entre las que ya existen. El ambiente "
+            "no produce la variante que conviene, y ese es el punto que separa a "
+            "Darwin de Lamarck: no se hereda lo adquirido durante la vida, se heredan "
+            "los genes.\\n\\n"
+            "**Quién evoluciona es la población, no el individuo.** Un organismo no "
+            "se adapta a lo largo de su vida: lo que cambia con las generaciones es "
+            "la frecuencia de los alelos en el conjunto.\\n\\n"
+            "**Además de la selección hay deriva génica**, un cambio al azar en las "
+            "frecuencias que pesa mucho en poblaciones pequeñas, y flujo génico, que "
+            "es el intercambio de alelos entre poblaciones que se mezclan.\\n\\n"
+            "**Especiación.** Cuando dos poblaciones quedan aisladas —por una barrera "
+            "geográfica, por ejemplo— acumulan cambios distintos hasta que ya no "
+            "pueden cruzarse entre sí. Ahí son dos especies.\\n\\n"
+            "**«Adaptación» no significa intención.** Decir que una especie "
+            "«desarrolló» una característica para sobrevivir es una forma de hablar: "
+            "lo que ocurrió es que los individuos que ya la tenían dejaron más "
+            "descendencia."
         ),
         "example_statement": (
             "Tras años de uso de un antibiótico, una población bacteriana pasa "
@@ -78872,6 +84340,63 @@ LESSONS: dict[str, dict] = {
                 "porque": "El cambio ocurre en la POBLACIÓN a lo largo de generaciones, no dentro de una bacteria individual. Ninguna bacteria se volvió resistente.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "En una población de insectos se aplica un insecticida nuevo. Al "
+                    "principio muere el $99\\%$, pero tras varias generaciones el producto "
+                    "deja de funcionar. ¿Cuál es la explicación correcta y cuál es el error "
+                    "frecuente?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Antes de aplicar el insecticida ya existían algunos insectos con "
+                            "variantes genéticas que los hacían resistentes, surgidas por mutación al "
+                            "azar."
+                        ),
+                        "porque": (
+                            "La variabilidad es previa al ambiente. Si no hubiera existido ningún "
+                            "resistente de antemano, la población entera habría muerto y no habría "
+                            "nada que seleccionar."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El insecticida actuó como agente de selección: mató al $99\\%$ sensible y "
+                            "dejó reproducirse casi solo a los resistentes."
+                        ),
+                        "porque": (
+                            "La selección no crea la característica, la filtra. El producto no hizo "
+                            "nada a los genes de nadie: solo decidió quién dejaba descendencia."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "En las generaciones siguientes la frecuencia del alelo resistente sube, "
+                            "hasta que la población es mayoritariamente resistente."
+                        ),
+                        "porque": (
+                            "Lo que evolucionó es la POBLACIÓN, no los individuos: ningún insecto se "
+                            "volvió resistente durante su vida. Cambió la proporción de alelos en el "
+                            "conjunto."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El error frecuente es decir que los insectos «se hicieron resistentes "
+                            "por el uso del insecticida», como si el ambiente produjera la variante "
+                            "necesaria."
+                        ),
+                        "porque": (
+                            "Esa es la explicación lamarckista, y es la alternativa incorrecta que "
+                            "casi siempre aparece. Es exactamente el mismo mecanismo de la "
+                            "resistencia bacteriana a los antibióticos."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Decir que las bacterias 'se hicieron resistentes' por estar "
             "expuestas al antibiótico. La resistencia ya existía en algunas por "
@@ -78885,23 +84410,40 @@ LESSONS: dict[str, dict] = {
             "otra la libera. Casi toda la energía que usa la vida pasa por ahí."
         ),
         "theory": (
-            "**Fotosíntesis: seis de cada uno.** Seis moléculas de dióxido de "
-            "carbono y seis de agua, con energía luminosa, dan una de glucosa y "
-            "seis de oxígeno. Ocurre en los cloroplastos.\n\n"
-            "**Tiene dos etapas.** La fase luminosa, en las membranas del "
-            "tilacoide, capta la luz, libera el oxígeno que viene del AGUA y "
-            "produce ATP. La fase oscura, en el estroma, usa ese ATP para fijar "
-            "el dióxido de carbono en glucosa; no necesita oscuridad, solo no "
-            "necesita luz directa.\n\n"
-            "**Respiración celular: la reacción inversa.** Glucosa y oxígeno dan "
-            "dióxido de carbono, agua y energía en forma de ATP. Ocurre "
-            "principalmente en la mitocondria.\n\n"
+            "**Fotosíntesis: seis de cada uno.**\\n\\n"
+            "$$6\\,\\mathrm{CO_2} + 6\\,\\mathrm{H_2O} + \\text{luz} \\;\\rightarrow\\; "
+            "\\mathrm{C_6H_{12}O_6} + 6\\,\\mathrm{O_2}$$\\n\\n"
+            "Ocurre en los cloroplastos, y la clorofila es el pigmento que capta la "
+            "luz: refleja el verde, que es el color que vemos.\\n\\n"
+            "**Tiene dos etapas.** La fase luminosa, en las membranas del tilacoide, "
+            "capta la luz, libera el oxígeno que viene del AGUA y produce ATP y "
+            "NADPH. La fase oscura o ciclo de Calvin, en el estroma, usa ese ATP para "
+            "fijar el dióxido de carbono en glucosa; no necesita oscuridad, solo no "
+            "necesita luz directa.\\n\\n"
+            "| | Fotosíntesis | Respiración celular |\\n"
+            "|---|---|---|\\n"
+            "| Dónde | cloroplasto | mitocondria |\\n"
+            "| Consume | CO₂ y H₂O | glucosa y O₂ |\\n"
+            "| Produce | glucosa y O₂ | CO₂, H₂O y ATP |\\n"
+            "| Con la energía | la almacena | la libera |\\n"
+            "| Cuándo | solo con luz | todo el día |\\n\\n"
             "**Las plantas hacen las dos cosas.** Respiran todo el día y "
             "fotosintetizan solo con luz. De día la fotosíntesis supera a la "
-            "respiración, y por eso el balance neto es liberar oxígeno.\n\n"
-            "**El oxígeno liberado proviene del agua**, no del dióxido de "
-            "carbono. Se comprobó marcando el oxígeno del agua con un isótopo y "
-            "siguiéndolo hasta el gas liberado."
+            "respiración, y por eso el balance neto es liberar oxígeno; de noche solo "
+            "respiran, y el balance se invierte.\\n\\n"
+            "**El punto de compensación** es la intensidad de luz en que ambas "
+            "velocidades se igualan y el intercambio neto de gases es cero. Bajo esa "
+            "intensidad la planta consume más de lo que produce.\\n\\n"
+            "**Qué limita la fotosíntesis.** La intensidad de la luz, la "
+            "concentración de CO₂ y la temperatura. Al subir uno, la velocidad "
+            "aumenta hasta que otro factor se vuelve limitante y la curva se aplana.\\n\\n"
+            "**El oxígeno liberado proviene del agua**, no del dióxido de carbono. Se "
+            "comprobó marcando el oxígeno del agua con un isótopo y siguiéndolo hasta "
+            "el gas liberado.\\n\\n"
+            "**Respiración celular no es respirar.** Respirar es un intercambio de "
+            "gases con el ambiente; la respiración celular es la reacción que libera "
+            "energía dentro de la célula, y ocurre en todos los seres vivos, plantas "
+            "incluidas."
         ),
         "example_statement": (
             "Una planta se mantiene en oscuridad total durante varios días. "
@@ -78921,6 +84463,60 @@ LESSONS: dict[str, dict] = {
                 "porque": "Con los días agota además sus reservas de glucosa, que solo puede reponer fotosintetizando: por eso termina muriendo.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una planta acuática se ilumina con intensidad creciente y se cuentan las "
+                    "burbujas de oxígeno por minuto. Al principio suben; después de cierto "
+                    "punto, dejan de aumentar. ¿Cómo se explica cada tramo?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "En el primer tramo, más luz significa más energía disponible para la "
+                            "fase luminosa, así que la fotosíntesis se acelera y se libera más "
+                            "oxígeno."
+                        ),
+                        "porque": (
+                            "La luz es el factor limitante mientras escasea: cada aumento se traduce "
+                            "directamente en más producto."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "En el tramo plano, seguir subiendo la luz ya no aumenta las burbujas: "
+                            "otro factor pasó a ser limitante, probablemente la concentración de CO₂ "
+                            "o la temperatura."
+                        ),
+                        "porque": (
+                            "La velocidad de un proceso con varias etapas la fija el recurso más "
+                            "escaso. Por mucha luz que haya, sin CO₂ no hay con qué armar la glucosa."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Para comprobarlo se repite el experimento aumentando el CO₂ y se observa "
+                            "si la curva vuelve a subir."
+                        ),
+                        "porque": (
+                            "Cambiar una variable a la vez es lo que permite atribuirle el efecto. Si "
+                            "al agregar CO₂ las burbujas vuelven a aumentar, el CO₂ era efectivamente "
+                            "el limitante."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Nota: las burbujas miden el oxígeno NETO, es decir la fotosíntesis menos "
+                            "la respiración, que sigue ocurriendo todo el tiempo."
+                        ),
+                        "porque": (
+                            "La planta consume parte del oxígeno que produce. En oscuridad total no "
+                            "habría burbujas y el consumo neto sería de oxígeno, no de CO₂."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Creer que las plantas respiran solo de noche. Respiran siempre; lo "
             "que ocurre solo con luz es la fotosíntesis, y de día su producción "
@@ -78934,24 +84530,36 @@ LESSONS: dict[str, dict] = {
             "elástica y roce son las cinco que aparecen una y otra vez."
         ),
         "theory": (
-            "**El peso apunta siempre hacia abajo** y vale $P = m \\cdot g$, con "
-            "$g$ cercano a 10 m/s². No depende de la superficie ni de la "
-            "inclinación.\n\n"
-            "**La normal es perpendicular a la superficie**, no siempre vertical. "
-            "En un plano horizontal sin otras fuerzas verticales coincide en "
-            "magnitud con el peso; en un plano inclinado es menor, porque solo "
-            "equilibra la componente perpendicular.\n\n"
-            "**La normal y el peso no son un par de acción y reacción.** Actúan "
-            "sobre el MISMO cuerpo. La reacción al peso es la atracción que el "
-            "cuerpo ejerce sobre la Tierra.\n\n"
-            "**El roce se opone al movimiento relativo** y vale $f = \\mu \\cdot "
-            "N$. Depende del coeficiente y de la normal, no del área de "
-            "contacto. El roce estático máximo es algo mayor que el cinético: "
-            "por eso cuesta más empezar a mover un mueble que mantenerlo en "
-            "movimiento.\n\n"
-            "**La fuerza elástica sigue la ley de Hooke**, $F = k \\cdot x$, "
-            "donde $x$ es el estiramiento respecto de la posición natural del "
-            "resorte."
+            "**El peso apunta siempre hacia abajo** y vale $P = m \\cdot g$, con $g$ "
+            "cercano a $10\\ \\text{m/s}^2$. No depende de la superficie ni de la "
+            "inclinación.\\n\\n"
+            "**La normal es perpendicular a la superficie**, no siempre vertical, y "
+            "es la fuerza con que la superficie sostiene al cuerpo. Su valor sale del "
+            "equilibrio en esa dirección, no de una fórmula fija:\\n\\n"
+            "| Situación | Normal |\\n"
+            "|---|---|\\n"
+            "| Plano horizontal, sin otras fuerzas verticales | $N = m g$ |\\n"
+            "| Plano inclinado $\\theta$ | $N = m g \\cos\\theta$ |\\n"
+            "| Con una fuerza vertical hacia abajo $F$ | $N = m g + F$ |\\n"
+            "| Tirando con una fuerza vertical hacia arriba $F$ | $N = m g - F$ |\\n\\n"
+            "**La normal y el peso no son un par de acción y reacción.** Actúan sobre "
+            "el MISMO cuerpo. La reacción al peso es la atracción que el cuerpo "
+            "ejerce sobre la Tierra.\\n\\n"
+            "**El roce se opone al movimiento relativo** y vale $f = \\mu \\cdot N$. "
+            "Depende del coeficiente y de la normal, no del área de contacto ni de la "
+            "velocidad.\\n\\n"
+            "**Estático y cinético.** El roce **estático** es el que impide que el "
+            "cuerpo empiece a moverse: crece según cuánto se empuje, hasta un máximo "
+            "$\\mu_e N$. El **cinético** actúa cuando ya se mueve y vale $\\mu_c N$, "
+            "constante. Como $\\mu_e > \\mu_c$, cuesta más empezar a mover un mueble "
+            "que mantenerlo en movimiento.\\n\\n"
+            "**La tensión** es la fuerza que transmite una cuerda, siempre tirando y "
+            "nunca empujando. En una cuerda ideal es la misma en toda su extensión, y "
+            "una polea sin roce solo le cambia la dirección.\\n\\n"
+            "**La fuerza elástica sigue la ley de Hooke**, $F = k \\cdot x$, donde $x$ "
+            "es la deformación respecto de la posición natural del resorte y $k$ es "
+            "su constante, en N/m. Apunta siempre a devolver el resorte a su largo "
+            "original, por eso se la llama restauradora."
         ),
         "example_statement": (
             "Un bloque de 10 kg se arrastra por una superficie horizontal con un "
@@ -78972,6 +84580,41 @@ LESSONS: dict[str, dict] = {
                 "porque": "Apoyar el bloque de canto o de plano no cambia la fuerza de roce, aunque la intuición diga lo contrario.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un resorte de constante $k = 250$ N/m sostiene colgando un cuerpo de $2$ "
+                    "kg. ¿Cuánto se estira? (Usa $g = 10\\ \\text{m/s}^2$.)"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "El cuerpo está en reposo, así que la fuerza neta es cero: la fuerza "
+                            "elástica equilibra exactamente al peso."
+                        ),
+                        "porque": (
+                            "En equilibrio las fuerzas se cancelan. Ese es el puente entre el peso, "
+                            "que es dato, y el estiramiento, que es la incógnita."
+                        ),
+                    },
+                    {
+                        "accion": "Calculo el peso: $P = 2 \\cdot 10 = 20$ N, y planteo $k\\,x = 20$.",
+                        "porque": (
+                            "La ley de Hooke relaciona la fuerza con la deformación. Igualarla al "
+                            "peso es lo que permite despejar $x$."
+                        ),
+                    },
+                    {
+                        "accion": "Despejo: $x = \\dfrac{20}{250} = 0{,}08$ m, es decir $8$ cm.",
+                        "porque": (
+                            "La constante está en N/m, así que el resultado sale en metros y conviene "
+                            "pasarlo a centímetros para que se entienda. Un $k$ mayor significa un "
+                            "resorte más duro, que se estira menos con el mismo peso."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Calcular el roce con el peso cuando el plano está inclinado. Ahí la "
             "normal es menor que el peso, y usar el peso sobreestima el roce."
@@ -78985,24 +84628,41 @@ LESSONS: dict[str, dict] = {
             "anterior no podía explicar."
         ),
         "theory": (
-            "**Del geocentrismo al heliocentrismo.** El modelo de Ptolomeo ponía "
-            "la Tierra en el centro y explicaba el movimiento retrógrado de los "
-            "planetas con epiciclos. Copérnico puso al Sol en el centro, y "
-            "Galileo aportó observaciones decisivas: las fases de Venus y las "
-            "lunas de Júpiter, que giraban en torno a algo que no era la "
-            "Tierra.\n\n"
-            "**Kepler corrigió las órbitas.** No son circulares sino elípticas, "
-            "con el Sol en uno de los focos. Su tercera ley relaciona el período "
-            "con la distancia: $T^2 = a^3$ cuando el período va en años y la "
-            "distancia en unidades astronómicas.\n\n"
-            "**Newton explicó por qué.** La gravitación universal da la causa "
-            "del movimiento que Kepler había descrito.\n\n"
-            "**El universo está en expansión.** Hubble observó que las galaxias "
-            "se alejan y que las más lejanas lo hacen más rápido. Ese "
-            "corrimiento al rojo, junto con la radiación de fondo de microondas, "
-            "sostiene el modelo del Big Bang.\n\n"
-            "**La expansión no tiene centro.** No es que las galaxias se alejen "
-            "de un punto: es el espacio entre ellas el que se estira."
+            "**Del geocentrismo al heliocentrismo.** El modelo de Ptolomeo ponía la "
+            "Tierra en el centro y explicaba el movimiento retrógrado de los planetas "
+            "con epiciclos. Copérnico puso al Sol en el centro, y Galileo aportó "
+            "observaciones decisivas: las fases de Venus y las lunas de Júpiter, que "
+            "giraban en torno a algo que no era la Tierra.\\n\\n"
+            "**Las tres leyes de Kepler.**\\n\\n"
+            "| Ley | Qué dice |\\n"
+            "|---|---|\\n"
+            "| Primera (órbitas) | son elipses, con el Sol en uno de los focos |\\n"
+            "| Segunda (áreas) | el planeta barre áreas iguales en tiempos iguales, "
+            "así que va más rápido cerca del Sol |\\n"
+            "| Tercera (períodos) | $T^2 = a^3$, con $T$ en años y $a$ en unidades "
+            "astronómicas |\\n\\n"
+            "La tercera ley es la que se calcula: un planeta el doble de lejos no "
+            "tarda el doble, sino $\\sqrt{2^3} \\approx 2{,}8$ veces más.\\n\\n"
+            "**Newton explicó por qué.** La gravitación universal, $F = G\\dfrac{m_1 "
+            "m_2}{d^2}$, da la causa del movimiento que Kepler había descrito. Al "
+            "depender del cuadrado de la distancia, alejarse al doble reduce la "
+            "fuerza a la cuarta parte.\\n\\n"
+            "**Escalas y unidades.** La unidad astronómica es la distancia "
+            "Tierra-Sol; el año luz es la distancia que recorre la luz en un año, y "
+            "por eso mirar lejos es mirar al pasado: la luz del Sol demora unos ocho "
+            "minutos en llegar.\\n\\n"
+            "**El universo está en expansión.** Hubble observó que las galaxias se "
+            "alejan y que las más lejanas lo hacen más rápido. Ese corrimiento al "
+            "rojo, junto con la radiación de fondo de microondas y la abundancia de "
+            "helio primordial, sostiene el modelo del Big Bang.\\n\\n"
+            "**La expansión no tiene centro.** No es que las galaxias se alejen de un "
+            "punto: es el espacio entre ellas el que se estira, y desde cualquier "
+            "galaxia se vería lo mismo.\\n\\n"
+            "**Cómo nacen y mueren las estrellas.** Se forman por colapso "
+            "gravitacional de nubes de gas, brillan mientras fusionan hidrógeno en "
+            "helio y terminan como enanas blancas, estrellas de neutrones o agujeros "
+            "negros según su masa. Los elementos más pesados que el hierro se forjan "
+            "en esas muertes."
         ),
         "example_statement": (
             "Un planeta orbita el Sol a 4 unidades astronómicas. ¿Cuánto dura su "
@@ -79022,6 +84682,42 @@ LESSONS: dict[str, dict] = {
                 "porque": "El resultado es coherente con la ley: al cuadruplicar la distancia el año se multiplica por ocho, no por cuatro.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un cometa tiene un período orbital de $8$ años. ¿Cuál es el semieje "
+                    "mayor de su órbita, en unidades astronómicas?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Uso la tercera ley de Kepler en la forma que corresponde a las unidades "
+                            "del enunciado: $T^2 = a^3$, con $T$ en años y $a$ en UA."
+                        ),
+                        "porque": (
+                            "Esa versión simplificada solo vale con esas unidades, y acá el período "
+                            "ya viene en años. Con otras unidades habría que arrastrar la constante "
+                            "completa."
+                        ),
+                    },
+                    {
+                        "accion": "Reemplazo: $8^2 = a^3$, es decir $64 = a^3$.",
+                        "porque": (
+                            "Acá se conoce el período y se busca la distancia, o sea el camino "
+                            "inverso del ejemplo anterior: se eleva al cuadrado el dato conocido."
+                        ),
+                    },
+                    {
+                        "accion": "Saco la raíz cúbica: $a = \\sqrt[3]{64} = 4$ UA.",
+                        "porque": (
+                            "El exponente que acompaña a la incógnita es el que hay que deshacer. "
+                            "Como $4^3 = 64$, la raíz sale exacta: el cometa orbita cuatro veces más "
+                            "lejos que la Tierra."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Suponer que el período crece en proporción directa con la "
             "distancia. La relación no es lineal: duplicar la distancia "
@@ -79035,21 +84731,36 @@ LESSONS: dict[str, dict] = {
             "partir de una descripción es lo que la prueba pide."
         ),
         "theory": (
-            "**Reflexión: la onda vuelve.** El ángulo de incidencia es igual al "
-            "de reflexión, medidos desde la perpendicular a la superficie. La "
-            "rapidez no cambia porque el medio es el mismo.\n\n"
-            "**Refracción: la onda cambia de medio y se desvía.** Al pasar a un "
-            "medio donde viaja más lento se acerca a la perpendicular. **La "
-            "frecuencia NO cambia** —la impone la fuente—; lo que cambian son la "
-            "rapidez y la longitud de onda.\n\n"
+            "**Reflexión: la onda vuelve.** El ángulo de incidencia es igual al de "
+            "reflexión, medidos desde la perpendicular a la superficie. La rapidez no "
+            "cambia porque el medio es el mismo. El eco es reflexión del sonido, y la "
+            "reverberación, muchas reflexiones seguidas.\\n\\n"
+            "**Refracción: la onda cambia de medio y se desvía.** Al pasar a un medio "
+            "donde viaja más lento se acerca a la perpendicular; al pasar a uno donde "
+            "va más rápido, se aleja. **La frecuencia NO cambia** —la impone la "
+            "fuente—; lo que cambian son la rapidez y la longitud de onda.\\n\\n"
+            "| En este fenómeno | Cambia | No cambia |\\n"
+            "|---|---|---|\\n"
+            "| Reflexión | la dirección | rapidez, frecuencia, longitud de onda |\\n"
+            "| Refracción | dirección, rapidez, longitud de onda | la frecuencia |\\n"
+            "| Difracción | la forma del frente | rapidez, frecuencia, longitud de "
+            "onda |\\n"
+            "| Doppler | la frecuencia PERCIBIDA | la emitida por la fuente |\\n\\n"
             "**Difracción: la onda rodea un obstáculo o se abre al pasar por una "
-            "rendija.** Es apreciable cuando la abertura es comparable a la "
-            "longitud de onda; por eso las ondas largas de radio rodean cerros y "
-            "la luz visible, no.\n\n"
-            "**Efecto Doppler: cambia la frecuencia percibida** cuando la fuente "
-            "y el observador se acercan o se alejan. Al acercarse, la frecuencia "
-            "sube; al alejarse, baja. En astronomía se ve como corrimiento al "
-            "azul o al rojo.\n\n"
+            "rendija.** Es apreciable cuando la abertura es comparable a la longitud "
+            "de onda; por eso las ondas largas de radio rodean cerros y la luz "
+            "visible, no, y por eso se escucha a alguien desde otra habitación aunque "
+            "no se le vea.\\n\\n"
+            "**Interferencia.** Dos ondas que se encuentran se suman: si las crestas "
+            "coinciden, la amplitud crece (constructiva); si una cresta coincide con "
+            "un valle, se cancelan (destructiva). Es el principio de los audífonos "
+            "con cancelación de ruido.\\n\\n"
+            "**Efecto Doppler: cambia la frecuencia percibida** cuando la fuente y el "
+            "observador se acercan o se alejan. Al acercarse, la frecuencia sube; al "
+            "alejarse, baja, y por eso la sirena de una ambulancia cambia de tono "
+            "justo al pasar. La fuente sigue emitiendo siempre lo mismo. En "
+            "astronomía se ve como corrimiento al azul o al rojo, y es la evidencia "
+            "con que se mide que las galaxias se alejan.\\n\\n"
             "**Para todas ellas vale $v = \\lambda \\cdot f$.**"
         ),
         "example_statement": (
@@ -79071,6 +84782,49 @@ LESSONS: dict[str, dict] = {
                 "porque": "En esa igualdad la frecuencia es la constante del problema, así que rapidez y longitud de onda están obligadas a cambiar juntas.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una onda sonora de $680$ Hz viaja en el aire a $340$ m/s y pasa al agua, "
+                    "donde el sonido viaja a $1.480$ m/s. ¿Qué ocurre con su frecuencia y con "
+                    "su longitud de onda?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Calculo la longitud de onda en el aire: $\\lambda = \\dfrac{340}{680} = "
+                            "0{,}5$ m."
+                        ),
+                        "porque": (
+                            "La ecuación fundamental relaciona los tres datos, y en el aire se "
+                            "conocen la velocidad y la frecuencia."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "En el agua la frecuencia sigue siendo $680$ Hz, porque la impone la "
+                            "fuente y no el medio."
+                        ),
+                        "porque": (
+                            "Es la regla que decide el ejercicio: al cambiar de medio la frecuencia "
+                            "se conserva. Si cambiara, el sonido se escucharía en otro tono bajo el "
+                            "agua, y no es lo que ocurre."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo la nueva longitud de onda: $\\lambda = \\dfrac{1480}{680} \\approx "
+                            "2{,}2$ m."
+                        ),
+                        "porque": (
+                            "Con la frecuencia fija, la longitud de onda tiene que crecer en la misma "
+                            "proporción que la velocidad: el agua transmite el sonido más rápido, así "
+                            "que cada oscilación abarca más distancia."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Decir que en la refracción cambia la frecuencia. La impone la "
             "fuente y se conserva al cambiar de medio; lo que cambian son la "
@@ -79084,23 +84838,37 @@ LESSONS: dict[str, dict] = {
             "dónde está el objeto respecto del foco."
         ),
         "theory": (
-            "**Espejo plano: imagen virtual, del mismo tamaño**, a la misma "
-            "distancia detrás del espejo y con izquierda y derecha invertidas. "
-            "Para verse de cuerpo entero basta un espejo de la mitad de la "
-            "estatura.\n\n"
-            "**Espejos curvos.** En un espejo cóncavo la distancia focal es la "
-            "mitad del radio de curvatura. Si el objeto está más lejos que el "
-            "foco, la imagen es real e invertida; si está más cerca, es virtual, "
-            "derecha y mayor. El espejo convexo siempre da imagen virtual, "
-            "derecha y menor, y por eso se usa como retrovisor.\n\n"
-            "**Lentes.** La convergente se comporta como el espejo cóncavo y la "
-            "divergente, como el convexo.\n\n"
-            "**La ecuación es una sola**: el inverso de la distancia focal es la "
-            "suma de los inversos de las distancias del objeto y de la imagen. "
-            "El aumento es el cociente entre el tamaño de la imagen y el del "
-            "objeto.\n\n"
+            "**Imagen real e imagen virtual.** La real se forma donde los rayos "
+            "efectivamente se cruzan y se puede proyectar en una pantalla; la virtual "
+            "se forma donde parecen venir los rayos y solo se ve mirando al espejo o "
+            "a la lente. Es la distinción que ordena toda la unidad.\\n\\n"
+            "**Espejo plano: imagen virtual, del mismo tamaño**, a la misma distancia "
+            "detrás del espejo y con izquierda y derecha invertidas. Para verse de "
+            "cuerpo entero basta un espejo de la mitad de la estatura.\\n\\n"
+            "**Espejos curvos.** En un espejo cóncavo la distancia focal es la mitad "
+            "del radio de curvatura, $f = \\dfrac{R}{2}$:\\n\\n"
+            "| Elemento | Objeto más lejos que el foco | Objeto más cerca que el foco "
+            "|\\n"
+            "|---|---|---|\\n"
+            "| Espejo cóncavo / lente convergente | imagen real e invertida | imagen "
+            "virtual, derecha y mayor |\\n"
+            "| Espejo convexo / lente divergente | siempre virtual, derecha y menor | "
+            "siempre virtual, derecha y menor |\\n\\n"
+            "El espejo convexo se usa como retrovisor y en las esquinas de los "
+            "pasillos justamente porque achica: abarca más campo visual.\\n\\n"
+            "**La ecuación es una sola**: $\\dfrac{1}{f} = \\dfrac{1}{d_o} + "
+            "\\dfrac{1}{d_i}$, donde $d_o$ es la distancia del objeto y $d_i$ la de la "
+            "imagen. El **aumento** es $A = -\\dfrac{d_i}{d_o}$, y su signo dice si la "
+            "imagen está derecha o invertida; su valor absoluto, cuántas veces más "
+            "grande es.\\n\\n"
+            "**Cuidado al despejar**: la ecuación relaciona los INVERSOS, así que el "
+            "resultado del cálculo es $\\dfrac{1}{d_i}$ y hay que invertirlo al final "
+            "para volver a centímetros.\\n\\n"
             "**La potencia de una lente**, en dioptrías, es el inverso de la "
-            "distancia focal expresada en metros."
+            "distancia focal en metros: $P = \\dfrac{1}{f}$. Es positiva en las "
+            "convergentes y negativa en las divergentes, y es el número que aparece "
+            "en la receta de los anteojos: la miopía se corrige con lentes "
+            "divergentes y la hipermetropía, con convergentes."
         ),
         "example_statement": (
             "Un objeto se coloca a 30 cm de una lente convergente de 10 cm de "
@@ -79120,6 +84888,54 @@ LESSONS: dict[str, dict] = {
                 "porque": "El inverso de un quinceavo es 15. Como el objeto estaba más lejos que el foco, la imagen resulta real e invertida, del otro lado de la lente.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un objeto de $4$ cm de alto se coloca a $15$ cm de una lente convergente "
+                    "de $10$ cm de distancia focal. ¿Dónde se forma la imagen y de qué tamaño "
+                    "es?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Planteo la ecuación: $\\dfrac{1}{10} = \\dfrac{1}{15} + \\dfrac{1}{d_i}$, y "
+                            "despejo $\\dfrac{1}{d_i} = \\dfrac{1}{10} - \\dfrac{1}{15}$."
+                        ),
+                        "porque": (
+                            "Lo que se despeja es el inverso de la distancia de la imagen, no la "
+                            "distancia. Restar mal este paso es el error más frecuente de la unidad."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Resuelvo la resta con denominador común $30$: $\\dfrac{3}{30} - "
+                            "\\dfrac{2}{30} = \\dfrac{1}{30}$, así que $d_i = 30$ cm."
+                        ),
+                        "porque": (
+                            "Al final hay que INVERTIR el resultado para volver a centímetros. Como "
+                            "$\\dfrac{1}{d_i}$ dio $\\dfrac{1}{30}$, la imagen está a $30$ cm de la "
+                            "lente, al otro lado."
+                        ),
+                    },
+                    {
+                        "accion": "Calculo el aumento: $A = -\\dfrac{30}{15} = -2$.",
+                        "porque": (
+                            "El signo negativo indica que la imagen está invertida, y el $2$, que "
+                            "mide el doble. Corresponde al caso de objeto más lejos que el foco: "
+                            "imagen real e invertida."
+                        ),
+                    },
+                    {
+                        "accion": "El tamaño de la imagen es $|{-2}| \\cdot 4 = 8$ cm, invertida.",
+                        "porque": (
+                            "El aumento multiplica el tamaño del objeto. Si el objeto se hubiera "
+                            "puesto a menos de $10$ cm, dentro del foco, la imagen habría salido "
+                            "virtual y derecha, que es como funciona una lupa."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Sumar directamente las distancias o restar los denominadores. La "
             "ecuación relaciona los INVERSOS de las distancias, así que hay que "
@@ -79134,24 +84950,35 @@ LESSONS: dict[str, dict] = {
             "todos los meses."
         ),
         "theory": (
-            "**Potencia: $P = V \\cdot I$.** Se mide en watt. Combinada con la "
-            "ley de Ohm da también $P = I^2 \\cdot R$, que explica por qué un "
-            "cable delgado se calienta: toda la potencia disipada se va en "
-            "calor.\n\n"
-            "**Energía: potencia por tiempo.** La compañía cobra en "
-            "kilowatt-hora, que es la energía de un artefacto de 1.000 W "
-            "funcionando una hora. Para calcularla se pasan los watt a kilowatt "
-            "y se multiplica por las horas.\n\n"
-            "**En la instalación domiciliaria los artefactos van en paralelo.** "
-            "Así todos reciben los mismos 220 V y cada uno se puede apagar sin "
-            "cortar a los demás. En serie, apagar uno cortaría todo el "
-            "circuito.\n\n"
-            "**El automático protege el cable, no el artefacto.** Corta cuando "
-            "la corriente total supera lo que el conductor tolera, que es lo que "
-            "ocurre al enchufar demasiados aparatos de alto consumo en el mismo "
-            "circuito.\n\n"
-            "**La conexión a tierra desvía la corriente de falla** hacia el "
-            "suelo en vez de hacia la persona que toca el artefacto."
+            "**Potencia: $P = V \\cdot I$.** Se mide en watt. Combinada con la ley de "
+            "Ohm da también $P = I^2 \\cdot R$, que explica por qué un cable delgado "
+            "se calienta: toda la potencia disipada se va en calor.\\n\\n"
+            "**Energía: potencia por tiempo.** La compañía cobra en kilowatt-hora, "
+            "que es la energía de un artefacto de $1.000$ W funcionando una hora:\\n\\n"
+            "$$E\\,[\\text{kWh}] = \\dfrac{P\\,[\\text{W}]}{1000} \\cdot t\\,[\\text{h}]$$\\n\\n"
+            "El kilowatt-hora es una unidad de ENERGÍA, no de potencia, aunque lleve "
+            "«watt» en el nombre. Y el costo de la boleta es esa energía por el "
+            "precio del kWh.\\n\\n"
+            "| Artefacto | Potencia típica | En $2$ horas |\\n"
+            "|---|---|---|\\n"
+            "| Ampolleta LED | $10$ W | $0{,}02$ kWh |\\n"
+            "| Televisor | $100$ W | $0{,}2$ kWh |\\n"
+            "| Estufa eléctrica | $2.000$ W | $4$ kWh |\\n\\n"
+            "Lo que encarece la boleta son los artefactos que producen calor "
+            "—estufas, hervidores, secadoras—, no los que quedan encendidos muchas "
+            "horas con poca potencia.\\n\\n"
+            "**En la instalación domiciliaria los artefactos van en paralelo.** Así "
+            "todos reciben los mismos $220$ V y cada uno se puede apagar sin cortar a "
+            "los demás. En serie, apagar uno cortaría todo el circuito.\\n\\n"
+            "**Cada artefacto que se enchufa suma corriente**, porque en paralelo la "
+            "resistencia total baja. Por eso la sobrecarga es un problema del "
+            "circuito completo y no de un aparato en particular.\\n\\n"
+            "**El automático protege el cable, no el artefacto.** Corta cuando la "
+            "corriente total supera lo que el conductor tolera. El **diferencial**, "
+            "en cambio, protege a la persona: corta cuando detecta que se está "
+            "fugando corriente del circuito.\\n\\n"
+            "**La conexión a tierra desvía la corriente de falla** hacia el suelo en "
+            "vez de hacia la persona que toca el artefacto."
         ),
         "example_statement": (
             "Una estufa de 2.000 W funciona 3 horas diarias. ¿Cuánta energía "
@@ -79171,6 +84998,48 @@ LESSONS: dict[str, dict] = {
                 "porque": "Ese salto es el que vuelve útil el cálculo: la boleta cobra energía acumulada, no la potencia del artefacto.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "En una casa hay un refrigerador de $150$ W encendido las $24$ horas y un "
+                    "hervidor de $2.000$ W que se usa $15$ minutos al día. Si el kWh cuesta "
+                    "$\\$140$, ¿cuál de los dos gasta más al mes ($30$ días)?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Refrigerador: $\\dfrac{150}{1000} \\cdot 24 = 3{,}6$ kWh al día, y en el "
+                            "mes $3{,}6 \\cdot 30 = 108$ kWh."
+                        ),
+                        "porque": (
+                            "Los watt se pasan a kilowatt dividiendo por mil antes de multiplicar por "
+                            "las horas. Su potencia es baja, pero funciona todo el día."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Hervidor: $15$ minutos son $0{,}25$ h, así que $\\dfrac{2000}{1000} \\cdot "
+                            "0{,}25 = 0{,}5$ kWh al día, y en el mes $15$ kWh."
+                        ),
+                        "porque": (
+                            "El tiempo tiene que estar en horas, igual que en la definición del kWh. "
+                            "Usar $15$ en vez de $0{,}25$ multiplicaría el resultado por sesenta."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Comparo y valorizo: el refrigerador gasta $108$ kWh contra $15$ kWh, es "
+                            "decir $108 \\cdot 140 = \\$15.120$ al mes contra $\\$2.100$."
+                        ),
+                        "porque": (
+                            "La potencia sola no decide el consumo: lo que se paga es potencia POR "
+                            "tiempo. El hervidor tiene trece veces más potencia y gasta siete veces "
+                            "menos, porque funciona un rato."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Multiplicar los watt por las horas y llamar kilowatt-hora al "
             "resultado. Falta dividir por mil: 2.000 W durante 3 h son 6 kWh, no "
@@ -79185,25 +85054,38 @@ LESSONS: dict[str, dict] = {
             "maneras."
         ),
         "theory": (
-            "**La Tierra tiene capas.** Corteza, manto y núcleo. La litosfera, "
-            "que es la corteza más la parte rígida del manto, está fragmentada "
-            "en placas que se mueven sobre la astenosfera, más plástica.\n\n"
-            "**Tres tipos de borde.** En el divergente las placas se separan y "
-            "se crea corteza nueva, como en las dorsales oceánicas. En el "
-            "convergente una placa se hunde bajo la otra: eso es la subducción, "
-            "y forma fosas, cordilleras y volcanes. En el transformante las "
-            "placas se deslizan de lado.\n\n"
-            "**Chile está en un borde convergente**: la placa de Nazca subduce "
-            "bajo la sudamericana a unos 7 cm por año. De ahí salen la fosa "
-            "frente a la costa, la cordillera de los Andes y la cadena "
-            "volcánica.\n\n"
-            "**Los sismos liberan energía acumulada** en la zona de contacto. "
-            "Las ondas P son las más rápidas y llegan primero; las S llegan "
-            "después. Esa diferencia de tiempo permite calcular a qué distancia "
-            "ocurrió el sismo.\n\n"
-            "**Magnitud e intensidad no son lo mismo.** La magnitud es una sola "
-            "por sismo y mide la energía liberada; la intensidad varía según el "
-            "lugar y mide los efectos observados."
+            "**La Tierra tiene capas.** Corteza, manto y núcleo. La **litosfera**, "
+            "que es la corteza más la parte rígida del manto, está fragmentada en "
+            "placas que se mueven sobre la **astenosfera**, más plástica. El motor "
+            "del movimiento son las corrientes de convección del manto.\\n\\n"
+            "**La deriva continental.** Wegener propuso en 1912 que los continentes "
+            "habían estado unidos en Pangea, con tres evidencias: el calce de las "
+            "costas, fósiles iguales en continentes separados por océanos y "
+            "formaciones geológicas que continúan de un lado al otro. Le faltaba el "
+            "mecanismo, y por eso no se aceptó hasta que la tectónica de placas lo "
+            "aportó.\\n\\n"
+            "| Tipo de borde | Qué pasa | Dónde se ve |\\n"
+            "|---|---|---|\\n"
+            "| Divergente | las placas se separan y se crea corteza nueva | dorsales "
+            "oceánicas |\\n"
+            "| Convergente | una placa se hunde bajo la otra (subducción) | fosas, "
+            "cordilleras, volcanes |\\n"
+            "| Transformante | se deslizan de lado | falla de San Andrés |\\n\\n"
+            "**Chile está en un borde convergente**: la placa de Nazca subduce bajo "
+            "la sudamericana a unos $7$ cm por año. De ahí salen la fosa frente a la "
+            "costa, la cordillera de los Andes y la cadena volcánica.\\n\\n"
+            "**Los sismos liberan energía acumulada** en la zona de contacto. El "
+            "**hipocentro** es el punto donde se origina, dentro de la Tierra, y el "
+            "**epicentro** es el punto de la superficie justo encima.\\n\\n"
+            "**Ondas sísmicas.** Las P son longitudinales, las más rápidas, y "
+            "atraviesan sólidos y líquidos; las S son transversales, más lentas, y no "
+            "pasan por líquidos —de ahí se dedujo que el núcleo externo es líquido—. "
+            "La diferencia de tiempo entre una y otra permite calcular a qué "
+            "distancia ocurrió el sismo.\\n\\n"
+            "**Magnitud e intensidad no son lo mismo.** La magnitud es una sola por "
+            "sismo y mide la energía liberada, en una escala logarítmica: un grado "
+            "más son unas $32$ veces más energía. La intensidad, en cambio, varía "
+            "según el lugar y mide los efectos observados."
         ),
         "example_statement": (
             "En una estación sismológica, la onda P llega 40 segundos antes que "
@@ -79224,6 +85106,44 @@ LESSONS: dict[str, dict] = {
                 "porque": "Este es el principio con que se ubica el epicentro: con tres estaciones y sus distancias, la intersección de tres circunferencias lo determina.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Si la placa de Nazca avanza $7$ cm por año, ¿cuánto se habrá desplazado "
+                    "en $100.000$ años, en kilómetros?"
+                ),
+                "steps": [
+                    {
+                        "accion": "Multiplico la velocidad por el tiempo: $7 \\cdot 100.000 = 700.000$ cm.",
+                        "porque": (
+                            "El movimiento de placas es lento pero constante, así que se trata como "
+                            "un MRU: distancia igual a velocidad por tiempo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Paso a kilómetros dividiendo por $100.000$: $700.000 \\div 100.000 = 7$ "
+                            "km."
+                        ),
+                        "porque": (
+                            "Un kilómetro son $1.000$ m y cada metro $100$ cm, o sea $100.000$ cm. "
+                            "Cambiar de unidad al final, y no a mitad de camino, evita arrastrar el "
+                            "error."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Interpreto el resultado: siete kilómetros en cien mil años, un abrir y "
+                            "cerrar de ojos en escala geológica."
+                        ),
+                        "porque": (
+                            "A ese ritmo, los $180$ millones de años desde Pangea dan miles de "
+                            "kilómetros: es lo que explica que los continentes estén donde están hoy."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Multiplicar los 40 segundos por la diferencia de rapideces. Lo que "
             "vale 40 segundos es la diferencia de TIEMPOS, y hay que despejar la "
@@ -79238,25 +85158,41 @@ LESSONS: dict[str, dict] = {
             "valor fijo."
         ),
         "theory": (
-            "**Sustancia pura o mezcla.** Una sustancia pura tiene composición "
-            "fija: puede ser un elemento (un solo tipo de átomo) o un compuesto "
-            "(dos o más elementos unidos en proporción constante). Una mezcla "
-            "tiene composición variable y sus componentes conservan sus "
-            "propiedades.\n\n"
+            "**Sustancia pura o mezcla.** Una sustancia pura tiene composición fija: "
+            "puede ser un **elemento** (un solo tipo de átomo) o un **compuesto** "
+            "(dos o más elementos unidos en proporción constante). Una mezcla tiene "
+            "composición variable y sus componentes conservan sus propiedades, porque "
+            "no hubo reacción química.\\n\\n"
             "**Homogénea o heterogénea.** En la homogénea no se distinguen los "
-            "componentes ni al microscopio: son las disoluciones. En la "
-            "heterogénea se reconocen fases distintas.\n\n"
-            "**Cada método de separación aprovecha una propiedad.** La "
-            "filtración separa un sólido insoluble de un líquido; la decantación "
-            "aprovecha la diferencia de densidad; el tamizado, el tamaño de "
-            "grano; la destilación, la diferencia de temperatura de ebullición, "
-            "y es la única de estas cuatro que sirve para una disolución.\n\n"
-            "**Las propiedades intensivas no dependen de la cantidad**: "
-            "densidad, temperatura de fusión, temperatura de ebullición. Las "
-            "extensivas sí: masa y volumen. Por eso la densidad identifica un "
-            "material y la masa no.\n\n"
-            "**Densidad: masa dividida por volumen.** Un objeto flota en un "
-            "líquido si su densidad es menor que la de ese líquido."
+            "componentes ni al microscopio: son las disoluciones. En la heterogénea "
+            "se reconocen fases distintas.\\n\\n"
+            "| Método | Qué propiedad aprovecha | Sirve para |\\n"
+            "|---|---|---|\\n"
+            "| Filtración | tamaño de partícula | sólido insoluble en líquido |\\n"
+            "| Decantación | diferencia de densidad | líquidos no miscibles, o sólido "
+            "sedimentado |\\n"
+            "| Tamizado | tamaño de grano | sólidos de distinto grosor |\\n"
+            "| Destilación | temperatura de ebullición | disoluciones (líquido + "
+            "soluto disuelto) |\\n"
+            "| Evaporación | volatilidad del disolvente | recuperar el soluto sólido "
+            "|\\n"
+            "| Cromatografía | afinidad con el soporte | pigmentos y mezclas de "
+            "colorantes |\\n\\n"
+            "La destilación es la única de las primeras cuatro que sirve para una "
+            "disolución: filtrar agua salada no separa nada, porque la sal pasa por "
+            "el filtro junto con el agua.\\n\\n"
+            "**Cambio físico y cambio químico.** En el físico cambia la forma o el "
+            "estado, pero la sustancia sigue siendo la misma y el proceso suele ser "
+            "reversible: fundir hielo, disolver azúcar. En el químico se forman "
+            "sustancias nuevas: oxidarse, quemar, fermentar.\\n\\n"
+            "**Las propiedades intensivas no dependen de la cantidad**: densidad, "
+            "temperatura de fusión, temperatura de ebullición, color. Las extensivas "
+            "sí: masa, volumen, peso. Por eso la densidad identifica un material y la "
+            "masa no.\\n\\n"
+            "**Densidad: $\\rho = \\dfrac{m}{V}$.** Un objeto flota en un líquido si su "
+            "densidad es menor que la de ese líquido. El agua tiene $1\\ \\text{g/mL}$, "
+            "que es la referencia con que se compara todo lo demás. Y para un sólido "
+            "irregular, el volumen se mide por desplazamiento de agua."
         ),
         "example_statement": (
             "Un objeto de 54 g se sumerge en una probeta con 25 mL de agua y el "
@@ -79276,6 +85212,47 @@ LESSONS: dict[str, dict] = {
                 "porque": "Ese valor corresponde además al aluminio, de modo que la densidad sirve para identificar el material sin destruir la muestra.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Se tiene una mezcla de arena, sal y agua. Describe cómo separar los tres "
+                    "componentes y qué propiedad aprovecha cada paso."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Primero filtro la mezcla: la arena queda en el papel filtro y pasa el "
+                            "agua con la sal disuelta."
+                        ),
+                        "porque": (
+                            "La arena es un sólido insoluble, así que sus partículas no atraviesan el "
+                            "filtro. La sal sí pasa, porque está disuelta: no es un sólido suspendido "
+                            "sino parte de una disolución."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Lo que pasó el filtro es agua salada, una disolución homogénea. La "
+                            "destilo: el agua hierve a $100\\ ^\\circ$C, se evapora y al condensarse se "
+                            "recupera pura."
+                        ),
+                        "porque": (
+                            "La sal tiene una temperatura de ebullición altísima y se queda en el "
+                            "recipiente. Es la diferencia de temperatura de ebullición lo que permite "
+                            "separar lo que un filtro no puede."
+                        ),
+                    },
+                    {
+                        "accion": "La sal queda como residuo sólido en el fondo del matraz de destilación.",
+                        "porque": (
+                            "Si solo interesara la sal y no el agua, bastaría con evaporar sin "
+                            "condensar. La destilación se usa cuando se quieren recuperar los DOS "
+                            "componentes."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Tomar el volumen final de la probeta, 45 mL, como volumen del "
             "objeto. Ese número incluye el agua que ya estaba: el volumen del "
@@ -79289,23 +85266,40 @@ LESSONS: dict[str, dict] = {
             "sin memorizar compuesto por compuesto."
         ),
         "theory": (
-            "**Hidrocarburos: solo carbono e hidrógeno.** Los alcanos tienen "
-            "enlaces simples y fórmula general $C_nH_{2n+2}$; los alquenos "
-            "tienen un doble enlace y responden a $C_nH_{2n}$; los alquinos "
-            "tienen un triple y responden a $C_nH_{2n-2}$. Los aromáticos "
-            "contienen el anillo del benceno.\n\n"
-            "**Los grupos con oxígeno.** El alcohol lleva $-OH$; el aldehído, "
-            "$-CHO$ en un extremo de la cadena; la cetona, un $C=O$ en el "
-            "interior; el ácido carboxílico, $-COOH$; el éster resulta de un "
-            "ácido con un alcohol.\n\n"
-            "**Los grupos con nitrógeno.** La amina lleva $-NH_2$ y la amida "
-            "combina el carbonilo con el nitrógeno.\n\n"
+            "**Hidrocarburos: solo carbono e hidrógeno.** Los alcanos tienen enlaces "
+            "simples y fórmula general $C_nH_{2n+2}$; los alquenos tienen un doble "
+            "enlace y responden a $C_nH_{2n}$; los alquinos tienen un triple y "
+            "responden a $C_nH_{2n-2}$. Los aromáticos contienen el anillo del "
+            "benceno.\\n\\n"
+            "| Familia | Grupo funcional | Terminación | Ejemplo |\\n"
+            "|---|---|---|---|\\n"
+            "| Alcano | solo enlaces simples | -ano | propano |\\n"
+            "| Alqueno | C$=$C | -eno | propeno |\\n"
+            "| Alquino | C≡C | -ino | propino |\\n"
+            "| Alcohol | $-$OH | -ol | etanol |\\n"
+            "| Aldehído | $-$CHO (en el extremo) | -al | etanal |\\n"
+            "| Cetona | C$=$O (interior) | -ona | propanona |\\n"
+            "| Ácido carboxílico | $-$COOH | -oico | ácido etanoico |\\n"
+            "| Éster | $-$COO$-$ | -ato de -ilo | etanoato de etilo |\\n"
+            "| Amina | $-$NH₂ | -amina | etilamina |\\n"
+            "| Amida | $-$CONH₂ | -amida | etanamida |\\n\\n"
             "**La posición importa.** Aldehído y cetona tienen el mismo grupo "
-            "carbonilo: lo que los distingue es si está al final de la cadena o "
-            "en medio.\n\n"
-            "**La nomenclatura sigue la cadena principal.** El prefijo cuenta "
-            "los carbonos (met, et, prop, but) y la terminación indica el grupo "
-            "funcional: -ano, -eno, -ino, -ol, -al, -ona, -oico."
+            "carbonilo: lo que los distingue es si está al final de la cadena o en "
+            "medio. Por eso la cetona más simple tiene tres carbonos: con dos, el "
+            "carbonilo quedaría forzosamente en un extremo.\\n\\n"
+            "**La nomenclatura sigue la cadena principal.** El prefijo cuenta los "
+            "carbonos (met $1$, et $2$, prop $3$, but $4$, pent $5$, hex $6$) y la "
+            "terminación indica el grupo funcional. Cuando hace falta, un número "
+            "indica en qué carbono está el grupo, contando desde el extremo que dé el "
+            "número más bajo.\\n\\n"
+            "**El grupo funcional manda sobre las propiedades.** El $-$OH del alcohol "
+            "forma puentes de hidrógeno, y por eso el etanol es líquido mientras el "
+            "etano, de masa parecida, es un gas. El $-$COOH del ácido libera H⁺ en "
+            "agua, y de ahí su acidez.\\n\\n"
+            "**Dónde aparecen en la vida diaria.** El ácido etanoico es el vinagre; "
+            "la propanona, el quitaesmalte; los ésteres dan el aroma de las frutas; y "
+            "las amidas forman el enlace peptídico que une los aminoácidos de las "
+            "proteínas."
         ),
         "example_statement": (
             "Un compuesto responde a la fórmula $CH_3-CH_2-OH$. ¿Qué grupo "
@@ -79325,6 +85319,57 @@ LESSONS: dict[str, dict] = {
                 "porque": "Ese nombre ya anticipa propiedades: los alcoholes de cadena corta se disuelven bien en agua, porque el $-OH$ forma puentes de hidrógeno.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Nombra el compuesto $\\mathrm{CH_3-CH_2-CH_2-COOH}$ e indica en qué se "
+                    "diferencia de $\\mathrm{CH_3-CH_2-CO-CH_3}$."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Cuento los carbonos del primero: son cuatro, incluido el del $-$COOH, "
+                            "así que el prefijo es but-."
+                        ),
+                        "porque": (
+                            "El carbono del grupo carboxilo forma parte de la cadena principal y se "
+                            "cuenta. Olvidarlo deja el nombre corrido en un carbono."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El grupo $-$COOH es el del ácido carboxílico, cuya terminación es -oico: "
+                            "el compuesto es el ácido butanoico."
+                        ),
+                        "porque": (
+                            "La terminación identifica la familia. Y el $-$COOH va siempre en un "
+                            "extremo, así que no necesita número de posición."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El segundo compuesto tiene un C$=$O en el interior de la cadena, no un "
+                            "$-$COOH: es una cetona, la butanona."
+                        ),
+                        "porque": (
+                            "Los dos tienen cuatro carbonos y un oxígeno doblemente enlazado, pero el "
+                            "del ácido está en el extremo y acompañado de un $-$OH. Esa diferencia de "
+                            "posición cambia la familia y todas sus propiedades."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo: el ácido butanoico es ácido y forma sales, mientras que la "
+                            "butanona es un disolvente neutro."
+                        ),
+                        "porque": (
+                            "El grupo funcional, y no la cantidad de carbonos, es lo que determina el "
+                            "comportamiento químico. Es la idea central de toda la unidad."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Confundir aldehído con cetona. Los dos tienen el grupo carbonilo; "
             "el aldehído lo lleva en un carbono del extremo y la cetona, en uno "
@@ -79338,24 +85383,37 @@ LESSONS: dict[str, dict] = {
             "que los átomos no aparecen ni desaparecen."
         ),
         "theory": (
-            "**Conservación de la materia.** En un sistema cerrado, la masa de "
-            "los reactantes es igual a la de los productos. Si el recipiente "
-            "está abierto y se libera un gas, la balanza marca menos, pero la "
-            "materia no se perdió: salió del sistema.\n\n"
-            "**Proporciones definidas.** Un compuesto puro siempre tiene la "
-            "misma proporción en masa entre sus elementos. El agua es siempre 8 "
-            "gramos de oxígeno por cada gramo de hidrógeno, venga de donde "
-            "venga.\n\n"
-            "**Proporciones múltiples.** Cuando dos elementos forman más de un "
-            "compuesto, las masas de uno que se combinan con una masa fija del "
-            "otro están en razón de números enteros pequeños.\n\n"
-            "**Partes de una ecuación.** Los reactantes van antes de la flecha y "
-            "los productos, después. Los coeficientes indican proporciones y son "
-            "lo único que se puede modificar al balancear; los subíndices "
-            "definen el compuesto y cambiarlos cambia la sustancia.\n\n"
-            "**Cómo balancear.** Conviene dejar para el final los elementos que "
-            "aparecen en más de un compuesto, típicamente el oxígeno y el "
-            "hidrógeno."
+            "**Conservación de la materia (Lavoisier).** En un sistema cerrado, la "
+            "masa de los reactantes es igual a la de los productos. Si el recipiente "
+            "está abierto y se libera un gas, la balanza marca menos, pero la materia "
+            "no se perdió: salió del sistema.\\n\\n"
+            "**Proporciones definidas (Proust).** Un compuesto puro siempre tiene la "
+            "misma proporción en masa entre sus elementos. El agua es siempre $8$ "
+            "gramos de oxígeno por cada gramo de hidrógeno, venga de donde venga.\\n\\n"
+            "**Proporciones múltiples (Dalton).** Cuando dos elementos forman más de "
+            "un compuesto, las masas de uno que se combinan con una masa fija del "
+            "otro están en razón de números enteros pequeños, como en el CO y el CO₂.\\n\\n"
+            "**Partes de una ecuación.** Los reactantes van antes de la flecha y los "
+            "productos, después:\\n\\n"
+            "| Elemento de la ecuación | Qué significa | ¿Se puede cambiar? |\\n"
+            "|---|---|---|\\n"
+            "| Coeficiente (delante) | cuántas unidades participan | sí, es lo único "
+            "que se ajusta |\\n"
+            "| Subíndice (dentro) | cuántos átomos tiene la molécula | no, cambia la "
+            "sustancia |\\n"
+            "| Estado $(s)$, $(l)$, $(g)$, $(ac)$ | en qué fase está | es "
+            "información, no se ajusta |\\n\\n"
+            "Cambiar H₂O por H₂O₂ para «cuadrar» el oxígeno no balancea la ecuación: "
+            "la convierte en otra reacción.\\n\\n"
+            "**Cómo balancear.** Se cuentan los átomos de cada elemento a ambos lados "
+            "y se ajustan los coeficientes, dejando para el final los elementos que "
+            "aparecen en más de un compuesto —típicamente el oxígeno y el hidrógeno—. "
+            "Si queda un coeficiente fraccionario, se multiplica toda la ecuación "
+            "para volver a enteros.\\n\\n"
+            "**Balancear es contar átomos, no moléculas.** Un subíndice multiplica "
+            "solo a su átomo, mientras que el coeficiente multiplica a toda la "
+            "fórmula: en $3\\mathrm{H_2SO_4}$ hay $6$ hidrógenos, $3$ azufres y $12$ "
+            "oxígenos."
         ),
         "example_statement": (
             "Balancear la combustión $CH_4 + O_2 \\rightarrow CO_2 + H_2O$."
@@ -79374,6 +85432,60 @@ LESSONS: dict[str, dict] = {
                 "porque": "El oxígeno va al final porque aparece en DOS productos: su cuenta depende de los coeficientes que ya se fijaron. La ecuación queda $CH_4 + 2O_2 \\rightarrow CO_2 + 2H_2O$.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Balancea la ecuación $\\mathrm{C_3H_8} + \\mathrm{O_2} \\rightarrow "
+                    "\\mathrm{CO_2} + \\mathrm{H_2O}$, la combustión del propano."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Empiezo por el carbono: hay $3$ a la izquierda, así que pongo "
+                            "coeficiente $3$ al CO₂."
+                        ),
+                        "porque": (
+                            "Se parte por los elementos que aparecen en un solo compuesto a cada "
+                            "lado. El carbono solo está en el propano y en el dióxido, así que su "
+                            "ajuste no desarma nada más."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Sigo con el hidrógeno: hay $8$ en el propano, y como cada agua aporta "
+                            "$2$, necesito $4$ moléculas de agua."
+                        ),
+                        "porque": (
+                            "El subíndice $8$ cuenta átomos de hidrógeno, y cada H₂O tiene dos. Por "
+                            "eso el coeficiente es $8 \\div 2 = 4$ y no $8$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Dejo el oxígeno para el final: a la derecha hay $3 \\cdot 2 + 4 \\cdot 1 = "
+                            "10$ átomos, y como el O₂ trae dos, el coeficiente es $5$."
+                        ),
+                        "porque": (
+                            "El oxígeno aparece en dos compuestos del lado derecho, así que su cuenta "
+                            "solo queda fija una vez que los demás están ajustados. Ajustarlo primero "
+                            "obliga a rehacerlo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "La ecuación balanceada es $\\mathrm{C_3H_8} + 5\\mathrm{O_2} \\rightarrow "
+                            "3\\mathrm{CO_2} + 4\\mathrm{H_2O}$, y verifico: $3$ C, $8$ H y $10$ O a "
+                            "cada lado."
+                        ),
+                        "porque": (
+                            "El recuento final por elemento es la comprobación. Si un lado quedara "
+                            "con un átomo de más, la ley de conservación de la materia no se "
+                            "cumpliría."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Balancear cambiando subíndices, por ejemplo escribiendo $H_2O_2$ "
             "para que cuadre el oxígeno. Eso convierte el agua en agua "
@@ -79389,18 +85501,27 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**El limitante se agota; el otro sobra.** El reactivo limitante se "
-            "consume por completo y fija el máximo de producto. El reactivo en "
-            "exceso queda sin reaccionar dentro del recipiente.\n\n"
+            "consume por completo y fija el máximo de producto. El reactivo en exceso "
+            "queda sin reaccionar dentro del recipiente.\\n\\n"
             "**No se comparan masas ni moles crudos.** Los coeficientes de la "
-            "ecuación piden proporciones distintas de cada reactante, así que "
-            "hay que dividir los moles de cada uno por su coeficiente. El menor "
-            "de esos cocientes señala al limitante.\n\n"
-            "**El producto se calcula desde el limitante.** Se toma su cantidad "
-            "y se aplica la proporción de la ecuación hasta el producto que "
-            "interesa.\n\n"
+            "ecuación piden proporciones distintas de cada reactante, así que el "
+            "procedimiento es siempre el mismo:\\n\\n"
+            "1) pasar cada masa a moles con $n = \\dfrac{m}{M}$;\\n"
+            "2) dividir los moles de cada reactante por su coeficiente;\\n"
+            "3) el cociente MENOR señala al limitante;\\n"
+            "4) calcular el producto a partir de ese reactante.\\n\\n"
+            "**El producto se calcula desde el limitante.** Se toma su cantidad y se "
+            "aplica la proporción de la ecuación hasta el producto que interesa. "
+            "Calcularlo desde el reactivo en exceso da un número mayor que el real, "
+            "porque supone que hay material que no alcanza.\\n\\n"
             "**El sobrante también se calcula desde el limitante.** Se determina "
-            "cuánto del otro reactante se consumió y se resta de lo que "
-            "había.\n\n"
+            "cuánto del otro reactante se consumió y se resta de lo que había:\\n\\n"
+            "$$\\text{sobrante} = \\text{lo que había} - \\text{lo que reaccionó}$$\\n\\n"
+            "**Rendimiento.** El cálculo entrega el rendimiento **teórico**, que es "
+            "el máximo posible. Lo que se obtiene en el laboratorio es el rendimiento "
+            "**real**, y su cociente por cien es el rendimiento porcentual: $\\%R = "
+            "\\dfrac{\\text{real}}{\\text{teórico}} \\cdot 100$. Nunca pasa del $100\\%$; "
+            "si lo hiciera, el producto está impuro o mal secado.\\n\\n"
             "**Agregar más del reactivo en exceso no cambia nada.** Esa "
             "insensibilidad es la prueba experimental de cuál de los dos está "
             "limitando: se duplica uno solo y se observa si el producto aumenta."
@@ -79423,6 +85544,61 @@ LESSONS: dict[str, dict] = {
                 "porque": "Calcular desde el hidrógeno habría dado 36 gramos, el doble del real: por eso identificar el limitante va siempre antes que el cálculo del producto.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Se hacen reaccionar $28$ g de nitrógeno con $9$ g de hidrógeno según "
+                    "$\\mathrm{N_2} + 3\\mathrm{H_2} \\rightarrow 2\\mathrm{NH_3}$. ¿Cuál es el "
+                    "limitante y cuántos moles de amoníaco se forman? (Masas molares: N₂ $= "
+                    "28$ g/mol, H₂ $= 2$ g/mol.)"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Paso las masas a moles: $n(\\mathrm{N_2}) = \\dfrac{28}{28} = 1$ mol y "
+                            "$n(\\mathrm{H_2}) = \\dfrac{9}{2} = 4{,}5$ mol."
+                        ),
+                        "porque": (
+                            "La ecuación habla de moles, no de gramos. Comparar $28$ g con $9$ g "
+                            "directamente no dice nada, porque una molécula de nitrógeno pesa catorce "
+                            "veces más que una de hidrógeno."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Divido cada uno por su coeficiente: nitrógeno $\\dfrac{1}{1} = 1$ e "
+                            "hidrógeno $\\dfrac{4{,}5}{3} = 1{,}5$."
+                        ),
+                        "porque": (
+                            "La receta pide tres hidrógenos por cada nitrógeno, así que el hidrógeno "
+                            "debe ser tres veces más abundante solo para empatar. Este cociente es lo "
+                            "que pone a los dos en la misma escala."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El menor cociente es el del nitrógeno ($1 < 1{,}5$), así que el "
+                            "nitrógeno es el limitante y el hidrógeno está en exceso."
+                        ),
+                        "porque": (
+                            "El nitrógeno se acaba primero y con él se detiene la reacción, aunque "
+                            "quede hidrógeno dando vueltas en el recipiente."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo el producto desde el limitante: $1$ mol de N₂ produce $2$ moles "
+                            "de NH₃, y sobran $4{,}5 - 3 = 1{,}5$ moles de H₂."
+                        ),
+                        "porque": (
+                            "La proporción de la ecuación es $1:2$ entre nitrógeno y amoníaco. Y del "
+                            "hidrógeno se consumieron tres moles, los que exigía ese mol de "
+                            "nitrógeno: el resto queda sin reaccionar."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Suponer que limita el reactante con menos masa o con menos moles. "
             "Lo que decide es el cociente entre moles y coeficiente, y puede "
@@ -79437,21 +85613,34 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**Análisis porcentual.** El porcentaje en masa de un elemento es su "
-            "aporte dividido por la masa molar del compuesto, por cien. La suma "
-            "de todos los porcentajes da 100%.\n\n"
-            "**Fórmula empírica: la menor proporción entera** entre los átomos. "
-            "Se obtiene pasando cada porcentaje a moles —dividiendo por la masa "
-            "atómica— y dividiendo después todos los resultados por el menor de "
-            "ellos.\n\n"
-            "**Si queda un decimal, se multiplica.** Un 0,5 pide multiplicar "
-            "todos los valores por 2; un 0,33 o un 0,67, por 3. Redondear "
-            "cambiaría el compuesto.\n\n"
-            "**Fórmula molecular: la empírica por un factor entero.** Ese factor "
-            "es la masa molar dividida por la masa de la fórmula empírica, así "
-            "que **un análisis porcentual por sí solo nunca alcanza**: hace falta "
-            "además la masa molar.\n\n"
-            "**Compuestos distintos pueden compartir la empírica.** El "
-            "formaldehído, el ácido acético y la glucosa son todos $CH_2O$."
+            "aporte dividido por la masa molar del compuesto, por cien:\\n\\n"
+            "$$\\%\\,\\text{elemento} = \\dfrac{n_{\\text{átomos}} \\cdot \\text{masa "
+            "atómica}}{\\text{masa molar}} \\cdot 100$$\\n\\n"
+            "La suma de todos los porcentajes da $100\\%$, y esa es la primera "
+            "comprobación del ejercicio.\\n\\n"
+            "**Fórmula empírica: la menor proporción entera** entre los átomos. Se "
+            "obtiene en tres pasos: pasar cada porcentaje a moles dividiendo por la "
+            "masa atómica; dividir todos los resultados por el menor de ellos; y "
+            "llevar a enteros.\\n\\n"
+            "**Si queda un decimal, se multiplica.** Un $0{,}5$ pide multiplicar "
+            "todos los valores por $2$; un $0{,}33$ o un $0{,}67$, por $3$; un "
+            "$0{,}25$, por $4$. Redondear cambiaría el compuesto.\\n\\n"
+            "**Fórmula molecular: la empírica por un factor entero**, $k = "
+            "\\dfrac{\\text{masa molar}}{\\text{masa de la fórmula empírica}}$. Por eso "
+            "**un análisis porcentual por sí solo nunca alcanza**: hace falta además "
+            "la masa molar.\\n\\n"
+            "| Compuesto | Fórmula empírica | Fórmula molecular |\\n"
+            "|---|---|---|\\n"
+            "| Formaldehído | CH₂O | CH₂O |\\n"
+            "| Ácido acético | CH₂O | C₂H₄O₂ |\\n"
+            "| Glucosa | CH₂O | C₆H₁₂O₆ |\\n"
+            "| Agua oxigenada | HO | H₂O₂ |\\n\\n"
+            "**Compuestos distintos pueden compartir la empírica**, como muestra la "
+            "tabla: la empírica dice en qué PROPORCIÓN están los átomos y la "
+            "molecular, cuántos hay realmente.\\n\\n"
+            "**Trabajar con $100$ g imaginarios** es el atajo que simplifica todo: si "
+            "el compuesto tiene $40\\%$ de carbono, se supone que hay $40$ g de "
+            "carbono, y los porcentajes se leen directamente como gramos."
         ),
         "example_statement": (
             "Un compuesto contiene 40% de carbono, 6,7% de hidrógeno y 53,3% de "
@@ -79472,6 +85661,62 @@ LESSONS: dict[str, dict] = {
                 "porque": "Sin la masa molar el ejercicio se habría quedado en $CH_2O$, que también corresponde al formaldehído. El factor es lo que identifica a la glucosa.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un compuesto contiene $52{,}2\\%$ de carbono, $13{,}0\\%$ de hidrógeno y "
+                    "$34{,}8\\%$ de oxígeno, y su masa molar es $46$ g/mol. Determina su "
+                    "fórmula molecular. (Masas atómicas: C $= 12$, H $= 1$, O $= 16$.)"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Supongo $100$ g de compuesto y paso cada masa a moles: C "
+                            "$\\dfrac{52{,}2}{12} = 4{,}35$; H $\\dfrac{13{,}0}{1} = 13{,}0$; O "
+                            "$\\dfrac{34{,}8}{16} = 2{,}18$."
+                        ),
+                        "porque": (
+                            "Con $100$ g los porcentajes se leen como gramos. Y hay que pasar a moles "
+                            "porque la fórmula cuenta ÁTOMOS, no masa: el hidrógeno pesa poco y "
+                            "aporta muchos átomos."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Divido los tres por el menor, que es $2{,}18$: C $\\approx 2$; H $\\approx "
+                            "6$; O $= 1$."
+                        ),
+                        "porque": (
+                            "Dividir por el menor deja al menos abundante en $1$ y expresa a los "
+                            "demás en relación a él, que es justamente la proporción que la fórmula "
+                            "empírica necesita."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "La fórmula empírica es C₂H₆O, cuya masa es $2 \\cdot 12 + 6 \\cdot 1 + 16 "
+                            "= 46$ g/mol."
+                        ),
+                        "porque": (
+                            "Los tres cocientes salieron enteros, así que no hay que multiplicar por "
+                            "nada. Calcular la masa de la empírica es el paso previo obligatorio para "
+                            "el factor."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo el factor: $k = \\dfrac{46}{46} = 1$, así que la fórmula "
+                            "molecular también es C₂H₆O."
+                        ),
+                        "porque": (
+                            "Un factor de $1$ significa que empírica y molecular coinciden. Y ojo: "
+                            "esa fórmula corresponde tanto al etanol como al dimetiléter, que son "
+                            "isómeros; el análisis porcentual no puede distinguirlos."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Usar los porcentajes como subíndices y escribir algo como "
             "$C_{40}H_7O_{53}$. Los porcentajes son masas: hay que dividirlos "
@@ -79485,24 +85730,35 @@ LESSONS: dict[str, dict] = {
             "cambian, y ver en qué volumen quedan repartidos."
         ),
         "theory": (
-            "**Diluir es agregar disolvente.** Los moles de soluto no cambian y "
-            "el volumen aumenta, así que la concentración baja. De ahí sale "
-            "$C_1V_1 = C_2V_2$: los dos productos son los mismos moles.\n\n"
-            "**Mezclar es sumar aportes.** Los moles de las dos disoluciones se "
-            "suman y los volúmenes también; la concentración final es el "
-            "cociente. Nunca queda por encima de la mayor de las dos "
-            "concentraciones ni por debajo de la menor.\n\n"
-            "**Las concentraciones no se suman.** Sumar 0,3 y 0,5 para obtener "
-            "0,8 es el error más frecuente de esta unidad: lo que se suma son "
-            "los moles.\n\n"
+            "**Diluir es agregar disolvente.** Los moles de soluto no cambian y el "
+            "volumen aumenta, así que la concentración baja. De ahí sale $C_1V_1 = "
+            "C_2V_2$: los dos productos son los mismos moles.\\n\\n"
+            "**Concentrar es lo inverso**: evaporar disolvente deja los mismos moles "
+            "en menos volumen, y la misma fórmula sirve.\\n\\n"
+            "**Mezclar es sumar aportes.** Los moles de las dos disoluciones se suman "
+            "y los volúmenes también; la concentración final es el cociente:\\n\\n"
+            "$$C_f = \\dfrac{C_1V_1 + C_2V_2}{V_1 + V_2}$$\\n\\n"
+            "El resultado nunca queda por encima de la mayor de las dos "
+            "concentraciones ni por debajo de la menor: es un promedio pesado por los "
+            "volúmenes, y esa es la comprobación de un segundo.\\n\\n"
+            "**Las concentraciones no se suman.** Sumar $0{,}3$ y $0{,}5$ para "
+            "obtener $0{,}8$ es el error más frecuente de esta unidad: lo que se suma "
+            "son los moles.\\n\\n"
             "**Solubilidad: el máximo que se disuelve** en una cantidad fija de "
-            "disolvente a una temperatura dada. Suele expresarse en gramos por "
-            "cada 100 gramos de agua. Superado ese valor, el exceso queda sin "
-            "disolver.\n\n"
-            "**Factores.** En la mayoría de los sólidos la solubilidad sube con "
-            "la temperatura; en los gases baja con la temperatura y sube con la "
-            "presión. La agitación y el tamaño de grano cambian la VELOCIDAD, "
-            "no el límite."
+            "disolvente a una temperatura dada. Suele expresarse en gramos por cada "
+            "$100$ gramos de agua. Superado ese valor, el exceso queda sin disolver "
+            "en el fondo y la disolución está **saturada**.\\n\\n"
+            "| Factor | En sólidos | En gases |\\n"
+            "|---|---|---|\\n"
+            "| Subir la temperatura | suele aumentar la solubilidad | la DISMINUYE |\\n"
+            "| Subir la presión | casi no influye | la aumenta |\\n"
+            "| Agitar o moler | cambia la velocidad, no el límite | — |\\n\\n"
+            "Que el gas sea menos soluble en caliente explica dos cosas cotidianas: "
+            "que una bebida tibia pierda el gas más rápido y que el agua de un río "
+            "caliente tenga menos oxígeno disponible para los peces.\\n\\n"
+            "**Leer una curva de solubilidad.** Un punto sobre la curva es una "
+            "disolución saturada; bajo ella, insaturada; y sobre ella, sobresaturada, "
+            "que es un estado inestable."
         ),
         "example_statement": (
             "Se toman 100 mL de una disolución 2 mol/L y se completan con agua "
@@ -79520,6 +85776,45 @@ LESSONS: dict[str, dict] = {
             {
                 "accion": "Verifico la coherencia: el volumen se multiplicó por cuatro y la concentración quedó en la cuarta parte.",
                 "porque": "Concentración y volumen son inversamente proporcionales al diluir, así que ese control de razonabilidad detecta de inmediato una multiplicación hecha al revés.",
+            },
+        ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Se mezclan $200$ mL de una disolución $0{,}5$ mol/L con $300$ mL de otra "
+                    "$1{,}0$ mol/L del mismo soluto. ¿Cuál es la concentración final?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Calculo los moles de cada disolución por separado: $0{,}5 \\cdot 0{,}2 = "
+                            "0{,}1$ mol y $1{,}0 \\cdot 0{,}3 = 0{,}3$ mol."
+                        ),
+                        "porque": (
+                            "Lo que se conserva y se suma son los moles. Y los volúmenes van en "
+                            "litros, porque la molaridad está definida por litro."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Sumo moles y volúmenes: $0{,}1 + 0{,}3 = 0{,}4$ mol en $0{,}2 + 0{,}3 = "
+                            "0{,}5$ L."
+                        ),
+                        "porque": (
+                            "Al juntar las dos disoluciones, todo el soluto queda repartido en todo "
+                            "el líquido. Sumar las concentraciones ($0{,}5 + 1{,}0$) no tiene sentido "
+                            "físico."
+                        ),
+                    },
+                    {
+                        "accion": "Divido: $C_f = \\dfrac{0{,}4}{0{,}5} = 0{,}8$ mol/L.",
+                        "porque": (
+                            "El resultado queda entre $0{,}5$ y $1{,}0$, como tiene que ser, y más "
+                            "cerca de $1{,}0$ porque la disolución más concentrada aportó más "
+                            "volumen."
+                        ),
+                    },
+                ],
             },
         ],
         "common_error": (

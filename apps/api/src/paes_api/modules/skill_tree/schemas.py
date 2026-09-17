@@ -52,6 +52,13 @@ class LessonStepOut(BaseModel):
     porque: str
 
 
+class LessonExampleOut(BaseModel):
+    """Un ejercicio resuelto de la lección, después del primero."""
+
+    statement: str
+    steps: list[LessonStepOut]
+
+
 class LessonOut(BaseModel):
     """La teoría del nodo: lo que se estudia antes de practicar."""
 
@@ -63,6 +70,9 @@ class LessonOut(BaseModel):
     theory: str
     example_statement: str
     example_steps: list[LessonStepOut]
+    #: Los ejemplos que vienen después del primero. Vacío en las lecciones que
+    #: solo traen uno.
+    extra_examples: list[LessonExampleOut] = []
     common_error: str | None = None
 
 

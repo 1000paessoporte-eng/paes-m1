@@ -119,6 +119,82 @@ RESULTADOS_LECCIONES: dict[str, Fraction] = {
     "prob_reglas": Fraction(5, 8) * Fraction(4, 7),                   # 5/14
 }
 
+#: Lo mismo, para el SEGUNDO ejemplo de una lección (`extra_examples`).
+#:
+#: Va en un diccionario aparte y no mezclado con el de arriba porque el
+#: resultado que hay que encontrar es otro: si se buscara en todos los pasos de
+#: todos los ejemplos, un ejemplo nuevo mal calculado pasaría inadvertido
+#: mientras el primero siga terminando donde debe.
+RESULTADOS_EJEMPLOS_EXTRA: dict[str, Fraction] = {
+    # Álgebra: los segundos ejemplos de la ampliación de las lecciones.
+    "alg_proporcionalidad": Fraction(7 * 250_000, 100_000),        # 17,5 km
+    "alg_lineal": Fraction(19 - 4, -3),                            # x = -5
+    # 30 entradas y $97.500: (97500 - 2500*30) / (4000 - 2500) = 15 adultos.
+    "alg_sistemas": Fraction(97_500 - 2_500 * 30, 4_000 - 2_500),
+    "alg_cuadratica": Fraction(-3 + int(sqrt(3**2 + 4 * 130)), 2),  # ancho 10 m
+    "alg_funciones": Fraction(-5 * 2**2 + 20 * 2),                 # 20 m de altura
+    "alg_sistemas_casos": Fraction(10 * 3, 6),                     # m = 5
+    "alg_funciones_trig": Fraction(7 - 1, 2),                      # amplitud 3
+    "alg_funcion_potencia": Fraction(4, 2**3),                     # f(0,5) = 0,5
+
+    # Geometría.
+    "geo_plana": Fraction((14 + 8) * 6, 2),                        # 66 m² de trapecio
+    "geo_pitagoras": Fraction(int(sqrt(12**2 + 9**2 + 8**2))),     # diagonal 17 cm
+    "geo_semejanza": Fraction(45 * 12, 9 * 10),                    # poste de 6 m
+    "geo_solidos": Fraction(6**2 * 8, 3),                          # volumen 96 pi
+    "geo_esfera": Fraction(3**3),                                  # 27 veces el volumen
+    "geo_trigonometria": Fraction(30, 2),                          # rampa de 15 m
+    "geo_rectas": Fraction(int(sqrt(6**2 + 8**2))),                # distancia 10
+    "geo_circunferencia": Fraction(9**2, 9),                       # sector de 9 pi
+
+    # Números.
+    # (3/4 + 1/6) : 11/8 = 11/12 * 8/11 = 2/3
+    "num_racionales": (Fraction(3, 4) + Fraction(1, 6)) / Fraction(11, 8),
+    "num_potencias_raices": Fraction(12, 10),                      # 1,2 x 10^-2
+    "num_porcentajes": Fraction(36_000 * 100, 120),                # costo 30.000
+    "num_logaritmos": Fraction(4 + 1, 2),                          # x = 5/2
+    "num_financiera": Fraction(200_000 * 121, 100),                # 242.000
+
+    # Probabilidad y estadística.
+    # 10 hogares: (1*2 + 2*3 + 3*4 + 8*1) / 10 = 2,8 personas
+    "prob_estadistica_desc": Fraction(1 * 2 + 2 * 3 + 3 * 4 + 8 * 1, 10),
+    "prob_posicion": Fraction(700 - 520),                          # IQR 180 puntos
+    "prob_combinatoria": Fraction(2 * 4 * 3),                       # 24 numeros pares
+    "prob_reglas": 1 - Fraction(5, 6) ** 2,                         # 11/36
+    "prob_dispersion": Fraction(30**2 + 10**2 + 10**2 + 30**2, 4),  # varianza 500
+    "prob_binomial": Fraction(4 * 8**3 * 2, 10**4),                 # 0,4096
+    "prob_condicional": Fraction(18, 28),                           # 9/14
+
+    # Ciencias: física.
+    "cie_fuerzas": Fraction(400 * 2 + 400 * 10),                    # tension 4.800 N
+    "cie_roce": Fraction(2 * 10, 250),                              # 0,08 m de estiramiento
+    "cie_ondas": Fraction(3 * 10**8, 10**8),                        # 3 m de longitud de onda
+    "cie_electricidad": Fraction(12, 4 + 8),                        # 1 A
+    # Refrigerador: 0,15 kW x 24 h x 30 dias = 108 kWh
+    "cie_energia_electrica": Fraction(150 * 24 * 30, 1000),
+    "cie_movimiento": Fraction(-12**2, 2 * 60),                     # -1,2 m/s2
+    "cie_cosmologia": Fraction(round(64 ** (1 / 3))),               # 4 UA
+    "cie_ondas_fenomenos": Fraction(340, 680),                      # 0,5 m en el aire
+    "cie_optica": Fraction(1, Fraction(1, 10) - Fraction(1, 15)),   # imagen a 30 cm
+    "cie_tierra": Fraction(7 * 100_000, 100_000),                   # 7 km
+    # Quimica.
+    "cie_leyes_ponderales": Fraction(3 * 2 + 4 * 1, 2),             # coeficiente 5 del O2
+    "cie_limitante": Fraction(9, 2) - 3,                            # sobran 1,5 mol de H2
+    "cie_formulas": Fraction(2 * 12 + 6 * 1 + 16),                  # masa 46 de C2H6O
+    "cie_atomo": Fraction(27 - 13),                                 # 14 neutrones
+    "cie_estequiometria": Fraction(8 * 44, 16),                     # 22 g de CO2
+    "cie_soluciones": Fraction(Fraction(117, 10), Fraction(585, 10)) / Fraction(1, 2),
+    # Mezcla: (0,5 L/mol x 0,2 L + 1,0 x 0,3) / 0,5 L = 0,8 mol/L
+    "cie_dilucion": (Fraction(1, 2) * Fraction(1, 5) + Fraction(3, 10))
+    / Fraction(1, 2),
+    # Biologia.
+    "cie_ciclo_celular": Fraction(12 * 2),                          # 24 cromatidas
+    "cie_ecosistemas": Fraction(50_000, 10**3),                     # 50 kJ al terciario
+
+    # Historia: lectura de graficos.
+    "his_representaciones": Fraction(25 * 15, 100),                 # 3,75 millones rurales
+}
+
 # --- Ciencias: física y química ---
 # Cada valor se recalcula acá desde la definición, sin mirar la alternativa que
 # el banco marcó como correcta. Es la única forma de que un error de cálculo no
@@ -2772,6 +2848,26 @@ def main() -> int:
             if not paso.get("porque", "").strip():
                 fallas.append(f"lección '{codigo}', paso {i} sin el porqué")
 
+        # Un ejemplo adicional no vale menos que el primero: se le exige lo
+        # mismo, porque el alumno lo lee igual.
+        for j, ejemplo in enumerate(leccion.get("extra_examples", []), 2):
+            if not ejemplo.get("statement", "").strip():
+                fallas.append(f"lección '{codigo}', ejemplo {j} sin enunciado")
+            extra = ejemplo.get("steps", [])
+            if len(extra) < 2:
+                fallas.append(
+                    f"lección '{codigo}', ejemplo {j} tiene {len(extra)} paso(s); mínimo 2"
+                )
+            for i, paso in enumerate(extra, 1):
+                if not paso.get("accion", "").strip():
+                    fallas.append(
+                        f"lección '{codigo}', ejemplo {j}, paso {i} sin acción"
+                    )
+                if not paso.get("porque", "").strip():
+                    fallas.append(
+                        f"lección '{codigo}', ejemplo {j}, paso {i} sin el porqué"
+                    )
+
     leidas = 0
     for codigo, esperado in RESULTADOS_LECCIONES.items():
         leccion = LESSONS.get(codigo)
@@ -2783,6 +2879,27 @@ def main() -> int:
             fallas.append(
                 f"aritmética de la lección '{codigo}': el resultado recalculado "
                 f"es {esperado} y no aparece en ningún paso del ejemplo"
+            )
+        leidas += 1
+
+    for codigo, esperado in RESULTADOS_EJEMPLOS_EXTRA.items():
+        leccion = LESSONS.get(codigo)
+        if leccion is None:
+            fallas.append(f"se comprueba un ejemplo extra de '{codigo}', que no existe")
+            continue
+        ejemplos = leccion.get("extra_examples", [])
+        if not ejemplos:
+            fallas.append(
+                f"se comprueba el segundo ejemplo de '{codigo}' y esa lección no tiene"
+            )
+            continue
+        texto = " ".join(
+            p["accion"] for ejemplo in ejemplos for p in ejemplo.get("steps", [])
+        )
+        if esperado not in _valores_del_texto(texto):
+            fallas.append(
+                f"aritmética del segundo ejemplo de '{codigo}': el resultado "
+                f"recalculado es {esperado} y no aparece en ningún paso"
             )
         leidas += 1
 

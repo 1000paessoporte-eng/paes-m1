@@ -106,6 +106,10 @@ class Lesson(Base):
     dice **por qué** se hace, y `common_error` es la trampa en la que caen casi
     todos.
 
+    `extra_examples` guarda los ejercicios resueltos que vienen después del
+    primero, en la misma forma. Es opcional y vacío en las lecciones que solo
+    traen uno.
+
     Un nodo puede no tener lección todavía; en ese caso la interfaz lleva
     directo a practicar.
     """
@@ -123,6 +127,16 @@ class Lesson(Base):
     #: Lista de {"accion", "porque"}. El "porque" es obligatorio: un paso sin
     #: justificación es una receta para copiar, no una explicación.
     example_steps: Mapped[list[dict[str, str]]] = mapped_column(JSON, default=list)
+    #: Ejemplos resueltos ADICIONALES, cada uno {"statement", "steps"} con la
+    #: misma forma que el de arriba.
+    #:
+    #: Un solo ejercicio resuelto alcanza para ver el procedimiento una vez,
+    #: pero no para reconocerlo en otra forma, y es en la segunda forma donde
+    #: el alumno se cae. Van en una columna JSON y no en columnas numeradas
+    #: para que agregar un tercer ejemplo sea escribirlo, no migrar la tabla.
+    extra_examples: Mapped[list[dict]] = mapped_column(
+        JSON, default=list, server_default="[]", nullable=False
+    )
     common_error: Mapped[str | None] = mapped_column(Text, nullable=True)
 
     skill_node: Mapped["SkillNode"] = relationship(back_populates="lesson")
