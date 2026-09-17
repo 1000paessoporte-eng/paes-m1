@@ -66,12 +66,33 @@ function pareceFormula(cuerpo: string): boolean {
   return !/\p{L}{3}/u.test(cuerpo);
 }
 
-/** Convierte un fragmento con `$...$` en HTML, dejando el texto plano intacto. */
+/** Convierte un fragmento con `$...$` en HTML, dejando el texto plano intacto.
+ *
+ * Reconoce dos formas: `$...$` va dentro del renglón y `$$...$$` va en su
+ * propia línea, centrada y más grande. La segunda existe porque la teoría de
+ * las lecciones tiene fórmulas que son el centro de lo que se explica --la
+ * ecuación de la fotosíntesis, la del rendimiento, el camino
+ * gramos-mol-mol-gramos--, y meterlas en medio de un párrafo las esconde. El
+ * patrón busca primero la forma doble: con el orden al revés, `$$x$$` calzaría
+ * como un `$` vacío seguido de texto suelto, y la fórmula saldría cruda con
+ * los signos a la vista. */
 function renderizarConFormulas(texto: string): string {
   return texto
     .replace(PESO_CHILENO, MARCA_PESO)
-    .split(/(\$[^$]*\$)/g)
+    .split(/(\$\$[^$]*\$\$|\$[^$]*\$)/g)
     .map((parte) => {
+      const bloque = parte.startsWith("$$") && parte.endsWith("$$") && parte.length > 4;
+      if (bloque) {
+        try {
+          return katex.renderToString(parte.slice(2, -2), {
+            throwOnError: false,
+            displayMode: true,
+            output: "html",
+          });
+        } catch {
+          return escaparHtml(parte);
+        }
+      }
       if (
         parte.startsWith("$") &&
         parte.endsWith("$") &&
@@ -140,7 +161,11 @@ function renderizarTabla(bloque: string): string {
     )
     .join("");
 
-  return `<div class="my-3 overflow-x-auto"><table class="border-collapse text-sm"><thead><tr>${th}</tr></thead><tbody>${tbody}</tbody></table></div>`;
+  // `w-full` porque una tabla de fórmulas ajustada a su contenido queda
+  // encogida contra el margen izquierdo y cuesta seguir la fila; el
+  // `overflow-x-auto` del contenedor sigue cubriendo el caso de una fórmula
+  // que no se puede partir en una pantalla angosta.
+  return `<div class="my-3 overflow-x-auto"><table class="w-full border-collapse text-sm"><thead><tr>${th}</tr></thead><tbody>${tbody}</tbody></table></div>`;
 }
 
 /**
