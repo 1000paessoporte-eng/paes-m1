@@ -76267,18 +76267,44 @@ LESSONS: dict[str, dict] = {
             "también lo que viene después."
         ),
         "theory": (
-            "**Para sumar o restar** hace falta el mismo denominador. Se busca "
-            "el mínimo común múltiplo de los denominadores, se amplifica cada "
-            "fracción hasta él y recién ahí se suman los numeradores. El "
-            "denominador NO se suma.\n\n"
+            "**Una fracción** $\\dfrac{a}{b}$ tiene un **numerador** $a$, que dice "
+            "cuántas partes se toman, y un **denominador** $b \\neq 0$, que dice en "
+            "cuántas partes se dividió el entero. **Amplificar** es multiplicar ambos "
+            "por un mismo número y **simplificar**, dividirlos: en los dos casos la "
+            "fracción vale lo mismo, y por eso $\\dfrac{2}{3}$, $\\dfrac{4}{6}$ y "
+            "$\\dfrac{20}{30}$ son la misma cantidad.\\n\\n"
+            "**Para sumar o restar** hace falta el mismo denominador. Se busca el "
+            "mínimo común múltiplo de los denominadores, se amplifica cada fracción "
+            "hasta él y recién ahí se suman los numeradores. El denominador NO se "
+            "suma.\\n\\n"
             "**Para multiplicar** no hace falta nada: numerador por numerador y "
-            "denominador por denominador.\n\n"
-            "**Para dividir** se multiplica por el inverso de la segunda: "
-            "$\\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\cdot \\frac{d}{c}$.\n\n"
-            "**El orden de las operaciones** manda sobre todo lo anterior: "
-            "primero paréntesis, después multiplicaciones y divisiones, y al "
-            "final sumas y restas."
-            "\n\n[figura:/preguntas/mat-recta-racionales.svg]"
+            "denominador por denominador. **Para dividir** se multiplica por el "
+            "inverso de la segunda: $\\dfrac{a}{b} \\div \\dfrac{c}{d} = \\dfrac{a}{b} "
+            "\\cdot \\dfrac{d}{c}$.\\n\\n"
+            "| Operación | Regla |\\n"
+            "|---|---|\\n"
+            "| $\\dfrac{a}{b} \\pm \\dfrac{c}{d}$ | $\\dfrac{ad \\pm bc}{bd}$, y después "
+            "se simplifica |\\n"
+            "| $\\dfrac{a}{b} \\cdot \\dfrac{c}{d}$ | $\\dfrac{ac}{bd}$ |\\n"
+            "| $\\dfrac{a}{b} \\div \\dfrac{c}{d}$ | $\\dfrac{ad}{bc}$ |\\n"
+            "| Comparar $\\dfrac{a}{b}$ con $\\dfrac{c}{d}$ | es mayor la del producto "
+            "cruzado mayor: $ad$ contra $bc$ |\\n\\n"
+            "**Comparar fracciones.** Con el mismo denominador, gana la de numerador "
+            "mayor; con el mismo numerador, gana la de denominador MENOR, porque el "
+            "entero se partió en menos pedazos. Si no coinciden ni uno ni otro, se "
+            "igualan denominadores o se multiplica en cruz.\\n\\n"
+            "**Fracción y decimal.** Un decimal finito se escribe sobre una potencia "
+            "de diez ($0{,}35 = \\frac{35}{100} = \\frac{7}{20}$). Un decimal "
+            "**periódico** también es racional: $0{,}\\overline{7} = \\dfrac{7}{9}$ y "
+            "$0{,}\\overline{27} = \\dfrac{27}{99} = \\dfrac{3}{11}$, porque el "
+            "denominador lleva tantos nueves como cifras tenga el período.\\n\\n"
+            "**Fracciones impropias y números mixtos.** $2\\frac{1}{4} = "
+            "\\dfrac{9}{4}$: se multiplica el entero por el denominador y se suma el "
+            "numerador. Conviene pasar a impropia antes de operar, nunca después.\\n\\n"
+            "**El orden de las operaciones** manda sobre todo lo anterior: primero "
+            "paréntesis, después potencias, luego multiplicaciones y divisiones, y al "
+            "final sumas y restas.\\n\\n"
+            "[figura:/preguntas/mat-recta-racionales.svg]"
         ),
         "example_statement": "Calcula $\\frac{5}{6} - \\frac{2}{9}$.",
         "example_steps": [
@@ -76299,6 +76325,53 @@ LESSONS: dict[str, dict] = {
                 "porque": "En la PAES las alternativas vienen simplificadas; una respuesta correcta sin simplificar puede no aparecer entre ellas.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": "Calcula $\\left(\\dfrac{3}{4} + \\dfrac{1}{6}\\right) \\div \\dfrac{11}{8}$.",
+                "steps": [
+                    {
+                        "accion": (
+                            "Resuelvo primero el paréntesis. El mínimo común múltiplo de $4$ y $6$ es "
+                            "$12$, así que $\\dfrac{3}{4} = \\dfrac{9}{12}$ y $\\dfrac{1}{6} = "
+                            "\\dfrac{2}{12}$."
+                        ),
+                        "porque": (
+                            "El orden de las operaciones exige el paréntesis antes que la división. Y "
+                            "para sumar hay que igualar denominadores: $12$ es el menor número al que "
+                            "llegan los dos."
+                        ),
+                    },
+                    {
+                        "accion": "Sumo los numeradores: $\\dfrac{9}{12} + \\dfrac{2}{12} = \\dfrac{11}{12}$.",
+                        "porque": (
+                            "Con el mismo denominador se suman solo los de arriba: los doceavos se "
+                            "cuentan como se cuentan manzanas, y el denominador dice de qué tamaño "
+                            "son."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Divido multiplicando por el inverso: $\\dfrac{11}{12} \\div \\dfrac{11}{8} "
+                            "= \\dfrac{11}{12} \\cdot \\dfrac{8}{11}$."
+                        ),
+                        "porque": (
+                            "Dividir por una fracción es multiplicar por la invertida. Se da vuelta "
+                            "la SEGUNDA, nunca la primera."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Simplifico antes de multiplicar: el $11$ se cancela arriba y abajo, y "
+                            "queda $\\dfrac{8}{12} = \\dfrac{2}{3}$."
+                        ),
+                        "porque": (
+                            "Simplificar antes evita trabajar con $88$ y $132$. Y el resultado es "
+                            "menor que $1$ porque se dividió por una fracción mayor que $1$."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Restar los denominadores entre sí: $\\frac{5}{6} - \\frac{2}{9} \\neq "
             "\\frac{3}{3}$. El denominador dice en cuántas partes se dividió el "
@@ -76312,18 +76385,39 @@ LESSONS: dict[str, dict] = {
             "Aparecen en notación científica, interés compuesto y funciones."
         ),
         "theory": (
-            "**Mismo base, se suman los exponentes** al multiplicar: "
-            "$a^m \\cdot a^n = a^{m+n}$. Al dividir se restan: "
-            "$\\frac{a^m}{a^n} = a^{m-n}$.\n\n"
-            "**Potencia de potencia**: se multiplican los exponentes, "
-            "$(a^m)^n = a^{m \\cdot n}$.\n\n"
-            "**Exponente negativo** significa recíproco, no número negativo: "
-            "$a^{-n} = \\frac{1}{a^n}$. Así, $2^{-3} = \\frac{1}{8}$, que es "
-            "positivo.\n\n"
-            "**Exponente cero**: $a^0 = 1$ para cualquier $a \\neq 0$.\n\n"
-            "**Raíces**: una raíz es una potencia de exponente fraccionario, "
-            "$\\sqrt[n]{a^m} = a^{m/n}$. Por eso $\\sqrt{a} = a^{1/2}$ y valen "
-            "las mismas propiedades."
+            "**Una potencia** $a^n$ es el producto de $n$ factores iguales a $a$: $a$ "
+            "es la **base** y $n$ el **exponente**. Las propiedades permiten operar "
+            "sin desarrollar nada, y todas exigen la MISMA base.\\n\\n"
+            "| Propiedad | Regla |\\n"
+            "|---|---|\\n"
+            "| Producto de igual base | $a^m \\cdot a^n = a^{m+n}$ |\\n"
+            "| Cociente de igual base | $\\dfrac{a^m}{a^n} = a^{m-n}$ |\\n"
+            "| Potencia de potencia | $(a^m)^n = a^{m \\cdot n}$ |\\n"
+            "| Potencia de un producto | $(ab)^n = a^n b^n$ |\\n"
+            "| Potencia de un cociente | $\\left(\\dfrac{a}{b}\\right)^n = "
+            "\\dfrac{a^n}{b^n}$ |\\n"
+            "| Exponente cero | $a^0 = 1$, con $a \\neq 0$ |\\n"
+            "| Exponente negativo | $a^{-n} = \\dfrac{1}{a^n}$ |\\n\\n"
+            "**El exponente negativo significa recíproco, no número negativo**: "
+            "$2^{-3} = \\dfrac{1}{8}$, que es positivo. Y "
+            "$\\left(\\dfrac{a}{b}\\right)^{-n} = \\left(\\dfrac{b}{a}\\right)^{n}$: el "
+            "signo menos da vuelta la fracción.\\n\\n"
+            "**El signo de la base.** $(-2)^4 = 16$ y $(-2)^3 = -8$: exponente par da "
+            "positivo, impar conserva el signo. Sin paréntesis es otra cosa, porque "
+            "$-2^4$ significa $-(2^4) = -16$.\\n\\n"
+            "**Raíces.** Una raíz es una potencia de exponente fraccionario: "
+            "$\\sqrt[n]{a^m} = a^{m/n}$, y por eso $\\sqrt{a} = a^{1/2}$ y valen las "
+            "mismas propiedades. La raíz de un producto se reparte ($\\sqrt{ab} = "
+            "\\sqrt{a}\\sqrt{b}$), pero la de una suma NO: $\\sqrt{9+16} = 5$, no $3+4$.\\n\\n"
+            "**Simplificar una raíz** es sacar los cuadrados perfectos: $\\sqrt{72} = "
+            "\\sqrt{36 \\cdot 2} = 6\\sqrt{2}$. Y **racionalizar** es sacar la raíz del "
+            "denominador multiplicando arriba y abajo por ella: $\\dfrac{3}{\\sqrt{2}} "
+            "= \\dfrac{3\\sqrt{2}}{2}$.\\n\\n"
+            "**Notación científica.** Todo número se escribe como $a \\times 10^n$ con "
+            "$1 \\leq a < 10$. El exponente positivo corre la coma a la derecha y el "
+            "negativo a la izquierda: $0{,}00043 = 4{,}3 \\times 10^{-4}$. Para "
+            "multiplicar se suman los exponentes, y es la forma en que la prueba "
+            "compara magnitudes muy distintas."
         ),
         "example_statement": "Calcula $\\dfrac{2^5 \\cdot 2^{-3}}{2^{-1}}$.",
         "example_steps": [
@@ -76340,6 +76434,45 @@ LESSONS: dict[str, dict] = {
                 "porque": "El resultado se pide como número, y $2^3$ significa $2 \\cdot 2 \\cdot 2$.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Escribe en notación científica el resultado de $(3 \\times 10^{5}) \\cdot "
+                    "(4 \\times 10^{-8})$."
+                ),
+                "steps": [
+                    {
+                        "accion": "Separo números y potencias: $(3 \\cdot 4) \\times (10^{5} \\cdot 10^{-8})$.",
+                        "porque": (
+                            "La multiplicación permite reordenar los factores, y así cada parte se "
+                            "resuelve con su propia regla: una es aritmética simple y la otra es la "
+                            "propiedad del producto de igual base."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Multiplico las potencias sumando exponentes: $10^{5 + (-8)} = 10^{-3}$, "
+                            "y los números dan $12$."
+                        ),
+                        "porque": (
+                            "Sumar $5$ y $-8$ da $-3$: el exponente negativo indica que el resultado "
+                            "es menor que uno, no que sea negativo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Queda $12 \\times 10^{-3}$, que todavía no está en notación científica: "
+                            "ajusto a $1{,}2 \\times 10^{-2}$."
+                        ),
+                        "porque": (
+                            "La notación científica exige un número entre $1$ y $10$ delante. Al "
+                            "correr la coma un lugar a la izquierda el número se divide por diez, así "
+                            "que el exponente sube en uno para compensar."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Creer que $2^{-3}$ es $-8$. El signo del exponente no pasa al "
             "resultado: indica que la potencia va al denominador. "
@@ -76353,17 +76486,37 @@ LESSONS: dict[str, dict] = {
             "los que más se repite en la prueba."
         ),
         "theory": (
-            "**El $p\\%$ de una cantidad** es multiplicarla por "
-            "$\\frac{p}{100}$. El 20% de 350 es $350 \\cdot 0{,}20 = 70$.\n\n"
-            "**Aumentar un $p\\%$** es multiplicar por $1 + \\frac{p}{100}$; "
-            "**descontar un $p\\%$**, por $1 - \\frac{p}{100}$. Subir 20% es "
-            "multiplicar por 1,2; bajar 15%, por 0,85.\n\n"
-            "**Los porcentajes sucesivos se multiplican, no se suman.** Subir "
-            "20% y luego bajar 20% NO devuelve al valor original.\n\n"
-            "**Proporcionalidad directa**: si una cantidad crece, la otra crece "
-            "en la misma razón, y $\\frac{a}{b}$ se mantiene constante. En la "
-            "**inversa**, el producto $a \\cdot b$ es el que se mantiene."
-            "\n\n[figura:/preguntas/mat-grilla-porcentaje.svg]"
+            "**Un porcentaje es una fracción de denominador $100$**: el $p\\%$ es "
+            "$\\dfrac{p}{100}$. Calcular el $p\\%$ de una cantidad es multiplicarla por "
+            "esa fracción: el $20\\%$ de $350$ es $350 \\cdot 0{,}20 = 70$.\\n\\n"
+            "**Los tres casos.** Toda pregunta de porcentaje es una de estas tres, y "
+            "se resuelven con la misma relación $\\text{parte} = \\text{total} \\cdot "
+            "\\dfrac{p}{100}$:\\n\\n"
+            "| Se pregunta | Cómo se obtiene |\\n"
+            "|---|---|\\n"
+            "| La parte | $\\text{total} \\cdot \\dfrac{p}{100}$ |\\n"
+            "| El porcentaje | $\\dfrac{\\text{parte}}{\\text{total}} \\cdot 100$ |\\n"
+            "| El total | $\\dfrac{\\text{parte} \\cdot 100}{p}$ |\\n\\n"
+            "**Factores multiplicativos.** Aumentar un $p\\%$ es multiplicar por $1 + "
+            "\\dfrac{p}{100}$; descontar un $p\\%$, por $1 - \\dfrac{p}{100}$. Subir "
+            "$20\\%$ es multiplicar por $1{,}2$; bajar $15\\%$, por $0{,}85$. Es el "
+            "atajo que convierte una cadena de cambios en una sola multiplicación.\\n\\n"
+            "**Los porcentajes sucesivos se multiplican, no se suman.** Subir $20\\%$ "
+            "y luego bajar $20\\%$ deja $1{,}2 \\cdot 0{,}8 = 0{,}96$, es decir un "
+            "$4\\%$ MENOS que al principio, porque cada porcentaje se aplica sobre una "
+            "base distinta.\\n\\n"
+            "**Volver atrás es dividir, no restar.** Si un precio con IVA del $19\\%$ "
+            "es $\\$11.900$, el neto es $\\dfrac{11.900}{1{,}19} = \\$10.000$. Restarle "
+            "el $19\\%$ al precio final da $\\$9.639$, que es otra cosa: el $19\\%$ "
+            "estaba calculado sobre el neto, no sobre el total.\\n\\n"
+            "**Porcentaje y puntos porcentuales.** Pasar de $20\\%$ a $30\\%$ es una "
+            "subida de diez PUNTOS porcentuales, pero de un $50\\%$. Si la pregunta "
+            "dice «puntos», se resta; si dice «en qué porcentaje varió», se divide "
+            "por el valor inicial.\\n\\n"
+            "**Variación porcentual**: $\\dfrac{\\text{valor final} - \\text{valor "
+            "inicial}}{\\text{valor inicial}} \\cdot 100$. El denominador es siempre el "
+            "valor de partida.\\n\\n"
+            "[figura:/preguntas/mat-grilla-porcentaje.svg]"
         ),
         "example_statement": (
             "Una bicicleta cuesta $\\$20.000$. En marzo sube un 20% y en abril, "
@@ -76382,6 +76535,52 @@ LESSONS: dict[str, dict] = {
             {
                 "accion": "El precio final es $\\$20.400$, es decir 400 pesos más caro que al principio.",
                 "porque": "Subir 20% y bajar 15% no se cancelan: $1{,}20 \\cdot 0{,}85 = 1{,}02$, un alza neta del 2%.",
+            },
+        ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una tienda vende un artículo en $\\$36.000$, precio que ya incluye un "
+                    "recargo del $20\\%$ sobre lo que le costó. ¿Cuánto le costó a la tienda?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico que el $20\\%$ está calculado sobre el costo, que es "
+                            "justamente el dato que falta, y no sobre los $\\$36.000$."
+                        ),
+                        "porque": (
+                            "Es el punto que decide el ejercicio: el porcentaje siempre se aplica "
+                            "sobre la base que nombra el enunciado. Acá la base es el costo, así que "
+                            "el precio de venta es el $120\\%$ de esa base."
+                        ),
+                    },
+                    {
+                        "accion": "Escribo la relación con el factor: $\\text{costo} \\cdot 1{,}20 = 36.000$.",
+                        "porque": (
+                            "Aumentar un $20\\%$ es multiplicar por $1{,}20$. Planteada así, la "
+                            "pregunta se convierte en una ecuación de un solo paso."
+                        ),
+                    },
+                    {
+                        "accion": "Despejo dividiendo: $\\text{costo} = \\dfrac{36.000}{1{,}20} = \\$30.000$.",
+                        "porque": (
+                            "Para deshacer una multiplicación se divide. Restarle el $20\\%$ a "
+                            "$36.000$ habría dado $\\$28.800$, que es la alternativa incorrecta que "
+                            "siempre aparece."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Compruebo hacia adelante: el $20\\%$ de $30.000$ es $6.000$, y $30.000 + "
+                            "6.000 = 36.000$."
+                        ),
+                        "porque": (
+                            "Rehacer el camino en el sentido del enunciado confirma la base elegida. "
+                            "Con $28.800$ no calzaría: su $20\\%$ es $5.760$ y la suma daría $34.560$."
+                        ),
+                    },
+                ],
             },
         ],
         "common_error": (
@@ -77140,16 +77339,40 @@ LESSONS: dict[str, dict] = {
             "enunciado para ver si se confunden."
         ),
         "theory": (
-            "**Rectángulo**: área $= a \\cdot b$, perímetro $= 2(a+b)$.\n\n"
-            "**Triángulo**: área $= \\dfrac{base \\cdot altura}{2}$. La altura "
-            "es perpendicular a la base, no el lado inclinado.\n\n"
-            "**Círculo**: área $= \\pi r^2$, perímetro (circunferencia) "
-            "$= 2\\pi r$. El diámetro es $2r$: si el enunciado da el diámetro, "
-            "hay que dividirlo entre 2 antes de usar la fórmula.\n\n"
-            "**Trapecio**: área $= \\dfrac{(B + b) \\cdot h}{2}$.\n\n"
-            "**Figuras compuestas**: se descomponen en figuras conocidas y se "
-            "suman o restan sus áreas."
-            "\n\n[figura:/preguntas/mat-paralelogramo-altura.svg]"
+            "**Perímetro** es la longitud del contorno y se mide en unidades de largo "
+            "(cm, m). **Área** es la superficie que encierra y se mide en unidades "
+            "cuadradas (cm², m²). Dos figuras con el mismo perímetro pueden tener "
+            "áreas muy distintas, así que una no se deduce de la otra.\\n\\n"
+            "**La altura es siempre perpendicular a la base**, nunca el lado "
+            "inclinado. En un paralelogramo o en un triángulo obtusángulo la altura "
+            "puede caer fuera de la figura, y sigue siendo la que va en la fórmula.\\n\\n"
+            "| Figura | Área | Perímetro |\\n"
+            "|---|---|---|\\n"
+            "| Cuadrado de lado $a$ | $a^2$ | $4a$ |\\n"
+            "| Rectángulo de lados $a$ y $b$ | $a \\cdot b$ | $2(a+b)$ |\\n"
+            "| Paralelogramo de base $b$ y altura $h$ | $b \\cdot h$ | $2(a+b)$ |\\n"
+            "| Triángulo | $\\dfrac{b \\cdot h}{2}$ | suma de los tres lados |\\n"
+            "| Triángulo equilátero de lado $a$ | $\\dfrac{\\sqrt{3}}{4}a^2$ | $3a$ |\\n"
+            "| Trapecio de bases $B$ y $b$ | $\\dfrac{(B+b) \\cdot h}{2}$ | suma de los "
+            "cuatro lados |\\n"
+            "| Rombo de diagonales $D$ y $d$ | $\\dfrac{D \\cdot d}{2}$ | $4a$ |\\n"
+            "| Polígono regular de perímetro $P$ y apotema $a$ | $\\dfrac{P \\cdot "
+            "a}{2}$ | $n \\cdot \\text{lado}$ |\\n"
+            "| Círculo de radio $r$ | $\\pi r^2$ | $2\\pi r$ |\\n\\n"
+            "**Radio y diámetro**: $d = 2r$. Si el enunciado da el diámetro hay que "
+            "dividirlo entre dos antes de entrar a las fórmulas del círculo. Es el "
+            "descuido más frecuente de esta unidad.\\n\\n"
+            "**Figuras compuestas.** Se descomponen en figuras conocidas y las áreas "
+            "se suman o se restan. Un marco, un pasillo o un jardín con una fuente "
+            "son siempre una resta: conviene marcar el corte en el dibujo antes de "
+            "calcular.\\n\\n"
+            "**Cambio de escala.** Si todas las longitudes se multiplican por $k$, el "
+            "perímetro se multiplica por $k$ y el área por $k^2$. Duplicar los lados "
+            "cuadruplica el área, y la alternativa que dice «el doble» está puesta "
+            "ahí a propósito.\\n\\n"
+            "**Unidades de área.** $1\\ \\text{m}^2 = 10.000\\ \\text{cm}^2$, no $100$: "
+            "al cambiar de unidad de área el factor va al cuadrado.\\n\\n"
+            "[figura:/preguntas/mat-paralelogramo-altura.svg]"
         ),
         "example_statement": (
             "Un jardín rectangular mide 8 m por 5 m y tiene en el centro una "
@@ -77170,6 +77393,48 @@ LESSONS: dict[str, dict] = {
                 "porque": "El pasto es lo que queda del rectángulo una vez sacada la fuente. Es una figura compuesta por resta.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un sitio tiene forma de trapecio: sus lados paralelos miden $14$ m y $8$ "
+                    "m, y la distancia entre ellos es de $6$ m. ¿Cuál es su área, y cuánto "
+                    "costaría cercarlo con malla a $\\$3.000$ el metro si los otros dos lados "
+                    "miden $7$ m cada uno?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Aplico la fórmula del trapecio: $A = \\dfrac{(14 + 8) \\cdot 6}{2} = "
+                            "\\dfrac{22 \\cdot 6}{2} = 66\\ \\text{m}^2$."
+                        ),
+                        "porque": (
+                            "La distancia entre los lados paralelos es la altura, y en el trapecio se "
+                            "multiplica por el promedio de las dos bases. Sumar las bases y dividir "
+                            "entre dos es exactamente eso."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Para la malla necesito el perímetro, que es otra magnitud: $14 + 8 + 7 + "
+                            "7 = 36$ m."
+                        ),
+                        "porque": (
+                            "El área no sirve para comprar malla: la malla se vende por metro lineal "
+                            "y rodea la figura. Acá los cuatro lados se suman tal cual, incluidos los "
+                            "inclinados que no entran en el área."
+                        ),
+                    },
+                    {
+                        "accion": "Calculo el costo: $36 \\cdot 3.000 = \\$108.000$.",
+                        "porque": (
+                            "El precio está dado por metro de contorno, así que se multiplica por el "
+                            "perímetro y no por los $66\\ \\text{m}^2$. Es la distinción que la "
+                            "pregunta está evaluando."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Confundir radio con diámetro. Si el enunciado dice «una fuente de 2 "
             "metros de diámetro», el radio es 1 y el área es la cuarta parte de "
@@ -77183,18 +77448,39 @@ LESSONS: dict[str, dict] = {
             "alturas y distancias."
         ),
         "theory": (
-            "**El teorema**: en un triángulo rectángulo, "
-            "$a^2 + b^2 = c^2$, donde $c$ es la **hipotenusa** —el lado opuesto "
-            "al ángulo recto, siempre el más largo— y $a$, $b$ son los "
-            "catetos.\n\n"
+            "**El teorema**: en un triángulo rectángulo, $a^2 + b^2 = c^2$, donde $c$ "
+            "es la **hipotenusa** —el lado opuesto al ángulo recto, siempre el más "
+            "largo— y $a$, $b$ son los **catetos**.\\n\\n"
             "**Solo vale si hay ángulo recto.** En un triángulo cualquiera no se "
-            "puede aplicar.\n\n"
-            "**Para buscar un cateto** se despeja restando: "
-            "$a = \\sqrt{c^2 - b^2}$.\n\n"
-            "**Tríos pitagóricos** que conviene reconocer de memoria: "
-            "(3, 4, 5), (5, 12, 13), (8, 15, 17) y sus múltiplos, como "
-            "(6, 8, 10)."
-            "\n\n[figura:/lecciones/geo-pitagoras-catetos.svg]"
+            "puede aplicar, y conviene comprobar que el enunciado o la figura lo "
+            "declaren.\\n\\n"
+            "**Para buscar un cateto** se despeja restando: $a = \\sqrt{c^2 - b^2}$. "
+            "Para la hipotenusa se suma: $c = \\sqrt{a^2 + b^2}$. Restar o sumar según "
+            "qué falte es la mitad del ejercicio.\\n\\n"
+            "**El recíproco también vale**, y sirve para clasificar: si se cumple "
+            "$a^2 + b^2 = c^2$ el triángulo ES rectángulo. Y comparando:\\n\\n"
+            "| Comparación (con $c$ el lado mayor) | El triángulo es |\\n"
+            "|---|---|\\n"
+            "| $a^2 + b^2 = c^2$ | rectángulo |\\n"
+            "| $a^2 + b^2 > c^2$ | acutángulo |\\n"
+            "| $a^2 + b^2 < c^2$ | obtusángulo |\\n\\n"
+            "**Tríos pitagóricos** que conviene reconocer de memoria: $(3, 4, 5)$, "
+            "$(5, 12, 13)$, $(8, 15, 17)$, $(7, 24, 25)$ y todos sus múltiplos, como "
+            "$(6, 8, 10)$. Reconocerlos ahorra la raíz.\\n\\n"
+            "**De dónde salen las fórmulas que ya usas.** Todas son Pitágoras "
+            "aplicado:\\n\\n"
+            "- diagonal de un rectángulo de lados $a$ y $b$: $d = \\sqrt{a^2+b^2}$;\\n"
+            "- diagonal de un cuadrado de lado $a$: $d = a\\sqrt{2}$;\\n"
+            "- altura de un triángulo equilátero de lado $a$: $h = "
+            "\\dfrac{\\sqrt{3}}{2}a$;\\n"
+            "- distancia entre dos puntos del plano: $d = \\sqrt{(x_2-x_1)^2 + "
+            "(y_2-y_1)^2}$;\\n"
+            "- diagonal de una caja de aristas $a$, $b$, $c$: $D = "
+            "\\sqrt{a^2+b^2+c^2}$.\\n\\n"
+            "**Comprobación de sentido.** La hipotenusa tiene que salir mayor que "
+            "cualquiera de los catetos y menor que su suma. Si no, hay un error de "
+            "planteo antes que de cálculo.\\n\\n"
+            "[figura:/lecciones/geo-pitagoras-catetos.svg]"
         ),
         "example_statement": (
             "Una escalera de 13 m se apoya en un muro vertical y su base está a "
@@ -77214,6 +77500,50 @@ LESSONS: dict[str, dict] = {
                 "porque": "Para buscar un cateto se RESTA, no se suma: la hipotenusa es la mayor y su cuadrado contiene a los otros dos.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una caja tiene $12$ cm de largo, $9$ cm de ancho y $8$ cm de alto. ¿Cabe "
+                    "dentro de ella una varilla rígida de $17$ cm?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "La medida más larga que admite la caja es su diagonal interior, así que "
+                            "calculo primero la diagonal de la base: $d = \\sqrt{12^2 + 9^2} = "
+                            "\\sqrt{144 + 81} = \\sqrt{225} = 15$ cm."
+                        ),
+                        "porque": (
+                            "La base es un rectángulo y su diagonal es la hipotenusa del triángulo "
+                            "rectángulo que forman el largo y el ancho. Acá aparece el trío $(9, 12, "
+                            "15)$, que es $(3,4,5)$ multiplicado por tres."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Uso esa diagonal como cateto con la altura: $D = \\sqrt{15^2 + 8^2} = "
+                            "\\sqrt{225 + 64} = \\sqrt{289} = 17$ cm."
+                        ),
+                        "porque": (
+                            "La diagonal de la base y la altura forman otro triángulo rectángulo, "
+                            "cuya hipotenusa es la diagonal del cuerpo. Es el mismo teorema aplicado "
+                            "dos veces, que es de donde sale $D = \\sqrt{a^2+b^2+c^2}$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Comparo: la varilla mide $17$ cm y la diagonal mide exactamente $17$ cm, "
+                            "así que cabe justo, en diagonal."
+                        ),
+                        "porque": (
+                            "Medida a medida la varilla no entra —es más larga que los $12$ cm del "
+                            "largo—, y por eso la pregunta no se responde mirando una sola arista: la "
+                            "caja admite hasta su diagonal interior."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Sumar cuando había que restar: dar $\\sqrt{13^2 + 5^2}$ como "
             "respuesta. Eso entrega un lado más largo que la escalera, lo que es "
@@ -77227,18 +77557,38 @@ LESSONS: dict[str, dict] = {
             "medida»."
         ),
         "theory": (
-            "**Traslación** según un vector $(a, b)$: cada punto se mueve $a$ "
-            "en horizontal y $b$ en vertical. El punto $(x, y)$ llega a "
-            "$(x+a,\\; y+b)$.\n\n"
-            "**Reflexión (simetría axial)**: respecto del eje $X$, "
-            "$(x, y) \\to (x, -y)$; respecto del eje $Y$, "
-            "$(x, y) \\to (-x, y)$. Cambia solo la coordenada del eje "
-            "perpendicular al espejo.\n\n"
-            "**Rotación en 90° antihorario** con centro en el origen: "
-            "$(x, y) \\to (-y, x)$. En 180°: $(x, y) \\to (-x, -y)$.\n\n"
-            "**Las tres conservan** las longitudes de los lados y la medida de "
-            "los ángulos: la figura resultante es congruente con la original."
-            "\n\n[figura:/preguntas/mat-traslacion-cuadricula.svg]"
+            "**Una isometría** es un movimiento que conserva las distancias: la "
+            "figura cambia de posición, no de forma ni de tamaño, así que la imagen "
+            "es **congruente** con la original. Son tres: traslación, reflexión y "
+            "rotación.\\n\\n"
+            "**Traslación** según un vector $(a, b)$: cada punto se mueve $a$ en "
+            "horizontal y $b$ en vertical, de modo que $(x, y) \\to (x+a,\\ y+b)$. No "
+            "tiene puntos fijos.\\n\\n"
+            "**Reflexión (simetría axial)**: el eje es un espejo y cambia solo la "
+            "coordenada perpendicular a él. Los puntos del eje quedan fijos.\\n\\n"
+            "**Rotación** con centro en el origen: gira la figura manteniendo fijo el "
+            "centro. El sentido positivo es el antihorario.\\n\\n"
+            "| Transformación | $(x, y)$ se convierte en |\\n"
+            "|---|---|\\n"
+            "| Traslación $(a,b)$ | $(x+a,\\ y+b)$ |\\n"
+            "| Reflexión en el eje $X$ | $(x,\\ -y)$ |\\n"
+            "| Reflexión en el eje $Y$ | $(-x,\\ y)$ |\\n"
+            "| Reflexión en la recta $y = x$ | $(y,\\ x)$ |\\n"
+            "| Rotación de $90^\\circ$ antihoraria | $(-y,\\ x)$ |\\n"
+            "| Rotación de $180^\\circ$ | $(-x,\\ -y)$ |\\n"
+            "| Rotación de $270^\\circ$ antihoraria | $(y,\\ -x)$ |\\n\\n"
+            "**Dos casos que se confunden.** La rotación de $180^\\circ$ es lo mismo "
+            "que la **simetría central** respecto del origen. Y girar $90^\\circ$ en "
+            "sentido horario equivale a girar $270^\\circ$ en sentido antihorario: la "
+            "tabla se lee igual.\\n\\n"
+            "**Composición.** Cuando se aplican varias transformaciones seguidas, "
+            "**el orden importa**: reflejar y después trasladar no da lo mismo que "
+            "trasladar y después reflejar. Se aplican una por una, en el orden que "
+            "dice el enunciado, anotando el punto intermedio.\\n\\n"
+            "**Qué se conserva.** Las tres mantienen longitudes y ángulos. La "
+            "reflexión, además, invierte la orientación: la figura queda «dada "
+            "vuelta», como en un espejo.\\n\\n"
+            "[figura:/preguntas/mat-traslacion-cuadricula.svg]"
         ),
         "example_statement": (
             "El punto $P(-3, 4)$ se refleja respecto del eje $Y$ y el resultado "
@@ -77258,6 +77608,48 @@ LESSONS: dict[str, dict] = {
                 "porque": "El orden importa: reflejar y después trasladar no da lo mismo que trasladar y después reflejar.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "El punto $A(2, -5)$ se rota $90^\\circ$ en sentido antihorario con centro "
+                    "en el origen y el resultado se refleja respecto de la recta $y = x$. "
+                    "¿Dónde termina?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Aplico la rotación: $(x, y) \\to (-y, x)$, así que $A(2, -5)$ pasa a $(5, "
+                            "2)$."
+                        ),
+                        "porque": (
+                            "El menos afecta a la coordenada que pasa al primer lugar. Como $y = -5$, "
+                            "su opuesto es $+5$, y por eso la imagen queda en el primer cuadrante."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reflejo ese punto en la recta $y = x$: $(x, y) \\to (y, x)$, de modo que "
+                            "$(5, 2)$ pasa a $(2, 5)$."
+                        ),
+                        "porque": (
+                            "Esa recta es la diagonal del plano, y reflejar en ella es intercambiar "
+                            "las coordenadas. No cambia ningún signo, solo el orden."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El punto final es $(2, 5)$, y compruebo que su distancia al origen sigue "
+                            "siendo la misma: $\\sqrt{2^2 + 5^2} = \\sqrt{29}$, igual que la de $A$."
+                        ),
+                        "porque": (
+                            "Las dos transformaciones son isometrías con el origen fijo, así que la "
+                            "distancia al origen no puede haber cambiado. Es la comprobación más "
+                            "rápida de que no se traspapeló un signo."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Cambiar la coordenada equivocada al reflejar. Respecto del eje $Y$ "
             "cambia la $x$; respecto del eje $X$ cambia la $y$. Conviene pensar "
@@ -77272,19 +77664,34 @@ LESSONS: dict[str, dict] = {
             "y a los volúmenes."
         ),
         "theory": (
-            "**La razón de semejanza** compara longitudes correspondientes. Si es "
-            "$r$, entonces cada lado del mayor mide $r$ veces el del menor.\n\n"
-            "**Los perímetros van en esa misma razón $r$**, porque un perímetro es "
-            "una suma de longitudes.\n\n"
-            "**Las áreas van en $r^2$** y **los volúmenes en $r^3$**. La razón es "
-            "que un área depende de dos dimensiones y un volumen de tres, y el "
-            "factor se aplica a cada una.\n\n"
+            "**Dos figuras son semejantes** si tienen los ángulos correspondientes "
+            "iguales y los lados correspondientes proporcionales. Tienen la misma "
+            "forma y distinto tamaño. Si además la razón es $1$, son **congruentes**.\\n\\n"
+            "**La razón de semejanza** $r$ compara longitudes correspondientes: cada "
+            "lado del mayor mide $r$ veces el del menor.\\n\\n"
+            "| Se compara | Va en razón |\\n"
+            "|---|---|\\n"
+            "| Lados, perímetros, alturas, radios | $r$ |\\n"
+            "| Áreas (total, lateral, de la base) | $r^2$ |\\n"
+            "| Volúmenes y capacidades | $r^3$ |\\n\\n"
+            "La razón es que un área depende de dos dimensiones y un volumen de tres, "
+            "y el factor se aplica a cada una.\\n\\n"
+            "**Criterios de semejanza de triángulos.** Basta con uno:\\n\\n"
+            "- **AA**: dos ángulos iguales. Es el más usado, porque el tercero queda "
+            "determinado;\\n"
+            "- **LAL**: dos lados proporcionales y el ángulo entre ellos igual;\\n"
+            "- **LLL**: los tres lados proporcionales.\\n\\n"
+            "**Teorema de Thales.** Toda recta paralela a un lado de un triángulo "
+            "corta a los otros dos en segmentos proporcionales, y forma con él un "
+            "triángulo semejante al original. Es lo que hay detrás de casi todos los "
+            "problemas de sombras, postes y escaleras.\\n\\n"
+            "**En el triángulo rectángulo.** La altura sobre la hipotenusa determina "
+            "dos triángulos semejantes al original, de donde sale $h^2 = p \\cdot q$: "
+            "la altura al cuadrado es el producto de las proyecciones de los catetos.\\n\\n"
             "**Una escala $1 : n$** dice que lo real es $n$ veces lo dibujado. De "
-            "plano a realidad se MULTIPLICA; de realidad a plano se DIVIDE. Antes "
-            "de operar hay que dejar ambas medidas en la misma unidad.\n\n"
-            "**Para triángulos basta el criterio AA**: si dos ángulos coinciden, "
-            "el tercero también, y los lados quedan forzosamente proporcionales."
-            "\n\n[figura:/preguntas/mat-triangulos-semejantes.svg]"
+            "plano a realidad se MULTIPLICA; de realidad a plano se DIVIDE. Antes de "
+            "operar hay que dejar ambas medidas en la misma unidad.\\n\\n"
+            "[figura:/preguntas/mat-triangulos-semejantes.svg]"
         ),
         "example_statement": (
             "Dos triángulos son semejantes con razón $2 : 5$. Si el área del menor "
@@ -77308,6 +77715,60 @@ LESSONS: dict[str, dict] = {
                 "porque": "Comprobación rápida: el mayor tiene lados 2,5 veces más largos, así que su área debe ser bastante más de 2,5 veces la del menor. Y 100 es 6,25 veces 16, que es exactamente $2{,}5^2$.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un poste proyecta una sombra de $4{,}5$ m a la misma hora en que una "
+                    "vara de $1{,}2$ m proyecta una sombra de $0{,}9$ m. ¿Cuánto mide el "
+                    "poste?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Reconozco dos triángulos rectángulos semejantes por el criterio AA: los "
+                            "dos tienen un ángulo recto y comparten el ángulo con que llega la luz "
+                            "del sol."
+                        ),
+                        "porque": (
+                            "«A la misma hora» es el dato que hace funcionar el problema: los rayos "
+                            "llegan con la misma inclinación a los dos objetos, así que los "
+                            "triángulos tienen dos ángulos iguales."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Escribo la proporción entre lados correspondientes: $\\dfrac{h}{4{,}5} = "
+                            "\\dfrac{1{,}2}{0{,}9}$."
+                        ),
+                        "porque": (
+                            "Altura con altura y sombra con sombra: lo que no puede mezclarse es la "
+                            "altura de uno con la sombra del otro en el mismo lado de la igualdad."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo la razón de la vara: $\\dfrac{1{,}2}{0{,}9} = \\dfrac{4}{3}$, y "
+                            "despejo: $h = 4{,}5 \\cdot \\dfrac{4}{3} = 6$ m."
+                        ),
+                        "porque": (
+                            "La razón dice que cada objeto mide un tercio más que su sombra. Aplicada "
+                            "a la sombra del poste entrega su altura."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reviso el sentido: $6$ m es mayor que la sombra de $4{,}5$ m, igual que "
+                            "la vara es mayor que su propia sombra."
+                        ),
+                        "porque": (
+                            "Si el resultado hubiera salido menor que la sombra, la proporción "
+                            "estaría invertida. Comparar la relación de los dos objetos caza ese "
+                            "error sin rehacer el cálculo."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Aplicarle a las áreas la razón de los lados sin elevarla al cuadrado, "
             "y responder $40\\ \\text{cm}^2$. La regla completa: longitudes en $r$, "
@@ -77321,17 +77782,37 @@ LESSONS: dict[str, dict] = {
             "capacidad, envases y pintura."
         ),
         "theory": (
-            "**Prisma o cubo**: volumen $= $ área de la base $\\times$ altura. "
-            "Para el cubo de arista $a$: $V = a^3$ y superficie $= 6a^2$.\n\n"
-            "**Cilindro**: $V = \\pi r^2 h$. Su superficie total es "
-            "$2\\pi r^2 + 2\\pi r h$: las dos tapas más el manto.\n\n"
-            "**Cono**: $V = \\dfrac{\\pi r^2 h}{3}$, un tercio del cilindro de "
-            "igual base y altura.\n\n"
-            "**Esfera**: $V = \\dfrac{4}{3}\\pi r^3$ y superficie "
-            "$= 4\\pi r^2$.\n\n"
-            "**Las unidades cambian de exponente**: el área va en unidades "
-            "cuadradas y el volumen en cúbicas. Y $1$ litro $= 1000$ cm³."
-            "\n\n[figura:/preguntas/mat-cilindro-cotas.svg]"
+            "**El volumen** mide cuánto cabe adentro y va en unidades cúbicas; el "
+            "**área de superficie** mide cuánto material se necesita para forrarlo y "
+            "va en unidades cuadradas. Cada pregunta pide una de las dos, y las "
+            "unidades de la respuesta delatan si se calculó la otra.\\n\\n"
+            "| Cuerpo | Volumen | Superficie total |\\n"
+            "|---|---|---|\\n"
+            "| Cubo de arista $a$ | $a^3$ | $6a^2$ |\\n"
+            "| Prisma / paralelepípedo | $A_{base} \\cdot h$ | suma de todas sus caras "
+            "|\\n"
+            "| Cilindro | $\\pi r^2 h$ | $2\\pi r^2 + 2\\pi r h$ |\\n"
+            "| Cono | $\\dfrac{\\pi r^2 h}{3}$ | $\\pi r^2 + \\pi r g$ |\\n"
+            "| Pirámide | $\\dfrac{A_{base} \\cdot h}{3}$ | base más las caras "
+            "laterales |\\n"
+            "| Esfera | $\\dfrac{4}{3}\\pi r^3$ | $4\\pi r^2$ |\\n\\n"
+            "**El tercio del cono y de la pirámide** no es un adorno: un cono cabe "
+            "exactamente tres veces en el cilindro de la misma base y altura, y lo "
+            "mismo vale para la pirámide y su prisma.\\n\\n"
+            "**La generatriz $g$** del cono es el lado inclinado, no la altura, y se "
+            "obtiene con Pitágoras: $g = \\sqrt{r^2 + h^2}$. Usar $h$ donde va $g$ es "
+            "el error habitual del área lateral.\\n\\n"
+            "**La superficie se calcula desarrollando el cuerpo.** El manto de un "
+            "cilindro, extendido, es un rectángulo de base $2\\pi r$ —el contorno del "
+            "círculo— y altura $h$. Dibujar la red evita tener que recordar la "
+            "fórmula.\\n\\n"
+            "**Unidades y capacidad.** $1$ litro $= 1.000\\ \\text{cm}^3$ y $1\\ "
+            "\\text{m}^3 = 1.000$ litros. Y al cambiar de unidad de volumen el factor "
+            "va al cubo: $1\\ \\text{m}^3 = 1.000.000\\ \\text{cm}^3$.\\n\\n"
+            "**Escala.** Si las aristas se multiplican por $k$, la superficie se "
+            "multiplica por $k^2$ y el volumen por $k^3$. Duplicar el radio de un "
+            "tarro multiplica por ocho lo que le cabe.\\n\\n"
+            "[figura:/preguntas/mat-cilindro-cotas.svg]"
         ),
         "example_statement": (
             "Un tarro cilíndrico tiene 10 cm de radio y 20 cm de altura. ¿Cuál "
@@ -77349,6 +77830,45 @@ LESSONS: dict[str, dict] = {
             {
                 "accion": "Si el enunciado pidiera litros: $6.280 \\div 1000 = 6{,}28$ litros.",
                 "porque": "Un litro equivale a 1000 cm³, y la prueba suele pedir el resultado en la unidad que no viene dada.",
+            },
+        ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un cono tiene $6$ cm de radio y $8$ cm de altura. Calcula su volumen y "
+                    "su área lateral en términos de $\\pi$."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Volumen: $V = \\dfrac{\\pi r^2 h}{3} = \\dfrac{\\pi \\cdot 36 \\cdot 8}{3} = "
+                            "96\\pi\\ \\text{cm}^3$."
+                        ),
+                        "porque": (
+                            "El exponente afecta solo al radio, y el tercio es lo que distingue al "
+                            "cono del cilindro de la misma base y altura, que mediría $288\\pi$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Para el área lateral necesito la generatriz: $g = \\sqrt{6^2 + 8^2} = "
+                            "\\sqrt{36 + 64} = \\sqrt{100} = 10$ cm."
+                        ),
+                        "porque": (
+                            "La generatriz es la hipotenusa del triángulo que forman el radio y la "
+                            "altura. Es más larga que la altura, así que usar los $8$ cm daría un "
+                            "manto más chico que el real."
+                        ),
+                    },
+                    {
+                        "accion": "Área lateral: $\\pi r g = \\pi \\cdot 6 \\cdot 10 = 60\\pi\\ \\text{cm}^2$.",
+                        "porque": (
+                            "El manto lleva la generatriz, no la altura. Y las unidades confirman el "
+                            "tipo de resultado: cm² para una superficie, cm³ para el volumen del "
+                            "primer paso."
+                        ),
+                    },
+                ],
             },
         ],
         "common_error": (
@@ -77369,25 +77889,36 @@ LESSONS: dict[str, dict] = {
             "gente gana menos que yo\"."
         ),
         "theory": (
-            "**Los cuartiles parten los datos ordenados en cuatro grupos "
-            "iguales.** $Q_1$ deja por debajo al 25% de los datos, $Q_2$ al "
-            "50% y $Q_3$ al 75%.\n\n"
-            "**$Q_2$ es siempre la mediana.** No es un dato nuevo: es el mismo "
-            "valor con otro nombre, y la prueba lo pregunta.\n\n"
-            "**Cómo se calculan**: se ordenan los datos y se parte por la "
-            "mitad. $Q_1$ es la mediana de la mitad de abajo y $Q_3$ la de la "
-            "mitad de arriba.\n\n"
-            "**Percentiles**: la misma idea con cien tramos. Estar en el "
-            "percentil 80 significa que el 80% de los datos está por debajo. "
-            "Es exactamente lo que dice tu puntaje PAES respecto del resto.\n\n"
-            "**Rango intercuartil** ($Q_3 - Q_1$): cuánto ocupa la mitad "
-            "central de los datos. Sirve para medir dispersión sin que un "
-            "valor extremo la infle.\n\n"
-            "**Diagrama de cajón**: dibuja cinco números —mínimo, $Q_1$, "
-            "mediana, $Q_3$ y máximo—. La caja va de $Q_1$ a $Q_3$, así que "
-            "**dentro de la caja está siempre la mitad de los datos**, sea "
-            "ancha o angosta."
-            "\n\n[figura:/preguntas/mat-cajon-puntajes.svg]"
+            "**Los cuartiles parten los datos ordenados en cuatro grupos iguales.** "
+            "$Q_1$ deja por debajo al $25\\%$ de los datos, $Q_2$ al $50\\%$ y $Q_3$ al "
+            "$75\\%$.\\n\\n"
+            "**$Q_2$ es siempre la mediana.** No es un dato nuevo: es el mismo valor "
+            "con otro nombre, y la prueba lo pregunta.\\n\\n"
+            "**Cómo se calculan**: se ordenan los datos y se parte por la mitad. "
+            "$Q_1$ es la mediana de la mitad de abajo y $Q_3$ la de la mitad de "
+            "arriba. Si la cantidad de datos es impar, el dato central no entra en "
+            "ninguna de las dos mitades.\\n\\n"
+            "**Percentiles**: la misma idea con cien tramos. Estar en el percentil "
+            "$80$ significa que el $80\\%$ de los datos está por debajo. Es "
+            "exactamente lo que dice tu puntaje PAES respecto del resto: un percentil "
+            "no es un porcentaje de logro ni una nota.\\n\\n"
+            "| Medida | Deja por debajo | Equivale a |\\n"
+            "|---|---|---|\\n"
+            "| $Q_1$ | $25\\%$ | percentil $25$ |\\n"
+            "| $Q_2$ | $50\\%$ | la mediana, percentil $50$ |\\n"
+            "| $Q_3$ | $75\\%$ | percentil $75$ |\\n\\n"
+            "**Rango intercuartil** ($IQR = Q_3 - Q_1$): cuánto ocupa la mitad "
+            "central de los datos. Sirve para medir dispersión sin que un valor "
+            "extremo la infle, a diferencia del rango.\\n\\n"
+            "**Diagrama de cajón**: dibuja cinco números —mínimo, $Q_1$, mediana, "
+            "$Q_3$ y máximo—. La caja va de $Q_1$ a $Q_3$, así que **dentro de la "
+            "caja está siempre la mitad de los datos**, sea ancha o angosta; los "
+            "bigotes cubren un $25\\%$ cada uno.\\n\\n"
+            "**Comparar dos cajones.** Una caja corrida hacia la derecha indica datos "
+            "más altos; una caja angosta, datos más parejos. Que un bigote sea largo "
+            "no significa que ahí haya más datos: significa que ese cuarto está más "
+            "disperso.\\n\\n"
+            "[figura:/preguntas/mat-cajon-puntajes.svg]"
         ),
         "example_statement": (
             "Ocho estudiantes registraron cuántos minutos estudiaron ayer: "
@@ -77416,6 +77947,55 @@ LESSONS: dict[str, dict] = {
                 "porque": "La mitad central del curso estudia dentro de una franja de doce minutos. Es la dispersión sin contar los extremos.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un diagrama de cajón de los puntajes de un curso muestra mínimo $410$, "
+                    "$Q_1 = 520$, mediana $610$, $Q_3 = 700$ y máximo $890$. Si el curso "
+                    "tiene $40$ estudiantes, ¿cuántos obtuvieron más de $700$ puntos, y "
+                    "cuánto vale el rango intercuartil?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "$Q_3 = 700$ deja por debajo al $75\\%$ de los datos, así que por encima "
+                            "queda el $25\\%$ restante."
+                        ),
+                        "porque": (
+                            "El tercer cuartil es, por definición, el corte que separa el cuarto "
+                            "superior. No hay que calcular nada con los puntajes: la posición ya está "
+                            "en el diagrama."
+                        ),
+                    },
+                    {
+                        "accion": "Calculo ese cuarto del curso: $40 \\cdot 0{,}25 = 10$ estudiantes.",
+                        "porque": (
+                            "Los cuartiles reparten la CANTIDAD de datos en cuatro partes iguales, no "
+                            "el rango de puntajes. Por eso cada tramo del cajón tiene diez "
+                            "estudiantes, aunque unos tramos se vean más largos que otros."
+                        ),
+                    },
+                    {
+                        "accion": "Rango intercuartil: $IQR = 700 - 520 = 180$ puntos.",
+                        "porque": (
+                            "Es cuánto ocupa la mitad central del curso. El rango total sería $890 - "
+                            "410 = 480$, casi el triple, porque lo estiran el mejor y el peor "
+                            "puntaje."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Interpreto: la mitad del curso está entre $520$ y $700$ puntos, y el "
+                            "bigote superior es más largo que el inferior."
+                        ),
+                        "porque": (
+                            "Un bigote largo arriba indica que el cuarto superior está más disperso, "
+                            "no que tenga más estudiantes: todos los tramos tienen diez."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Confundir una medida de posición con una de tendencia central. "
             "$Q_2$ y la mediana son el mismo número, pero $Q_1$ y $Q_3$ no "
@@ -77434,18 +78014,37 @@ LESSONS: dict[str, dict] = {
             "que evalúa la prueba."
         ),
         "theory": (
-            "**Media aritmética**: la suma de todos los datos dividida por "
-            "cuántos son. Le afectan mucho los valores extremos.\n\n"
-            "**Mediana**: el valor del medio con los datos ORDENADOS. Si la "
-            "cantidad de datos es par, es el promedio de los dos centrales. No "
-            "le afectan los extremos.\n\n"
-            "**Moda**: el dato que más se repite. Puede no existir o haber "
-            "varias.\n\n"
-            "**Rango**: la diferencia entre el mayor y el menor.\n\n"
-            "**Cuándo usar cuál**: si hay un dato muy alejado del resto (un "
-            "sueldo enorme entre sueldos normales), la mediana representa mejor "
-            "al grupo que la media."
-            "\n\n[figura:/preguntas/mat-histograma-edades.svg]"
+            "**Media aritmética**: la suma de todos los datos dividida por cuántos "
+            "son, $\\bar{x} = \\dfrac{\\sum x_i}{n}$. Le afectan mucho los valores "
+            "extremos, porque cada dato entra con todo su peso.\\n\\n"
+            "**Mediana**: el valor del medio con los datos ORDENADOS. Si la cantidad "
+            "de datos es par, es el promedio de los dos centrales. No le afectan los "
+            "extremos.\\n\\n"
+            "**Moda**: el dato que más se repite. Puede no existir, o haber dos "
+            "(bimodal) o más. Es la única que sirve para datos que no son números, "
+            "como el color más vendido.\\n\\n"
+            "**Rango**: la diferencia entre el mayor y el menor.\\n\\n"
+            "| Medida | Qué responde | La afectan los extremos |\\n"
+            "|---|---|---|\\n"
+            "| Media | el valor que reparte el total en partes iguales | sí, mucho |\\n"
+            "| Mediana | el valor que deja a la mitad por debajo | no |\\n"
+            "| Moda | el valor más frecuente | no |\\n\\n"
+            "**Cuándo usar cuál**: si hay un dato muy alejado del resto —un sueldo "
+            "enorme entre sueldos normales—, la mediana representa mejor al grupo que "
+            "la media. Por eso los ingresos de un país se informan con la mediana y "
+            "no con el promedio.\\n\\n"
+            "**Media en una tabla de frecuencias.** Cuando los datos vienen "
+            "agrupados, cada valor pesa según cuántas veces aparece: $\\bar{x} = "
+            "\\dfrac{\\sum x_i f_i}{\\sum f_i}$. Sumar los valores distintos y dividir "
+            "por cuántos son ignora las frecuencias y da otro número.\\n\\n"
+            "**Media ponderada.** Si cada nota tiene un porcentaje distinto, se "
+            "multiplica cada una por su peso y se divide por la suma de los pesos. Es "
+            "el cálculo del puntaje ponderado de admisión.\\n\\n"
+            "**Cómo se mueven al cambiar los datos.** Sumar una constante a todos los "
+            "datos sube la media, la mediana y la moda en esa misma cantidad. "
+            "Multiplicarlos por una constante multiplica las tres. Y agregar un dato "
+            "igual a la media deja la media intacta.\\n\\n"
+            "[figura:/preguntas/mat-histograma-edades.svg]"
         ),
         "example_statement": (
             "Las notas de un estudiante son 4, 5, 5, 6 y 10. Calcula la media y "
@@ -77465,6 +78064,53 @@ LESSONS: dict[str, dict] = {
                 "porque": "Un solo valor extremo arrastra la media pero no mueve la mediana, y por eso acá la mediana representa mejor el desempeño habitual.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "En una encuesta, $10$ hogares declararon cuántas personas viven en "
+                    "ellos: dos hogares con $1$ persona, tres con $2$, cuatro con $3$ y uno "
+                    "con $8$. Calcula la media y la mediana, y decide cuál representa mejor "
+                    "al grupo."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Calculo la media pesando cada valor por su frecuencia: $\\dfrac{1 \\cdot 2 "
+                            "+ 2 \\cdot 3 + 3 \\cdot 4 + 8 \\cdot 1}{10} = \\dfrac{2 + 6 + 12 + 8}{10} = "
+                            "2{,}8$."
+                        ),
+                        "porque": (
+                            "Los datos vienen agrupados: cada tamaño de hogar aparece varias veces y "
+                            "tiene que entrar tantas veces como se repite. Promediar $1$, $2$, $3$ y "
+                            "$8$ a secas daría $3{,}5$, que no es la media de los diez hogares."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Ordeno los diez datos: $1, 1, 2, 2, 2, 3, 3, 3, 3, 8$. Como son pares, "
+                            "la mediana es el promedio del quinto y el sexto: $\\dfrac{2 + 3}{2} = "
+                            "2{,}5$."
+                        ),
+                        "porque": (
+                            "Con $10$ datos no hay un único central, así que se promedian los dos del "
+                            "medio. Escribir la lista completa evita contar mal las repeticiones."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Comparo: la mediana ($2{,}5$) representa mejor al grupo que la media "
+                            "($2{,}8$), porque el hogar de $8$ personas tira el promedio hacia "
+                            "arriba."
+                        ),
+                        "porque": (
+                            "Nueve de los diez hogares tienen tres personas o menos. Un solo dato "
+                            "extremo mueve la media y deja intacta la mediana, que es exactamente la "
+                            "razón por la que existen las dos."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Calcular la mediana sin ordenar los datos. En la lista 10, 4, 5, 6, "
             "5 el valor central es 5, no el 5 que aparece tercero en el desorden: "
@@ -77478,22 +78124,36 @@ LESSONS: dict[str, dict] = {
             "casos posibles."
         ),
         "theory": (
-            "**Principio multiplicativo**: si una decisión tiene $m$ opciones y "
-            "otra independiente tiene $n$, juntas dan $m \\cdot n$ "
-            "posibilidades.\n\n"
-            "**Permutaciones** (importa el orden, se usan todos): $n! = n \\cdot "
-            "(n-1) \\cdots 2 \\cdot 1$.\n\n"
-            "**Variaciones**, también escritas $P(n,k)$ (importa el orden, se "
-            "eligen $k$ de $n$): "
-            "$\\dfrac{n!}{(n-k)!}$.\n\n"
-            "**Combinaciones** (NO importa el orden): "
-            "$\\binom{n}{k} = \\dfrac{n!}{k!\\,(n-k)!}$.\n\n"
+            "**Principio multiplicativo**: si una decisión tiene $m$ opciones y otra "
+            "independiente tiene $n$, juntas dan $m \\cdot n$ posibilidades. Es la "
+            "base de todo lo demás, y sirve incluso cuando ninguna fórmula calza: se "
+            "dibujan las casillas y se multiplica lo que puede ir en cada una.\\n\\n"
+            "**Principio aditivo**: si las opciones son excluyentes —o una cosa o la "
+            "otra, nunca ambas—, se SUMAN en vez de multiplicarse. La palabra «o» "
+            "suele marcar una suma y la «y», un producto.\\n\\n"
+            "| Situación | Fórmula | Ejemplo |\\n"
+            "|---|---|---|\\n"
+            "| Permutaciones de $n$ | $n!$ | ordenar $5$ libros: $120$ |\\n"
+            "| Variaciones de $k$ entre $n$ (importa el orden) | $\\dfrac{n!}{(n-k)!}$ "
+            "| podio de $3$ entre $8$ |\\n"
+            "| Combinaciones de $k$ entre $n$ (no importa) | $\\dbinom{n}{k} = "
+            "\\dfrac{n!}{k!(n-k)!}$ | comité de $2$ entre $6$ |\\n"
+            "| Con repetición permitida | $n^k$ | claves de $4$ dígitos: $10^4$ |\\n\\n"
             "**La pregunta que decide todo**: ¿cambia el resultado si altero el "
-            "orden? Un podio sí cambia (primero y segundo no son lo mismo); un "
-            "comité de dos personas no.\n\n"
-            "**Y recuerda que $0! = 1$**, que es lo que hace que las fórmulas "
-            "sigan funcionando cuando se eligen todos los elementos."
-            "\n\n[figura:/preguntas/mat-casilleros-cifras.svg]"
+            "orden? Un podio sí cambia —primero y segundo no son lo mismo—; un comité "
+            "de dos personas no. Si el orden importa, van variaciones o "
+            "permutaciones; si no, combinaciones.\\n\\n"
+            "**El factorial.** $n! = n \\cdot (n-1) \\cdots 2 \\cdot 1$, y $0! = 1$, que "
+            "es lo que hace que las fórmulas sigan funcionando cuando se eligen todos "
+            "los elementos. Crece muy rápido: $5! = 120$ pero $10! = 3.628.800$.\\n\\n"
+            "**Dos propiedades de las combinaciones** que ahorran cuentas: "
+            "$\\dbinom{n}{k} = \\dbinom{n}{n-k}$ —elegir quién entra es lo mismo que "
+            "elegir quién queda fuera— y $\\dbinom{n}{0} = \\dbinom{n}{n} = 1$.\\n\\n"
+            "**Restricciones.** Cuando el enunciado obliga a algo —«que empiece con "
+            "vocal», «que dos personas vayan juntas»— conviene contar primero las "
+            "posiciones obligadas y después el resto. Y para «al menos uno», casi "
+            "siempre es más corto contar el total y restar los casos que no cumplen.\\n\\n"
+            "[figura:/preguntas/mat-casilleros-cifras.svg]"
         ),
         "example_statement": (
             "De un grupo de 6 personas se debe elegir un comité de 2, sin "
@@ -77513,6 +78173,50 @@ LESSONS: dict[str, dict] = {
                 "porque": "El $4!$ del denominador cancela la parte baja del $6!$, así que basta multiplicar los dos primeros factores y dividir por $2!$.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Cuántos números de tres cifras distintas se pueden formar con los "
+                    "dígitos $1, 2, 3, 4, 5$? ¿Y cuántos de ellos son pares?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Para la primera pregunta el orden importa —$132$ y $231$ son números "
+                            "distintos— y no se repiten cifras: son variaciones de $3$ entre $5$, es "
+                            "decir $5 \\cdot 4 \\cdot 3 = 60$."
+                        ),
+                        "porque": (
+                            "Con el principio multiplicativo se ve mejor que con la fórmula: la "
+                            "primera casilla admite cinco dígitos, la segunda los cuatro que quedan y "
+                            "la tercera, tres."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Para que sea par, la ÚLTIMA cifra debe ser $2$ o $4$: dos opciones. "
+                            "Empiezo por ahí."
+                        ),
+                        "porque": (
+                            "La casilla con restricción se llena primero. Si se dejara para el final, "
+                            "la cantidad de dígitos disponibles dependería de lo elegido antes y ya "
+                            "no se podría multiplicar."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Fijada la última cifra, quedan cuatro dígitos para la primera casilla y "
+                            "tres para la segunda: $2 \\cdot 4 \\cdot 3 = 24$ números pares."
+                        ),
+                        "porque": (
+                            "El factor de la restricción va primero y los demás se completan con lo "
+                            "que sobra. De los $60$ números, $24$ son pares y $36$ impares, que calza "
+                            "con que haya tres dígitos impares disponibles para la última posición."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Usar variaciones donde correspondían combinaciones y responder 30. "
             "Ese número cuenta dos veces cada comité, una por cada orden posible "
@@ -77529,17 +78233,37 @@ LESSONS: dict[str, dict] = {
         "theory": (
             "**Definición clásica**: $P(A) = \\dfrac{\\text{casos "
             "favorables}}{\\text{casos posibles}}$, cuando todos los casos son "
-            "igualmente probables. Siempre está entre 0 y 1.\n\n"
-            "**Complemento**: $P(\\text{no } A) = 1 - P(A)$. Es el atajo para "
-            "cualquier pregunta que diga «al menos uno».\n\n"
-            "**Unión**: $P(A \\text{ o } B) = P(A) + P(B) - P(A \\text{ y } B)$. "
-            "Se resta la intersección para no contarla dos veces.\n\n"
-            "**Eventos independientes** (uno no afecta al otro): "
-            "$P(A \\text{ y } B) = P(A) \\cdot P(B)$.\n\n"
-            "**Con o sin reposición**: si el objeto extraído no se devuelve, el "
-            "total cambia para la segunda extracción y los eventos dejan de ser "
-            "independientes."
-            "\n\n[figura:/preguntas/mat-venn-deportes.svg]"
+            "igualmente probables. Siempre está entre $0$ y $1$: una probabilidad de "
+            "$1{,}3$ o de $-0{,}2$ es un error de cálculo, no un resultado.\\n\\n"
+            "| Regla | Fórmula | Cuándo |\\n"
+            "|---|---|---|\\n"
+            "| Complemento | $P(\\text{no } A) = 1 - P(A)$ | «al menos uno» |\\n"
+            "| Unión | $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$ | «A o B» |\\n"
+            "| Unión excluyente | $P(A \\cup B) = P(A) + P(B)$ | si no pueden ocurrir "
+            "juntos |\\n"
+            "| Intersección independiente | $P(A \\cap B) = P(A) \\cdot P(B)$ | uno no "
+            "afecta al otro |\\n"
+            "| Intersección dependiente | $P(A) \\cdot P(B|A)$ | sin reposición |\\n\\n"
+            "**Por qué se resta la intersección.** Al sumar $P(A)$ y $P(B)$, los "
+            "casos que cumplen las dos cosas se cuentan dos veces. En un diagrama de "
+            "Venn es la zona del medio, y por eso se descuenta una vez.\\n\\n"
+            "**Excluyentes no es lo mismo que independientes.** Excluyentes es que no "
+            "pueden ocurrir a la vez ($P(A \\cap B) = 0$); independientes es que uno "
+            "no cambia la probabilidad del otro. De hecho, dos eventos excluyentes "
+            "con probabilidad positiva nunca son independientes: si ocurre uno, el "
+            "otro pasa a ser imposible.\\n\\n"
+            "**Con o sin reposición.** Si el objeto extraído no se devuelve, el total "
+            "cambia para la segunda extracción y los eventos dejan de ser "
+            "independientes. Con reposición, cada extracción parte de cero.\\n\\n"
+            "**«Al menos uno» casi siempre se resuelve por complemento**: es más "
+            "corto calcular la probabilidad de que no ocurra ninguno y restarla de "
+            "$1$ que sumar todos los casos favorables.\\n\\n"
+            "**Probabilidad y frecuencia.** Lo anterior es la probabilidad teórica. "
+            "La **frecuencia relativa** es el resultado observado al repetir el "
+            "experimento, y se acerca a la teórica mientras más repeticiones haya: en "
+            "diez lanzamientos pueden salir siete caras sin que la moneda esté "
+            "cargada.\\n\\n"
+            "[figura:/preguntas/mat-venn-deportes.svg]"
         ),
         "example_statement": (
             "Una bolsa tiene 5 bolitas rojas y 3 azules. Se sacan dos sin "
@@ -77557,6 +78281,50 @@ LESSONS: dict[str, dict] = {
             {
                 "accion": "Multiplico las dos: $\\frac{5}{8} \\cdot \\frac{4}{7} = \\frac{20}{56} = \\frac{5}{14}$.",
                 "porque": "Para que ocurran los dos sucesos encadenados se multiplica la probabilidad del primero por la del segundo dado que ocurrió el primero.",
+            },
+        ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Se lanzan dos dados equilibrados. ¿Cuál es la probabilidad de obtener al "
+                    "menos un seis?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Uso el complemento: en vez de contar los casos con uno o dos seis, "
+                            "calculo la probabilidad de que NO salga ningún seis."
+                        ),
+                        "porque": (
+                            "«Al menos uno» abarca tres situaciones distintas —seis en el primero, en "
+                            "el segundo, o en ambos— y sumarlas obliga a descontar la intersección. "
+                            "El complemento es un solo cálculo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Cada dado tiene cinco caras que no son seis, y los lanzamientos son "
+                            "independientes: $P(\\text{ningún seis}) = \\dfrac{5}{6} \\cdot \\dfrac{5}{6} "
+                            "= \\dfrac{25}{36}$."
+                        ),
+                        "porque": (
+                            "Un dado no afecta al otro, así que las probabilidades se multiplican. No "
+                            "hay reposición que considerar: los dados no se gastan."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Resto de uno: $P(\\text{al menos un seis}) = 1 - \\dfrac{25}{36} = "
+                            "\\dfrac{11}{36}$."
+                        ),
+                        "porque": (
+                            "Los $36$ resultados posibles se reparten entre los $25$ sin ningún seis "
+                            "y los $11$ que tienen alguno. Sumar $\\dfrac{1}{6} + \\dfrac{1}{6}$ habría "
+                            "dado $\\dfrac{12}{36}$, contando dos veces el caso en que ambos dados "
+                            "salen seis."
+                        ),
+                    },
+                ],
             },
         ],
         "common_error": (
@@ -78401,21 +79169,41 @@ LESSONS: dict[str, dict] = {
             "todo el ejercicio."
         ),
         "theory": (
-            "**Los conjuntos están encajados.** Naturales $\\subset$ enteros "
-            "$\\subset$ racionales $\\subset$ reales. Cada uno contiene al "
-            "anterior, así que todo natural es también entero, racional y real.\n\n"
-            "**Racional o irracional.** Un racional se puede escribir como "
-            "fracción de enteros; su decimal termina o se repite "
-            "periódicamente. Un irracional no: su decimal es infinito y sin "
-            "período. Son irracionales $\\pi$, $e$ y las raíces no exactas como "
-            "$\\sqrt{2}$.\n\n"
-            "**Cuidado con las raíces.** $\\sqrt{9} = 3$ es racional; "
-            "$\\sqrt{10}$ es irracional. Que aparezca una raíz no hace "
-            "irracional al número: hay que ver si es exacta.\n\n"
+            "**Los conjuntos están encajados.** Naturales $\\subset$ enteros $\\subset$ "
+            "racionales $\\subset$ reales. Cada uno contiene al anterior, así que todo "
+            "natural es también entero, racional y real, y una pregunta por «a qué "
+            "conjunto pertenece» suele admitir varias respuestas verdaderas a la vez.\\n\\n"
+            "| Conjunto | Qué incluye | Ejemplos |\\n"
+            "|---|---|---|\\n"
+            "| $\\mathbb{N}$ naturales | para contar | $1,\\ 2,\\ 3$ |\\n"
+            "| $\\mathbb{Z}$ enteros | con negativos y el cero | $-4,\\ 0,\\ 7$ |\\n"
+            "| $\\mathbb{Q}$ racionales | los que son fracción de enteros | "
+            "$\\dfrac{3}{5},\\ -2{,}75,\\ 0{,}\\overline{3}$ |\\n"
+            "| irracionales | decimal infinito sin período | $\\pi,\\ e,\\ \\sqrt{2}$ |\\n"
+            "| $\\mathbb{R}$ reales | todos los de la recta numérica | todos los "
+            "anteriores |\\n\\n"
+            "**Racional o irracional.** Un racional se puede escribir como fracción "
+            "de enteros, y su decimal termina o se repite periódicamente. Un "
+            "irracional no: su decimal es infinito y sin período.\\n\\n"
+            "**Cuidado con las raíces.** $\\sqrt{9} = 3$ es racional; $\\sqrt{10}$ es "
+            "irracional. Que aparezca una raíz no hace irracional al número: hay que "
+            "ver si es exacta.\\n\\n"
             "**Las operaciones pueden cambiar de conjunto.** La suma de dos "
-            "irracionales puede ser racional: $(2+\\sqrt{2}) + (2-\\sqrt{2}) = 4$. "
-            "Por eso no se puede afirmar el resultado sin calcular."
-            "\n\n[figura:/preguntas/mat-recta-real-puntos.svg]"
+            "irracionales puede ser racional: $(2+\\sqrt{2}) + (2-\\sqrt{2}) = 4$, y "
+            "$\\sqrt{2} \\cdot \\sqrt{2} = 2$. Por eso no se puede afirmar el resultado "
+            "sin calcular. En cambio, un racional distinto de cero por un irracional "
+            "siempre da irracional.\\n\\n"
+            "**Entre dos reales siempre hay otro** —basta el promedio—, y por eso no "
+            "existe «el número siguiente» a $0{,}5$ en los reales, como sí existe el "
+            "siguiente de $5$ en los enteros. Es la propiedad de densidad.\\n\\n"
+            "**Ubicar un irracional.** $\\sqrt{20}$ está entre $4$ y $5$ porque $4^2 = "
+            "16$ y $5^2 = 25$, y más cerca de $4{,}5$ porque $4{,}5^2 = 20{,}25$. "
+            "Acotar entre cuadrados perfectos resuelve casi todas las preguntas de "
+            "orden sin calculadora.\\n\\n"
+            "**Valor absoluto.** $|x|$ es la distancia de $x$ al cero, así que nunca "
+            "es negativo: $|-7| = 7$. En la recta, $|a - b|$ es la distancia entre "
+            "$a$ y $b$.\\n\\n"
+            "[figura:/preguntas/mat-recta-real-puntos.svg]"
         ),
         "example_statement": (
             "Clasifica cada número como racional o irracional: "
@@ -78436,6 +79224,60 @@ LESSONS: dict[str, dict] = {
                 "porque": "Un irracional no deja de serlo al multiplicarlo o dividirlo por un racional no nulo. Solo puede \"perder\" su irracionalidad al combinarse con otro irracional.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Ordena de menor a mayor: $\\sqrt{30}$, $\\;5{,}4$, $\\;\\dfrac{16}{3}$ y "
+                    "$\\;\\pi + 2$."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Acoto la raíz entre cuadrados perfectos: $5^2 = 25$ y $6^2 = 36$, así "
+                            "que $\\sqrt{30}$ está entre $5$ y $6$; como $5{,}5^2 = 30{,}25$, es un "
+                            "poco menor que $5{,}5$."
+                        ),
+                        "porque": (
+                            "Comparar con cuadrados conocidos evita la calculadora y da precisión "
+                            "suficiente para ordenar. El cuadrado de $5{,}5$ se pasa apenas, así que "
+                            "la raíz queda justo por debajo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Paso la fracción a decimal: $\\dfrac{16}{3} = 5{,}\\overline{3}$, es decir "
+                            "$5{,}33\\ldots$"
+                        ),
+                        "porque": (
+                            "Es un decimal periódico, así que la fracción es racional. Y en decimal "
+                            "se compara directamente con los otros tres números."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Estimo el irracional: $\\pi \\approx 3{,}14$, así que $\\pi + 2 \\approx "
+                            "5{,}14$."
+                        ),
+                        "porque": (
+                            "Sumar un racional a un irracional lo deja irracional, pero eso no impide "
+                            "ubicarlo: para ordenar basta una aproximación de dos decimales."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Ordeno con los valores obtenidos: $\\pi + 2 \\approx 5{,}14$, luego "
+                            "$\\dfrac{16}{3} \\approx 5{,}33$, luego $5{,}4$ y por último $\\sqrt{30} "
+                            "\\approx 5{,}48$."
+                        ),
+                        "porque": (
+                            "Los cuatro caen entre $5$ y $5{,}5$, que es la razón de que la pregunta "
+                            "se vea difícil: sin llevar todo a decimal, la intuición no alcanza para "
+                            "distinguirlos."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Creer que todo decimal infinito es irracional. $0{,}333\\ldots$ "
             "tiene infinitos decimales y es $\\frac{1}{3}$, perfectamente "
@@ -78449,20 +79291,34 @@ LESSONS: dict[str, dict] = {
             "ser completamente distintos."
         ),
         "theory": (
-            "**Rango.** Es el máximo menos el mínimo. Es la medida más simple y "
-            "la más frágil: un solo dato extremo la dispara.\n\n"
+            "**Rango.** Es el máximo menos el mínimo. Es la medida más simple y la "
+            "más frágil: un solo dato extremo la dispara.\\n\\n"
             "**Varianza.** Es el promedio de los cuadrados de las desviaciones "
-            "respecto de la media: $\\sigma^2 = \\frac{\\sum (x_i - "
-            "\\bar{x})^2}{n}$. Se elevan al cuadrado para que las desviaciones "
-            "negativas no cancelen a las positivas.\n\n"
-            "**Desviación estándar.** Es la raíz de la varianza. Se usa porque "
-            "queda en las MISMAS unidades que los datos, y por eso se puede "
-            "comparar directamente con el promedio.\n\n"
-            "**Cómo se lee.** A mayor desviación estándar, más dispersos los "
-            "datos. Si es cero, todos los datos son idénticos. Sumar una "
-            "constante a todos los datos NO cambia la dispersión; multiplicarlos "
-            "por una constante sí."
-            "\n\n[figura:/preguntas/mat-tabla-desviacion.svg]"
+            "respecto de la media: $\\sigma^2 = \\dfrac{\\sum (x_i - \\bar{x})^2}{n}$. Se "
+            "elevan al cuadrado para que las desviaciones negativas no cancelen a las "
+            "positivas: sin el cuadrado, la suma de las desviaciones da cero siempre.\\n\\n"
+            "**Desviación estándar.** Es la raíz de la varianza, $\\sigma = "
+            "\\sqrt{\\sigma^2}$. Se usa porque queda en las MISMAS unidades que los "
+            "datos, y por eso se puede comparar directamente con el promedio.\\n\\n"
+            "**Cómo se calcula, en orden**: se obtiene la media; se resta la media a "
+            "cada dato; se elevan al cuadrado esas diferencias; se promedian; y se "
+            "saca la raíz.\\n\\n"
+            "| Si a todos los datos se les... | La media | La desviación estándar |\\n"
+            "|---|---|---|\\n"
+            "| suma una constante $c$ | sube en $c$ | no cambia |\\n"
+            "| multiplica por una constante $k$ | se multiplica por $k$ | se "
+            "multiplica por $|k|$ |\\n\\n"
+            "Sumar una constante mueve todo el conjunto sin separarlo, así que la "
+            "dispersión se mantiene; multiplicar sí estira las distancias.\\n\\n"
+            "**Cómo se lee.** A mayor desviación estándar, más dispersos los datos. "
+            "Si es cero, todos los datos son idénticos. Dos cursos con el mismo "
+            "promedio pueden tener desviaciones muy distintas, y eso es justamente lo "
+            "que la pregunta suele estar comparando.\\n\\n"
+            "**Coeficiente de variación.** Es $\\dfrac{\\sigma}{\\bar{x}}$, y sirve para "
+            "comparar dispersiones de conjuntos con promedios muy distintos: una "
+            "desviación de $5$ es enorme si la media es $10$ y despreciable si la "
+            "media es $10.000$.\\n\\n"
+            "[figura:/preguntas/mat-tabla-desviacion.svg]"
         ),
         "example_statement": (
             "Calcula la desviación estándar del conjunto: 2, 4, 4, 4, 5, 5, 7, 9."
@@ -78481,6 +79337,56 @@ LESSONS: dict[str, dict] = {
                 "porque": "Falta la raíz para volver a las unidades originales. Quedarse en 4 es responder la varianza, que es otra cosa.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Dos cursos rindieron la misma prueba. En el curso A los puntajes fueron "
+                    "$50, 50, 50, 50$ y en el B, $20, 40, 60, 80$. Calcula la media y la "
+                    "desviación estándar de cada uno."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Media del curso A: $\\dfrac{50 \\cdot 4}{4} = 50$. Media del curso B: "
+                            "$\\dfrac{20+40+60+80}{4} = \\dfrac{200}{4} = 50$."
+                        ),
+                        "porque": (
+                            "Los dos cursos tienen exactamente el mismo promedio, que es lo que hace "
+                            "útil el ejercicio: con ese solo número los cursos parecen iguales."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Desviación del curso A: todas las diferencias con la media son cero, así "
+                            "que la varianza es cero y $\\sigma = 0$."
+                        ),
+                        "porque": (
+                            "Una desviación estándar de cero significa que no hay dispersión: todos "
+                            "los datos son idénticos. Es el único caso en que eso ocurre."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Para el curso B calculo las desviaciones: $-30, -10, 10, 30$; las elevo "
+                            "al cuadrado: $900, 100, 100, 900$; y promedio: $\\dfrac{2000}{4} = 500$."
+                        ),
+                        "porque": (
+                            "Sin elevar al cuadrado, las desviaciones sumarían cero y el cálculo no "
+                            "diría nada. Los cuadrados además castigan más a los datos lejanos, que "
+                            "es lo que interesa medir."
+                        ),
+                    },
+                    {
+                        "accion": "Saco la raíz: $\\sigma = \\sqrt{500} \\approx 22{,}4$ puntos.",
+                        "porque": (
+                            "La varianza quedó en «puntos al cuadrado», que no significa nada; la "
+                            "raíz la devuelve a puntos y permite decir que el curso B se desvía unos "
+                            "$22$ puntos del promedio, mientras el A no se desvía nada."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Entregar la varianza cuando se pidió la desviación estándar. Son "
             "el mismo cálculo con un paso de diferencia, y las alternativas casi "
@@ -78493,20 +79399,35 @@ LESSONS: dict[str, dict] = {
             "siempre entregan el diámetro y la fórmula pide el radio."
         ),
         "theory": (
-            "**Las dos fórmulas.** Superficie: $A = 4\\pi r^2$. Volumen: "
-            "$V = \\frac{4}{3}\\pi r^3$. La superficie va con el cuadrado del "
-            "radio y el volumen con el cubo.\n\n"
-            "**Radio y diámetro.** $d = 2r$, así que $r = \\frac{d}{2}$. Si el "
-            "enunciado da el diámetro, dividir antes de reemplazar no es "
-            "opcional.\n\n"
-            "**Cómo escalan.** Si el radio se duplica, la superficie se "
-            "cuadruplica ($2^2$) y el volumen se hace ocho veces mayor ($2^3$). "
-            "Es la razón por la que las preguntas de comparación se resuelven "
-            "sin calcular nada.\n\n"
+            "**Las dos fórmulas.** Superficie: $A = 4\\pi r^2$. Volumen: $V = "
+            "\\dfrac{4}{3}\\pi r^3$. La superficie va con el cuadrado del radio y el "
+            "volumen con el cubo, y esa diferencia de exponente explica casi todo lo "
+            "que la prueba pregunta sobre esferas.\\n\\n"
+            "**Radio y diámetro.** $d = 2r$, así que $r = \\dfrac{d}{2}$. Si el "
+            "enunciado da el diámetro, dividir antes de reemplazar no es opcional.\\n\\n"
+            "**Cómo escalan.** Si el radio se multiplica por $k$, la superficie se "
+            "multiplica por $k^2$ y el volumen por $k^3$:\\n\\n"
+            "| El radio | La superficie | El volumen |\\n"
+            "|---|---|---|\\n"
+            "| se duplica | $\\times 4$ | $\\times 8$ |\\n"
+            "| se triplica | $\\times 9$ | $\\times 27$ |\\n"
+            "| se reduce a la mitad | $\\div 4$ | $\\div 8$ |\\n\\n"
+            "Por eso las preguntas de comparación se responden sin calcular ningún "
+            "volumen: basta la razón de los radios elevada al exponente que "
+            "corresponda.\\n\\n"
+            "**La esfera y su cilindro.** Una esfera ocupa exactamente dos tercios "
+            "del cilindro más ajustado que la contiene, el de radio $r$ y altura "
+            "$2r$. Es la relación que descubrió Arquímedes y sirve para estimar sin "
+            "calculadora.\\n\\n"
+            "**Media esfera.** Un casquete de media esfera tiene volumen "
+            "$\\dfrac{2}{3}\\pi r^3$, y si se pide su superficie hay que decidir si "
+            "incluye la tapa circular: la media superficie esférica es $2\\pi r^2$, y "
+            "con la tapa son $3\\pi r^2$.\\n\\n"
             "**Las unidades delatan el error.** La superficie va en unidades "
-            "cuadradas y el volumen en cúbicas. Si el resultado quedó en cm² "
-            "cuando se pedía volumen, el procedimiento estaba equivocado."
-            "\n\n[figura:/preguntas/mat-esfera-radio.svg]"
+            "cuadradas y el volumen en cúbicas. Si el resultado quedó en cm² cuando "
+            "se pedía volumen, el procedimiento estaba equivocado antes que el "
+            "número.\\n\\n"
+            "[figura:/preguntas/mat-esfera-radio.svg]"
         ),
         "example_statement": (
             "Una esfera tiene 12 cm de diámetro. Calcula su volumen en términos "
@@ -78526,6 +79447,41 @@ LESSONS: dict[str, dict] = {
                 "porque": "Dividir 216 por 3 antes de multiplicar por 4 evita trabajar con números grandes. Y el resultado va en cm³, que confirma que es un volumen.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Dos pelotas son esféricas: la primera tiene $3$ cm de radio y la "
+                    "segunda, $9$ cm. ¿Cuántas veces más material se necesita para forrar la "
+                    "segunda, y cuántas veces más aire le cabe?"
+                ),
+                "steps": [
+                    {
+                        "accion": "Calculo la razón entre los radios: $k = \\dfrac{9}{3} = 3$.",
+                        "porque": (
+                            "Toda la comparación sale de este número. Calcular las dos superficies y "
+                            "los dos volúmenes por separado lleva al mismo resultado con cuatro veces "
+                            "más cuentas."
+                        ),
+                    },
+                    {
+                        "accion": "El material es superficie, así que va con $k^2$: $3^2 = 9$ veces más.",
+                        "porque": (
+                            "Forrar es cubrir el exterior, y la superficie depende de dos "
+                            "dimensiones. La segunda pelota necesita nueve veces el material de la "
+                            "primera, no tres."
+                        ),
+                    },
+                    {
+                        "accion": "El aire que cabe es volumen, así que va con $k^3$: $3^3 = 27$ veces más.",
+                        "porque": (
+                            "La capacidad depende de las tres dimensiones. Un radio tres veces mayor "
+                            "da una pelota veintisiete veces más voluminosa, que es lo que hace tan "
+                            "distinta una pelota de tenis de una de basquetbol."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Usar el diámetro como si fuera el radio. Como el volumen depende "
             "de $r^3$, el error no duplica el resultado: lo multiplica por ocho. "
@@ -78539,19 +79495,31 @@ LESSONS: dict[str, dict] = {
             "sombra o una fotocopia ampliada sigue siendo \"la misma\" figura."
         ),
         "theory": (
-            "**Centro y razón.** Una homotecia queda definida por un centro $O$ "
-            "y una razón $k$. Cada punto $P$ va a $P'$ sobre la recta $OP$, de "
-            "modo que $\\overline{OP'} = k \\cdot \\overline{OP}$.\n\n"
-            "**Qué hace la razón.** Si $|k| > 1$ la figura se agranda; si "
-            "$0 < |k| < 1$ se achica. Si $k$ es NEGATIVO, la imagen queda al "
-            "otro lado del centro, invertida.\n\n"
-            "**Qué se conserva y qué no.** Se conservan los ángulos y el "
-            "paralelismo: la figura resultante es SEMEJANTE a la original. No se "
-            "conservan las longitudes, que se multiplican por $|k|$.\n\n"
-            "**Áreas y volúmenes.** Las longitudes se multiplican por $k$, las "
-            "áreas por $k^2$ y los volúmenes por $k^3$. Es el error más caro de "
-            "esta unidad."
-            "\n\n[figura:/preguntas/mat-homotecia-razon.svg]"
+            "**Centro y razón.** Una homotecia queda definida por un centro $O$ y una "
+            "razón $k \\neq 0$. Cada punto $P$ va a un $P'$ que está sobre la recta "
+            "$OP$, de modo que $\\overline{OP'} = k \\cdot \\overline{OP}$.\\n\\n"
+            "**En coordenadas**, con centro en el origen es una multiplicación: $(x, "
+            "y) \\to (kx,\\ ky)$. Con centro en $O(a, b)$ se mueve el punto, se escala "
+            "y se devuelve: $P' = \\big(a + k(x-a),\\ b + k(y-b)\\big)$.\\n\\n"
+            "| Razón $k$ | Qué pasa |\\n"
+            "|---|---|\\n"
+            "| $k > 1$ | la figura se agranda, del mismo lado del centro |\\n"
+            "| $0 < k < 1$ | se achica, del mismo lado |\\n"
+            "| $k = 1$ | no cambia nada |\\n"
+            "| $k < 0$ | pasa al otro lado del centro, invertida |\\n\\n"
+            "**Qué se conserva y qué no.** Se conservan los ángulos, el paralelismo y "
+            "la forma: la imagen es SEMEJANTE a la original, con razón de semejanza "
+            "$|k|$. No se conservan las longitudes, que se multiplican por $|k|$.\\n\\n"
+            "**El centro es el único punto fijo** cuando $k \\neq 1$: es el único que "
+            "no se mueve, y por eso todas las rectas que unen un punto con su imagen "
+            "pasan por él. Ubicarlo en un dibujo es cruzar dos de esas rectas.\\n\\n"
+            "**Áreas y volúmenes.** Las longitudes se multiplican por $|k|$, las "
+            "áreas por $k^2$ y los volúmenes por $|k|^3$. Es el error más caro de "
+            "esta unidad.\\n\\n"
+            "**No es una isometría.** A diferencia de trasladar, rotar o reflejar, "
+            "una homotecia cambia el tamaño: la figura resultante es semejante, pero "
+            "no congruente, salvo que $|k| = 1$.\\n\\n"
+            "[figura:/preguntas/mat-homotecia-razon.svg]"
         ),
         "example_statement": (
             "Un triángulo de área 12 cm² se somete a una homotecia de razón "
@@ -78571,6 +79539,52 @@ LESSONS: dict[str, dict] = {
                 "porque": "Si se hubiera pedido el volumen de un cuerpo homotético, el factor habría sido $3^3 = 27$. La regla es siempre la misma: una dimensión, un exponente.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Al punto $P(6, -4)$ se le aplica una homotecia de centro en el origen y "
+                    "razón $k = -\\dfrac{1}{2}$. ¿Cuáles son las coordenadas de su imagen y en "
+                    "qué cuadrante queda?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Con centro en el origen, multiplico ambas coordenadas por $k$: $P' = "
+                            "\\left(6 \\cdot \\left(-\\dfrac{1}{2}\\right),\\ -4 \\cdot "
+                            "\\left(-\\dfrac{1}{2}\\right)\\right) = (-3,\\ 2)$."
+                        ),
+                        "porque": (
+                            "La homotecia con centro en el origen es una multiplicación, y el signo "
+                            "de $k$ se aplica a las dos coordenadas por igual: por eso la segunda, "
+                            "que era negativa, queda positiva."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "$P$ estaba en el cuarto cuadrante y $P'$ queda en el segundo, es decir "
+                            "al otro lado del centro."
+                        ),
+                        "porque": (
+                            "Una razón negativa manda la imagen al lado opuesto del centro. Con $k$ "
+                            "positivo la imagen habría quedado en el mismo cuarto cuadrante, más "
+                            "cerca del origen."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Compruebo el tamaño: la distancia de $P$ al origen es $\\sqrt{36+16} = "
+                            "\\sqrt{52}$ y la de $P'$ es $\\sqrt{9+4} = \\sqrt{13}$, exactamente la "
+                            "mitad."
+                        ),
+                        "porque": (
+                            "$|k| = \\dfrac{1}{2}$ dice que las longitudes se reducen a la mitad, y "
+                            "$\\sqrt{52} = 2\\sqrt{13}$ lo confirma. Si la figura tuviera área, esta se "
+                            "reduciría a la cuarta parte."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Multiplicar el área directamente por $k$ y responder 36 cm². La "
             "razón vale para longitudes. Para área va $k^2$ y para volumen $k^3$."
@@ -78583,19 +79597,36 @@ LESSONS: dict[str, dict] = {
             "propiedades que salen de ahí."
         ),
         "theory": (
-            "**La definición.** $\\log_b a = c$ significa exactamente "
-            "$b^c = a$. Pasar de una forma a la otra resuelve la mayoría de los "
-            "ejercicios.\n\n"
-            "**Las tres propiedades.** $\\log(xy) = \\log x + \\log y$; "
-            "$\\log\\frac{x}{y} = \\log x - \\log y$; "
-            "$\\log x^n = n\\log x$. El logaritmo convierte multiplicaciones en "
-            "sumas y potencias en productos: para eso se inventó.\n\n"
-            "**Dos valores que hay que saber de memoria.** $\\log_b 1 = 0$ "
-            "porque $b^0 = 1$, y $\\log_b b = 1$ porque $b^1 = b$.\n\n"
-            "**Restricciones.** La base debe ser positiva y distinta de 1, y el "
-            "argumento debe ser ESTRICTAMENTE positivo. No existe el logaritmo "
-            "de cero ni de un número negativo."
-            "\n\n[figura:/preguntas/mat-grafico-logaritmo.svg]"
+            "**La definición.** $\\log_b a = c$ significa exactamente $b^c = a$: el "
+            "logaritmo es el exponente. Pasar de una forma a la otra resuelve la "
+            "mayoría de los ejercicios.\\n\\n"
+            "| Propiedad | Regla |\\n"
+            "|---|---|\\n"
+            "| Producto | $\\log(xy) = \\log x + \\log y$ |\\n"
+            "| Cociente | $\\log\\dfrac{x}{y} = \\log x - \\log y$ |\\n"
+            "| Potencia | $\\log x^n = n\\log x$ |\\n"
+            "| Raíz | $\\log \\sqrt[n]{x} = \\dfrac{1}{n}\\log x$ |\\n"
+            "| Cambio de base | $\\log_b a = \\dfrac{\\log a}{\\log b}$ |\\n\\n"
+            "El logaritmo convierte multiplicaciones en sumas y potencias en "
+            "productos: para eso se inventó.\\n\\n"
+            "**Dos valores que hay que saber de memoria.** $\\log_b 1 = 0$ porque $b^0 "
+            "= 1$, y $\\log_b b = 1$ porque $b^1 = b$. De ahí también $\\log 10 = 1$, "
+            "$\\log 100 = 2$ y $\\log 1000 = 3$ en base diez.\\n\\n"
+            "**Restricciones.** La base debe ser positiva y distinta de $1$, y el "
+            "argumento **estrictamente positivo**. No existe el logaritmo de cero ni "
+            "de un número negativo, y por eso toda solución de una ecuación "
+            "logarítmica hay que verificarla en la ecuación original.\\n\\n"
+            "**Ecuaciones exponenciales.** Si las bases se pueden igualar, se igualan "
+            "los exponentes: $2^x = 32 = 2^5$ da $x = 5$. Si no, se aplica logaritmo "
+            "a ambos lados y se baja el exponente con la propiedad de la potencia.\\n\\n"
+            "**Ecuaciones logarítmicas.** Se juntan los logaritmos en uno solo con "
+            "las propiedades y se vuelve a la forma exponencial. Las soluciones que "
+            "dejen un argumento negativo o cero se descartan.\\n\\n"
+            "**Para qué sirven en la vida real.** Las escalas logarítmicas comprimen "
+            "rangos enormes: la magnitud Richter, el pH y los decibeles. Por eso un "
+            "sismo de magnitud $7$ libera unas $32$ veces más energía que uno de $6$, "
+            "y no un séptimo más.\\n\\n"
+            "[figura:/preguntas/mat-grafico-logaritmo.svg]"
         ),
         "example_statement": (
             "Si $\\log 2 = 0{,}30$ y $\\log 3 = 0{,}48$, calcula $\\log 12$."
@@ -78614,6 +79645,42 @@ LESSONS: dict[str, dict] = {
                 "porque": "El exponente baja como factor multiplicando. Reemplazar recién al final evita arrastrar decimales por todo el desarrollo.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": "Resuelve la ecuación $3^{2x - 1} = 81$.",
+                "steps": [
+                    {
+                        "accion": "Escribo el $81$ como potencia de la misma base: $81 = 3^4$.",
+                        "porque": (
+                            "Con las dos bases iguales la ecuación se resuelve sin logaritmos. "
+                            "Reconocer las potencias chicas de $2$, $3$ y $5$ ahorra todo el "
+                            "procedimiento largo."
+                        ),
+                    },
+                    {
+                        "accion": "Igualo los exponentes: $2x - 1 = 4$.",
+                        "porque": (
+                            "Si dos potencias de la misma base son iguales, sus exponentes lo son. Es "
+                            "la definición de logaritmo usada al revés."
+                        ),
+                    },
+                    {
+                        "accion": "Despejo: $2x = 5$, entonces $x = \\dfrac{5}{2}$.",
+                        "porque": (
+                            "Queda una ecuación lineal común. Que la solución no sea entera no tiene "
+                            "nada de raro: el exponente puede ser cualquier real."
+                        ),
+                    },
+                    {
+                        "accion": "Verifico: $3^{2 \\cdot 2{,}5 - 1} = 3^{4} = 81$.",
+                        "porque": (
+                            "Reemplazar en la ecuación original detecta al tiro un error de signo en "
+                            "el despeje, que es donde se cae este tipo de ejercicio."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Inventar propiedades que no existen, como $\\log(x+y) = \\log x + "
             "\\log y$. El logaritmo convierte PRODUCTOS en sumas, no sumas en "
@@ -78628,18 +79695,36 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**Interés simple.** El interés se calcula siempre sobre el capital "
-            "inicial: $I = C \\cdot i \\cdot t$, y el monto final es $C + I$. "
-            "Crece de forma lineal.\n\n"
-            "**Interés compuesto.** El interés se suma al capital y desde ahí "
-            "genera más interés: $M = C(1 + i)^t$. Crece de forma exponencial, y "
-            "por eso a largo plazo la diferencia con el simple es enorme.\n\n"
-            "**Aumentos y descuentos sucesivos NO se suman.** Un alza del 20% "
-            "seguida de una baja del 20% no deja el precio igual: queda en "
-            "$1{,}20 \\cdot 0{,}80 = 0{,}96$, un 4% MENOS que al principio.\n\n"
-            "**Los factores multiplicativos son el atajo.** Aumentar un 15% es "
-            "multiplicar por 1,15; descontar un 15% es multiplicar por 0,85. "
-            "Encadenar operaciones se vuelve una sola multiplicación."
-            "\n\n[figura:/preguntas/mat-interes-simple-compuesto.svg]"
+            "inicial: $I = C \\cdot i \\cdot t$, y el monto final es $M = C(1 + i\\,t)$. "
+            "Crece de forma lineal, porque cada período aporta lo mismo.\\n\\n"
+            "**Interés compuesto.** El interés se suma al capital y desde ahí genera "
+            "más interés: $M = C(1 + i)^t$. Crece de forma exponencial, y por eso a "
+            "largo plazo la diferencia con el simple es enorme.\\n\\n"
+            "| | Simple | Compuesto |\\n"
+            "|---|---|---|\\n"
+            "| Monto final | $C(1 + i\\,t)$ | $C(1+i)^t$ |\\n"
+            "| El interés se calcula sobre | el capital inicial | el saldo acumulado "
+            "|\\n"
+            "| Crecimiento | lineal | exponencial |\\n\\n"
+            "En las dos fórmulas $i$ va en decimal ($5\\% \\to 0{,}05$) y **el tiempo "
+            "tiene que estar en la misma unidad que la tasa**: con una tasa mensual, "
+            "$t$ se cuenta en meses. Es el error más frecuente de la unidad.\\n\\n"
+            "**Aumentos y descuentos sucesivos NO se suman.** Un alza del $20\\%$ "
+            "seguida de una baja del $20\\%$ deja $1{,}20 \\cdot 0{,}80 = 0{,}96$, un "
+            "$4\\%$ MENOS que al principio.\\n\\n"
+            "**Los factores multiplicativos son el atajo.** Aumentar un $15\\%$ es "
+            "multiplicar por $1{,}15$; descontar un $15\\%$, por $0{,}85$. Encadenar "
+            "operaciones se vuelve una sola multiplicación, y el orden de los "
+            "factores no altera el resultado: aplicar primero el descuento o primero "
+            "el recargo da lo mismo.\\n\\n"
+            "**Volver al precio original es dividir.** Si el final es $\\$11.900$ con "
+            "IVA del $19\\%$, el neto es $\\dfrac{11.900}{1{,}19} = \\$10.000$, no el "
+            "final menos su $19\\%$.\\n\\n"
+            "**Comparar alternativas.** Para decidir entre dos ofertas de crédito o "
+            "de ahorro se calcula el monto final de cada una con su propia fórmula y "
+            "recién ahí se comparan: una tasa más baja con más períodos puede "
+            "terminar costando más.\\n\\n"
+            "[figura:/preguntas/mat-interes-simple-compuesto.svg]"
         ),
         "example_statement": (
             "Un producto cuesta $10.000. Primero sube un 20% y después el nuevo "
@@ -78659,6 +79744,45 @@ LESSONS: dict[str, dict] = {
                 "porque": "El factor total es $1{,}20 \\cdot 0{,}75 = 0{,}90$, o sea una baja neta del 10%: no del 5% que daría restar 25 menos 20.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Se depositan $\\$200.000$ a un $10\\%$ de interés compuesto anual. ¿Cuánto "
+                    "hay a los dos años, y cuánto más que con interés simple a la misma tasa?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Aplico la fórmula del compuesto: $M = 200.000 \\cdot (1 + 0{,}10)^2 = "
+                            "200.000 \\cdot 1{,}21 = \\$242.000$."
+                        ),
+                        "porque": (
+                            "La tasa entra en decimal y el exponente es la cantidad de períodos. "
+                            "$1{,}1^2 = 1{,}21$, no $1{,}2$: ahí está todo el efecto del interés "
+                            "sobre el interés."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo el interés simple: $I = 200.000 \\cdot 0{,}10 \\cdot 2 = "
+                            "\\$40.000$, así que el monto sería $\\$240.000$."
+                        ),
+                        "porque": (
+                            "En el simple cada año aporta lo mismo, $\\$20.000$, porque siempre se "
+                            "calcula sobre los $\\$200.000$ iniciales y nunca sobre lo ya ganado."
+                        ),
+                    },
+                    {
+                        "accion": "Comparo: el compuesto entrega $\\$2.000$ más.",
+                        "porque": (
+                            "Esos $\\$2.000$ son exactamente el $10\\%$ de los $\\$20.000$ ganados el "
+                            "primer año. En dos años la diferencia es chica; en veinte, el compuesto "
+                            "llega a $\\$1.345.500$ y el simple a $\\$600.000$."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Sumar y restar los porcentajes: \"subió 20 y bajó 25, entonces bajó "
             "5%\". Los porcentajes sucesivos se MULTIPLICAN, porque cada uno se "
@@ -78672,21 +79796,37 @@ LESSONS: dict[str, dict] = {
             "que no se pueden medir directamente."
         ),
         "theory": (
-            "**Las tres razones.** Respecto de un ángulo agudo $\\alpha$: "
-            "$\\sin\\alpha = \\frac{\\text{cateto opuesto}}{\\text{hipotenusa}}$, "
-            "$\\cos\\alpha = \\frac{\\text{cateto adyacente}}{\\text{hipotenusa}}$, "
-            "$\\tan\\alpha = \\frac{\\text{opuesto}}{\\text{adyacente}}$.\n\n"
-            "**Opuesto y adyacente dependen del ángulo.** El mismo cateto es "
-            "opuesto para un ángulo y adyacente para el otro. Marcar el ángulo "
-            "antes de nombrar los lados evita casi todos los errores.\n\n"
-            "**Valores que conviene saber.** $\\sin 30° = \\frac{1}{2}$, "
-            "$\\cos 60° = \\frac{1}{2}$, "
-            "$\\sin 45° = \\cos 45° = \\frac{\\sqrt{2}}{2}$, "
-            "$\\tan 45° = 1$, $\\sin 60° = \\cos 30° = \\frac{\\sqrt{3}}{2}$.\n\n"
-            "**Identidad fundamental.** $\\sin^2\\alpha + \\cos^2\\alpha = 1$. "
-            "Sale del teorema de Pitágoras y permite obtener una razón "
-            "conociendo la otra."
-            "\n\n[figura:/preguntas/mat-triangulo-trigonometria.svg]"
+            "**Las tres razones.** Respecto de un ángulo agudo $\\alpha$ de un "
+            "triángulo rectángulo:\\n\\n"
+            "$$\\sin\\alpha = \\dfrac{\\text{opuesto}}{\\text{hipotenusa}}, \\quad "
+            "\\cos\\alpha = \\dfrac{\\text{adyacente}}{\\text{hipotenusa}}, \\quad "
+            "\\tan\\alpha = \\dfrac{\\text{opuesto}}{\\text{adyacente}}$$\\n\\n"
+            "**Opuesto y adyacente dependen del ángulo.** El mismo cateto es opuesto "
+            "para un ángulo y adyacente para el otro. Marcar el ángulo antes de "
+            "nombrar los lados evita casi todos los errores.\\n\\n"
+            "**Cuál usar.** Se elige la razón que relaciona lo que se tiene con lo "
+            "que se busca: con los dos catetos en juego, tangente; si aparece la "
+            "hipotenusa, seno o coseno según el cateto que sea.\\n\\n"
+            "| $\\alpha$ | $30^\\circ$ | $45^\\circ$ | $60^\\circ$ |\\n"
+            "|---|---|---|---|\\n"
+            "| $\\sin$ | $\\dfrac{1}{2}$ | $\\dfrac{\\sqrt{2}}{2}$ | "
+            "$\\dfrac{\\sqrt{3}}{2}$ |\\n"
+            "| $\\cos$ | $\\dfrac{\\sqrt{3}}{2}$ | $\\dfrac{\\sqrt{2}}{2}$ | "
+            "$\\dfrac{1}{2}$ |\\n"
+            "| $\\tan$ | $\\dfrac{\\sqrt{3}}{3}$ | $1$ | $\\sqrt{3}$ |\\n\\n"
+            "**Ángulos complementarios.** $\\sin\\alpha = \\cos(90^\\circ - \\alpha)$: el "
+            "seno de uno es el coseno del otro, porque el cateto opuesto a uno es el "
+            "adyacente al otro. Eso explica la simetría de la tabla.\\n\\n"
+            "**Identidad fundamental.** $\\sin^2\\alpha + \\cos^2\\alpha = 1$. Sale del "
+            "teorema de Pitágoras y permite obtener una razón conociendo la otra. Y "
+            "$\\tan\\alpha = \\dfrac{\\sin\\alpha}{\\cos\\alpha}$.\\n\\n"
+            "**Elevación y depresión.** El ángulo de **elevación** se mide desde la "
+            "horizontal hacia arriba, y el de **depresión**, desde la horizontal "
+            "hacia abajo. Son iguales entre sí cuando se miran dos puntos entre "
+            "ellos, porque son ángulos alternos internos entre paralelas: el error "
+            "típico es marcar el de depresión dentro del triángulo, donde va su "
+            "complemento.\\n\\n"
+            "[figura:/preguntas/mat-triangulo-trigonometria.svg]"
         ),
         "example_statement": (
             "Desde un punto en el suelo, a 20 m de la base de un edificio, se "
@@ -78707,6 +79847,57 @@ LESSONS: dict[str, dict] = {
                 "porque": "El resultado tiene sentido: el edificio es más alto que la distancia al punto de observación, tal como se espera con un ángulo mayor que 45°.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una rampa de $30$ metros de largo sube con un ángulo de $30^\\circ$ "
+                    "respecto del suelo. ¿Qué altura alcanza?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico los lados: los $30$ m de la rampa son la HIPOTENUSA, porque "
+                            "es el lado inclinado, y la altura es el cateto opuesto al ángulo de "
+                            "$30^\\circ$."
+                        ),
+                        "porque": (
+                            "La rampa no es un cateto: es el camino inclinado que va del suelo al "
+                            "punto alto, o sea el lado opuesto al ángulo recto que forman el suelo y "
+                            "la vertical."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Con opuesto e hipotenusa, la razón que corresponde es el seno: $\\sin "
+                            "30^\\circ = \\dfrac{h}{30}$."
+                        ),
+                        "porque": (
+                            "La tangente serviría si conociera el largo horizontal, que no es dato. "
+                            "Elegir la razón según los lados que están en juego es lo que decide el "
+                            "ejercicio."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reemplazo el valor de la tabla y despejo: $h = 30 \\cdot \\dfrac{1}{2} = "
+                            "15$ m."
+                        ),
+                        "porque": (
+                            "$\\sin 30^\\circ$ vale exactamente un medio, así que la altura es la mitad "
+                            "del largo de la rampa: un resultado que conviene recordar porque aparece "
+                            "seguido."
+                        ),
+                    },
+                    {
+                        "accion": "Reviso el sentido: $15$ m es menor que los $30$ m de la rampa.",
+                        "porque": (
+                            "Un cateto siempre mide menos que la hipotenusa. Si el resultado hubiera "
+                            "salido mayor, la razón elegida estaría invertida."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Usar seno o coseno cuando no se conoce la hipotenusa. Si el "
             "problema entrega los dos catetos —o pide uno teniendo el otro—, la "
@@ -78720,20 +79911,34 @@ LESSONS: dict[str, dict] = {
             "intersección."
         ),
         "theory": (
-            "**Forma principal.** $y = mx + n$, donde $m$ es la pendiente y $n$ "
-            "el coeficiente de posición, que es donde la recta corta al eje "
-            "$y$.\n\n"
-            "**Pendiente entre dos puntos.** "
-            "$m = \\frac{y_2 - y_1}{x_2 - x_1}$. Si $m > 0$ la recta sube; si "
-            "$m < 0$ baja; si $m = 0$ es horizontal. Una recta vertical no tiene "
-            "pendiente definida.\n\n"
-            "**Paralelas y perpendiculares.** Dos rectas son paralelas si "
-            "$m_1 = m_2$, y perpendiculares si $m_1 \\cdot m_2 = -1$, es decir "
-            "si una pendiente es el inverso multiplicativo negativo de la otra.\n\n"
-            "**Intersección.** El punto donde se cruzan dos rectas es la "
-            "solución del sistema formado por sus ecuaciones. Si son paralelas "
-            "distintas, no hay solución."
-            "\n\n[figura:/preguntas/mat-recta-pendiente.svg]"
+            "**Forma principal.** $y = mx + n$, donde $m$ es la **pendiente** y $n$ "
+            "el **coeficiente de posición**, que es donde la recta corta al eje $Y$. "
+            "También aparece la **forma general** $Ax + By + C = 0$ y la "
+            "**punto-pendiente** $y - y_1 = m(x - x_1)$, que es la más cómoda cuando "
+            "se conocen un punto y la pendiente.\\n\\n"
+            "**Pendiente entre dos puntos.** $m = \\dfrac{y_2 - y_1}{x_2 - x_1}$, el "
+            "cambio vertical dividido por el horizontal. Si $m > 0$ la recta sube; si "
+            "$m < 0$ baja; si $m = 0$ es horizontal ($y = n$). Una recta **vertical** "
+            "no tiene pendiente definida y se escribe $x = a$.\\n\\n"
+            "| Relación | Condición |\\n"
+            "|---|---|\\n"
+            "| Paralelas | $m_1 = m_2$ (y $n_1 \\neq n_2$) |\\n"
+            "| Perpendiculares | $m_1 \\cdot m_2 = -1$ |\\n"
+            "| Coincidentes | $m_1 = m_2$ y $n_1 = n_2$ |\\n\\n"
+            "Para la perpendicular hay que invertir la fracción **y** cambiarle el "
+            "signo: la perpendicular a una recta de pendiente $2$ tiene pendiente "
+            "$-\\dfrac{1}{2}$, no $-2$.\\n\\n"
+            "**Intersección.** El punto donde se cruzan dos rectas es la solución del "
+            "sistema formado por sus ecuaciones. Si son paralelas distintas no hay "
+            "solución, y si son coincidentes hay infinitas.\\n\\n"
+            "**Dos puntos, dos fórmulas que se usan todo el tiempo:**\\n\\n"
+            "- distancia: $d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$;\\n"
+            "- punto medio: $M = \\left(\\dfrac{x_1+x_2}{2},\\ "
+            "\\dfrac{y_1+y_2}{2}\\right)$.\\n\\n"
+            "**Leer la pendiente de un gráfico.** Se cuentan los cuadraditos: cuánto "
+            "sube por cada uno que avanza. Y el coeficiente de posición se lee "
+            "directo donde la recta cruza el eje vertical, sin calcular nada.\\n\\n"
+            "[figura:/preguntas/mat-recta-pendiente.svg]"
         ),
         "example_statement": (
             "Determina la ecuación de la recta perpendicular a "
@@ -78753,6 +79958,55 @@ LESSONS: dict[str, dict] = {
                 "porque": "La pendiente sola define infinitas rectas paralelas entre sí; el punto es lo que elige una. Por eso hacen falta los dos datos.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una recta pasa por $A(-2, 1)$ y $B(4, 9)$. Determina su ecuación, el "
+                    "punto medio de $\\overline{AB}$ y la distancia entre ambos puntos."
+                ),
+                "steps": [
+                    {
+                        "accion": "Pendiente: $m = \\dfrac{9 - 1}{4 - (-2)} = \\dfrac{8}{6} = \\dfrac{4}{3}$.",
+                        "porque": (
+                            "Restar un negativo suma: el denominador es $6$, no $2$. Ahí se pierde la "
+                            "mitad de los ejercicios con puntos en distintos cuadrantes."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Uso la forma punto-pendiente con $A$: $y - 1 = \\dfrac{4}{3}(x + 2)$, que "
+                            "ordenada queda $y = \\dfrac{4}{3}x + \\dfrac{11}{3}$."
+                        ),
+                        "porque": (
+                            "Con un punto y la pendiente la recta queda determinada. Elegir $A$ o $B$ "
+                            "da la misma ecuación; conviene el de números más chicos."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Punto medio: $M = \\left(\\dfrac{-2+4}{2},\\ \\dfrac{1+9}{2}\\right) = (1,\\ "
+                            "5)$."
+                        ),
+                        "porque": (
+                            "El punto medio es el promedio de cada coordenada por separado. Y "
+                            "compruebo que pertenece a la recta: $\\dfrac{4}{3} \\cdot 1 + "
+                            "\\dfrac{11}{3} = \\dfrac{15}{3} = 5$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Distancia: $d = \\sqrt{(4+2)^2 + (9-1)^2} = \\sqrt{36 + 64} = \\sqrt{100} = "
+                            "10$."
+                        ),
+                        "porque": (
+                            "Es Pitágoras sobre el triángulo que forman el avance horizontal y el "
+                            "vertical. Los catetos $6$ y $8$ dan el trío $(6, 8, 10)$, así que la "
+                            "raíz sale exacta."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Usar $-2$ como pendiente perpendicular en vez de $-\\frac{1}{2}$. "
             "La condición es que el PRODUCTO sea $-1$: hay que invertir la "
@@ -78765,20 +80019,34 @@ LESSONS: dict[str, dict] = {
             "se aplican una y otra vez, y que se reconocen por el dibujo."
         ),
         "theory": (
-            "**Ángulo del centro y ángulo inscrito.** Un ángulo del centro mide "
-            "lo mismo que su arco. Un ángulo inscrito mide la MITAD de su arco, "
-            "y por lo tanto la mitad del ángulo del centro que abarca el mismo "
-            "arco.\n\n"
-            "**Consecuencia clásica.** Todo ángulo inscrito en una "
-            "semicircunferencia es recto, porque abarca un arco de 180° y mide "
-            "su mitad.\n\n"
-            "**La tangente es perpendicular al radio** en el punto de contacto. "
-            "Es la propiedad que convierte muchos problemas de circunferencia en "
-            "problemas de triángulo rectángulo.\n\n"
-            "**Cuerdas que se cortan.** Si dos cuerdas se intersecan dentro de "
-            "la circunferencia, los productos de sus segmentos son iguales: "
-            "$a \\cdot b = c \\cdot d$."
-            "\n\n[figura:/preguntas/mat-cuerdas-circunferencia.svg]"
+            "**Los elementos.** El **radio** va del centro a la circunferencia; la "
+            "**cuerda** une dos puntos de ella; el **diámetro** es la cuerda que pasa "
+            "por el centro y mide $2r$; el **arco** es un trozo de la curva; el "
+            "**sector** es la porción de círculo entre dos radios, como una tajada de "
+            "pizza.\\n\\n"
+            "**Ángulo del centro y ángulo inscrito.** Un ángulo del centro mide lo "
+            "mismo que su arco. Un ángulo inscrito mide la MITAD de su arco, y por lo "
+            "tanto la mitad del ángulo del centro que abarca el mismo arco.\\n\\n"
+            "**Consecuencias que se preguntan una y otra vez:**\\n\\n"
+            "- todo ángulo inscrito en una semicircunferencia es recto, porque abarca "
+            "un arco de $180^\\circ$;\\n"
+            "- dos ángulos inscritos que abarcan el mismo arco son iguales;\\n"
+            "- en un cuadrilátero inscrito, los ángulos opuestos suman $180^\\circ$.\\n\\n"
+            "**La tangente es perpendicular al radio** en el punto de contacto. Es la "
+            "propiedad que convierte muchos problemas de circunferencia en problemas "
+            "de triángulo rectángulo. Además, los dos segmentos tangentes trazados "
+            "desde un mismo punto exterior miden lo mismo.\\n\\n"
+            "**Cuerdas que se cortan.** Si dos cuerdas se intersecan dentro de la "
+            "circunferencia, los productos de sus segmentos son iguales: $a \\cdot b = "
+            "c \\cdot d$.\\n\\n"
+            "**Arco y sector.** Para un ángulo del centro de $\\alpha$ grados:\\n\\n"
+            "| Se pide | Fórmula |\\n"
+            "|---|---|\\n"
+            "| Longitud del arco | $\\dfrac{\\alpha}{360^\\circ} \\cdot 2\\pi r$ |\\n"
+            "| Área del sector | $\\dfrac{\\alpha}{360^\\circ} \\cdot \\pi r^2$ |\\n\\n"
+            "Las dos son la misma idea: la fracción de vuelta que ocupa el ángulo, "
+            "aplicada al perímetro o al área completos.\\n\\n"
+            "[figura:/preguntas/mat-cuerdas-circunferencia.svg]"
         ),
         "example_statement": (
             "En una circunferencia, un ángulo del centro mide 80°. ¿Cuánto mide "
@@ -78798,6 +80066,46 @@ LESSONS: dict[str, dict] = {
                 "porque": "Todos los ángulos inscritos que abarcan ese mismo arco miden 40°, sin importar dónde esté su vértice sobre la circunferencia.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "En una circunferencia de $9$ cm de radio, un sector tiene un ángulo del "
+                    "centro de $40^\\circ$. Calcula el área del sector y la longitud de su "
+                    "arco, en términos de $\\pi$."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Calculo qué fracción de la vuelta completa representa el ángulo: "
+                            "$\\dfrac{40^\\circ}{360^\\circ} = \\dfrac{1}{9}$."
+                        ),
+                        "porque": (
+                            "Todo el ejercicio se apoya en esta fracción: el sector es esa parte del "
+                            "círculo y el arco, esa parte del contorno. Reducirla primero deja las "
+                            "dos cuentas siguientes en una multiplicación simple."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Área del sector: $\\dfrac{1}{9} \\cdot \\pi \\cdot 9^2 = \\dfrac{81\\pi}{9} = "
+                            "9\\pi\\ \\text{cm}^2$."
+                        ),
+                        "porque": (
+                            "El área del círculo completo es $81\\pi$, y el sector es un noveno de "
+                            "ella. El radio se eleva al cuadrado antes de aplicar la fracción."
+                        ),
+                    },
+                    {
+                        "accion": "Longitud del arco: $\\dfrac{1}{9} \\cdot 2\\pi \\cdot 9 = 2\\pi$ cm.",
+                        "porque": (
+                            "El contorno completo mide $18\\pi$, y el arco es un noveno. Fíjate que "
+                            "acá el radio va sin elevar: el arco es una longitud, no una superficie, "
+                            "y por eso sus unidades son cm y no cm²."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Invertir la relación y duplicar en vez de dividir. El del CENTRO "
             "es el grande y el INSCRITO es la mitad. La regla mnemotécnica: el "
@@ -78812,19 +80120,32 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**Cuándo aplica.** Se necesitan cuatro condiciones: número FIJO de "
-            "repeticiones $n$, solo dos resultados por repetición (éxito o "
-            "fracaso), probabilidad $p$ constante, y repeticiones "
-            "independientes.\n\n"
-            "**La fórmula.** $P(X = k) = C(n,k)\\, p^k (1-p)^{n-k}$. El "
-            "combinatorio cuenta en cuántos ÓRDENES distintos pueden ocurrir "
-            "esos $k$ éxitos.\n\n"
-            "**Esperanza y varianza.** $E(X) = n\\,p$ y "
-            "$\\mathrm{Var}(X) = n\\,p\\,(1-p)$. La esperanza es el número de "
-            "éxitos que se espera en promedio.\n\n"
-            "**Éxito es lo que uno defina.** Puede ser sacar cara, fallar un "
-            "tiro o que una pieza salga defectuosa. Lo importante es fijar qué "
-            "es éxito ANTES de escribir $p$, y no cambiarlo a mitad de camino."
-            "\n\n[figura:/preguntas/mat-barras-binomial.svg]"
+            "repeticiones $n$, solo dos resultados por repetición (éxito o fracaso), "
+            "probabilidad $p$ constante, y repeticiones independientes. Si el "
+            "enunciado saca bolitas sin reposición, $p$ cambia y el modelo ya no "
+            "sirve.\\n\\n"
+            "**La fórmula.** $P(X = k) = \\dbinom{n}{k}\\, p^k\\,(1-p)^{n-k}$. Cada "
+            "parte hace algo distinto:\\n\\n"
+            "| Parte | Qué aporta |\\n"
+            "|---|---|\\n"
+            "| $\\dbinom{n}{k}$ | en cuántos órdenes distintos pueden ocurrir los $k$ "
+            "éxitos |\\n"
+            "| $p^k$ | que los $k$ éxitos ocurran |\\n"
+            "| $(1-p)^{n-k}$ | que los demás intentos fallen |\\n\\n"
+            "**Esperanza y varianza.** $E(X) = n\\,p$ y $\\mathrm{Var}(X) = "
+            "n\\,p\\,(1-p)$, con $\\sigma = \\sqrt{n\\,p\\,(1-p)}$. La esperanza es el "
+            "número de éxitos que se espera en promedio, y no tiene por qué ser un "
+            "entero: en $5$ lanzamientos de moneda se esperan $2{,}5$ caras.\\n\\n"
+            "**Éxito es lo que uno defina.** Puede ser sacar cara, fallar un tiro o "
+            "que una pieza salga defectuosa. Lo importante es fijar qué es éxito "
+            "ANTES de escribir $p$, y no cambiarlo a mitad de camino.\\n\\n"
+            "**«Al menos» y «a lo más».** $P(X \\geq 1) = 1 - P(X = 0)$, que es el "
+            "atajo de siempre. Para «a lo más dos» hay que sumar $P(X=0)$, $P(X=1)$ y "
+            "$P(X=2)$: la fórmula entrega un valor exacto por vez.\\n\\n"
+            "**La forma de la distribución.** Con $p = 0{,}5$ es simétrica; con $p$ "
+            "chico se carga hacia la izquierda. El valor más probable está siempre "
+            "cerca de $n\\,p$, lo que permite descartar alternativas sin calcular.\\n\\n"
+            "[figura:/preguntas/mat-barras-binomial.svg]"
         ),
         "example_statement": (
             "Se lanza una moneda equilibrada 5 veces. ¿Cuál es la probabilidad "
@@ -78844,6 +80165,56 @@ LESSONS: dict[str, dict] = {
                 "porque": "Con $p = 0{,}5$ los exponentes se juntan en $(0{,}5)^5 = \\frac{1}{32}$, así que la probabilidad es $\\frac{10}{32}$. Comprobarlo como fracción confirma el resultado.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un jugador de básquetbol encesta el $80\\%$ de sus tiros libres. Si lanza "
+                    "$4$ tiros, ¿cuál es la probabilidad de que falle exactamente uno? ¿Y "
+                    "cuántos aciertos se esperan?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Defino el éxito como encestar, con $p = 0{,}8$, $n = 4$ y $k = 3$ "
+                            "aciertos, porque fallar exactamente uno es acertar exactamente tres."
+                        ),
+                        "porque": (
+                            "Traducir el enunciado antes de escribir la fórmula es la mitad del "
+                            "ejercicio: «falla uno» y «acierta tres» son el mismo suceso, y con $p = "
+                            "0{,}8$ conviene contar los aciertos."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo el combinatorio: $\\dbinom{4}{3} = 4$, que son los cuatro tiros "
+                            "en que puede caer la falla."
+                        ),
+                        "porque": (
+                            "El fallo puede ser el primero, el segundo, el tercero o el cuarto. Sin "
+                            "este factor se estaría calculando la probabilidad de una sola secuencia."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Aplico la fórmula: $P = 4 \\cdot (0{,}8)^3 \\cdot (0{,}2)^1 = 4 \\cdot "
+                            "0{,}512 \\cdot 0{,}2 = 0{,}4096$."
+                        ),
+                        "porque": (
+                            "Los tres aciertos aportan $(0{,}8)^3$ y el fallo, $0{,}2$. El resultado, "
+                            "cerca del $41\\%$, es el más probable de todos los casos posibles."
+                        ),
+                    },
+                    {
+                        "accion": "La esperanza es $E(X) = n\\,p = 4 \\cdot 0{,}8 = 3{,}2$ aciertos.",
+                        "porque": (
+                            "Es el promedio a la larga, no un resultado posible de una tanda: nadie "
+                            "encesta $3{,}2$ tiros. Que esté entre $3$ y $4$ confirma que el caso de "
+                            "tres aciertos es de los más probables."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Olvidar el combinatorio y calcular solo $(0{,}5)^5$. Eso da la "
             "probabilidad de UNA secuencia específica, como cara-cara-cara-sello-sello. "
@@ -78857,18 +80228,29 @@ LESSONS: dict[str, dict] = {
             "cálculo, y ese es todo el asunto."
         ),
         "theory": (
-            "**La definición.** $P(A|B) = \\frac{P(A \\cap B)}{P(B)}$, con "
-            "$P(B) > 0$. Se lee \"probabilidad de A dado B\".\n\n"
-            "**Saber algo reduce el espacio muestral.** Al condicionar, ya no se "
-            "considera todo lo posible sino solo los casos donde ocurrió $B$. "
-            "Por eso $B$ pasa al denominador.\n\n"
-            "**Independencia.** $A$ y $B$ son independientes si "
-            "$P(A|B) = P(A)$, es decir si saber que ocurrió $B$ no cambia nada. "
-            "En ese caso $P(A \\cap B) = P(A)\\cdot P(B)$.\n\n"
-            "**El orden importa.** $P(A|B)$ y $P(B|A)$ son cosas distintas y "
-            "rara vez coinciden. Confundirlas es un error clásico, y las "
-            "alternativas de la prueba suelen incluir las dos."
-            "\n\n[figura:/preguntas/mat-arbol-condicional.svg]"
+            "**La definición.** $P(A|B) = \\dfrac{P(A \\cap B)}{P(B)}$, con $P(B) > 0$. "
+            "Se lee «probabilidad de $A$ dado $B$».\\n\\n"
+            "**Saber algo reduce el espacio muestral.** Al condicionar ya no se "
+            "considera todo lo posible, sino solo los casos donde ocurrió $B$. Por "
+            "eso $B$ pasa al denominador: se convirtió en el nuevo universo.\\n\\n"
+            "**Con una tabla de doble entrada** la fórmula casi no hace falta: "
+            "$P(A|B)$ es la casilla de $A$ y $B$ dividida por el TOTAL de la fila o "
+            "columna de $B$, no por el total general.\\n\\n"
+            "**Regla del producto.** Despejando: $P(A \\cap B) = P(B) \\cdot P(A|B)$. "
+            "Es lo que se usa en los árboles: se multiplica a lo largo de una rama.\\n\\n"
+            "**Independencia.** $A$ y $B$ son independientes si $P(A|B) = P(A)$, es "
+            "decir si saber que ocurrió $B$ no cambia nada. En ese caso $P(A \\cap B) "
+            "= P(A) \\cdot P(B)$.\\n\\n"
+            "**El orden importa.** $P(A|B)$ y $P(B|A)$ son cosas distintas y rara vez "
+            "coinciden: la probabilidad de tener fiebre dado que hay gripe es "
+            "altísima, y la de tener gripe dado que hay fiebre, mucho menor. Las "
+            "alternativas de la prueba suelen incluir las dos.\\n\\n"
+            "**Diagramas de árbol.** Cada nivel es una etapa y cada rama lleva su "
+            "probabilidad. Para la de un camino completo se multiplica a lo largo de "
+            "la rama; para un suceso que ocurre por varios caminos, se suman las "
+            "ramas. Las probabilidades que salen de un mismo nodo suman siempre $1$, "
+            "y esa es la comprobación de que el árbol está bien armado.\\n\\n"
+            "[figura:/preguntas/mat-arbol-condicional.svg]"
         ),
         "example_statement": (
             "En un curso, el 60% practica algún deporte, el 30% toca un "
@@ -78888,6 +80270,57 @@ LESSONS: dict[str, dict] = {
             {
                 "accion": "Aplico la fórmula: $P(I|D) = \\frac{0{,}20}{0{,}60} = \\frac{1}{3} \\approx 33{,}3\\%$.",
                 "porque": "El denominador es la probabilidad de la CONDICIÓN, porque el universo ahora son solo quienes practican deporte. Nota que $P(D|I) = \\frac{0{,}20}{0{,}30} = 66{,}7\\%$: distinto, como se anticipaba.",
+            },
+        ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "En un curso de $40$ estudiantes, $24$ son mujeres. De ellas, $18$ "
+                    "aprobaron la prueba, y en total aprobaron $28$ estudiantes. Si se elige "
+                    "a alguien que aprobó, ¿cuál es la probabilidad de que sea mujer?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico qué condiciona a qué: se sabe que la persona aprobó, así que "
+                            "el universo pasa a ser los $28$ que aprobaron."
+                        ),
+                        "porque": (
+                            "La condición es lo que va después de la barra y define el nuevo "
+                            "denominador. Si la pregunta hubiera sido al revés —elegir una mujer y "
+                            "preguntar si aprobó—, el denominador serían las $24$ mujeres."
+                        ),
+                    },
+                    {
+                        "accion": "Cuento los casos que cumplen las dos cosas: $18$ mujeres aprobadas.",
+                        "porque": (
+                            "El numerador de una probabilidad condicional es siempre la intersección: "
+                            "las personas que son mujeres Y aprobaron."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo: $P(\\text{mujer}\\,|\\,\\text{aprobó}) = \\dfrac{18}{28} = "
+                            "\\dfrac{9}{14} \\approx 0{,}64$."
+                        ),
+                        "porque": (
+                            "Dividir por los $40$ del curso daría $0{,}45$, que responde otra "
+                            "pregunta: la probabilidad de elegir a una mujer aprobada entre todos, "
+                            "sin saber nada de antemano."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Compruebo que no son independientes: $P(\\text{mujer}) = \\dfrac{24}{40} = "
+                            "0{,}6$ y $P(\\text{mujer}|\\text{aprobó}) \\approx 0{,}64$."
+                        ),
+                        "porque": (
+                            "Saber que aprobó cambia la probabilidad, aunque sea poco, así que los "
+                            "dos sucesos no son independientes. Si ambas hubieran dado $0{,}6$, lo "
+                            "serían."
+                        ),
+                    },
+                ],
             },
         ],
         "common_error": (

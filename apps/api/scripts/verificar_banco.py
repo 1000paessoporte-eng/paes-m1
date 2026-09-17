@@ -136,6 +136,34 @@ RESULTADOS_EJEMPLOS_EXTRA: dict[str, Fraction] = {
     "alg_sistemas_casos": Fraction(10 * 3, 6),                     # m = 5
     "alg_funciones_trig": Fraction(7 - 1, 2),                      # amplitud 3
     "alg_funcion_potencia": Fraction(4, 2**3),                     # f(0,5) = 0,5
+
+    # Geometría.
+    "geo_plana": Fraction((14 + 8) * 6, 2),                        # 66 m² de trapecio
+    "geo_pitagoras": Fraction(int(sqrt(12**2 + 9**2 + 8**2))),     # diagonal 17 cm
+    "geo_semejanza": Fraction(45 * 12, 9 * 10),                    # poste de 6 m
+    "geo_solidos": Fraction(6**2 * 8, 3),                          # volumen 96 pi
+    "geo_esfera": Fraction(3**3),                                  # 27 veces el volumen
+    "geo_trigonometria": Fraction(30, 2),                          # rampa de 15 m
+    "geo_rectas": Fraction(int(sqrt(6**2 + 8**2))),                # distancia 10
+    "geo_circunferencia": Fraction(9**2, 9),                       # sector de 9 pi
+
+    # Números.
+    # (3/4 + 1/6) : 11/8 = 11/12 * 8/11 = 2/3
+    "num_racionales": (Fraction(3, 4) + Fraction(1, 6)) / Fraction(11, 8),
+    "num_potencias_raices": Fraction(12, 10),                      # 1,2 x 10^-2
+    "num_porcentajes": Fraction(36_000 * 100, 120),                # costo 30.000
+    "num_logaritmos": Fraction(4 + 1, 2),                          # x = 5/2
+    "num_financiera": Fraction(200_000 * 121, 100),                # 242.000
+
+    # Probabilidad y estadística.
+    # 10 hogares: (1*2 + 2*3 + 3*4 + 8*1) / 10 = 2,8 personas
+    "prob_estadistica_desc": Fraction(1 * 2 + 2 * 3 + 3 * 4 + 8 * 1, 10),
+    "prob_posicion": Fraction(700 - 520),                          # IQR 180 puntos
+    "prob_combinatoria": Fraction(2 * 4 * 3),                       # 24 numeros pares
+    "prob_reglas": 1 - Fraction(5, 6) ** 2,                         # 11/36
+    "prob_dispersion": Fraction(30**2 + 10**2 + 10**2 + 30**2, 4),  # varianza 500
+    "prob_binomial": Fraction(4 * 8**3 * 2, 10**4),                 # 0,4096
+    "prob_condicional": Fraction(18, 28),                           # 9/14
 }
 
 # --- Ciencias: física y química ---
