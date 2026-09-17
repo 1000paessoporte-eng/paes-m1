@@ -2882,6 +2882,16 @@ export interface components {
             axis_label: string;
         };
         /**
+         * LessonExampleOut
+         * @description Un ejercicio resuelto de la lección, después del primero.
+         */
+        LessonExampleOut: {
+            /** Statement */
+            statement: string;
+            /** Steps */
+            steps: components["schemas"]["LessonStepOut"][];
+        };
+        /**
          * LessonOut
          * @description La teoría del nodo: lo que se estudia antes de practicar.
          */
@@ -2898,6 +2908,11 @@ export interface components {
             example_statement: string;
             /** Example Steps */
             example_steps: components["schemas"]["LessonStepOut"][];
+            /**
+             * Extra Examples
+             * @default []
+             */
+            extra_examples: components["schemas"]["LessonExampleOut"][];
             /** Common Error */
             common_error?: string | null;
         };

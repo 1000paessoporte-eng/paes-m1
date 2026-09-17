@@ -30,6 +30,7 @@ from paes_api.modules.skill_tree.models import (
 )
 from paes_api.modules.skill_tree.schemas import (
     LeccionIndiceOut,
+    LessonExampleOut,
     LessonOut,
     LessonStepOut,
     SkillNodeProgressOut,
@@ -299,6 +300,13 @@ def get_lesson(db: Session, code: str) -> LessonOut | None:
         theory=leccion.theory,
         example_statement=leccion.example_statement,
         example_steps=[LessonStepOut(**paso) for paso in leccion.example_steps],
+        extra_examples=[
+            LessonExampleOut(
+                statement=ejemplo["statement"],
+                steps=[LessonStepOut(**paso) for paso in ejemplo["steps"]],
+            )
+            for ejemplo in (leccion.extra_examples or [])
+        ],
         common_error=leccion.common_error,
     )
 

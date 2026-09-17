@@ -119,6 +119,25 @@ RESULTADOS_LECCIONES: dict[str, Fraction] = {
     "prob_reglas": Fraction(5, 8) * Fraction(4, 7),                   # 5/14
 }
 
+#: Lo mismo, para el SEGUNDO ejemplo de una lección (`extra_examples`).
+#:
+#: Va en un diccionario aparte y no mezclado con el de arriba porque el
+#: resultado que hay que encontrar es otro: si se buscara en todos los pasos de
+#: todos los ejemplos, un ejemplo nuevo mal calculado pasaría inadvertido
+#: mientras el primero siga terminando donde debe.
+RESULTADOS_EJEMPLOS_EXTRA: dict[str, Fraction] = {
+    # Álgebra: los segundos ejemplos de la ampliación de las lecciones.
+    "alg_proporcionalidad": Fraction(7 * 250_000, 100_000),        # 17,5 km
+    "alg_lineal": Fraction(19 - 4, -3),                            # x = -5
+    # 30 entradas y $97.500: (97500 - 2500*30) / (4000 - 2500) = 15 adultos.
+    "alg_sistemas": Fraction(97_500 - 2_500 * 30, 4_000 - 2_500),
+    "alg_cuadratica": Fraction(-3 + int(sqrt(3**2 + 4 * 130)), 2),  # ancho 10 m
+    "alg_funciones": Fraction(-5 * 2**2 + 20 * 2),                 # 20 m de altura
+    "alg_sistemas_casos": Fraction(10 * 3, 6),                     # m = 5
+    "alg_funciones_trig": Fraction(7 - 1, 2),                      # amplitud 3
+    "alg_funcion_potencia": Fraction(4, 2**3),                     # f(0,5) = 0,5
+}
+
 # --- Ciencias: física y química ---
 # Cada valor se recalcula acá desde la definición, sin mirar la alternativa que
 # el banco marcó como correcta. Es la única forma de que un error de cálculo no
@@ -2772,6 +2791,26 @@ def main() -> int:
             if not paso.get("porque", "").strip():
                 fallas.append(f"lección '{codigo}', paso {i} sin el porqué")
 
+        # Un ejemplo adicional no vale menos que el primero: se le exige lo
+        # mismo, porque el alumno lo lee igual.
+        for j, ejemplo in enumerate(leccion.get("extra_examples", []), 2):
+            if not ejemplo.get("statement", "").strip():
+                fallas.append(f"lección '{codigo}', ejemplo {j} sin enunciado")
+            extra = ejemplo.get("steps", [])
+            if len(extra) < 2:
+                fallas.append(
+                    f"lección '{codigo}', ejemplo {j} tiene {len(extra)} paso(s); mínimo 2"
+                )
+            for i, paso in enumerate(extra, 1):
+                if not paso.get("accion", "").strip():
+                    fallas.append(
+                        f"lección '{codigo}', ejemplo {j}, paso {i} sin acción"
+                    )
+                if not paso.get("porque", "").strip():
+                    fallas.append(
+                        f"lección '{codigo}', ejemplo {j}, paso {i} sin el porqué"
+                    )
+
     leidas = 0
     for codigo, esperado in RESULTADOS_LECCIONES.items():
         leccion = LESSONS.get(codigo)
@@ -2783,6 +2822,27 @@ def main() -> int:
             fallas.append(
                 f"aritmética de la lección '{codigo}': el resultado recalculado "
                 f"es {esperado} y no aparece en ningún paso del ejemplo"
+            )
+        leidas += 1
+
+    for codigo, esperado in RESULTADOS_EJEMPLOS_EXTRA.items():
+        leccion = LESSONS.get(codigo)
+        if leccion is None:
+            fallas.append(f"se comprueba un ejemplo extra de '{codigo}', que no existe")
+            continue
+        ejemplos = leccion.get("extra_examples", [])
+        if not ejemplos:
+            fallas.append(
+                f"se comprueba el segundo ejemplo de '{codigo}' y esa lección no tiene"
+            )
+            continue
+        texto = " ".join(
+            p["accion"] for ejemplo in ejemplos for p in ejemplo.get("steps", [])
+        )
+        if esperado not in _valores_del_texto(texto):
+            fallas.append(
+                f"aritmética del segundo ejemplo de '{codigo}': el resultado "
+                f"recalculado es {esperado} y no aparece en ningún paso"
             )
         leidas += 1
 

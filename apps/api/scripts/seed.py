@@ -224,6 +224,7 @@ def seed_lessons(db, nodes_by_code: dict[str, SkillNode]) -> None:
                     theory=datos["theory"],
                     example_statement=datos["example_statement"],
                     example_steps=datos["example_steps"],
+                    extra_examples=datos.get("extra_examples", []),
                     common_error=datos.get("common_error"),
                 )
             )
@@ -235,6 +236,7 @@ def seed_lessons(db, nodes_by_code: dict[str, SkillNode]) -> None:
             or existente.theory != datos["theory"]
             or existente.example_statement != datos["example_statement"]
             or existente.example_steps != datos["example_steps"]
+            or (existente.extra_examples or []) != datos.get("extra_examples", [])
             or existente.common_error != datos.get("common_error")
         )
         if cambios:
@@ -242,6 +244,7 @@ def seed_lessons(db, nodes_by_code: dict[str, SkillNode]) -> None:
             existente.theory = datos["theory"]
             existente.example_statement = datos["example_statement"]
             existente.example_steps = datos["example_steps"]
+            existente.extra_examples = datos.get("extra_examples", [])
             existente.common_error = datos.get("common_error")
             actualizadas += 1
 

@@ -76392,22 +76392,57 @@ LESSONS: dict[str, dict] = {
     },
     "alg_expresiones": {
         "intro": (
-            "Factorizar es escribir una suma como una multiplicación. Sirve para "
-            "simplificar fracciones algebraicas y para resolver ecuaciones: si un "
-            "producto es cero, alguno de sus factores es cero."
+            "Factorizar es escribir una suma como una multiplicación, y es la "
+            "herramienta con la que se simplifican fracciones algebraicas y se "
+            "resuelven ecuaciones: si un producto es cero, alguno de sus factores es "
+            "cero. Antes de factorizar hay que reconocer los productos notables, "
+            "porque son las mismas identidades leídas al revés."
         ),
         "theory": (
-            "**Factor común**: lo que se repite en todos los términos sale "
-            "afuera. $6x^2 + 9x = 3x(2x + 3)$.\n\n"
-            "**Diferencia de cuadrados**: "
-            "$a^2 - b^2 = (a+b)(a-b)$. Ojo: la SUMA de cuadrados no se factoriza "
-            "en los reales.\n\n"
-            "**Trinomio cuadrado perfecto**: "
-            "$a^2 \\pm 2ab + b^2 = (a \\pm b)^2$.\n\n"
-            "**Trinomio de la forma** $x^2 + bx + c$: se buscan dos números que "
-            "multiplicados den $c$ y sumados den $b$. Para $x^2 + 5x + 6$ son 2 y "
-            "3, así que queda $(x+2)(x+3)$."
-            "\n\n[figura:/preguntas/mat-rectangulo-expresion.svg]"
+            "**Un término algebraico** es el producto de un número, el *coeficiente*, "
+            "por potencias de letras, el *factor literal*: en $-5x^2y$ el coeficiente "
+            "es $-5$ y el factor literal es $x^2y$. Un **polinomio** es una suma de "
+            "términos y su **grado** es el mayor exponente que aparece. Dos términos "
+            "son **semejantes** si tienen el mismo factor literal, y solo esos se "
+            "pueden sumar: $3x^2 + 5x^2 = 8x^2$, mientras que $3x^2 + 5x$ no se "
+            "reduce.\\n\\n"
+            "**Productos notables.** Conviene reconocerlos de memoria, porque se usan "
+            "en los dos sentidos:\\n\\n"
+            "| Nombre | Identidad |\\n"
+            "|---|---|\\n"
+            "| Cuadrado de binomio | $(a \\pm b)^2 = a^2 \\pm 2ab + b^2$ |\\n"
+            "| Suma por diferencia | $(a+b)(a-b) = a^2 - b^2$ |\\n"
+            "| Cubo de binomio | $(a \\pm b)^3 = a^3 \\pm 3a^2b + 3ab^2 \\pm b^3$ |\\n"
+            "| Binomios con término común | $(x+p)(x+q) = x^2 + (p+q)x + pq$ |\\n"
+            "| Suma y diferencia de cubos | $a^3 \\pm b^3 = (a \\pm b)(a^2 \\mp ab + "
+            "b^2)$ |\\n\\n"
+            "El término que se olvida es el doble producto: $(a+b)^2$ **no** es $a^2 "
+            "+ b^2$. Ese $2ab$ es el que separa la respuesta correcta de casi todas "
+            "las incorrectas.\\n\\n"
+            "**Factorizar** es el camino inverso, y se busca siempre en este orden:\\n\\n"
+            "1) **Factor común**: lo que se repite en todos los términos sale afuera, "
+            "$6x^2 + 9x = 3x(2x + 3)$. Si no hay uno para todos, puede haberlo **por "
+            "grupos**: $ax + ay + bx + by = a(x+y) + b(x+y) = (a+b)(x+y)$.\\n"
+            "2) **Diferencia de cuadrados**: $a^2 - b^2 = (a+b)(a-b)$. La **suma** de "
+            "cuadrados no se factoriza en los reales.\\n"
+            "3) **Trinomio cuadrado perfecto**: $a^2 \\pm 2ab + b^2 = (a \\pm b)^2$. Se "
+            "reconoce cuando dos términos son cuadrados y el tercero es el doble "
+            "producto de sus raíces.\\n"
+            "4) **Trinomio** $x^2 + bx + c$: dos números que multiplicados den $c$ y "
+            "sumados den $b$. Para $x^2 + 5x + 6$ son $2$ y $3$, así que queda "
+            "$(x+2)(x+3)$.\\n"
+            "5) **Trinomio** $ax^2 + bx + c$: si no se ve a simple vista, se obtienen "
+            "las raíces $x_1$ y $x_2$ con la fórmula general y se escribe $a(x - "
+            "x_1)(x - x_2)$.\\n\\n"
+            "**Fracciones algebraicas.** Se simplifican factorizando arriba y abajo y "
+            "cancelando factores **completos**, nunca términos sueltos: $\\dfrac{x^2 - "
+            "4}{x + 2} = \\dfrac{(x+2)(x-2)}{x+2} = x - 2$, y eso vale solo si $x \\neq "
+            "-2$. El denominador no puede ser cero, y esa restricción se arrastra "
+            "aunque el factor haya desaparecido.\\n\\n"
+            "**Para qué sirve.** Por el **factor nulo**: si un producto es cero, "
+            "alguno de sus factores es cero. Por eso $x^2 - 4 = 0$ se resuelve como "
+            "$(x+2)(x-2) = 0$, de donde $x = -2$ o $x = 2$.\\n\\n"
+            "[figura:/preguntas/mat-rectangulo-expresion.svg]"
         ),
         "example_statement": "Factoriza completamente $2x^2 - 8$.",
         "example_steps": [
@@ -76424,10 +76459,64 @@ LESSONS: dict[str, dict] = {
                 "porque": "«Completamente» significa que ningún factor se puede seguir descomponiendo, y $x+2$ y $x-2$ ya no se pueden.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Simplifica $\\dfrac{x^2 + 5x + 6}{x^2 - 9}$ e indica para qué valores de "
+                    "$x$ vale la simplificación."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Factorizo el numerador: busco dos números que multiplicados den $6$ y "
+                            "sumados $5$, que son $2$ y $3$. Queda $(x+2)(x+3)$."
+                        ),
+                        "porque": (
+                            "Es el trinomio $x^2 + bx + c$, el cuarto caso de la lista. Con enteros "
+                            "chicos se ve más rápido que con la fórmula general."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Factorizo el denominador: $x^2 - 9$ es una diferencia de cuadrados con "
+                            "$a = x$ y $b = 3$, así que es $(x+3)(x-3)$."
+                        ),
+                        "porque": (
+                            "$9 = 3^2$ y los dos términos se están restando, que es exactamente la "
+                            "forma $a^2 - b^2$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Cancelo el factor $(x+3)$, que aparece completo arriba y abajo: queda "
+                            "$\\dfrac{x+2}{x-3}$."
+                        ),
+                        "porque": (
+                            "Se cancelan factores, nunca términos sueltos. Si el $(x+3)$ hubiera "
+                            "estado sumado y no multiplicado, no se podría tocar."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Anoto las restricciones del denominador original: $x \\neq -3$ y $x \\neq "
+                            "3$."
+                        ),
+                        "porque": (
+                            "El denominador de partida se anula en esos dos valores, y eso no cambia "
+                            "porque uno de los factores haya desaparecido al simplificar. La "
+                            "expresión simplificada solo equivale a la original donde la original "
+                            "existe."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
-            "Detenerse en $2(x^2 - 4)$ y darlo por factorizado, o intentar "
-            "factorizar $x^2 + 4$. La suma de cuadrados no tiene factorización "
-            "en los números reales."
+            "Cancelar términos en vez de factores: escribir $\\dfrac{x^2 - 4}{x} = x - "
+            "4$ tachando la $x$, o detenerse en $2(x^2 - 4)$ y darlo por factorizado. "
+            "Y el clásico de los productos notables: $(a+b)^2 = a^2 + b^2$, que se "
+            "olvida del doble producto. La suma de cuadrados, en cambio, no tiene "
+            "factorización en los números reales."
         ),
     },
     "alg_proporcionalidad": {
@@ -76438,27 +76527,48 @@ LESSONS: dict[str, dict] = {
             "magnitud sube, ¿la otra sube o baja?"
         ),
         "theory": (
-            "**Proporcionalidad directa.** Las dos magnitudes suben y bajan "
-            "juntas, y lo que se mantiene fijo es el COCIENTE: "
-            "$\\frac{y}{x} = k$, o lo que es lo mismo, $y = kx$. La constante "
-            "$k$ es el valor de una unidad: el precio de un kilo, los "
-            "kilómetros de un centímetro del mapa. Su gráfico es una recta que "
-            "pasa por el origen.\n\n"
-            "**Proporcionalidad inversa.** Una sube cuando la otra baja, y lo "
-            "que se mantiene fijo es el PRODUCTO: $x \\cdot y = k$, o sea "
-            "$y = \\frac{k}{x}$. La constante es el total del trabajo: los "
-            "días-persona de una obra, los kilómetros de un viaje. Su gráfico "
-            "es una curva que se acerca a los ejes sin tocarlos.\n\n"
-            "**Cómo saber cuál es cuál.** No basta con mirar si una sube y la "
-            "otra baja: hay que probar con los números. Divide un par y "
-            "después otro; si da lo mismo, es directa. Multiplica un par y "
-            "después otro; si da lo mismo, es inversa. Si ninguna de las dos "
-            "cosas se cumple para TODOS los pares, no hay proporcionalidad.\n\n"
-            "**Cuidado con la trampa del +.** $y = 3x$ es proporcional; "
-            "$y = 3x + 5$ no lo es, aunque crezca igual de parejo. La prueba "
-            "rápida: en una proporcionalidad directa, si $x$ vale 0 entonces "
-            "$y$ vale 0."
-            "\n\n[figura:/preguntas/mat-proporcionalidad-inversa.svg]"
+            "**Una razón** es el cociente entre dos cantidades, $a : b$ o "
+            "$\\dfrac{a}{b}$, y una **proporción** es la igualdad de dos razones, "
+            "$\\dfrac{a}{b} = \\dfrac{c}{d}$. De ahí sale la **propiedad fundamental**: "
+            "en toda proporción los productos cruzados son iguales, $a \\cdot d = b "
+            "\\cdot c$. Es la que justifica la regla de tres.\\n\\n"
+            "**Proporcionalidad directa.** Las dos magnitudes suben y bajan juntas, y "
+            "lo que se mantiene fijo es el COCIENTE: $\\dfrac{y}{x} = k$, o lo que es "
+            "lo mismo, $y = kx$. La constante $k$ es el valor de una unidad: el "
+            "precio de un kilo, los kilómetros que representa un centímetro del mapa. "
+            "Su gráfico es una recta que pasa por el origen.\\n\\n"
+            "**Proporcionalidad inversa.** Una sube cuando la otra baja, y lo que se "
+            "mantiene fijo es el PRODUCTO: $x \\cdot y = k$, o sea $y = \\dfrac{k}{x}$. "
+            "La constante es el total del trabajo: los días-persona de una obra, los "
+            "kilómetros de un viaje. Su gráfico es una hipérbola que se acerca a los "
+            "ejes sin tocarlos.\\n\\n"
+            "| | Directa | Inversa |\\n"
+            "|---|---|---|\\n"
+            "| Se conserva | el cociente $y/x$ | el producto $x \\cdot y$ |\\n"
+            "| Fórmula | $y = kx$ | $y = k/x$ |\\n"
+            "| Al duplicar $x$ | $y$ se duplica | $y$ se reduce a la mitad |\\n"
+            "| Gráfico | recta por el origen | hipérbola |\\n\\n"
+            "**Cómo saber cuál es cuál.** No basta con mirar si una sube y la otra "
+            "baja: hay que probar con los números. Divide un par y después otro; si "
+            "da lo mismo, es directa. Multiplica un par y después otro; si da lo "
+            "mismo, es inversa. Si ninguna de las dos cosas se cumple para TODOS los "
+            "pares, no hay proporcionalidad.\\n\\n"
+            "**Cuidado con la trampa del $+$.** $y = 3x$ es proporcional; $y = 3x + "
+            "5$ no lo es, aunque crezca igual de parejo. La prueba rápida: en una "
+            "proporcionalidad directa, si $x$ vale $0$ entonces $y$ vale $0$.\\n\\n"
+            "**Proporcionalidad compuesta.** Cuando intervienen tres magnitudes "
+            "—obreros, días y obra— se resuelve una variable a la vez: se fija una, "
+            "se ajusta la otra. El atajo seguro es la constante con significado, del "
+            "tipo «días-persona», porque es la cantidad que el problema conserva.\\n\\n"
+            "**Reparto proporcional.** Repartir $T$ en partes proporcionales a $a$, "
+            "$b$ y $c$ es multiplicar $T$ por $\\dfrac{a}{a+b+c}$, $\\dfrac{b}{a+b+c}$ "
+            "y $\\dfrac{c}{a+b+c}$. La suma de las partes tiene que devolver $T$: es "
+            "la comprobación de un segundo.\\n\\n"
+            "**Escalas y porcentajes son proporciones.** Una escala $1 : 50.000$ dice "
+            "que $1$ cm en el plano son $50.000$ cm reales, o sea $500$ m. Y un $p\\%$ "
+            "es la proporción $\\dfrac{p}{100}$, así que todo problema de porcentaje "
+            "se puede plantear como regla de tres.\\n\\n"
+            "[figura:/preguntas/mat-proporcionalidad-inversa.svg]"
         ),
         "example_statement": (
             "Seis pintores terminan un edificio en 10 días. Trabajando al mismo "
@@ -76482,6 +76592,45 @@ LESSONS: dict[str, dict] = {
                 "porque": "Comprobar el sentido del resultado caza al tiro el error más común, que es aplicar la regla de tres directa donde correspondía la inversa.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "En un mapa a escala $1 : 250.000$, dos ciudades están a $7$ cm de "
+                    "distancia. ¿Cuántos kilómetros las separan en la realidad?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Leo la escala como una proporcionalidad directa: cada $1$ cm del mapa "
+                            "son $250.000$ cm reales, así que la constante es $k = 250.000$."
+                        ),
+                        "porque": (
+                            "Al doble de distancia en el mapa le corresponde el doble de distancia "
+                            "real, y a $0$ cm le corresponden $0$ km: es el comportamiento de $y = "
+                            "kx$."
+                        ),
+                    },
+                    {
+                        "accion": "Multiplico: $7 \\cdot 250.000 = 1.750.000$ cm.",
+                        "porque": (
+                            "La constante es el valor de una unidad, así que el total se obtiene "
+                            "multiplicándola por cuántas unidades hay."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Paso a kilómetros dividiendo por $100.000$, porque $1$ km son $1.000$ m "
+                            "y cada metro son $100$ cm: $1.750.000 \\div 100.000 = 17{,}5$ km."
+                        ),
+                        "porque": (
+                            "La escala viene en centímetros y la pregunta pide kilómetros. Cambiar de "
+                            "unidad al final, y no a mitad de camino, evita arrastrar el error a los "
+                            "dos pasos anteriores."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Usar la regla de tres directa para todo. Frente a \"6 pintores en "
             "10 días, ¿y 4 pintores?\" la respuesta automática suele ser "
@@ -76497,18 +76646,42 @@ LESSONS: dict[str, dict] = {
             "despejar la incógnita."
         ),
         "theory": (
-            "**Lo que se hace a un lado se hace al otro.** Sumar, restar, "
-            "multiplicar o dividir por lo mismo a ambos lados mantiene la "
-            "igualdad.\n\n"
-            "**El orden conviene así**: primero se eliminan paréntesis, después "
-            "se juntan las incógnitas a un lado y los números al otro, y recién "
-            "al final se divide.\n\n"
-            "**Inecuaciones**: se resuelven igual, con UNA diferencia crítica. "
-            "Al multiplicar o dividir por un número **negativo**, el signo de "
-            "desigualdad se da vuelta: de $-2x < 6$ se pasa a $x > -3$.\n\n"
-            "**Siempre conviene verificar**: reemplazar la solución en la "
-            "ecuación original y comprobar que los dos lados dan lo mismo."
-            "\n\n[figura:/preguntas/mat-proporcionalidad-directa.svg]"
+            "**Una ecuación** es una igualdad con una incógnita, y **resolverla** es "
+            "encontrar el valor que la hace verdadera. Ese valor es su *solución*. "
+            "Distinto es una **identidad**, que se cumple para cualquier valor "
+            "($2(x+1) = 2x+2$), y una ecuación **sin solución**, que no se cumple "
+            "para ninguno ($x = x + 1$).\\n\\n"
+            "**Propiedades de la igualdad.** Lo que se hace a un lado se hace al "
+            "otro: se puede sumar o restar lo mismo en ambos lados, y multiplicar o "
+            "dividir ambos lados por un número distinto de cero. Multiplicar por cero "
+            "está prohibido, porque convierte cualquier ecuación en $0 = 0$.\\n\\n"
+            "**El orden conviene así**: primero se eliminan paréntesis, después se "
+            "juntan las incógnitas a un lado y los números al otro, y recién al final "
+            "se divide por el coeficiente.\\n\\n"
+            "**Con fracciones**, se multiplica toda la ecuación por el mínimo común "
+            "múltiplo de los denominadores y desaparecen de una vez. En $\\dfrac{x}{2} "
+            "+ \\dfrac{x}{3} = 5$ se multiplica por $6$ y queda $3x + 2x = 30$.\\n\\n"
+            "**Inecuaciones.** Se resuelven igual, con UNA diferencia crítica: al "
+            "multiplicar o dividir por un número **negativo**, el signo de "
+            "desigualdad se da vuelta. De $-2x < 6$ se pasa a $x > -3$.\\n\\n"
+            "| Símbolo | Se lee | Intervalo |\\n"
+            "|---|---|---|\\n"
+            "| $x < a$ | menor que | $(-\\infty, a)$ |\\n"
+            "| $x \\leq a$ | menor o igual | $(-\\infty, a]$ |\\n"
+            "| $x > a$ | mayor que | $(a, +\\infty)$ |\\n"
+            "| $a < x \\leq b$ | entre, con $b$ incluido | $(a, b]$ |\\n\\n"
+            "El paréntesis excluye el extremo y el corchete lo incluye. La solución "
+            "de una inecuación es un conjunto de números, no uno solo: por eso se "
+            "responde con un intervalo.\\n\\n"
+            "**Modelar el enunciado.** Casi siempre el trabajo está antes del "
+            "álgebra: decidir qué representa la incógnita y escribir la frase como "
+            "igualdad. «El doble de un número disminuido en tres» es $2x - 3$, "
+            "mientras que «el doble de un número disminuido en tres» entendido como "
+            "$2(x-3)$ es otra cosa: el paréntesis cambia el resultado.\\n\\n"
+            "**Siempre conviene verificar**: reemplazar la solución en la ecuación "
+            "original y comprobar que los dos lados dan lo mismo. Detecta cualquier "
+            "error de signo en diez segundos.\\n\\n"
+            "[figura:/preguntas/mat-proporcionalidad-directa.svg]"
         ),
         "example_statement": "Resuelve $3(x - 2) + 4 = 2x + 7$.",
         "example_steps": [
@@ -76533,6 +76706,50 @@ LESSONS: dict[str, dict] = {
                 "porque": "La verificación detecta cualquier error de signo en menos de diez segundos, y en la prueba vale lo mismo que resolver bien.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Resuelve la inecuación $4 - 3x \\geq 19$ y escribe la solución como "
+                    "intervalo."
+                ),
+                "steps": [
+                    {
+                        "accion": "Resto $4$ a los dos lados: $-3x \\geq 15$.",
+                        "porque": (
+                            "Sumar o restar lo mismo en ambos lados no altera una desigualdad, así "
+                            "que este paso es idéntico al de una ecuación."
+                        ),
+                    },
+                    {
+                        "accion": "Divido por $-3$ y DOY VUELTA el signo: $x \\leq -5$.",
+                        "porque": (
+                            "Dividir por un negativo invierte el orden de los números: $6 > 3$, pero "
+                            "$-6 < -3$. Si no se da vuelta el signo, la solución queda al revés y esa "
+                            "es justamente la alternativa incorrecta que se ofrece."
+                        ),
+                    },
+                    {
+                        "accion": "Escribo la solución como intervalo: $(-\\infty, -5]$.",
+                        "porque": (
+                            "El corchete en el $-5$ es porque la desigualdad incluye el igual: $x = "
+                            "-5$ sí cumple. Del otro lado va paréntesis porque el infinito no es un "
+                            "número que se pueda alcanzar."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Compruebo con un valor del intervalo, $x = -6$: $4 - 3(-6) = 4 + 18 = "
+                            "22$, y $22 \\geq 19$ es verdadero."
+                        ),
+                        "porque": (
+                            "En una inecuación la verificación se hace con cualquier número de la "
+                            "solución, no con uno solo puntual: si el elegido cumple y un número de "
+                            "afuera no cumple, el intervalo está bien orientado."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "En las inecuaciones, no dar vuelta el signo al dividir por un "
             "negativo. Si $-2x < 6$, dividir por −2 obliga a escribir $x > -3$, "
@@ -76546,17 +76763,41 @@ LESSONS: dict[str, dict] = {
             "donde se cruzan las dos rectas."
         ),
         "theory": (
-            "**Sustitución**: se despeja una incógnita en una ecuación y se "
-            "reemplaza en la otra. Conviene cuando alguna ya está casi "
-            "despejada.\n\n"
-            "**Igualación**: se despeja la MISMA incógnita en ambas y se igualan "
-            "las expresiones.\n\n"
-            "**Reducción (o suma y resta)**: se multiplican las ecuaciones por "
-            "los números necesarios para que una incógnita quede con "
-            "coeficientes opuestos, y se suman para que desaparezca.\n\n"
-            "**La solución es un par $(x, y)$**, no un solo número, y tiene que "
-            "cumplir LAS DOS ecuaciones. Siempre se verifica en ambas."
-            "\n\n[figura:/preguntas/mat-sistema-rectas.svg]"
+            "**Un sistema $2\\times 2$** son dos ecuaciones lineales con dos "
+            "incógnitas, y su solución es el par $(x, y)$ que cumple las dos a la "
+            "vez. Geométricamente, cada ecuación es una recta y la solución es el "
+            "punto donde se cortan.\\n\\n"
+            "**Sustitución**: se despeja una incógnita en una ecuación y se reemplaza "
+            "en la otra. Conviene cuando alguna ya está casi despejada, como en $y = "
+            "3x - 1$.\\n\\n"
+            "**Igualación**: se despeja la MISMA incógnita en las dos y se igualan "
+            "las expresiones resultantes.\\n\\n"
+            "**Reducción (o suma y resta)**: se multiplican las ecuaciones por los "
+            "números necesarios para que una incógnita quede con coeficientes "
+            "opuestos, y se suman para que desaparezca. Es el más rápido cuando los "
+            "coeficientes ya son parecidos.\\n\\n"
+            "Los tres métodos dan el mismo par; se elige por comodidad, no por "
+            "corrección.\\n\\n"
+            "**Cuántas soluciones hay.** Para $a_1x + b_1y = c_1$ y $a_2x + b_2y = "
+            "c_2$:\\n\\n"
+            "| Caso | Condición | Las rectas |\\n"
+            "|---|---|---|\\n"
+            "| Una solución | $\\dfrac{a_1}{a_2} \\neq \\dfrac{b_1}{b_2}$ | se cortan |\\n"
+            "| Infinitas | $\\dfrac{a_1}{a_2} = \\dfrac{b_1}{b_2} = \\dfrac{c_1}{c_2}$ | "
+            "son la misma |\\n"
+            "| Ninguna | $\\dfrac{a_1}{a_2} = \\dfrac{b_1}{b_2} \\neq \\dfrac{c_1}{c_2}$ "
+            "| son paralelas |\\n\\n"
+            "**Cómo se ve al resolver**: si al eliminar una incógnita queda $0 = 0$, "
+            "hay infinitas soluciones; si queda algo imposible como $0 = 5$, no hay "
+            "ninguna.\\n\\n"
+            "**Plantear el sistema** es la mitad del ejercicio. Dos frases del "
+            "enunciado dan dos ecuaciones: una suele ser el total de unidades y la "
+            "otra el total de dinero, de edades o de kilos. Conviene escribir primero "
+            "qué representa cada letra, con su unidad, y recién después armar las "
+            "ecuaciones.\\n\\n"
+            "**La solución es un par**, no un solo número, y tiene que cumplir LAS "
+            "DOS ecuaciones: siempre se verifica en ambas.\\n\\n"
+            "[figura:/preguntas/mat-sistema-rectas.svg]"
         ),
         "example_statement": "Resuelve el sistema $x + y = 12$ ; $x - y = 2$.",
         "example_steps": [
@@ -76577,6 +76818,68 @@ LESSONS: dict[str, dict] = {
                 "porque": "Verificar en la ecuación que no se usó para despejar es lo que detecta un error de reemplazo.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "En una feria se vendieron $30$ entradas, entre adultos a $\\$4.000$ y "
+                    "niños a $\\$2.500$, y se recaudaron $\\$97.500$. ¿Cuántas entradas de "
+                    "adulto se vendieron?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Defino las incógnitas con su unidad: $a$ es la cantidad de entradas de "
+                            "adulto y $n$ la de niños."
+                        ),
+                        "porque": (
+                            "Sin decidir esto primero, las dos ecuaciones se mezclan: una cuenta "
+                            "entradas y la otra pesos, y hay que saber cuál es cuál."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Escribo las dos ecuaciones: $a + n = 30$ por el total de entradas, y "
+                            "$4000a + 2500n = 97500$ por la recaudación."
+                        ),
+                        "porque": (
+                            "Cada frase del enunciado aporta una ecuación. La primera cuenta "
+                            "personas; la segunda, plata: son dos condiciones distintas sobre los "
+                            "mismos dos números."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Despejo $n = 30 - a$ en la primera y lo reemplazo en la segunda: $4000a "
+                            "+ 2500(30 - a) = 97500$."
+                        ),
+                        "porque": (
+                            "La primera ecuación ya está casi despejada, así que la sustitución es el "
+                            "camino más corto. Reemplazar deja una sola incógnita."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Desarrollo y despejo: $4000a + 75000 - 2500a = 97500$, o sea $1500a = "
+                            "22500$, de donde $a = 15$."
+                        ),
+                        "porque": (
+                            "El $2500$ multiplica a todo el paréntesis, incluido el $-a$. De ahí "
+                            "salen los $75.000$ que se restan a los $97.500$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo $n = 30 - 15 = 15$ y verifico en la ecuación del dinero: $4000 "
+                            "\\cdot 15 + 2500 \\cdot 15 = 60000 + 37500 = 97500$. Correcto."
+                        ),
+                        "porque": (
+                            "Verificar en la ecuación que no se usó para despejar es lo que detecta "
+                            "un error de reemplazo. Y la pregunta pedía solo los adultos: son $15$."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Encontrar $x$ y entregar eso como respuesta. La solución de un "
             "sistema 2x2 son los dos valores; una alternativa con el $x$ correcto "
@@ -76590,17 +76893,37 @@ LESSONS: dict[str, dict] = {
             "sube y baja: áreas, trayectorias, máximos."
         ),
         "theory": (
-            "**Forma general**: $ax^2 + bx + c = 0$, con $a \\neq 0$.\n\n"
-            "**Fórmula general**: "
-            "$x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$. Sirve siempre.\n\n"
-            "**El discriminante** $\\Delta = b^2 - 4ac$ dice cuántas soluciones "
-            "hay antes de calcularlas: si $\\Delta > 0$ hay dos, si "
-            "$\\Delta = 0$ hay una, y si $\\Delta < 0$ no hay solución "
-            "real.\n\n"
-            "**Por factorización**: si la ecuación se puede escribir como "
-            "$(x - p)(x - q) = 0$, entonces $x = p$ o $x = q$, porque un producto "
-            "solo da cero si alguno de sus factores es cero."
-            "\n\n[figura:/preguntas/mat-parabola-vertice.svg]"
+            "**Forma general**: $ax^2 + bx + c = 0$, con $a \\neq 0$. Si $a$ fuera "
+            "cero no habría término cuadrático y la ecuación sería lineal.\\n\\n"
+            "**Fórmula general**: $x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$. Sirve "
+            "siempre, y el $\\pm$ es el que produce las dos soluciones.\\n\\n"
+            "**El discriminante** $\\Delta = b^2 - 4ac$ dice cuántas hay antes de "
+            "calcularlas:\\n\\n"
+            "| Discriminante | Soluciones reales | La parábola |\\n"
+            "|---|---|---|\\n"
+            "| $\\Delta > 0$ | dos distintas | corta el eje $X$ en dos puntos |\\n"
+            "| $\\Delta = 0$ | una (doble) | toca el eje $X$ en el vértice |\\n"
+            "| $\\Delta < 0$ | ninguna | no toca el eje $X$ |\\n\\n"
+            "**Por factorización**: si la ecuación se puede escribir como $(x - p)(x "
+            "- q) = 0$, entonces $x = p$ o $x = q$, porque un producto solo da cero "
+            "si alguno de sus factores es cero. Con coeficientes enteros chicos es "
+            "más rápido y más seguro que la fórmula.\\n\\n"
+            "**Ecuaciones incompletas.** Cuando falta un término no hace falta la "
+            "fórmula: $ax^2 + bx = 0$ se factoriza como $x(ax + b) = 0$, de donde $x "
+            "= 0$ o $x = -\\dfrac{b}{a}$; y $ax^2 + c = 0$ se despeja como $x^2 = "
+            "-\\dfrac{c}{a}$, que tiene dos raíces opuestas o ninguna real.\\n\\n"
+            "**Suma y producto de las raíces.** Sin resolver nada, $x_1 + x_2 = "
+            "-\\dfrac{b}{a}$ y $x_1 \\cdot x_2 = \\dfrac{c}{a}$. Es la vía corta cuando "
+            "la pregunta pide la suma, el producto, o armar una ecuación a partir de "
+            "sus raíces: $x^2 - (x_1+x_2)x + x_1x_2 = 0$.\\n\\n"
+            "**Completar el cuadrado.** Sumando y restando "
+            "$\\left(\\dfrac{b}{2}\\right)^2$ la ecuación se reescribe como $(x + h)^2 = "
+            "k$. Es de donde sale la fórmula general y lo que permite ver el vértice "
+            "de la parábola.\\n\\n"
+            "**No toda solución sirve.** Si la incógnita es una longitud, una "
+            "cantidad de personas o un tiempo, la raíz negativa se descarta: la "
+            "ecuación no sabe de qué está hablando el problema.\\n\\n"
+            "[figura:/preguntas/mat-parabola-vertice.svg]"
         ),
         "example_statement": "Resuelve $x^2 - 5x + 6 = 0$.",
         "example_steps": [
@@ -76621,6 +76944,65 @@ LESSONS: dict[str, dict] = {
                 "porque": "Esta es la propiedad que hace útil factorizar, y es la que la prueba evalúa.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un terreno rectangular tiene $3$ metros más de largo que de ancho y su "
+                    "área es de $130\\ \\text{m}^2$. ¿Cuánto mide el ancho?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Llamo $x$ al ancho en metros; el largo es entonces $x + 3$, y el área es "
+                            "$x(x+3) = 130$."
+                        ),
+                        "porque": (
+                            "«Tres metros más de largo que de ancho» es una relación entre las dos "
+                            "medidas, así que con una sola incógnita quedan descritas ambas."
+                        ),
+                    },
+                    {
+                        "accion": "Ordeno la ecuación en la forma general: $x^2 + 3x - 130 = 0$.",
+                        "porque": (
+                            "La fórmula y el discriminante exigen que todo esté igualado a cero; con "
+                            "la ecuación sin ordenar, el $c$ se confunde con el área."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo el discriminante: $\\Delta = 3^2 - 4 \\cdot 1 \\cdot (-130) = 9 + "
+                            "520 = 529$, y $\\sqrt{529} = 23$."
+                        ),
+                        "porque": (
+                            "Restar un negativo suma, y ahí se cae la mitad de los cálculos. Que el "
+                            "discriminante sea un cuadrado perfecto avisa además que las raíces son "
+                            "enteras."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Aplico la fórmula: $x = \\dfrac{-3 \\pm 23}{2}$, así que $x = 10$ o $x = "
+                            "-13$."
+                        ),
+                        "porque": (
+                            "El $\\pm$ entrega las dos soluciones de la ecuación, y conviene "
+                            "escribirlas las dos antes de decidir cuál sirve."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Descarto $x = -13$ porque un ancho no puede ser negativo: el ancho es "
+                            "$10$ m y el largo $13$ m, con área $10 \\cdot 13 = 130$."
+                        ),
+                        "porque": (
+                            "La ecuación no sabe que $x$ es una longitud. El descarte lo hace el "
+                            "contexto, y la comprobación del área confirma que la raíz elegida es la "
+                            "correcta."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Entregar una sola solución. Una cuadrática con discriminante "
             "positivo tiene dos, y el enunciado suele pedir la suma, el producto "
@@ -76634,17 +77016,41 @@ LESSONS: dict[str, dict] = {
             "cambia de dirección una vez."
         ),
         "theory": (
+            "**Una función** asigna a cada valor de entrada exactamente un valor de "
+            "salida. El conjunto de entradas admitidas es el **dominio** y el de "
+            "salidas efectivas, el **recorrido**. La notación $f(3) = 11$ se lee «la "
+            "imagen de $3$ es $11$», y evaluar una función es reemplazar la letra por "
+            "el número.\\n\\n"
             "**Función lineal**: $f(x) = mx + n$. Su gráfico es una recta. La "
-            "**pendiente** $m$ dice cuánto sube $y$ cuando $x$ aumenta en 1: si "
-            "$m > 0$ la recta sube, si $m < 0$ baja. El **coeficiente de "
-            "posición** $n$ es donde corta al eje $Y$.\n\n"
-            "**Pendiente entre dos puntos**: "
-            "$m = \\dfrac{y_2 - y_1}{x_2 - x_1}$.\n\n"
-            "**Función cuadrática**: $f(x) = ax^2 + bx + c$. Su gráfico es una "
-            "parábola: abre hacia arriba si $a > 0$ y hacia abajo si $a < 0$.\n\n"
-            "**Vértice**: está en $x = -\\dfrac{b}{2a}$, y ahí ocurre el mínimo "
-            "(si abre hacia arriba) o el máximo (si abre hacia abajo)."
-            "\n\n[figura:/preguntas/mat-tabla-funcion.svg]"
+            "**pendiente** $m$ dice cuánto cambia $y$ cuando $x$ aumenta en $1$: si "
+            "$m > 0$ la recta sube, si $m < 0$ baja, y si $m = 0$ es horizontal. El "
+            "**coeficiente de posición** $n$ es donde corta al eje $Y$, es decir "
+            "$f(0)$.\\n\\n"
+            "**Pendiente entre dos puntos**: $m = \\dfrac{y_2 - y_1}{x_2 - x_1}$, el "
+            "cambio vertical dividido por el horizontal, en ese orden.\\n\\n"
+            "Dos rectas son **paralelas** si tienen la misma pendiente ($m_1 = m_2$) "
+            "y **perpendiculares** si el producto de sus pendientes es $-1$ ($m_1 "
+            "\\cdot m_2 = -1$).\\n\\n"
+            "**Función cuadrática**: $f(x) = ax^2 + bx + c$, con $a \\neq 0$. Su "
+            "gráfico es una parábola que abre hacia arriba si $a > 0$ y hacia abajo "
+            "si $a < 0$; mientras mayor es $|a|$, más angosta.\\n\\n"
+            "| Elemento | Dónde está |\\n"
+            "|---|---|\\n"
+            "| Vértice | $x_v = -\\dfrac{b}{2a}$, y $y_v = f(x_v)$ |\\n"
+            "| Eje de simetría | la recta vertical $x = -\\dfrac{b}{2a}$ |\\n"
+            "| Corte con el eje $Y$ | $(0, c)$ |\\n"
+            "| Cortes con el eje $X$ | las raíces de $ax^2+bx+c=0$ |\\n\\n"
+            "**El vértice es el máximo o el mínimo**: mínimo si la parábola abre "
+            "hacia arriba, máximo si abre hacia abajo. Toda pregunta de «la ganancia "
+            "máxima», «la altura máxima» o «el costo mínimo» se responde calculando "
+            "el vértice.\\n\\n"
+            "**Forma canónica**: $f(x) = a(x - h)^2 + k$, donde $(h, k)$ es "
+            "directamente el vértice. Se obtiene completando el cuadrado, y es la "
+            "forma en que el gráfico se lee sin calcular nada.\\n\\n"
+            "**Leer un gráfico o una tabla.** En una tabla, la función es lineal si a "
+            "incrementos iguales de $x$ le corresponden incrementos iguales de $y$; "
+            "si esas diferencias cambian de forma constante, es cuadrática.\\n\\n"
+            "[figura:/preguntas/mat-tabla-funcion.svg]"
         ),
         "example_statement": (
             "Una recta pasa por los puntos $(1, 5)$ y $(3, 11)$. Encuentra su "
@@ -76666,6 +77072,59 @@ LESSONS: dict[str, dict] = {
             {
                 "accion": "Verifico con el otro punto: $3 \\cdot 3 + 2 = 11$. Coincide.",
                 "porque": "Si el segundo punto no calzara, el error estaría en la pendiente.",
+            },
+        ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una pelota lanzada hacia arriba alcanza una altura $h(t) = -5t^2 + 20t$ "
+                    "metros a los $t$ segundos. ¿Cuál es la altura máxima y en qué instante "
+                    "la alcanza?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico los coeficientes: $a = -5$ y $b = 20$. Como $a < 0$, la "
+                            "parábola abre hacia abajo y su vértice es un máximo."
+                        ),
+                        "porque": (
+                            "Si abriera hacia arriba el vértice sería el punto más bajo y la pregunta "
+                            "por un máximo no tendría respuesta finita. El signo de $a$ decide qué se "
+                            "está buscando."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo el instante del vértice: $t_v = -\\dfrac{b}{2a} = -\\dfrac{20}{2 "
+                            "\\cdot (-5)} = 2$ segundos."
+                        ),
+                        "porque": (
+                            "El vértice está en $-b/2a$, y acá el denominador es negativo: dos signos "
+                            "menos dan un tiempo positivo, que es el único que tiene sentido físico."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Evalúo la función en ese instante: $h(2) = -5 \\cdot 2^2 + 20 \\cdot 2 = "
+                            "-20 + 40 = 20$ metros."
+                        ),
+                        "porque": (
+                            "El $-b/2a$ entrega CUÁNDO, no CUÁNTO. La altura es la imagen de ese "
+                            "instante, así que hay que reemplazarlo en la función."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Compruebo con la simetría: $h(0) = 0$ y $h(4) = -80 + 80 = 0$, y el "
+                            "punto medio entre $0$ y $4$ es justamente $2$."
+                        ),
+                        "porque": (
+                            "La parábola es simétrica respecto del eje que pasa por el vértice, así "
+                            "que dos instantes con la misma altura tienen el vértice exactamente al "
+                            "medio. Es la comprobación más rápida de que el vértice quedó bien."
+                        ),
+                    },
+                ],
             },
         ],
         "common_error": (
@@ -78444,21 +78903,39 @@ LESSONS: dict[str, dict] = {
             "lo que esta unidad entrena."
         ),
         "theory": (
-            "**Interpretación geométrica.** Cada ecuación es una recta. Una "
-            "solución = las rectas se cortan; infinitas = son la MISMA recta; "
-            "ninguna = son paralelas distintas.\n\n"
-            "**El criterio de los coeficientes.** Para "
-            "$a_1x + b_1y = c_1$ y $a_2x + b_2y = c_2$: si "
-            "$\\frac{a_1}{a_2} \\neq \\frac{b_1}{b_2}$ hay solución única. Si "
-            "las tres razones son iguales, hay infinitas. Si las de $a$ y $b$ "
-            "coinciden pero la de $c$ no, no hay solución.\n\n"
-            "**Qué significa cada caso.** Solución única: las pendientes son "
-            "distintas. Infinitas: una ecuación es múltiplo de la otra, así que "
-            "no aporta información nueva. Ninguna: mismas pendientes, distinto "
-            "corte con el eje.\n\n"
-            "**Cómo se ve al resolver.** Si al eliminar una incógnita queda "
-            "$0 = 0$, hay infinitas soluciones. Si queda algo imposible como "
-            "$0 = 5$, no hay ninguna."
+            "**Interpretación geométrica.** Cada ecuación de un sistema $2\\times 2$ "
+            "es una recta, y la cantidad de soluciones es la cantidad de puntos en "
+            "común: una solución si se cortan, infinitas si son la MISMA recta, "
+            "ninguna si son paralelas distintas. No hay un cuarto caso; dos rectas "
+            "del plano no pueden cortarse en exactamente dos puntos.\\n\\n"
+            "**El criterio de los coeficientes.** Para $a_1x + b_1y = c_1$ y $a_2x + "
+            "b_2y = c_2$:\\n\\n"
+            "| Razones | Soluciones | Nombre |\\n"
+            "|---|---|---|\\n"
+            "| $\\dfrac{a_1}{a_2} \\neq \\dfrac{b_1}{b_2}$ | una | compatible "
+            "determinado |\\n"
+            "| $\\dfrac{a_1}{a_2} = \\dfrac{b_1}{b_2} = \\dfrac{c_1}{c_2}$ | infinitas | "
+            "compatible indeterminado |\\n"
+            "| $\\dfrac{a_1}{a_2} = \\dfrac{b_1}{b_2} \\neq \\dfrac{c_1}{c_2}$ | ninguna "
+            "| incompatible |\\n\\n"
+            "La razón de los términos independientes es la que separa «infinitas» de "
+            "«ninguna»: con los mismos coeficientes de $x$ e $y$, el $c$ decide si es "
+            "la misma recta o una paralela.\\n\\n"
+            "**En forma de función.** Si las dos ecuaciones se escriben como $y = mx "
+            "+ n$, el criterio se lee directo: pendientes distintas, una solución; "
+            "misma pendiente y mismo $n$, infinitas; misma pendiente y distinto $n$, "
+            "ninguna.\\n\\n"
+            "**Qué significa cada caso.** Solución única: las dos ecuaciones aportan "
+            "información distinta. Infinitas: una es múltiplo de la otra, así que la "
+            "segunda no agrega nada y el sistema queda indeterminado. Ninguna: las "
+            "condiciones se contradicen y no existe ningún par que las cumpla.\\n\\n"
+            "**Cómo se ve al resolver.** Si al eliminar una incógnita queda $0 = 0$, "
+            "hay infinitas soluciones. Si queda algo imposible como $0 = 5$, no hay "
+            "ninguna. Que desaparezcan las dos incógnitas no es un error de cálculo: "
+            "es el resultado.\\n\\n"
+            "**Con un parámetro.** Cuando un coeficiente es una letra, la pregunta es "
+            "para qué valor de esa letra ocurre cada caso. Se plantea la igualdad o "
+            "la desigualdad de razones que corresponda y se despeja el parámetro."
         ),
         "example_statement": (
             "Determina para qué valor de $k$ el sistema "
@@ -78479,6 +78956,56 @@ LESSONS: dict[str, dict] = {
                 "porque": "Con $k = 6$ la segunda ecuación es exactamente el doble de la primera, así que no aporta información nueva y el sistema queda indeterminado.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Para qué valor de $m$ el sistema $3x - my = 4$ ; $6x - 10y = 9$ NO "
+                    "tiene solución?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "«Sin solución» significa rectas paralelas distintas: las razones de $a$ "
+                            "y $b$ tienen que ser iguales, y la de $c$ distinta."
+                        ),
+                        "porque": (
+                            "Es la tercera fila de la tabla. Si la razón de los términos "
+                            "independientes también coincidiera, el sistema tendría infinitas "
+                            "soluciones en vez de ninguna."
+                        ),
+                    },
+                    {
+                        "accion": "Calculo la razón conocida: $\\dfrac{3}{6} = \\dfrac{1}{2}$.",
+                        "porque": (
+                            "Los coeficientes de $x$ son los dos datos numéricos que no dependen del "
+                            "parámetro, así que fijan la razón que las otras deben respetar."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Impongo la misma razón en los coeficientes de $y$: $\\dfrac{-m}{-10} = "
+                            "\\dfrac{1}{2}$, o sea $2m = 10$ y $m = 5$."
+                        ),
+                        "porque": (
+                            "Los signos menos están en ambos coeficientes y se cancelan al formar la "
+                            "razón. Con $m = 5$ el lado izquierdo de la segunda ecuación es "
+                            "exactamente el doble del de la primera."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Compruebo que la razón de los independientes sea distinta: $\\dfrac{4}{9} "
+                            "\\neq \\dfrac{1}{2}$, así que con $m = 5$ el sistema es incompatible."
+                        ),
+                        "porque": (
+                            "Este paso es el que confirma el caso. Con $m = 5$ la segunda ecuación "
+                            "diría $6x - 10y = 8$ si fuera múltiplo de la primera, y dice $9$: son "
+                            "dos rectas paralelas que nunca se cruzan."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Revisar solo los coeficientes de $x$ e $y$ y olvidar el término "
             "independiente. Esa comparación distingue infinitas soluciones de "
@@ -78491,18 +79018,42 @@ LESSONS: dict[str, dict] = {
             "una curva que se repite. Sirven para modelar todo lo que oscila."
         ),
         "theory": (
-            "**Son periódicas.** $\\sin x$ y $\\cos x$ se repiten cada $2\\pi$. "
-            "Ambas toman valores entre $-1$ y $1$, nunca fuera de ese rango.\n\n"
-            "**La forma general.** En $y = a\\sin(bx) + d$: $|a|$ es la "
-            "AMPLITUD (qué tanto sube y baja desde el eje), $b$ afecta el "
-            "PERÍODO según $T = \\frac{2\\pi}{|b|}$, y $d$ desplaza la curva "
-            "verticalmente.\n\n"
-            "**La diferencia entre ambas.** $\\sin 0 = 0$ y $\\cos 0 = 1$: son "
-            "la misma curva desfasada en $\\frac{\\pi}{2}$.\n\n"
-            "**Cómo leer un gráfico.** La amplitud es la mitad de la distancia "
-            "entre el máximo y el mínimo. El período es lo que la curva demora "
-            "en volver a empezar. Con esos dos datos se reconstruye la función."
-            "\n\n[figura:/preguntas/mat-grafico-seno.svg]"
+            "**Del triángulo a la circunferencia.** En un triángulo rectángulo $\\sin "
+            "\\alpha$ es el cateto opuesto sobre la hipotenusa y $\\cos \\alpha$ el "
+            "adyacente sobre la hipotenusa. En la circunferencia de radio $1$, el "
+            "punto que corresponde al ángulo $\\alpha$ tiene coordenadas $(\\cos "
+            "\\alpha, \\sin \\alpha)$: de ahí sale que ambas funciones vivan entre $-1$ "
+            "y $1$, y que valga siempre la identidad $\\sin^2\\alpha + \\cos^2\\alpha = "
+            "1$.\\n\\n"
+            "**Grados y radianes.** Media vuelta son $180^\\circ = \\pi$ rad, así que "
+            "para pasar de grados a radianes se multiplica por $\\dfrac{\\pi}{180}$ y "
+            "al revés por $\\dfrac{180}{\\pi}$.\\n\\n"
+            "| Ángulo | $0$ | $\\dfrac{\\pi}{6}$ | $\\dfrac{\\pi}{4}$ | $\\dfrac{\\pi}{3}$ "
+            "| $\\dfrac{\\pi}{2}$ |\\n"
+            "|---|---|---|---|---|---|\\n"
+            "| $\\sin$ | $0$ | $\\dfrac{1}{2}$ | $\\dfrac{\\sqrt{2}}{2}$ | "
+            "$\\dfrac{\\sqrt{3}}{2}$ | $1$ |\\n"
+            "| $\\cos$ | $1$ | $\\dfrac{\\sqrt{3}}{2}$ | $\\dfrac{\\sqrt{2}}{2}$ | "
+            "$\\dfrac{1}{2}$ | $0$ |\\n\\n"
+            "**Son periódicas.** $\\sin x$ y $\\cos x$ se repiten cada $2\\pi$, y esa "
+            "repetición es lo que las hace servir para modelar cualquier cosa que "
+            "oscile: mareas, temperatura a lo largo del año, corriente alterna.\\n\\n"
+            "**La forma general.** En $y = a\\sin(bx) + d$:\\n\\n"
+            "- $|a|$ es la **amplitud**, cuánto sube y baja desde el centro;\\n"
+            "- $b$ fija el **período** según $T = \\dfrac{2\\pi}{|b|}$;\\n"
+            "- $d$ desplaza la curva **verticalmente**, y el recorrido pasa a ser $[d "
+            "- |a|,\\ d + |a|]$.\\n\\n"
+            "**La diferencia entre ambas.** $\\sin 0 = 0$ y $\\cos 0 = 1$: son la misma "
+            "curva desfasada en $\\dfrac{\\pi}{2}$, es decir $\\cos x = \\sin\\left(x + "
+            "\\dfrac{\\pi}{2}\\right)$.\\n\\n"
+            "**La tangente** es $\\tan x = \\dfrac{\\sin x}{\\cos x}$. No está acotada, "
+            "su período es $\\pi$ —la mitad— y no existe donde $\\cos x = 0$, o sea en "
+            "$\\dfrac{\\pi}{2}$ y cada $\\pi$ después.\\n\\n"
+            "**Cómo leer un gráfico.** La amplitud es la mitad de la distancia entre "
+            "el máximo y el mínimo; el centro $d$ es el promedio de ambos; y el "
+            "período es lo que la curva demora en volver a empezar. Con esos tres "
+            "datos se reconstruye la función completa.\\n\\n"
+            "[figura:/preguntas/mat-grafico-seno.svg]"
         ),
         "example_statement": (
             "Determina la amplitud y el período de la función "
@@ -78522,6 +79073,59 @@ LESSONS: dict[str, dict] = {
                 "porque": "Un $b$ mayor que 1 COMPRIME la curva: se repite más seguido. Es contraintuitivo, porque el número es más grande y el período más chico.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una función tiene la forma $y = a\\sin(bx) + d$. Su máximo es $7$, su "
+                    "mínimo es $1$ y se repite cada $4\\pi$. Determina $a$, $b$ y $d$."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "La amplitud es la mitad de la distancia entre máximo y mínimo: $a = "
+                            "\\dfrac{7 - 1}{2} = 3$."
+                        ),
+                        "porque": (
+                            "El seno recorre dos unidades completas, de $-1$ a $1$, y la amplitud es "
+                            "cuánto vale cada una de esas unidades en la función. Por eso se divide "
+                            "entre dos y no se resta a secas."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El desplazamiento vertical es el promedio de máximo y mínimo: $d = "
+                            "\\dfrac{7 + 1}{2} = 4$."
+                        ),
+                        "porque": (
+                            "La curva oscila alrededor de $d$: sube $|a|$ por encima y baja $|a|$ por "
+                            "debajo. Con $d = 4$ y $a = 3$ se llega justo a $7$ y a $1$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Del período despejo $b$: si $T = \\dfrac{2\\pi}{|b|} = 4\\pi$, entonces "
+                            "$|b| = \\dfrac{2\\pi}{4\\pi} = \\dfrac{1}{2}$."
+                        ),
+                        "porque": (
+                            "Un período MÁS largo que $2\\pi$ exige un $b$ menor que $1$: el parámetro "
+                            "no es el período, es lo que lo comprime o lo estira."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "La función es $y = 3\\sin\\left(\\dfrac{x}{2}\\right) + 4$, y compruebo en "
+                            "$x = \\pi$: $3\\sin\\left(\\dfrac{\\pi}{2}\\right) + 4 = 3 \\cdot 1 + 4 = 7$, "
+                            "el máximo."
+                        ),
+                        "porque": (
+                            "Evaluar donde el seno vale $1$ tiene que devolver exactamente el máximo "
+                            "declarado. Si no calzara, el error estaría en la amplitud o en el "
+                            "desplazamiento."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Creer que $b$ es el período. $b$ es la frecuencia angular: el "
             "período se obtiene dividiendo $2\\pi$ por él. Con $b = 2$ el "
@@ -78535,19 +79139,36 @@ LESSONS: dict[str, dict] = {
             "coeficiente."
         ),
         "theory": (
-            "**Exponente par.** La curva es simétrica respecto del eje $y$ "
-            "(función par): $f(-x) = f(x)$. Ambos extremos apuntan en la misma "
-            "dirección, como en la parábola $y = x^2$.\n\n"
-            "**Exponente impar.** La curva es simétrica respecto del origen "
-            "(función impar): $f(-x) = -f(x)$. Los extremos apuntan en "
-            "direcciones opuestas, como en $y = x^3$.\n\n"
-            "**El signo de $a$ refleja.** Si $a < 0$ la curva se da vuelta "
-            "verticalmente. Si $|a| > 1$ se estira; si $0 < |a| < 1$ se "
-            "aplasta.\n\n"
-            "**Todas pasan por el origen** cuando no hay término constante, y a "
-            "mayor exponente el crecimiento es más brusco para $|x| > 1$ y más "
-            "aplanado para $|x| < 1$."
-            "\n\n[figura:/preguntas/mat-grafico-exponencial.svg]"
+            "**Una función potencia** es $f(x) = a\\,x^n$ con $a \\neq 0$ y $n$ entero. "
+            "Todo su comportamiento depende de dos cosas: si el exponente es par o "
+            "impar, y qué signo tiene el coeficiente.\\n\\n"
+            "**Exponente par.** La curva es simétrica respecto del eje $Y$ (función "
+            "**par**): $f(-x) = f(x)$. Ambos extremos apuntan en la misma dirección, "
+            "como en $y = x^2$. Su recorrido no cubre los dos signos: con $a > 0$ "
+            "nunca toma valores negativos.\\n\\n"
+            "**Exponente impar.** La curva es simétrica respecto del origen (función "
+            "**impar**): $f(-x) = -f(x)$. Los extremos apuntan en direcciones "
+            "opuestas, como en $y = x^3$, y el recorrido son todos los reales.\\n\\n"
+            "| | $n$ par | $n$ impar |\\n"
+            "|---|---|---|\\n"
+            "| Simetría | eje $Y$ | origen |\\n"
+            "| $f(-x)$ | $f(x)$ | $-f(x)$ |\\n"
+            "| Extremos | misma dirección | direcciones opuestas |\\n"
+            "| Recorrido (con $a>0$) | $[0, +\\infty)$ | todos los reales |\\n\\n"
+            "**El coeficiente.** Si $a < 0$ la curva se refleja verticalmente. Si "
+            "$|a| > 1$ se estira y si $0 < |a| < 1$ se aplasta, pero ninguna de las "
+            "dos cosas cambia la simetría: esa la decide el exponente.\\n\\n"
+            "**Todas pasan por el origen** cuando no hay término constante, y todas "
+            "pasan por $(1, a)$. A mayor exponente, el crecimiento es más brusco para "
+            "$|x| > 1$ y más aplanado para $|x| < 1$: entre $0$ y $1$, $x^3$ va por "
+            "DEBAJO de $x^2$, y después de $1$ lo supera.\\n\\n"
+            "**Exponente negativo.** $f(x) = a\\,x^{-n} = \\dfrac{a}{x^n}$ ya no es una "
+            "parábola ni una cúbica: es una hipérbola, no está definida en $x = 0$ y "
+            "se acerca a los ejes sin tocarlos. Su dominio excluye el cero.\\n\\n"
+            "**Par, impar o ninguna de las dos.** La mayoría de las funciones no es "
+            "ni par ni impar: $f(x) = x^2 + x$ no cumple ninguna de las dos "
+            "igualdades. La prueba siempre es la misma: calcular $f(-x)$ y comparar.\\n\\n"
+            "[figura:/preguntas/mat-grafico-exponencial.svg]"
         ),
         "example_statement": (
             "Sin graficar, determina si $f(x) = -2x^4$ es par o impar, y hacia "
@@ -78565,6 +79186,47 @@ LESSONS: dict[str, dict] = {
             {
                 "accion": "El coeficiente es negativo ($a = -2$), así que la curva está reflejada: ambos extremos apuntan hacia ABAJO.",
                 "porque": "Sin el signo menos los dos extremos subirían, como en $y = x^4$. El $-2$ invierte la curva y además la estira verticalmente.",
+            },
+        ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Dada $f(x) = 4x^3$, decide si es par o impar y compara $f(0{,}5)$ con "
+                    "$g(0{,}5)$, donde $g(x) = 4x^2$."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Evalúo en $-x$: $f(-x) = 4(-x)^3 = -4x^3 = -f(x)$, así que $f$ es impar "
+                            "y su gráfico es simétrico respecto del origen."
+                        ),
+                        "porque": (
+                            "Un exponente IMPAR conserva el signo de la base: $(-x)^3 = -x^3$. Por "
+                            "eso la función devuelve el valor opuesto y no el mismo, que es lo que "
+                            "distingue impar de par."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo $f(0{,}5) = 4 \\cdot 0{,}125 = 0{,}5$ y $g(0{,}5) = 4 \\cdot "
+                            "0{,}25 = 1$."
+                        ),
+                        "porque": (
+                            "$0{,}5^3 = 0{,}125$ y $0{,}5^2 = 0{,}25$: elevar un número entre $0$ y "
+                            "$1$ lo hace más chico, y mientras mayor el exponente, más chico queda."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que $f(0{,}5) < g(0{,}5)$: entre $0$ y $1$ la cúbica va por "
+                            "debajo de la cuadrática."
+                        ),
+                        "porque": (
+                            "Es lo contrario de lo que pasa después de $1$, donde $x^3$ supera a "
+                            "$x^2$. El cruce ocurre exactamente en $x = 1$, donde ambas valen $4$."
+                        ),
+                    },
+                ],
             },
         ],
         "common_error": (
