@@ -27,24 +27,16 @@ _TABLA_M1: list[int] = [
     1000,  # 60
 ]
 
-# Tabla oficial DEMRE, PAES de Invierno M2 (Proceso 2025). 55 preguntas
-# oficiales (temario Admisión 2026), de las cuales 49 puntuaron en esta
-# aplicación (el resto fueron de pilotaje). Fuente: demre.cl/paes/
-# factores-seleccion/tabla-transformacion-puntajes-paes-invierno-p2025-m2
-#
-# PENDIENTE: es la única tabla del archivo que no viene del Proceso 2026. El
-# DEMRE ya publicó la de la PAES de Invierno M2 del Proceso 2026 en
-# demre.cl/paes/factores-seleccion/tabla-transformacion-puntajes-paes-invierno-p2026-m2,
-# pero actualizarla exige transcribir los 49 valores oficiales desde esa
-# página: no se inventan. Mientras tanto se usa esta, que es la más reciente
-# verificada. El desfase afecta solo la estimación de puntaje, no qué
-# preguntas trae el ensayo ni si están bien respondidas.
+# Tabla oficial DEMRE, PAES de Invierno M2 (Proceso 2026). 55 preguntas
+# oficiales, de las cuales 49 puntuaron en esta aplicación (el resto fueron
+# de pilotaje). Índice = respuestas correctas. Fuente: demre.cl/paes/
+# factores-seleccion/tabla-transformacion-puntajes-paes-invierno-p2026-m2
 _TABLA_M2: list[int] = [
-    100, 181, 212, 240, 265, 287, 308, 327, 347, 365,  # 0-9
-    381, 396, 409, 424, 439, 455, 469, 481, 491, 502,  # 10-19
-    514, 528, 542, 556, 567, 577, 586, 596, 609, 623,  # 20-29
-    637, 651, 662, 672, 683, 695, 710, 725, 740, 755,  # 30-39
-    768, 783, 800, 818, 837, 856, 877, 900, 926,       # 40-48
+    100, 174, 204, 231, 256, 278, 298, 317, 336, 354,  # 0-9
+    371, 386, 400, 413, 427, 443, 458, 471, 482, 493,  # 10-19
+    503, 515, 529, 544, 557, 569, 578, 588, 599, 611,  # 20-29
+    626, 640, 654, 665, 676, 687, 701, 716, 732, 747,  # 30-39
+    762, 776, 793, 811, 830, 850, 871, 894, 919,       # 40-48
     1000,  # 49
 ]
 

@@ -56114,7 +56114,7 @@ QUESTIONS_HISTORIA = [
         [
             ("Elecciones primarias y plebiscitos nacionales", "El texto no los incluye entre los mecanismos comunales."),
             ("Recursos judiciales ante la Corte de Apelaciones", "Esa es una vía de protección de derechos, no de participación comunal."),
-            ("Consultas obligatorias antes de cada decisión municipal", "El texto no describe ninguna consulta obligatoria."),
+            ("Consultas obligatorias antes de cada decisión que tome el municipio", "El texto no describe ninguna consulta obligatoria."),
         ],
     ),
     _ql(
@@ -59508,18 +59508,17 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "eco_tabla_mercado", "eco_estado_mercado", "facil",
-        "Según la Tabla 2, ¿qué ocurre con la curva de oferta si una helada arruina "
-        "parte de la cosecha?",
-        "Se desplaza la curva de oferta a la izquierda",
-        "La Tabla 2 lo registra directamente. La helada reduce lo que hay "
-        "disponible para vender, de modo que a cada precio se ofrece menos que "
-        "antes.\nLa primera nota entrega la clave para leer el sentido del "
-        "desplazamiento: a la derecha significa más cantidad a cada precio, así que "
-        "a la izquierda es lo contrario.",
+        "Según la Tabla 2, ¿qué curva se desplaza si sube el ingreso de los "
+        "hogares?",
+        "La demanda, hacia la derecha",
+        "La Tabla 2 registra ese caso en su primera fila y aclara además que se "
+        "trata de un bien normal.\nCon más ingreso, los hogares compran más de "
+        "ese producto a cada precio, y eso es exactamente lo que significa un "
+        "desplazamiento a la derecha según la primera nota de la fuente.",
         [
-            ("Se desplaza a la derecha, porque sube el precio", "Un cambio de precio no desplaza la curva, según la segunda nota."),
-            ("Se desplaza la curva de demanda a la izquierda", "La helada afecta a los productores, no a las preferencias de los compradores."),
-            ("No se desplaza ninguna curva, solo cambia el precio", "La tabla indica que la oferta sí se desplaza."),
+            ("La demanda, hacia la izquierda", "La tabla asocia el alza del ingreso a un desplazamiento a la derecha."),
+            ("La oferta, hacia la derecha", "La oferta se desplaza cuando cambian la cosecha o el costo del transporte."),
+            ("Ninguna, porque solo cambia el precio", "La segunda nota reserva ese caso para un cambio en el precio del propio producto."),
         ],
     ),
     _ql(
@@ -65387,7 +65386,7 @@ QUESTIONS_HISTORIA = [
         [
             ("No amplió la previsión social ni la educación", "El texto afirma expresamente que amplió ambas."),
             ("Renunció a intervenir en el desarrollo industrial", "Creó una corporación de fomento para conducirlo."),
-            ("Suprimió los partidos políticos durante el período", "El texto describe elecciones competitivas y alternancia."),
+            ("Suprimió los partidos políticos y las elecciones durante todo el período", "El texto describe elecciones competitivas y alternancia."),
         ],
     ),
     _ql(
@@ -65836,7 +65835,7 @@ QUESTIONS_HISTORIA = [
         [
             ("Negar que existiera desocupación en el país", "El discurso la afirma, y la columna coincide en que era real."),
             ("Atribuir la crisis a potencias extranjeras", "Ninguna de las dos fuentes plantea una causa externa."),
-            ("Proponer medidas económicas sin financiamiento", "La objeción de la columna es política y no presupuestaria."),
+            ("Proponer medidas económicas sin indicar de dónde saldrá el financiamiento", "La objeción de la columna es política y no presupuestaria."),
         ],
     ),
     _ql(
@@ -72449,21 +72448,26 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ddhh", "civ_ddhh", "facil",
-        "Según el texto, ¿qué significa que los derechos humanos sean inalienables?",
-        "Que nadie puede renunciar a ellos ni ser despojado de ellos",
-        "El texto lo señala al cerrar el primer párrafo: son inalienables porque "
-        "nadie puede renunciar a ellos ni ser despojado de ellos.\nLa palabra "
-        "apunta a que un derecho humano no se transfiere ni se entrega, ni siquiera "
-        "con el acuerdo de quien lo tiene. Por eso el texto dice antes que el "
-        "Estado no los concede: no está en posición de darlos ni de quitarlos.\nQue "
-        "además no queden a disposición de lo que decida una mayoría es otra "
-        "propiedad, y el texto la afirma en la misma frase. Pero esa es su relación "
-        "con la democracia, no lo que significa la palabra inalienable.",
+        "civ_ddhh", "civ_ddhh", "dificil",
+        "Según el texto, ¿a qué se refieren los derechos de tercera "
+        "generación?",
+        "A derechos colectivos, en asuntos como el medio ambiente y la paz",
+        "El texto los presenta al cerrar la distinción por generaciones, "
+        "después de los civiles y políticos y de los económicos, sociales y "
+        "culturales.\n"
+        "Los describe como derechos colectivos y da dos ejemplos: el medio "
+        "ambiente y la paz. Su titular no es una persona aislada sino una "
+        "comunidad.\n"
+        "Esa diferencia de titularidad es la que los distingue de las dos "
+        "generaciones anteriores, que el texto describe por el tipo de "
+        "exigencia que dirigen al Estado.",
         [
-            ("Que ninguna ley puede limitar su ejercicio", "Ningún derecho es absoluto: la ley puede limitarlos de forma proporcional. Inalienable no significa ilimitado."),
-            ("Que se pierden si la persona comete un delito grave", "Es lo contrario de lo que dice el texto: no se ganan por mérito ni se pierden por conducta."),
-            ("Que solo los reconoce el país donde se nació", "Eso contradice la universalidad, que el texto afirma en la primera línea."),
+            ("A los derechos civiles y políticos, como la vida y la expresión",
+             "Esos son los derechos de primera generación según el texto."),
+            ("A los derechos económicos y sociales, como la educación y la salud",
+             "Esos son los de segunda generación."),
+            ("A los deberes ciudadanos que acompañan a los derechos reconocidos",
+             "El texto trata los deberes aparte, como contracara de los derechos."),
         ],
     ),
     _ql(
@@ -134255,5 +134259,8217 @@ QUESTIONS += [
              "Ese lado mide poco más de 7 unidades, pero es una longitud y no un área."),
         ],
         imagen="/preguntas/mat-recta-triangulo-ejes.svg",
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M1 - Medidas de posicion
+#
+# Era el unico nodo de M1 que seguia en 16 preguntas mientras el resto del eje
+# iba en 60. Cuartiles, mediana, percentiles, rango intercuartilico y lectura
+# del diagrama de cajon.
+#
+# Convencion del banco, la misma que ya usaban las preguntas que estaban: con
+# n par, cada mitad se toma completa y el cuartil es el promedio de sus dos
+# centrales; con n impar, la mediana queda FUERA de las dos mitades.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "prob_posicion", "facil",
+        "¿Qué indica la mediana de un conjunto de datos ordenados?",
+        "El valor que deja la mitad de los datos a cada lado",
+        "La mediana es una medida de posición, no de dispersión.\n\n"
+        "1) Se ordenan los datos de menor a mayor.\n"
+        "2) Se busca el valor que parte ese ordenamiento en dos mitades del "
+        "mismo tamaño.\n"
+        "3) Ese valor es la mediana.\n\n"
+        "A diferencia del promedio, un solo dato muy grande casi no la mueve: "
+        "por eso se prefiere al informar sueldos o precios de vivienda.",
+        [
+            ("El valor que más se repite",
+             "Esa es la moda."),
+            ("El promedio de todos los datos",
+             "Ese es la media, que sí se mueve cuando aparece un dato extremo."),
+            ("La diferencia entre el dato mayor y el menor",
+             "Ese es el rango, que mide dispersión y no posición."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "¿En cuántas partes iguales dividen los cuartiles a un conjunto de "
+        "datos ordenados?",
+        "En cuatro",
+        "El nombre lo dice: cuartiles reparten en cuartos.\n\n"
+        "1) Los cuartiles son tres: Q1, Q2 y Q3.\n"
+        "2) Esos tres cortes dejan cuatro grupos.\n"
+        "3) Cada grupo reúne el 25% de los datos.\n\n"
+        "Con la misma lógica, los deciles son nueve y reparten en diez partes; "
+        "los percentiles son noventa y nueve y reparten en cien.",
+        [
+            ("En tres",
+             "Tres es la cantidad de cuartiles, no la de grupos que dejan."),
+            ("En dos",
+             "En dos parte la mediana, que es solo uno de los tres cuartiles."),
+            ("En diez",
+             "En diez reparten los deciles, no los cuartiles."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "¿Qué porcentaje de los datos queda bajo el primer cuartil?",
+        "El 25%",
+        "El primer cuartil es el primero de los tres cortes.\n\n"
+        "1) Los cuartiles reparten los datos en cuatro grupos iguales.\n"
+        "2) Bajo Q1 queda solo el primero de esos grupos.\n"
+        "3) Eso corresponde al 25% de los datos.\n\n"
+        "Sobre Q3 queda el otro extremo, también un 25%, y entre ambos vive el "
+        "50% central.",
+        [
+            ("El 50%",
+             "Ese es el porcentaje que queda bajo la mediana, no bajo Q1."),
+            ("El 75%",
+             "Ese es el porcentaje que queda bajo Q3."),
+            ("El 100%",
+             "Bajo el dato mayor quedan todos, pero Q1 está mucho antes."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "¿Cuál es la mediana de los datos 3, 5, 7, 9 y 11?",
+        "7",
+        "Con una cantidad impar de datos, la mediana es el dato central.\n\n"
+        "1) Los datos ya están ordenados y son cinco.\n"
+        "2) El dato central es el tercero.\n"
+        "3) Ese dato es 7.\n\n"
+        "Quedan dos datos a cada lado, que es exactamente lo que la mediana "
+        "garantiza.",
+        [
+            ("5",
+             "Es el segundo dato: deja uno a la izquierda y tres a la derecha."),
+            ("9",
+             "Es el cuarto dato: deja tres a la izquierda y uno a la derecha."),
+            ("35",
+             "Es la suma de los cinco datos, que sirve para la media y no para la mediana."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "¿Cuál es la mediana de los datos 4, 8, 10 y 14?",
+        "9",
+        "Con una cantidad par de datos, la mediana promedia los dos "
+        "centrales.\n\n"
+        "1) Los datos ya están ordenados y son cuatro.\n"
+        "2) Los dos centrales son 8 y 10.\n"
+        "3) La mediana es (8 + 10) / 2 = 9.\n\n"
+        "La mediana no tiene por qué coincidir con ninguno de los datos: aquí "
+        "el 9 no aparece en el conjunto.",
+        [
+            ("8",
+             "Es solo el primero de los dos datos centrales."),
+            ("10",
+             "Es solo el segundo de los dos datos centrales."),
+            ("36",
+             "Es la suma de los cuatro datos, no su mediana."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "¿Con qué percentil coincide siempre la mediana de un conjunto de "
+        "datos?",
+        "Con el percentil 50",
+        "Ambas marcan el mismo punto del ordenamiento.\n\n"
+        "1) La mediana deja la mitad de los datos por debajo.\n"
+        "2) El percentil 50 se define exactamente así.\n"
+        "3) Por lo tanto son la misma medida con dos nombres.\n\n"
+        "También coincide con el segundo cuartil y con el quinto decil: los "
+        "tres nombran el centro del ordenamiento.",
+        [
+            ("Con el percentil 25",
+             "Ese percentil coincide con el primer cuartil, no con la mediana."),
+            ("Con el percentil 75",
+             "Ese percentil coincide con el tercer cuartil."),
+            ("Con el percentil 100",
+             "Ese punto correspondería al dato mayor del conjunto."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "En un diagrama de cajón, ¿qué representa la línea que está dentro de "
+        "la caja?",
+        "La mediana",
+        "Cada trazo del diagrama corresponde a una medida de posición.\n\n"
+        "1) Los extremos de la caja son el primer y el tercer cuartil.\n"
+        "2) La línea interior parte la caja en el segundo cuartil.\n"
+        "3) Ese segundo cuartil es la mediana.\n\n"
+        "Que la línea no quede al centro de la caja no es un error: indica que "
+        "los datos se reparten de manera asimétrica.",
+        [
+            ("La media",
+             "El diagrama de cajón no muestra el promedio: muestra cuartiles."),
+            ("El dato mayor",
+             "El dato mayor está en el extremo del bigote derecho, no dentro de la caja."),
+            ("El rango intercuartílico",
+             "El rango intercuartílico es el ancho de la caja, no una línea."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "¿Qué porcentaje de los datos queda BAJO el tercer cuartil?",
+        "El 75%",
+        "Q3 es el tercero de los cortes que reparten en cuartos.\n\n"
+        "1) Los cuartiles dejan cuatro grupos del 25% cada uno.\n"
+        "2) Bajo el tercer cuartil quedan los tres primeros grupos.\n"
+        "3) Eso suma 25 + 25 + 25 = 75% de los datos.\n\n"
+        "El 25% restante queda por encima: es el cuarto más alto del conjunto.",
+        [
+            ("El 25%",
+             "Ese es el porcentaje que queda SOBRE el tercer cuartil."),
+            ("El 50%",
+             "Ese es el porcentaje que queda bajo la mediana."),
+            ("El 33%",
+             "Los cuartiles reparten en cuatro grupos de 25%, no en tres."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿Cuál es el primer cuartil de los datos 1, 3, 5, 7, 9 y 11?",
+        "3",
+        "Se parte el conjunto por la mitad y se busca el centro de la mitad "
+        "baja.\n\n"
+        "1) Los seis datos se reparten en dos mitades: 1, 3, 5 y 7, 9, 11.\n"
+        "2) El primer cuartil es la mediana de la mitad baja.\n"
+        "3) Esa mitad es 1, 3, 5, y su centro es 3.\n\n"
+        "El tercer cuartil sale igual del otro lado: la mediana de 7, 9, 11, "
+        "que es 9.",
+        [
+            ("1",
+             "Es el dato menor del conjunto, no el primer cuartil."),
+            ("5",
+             "Es el tercer dato: queda dentro de la mitad baja pero no es su centro."),
+            ("6",
+             "Es la mediana del conjunto completo, es decir, el segundo cuartil."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "¿Qué es el rango intercuartílico de un conjunto de datos?",
+        "La diferencia entre el tercer cuartil y el primero",
+        "Mide cuán ancho es el 50% central del conjunto.\n\n"
+        "1) Entre Q1 y Q3 vive la mitad central de los datos.\n"
+        "2) Su diferencia indica cuánto espacio ocupa esa mitad.\n"
+        "3) En el diagrama de cajón corresponde al ancho de la caja.\n\n"
+        "Deja fuera el 25% más bajo y el 25% más alto, así que un dato extremo "
+        "no lo altera: es la medida de dispersión más resistente.",
+        [
+            ("La diferencia entre el dato mayor y el menor",
+             "Ese es el rango, que sí se ve alterado por un dato extremo."),
+            ("El promedio entre el primer y el tercer cuartil",
+             "El promedio de ambos indicaría el centro de la caja, no su ancho."),
+            ("La cantidad de datos que hay entre los dos cuartiles",
+             "Es una diferencia entre valores, no un conteo de datos."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "¿Entre qué dos cuartiles vive el 50% central de un conjunto de datos?",
+        "Entre el primero y el tercero",
+        "Los cuartiles del medio delimitan la mitad central.\n\n"
+        "1) Bajo el primer cuartil queda el 25% más bajo.\n"
+        "2) Sobre el tercero queda el 25% más alto.\n"
+        "3) Entre ambos queda el 50% restante, que es la mitad central.\n\n"
+        "En el diagrama de cajón ese tramo es justamente la caja, y su ancho "
+        "es el rango intercuartílico.",
+        [
+            ("Entre el primero y el segundo",
+             "Ese tramo va de Q1 a la mediana y cubre el 25%, no el 50%."),
+            ("Entre el segundo y el tercero",
+             "Ese tramo va de la mediana a Q3 y también cubre solo el 25%."),
+            ("Entre el dato menor y el primero",
+             "Ese tramo es el bigote izquierdo del diagrama y cubre el 25% más bajo."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿Cuál es el tercer cuartil de los datos 1, 3, 5, 7, 9 y 11?",
+        "9",
+        "El tercer cuartil es la mediana de la mitad alta.\n\n"
+        "1) Los seis datos se reparten en dos mitades: 1, 3, 5 y 7, 9, 11.\n"
+        "2) La mitad alta es 7, 9, 11.\n"
+        "3) Su dato central es 9.\n\n"
+        "Con el primer cuartil en 3, el rango intercuartílico de este conjunto "
+        "es 9 − 3 = 6.",
+        [
+            ("11",
+             "Es el dato mayor del conjunto, no el tercer cuartil."),
+            ("7",
+             "Es el primer dato de la mitad alta, pero no su centro."),
+            ("6",
+             "Es la mediana del conjunto completo."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿Cuál es la mediana de los datos 2, 3, 5, 8, 9, 10, 12 y 15?",
+        "8,5",
+        "Con ocho datos, la mediana promedia el cuarto y el quinto.\n\n"
+        "1) Los datos ya están ordenados.\n"
+        "2) Los dos centrales son 8 y 9.\n"
+        "3) La mediana es (8 + 9) / 2 = 8,5.\n\n"
+        "Cuatro datos quedan por debajo y cuatro por encima, como corresponde.",
+        [
+            ("8",
+             "Es solo el cuarto dato: deja tres por debajo y cuatro por encima."),
+            ("9",
+             "Es solo el quinto dato: deja cuatro por debajo y tres por encima."),
+            ("7,75",
+             "Es el promedio de los ocho datos, que es la media y no la mediana."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿Cuál es el primer cuartil de los datos 2, 3, 5, 8, 9, 10, 12 y 15?",
+        "4",
+        "El primer cuartil es la mediana de la mitad baja.\n\n"
+        "1) Con ocho datos, la mitad baja son los primeros cuatro: 2, 3, 5 y "
+        "8.\n"
+        "2) Su mediana promedia los dos centrales, 3 y 5.\n"
+        "3) El resultado es (3 + 5) / 2 = 4.\n\n"
+        "El tercer cuartil sale del otro lado: la mediana de 9, 10, 12 y 15, "
+        "que es 11.",
+        [
+            ("3",
+             "Es el segundo dato: queda en la mitad baja pero no es su centro."),
+            ("5",
+             "Es el tercer dato: también está en la mitad baja sin ser su centro."),
+            ("2",
+             "Es el dato menor del conjunto."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "En un conjunto de 400 datos, ¿cuántos quedan bajo el percentil 60?",
+        "240",
+        "El percentil indica qué porcentaje deja por debajo.\n\n"
+        "1) El percentil 60 deja bajo sí el 60% de los datos.\n"
+        "2) El 60% de 400 es 0,60 · 400.\n"
+        "3) Eso da 240 datos.\n\n"
+        "Sobre ese percentil quedan los 160 restantes, es decir, el 40%.",
+        [
+            ("60",
+             "Es el número del percentil, no la cantidad de datos."),
+            ("160",
+             "Es la cantidad de datos que quedan POR SOBRE el percentil 60."),
+            ("40",
+             "Es el porcentaje que queda por encima, no una cantidad de datos."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "En un diagrama de cajón, la caja va de 30 a 50. ¿Cuál es el rango "
+        "intercuartílico?",
+        "20",
+        "El ancho de la caja es el rango intercuartílico.\n\n"
+        "1) El extremo izquierdo de la caja es el primer cuartil: 30.\n"
+        "2) El extremo derecho es el tercer cuartil: 50.\n"
+        "3) La diferencia es 50 − 30 = 20.\n\n"
+        "Dentro de ese tramo vive el 50% central de los datos, cualquiera sea "
+        "el largo de los bigotes.",
+        [
+            ("40",
+             "Es el promedio entre los dos cuartiles, es decir, el centro de la caja."),
+            ("80",
+             "Es la suma de los dos cuartiles, que no corresponde a ninguna medida."),
+            ("50",
+             "Es el tercer cuartil, sin descontar el primero."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "Una estudiante quedó en el percentil 90 de su prueba. ¿Qué significa?",
+        "Que su puntaje superó al 90% de quienes rindieron",
+        "El percentil ubica a la persona dentro del grupo.\n\n"
+        "1) El percentil 90 deja bajo sí al 90% de los datos.\n"
+        "2) El puntaje de la estudiante está en ese punto del ordenamiento.\n"
+        "3) Por lo tanto superó al 90% de quienes rindieron.\n\n"
+        "No dice cuántas preguntas respondió bien: un 90% de aciertos y el "
+        "percentil 90 son cosas distintas.",
+        [
+            ("Que respondió correctamente el 90% de la prueba",
+             "El percentil compara con las demás personas, no cuenta aciertos."),
+            ("Que el 90% de quienes rindieron obtuvo un puntaje mayor",
+             "Es al revés: solo el 10% quedó por sobre ella."),
+            ("Que su puntaje fue 90 sobre 100",
+             "El percentil no es el puntaje: es la posición relativa."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "En un conjunto de datos la mediana es 12 y el primer cuartil es 8. "
+        "¿Qué porcentaje de los datos está entre 8 y 12?",
+        "El 25%",
+        "Entre Q1 y la mediana vive siempre un cuarto de los datos.\n\n"
+        "1) Bajo el primer cuartil queda el 25%.\n"
+        "2) Bajo la mediana queda el 50%.\n"
+        "3) Entre ambos valores queda la diferencia: el 25%.\n\n"
+        "Los valores concretos no importan: la respuesta sería la misma con "
+        "cualquier par de cuartil y mediana.",
+        [
+            ("El 50%",
+             "Ese es el porcentaje que queda entre el primer y el tercer cuartil."),
+            ("El 4%",
+             "Confunde la diferencia entre los valores, 12 − 8, con un porcentaje."),
+            ("El 75%",
+             "Ese es el porcentaje que queda bajo el tercer cuartil."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "En un conjunto de 60 datos, ¿cuántos son mayores que el tercer "
+        "cuartil?",
+        "15",
+        "Sobre Q3 queda el cuarto más alto del conjunto.\n\n"
+        "1) Los cuartiles reparten los 60 datos en cuatro grupos iguales.\n"
+        "2) Cada grupo tiene 60 / 4 = 15 datos.\n"
+        "3) Sobre el tercer cuartil queda uno de esos grupos: 15 datos.\n\n"
+        "Bajo Q3 quedan los otros tres grupos, es decir, 45 datos.",
+        [
+            ("45",
+             "Es la cantidad de datos que queda BAJO el tercer cuartil."),
+            ("30",
+             "Es la mitad de los datos, que corresponde a la mediana y no a Q3."),
+            ("3",
+             "Es el número del cuartil, no una cantidad de datos."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "facil",
+        "¿Cuál es la mediana de los datos 10, 20, 30 y 40?",
+        "25",
+        "Con cuatro datos, la mediana promedia los dos centrales.\n\n"
+        "1) Los datos ya están ordenados.\n"
+        "2) Los dos centrales son 20 y 30.\n"
+        "3) La mediana es (20 + 30) / 2 = 25.\n\n"
+        "En este conjunto la mediana coincide con la media, porque los datos "
+        "están repartidos de manera simétrica.",
+        [
+            ("20",
+             "Es solo el primero de los dos datos centrales."),
+            ("30",
+             "Es solo el segundo de los dos datos centrales."),
+            ("100",
+             "Es la suma de los cuatro datos, no su mediana."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿Cuál es el tercer cuartil de los datos 10, 20, 30 y 40?",
+        "35",
+        "El tercer cuartil es la mediana de la mitad alta.\n\n"
+        "1) Con cuatro datos, la mitad alta son 30 y 40.\n"
+        "2) Su mediana promedia esos dos valores.\n"
+        "3) El resultado es (30 + 40) / 2 = 35.\n\n"
+        "El primer cuartil sale igual del otro lado: (10 + 20) / 2 = 15, así "
+        "que el rango intercuartílico es 20.",
+        [
+            ("40",
+             "Es el dato mayor del conjunto, no el tercer cuartil."),
+            ("30",
+             "Es el tercer dato, pero el cuartil promedia los dos de la mitad alta."),
+            ("25",
+             "Es la mediana del conjunto completo."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿En cuántas partes iguales dividen los deciles a un conjunto de datos "
+        "ordenados?",
+        "En diez",
+        "El nombre indica el reparto, igual que con los cuartiles.\n\n"
+        "1) Los deciles son nueve cortes: D1 hasta D9.\n"
+        "2) Esos nueve cortes dejan diez grupos.\n"
+        "3) Cada grupo reúne el 10% de los datos.\n\n"
+        "El quinto decil coincide con la mediana, con el segundo cuartil y con "
+        "el percentil 50: los cuatro nombran el mismo punto.",
+        [
+            ("En nueve",
+             "Nueve es la cantidad de deciles, no la de grupos que dejan."),
+            ("En cuatro",
+             "En cuatro reparten los cuartiles."),
+            ("En cien",
+             "En cien reparten los percentiles."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# M1 - Medidas de posicion (segunda tanda)
+#
+# Lectura del diagrama de cajon, deteccion de datos atipicos con el criterio
+# de 1,5 veces el rango intercuartilico, y que le pasa a las medidas de
+# posicion cuando los datos se trasladan o se reescalan.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "prob_posicion", "medio",
+        "Un diagrama de cajón muestra mínimo 12, Q1 = 20, mediana 26, Q3 = 34 "
+        "y máximo 50. ¿Entre qué valores está el 50% central de los datos?",
+        "Entre 20 y 34",
+        "El 50% central es exactamente lo que encierra la caja.\n\n"
+        "1) El extremo izquierdo de la caja es Q1 = 20.\n"
+        "2) El extremo derecho es Q3 = 34.\n"
+        "3) Entre esos dos valores vive la mitad central del conjunto.\n\n"
+        "Los bigotes, que llegan a 12 y a 50, cubren el 25% más bajo y el 25% "
+        "más alto.",
+        [
+            ("Entre 12 y 50",
+             "Ese es el recorrido completo de los datos, es decir, el 100%."),
+            ("Entre 20 y 26",
+             "Ese tramo va de Q1 a la mediana y cubre el 25%, no el 50%."),
+            ("Entre 26 y 50",
+             "Ese tramo va de la mediana al máximo y cubre el 50% superior, no el central."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿Cuál es el primer cuartil de los datos 5, 5, 6, 8, 10, 12, 14 y 20?",
+        "5,5",
+        "El primer cuartil es la mediana de la mitad baja.\n\n"
+        "1) Con ocho datos, la mitad baja son los primeros cuatro: 5, 5, 6 y "
+        "8.\n"
+        "2) Su mediana promedia los dos centrales, 5 y 6.\n"
+        "3) El resultado es (5 + 6) / 2 = 5,5.\n\n"
+        "Que un valor se repita no altera el procedimiento: los datos "
+        "repetidos se cuentan todas las veces que aparecen.",
+        [
+            ("5",
+             "Es uno de los dos datos centrales de la mitad baja, pero el cuartil los promedia."),
+            ("6",
+             "Es el otro dato central de la mitad baja."),
+            ("9",
+             "Es la mediana del conjunto completo, no el primer cuartil."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿Cuál es el rango intercuartílico de los datos 5, 5, 6, 8, 10, 12, 14 "
+        "y 20?",
+        "7,5",
+        "Se calculan los dos cuartiles y se restan.\n\n"
+        "1) La mitad baja, 5, 5, 6 y 8, tiene mediana 5,5: ese es Q1.\n"
+        "2) La mitad alta, 10, 12, 14 y 20, tiene mediana 13: ese es Q3.\n"
+        "3) El rango intercuartílico es 13 − 5,5 = 7,5.\n\n"
+        "El rango completo, en cambio, es 20 − 5 = 15: el dato 20 lo estira, "
+        "pero no afecta a la caja.",
+        [
+            ("15",
+             "Es el rango completo, que va del dato menor al mayor."),
+            ("13",
+             "Es el tercer cuartil, sin descontar el primero."),
+            ("9,25",
+             "Es el promedio de los ocho datos, que no interviene en este cálculo."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "En un conjunto de 80 datos, ¿cuántos quedan entre el primer y el "
+        "tercer cuartil?",
+        "40",
+        "Entre Q1 y Q3 vive la mitad central del conjunto.\n\n"
+        "1) Los cuartiles reparten los 80 datos en cuatro grupos de 20.\n"
+        "2) Entre Q1 y Q3 quedan dos de esos grupos.\n"
+        "3) Eso da 20 + 20 = 40 datos.\n\n"
+        "Los otros 40 se reparten en partes iguales entre los dos extremos.",
+        [
+            ("20",
+             "Es la cantidad de datos de un solo grupo, no de los dos centrales."),
+            ("60",
+             "Es la cantidad de datos que queda bajo el tercer cuartil."),
+            ("2",
+             "Es la cantidad de grupos centrales, no de datos."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿Qué relación hay entre el percentil 25 y el primer cuartil?",
+        "Son la misma medida con dos nombres distintos",
+        "Ambos marcan el punto que deja bajo sí una cuarta parte de los "
+        "datos.\n\n"
+        "1) El primer cuartil deja bajo sí el 25% del conjunto.\n"
+        "2) El percentil 25 se define exactamente igual.\n"
+        "3) Por lo tanto coinciden siempre.\n\n"
+        "Lo mismo pasa con el percentil 75 y el tercer cuartil, y con el "
+        "percentil 50, la mediana y el segundo cuartil.",
+        [
+            ("El percentil 25 es la cuarta parte del primer cuartil",
+             "No hay ninguna operación entre ellos: son el mismo valor."),
+            ("El primer cuartil siempre es mayor",
+             "Coinciden exactamente, así que ninguno supera al otro."),
+            ("El percentil 25 se calcula con la media y el cuartil con la mediana",
+             "Ninguna de las dos medidas usa el promedio."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "A un conjunto de datos se le agrega un valor mucho mayor que todos "
+        "los demás. ¿Qué le ocurre a la mediana?",
+        "Cambia poco o nada, porque solo se corre un lugar en el ordenamiento",
+        "La mediana depende de la posición, no del valor de los datos "
+        "extremos.\n\n"
+        "1) Al agregar un dato el ordenamiento crece en uno y el centro se "
+        "desplaza una posición.\n"
+        "2) El nuevo centro es un dato vecino al anterior, así que el valor "
+        "cambia poco.\n"
+        "3) Que el dato agregado sea enorme no lo altera: la mediana no lo "
+        "mira.\n\n"
+        "La media, en cambio, sí se dispara: un solo dato grande arrastra la "
+        "suma total.",
+        [
+            ("Aumenta en la misma proporción que ese dato",
+             "La mediana no depende del valor del dato agregado."),
+            ("Se vuelve igual al dato agregado",
+             "El dato agregado queda en el extremo del ordenamiento, no en el centro."),
+            ("Deja de poder calcularse",
+             "Siempre se puede calcular: basta ordenar los datos."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "En un diagrama de cajón, el bigote izquierdo es mucho más largo que "
+        "el derecho. ¿Qué indica?",
+        "Que el 25% más bajo está más disperso que el 25% más alto",
+        "Cada bigote cubre un cuarto de los datos, sea cual sea su largo.\n\n"
+        "1) El bigote izquierdo va del dato menor hasta Q1: ahí vive el 25% más "
+        "bajo.\n"
+        "2) El derecho va de Q3 hasta el dato mayor: ahí vive el 25% más "
+        "alto.\n"
+        "3) Un bigote más largo cubre el mismo 25% pero repartido en un tramo "
+        "más ancho.\n\n"
+        "El largo habla de dispersión, no de cantidad: los cuatro grupos "
+        "siempre tienen el mismo número de datos.",
+        [
+            ("Que hay más datos bajos que altos",
+             "Los dos bigotes cubren siempre el 25% cada uno, cualquiera sea su largo."),
+            ("Que la mediana está mal calculada",
+             "Un diagrama asimétrico es perfectamente válido."),
+            ("Que el conjunto no tiene datos atípicos",
+             "El largo de los bigotes no decide por sí solo si hay datos atípicos."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "En una tabla de frecuencia acumulada, el 50% de los casos se alcanza "
+        "en el intervalo [30, 40). ¿Qué se puede afirmar?",
+        "Que la mediana está en ese intervalo",
+        "La frecuencia acumulada del 50% marca el centro del ordenamiento.\n\n"
+        "1) La mediana es el valor que deja la mitad de los datos por debajo.\n"
+        "2) Ese punto se alcanza dentro del intervalo [30, 40).\n"
+        "3) Por lo tanto la mediana está entre 30 y 40.\n\n"
+        "Con datos agrupados no se obtiene un valor exacto: la tabla entrega el "
+        "intervalo donde cae.",
+        [
+            ("Que la media vale 35",
+             "El promedio no se lee en la frecuencia acumulada, y no tiene por qué caer ahí."),
+            ("Que el primer cuartil está en ese intervalo",
+             "El primer cuartil se alcanza al 25% de la frecuencia acumulada."),
+            ("Que la mitad de los datos vale exactamente 35",
+             "El intervalo agrupa valores distintos entre 30 y 40."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "En un conjunto de 50 datos, ¿cuántos quedan bajo el percentil 80?",
+        "40",
+        "El percentil indica el porcentaje que deja por debajo.\n\n"
+        "1) El percentil 80 deja bajo sí el 80% de los datos.\n"
+        "2) El 80% de 50 es 0,80 · 50.\n"
+        "3) Eso da 40 datos.\n\n"
+        "Los 10 restantes quedan por encima: son el 20% más alto del conjunto.",
+        [
+            ("10",
+             "Es la cantidad de datos que queda POR SOBRE el percentil 80."),
+            ("80",
+             "Es el número del percentil, y además supera al total de datos."),
+            ("25",
+             "Es la mitad del conjunto, que corresponde a la mediana."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "En un diagrama de cajón, la línea interior está justo al centro de la "
+        "caja. ¿Qué indica?",
+        "Que el 50% central de los datos se reparte de manera simétrica",
+        "La posición de la mediana dentro de la caja habla del reparto "
+        "interno.\n\n"
+        "1) La caja va de Q1 a Q3 y la línea marca la mediana.\n"
+        "2) Si la línea está al centro, el tramo de Q1 a la mediana mide lo "
+        "mismo que el de la mediana a Q3.\n"
+        "3) El 50% central está repartido simétricamente.\n\n"
+        "No dice nada sobre los bigotes: el conjunto completo puede ser "
+        "asimétrico aunque la caja no lo sea.",
+        [
+            ("Que todos los datos son iguales",
+             "Si lo fueran, la caja tendría ancho cero."),
+            ("Que la mediana coincide con el promedio del conjunto",
+             "Puede ocurrir, pero el diagrama de cajón no muestra el promedio."),
+            ("Que no hay datos atípicos en el conjunto",
+             "La simetría de la caja no dice nada sobre los extremos."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "Dos cursos rinden la misma prueba. En el primero la caja del diagrama "
+        "va de 40 a 70 y en el segundo, de 50 a 60. ¿Qué se puede afirmar?",
+        "El primer curso tiene más dispersos sus puntajes centrales",
+        "El ancho de la caja mide la dispersión del 50% central.\n\n"
+        "1) El primer curso tiene rango intercuartílico 70 − 40 = 30.\n"
+        "2) El segundo tiene 60 − 50 = 10.\n"
+        "3) El primero triplica al segundo: su mitad central está mucho más "
+        "repartida.\n\n"
+        "El dato no dice cuál curso obtuvo mejores puntajes: para eso habría "
+        "que comparar las medianas.",
+        [
+            ("El segundo curso obtuvo mejores puntajes",
+             "El ancho de la caja no compara niveles: para eso está la mediana."),
+            ("Los dos cursos tienen la misma mediana",
+             "El diagrama descrito no entrega las medianas."),
+            ("El primer curso tiene más estudiantes",
+             "El ancho de la caja no depende del tamaño del curso."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "¿Qué mide el criterio de 1,5 veces el rango intercuartílico?",
+        "Sirve para decidir si un dato es atípico",
+        "Es la regla estándar para marcar valores fuera de lo esperable.\n\n"
+        "1) Se calcula el rango intercuartílico y se multiplica por 1,5.\n"
+        "2) Ese margen se descuenta de Q1 y se suma a Q3.\n"
+        "3) Los datos que caen fuera de esos límites se consideran atípicos.\n\n"
+        "El criterio se apoya en los cuartiles justamente porque estos no se "
+        "ven alterados por los datos extremos que se quiere detectar.",
+        [
+            ("Sirve para calcular la mediana de datos agrupados",
+             "La mediana se obtiene del ordenamiento, sin ese margen."),
+            ("Sirve para convertir cuartiles en percentiles",
+             "Cuartiles y percentiles se corresponden directamente, sin cálculo intermedio."),
+            ("Sirve para estimar la media cuando hay datos faltantes",
+             "El criterio no reemplaza datos: solo señala cuáles quedan fuera de rango."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "En un conjunto de datos, Q1 = 10 y Q3 = 22. ¿Es 45 un dato atípico "
+        "según el criterio de 1,5 veces el rango intercuartílico?",
+        "Sí, porque supera el límite de 40",
+        "Se calcula el límite superior y se compara.\n\n"
+        "1) El rango intercuartílico es 22 − 10 = 12.\n"
+        "2) El margen es 1,5 · 12 = 18.\n"
+        "3) El límite superior es 22 + 18 = 40, y 45 lo supera: es atípico.\n\n"
+        "El límite inferior sería 10 − 18 = −8, así que por abajo este conjunto "
+        "difícilmente tendría atípicos.",
+        [
+            ("No, porque está dentro del rango de los datos",
+             "El criterio no compara con el recorrido observado sino con el límite calculado."),
+            ("No, porque no supera el doble del tercer cuartil",
+             "El criterio usa 1,5 veces el rango intercuartílico, no el doble de Q3."),
+            ("Sí, porque cualquier dato sobre el tercer cuartil es atípico",
+             "Sobre Q3 está el 25% más alto del conjunto, y casi nada de eso es atípico."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "A todos los datos de un conjunto se les suma 7. ¿Qué ocurre con el "
+        "rango intercuartílico?",
+        "No cambia",
+        "Trasladar los datos mueve las posiciones pero no las distancias.\n\n"
+        "1) Al sumar 7, tanto Q1 como Q3 aumentan en 7.\n"
+        "2) El rango intercuartílico es su diferencia.\n"
+        "3) Los dos aumentos se cancelan al restar: la diferencia queda "
+        "igual.\n\n"
+        "La mediana y los cuartiles sí se desplazan 7 unidades: lo que no "
+        "cambia es cuán separados están entre sí.",
+        [
+            ("Aumenta en 7",
+             "Ese aumento lo tienen los cuartiles por separado, no su diferencia."),
+            ("Aumenta en 14",
+             "Sumar la misma constante a los dos cuartiles no ensancha la caja."),
+            ("Se reduce a la mitad",
+             "Trasladar los datos no altera ninguna medida de dispersión."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "A todos los datos de un conjunto se les multiplica por 4. ¿Qué ocurre "
+        "con el rango intercuartílico?",
+        "Se multiplica por 4",
+        "Reescalar los datos reescala también las distancias entre ellos.\n\n"
+        "1) Al multiplicar por 4, tanto Q1 como Q3 quedan multiplicados por "
+        "4.\n"
+        "2) El rango intercuartílico es su diferencia.\n"
+        "3) Esa diferencia también queda multiplicada por 4.\n\n"
+        "Es la diferencia con sumar una constante: trasladar no cambia la "
+        "dispersión, reescalar sí.",
+        [
+            ("No cambia",
+             "Eso ocurre al sumar una constante, no al multiplicar por ella."),
+            ("Se multiplica por 16",
+             "Ese sería el factor de la varianza, que eleva las diferencias al cuadrado."),
+            ("Aumenta en 4 unidades",
+             "El efecto es multiplicativo, no aditivo."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "En un conjunto de 200 datos, ¿cuántos quedan entre el percentil 30 y "
+        "el percentil 75?",
+        "90",
+        "Se resta el porcentaje acumulado de cada percentil.\n\n"
+        "1) Bajo el percentil 75 queda el 75% de los datos.\n"
+        "2) Bajo el percentil 30 queda el 30%.\n"
+        "3) Entre ambos queda el 45%, y el 45% de 200 es 90 datos.\n\n"
+        "El error frecuente es restar los números de percentil y quedarse en "
+        "45 sin aplicarlo al total.",
+        [
+            ("45",
+             "Es el porcentaje que queda entre ambos percentiles, no la cantidad de datos."),
+            ("105",
+             "Corresponde a un tramo del 52,5%, que no es el que dejan esos dos percentiles."),
+            ("150",
+             "Es la cantidad de datos que queda bajo el percentil 75."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "En una empresa, la mediana de los sueldos es $ 650.000 y el promedio "
+        "es $ 900.000. ¿Qué se puede concluir?",
+        "Hay sueldos altos que arrastran el promedio hacia arriba",
+        "La media se deja mover por los extremos y la mediana no.\n\n"
+        "1) La mediana deja a la mitad del personal bajo $ 650.000.\n"
+        "2) El promedio, bastante más alto, indica que la suma total está "
+        "inflada por algunos sueldos grandes.\n"
+        "3) Esos pocos sueldos arrastran la media sin mover la mediana.\n\n"
+        "Es la razón por la que los informes de remuneraciones suelen entregar "
+        "la mediana y no el promedio.",
+        [
+            ("La mayoría gana más de $ 900.000",
+             "La mediana dice lo contrario: la mitad gana menos de $ 650.000."),
+            ("Los sueldos están muy concentrados",
+             "Si lo estuvieran, media y mediana serían parecidas."),
+            ("Hubo un error, porque media y mediana deberían coincidir",
+             "Coinciden solo en distribuciones simétricas: la diferencia es información válida."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "¿Cuál es el tercer cuartil de los datos 4, 7, 7, 9, 11, 13, 16, 18 y "
+        "25?",
+        "17",
+        "Con nueve datos, la mediana queda FUERA de las dos mitades.\n\n"
+        "1) La mediana es el quinto dato: 11.\n"
+        "2) La mitad alta son los cuatro datos que le siguen: 13, 16, 18 y "
+        "25.\n"
+        "3) Su mediana promedia los dos centrales, 16 y 18, lo que da 17.\n\n"
+        "Con cantidad impar de datos, la mediana no se cuenta en ninguna de las "
+        "dos mitades: incluirla cambiaría el resultado.",
+        [
+            ("16",
+             "Es el séptimo dato: queda en la mitad alta, pero el cuartil promedia los dos centrales."),
+            ("18",
+             "Es el octavo dato, el otro de los dos centrales de la mitad alta."),
+            ("25",
+             "Es el dato mayor del conjunto."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "Un estudiante afirma que el percentil 50 es lo mismo que el promedio "
+        "de los datos. ¿Es correcta su afirmación?",
+        "No: el percentil 50 es la mediana, que puede diferir del promedio",
+        "Son dos medidas de centro que se calculan de manera distinta.\n\n"
+        "1) El percentil 50 deja la mitad de los datos por debajo: es la "
+        "mediana.\n"
+        "2) El promedio suma todos los valores y divide por la cantidad.\n"
+        "3) En el conjunto 1, 2, 3, 4 y 40 la mediana es 3 y el promedio es 10: "
+        "no coinciden.\n\n"
+        "Solo coinciden cuando los datos se reparten de manera simétrica, y eso "
+        "no está garantizado.",
+        [
+            ("Sí: ambos indican el centro del conjunto",
+             "Ambos son medidas de centro, pero el contraejemplo 1, 2, 3, 4, 40 los separa."),
+            ("Sí, siempre que la cantidad de datos sea impar",
+             "La paridad no influye: lo que decide es la simetría del reparto."),
+            ("No: el percentil 50 siempre es mayor que el promedio",
+             "Puede ser mayor, menor o igual según cómo se repartan los datos."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "En un conjunto de datos, el rango intercuartílico vale 0. ¿Qué se "
+        "puede afirmar?",
+        "Al menos la mitad central de los datos toma el mismo valor",
+        "Un rango intercuartílico nulo aplasta la caja en un punto.\n\n"
+        "1) El rango intercuartílico es Q3 menos Q1.\n"
+        "2) Si vale cero, entonces Q1 y Q3 coinciden.\n"
+        "3) Todo el 50% central está atrapado entre dos valores iguales, así "
+        "que todos esos datos son idénticos.\n\n"
+        "Los extremos pueden ser distintos: el conjunto 1, 7, 7, 7, 7, 7, 20 "
+        "tiene rango intercuartílico cero y un recorrido de 19.",
+        [
+            ("Todos los datos del conjunto son iguales",
+             "Los extremos pueden diferir: 1, 7, 7, 7, 7, 7, 20 es un contraejemplo."),
+            ("El conjunto tiene un solo dato",
+             "Con muchos datos repetidos en el centro ocurre lo mismo."),
+            ("Hubo un error de cálculo, porque el rango intercuartílico nunca es cero",
+             "Sí puede serlo, y es información válida sobre el conjunto."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "En una prueba de 500 postulantes, alguien quedó en el percentil 96. "
+        "¿Cuántos postulantes obtuvieron un puntaje mayor?",
+        "20",
+        "Sobre el percentil 96 queda el 4% del grupo.\n\n"
+        "1) Bajo el percentil 96 queda el 96% de los postulantes.\n"
+        "2) Por encima queda el 4% restante.\n"
+        "3) El 4% de 500 es 20 postulantes.\n\n"
+        "El percentil describe la posición relativa, así que la respuesta "
+        "depende del tamaño del grupo y no del puntaje obtenido.",
+        [
+            ("480",
+             "Es la cantidad de postulantes que quedó POR DEBAJO."),
+            ("96",
+             "Es el número del percentil, no una cantidad de personas."),
+            ("4",
+             "Es el porcentaje que queda por encima, no la cantidad de postulantes."),
+        ],
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "Se comparan dos diagramas de cajón con la misma mediana. El primero "
+        "tiene bigotes largos y caja angosta; el segundo, bigotes cortos y caja "
+        "ancha. ¿Qué se puede afirmar?",
+        "El primero concentra su mitad central y dispersa sus extremos",
+        "Caja y bigotes describen tramos distintos del conjunto.\n\n"
+        "1) La caja angosta del primero indica que su 50% central está muy "
+        "junto.\n"
+        "2) Sus bigotes largos indican que el 25% más bajo y el 25% más alto se "
+        "extienden bastante.\n"
+        "3) En el segundo ocurre lo contrario: la mitad central está repartida "
+        "y los extremos, apretados.\n\n"
+        "Los dos conjuntos pueden tener el mismo recorrido total y la misma "
+        "mediana, y aun así repartirse de manera muy distinta.",
+        [
+            ("El primero tiene más datos que el segundo",
+             "El ancho de la caja y el largo de los bigotes no dependen de la cantidad de datos."),
+            ("El segundo tiene una mediana mayor",
+             "El enunciado dice que las medianas coinciden."),
+            ("El primero no tiene datos atípicos y el segundo sí",
+             "El diagrama descrito no permite concluir eso."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Historia - Pensamiento temporal
+#
+# Era uno de los cuatro nodos de habilidad que seguian bajo 60 mientras los de
+# contenido iban en 52. Las preguntas se apoyan en las fuentes que ya estaban:
+# los dos textos metodologicos sobre duraciones y sobre cambio y continuidad, y
+# dos pares de fuentes de contraste donde el cambio se puede fechar.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_HISTORIA += [
+    _ql(
+        "his_duraciones", "his_temporal", "medio",
+        "Según el texto, ¿por qué distintos historiadores pueden periodizar de "
+        "manera distinta el mismo pasado?",
+        "Porque cada periodización se traza a partir de un criterio explícito",
+        "El texto define la periodización como una herramienta que divide el "
+        "tiempo en etapas «según criterios definidos», y agrega que se traza a "
+        "partir de un criterio explícito —político, económico, cultural—.\n"
+        "De ahí se sigue lo que el texto afirma de inmediato: distintos "
+        "criterios producen distintas periodizaciones del mismo pasado. No es "
+        "que uno acierte y otro se equivoque; están cortando el tiempo con "
+        "reglas distintas.\n"
+        "Por eso el texto insiste en que la periodización es una construcción y "
+        "no un hecho: nadie se acostó en la Edad Media y despertó en la Edad "
+        "Moderna.",
+        [
+            ("Porque los documentos disponibles cambian de un archivo a otro",
+             "El texto no menciona la disponibilidad de documentos al explicar la periodización."),
+            ("Porque el tiempo histórico viene naturalmente dividido en etapas",
+             "El texto afirma lo contrario: el tiempo histórico es continuo y no viene cortado en pedazos."),
+            ("Porque los historiadores discrepan sobre las fechas exactas de los hechos",
+             "La diferencia no está en las fechas de los hechos sino en el criterio con que se agrupan."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "medio",
+        "Un proceso de cambio en las mentalidades que se extiende por varios "
+        "siglos, ¿en qué escala temporal lo ubicaría el texto?",
+        "En la larga duración",
+        "El texto ordena tres escalas y le asigna a cada una su extensión y sus "
+        "ejemplos. Los procesos de larga duración son «transformaciones lentas "
+        "que se extienden por siglos», y menciona expresamente los cambios en "
+        "las mentalidades.\n"
+        "El texto agrega un rasgo que ayuda a reconocerlos: resultan casi "
+        "imperceptibles para quien los vive. Nadie nota que su época está "
+        "cambiando de mentalidad mientras ocurre.\n"
+        "Las otras dos escalas quedan descartadas por su extensión: el "
+        "acontecimiento dura días o meses y la media duración abarca décadas.",
+        [
+            ("En la media duración",
+             "El texto la reserva para décadas, con ejemplos como una crisis económica."),
+            ("En el acontecimiento",
+             "El texto lo sitúa en días o meses, como una batalla o una elección."),
+            ("En la periodización",
+             "La periodización no es una escala temporal sino la herramienta que divide el tiempo en etapas."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "medio",
+        "¿Cuántos años abarca el período que va de 1810 a 1891, según la regla "
+        "que da el texto para calcular la extensión de un período?",
+        "81 años",
+        "El texto distingue dos operaciones que se confunden con facilidad. "
+        "Para ubicar un hecho en un siglo se toman las dos primeras cifras y se "
+        "suma uno; para medir la extensión de un período, en cambio, «se "
+        "obtiene restando el año inicial del final».\n"
+        "Aplicando esa segunda regla: 1891 − 1810 = 81 años.\n"
+        "La suma de uno pertenece solo al cálculo del siglo y no a la duración: "
+        "mezclarlas es el error que la última línea del texto busca evitar.",
+        [
+            ("82 años",
+             "Suma uno a la resta, que es la regla del siglo y no la de la extensión."),
+            ("80 años",
+             "Redondea el resultado en vez de aplicar la resta que indica el texto."),
+            ("19 años",
+             "Corresponde a la diferencia entre los siglos, no a la cantidad de años del período."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "medio",
+        "Según el texto, ¿qué significa que un mismo hecho pueda ser causa y "
+        "consecuencia a la vez?",
+        "Que su papel depende de cuál sea el proceso que se está analizando",
+        "El texto define causa como lo que contribuye a que un proceso ocurra y "
+        "consecuencia como lo que resulta de él, y agrega que un mismo hecho "
+        "puede ser ambas cosas «según el proceso analizado».\n"
+        "El ejemplo que entrega lo muestra: una crisis económica es "
+        "consecuencia de una guerra y, a la vez, causa de un cambio político "
+        "posterior. El hecho no cambió; cambió la pregunta que se le hace.\n"
+        "Por eso el papel causal no es una propiedad del hecho sino del recorte "
+        "que hace el historiador.",
+        [
+            ("Que el historiador no logra determinar el orden de los hechos",
+             "El orden está claro en el ejemplo del texto: la guerra precede a la crisis y la crisis al cambio político."),
+            ("Que las causas y las consecuencias son en el fondo lo mismo",
+             "El texto las define de manera distinta: una contribuye a que algo ocurra y la otra resulta de ello."),
+            ("Que los hechos históricos ocurren simultáneamente",
+             "El ejemplo del texto es una cadena en el tiempo, no una simultaneidad."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "medio",
+        "Un hecho ocurrió en 1789. Según la regla del texto, ¿a qué siglo "
+        "pertenece?",
+        "Al siglo XVIII",
+        "El texto da la regla rápida: se toman las dos primeras cifras del año "
+        "y se suma uno, salvo que el año termine exactamente en 00.\n"
+        "Las dos primeras cifras de 1789 son 17, y 17 + 1 = 18. El año no "
+        "termina en 00, así que la excepción no se aplica: el hecho pertenece "
+        "al siglo XVIII.\n"
+        "El desfase existe porque el primer siglo va del año 1 al 100: no hubo "
+        "año cero, y ese corrimiento se arrastra hasta hoy.",
+        [
+            ("Al siglo XVII",
+             "Toma las dos primeras cifras sin sumar uno, que es justamente el paso que la regla agrega."),
+            ("Al siglo XIX",
+             "El siglo XIX comienza en 1801, doce años después."),
+            ("Al siglo XVI",
+             "El siglo XVI termina en 1600, casi dos siglos antes."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "dificil",
+        "Un historiador sostiene que la Revolución Francesa «cambió Francia por "
+        "completo». ¿Qué objeción le haría el texto?",
+        "Que ningún proceso cambia todo, y que habría que precisar qué permaneció pese a la transformación",
+        "El texto formula el análisis de continuidades y cambios como una tarea "
+        "doble: identificar qué elementos se transformaron y cuáles "
+        "permanecieron. Y agrega una afirmación categórica: «Ningún proceso "
+        "cambia todo ni deja todo igual».\n"
+        "El ejemplo que ofrece apunta exactamente a este caso: una revolución "
+        "puede cambiar el régimen político y mantener intacta la estructura de "
+        "propiedad de la tierra.\n"
+        "La objeción no es que la revolución no haya sido importante, sino que "
+        "describirla solo como cambio total deja fuera la mitad del análisis.",
+        [
+            ("Que las revoluciones pertenecen a la escala del acontecimiento y no cambian nada",
+             "El texto no niega el cambio: niega que sea total."),
+            ("Que solo la larga duración produce cambios verdaderos",
+             "El texto no jerarquiza las escalas por importancia sino por velocidad."),
+            ("Que la afirmación sería válida solo si se demostrara con fuentes primarias",
+             "La objeción del texto es conceptual, no documental."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "dificil",
+        "Según la lógica del texto, ¿por qué un contemporáneo difícilmente "
+        "advierte un proceso de larga duración?",
+        "Porque el proceso avanza más lento de lo que una vida alcanza a observar",
+        "El texto define la larga duración como transformaciones lentas que se "
+        "extienden por siglos y añade que «resultan casi imperceptibles para "
+        "quien los vive».\n"
+        "La razón está en la relación entre la velocidad del proceso y la "
+        "duración de una vida: quien observa décadas no puede ver el movimiento "
+        "de algo que se despliega en siglos, del mismo modo que no se ve "
+        "moverse la manecilla de las horas.\n"
+        "De ahí que estas transformaciones solo se vuelvan visibles cuando el "
+        "historiador compara puntos muy separados en el tiempo.",
+        [
+            ("Porque las fuentes de esos procesos suelen haberse perdido",
+             "El texto no atribuye la dificultad a la conservación de las fuentes."),
+            ("Porque los procesos de larga duración no dejan huellas materiales",
+             "El texto menciona estructuras económicas y mentalidades, que sí dejan huellas."),
+            ("Porque los contemporáneos prefieren fijarse en los acontecimientos políticos",
+             "El texto explica la dificultad por la velocidad del proceso, no por la preferencia de quien observa."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "dificil",
+        "Se afirma que «la periodización descubre las divisiones que el tiempo "
+        "histórico ya tenía». ¿Qué diría el texto de esa afirmación?",
+        "Que la invierte: el tiempo es continuo y las divisiones las introduce quien analiza",
+        "El texto abre con una afirmación explícita: el tiempo histórico es "
+        "continuo y no viene cortado en pedazos. La periodización es «la "
+        "herramienta con que el historiador lo divide», no un hallazgo.\n"
+        "Por eso el texto agrega que es una construcción y no un hecho, y "
+        "remata con la imagen de que nadie se acostó en la Edad Media y "
+        "despertó en la Edad Moderna.\n"
+        "La afirmación citada trata como descubrimiento algo que el texto "
+        "presenta como decisión metodológica, y esa es exactamente la inversión "
+        "que corrige.",
+        [
+            ("Que es correcta, porque cada etapa histórica tiene rasgos propios",
+             "Que las etapas tengan rasgos propios no significa que las divisiones existan antes de trazarlas."),
+            ("Que es correcta solo para la historia política",
+             "El texto no exceptúa ningún criterio: menciona el político junto al económico y al cultural."),
+            ("Que es indiferente, porque el resultado del análisis no depende de la periodización",
+             "El texto sostiene lo contrario: distintos criterios producen distintas periodizaciones."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "dificil",
+        "Un estudiante calcula que del año 1501 al año 1600 hay 100 años y "
+        "concluye que ese período corresponde al siglo XVI. ¿Es consistente con "
+        "el texto?",
+        "Sí: el texto señala que el siglo XVI comprende de 1501 a 1600",
+        "El texto entrega ese tramo de manera literal al explicar por qué el "
+        "primer siglo va del año 1 al 100: «de modo que el siglo XVI comprende "
+        "de 1501 a 1600».\n"
+        "El cálculo de la extensión también calza con la regla del texto: "
+        "restar el año inicial del final da 99, y el período incluye ambos "
+        "extremos, lo que completa los cien años.\n"
+        "Es uno de los pocos casos en que las dos reglas del texto —la del "
+        "siglo y la de la extensión— se apoyan mutuamente en vez de "
+        "confundirse.",
+        [
+            ("No: el siglo XVI iría de 1500 a 1599",
+             "Ese tramo contradice la regla del texto, que hace terminar cada siglo en un año que acaba en 00."),
+            ("No: el siglo XVI iría de 1601 a 1700",
+             "Ese es el siglo XVII según la misma regla."),
+            ("Sí, pero solo si se ignora la excepción del año terminado en 00",
+             "La excepción es justamente lo que hace que 1600 cierre el siglo XVI."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "dificil",
+        "Dos historiadores analizan el mismo siglo: uno lo divide según los "
+        "gobiernos y otro según los ciclos de exportación. Según el texto, "
+        "¿cómo debe entenderse esa diferencia?",
+        "Como el resultado de haber usado criterios distintos, ambos legítimos si están explicitados",
+        "El texto sostiene que la periodización se traza a partir de un "
+        "criterio explícito —político, económico, cultural— y que por eso "
+        "distintos criterios producen distintas periodizaciones del mismo "
+        "pasado.\n"
+        "Los dos casos del enunciado corresponden a dos de esos criterios: el "
+        "político en el primero y el económico en el segundo. Ninguno "
+        "contradice al otro porque no están respondiendo la misma pregunta.\n"
+        "Lo que el texto exige no es que coincidan, sino que el criterio esté "
+        "declarado: sin eso, la división queda sin justificación.",
+        [
+            ("Como un desacuerdo que la evidencia debería resolver a favor de uno de los dos",
+             "El texto no plantea la diferencia como un problema de evidencia sino de criterio."),
+            ("Como una señal de que uno de los dos periodizó mal",
+             "El texto admite explícitamente que un mismo pasado admite varias periodizaciones."),
+            ("Como una diferencia irrelevante, porque el tiempo histórico es continuo",
+             "Que el tiempo sea continuo es la razón por la que el criterio importa, no por la que dejaría de importar."),
+        ],
+    ),
+    _ql(
+        "his_cambio_continuidad", "his_temporal", "medio",
+        "Según el texto, ¿qué cambió y qué permaneció con las independencias "
+        "americanas?",
+        "Cambió la soberanía; permaneció la propiedad de la tierra",
+        "El texto separa con precisión los dos planos. Del lado del cambio "
+        "enumera la soberanía —el poder dejó de residir en la Corona y pasó a "
+        "repúblicas—, las instituciones políticas, los símbolos y el "
+        "vocabulario público.\n"
+        "Del lado de la permanencia señala que la estructura de propiedad de la "
+        "tierra se mantuvo prácticamente intacta y que la sociedad siguió "
+        "organizada de forma jerárquica.\n"
+        "El texto agrega un tercer elemento que no cambió: buena parte de la "
+        "población quedó fuera de la ciudadanía que la nueva república "
+        "proclamaba.",
+        [
+            ("Cambió la estructura de propiedad de la tierra; permaneció la soberanía",
+             "El texto dice exactamente lo contrario en ambos casos."),
+            ("Cambió todo el orden social; permaneció solo el vocabulario público",
+             "El texto ubica el vocabulario público entre lo que cambió, no entre lo que permaneció."),
+            ("No cambió nada relevante: la independencia fue solo un cambio de nombres",
+             "El texto reconoce un cambio real de soberanía e instituciones."),
+        ],
+    ),
+    _ql(
+        "his_cambio_continuidad", "his_temporal", "medio",
+        "Según el texto, ¿cuál de los siguientes elementos NO se mantuvo tras "
+        "las independencias americanas?",
+        "Los símbolos y el vocabulario público",
+        "El texto reparte los elementos en dos columnas. Del lado del cambio "
+        "enumera la soberanía, las instituciones políticas, los símbolos y el "
+        "vocabulario público.\n"
+        "Del lado de la permanencia sitúa la estructura de propiedad de la "
+        "tierra, la organización jerárquica de la sociedad y la exclusión de "
+        "mujeres, esclavos y pueblos originarios de la ciudadanía.\n"
+        "Que el vocabulario público cambiara mientras la exclusión permanecía "
+        "es justamente lo que el texto quiere hacer notar: cambió el modo de "
+        "nombrar antes que el modo de repartir.",
+        [
+            ("La estructura de propiedad de la tierra en el campo americano",
+             "El texto la sitúa entre lo que se mantuvo prácticamente intacto."),
+            ("La organización jerárquica de la sociedad heredada del período colonial",
+             "El texto señala que la sociedad siguió organizada de forma jerárquica."),
+            ("La exclusión de las mujeres respecto de la ciudadanía proclamada",
+             "El texto la menciona expresamente entre lo que permaneció."),
+        ],
+    ),
+    _ql(
+        "his_cambio_continuidad", "his_temporal", "medio",
+        "¿Qué pregunta propone el texto como especialmente útil frente a "
+        "cualquier proceso histórico?",
+        "¿Para quién cambió?",
+        "El texto la formula de manera literal y explica por qué la considera "
+        "útil: un mismo acontecimiento puede significar una transformación "
+        "completa para un grupo y prácticamente nada para otro.\n"
+        "La condición que agrega es exigente: esos dos grupos pueden vivir en "
+        "el mismo territorio y en el mismo año. La diferencia no es de época "
+        "sino de posición social.\n"
+        "La pregunta obliga a especificar el sujeto del cambio, que es lo que "
+        "una afirmación como «el país se transformó» deja sin decir.",
+        [
+            ("¿Cuándo empezó exactamente?",
+             "El texto no propone fijar el inicio sino identificar a quién alcanzó el cambio."),
+            ("¿Fue una ruptura o una continuidad?",
+             "El texto rechaza esa alternativa: describirlo solo de un modo o del otro sería igualmente falso."),
+            ("¿Qué fuentes lo registran?",
+             "La pregunta del texto es sobre los efectos del proceso, no sobre su documentación."),
+        ],
+    ),
+    _ql(
+        "his_cambio_continuidad", "his_temporal", "dificil",
+        "Según el texto, ¿por qué sería igualmente falso describir las "
+        "independencias americanas solo como ruptura o solo como continuidad?",
+        "Porque el proceso combinó transformaciones profundas con estructuras que siguieron funcionando",
+        "El texto muestra las dos caras del mismo proceso: cambió la soberanía "
+        "y el orden institucional, y al mismo tiempo se mantuvieron la "
+        "propiedad de la tierra, la jerarquía social y la exclusión de buena "
+        "parte de la población.\n"
+        "Describirlo solo como ruptura deja fuera todo lo segundo; describirlo "
+        "solo como continuidad deja fuera todo lo primero. Por eso el texto "
+        "dice que ambas descripciones son «igualmente falsas».\n"
+        "Lo que propone en su lugar es más exigente y menos vistoso: precisar "
+        "qué cambió, qué permaneció y a qué ritmo.",
+        [
+            ("Porque no existen fuentes suficientes para decidir entre las dos descripciones",
+             "El texto no plantea un problema de evidencia sino de descripción incompleta."),
+            ("Porque la independencia fue un acontecimiento y no un proceso",
+             "El texto la trata como un proceso con planos que se mueven a distinta velocidad."),
+            ("Porque los historiadores aún discuten la fecha en que terminó",
+             "La discusión de fechas no aparece en el argumento del texto."),
+        ],
+    ),
+    _ql(
+        "his_cambio_continuidad", "his_temporal", "dificil",
+        "Dos personas viven en la misma ciudad en 1820: una es propietaria de "
+        "tierras y la otra está esclavizada. Según el texto, ¿cómo debería "
+        "tratarse la afirmación «para ambas, la independencia lo cambió todo»?",
+        "Como una afirmación que el texto rechaza: el proceso alcanzó de modo desigual a cada grupo",
+        "El texto propone preguntar «¿para quién cambió?» precisamente porque "
+        "un mismo acontecimiento puede significar una transformación completa "
+        "para un grupo y prácticamente nada para otro que vivía en el mismo "
+        "territorio y en el mismo año.\n"
+        "El caso del enunciado es el que el texto describe: entre lo que "
+        "permaneció menciona la exclusión de esclavos, mujeres y pueblos "
+        "originarios de la ciudadanía que la república proclamaba.\n"
+        "La afirmación no es falsa por exagerada sino por indiferenciada: "
+        "atribuye a todos un cambio que solo alcanzó a algunos.",
+        [
+            ("Como correcta, porque la soberanía cambió para todo el territorio y sus habitantes",
+             "El texto distingue entre el cambio de soberanía y sus efectos sobre cada grupo."),
+            ("Como imposible de evaluar sin conocer las fuentes de la época",
+             "El texto entrega la clave conceptual sin necesidad de fuentes adicionales."),
+            ("Como correcta si se la limita al plano de las mentalidades",
+             "El texto ubica las mentalidades entre los planos más lentos, no entre los que cambiaron de inmediato."),
+        ],
+    ),
+    _ql(
+        "his_cambio_continuidad", "his_temporal", "dificil",
+        "Según el texto, ¿qué error comete quien sostiene que una revolución es "
+        "una ruptura total con el pasado?",
+        "Supone que todos los planos de la realidad se transforman a la misma velocidad",
+        "El texto abre afirmando que los procesos históricos rara vez son "
+        "rupturas totales, y que incluso los que se recuerdan como quiebres "
+        "conviven con estructuras que siguen funcionando.\n"
+        "La explicación que da es de ritmos: lo político puede transformarse en "
+        "meses, lo económico en décadas y las mentalidades en siglos. Quien "
+        "habla de ruptura total está aplicando el ritmo del plano más rápido a "
+        "todos los demás.\n"
+        "De ahí que el análisis histórico deba precisar no solo qué cambió sino "
+        "a qué ritmo lo hizo cada plano.",
+        [
+            ("Confunde una causa estructural con una causa inmediata del proceso",
+             "Esa distinción pertenece al análisis causal y no aparece en este texto."),
+            ("Aplica al pasado categorías y valores de su propia época",
+             "Ese es el anacronismo, un problema distinto del que plantea este texto."),
+            ("Toma una fuente secundaria como si fuera una fuente primaria",
+             "El texto no discute tipos de fuentes."),
+        ],
+    ),
+    _ql(
+        "fuente_voto_femenino", "his_temporal", "medio",
+        "Según la primera intervención, ¿qué distinción temporal establece el "
+        "parlamentario entre dos derechos ya concedidos y uno en discusión?",
+        "Acepta el voto municipal ya otorgado y discute la extensión al voto presidencial",
+        "La intervención termina con esa distinción de manera literal: "
+        "«Concederle el voto municipal fue prudente; extenderlo a la elección "
+        "presidencial es otra cosa».\n"
+        "El argumento supone una secuencia: un derecho ya reconocido en el "
+        "pasado y otro que se propone para el futuro, con la prudencia como "
+        "criterio para separar ambos momentos.\n"
+        "La segunda intervención responde justamente a esa idea de gradualidad "
+        "al observar que la espera lleva tanto tiempo como la República.",
+        [
+            ("Rechaza ambos derechos por igual",
+             "Califica de prudente la concesión del voto municipal."),
+            ("Sostiene que el voto presidencial debe concederse antes que el municipal en todo caso",
+             "Plantea el orden inverso: el municipal ya está y el presidencial es lo que discute."),
+            ("Afirma que ninguno de los dos derechos ha sido concedido todavía",
+             "El texto da por concedido el voto municipal."),
+        ],
+    ),
+    _ql(
+        "fuente_voto_femenino", "his_temporal", "dificil",
+        "«Llevamos esperando desde que existe la República». ¿Qué operación "
+        "temporal realiza esa frase dentro del argumento?",
+        "Convierte la gradualidad prudente en una espera que ya lleva más de un siglo",
+        "El argumento de la primera intervención descansa en la prudencia: un "
+        "derecho ya se concedió y el otro puede esperar. La frase citada "
+        "responde midiendo esa espera con la escala más larga disponible, la de "
+        "la existencia misma de la República.\n"
+        "Al hacerlo desplaza el asunto de la escala del acontecimiento —una "
+        "votación concreta— a la de un proceso que lleva más de un siglo sin "
+        "resolverse.\n"
+        "Con eso la prudencia deja de parecer cautela y pasa a parecer "
+        "postergación sostenida en el tiempo, que es exactamente el efecto que "
+        "la oradora busca.",
+        [
+            ("Fija la fecha exacta en que se inició la demanda por el sufragio femenino",
+             "La frase no fecha nada: mide una duración para calificar la espera."),
+            ("Sostiene que el derecho ya fue concedido y solo falta aplicarlo",
+             "La intervención pide el derecho, no su aplicación."),
+            ("Traslada la discusión al terreno económico del precio del pan",
+             "La mención del precio del pan es un ejemplo previo, no el eje de esta frase."),
+        ],
+    ),
+    _ql(
+        "fuente_voto_femenino", "his_temporal", "dificil",
+        "Si se comparan las dos intervenciones, ¿qué elemento permanece igual "
+        "para ambas y cuál está en disputa?",
+        "Permanece el papel de la mujer en el hogar; se disputa si eso la excluye o la habilita para la política",
+        "Las dos intervenciones parten del mismo dato: la mujer administra el "
+        "hogar. El parlamentario lo describe como «una función que ningún "
+        "hombre puede reemplazar»; la dirigenta enumera lo mismo —presupuesto, "
+        "educación de los hijos, precio del pan—.\n"
+        "Lo que cambia es la conclusión. Para el primero, ese papel es una "
+        "razón para mantenerla fuera de la política; para la segunda, es la "
+        "prueba de que ya está dentro y solo le falta la voz.\n"
+        "El desacuerdo no es sobre los hechos sino sobre qué se sigue de ellos, "
+        "que es una forma habitual del debate político.",
+        [
+            ("Permanece el acuerdo sobre el derecho a voto; se disputa la fecha de su aplicación",
+             "La primera intervención se opone a extender el derecho, no discute solo su fecha."),
+            ("Permanece la valoración de la política como espacio deseable; se disputa quién entra",
+             "El parlamentario describe la política como áspera y divisiva, no como deseable."),
+            ("Permanece el diagnóstico económico; se disputa la responsabilidad del gobierno",
+             "El precio del pan aparece como ejemplo, y no hay diagnóstico económico compartido."),
+        ],
+    ),
+    _ql(
+        "fuentes_salitre", "his_temporal", "medio",
+        "Las dos fuentes están separadas por un año. ¿Qué permite esa cercanía "
+        "temporal al analizarlas?",
+        "Descartar que la diferencia entre ambas se deba a un cambio en las condiciones de la oficina",
+        "El informe del administrador es de 1907 y la carta del obrero, de "
+        "1908. Un año es un lapso demasiado breve como para que la vida de la "
+        "oficina se haya transformado entre uno y otro documento.\n"
+        "Por eso la discrepancia no puede atribuirse al paso del tiempo: ambas "
+        "fuentes describen, en lo esencial, la misma realidad material —"
+        "pulpería, escuela, agua, pago—.\n"
+        "Lo que las separa es la posición de quien escribe y el destinatario de "
+        "cada documento, no el momento en que fueron escritas.",
+        [
+            ("Confirmar que las condiciones mejoraron rápidamente entre un año y otro",
+             "Las fuentes describen los mismos elementos con valoraciones opuestas, no una mejora."),
+            ("Establecer cuál de las dos fue escrita primero y por lo tanto es más confiable",
+             "La anterioridad no otorga confiabilidad por sí sola."),
+            ("Determinar la duración total del ciclo salitrero",
+             "Dos documentos de años consecutivos no permiten medir un ciclo económico completo."),
+        ],
+    ),
+    _ql(
+        "fuentes_salitre", "his_temporal", "medio",
+        "Según la carta del obrero, ¿qué elemento del sistema de pago produce "
+        "un efecto que se acumula mes a mes?",
+        "El pago en fichas que solo sirven en la pulpería de la propia oficina",
+        "La carta describe el mecanismo con precisión: el pago «no viene en "
+        "dinero sino en fichas que solo sirven en la pulpería de la misma "
+        "oficina, y allí el precio lo ponen ellos».\n"
+        "El efecto acumulativo aparece en la frase siguiente: «Uno trabaja el "
+        "mes entero y termina debiendo». No es que el sueldo alcance justo; es "
+        "que el ciclo se cierra en deuda.\n"
+        "El administrador menciona la misma pulpería como un servicio, sin "
+        "referirse al sistema de pago que la hace obligatoria.",
+        [
+            ("La existencia de una escuela con un solo maestro para ciento veinte niños",
+             "La carta la menciona como carencia del servicio educativo, no como parte del sistema de pago."),
+            ("La llegada de trabajadores desde el sur en busca de trabajo seguro",
+             "Ese dato aparece en el informe del administrador y no describe un efecto acumulativo."),
+            ("La presencia de agitadores externos",
+             "Es la explicación del administrador para las quejas, y la carta la rechaza expresamente."),
+        ],
+    ),
+    _ql(
+        "fuentes_salitre", "his_temporal", "dificil",
+        "El administrador atribuye las quejas a «agitadores venidos de fuera». "
+        "¿Qué efecto tiene esa atribución sobre el modo de entender el "
+        "conflicto en el tiempo?",
+        "Lo presenta como importado y reciente en vez de acumulado en la propia oficina",
+        "El informe describe el malestar como algo traído desde afuera por "
+        "personas «ajenas por completo a la vida de la pampa». Con eso el "
+        "conflicto deja de tener raíces en el lugar y pasa a tener una fecha de "
+        "llegada.\n"
+        "La carta responde justamente a esa operación: «No somos agitados por "
+        "nadie, hermano: somos nosotros los que sabemos contar». El conflicto "
+        "no llegó de fuera; se acumuló mes a mes con el sistema de fichas.\n"
+        "La disputa, entonces, no es solo sobre quién tiene razón sino sobre "
+        "desde cuándo y dónde se origina el problema.",
+        [
+            ("Lo sitúa en la larga duración, como parte de la estructura económica de la pampa",
+             "Es lo contrario: la atribución a agitadores externos le quita profundidad temporal al conflicto."),
+            ("Lo fecha con precisión al identificar a los responsables",
+             "El informe no entrega fechas ni nombres: generaliza."),
+            ("Reconoce que el malestar venía acumulándose desde años anteriores en la pampa",
+             "El informe niega que el malestar provenga del personal de la oficina."),
+        ],
+    ),
+    _ql(
+        "fuentes_salitre", "his_temporal", "dificil",
+        "Un investigador quiere saber si las condiciones de vida en la pampa "
+        "mejoraron entre 1900 y 1920. ¿Qué limitación tienen estas dos fuentes "
+        "para responder esa pregunta?",
+        "Cubren solo dos años consecutivos y no muestran ninguna tendencia",
+        "Las fuentes son de 1907 y 1908. Aunque discrepan entre sí, ambas "
+        "describen prácticamente el mismo momento: no hay distancia temporal "
+        "suficiente para detectar mejora o deterioro.\n"
+        "Responder por una tendencia de veinte años exige series de datos o "
+        "documentos repartidos a lo largo del período, no dos testimonios "
+        "contiguos.\n"
+        "Lo que estas fuentes sí permiten es contrastar dos miradas sobre un "
+        "mismo estado de cosas, que es una pregunta distinta y también "
+        "legítima.",
+        [
+            ("Ninguna de las dos menciona las condiciones de vida",
+             "Ambas se refieren a pulpería, escuela, agua y pago: es exactamente lo que describen."),
+            ("Provienen de la misma oficina, lo que impide cualquier comparación",
+             "Compartir el lugar es lo que hace comparables a las dos fuentes, no lo que lo impide."),
+            ("Son fuentes secundarias y no pueden usarse para estudiar el período",
+             "Ambas fueron producidas en la época estudiada: son fuentes primarias."),
+        ],
+    ),
+    _ql(
+        "his_cambio_continuidad", "his_temporal", "medio",
+        "Según el texto, ¿qué significa que las independencias americanas "
+        "convivieran con «estructuras que siguen funcionando»?",
+        "Que instituciones y relaciones anteriores al quiebre continuaron operando después de él",
+        "El texto abre señalando que incluso los procesos recordados como "
+        "quiebres —una revolución, una independencia— conviven con estructuras "
+        "que siguen funcionando.\n"
+        "El caso americano lo ilustra: la propiedad de la tierra se mantuvo "
+        "prácticamente intacta y la sociedad siguió organizada de forma "
+        "jerárquica, aunque la soberanía hubiera cambiado de manos.\n"
+        "Esa convivencia entre lo nuevo y lo que sigue es lo que hace "
+        "insuficiente describir el proceso con una sola palabra.",
+        [
+            ("Que la independencia fracasó en sus objetivos declarados",
+             "El texto reconoce cambios reales en soberanía e instituciones, así que no habla de fracaso."),
+            ("Que las estructuras coloniales fueron restauradas después del proceso",
+             "El texto habla de continuidad, no de restauración: nunca dejaron de operar."),
+            ("Que el proceso solo alcanzó a las capitales y no al territorio",
+             "El texto distingue por grupos sociales, no por regiones."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "medio",
+        "¿Qué relación establece el texto entre la escala temporal elegida y lo "
+        "que se puede observar?",
+        "Cada escala hace visibles unos fenómenos y deja fuera otros",
+        "El texto distingue tres escalas por su extensión —acontecimiento, "
+        "media duración y larga duración— y les asigna fenómenos distintos: una "
+        "batalla, una crisis económica, un cambio de mentalidad.\n"
+        "Esa correspondencia implica que la escala funciona como un filtro: "
+        "quien mira un año no verá una transformación de siglos, y quien mira "
+        "siglos perderá de vista la elección concreta.\n"
+        "Por eso la elección de escala no es un detalle técnico sino parte de "
+        "la pregunta que el historiador decide hacerse.",
+        [
+            ("La escala no influye: los mismos hechos aparecen en todas",
+             "El texto asigna fenómenos distintos a cada escala, así que sí influye."),
+            ("Solo la larga duración permite observar procesos verdaderos",
+             "El texto no jerarquiza las escalas por importancia sino por velocidad."),
+            ("La escala depende exclusivamente de las fuentes disponibles",
+             "El texto define las escalas por la velocidad del fenómeno, no por su documentación."),
+        ],
+    ),
+    _ql(
+        "his_cambio_continuidad", "his_temporal", "dificil",
+        "Un texto escolar afirma: «Con la independencia, América pasó a ser una "
+        "sociedad de ciudadanos iguales». ¿Qué corrección haría esta fuente?",
+        "Que la ciudadanía proclamada dejó fuera a mujeres, esclavos y pueblos originarios",
+        "El texto es explícito al enumerar lo que permaneció: «buena parte de "
+        "la población —mujeres, esclavos, pueblos originarios— quedó fuera de "
+        "la ciudadanía que la nueva república proclamaba».\n"
+        "La distancia entre lo proclamado y lo efectivo es justamente el punto: "
+        "el vocabulario público cambió y la exclusión no. Tomar la proclamación "
+        "por descripción es el error que la fuente corrige.\n"
+        "La pregunta «¿para quién cambió?» que el texto propone sirve "
+        "exactamente para detectar afirmaciones como la del enunciado.",
+        [
+            ("Que la igualdad se alcanzó recién con las reformas del siglo XX",
+             "El texto no fecha la llegada de la igualdad: señala la exclusión que la independencia mantuvo."),
+            ("Que la independencia no modificó las instituciones políticas",
+             "El texto sitúa las instituciones políticas entre lo que sí cambió."),
+            ("Que el concepto de ciudadanía es anacrónico para el siglo XIX",
+             "El propio texto usa el término al describir el período."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_temporal", "dificil",
+        "Según el texto, ¿en qué se distinguen una causa estructural y una "
+        "causa inmediata?",
+        "La estructural prepara el terreno durante años y la inmediata actúa como detonante",
+        "El texto introduce la distinción al explicar la multicausalidad: los "
+        "fenómenos sociales resultan de la combinación de factores políticos, "
+        "económicos, sociales y culturales.\n"
+        "Dentro de esa combinación separa dos tiempos: «causas estructurales, "
+        "que preparan el terreno durante años, y causas inmediatas, que actúan "
+        "como detonante».\n"
+        "La diferencia es de duración y de función, no de importancia: sin las "
+        "primeras el detonante no encuentra qué detonar.",
+        [
+            ("La estructural es política y la inmediata es económica",
+             "El texto no reparte las causas por ámbito sino por su temporalidad."),
+            ("La estructural se documenta con fuentes primarias y la inmediata con secundarias",
+             "El tipo de fuente no interviene en esta distinción."),
+            ("La estructural explica el hecho y la inmediata solo lo acompaña",
+             "El texto presenta el detonante como parte de la explicación, no como acompañamiento."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_temporal", "dificil",
+        "«El pasado no cambia, pero las preguntas que se le hacen sí». ¿Qué "
+        "consecuencia extrae el texto de esa afirmación?",
+        "Que aparecen temas nuevos de investigación sin que la disciplina se vuelva arbitraria",
+        "El texto usa esa frase para explicar por qué la historia se reescribe "
+        "con cada generación, y da ejemplos concretos: cuando la historiografía "
+        "empezó a interrogarse por la vida cotidiana, por el trabajo de las "
+        "mujeres o por los pueblos sin escritura, aparecieron temas enteros que "
+        "antes no se investigaban.\n"
+        "A eso suma dos factores materiales: archivos que se abren y técnicas "
+        "nuevas de análisis.\n"
+        "Y cierra la posible objeción de inmediato: «Eso no vuelve arbitraria "
+        "la disciplina: las afirmaciones siguen exigiendo evidencia».",
+        [
+            ("Que cada generación puede sostener sobre el pasado lo que le convenga",
+             "El texto descarta esa lectura: las afirmaciones siguen exigiendo evidencia."),
+            ("Que las investigaciones anteriores quedan invalidadas",
+             "El texto habla de temas que se agregan, no de trabajos que se anulan."),
+            ("Que conviene evitar preguntas nuevas para mantener la objetividad",
+             "El texto presenta las preguntas nuevas como una ganancia de la disciplina."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Historia - Pensamiento critico y analisis de fuentes
+#
+# Los otros dos nodos de habilidad que seguian bajo 60. Se apoyan en los dos
+# textos metodologicos que ya estaban y en los pares de fuentes de contraste,
+# que es donde el contraste entre versiones se puede trabajar sin salir del
+# banco.
+#
+# Cuidado con el largo: en este banco la correcta no puede medir mas de 1,35
+# veces el promedio de las cuatro, o el verificador la marca como delatada.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_HISTORIA += [
+    # ---------------- pensamiento crítico ----------------
+    _ql(
+        "his_oficio", "his_critico", "medio",
+        "Según el texto, ¿para qué sirve reconstruir el contexto histórico?",
+        "Para comprender por qué un hecho ocurrió y qué significó en su época",
+        "El texto define el contexto como el conjunto de condiciones "
+        "políticas, económicas, sociales y culturales que permiten comprender "
+        "por qué un hecho ocurrió y qué significó.\n"
+        "El ejemplo muestra su alcance: publicar un texto crítico bajo una "
+        "dictadura y hacerlo en democracia no son el mismo acto, aunque la "
+        "acción material sea idéntica.\n"
+        "Por eso el texto insiste en que reconstruir el contexto «no es un "
+        "adorno introductorio»: es lo que impide leer el pasado como si "
+        "hubiera ocurrido hoy.",
+        [
+            ("Para ubicar con exactitud la fecha en que ocurrió el hecho",
+             "El contexto explica el sentido del hecho, no fija su fecha."),
+            ("Para decidir si la fuente que lo relata es confiable o no",
+             "La evaluación de la fuente es otra operación del oficio."),
+            ("Para introducir el tema antes de entrar en el análisis mismo",
+             "El texto rechaza expresamente esa idea del contexto como adorno."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "medio",
+        "¿Qué quiere decir el texto al afirmar que los procesos históricos son "
+        "multicausales?",
+        "Que resultan de la combinación de factores políticos, económicos, sociales y culturales",
+        "El texto lo define en esos términos y lo ilustra con una revolución: "
+        "no se explica solo por el hambre, ni solo por las ideas, ni solo por "
+        "la debilidad del gobierno.\n"
+        "Lo que la vuelve posible, dice, es la convergencia de esos factores. "
+        "Ninguno basta por separado y ninguno es prescindible.\n"
+        "De esa idea se desprende la distinción que el texto agrega enseguida "
+        "entre causas estructurales y causas inmediatas.",
+        [
+            ("Que siempre existe una causa principal y varias secundarias",
+             "El texto habla de convergencia, no de una causa que domine a las demás."),
+            ("Que las causas de un proceso nunca pueden establecerse con certeza",
+             "El texto sostiene que sí se establecen, pero combinando factores."),
+            ("Que cada historiador elige la causa que le parece más importante",
+             "La multicausalidad describe el fenómeno, no la preferencia del investigador."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "medio",
+        "Según el texto, ¿por qué la misma acción puede significar cosas "
+        "opuestas en dos contextos distintos?",
+        "Porque el significado de un acto depende de las condiciones en que se realiza",
+        "El texto entrega el ejemplo con claridad: publicar un texto crítico "
+        "bajo una dictadura y hacerlo en democracia no son el mismo acto.\n"
+        "La acción material es idéntica —escribir y publicar—, pero el riesgo, "
+        "el destinatario y las consecuencias son distintos, y eso es parte de "
+        "lo que el acto significa.\n"
+        "De ahí que el texto trate el contexto como una condición de la "
+        "comprensión y no como información de fondo.",
+        [
+            ("Porque los historiadores interpretan los hechos según su ideología",
+             "El argumento del texto es sobre las condiciones del acto, no sobre quien lo estudia."),
+            ("Porque las fuentes de cada época se conservan de manera desigual",
+             "La conservación de fuentes no interviene en este pasaje."),
+            ("Porque el significado de las palabras cambia con el paso del tiempo",
+             "El texto habla del contexto del acto, no de la evolución del lenguaje."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "dificil",
+        "Alguien critica a un médico del siglo XVIII por no lavarse las manos "
+        "antes de operar. ¿Qué diría el texto de esa crítica?",
+        "Que incurre en anacronismo, porque juzga con un conocimiento posterior",
+        "El texto define el anacronismo como aplicar al pasado categorías, "
+        "valores o conocimientos de otra época, y agrega el caso exacto del "
+        "enunciado: reprochar a alguien no saber algo que en su tiempo aún no "
+        "había sido establecido.\n"
+        "La conclusión que saca es dura: esa crítica «no describe su "
+        "ignorancia: describe la confusión de quien juzga».\n"
+        "Lo que el texto pide en cambio es entender la época «según lo que "
+        "estaba disponible y era pensable en ella».",
+        [
+            ("Que es válida, porque la higiene siempre ha sido necesaria",
+             "El texto exige juzgar según lo que era pensable en la época, no según lo que hoy sabemos."),
+            ("Que confunde una causa estructural con una inmediata",
+             "Esa distinción pertenece al análisis causal, no al problema del anacronismo."),
+            ("Que exigiría contrastarla con al menos dos fuentes primarias",
+             "El problema no es de evidencia sino del criterio con que se juzga."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "dificil",
+        "Un estudiante concluye que, si la historia se reescribe, entonces "
+        "cualquier versión del pasado vale lo mismo. ¿Cómo responde el texto?",
+        "Distingue entre cambiar las preguntas y abandonar la exigencia de evidencia",
+        "El texto acepta la premisa: la historia se reescribe con cada "
+        "generación, porque el pasado no cambia pero las preguntas que se le "
+        "hacen sí.\n"
+        "Enseguida bloquea la conclusión: «Eso no vuelve arbitraria la "
+        "disciplina: las afirmaciones siguen exigiendo evidencia». Lo que "
+        "cambia es qué se busca y con qué herramientas.\n"
+        "La reescritura, entonces, amplía el temario de la disciplina sin "
+        "relajar su regla de prueba.",
+        [
+            ("Acepta la conclusión, porque toda interpretación es legítima",
+             "El texto la rechaza expresamente al exigir evidencia."),
+            ("Rechaza la premisa: sostiene que la historia no se reescribe",
+             "El texto afirma justamente que sí se reescribe con cada generación."),
+            ("Sostiene que solo las fuentes primarias permiten decidir",
+             "El texto no reduce la evidencia a un solo tipo de fuente."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "dificil",
+        "Según el texto, ¿qué factores explican que aparezcan temas históricos "
+        "que antes no se investigaban?",
+        "Preguntas nuevas, archivos que se abren y técnicas nuevas de análisis",
+        "El texto enumera los tres. Primero, las preguntas: cuando la "
+        "historiografía empezó a interrogarse por la vida cotidiana, por el "
+        "trabajo de las mujeres o por los pueblos sin escritura, aparecieron "
+        "temas enteros.\n"
+        "A eso suma dos condiciones materiales: archivos que se abren y "
+        "técnicas nuevas de análisis.\n"
+        "Los tres factores operan juntos: una pregunta nueva sin fuentes ni "
+        "métodos para responderla no llega a convertirse en investigación.",
+        [
+            ("El cambio de los hechos del pasado con el paso del tiempo",
+             "El texto afirma expresamente que el pasado no cambia."),
+            ("La sustitución de los historiadores de una generación por otra",
+             "El relevo generacional aparece como marco, no como explicación."),
+            ("La necesidad de corregir los errores de las investigaciones previas",
+             "El texto habla de temas que se agregan, no de trabajos que se corrigen."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_critico", "medio",
+        "¿Qué explicación da la primera fuente para el uso de la fuerza contra "
+        "los habitantes del valle?",
+        "Que algunos prefirieron resistir por falta de entendimiento",
+        "El cronista describe una secuencia en la que la violencia aparece "
+        "como último recurso: el capitán «les habló de paz y les ofreció "
+        "amparo», y solo algunos aceptaron.\n"
+        "A quienes no aceptaron los llama «ciegos aún» y justifica reducirlos "
+        "por las armas «como manda la razón cuando falta el entendimiento».\n"
+        "La explicación atribuye el conflicto a una carencia de los otros, no "
+        "a lo que la expedición fue a buscar.",
+        [
+            ("Que los habitantes atacaron primero a la expedición",
+             "El relato no menciona ningún ataque previo de los habitantes."),
+            ("Que la expedición necesitaba alimentos con urgencia",
+             "La petición de alimento aparece en la segunda fuente, no en esta."),
+            ("Que las autoridades de la Corona lo habían ordenado así",
+             "El cronista invoca el servicio de Dios y del rey, no una orden concreta."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_critico", "medio",
+        "Según la segunda fuente, ¿en qué orden ocurrieron las peticiones de "
+        "los recién llegados?",
+        "Primero alimento, después el oro y por último las tierras y la gente",
+        "El testimonio entrega la secuencia de manera explícita: «pidieron "
+        "alimento, y se lo dimos. Después pidieron el oro, y luego pidieron "
+        "las tierras y a nuestra gente para trabajarlas».\n"
+        "La progresión importa porque muestra un aumento sostenido de las "
+        "demandas, no un choque inicial.\n"
+        "La violencia aparece recién al final, cuando la respuesta fue "
+        "negativa: «Cuando dijimos que no, quemaron las siembras».",
+        [
+            ("Primero el oro, después las tierras y por último alimento",
+             "El relato sitúa el alimento al comienzo y el oro después."),
+            ("Primero las tierras, después la gente y por último el oro",
+             "El oro aparece antes que las tierras en el testimonio."),
+            ("Pidieron las tres cosas en la misma conversación inicial",
+             "El testimonio marca una progresión con «después» y «luego»."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_critico", "dificil",
+        "«No hubo entendimiento que faltara: hubo una lengua que no quisimos "
+        "hablar». ¿Qué operación realiza esa frase respecto de la primera "
+        "fuente?",
+        "Refuta su explicación: cambia la falta de comprensión por una negativa",
+        "El cronista atribuye la resistencia a que faltaba entendimiento y "
+        "llama «ciegos» a quienes no aceptaron. La frase citada toma ese mismo "
+        "término y lo devuelve invertido.\n"
+        "Donde el primero veía incapacidad, el segundo declara una decisión: "
+        "no es que no pudieran entender, es que no quisieron aceptar lo que se "
+        "les pedía.\n"
+        "Con eso el conflicto deja de ser un malentendido y pasa a ser una "
+        "disputa por el oro, las tierras y el trabajo.",
+        [
+            ("Confirma la versión del cronista con otras palabras",
+             "La invierte: donde el cronista veía ceguera, el testimonio ve una negativa consciente."),
+            ("Reconoce que hubo un problema de traducción entre ambas partes",
+             "La frase niega expresamente que faltara entendimiento."),
+            ("Atribuye el conflicto a la llegada de personas ajenas al valle",
+             "Esa explicación no aparece en ninguna de las dos fuentes."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_critico", "dificil",
+        "Un historiador quiere explicar el conflicto del valle. ¿Qué le aporta "
+        "usar las dos fuentes en vez de una sola?",
+        "Permite ver que ambas describen los mismos hechos con causas distintas",
+        "Las dos fuentes coinciden en lo material: hubo un encuentro, hubo "
+        "peticiones y hubo violencia. Lo que difiere es la causa que cada una "
+        "asigna.\n"
+        "El cronista la ubica en la falta de entendimiento de los otros; el "
+        "testimonio, en el aumento de las demandas hasta llegar a las tierras "
+        "y al trabajo de la gente.\n"
+        "Contrastarlas convierte una narración en un problema investigable: la "
+        "pregunta deja de ser qué pasó y pasa a ser por qué cada parte lo "
+        "cuenta así.",
+        [
+            ("Permite descartar la fuente menos confiable de las dos",
+             "El contraste no sirve para eliminar una versión sino para situar ambas."),
+            ("Permite establecer la fecha exacta del encuentro",
+             "Ninguna de las dos fuentes entrega fechas."),
+            ("Permite comprobar que los hechos narrados no ocurrieron",
+             "Ambas coinciden en que el encuentro y la violencia ocurrieron."),
+        ],
+    ),
+    _ql(
+        "fuente_memoria", "his_critico", "medio",
+        "¿Qué argumento usa el editorial para desaconsejar la revisión de los "
+        "hechos?",
+        "Que revisarlos reabre heridas que el tiempo estaría cerrando",
+        "El editorial construye su posición en tres pasos: califica lo "
+        "ocurrido de «lamentable pero inevitable», atribuye la actuación de "
+        "las autoridades a la crisis del país y concluye con el argumento del "
+        "tiempo.\n"
+        "Esa conclusión es la que sostiene la recomendación: insistir en "
+        "revisar aquellos días «solo reabre heridas que el tiempo ya está "
+        "cerrando».\n"
+        "El argumento no niega los hechos: sostiene que ocuparse de ellos "
+        "tiene un costo mayor que el beneficio.",
+        [
+            ("Que los hechos denunciados nunca llegaron a ocurrir",
+             "El editorial los reconoce y los llama un episodio lamentable."),
+            ("Que la investigación corresponde a los tribunales y no a la prensa",
+             "El editorial no plantea una cuestión de competencia."),
+            ("Que los responsables ya fueron identificados y sancionados",
+             "El editorial no menciona ninguna sanción ni identificación."),
+        ],
+    ),
+    _ql(
+        "fuente_memoria", "his_critico", "dificil",
+        "«El tiempo no cierra nada por sí solo: lo que cierra es la verdad». "
+        "¿Cómo funciona esa frase frente al editorial?",
+        "Acepta su metáfora del cierre y le cambia la condición que lo produce",
+        "El editorial sostiene que el tiempo está cerrando las heridas. La "
+        "declaración no rechaza la imagen: la conserva y discute qué es lo que "
+        "efectivamente cierra.\n"
+        "Con ese giro, la espera deja de ser un remedio y pasa a ser una "
+        "postergación. De ahí la conclusión: «Mientras no se sepa qué pasó y "
+        "quién lo decidió, no hay pasado que pase».\n"
+        "El cierre final —«no pedimos que se reabra nada, pedimos que por fin "
+        "se abra»— desarma también el verbo del editorial.",
+        [
+            ("Rechaza la metáfora del cierre por considerarla inadecuada",
+             "La declaración la conserva y la usa para su propio argumento."),
+            ("Sostiene que las heridas ya se cerraron con el paso de los años",
+             "Afirma lo contrario: sin verdad no hay cierre posible."),
+            ("Propone que el tribunal decida si corresponde investigar",
+             "La declaración no menciona ninguna instancia judicial."),
+        ],
+    ),
+    _ql(
+        "fuente_memoria", "his_critico", "dificil",
+        "¿Qué diferencia de posición explica mejor el contraste entre las dos "
+        "fuentes?",
+        "Una la escribe un medio al año siguiente y la otra una agrupación de familiares",
+        "El texto identifica a cada emisor y el momento de su intervención: un "
+        "editorial publicado al año siguiente de los hechos y una declaración "
+        "de familiares cuarenta años después.\n"
+        "La distancia temporal explica el tono, pero lo decisivo es la "
+        "relación con lo ocurrido: para el medio es un episodio del país; para "
+        "los familiares es un asunto sin resolver que los involucra "
+        "directamente.\n"
+        "Leer cada fuente sabiendo quién la produce y para qué es justamente "
+        "el procedimiento que exige el oficio.",
+        [
+            ("Una fue escrita por testigos directos y la otra por historiadores",
+             "Ninguna de las dos es obra de historiadores: son un medio y una agrupación."),
+            ("Una es una fuente primaria y la otra es secundaria",
+             "Ambas fueron producidas por actores de la época que describen, no por intérpretes posteriores."),
+            ("Una se apoya en documentos oficiales y la otra en testimonios orales",
+             "El texto no indica en qué se apoya cada una."),
+        ],
+    ),
+    _ql(
+        "fuente_participacion", "his_critico", "medio",
+        "Según la segunda fuente, ¿cuál es el problema del voto voluntario?",
+        "Que la abstención se concentra en los sectores de menores ingresos",
+        "La fuente desplaza la pregunta desde la cantidad a la composición: "
+        "«El problema del voto voluntario no es cuánta gente vota, sino quién "
+        "deja de votar».\n"
+        "Y responde de inmediato: la abstención no se reparte parejo, se "
+        "concentra en los sectores con menos ingresos y menos años de "
+        "escolaridad.\n"
+        "La consecuencia que extrae es política: un padrón que se achica por "
+        "ese lado produce autoridades que responden a una parte del país.",
+        [
+            ("Que reduce el total de votantes por debajo de la mitad",
+             "La fuente dice expresamente que el problema no es cuánta gente vota."),
+            ("Que obliga a las personas a votar bajo amenaza de multa",
+             "La multa aparece en la primera fuente y como rasgo del voto obligatorio."),
+            ("Que impide conocer la voluntad real de quienes acuden a votar",
+             "Ese es el argumento de la primera fuente, no de la segunda."),
+        ],
+    ),
+    _ql(
+        "fuente_participacion", "his_critico", "dificil",
+        "Las dos fuentes observan la misma baja participación. ¿Qué las lleva "
+        "a valorarla de manera opuesta?",
+        "Miran datos distintos: una a quien vota y la otra a quien se abstiene",
+        "La primera fuente se fija en quienes acuden: si el voto es "
+        "voluntario, quien vota lo hace por convicción, y de ahí concluye que "
+        "una participación menor puede indicar un electorado más consciente.\n"
+        "La segunda se fija en quienes no acuden y observa que la abstención "
+        "se concentra en los sectores de menores ingresos y escolaridad.\n"
+        "El mismo porcentaje admite las dos lecturas porque cada una lo "
+        "descompone de una manera distinta.",
+        [
+            ("Una usa cifras oficiales y la otra estimaciones propias sin fuente",
+             "Ninguna de las dos indica el origen de sus datos."),
+            ("Una se refiere a elecciones locales y la otra a nacionales",
+             "El tipo de elección no aparece en ninguna de las dos fuentes."),
+            ("Una defiende el voto obligatorio y la otra lo rechaza",
+             "La segunda fuente no propone volver al voto obligatorio: describe un efecto."),
+        ],
+    ),
+    _ql(
+        "fuente_participacion", "his_critico", "dificil",
+        "Un analista concluye que «la baja participación demuestra que el "
+        "electorado es más consciente». ¿Qué objeción le haría la segunda "
+        "fuente?",
+        "Que esa lectura ignora quiénes son los que dejaron de votar",
+        "La conclusión del analista repite el argumento de la primera fuente: "
+        "quien vota lo hace por convicción y no para evitar una multa.\n"
+        "La segunda fuente no discute esa motivación, sino lo que la "
+        "afirmación deja fuera: la abstención se concentra en los sectores con "
+        "menos ingresos y menos escolaridad.\n"
+        "De ahí que la conclusión resulte incompleta antes que falsa: describe "
+        "a quienes quedaron sin decir nada de quienes se fueron.",
+        [
+            ("Que la participación en realidad aumentó en el último período",
+             "Ninguna de las dos fuentes entrega esa información."),
+            ("Que el voto voluntario no existe en la legislación vigente",
+             "Las dos fuentes discuten sus efectos, así que lo dan por vigente."),
+            ("Que la conciencia política no puede medirse con encuestas",
+             "La objeción de la fuente es sobre la composición del padrón, no sobre la medición."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "medio",
+        "Según el texto, ¿qué distingue a las causas estructurales de las "
+        "inmediatas en una revolución?",
+        "Las estructurales operan durante años y las inmediatas actúan como detonante",
+        "El texto presenta ambas dentro de la explicación multicausal: la "
+        "revolución no se explica solo por el hambre, ni solo por las ideas, "
+        "ni solo por la debilidad del gobierno.\n"
+        "Dentro de esa convergencia distingue dos tiempos: causas "
+        "estructurales «que preparan el terreno durante años» y causas "
+        "inmediatas «que actúan como detonante».\n"
+        "La diferencia es de duración y función, no de importancia: sin "
+        "terreno preparado el detonante no encuentra qué encender.",
+        [
+            ("Las estructurales son económicas y las inmediatas son políticas",
+             "El texto no reparte las causas por ámbito sino por su temporalidad."),
+            ("Las estructurales las estudia el historiador y las inmediatas el testigo",
+             "El texto no asigna cada tipo de causa a un observador distinto."),
+            ("Las estructurales explican el hecho y las inmediatas solo lo ilustran",
+             "El texto trata el detonante como parte de la explicación."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "dificil",
+        "Un texto sostiene que la Revolución Francesa «se explica por el "
+        "hambre del pueblo». ¿Qué objeción le haría esta fuente?",
+        "Que reduce a un solo factor un proceso que el texto describe como multicausal",
+        "El texto usa exactamente ese ejemplo: una revolución «no se explica "
+        "solo por el hambre, ni solo por las ideas, ni solo por la debilidad "
+        "del gobierno».\n"
+        "Lo que la vuelve posible, sostiene, es la convergencia de factores "
+        "políticos, económicos, sociales y culturales.\n"
+        "La objeción no niega que el hambre haya influido: niega que baste "
+        "para explicar el proceso completo.",
+        [
+            ("Que el hambre es una causa inmediata y no una estructural",
+             "El texto no clasifica ese factor: objeta la reducción a uno solo."),
+            ("Que la afirmación es anacrónica respecto de su época",
+             "El anacronismo consiste en aplicar categorías de otra época, que no es el caso."),
+            ("Que faltaría contrastarla con una fuente primaria del período",
+             "La objeción del texto es conceptual y no documental."),
+        ],
+    ),
+    _ql(
+        "fuente_memoria", "his_critico", "medio",
+        "¿Qué diferencia hay entre lo que pide la agrupación y lo que el "
+        "editorial supone que pide?",
+        "El editorial supone que pide reabrir y ella pide que se abra",
+        "El editorial advierte contra «reabrir heridas», con lo que da por "
+        "supuesto que el asunto ya estuvo abierto y se cerró.\n"
+        "La declaración corrige esa suposición en su última línea: «No pedimos "
+        "que se reabra nada, pedimos que por fin se abra».\n"
+        "La corrección es de fondo: si nunca se supo qué pasó ni quién lo "
+        "decidió, no hubo cierre y por lo tanto no hay reapertura posible.",
+        [
+            ("El editorial pide sanciones y la agrupación pide reparación",
+             "Ninguna de las dos fuentes menciona sanciones ni reparación económica."),
+            ("El editorial habla del pasado y la agrupación del presente",
+             "Ambas discuten qué hacer hoy con lo ocurrido."),
+            ("El editorial pide investigar y la agrupación pide olvidar",
+             "Las posiciones son exactamente las inversas."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "medio",
+        "Según el texto, ¿qué se necesita para juzgar adecuadamente una "
+        "decisión tomada en el pasado?",
+        "Entender qué estaba disponible y qué era pensable en esa época",
+        "El texto cierra el párrafo sobre el anacronismo con esa exigencia "
+        "literal: cada época «debe entenderse según lo que estaba disponible y "
+        "era pensable en ella».\n"
+        "La condición es doble. No basta con lo material —los medios "
+        "existentes—: también cuenta el horizonte de lo que era posible "
+        "concebir en ese momento.\n"
+        "Sin esa reconstrucción, el juicio dice más sobre quien juzga que "
+        "sobre la decisión juzgada.",
+        [
+            ("Comparar la decisión con otras similares del mismo período",
+             "El texto no propone la comparación como criterio de juicio."),
+            ("Verificar que exista una fuente primaria que la registre",
+             "La exigencia del texto es de contexto, no de registro documental."),
+            ("Determinar si la decisión tuvo consecuencias positivas",
+             "El texto no evalúa las decisiones por su resultado."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_critico", "medio",
+        "¿Qué elemento aparece solo en la segunda fuente y no en la primera?",
+        "La quema de las siembras después de la negativa",
+        "El testimonio del habitante cierra con ese hecho: «Cuando dijimos que "
+        "no, quemaron las siembras».\n"
+        "El relato del cronista menciona que hubo que «reducirlos por las "
+        "armas», pero no describe ninguna acción concreta contra los bienes "
+        "del valle.\n"
+        "La diferencia importa porque el detalle específico es lo que permite "
+        "contrastar versiones: una fórmula general y un hecho concreto no "
+        "pesan igual.",
+        [
+            ("La entrega de alimento a los recién llegados",
+             "Ese hecho aparece solo en la segunda fuente, pero la pregunta admite un solo elemento y la quema es el que cierra el relato."),
+            ("El ofrecimiento de paz por parte del capitán",
+             "Ese elemento aparece únicamente en la primera fuente."),
+            ("La presencia de un gran número de habitantes en el valle",
+             "Ese dato lo entrega la primera fuente al describir el encuentro."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "dificil",
+        "¿Por qué el texto sostiene que reconstruir el contexto «no es un "
+        "adorno introductorio»?",
+        "Porque sin él se lee el pasado como si hubiera ocurrido en nuestra época",
+        "El texto entrega esa razón de manera literal al cerrar el párrafo: "
+        "reconstruir el contexto «es lo que impide leer el pasado como si "
+        "hubiera ocurrido en nuestra época».\n"
+        "El ejemplo previo lo respalda: publicar un texto crítico bajo una "
+        "dictadura y hacerlo en democracia no son el mismo acto.\n"
+        "Tratado como adorno, el contexto se cuenta y se olvida; tratado como "
+        "condición, decide qué significa cada hecho que viene después.",
+        [
+            ("Porque los lectores esperan una introducción antes del análisis",
+             "El texto rechaza justamente esa función decorativa del contexto."),
+            ("Porque permite citar más fuentes al comienzo del trabajo",
+             "La cantidad de fuentes no interviene en el argumento."),
+            ("Porque ayuda a fijar con precisión la fecha de los hechos",
+             "El contexto explica el sentido de los hechos, no su cronología."),
+        ],
+    ),
+    _ql(
+        "fuente_participacion", "his_critico", "medio",
+        "Según la primera fuente, ¿qué indicaría una participación electoral "
+        "menor?",
+        "Un electorado más consciente y no uno más indiferente",
+        "La fuente construye el argumento sobre la motivación: cuando el voto "
+        "es voluntario, quien acude «lo hace por convicción».\n"
+        "De ahí concluye que el resultado refleja la voluntad de quienes de "
+        "verdad quieren decidir, y no la de quienes votan solo para evitar una "
+        "multa.\n"
+        "La frase final resume la lectura: una participación menor «puede ser "
+        "señal de un electorado más consciente, no de uno más indiferente».",
+        [
+            ("Un problema de acceso a los locales de votación",
+             "La fuente no menciona dificultades de acceso."),
+            ("Una señal de desconfianza hacia las instituciones",
+             "La desconfianza no aparece en el argumento de esta fuente."),
+            ("Un padrón que responde solo a una parte del país",
+             "Esa es la conclusión de la segunda fuente, no de la primera."),
+        ],
+    ),
+    _ql(
+        "fuente_memoria", "his_critico", "dificil",
+        "Un investigador quiere estudiar cómo se recordó el hecho a lo largo "
+        "del tiempo. ¿Qué le permiten estas dos fuentes?",
+        "Comparar dos momentos del recuerdo separados por cuarenta años",
+        "El texto fecha cada intervención: el editorial se publicó al año "
+        "siguiente de los hechos y la declaración, cuarenta años después.\n"
+        "Esa distancia convierte al par en material útil para estudiar la "
+        "memoria: no solo qué se dijo, sino cómo cambió lo que se consideraba "
+        "decible.\n"
+        "Para reconstruir los hechos mismos, en cambio, harían falta otras "
+        "fuentes: ninguna de las dos los describe en detalle.",
+        [
+            ("Establecer con precisión qué ocurrió durante aquellos días",
+             "Ninguna de las dos fuentes describe los hechos en detalle."),
+            ("Determinar quiénes fueron los responsables de lo ocurrido",
+             "Esa es justamente la pregunta que la declaración señala como pendiente."),
+            ("Medir cuánta gente compartía cada una de las dos posturas",
+             "Las fuentes expresan posiciones, no su extensión en la población."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "dificil",
+        "Según el texto, ¿qué relación hay entre las preguntas nuevas y la "
+        "evidencia?",
+        "Las preguntas pueden renovarse, pero cada afirmación sigue exigiendo evidencia",
+        "El texto sostiene que el pasado no cambia y que lo que cambia son las "
+        "preguntas, los archivos disponibles y las técnicas de análisis.\n"
+        "Y agrega el límite de inmediato: «Eso no vuelve arbitraria la "
+        "disciplina: las afirmaciones siguen exigiendo evidencia».\n"
+        "La renovación, entonces, ocurre en el temario y en el método, no en "
+        "la regla de prueba, que permanece constante.",
+        [
+            ("Las preguntas nuevas reemplazan a la evidencia como criterio",
+             "El texto mantiene la exigencia de evidencia intacta."),
+            ("Solo las preguntas antiguas admiten verificación documental",
+             "El texto no distingue entre preguntas verificables y no verificables."),
+            ("La evidencia limita qué preguntas puede formular un historiador",
+             "El texto presenta las preguntas como abiertas y la evidencia como exigencia posterior."),
+        ],
+    ),
+    # ---------------- análisis de fuentes ----------------
+    _ql(
+        "his_tipos_fuentes", "his_fuentes", "medio",
+        "Según el texto, ¿en qué se diferencian las fuentes primarias de las "
+        "secundarias?",
+        "En la distancia respecto de los hechos, no en su calidad",
+        "El texto define las primarias como producidas en la época estudiada "
+        "—cartas, actas, fotografías, herramientas, edificios— y las "
+        "secundarias como elaboraciones posteriores que las interpretan.\n"
+        "Y agrega una precisión que corrige un error frecuente: «La diferencia "
+        "no está en la calidad sino en la distancia respecto de los hechos».\n"
+        "Una fuente primaria puede ser tendenciosa y una secundaria, "
+        "rigurosa: la clasificación no anticipa cuál es más confiable.",
+        [
+            ("En que las primarias son más confiables que las secundarias",
+             "El texto niega expresamente que la diferencia sea de calidad."),
+            ("En que las primarias son escritas y las secundarias orales",
+             "El soporte es otra clasificación, distinta de esta."),
+            ("En que las secundarias solo se usan cuando faltan primarias",
+             "El texto no plantea ninguna jerarquía de uso entre ambas."),
+        ],
+    ),
+    _ql(
+        "his_tipos_fuentes", "his_fuentes", "medio",
+        "Según el texto, ¿qué significa que «ninguna fuente habla sola»?",
+        "Que toda fuente fue producida por alguien, en un momento y con un propósito",
+        "El texto lo desarrolla en esos términos y agrega que esas condiciones "
+        "«forman parte de lo que dice»: no son un ruido que haya que descontar "
+        "sino información sobre el documento.\n"
+        "El ejemplo lo aclara: un informe escrito para justificar una decisión "
+        "ante un superior no es menos útil por eso, «simplemente hay que leerlo "
+        "sabiendo qué buscaba lograr».\n"
+        "De ahí el procedimiento que el texto propone: identificar quién, "
+        "cuándo, para quién y con qué intención, y contrastar.",
+        [
+            ("Que una fuente aislada siempre contiene errores de hecho que hay que corregir",
+             "El texto no atribuye errores a las fuentes por estar aisladas."),
+            ("Que las fuentes deben leerse en su idioma original",
+             "El idioma no aparece en el argumento del texto."),
+            ("Que solo las fuentes orales requieren un intérprete",
+             "La advertencia del texto vale para toda fuente, no solo las orales."),
+        ],
+    ),
+    _ql(
+        "his_tipos_fuentes", "his_fuentes", "dificil",
+        "Según el texto, ¿en qué consiste el procedimiento básico del oficio "
+        "frente a una fuente?",
+        "Identificar quién, cuándo, para quién y con qué intención, y contrastar",
+        "El texto lo enuncia como cierre de todo el razonamiento anterior: "
+        "identificar quién produjo la fuente, cuándo, para quién y con qué "
+        "intención, y contrastarla con otras.\n"
+        "El contraste no es opcional. El texto lo justifica en la última "
+        "línea: «Una sola fuente rara vez basta, y dos que coinciden dicen más "
+        "que una que afirma».\n"
+        "Las cuatro preguntas iniciales sitúan el documento; el contraste "
+        "permite pesar lo que dice.",
+        [
+            ("Verificar que sea primaria antes de darle cualquier valor",
+             "El texto niega que lo primario garantice calidad."),
+            ("Comprobar que su autor haya sido testigo de los hechos",
+             "El texto no exige que el autor sea testigo directo."),
+            ("Traducirla y transcribirla antes de analizar su contenido",
+             "El texto no menciona traducción ni transcripción."),
+        ],
+    ),
+    _ql(
+        "his_tipos_fuentes", "his_fuentes", "dificil",
+        "Un investigador estudia una sociedad que no dejó documentos escritos. "
+        "Según el texto, ¿qué puede usar?",
+        "Fuentes materiales y orales, como objetos, restos, arquitectura y relatos",
+        "El texto plantea el problema y la salida en el mismo párrafo. "
+        "Privilegiar lo escrito deja fuera a las sociedades sin escritura, y "
+        "las fuentes materiales y orales «permiten acceder justamente a esos "
+        "sectores».\n"
+        "Entre las materiales enumera objetos, restos y arquitectura, que "
+        "aparecen también en su lista de fuentes primarias.\n"
+        "La ausencia de escritura, entonces, no deja al historiador sin "
+        "material: le cambia el tipo de vestigio con que trabaja.",
+        [
+            ("Solo fuentes secundarias escritas por otros investigadores",
+             "Las secundarias interpretan fuentes previas: no reemplazan la falta de vestigios."),
+            ("Documentos escritos por sociedades vecinas exclusivamente",
+             "El texto no propone limitar la investigación a fuentes externas."),
+            ("Ninguna, porque sin escritura no hay fuentes disponibles",
+             "El texto define la fuente como cualquier vestigio, no solo el escrito."),
+        ],
+    ),
+    _ql(
+        "his_tipos_fuentes", "his_fuentes", "dificil",
+        "«Dos que coinciden dicen más que una que afirma». ¿Qué principio del "
+        "oficio resume esa frase?",
+        "El del contraste: una sola fuente rara vez basta para sostener una afirmación",
+        "La frase cierra el párrafo dedicado al procedimiento y explica por "
+        "qué el contraste forma parte de él y no es un paso opcional.\n"
+        "El razonamiento es sencillo: si toda fuente fue producida con un "
+        "propósito, la coincidencia entre dos producidas por motivos distintos "
+        "es más difícil de explicar por ese propósito.\n"
+        "No garantiza la verdad, pero eleva el costo del error: es la forma "
+        "que toma la exigencia de evidencia en este oficio.",
+        [
+            ("El de la primacía: la fuente primaria pesa más que la secundaria",
+             "El texto niega expresamente que lo primario implique mayor calidad."),
+            ("El del contexto: cada fuente debe leerse en su época",
+             "Ese principio aparece en el texto sobre el oficio, no en esta frase."),
+            ("El de la cantidad: mientras más fuentes, más cierta la conclusión",
+             "El texto valora la coincidencia entre fuentes distintas, no el número."),
+        ],
+    ),
+    _ql(
+        "fuentes_salitre", "his_fuentes", "medio",
+        "¿Para quién fue escrito cada uno de los dos documentos de la oficina "
+        "salitrera?",
+        "El primero para la casa matriz y el segundo para un hermano",
+        "El texto identifica al destinatario de cada fuente en su "
+        "encabezado: un informe de un administrador «a la casa matriz» y una "
+        "carta de un obrero «a su hermano».\n"
+        "El destinatario condiciona lo que cada documento dice. Ante la casa "
+        "matriz conviene mostrar una oficina ordenada; ante un hermano que "
+        "pregunta, conviene responder sin adorno.\n"
+        "Identificar para quién se escribió es uno de los cuatro pasos del "
+        "procedimiento básico del oficio.",
+        [
+            ("El primero para los obreros y el segundo para las autoridades",
+             "El informe se dirige a la casa matriz y la carta a un familiar."),
+            ("Ambos para ser publicados en la prensa de la época",
+             "Ninguno de los dos documentos fue escrito para publicarse."),
+            ("El primero para un tribunal y el segundo para un sindicato",
+             "Ni tribunales ni sindicatos aparecen como destinatarios."),
+        ],
+    ),
+    _ql(
+        "fuentes_salitre", "his_fuentes", "dificil",
+        "Un historiador debe decidir cuál de las dos fuentes usar. Según el "
+        "oficio, ¿qué corresponde hacer?",
+        "Usar ambas, leyendo cada una a la luz de quién la escribió y para quién",
+        "Ninguna de las dos es descartable: las dos fueron producidas en la "
+        "época y describen los mismos elementos —pulpería, escuela, agua, "
+        "pago— desde posiciones opuestas.\n"
+        "El informe muestra qué necesitaba mostrar una administración ante su "
+        "casa matriz; la carta, qué experimentaba un trabajador. Ambas cosas "
+        "son parte de lo que hay que explicar.\n"
+        "Elegir una sola equivaldría a adoptar su punto de vista sin "
+        "advertirlo, que es lo contrario del contraste.",
+        [
+            ("Usar solo la carta, porque proviene de quien vivió las condiciones",
+             "Haber vivido algo no convierte un testimonio en versión única."),
+            ("Usar solo el informe, porque su autor tenía datos administrativos",
+             "Tener datos no exime del propósito con que se escribió el informe."),
+            ("Descartar ambas y buscar una fuente secundaria neutral",
+             "El texto no plantea la existencia de fuentes sin punto de vista."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_fuentes", "medio",
+        "¿Qué diferencia de producción hay entre las dos fuentes sobre el "
+        "encuentro en el valle?",
+        "Una la escribió un cronista de la expedición y la otra se transmitió oralmente",
+        "El texto identifica el origen de cada una: el primer relato "
+        "corresponde a «un cronista que acompañó a la expedición» y el segundo "
+        "es un «testimonio recogido a un habitante del valle, transmitido "
+        "oralmente y puesto por escrito generaciones después».\n"
+        "La diferencia no es solo de autor sino de recorrido: uno se escribió "
+        "en el momento y el otro pasó por varias generaciones antes de fijarse "
+        "por escrito.\n"
+        "Ese recorrido forma parte de lo que hay que considerar al leerlo, sin "
+        "que lo invalide.",
+        [
+            ("Una es un documento oficial y la otra una carta privada",
+             "Ninguno de los dos documentos es una carta ni una pieza oficial."),
+            ("Una fue escrita por un historiador y la otra por un testigo",
+             "El cronista acompañó la expedición: no es un historiador posterior."),
+            ("Ambas fueron redactadas el mismo año por encargo de la Corona",
+             "El segundo testimonio se puso por escrito generaciones después."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_fuentes", "dificil",
+        "El segundo testimonio se puso por escrito generaciones después. "
+        "¿Cómo debería tratarse ese dato?",
+        "Como una condición de producción que hay que considerar, sin descartar la fuente",
+        "El procedimiento del oficio pide identificar cuándo se produjo cada "
+        "fuente, y aquí la respuesta es doble: el hecho ocurrió en un momento "
+        "y la fijación por escrito, generaciones después.\n"
+        "Esa distancia puede introducir elaboración, pero también es la única "
+        "vía por la que una versión no escrita llegó a conservarse: "
+        "descartarla dejaría el episodio con un solo relato.\n"
+        "Lo que corresponde es leerla sabiendo su recorrido y contrastarla con "
+        "la otra fuente, que es lo que el oficio propone.",
+        [
+            ("Como motivo suficiente para preferir la crónica del expedicionario",
+             "La crónica también fue escrita con un propósito: la antigüedad no la vuelve neutral."),
+            ("Como prueba de que el testimonio fue inventado más tarde",
+             "La transmisión oral no equivale a invención."),
+            ("Como un detalle irrelevante para el análisis de la fuente",
+             "El cuándo es uno de los cuatro datos que el oficio exige identificar."),
+        ],
+    ),
+    _ql(
+        "fuentes_salitre", "his_fuentes", "dificil",
+        "Ambas fuentes mencionan la escuela de la oficina. ¿Qué revela ese "
+        "punto de coincidencia?",
+        "Que el desacuerdo no es sobre su existencia sino sobre su alcance",
+        "El informe la presenta como parte de los servicios: «escuela para los "
+        "hijos de los operarios». La carta no la niega: «La escuela existe y "
+        "tiene un solo maestro para ciento veinte niños».\n"
+        "La coincidencia sobre el hecho y la discrepancia sobre su alcance es "
+        "justamente lo que hace productivo el contraste: el dato adicional de "
+        "la carta cambia lo que significa el mismo servicio.\n"
+        "Es un buen ejemplo de por qué dos fuentes que coinciden en algo dicen "
+        "más que una que afirma.",
+        [
+            ("Que una de las dos fuentes está faltando a la verdad",
+             "Ambas afirman que la escuela existe: la diferencia es de alcance."),
+            ("Que la escuela fue construida entre 1907 y 1908",
+             "Las dos fuentes la dan por existente, sin indicar cuándo se construyó."),
+            ("Que el administrador desconocía las condiciones de la escuela",
+             "El informe no niega el dato de la carta: simplemente no lo menciona."),
+        ],
+    ),
+]
+
+
+# Reemplazos de las cuatro preguntas que repetian un enunciado ya existente,
+# mas las dos que faltaban para dejar his_critico en 60.
+
+QUESTIONS_HISTORIA += [
+    _ql(
+        "his_tipos_fuentes", "his_fuentes", "facil",
+        "¿Qué ejemplos de fuentes primarias entrega el texto?",
+        "Cartas, actas, fotografías, herramientas y edificios",
+        "El texto define las primarias como producidas en la época estudiada y "
+        "entrega esa lista, que mezcla soportes muy distintos: papel, imagen, "
+        "objeto y construcción.\n"
+        "La variedad no es casual. Sirve para mostrar que lo primario no "
+        "coincide con lo escrito: una herramienta también es fuente.\n"
+        "Las secundarias, en cambio, las ejemplifica con un libro de historia "
+        "o un artículo académico, que son elaboraciones posteriores.",
+        [
+            ("Libros de historia y artículos académicos recientes",
+             "Esos son los ejemplos que el texto da de fuentes secundarias."),
+            ("Únicamente documentos oficiales conservados en archivos",
+             "El texto incluye fotografías, herramientas y edificios."),
+            ("Relatos orales transmitidos entre varias generaciones",
+             "Las fuentes orales aparecen en la clasificación por soporte."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "medio",
+        "Según el texto, ¿qué describe en realidad el reproche a alguien por "
+        "no saber algo que en su tiempo no estaba establecido?",
+        "La confusión de quien juzga, no la ignorancia de quien fue juzgado",
+        "El texto lo formula así al explicar el anacronismo: ese reproche «no "
+        "describe su ignorancia: describe la confusión de quien juzga».\n"
+        "El desplazamiento es deliberado. El juicio pretende hablar del pasado "
+        "y termina hablando del criterio con que se lo mira.\n"
+        "De ahí la exigencia que el texto plantea a continuación: entender "
+        "cada época según lo que estaba disponible y era pensable en ella.",
+        [
+            ("Una carencia real de conocimiento en la época estudiada",
+             "El texto sostiene que ese conocimiento aún no había sido establecido."),
+            ("La falta de fuentes que documenten lo que se sabía entonces",
+             "El problema que plantea el texto no es documental sino de criterio."),
+            ("Un error de método al reconstruir el contexto de la época",
+             "El contexto es el remedio que propone el texto, no el error que describe."),
+        ],
+    ),
+    _ql(
+        "his_tipos_fuentes", "his_fuentes", "medio",
+        "Además de por su distancia respecto de los hechos, ¿cómo clasifica el "
+        "texto las fuentes históricas?",
+        "Por su soporte: escritas, materiales y orales",
+        "El texto abre esa segunda clasificación de manera explícita: «Las "
+        "fuentes también se clasifican por su soporte».\n"
+        "Enumera las escritas, que reconoce como las más usadas; las "
+        "materiales, que incluyen objetos, restos y arquitectura; y las "
+        "orales.\n"
+        "La distinción importa porque cada soporte da acceso a sectores "
+        "distintos: privilegiar lo escrito deja fuera a quienes no escribían.",
+        [
+            ("Por su antigüedad: antiguas, modernas y contemporáneas",
+             "El texto no clasifica las fuentes por su antigüedad."),
+            ("Por su confiabilidad: verificadas y no verificadas",
+             "El texto niega que la clasificación anticipe la confiabilidad."),
+            ("Por su extensión: documentos breves y documentos largos",
+             "La extensión no aparece como criterio en el texto."),
+        ],
+    ),
+    _ql(
+        "his_tipos_fuentes", "his_fuentes", "medio",
+        "Un investigador cita un artículo académico publicado en 2010 sobre la "
+        "Colonia. Según el texto, ¿qué tipo de fuente está usando?",
+        "Una fuente secundaria, porque interpreta fuentes anteriores",
+        "El texto define las secundarias como «elaboraciones posteriores que "
+        "interpretan a las primeras», y menciona expresamente el libro de "
+        "historia y el artículo académico como ejemplos.\n"
+        "Lo que decide la categoría es la distancia respecto de los hechos, no "
+        "el prestigio del autor ni el rigor del trabajo.\n"
+        "El propio texto lo aclara: la diferencia entre primaria y secundaria "
+        "«no está en la calidad sino en la distancia».",
+        [
+            ("Una fuente primaria, porque fue escrita por un especialista",
+             "La condición de especialista no convierte un texto en fuente primaria."),
+            ("Una fuente material, porque el artículo es un objeto impreso",
+             "Las fuentes materiales son objetos, restos y arquitectura de la época estudiada."),
+            ("Una fuente primaria, porque cita documentos de la época",
+             "Citar documentos de la época es lo que hace una elaboración posterior."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "medio",
+        "Según el texto, ¿qué condiciones componen el contexto histórico de un "
+        "hecho?",
+        "Las políticas, económicas, sociales y culturales de su época",
+        "El texto lo define como «el conjunto de condiciones políticas, "
+        "económicas, sociales y culturales de la época» que permiten "
+        "comprender por qué un hecho ocurrió y qué significó.\n"
+        "Las cuatro dimensiones son las mismas que reaparecen cuando el texto "
+        "explica la multicausalidad, y no es casualidad: reconstruir el "
+        "contexto y explicar las causas son operaciones emparentadas.\n"
+        "Dejar fuera alguna de ellas empobrece la explicación aunque el relato "
+        "siga siendo correcto.",
+        [
+            ("Únicamente las decisiones de las autoridades de turno",
+             "El texto incluye condiciones económicas, sociales y culturales además de las políticas."),
+            ("Los antecedentes militares y diplomáticos del período",
+             "El texto no reduce el contexto a esos dos ámbitos."),
+            ("Las fuentes disponibles para estudiar ese hecho concreto",
+             "Las fuentes son el material del historiador, no el contexto del hecho."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "dificil",
+        "Dos generaciones de historiadores estudian el mismo siglo y publican "
+        "conclusiones distintas. Según el texto, ¿qué explica esa diferencia?",
+        "Cambiaron las preguntas, los archivos disponibles y las técnicas de análisis",
+        "El texto sostiene que la historia se reescribe con cada generación "
+        "porque «el pasado no cambia, pero las preguntas que se le hacen sí», "
+        "y suma dos factores materiales: archivos que se abren y técnicas "
+        "nuevas.\n"
+        "Da ejemplos concretos del giro en las preguntas: la vida cotidiana, "
+        "el trabajo de las mujeres, los pueblos sin escritura.\n"
+        "Y marca el límite de esa explicación: la disciplina no se vuelve "
+        "arbitraria, porque las afirmaciones siguen exigiendo evidencia.",
+        [
+            ("Una de las dos generaciones trabajó con fuentes falsas",
+             "El texto no atribuye la diferencia a fuentes defectuosas."),
+            ("Los hechos del siglo estudiado se conocieron con más detalle",
+             "El texto afirma que el pasado no cambia: lo que cambia es qué se le pregunta."),
+            ("La segunda generación abandonó la exigencia de evidencia",
+             "El texto sostiene expresamente lo contrario."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Historia - Mapas, graficos y lineas de tiempo
+#
+# El ultimo nodo de habilidad bajo 60. Todas las preguntas leen las tablas que
+# ya estaban en el banco: se verifico cada cifra citada contra la fuente.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_HISTORIA += [
+    _ql(
+        "migracion_tabla", "his_representaciones", "medio",
+        "¿En qué año la población urbana de San Alberto superó por primera vez "
+        "a la rural?",
+        "En 2000",
+        "La tabla permite comparar las dos columnas año por año. En 1990 la "
+        "población rural era 8.100 y la urbana 4.300: la rural casi duplicaba "
+        "a la otra.\n"
+        "En 2000 la relación ya está invertida: 6.900 rurales frente a 8.900 "
+        "urbanos. Ese es el primer registro en que la urbana es mayor.\n"
+        "En los dos censos siguientes la distancia se amplía hasta llegar a "
+        "3.800 rurales frente a 24.900 urbanos.",
+        [
+            ("En 1990",
+             "Ese año la población rural era casi el doble de la urbana."),
+            ("En 2010",
+             "En 2010 la urbana ya superaba a la rural desde el registro anterior."),
+            ("En 2020",
+             "Es el último registro de la tabla, no el primero en que se invierte."),
+        ],
+    ),
+    _ql(
+        "migracion_tabla", "his_representaciones", "dificil",
+        "Entre 1990 y 2020 la población total de San Alberto creció y la rural "
+        "disminuyó. ¿Qué explicación es compatible con la tabla y sus notas?",
+        "Llegó población desde fuera y parte de la rural se trasladó a la zona urbana",
+        "La tabla muestra dos movimientos simultáneos: el total sube de 12.400 "
+        "a 28.700 y la población rural cae de 8.100 a 3.800.\n"
+        "La caída rural de 4.300 personas no alcanza a explicar por sí sola el "
+        "aumento urbano de 20.600: buena parte del crecimiento tuvo que venir "
+        "de fuera de la comuna.\n"
+        "Las notas aportan el contexto: agua potable urbana desde 1998 y camino "
+        "pavimentado a la capital regional desde 2005.",
+        [
+            ("Toda la población rural se trasladó a la zona urbana de la comuna",
+             "En 2020 quedaban 3.800 habitantes rurales, así que no se trasladó toda."),
+            ("La comuna perdió población total durante el período estudiado",
+             "El total pasó de 12.400 a 28.700 habitantes."),
+            ("El crecimiento urbano se explica solo por el aumento de la natalidad",
+             "La tabla no entrega datos de natalidad y el aumento supera la caída rural."),
+        ],
+    ),
+    _ql(
+        "empleo_sectores", "his_representaciones", "medio",
+        "Según la tabla, ¿en qué año el sector secundario alcanzó su mayor "
+        "participación en el empleo?",
+        "En 1980, con un 28%",
+        "La columna del sector secundario recorre cuatro valores: 20 en 1960, "
+        "28 en 1980, 26 en 2000 y 19 en 2020.\n"
+        "El máximo es 28 y corresponde a 1980. Después de ese año la "
+        "participación baja de manera sostenida hasta quedar por debajo del "
+        "punto de partida.\n"
+        "Es el único sector de la tabla que primero sube y después baja: el "
+        "primario cae siempre y el terciario sube siempre.",
+        [
+            ("En 1960, con un 20%",
+             "Ese es el primer valor de la serie, no el mayor."),
+            ("En 2000, con un 26%",
+             "En 2000 el sector ya había empezado a retroceder desde el 28% de 1980."),
+            ("En 2020, con un 19%",
+             "Ese es el valor más bajo de toda la serie."),
+        ],
+    ),
+    _ql(
+        "empleo_sectores", "his_representaciones", "dificil",
+        "Un estudiante concluye que entre 1960 y 2020 disminuyó la cantidad de "
+        "trabajadores del sector primario. ¿Qué problema tiene esa conclusión?",
+        "La tabla entrega porcentajes, no cantidades de trabajadores",
+        "El encabezado de la tabla es explícito: los valores son el porcentaje "
+        "del total de trabajadores ocupados en cada sector.\n"
+        "Un porcentaje puede caer del 55% al 11% mientras la cantidad absoluta "
+        "se mantiene o incluso sube, si el total de ocupados creció lo "
+        "suficiente en el mismo período.\n"
+        "Para afirmar algo sobre cantidades haría falta un dato que la tabla no "
+        "entrega: cuántos trabajadores había en cada año.",
+        [
+            ("La tabla no cubre el período completo que menciona el estudiante",
+             "La tabla va de 1960 a 2020, exactamente el período citado."),
+            ("El sector primario no incluye la actividad minera en esta tabla",
+             "La nota al pie incluye la minería dentro del sector primario."),
+            ("Los porcentajes de la tabla no suman cien en todos los años",
+             "Suman cien en los cuatro años registrados."),
+        ],
+    ),
+    _ql(
+        "empleo_sectores", "his_representaciones", "dificil",
+        "¿Qué transformación de largo plazo describe mejor la serie completa "
+        "de la tabla?",
+        "El paso de una economía centrada en el sector primario a una de servicios",
+        "Los extremos de la serie son elocuentes: el sector primario pasa del "
+        "55% al 11% del empleo y el terciario, del 25% al 70%.\n"
+        "El secundario cumple un papel intermedio: sube hasta el 28% en 1980 y "
+        "después retrocede al 19%, sin llegar nunca a ser el sector "
+        "mayoritario.\n"
+        "La nota al pie precisa qué actividades componen cada sector, y "
+        "confirma que el terciario reúne comercio y servicios.",
+        [
+            ("Una industrialización sostenida a lo largo de los sesenta años",
+             "El sector secundario termina el período por debajo de donde partió."),
+            ("El retroceso del comercio frente a la actividad agrícola",
+             "La tabla muestra exactamente el movimiento contrario."),
+            ("Un reparto cada vez más parejo entre los tres sectores",
+             "En 2020 el terciario concentra el 70% del empleo: el reparto es más desigual."),
+        ],
+    ),
+    _ql(
+        "tabla_alfabetizacion", "his_representaciones", "medio",
+        "Según la tabla, ¿qué grupo aumentó más su alfabetización entre 1930 y "
+        "2020?",
+        "Las mujeres rurales, que pasaron de 19% a 96%",
+        "Los cuatro grupos mejoran, pero no en la misma magnitud. Los hombres "
+        "urbanos suben de 62 a 99, es decir, 37 puntos.\n"
+        "Las mujeres rurales parten del valor más bajo de toda la tabla, 19%, y "
+        "llegan a 96%: 77 puntos de aumento, más del doble que cualquier otro "
+        "grupo.\n"
+        "Es el efecto habitual de partir desde muy abajo: el mismo avance "
+        "absoluto se nota mucho más en quien tenía menos.",
+        [
+            ("Los hombres urbanos, que pasaron de 62% a 99%",
+             "Ese aumento es de 37 puntos, la mitad del de las mujeres rurales."),
+            ("Las mujeres urbanas, que pasaron de 48% a 99%",
+             "Ese aumento es de 51 puntos, menor que el de las mujeres rurales."),
+            ("Los hombres rurales, que pasaron de 34% a 96%",
+             "Ese aumento es de 62 puntos, todavía menor que el de las mujeres rurales."),
+        ],
+    ),
+    _ql(
+        "tabla_alfabetizacion", "his_representaciones", "dificil",
+        "¿Qué advertencia introduce la nota sobre la caída de la población "
+        "rural entre 1930 y 1960?",
+        "Que parte de la mejora regional puede deberse al cambio en la composición",
+        "La nota informa que entre 1930 y 1960 la población rural de la región "
+        "cayó de 58% a 39% del total.\n"
+        "Si los grupos rurales tenían las tasas más bajas y su peso en el total "
+        "disminuye, el promedio regional sube aunque ningún grupo hubiera "
+        "mejorado. El efecto es de composición, no de política educativa.\n"
+        "La tabla protege contra ese error al informar cada grupo por separado, "
+        "y ahí se ve que todos mejoraron de verdad.",
+        [
+            ("Que las cifras rurales de 1930 fueron estimadas y no medidas",
+             "La nota sobre estimaciones se refiere a los menores de 15 años, no al ámbito rural."),
+            ("Que la región dejó de tener población rural después de 1960",
+             "La tabla sigue registrando grupos rurales hasta 2020."),
+            ("Que las tasas rurales y urbanas no son comparables entre sí",
+             "La tabla las presenta juntas precisamente para compararlas."),
+        ],
+    ),
+    _ql(
+        "tabla_alfabetizacion", "his_representaciones", "dificil",
+        "En 1930 la brecha entre hombres y mujeres era de 14 puntos en lo "
+        "urbano y de 15 en lo rural. ¿Qué muestra la tabla sobre esas dos "
+        "brechas hacia 2020?",
+        "Las dos prácticamente desaparecen, con valores iguales en cada ámbito",
+        "En 2020 la tabla registra 99% para hombres urbanos y 99% para mujeres "
+        "urbanas, y 96% para hombres rurales y 96% para mujeres rurales.\n"
+        "La brecha de género se cierra por completo en ambos ámbitos. Lo que "
+        "queda es una diferencia de 3 puntos entre lo urbano y lo rural, mucho "
+        "menor que los 28 puntos de 1930.\n"
+        "Cerrar la brecha de género antes que la territorial es un patrón "
+        "frecuente en las series de escolaridad.",
+        [
+            ("La brecha urbana se cierra y la rural se mantiene en 15 puntos",
+             "En 2020 hombres y mujeres rurales registran el mismo 96%."),
+            ("Ambas brechas se amplían respecto de los valores de 1930",
+             "Las dos se reducen hasta desaparecer."),
+            ("La brecha de género se cierra y la brecha urbano-rural también",
+             "Persiste una diferencia de 3 puntos entre lo urbano y lo rural."),
+        ],
+    ),
+    _ql(
+        "tabla_electoral", "his_representaciones", "medio",
+        "¿En cuál de las elecciones de la tabla se emitió la mayor cantidad de "
+        "votos?",
+        "En el plebiscito de 2020, con 23.000 votos",
+        "La columna de votos emitidos registra 22.000 en 2012, 15.400 en 2016, "
+        "23.000 en 2020 y 18.800 en 2021.\n"
+        "El máximo es 23.000 y corresponde al plebiscito. Conviene distinguir "
+        "esa columna de la de participación: el plebiscito tiene el mayor "
+        "número de votos y no el mayor porcentaje.\n"
+        "El porcentaje más alto, 55%, es el de 2012, con un padrón bastante "
+        "menor.",
+        [
+            ("En la municipal de 2012, con 22.000 votos",
+             "Es la segunda cifra más alta, aunque sí tiene el mayor porcentaje."),
+            ("En la municipal de 2021, con 18.800 votos",
+             "Queda por debajo de 2012 y del plebiscito."),
+            ("En la municipal de 2016, con 15.400 votos",
+             "Es la cifra más baja de la tabla."),
+        ],
+    ),
+    _ql(
+        "tabla_electoral", "his_representaciones", "dificil",
+        "La participación cae del 55% en 2012 al 35% en 2016. ¿Qué nota de la "
+        "tabla ayuda a interpretar esa caída?",
+        "Que desde 2012 la inscripción pasó a ser automática y amplió el padrón",
+        "La caída porcentual es fuerte, pero el padrón creció de 40.000 a "
+        "44.000 personas entre ambas elecciones.\n"
+        "La nota explica el cambio de regla: hasta 2012 la inscripción era "
+        "voluntaria y el voto obligatorio para los inscritos; desde entonces la "
+        "inscripción es automática.\n"
+        "Con inscripción voluntaria el padrón reunía sobre todo a quienes "
+        "querían votar. Al incorporar automáticamente al resto, el denominador "
+        "creció más rápido que los votos.",
+        [
+            ("Que el plebiscito de 2020 fue una consulta nacional",
+             "Esa nota explica el repunte de 2020, no la caída de 2016."),
+            ("Que en 2023 el voto volvió a ser obligatorio",
+             "Ese cambio es posterior al período que cubre la tabla."),
+            ("Que el padrón habilitado disminuyó entre ambas elecciones",
+             "El padrón creció de 40.000 a 44.000 personas."),
+        ],
+    ),
+    _ql(
+        "tabla_electoral", "his_representaciones", "dificil",
+        "Un análisis afirma que «el interés electoral de la comuna cayó de "
+        "manera sostenida entre 2012 y 2021». ¿Qué muestra la tabla?",
+        "Que la participación bajó, subió en 2020 y volvió a bajar",
+        "La serie de participación es 55%, 35%, 50% y 40%: no describe una "
+        "caída sostenida sino un movimiento con un repunte intermedio.\n"
+        "El repunte corresponde al plebiscito de 2020, que según la nota fue "
+        "una consulta nacional y no una elección de autoridades. El tipo de "
+        "elección influye en cuánta gente acude.\n"
+        "Describirla como caída sostenida obliga a ignorar el año en que la "
+        "participación subió quince puntos.",
+        [
+            ("Que la participación se mantuvo estable en torno al 45%",
+             "Los valores van del 35% al 55%: la variación es de veinte puntos."),
+            ("Que la participación subió en cada elección desde 2016",
+             "Bajó del 50% en 2020 al 40% en 2021."),
+            ("Que la caída se explica por la reducción del padrón",
+             "El padrón creció en cada uno de los registros de la tabla."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_representaciones", "medio",
+        "Según la tabla 2, ¿qué país estableció el servicio militar "
+        "obligatorio mucho antes de su unificación nacional?",
+        "El país C, con servicio desde 1814 y unificación en 1871",
+        "La tabla 1 fecha la unificación de C en 1871 y la tabla 2 sitúa su "
+        "servicio militar obligatorio en 1814: cincuenta y siete años antes.\n"
+        "El caso muestra que las herramientas de construcción estatal no "
+        "siguen siempre el mismo orden. En B, en cambio, la unificación de 1861 "
+        "precede al servicio de 1875.\n"
+        "El país D no aparece en esta comparación porque, según la nota, "
+        "mantuvo un ejército profesional voluntario durante todo el período.",
+        [
+            ("El país B, con servicio desde 1875 y unificación en 1861",
+             "En B el servicio militar es posterior a la unificación, no anterior."),
+            ("El país A, con servicio desde 1872",
+             "A se unificó antes de 1800, así que la tabla no permite ese contraste."),
+            ("El país D, que no estableció servicio militar obligatorio",
+             "La nota indica que D mantuvo un ejército profesional voluntario."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_representaciones", "dificil",
+        "¿Qué elemento común a los cuatro países señala la última nota de la "
+        "fuente?",
+        "Reemplazaron las lenguas regionales por una lengua nacional en la enseñanza",
+        "Las tablas muestran trayectorias distintas: unificaciones en fechas "
+        "muy distantes, niveles de alfabetización dispares y redes ferroviarias "
+        "de tamaños desiguales.\n"
+        "La nota final identifica lo que sí comparten: los cuatro Estados "
+        "reemplazaron en estas décadas las lenguas y dialectos regionales por "
+        "una lengua nacional única en la enseñanza pública.\n"
+        "Es un dato de peso para el tema del nodo: la escuela funcionó como "
+        "herramienta de homogeneización cultural en todos ellos.",
+        [
+            ("Todos alcanzaron una alfabetización superior al 95% en 1910",
+             "B llegó al 62% y D al 87% en esa fecha."),
+            ("Todos establecieron el servicio militar obligatorio en el período",
+             "El país D no lo estableció durante el período."),
+            ("Todos completaron su unificación nacional durante el siglo XIX",
+             "A y D se unificaron antes de 1800."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_representaciones", "medio",
+        "Según la tabla 1, ¿en qué año el salitre pasó a ser el principal "
+        "producto de exportación?",
+        "En 1890, con el 51% del valor total",
+        "La serie del salitre parte en 0% en 1850 y sube a 3% en 1870, cuando "
+        "la plata y el cobre concentraban el 52%.\n"
+        "En 1890 el salitre alcanza el 51% y la plata y el cobre caen al 28%: "
+        "ese es el año en que se convierte en el principal producto.\n"
+        "En 1910 la posición se refuerza hasta el 68%, mientras el trigo y la "
+        "harina bajan al 5%.",
+        [
+            ("En 1870, con el 3% del valor total",
+             "Ese año el salitre era todavía marginal frente a la plata y el cobre."),
+            ("En 1910, con el 68% del valor total",
+             "En 1910 ya era el principal desde el registro anterior."),
+            ("En 1850, cuando comenzó su explotación",
+             "En 1850 el salitre representaba el 0% de las exportaciones."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_representaciones", "dificil",
+        "Al comparar las dos tablas, ¿qué relación aparece entre las "
+        "exportaciones y los ingresos del fisco hacia 1910?",
+        "El fisco dependía de un producto cuyo precio se fijaba fuera del país",
+        "La tabla 1 muestra que en 1910 el salitre concentraba el 68% del valor "
+        "exportado, y la tabla 2 que los derechos sobre el salitre aportaban el "
+        "53% de los ingresos ordinarios del fisco.\n"
+        "La nota agrega el dato decisivo: el salitre se vendía casi por "
+        "completo a mercados europeos, que fijaban su precio.\n"
+        "La consecuencia es una hacienda pública expuesta: una caída del precio "
+        "externo se traslada de inmediato al presupuesto del Estado.",
+        [
+            ("El fisco redujo su dependencia de las aduanas entre 1870 y 1910",
+             "Los derechos sobre el salitre son también un ingreso aduanero, y crecieron."),
+            ("Los impuestos internos pasaron a ser la principal fuente de ingresos",
+             "Cayeron del 37% en 1870 al 18% en 1910."),
+            ("Las exportaciones se diversificaron a lo largo del período",
+             "Ocurrió lo contrario: se concentraron cada vez más en el salitre."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_representaciones", "dificil",
+        "Según las dos tablas, ¿qué país sufrió la mayor caída del valor "
+        "exportado en 1932 y cómo se explica?",
+        "Chile, cuyo valor exportado cayó a 22 por depender de dos productos mineros",
+        "La tabla 2 registra el valor exportado de 1932 con base 100 en 1929: "
+        "país W en 31, X en 39, Y en 52, Z en 64 y Chile en 22.\n"
+        "El 22 es la caída más pronunciada de las cinco economías. La nota "
+        "explica por qué: el valor exportado de Chile dependía casi por "
+        "completo de dos productos mineros cuyos precios se fijaban en mercados "
+        "extranjeros.\n"
+        "La producción industrial acompaña ese golpe: cae a 47 en 1932, también "
+        "la mayor caída de la tabla 1.",
+        [
+            ("El país X, cuya desocupación llegó al 30% en 1932",
+             "X tuvo la mayor desocupación, pero su valor exportado cayó a 39 y no a 22."),
+            ("El país W, cuyo valor exportado cayó a 31",
+             "Es la segunda caída más fuerte, por sobre la de Chile."),
+            ("El país Z, que mantuvo controles de cambio y aranceles altos todo el período",
+             "Z registra la menor caída de las cinco economías."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_representaciones", "dificil",
+        "¿Qué relación se observa entre el gasto público de 1938 y la "
+        "recuperación industrial de las economías de la tabla?",
+        "Los países con mayor aumento del gasto muestran también mayor recuperación",
+        "El país X combina el mayor aumento del gasto público —214 con base 100 "
+        "en 1929— con la mayor recuperación industrial, 126 en 1938.\n"
+        "En el otro extremo, el país Y aumenta el gasto a 141 y recupera hasta "
+        "114, y el país Z, con gasto en 133, llega a 118 desde una caída mucho "
+        "menor.\n"
+        "La nota final refuerza la lectura: los cuatro países no chilenos "
+        "aumentaron el gasto entre 1932 y 1938 mediante obras y programas de "
+        "empleo.",
+        [
+            ("Los países con mayor gasto público tuvieron peor recuperación",
+             "El país X reúne el mayor gasto y la mayor recuperación."),
+            ("El gasto público no varió entre las cinco economías del período",
+             "Los índices de 1938 van de 133 a 214: la variación es amplia."),
+            ("La recuperación dependió únicamente del nivel de desocupación",
+             "El país X tenía la desocupación más alta en 1932 y la mejor recuperación en 1938."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_representaciones", "dificil",
+        "Según la tabla 2, ¿qué cambio experimentó la composición de la "
+        "organización mundial entre 1945 y 1975?",
+        "Los miembros de Asia y África pasaron de ser 8 de 51 a ser 76 de 144",
+        "En 1945 la organización reunía 51 miembros, de los cuales 8 eran de "
+        "Asia y África: menos de un sexto del total.\n"
+        "En 1975 los miembros llegan a 144 y los de Asia y África, a 76: más de "
+        "la mitad de la asamblea.\n"
+        "La nota agrega por qué importa: en la asamblea general cada Estado "
+        "dispone de un voto, cualquiera sea su población o su territorio.",
+        [
+            ("El total de miembros se mantuvo estable y solo cambió su origen",
+             "El total pasó de 51 a 144 miembros."),
+            ("Los miembros con derecho a veto aumentaron junto con la asamblea",
+             "La nota indica que se mantuvieron en cinco durante todo el período."),
+            ("Los Estados de Asia y África siguieron siendo minoría en 1975",
+             "En 1975 eran 76 de 144, es decir, más de la mitad."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Historia - Estado-nacion y Chile en el siglo XIX
+#
+# Los nodos de contenido estaban en 52 mientras el resto del banco iba en 60.
+# Estas preguntas se apoyan en las fuentes que ya tenia cada nodo.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_HISTORIA += [
+    # ---------------- El Estado-nación en el siglo XIX ----------------
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "facil",
+        "Según el texto, ¿cuáles fueron los tres instrumentos principales de "
+        "construcción de la nación en el siglo XIX?",
+        "La escuela primaria, el servicio militar y el ferrocarril",
+        "El texto los enumera de manera directa y explica qué hizo cada uno. "
+        "La escuela primaria obligatoria enseñó a leer en una lengua única y "
+        "transmitió un relato del pasado nacional.\n"
+        "El servicio militar reunió durante meses a jóvenes de regiones "
+        "distintas bajo la misma disciplina, y el ferrocarril —junto al "
+        "telégrafo y el correo— acortó la distancia entre capital y "
+        "periferia.\n"
+        "El resultado que describe es una población que compartía calendario, "
+        "medidas, moneda y manuales donde antes había comarcas separadas.",
+        [
+            ("El parlamento, los partidos políticos y la prensa escrita",
+             "El texto no menciona esos tres elementos entre los instrumentos."),
+            ("La Iglesia, el ejército profesional y las aduanas",
+             "El texto habla de servicio militar obligatorio, no de ejército profesional."),
+            ("El comercio exterior, la banca y las sociedades científicas",
+             "Ninguno de los tres aparece en la enumeración del texto."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "medio",
+        "Según el texto, ¿qué costo tuvo la producción de una comunidad "
+        "nacional homogénea?",
+        "La supresión de las diferencias de lengua, religión y modo de vida",
+        "El texto lo plantea como una consecuencia lógica del programa: "
+        "«Producir una comunidad homogénea exige suprimir diferencias».\n"
+        "Y precisa cuáles fueron las suprimidas: las de quienes hablaban otra "
+        "lengua, practicaban otra religión o vivían de otro modo. En Europa "
+        "esas minorías quedaron descritas como obstáculos a la unidad "
+        "nacional.\n"
+        "En América el mismo razonamiento recayó sobre los pueblos indígenas, "
+        "declarados ciudadanos en el papel mientras se avanzaba sobre sus "
+        "territorios.",
+        [
+            ("El retraso de la industrialización en las regiones periféricas",
+             "El texto no vincula el proceso con el ritmo de la industrialización."),
+            ("La pérdida de autonomía de los parlamentos regionales",
+             "El texto no menciona parlamentos regionales entre los costos."),
+            ("El aumento del analfabetismo en las zonas rurales",
+             "El texto atribuye a la escuela obligatoria el efecto contrario."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "dificil",
+        "«Primero se constituyó el Estado y después este construyó la nación "
+        "que decía representar». ¿Qué idea corrige esa afirmación?",
+        "La de que la nación existía antes y el Estado solo vino a reconocerla",
+        "El texto advierte contra leer la nación «como un dato previo que el "
+        "Estado vino a reconocer», y sostiene que el orden de los factores fue "
+        "casi siempre el inverso.\n"
+        "El argumento se apoya en un dato del comienzo: en 1800 casi ningún "
+        "territorio europeo o americano cumplía las condiciones que el "
+        "principio nacional daba por supuestas, y el siglo XIX se dedicó a "
+        "producirlas.\n"
+        "Por eso el texto llama programa a lo que parecía una descripción: no "
+        "constataba una comunidad, se proponía fabricarla.",
+        [
+            ("La de que el Estado-nación fue un fenómeno exclusivamente europeo",
+             "El texto describe el mismo proceso en América."),
+            ("La de que la escuela obligatoria fracasó en su propósito",
+             "El texto la presenta como uno de los instrumentos que sí funcionaron."),
+            ("La de que las fronteras del siglo XIX eran estables",
+             "El texto sostiene lo contrario al hablar de fronteras pendientes de corrección."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "dificil",
+        "Según el texto, ¿por qué el principio nacional «fabricó conflictos "
+        "donde no los había»?",
+        "Porque si cada nación reclama un Estado, toda frontera queda pendiente de corrección",
+        "El texto desarrolla la consecuencia del principio: si a cada nación le "
+        "corresponde un Estado, entonces toda población que se considere nación "
+        "puede reclamar uno.\n"
+        "Y agrega el efecto sobre los límites: toda frontera que deje a "
+        "compatriotas del otro lado queda pendiente de corrección.\n"
+        "Sobre esa base sitúa buena parte de las guerras europeas del siglo XIX "
+        "y de las disputas limítrofes americanas, que se argumentaron "
+        "justamente en esos términos.",
+        [
+            ("Porque los Estados necesitaban justificar el servicio militar",
+             "El texto presenta el servicio militar como instrumento, no como causa de los conflictos."),
+            ("Porque el ferrocarril acercó territorios antes incomunicados",
+             "El ferrocarril aparece como herramienta de integración interna."),
+            ("Porque las minorías europeas reclamaron autonomía religiosa",
+             "El texto describe a las minorías como suprimidas, no como demandantes de autonomía."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "medio",
+        "Según la primera intervención, ¿qué dos requisitos debía fijar por "
+        "ahora la ley electoral?",
+        "Un censo de renta y la exigencia de saber leer",
+        "El diputado cierra su intervención con esa propuesta concreta: la ley "
+        "debe fijar «por ahora un censo de renta y la exigencia de saber "
+        "leer».\n"
+        "Los presenta como transitorios —«yo no excluyo a nadie para "
+        "siempre»— y los apoya en una idea de capacidad: el voto sería el "
+        "ejercicio de una función pública que exige aptitud en quien la "
+        "ejerce.\n"
+        "El orden que propone es explícito: «la escuela debe preceder al "
+        "sufragio».",
+        [
+            ("La mayoría de edad y el servicio militar cumplido",
+             "Ninguno de los dos aparece en la intervención."),
+            ("La residencia en la comuna y el pago de contribuciones",
+             "El texto menciona renta y lectura, no residencia."),
+            ("La propiedad de tierras y la pertenencia a una sociedad de socorros",
+             "Las sociedades de socorros no se mencionan en este debate."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "dificil",
+        "¿Qué objeción hace la segunda intervención al argumento de que «la "
+        "escuela debe preceder al sufragio»?",
+        "Que la escuela depende de un Congreso elegido por quienes ya votan",
+        "El segundo diputado no discute que la escuela sea deseable: discute "
+        "quién la construiría. «La escuela la decreta este Congreso, y este "
+        "Congreso lo eligen los que ya votan».\n"
+        "De ahí extrae la consecuencia: se pide al excluido que espere una "
+        "escuela «que solo construirán quienes no tienen ningún apuro en "
+        "construirla».\n"
+        "El argumento convierte una condición previa en un círculo: la "
+        "exclusión se justifica por una carencia que la propia exclusión "
+        "impide remediar.",
+        [
+            ("Que la escuela no mejora la capacidad de deliberar de los electores",
+             "El diputado no cuestiona el valor de la escuela sino la secuencia propuesta."),
+            ("Que el país carecía de recursos para financiar escuelas públicas",
+             "El financiamiento no aparece en la intervención."),
+            ("Que la alfabetización debía quedar a cargo de la Iglesia",
+             "La intervención no menciona a la Iglesia."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "dificil",
+        "«El censo de renta no mide capacidad alguna: mide fortuna». ¿Qué "
+        "efecto tiene esa frase sobre el argumento del primer diputado?",
+        "Muestra que el requisito propuesto no cumple el criterio que él mismo invocó",
+        "El primer diputado justifica la restricción por la capacidad: pide al "
+        "juez que conozca las leyes y al médico su ciencia, y de ahí concluye "
+        "que también al elector debe exigírsele aptitud.\n"
+        "La respuesta acepta ese criterio y muestra que el instrumento elegido "
+        "no lo aplica: la renta informa sobre el patrimonio y no sobre la "
+        "capacidad de deliberar.\n"
+        "El remate lo lleva al extremo: si la capacidad fuera realmente el "
+        "criterio, «examinaríamos a los propietarios uno por uno y a más de uno "
+        "dejaríamos fuera de esta sala».",
+        [
+            ("Demuestra que el primer diputado defendía intereses económicos propios",
+             "La respuesta discute la coherencia del argumento, no las intenciones de quien lo hace."),
+            ("Propone reemplazar el censo de renta por un examen de lectura",
+             "La intervención rechaza ambos requisitos, no propone sustituir uno por otro."),
+            ("Sostiene que la capacidad no debería exigirse a ningún funcionario",
+             "La objeción se refiere solo al requisito para votar."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_estado_nacion", "medio",
+        "Según las tablas, ¿qué relación se observa entre la instrucción "
+        "primaria obligatoria y el aumento de la alfabetización?",
+        "Los cuatro países la establecen entre 1870 y 1882 y todos mejoran hacia 1910",
+        "La tabla 2 fecha la instrucción primaria obligatoria: 1882 en A, 1877 "
+        "en B, 1871 en C y 1870 en D. Las cuatro fechas caen en una franja de "
+        "doce años.\n"
+        "La tabla 1 muestra que los cuatro países aumentan su alfabetización "
+        "entre 1850 y 1910: A de 58 a 96, B de 25 a 62, C de 61 a 98 y D de 47 "
+        "a 87.\n"
+        "El dato es consistente con lo que el nodo estudia: la escuela fue uno "
+        "de los instrumentos con que el Estado construyó la nación.",
+        [
+            ("Solo los países unificados antes de 1800 mejoran su alfabetización",
+             "B y C, unificados en 1861 y 1871, también mejoran."),
+            ("Los países que la establecieron antes alcanzaron menor alfabetización",
+             "C la estableció en 1871 y llegó al 98%, la cifra más alta de la tabla."),
+            ("La instrucción obligatoria no se aplicó en ninguno de los cuatro países",
+             "La tabla 2 entrega el año en que la estableció cada uno."),
+        ],
+    ),
+    # ---------------- Chile en el siglo XIX ----------------
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "facil",
+        "Según el texto, ¿qué declaró la ley de instrucción primaria de 1860?",
+        "Que la enseñanza primaria sería gratuita y estaría a cargo del Estado",
+        "El texto lo señala de manera directa al describir las instituciones "
+        "creadas por el Estado en formación.\n"
+        "Agrega de inmediato dos límites importantes: la asistencia siguió "
+        "siendo voluntaria durante décadas y la mayoría de la población "
+        "continuó sin saber leer.\n"
+        "Esa distancia entre la ley y su efecto es parte de lo que el texto "
+        "quiere mostrar: declarar un derecho no equivale a producirlo.",
+        [
+            ("Que la asistencia a la escuela sería obligatoria para todos",
+             "El texto precisa que la asistencia siguió siendo voluntaria durante décadas."),
+            ("Que la enseñanza quedaría a cargo de las municipalidades",
+             "El texto la pone a cargo del Estado."),
+            ("Que la enseñanza primaria pasaría a manos de la Iglesia",
+             "El traspaso que menciona el texto va en sentido contrario, y es posterior."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "medio",
+        "Según el texto, ¿qué traspasaron desde la Iglesia al Estado las leyes "
+        "laicas de 1883 y 1884?",
+        "Los cementerios y los registros de nacimientos, matrimonios y defunciones",
+        "El texto enumera con precisión lo traspasado y advierte que no eran "
+        "trámites menores.\n"
+        "La razón que da es de fondo: «definir quién nace, quién se casa y "
+        "quién muere es definir quién forma parte de la nación», y esa "
+        "atribución pasó a manos civiles.\n"
+        "El registro civil aparece así como un instrumento de construcción "
+        "estatal y no solo como una reforma administrativa.",
+        [
+            ("La enseñanza primaria y la formación de preceptores",
+             "Esas instituciones son de 1842 y 1860, y no provienen de un traspaso."),
+            ("La administración de los hospitales y las obras de beneficencia",
+             "El texto no menciona hospitales entre lo traspasado."),
+            ("El cobro de los derechos de aduana sobre el salitre",
+             "Los derechos aduaneros no tienen relación con las leyes laicas."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "dificil",
+        "Según el texto, ¿qué supone llamar «pacificación» a la ocupación de "
+        "la Araucanía?",
+        "Que existía un desorden previo que había que corregir",
+        "El texto dedica un párrafo entero al vocabulario. Sostiene que llamar "
+        "pacificación a una campaña militar «supone que había un desorden "
+        "previo que corregir», y llamar colonización a la entrega de tierras "
+        "supone que estaban disponibles.\n"
+        "En ambos casos, dice, el nombre elegido presenta como restablecimiento "
+        "de un orden natural lo que fue la incorporación forzada de un "
+        "territorio con población propia.\n"
+        "El proceso que describe ocurrió entre 1861 y 1883, y confinó al pueblo "
+        "mapuche en reducciones.",
+        [
+            ("Que el proceso se realizó sin intervención militar",
+             "El texto lo describe como un proceso militar y colonizador."),
+            ("Que las tierras fueron compradas a sus ocupantes",
+             "El texto habla de despojo, no de compra."),
+            ("Que la ocupación fue posterior a las leyes laicas",
+             "La ocupación va de 1861 a 1883 y las leyes laicas son de 1883 y 1884."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "medio",
+        "Según el informe de higiene, ¿qué condiciones registró el inspector "
+        "en el conventillo más numeroso?",
+        "Ciento cuarenta piezas con una sola llave de agua y dos letrinas comunes",
+        "El informe entrega la descripción con cifras: ciento cuarenta piezas "
+        "en torno a un patio de tierra, una sola llave de agua, dos letrinas "
+        "comunes y entre cuatro y siete personas por pieza.\n"
+        "El inspector vincula esas condiciones con la mortalidad infantil que "
+        "registran las parroquias del sector.\n"
+        "La descripción material es el punto en que ambas fuentes coinciden: lo "
+        "que discuten es la causa de esa miseria.",
+        [
+            ("Cuarenta piezas con agua corriente en cada una de ellas",
+             "El informe registra ciento cuarenta piezas y una sola llave de agua."),
+            ("Piezas individuales para cada familia obrera del sector",
+             "En cada pieza dormían entre cuatro y siete personas."),
+            ("Un patio pavimentado con servicio de recolección de residuos",
+             "El informe describe un patio de tierra y no menciona recolección."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "dificil",
+        "¿Qué explicación de la miseria propone el inspector además de las "
+        "condiciones materiales, y cómo responde la circular obrera?",
+        "El inspector atribuye parte de la miseria a los hábitos, y la circular responde con cifras",
+        "El informe reconoce las condiciones materiales pero agrega que el "
+        "problema «no se resolverá solo con ordenanzas de construcción»: "
+        "observa hábitos de intemperancia y desorden doméstico y recomienda una "
+        "vigilancia moral.\n"
+        "La circular responde a esa atribución de manera directa: «se ha "
+        "publicado que nuestra miseria proviene de nuestros vicios. Respondamos "
+        "con números».\n"
+        "Los números que entrega son el jornal estancado desde 1897 y el "
+        "arriendo del conventillo, que subió tres veces en seis años.",
+        [
+            ("El inspector culpa a los propietarios y la circular lo confirma",
+             "El inspector exige agua y desagüe a los propietarios, pero agrega la explicación por los hábitos."),
+            ("El inspector propone subir los jornales y la circular lo rechaza",
+             "El informe no menciona los salarios."),
+            ("Ambas fuentes coinciden en atribuir la miseria a la falta de escuelas",
+             "Ninguna de las dos menciona la escuela como causa."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "dificil",
+        "Según la circular, ¿para qué existía la sociedad de socorros mutuos?",
+        "Para reunir cuotas y cubrir médico y sepultura de sus socios",
+        "La circular lo declara de manera literal: «Por eso existimos: reunimos "
+        "una cuota semanal para que ningún socio quede sin médico ni sin "
+        "sepultura».\n"
+        "El motivo aparece en las líneas previas: se pagaba por día trabajado, "
+        "de modo que la enfermedad dejaba al obrero sin salario, y la muerte, "
+        "sin entierro si la sociedad no lo costeaba.\n"
+        "La organización mutual aparece así como una respuesta obrera a la "
+        "ausencia de cualquier seguro frente a esos riesgos.",
+        [
+            ("Para negociar colectivamente el valor del jornal con los patrones",
+             "La circular no menciona negociación de salarios."),
+            ("Para financiar escuelas nocturnas destinadas a los obreros",
+             "La educación no aparece entre los fines que declara la circular."),
+            ("Para presentar denuncias ante el inspector de higiene",
+             "La circular responde al informe, pero no señala esa función."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_chile_xix", "medio",
+        "Según la nota de la fuente, ¿qué territorios se incorporan a Chile "
+        "tras la Guerra del Pacífico?",
+        "Tarapacá y Antofagasta, entre 1879 y 1883",
+        "La nota lo indica de manera directa y el dato explica el giro que "
+        "muestran las tablas: el salitre pasa del 3% de las exportaciones en "
+        "1870 al 51% en 1890.\n"
+        "La segunda tabla registra el efecto fiscal del mismo cambio: los "
+        "derechos sobre el salitre pasan del 2% de los ingresos ordinarios en "
+        "1870 al 46% en 1890.\n"
+        "El territorio incorporado, entonces, no solo amplió el país: "
+        "reorganizó su economía y su hacienda pública.",
+        [
+            ("Valdivia y Llanquihue, colonizadas desde mediados de siglo",
+             "Esa colonización es anterior y no proviene de la Guerra del Pacífico."),
+            ("La Araucanía, ocupada entre 1861 y 1883",
+             "Ese proceso es interno y no resulta de la guerra."),
+            ("El estrecho de Magallanes, ocupado en 1843",
+             "Esa ocupación es muy anterior a la guerra."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Historia - Crisis del Estado liberal y orden de posguerra
+# ---------------------------------------------------------------------------
+
+QUESTIONS_HISTORIA += [
+    # ---------------- La crisis del Estado liberal ----------------
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "facil",
+        "Según el texto, ¿en qué consistió la salida totalitaria a la crisis "
+        "del Estado liberal?",
+        "En eliminar los partidos, la prensa independiente y las elecciones competitivas",
+        "El texto la describe en una frase: el totalitarismo «resolvió el "
+        "problema suprimiéndolo».\n"
+        "Lo suprimido fueron los partidos, la prensa independiente y las "
+        "elecciones competitivas, y en su lugar se presentó a la nación como un "
+        "cuerpo único sin conflictos legítimos en su interior.\n"
+        "Es la segunda de las tres salidas que el texto identifica, junto al "
+        "Estado de bienestar y al populismo latinoamericano.",
+        [
+            ("En ampliar los seguros sociales financiados con impuestos",
+             "Esa es la salida del Estado de bienestar según el texto."),
+            ("En industrializar sustituyendo importaciones desde el Estado",
+             "Ese rasgo corresponde al populismo latinoamericano."),
+            ("En restablecer los supuestos del Estado liberal del siglo XIX",
+             "El texto presenta las tres salidas como respuestas al fracaso de esos supuestos."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "medio",
+        "Según el texto, ¿cuál es la idea de fondo del Estado de bienestar?",
+        "Que ciertos riesgos no deben depender de la suerte individual",
+        "El texto la formula así al describir la primera de las tres salidas: "
+        "enfermar, envejecer o quedar sin trabajo son riesgos que no deben "
+        "quedar librados a la suerte de cada persona.\n"
+        "A eso suma un argumento económico: sostener la demanda con gasto "
+        "público estabiliza la economía en las crisis.\n"
+        "El texto precisa además lo que esa salida no abandonó: ni la "
+        "democracia representativa ni la propiedad privada.",
+        [
+            ("Que el Estado debe reemplazar a la propiedad privada",
+             "El texto señala que el Estado de bienestar no abandonó la propiedad privada."),
+            ("Que la nación debe expresarse a través de un liderazgo personal",
+             "Ese rasgo corresponde al populismo latinoamericano según el texto."),
+            ("Que los partidos y las elecciones deben suprimirse en la crisis",
+             "Esa es la salida totalitaria, no la del Estado de bienestar."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "medio",
+        "Según el texto, ¿qué tres rasgos reconocibles tuvo el populismo "
+        "latinoamericano entre 1930 y 1955?",
+        "Liderazgo personal, incorporación de trabajadores e industrialización dirigida",
+        "El texto enumera los tres. El liderazgo personal fuerte se dirige "
+        "directamente a las masas urbanas por radio y en concentraciones, sin "
+        "pasar por los partidos tradicionales.\n"
+        "La incorporación política alcanzó a trabajadores antes excluidos, con "
+        "derechos laborales y sindicatos ampliados.\n"
+        "Y la política económica sustituyó importaciones para depender menos de "
+        "los mercados externos que acababan de derrumbarse.",
+        [
+            ("Supresión de partidos, prensa controlada y elecciones anuladas",
+             "Esos son los rasgos que el texto asigna al totalitarismo."),
+            ("Seguros de desempleo, pensiones y educación financiados con impuestos",
+             "Esos corresponden al Estado de bienestar."),
+            ("Apertura comercial, tipos de cambio estables y crédito internacional",
+             "Esos elementos pertenecen al orden económico de posguerra."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "dificil",
+        "Según el texto, ¿por qué los gobiernos populistas son difíciles de "
+        "clasificar?",
+        "Porque ampliaron derechos efectivos y al mismo tiempo debilitaron los contrapesos",
+        "El texto lo plantea como una combinación incómoda: esos gobiernos "
+        "«hicieron a la vez dos cosas que solemos poner en veredas opuestas».\n"
+        "Por un lado ampliaron derechos efectivos a sectores que nunca los "
+        "habían tenido; por otro concentraron poder, debilitaron contrapesos "
+        "institucionales y trataron a la oposición como adversario "
+        "ilegítimo.\n"
+        "Y advierte sobre el atajo: reducirlos a una sola de esas mitades es "
+        "«la manera más rápida de no explicar por qué contaron con apoyo "
+        "popular real y duradero».",
+        [
+            ("Porque duraron muy poco tiempo y dejaron pocas fuentes",
+             "El texto los sitúa entre 1930 y 1955 y no menciona escasez de fuentes."),
+            ("Porque su programa económico fue idéntico al del Estado de bienestar",
+             "El texto los distingue: uno sustituye importaciones y el otro amplía seguros sociales."),
+            ("Porque suprimieron los partidos igual que los regímenes totalitarios",
+             "El texto dice que el liderazgo no pasaba por los partidos, no que los suprimiera."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "dificil",
+        "Según el texto, ¿qué caracterizó a la versión chilena del período?",
+        "Conducción estatal del desarrollo con elecciones competitivas",
+        "El texto describe el caso chileno al cerrar: el Estado asumió la "
+        "conducción del desarrollo industrial mediante una corporación de "
+        "fomento creada tras el terremoto de 1939.\n"
+        "A eso suma la ampliación de la educación y la previsión social.\n"
+        "Y precisa el marco político, que es lo que distingue el caso: todo "
+        "ello ocurrió «en un marco que mantuvo elecciones competitivas y "
+        "alternancia».",
+        [
+            ("La supresión de los partidos políticos durante la crisis",
+             "El texto indica que se mantuvieron elecciones competitivas."),
+            ("El retiro del Estado de la actividad industrial",
+             "El texto describe justamente la conducción estatal del desarrollo industrial."),
+            ("La renuncia a ampliar la previsión social hasta la posguerra",
+             "El texto señala que la previsión social se amplió en ese mismo período."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "medio",
+        "Según el discurso de 1933, ¿qué propone el dirigente respecto de los "
+        "partidos políticos?",
+        "Terminar con ellos, no fundar uno nuevo",
+        "El discurso lo declara de manera literal: «Yo no vengo a proponer otro "
+        "partido: vengo a terminar con ellos».\n"
+        "La justificación es la imagen de la nación como cuerpo: «no es la suma "
+        "de intereses que se disputan un reparto; es un cuerpo único, con una "
+        "sola voluntad, y un cuerpo no delibera consigo mismo».\n"
+        "De ahí se sigue el trato que anuncia para quien discrepe: no lo llama "
+        "adversario sino organismo debilitado desde adentro.",
+        [
+            ("Fundar un partido nuevo que reemplace a los existentes",
+             "El discurso rechaza expresamente esa posibilidad."),
+            ("Reformar el Parlamento manteniendo la competencia entre partidos",
+             "El discurso ataca la deliberación parlamentaria como tal."),
+            ("Convocar elecciones anticipadas para renovar las carteras",
+             "El discurso no propone ninguna elección."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "dificil",
+        "Según el periodista, ¿en qué punto exacto el discurso «salta a una "
+        "conclusión que no se sigue»?",
+        "Al pasar de constatar la crisis a culpar a la discusión misma",
+        "El columnista concede el punto de partida: la desocupación es real, la "
+        "miseria es real y el Parlamento fue efectivamente incapaz. Por eso, "
+        "dice, lo escuchan.\n"
+        "El salto ocurre después: de esa descripción exacta el discurso "
+        "concluye «que la culpa es de la discusión misma», que es una "
+        "conclusión distinta de la constatación.\n"
+        "La observación es de método: aceptar el diagnóstico no obliga a "
+        "aceptar el remedio que se propone a continuación.",
+        [
+            ("Al describir la desocupación como un problema real del país",
+             "El periodista concede expresamente que esa descripción es exacta."),
+            ("Al prometer trabajo y pan a la población desocupada",
+             "La promesa aparece después y el periodista la comenta aparte."),
+            ("Al señalar que el Parlamento negociaba carteras",
+             "El periodista reconoce que el Parlamento fue incapaz."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "dificil",
+        "«Un adversario se derrota en una elección; una enfermedad se "
+        "extirpa». ¿Qué advierte el periodista con esa distinción?",
+        "Que el cambio de vocabulario anticipa lo que después harán los decretos",
+        "El columnista pide reparar en la palabra elegida: el discurso «no dice "
+        "adversario, dice organismo debilitado desde adentro».\n"
+        "Ese desplazamiento cambia el tipo de respuesta que se vuelve "
+        "pensable. Con un adversario se compite; con una enfermedad no se "
+        "compite.\n"
+        "Y de ahí su advertencia sobre el orden en que ocurren las cosas: ese "
+        "desplazamiento del vocabulario «llegará antes que los decretos».",
+        [
+            ("Que el dirigente exagera la gravedad de la crisis económica",
+             "El periodista reconoce que la crisis es real."),
+            ("Que las elecciones seguirán celebrándose bajo el nuevo régimen",
+             "El periodista advierte lo contrario sobre las instituciones."),
+            ("Que la enfermedad del cuerpo social requiere atención médica",
+             "El periodista analiza la metáfora, no la suscribe."),
+        ],
+    ),
+    # ---------------- El nuevo orden mundial tras la Segunda Guerra ----------------
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "facil",
+        "Según el texto, ¿qué problema económico buscaba resolver la "
+        "conferencia internacional de 1944?",
+        "Que cada país enfrentara la crisis por su cuenta cerrando su mercado",
+        "El texto identifica el problema con la experiencia de los años "
+        "treinta: cuando cada país devalúa su moneda, cierra su mercado y sube "
+        "aranceles, «el resultado agregado empeora la situación de todos».\n"
+        "La respuesta fue un sistema de tipos de cambio estables y organismos "
+        "destinados a prestar a los países con dificultades de balanza de pagos "
+        "y a financiar la reconstrucción.\n"
+        "La idea, resume el texto, «era que un país en apuros tuviera algo que "
+        "hacer distinto de cerrarse».",
+        [
+            ("La falta de una moneda única para todo el continente europeo",
+             "El texto habla de tipos de cambio estables, no de moneda única."),
+            ("La ausencia de tribunales para juzgar crímenes económicos",
+             "Los tribunales que menciona el texto corresponden al tercer problema."),
+            ("El exceso de préstamos entre Estados durante la guerra",
+             "El texto propone crear organismos que presten, no reducir préstamos."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "medio",
+        "Según el texto, ¿en qué dos órganos descansa el diseño de la "
+        "organización mundial fundada en 1945?",
+        "Una asamblea con un voto por Estado y un consejo reducido con veto",
+        "El texto describe ambos: una asamblea donde cada Estado dispone de un "
+        "voto y un consejo reducido, con cinco miembros permanentes dotados de "
+        "veto, encargado de la seguridad internacional.\n"
+        "Explica también qué buscaba corregir ese diseño: el defecto de la "
+        "organización anterior, «que aprobaba resoluciones que nadie "
+        "ejecutaba».\n"
+        "Y anota el costo: una desigualdad escrita en el propio tratado, que "
+        "los Estados pequeños objetaron desde el primer día.",
+        [
+            ("Un tribunal internacional y una comisión de derechos humanos",
+             "Esos organismos no son los dos órganos que el texto describe."),
+            ("Una asamblea de delegados y un banco de reconstrucción",
+             "El banco pertenece al orden económico de 1944, no a este diseño."),
+            ("Un consejo de potencias vencedoras y una corte de arbitraje",
+             "El texto menciona la asamblea, no una corte de arbitraje."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "medio",
+        "Según el texto, ¿qué problema hacía difícil juzgar los crímenes del "
+        "régimen nazi?",
+        "Que fueron cometidos conforme a las leyes que ese mismo régimen dictó",
+        "El texto lo presenta como «el tercer problema, más difícil de "
+        "nombrar»: los crímenes habían sido cometidos en buena parte conforme "
+        "a la legalidad interna del propio régimen.\n"
+        "De ahí la dificultad que señala: «Si la legalidad interna de un Estado "
+        "era el criterio último, no había desde dónde juzgarlos».\n"
+        "Las dos innovaciones que siguieron rompieron con esa tradición: "
+        "juzgar a personas concretas por crímenes contra la humanidad y "
+        "establecer que obedecer órdenes no exime de responsabilidad.",
+        [
+            ("Que no existían pruebas documentales de lo ocurrido",
+             "El texto no plantea un problema de evidencia sino de criterio jurídico."),
+            ("Que los responsables habían muerto antes de los juicios",
+             "El texto señala que se juzgó a personas concretas."),
+            ("Que la organización mundial aún no se había fundado",
+             "La fundación de 1945 es anterior a la declaración de 1948 y no es el obstáculo descrito."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "dificil",
+        "Según el texto, ¿cuál fue el efecto real de la declaración universal "
+        "de derechos de 1948?",
+        "Instaló un lenguaje con el que acusar a un gobierno sin que invoque su ley interna",
+        "El texto pide medir bien su alcance y parte por lo que la declaración "
+        "no es: «No es un tratado obligatorio: no crea tribunales ni sanciones, "
+        "y su cumplimiento quedó entregado a la buena voluntad de cada "
+        "Estado».\n"
+        "Su efecto, sostiene, fue de otro orden: instaló un lenguaje común con "
+        "el que se puede acusar a un gobierno de violar derechos sin que este "
+        "pueda responder que se trata de un asunto interno.\n"
+        "Ese desplazamiento —de la soberanía absoluta a la soberanía con "
+        "límites— es lo que el período dejó instalado y lo que desde entonces "
+        "se discute.",
+        [
+            ("Creó tribunales internacionales con capacidad de sancionar Estados",
+             "El texto precisa que la declaración no crea tribunales ni sanciones."),
+            ("Obligó a los Estados firmantes a modificar su legislación interna",
+             "El texto señala que no es un tratado obligatorio."),
+            ("Reemplazó a los tribunales de posguerra en el juzgamiento de crímenes",
+             "Los tribunales de posguerra y la declaración son innovaciones distintas y paralelas."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "medio",
+        "Según el primer memorando, ¿por qué fracasó la organización "
+        "anterior?",
+        "Porque le faltó fuerza: aprobaba resoluciones que nadie ejecutaba",
+        "El memorando descarta de entrada una explicación habitual: «No le "
+        "faltó buena voluntad: le faltó fuerza».\n"
+        "El mecanismo del fracaso lo describe enseguida: quienes tenían "
+        "ejércitos no estaban obligados a usarlos y quienes votaban no los "
+        "tenían.\n"
+        "De ahí la conclusión que sostiene toda la propuesta: «Una asamblea "
+        "donde cada Estado pesa lo mismo producirá siempre mayorías que no "
+        "pueden cumplirse».",
+        [
+            ("Porque sus miembros carecían de voluntad de cooperar entre sí",
+             "El memorando descarta expresamente la falta de buena voluntad."),
+            ("Porque las potencias vencedoras se negaron a integrarla",
+             "El memorando no menciona ninguna negativa a integrarse."),
+            ("Porque no contaba con financiamiento suficiente para operar",
+             "El financiamiento no aparece en el diagnóstico."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "dificil",
+        "Según el segundo memorando, ¿cuál es la consecuencia práctica del "
+        "derecho a veto?",
+        "La organización actuará ante un Estado débil y quedará paralizada ante uno fuerte",
+        "El memorando del Estado pequeño acepta el diagnóstico y rechaza la "
+        "conclusión. Su objeción es sobre el efecto del mecanismo: cinco "
+        "Estados podrán detener cualquier decisión, «incluida aquella que los "
+        "tenga por objeto».\n"
+        "De ahí la consecuencia que enuncia y que es el centro de su "
+        "argumento: la organización quedará paralizada frente a la agresión de "
+        "un Estado fuerte, «que es exactamente el caso para el que se la "
+        "funda».\n"
+        "Aun así anuncia que firmará, dejando constancia de que se trata de un "
+        "tratado desigual.",
+        [
+            ("La organización perderá capacidad de aprobar resoluciones nuevas",
+             "La objeción no es sobre aprobar resoluciones sino sobre a quién pueden alcanzar."),
+            ("Los Estados pequeños quedarán excluidos de la asamblea general",
+             "El memorando no plantea exclusión de la asamblea."),
+            ("El consejo dejará de tener competencia en materias de seguridad",
+             "El memorando discute cómo decide el consejo, no su competencia."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "dificil",
+        "Ambos memorandos reconocen que la desigualdad entre Estados existe. "
+        "¿Qué conclusión distinta extrae cada uno?",
+        "Uno la incorpora al reglamento y el otro quiere someterla a regla",
+        "El primero sostiene que la desigualdad «ya existe y que no la crea el "
+        "reglamento», porque ninguna votación puede repartir divisiones "
+        "acorazadas entre quienes no las tienen. Por eso prefiere «una "
+        "organización imperfecta que funcione».\n"
+        "El segundo parte del mismo dato y llega al punto opuesto: «Existe, y "
+        "por eso mismo el derecho internacional tiene sentido: para someter a "
+        "regla lo que de otro modo resolvería la sola potencia».\n"
+        "El desacuerdo no es sobre los hechos sino sobre para qué sirve una "
+        "norma frente a una desigualdad de poder.",
+        [
+            ("Uno la considera transitoria y el otro permanente",
+             "Ninguno de los dos memorandos plantea que la desigualdad sea transitoria."),
+            ("Uno propone eliminarla y el otro mantenerla sin cambios",
+             "El segundo no propone eliminarla: propone someterla a regla."),
+            ("Uno se refiere a la desigualdad económica y el otro a la militar",
+             "Ambos discuten la desigualdad de fuerza militar."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Historia - Guerra Fria y sociedad chilena a mediados del siglo XX
+# ---------------------------------------------------------------------------
+
+QUESTIONS_HISTORIA += [
+    # ---------------- La Guerra Fría y América Latina ----------------
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "facil",
+        "Según el texto, ¿qué tuvo de particular el desenlace de la Guerra "
+        "Fría entre 1989 y 1991?",
+        "Uno de los dos bloques dejó de existir sin que mediara una guerra entre las potencias",
+        "El texto lo señala en su primer párrafo: durante cuarenta años el "
+        "mundo se ordenó en torno a dos bloques y entre 1989 y 1991 uno de "
+        "ellos dejó de existir.\n"
+        "Lo llamativo es cómo ocurrió: sin guerra entre las potencias. El texto "
+        "agrega que el desenlace «sorprendió a casi todos, incluidos los "
+        "servicios de inteligencia que llevaban décadas observándolo».\n"
+        "Esa sorpresa es parte del problema histórico: un colapso que nadie "
+        "anticipó exige explicar qué se estaba mirando mal.",
+        [
+            ("Los dos bloques se disolvieron simultáneamente por acuerdo mutuo",
+             "El texto indica que fue uno de los dos el que dejó de existir."),
+            ("El conflicto terminó con una guerra breve entre las potencias",
+             "El texto subraya que no medió guerra entre ellas."),
+            ("Los servicios de inteligencia lo habían anticipado con precisión",
+             "El texto dice que el desenlace los sorprendió."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "medio",
+        "Según el texto, ¿qué causas acumulativas explican el colapso del "
+        "bloque oriental?",
+        "Falta de innovación, gasto militar, intervenciones costosas y crisis interna",
+        "El texto ordena cuatro factores. La economía planificada había "
+        "industrializado rápido en las décadas centrales del siglo pero se "
+        "mostró incapaz de sostener innovación y variedad de consumo.\n"
+        "A eso suma el gasto militar exigido por la competencia, que absorbía "
+        "una parte creciente de recursos escasos, y las intervenciones para "
+        "sostener gobiernos aliados, costosas y desgastantes.\n"
+        "El cuarto factor es interno: la distancia entre el discurso oficial y "
+        "la vida cotidiana «era conocida por todos y ya no convencía a nadie».",
+        [
+            ("Una derrota militar directa frente a los ejércitos del bloque occidental",
+             "El texto insiste en que no hubo guerra entre las potencias."),
+            ("El agotamiento de sus recursos naturales exportables",
+             "El texto no menciona recursos naturales entre las causas."),
+            ("La negativa de sus aliados a integrarse al bloque",
+             "El texto habla de intervenciones para sostener aliados, no de negativas."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "dificil",
+        "Según el texto, ¿qué le dio el derrumbe del bloque oriental a un "
+        "conjunto de políticas económicas que ya se aplicaba desde antes?",
+        "La ausencia de un modelo rival con el cual compararlo",
+        "El texto enumera esas políticas: apertura comercial, privatización de "
+        "empresas públicas, desregulación de mercados y disciplina fiscal.\n"
+        "Y precisa que no eran nuevas: «Ese programa ya se aplicaba antes de "
+        "1989 en varios países, incluido Chile desde la década de 1970».\n"
+        "Lo que cambió, sostiene, fue el escenario: con un solo bloque en pie "
+        "pasaron a presentarse como la única alternativa disponible, porque "
+        "desapareció el término de comparación.",
+        [
+            ("Un respaldo militar que antes no tenían esas políticas",
+             "El texto no vincula el programa económico con respaldo militar."),
+            ("Su primera aplicación práctica en América Latina",
+             "El texto señala que Chile las aplicaba desde la década de 1970."),
+            ("La aprobación formal de la organización mundial",
+             "El texto no menciona ninguna aprobación de ese tipo."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "dificil",
+        "Según el texto, ¿por qué conviene resistir la lectura de que el "
+        "colapso «probó la superioridad de un sistema sobre otro»?",
+        "Porque un colapso solo muestra que ese modelo no era sostenible en esas condiciones",
+        "El texto plantea dos lecturas apresuradas y esta es la segunda. La "
+        "primera es que el fin de la Guerra Fría trajo el fin de los "
+        "conflictos, algo que los años noventa desmintieron.\n"
+        "Sobre la segunda es preciso: lo que un colapso demuestra es que el "
+        "modelo no era sostenible en esas condiciones.\n"
+        "Y agrega por qué prefiere esa formulación: es «más modesta y más útil» "
+        "que afirmar una superioridad general en todos los planos.",
+        [
+            ("Porque el bloque occidental también colapsó pocos años después",
+             "El texto no afirma nada semejante."),
+            ("Porque las causas del colapso siguen siendo desconocidas",
+             "El texto enumera varias causas acumulativas."),
+            ("Porque los años noventa no registraron conflictos armados",
+             "El texto sostiene lo contrario: fueron intensos en guerras."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "medio",
+        "Según la primera alocución, ¿por qué la ayuda económica no es "
+        "caridad?",
+        "Porque la miseria favorece al totalitarismo y evitarla protege la seguridad propia",
+        "El dirigente occidental encadena dos ideas. Primero, «la ayuda "
+        "económica y financiera es la condición de la estabilidad política».\n"
+        "Segundo, la razón de fondo: «La semilla del régimen totalitario prende "
+        "en la miseria y en la necesidad; crece cuando muere la esperanza de "
+        "una vida mejor».\n"
+        "De ahí la conclusión que cierra la alocución: sostener esa esperanza "
+        "«no es caridad: es la defensa de nuestra propia seguridad».",
+        [
+            ("Porque los países que la reciben deben devolverla con intereses",
+             "Esa objeción la plantea la segunda alocución, no la primera."),
+            ("Porque se entrega solo a los países que ya son estables",
+             "La alocución la propone justamente para los pueblos amenazados."),
+            ("Porque forma parte de una cruzada declarada contra el bloque contrario",
+             "La alocución declara expresamente que no propone una cruzada."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "dificil",
+        "«La libertad de imprenta es real para quien puede comprar una "
+        "imprenta». ¿Qué estrategia argumentativa emplea esa frase?",
+        "Acepta el valor invocado y discute si las condiciones permiten ejercerlo",
+        "La primera alocución enumera entre sus garantías la libertad de creer "
+        "y de expresarse. La respuesta no niega que sea deseable.\n"
+        "Lo que hace es desplazar la pregunta desde el derecho formal a su "
+        "ejercicio efectivo: una libertad que exige un medio material queda "
+        "reservada a quien dispone de ese medio.\n"
+        "La misma operación aparece antes en el texto, cuando llama elección "
+        "«a la que se hace entre dos partidos que defienden el mismo reparto».",
+        [
+            ("Niega que la libertad de expresión sea un valor deseable",
+             "La frase no discute el valor sino las condiciones de su ejercicio."),
+            ("Sostiene que la prensa debe quedar bajo control estatal",
+             "Esa conclusión no aparece en la frase citada."),
+            ("Propone subsidiar la compra de imprentas para los trabajadores",
+             "La alocución no plantea ninguna medida de ese tipo."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "dificil",
+        "Según la segunda alocución, ¿qué condiciones tendría la ayuda "
+        "económica ofrecida por el otro bloque?",
+        "Sería un préstamo que abre mercados y ata a quien lo recibe",
+        "La alocución oriental invita a mirar las condiciones y las enumera: "
+        "«no es un regalo sino un préstamo que abre mercados a quien lo "
+        "concede, ata al que lo recibe y le indica con quién puede "
+        "comerciar».\n"
+        "El argumento no niega que la ayuda exista: discute qué obtiene quien "
+        "la entrega.\n"
+        "Frente a eso propone otra cosa: que los medios de producción "
+        "pertenezcan a quienes trabajan y que la planificación reemplace al "
+        "desorden del mercado.",
+        [
+            ("Sería una donación sin contrapartida para el país receptor",
+             "La alocución sostiene expresamente que no es un regalo."),
+            ("Estaría condicionada a la celebración de elecciones libres",
+             "Las condiciones que enumera son comerciales, no electorales."),
+            ("Se entregaría solo a países del propio bloque oriental",
+             "La alocución comenta la ayuda que ofrece el bloque contrario."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "dificil",
+        "«Toda edificación exige disciplina mientras el enemigo esté a las "
+        "puertas». ¿Qué función cumple esa frase en la alocución?",
+        "Responde a la acusación de represión justificándola por la amenaza externa",
+        "La alocución llega a esa frase después de anticipar la objeción: "
+        "«Dicen que reprimimos».\n"
+        "La respuesta no niega el hecho sino que lo redescribe: «Nosotros "
+        "decimos que edificamos», y presenta la disciplina como requisito de "
+        "esa construcción.\n"
+        "La cláusula final —«mientras el enemigo esté a las puertas»— convierte "
+        "la restricción en algo transitorio y condicionado a una amenaza cuya "
+        "duración no se precisa.",
+        [
+            ("Reconoce que la represión fue un error del período inicial",
+             "La alocución no la presenta como error sino como condición de la edificación."),
+            ("Anuncia el fin de las restricciones una vez firmada la paz",
+             "No se menciona ninguna paz ni un plazo determinado."),
+            ("Atribuye la represión a decisiones del bloque contrario",
+             "La alocución asume la disciplina como propia."),
+        ],
+    ),
+    # ---------------- La sociedad chilena a mediados del siglo XX ----------------
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "facil",
+        "Según el texto, ¿por cuáles tres vías incorporó Chile nuevos grupos a "
+        "la vida política entre 1930 y 1970?",
+        "Ampliando quién votaba, cambiando cómo se votaba y reconociendo derechos",
+        "El texto las enuncia al comienzo y después dedica un párrafo a cada "
+        "una.\n"
+        "La primera es el padrón: el voto femenino en elecciones nacionales y "
+        "el fin de la exclusión de los analfabetos. La segunda es la cédula "
+        "única, que hizo secreto el sufragio de verdad.\n"
+        "La tercera ocurre fuera de las urnas: la sindicalización campesina "
+        "autorizada en 1967 y la reforma agraria, que alteró la estructura de "
+        "propiedad sobre la que descansaba el control del voto rural.",
+        [
+            ("Aumentando la frecuencia de las elecciones presidenciales",
+             "El texto advierte que democratizar «no es solo votar más seguido»."),
+            ("Creando nuevos partidos políticos de representación obrera",
+             "La fundación de partidos no aparece entre las vías que describe el texto."),
+            ("Trasladando el registro electoral desde la Iglesia al Estado",
+             "Ese traspaso corresponde a las leyes laicas del siglo XIX."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "medio",
+        "Según el texto, ¿qué problema resolvió la cédula única adoptada a "
+        "fines de los años cincuenta?",
+        "Que cada candidatura imprimiera su voto y se supiera qué votaba cada persona",
+        "El texto describe la práctica anterior: cada candidatura imprimía y "
+        "repartía su propio voto, «lo que permitía saber qué había votado una "
+        "persona y, en el campo, controlar el sufragio de los inquilinos».\n"
+        "La cédula única entregó al Estado la impresión de una papeleta con "
+        "todas las candidaturas, y los estudios electorales del período le "
+        "atribuyen un efecto rápido en zonas rurales.\n"
+        "El texto remata con una idea fuerte: «Un voto secreto en serio no es "
+        "un detalle de procedimiento: es la condición para que exista voto».",
+        [
+            ("Que las mujeres no pudieran votar en elecciones nacionales",
+             "Esa exclusión se resolvió por otra vía, la del padrón."),
+            ("Que los analfabetos no pudieran leer las papeletas",
+             "El texto no vincula la cédula única con el analfabetismo."),
+            ("Que los resultados de la elección demoraran semanas en conocerse",
+             "El texto no menciona el conteo ni los plazos."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "medio",
+        "Según el texto, ¿qué ocurrió con la sindicalización campesina después "
+        "de 1967?",
+        "Pasó de unos pocos miles a más de cien mil trabajadores organizados",
+        "El texto señala que la sindicalización campesina estuvo prohibida en "
+        "la práctica durante casi todo el período y se autorizó en 1967.\n"
+        "El efecto fue rápido: «en pocos años el número de trabajadores "
+        "agrícolas organizados pasó de unos pocos miles a más de cien mil».\n"
+        "El texto conecta ese cambio con la reforma agraria iniciada en 1962 y "
+        "profundizada desde 1967, que alteró la estructura de propiedad sobre "
+        "la que descansaba el control del voto rural.",
+        [
+            ("Se mantuvo prohibida hasta el final del período",
+             "El texto indica que fue autorizada en 1967."),
+            ("Se redujo por efecto de la reforma agraria",
+             "El texto presenta ambos procesos como convergentes, no opuestos."),
+            ("Quedó limitada a los trabajadores de la industria urbana",
+             "El texto se refiere expresamente a trabajadores agrícolas."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "dificil",
+        "Según el texto, ¿por qué la ampliación democrática «no fue una línea "
+        "recta»?",
+        "Porque entre 1948 y 1958 una ley proscribió a un partido y a sus militantes",
+        "El texto advierte contra idealizar el proceso y entrega el "
+        "contraejemplo: entre 1948 y 1958 rigió una ley que proscribió a un "
+        "partido, borró a sus militantes de los registros electorales y relegó "
+        "a dirigentes.\n"
+        "El dato convive con las tres vías de ampliación que el propio texto "
+        "describe, y por eso concluye que la ampliación «no alcanzó a todos al "
+        "mismo tiempo».\n"
+        "Es un buen ejemplo de proceso con avances y retrocesos simultáneos.",
+        [
+            ("Porque la cédula única se aplicó solo en las zonas urbanas",
+             "El texto le atribuye un efecto rápido justamente en zonas rurales."),
+            ("Porque las mujeres perdieron el voto municipal durante los años cincuenta",
+             "El texto describe una ampliación del voto femenino, no un retroceso."),
+            ("Porque la reforma agraria se suspendió entre 1962 y 1967",
+             "El texto la describe iniciada en 1962 y profundizada desde 1967."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "medio",
+        "Según la entrevista de 1957, ¿por qué la familia dejó el fundo?",
+        "Porque la mecanización redujo la necesidad de mano de obra",
+        "La entrevistada lo relata de manera directa: «Cuando entró la máquina "
+        "no hicieron falta tantas manos y nos avisaron que teníamos que "
+        "salir».\n"
+        "Antes describe el sistema en que vivían: su marido de inquilino, ella "
+        "en la casa patronal, y una regalía de tierra, leña y ración, con casi "
+        "nada de dinero.\n"
+        "El destino lo decidió una red familiar: llegaron porque «un primo "
+        "tenía sitio tomado en la loma».",
+        [
+            ("Porque el patrón les ofreció trabajo en la ciudad",
+             "El relato indica que les avisaron que debían salir, sin ninguna oferta."),
+            ("Porque buscaban acceder a la escuela para su hijo",
+             "La escuela aparece como una ventaja posterior, no como el motivo de la salida."),
+            ("Porque la pulpería del fundo cerró sus puertas",
+             "El relato menciona la pulpería como destino del poco dinero, sin señalar cierre."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "dificil",
+        "«Comemos peor que en el fundo, pero aquí el niño está en la escuela y "
+        "nadie viene a decirnos a qué hora hay que levantarse». ¿Qué muestra "
+        "esa frase sobre la migración?",
+        "Que el balance incluye pérdidas materiales y ganancias de autonomía",
+        "La frase reconoce un empeoramiento concreto —la comida— y no lo "
+        "disimula. Lo que hace es ponerlo junto a dos ganancias: la escuela "
+        "para el hijo y el fin del control patronal sobre la jornada.\n"
+        "Ese balance mixto es lo que hace útil el testimonio: la migración no "
+        "aparece como mejora ni como fracaso, sino como un cambio en qué se "
+        "tiene y qué se pierde.\n"
+        "El informe municipal, en cambio, mira el mismo proceso solo desde la "
+        "capacidad de la ciudad para absorberlo.",
+        [
+            ("Que las condiciones de vida mejoraron en todos los aspectos",
+             "La propia entrevistada dice que comen peor que en el fundo."),
+            ("Que la familia planeaba regresar al campo en poco tiempo",
+             "El relato no menciona ninguna intención de regresar."),
+            ("Que el trabajo urbano les dio ingresos estables",
+             "El relato indica que el marido hace pololos «no todos los meses»."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "dificil",
+        "Según el informe municipal de 1952, ¿qué observó la comisión sobre "
+        "las erradicaciones practicadas hasta entonces?",
+        "Que no disminuyeron la población del sector, porque llegaban otras familias",
+        "El informe cierra con esa constatación: «las erradicaciones "
+        "practicadas hasta ahora no han disminuido la población del sector: las "
+        "familias erradicadas han sido reemplazadas por otras en el término de "
+        "pocos meses».\n"
+        "El dato desmiente la eficacia de la medida que la propia comisión "
+        "venía aplicando, y por eso recomienda estudiar en cambio medidas de "
+        "contención del flujo y un plan de urbanización.\n"
+        "El diagnóstico previo apunta al origen: el crecimiento no viene del "
+        "aumento vegetativo sino de la llegada continua de familias del campo.",
+        [
+            ("Que lograron reducir a la mitad la población del sector",
+             "El informe afirma que no disminuyeron la población."),
+            ("Que las familias erradicadas regresaron a sus fundos de origen",
+             "El informe señala que fueron reemplazadas por otras familias."),
+            ("Que resolvieron el problema de abastecimiento de agua",
+             "El informe describe piletas insuficientes, sin mejora."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Historia - Dictadura, democracia y derechos humanos
+#
+# Nota de redaccion: en cada pregunta al menos un distractor mide mas que la
+# correcta. El banco de Historia venia subiendo la proporcion de items donde
+# la correcta es la alternativa mas larga, y esa es una filtracion que se
+# arregla escribiendo, no despues.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_HISTORIA += [
+    # ---------------- Dictadura militar y transición ----------------
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "facil",
+        "Según el comunicado oficial de 1984, ¿qué medidas contemplaba el "
+        "estado de sitio?",
+        "Restricción de reunión, censura, toque de queda y detenciones sin orden judicial",
+        "El comunicado enumera las cuatro medidas de manera consecutiva y sin "
+        "eufemismos: restricción del derecho de reunión, censura de los medios "
+        "de comunicación social, toque de queda desde las veintidós horas y la "
+        "facultad de disponer detenciones y traslados administrativos.\n"
+        "El rasgo decisivo de la última es que no requiere orden judicial, lo "
+        "que deja la privación de libertad fuera del control de un juez.\n"
+        "El texto las presenta como transitorias y dirigidas a grupos "
+        "minoritarios.",
+        [
+            ("Suspensión de las elecciones municipales y disolución del Congreso Nacional",
+             "El comunicado no menciona elecciones ni al Congreso entre sus medidas."),
+            ("Cierre de las universidades y prohibición de los sindicatos de trabajadores",
+             "Ninguna de esas dos medidas aparece en el comunicado citado."),
+            ("Requisición de bienes y control estatal de los precios de los alimentos",
+             "El comunicado no dispone medidas económicas de ningún tipo."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "medio",
+        "¿Qué dato concreto entrega la declaración de las organizaciones para "
+        "responder al comunicado?",
+        "Cuatrocientas once denuncias de detención en tres semanas",
+        "La declaración abre con esa cifra y agrega una distinción que importa: "
+        "en doscientos ochenta casos pudo establecerse el recinto donde se "
+        "encuentra la persona y en el resto no.\n"
+        "Esa incertidumbre es lo que declaran como motivo de la presentación: "
+        "«es esa incertidumbre lo que hoy nos convoca».\n"
+        "De ahí la petición final, deliberadamente mínima: la nómina completa "
+        "de detenidos y el lugar donde se encuentran.",
+        [
+            ("Un informe sobre el número de medios de comunicación censurados",
+             "La declaración no entrega cifras sobre censura de medios."),
+            ("El registro de las personas que infringieron el toque de queda",
+             "La declaración no menciona infracciones al toque de queda."),
+            ("Una lista de los recintos militares habilitados en la capital",
+             "La declaración pide esa información, no la entrega."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "dificil",
+        "«Se nos dirá que estas medidas son transitorias. Llevamos once años "
+        "oyéndolo». ¿Qué hace esa respuesta con el argumento oficial?",
+        "Lo confronta con su propia duración acumulada",
+        "El comunicado califica las disposiciones de transitorias, y esa "
+        "calificación es la que sostiene su aceptabilidad: una restricción "
+        "breve pesa distinto que una permanente.\n"
+        "La declaración no discute la palabra sino el hecho: once años de "
+        "medidas anunciadas siempre como transitorias vuelven dudosa la "
+        "calificación.\n"
+        "Es un argumento de tiempo y no de principio, y por eso resulta "
+        "difícil de responder desde el mismo vocabulario oficial.",
+        [
+            ("Sostiene que las medidas transitorias son inconstitucionales por definición",
+             "La declaración no argumenta sobre la constitucionalidad de la figura."),
+            ("Propone reemplazar el estado de sitio por otras medidas de excepción",
+             "La declaración no propone medidas alternativas de ninguna clase."),
+            ("Reconoce que las restricciones terminarán una vez pasada la crisis",
+             "La declaración cuestiona justamente esa expectativa."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "dificil",
+        "«Un derecho que puede suspenderse por comunicado, sin juez que lo "
+        "revise, no está suspendido: está entregado a quien lo suspende». ¿Qué "
+        "sostiene esa afirmación?",
+        "Que sin control judicial el derecho deja de existir como límite al poder",
+        "La distinción que hace la declaración es entre suspender y entregar. "
+        "Un derecho suspendido con control judicial sigue siendo un límite: "
+        "alguien puede revisar si la suspensión corresponde.\n"
+        "Sin ese control, la decisión sobre el derecho queda en manos de la "
+        "misma autoridad que lo restringe, y entonces el derecho ya no la "
+        "limita.\n"
+        "La petición final es coherente con esa idea: pedir la nómina y el "
+        "lugar de los detenidos es pedir que la decisión sea verificable.",
+        [
+            ("Que las suspensiones de derechos requieren siempre una ley del Congreso",
+             "La declaración exige revisión judicial, sin referirse al procedimiento legislativo."),
+            ("Que los derechos suspendidos deben restituirse dentro de un plazo fijo",
+             "La declaración no propone plazos para la restitución."),
+            ("Que la autoridad debe informar a la ciudadanía antes de suspenderlos",
+             "El comunicado sí informó: la objeción es sobre la falta de revisión."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "medio",
+        "Según el texto, ¿qué está establecido sobre el período y no se "
+        "discute historiográficamente?",
+        "El golpe, la dictadura de diecisiete años y las violaciones sistemáticas",
+        "El texto separa desde el comienzo los hechos establecidos de las "
+        "explicaciones en disputa.\n"
+        "Entre los primeros sitúa el golpe de Estado, los diecisiete años de "
+        "dictadura y las violaciones sistemáticas a los derechos humanos —"
+        "detención sin orden judicial, tortura, ejecución y desaparición "
+        "forzada, con organismos creados para esa tarea—.\n"
+        "Y precisa cómo se establecieron: por comisiones de verdad y por "
+        "sentencias judiciales.",
+        [
+            ("El peso relativo de cada factor en el quiebre democrático de 1973",
+             "Ese es justamente el punto que el texto sitúa en discusión."),
+            ("La responsabilidad de los partidos políticos en la polarización previa",
+             "Esa es una de las tres explicaciones en disputa, no un hecho establecido."),
+            ("La existencia de intervención extranjera en el financiamiento opositor",
+             "El texto la menciona dentro de la tercera explicación, no entre los hechos."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "dificil",
+        "¿En qué se diferencia la segunda explicación del quiebre de 1973 "
+        "respecto de la primera?",
+        "Pone el acento en los intereses afectados y no en la conversación política",
+        "La primera explicación atribuye el quiebre a la polarización interna: "
+        "un sistema de partidos fragmentado en tres bloques sin voluntad de "
+        "acuerdo, con instituciones de mediación que dejaron de ser "
+        "reconocidas.\n"
+        "La segunda desplaza el foco al conflicto social y económico: el "
+        "programa de reformas afectó intereses concretos y poderosos, y la "
+        "reacción incluyó desabastecimiento, paros de gremios y financiamiento "
+        "de la oposición.\n"
+        "El texto resume la diferencia: para la segunda, el quiebre «no fue un "
+        "accidente de la conversación política sino la defensa de un orden de "
+        "propiedad amenazado».",
+        [
+            ("Atribuye el quiebre exclusivamente a la intervención extranjera documentada",
+             "Ese elemento pertenece a la tercera explicación, la de la Guerra Fría."),
+            ("Sostiene que la democracia chilena no llegó a quebrarse realmente",
+             "El texto sitúa el golpe entre los hechos establecidos."),
+            ("Niega que las reformas en curso hayan afectado intereses concretos",
+             "La segunda explicación afirma exactamente lo contrario."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "dificil",
+        "Según el texto, ¿qué relación hay entre las tres explicaciones del "
+        "quiebre?",
+        "No son incompatibles: iluminan planos distintos y suelen combinarse",
+        "El texto lo dice de manera directa: cada explicación ilumina un plano "
+        "distinto y la mayoría de los trabajos recientes las combina, "
+        "discutiendo el peso relativo de cada factor.\n"
+        "Lo que sí las distingue, agrega, es dónde ponen la responsabilidad, y "
+        "por eso «la elección entre ellas nunca es solo técnica».\n"
+        "El texto cierra con una regla de método: explicar por qué ocurrió algo "
+        "no equivale a justificarlo.",
+        [
+            ("Se excluyen entre sí, de modo que aceptar una obliga a descartar las otras",
+             "El texto afirma expresamente que no son incompatibles."),
+            ("Coinciden en todo salvo en la fecha exacta en que comenzó el proceso",
+             "Las tres coinciden en la fecha y difieren en las causas."),
+            ("Corresponden a tres momentos sucesivos del mismo proceso histórico",
+             "El texto las presenta como planos simultáneos, no como etapas."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "dificil",
+        "«Explicar por qué ocurrió algo no equivale a justificarlo». ¿Qué "
+        "problema busca evitar esa regla?",
+        "Que la explicación del pasado reciente se lea como una defensa de lo ocurrido",
+        "El texto cierra con esa regla después de reconocer que las tres "
+        "explicaciones se distinguen por dónde ponen la responsabilidad, de "
+        "modo que elegir entre ellas nunca es solo técnico.\n"
+        "El riesgo que se sigue es de lectura: si explicar se confunde con "
+        "justificar, cualquier análisis de causas queda bajo sospecha de "
+        "aprobar el resultado.\n"
+        "Y el costo lo enuncia el propio texto: confundir ambas cosas «hace "
+        "imposible investigar el pasado reciente».",
+        [
+            ("Que los historiadores discutan el peso relativo de cada factor causal",
+             "El texto presenta esa discusión como el trabajo normal de la disciplina."),
+            ("Que se atribuya el quiebre a una sola de las tres explicaciones",
+             "Ese es otro problema, distinto del que la regla busca evitar."),
+            ("Que las comisiones de verdad revisen las sentencias judiciales",
+             "El texto no plantea ninguna relación de ese tipo."),
+        ],
+    ),
+    # ---------------- Democracia, participación y sufragio ----------------
+    _ql(
+        "civ_sufragio", "civ_democracia", "facil",
+        "Según el texto, ¿qué significa que el sufragio sea igualitario?",
+        "Que el voto de cada persona vale exactamente lo mismo que el de otra",
+        "El texto define los cuatro atributos del sufragio en Chile y precisa "
+        "cada uno. Igualitario significa que ninguna característica personal "
+        "hace pesar más un voto.\n"
+        "La enumeración es explícita: no pesan más la riqueza, la educación, el "
+        "sexo ni el origen.\n"
+        "Los otros tres atributos son universal —votan todos los ciudadanos "
+        "habilitados—, personal —nadie vota por otro— y secreto.",
+        [
+            ("Que todos los ciudadanos habilitados tienen derecho a votar en las elecciones",
+             "Esa es la definición de sufragio universal según el texto."),
+            ("Que ninguna persona puede votar en representación de otra persona",
+             "Esa es la definición de sufragio personal."),
+            ("Que nadie puede saber qué votó una persona y presionarla por ello",
+             "Esa es la definición de sufragio secreto."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio", "civ_democracia", "medio",
+        "Según el texto, ¿en qué se diferencia la democracia directa de la "
+        "representativa?",
+        "En la directa la ciudadanía decide y en la representativa elige a quien decide",
+        "El texto define ambas por quién toma la decisión. En la democracia "
+        "directa la ciudadanía decide ella misma sobre los asuntos, como en la "
+        "asamblea ateniense.\n"
+        "En la representativa elige autoridades que deciden en su nombre "
+        "durante un período, y les pide cuentas en la elección siguiente.\n"
+        "Chile es representativo como regla, pero contempla mecanismos de "
+        "participación directa como el plebiscito, comunal y nacional.",
+        [
+            ("En la directa se vota en la comuna y en la representativa a nivel nacional",
+             "El texto señala que el plebiscito existe en ambos niveles."),
+            ("En la directa los partidos presentan candidatos y en la otra no lo hacen",
+             "El texto asigna esa tarea a los partidos dentro del sistema representativo."),
+            ("En la directa el voto es obligatorio y en la representativa es voluntario",
+             "El texto indica que desde 2023 el voto es obligatorio para los habilitados."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio", "civ_democracia", "medio",
+        "Según el texto, ¿qué dos tareas cumplen los partidos políticos en el "
+        "sistema representativo?",
+        "Organizar corrientes de opinión y presentar candidatos a cargos electivos",
+        "El texto las enumera como tareas propias del sistema representativo. "
+        "La primera es organizar y representar corrientes de opinión, "
+        "canalizando demandas ciudadanas dispersas.\n"
+        "La segunda es seleccionar y presentar candidatos a los cargos de "
+        "elección popular.\n"
+        "Ninguna de las dos la cumple la sociedad civil organizada, que el "
+        "texto describe aparte como complemento y no sustituto de la "
+        "representación.",
+        [
+            ("Ejercer control social permanente y canalizar demandas territoriales",
+             "Esas son las funciones que el texto asigna a la sociedad civil organizada."),
+            ("Convocar plebiscitos comunales y administrar el registro electoral",
+             "El texto no atribuye ninguna de esas funciones a los partidos."),
+            ("Fiscalizar a las autoridades electas y revisar sus cuentas públicas",
+             "El texto sitúa la rendición de cuentas en la elección siguiente."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio", "civ_democracia", "dificil",
+        "Según el texto, ¿por qué la alternancia se considera un indicador de "
+        "salud democrática?",
+        "Porque muestra que las elecciones compiten y que el poder se entrega",
+        "El texto define alternancia como que un gobierno sea sucedido por la "
+        "oposición, y le atribuye tres significados.\n"
+        "Demuestra que las elecciones son competitivas de verdad, que quien "
+        "pierde acepta el resultado y que el poder se entrega pacíficamente.\n"
+        "Los tres apuntan a lo mismo: no basta con que haya elecciones, tiene "
+        "que ser posible perderlas y aceptarlo.",
+        [
+            ("Porque garantiza que cada corriente de opinión gobierne por turnos",
+             "El texto no plantea ningún turno garantizado entre corrientes."),
+            ("Porque obliga a los partidos a presentar candidatos en cada elección",
+             "Esa es una función permanente de los partidos, no un efecto de la alternancia."),
+            ("Porque asegura que las políticas del gobierno anterior se mantengan",
+             "El texto no vincula la alternancia con la continuidad de las políticas."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio", "civ_democracia", "dificil",
+        "Según el texto, ¿qué relación hay entre la sociedad civil organizada "
+        "y la representación electoral?",
+        "Es un complemento y no un sustituto de la representación",
+        "El texto lo afirma de manera literal después de enumerar juntas de "
+        "vecinos, sindicatos, centros de alumnos y fundaciones.\n"
+        "La razón que da es de alcance: la sociedad civil actúa en el día a día "
+        "del territorio, «donde el voto no llega», canalizando demandas y "
+        "ejerciendo control social de forma permanente.\n"
+        "La palabra permanente contrasta con el carácter periódico de la "
+        "elección, y ahí está la complementariedad.",
+        [
+            ("Reemplaza a los partidos cuando estos pierden apoyo ciudadano",
+             "El texto la presenta como complemento, no como reemplazo."),
+            ("Depende de los partidos políticos para canalizar sus demandas",
+             "El texto le atribuye capacidad propia de canalizar demandas."),
+            ("Solo puede actuar durante los períodos de campaña electoral",
+             "El texto describe su acción como permanente y cotidiana."),
+        ],
+    ),
+    _ql(
+        "fuente_voto_femenino", "civ_democracia", "medio",
+        "¿Qué función atribuye el parlamentario opositor a la mujer para "
+        "justificar su exclusión del voto presidencial?",
+        "Una función en el hogar que, según él, ningún hombre puede reemplazar",
+        "La intervención construye su argumento sin negar capacidades: «Nadie "
+        "discute la inteligencia ni las virtudes de la mujer chilena».\n"
+        "Lo que sostiene es que la política «es áspera y divide a las "
+        "familias», y que la mujer cumple en el hogar una función "
+        "irreemplazable de la que no conviene distraerla.\n"
+        "Sobre esa base acepta el voto municipal ya concedido y objeta "
+        "extenderlo a la elección presidencial.",
+        [
+            ("Una falta de preparación política que la escuela debería corregir antes",
+             "La intervención declara expresamente que no discute su inteligencia."),
+            ("Una responsabilidad económica que le impediría acudir a votar",
+             "El argumento es sobre el papel en el hogar, no sobre disponibilidad."),
+            ("Una condición legal que la Constitución vigente ya establecía",
+             "La intervención argumenta sobre conveniencia, no sobre norma vigente."),
+        ],
+    ),
+    _ql(
+        "fuente_voto_femenino", "civ_democracia", "dificil",
+        "«No pedimos entrar a la política: ya estamos en ella, soportando sus "
+        "efectos sin voz». ¿Qué idea de ciudadanía propone esa frase?",
+        "Que quien sufre las decisiones ya está en política y le falta la voz",
+        "La dirigenta llega a esa frase después de enumerar decisiones "
+        "cotidianas: el presupuesto del hogar, la educación de los hijos y el "
+        "precio del pan, «una decisión política tomada por hombres que nosotras "
+        "no elegimos».\n"
+        "Con eso desplaza el eje del debate: no discute si las mujeres deben "
+        "entrar a un ámbito ajeno, sostiene que ya están dentro y sin "
+        "representación.\n"
+        "La ciudadanía deja de ser un permiso de ingreso y pasa a ser el "
+        "reconocimiento de una condición existente.",
+        [
+            ("Que la ciudadanía debe reservarse a quienes ejercen cargos públicos",
+             "La intervención argumenta en sentido contrario."),
+            ("Que las decisiones del hogar deberían quedar fuera de la política",
+             "La intervención sostiene que ya son políticas."),
+            ("Que el voto municipal es suficiente para representar a las mujeres",
+             "La intervención pide extender el derecho, no conformarse con él."),
+        ],
+    ),
+    # ---------------- Derechos humanos y deberes ciudadanos ----------------
+    _ql(
+        "civ_ddhh", "civ_ddhh", "facil",
+        "Según el texto, ¿qué significa que los derechos humanos sean "
+        "universales?",
+        "Que corresponden a todas las personas por el solo hecho de serlo",
+        "El texto lo define así y precisa que no admiten distinción de "
+        "nacionalidad, sexo, religión, situación migratoria ni ninguna otra "
+        "condición.\n"
+        "Agrega dos consecuencias: no se ganan por mérito ni se otorgan como "
+        "premio, y por eso se dice que el Estado no los concede sino que los "
+        "reconoce.\n"
+        "La obligación estatal alcanza incluso a quien la sociedad rechaza, que "
+        "es donde la universalidad se pone realmente a prueba.",
+        [
+            ("Que todos los Estados del mundo los han incorporado a su legislación",
+             "El texto no afirma que todos los Estados los hayan incorporado."),
+            ("Que se aplican solo a los ciudadanos del país que los reconoce",
+             "El texto descarta expresamente la distinción por nacionalidad."),
+            ("Que su cumplimiento puede ser exigido ante tribunales internacionales",
+             "El texto no vincula la universalidad con la existencia de tribunales."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_ddhh", "medio",
+        "Según el texto, ¿qué significa que los derechos humanos sean "
+        "inalienables?",
+        "Que nadie puede renunciar a ellos ni ser despojado de ellos",
+        "El texto lo define en esos términos y agrega una precisión que es la "
+        "más exigente del párrafo: «no quedan a disposición de lo que una "
+        "mayoría decida».\n"
+        "Esa cláusula distingue los derechos humanos de otras decisiones "
+        "colectivas: una mayoría puede cambiar impuestos o programas, pero no "
+        "suprimir derechos.\n"
+        "Es también lo que explica por qué el Estado debe garantizarlos incluso "
+        "frente a quien la sociedad rechaza.",
+        [
+            ("Que solo pueden suspenderse mediante una ley aprobada por el Congreso",
+             "El texto los sustrae a la decisión de las mayorías, incluidas las legislativas."),
+            ("Que se pierden cuando una persona comete un delito grave",
+             "El texto sostiene que nadie puede ser despojado de ellos."),
+            ("Que su reconocimiento depende de los recursos del Estado",
+             "Esa condición el texto la aplica a la realización progresiva de otros derechos."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_ddhh", "medio",
+        "Según el texto, ¿qué contexto explica el contenido de la Declaración "
+        "Universal de 1948?",
+        "El Holocausto y la constatación de que un Estado podía aniquilar legalmente",
+        "El texto fecha la aprobación en 1948 por la Asamblea General, tres "
+        "años después del fin de la Segunda Guerra Mundial, y sostiene que ese "
+        "contexto explica su contenido.\n"
+        "La constatación que menciona es precisa y es la que obliga a un "
+        "criterio superior a la ley interna: un Estado podía aniquilar "
+        "legalmente a su propia población.\n"
+        "De ahí que la declaración afirme derechos que valen con independencia "
+        "de lo que disponga la ley del país donde se vive.",
+        [
+            ("La descolonización de Asia y África durante las décadas siguientes",
+             "Ese proceso es posterior y el texto no lo menciona como contexto."),
+            ("La creación de organismos financieros internacionales en 1944",
+             "El texto no vincula la declaración con el orden económico de posguerra."),
+            ("El inicio de la Guerra Fría entre los dos bloques de posguerra",
+             "El texto no menciona la Guerra Fría al explicar la declaración."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_ddhh", "dificil",
+        "Según el texto, ¿en qué se diferencian las exigencias de los derechos "
+        "de primera y de segunda generación?",
+        "Los primeros piden que el Estado se abstenga y los segundos, prestaciones",
+        "El texto describe los de primera generación —civiles y políticos, como "
+        "la vida, la libertad de expresión y el debido proceso— señalando que "
+        "exigen sobre todo abstención: que el Estado no censure ni detenga "
+        "arbitrariamente.\n"
+        "Los de segunda generación —económicos, sociales y culturales, como "
+        "educación y salud— exigen lo contrario: escuelas, hospitales, "
+        "profesionales y presupuesto.\n"
+        "Por eso el texto agrega que su realización es progresiva y depende de "
+        "los recursos disponibles.",
+        [
+            ("Los primeros son universales y los segundos solo rigen para los ciudadanos",
+             "El texto declara universales a los derechos humanos sin distinguir generaciones."),
+            ("Los primeros son colectivos y los segundos corresponden a cada persona",
+             "Los derechos colectivos son los de tercera generación según el texto."),
+            ("Los primeros se aprobaron en 1948 y los segundos en tratados posteriores",
+             "El texto no fecha por separado cada generación de derechos."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_ddhh", "dificil",
+        "Según el texto, ¿qué relación existe entre los deberes ciudadanos y "
+        "los derechos?",
+        "Los deberes son la contracara: sin recursos ni convivencia no hay garantía",
+        "El texto enumera los deberes —respetar la Constitución y las leyes, "
+        "pagar impuestos, respetar los derechos de los demás y cuidar los "
+        "bienes públicos— y los llama «la contracara de los derechos».\n"
+        "La razón que da es material y directa: para garantizar educación, "
+        "salud o seguridad, el Estado «necesita recursos y un marco de "
+        "convivencia respetado por todos».\n"
+        "La relación no es de intercambio —los derechos no se ganan cumpliendo "
+        "deberes—, sino de condición para que la garantía sea posible.",
+        [
+            ("Los derechos se otorgan a quienes cumplen previamente con sus deberes",
+             "El texto sostiene que los derechos no se ganan por mérito ni se otorgan como premio."),
+            ("Los deberes reemplazan a los derechos en períodos de crisis fiscal",
+             "El texto no plantea ninguna sustitución de ese tipo."),
+            ("Los deberes corresponden al Estado y los derechos a las personas",
+             "El texto atribuye los deberes a la ciudadanía."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Historia - Sociedad de la informacion, mercado y ajustes de nodos
+# ---------------------------------------------------------------------------
+
+QUESTIONS_HISTORIA += [
+    # ---------------- La democracia en la sociedad de la información ----------------
+    _ql(
+        "civ_info_desinformacion", "civ_informacion", "medio",
+        "Según el texto, ¿en qué se diferencia la desinformación de la "
+        "información engañosa?",
+        "La desinformación es falsa; la engañosa usa datos verdaderos mal ordenados",
+        "El texto distingue tres cosas que suelen confundirse. El error es una "
+        "afirmación falsa publicada sin intención de engañar, y se corrige.\n"
+        "La desinformación es contenido falso difundido a sabiendas, con un "
+        "propósito. La información engañosa, en cambio, usa datos verdaderos "
+        "ordenados de modo que produzcan una conclusión falsa.\n"
+        "Los ejemplos que da son precisos: una cifra real fuera de contexto, un "
+        "gráfico con la escala manipulada, una cita a la que se le quitó la "
+        "frase que la matizaba.",
+        [
+            ("La desinformación circula en redes y la engañosa en medios tradicionales",
+             "El texto no distingue ambas por el canal en que circulan."),
+            ("La desinformación se publica sin intención y la engañosa con propósito",
+             "Publicar sin intención de engañar es lo que el texto llama error."),
+            ("La desinformación se puede verificar y la información engañosa no",
+             "El texto señala que la engañosa resiste la verificación pieza por pieza."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "medio",
+        "¿Qué tres medidas propone la investigadora en la comisión?",
+        "Informar el criterio de ordenamiento, permitir auditarlo y responder por lo promovido",
+        "La investigadora las presenta como pedidos «mucho más modestos» que "
+        "obligar a borrar opiniones, cosa que declara no pedir.\n"
+        "Las dos primeras son de transparencia: informar con qué criterio se "
+        "ordenan los contenidos y permitir auditar ese criterio de forma "
+        "independiente.\n"
+        "La tercera es de responsabilidad, y viene acotada: responder cuando la "
+        "plataforma promueva activamente contenido que ya fue declarado falso "
+        "por un tribunal.",
+        [
+            ("Eliminar las opiniones falsas, sancionar a sus autores y cerrar cuentas",
+             "La investigadora declara expresamente que no pide borrar opiniones."),
+            ("Prohibir los sistemas automáticos de ordenamiento de contenidos",
+             "Su propuesta es transparentar y auditar ese sistema, no prohibirlo."),
+            ("Entregar a un organismo estatal la revisión previa de las publicaciones",
+             "Ninguna de sus propuestas contempla revisión previa."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "dificil",
+        "Según el abogado, ¿qué efecto produce obligar a las plataformas a "
+        "responder por lo que circula?",
+        "Que ante la duda borren, porque les sale más barato eliminar de más",
+        "El abogado describe el cálculo con precisión: a la empresa «le sale "
+        "más barato eliminar mil publicaciones legítimas que arriesgar una "
+        "sanción por una ilegítima».\n"
+        "Y agrega quién ejecuta ese cálculo: un sistema automático, en segundos "
+        "y sin que nadie revise el caso.\n"
+        "El perjudicado no es la empresa, que se protege, sino «quien denuncia "
+        "algo incómodo y ve su publicación desaparecer sin explicación ni "
+        "apelación».",
+        [
+            ("Que las plataformas dejen de ordenar los contenidos que muestran",
+             "El abogado no plantea que abandonen el ordenamiento."),
+            ("Que los tribunales asuman la revisión de cada publicación retirada",
+             "El abogado advierte justamente que nadie revisa los casos."),
+            ("Que las empresas contraten equipos humanos de revisión permanente",
+             "El abogado sostiene que el filtrado lo hará un sistema automático."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "dificil",
+        "¿En qué coinciden y en qué difieren las dos intervenciones de la "
+        "comisión?",
+        "Coinciden en el diagnóstico y en dos propuestas; difieren en la tercera",
+        "El abogado lo declara de entrada: «Comparto el diagnóstico y me "
+        "preocupa el remedio». La discrepancia no es sobre los hechos.\n"
+        "Sobre las propuestas es todavía más explícito al cerrar: de las tres, "
+        "«las dos primeras no tengo nada que objetar: transparencia y auditoría "
+        "independiente son exigibles hoy mismo».\n"
+        "La objeción se concentra en la tercera, la de responsabilidad por el "
+        "contenido promovido: «es la que abre una puerta que después no se "
+        "cierra».",
+        [
+            ("Coinciden en las tres propuestas y difieren en el diagnóstico inicial",
+             "El abogado comparte el diagnóstico y objeta una de las propuestas."),
+            ("Difieren en todo, porque uno defiende regular y el otro no regular",
+             "El abogado acepta dos de las tres medidas propuestas."),
+            ("Coinciden en que la autoridad debe poder retirar contenidos falsos",
+             "El abogado advierte contra entregar esa herramienta a la autoridad."),
+        ],
+    ),
+    _ql(
+        "civ_info_cifras", "civ_informacion", "medio",
+        "Según la tabla 2, ¿qué relación se observa entre la confianza "
+        "declarada y la verificación antes de compartir?",
+        "A mayor confianza declarada, menor porcentaje que verifica",
+        "La tabla ordena los cuatro grupos de edad y las dos columnas se mueven "
+        "en sentidos opuestos.\n"
+        "La confianza sube de 31% en el grupo más joven a 51% en el mayor, "
+        "mientras la verificación baja de 39% a 17% en el mismo recorrido.\n"
+        "La tercera columna acompaña esa lectura: quienes menos verifican son "
+        "también quienes menos declaran haber compartido algo falso, y la nota "
+        "advierte que puede ser porque no se enteraron.",
+        [
+            ("A mayor confianza declarada, mayor porcentaje que verifica",
+             "Las dos columnas se mueven en sentidos opuestos, no en el mismo."),
+            ("La confianza y la verificación se mantienen constantes entre grupos",
+             "Ambas varían más de veinte puntos entre el grupo menor y el mayor."),
+            ("Solo el grupo de 30 a 49 años muestra confianza y verificación altas",
+             "Ese grupo registra 38% de confianza y 33% de verificación, valores intermedios."),
+        ],
+    ),
+    # ---------------- Mercado: oferta, demanda y precios ----------------
+    _ql(
+        "eco_tabla_mercado", "eco_mercado", "facil",
+        "Según la tabla 1, ¿a qué precio se equilibran la cantidad demandada y "
+        "la ofrecida?",
+        "A $400 por caja, con 600 cajas",
+        "La tabla permite comparar las dos columnas fila por fila. A $200 la "
+        "demanda supera con creces a la oferta: 900 contra 300.\n"
+        "A medida que sube el precio, la demanda baja y la oferta sube, hasta "
+        "que ambas coinciden en 600 cajas cuando el precio es $400.\n"
+        "Sobre ese precio la relación se invierte: a $600 se ofrecen 900 cajas "
+        "y se demandan solo 300.",
+        [
+            ("A $300 por caja, donde la demanda es mayor que la oferta",
+             "A ese precio se demandan 750 cajas y se ofrecen 450: no hay equilibrio."),
+            ("A $500 por caja, donde la oferta supera a la cantidad demandada",
+             "A ese precio se ofrecen 750 cajas y se demandan 450."),
+            ("A $600 por caja, que es donde la oferta alcanza su valor máximo",
+             "Ese es el mayor valor de la oferta, pero la demanda cae a 300."),
+        ],
+    ),
+    _ql(
+        "eco_tabla_mercado", "eco_mercado", "medio",
+        "Según la tabla 2, ¿qué ocurre con la curva de oferta si una helada "
+        "arruina parte de la cosecha?",
+        "Se desplaza a la izquierda",
+        "La tabla asigna a cada cambio la curva afectada y la dirección del "
+        "desplazamiento, y la helada aparece expresamente como un caso de "
+        "oferta hacia la izquierda.\n"
+        "La nota explica qué significa: un desplazamiento a la derecha implica "
+        "ofrecer más a cada precio, de modo que a la izquierda es lo "
+        "contrario.\n"
+        "El caso opuesto también está en la tabla: si baja el precio del "
+        "combustible del transporte, la oferta se desplaza a la derecha.",
+        [
+            ("Se desplaza a la derecha, porque el precio del producto subirá",
+             "La tabla asigna ese desplazamiento a una baja en los costos, no a una helada."),
+            ("Se mantiene igual y solo se mueve un punto sobre la misma curva",
+             "Eso ocurre cuando cambia el precio del propio producto."),
+            ("Se desplaza la curva de demanda a la izquierda por el menor consumo",
+             "La helada afecta la producción, no las decisiones de los compradores."),
+        ],
+    ),
+    _ql(
+        "eco_tabla_mercado", "eco_mercado", "dificil",
+        "Según las notas de la fuente, ¿qué diferencia hay entre un cambio en "
+        "el precio del propio producto y los cambios de la tabla 2?",
+        "El precio mueve un punto sobre la curva; los otros la desplazan entera",
+        "La nota lo establece de manera directa: «Un cambio en el precio del "
+        "propio producto no desplaza ninguna curva: mueve un punto a lo largo "
+        "de ella».\n"
+        "Los cambios de la tabla 2 son de otra naturaleza: ingreso de los "
+        "hogares, clima, costo del transporte o percepción sobre la salud. "
+        "Ninguno es el precio del producto.\n"
+        "La distinción importa porque confundirlas lleva a decir que la demanda "
+        "«bajó» cuando en realidad solo se recorrió la misma curva.",
+        [
+            ("El precio desplaza ambas curvas y los otros cambios solo una",
+             "La nota señala que el precio no desplaza ninguna curva."),
+            ("El precio afecta la oferta y los otros cambios afectan la demanda",
+             "La tabla 2 incluye desplazamientos de ambas curvas."),
+            ("El precio produce efectos permanentes y los otros son transitorios",
+             "La fuente no distingue los cambios por su duración."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_mercado", "medio",
+        "Según el texto, ¿por qué el Estado regula la tarifa en un monopolio "
+        "natural?",
+        "Porque la competencia no puede existir, no porque no le guste",
+        "El texto explica primero qué hace natural a ese monopolio: hay "
+        "actividades donde tener una sola red resulta mucho más barato que "
+        "duplicarla, como agua potable, alcantarillado o distribución "
+        "eléctrica.\n"
+        "De ahí la consecuencia: «Nadie va a tender una segunda cañería para "
+        "competir con la primera», así que la competencia no aparecerá sola y "
+        "el único proveedor puede fijar el precio.\n"
+        "El texto cierra la idea con esa frase exacta sobre por qué se regula.",
+        [
+            ("Porque las empresas privadas no pueden operar redes de servicios",
+             "El texto no plantea ninguna incapacidad de las empresas para operar redes."),
+            ("Porque los usuarios no disponen de información sobre las tarifas",
+             "Ese problema corresponde a la información asimétrica, otra falla distinta."),
+            ("Porque el servicio se presta a quien no paga y no se puede cobrar",
+             "Ese rasgo describe a los bienes públicos, no al monopolio natural."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_mercado", "dificil",
+        "Según el texto, ¿qué efecto produce la información asimétrica cuando "
+        "nadie puede distinguir lo bueno de lo malo?",
+        "El comprador ofrece un precio promedio y los productos buenos se retiran",
+        "El texto describe primero la situación: una parte sabe mucho más que "
+        "la otra sobre lo que se vende, como el estado real de un auto usado o "
+        "la letra chica de un crédito.\n"
+        "Y advierte que el problema no se agota en que algunos salgan "
+        "perjudicados. Si nadie puede distinguir la calidad, el comprador "
+        "ofrece un precio promedio.\n"
+        "A ese precio, quien vende algo bueno prefiere no vender: los buenos "
+        "productos abandonan el mercado y queda lo peor.",
+        [
+            ("El precio sube hasta que solo los productos buenos quedan disponibles",
+             "El texto describe el movimiento inverso: son los buenos los que se retiran."),
+            ("El Estado debe proveer directamente el bien porque nadie lo ofrecerá",
+             "Esa conclusión corresponde a los bienes públicos."),
+            ("La competencia desaparece y queda un solo oferente en el mercado",
+             "Ese resultado describe al monopolio natural, no a esta falla."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_mercado", "dificil",
+        "¿Qué advertencia hace el texto al cerrar su repaso de las cuatro "
+        "fallas de mercado?",
+        "Que una falla muestra que intervenir puede mejorar, no que cualquier intervención mejore",
+        "El texto lo llama «un cierre honesto» y da tres ejemplos de "
+        "intervenciones que dejan la situación peor que antes: una tarifa mal "
+        "calculada, un subsidio que llega a quien no lo necesita o una "
+        "regulación escrita por los propios regulados.\n"
+        "La distinción que propone es de etapas: «Identificar la falla es el "
+        "primer paso; diseñar bien el remedio es otro problema».\n"
+        "Con eso evita que el diagnóstico funcione como justificación "
+        "automática de cualquier medida.",
+        [
+            ("Que las cuatro fallas descritas no se presentan en economías reales",
+             "El texto entrega ejemplos concretos de cada una."),
+            ("Que un mercado con muchos oferentes nunca asigna bien los recursos",
+             "El texto sostiene lo contrario al comenzar."),
+            ("Que el Estado debería abstenerse de intervenir en todos los casos",
+             "El texto admite que intervenir puede mejorar el resultado."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_mercado", "medio",
+        "Según la primera columna, ¿por qué la oferta de vivienda no corrige "
+        "sola el problema del arriendo?",
+        "Porque construir toma años y el suelo urbano no se fabrica",
+        "La columna concede que quien defiende el precio libre supone que la "
+        "oferta responderá, y responde que no ha ocurrido, con una razón "
+        "concreta.\n"
+        "Esa razón es de plazos y de límites físicos: construir vivienda toma "
+        "años y el suelo urbano no se puede producir.\n"
+        "Y agrega por qué el plazo importa: la familia que no puede pagar «no "
+        "aplaza su decisión», se va más lejos, se hacina o queda en la calle.",
+        [
+            ("Porque los propietarios se han organizado para no construir más",
+             "La columna no atribuye el problema a una coordinación entre propietarios."),
+            ("Porque el Estado prohíbe la construcción de viviendas nuevas",
+             "La columna no menciona ninguna prohibición."),
+            ("Porque los arrendatarios prefieren no cambiarse de comuna",
+             "La columna describe justamente que se van a vivir más lejos."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_mercado", "dificil",
+        "Según la segunda columna, ¿por qué un tope al arriendo perjudicaría a "
+        "las familias que dice proteger?",
+        "Porque al escasear la vivienda el arrendador elige a quien tiene contrato y aval",
+        "La columna describe primero el mecanismo: con el precio bajo el nivel "
+        "de equilibrio, más familias buscan arrendar y menos propietarios "
+        "ofrecen. Algunos venden, otros dejan la vivienda vacía y otros la "
+        "destinan a arriendo por días.\n"
+        "La escasez que antes se expresaba en precios altos pasa a expresarse "
+        "en «no encontrar nada», que la columna considera peor.\n"
+        "Y ahí aparece el efecto sobre a quién alcanza: cuando el arrendador "
+        "elige, quedan fuera las familias con menos respaldo.",
+        [
+            ("Porque el tope obliga a las familias a pagar un arriendo mayor",
+             "El tope fija un precio máximo, no uno mayor."),
+            ("Porque los propietarios deberán invertir más en mantener el inmueble",
+             "La columna sostiene lo contrario: el precio congelado desincentiva mantenerlo."),
+            ("Porque el subsidio directo dejaría de estar disponible para ellas",
+             "El subsidio aparece como propuesta alternativa, no como algo que se pierda."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_mercado", "dificil",
+        "¿Qué propone la segunda columna en lugar del tope al arriendo?",
+        "Un subsidio directo a las familias que lo necesitan",
+        "La columna cierra con esa alternativa después de sostener que el tope "
+        "destruye la oferta.\n"
+        "El argumento a favor es de precisión: el subsidio «llega a ellas sin "
+        "destruir la oferta», es decir, alcanza al grupo que se quiere proteger "
+        "sin alterar la cantidad de viviendas disponibles.\n"
+        "La columna acepta el objetivo declarado por la otra parte —que nadie "
+        "quede sin techo— y discute solo el instrumento.",
+        [
+            ("La construcción de viviendas públicas administradas por el Estado",
+             "La columna no menciona construcción pública entre sus propuestas."),
+            ("Un impuesto a las viviendas que permanezcan desocupadas",
+             "La columna menciona las viviendas vacías como efecto, no propone gravarlas."),
+            ("La liberalización del arriendo por días en toda la ciudad",
+             "La columna cita ese uso como consecuencia del tope, no como propuesta."),
+        ],
+    ),
+    # ---------------- ajustes de nodos que quedaron en 58 y 59 ----------------
+    _ql(
+        "chile_xix_exportaciones", "his_chile_xix", "dificil",
+        "Según la tabla 2, ¿qué ocurrió con los impuestos internos como fuente "
+        "de ingresos fiscales entre 1870 y 1910?",
+        "Cayeron del 37% al 18% del total de ingresos ordinarios",
+        "La tabla registra tres momentos: 37% en 1870, 21% en 1890 y 18% en "
+        "1910.\n"
+        "La caída no se debe a que el Estado recaudara menos por esa vía sino a "
+        "que otra fuente creció mucho más rápido: los derechos sobre el salitre "
+        "pasan del 2% al 53% en el mismo período.\n"
+        "El resultado es una hacienda pública cada vez más apoyada en un solo "
+        "producto de exportación, con el riesgo que la nota de la fuente "
+        "señala.",
+        [
+            ("Subieron del 18% al 37% al ampliarse la base tributaria interna",
+             "La tabla muestra el movimiento en sentido contrario."),
+            ("Se mantuvieron estables en torno a un tercio de los ingresos",
+             "Cayeron diecinueve puntos entre 1870 y 1910."),
+            ("Pasaron a ser la principal fuente de ingresos del fisco chileno",
+             "En 1910 la principal fuente eran los derechos sobre el salitre."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_posguerra", "medio",
+        "Según la tabla 1, ¿en qué quinquenio se concentró el mayor número de "
+        "independencias africanas?",
+        "Entre 1960 y 1964, con veinticuatro Estados",
+        "La columna de África recorre los seis quinquenios: 1, 2, 5, 24, 8 y "
+        "7.\n"
+        "El máximo, 24, corresponde a 1960-1964, y explica por sí solo la "
+        "mayor parte de los 30 Estados que acceden a la independencia en ese "
+        "quinquenio.\n"
+        "La nota final agrega un dato que ayuda a situarlo: la declaración "
+        "sobre la concesión de la independencia a los países coloniales fue "
+        "aprobada por la asamblea en 1960.",
+        [
+            ("Entre 1945 y 1949, cuando comenzó el proceso descolonizador",
+             "En ese quinquenio la tabla registra un solo Estado africano."),
+            ("Entre 1965 y 1969, con dieciséis Estados en total",
+             "Esos dieciséis incluyen Asia y el Caribe: África aporta ocho."),
+            ("Entre 1970 y 1975, cuando el proceso alcanzó su punto más alto",
+             "En ese quinquenio África registra siete Estados."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "medio",
+        "Según el informe municipal, ¿de dónde provenía el crecimiento del "
+        "sector de la quebrada?",
+        "De la llegada continua de familias del campo, no del aumento vegetativo",
+        "El informe lo establece de manera expresa al describir las unas mil "
+        "doscientas viviendas levantadas sin permiso.\n"
+        "La comisión atribuye la llegada a la expectativa de empleo industrial, "
+        "y agrega una observación que matiza esa expectativa: la ciudad «no "
+        "está en condiciones de ofrecer en la cantidad requerida».\n"
+        "Sobre esa base recomienda estudiar medidas de contención del flujo y "
+        "un plan de urbanización de los sectores ya consolidados.",
+        [
+            ("Del crecimiento natural de las familias que ya vivían en el sector",
+             "El informe descarta expresamente el aumento vegetativo."),
+            ("Del traslado de familias erradicadas desde otros sectores urbanos",
+             "El informe menciona erradicaciones desde el propio sector, no hacia él."),
+            ("De la llegada de trabajadores extranjeros contratados por la industria",
+             "El informe se refiere a familias provenientes del campo."),
+        ],
+    ),
+    _ql(
+        "fuente_participacion", "civ_democracia", "dificil",
+        "Según la segunda fuente, ¿qué consecuencia tiene para la "
+        "representación que la abstención se concentre en ciertos sectores?",
+        "Produce autoridades que responden a una parte del país y no al conjunto",
+        "La fuente construye el argumento en dos pasos. Primero constata que "
+        "la abstención «no se reparte parejo»: se concentra en los sectores con "
+        "menos ingresos y menos años de escolaridad.\n"
+        "Segundo, extrae la consecuencia institucional: «Un padrón que se "
+        "achica por ese lado produce autoridades que responden a una parte del "
+        "país y no al conjunto».\n"
+        "La objeción, entonces, no es sobre cuánta gente vota sino sobre a "
+        "quién termina representando el resultado.",
+        [
+            ("Reduce la legitimidad de las elecciones hasta hacerlas inválidas",
+             "La fuente no sostiene que las elecciones dejen de ser válidas."),
+            ("Obliga a repetir la elección cuando la participación es muy baja",
+             "La fuente no propone repetir ninguna elección."),
+            ("Aumenta el peso electoral de los sectores de mayores ingresos hasta duplicarlo",
+             "La fuente no cuantifica el peso relativo de ningún sector."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_ddhh", "medio",
+        "Según el texto, ¿qué deberes ciudadanos enumera como contracara de "
+        "los derechos?",
+        "Respetar la ley, pagar impuestos, respetar a los demás y cuidar lo público",
+        "El texto los enumera en ese orden al cerrar: respetar la Constitución "
+        "y las leyes, contribuir mediante el pago de impuestos, respetar los "
+        "derechos de los demás y cuidar los bienes públicos.\n"
+        "La razón por la que los llama contracara es material: para garantizar "
+        "educación, salud o seguridad, el Estado necesita recursos y un marco "
+        "de convivencia respetado por todos.\n"
+        "No se trata de un intercambio: el texto ya había establecido que los "
+        "derechos no se ganan por mérito.",
+        [
+            ("Votar en cada elección, informarse y participar en organizaciones",
+             "El texto no incluye esos elementos entre los deberes que enumera."),
+            ("Denunciar las violaciones de derechos y colaborar con la justicia",
+             "Ninguno de los dos aparece en la enumeración del texto."),
+            ("Prestar servicio militar y desempeñar cargos de elección popular",
+             "El texto no menciona ninguno de esos deberes."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_ddhh", "dificil",
+        "Según el texto, ¿por qué la obligación del Estado alcanza «incluso "
+        "frente a quien la sociedad rechaza»?",
+        "Porque los derechos no dependen del mérito ni de lo que decida una mayoría",
+        "El texto establece dos rasgos que juntos producen esa consecuencia. "
+        "Los derechos corresponden a toda persona por el solo hecho de serlo y "
+        "no se ganan por mérito ni se otorgan como premio.\n"
+        "Y son inalienables: nadie puede renunciar a ellos ni ser despojado de "
+        "ellos, y «no quedan a disposición de lo que una mayoría decida».\n"
+        "Si dependieran del mérito o del apoyo social, quien la sociedad "
+        "rechaza sería exactamente el primero en perderlos, y por eso el texto "
+        "menciona ese caso.",
+        [
+            ("Porque el Estado debe evitar conflictos con la opinión pública mayoritaria",
+             "El texto sustrae los derechos a la decisión de las mayorías, no busca evitar conflictos."),
+            ("Porque los tratados internacionales lo obligan a hacerlo así",
+             "El texto no funda esa obligación en tratados."),
+            ("Porque quien la sociedad rechaza suele ser inocente de lo que se le imputa",
+             "El texto no plantea nada sobre la inocencia de esa persona."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Historia - Sistema economico: los cuatro nodos que faltaban
+#
+# eco_indicadores tenia 51 de sus 52 preguntas SIN fuente, unico caso en el
+# banco de Historia. Se agrega una fuente discontinua propia con los cuatro
+# indicadores que el temario pide leer, y las ocho preguntas nuevas del nodo
+# se apoyan en ella.
+# ---------------------------------------------------------------------------
+
+PASSAGES_HISTORIA += [
+    {
+        "key": "eco_indicadores_tabla",
+        "title": "Cuatro indicadores de una economía, 2015-2024",
+        "kind": "discontinuo",
+        "source_note": (
+            "Tabla original de 1000paes con datos ficticios, construida a "
+            "partir del temario de Sistema económico para ejercitar lectura "
+            "de indicadores. No corresponde a cifras de ningún país real."
+        ),
+        "body": (
+            "**Tabla. Indicadores anuales del país de Aldarén.**\n\n"
+            "| Año | Variación del PIB | Inflación anual | Desocupación | Índice de Gini |\n"
+            "|---|---|---|---|---|\n"
+            "| 2015 | 2,3% | 4,4% | 6,3% | 0,50 |\n"
+            "| 2018 | 3,7% | 2,6% | 7,1% | 0,49 |\n"
+            "| 2020 | −5,8% | 3,0% | 10,8% | 0,51 |\n"
+            "| 2022 | 2,1% | 12,8% | 7,9% | 0,49 |\n"
+            "| 2024 | 1,6% | 4,2% | 8,5% | 0,48 |\n\n"
+            "Notas de la fuente:\n"
+            "— El PIB mide el valor de lo producido dentro del país en un "
+            "año. Su variación no indica cómo se reparte ese valor.\n"
+            "— La inflación anual se calcula sobre una canasta fija de bienes "
+            "y servicios, que no coincide con el consumo de cada hogar.\n"
+            "— La desocupación cuenta a quienes buscan trabajo activamente: "
+            "quien deja de buscar sale de la medición sin haber encontrado "
+            "empleo.\n"
+            "— El índice de Gini va de 0 a 1 y mide la desigualdad en la "
+            "distribución del ingreso: cuanto más alto, más desigual."
+        ),
+    },
+]
+
+QUESTIONS_HISTORIA += [
+    # ---------------- Indicadores y política económica ----------------
+    _ql(
+        "eco_indicadores_tabla", "eco_indicadores", "facil",
+        "Según la tabla, ¿en qué año el país registró una caída del PIB?",
+        "En 2020, con una variación de −5,8%",
+        "La columna de variación del PIB registra 2,3%, 3,7%, −5,8%, 2,1% y "
+        "1,6% en los cinco años de la tabla.\n"
+        "El único valor negativo es el de 2020, y una variación negativa "
+        "significa que el país produjo menos que el año anterior.\n"
+        "Ese mismo año la desocupación alcanza su valor más alto de la serie, "
+        "10,8%, lo que es coherente con una caída de la producción.",
+        [
+            ("En 2022, cuando la inflación alcanzó su valor más alto de la serie",
+             "En 2022 el PIB creció 2,1%: lo que subió fue la inflación."),
+            ("En 2024, porque su variación es la menor de los años positivos",
+             "1,6% es un crecimiento bajo, pero sigue siendo crecimiento."),
+            ("En 2015, cuando la desocupación registró su valor más bajo",
+             "En 2015 el PIB creció 2,3% y la desocupación fue la menor de la serie."),
+        ],
+    ),
+    _ql(
+        "eco_indicadores_tabla", "eco_indicadores", "medio",
+        "Según la tabla, ¿qué ocurrió con la desigualdad medida por el índice "
+        "de Gini entre 2015 y 2024?",
+        "Bajó levemente, de 0,50 a 0,48",
+        "La columna del Gini recorre 0,50, 0,49, 0,51, 0,49 y 0,48.\n"
+        "El movimiento total es de dos centésimas a la baja, con un repunte en "
+        "2020 que coincide con la caída del PIB y el alza de la "
+        "desocupación.\n"
+        "La nota precisa cómo se lee la escala: el índice va de 0 a 1 y cuanto "
+        "más alto, más desigual es la distribución del ingreso.",
+        [
+            ("Subió de manera sostenida durante todo el período",
+             "El valor final, 0,48, es menor que el inicial, 0,50."),
+            ("Se mantuvo exactamente igual en los cinco años registrados",
+             "Los valores van de 0,48 a 0,51: hay variación."),
+            ("Bajó a la mitad, desde 0,50 hasta cerca de 0,25 en 2024",
+             "El valor de 2024 es 0,48, no 0,25."),
+        ],
+    ),
+    _ql(
+        "eco_indicadores_tabla", "eco_indicadores", "medio",
+        "Según la tabla, ¿en qué año la inflación anual fue más alta y cuánto "
+        "alcanzó?",
+        "En 2022, con un 12,8%",
+        "La columna de inflación registra 4,4%, 2,6%, 3,0%, 12,8% y 4,2%.\n"
+        "El máximo, 12,8%, corresponde a 2022 y cuadruplica con creces el "
+        "valor del año más bajo de la serie, 2018.\n"
+        "Ese mismo año el PIB creció 2,1% y la desocupación bajó respecto de "
+        "2020: la inflación alta no coincide aquí con una caída de la "
+        "actividad.",
+        [
+            ("En 2020, cuando el PIB registró su única variación negativa",
+             "En 2020 la inflación fue 3,0%, una de las más bajas de la serie."),
+            ("En 2015, con un 4,4% que encabeza la serie completa",
+             "4,4% es el segundo valor más alto, no el mayor."),
+            ("En 2024, porque la inflación aumenta siempre con el paso del tiempo",
+             "En 2024 la inflación fue 4,2%, muy por debajo del 12,8% de 2022."),
+        ],
+    ),
+    _ql(
+        "eco_indicadores_tabla", "eco_indicadores", "dificil",
+        "Según las notas, ¿por qué la desocupación puede bajar sin que hayan "
+        "aumentado los empleos?",
+        "Porque quien deja de buscar trabajo sale de la medición",
+        "La nota define con precisión a quién cuenta el indicador: a quienes "
+        "buscan trabajo activamente.\n"
+        "De ahí se sigue el efecto que describe: quien se desanima y deja de "
+        "buscar «sale de la medición sin haber encontrado empleo». La tasa "
+        "baja y esa persona sigue sin trabajar.\n"
+        "Por eso la desocupación se lee junto a otros datos: por sí sola no "
+        "distingue entre quienes encontraron empleo y quienes dejaron de "
+        "buscarlo.",
+        [
+            ("Porque el indicador se calcula sobre la población total del país",
+             "La nota indica que cuenta solo a quienes buscan trabajo activamente."),
+            ("Porque las personas con empleo informal se cuentan como ocupadas",
+             "La nota no se refiere a la formalidad del empleo."),
+            ("Porque el cálculo se realiza una sola vez al año en cada país",
+             "La nota no menciona la frecuencia de la medición."),
+        ],
+    ),
+    _ql(
+        "eco_indicadores_tabla", "eco_indicadores", "dificil",
+        "Un analista afirma que el crecimiento del PIB en 2018 mejoró la "
+        "situación de todos los hogares. ¿Qué objeción permite la fuente?",
+        "Que el PIB mide lo producido y no cómo se reparte",
+        "La primera nota es explícita: el PIB mide el valor de lo producido "
+        "dentro del país en un año y «su variación no indica cómo se reparte "
+        "ese valor».\n"
+        "La tabla ofrece además el indicador que sí habla de reparto: el Gini "
+        "pasa de 0,50 en 2015 a 0,49 en 2018, una mejora mucho más discreta "
+        "que el 3,7% de crecimiento.\n"
+        "La objeción no es que el crecimiento sea irrelevante: es que un solo "
+        "indicador no permite concluir sobre todos los hogares.",
+        [
+            ("Que el PIB de 2018 fue menor que el de los años siguientes",
+             "3,7% es la mayor variación positiva de toda la serie."),
+            ("Que la inflación de ese año anuló cualquier mejora de ingresos",
+             "En 2018 la inflación fue 2,6%, la más baja de la serie."),
+            ("Que la desocupación de 2018 fue la más alta del período medido",
+             "La más alta fue la de 2020, con 10,8%."),
+        ],
+    ),
+    _ql(
+        "eco_indicadores_tabla", "eco_indicadores", "dificil",
+        "Según la segunda nota, ¿por qué una familia puede percibir una "
+        "inflación distinta de la que informa la tabla?",
+        "Porque la canasta fija con que se calcula no coincide con su consumo",
+        "La nota lo señala al describir el método: la inflación anual se "
+        "calcula sobre una canasta fija de bienes y servicios.\n"
+        "Esa canasta representa un consumo promedio, y ningún hogar consume "
+        "exactamente el promedio. Un hogar que destina buena parte de su "
+        "presupuesto a un producto que subió más que el resto experimentará "
+        "un alza mayor que la informada.\n"
+        "El indicador sigue siendo útil para comparar años entre sí: lo que no "
+        "es es una medida del costo de vida de cada familia en particular.",
+        [
+            ("Porque el cálculo excluye los servicios básicos del hogar",
+             "La nota habla de bienes y servicios, sin excluir a estos últimos."),
+            ("Porque la inflación se mide solo en las grandes ciudades del país",
+             "La nota no menciona ninguna restricción territorial."),
+            ("Porque el índice se actualiza cada varios años y queda desfasado",
+             "La nota no plantea un problema de actualización sino de composición."),
+        ],
+    ),
+    _ql(
+        "eco_indicadores_tabla", "eco_indicadores", "medio",
+        "Según la tabla, ¿qué ocurrió con la desocupación entre 2020 y 2024?",
+        "Bajó de 10,8% a 8,5%, sin volver al nivel de 2015",
+        "La columna registra 6,3%, 7,1%, 10,8%, 7,9% y 8,5%.\n"
+        "Desde el máximo de 2020 la serie baja a 7,9% en 2022 y vuelve a subir "
+        "a 8,5% en 2024, de modo que la recuperación no es continua.\n"
+        "El punto de partida de la serie, 6,3% en 2015, sigue siendo el valor "
+        "más bajo: en 2024 la desocupación está más de dos puntos por encima.",
+        [
+            ("Bajó de manera sostenida hasta quedar por debajo del nivel de 2015",
+             "En 2024 la desocupación es 8,5%, superior al 6,3% de 2015."),
+            ("Se mantuvo en torno al 10% durante todo el período posterior",
+             "Los valores de 2022 y 2024 son 7,9% y 8,5%."),
+            ("Subió de manera continua desde el año 2020 en adelante",
+             "Entre 2020 y 2022 bajó de 10,8% a 7,9%."),
+        ],
+    ),
+    _ql(
+        "eco_indicadores_tabla", "eco_indicadores", "dificil",
+        "¿Qué relación entre indicadores muestra la tabla para el año 2020?",
+        "Caída del PIB, desocupación máxima y el Gini más alto de la serie",
+        "El año 2020 concentra los tres registros extremos: la única variación "
+        "negativa del PIB, −5,8%; la desocupación más alta, 10,8%; y el Gini "
+        "más alto, 0,51.\n"
+        "La coincidencia es coherente: menos producción suele significar menos "
+        "empleo, y el desempleo tiende a golpear con más fuerza a los hogares "
+        "de menores ingresos, lo que amplía la desigualdad.\n"
+        "La inflación de ese año, en cambio, fue baja: 3,0%, lo que muestra "
+        "que los cuatro indicadores no se mueven siempre juntos.",
+        [
+            ("Caída del PIB acompañada de la inflación más alta del período",
+             "La inflación más alta fue la de 2022, con 12,8%."),
+            ("Crecimiento del PIB con desocupación y desigualdad a la baja",
+             "En 2020 el PIB cayó y los otros dos indicadores subieron."),
+            ("Los cuatro indicadores mejoraron respecto del año 2018",
+             "Los cuatro empeoraron o se mantuvieron respecto de 2018."),
+        ],
+    ),
+    # ---------------- Estado y mercado en la economía ----------------
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "medio",
+        "Según el texto, ¿qué transmiten los precios en un mercado "
+        "competitivo?",
+        "Información sobre escasez, sin que nadie deba reunirla ni comunicarla",
+        "El texto describe el mecanismo con un ejemplo: si aumenta la demanda "
+        "de un bien y la oferta no varía, su precio tiende a subir.\n"
+        "Ese aumento cumple dos funciones a la vez: indica a los productores "
+        "que conviene producir más y a los consumidores que conviene moderar "
+        "su consumo.\n"
+        "El rasgo que el texto destaca es que ocurre sin coordinación "
+        "deliberada: los precios transmiten la información «sin que nadie tenga "
+        "que reunirla ni comunicarla».",
+        [
+            ("Las decisiones que la autoridad económica comunica a los productores",
+             "El texto subraya que nadie comunica deliberadamente esa información."),
+            ("El costo exacto de producir cada bien en cada empresa del mercado",
+             "El texto no atribuye al precio esa función informativa."),
+            ("La cantidad de bienes que cada consumidor está dispuesto a comprar",
+             "El precio orienta esa decisión, pero no la transmite como dato."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "dificil",
+        "Según el texto, ¿por qué el costo de oportunidad existe aunque no se "
+        "pague dinero por él?",
+        "Porque usar un recurso en algo obliga a renunciar a otro uso posible",
+        "El texto lo deriva del problema económico básico: los recursos son "
+        "limitados y las necesidades no, de modo que no alcanza para todo.\n"
+        "De ahí la definición: usar un recurso en algo obliga a renunciar a "
+        "usarlo en otra cosa, y a ese sacrificio se lo llama costo de "
+        "oportunidad.\n"
+        "El texto agrega la precisión que la pregunta recoge: existe aunque no "
+        "medie ningún pago, porque lo que se pierde es la alternativa y no una "
+        "suma de dinero.",
+        [
+            ("Porque todo bien tiene un precio de mercado aunque no se transe",
+             "El texto no vincula el costo de oportunidad con la existencia de un precio."),
+            ("Porque los impuestos encarecen indirectamente cualquier decisión",
+             "El texto trata los impuestos en otro apartado, sin relación con este concepto."),
+            ("Porque los recursos naturales se agotan con cada uso que se les da",
+             "El agotamiento es otro asunto: el costo de oportunidad rige también con recursos renovables."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "dificil",
+        "Según el texto, ¿qué buscan los impuestos y las normas de emisión "
+        "frente a una externalidad negativa?",
+        "Incorporar el costo al precio en lugar de reemplazar el mercado",
+        "El texto explica primero el problema: como el precio no recoge los "
+        "costos que recaen sobre terceros, queda artificialmente bajo y se "
+        "produce más de lo que convendría.\n"
+        "De ahí que se justifiquen impuestos, normas de emisión o cobros por "
+        "contaminar. Y el texto precisa cuál es su lógica: «buscan incorporar "
+        "el costo al precio en lugar de reemplazar el mercado».\n"
+        "La distinción importa: la intervención corrige la señal de precios, no "
+        "sustituye el mecanismo que la produce.",
+        [
+            ("Prohibir la actividad productiva que genera la contaminación",
+             "El texto describe instrumentos que corrigen el precio, no prohibiciones."),
+            ("Transferir la producción del bien contaminante al sector público",
+             "El texto no propone que el Estado asuma la producción."),
+            ("Compensar directamente a quienes viven aguas abajo del río",
+             "El texto menciona impuestos, normas y cobros, no compensaciones directas."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "dificil",
+        "Según el texto, ¿por qué el impuesto al valor agregado se describe "
+        "como regresivo?",
+        "Porque absorbe una fracción mayor del presupuesto de quien menos tiene",
+        "El texto parte del dato formal: el IVA se aplica con la misma tasa a "
+        "todos, cualquiera sea su ingreso.\n"
+        "El efecto desigual aparece al mirar qué proporción del ingreso se "
+        "destina a consumo: los hogares de menores ingresos destinan casi todo "
+        "lo que reciben, mientras los de mayores ingresos ahorran una parte.\n"
+        "Como el impuesto grava el consumo y no el ahorro, termina absorbiendo "
+        "una fracción mayor del presupuesto de quien menos tiene, que es "
+        "exactamente lo contrario de un impuesto progresivo.",
+        [
+            ("Porque su tasa aumenta con el precio del producto adquirido",
+             "El texto señala que la tasa es la misma para todos."),
+            ("Porque los hogares de mayores ingresos están exentos de pagarlo",
+             "El texto no menciona exenciones para ningún grupo."),
+            ("Porque grava el ahorro y no el consumo de los hogares",
+             "El IVA grava el consumo: por eso el ahorro queda fuera de su alcance."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "medio",
+        "Según el texto, ¿por qué un bien del que nadie puede ser excluido no "
+        "se produce en el mercado?",
+        "Porque a cada uno le conviene no pagar y esperar que otros financien",
+        "El texto usa el alumbrado de una calle: beneficia a todo el que pasa, "
+        "haya pagado o no.\n"
+        "De esa imposibilidad de excluir se sigue el cálculo individual: a cada "
+        "uno le conviene no pagar y esperar que otros financien el bien.\n"
+        "Y el resultado agregado es el que explica la intervención: «Cuando "
+        "todos razonan así, el bien no se produce aunque todos lo quieran, y "
+        "por eso lo provee el Estado».",
+        [
+            ("Porque su costo de producción supera siempre el precio de mercado",
+             "El texto no atribuye el problema al costo de producción."),
+            ("Porque el Estado prohíbe a los privados proveer ese tipo de bienes",
+             "El texto no menciona ninguna prohibición."),
+            ("Porque su consumo por una persona impide el de las demás",
+             "El alumbrado que usa una persona no impide que otra lo use."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "medio",
+        "Según el texto, ¿qué hacen los gobiernos con el gasto público durante "
+        "una recesión y por qué?",
+        "Lo aumentan para sostener la demanda cuando el sector privado la retira",
+        "El texto describe la política fiscal como una respuesta al ciclo "
+        "económico.\n"
+        "Durante una recesión los gobiernos suelen aumentar el gasto público "
+        "«para sostener la demanda y el empleo cuando el sector privado los "
+        "está retirando».\n"
+        "La lógica es de compensación: el gasto estatal ocupa el lugar que deja "
+        "vacío la caída del gasto privado, en vez de sumarse a ella.",
+        [
+            ("Lo reducen para equilibrar el presupuesto fiscal del período",
+             "El texto describe el movimiento contrario."),
+            ("Lo mantienen constante para no alterar los precios del mercado",
+             "El texto vincula el gasto con la demanda, no con el nivel de precios."),
+            ("Lo trasladan íntegramente a subsidios directos a las empresas",
+             "El texto no especifica ese destino para el gasto adicional."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "dificil",
+        "Según el texto, ¿qué tensión aparece detrás de casi todas las "
+        "decisiones de política económica?",
+        "Que redistribuir puede alterar los incentivos de quienes producen o trabajan",
+        "El texto la enuncia al cerrar, después de repasar regulación, "
+        "provisión de servicios, inversión e impuestos.\n"
+        "La formulación es cuidadosa: redistribuir «puede» alterar los "
+        "incentivos de quienes producen, invierten o trabajan. No afirma que "
+        "siempre lo haga ni que por eso deba evitarse.\n"
+        "Es la misma cautela que el texto muestra al describir las fallas de "
+        "mercado: identificar un problema no equivale a tener resuelto el "
+        "remedio.",
+        [
+            ("Que los precios no logran transmitir información en ningún mercado",
+             "El texto sostiene que sí lo hacen en un mercado competitivo."),
+            ("Que el Estado no puede recaudar impuestos sin generar inflación",
+             "El texto no vincula la recaudación con la inflación."),
+            ("Que los bienes públicos compiten por los mismos recursos que la salud",
+             "El texto no plantea esa competencia entre destinos del gasto."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "medio",
+        "Según el texto, ¿qué mide el producto interno bruto y qué no indica?",
+        "Mide el valor de lo producido, pero no cómo se distribuye",
+        "El texto lo menciona junto a la inflación entre los fenómenos que se "
+        "vigilan de cerca.\n"
+        "Su definición es acotada: mide el valor de lo producido. Y la "
+        "limitación viene enseguida: «no indica cómo se distribuye».\n"
+        "Esa distinción es la que separa el crecimiento del desarrollo, y "
+        "explica por qué un país puede aumentar su producción sin que mejoren "
+        "las condiciones de vida de la mayoría.",
+        [
+            ("Mide el ingreso promedio de los hogares y su evolución anual",
+             "El texto lo define por el valor producido, no por el ingreso de los hogares."),
+            ("Mide la desigualdad en la distribución del ingreso del país",
+             "El texto señala expresamente que no indica la distribución."),
+            ("Mide el alza sostenida y generalizada del nivel de precios",
+             "Esa es la definición de inflación que entrega el mismo texto."),
+        ],
+    ),
+    # ---------------- Desarrollo, sociedad y medio ambiente ----------------
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "medio",
+        "Según el texto, ¿por qué la concentración exportadora en el cobre "
+        "expone al país?",
+        "Porque su precio se fija en mercados internacionales fuera de su control",
+        "El texto describe la exposición en los dos sentidos del ciclo: cuando "
+        "los precios suben, aumentan la inversión y la recaudación; cuando "
+        "caen, «el ajuste llega al presupuesto y al empleo».\n"
+        "Lo que hace especial esa exposición es la ausencia de control: los "
+        "precios se fijan en mercados internacionales.\n"
+        "El texto agrega una advertencia que matiza el diagnóstico: la "
+        "abundancia de recursos no garantiza el desarrollo, y la diferencia "
+        "suele estar en qué se hace con esa renta.",
+        [
+            ("Porque el cobre se agota más rápido que otros recursos naturales",
+             "El texto lo describe como no renovable, sin comparar velocidades de agotamiento."),
+            ("Porque la extracción emplea a una parte muy pequeña de la población",
+             "El texto no menciona la magnitud del empleo minero."),
+            ("Porque los mercados internacionales prohíben exportar otros productos",
+             "El texto no plantea ninguna restricción de ese tipo."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "dificil",
+        "Según el texto, ¿qué distingue a los países que aprovechan bien la "
+        "renta de sus recursos naturales?",
+        "Que la usan en educación, infraestructura y diversificación productiva",
+        "El texto recoge la advertencia de algunos autores: la abundancia de "
+        "recursos no garantiza el desarrollo.\n"
+        "La diferencia, dice, «suele estar en qué se hace con esa renta»: si "
+        "financia educación, infraestructura y diversificación, o si se consume "
+        "sin dejar capacidades instaladas.\n"
+        "La expresión «capacidades instaladas» es la clave: lo que distingue "
+        "un caso del otro es si el país queda en mejores condiciones cuando el "
+        "ciclo del recurso termina.",
+        [
+            ("Que mantienen el precio del recurso estable en el mercado mundial",
+             "El texto señala que ese precio se fija fuera del control del país."),
+            ("Que limitan la extracción para prolongar la vida de los yacimientos",
+             "El texto no plantea la restricción de la extracción como criterio."),
+            ("Que exportan el recurso ya procesado en vez de exportarlo en bruto",
+             "El texto no menciona el grado de procesamiento del recurso."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "dificil",
+        "Según el texto, ¿por qué las emisiones plantean «un problema de "
+        "coordinación particular»?",
+        "Porque afectan el clima global y ningún país obtiene solo el beneficio completo",
+        "El texto lo formula en esos términos al describir las fuentes "
+        "renovables incorporadas a la matriz eléctrica.\n"
+        "El problema es de reparto entre esfuerzo y beneficio: las emisiones "
+        "producidas en un país afectan el clima de todo el planeta, de modo "
+        "que quien reduce las suyas asume el costo completo y recibe solo una "
+        "fracción del beneficio.\n"
+        "Esa asimetría es lo que hace insuficiente la decisión individual de "
+        "cada país y explica por qué el asunto exige acuerdos.",
+        [
+            ("Porque las energías renovables resultan más caras de instalar",
+             "El texto no compara costos de instalación entre fuentes."),
+            ("Porque cada país mide sus emisiones con métodos distintos",
+             "El texto no plantea un problema de medición."),
+            ("Porque las emisiones se concentran en unos pocos países grandes",
+             "El texto no atribuye el problema a la concentración de las emisiones."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "dificil",
+        "Según el texto, ¿cómo se reparten los efectos de un proyecto "
+        "productivo entre el conjunto y la comunidad local?",
+        "El empleo y la recaudación benefician al conjunto; el costo ambiental recae en el lugar",
+        "El texto describe el reparto desigual al explicar los conflictos entre "
+        "proyectos productivos y comunidades locales por el uso del agua o del "
+        "territorio.\n"
+        "La asimetría es la que genera el conflicto: los beneficios se "
+        "distribuyen ampliamente mientras «el consumo de agua o el deterioro "
+        "del entorno recaen sobre quienes viven en el lugar».\n"
+        "Es la misma estructura de una externalidad: parte del costo la asume "
+        "quien no participa de la decisión.",
+        [
+            ("Ambos efectos se reparten de manera pareja en todo el territorio",
+             "El texto describe justamente un reparto desigual."),
+            ("El costo ambiental se distribuye y el empleo queda en la comuna",
+             "El texto plantea la relación inversa."),
+            ("El proyecto no genera efectos sobre la comunidad donde se instala",
+             "El texto describe conflictos concretos por agua y territorio."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "medio",
+        "Según el texto, ¿qué posiciones se enfrentan sobre la posibilidad de "
+        "crecer sin deteriorar el medio ambiente?",
+        "Una confía en la tecnología y la otra observa que el consumo total absorbe la mejora",
+        "El texto cierra planteando esa discusión sin tomar partido.\n"
+        "Quienes sostienen que sí es posible «apuestan a que la tecnología "
+        "reduzca el impacto por unidad producida».\n"
+        "Quienes lo dudan responden que esas mejoras «han quedado absorbidas "
+        "por el aumento del consumo total»: producir cada unidad contamina "
+        "menos, pero se producen muchas más unidades.",
+        [
+            ("Una propone detener el crecimiento y la otra acelerarlo al máximo",
+             "El texto no presenta ninguna posición que proponga detener el crecimiento."),
+            ("Una confía en la regulación estatal y la otra en los acuerdos internacionales",
+             "El texto contrasta tecnología y volumen de consumo, no instrumentos."),
+            ("Ambas coinciden en que el problema ya está resuelto con energías limpias",
+             "El texto presenta la discusión como abierta."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "medio",
+        "Según el texto, ¿qué efecto tiene la apertura comercial sobre "
+        "consumidores y productores locales?",
+        "Abarata los productos y obliga a los productores a competir con proveedores externos",
+        "El texto los menciona juntos porque son las dos caras del mismo "
+        "fenómeno.\n"
+        "Para los consumidores el efecto es de precio: la apertura abarata los "
+        "productos disponibles.\n"
+        "Para los productores locales el efecto es de competencia: deben "
+        "enfrentarse a proveedores externos que antes no llegaban a ese "
+        "mercado.",
+        [
+            ("Encarece los productos y protege a los productores nacionales",
+             "El texto describe el efecto contrario en ambos casos."),
+            ("Beneficia a los productores locales y perjudica a los consumidores",
+             "El texto plantea la relación inversa."),
+            ("No produce efectos apreciables sobre ninguno de los dos grupos",
+             "El texto describe efectos concretos sobre ambos."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "dificil",
+        "Según el texto, ¿qué detecta la medición de pobreza multidimensional "
+        "que la línea de ingreso no muestra?",
+        "Carencias en acceso a educación, salud, vivienda y trabajo",
+        "El texto la introduce como continuación de la distinción entre "
+        "crecimiento y desarrollo.\n"
+        "Su rasgo es incorporar más de una dimensión: además del ingreso, "
+        "considera el acceso a educación, salud, vivienda y trabajo.\n"
+        "Y por eso «detecta carencias que la sola línea de ingreso no "
+        "muestra»: un hogar puede superar el umbral de ingreso y seguir sin "
+        "acceso a servicios básicos.",
+        [
+            ("La distribución del ingreso entre los distintos grupos sociales",
+             "Esa dimensión la miden otros indicadores, como el índice de Gini."),
+            ("El crecimiento anual de la producción total del país",
+             "Ese es el PIB, que el texto trata en otro apartado."),
+            ("La proporción de exportaciones que provienen de recursos naturales",
+             "Ese dato no forma parte de la medición de pobreza."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "medio",
+        "Según el texto, ¿qué relación hay entre las brechas regionales y la "
+        "migración interna?",
+        "Las brechas en servicios y empleo alimentan el movimiento hacia otras zonas",
+        "El texto lo señala al describir el reparto desigual del desarrollo "
+        "dentro del país.\n"
+        "La secuencia que plantea es directa: el desarrollo no se distribuye "
+        "igual entre regiones, y «esas brechas en servicios y empleo alimentan "
+        "la migración interna».\n"
+        "La migración aparece así como una consecuencia del desarrollo "
+        "desigual y no como un fenómeno independiente de él.",
+        [
+            ("La migración interna produce las brechas entre regiones del país",
+             "El texto plantea la causalidad en el sentido contrario."),
+            ("Las brechas regionales desaparecen cuando aumenta la migración",
+             "El texto no atribuye ese efecto a la migración."),
+            ("No existe relación entre ambos fenómenos según el texto",
+             "El texto los vincula expresamente."),
+        ],
+    ),
+    # ---------------- El mundo del trabajo y los derechos laborales ----------------
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "medio",
+        "Según el texto, ¿en qué consiste la asimetría de la que nace el "
+        "derecho laboral?",
+        "En que la empresa pierde un candidato y el trabajador pierde su sustento",
+        "El texto reconoce que formalmente ambas partes concurren libremente al "
+        "contrato.\n"
+        "La desigualdad está en lo que cada una arriesga si el contrato no se "
+        "celebra, y ahí la diferencia es enorme: un candidato frente a un "
+        "sustento.\n"
+        "De esa asimetría, señala el texto, «se siguen sus reglas propias»: el "
+        "derecho laboral existe justamente porque las partes no negocian en "
+        "igualdad de condiciones.",
+        [
+            ("En que la empresa conoce la ley laboral y el trabajador no",
+             "El texto no funda la asimetría en el conocimiento de la ley."),
+            ("En que el contrato lo redacta siempre la parte empleadora",
+             "El texto no menciona quién redacta el contrato."),
+            ("En que la ley protege a la empresa frente al incumplimiento",
+             "El texto describe reglas que protegen al trabajador."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "dificil",
+        "Según el texto, ¿por qué los derechos laborales son irrenunciables "
+        "mientras dura la relación laboral?",
+        "Porque si pudieran renunciarse, quien necesita el empleo firmaría igual",
+        "El texto entrega el argumento en una sola línea, y es un argumento "
+        "sobre las consecuencias.\n"
+        "Si la renuncia fuera posible, «bastaría incluir la renuncia en el "
+        "contrato» y la protección desaparecería en la práctica para quien más "
+        "la necesita.\n"
+        "La irrenunciabilidad, entonces, no desconfía del trabajador: reconoce "
+        "que la asimetría inicial haría de esa renuncia una formalidad "
+        "inevitable.",
+        [
+            ("Porque el contrato es el que crea los derechos laborales",
+             "El texto sostiene lo contrario: los derechos están en la ley."),
+            ("Porque la ley impide modificar cualquier cláusula del contrato",
+             "El texto no plantea que ninguna cláusula pueda modificarse."),
+            ("Porque la empresa podría exigir su restitución más adelante",
+             "El texto no menciona esa posibilidad."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "dificil",
+        "Según el texto, ¿qué papel cumple el costo compartido de la huelga "
+        "dentro de la negociación colectiva?",
+        "Empuja al acuerdo, porque ambas partes pierden mientras dura",
+        "El texto sitúa la huelga dentro del proceso de negociación colectiva, "
+        "que a su vez sirve para compensar la asimetría inicial.\n"
+        "Lo decisivo es que el costo recae sobre las dos partes, y «ese costo "
+        "compartido es lo que empuja al acuerdo».\n"
+        "El texto agrega el efecto jurídico: la huelga legal suspende la "
+        "relación laboral sin extinguirla, de modo que el vínculo se retoma "
+        "una vez cerrado el conflicto.",
+        [
+            ("Traslada el conflicto a los tribunales para que lo resuelvan",
+             "El texto no menciona intervención judicial en la huelga."),
+            ("Termina la relación laboral de quienes participan en ella",
+             "El texto señala que la huelga legal suspende sin extinguir."),
+            ("Obliga a la empresa a aceptar todas las demandas presentadas",
+             "El texto describe un mecanismo que empuja al acuerdo, no una imposición."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "dificil",
+        "Según el texto, ¿por qué el trabajo mediante aplicaciones obliga a "
+        "definir si existe relación de dependencia?",
+        "Porque el trabajador elige cuándo conectarse pero la plataforma fija y evalúa",
+        "El texto describe una situación mixta. Del lado de la autonomía, el "
+        "trabajador elige cuándo conectarse.\n"
+        "Del lado de la subordinación, la plataforma fija tarifas, asigna "
+        "tareas y evalúa su desempeño, que son rasgos propios de una relación "
+        "de dependencia.\n"
+        "La calificación no es un debate abstracto: «de esa calificación "
+        "depende si le corresponden cotizaciones y jornada máxima».",
+        [
+            ("Porque las aplicaciones operan desde el extranjero y evaden la ley",
+             "El texto no plantea un problema de jurisdicción."),
+            ("Porque el trabajo por aplicaciones no genera ingresos estables",
+             "El texto no funda la discusión en la estabilidad del ingreso."),
+            ("Porque los trabajadores de plataformas no pueden sindicalizarse",
+             "El texto no menciona restricciones a la sindicalización."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "medio",
+        "Según el texto, ¿qué efecto tiene la automatización sobre el empleo?",
+        "Reduce tareas rutinarias y crea otras de diseño, supervisión y mantenimiento",
+        "El texto describe un efecto doble y no un saldo único.\n"
+        "La automatización afecta primero a las tareas rutinarias, y a la vez "
+        "genera demanda por trabajos de diseño, supervisión y mantenimiento.\n"
+        "De ahí la formulación del problema, que el texto plantea con "
+        "precisión: «el problema no es el número total de empleos sino la "
+        "transición entre unos y otros».",
+        [
+            ("Elimina empleos de manera neta sin generar ocupaciones nuevas",
+             "El texto señala que también crea demanda por otros trabajos."),
+            ("Aumenta el número total de empleos disponibles en la economía",
+             "El texto no afirma un saldo positivo: plantea el problema como transición."),
+            ("Afecta principalmente a los trabajos de supervisión y diseño",
+             "El texto los sitúa entre los que aumentan, no entre los afectados."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "dificil",
+        "Según el texto, ¿qué explica parte de la brecha de remuneraciones "
+        "entre hombres y mujeres?",
+        "El reparto desigual del trabajo doméstico y de cuidados, que no se remunera",
+        "El texto constata primero los dos hechos: la participación laboral de "
+        "las mujeres es menor y sus remuneraciones promedio también.\n"
+        "Y señala qué incide en esa diferencia: el reparto desigual del trabajo "
+        "doméstico y de cuidados.\n"
+        "Los dos efectos que menciona son concretos: ese trabajo «limita la "
+        "disponibilidad horaria e interrumpe trayectorias», además de no "
+        "remunerarse ni contabilizarse como trabajo.",
+        [
+            ("La menor calificación educativa promedio de las trabajadoras",
+             "El texto no menciona diferencias de calificación."),
+            ("La concentración del empleo femenino en el sector informal",
+             "El texto trata la informalidad aparte, sin vincularla a esta brecha."),
+            ("La imposibilidad legal de acceder a ciertos cargos de jefatura",
+             "El texto no plantea impedimentos legales de ese tipo."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "medio",
+        "Según el texto, ¿qué pierde quien se desempeña sin contrato ni "
+        "cotizaciones?",
+        "Cobertura de salud, seguro de cesantía y fondos para la vejez",
+        "El texto enumera las tres pérdidas de manera consecutiva al describir "
+        "el trabajo informal.\n"
+        "La lista no es casual: corresponde a las contingencias que la "
+        "seguridad social cubre reuniendo aportes de muchos para quienes "
+        "efectivamente las enfrentan.\n"
+        "Quedar fuera del sistema formal significa quedar fuera de ese "
+        "mecanismo completo, no solo de una de sus prestaciones.",
+        [
+            ("El derecho a negociar colectivamente y a declararse en huelga",
+             "El texto enumera prestaciones de seguridad social, no derechos colectivos."),
+            ("La posibilidad de reclamar por despido ante los tribunales",
+             "El texto no menciona el reclamo judicial entre lo que se pierde."),
+            ("El acceso a la formación técnica financiada por el empleador",
+             "El texto no menciona formación técnica."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "dificil",
+        "Según el texto, ¿cómo se instalaron muchas de las protecciones "
+        "laborales que hoy existen?",
+        "Por acción colectiva sostenida de movimientos sin facultad de legislar",
+        "El texto cierra con esa observación, que cambia el modo de leer todo "
+        "lo anterior: «Muchas de estas protecciones no existían».\n"
+        "Quienes las instalaron fueron movimientos sociales «sin facultad de "
+        "legislar ni representación propia», que consiguieron poner sus "
+        "demandas en la agenda mediante acción colectiva sostenida en el "
+        "tiempo.\n"
+        "El punto es que el catálogo de derechos laborales no es un punto de "
+        "partida sino un resultado histórico.",
+        [
+            ("Por iniciativa de los empleadores para retener trabajadores calificados",
+             "El texto atribuye las conquistas a movimientos sociales."),
+            ("Por tratados internacionales que los Estados debieron incorporar",
+             "El texto no menciona tratados internacionales."),
+            ("Por decisiones judiciales que interpretaron el contrato de trabajo",
+             "El texto no menciona la vía judicial."),
+        ],
+    ),
+    # ---------------- ajuste final de civ_informacion ----------------
+    _ql(
+        "civ_informacion_fte", "civ_informacion", "medio",
+        "Según el texto, ¿qué significa que no haya censura previa pero sí "
+        "responsabilidad posterior?",
+        "Que hay contenidos perseguibles una vez publicados, pero no impedibles antes",
+        "El texto distingue dos momentos que suelen confundirse.\n"
+        "La libertad de expresión impide que una autoridad autorice o bloquee "
+        "un contenido antes de su publicación, porque entonces las decisiones "
+        "colectivas se adoptarían sobre la base de lo que esa autoridad "
+        "permite decir.\n"
+        "Lo que sí admite es la responsabilidad posterior: publicado el "
+        "contenido, puede perseguirse conforme a la ley.",
+        [
+            ("Que ningún contenido puede ser perseguido una vez publicado",
+             "El texto admite expresamente la responsabilidad posterior."),
+            ("Que la autoridad revisa los contenidos antes de autorizarlos",
+             "Eso es exactamente lo que la ausencia de censura previa impide."),
+            ("Que los medios deben publicar todas las opiniones que reciben",
+             "El texto no impone a los medios ninguna obligación de publicar."),
+        ],
+    ),
+    _ql(
+        "civ_informacion_fte", "civ_informacion", "dificil",
+        "Según el texto, ¿por qué lo que un medio omite «difícilmente llega a "
+        "discutirse»?",
+        "Porque informar supone elegir y lo destacado ocupa la conversación pública",
+        "El texto parte de una restricción material: ocurren cada día muchos "
+        "más hechos de los que caben en un noticiario.\n"
+        "De ahí que informar suponga siempre elegir, y esa elección tiene "
+        "consecuencias: lo que un medio destaca «tiende a instalarse en la "
+        "conversación pública».\n"
+        "Lo omitido no queda refutado sino fuera del campo de la discusión, y "
+        "por eso el texto considera deseable que existan medios de "
+        "orientaciones distintas.",
+        [
+            ("Porque los medios están obligados a publicar solo información verificada",
+             "El texto no vincula la omisión con la verificación previa."),
+            ("Porque la audiencia rechaza los temas que no aparecen en televisión",
+             "El texto no atribuye la omisión a una preferencia de la audiencia."),
+            ("Porque la ley prohíbe difundir hechos no confirmados por la autoridad",
+             "El texto describe un sistema sin censura previa."),
+        ],
+    ),
+    _ql(
+        "civ_informacion_fte", "civ_informacion", "dificil",
+        "Según el texto, ¿por qué el discurso de un gobernante sobre su "
+        "gestión «sirve mal como comprobación» de los resultados?",
+        "Porque es válido pero no neutral: muestra qué quería proyectar",
+        "El texto lo trata dentro del paralelo con el trabajo del historiador, "
+        "para el cual toda fuente tiene un punto de vista.\n"
+        "Sobre ese discurso en particular es preciso: es válido, «pero no "
+        "neutral». Sirve para saber qué quería proyectar quien lo pronuncia y "
+        "con qué argumentos.\n"
+        "Lo que no puede hacer es comprobar los resultados que afirma, porque "
+        "el interés de quien lo emite forma parte de lo que dice.",
+        [
+            ("Porque los discursos políticos suelen contener afirmaciones falsas",
+             "El texto no supone que el discurso sea falso: señala que no es neutral."),
+            ("Porque una fuente primaria nunca permite comprobar resultados",
+             "El texto sostiene que ninguna clase de fuente es superior a otra."),
+            ("Porque fue producido después de los hechos que describe",
+             "La posterioridad no es el problema que el texto identifica."),
+        ],
+    ),
+]
+
+
+QUESTIONS_HISTORIA += [
+    _ql(
+        "civ_ddhh", "civ_ddhh", "facil",
+        "Según el texto, ¿en qué año se aprobó la Declaración Universal de los "
+        "Derechos Humanos y en qué organismo?",
+        "En 1948, en la Asamblea General de las Naciones Unidas",
+        "El texto entrega ambos datos y agrega el que permite entenderlos: la "
+        "aprobación ocurrió tres años después del fin de la Segunda Guerra "
+        "Mundial.\n"
+        "Ese contexto explica su contenido: nace como respuesta al Holocausto y "
+        "a la constatación de que un Estado podía aniquilar legalmente a su "
+        "propia población.\n"
+        "De ahí que la declaración afirme derechos que valen con independencia "
+        "de lo que disponga la ley del país donde se vive.",
+        [
+            ("En 1945, en la conferencia que fundó la organización mundial de posguerra",
+             "En 1945 se fundó la organización; la declaración es de tres años después."),
+            ("En 1948, en un tribunal internacional creado para juzgar crímenes de guerra",
+             "Los tribunales de posguerra son otra innovación, distinta de la declaración."),
+            ("En 1960, en la asamblea que aprobó la declaración sobre descolonización",
+             "Esa declaración es posterior y trata otro asunto."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Lectora - Idea central y aplicacion a un caso nuevo (tanda 1)
+#
+# lec_idea_central tenia 10 preguntas y lec_aplicar 12, sobre 87 textos. Eran
+# de lejos los dos nodos mas flacos del banco: quien reforzaba "idea central"
+# veia siempre las mismas diez. Cada texto recibe una pregunta de cada tipo.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_LECTORA += [
+    # ---------- 'Una medida sin patrón' ----------
+    _ql(
+        "talla_ropa", "lec_idea_central", "medio",
+        "¿Cuál es la idea central del texto sobre las tallas de ropa?",
+        "Que la talla no funciona como medida porque ninguna escala común la define",
+        "El texto abre con el caso de las tres poleras M y adelanta la "
+        "conclusión: «no hay ningún problema, porque la M no mide nada».\n"
+        "Todo lo que sigue sostiene esa afirmación: no existe un patrón "
+        "obligatorio, cada marca construye su molde y las etiquetas además se "
+        "agrandan con el tiempo dentro de una misma marca.\n"
+        "Las recomendaciones finales —mirar centímetros, medir una prenda "
+        "propia, contar con la devolución— se siguen de ahí: sirven porque "
+        "reemplazan una letra sin patrón por una unidad que sí lo tiene.",
+        [
+            ("Que las marcas de ropa engañan deliberadamente a sus compradores",
+             "El texto sostiene que cada marca es coherente consigo misma y ninguna está equivocada."),
+            ("Que conviene exigir una norma única de tallas para toda la industria",
+             "El texto dedica un apartado a explicar por qué esa norma ayudaría sin resolver el fondo."),
+            ("Que las tallas dejaron de servir cuando terminó la ropa hecha a medida",
+             "El texto sitúa el origen de las tallas justamente al terminar ese sistema."),
+        ],
+    ),
+    _ql(
+        "talla_ropa", "lec_aplicar", "dificil",
+        "Una tienda en línea publica junto a cada prenda su contorno de pecho y "
+        "de cintura en centímetros. Según el texto, ¿por qué esa práctica ayuda?",
+        "Porque el centímetro sí es un patrón y permite comparar con medidas propias",
+        "El texto distingue entre la letra y la unidad. La letra «depende de "
+        "quién la puso»; el centímetro, no.\n"
+        "Sobre las tablas de medidas es explícito: «Un centímetro sí es un "
+        "patrón, y compararlo con las medidas propias entrega información "
+        "real».\n"
+        "La práctica no elimina el problema de fondo —un cuerpo no cabe en un "
+        "número—, pero sustituye una escala privada por una compartida, que es "
+        "lo que el texto recomienda hacer.",
+        [
+            ("Porque obliga a la marca a usar el mismo molde que sus competidoras",
+             "Publicar medidas no cambia el molde con que la marca corta sus prendas."),
+            ("Porque permite prescindir de la devolución al comprar a distancia",
+             "El texto recomienda tratar la devolución como parte normal del proceso."),
+            ("Porque demuestra que la marca apunta a un público más amplio",
+             "El público objetivo no se deduce de que se publiquen las medidas."),
+        ],
+    ),
+    # ---------- 'La casa piloto' ----------
+    _ql(
+        "casa_piloto", "lec_idea_central", "dificil",
+        "¿Qué idea organiza el recuerdo que el narrador construye sobre esos "
+        "domingos?",
+        "Que aquellos domingos fueron algo real, aunque la compra nunca ocurriera",
+        "El narrador descarta primero la lectura que él mismo tuvo: «Durante un "
+        "tiempo eso me pareció triste, y creo que era la lectura fácil».\n"
+        "Lo que propone en cambio es que esos domingos «no eran un simulacro de "
+        "algo que no ocurrió: eran lo que efectivamente ocurrió», y lo respalda "
+        "con hechos concretos: la madre midió, la hermana anotó, él eligió "
+        "piezas.\n"
+        "El cierre lo formula sin resolver la tensión: «Las dos descripciones "
+        "son ciertas y no describen lo mismo».",
+        [
+            ("Que la familia se engañaba a sí misma para no admitir su situación",
+             "El narrador presenta esa lectura como la fácil y la deja atrás."),
+            ("Que el padre ocultó a sus hijos la verdadera situación económica",
+             "El relato no plantea ocultamiento: nadie dijo nunca que sí ni que no."),
+            ("Que visitar casas piloto sirvió para preparar la compra posterior",
+             "El departamento que el narrador compró veinte años después no aparece ligado a esas visitas."),
+        ],
+    ),
+    _ql(
+        "casa_piloto", "lec_aplicar", "dificil",
+        "Una familia planifica durante meses un viaje que finalmente no hace: "
+        "elige rutas, discute fechas, imagina lugares. Según el texto, ¿cómo "
+        "habría que describir esos meses?",
+        "Como algo que ocurrió de verdad, aunque el viaje no se realizara",
+        "El texto sostiene exactamente esa posición sobre los domingos en las "
+        "casas piloto: no fueron un ensayo de algo que no pasó, «eran lo que "
+        "efectivamente ocurrió».\n"
+        "El argumento se apoya en que las acciones fueron reales: medir un "
+        "living con los brazos, poner notas en una libreta, pelear por una "
+        "pieza. Nada de eso depende de que la compra se concretara.\n"
+        "Trasladado al viaje, lo que ocurrió fueron esos meses de conversación "
+        "compartida, que existen con independencia del itinerario que no se "
+        "cumplió.",
+        [
+            ("Como tiempo perdido, porque el viaje era la única finalidad posible",
+             "El texto rechaza medir la experiencia solo por el resultado que no llegó."),
+            ("Como un engaño que la familia se permitió para sentirse mejor",
+             "El narrador descarta esa lectura al hablar de sus propios domingos."),
+            ("Como una preparación útil para un viaje que se hará más adelante",
+             "El texto no justifica la experiencia por un resultado futuro."),
+        ],
+    ),
+    # ---------- 'El enlace que ya no lleva a ninguna parte' ----------
+    _ql(
+        "enlaces_perdidos", "lec_idea_central", "dificil",
+        "¿Cuál es la tesis que el texto sostiene sobre la conservación de lo "
+        "publicado en internet?",
+        "Que lo digital solo se conserva si alguien decide sostenerlo mes a mes",
+        "El texto cierra con la comparación que ordena todo lo anterior: el "
+        "papel se conservó «en buena medida por inercia», porque bastaba con "
+        "que nadie lo destruyera.\n"
+        "Con lo digital ocurre al revés: para que un documento siga disponible "
+        "en diez años «alguien tiene que estar decidiendo activamente "
+        "mantenerlo, mes a mes, pagando por ello».\n"
+        "Esa inversión es la que explica los casos que el texto describe antes: "
+        "medios que cierran, sitios que se rediseñan, dominios que nadie "
+        "renueva.",
+        [
+            ("Que internet conserva todo lo publicado y el problema es encontrarlo",
+             "El texto atribuye esa sensación a otro fenómeno y la corrige de entrada."),
+            ("Que los archivos automáticos ya resolvieron el problema de la pérdida",
+             "El texto sostiene que las tres soluciones funcionan y ninguna alcanza."),
+            ("Que todo lo publicado debería conservarse de manera indefinida",
+             "El texto dedica un apartado a advertir en sentido contrario."),
+        ],
+    ),
+    _ql(
+        "enlaces_perdidos", "lec_aplicar", "dificil",
+        "Una profesora arma una guía con enlaces a documentos oficiales y la "
+        "reutiliza cada año sin revisarla. Según el texto, ¿cuál es el riesgo "
+        "menos visible?",
+        "Que un enlace siga funcionando pero lleve a una versión distinta",
+        "El texto distingue dos formas de pérdida y advierte que la segunda es "
+        "«más incómoda que la primera, porque no deja error visible».\n"
+        "En esa segunda, la dirección responde y lo que hay del otro lado ya no "
+        "es lo mismo: el documento se actualizó, la cifra se corrigió, el "
+        "párrafo citado desapareció.\n"
+        "Y agrega el agravante que calza con el caso: «quien cita casi nunca "
+        "vuelve a revisar sus propios enlaces», de modo que el desajuste puede "
+        "instalarse sin que nadie se entere.",
+        [
+            ("Que los enlaces devuelvan un error y los estudiantes lo noten",
+             "El texto señala que un enlace roto al menos avisa que algo falta."),
+            ("Que los documentos oficiales dejen de publicarse en internet",
+             "El texto no plantea que las instituciones abandonen la publicación en línea."),
+            ("Que los estudiantes consulten archivos con copias fechadas de las páginas",
+             "Esa es una de las soluciones que el texto describe, no un riesgo."),
+        ],
+    ),
+    # ---------- 'El orden que nadie había elegido' ----------
+    _ql(
+        "orden_apellidos", "lec_idea_central", "dificil",
+        "Según el cierre del texto, ¿qué fue lo que la ley modificó realmente?",
+        "El estatuto de la pregunta, más que el orden de los apellidos",
+        "El texto reconoce que en la mayoría de los casos el orden «seguirá "
+        "siendo el mismo», de modo que el cambio no está ahí.\n"
+        "Lo que cambió lo formula así: «Antes había una manera de hacer las "
+        "cosas y ninguna alternativa; ahora hay una decisión que se puede tomar "
+        "y una opción por defecto para quien no la tome».\n"
+        "Y remata con la consecuencia de fondo: una costumbre que se sabe "
+        "elegible «ya no es del todo una costumbre: es una preferencia, y las "
+        "preferencias se pueden discutir».",
+        [
+            ("La inversión del orden de los apellidos para la mayoría de las familias",
+             "El texto señala que en la mayoría de los casos el orden seguirá siendo el mismo."),
+            ("La obligación de que la madre y el padre lleguen siempre a un acuerdo",
+             "El texto precisa que la ley no resuelve el desacuerdo: fija qué ocurre sin acuerdo."),
+            ("La eliminación del segundo apellido en el registro de los hijos",
+             "La ley no suprime ningún apellido: cambia el procedimiento para ordenarlos."),
+        ],
+    ),
+    _ql(
+        "orden_apellidos", "lec_aplicar", "dificil",
+        "Un trámite en línea deja marcada por defecto la casilla que autoriza "
+        "recibir publicidad. Según el texto, ¿qué habría que esperar?",
+        "Que la mayoría quede autorizando sin haberlo considerado nunca",
+        "El texto dedica un apartado a la regla que opera cuando nadie decide y "
+        "sostiene que «hace bastante más trabajo del que parece».\n"
+        "El argumento es general y no específico de los apellidos: «en "
+        "cualquier trámite, la mayoría de las personas no elige entre opciones: "
+        "acepta lo que viene puesto».\n"
+        "De ahí la consecuencia que el texto formula y que aplica igual al "
+        "caso: la alternativa la usará quien tenga una razón para manifestarse, "
+        "y el resto quedará bajo la opción por defecto.",
+        [
+            ("Que la mayoría desmarque la casilla al advertir que está marcada",
+             "El texto sostiene que la mayoría acepta lo que viene puesto."),
+            ("Que la casilla por defecto no tenga efecto sobre el resultado final",
+             "El texto afirma que la regla supletoria determina el resultado para la mayoría."),
+            ("Que quienes se manifiesten sean más que quienes acepten lo predefinido",
+             "El texto describe la relación inversa entre ambos grupos."),
+        ],
+    ),
+    # ---------- 'La entrada que valía más de lo que costaba' ----------
+    _ql(
+        "reventa_entradas", "lec_idea_central", "dificil",
+        "Según el texto, ¿cuál es la pregunta de fondo del debate sobre la "
+        "reventa?",
+        "Quién se queda con la diferencia entre lo que cuesta la entrada y lo que vale",
+        "El texto reformula el problema al cerrar: «La pregunta no es si la "
+        "reventa es moralmente aceptable, sino quién se queda con la "
+        "diferencia».\n"
+        "Los tres candidatos que enumera son el organizador, el revendedor y el "
+        "comprador que alcanzó a entrar al sitio, y sobre este último hace la "
+        "observación decisiva: el reparto lo decide la velocidad de conexión, "
+        "«que no es un criterio más justo que los otros dos: es solo uno que no "
+        "se anuncia».\n"
+        "Por eso concluye que el sistema ya está repartiendo con un criterio "
+        "aunque nadie lo haya escrito.",
+        [
+            ("Si conviene prohibir la reventa para proteger a los seguidores de siempre",
+             "El texto plantea que la prohibición no responde la pregunta de fondo."),
+            ("Cómo impedir que los sistemas automáticos compren antes que las personas",
+             "Ese es uno de los problemas descritos, no la pregunta que el texto identifica."),
+            ("Por qué los organizadores no fijan desde el inicio el precio máximo posible",
+             "El texto explica esa decisión, pero no la presenta como la discusión de fondo."),
+        ],
+    ),
+    _ql(
+        "reventa_entradas", "lec_aplicar", "dificil",
+        "Un hospital libera cada mañana un número limitado de horas médicas por "
+        "internet y se agotan en minutos. Según el texto, ¿qué habría que "
+        "reconocer sobre ese sistema?",
+        "Que ya reparte con un criterio, aunque nadie lo haya declarado",
+        "El texto lo formula como una observación general: «Un sistema donde "
+        "las entradas se agotan en minutos ya está repartiendo un beneficio "
+        "escaso con un criterio, aunque nadie lo haya escrito».\n"
+        "En el caso de las entradas ese criterio es la velocidad de conexión, y "
+        "el texto se niega a tratarlo como neutral: «no es un criterio más "
+        "justo que los otros dos: es solo uno que no se anuncia».\n"
+        "Aplicado a las horas médicas, el sistema no es que carezca de "
+        "criterio: tiene uno que no fue elegido ni discutido.",
+        [
+            ("Que reparte de manera neutral, porque no discrimina entre pacientes",
+             "El texto niega que repartir por velocidad sea un criterio neutral."),
+            ("Que la escasez desaparecería si se liberaran las horas más temprano",
+             "Cambiar el horario no altera la relación entre demanda y oferta."),
+            ("Que el problema se resuelve prohibiendo el uso de sistemas automáticos",
+             "El texto trata esa medida como parcial frente a la brecha de fondo."),
+        ],
+    ),
+    # ---------- 'El único contaminante que se va solo' ----------
+    _ql(
+        "ruido_ciudad", "lec_idea_central", "dificil",
+        "¿Qué problema central plantea el texto sobre el ruido urbano?",
+        "La distancia entre lo que un instrumento mide y lo que una persona sufre",
+        "El texto lo anuncia en su primer párrafo, con la perforación del "
+        "sábado y el zumbido de la autopista: dos situaciones que «podrían "
+        "arrojar cifras parecidas» y que «como experiencias no se parecen en "
+        "nada».\n"
+        "Y lo nombra de inmediato: «esa distancia entre lo que se mide y lo que "
+        "se sufre es el problema central de este asunto».\n"
+        "Los apartados siguientes desarrollan esa brecha: el promedio borra la "
+        "irrupción, el ruido no deja rastro para acreditarlo y el control sobre "
+        "la fuente cambia la molestia sin cambiar el decibel.",
+        [
+            ("La pérdida de audición que produce la exposición prolongada al ruido",
+             "El texto la menciona como el efecto más conocido y no el más frecuente."),
+            ("La falta de normas que fijen límites a los niveles sonoros permitidos",
+             "El texto describe normas existentes y discute su método de medición."),
+            ("La imposibilidad de exigir silencio en las ciudades contemporáneas",
+             "El texto plantea eso como advertencia final, no como problema central."),
+        ],
+    ),
+    _ql(
+        "ruido_ciudad", "lec_aplicar", "dificil",
+        "Una municipalidad reparte tapones para los oídos a los vecinos de una "
+        "autopista. Según el texto, ¿qué objeción cabe hacer a esa medida?",
+        "Que actúa sobre el receptor y traslada el esfuerzo a quien no causó el problema",
+        "El texto ordena las medidas según dónde actúan: sobre la fuente, sobre "
+        "el camino o sobre quien recibe.\n"
+        "Sobre los tapones es explícito: «sirven para quien los usa y no "
+        "resuelven nada para el resto del barrio».\n"
+        "Y explica por qué el orden no es casual: actuar sobre la fuente "
+        "beneficia a todos los afectados a la vez, mientras actuar sobre el "
+        "receptor «traslada el costo y el esfuerzo a quien no produjo el "
+        "problema».",
+        [
+            ("Que las barreras acústicas resultarían más económicas de instalar",
+             "El texto no compara los costos de una y otra medida."),
+            ("Que el ruido de la autopista no alcanza niveles que justifiquen actuar",
+             "El texto describe el zumbido continuo como un caso con efectos reales."),
+            ("Que los vecinos ya se acostumbraron y no perciben el zumbido",
+             "El texto advierte que acostumbrarse describe la conciencia y no el cuerpo."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Lectora - Idea central y aplicacion a un caso nuevo (tanda 2)
+# ---------------------------------------------------------------------------
+
+QUESTIONS_LECTORA += [
+    # ---------- 'El segundo lugar' ----------
+    _ql(
+        "segundo_lugar", "lec_idea_central", "dificil",
+        "¿Qué descubrimiento organiza el relato del narrador?",
+        "Que la rivalidad que ordenó su vida existió solo de un lado",
+        "El encuentro en la bencinera le muestra que en la cabeza de Iván no "
+        "hay ningún registro suyo: «Simplemente no estaba».\n"
+        "De ahí la formulación que el narrador da al asunto: «Todo el tiempo "
+        "hubo una sola persona en esa rivalidad, y era yo. Él estaba corriendo, "
+        "nada más».\n"
+        "Lo que queda abierto es la valoración: si el motivo funcionó veinte "
+        "años, «¿importa que estuviera hecho de una materia que solo yo "
+        "veía?». El narrador se inclina a pensar que no, sin quedar seguro.",
+        [
+            ("Que su rival lo despreció durante todos esos años de competencia",
+             "El narrador insiste en que no hubo desprecio ni ironía: no había recuerdo."),
+            ("Que dejar de correr fue el error que le impidió alcanzarlo",
+             "El relato no plantea el abandono del deporte como un error."),
+            ("Que su esfuerzo de veinte años no produjo ningún resultado real",
+             "El narrador enumera efectos verificables de ese esfuerzo."),
+        ],
+    ),
+    _ql(
+        "segundo_lugar", "lec_aplicar", "dificil",
+        "Una estudiante compite en silencio con una compañera que ni siquiera "
+        "sabe que existe esa competencia, y por eso estudia más. Según el "
+        "texto, ¿cómo habría que evaluar esa situación?",
+        "Como un motivo que produce efectos reales aunque exista en un solo lado",
+        "El narrador enfrenta exactamente ese problema y lo deja formulado como "
+        "pregunta: «Si un motivo funciona, si lo hace durante veinte años, si "
+        "produce todo lo que produjo, ¿importa que estuviera hecho de una "
+        "materia que solo yo veía?».\n"
+        "Su respuesta es tentativa: «Me inclino a pensar que no importa, o que "
+        "importa menos de lo que me gustaría».\n"
+        "Lo que no discute es que los efectos hayan sido reales: aprendió a "
+        "levantarse temprano y a insistir, y eso ocurrió con independencia de "
+        "lo que el otro supiera.",
+        [
+            ("Como un error que la estudiante debería corregir cuanto antes",
+             "El narrador no trata su propia experiencia como un error que hubiera que corregir."),
+            ("Como algo sin ningún efecto, porque la otra parte no participa",
+             "El texto insiste en que la rivalidad produjo efectos verificables."),
+            ("Como una competencia legítima que la compañera debería conocer",
+             "El texto no plantea que el otro deba enterarse para que el motivo funcione."),
+        ],
+    ),
+    # ---------- 'El pan del día siguiente' ----------
+    _ql(
+        "pan_duro", "lec_idea_central", "medio",
+        "¿Cuál es la afirmación central del texto sobre el pan del día "
+        "siguiente?",
+        "Que no se seca: su almidón se reordena y expulsa el agua que tenía dentro",
+        "El texto descarta primero la explicación corriente con dos "
+        "observaciones caseras: un pan en bolsa cerrada se endurece igual, y un "
+        "pan duro vuelve a estar blando en el horno.\n"
+        "Y entrega la explicación alternativa: al enfriarse, las moléculas del "
+        "almidón «comienzan a reordenarse de a poco y a volver a una "
+        "disposición más rígida», proceso llamado retrogradación.\n"
+        "La formulación que resume todo aparece en una sola línea: «el pan del "
+        "día siguiente no está seco, está reordenado».",
+        [
+            ("Que se seca más rápido cuando se guarda dentro de una bolsa plástica",
+             "El texto señala que la bolsa conserva la humedad y la miga se endurece igual."),
+            ("Que el refrigerador es el mejor lugar para conservarlo blando",
+             "El texto sostiene lo contrario: el frío del refrigerador acelera el endurecimiento."),
+            ("Que la corteza y la miga envejecen del mismo modo con el tiempo",
+             "El texto explica que ocurren en direcciones opuestas."),
+        ],
+    ),
+    _ql(
+        "pan_duro", "lec_aplicar", "dificil",
+        "Alguien guarda el pan en el refrigerador convencido de que el frío lo "
+        "conserva. Según el texto, ¿qué error está cometiendo?",
+        "Aplicar una regla general a un proceso que responde al revés",
+        "El texto describe ese caso de manera directa: «Peor le va a quien "
+        "busca conservarlo y lo pone en el refrigerador, convencido de que el "
+        "frío retrasa lo que sea».\n"
+        "Y nombra el error con precisión: «Está aplicando una regla general —el "
+        "frío conserva— a un proceso que responde al revés».\n"
+        "La razón es la retrogradación, que «avanza más rápido a temperaturas "
+        "de refrigerador que a temperatura ambiente».",
+        [
+            ("Exponer el pan a un aire seco que le extrae la humedad restante",
+             "El texto sostiene que el agua no es el problema de la miga."),
+            ("Impedir que la corteza mantenga su textura crujiente original",
+             "El texto no vincula el refrigerador con la corteza."),
+            ("Guardarlo antes de que termine de enfriarse por completo",
+             "El texto no plantea nada sobre el momento en que se guarda."),
+        ],
+    ),
+    # ---------- 'Los agujeros que no están' ----------
+    _ql(
+        "sesgo_sobreviviente", "lec_idea_central", "medio",
+        "¿Cuál es la idea central del texto sobre los aviones y sus impactos?",
+        "Que una muestra filtrada de antemano responde mal una pregunta sobre el conjunto",
+        "El caso de los aviones ilustra el mecanismo: los examinados eran los "
+        "que habían vuelto, de modo que los agujeros «señalaban dónde un avión "
+        "puede recibirlos y seguir volando».\n"
+        "El texto generaliza con los edificios antiguos, el abuelo fumador y "
+        "las biografías de empresarios: «la muestra no fue elegida al azar: fue "
+        "elegida por un filtro que actuó antes».\n"
+        "Y precisa dónde está la falla: «el problema aparece cuando se usa una "
+        "muestra filtrada para responder una pregunta que trata de todo el "
+        "conjunto, y ahí la falla no está en los datos sino en la pregunta que "
+        "se les hace».",
+        [
+            ("Que los datos de los bombarderos fueron mal recogidos por los técnicos",
+             "El texto insiste en que los datos estaban bien tomados."),
+            ("Que conviene desconfiar de toda conclusión basada en datos numéricos",
+             "El texto advierte que descartar sin mirar cuesta lo mismo que aceptar sin mirar."),
+            ("Que toda selección de casos constituye un sesgo que invalida el estudio",
+             "El texto dedica una advertencia a negar exactamente eso."),
+        ],
+    ),
+    _ql(
+        "sesgo_sobreviviente", "lec_aplicar", "dificil",
+        "Un colegio publica las técnicas de estudio de sus alumnos con mejor "
+        "puntaje. Según el texto, ¿qué pregunta habría que hacerse?",
+        "Qué hicieron quienes obtuvieron malos puntajes, porque puede haber sido lo mismo",
+        "El texto entrega ese caso entre sus ejemplos de detección: «Frente a "
+        "una técnica de estudio recomendada por quienes obtuvieron buenos "
+        "puntajes, la pregunta es qué hicieron los que obtuvieron malos "
+        "puntajes».\n"
+        "Y agrega la razón que vuelve pertinente la pregunta: «porque puede "
+        "haber sido lo mismo».\n"
+        "Es la versión escolar de la pregunta que desarma el sesgo: quién no "
+        "está en estos datos y por qué no está.",
+        [
+            ("Si los alumnos con buen puntaje recuerdan bien lo que hicieron",
+             "El texto no plantea un problema de memoria de los encuestados."),
+            ("Cuántos alumnos del colegio rindieron la prueba ese año",
+             "El tamaño del grupo no es la pregunta que el texto propone."),
+            ("Si esas técnicas se aplicaron durante todo el año escolar",
+             "La duración de la técnica no aparece en el criterio del texto."),
+        ],
+    ),
+    # ---------- 'Un carácter' ----------
+    _ql(
+        "un_caracter", "lec_idea_central", "dificil",
+        "¿Qué desplazamiento produce el relato a medida que avanza el "
+        "interrogatorio?",
+        "Pasa de la descripción física del reo a las razones que él expone",
+        "El texto abre con una descripción minuciosa y despiadada del acusado: "
+        "la barba, la nariz aplastada, las piernas torcidas, la ropa raída, los "
+        "grillos.\n"
+        "Al declarar, el reo desplaza la atención hacia otro terreno: el perro "
+        "que rescató, los diez años juntos, el disparo del caballero y la "
+        "pregunta que repite —«¿por qué vino a quitarme mi única riqueza?»—.\n"
+        "El cierre marca el efecto de ese desplazamiento: el juez «se cubre la "
+        "frente con las manos y parece reflexionar profundamente».",
+        [
+            ("Pasa de la declaración del reo a la sentencia que dicta el juez",
+             "El relato termina antes de cualquier sentencia."),
+            ("Pasa de la muerte del perro a la investigación policial del caso",
+             "El relato no incluye ninguna investigación policial."),
+            ("Pasa de la duda sobre la autoría a la confesión del acusado",
+             "El reo confiesa de inmediato, sin que exista duda previa."),
+        ],
+    ),
+    _ql(
+        "un_caracter", "lec_aplicar", "dificil",
+        "Un tribunal debe juzgar un caso en que los hechos están admitidos "
+        "desde el comienzo. Según lo que muestra el relato, ¿qué queda por "
+        "resolver?",
+        "Qué peso tiene lo que el acusado expone sobre sus razones",
+        "El reo admite la autoría sin rodeos y sin pedir clemencia: «Sí, señor, "
+        "yo lo maté», y agrega que sabía que lo fusilarían.\n"
+        "Lo que pide es otra cosa: «antes que me condenen, quiero decir algo a "
+        "Su Señoría», y él mismo anticipa que «a nadie importa lo que tengo que "
+        "decir».\n"
+        "El gesto final del juez —cubrirse la frente y reflexionar— muestra que "
+        "esa exposición no dejó las cosas donde estaban, aunque los hechos "
+        "nunca hayan estado en discusión.",
+        [
+            ("Determinar si el acusado es efectivamente el autor del hecho",
+             "El relato deja la autoría admitida desde la primera respuesta."),
+            ("Establecer la identidad y el origen familiar del acusado",
+             "Esas preguntas se hacen al inicio y quedan sin respuesta, sin ser el asunto."),
+            ("Decidir si el arma empleada corresponde a la que está sobre la mesa",
+             "El propio reo la identifica, y el relato no lo pone en duda."),
+        ],
+    ),
+    # ---------- 'El último kilómetro' ----------
+    _ql(
+        "ultimo_kilometro", "lec_idea_central", "medio",
+        "¿Cuál es la tesis del reportaje sobre el tramo final del reparto?",
+        "Que es el tramo más caro porque ahí se pierde la escala del viaje",
+        "El texto anuncia el dato que contradice la intuición: el trayecto de "
+        "miles de kilómetros cuesta menos que los últimos dos o tres, y sitúa "
+        "ese tramo entre el 41% y el 53% del costo total.\n"
+        "La explicación «no está en las distancias sino en la aritmética del "
+        "reparto»: el viaje anterior reparte cada kilómetro entre toda la "
+        "carga, mientras la camioneta lleva ochenta paquetes a ochenta "
+        "direcciones.\n"
+        "De ahí la formulación: «El costo deja de repartirse entre la carga y "
+        "pasa a repartirse entre las paradas».",
+        [
+            ("Que el reparto a domicilio debería reemplazarse por puntos de retiro",
+             "El texto describe esa alternativa como un traslado del costo, no como la solución."),
+            ("Que los compradores abusan del envío gratuito y encarecen el sistema",
+             "El texto declara que esas conductas no son irracionales y evita la acusación."),
+            ("Que las entregas fallidas son la principal causa del costo del reparto",
+             "El texto las presenta como una ineficiencia adicional, con cifras en disputa."),
+        ],
+    ),
+    _ql(
+        "ultimo_kilometro", "lec_aplicar", "dificil",
+        "Un municipio instala casilleros automáticos en las plazas para "
+        "reducir el reparto puerta a puerta. Según el texto, ¿qué habría que "
+        "reconocer sobre esa medida?",
+        "Que funciona trasladando el último trecho al comprador, que ahora camina",
+        "El texto agrupa las soluciones bajo una misma forma: «mover el último "
+        "tramo a un lugar donde vuelva a haber escala».\n"
+        "Y advierte que ninguna elimina el costo: «Todas funcionan y todas "
+        "trasladan algo». Sobre el casillero es explícito: «traslada el último "
+        "trecho al comprador, que ahora camina tres cuadras».\n"
+        "La conclusión que extrae vale para cualquiera de las medidas: «Elegir "
+        "entre ellas no es elegir cuál elimina el costo, sino quién lo asume».",
+        [
+            ("Que elimina el costo del último kilómetro para todas las partes",
+             "El texto sostiene que ninguna solución elimina el costo."),
+            ("Que resuelve el problema de las direcciones mal escritas en la ciudad",
+             "El texto atribuye las entregas fallidas a la nomenclatura urbana, sin vincularla al casillero."),
+            ("Que aumenta la congestión al concentrar vehículos en las plazas",
+             "El texto describe el casillero como una sola parada para treinta paquetes."),
+        ],
+    ),
+    # ---------- 'El afinador' ----------
+    _ql(
+        "afinador_piano", "lec_idea_central", "dificil",
+        "¿Qué comprende Sergio a partir del episodio con la niña del violín?",
+        "Que perdió parte de su oído sin poder notarlo y que nadie se lo dijo",
+        "La comprobación con el aparato le muestra dónde está el límite: «desde "
+        "cierta tecla en adelante, él ya no escuchaba el temblor. No es que lo "
+        "escuchara mal. No estaba».\n"
+        "El texto explica por qué eso no podía advertirse: un oído «se va yendo "
+        "de a poco, y lo hace en el único lugar donde uno no puede notarlo, que "
+        "es adentro de la propia cabeza».\n"
+        "Y agrega la segunda mitad del hallazgo, la que le costó más: en "
+        "cuarenta años nadie lo corrigió, porque «a un afinador con cincuenta "
+        "años de oficio no se le corrige».",
+        [
+            ("Que sus clientes venían engañándolo desde hacía varios años",
+             "El texto no plantea engaño: plantea que nadie lo corrigió."),
+            ("Que los aparatos de medición son más confiables que cualquier oído",
+             "Sergio sigue afinando a mano la primera parte del teclado."),
+            ("Que la niña del violín tenía mejor formación musical que él",
+             "El texto no compara la formación de ambos."),
+        ],
+    ),
+    _ql(
+        "afinador_piano", "lec_aplicar", "dificil",
+        "En una oficina, nadie corrige a la jefa con más años en el cargo. "
+        "Según lo que el texto muestra, ¿qué riesgo trae esa costumbre?",
+        "Que un error se sostenga durante años porque nadie está dispuesto a señalarlo",
+        "El texto ofrece el paralelo casi literal. Sergio descubre que en "
+        "cuarenta años «nadie le había dicho nunca que una nota estuviera mal», "
+        "y que durante mucho tiempo eso le pareció una medida de su trabajo.\n"
+        "Esa noche entiende que podía ser otra cosa: que a un afinador con "
+        "cincuenta años de oficio «no se le corrige, aunque uno escuche algo "
+        "raro».\n"
+        "Por eso la única que habló fue la niña del violín: «la primera persona "
+        "en la historia de su carrera que no sabía todavía que eso no se hace».",
+        [
+            ("Que la jefa pierda autoridad frente al resto de su equipo",
+             "El texto muestra el problema contrario: la autoridad impide la corrección."),
+            ("Que los errores se acumulen hasta volverse imposibles de reparar",
+             "Sergio corrige la nota apenas la comprueba: el problema es la demora en detectarla."),
+            ("Que quienes corrigen sean sancionados por su atrevimiento",
+             "El texto no describe ninguna sanción a quien corrige."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Lectora - Idea central y aplicacion a un caso nuevo (tanda 3)
+# ---------------------------------------------------------------------------
+
+QUESTIONS_LECTORA += [
+    # ---------- 'Una sola fila' ----------
+    _ql(
+        "fila_unica", "lec_idea_central", "medio",
+        "¿Qué sostiene el texto sobre la ventaja de la fila única?",
+        "Que impide que alguien atendiendo quede libre mientras hay gente esperando",
+        "El texto desarma primero la intuición de que el orden da lo mismo, y "
+        "localiza la falla: las cajas «pueden quedar desocupadas mientras "
+        "todavía hay gente esperando».\n"
+        "En la fila única eso no puede ocurrir, porque la siguiente persona "
+        "entra de inmediato a la caja que se desocupe. De ahí la formulación "
+        "que el texto elige: «no atiende más rápido a cada persona; lo que hace "
+        "es no desperdiciar a nadie que esté atendiendo».\n"
+        "A eso suma un segundo efecto: el orden de salida es el de llegada, lo "
+        "que elimina la espera que la gente considera ofensiva.",
+        [
+            ("Que reduce el tiempo que cada persona demora en ser atendida",
+             "El texto precisa que no atiende más rápido a cada persona."),
+            ("Que permite prescindir de quien administra el reparto de turnos",
+             "El texto señala que la fila única sí requiere que alguien lo administre."),
+            ("Que hace que la espera se vea más corta a quien llega al local",
+             "El texto advierte que una fila única se ve larga y puede espantar clientes."),
+        ],
+    ),
+    _ql(
+        "fila_unica", "lec_aplicar", "dificil",
+        "Un consultorio tiene cuatro boxes y una fila frente a cada uno. Según "
+        "el texto, ¿qué ganaría si juntara las cuatro filas en una?",
+        "Evitaría que un box quede libre mientras hay pacientes esperando",
+        "El texto identifica esa pérdida como el problema central de las filas "
+        "separadas: «Ese tiempo de caja vacía con gente esperando no se "
+        "recupera nunca».\n"
+        "Con una fila común, mientras quede alguien esperando ningún box queda "
+        "libre, porque el siguiente entra de inmediato al que se desocupe.\n"
+        "El texto agrega que la ventaja crece justamente cuando el lugar está "
+        "más lleno, y que además el orden de salida pasa a ser el de llegada.",
+        [
+            ("Reduciría el tiempo que cada atención toma dentro del box",
+             "La fila no altera la duración de cada atención."),
+            ("Permitiría atender a más pacientes con menos profesionales",
+             "El texto no plantea que se pueda reducir la cantidad de quienes atienden."),
+            ("Haría innecesario informar el tiempo estimado de espera",
+             "El texto presenta esa información como una medida útil en cualquier caso."),
+        ],
+    ),
+    # ---------- 'La información que se pierde en el color' ----------
+    _ql(
+        "color_redundancia", "lec_idea_central", "medio",
+        "¿Cuándo se vuelve un problema la dificultad para distinguir ciertos "
+        "colores, según el texto?",
+        "Cuando la información está codificada solo en el color y nada la repite",
+        "El texto observa que la mayoría de estas personas conduce, cocina y "
+        "trabaja sin dificultades, y de ahí formula la pregunta por el momento "
+        "exacto en que la diferencia importa.\n"
+        "Su respuesta es precisa: el problema aparece «cuando la información "
+        "está codificada SOLO en el color y no hay ninguna otra señal que la "
+        "repita».\n"
+        "El semáforo funciona como contraejemplo: usa el par difícil y sirve "
+        "para todos, porque la posición de la luz repite lo que dice el color.",
+        [
+            ("Cuando los colores empleados tienen una saturación demasiado baja",
+             "El texto advierte que subir la saturación no ayuda a quien confunde ese par."),
+            ("Cuando el documento se imprime en blanco y negro en vez de a color",
+             "El texto propone esa impresión como prueba para detectar el problema."),
+            ("Cuando quien mira el documento no conoce el significado de cada color",
+             "El texto no atribuye el problema al desconocimiento de la convención."),
+        ],
+    ),
+    _ql(
+        "color_redundancia", "lec_aplicar", "dificil",
+        "Un tablero de proyectos marca el estado de cada equipo con un círculo "
+        "verde, amarillo o rojo. Según el texto, ¿qué habría que agregar?",
+        "Un segundo dato que repita el estado, como un símbolo junto al círculo",
+        "El texto usa exactamente ese tablero entre sus casos que fallan, "
+        "porque el estado viaja únicamente en el color.\n"
+        "Y entrega la solución para ese caso: «Acompañar el círculo verde con "
+        "un visto y el rojo con una cruz».\n"
+        "El principio general es el mismo en todos sus ejemplos: «el color se "
+        "conserva y se le suma algo», de modo que no sea el único que lleva el "
+        "mensaje.",
+        [
+            ("Colores más intensos, para que la diferencia entre ellos se note",
+             "El texto señala que la confusión no depende de cuán vivo sea el color."),
+            ("Una leyenda aparte que explique qué significa cada color usado",
+             "El texto critica justamente las leyendas con cuadraditos de color."),
+            ("Reemplazar el rojo y el verde por dos colores completamente distintos",
+             "El texto no propone abandonar el color sino agregar una segunda señal."),
+        ],
+    ),
+    # ---------- 'El recreo largo' ----------
+    _ql(
+        "recreo_largo", "lec_idea_central", "dificil",
+        "Según la conclusión que saca Fernanda, ¿qué es lo que había que "
+        "aprender del episodio?",
+        "Que el recreo estuvo once años sin motivo y en una semana le apareció uno",
+        "El relato descubre que la razón original —el viaje en micro de la "
+        "señora Villagra— llevaba once años sin existir, y que nadie lo había "
+        "notado.\n"
+        "Fernanda formula la conclusión al salir: el recreo «estuvo once años "
+        "sin motivo y no se cayó, y bastó que alguien preguntara para que en "
+        "una semana le apareciera uno».\n"
+        "Y agrega la parte que desplaza el foco: «Que a lo mejor era eso lo que "
+        "había que aprender y no lo de la señora Villagra».",
+        [
+            ("Que la señora Villagra merecía ser recordada por el colegio entero",
+             "Fernanda desplaza expresamente el aprendizaje lejos de ese punto."),
+            ("Que las tradiciones escolares deben mantenerse aunque no se expliquen",
+             "El inspector rechaza «siempre ha sido así» como razón, y los alumnos construyen una."),
+            ("Que el inspector nuevo buscaba un pretexto para acortar el recreo",
+             "El inspector mantiene el horario después de escuchar a los alumnos."),
+        ],
+    ),
+    _ql(
+        "recreo_largo", "lec_aplicar", "dificil",
+        "Una oficina mantiene una reunión semanal que empezó por un motivo que "
+        "ya nadie recuerda. Según el relato, ¿qué convendría hacer?",
+        "Preguntar por qué existe y revisar qué depende hoy de ella",
+        "Los alumnos hacen exactamente ese recorrido. Primero preguntan y "
+        "descubren que nadie sabe; después buscan en las carpetas y encuentran "
+        "el motivo original, ya muerto.\n"
+        "Pero no se quedan ahí: arman una lista de lo que depende del recreo "
+        "hoy —el taller de radio, los que almuerzan temprano, la fila sin "
+        "empujones— y con eso van a hablar con el inspector.\n"
+        "El resultado es el que Fernanda destaca: la práctica se sostuvo no por "
+        "su origen sino por lo que se había construido encima.",
+        [
+            ("Eliminarla, porque una práctica sin motivo original no se justifica",
+             "El relato muestra que el recreo se sostuvo por motivos nuevos, no por el original."),
+            ("Mantenerla sin preguntar, para no arriesgar que alguien la suprima",
+             "Esa posición se discutió en el relato y perdió por frágil."),
+            ("Buscar en los archivos hasta encontrar quién la decidió y por qué",
+             "Los alumnos encontraron ese dato y aun así no fue lo que sostuvo la práctica."),
+        ],
+    ),
+    # ---------- 'Leer en pantalla' ----------
+    _ql(
+        "leer_pantalla", "lec_idea_central", "medio",
+        "Según el texto, ¿a qué se debe principalmente la desventaja de leer en "
+        "pantalla?",
+        "Al modo de leer que traemos hacia ella, no a la pantalla misma",
+        "El texto acota primero la magnitud: la ventaja del papel en "
+        "comprensión es pequeña y aparece sobre todo en textos expositivos y "
+        "bajo presión de tiempo.\n"
+        "Ese patrón es la pista que usa: «si el soporte por sí solo dañara la "
+        "comprensión, el efecto debería aparecer igual en todos los casos».\n"
+        "La explicación que ofrece es de hábito: en pantalla uno aprende a "
+        "mirar en diagonal y a saltar, y esa manera de leer «se activa por el "
+        "contexto» aunque el texto exija otra cosa.",
+        [
+            ("A que la pantalla cansa la vista más que el papel impreso",
+             "El texto no menciona la fatiga visual entre sus explicaciones."),
+            ("A que las generaciones nuevas leen menos que las anteriores",
+             "El texto señala que el efecto no ha desaparecido con las generaciones."),
+            ("A que los textos digitales suelen estar peor redactados",
+             "Las comparaciones que el texto cita usan el mismo texto en ambos soportes."),
+        ],
+    ),
+    _ql(
+        "leer_pantalla", "lec_aplicar", "dificil",
+        "Un estudiante decide imprimir todos sus apuntes para estudiar mejor. "
+        "Según el texto, ¿qué habría que decirle?",
+        "Que el soporte importa menos que cambiar el modo de leer",
+        "El texto declara expresamente lo que sus resultados no autorizan a "
+        "concluir: «No dice que haya que imprimirlo todo», y califica esa "
+        "recomendación de cara y desproporcionada frente a un efecto pequeño.\n"
+        "Lo que sí se sigue es más modesto: si el problema es el modo de leer "
+        "que traemos hacia la pantalla, «lo que hay que cambiar es el modo».\n"
+        "Y detalla ese modo: ir más lento, volver atrás, detenerse a resumir "
+        "sin mirar, preguntarse qué se está afirmando y con qué.",
+        [
+            ("Que imprimir es la única manera de compensar la desventaja medida",
+             "El texto rechaza esa conclusión de manera explícita."),
+            ("Que da lo mismo el soporte porque el efecto medido no existe",
+             "El texto sostiene que la diferencia aparece de manera consistente."),
+            ("Que el papel solo conviene para leer novelas y textos narrativos",
+             "El texto señala que en textos narrativos la diferencia casi desaparece."),
+        ],
+    ),
+    # ---------- 'La mina que está en el cajón' ----------
+    _ql(
+        "residuos_electronicos", "lec_idea_central", "dificil",
+        "¿Qué propone el texto como la discusión más productiva sobre los "
+        "aparatos electrónicos?",
+        "Discutir reglas verificables en vez de sospechar de las intenciones",
+        "El texto distingue dos versiones de la obsolescencia programada. La "
+        "fuerte —aparatos diseñados para fallar en una fecha— la considera "
+        "difícil de sostener en general.\n"
+        "La débil sí está documentada: baterías pegadas, tornillos especiales, "
+        "repuestos que no se venden, actualizaciones que dejan de llegar. "
+        "Ninguna hace que el equipo se rompa; todas encarecen repararlo.\n"
+        "De ahí su conclusión: exigir repuestos por un plazo mínimo, manuales y "
+        "baterías cambiables son «medidas aburridas, verificables y bastante "
+        "más eficaces que sospechar de un plan».",
+        [
+            ("Demostrar que los fabricantes programan la falla de sus aparatos",
+             "El texto considera esa versión difícil de sostener en general."),
+            ("Convencer a los consumidores de sentirse responsables del problema",
+             "El texto advierte que la culpa suele hacer de sustituto de la acción."),
+            ("Aumentar la capacidad industrial para procesar los aparatos usados",
+             "El texto menciona el problema de concentración, sin proponer eso como eje."),
+        ],
+    ),
+    _ql(
+        "residuos_electronicos", "lec_aplicar", "dificil",
+        "Alguien elige entre dos teléfonos y prefiere el más delgado. Según el "
+        "texto, ¿qué está eligiendo sin saberlo?",
+        "El modelo más difícil de reparar, por ser más pegado y menos modular",
+        "El texto advierte contra atribuirlo todo a la mala fe y ofrece otra "
+        "explicación para parte de esas decisiones de diseño.\n"
+        "La formula así: «Un aparato más delgado, más liviano y más barato es, "
+        "casi inevitablemente, un aparato más pegado y menos modular».\n"
+        "Y saca la consecuencia sobre quien compra: «El consumidor que elige el "
+        "modelo más delgado está eligiendo, sin saberlo, el más difícil de "
+        "reparar». Eso no exime al fabricante, pero mueve el punto de decisión.",
+        [
+            ("Un aparato programado para fallar en una fecha determinada",
+             "El texto considera poco sostenible esa versión de la obsolescencia."),
+            ("Un modelo que contiene menos metales valiosos en su interior",
+             "El texto no relaciona el grosor con la cantidad de metales."),
+            ("Un producto que no está cubierto por la ley de responsabilidad extendida",
+             "La ley incluye a los aparatos eléctricos y electrónicos sin distinguir modelos."),
+        ],
+    ),
+    # ---------- 'La cabeza ocupada' ----------
+    _ql(
+        "ansiedad_pruebas", "lec_idea_central", "medio",
+        "Según el texto, ¿qué le ocurre a quien no logra recordar en una prueba "
+        "algo que sabía el día anterior?",
+        "Los pensamientos sobre su desempeño ocupan el espacio donde debe pensar",
+        "El texto describe el mecanismo con precisión: resolver un problema "
+        "exige mantener información disponible mientras se opera con ella, y "
+        "ese espacio es limitado.\n"
+        "Los pensamientos sobre el propio desempeño —«voy a quedar mal», «no me "
+        "va a alcanzar el tiempo»— «ocupan exactamente el mismo espacio».\n"
+        "De ahí la formulación que ordena todo: «la ansiedad no borra lo que "
+        "uno sabe. Compite con ello». Y explica por qué la respuesta aparece en "
+        "el pasillo: ahí ese espacio quedó libre.",
+        [
+            ("El material estudiado se borra por efecto de la activación fisiológica",
+             "El texto sostiene que la ansiedad no borra lo aprendido: compite con ello."),
+            ("Los nervios revelan que no había estudiado lo suficiente",
+             "El texto desarma expresamente esa creencia."),
+            ("La preocupación mejora el rendimiento al estrechar la atención",
+             "Eso ocurre con una activación moderada, no con la que satura el espacio."),
+        ],
+    ),
+    _ql(
+        "ansiedad_pruebas", "lec_aplicar", "dificil",
+        "Un estudiante lleva cuatro minutos atascado en una pregunta y calcula "
+        "cuánto tiempo está perdiendo. Según el texto, ¿qué conviene hacer?",
+        "Saltar la pregunta y volver después, para liberar el espacio de pensar",
+        "El texto describe esa situación exacta: quien lleva cuatro minutos "
+        "atascado «suele estar haciendo dos cosas a la vez: intentar resolverla "
+        "y calcular cuánto le está costando».\n"
+        "Y evalúa la segunda tarea sin rodeos: «no aporta nada y consume el "
+        "mismo espacio que la primera».\n"
+        "De ahí la recomendación, formulada como corrección de una creencia: "
+        "«Saltarse una pregunta y volver después no es una derrota; es liberar "
+        "el lugar donde hay que pensar».",
+        [
+            ("Insistir en la pregunta hasta resolverla, para no perder el punto",
+             "El texto muestra que insistir mantiene ocupado el espacio de trabajo."),
+            ("Escribir durante unos minutos sobre lo que le preocupa de la prueba",
+             "El texto sitúa ese procedimiento antes de la prueba y lo describe como en estudio."),
+            ("Interpretar los nervios como señal de que le faltó preparación",
+             "El texto advierte que esa interpretación agrega una preocupación más."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Lectora - Idea central y aplicacion a un caso nuevo (tanda 4)
+# ---------------------------------------------------------------------------
+
+QUESTIONS_LECTORA += [
+    # ---------- 'Las abejas equivocadas' ----------
+    _ql(
+        "abejas_simbolo", "lec_idea_central", "medio",
+        "¿Qué sostiene el texto sobre la campaña para salvar a las abejas?",
+        "Que la causa es correcta pero el animal que la ilustra es el equivocado",
+        "El texto abre con esa distinción: «La causa es buena y la frase apunta "
+        "al animal equivocado».\n"
+        "La abeja de los afiches es la de miel, que el texto describe «en "
+        "términos prácticos» como ganado: se compra, se vende y se traslada, y "
+        "su número depende de cuántas colmenas mantengan los apicultores.\n"
+        "Las que sí están en problemas son las silvestres, que no producen "
+        "miel, no viven en colmenas y «no se reponen cuando desaparecen de un "
+        "lugar».",
+        [
+            ("Que la apicultura debería prohibirse para proteger a las especies locales",
+             "El texto declara que no es un argumento contra la apicultura."),
+            ("Que las abejas de miel están al borde de la extinción en el mundo",
+             "El texto sostiene que su situación es un problema económico y no una extinción."),
+            ("Que instalar colmenas urbanas es la mejor manera de ayudar",
+             "El texto advierte que esas colmenas compiten con las abejas silvestres."),
+        ],
+    ),
+    _ql(
+        "abejas_simbolo", "lec_aplicar", "dificil",
+        "Una municipalidad instala veinte colmenas de abejas de miel en un "
+        "parque «para ayudar a los polinizadores». Según el texto, ¿qué efecto "
+        "podría tener?",
+        "Reducir el alimento disponible para las especies silvestres del lugar",
+        "El texto señala ese punto como «el más incómodo del asunto»: instalar "
+        "muchas colmenas manejadas en una zona «no ayuda a las abejas "
+        "silvestres: compite con ellas».\n"
+        "El mecanismo es de alimento: miles de individuos recorriendo las "
+        "mismas flores reducen lo disponible para especies locales «bastante "
+        "menos numerosas y que no tienen quien las alimente en invierno».\n"
+        "De ahí la advertencia que cierra ese párrafo: una campaña así puede "
+        "producir, con toda la buena intención, el efecto contrario al que "
+        "anuncia.",
+        [
+            ("Aumentar la polinización de los cultivos cercanos al parque",
+             "El texto sostiene que varias especies silvestres polinizan mejor ciertos cultivos."),
+            ("Resolver la pérdida de hábitat de los polinizadores del sector",
+             "El texto atribuye esa pérdida a la desaparición de bordes y terrenos sin uso."),
+            ("Proteger a las abejas silvestres del contagio de enfermedades",
+             "El texto menciona enfermedades que a veces saltan desde las colmenas manejadas."),
+        ],
+    ),
+    # ---------- 'Por qué las micros se juntan' ----------
+    _ql(
+        "micros_juntas", "lec_idea_central", "dificil",
+        "¿Qué explica, según el texto, que las micros terminen viajando "
+        "juntas?",
+        "Que el reparto parejo es un equilibrio inestable que amplifica cualquier atraso",
+        "El texto reconstruye el mecanismo paso a paso: un bus que pierde dos "
+        "minutos encuentra más pasajeros acumulados, demora más en cada "
+        "paradero y se atrasa cada vez más, mientras el de atrás encuentra "
+        "paraderos recién barridos y avanza más rápido.\n"
+        "Y formula la conclusión general: «la situación ordenada —buses "
+        "repartidos parejo— es un equilibrio inestable».\n"
+        "La imagen que usa lo resume: «Un lápiz parado sobre su punta también "
+        "está en equilibrio, y por eso mismo dura poco».",
+        [
+            ("Que los conductores no respetan los horarios que la empresa fija",
+             "El texto señala que el fenómeno ocurre incluso si todos trabajan perfectamente."),
+            ("Que la cantidad de buses de cada línea resulta siempre insuficiente",
+             "El texto sostiene que agregar buses no resuelve el problema."),
+            ("Que el tránsito de la ciudad retrasa a unos buses más que a otros",
+             "El tránsito puede disparar el mecanismo, pero no es lo que lo explica."),
+        ],
+    ),
+    _ql(
+        "micros_juntas", "lec_aplicar", "dificil",
+        "Un policlínico atiende con más demora a medida que se acumula gente en "
+        "la sala. Según el texto, ¿qué forma general tiene ese problema?",
+        "La de un servicio donde cada retraso se paga con un retraso mayor",
+        "El texto generaliza el caso de las micros al cerrar: «Cuando la demora "
+        "de un servicio depende de cuánta gente se acumuló esperándolo, cada "
+        "retraso se paga con un retraso mayor».\n"
+        "Y nombra expresamente dónde aparece: «Ocurre en un paradero y ocurre "
+        "en una fila de banco, en un policlínico y en una mesa de atención».\n"
+        "Sobre la respuesta habitual también advierte: la primera reacción es "
+        "pedir más buses o más funcionarios, cuando muchas veces lo que hace "
+        "falta es que el sistema deje de premiar al que llegó tarde con más "
+        "trabajo.",
+        [
+            ("La de un servicio que necesita contratar más personal de atención",
+             "El texto presenta esa reacción como la primera y muchas veces no la correcta."),
+            ("La de un servicio cuyo personal trabaja con menos dedicación",
+             "El texto insiste en que el fenómeno ocurre aunque todos hagan bien su trabajo."),
+            ("La de un servicio con horarios de atención mal distribuidos",
+             "El texto no atribuye el mecanismo a la distribución de horarios."),
+        ],
+    ),
+    # ---------- 'Seiscientas veces' ----------
+    _ql(
+        "agua_embotellada", "lec_idea_central", "dificil",
+        "¿Hacia dónde desplaza el texto la discusión sobre el agua "
+        "embotellada?",
+        "Desde el hábito individual hacia la infraestructura que lo haría fácil",
+        "El texto muestra que la recomendación habitual —anda con tu botella, "
+        "deja de comprar— «es correcta y es insuficiente, porque atribuye a una "
+        "decisión individual algo que en buena medida es un problema de "
+        "infraestructura».\n"
+        "Y reformula la pregunta útil: «No es cuánta gente debería cambiar de "
+        "hábito, sino qué haría falta para que el hábito resultara fácil».\n"
+        "Lo que enumera a continuación son bebederos que funcionen, "
+        "información verificable sobre la calidad del agua y respuestas rápidas "
+        "cuando esa calidad falla.",
+        [
+            ("Desde el costo económico hacia el impacto ambiental del envase",
+             "El texto trata ambos, pero su desplazamiento final es hacia la infraestructura."),
+            ("Desde la calidad del agua potable hacia la del agua embotellada",
+             "El texto señala que ambas suelen estar sometidas a controles de calidad."),
+            ("Desde el reciclaje del plástico hacia el uso de botellas reutilizables",
+             "El texto advierte que la botella reutilizable tampoco es gratis en el primer uso."),
+        ],
+    ),
+    _ql(
+        "agua_embotellada", "lec_aplicar", "dificil",
+        "Alguien compra una botella de acero, la usa dos veces y la olvida en "
+        "un cajón. Según el texto, ¿cómo debería evaluarse esa compra?",
+        "Como peor que las botellas desechables que habría reemplazado",
+        "El texto hace esa comparación de manera explícita, y advierte que casi "
+        "nunca se hace.\n"
+        "Fabricar una botella reutilizable «cuesta más energía y más material "
+        "que fabricar una botella desechable», de modo que su ventaja «no "
+        "existe el primer día: aparece recién después de bastantes usos».\n"
+        "Y entrega el caso exacto del enunciado: «Una botella de acero comprada "
+        "y olvidada en un cajón es peor que las tres botellas plásticas que "
+        "habría reemplazado. Lo que importa no es el objeto, es cuántas veces "
+        "se usa».",
+        [
+            ("Como una decisión correcta, porque el acero se recicla mejor",
+             "El texto no evalúa la compra por el material sino por la cantidad de usos."),
+            ("Como equivalente a no haber comprado nada en absoluto",
+             "El texto señala que fabricarla ya tuvo un costo ambiental."),
+            ("Como una mejora, porque evitó comprar agua embotellada dos veces",
+             "Dos usos no alcanzan a compensar el costo de fabricarla."),
+        ],
+    ),
+    # ---------- 'En defensa de las horas vacías' ----------
+    _ql(
+        "aburrimiento_horas", "lec_idea_central", "dificil",
+        "¿Qué conclusión sostiene el texto sobre el aburrimiento y la "
+        "creatividad?",
+        "Que lo valioso no es el aburrimiento sino el rato sin destino asignado",
+        "El texto trata la frase «el aburrimiento estimula la creatividad» como "
+        "«una idea probablemente cierta que se está defendiendo con malos "
+        "argumentos», y desarma dos de ellos: los estudios son acotados y la "
+        "escena nostálgica selecciona los casos exitosos.\n"
+        "Lo que deja en pie es más modesto: «No que el aburrimiento sea "
+        "valioso, sino que el hueco donde ocurre lo es».\n"
+        "De ahí que las ideas que llegan en la ducha o caminando no lleguen por "
+        "aburrimiento, «sino porque ese rato no estaba ocupado por nadie más».",
+        [
+            ("Que el aburrimiento produce ideas mejores que cualquier otro estado",
+             "El texto sostiene que nadie ha logrado establecer esa relación directa."),
+            ("Que conviene provocarse aburrimiento a diario para tener ideas",
+             "El texto considera «abúrrete» una instrucción rara y propone otra cosa."),
+            ("Que el aburrimiento es siempre un estado negativo que hay que evitar",
+             "El texto lo describe como una señal con función, no como algo a evitar."),
+        ],
+    ),
+    _ql(
+        "aburrimiento_horas", "lec_aplicar", "dificil",
+        "Una persona revisa el teléfono cada vez que espera algo, aunque sean "
+        "dos minutos. Según el texto, ¿qué está ocurriendo?",
+        "Que apaga una señal sin atender lo que estaba avisando",
+        "El texto compara el aburrimiento con una alarma: avisa que lo que uno "
+        "está haciendo no vale la pena, y «su función no es ser agradable: es "
+        "ser lo bastante molesta como para que uno cambie de actividad».\n"
+        "Sobre el teléfono es preciso: resuelve el aburrimiento en cuatro "
+        "segundos y sin esfuerzo, de modo que «la señal se apaga sin haber "
+        "informado nada, y la actividad que la disparó queda intacta».\n"
+        "Y formula la regla general en el cierre: «una señal que se apaga sin "
+        "ser atendida deja de cumplir su función».",
+        [
+            ("Que pierde oportunidades de tener ideas creativas comprobadas",
+             "El texto declara que no puede demostrar esa consecuencia."),
+            ("Que se somete a un aburrimiento crónico perjudicial",
+             "El texto asocia el aburrimiento crónico al encierro y a la falta de control."),
+            ("Que evita quedarse a solas con sus propios pensamientos",
+             "El texto lo menciona como parte del atractivo del teléfono, no como lo que ocurre siempre."),
+        ],
+    ),
+    # ---------- 'La que firma' ----------
+    _ql(
+        "la_que_firma", "lec_idea_central", "dificil",
+        "¿Qué comprende Javiera al calcular lo que implica irse a estudiar?",
+        "Que dejó de ser una ayuda y pasó a ser una pieza del funcionamiento",
+        "El relato muestra el cálculo: pasajes, arriendo, las horas de "
+        "consultorio si ella no está, a quién pedirle el favor y cuántas veces "
+        "se puede pedir.\n"
+        "Y entrega la conclusión que la deja sentada un rato largo: «el "
+        "problema no era el dinero».\n"
+        "Lo que era: «que ella se había vuelto una parte del funcionamiento de "
+        "esa casa. No una ayuda: una pieza», dentro de un mecanismo que se armó "
+        "«sin que nadie lo decidiera, un formulario a la vez».",
+        [
+            ("Que su abuela nunca aprendió a resolver los trámites por sí sola",
+             "El relato termina con la abuela leyendo la carpeta, como quien vuelve a algo que sabía."),
+            ("Que la beca no alcanzaría para cubrir los gastos de la mudanza",
+             "El relato dice expresamente que el problema no era el dinero."),
+            ("Que había perdido su adolescencia por hacerse cargo de la casa",
+             "El relato no formula el asunto como una pérdida sino como un mecanismo que se armó."),
+        ],
+    ),
+    _ql(
+        "la_que_firma", "lec_aplicar", "dificil",
+        "En un equipo de trabajo, una persona resuelve sola todos los trámites "
+        "durante años y luego debe cambiarse de área. Según el relato, ¿qué "
+        "conviene hacer antes de irse?",
+        "Dejar por escrito lo que sabe, para que el resto pueda retomarlo",
+        "Javiera hace exactamente eso el sábado antes de irse: ordena la "
+        "carpeta hoja por hoja, pone los convenios adelante con las fechas "
+        "escritas y agrega una hoja nueva al principio «con los teléfonos y con "
+        "una instrucción corta para cada trámite, en frases de una línea».\n"
+        "Incluso deja dos separadores en blanco «por si aparecía algo», es "
+        "decir, previendo lo que todavía no ocurre.\n"
+        "El domingo se la pasa a su abuela y le explica las primeras cuatro "
+        "hojas: entrega el sistema, no solo los papeles.",
+        [
+            ("Postergar el cambio hasta que otra persona asuma esas tareas",
+             "Javiera no posterga su viaje: prepara el traspaso."),
+            ("Seguir haciendo los trámites a distancia para no dejar vacíos",
+             "El relato muestra que el problema era ser una pieza del mecanismo."),
+            ("Explicar en persona cada trámite cada vez que aparezca uno nuevo",
+             "Javiera deja instrucciones escritas justamente para no depender de eso."),
+        ],
+    ),
+    # ---------- 'El primer trabajo' ----------
+    _ql(
+        "primer_trabajo", "lec_idea_central", "medio",
+        "Según el texto, ¿cuál es el criterio con que está construida la "
+        "regulación del trabajo adolescente?",
+        "Que el trabajo no desplace al colegio",
+        "El texto lo deduce de la regla que considera más interesante: durante "
+        "el año escolar, la suma del tiempo dedicado a las actividades "
+        "educativas y a la jornada de trabajo no puede superar las doce "
+        "horas.\n"
+        "Sobre esa regla comenta que «revela el criterio con que todo lo demás "
+        "está construido»: la ley no busca que el adolescente trabaje poco, "
+        "«está tratando de que el trabajo no desplace al colegio».\n"
+        "De ahí que los topes miren el día completo y que el mismo trabajo "
+        "tenga un límite en junio y otro en enero.",
+        [
+            ("Que el adolescente no obtenga ingresos propios antes de los dieciocho",
+             "El texto valora que quien trabaja en vacaciones obtenga ingresos y experiencia."),
+            ("Que las empresas no contraten personas menores de dieciocho años",
+             "La ley permite el trabajo desde los quince bajo condiciones."),
+            ("Que ninguna faena resulte peligrosa para quien la realiza",
+             "Esa es una regla específica del texto, no el criterio general que identifica."),
+        ],
+    ),
+    _ql(
+        "primer_trabajo", "lec_aplicar", "dificil",
+        "Un estudiante de dieciséis años pasa nueve horas diarias entre clases "
+        "y traslados. Según el texto, ¿cuántas horas puede trabajar ese día "
+        "durante el año escolar?",
+        "Tres, aunque el máximo diario de trabajo sea seis",
+        "El texto explica que la regla de las doce horas «es una regla de suma, "
+        "no de partes».\n"
+        "Y da exactamente este caso: «si alguien pasa nueve horas entre clases y "
+        "traslados, le quedan tres, aunque el máximo diario del trabajo sea "
+        "seis».\n"
+        "El tope de seis horas sigue existiendo: lo que ocurre es que la suma "
+        "con el tiempo escolar lo vuelve inalcanzable ese día.",
+        [
+            ("Seis, porque ese es el máximo diario durante el año escolar",
+             "El texto precisa que la suma con el tiempo escolar reduce ese máximo."),
+            ("Ocho, que es el tope diario cuando el año escolar está interrumpido",
+             "Ese tope rige en vacaciones, no durante el año escolar."),
+            ("Ninguna, porque nueve horas de colegio ya superan el límite legal",
+             "El límite de doce horas se refiere a la suma, y nueve todavía dejan margen."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Lectora - Idea central y aplicacion a un caso nuevo (tanda 5)
+# ---------------------------------------------------------------------------
+
+QUESTIONS_LECTORA += [
+    # ---------- 'El día en que un libro deja de tener dueño' ----------
+    _ql(
+        "dominio_publico", "lec_idea_central", "medio",
+        "¿Qué sostiene el artículo sobre el plazo de los derechos de autor?",
+        "Que es un trato con plazo, no un premio permanente al talento",
+        "El texto lo dice sin rodeos al preguntarse por qué existe un plazo: el "
+        "derecho «no se concibió como un premio moral al talento, sino como un "
+        "incentivo».\n"
+        "Y describe el intercambio completo: se le entrega al autor un "
+        "monopolio temporal para que escribir sea sostenible, y a cambio la "
+        "sociedad recibe después una obra que puede usar libremente.\n"
+        "De ahí la fórmula con que cierra ese párrafo, que resume la idea "
+        "central del artículo: «Es un trato, con dos partes y con fecha de "
+        "término».",
+        [
+            ("Que debería eliminarse para que toda obra circule libremente desde su publicación",
+             "El texto explica por qué el monopolio temporal existe y no propone suprimirlo."),
+            ("Que su duración actual es la única compatible con los acuerdos internacionales",
+             "El texto menciona la armonización internacional como una razón entre varias, no como una obligación única."),
+            ("Que la protección se extingue por completo cuando la obra entra al patrimonio común",
+             "El texto aclara que se extingue la protección patrimonial, no el reconocimiento de la autoría."),
+        ],
+    ),
+    _ql(
+        "dominio_publico", "lec_aplicar", "dificil",
+        "Una profesora copia de un buscador una fotografía tomada en 1990 y la "
+        "reparte en una guía. Según el texto, ¿qué está confundiendo?",
+        "Que algo sea fácil de copiar con que esté permitido usarlo",
+        "El artículo dedica un párrafo entero a esa confusión: «que una obra "
+        "esté disponible en internet no significa que esté en dominio "
+        "público».\n"
+        "Y agrega el caso exacto de la fotografía: la que aparece en un "
+        "buscador «tiene autor y tiene plazo, exactamente igual que un libro en "
+        "una vitrina».\n"
+        "La frase que cierra el párrafo nombra el error: «la facilidad técnica "
+        "para copiar algo no dice nada sobre el permiso para hacerlo», y de ahí "
+        "vienen la mayoría de los problemas cotidianos con este tema.",
+        [
+            ("Que la obra sea reciente con que su autor haya renunciado a los derechos patrimoniales",
+             "Nada en el texto asocia la fecha de una obra con una renuncia del autor."),
+            ("Que el uso escolar del material la libere de citar el nombre de quien tomó la foto",
+             "El texto señala que el material escolar debe pagar o pedir autorización, y que la autoría se cita siempre."),
+            ("Que la fotografía sea una obra huérfana porque su autor no aparece junto a la imagen",
+             "Una obra huérfana es aquella cuyo titular no se puede identificar ni ubicar, no la que se publica sin crédito visible."),
+        ],
+    ),
+    # ---------- 'Los nombres que ya estaban' ----------
+    _ql(
+        "toponimia_nombres", "lec_idea_central", "medio",
+        "¿Qué sostiene el artículo sobre los nombres de lugar del mapa chileno?",
+        "Que son descripciones del lugar que hoy casi nadie sabe leer",
+        "El texto describe primero qué son esos nombres: un «inventario "
+        "descriptivo, hecho por gente que necesitaba orientarse y que nombraba "
+        "lo que había», con partículas que se repiten como «ko» y «pichi».\n"
+        "Después muestra el problema: cuando nadie sabe ya qué decía "
+        "«Curanilahue», la palabra sigue sirviendo de dirección postal y deja "
+        "de funcionar como información.\n"
+        "El cierre insiste en eso mismo: la información está disponible y es "
+        "gratis, y aun así casi nadie la busca.",
+        [
+            ("Que deberían traducirse al castellano para que la gente entienda qué significan",
+             "El texto propone conocer los significados, no reemplazar los nombres."),
+            ("Que su origen se conoce con certeza gracias a los registros de los cronistas",
+             "El texto advierte lo contrario: muchos fueron transcritos de oído por cronistas que no hablaban la lengua."),
+            ("Que el mapudungun sigue vivo porque millones de personas lo hablan a diario",
+             "El texto dice que millones pronuncian esos nombres sin hablar la lengua ni saber que la usan."),
+        ],
+    ),
+    _ql(
+        "toponimia_nombres", "lec_aplicar", "dificil",
+        "Un municipio decide agregar en el letrero de entrada, bajo el nombre "
+        "de la comuna, una línea con su significado. Según el texto, ¿qué "
+        "recuperaría esa medida?",
+        "La información que el nombre daba sobre el lugar y sobre quien lo nombró",
+        "El artículo define el topónimo como «un dato doble»: dice algo del "
+        "lugar —que ahí había agua, o un tipo de árbol— y dice algo de quien lo "
+        "nombró, de en qué se fijaba y qué necesitaba distinguir.\n"
+        "Lo que se pierde cuando el significado se olvida es justamente esa "
+        "función: el lugar «conserva su etiqueta y pierde su descripción».\n"
+        "Por eso el texto sostiene que recuperar esos significados «no sea solo "
+        "un asunto de curiosidad», y compara la pérdida con un archivo cuyos "
+        "títulos ya nadie puede leer.",
+        [
+            ("El uso cotidiano del mapudungun por parte de los habitantes de esa comuna",
+             "El texto observa que el nombre sobrevive sin hablantes; conocer su significado no devuelve la lengua."),
+            ("La certeza sobre cuál de las etimologías posibles del nombre es la correcta",
+             "El texto advierte que muchas etimologías son discutidas y que algunas admiten dos lecturas razonables."),
+            ("La capa de nombres de santos y apellidos que se depositó sobre la anterior",
+             "Esa capa posterior sigue visible en el mapa; no es lo que se ha perdido."),
+        ],
+    ),
+    # ---------- 'Nueve tonos' ----------
+    _ql(
+        "nueve_tonos", "lec_idea_central", "medio",
+        "¿Qué asunto desarrolla el relato mientras el teléfono suena?",
+        "La espera de una noticia temida y lo que Marisol piensa en ese intervalo",
+        "Todo el relato transcurre entre el primer tono y el noveno, con "
+        "Marisol despierta y sin levantarse, mirando el techo.\n"
+        "En ese intervalo aparecen la última conversación sobre el malvón, las "
+        "tres preguntas que nunca hizo, el hermano marcando el número y la Ely "
+        "llegando a las ocho sin saber.\n"
+        "El propio relato explica por qué ese intervalo importa: «mientras el "
+        "teléfono suene, la noticia todavía no existe».",
+        [
+            ("El deterioro de la salud de una mujer de ochenta y siete años que vive sola",
+             "La madre no vive sola: la acompaña de día la Ely, y el relato no narra su deterioro."),
+            ("El reproche de una hija a su hermano por no haberla llamado antes de tiempo",
+             "Marisol siente pena por su hermano marcando ese número, no reproche."),
+            ("La distancia entre Santiago y Rancagua como obstáculo para cuidar a la madre",
+             "La carretera aparece un instante en los cálculos de Marisol, no como asunto del relato."),
+        ],
+    ),
+    _ql(
+        "nueve_tonos", "lec_aplicar", "dificil",
+        "Un cuento nuevo quiere narrar los cuatro minutos en que un hombre "
+        "espera fuera de un pabellón. Según lo que hace «Nueve tonos», ¿qué "
+        "recurso le serviría?",
+        "Marcar el paso del tiempo con hitos breves que separen lo que él piensa",
+        "El relato hace exactamente eso: intercala «Primer tono», «Segundo "
+        "tono» y así hasta el noveno, y entre esos hitos coloca los "
+        "pensamientos de Marisol.\n"
+        "El recurso permite que unos segundos de tiempo narrado ocupen páginas "
+        "de relato sin que el lector pierda de vista cuánto ha pasado en "
+        "realidad.\n"
+        "Y sostiene la tensión, porque cada hito acerca el momento en que "
+        "habrá que contestar y la noticia empezará a existir.",
+        [
+            ("Adelantar el desenlace en la primera línea para que el lector no se distraiga",
+             "«Nueve tonos» hace lo contrario: termina justo antes de que se conozca la noticia."),
+            ("Resumir en un párrafo los cuatro minutos y detallar en cambio lo que pasó después",
+             "El relato se detiene en la espera y no narra lo que viene después."),
+            ("Sustituir los pensamientos del hombre por el diálogo de quienes esperan con él",
+             "En «Nueve tonos» solo hay una línea de diálogo, y todo el peso está en lo que Marisol piensa."),
+        ],
+    ),
+    # ---------- 'El problema no son los perros' ----------
+    _ql(
+        "perros_calle", "lec_idea_central", "medio",
+        "¿Qué sostiene el artículo sobre los perros que andan sueltos?",
+        "Que el problema lo producen decisiones humanas, no una clase de perro",
+        "El título ya lo anuncia y el cierre lo formula: hablar de «perros "
+        "callejeros» pone el problema del lado del animal, «como si fuera una "
+        "categoría natural, algo que ciertos perros son».\n"
+        "El texto responde que no lo es: cada perro en la calle llegó ahí por "
+        "una decisión humana concreta, porque alguien no esterilizó, alguien "
+        "regaló una camada o alguien abrió la puerta en la mañana.\n"
+        "El mismo argumento explica por qué buena parte de los perros sueltos "
+        "tiene dueño y por qué retirar animales no cambia las condiciones que "
+        "los ponen ahí.",
+        [
+            ("Que la Ley 21.020 bastaría para resolverlo si los municipios la aplicaran",
+             "El texto la llama razonable y no una solución completa: registrar no interviene en el número."),
+            ("Que la mayoría de esos perros fueron abandonados por dueños irresponsables",
+             "El texto sostiene que buena parte no está abandonada: son perros con casa a los que dejan salir."),
+            ("Que el retiro de animales es la medida más eficaz cuando se aplica a tiempo",
+             "El texto dice que se nota de inmediato y no resuelve, porque aparecen otros perros."),
+        ],
+    ),
+    _ql(
+        "perros_calle", "lec_aplicar", "dificil",
+        "Una comuna anuncia un plan que retira perros sueltos todos los meses "
+        "y no contempla esterilización. Según el texto, ¿qué cabe esperar?",
+        "Una mejora visible al principio y perros nuevos ocupando ese espacio",
+        "El texto describe con precisión ese resultado: el retiro «se nota de "
+        "inmediato y no resuelve».\n"
+        "La razón es que donde queda espacio y comida disponible aparecen otros "
+        "perros: el problema no era el individuo que se retiró, sino las "
+        "condiciones que permitían que hubiera uno ahí.\n"
+        "Y cierra con la comparación que fija la idea: es el mismo error de "
+        "quien limpia una fuga de agua en vez de cerrar la llave.",
+        [
+            ("Una caída sostenida del número de mordeduras registradas en los años siguientes",
+             "El texto atribuye los efectos duraderos a la esterilización masiva, que este plan no incluye."),
+            ("Un aumento inmediato de la caza de fauna nativa por parte de los perros con dueño",
+             "La caza aparece en el texto como conducta habitual del perro suelto, no como consecuencia del retiro."),
+            ("Un efecto nulo desde el primer día, porque casi todos los perros tienen dueño y collar",
+             "El texto reconoce que el retiro sí se nota de inmediato; el problema es que no dura."),
+        ],
+    ),
+    # ---------- 'Muy inapropiado para mujeres' ----------
+    _ql(
+        "futbol_prohibido", "lec_idea_central", "medio",
+        "¿Qué muestra el artículo al reconstruir la prohibición del fútbol femenino?",
+        "Cómo un argumento sobre la naturaleza sostuvo una decisión medio siglo",
+        "El texto señala que las dos prohibiciones, la inglesa y la brasileña, "
+        "se justificaron con el mismo tipo de argumento: no que jugaran mal ni "
+        "que nadie quisiera verlas, sino que el deporte era inadecuado «por "
+        "razones de salud».\n"
+        "Y explica la forma de ese argumento: en vez de sostener que algo es "
+        "indeseable, afirma que es imposible o dañino, porque «una preferencia "
+        "se discute y una ley natural no».\n"
+        "El cierre extrae la advertencia: en 1921 esa frase no le pareció "
+        "escandalosa a casi nadie, y lo incómodo es suponer que hoy no estamos "
+        "escribiendo alguna parecida.",
+        [
+            ("Que el fútbol femenino nunca despertó interés de público hasta los años setenta",
+             "El texto insiste en la fecha: la prohibición llegó justo después de llenar estadios."),
+            ("Que las diferencias actuales de recursos se explican por completo por esa medida",
+             "El texto advierte contra ese atajo: la prohibición explica el punto de partida, no el presente."),
+            ("Que la ignorancia médica de la época fue la única causa de aquellas decisiones",
+             "El texto desconfía de esa explicación fácil y muestra que el argumento se invocaba en una sola dirección."),
+        ],
+    ),
+    _ql(
+        "futbol_prohibido", "lec_aplicar", "dificil",
+        "Una federación no abre cierta categoría a un grupo porque sostiene que "
+        "«no está hecho para eso», y por eso no organiza torneos de prueba. "
+        "Según el texto, ¿qué problema tiene esa decisión?",
+        "Impide producir la evidencia que permitiría evaluar si es cierta",
+        "El texto llama a eso una asimetría: durante los cincuenta años de "
+        "prohibición «la prohibición no necesitó defenderse: bastaba con "
+        "existir».\n"
+        "Quien quisiera cambiarla tenía que probar algo y no podía probarlo, "
+        "porque para producir la evidencia habría que haber jugado los partidos "
+        "que estaban prohibidos.\n"
+        "Y generaliza el caso más allá del deporte: «cada vez que una regla "
+        "impide generar la información que permitiría evaluarla, esa regla "
+        "queda protegida de su propia revisión».",
+        [
+            ("Contradice las normas internacionales que rigen hoy a las federaciones deportivas",
+             "El texto no discute normas internacionales vigentes, sino la forma del argumento."),
+            ("Se apoya en estudios médicos que fueron correctos en su momento y hoy no lo son",
+             "El texto dice que aquellas afirmaciones no se apoyaban en evidencia alguna."),
+            ("Confunde una preferencia de la federación con una decisión de la autoridad pública",
+             "El problema que señala el texto es que la preferencia se presenta como ley natural, no como decisión ajena."),
+        ],
+    ),
+    # ---------- 'El barco' ----------
+    _ql(
+        "el_barco", "lec_idea_central", "medio",
+        "¿Qué desarrolla el relato a partir de la historia que cuenta la abuela?",
+        "El cambio en la manera en que Antonia escucha algo que no puede comprobar",
+        "El relato marca dos momentos: a los diecinueve años Antonia explicó las "
+        "luces «con esa claridad insoportable», y la abuela solo dijo «puede "
+        "ser».\n"
+        "A los veinticuatro «la escuchaba distinto», porque advierte en el "
+        "relato cosas que su explicación no explica: el bisabuelo que no volvió "
+        "a salir de noche, los veinte años de silencio, la voz que baja siempre "
+        "en la misma palabra.\n"
+        "El cierre confirma ese cambio sin resolver el misterio: Antonia se "
+        "sorprende pensando que si aparecían las luces no se lo iba a contar a "
+        "nadie.",
+        [
+            ("La comprobación científica de que las luces del canal eran organismos marinos",
+             "El relato ofrece esa explicación como algo que Antonia sabe, y muestra lo que deja fuera."),
+            ("El conflicto entre Antonia y su abuela por la explicación de aquella noche",
+             "No hay conflicto: la abuela escucha hasta el final, no se enoja y cambia de tema."),
+            ("El arrepentimiento de Antonia por haber estudiado biología en vez de quedarse",
+             "Antonia sigue trabajando en el fiordo y entregó su informe; nada indica arrepentimiento."),
+        ],
+    ),
+    _ql(
+        "el_barco", "lec_aplicar", "dificil",
+        "Un compañero de Antonia descarta entero el relato de un pescador "
+        "apenas oye la parte de las luces. Según el relato, ¿qué le objetaría "
+        "ella?",
+        "Que descartar todo por su parte menos verificable es un atajo",
+        "Antonia reconoce esa reacción porque la tuvo: en la universidad el "
+        "curso entero se reía y ella se reía también, y después caminaba hasta "
+        "el paradero incómoda.\n"
+        "El relato nombra la objeción: «Era que la risa le parecía un atajo: "
+        "descartar el relato completo por su parte menos verificable, y "
+        "quedarse tranquilo, y no preguntar nada más».\n"
+        "Y agrega el argumento que a ella la convence, porque viene de su "
+        "propio oficio: en el laboratorio eso mismo tiene un nombre feo cuando "
+        "se hace con un dato que no calza.",
+        [
+            ("Que el relato del pescador debería aceptarse mientras nadie pruebe lo contrario",
+             "Antonia no pide creer; el relato aclara que «no era que creyera»."),
+            ("Que la explicación por organismos luminosos ya fue refutada por su propio informe",
+             "Antonia conoce y sostiene esa explicación; lo que discute es qué deja afuera."),
+            ("Que ninguna observación hecha de noche puede servir como dato en un laboratorio",
+             "Ella misma sale a medir de madrugada, de modo que no descarta la observación nocturna."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Lectora - Idea central y aplicacion a un caso nuevo (tanda 6)
+# ---------------------------------------------------------------------------
+
+QUESTIONS_LECTORA += [
+    # ---------- 'El número que empezó siendo un espacio en blanco' ----------
+    _ql(
+        "historia_cero", "lec_idea_central", "medio",
+        "¿Qué sostiene el artículo al contar la historia del cero?",
+        "Que la dificultad no fue entenderlo, sino reemplazar algo que funcionaba",
+        "El cierre lo formula con todas sus letras: «la historia del cero dice "
+        "poco sobre el cero y bastante sobre cómo se adoptan las ideas».\n"
+        "La dificultad no estuvo en comprenderlo, porque «cualquier comerciante "
+        "florentino podía aprender a usar las cifras nuevas en una tarde, y "
+        "muchos lo hicieron».\n"
+        "Estuvo en tres cosas que el texto enumera y no ridiculiza: el sistema "
+        "anterior funcionaba, había gente cuyo oficio dependía de él y el "
+        "cambio traía un riesgo real que nadie había resuelto todavía.",
+        [
+            ("Que los cambistas de Florencia rechazaron el cero por motivos religiosos y místicos",
+             "El texto aclara que el argumento «no era místico ni religioso, como a veces se cuenta»: era operativo."),
+            ("Que el cero es una idea tan simple que se adoptó apenas llegó el sistema a Europa",
+             "El texto muestra lo contrario: los dos sistemas convivieron casi dos siglos."),
+            ("Que la numeración romana era mejor para calcular que la numeración posicional",
+             "El texto señala que con romanas hay que usar ábaco y que la ventaja de calcular sobre el papel inclinó la balanza."),
+        ],
+    ),
+    _ql(
+        "historia_cero", "lec_aplicar", "dificil",
+        "En una oficina se propone reemplazar por un sistema digital un "
+        "registro en papel que funciona, y varios se oponen. Según el "
+        "artículo, ¿qué explicaría mejor esa resistencia?",
+        "Que lo viejo funciona, hay oficios que dependen de él y el cambio trae riesgo",
+        "El artículo termina diciendo que esas tres cosas «siguen apareciendo "
+        "cada vez que algo nuevo pretende reemplazar a algo que anda».\n"
+        "Son exactamente las que operaron con el cero: la numeración romana "
+        "servía, el ábaco sostenía el oficio de un especialista y las cifras "
+        "nuevas se podían alterar con un trazo en una época sin auditorías.\n"
+        "El texto subraya además que «ninguna de esas tres cosas es una "
+        "tontería», de modo que la resistencia no se explica por ignorancia.",
+        [
+            ("Que quienes se oponen no alcanzan a entender cómo funciona la herramienta nueva",
+             "El texto descarta esa explicación: entender el sistema nuevo tomaba una tarde."),
+            ("Que la herramienta nueva no ofrece ninguna ventaja práctica sobre el registro anterior",
+             "En el caso del cero la ventaja era enorme, y aun así la adopción tardó."),
+            ("Que toda resistencia a una técnica nueva proviene de creencias sin base razonable",
+             "El texto insiste en que el riesgo de alterar las cifras era real y razonable."),
+        ],
+    ),
+    # ---------- 'La escritura no se inventó para escribir' ----------
+    _ql(
+        "origen_escritura", "lec_idea_central", "medio",
+        "¿Qué idea central desarrolla el artículo sobre el origen de la escritura?",
+        "Que nació de un procedimiento contable y no de un propósito de escribir",
+        "El texto opone desde el título la respuesta esperable —contar "
+        "historias, transmitir sabiduría— a la que dan las tablillas: la "
+        "escritura se inventó «para llevar la cuenta de cuánta cebada había en "
+        "un depósito».\n"
+        "El recorrido lo confirma: fichas de arcilla dentro de una bola "
+        "sellada, impresiones en la superficie y, por simplificación, una "
+        "tablilla con marcas.\n"
+        "De ahí la conclusión que el propio artículo subraya: nadie se propuso "
+        "inventarla, y un procedimiento contable se convirtió «sin que nadie lo "
+        "decidiera» en otra cosa más poderosa.",
+        [
+            ("Que fue inventada por un escriba mesopotámico para registrar poemas y oraciones",
+             "El texto dice que los documentos más antiguos son inventarios y que la literatura es muy posterior."),
+            ("Que las primeras escrituras anotaban sonidos y solo después pasaron a las cosas",
+             "El texto invierte ese orden: los signos más antiguos anotan cosas y cantidades."),
+            ("Que apareció una sola vez y desde Mesopotamia se difundió al resto del mundo",
+             "El texto afirma que se inventó de manera independiente al menos tres veces."),
+        ],
+    ),
+    _ql(
+        "origen_escritura", "lec_aplicar", "dificil",
+        "Alguien estudia este siglo dentro de cinco mil años y solo dispone de "
+        "registros de compras y de recorridos. Según el artículo, ¿qué límite "
+        "tendrá la imagen que se forme?",
+        "Verá lo que alguien tuvo motivos para anotar, no lo que fue importante",
+        "El artículo formula esa advertencia a propósito de Mesopotamia: «la "
+        "imagen que tenemos de esos siglos no es la imagen de lo que ocurrió: "
+        "es la imagen de lo que se registró».\n"
+        "Y aclara el criterio del sesgo: se registró «aquello que a alguien le "
+        "convenía verificar después», por eso sabemos cuánta cebada recibió un "
+        "trabajador de Uruk y no qué cantaba.\n"
+        "El cierre traslada el problema a nuestro siglo: habrá una cantidad "
+        "asombrosa de datos sobre lo que compramos y por dónde anduvimos, y las "
+        "mismas dificultades para saber de qué nos reíamos.",
+        [
+            ("Verá una imagen fiel de la época, porque el volumen de datos será enorme",
+             "El texto sostiene que el volumen no corrige el sesgo: sigue valiendo la misma advertencia."),
+            ("No podrá reconstruir nada, porque los soportes digitales no duran tanto tiempo",
+             "El texto supone justamente lo contrario: que esos datos estarán a mano."),
+            ("Verá sobre todo obras literarias, que son las que suelen conservarse mejor",
+             "El texto señala que lo conservado se sesga hacia lo administrativo, no hacia lo literario."),
+        ],
+    ),
+    # ---------- 'Lo falso viaja liviano' ----------
+    _ql(
+        "noticias_falsas", "lec_idea_central", "medio",
+        "¿Qué sostiene el artículo sobre la difusión de las noticias falsas?",
+        "Que las difunden sobre todo personas, atraídas por lo que parece novedoso",
+        "El estudio que el texto resume descartó la explicación más cómoda: al "
+        "sacar de la muestra las cuentas automatizadas la diferencia se "
+        "mantuvo, porque los bots empujaban lo verdadero y lo falso por igual.\n"
+        "Lo que quedó fueron «las personas, apretando el botón de compartir», "
+        "movidas por una propiedad medible: las historias falsas eran, en "
+        "promedio, más novedosas.\n"
+        "El artículo remata la idea diciendo que la maquinaria más eficiente "
+        "que encontró el estudio «es enteramente voluntaria, gratuita y de "
+        "buena fe».",
+        [
+            ("Que las cuentas automáticas son las responsables de casi toda su circulación",
+             "El estudio puso a prueba esa hipótesis y no resistió."),
+            ("Que la gente las comparte porque cree en ellas más que en las verdaderas",
+             "El texto precisa que el estudio midió difusión, no creencia, y que no hace falta creerlo para mandarlo."),
+            ("Que etiquetar las publicaciones falsas resolvió el problema en las plataformas",
+             "El texto describe un efecto lateral de esas etiquetas: la ausencia de etiqueta se lee como certificado."),
+        ],
+    ),
+    _ql(
+        "noticias_falsas", "lec_aplicar", "dificil",
+        "A alguien le llega un audio asombroso y siente que tiene que "
+        "reenviarlo de inmediato. Según el artículo, ¿qué debería hacer con esa "
+        "sensación?",
+        "Tomarla como motivo para revisar el mensaje antes de reenviarlo",
+        "El artículo convierte el hallazgo del estudio en una regla práctica: "
+        "si la novedad es lo que empuja a compartir, esa sensación de estar "
+        "frente a algo asombroso «es, estadísticamente, una señal de alarma y "
+        "no una credencial».\n"
+        "De ahí la fórmula que propone: cuanto más increíble parece, más "
+        "motivos hay para revisarlo antes.\n"
+        "Y la segunda pregunta casera apunta a lo mismo: si la respuesta "
+        "honesta a «por qué me dieron ganas de mandarlo» es «porque nadie lo "
+        "sabe todavía», conviene detenerse.",
+        [
+            ("Confiar en ella, porque lo sorprendente suele venir de una fuente directa",
+             "El texto sostiene lo contrario: la sorpresa es la marca del arranque de las cadenas más largas."),
+            ("Reenviarlo solo a un grupo familiar, donde la información circula sin riesgo",
+             "El texto advierte que el estudio no cubrió los grupos de mensajería, no que ahí no haya riesgo."),
+            ("Comprobar si la publicación original trae una etiqueta de verificación falsa",
+             "El texto explica que la mayoría de las publicaciones nunca alcanza a ser revisada."),
+        ],
+    ),
+    # ---------- 'Todos los mapas mienten' ----------
+    _ql(
+        "mapas_proyeccion", "lec_idea_central", "medio",
+        "¿Qué idea organiza el artículo sobre las proyecciones cartográficas?",
+        "Que toda proyección elige qué conserva, de modo que ninguna es la correcta",
+        "El punto de partida es geométrico: una superficie curva no se puede "
+        "desplegar sobre un plano sin deformarla, y eso «no es que todavía no "
+        "se haya inventado la técnica; es que no puede existir».\n"
+        "De ahí se sigue la idea que ordena el texto: toda proyección conserva "
+        "áreas, o ángulos, o distancias desde un punto, pero no todo a la vez.\n"
+        "Por eso el artículo concluye que «no existe la proyección correcta: "
+        "existen proyecciones adecuadas para una tarea determinada».",
+        [
+            ("Que la proyección de Gall-Peters es la única que representa el mundo sin errores",
+             "El texto dice que tampoco es neutra: al conservar las áreas estira las formas."),
+            ("Que Mercator diseñó su mapa para agrandar Europa frente al resto del mundo",
+             "El texto sostiene que se publicó en el siglo XVI para orientar barcos y que criticar un efecto no exige inventarle un motivo."),
+            ("Que las salas de clases deberían dejar de colgar cualquier tipo de planisferio",
+             "El texto no propone eso: propone cambiar la pregunta con que se evalúa un mapa."),
+        ],
+    ),
+    _ql(
+        "mapas_proyeccion", "lec_aplicar", "dificil",
+        "Un diario publica un gráfico que deja fuera varios datos para que se "
+        "vea con claridad una tendencia. Según el artículo, ¿qué pregunta "
+        "corresponde hacerle?",
+        "Qué eligió conservar quien lo hizo y qué tuvo que sacrificar",
+        "El párrafo final extiende el argumento más allá de los mapas: un "
+        "gráfico descarta información para hacer visible una tendencia, un "
+        "resumen deja afuera lo que no cabe y un texto ordena los hechos en una "
+        "secuencia que no traían.\n"
+        "En todos esos casos, dice el artículo, «la pregunta razonable es la "
+        "misma que frente a un planisferio».\n"
+        "Y esa pregunta ya había sido formulada antes: no «¿cuál dice la "
+        "verdad?», que está mal planteada, sino qué se conservó y qué se "
+        "sacrificó para lograrlo.",
+        [
+            ("Si el gráfico dice la verdad o si en cambio distorsiona los datos originales",
+             "El texto declara mal planteada justamente esa pregunta."),
+            ("Por qué no se publicaron todos los datos disponibles junto con el gráfico",
+             "Según el texto, descartar información es lo que hace todo gráfico, no una falta que subsanar."),
+            ("Cuál de las tendencias posibles es la que el diario prefería mostrar",
+             "El texto no supone una intención oculta; pregunta por lo que se conserva y lo que se pierde."),
+        ],
+    ),
+    # ---------- 'El azar no se ve como azar' ----------
+    _ql(
+        "azar_rachas", "lec_idea_central", "medio",
+        "¿Qué sostiene el artículo sobre nuestra manera de mirar el azar?",
+        "Que esperamos del azar una regularidad que el azar no tiene",
+        "El ejercicio inicial lo muestra: la secuencia inventada alterna "
+        "demasiado, porque cuatro caras seguidas «le parece poco creíble» a "
+        "quien la escribe, mientras la moneda produce rachas sin esfuerzo.\n"
+        "El texto explica la raíz del error: trasladamos a tramos cortos una "
+        "propiedad que solo rige a la larga, y esperamos que cada pedacito de "
+        "la secuencia se parezca al total.\n"
+        "Los demás casos repiten el patrón: la falacia del jugador, la lista "
+        "de reproducción, los grumos de puntos en un mapa y las muestras "
+        "pequeñas que aparecen en los extremos de los rankings.",
+        [
+            ("Que las rachas largas son señal de que un mecanismo fue manipulado",
+             "El texto muestra lo contrario: en veinte lanzamientos lo raro sería no ver ninguna racha."),
+            ("Que casi todo lo que parece un patrón termina siendo una casualidad",
+             "El texto advierte contra ese error contrario y recuerda que un patrón puede tener causa."),
+            ("Que las muestras pequeñas producen resultados más confiables que las grandes",
+             "El texto sostiene que cuanto más chica es la muestra, más extremos son sus resultados."),
+        ],
+    ),
+    _ql(
+        "azar_rachas", "lec_aplicar", "dificil",
+        "En un sector pequeño de una comuna se registran tres incendios en el "
+        "mismo mes. Según el artículo, ¿qué corresponde hacer?",
+        "Mirar el caso, porque puede ser ruido y puede tener una causa",
+        "El artículo plantea justamente esa dificultad: la vida está llena de "
+        "rachas que interpretamos, cada una «puede ser ruido» y cada una «puede "
+        "ser una señal», y el problema es que se ven igual.\n"
+        "Su ejemplo es casi el mismo: tres accidentes en la misma esquina "
+        "pueden ser coincidencia y también pueden ser un cruce mal diseñado.\n"
+        "Y advierte contra los dos atajos: «concluir “es azar” sin mirar es tan "
+        "perezoso como concluir “alguien lo hizo”».",
+        [
+            ("Descartarlo como casualidad, ya que el azar produce rachas de ese tipo",
+             "El texto llama a ese atajo el error contrario y lo considera igual de caro."),
+            ("Suponer que hubo intención, porque tres casos seguidos no son casualidad",
+             "El texto muestra que una racha así es perfectamente compatible con el azar."),
+            ("Esperar a que la serie sea más corta para que el patrón se note mejor",
+             "El texto explica que las series cortas son las que producen resultados más extremos."),
+        ],
+    ),
+    # ---------- 'El remedio que no era para eso' ----------
+    _ql(
+        "antibiotico_resfrio", "lec_idea_central", "medio",
+        "¿Qué sostiene el artículo sobre tomar antibióticos por un resfrío?",
+        "Que no actúan sobre un virus y gastan un recurso que es de todos",
+        "El texto parte de la distinción básica: los antibióticos actúan sobre "
+        "bacterias y el resfrío común lo producen virus, de modo que tomarlos "
+        "es «llevar la llave correcta a una puerta que no existe».\n"
+        "Después describe el costo en dos capas: los efectos adversos "
+        "individuales y, sobre todo, la resistencia bacteriana, con las cifras "
+        "del análisis de 2022.\n"
+        "Y lo pone en escala doméstica: quien se toma cuatro comprimidos "
+        "sobrantes «está gastando un poquito de un recurso común», el que va a "
+        "necesitar si alguna vez tiene una infección de verdad.",
+        [
+            ("Que los antibióticos son dañinos y conviene evitarlos en cualquier caso",
+             "El texto aclara que son uno de los inventos que más vidas han salvado."),
+            ("Que basta mirar el color del mucus para saber cuándo corresponde tomarlos",
+             "El texto desmonta esa creencia: el color viene de las células de defensa, no del germen."),
+            ("Que el problema en Chile sigue siendo la venta libre en las farmacias",
+             "El texto dice que está prohibida desde 1999 y que hoy la fuente principal son las sobras."),
+        ],
+    ),
+    _ql(
+        "antibiotico_resfrio", "lec_aplicar", "dificil",
+        "A una persona le indican siete días de antibiótico y al tercero ya se "
+        "siente bien. Según el artículo, ¿qué corresponde hacer?",
+        "Completar los siete días, porque cortar antes deja vivas a las más difíciles",
+        "El artículo lo incluye entre sus recomendaciones «aburridas y "
+        "caseras»: un antibiótico indicado se toma completo, «aunque uno se "
+        "sienta bien al tercer día».\n"
+        "La razón que da es la misma que explica la resistencia: cortar antes "
+        "deja vivas justo a las bacterias más difíciles, que son las que "
+        "sobreviven y se multiplican.\n"
+        "Por eso el texto agrega que no se guardan sobras: si sobraron, es que "
+        "algo se hizo distinto de lo indicado.",
+        [
+            ("Suspenderlo y guardar el resto por si aparece un cuadro parecido después",
+             "El texto lo desaconseja expresamente: no se guardan sobras ni se hereda una receta."),
+            ("Suspenderlo, porque sentirse bien muestra que la infección ya está resuelta",
+             "El texto explica que la mejoría no significa que las bacterias más difíciles hayan desaparecido."),
+            ("Consultar si conviene cambiar a otro antibiótico de menor potencia",
+             "El texto no plantea cambiar el fármaco, sino completar el tratamiento indicado."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Lectora - Idea central y aplicacion a un caso nuevo (tanda 7)
+# ---------------------------------------------------------------------------
+
+QUESTIONS_LECTORA += [
+    # ---------- 'Quince años sin llover como antes' ----------
+    _ql(
+        "megasequia", "lec_idea_central", "medio",
+        "¿Qué sostiene el artículo sobre la megasequía de la zona central?",
+        "Que es un déficit sostenido, con causas mixtas y un reparto desigual",
+        "El texto define primero el fenómeno: un déficit cercano al treinta por "
+        "ciento sostenido año tras año, «sin la alternancia de temporadas "
+        "buenas y malas que caracteriza a una sequía corriente».\n"
+        "Sobre las causas es igual de cuidadoso: al menos un cuarto del déficit "
+        "es atribuible al cambio climático de origen humano y el resto "
+        "corresponde a variabilidad que existe desde siempre.\n"
+        "Y agrega la dimensión que la palabra «sequía» esconde: las "
+        "consecuencias no se reparten parejo, porque cuando el agua escasea «el "
+        "reparto deja de ser un asunto técnico y pasa a ser una decisión».",
+        [
+            ("Que se explica por completo por el cambio climático de origen humano",
+             "El texto advierte que la cifra dice «al menos un cuarto es atribuible», no que fuera causada por él."),
+            ("Que un año de lluvias abundantes bastaría para dejarla definitivamente atrás",
+             "El texto descarta ese relato: un año lluvioso alivia embalses, pero no recarga napas que tardan décadas."),
+            ("Que su causa principal son los cultivos de exportación de alto consumo",
+             "El texto reconoce que esos cultivos pesan, y niega que un déficit del treinta por ciento «lo produzca nadie regando»."),
+        ],
+    ),
+    _ql(
+        "megasequia", "lec_aplicar", "dificil",
+        "Un servicio público prepara su plan de agua con medidas de emergencia "
+        "que se activan y luego se levantan. Según el artículo, ¿qué objeción "
+        "cabe hacerle?",
+        "Que el déficit dejó de ser pasajero y sería el nuevo punto de partida",
+        "El artículo plantea exactamente ese problema como «una pregunta "
+        "incómoda que no es científica sino de organización»: qué se hace "
+        "cuando lo que era excepcional deja de serlo.\n"
+        "Y señala el supuesto que falla: buena parte de la institucionalidad "
+        "del agua «fue diseñada suponiendo que las sequías son episodios "
+        "pasajeros», con medidas que se activan y luego se levantan.\n"
+        "Si el clima que viene se parece más a esta década que a la anterior, "
+        "concluye, lo que hoy llamamos emergencia es en realidad el nuevo punto "
+        "de partida.",
+        [
+            ("Que las medidas de emergencia deberían reemplazarse por pronósticos del año siguiente",
+             "El texto advierte que nada de lo anterior autoriza a pronosticar el año que viene."),
+            ("Que ningún plan tiene sentido mientras no se conozca la causa exacta del déficit",
+             "El texto sostiene que la evidencia disponible ya permite decidir sobre el reparto."),
+            ("Que la lluvia volverá a su nivel histórico y no hará falta ningún plan de este tipo",
+             "El texto dice que la tendencia de fondo apunta hacia menos agua."),
+        ],
+    ),
+    # ---------- 'Lo que se sabe y lo que no de un terremoto' ----------
+    _ql(
+        "terremoto_saber", "lec_idea_central", "medio",
+        "¿Qué idea organiza el artículo sobre los terremotos en Chile?",
+        "Que no se pueden predecir, pero sí prepararse, y ahí está la diferencia",
+        "El texto responde primero la pregunta que todos hacen: no existe hoy "
+        "método capaz de anunciar fecha, lugar y magnitud con la precisión que "
+        "haría falta para evacuar una ciudad.\n"
+        "Enseguida enumera lo que sí puede hacerse: estimar dónde el peligro es "
+        "mayor, fijar normas de construcción y contar con alerta temprana de "
+        "unos segundos.\n"
+        "Y formula la distinción que ordena todo el artículo: «Predecir supone "
+        "saber cuándo; prepararse supone aceptar que no se sabrá y actuar "
+        "igual».",
+        [
+            ("Que la magnitud de un sismo determina por sí sola cuánta gente va a morir",
+             "El texto dice que un sismo igual puede dejar cientos o decenas de miles de muertos según cómo se construyó y se evacúe."),
+            ("Que el sistema de alarma de maremotos alcanza a avisar a toda la costa chilena",
+             "El texto señala su límite: no alcanza a avisar a quien está a cincuenta kilómetros del epicentro."),
+            ("Que existen indicios confiables para anticipar la fecha del próximo terremoto",
+             "El texto afirma que ninguno de esos indicios ha resistido la prueba de comprobarse por adelantado."),
+        ],
+    ),
+    _ql(
+        "terremoto_saber", "lec_aplicar", "dificil",
+        "Una familia veranea en una caleta y siente un sismo tan largo que "
+        "cuesta mantenerse en pie. Nadie ha dado ninguna alerta. Según el "
+        "artículo, ¿qué corresponde hacer?",
+        "Subir de inmediato a una zona segura, sin esperar ningún aviso",
+        "El artículo explica por qué el aviso no va a llegar a tiempo: a esa "
+        "distancia del epicentro «no hay tiempo para que una autoridad evalúe, "
+        "decida y comunique».\n"
+        "Por eso la instrucción oficial que cita no depende de ninguna alerta: "
+        "si el sismo es tan fuerte que cuesta mantenerse en pie, o si dura "
+        "mucho, hay que subir a una zona segura de inmediato.\n"
+        "La frase con que cierra ese párrafo resume la regla: «El propio "
+        "terremoto es la alarma».",
+        [
+            ("Esperar la evaluación de la autoridad antes de moverse de donde están",
+             "El texto explica que a esa distancia no alcanza a haber evaluación ni comunicación."),
+            ("Revisar si el sismo superó la magnitud a partir de la cual se evacúa",
+             "La instrucción del texto no usa magnitudes, sino la fuerza y la duración percibidas."),
+            ("Alejarse solo si el mar se retira, que es la señal de que viene la ola",
+             "El texto no plantea esa condición: la señal es el propio sismo."),
+        ],
+    ),
+    # ---------- 'Por qué el mar de Chile es frío' ----------
+    _ql(
+        "mar_frio", "lec_idea_central", "medio",
+        "¿Qué explica el artículo sobre el mar frío de la costa chilena?",
+        "Que el frío sube desde el fondo por acción del viento, no llega del sur",
+        "El artículo corrige la explicación escolar: «el agua más fría que se "
+        "encuentra frente a la costa no llega desde el sur, sino desde abajo».\n"
+        "El mecanismo que describe es la surgencia: el viento del sur desplaza "
+        "la capa superficial hacia mar adentro y ese lugar lo ocupa agua "
+        "profunda, mucho más fría y cargada de nutrientes.\n"
+        "De ahí se desprenden la riqueza pesquera, el clima costero sin lluvia "
+        "y la lección final sobre qué hace buena a una explicación.",
+        [
+            ("Que la corriente de Humboldt trae agua antártica y esa es toda la explicación",
+             "El texto dice que esa explicación «no es falsa, pero se queda corta»."),
+            ("Que el sol calienta menos en el Pacífico que en la costa atlántica del continente",
+             "El texto descarta esa idea: el sol llega igual a ambos lados del continente."),
+            ("Que El Niño es la causa principal del frío del agua en la costa central",
+             "El Niño aparece en el texto como el fenómeno que interrumpe el frío, no como su causa."),
+        ],
+    ),
+    _ql(
+        "mar_frio", "lec_aplicar", "dificil",
+        "Durante una semana de verano el viento del sur amaina frente a la "
+        "costa central. Según el artículo, ¿qué debería ocurrir con la "
+        "temperatura del agua?",
+        "Debería entibiarse en pocos días, porque cesa el ascenso de agua fría",
+        "El cierre del artículo usa justamente ese caso para mostrar qué "
+        "distingue a una buena explicación: «si el frío depende del viento, "
+        "entonces cuando el viento del sur amaine el agua debería entibiarse en "
+        "pocos días».\n"
+        "Y agrega que «eso es exactamente lo que ocurre», de modo que la "
+        "predicción se cumple y respalda la explicación por surgencia.\n"
+        "La explicación escolar, en cambio, no permitiría anticipar nada, "
+        "porque una corriente que viene del sur no se detiene cuando amaina el "
+        "viento.",
+        [
+            ("Debería enfriarse, porque sin viento el agua superficial deja de mezclarse",
+             "Según el texto, sin viento no sube agua profunda y por lo tanto el agua se entibia."),
+            ("No debería cambiar, ya que el frío depende de la corriente que viene del sur",
+             "Esa es la explicación que el texto considera incompleta y que no predice nada."),
+            ("Debería llenarse de nutrientes y provocar una floración de fitoplancton",
+             "Los nutrientes llegan con la surgencia; si el viento amaina, la surgencia se debilita."),
+        ],
+    ),
+    # ---------- 'Para qué sirve olvidar' ----------
+    _ql(
+        "olvido_memoria", "lec_idea_central", "medio",
+        "¿Qué sostiene el artículo sobre el olvido?",
+        "Que no es una falla de la memoria, sino una de sus operaciones",
+        "El texto lo anuncia en el primer párrafo: tratamos el olvido como una "
+        "falla del sistema, y la investigación de las últimas décadas apunta a "
+        "que «no es el defecto de la memoria, sino una de sus operaciones».\n"
+        "Después da las razones: una memoria perfecta sería inútil, porque "
+        "olvidar los detalles y quedarse con el patrón es lo que permite "
+        "reconocer que un perro nunca visto es un perro.\n"
+        "Y añade la razón de higiene: retener lo que no volverá a servir "
+        "interferiría con lo que sí importa, porque «cuando se buscan las "
+        "llaves, los trescientos lugares donde estuvieron antes son ruido».",
+        [
+            ("Que puede evitarse casi por completo si se estudia con suficiente intensidad",
+             "El texto dice que lo decisivo no es la intensidad del esfuerzo inicial, sino volver sobre lo aprendido."),
+            ("Que las enfermedades de la memoria son una versión exagerada de ese proceso",
+             "El texto rechaza esa conclusión: podar un árbol y talarlo no se diferencian en grado."),
+            ("Que releer un texto varias veces es la mejor manera de fijar lo aprendido",
+             "El experimento que cita muestra que quienes releen se sienten más seguros y recuerdan peor."),
+        ],
+    ),
+    _ql(
+        "olvido_memoria", "lec_aplicar", "dificil",
+        "Alguien terminó hoy de estudiar una materia y dispone de tres ratos "
+        "cortos antes de una prueba que será dentro de un mes. Según el "
+        "artículo, ¿cuándo conviene usarlos?",
+        "Al día siguiente, a la semana y al mes, mientras el recuerdo es frágil",
+        "El artículo deriva esa recomendación de la forma de la curva: si el "
+        "recuerdo se debilita rápido al comienzo y se estabiliza después, «el "
+        "momento de repasar no es la víspera de la prueba, sino los días "
+        "inmediatamente posteriores al primer estudio».\n"
+        "El reparto que propone es exactamente ese: un repaso corto al día "
+        "siguiente, otro a la semana y otro al mes.\n"
+        "Y explica por qué rinde más que la misma cantidad de horas la noche "
+        "anterior: «cada recuperación exitosa vuelve a estabilizar el "
+        "recuerdo».",
+        [
+            ("Los tres la víspera de la prueba, para llegar con la materia más fresca",
+             "El texto identifica ese hábito como el más extendido y el menos eficaz."),
+            ("Repartidos en la última semana, cuando la curva del olvido ya se aplanó",
+             "El texto indica repasar mientras la curva todavía está cayendo, no después."),
+            ("En los tres días previos, releyendo el texto completo en cada rato",
+             "El texto muestra que releer produce seguridad y no aprendizaje duradero."),
+        ],
+    ),
+    # ---------- 'El estilo que nadie encontró' ----------
+    _ql(
+        "estilos_aprendizaje", "lec_idea_central", "medio",
+        "¿Qué sostiene el artículo sobre los estilos de aprendizaje?",
+        "Que la preferencia existe, pero enseñar según ella no mejora el aprendizaje",
+        "El texto separa desde el comienzo dos afirmaciones: que las personas "
+        "tienen preferencias sobre cómo recibir información, «bien documentado "
+        "y nadie lo discute», y la hipótesis de correspondencia.\n"
+        "Esa segunda afirmación es la que está en cuestión, porque en los "
+        "estudios con el diseño adecuado «el cruce no aparece»: lo que predice "
+        "el resultado es la calidad del material y la dificultad de la tarea.\n"
+        "El cierre precisa el alcance: no se demostró que los estilos no "
+        "existan, sino que la afirmación puesta a prueba «no se sostuvo en los "
+        "estudios que la midieron bien».",
+        [
+            ("Que las preferencias de los estudiantes son un invento sin ningún respaldo",
+             "El texto dice justamente que las preferencias están bien documentadas."),
+            ("Que el formato del material da lo mismo, porque todos aprenden de igual modo",
+             "El texto afirma que el formato importa mucho, pero lo determina el contenido y no la persona."),
+            ("Que la hipótesis quedó demostrada en los estudios diseñados para medirla",
+             "El texto señala que la mayoría de esos estudios no halló el efecto."),
+        ],
+    ),
+    _ql(
+        "estilos_aprendizaje", "lec_aplicar", "dificil",
+        "Un liceo decide reasignar las horas que hoy dedica a clasificar cursos "
+        "por estilo de aprendizaje. Según el artículo, ¿en qué debería usarlas?",
+        "En prácticas con respaldo, como distribuir el estudio y ponerse a prueba",
+        "El artículo enumera esas prácticas: distribuir el estudio en el tiempo "
+        "en lugar de acumularlo la víspera, ponerse a prueba tratando de "
+        "recordar sin mirar el cuaderno, explicar con palabras propias y "
+        "alternar problemas de distinto tipo.\n"
+        "Y advierte que el costo de la creencia contraria no es cero: se "
+        "invierten horas y presupuesto en clasificar cursos y, sobre todo, «se "
+        "desplaza el tiempo que podría dedicarse a prácticas que sí tienen "
+        "respaldo».\n"
+        "Agrega una advertencia útil: ninguna de esas prácticas es popular, "
+        "porque mientras se hacen se sienten más difíciles.",
+        [
+            ("En preparar tres versiones del mismo material, una para cada estilo declarado",
+             "El texto menciona ese trabajo entre los costos de creer en la hipótesis."),
+            ("En mejorar la ficha con que se clasifica a los estudiantes por su preferencia",
+             "El texto señala que la ficha «se responde sola» y que el problema no es el instrumento."),
+            ("En evaluar la comodidad que cada estudiante reporta frente a cada formato",
+             "El texto indica que esa comodidad existe y no se tradujo en más aprendizaje."),
+        ],
+    ),
+    # ---------- 'La canasta que no es de nadie' ----------
+    _ql(
+        "ipc_canasta", "lec_idea_central", "medio",
+        "¿Qué explica el artículo sobre el índice de precios al consumidor?",
+        "Que mide una canasta promedio, que no es la de ningún hogar real",
+        "El texto parte del desacuerdo mensual y lo resuelve mostrando qué mide "
+        "el índice: no «los precios», sino cuánto cuesta comprar mes a mes "
+        "exactamente la misma canasta, con cada producto ponderado según su "
+        "peso en el gasto.\n"
+        "Esa canasta «representa el gasto de los hogares chilenos en promedio, "
+        "y ese promedio no es el gasto de ninguna familia real».\n"
+        "De ahí la conclusión: el índice mide bien lo que se propuso medir, y "
+        "la distancia entre esa canasta y la de uno explica por sí sola la "
+        "mayor parte del desacuerdo.",
+        [
+            ("Que el índice está mal calculado y por eso no coincide con lo que uno gasta",
+             "El texto sostiene que mide bien lo que se propuso medir; el desacuerdo viene de otra parte."),
+            ("Que mide el costo de vida de cada familia y cuánto alcanza un sueldo",
+             "El texto enumera esas dos cosas entre las que el índice no pretende ser."),
+            ("Que la percepción de la gente es más exacta que el número que se publica",
+             "El texto explica que la inflación sentida se arma con los precios que uno mira, no con los que paga."),
+        ],
+    ),
+    _ql(
+        "ipc_canasta", "lec_aplicar", "dificil",
+        "Una persona quiere saber cuánto subieron durante el año sus propios "
+        "gastos. Según el artículo, ¿qué debería hacer?",
+        "Mirar su propio gasto, porque el índice describe otra canasta",
+        "El artículo responde esa pregunta en el cierre: «quien quiera saber "
+        "cuánto subieron sus precios tiene que mirar su propio gasto».\n"
+        "La razón es la que desarrolla todo el texto: la canasta del índice "
+        "corresponde a un promedio nacional que no coincide con la de ningún "
+        "hogar en particular.\n"
+        "Y aclara qué sí entrega el índice a cambio, que es «algo que su gasto "
+        "no puede decirle: qué está pasando en el país donde compra».",
+        [
+            ("Usar la variación del índice, que mide exactamente eso para cada hogar",
+             "El texto dice que el índice no mide el costo de vida de un hogar en particular."),
+            ("Comparar el precio del pan y de la bencina, que son los que más se notan",
+             "El texto advierte que los precios que uno mira seguido distorsionan la inflación sentida."),
+            ("Esperar la próxima actualización de la canasta, prevista cada cinco años",
+             "Actualizar la canasta cambia el promedio nacional, no informa sobre el gasto propio."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Lectora - Idea central y aplicacion a un caso nuevo (tanda 8)
+# ---------------------------------------------------------------------------
+
+QUESTIONS_LECTORA += [
+    # ---------- 'La piscina' ----------
+    _ql(
+        "piscina_salitrera", "lec_idea_central", "medio",
+        "¿Qué asunto desarrolla el relato en torno al trabajo de Camila?",
+        "La distancia entre la historia que cuenta y la que su familia calló",
+        "Camila repite seiscientas veces un relato ordenado, «con las pausas en "
+        "el lugar correcto», y responde con una frase ensayada cuando le "
+        "preguntan por su familia.\n"
+        "Lo que no cabe en el recorrido es que su abuela nació en esa calle y "
+        "nunca habló de la oficina: el día que la llevaron se quedó en el auto "
+        "mirando el camino por donde habían llegado.\n"
+        "El relato deja ambas cosas juntas y sin resolver: Camila cuida el "
+        "lugar y también lo entrega todos días, «a las once y a las tres», y no "
+        "sabe cuál de las dos cosas pesa más.",
+        [
+            ("El deterioro material de la oficina salitrera y la falta de recursos para cuidarla",
+             "El relato menciona el estado del lugar como escenario, no como el asunto que desarrolla."),
+            ("El desinterés de los turistas por la historia del lugar que están visitando",
+             "Los visitantes preguntan, se emocionan y sacan fotos; el relato no los presenta como indiferentes."),
+            ("El deseo de Camila de dejar su trabajo de guía y volver a estudiar",
+             "Nada en el relato indica que Camila quiera dejar el trabajo: le gustan los diez minutos junto a la piscina."),
+        ],
+    ),
+    _ql(
+        "piscina_salitrera", "lec_aplicar", "dificil",
+        "Una guía de otro museo de sitio siente que su relato está tan ensayado "
+        "que ya no significa nada. Según el relato, ¿qué dilema reconocería "
+        "Camila en eso?",
+        "Que cuidar el lugar y entregarlo cada día son la misma tarea",
+        "Camila piensa «que hay algo raro en su oficio»: cada mañana ordena una "
+        "historia que no le contaron, la cuenta con gracia y recibe propinas.\n"
+        "Reconoce el valor de lo que hace: si nadie lo mostrara, «esto sería un "
+        "montón de fierros y en diez años no quedaría ni el trampolín».\n"
+        "Y reconoce también lo otro: lo entrega, todos los días, ordenado y con "
+        "las pausas en su lugar. La pregunta que nunca termina es cuál de las "
+        "dos cosas pesa más.",
+        [
+            ("Que un relato ensayado siempre resulta menos exacto que uno improvisado",
+             "El relato subraya que Camila lo dice bien; el problema no es la exactitud."),
+            ("Que el trabajo de guía debería reservarse a quienes vivieron esa historia",
+             "Camila desciende de la oficina y su abuela nunca le contó nada: el relato no plantea esa exigencia."),
+            ("Que hablar del pasado es la única forma de impedir que un lugar se pierda",
+             "Esa es solo una mitad de lo que Camila piensa, y el relato la contrapesa con la otra."),
+        ],
+    ),
+    # ---------- 'La cuenta de don Nibaldo' ----------
+    _ql(
+        "cuenta_nibaldo", "lec_idea_central", "medio",
+        "¿Qué asunto plantea el relato con el hallazgo del cuaderno?",
+        "La dificultad de sostener dos ideas ciertas sobre la misma persona",
+        "El narrador lo dice sin adornos: don Nibaldo «no dejó de ser el viejo "
+        "agarrado de la calle Los Naranjos», con el mes completo cobrado y los "
+        "huevos anotados.\n"
+        "El cuaderno «no borra nada de eso. Solamente lo pone al lado de otra "
+        "cosa», y eso lo obliga a tener dos ideas al mismo tiempo sobre la "
+        "misma persona.\n"
+        "Y agrega la dificultad que el relato no resuelve: puesto que una "
+        "cuenta que cuadra no distingue de dónde salió cada peso, quizá no hubo "
+        "generosidad sino un sistema, o quizá para él eran la misma cosa.",
+        [
+            ("La injusticia de haber juzgado mal a un vecino que en realidad era generoso",
+             "El relato se niega a esa corrección simple: el vecino siguió siendo el que cobró el mes completo."),
+            ("El arrepentimiento del barrio entero después de conocer lo que hacía el vecino",
+             "El narrador aclara que no pasó nada de eso y que el barrio nunca se enteró."),
+            ("La conveniencia de anotar cada gasto para no perder el control del dinero",
+             "El cuaderno funciona en el relato como hallazgo moral, no como consejo de administración."),
+        ],
+    ),
+    _ql(
+        "cuenta_nibaldo", "lec_aplicar", "dificil",
+        "En un curso circula una fama fija sobre un compañero y aparece un dato "
+        "que no calza con ella. Según el relato, ¿qué reacción sería la que "
+        "propone?",
+        "Poner el dato al lado de la fama, sin que ninguno borre al otro",
+        "Es exactamente lo que el narrador hace con el cuaderno: no lo usa para "
+        "cancelar la fama anterior, porque «el cuaderno no borra nada de eso».\n"
+        "Lo que hace es ponerlo «al lado de otra cosa», y admitir que eso "
+        "obliga a sostener dos ideas al mismo tiempo, «una cosa bastante más "
+        "difícil de lo que parece».\n"
+        "Por eso nueve años después no corrige a nadie: en parte por lata y en "
+        "parte porque no está seguro de qué habría que corregir.",
+        [
+            ("Reemplazar la fama anterior por la imagen contraria que sugiere el dato nuevo",
+             "El relato rechaza ese cambio de bando: la fama seguía siendo cierta."),
+            ("Descartar el dato, porque una fama sostenida por todos suele estar bien fundada",
+             "El relato muestra que la fama sin matices era justamente lo que impedía ver el resto."),
+            ("Contárselo a todo el curso de inmediato para que cambien de opinión",
+             "La madre decide lo contrario, y el narrador nunca resuelve si tenía razón."),
+        ],
+    ),
+    # ---------- 'El libro que no devolviste' ----------
+    _ql(
+        "libro_no_devuelto", "lec_idea_central", "medio",
+        "¿Qué desarrolla el relato a partir del libro que el personaje nunca devolvió?",
+        "El peso de una deuda pequeña que resulta ser más antigua que él",
+        "El libro viaja «a cuatro mudanzas, a dos ciudades y a una casa que ya "
+        "no es tuya», sin que el personaje lo abra nunca, y lo carga como una "
+        "deuda con nombre y apellido.\n"
+        "El hallazgo del nombre tachado de 1991 muestra que antes de ser suya "
+        "la deuda «fue de otro», y que Sofía prestaba algo que tampoco había "
+        "devuelto.\n"
+        "El relato no lo absuelve: «eso no te libera de nada», pero cambia el "
+        "tamaño de la cosa, porque lo que llevaba en el bolso «era una "
+        "costumbre antigua que alguien te pasó junto con el libro».",
+        [
+            ("El reencuentro del personaje con Sofía después de veinticuatro años",
+             "El reencuentro no ocurre: el personaje sabe que podría buscarla y decide no hacerlo."),
+            ("El cambio urbano de un pueblo y la desaparición de su canal antiguo",
+             "El pueblo cambiado es el escenario que enmarca el regreso, no el asunto del relato."),
+            ("La decisión del personaje de devolver por fin el libro a su dueña",
+             "El final muestra lo contrario: guarda el libro «como se guarda lo que uno ya decidió seguir cargando»."),
+        ],
+    ),
+    _ql(
+        "libro_no_devuelto", "lec_aplicar", "dificil",
+        "Alguien descubre que una costumbre que creía suya viene de dos "
+        "generaciones atrás. Según el relato, ¿qué cambia ese descubrimiento?",
+        "Cambia el tamaño del asunto, no lo libera de su propia parte",
+        "El personaje formula esa distinción al ver el nombre tachado: «La "
+        "cadena es más larga que tú. Eso no te libera de nada».\n"
+        "Lo que sí ocurre es un cambio de escala: «cambia el tamaño de la "
+        "cosa», porque lo que cargaba dejó de ser una falta personal y pasó a "
+        "ser una costumbre heredada.\n"
+        "Y el relato mantiene la parte que sigue siendo suya: sabe que no va a "
+        "buscarla, no sabe exactamente por qué, y esa es la parte que le "
+        "gustaría poder explicarle a alguien.",
+        [
+            ("Le quita toda responsabilidad, porque no fue él quien inició la costumbre",
+             "El relato dice expresamente que el descubrimiento no lo libera de nada."),
+            ("Agrava la falta, porque haberla heredado la vuelve más difícil de romper",
+             "El relato no aumenta el reproche: reduce la escala del asunto."),
+            ("No cambia nada, ya que el origen de una costumbre es siempre irrelevante",
+             "El personaje señala que sí cambia el tamaño de lo que venía cargando."),
+        ],
+    ),
+    # ---------- 'La carta que no se abre' ----------
+    _ql(
+        "carta_cerrada", "lec_idea_central", "medio",
+        "¿Qué asunto desarrolla el relato de la carta que nadie abrió?",
+        "Lo que una familia elige conservar al preferir la pregunta a la respuesta",
+        "La bisabuela lo dijo primero: si la abre tiene que hacer algo con lo "
+        "que diga, y «cerrada, todavía puedo elegir».\n"
+        "La narradora repite el gesto a los quince años, cuando entiende que "
+        "abrirla convertiría la historia contada «en un dato», con toda "
+        "probabilidad decepcionante.\n"
+        "Y el relato lo generaliza al final: cualquiera sea la explicación de "
+        "la letra, durante noventa años «cuatro mujeres tuvieron a mano una "
+        "respuesta y prefirieron seguir teniendo una pregunta».",
+        [
+            ("El descubrimiento de que la bisabuela había escrito ella misma esa carta",
+             "El relato ofrece esa posibilidad como una de tres explicaciones razonables, sin decidir entre ellas."),
+            ("El esfuerzo de la narradora por reconstruir la historia del hombre que se fue",
+             "La narradora no investiga al remitente: lo que hace es imaginarle contenidos distintos a cada edad."),
+            ("La disputa entre cuatro generaciones sobre quién tenía derecho a abrirla",
+             "No hay disputa: la madre lo llama «un acuerdo», no un secreto."),
+        ],
+    ),
+    _ql(
+        "carta_cerrada", "lec_aplicar", "dificil",
+        "Alguien puede averiguar en un minuto el desenlace de una historia que "
+        "en su familia se cuenta desde hace años. Según el relato, ¿qué razón "
+        "habría para no hacerlo?",
+        "Que la respuesta convertiría el relato en un dato, probablemente menor",
+        "La narradora describe esa razón cuando se detiene con la tetera "
+        "hirviendo: no fue por respeto, sino porque entendió que la historia "
+        "«se iba a convertir en otra cosa —en un dato».\n"
+        "Y agrega el pronóstico que la disuade: ese dato iba a ser, «con toda "
+        "probabilidad, decepcionante».\n"
+        "Es la misma razón que la bisabuela había dado en la versión de la "
+        "cocina: mientras el sobre siga cerrado, todavía se puede elegir qué "
+        "hacer con lo que diga.",
+        [
+            ("Que averiguarlo sería desobedecer a quienes decidieron no averiguarlo antes",
+             "El relato aclara que ahora el sobre está en manos de alguien que puede abrirlo «sin desobedecer a nadie»."),
+            ("Que ninguna fuente disponible hoy podría confirmar lo que ocurrió entonces",
+             "La respuesta está a mano dentro del sobre; el problema no es la falta de información."),
+            ("Que el desenlace real sería más doloroso que cualquier versión imaginada",
+             "Lo que la narradora teme no es el dolor, sino que la carta no diga nada."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Lectora - Idea central y aplicacion a un caso nuevo (tanda 9)
+# ---------------------------------------------------------------------------
+
+QUESTIONS_LECTORA += [
+    # ---------- 'La versión de mi hermano' ----------
+    _ql(
+        "version_hermano", "lec_idea_central", "medio",
+        "¿Qué asunto desarrolla el relato al confrontar las dos versiones del rescate?",
+        "Que contar mucho una historia la va acomodando a quien la cuenta",
+        "El narrador reconoce que fue puliendo el relato con los años: le sacó "
+        "lo que sobraba, le agregó el detalle del olor y aprendió en qué parte "
+        "hacer la pausa.\n"
+        "De ahí sale su conclusión: es más probable que la versión falsa sea la "
+        "suya, no porque el hermano recuerde mejor, sino porque él «contó esa "
+        "historia cien veces y él no la contó nunca».\n"
+        "Y explica el mecanismo: cada vez que uno cuenta algo lo vuelve a "
+        "armar, y «lo que uno arma cien veces termina pareciéndose más a lo que "
+        "uno quiere que a lo que pasó».",
+        [
+            ("Que el hermano mayor mintió deliberadamente para quedarse con el mérito",
+             "El relato no acusa al hermano: el narrador termina creyendo que él tiene razón."),
+            ("Que la memoria de la madre permitió establecer cuál versión era la cierta",
+             "La madre «confirmó las puntas y no confirmó nada más»; la conversación no sirvió de nada."),
+            ("Que ninguna historia familiar puede reconstruirse sin documentos escritos",
+             "El relato no plantea un problema de pruebas documentales, sino de cómo se rearma un recuerdo."),
+        ],
+    ),
+    _ql(
+        "version_hermano", "lec_aplicar", "dificil",
+        "Alguien nota que una anécdota que repite hace años se fue puliendo y "
+        "que ahora lo deja siempre bien parado. Según el relato, ¿qué sospecha "
+        "corresponde?",
+        "Que la repetición la fue armando hacia lo que uno quiere recordar",
+        "El narrador llega a esa sospecha sobre su propio relato: cada vez que "
+        "uno cuenta algo lo vuelve a armar, y lo armado cien veces se parece "
+        "más a lo que uno quiere que a lo ocurrido.\n"
+        "El detalle que lo delata es justamente el que lo favorece: haber dicho "
+        "«nos van a retar» es la frase del que tiene miedo, y «nadie inventa un "
+        "recuerdo en el que queda mal».\n"
+        "Pero esa frase cumple otra función, que él mismo nombra: hace que "
+        "entrar igual sea un acto de valentía. «Puse el miedo ahí para poder "
+        "vencerlo».",
+        [
+            ("Que el recuerdo original desapareció y ya no queda nada que examinar",
+             "El narrador encuentra su recuerdo nítido; el problema es que también lo está el otro."),
+            ("Que si el recuerdo se siente nítido, entonces es prueba de que ocurrió",
+             "El relato muestra que las dos imágenes estaban «igual de firmes» y una la fabricó él."),
+            ("Que basta preguntarle a un testigo para saber qué versión es la buena",
+             "El narrador lo intenta con su madre y no obtiene nada concluyente."),
+        ],
+    ),
+    # ---------- 'El pasaje' ----------
+    _ql(
+        "el_pasaje", "lec_idea_central", "medio",
+        "¿Qué asunto desarrolla el relato del viejo que compra un pasaje cada viernes?",
+        "Lo que un registro no alcanza a mostrar de quienes figuran en él",
+        "El viejo compra cada semana un pasaje que no usa, para que el asiento "
+        "cuente en la ocupación del recorrido del que depende la visita anual "
+        "de su hija.\n"
+        "La narradora reconoce el límite del sistema: «en la pantalla del "
+        "sistema no hay ninguna columna donde figure por qué alguien compró».\n"
+        "Y el cierre lo confirma desde su propio oficio: ahora anota la venta, "
+        "entrega el vuelto y mira el andén, porque «en la pantalla del sistema "
+        "esa venta se ve exactamente igual que todas las demás».",
+        [
+            ("El esfuerzo de una empresa por mantener un recorrido que daba pérdidas",
+             "Doña Marta atribuye la decisión a conveniencias de la empresa, y el relato no la desarrolla."),
+            ("La reconciliación de un padre con su hija después de años sin verse",
+             "La hija venía una vez al año; lo que estaba en juego era que siguiera pudiendo venir."),
+            ("El deseo de la narradora de irse a estudiar a Chillán algún día",
+             "Ese hilo acompaña el relato como espejo del viejo, pero no es el asunto que desarrolla."),
+        ],
+    ),
+    _ql(
+        "el_pasaje", "lec_aplicar", "dificil",
+        "Alguien revisa la planilla de ocupación de una ruta y solo ve columnas "
+        "con números. Según el relato, ¿qué se le escapa de lo que ahí figura?",
+        "Por qué alguien compró: la planilla no tiene esa columna",
+        "La narradora formula esa carencia al final, cuando admite que doña "
+        "Marta seguramente tiene razón sobre los motivos de la empresa: «en la "
+        "pantalla del sistema no hay ninguna columna donde figure por qué "
+        "alguien compró».\n"
+        "Aun así, agrega el dato que la planilla registró sin entenderlo: "
+        "durante todos esos viernes la ocupación promedio incluyó, cada semana, "
+        "«un asiento que nadie ocupó».\n"
+        "Por eso el relato termina en el gesto de anotar la venta sin "
+        "preguntar: el registro es exacto y no dice nada de lo que importa.",
+        [
+            ("El número exacto de pasajes vendidos cada viernes durante el invierno",
+             "Ese dato es justamente el que la planilla sí registra."),
+            ("La rentabilidad total del recorrido, que la empresa calcula por otra vía",
+             "El relato no plantea que falte información económica, sino el motivo de cada compra."),
+            ("La frecuencia con que el bus salió con menos de cuatro pasajeros",
+             "También es un dato de ocupación, del tipo que el sistema sí puede mostrar."),
+        ],
+    ),
+    # ---------- 'Al revés' ----------
+    _ql(
+        "al_reves", "lec_idea_central", "medio",
+        "¿Qué asunto desarrolla el relato al contar la amistad desde el final hacia el principio?",
+        "Cómo una amistad se deshace por lo que nadie llega a decir",
+        "El quiebre no tiene gritos ni traiciones: la conversación dura veinte "
+        "minutos, nadie levanta la voz y los dos creen que van a hablar la "
+        "próxima semana.\n"
+        "El relato señala lo que faltó: ninguno dice «la única frase que habría "
+        "servido, que es que se echan de menos», porque parecía de otra "
+        "conversación, y «efectivamente era otra conversación. Era la que había "
+        "que tener».\n"
+        "Lo mismo ocurre antes con el préstamo sin papeles, que permite que "
+        "cada uno recuerde una cifra distinta «y que ninguno de los dos esté "
+        "mintiendo».",
+        [
+            ("Cómo un préstamo mal documentado arruinó un taller que funcionaba bien",
+             "El préstamo es una pieza de la secuencia, y el relato aclara que el problema «no es la plata»."),
+            ("Cómo dos socios se enfrentaron abiertamente hasta terminar peleados",
+             "El relato subraya que no hubo enfrentamiento: lo más raro fue que nadie levantara la voz."),
+            ("Cómo se recompone una amistad después de un encuentro casual",
+             "En el supermercado Rubén decide no saludar, y nada se recompone."),
+        ],
+    ),
+    # ---------- 'A la deriva' ----------
+    _ql(
+        "a_la_deriva", "lec_idea_central", "medio",
+        "¿Qué desarrolla el relato desde la mordedura hasta el final?",
+        "El avance del veneno mientras el hombre cree que va mejorando",
+        "El relato sigue el envenenamiento paso a paso: el dolor que sube a la "
+        "pantorrilla, la sed que no se calma con caña, la pierna convertida en "
+        "«un bloque deforme y durísimo».\n"
+        "Cuando el hombre ya va en la canoa, siente un bienestar que interpreta "
+        "al revés: «El veneno comenzaba a irse, no había duda», y calcula "
+        "llegar en tres horas a Tacurú-Pucú.\n"
+        "El lector entiende lo contrario, porque enseguida vienen el frío hasta "
+        "el pecho, la respiración que falla y las últimas cuentas confusas "
+        "sobre un jueves.",
+        [
+            ("La disputa del hombre con su compadre Alves, que se niega a ayudarlo",
+             "Alves nunca responde: en el silencio de la selva no se oyó un solo rumor."),
+            ("El viaje de un hombre que consigue llegar a tiempo a Tacurú-Pucú",
+             "El hombre nunca llega: la canoa sigue a la deriva y él deja de respirar."),
+            ("La lucha de la mujer por conseguir el remedio que su marido pedía",
+             "La mujer aparece solo en la escena de la caña, y lo que él pedía no era un remedio."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Lectora - Forma, juicio y funcion (tanda 10)
+# ---------------------------------------------------------------------------
+
+QUESTIONS_LECTORA += [
+    # ---------- lec_forma ----------
+    _ql(
+        "dominio_publico", "lec_forma", "medio",
+        "¿Qué recurso emplea el emisor al definir el derecho de autor como «un trato, con dos partes y con fecha de término»?",
+        "Una fórmula breve que condensa el argumento del párrafo anterior",
+        "El párrafo había explicado el intercambio con detalle: al autor se le "
+        "entrega un monopolio temporal para que escribir sea sostenible, y a "
+        "cambio la sociedad recibe después una obra de uso libre.\n"
+        "La frase final no agrega información nueva: comprime esa explicación "
+        "en tres rasgos —dos partes, un acuerdo y un plazo— y la deja lista "
+        "para usarse en el resto del artículo.\n"
+        "De hecho, el texto vuelve sobre ella cuando discute el largo del "
+        "plazo, porque solo se puede discutir cuánto dura algo que ya se "
+        "entendió como un trato.",
+        [
+            ("Una definición legal tomada de la ley chilena sobre propiedad intelectual",
+             "La ley aparece antes, con los plazos concretos; esta frase es una formulación del emisor."),
+            ("Una ironía que pone en duda la existencia misma de ese derecho",
+             "El emisor sostiene el derecho de autor y explica para qué se creó, sin ironizar sobre él."),
+            ("Una concesión a quienes defienden plazos de protección más largos",
+             "Esa concesión aparece después, en el párrafo sobre las regalías y la armonización internacional."),
+        ],
+    ),
+    _ql(
+        "historia_cero", "lec_forma", "medio",
+        "¿Qué aporta el título «El número que empezó siendo un espacio en blanco»?",
+        "Anuncia el recorrido: de hueco en la escritura a número con el que se opera",
+        "El artículo distingue desde el comienzo dos cosas que suelen ir "
+        "juntas: el cero como marcador de posición, «una solución de "
+        "escritura», y el cero como número, que es «una idea, y bastante "
+        "incómoda».\n"
+        "El título nombra el punto de partida de ese recorrido, el espacio en "
+        "blanco que los babilonios y los mayas resolvieron con un signo.\n"
+        "Y anticipa el punto de llegada, porque un espacio en blanco que "
+        "termina siendo un número es exactamente lo que ocurre cuando "
+        "Brahmagupta escribe reglas para operar con él.",
+        [
+            ("Anticipa que el cero fue prohibido durante siglos por los gremios europeos",
+             "La prohibición de 1299 alcanzó a todas las cifras nuevas y aparece más adelante, no en el título."),
+            ("Sugiere que el cero no llegó a tener nunca un uso realmente matemático",
+             "El artículo cuenta justamente cómo entró a la aritmética «como un número más»."),
+            ("Advierte que la división por cero quedó declarada indefinida por convención",
+             "Ese es un episodio dentro del texto, no lo que el título anuncia."),
+        ],
+    ),
+    _ql(
+        "origen_escritura", "lec_forma", "dificil",
+        "¿Qué efecto produce que el artículo diga «No son poemas ni oraciones ni leyes» antes de decir qué contienen las tablillas?",
+        "Descarta primero lo esperable para que el dato real resulte más notorio",
+        "El artículo había abierto con la respuesta que casi todos darían: "
+        "contar historias, transmitir sabiduría, dejar constancia de grandes "
+        "hechos.\n"
+        "La enumeración negativa retoma esas expectativas una por una y las "
+        "elimina, de modo que la palabra que viene después —«Son listas»— cae "
+        "sobre un lugar ya despejado.\n"
+        "El efecto es el mismo que busca el título: el contraste entre lo "
+        "elevado que se espera y lo administrativo que muestran los "
+        "documentos.",
+        [
+            ("Enumera los géneros que sí aparecen en las tablillas más antiguas conocidas",
+             "La enumeración dice justamente lo que no aparece en ellas."),
+            ("Sugiere que esos textos existieron y que se perdieron por el soporte usado",
+             "El artículo afirma que la literatura conocida es muy posterior, no que se haya perdido."),
+            ("Anticipa el sesgo de conservación que el artículo discutirá al final",
+             "Ese sesgo se plantea después y se refiere a qué se registraba, no a este contraste inicial."),
+        ],
+    ),
+    _ql(
+        "futbol_prohibido", "lec_forma", "medio",
+        "¿Qué efecto produce que el artículo cite textualmente la frase «muy inapropiado para mujeres»?",
+        "Deja que el argumento de la época se muestre solo, sin comentario",
+        "El emisor anuncia esa intención al presentar la cita: la declaración "
+        "«es breve y vale la pena leerla completa, porque ahorra "
+        "explicaciones».\n"
+        "Al reproducirla, el artículo no necesita calificarla: la frase queda a "
+        "la vista tal como fue escrita por una institución seria, con abogados "
+        "y actas.\n"
+        "Y eso prepara el cierre, donde el emisor observa que cien años después "
+        "esa frase «se lee sola», mientras en 1921 no le pareció escandalosa a "
+        "casi nadie.",
+        [
+            ("Demuestra que la federación contaba entonces con estudios médicos de respaldo",
+             "El artículo dice lo contrario: aquellas afirmaciones no se apoyaban en evidencia alguna."),
+            ("Introduce una opinión del emisor sobre lo que hoy pensamos del deporte",
+             "La frase citada es de la federación inglesa de 1921, no del emisor."),
+            ("Sirve de ejemplo de un lenguaje que en 1921 ya resultaba escandaloso",
+             "El artículo subraya que entonces era «la manera corriente de decir las cosas»."),
+        ],
+    ),
+    _ql(
+        "megasequia", "lec_forma", "medio",
+        "¿Qué aporta al artículo el título «Quince años sin llover como antes»?",
+        "Fija la duración, que es lo que distingue a este déficit de una sequía común",
+        "El primer párrafo explica que lo distintivo no es la falta de lluvia "
+        "de un año, sino que el déficit «se ha sostenido año tras año, sin la "
+        "alternancia de temporadas buenas y malas».\n"
+        "El título traduce eso a una cifra de tiempo, que es la razón por la "
+        "que el fenómeno recibió un nombre propio: megasequía.\n"
+        "Y prepara la pregunta de organización que viene después: qué se hace "
+        "cuando lo que era excepcional deja de serlo.",
+        [
+            ("Anuncia que el artículo atribuirá el fenómeno al cambio climático de origen humano",
+             "El artículo precisa que al menos un cuarto del déficit es atribuible a esa causa, no todo."),
+            ("Sugiere que la lluvia desapareció por completo en la zona central del país",
+             "El déficit ronda el treinta por ciento y ha habido inviernos generosos dentro del periodo."),
+            ("Advierte que el registro instrumental chileno no alcanza a cubrir ese periodo",
+             "El texto usa ese registro para afirmar que el fenómeno no tiene comparación en él."),
+        ],
+    ),
+    # ---------- lec_juicio ----------
+    _ql(
+        "dominio_publico", "lec_juicio", "dificil",
+        "¿Cuál de estas afirmaciones del artículo es una valoración del emisor y no un dato verificable?",
+        "Que la libertad de copiar no produce lectores",
+        "Las otras tres afirmaciones se pueden contrastar con la ley y con la "
+        "descripción del régimen: los plazos, la situación de las obras "
+        "huérfanas y lo que permite el patrimonio cultural común.\n"
+        "Esta, en cambio, es una conclusión que el emisor extrae al final, "
+        "cuando observa que miles de obras entran cada año al dominio público "
+        "«y siguen tan olvidadas como el día anterior».\n"
+        "El propio texto la presenta como una pregunta que la ley no resuelve, "
+        "es decir, como algo que va más allá de lo que la norma establece.",
+        [
+            ("Que en Chile la protección dura toda la vida del autor y setenta años más",
+             "Es el plazo que fija la ley sobre propiedad intelectual, según el propio texto."),
+            ("Que las obras huérfanas siguen protegidas aunque su titular no se ubique",
+             "Es la definición que el artículo entrega de esas obras."),
+            ("Que una obra en dominio público puede reeditarse sin pedir autorización",
+             "Es el efecto legal que el artículo describe en su primer párrafo."),
+        ],
+    ),
+    _ql(
+        "noticias_falsas", "lec_juicio", "dificil",
+        "Un lector concluye que la gente cree más en las historias falsas que en las verdaderas. ¿Qué respondería el artículo?",
+        "Que el estudio midió cuánto se comparte algo, no cuánto se cree",
+        "El artículo dedica un párrafo a lo que el estudio no muestra, "
+        "«porque leerlo de más es otra manera de difundir algo falso».\n"
+        "Ahí precisa el alcance del hallazgo: «midió difusión, no creencia: "
+        "mostró que lo falso se comparte más, no que la gente lo crea más».\n"
+        "Es coherente con el resto del texto, que observa que «no hace falta "
+        "creerlo del todo para mandarlo» y que basta con que valga la pena "
+        "contarlo.",
+        [
+            ("Que esa conclusión vale solo para las noticias de tipo político",
+             "La diferencia era mayor en política, pero apareció en todas las categorías."),
+            ("Que el estudio no distinguió entre historias verdaderas y falsas",
+             "El estudio comparó unas con otras según lo dictaminado por organizaciones de verificación."),
+            ("Que la creencia se midió y resultó igual en ambos tipos de historia",
+             "El texto dice que la creencia no se midió."),
+        ],
+    ),
+    _ql(
+        "mapas_proyeccion", "lec_juicio", "dificil",
+        "Un lector afirma que un planisferio con el sur arriba está equivocado. ¿Qué respondería el artículo?",
+        "Que es la misma imagen girada y que el arriba no se deduce de nada",
+        "El artículo dedica un párrafo a esa decisión, que llama «todavía más "
+        "invisible que la proyección»: que el norte ocupe la parte superior de "
+        "la hoja «no se deduce de nada».\n"
+        "Como respaldo menciona que hubo mapas medievales orientados hacia el "
+        "este y mapas árabes orientados hacia el sur.\n"
+        "Y describe con precisión lo que ocurre con el planisferio dado vuelta: "
+        "produce «una sensación de error que no corresponde a ningún error. Es "
+        "la misma imagen, girada».",
+        [
+            ("Que ese mapa sacrifica las áreas para poder conservar las formas reales",
+             "Girar un mapa no cambia lo que su proyección conserva o sacrifica."),
+            ("Que la orientación al norte se justifica por la posición del eje terrestre",
+             "El texto afirma que en el espacio no hay arriba ni abajo."),
+            ("Que solo las proyecciones de compromiso admiten girarse de esa manera",
+             "La orientación es independiente de la proyección elegida."),
+        ],
+    ),
+    _ql(
+        "perros_calle", "lec_juicio", "dificil",
+        "¿Cuál de estas afirmaciones del artículo es una interpretación del emisor y no un dato?",
+        "Que el lenguaje usado en este tema hace daño",
+        "Las otras tres se pueden verificar en la ley o en la descripción de "
+        "las medidas: qué obliga la Ley 21.020, quién debe aplicarla y qué "
+        "características tiene la esterilización masiva.\n"
+        "Esta, en cambio, es la lectura que el emisor propone en el cierre: "
+        "hablar de «perros callejeros» pondría el problema del lado del animal, "
+        "«como si fuera una categoría natural».\n"
+        "El propio texto la presenta como una valoración cuando dice que la "
+        "frase correcta «es más larga y bastante menos cómoda».",
+        [
+            ("Que la Ley 21.020 obliga a identificar a los animales con un dispositivo",
+             "Es una obligación legal que el artículo describe."),
+            ("Que la aplicación de esa ley quedó en manos de los municipios",
+             "Es un dato sobre cómo se distribuyó la competencia."),
+            ("Que la esterilización masiva es cara y sus efectos tardan años",
+             "El artículo lo presenta como dos problemas prácticos comprobables de la medida."),
+        ],
+    ),
+    _ql(
+        "mar_frio", "lec_juicio", "dificil",
+        "Un lector concluye que cada mala temporada de pesca se explica por El Niño. ¿Qué respondería el artículo?",
+        "Que la sobreexplotación o un cambio de regulación dan el mismo resultado",
+        "El artículo advierte expresamente contra ese exceso: «conviene, eso "
+        "sí, no explicarlo todo con El Niño».\n"
+        "Y enumera otras causas capaces de producir el mismo efecto en las "
+        "cifras: la sobreexplotación de un banco, un cambio en la regulación o "
+        "una migración local.\n"
+        "La advertencia es del mismo tipo que la del cierre: una explicación "
+        "sirve cuando permite anticipar qué observar, no cuando absorbe "
+        "cualquier resultado.",
+        [
+            ("Que El Niño no afecta a la pesca, sino solamente a la agricultura de secano",
+             "El artículo describe capturas que se desploman durante El Niño."),
+            ("Que las malas temporadas dependen únicamente de la intensidad del viento sur",
+             "El viento explica la surgencia, y el texto enumera además causas que no son climáticas."),
+            ("Que no existe manera de saber qué causó una caída en las capturas",
+             "El texto nombra causas concretas y distinguibles entre sí."),
+        ],
+    ),
+    # ---------- lec_funcion ----------
+    _ql(
+        "historia_cero", "lec_funcion", "medio",
+        "¿Qué función cumple en el artículo la mención al *Liber Abaci*?",
+        "Explica cómo la notación llegó a quienes llevaban libros de cuentas",
+        "El artículo venía siguiendo el viaje de la notación desde la India "
+        "hacia el mundo islámico y de ahí a Europa.\n"
+        "El libro de 1202 es la pieza que explica su difusión europea: "
+        "«explicaba con ejemplos comerciales cómo calcular con esas nueve "
+        "cifras y el cero».\n"
+        "Y el dato sobre su autor refuerza el punto que ordena todo el texto: "
+        "era un comerciante y escribió el manual «para gente que llevaba libros "
+        "de cuentas, no para matemáticos».",
+        [
+            ("Demuestra que el sistema posicional fue inventado en Europa en el siglo XIII",
+             "El artículo sitúa su desarrollo en la India y su transmisión por el mundo islámico."),
+            ("Muestra que los matemáticos europeos se opusieron a la numeración nueva",
+             "La resistencia que describe el texto vino de un gremio de cambistas, por motivos operativos."),
+            ("Justifica que el gremio de Florencia prohibiera esas cifras en 1299",
+             "La prohibición se explica en el texto por la facilidad para alterar las cifras, no por ese libro."),
+        ],
+    ),
+    _ql(
+        "futbol_prohibido", "lec_funcion", "medio",
+        "¿Qué función cumple en el artículo el caso brasileño de 1941?",
+        "Muestra que la misma clase de argumento operó en otro país y por otra vía",
+        "El artículo lo introduce como un episodio paralelo: «Brasil hizo algo "
+        "parecido veinte años más tarde y por otra vía», mediante un decreto "
+        "ley que ni siquiera nombraba al fútbol.\n"
+        "Su utilidad aparece en el párrafo siguiente, cuando el emisor observa "
+        "que «las dos decisiones se justificaron con el mismo tipo de "
+        "argumento», y ese es el aspecto que le interesa.\n"
+        "Al repetirse en dos países y con instrumentos distintos, el argumento "
+        "deja de parecer una rareza inglesa y pasa a ser una forma de razonar "
+        "reconocible.",
+        [
+            ("Demuestra que la federación inglesa copió su decisión de la norma brasileña",
+             "La decisión inglesa es de 1921 y la brasileña de 1941: el orden lo impide."),
+            ("Prueba que la prohibición inglesa se mantuvo hasta mediados de los setenta",
+             "La inglesa se levantó en 1971; la restricción brasileña duró hasta mediados de esa década."),
+            ("Explica por qué el fútbol femenino no tuvo público durante esas décadas",
+             "El artículo insiste en que el público existía: cincuenta y tres mil personas en 1920."),
+        ],
+    ),
+    _ql(
+        "megasequia", "lec_funcion", "dificil",
+        "¿Qué función cumple el párrafo final, que empieza diciendo que nada autoriza a pronosticar el año que viene?",
+        "Acota el alcance de lo dicho y separa lo cierto de lo que no se sabe",
+        "Después de un artículo entero sobre una tendencia sostenida, el cierre "
+        "impide que se lea como un pronóstico: «la variabilidad sigue "
+        "existiendo y habrá inviernos generosos; ya los ha habido dentro de "
+        "este mismo periodo».\n"
+        "Enseguida enumera lo que sí puede afirmarse: que la tendencia de fondo "
+        "apunta hacia menos agua y que una parte de ella es de origen humano.\n"
+        "Y termina devolviendo el asunto a donde el artículo lo había puesto: "
+        "el resto de la tendencia no depende de nosotros, «pero el reparto sí».",
+        [
+            ("Introduce un pronóstico de precipitaciones para las temporadas siguientes",
+             "El párrafo dice expresamente que nada de lo anterior autoriza a pronosticar."),
+            ("Contradice lo afirmado antes sobre la tendencia de fondo hacia menos agua",
+             "La reafirma: lo que acota es la posibilidad de anticipar un año en particular."),
+            ("Resume las tres definiciones de sequía que el artículo había distinguido",
+             "Esa distinción se hace al comienzo y no reaparece en el cierre."),
+        ],
+    ),
+    _ql(
+        "ipc_canasta", "lec_funcion", "medio",
+        "¿Qué función cumple en el artículo el ejemplo del pan y los pasajes de avión?",
+        "Muestra que el índice es un promedio ponderado y no de porcentajes",
+        "El artículo venía explicando que los productos no entran todos por "
+        "igual, sino «según cuánto representa cada uno dentro del gasto de los "
+        "hogares».\n"
+        "El ejemplo pone esa idea a prueba con dos variaciones opuestas: si el "
+        "pan sube diez por ciento y los pasajes bajan diez, el efecto no se "
+        "cancela, porque las familias gastan mucho más en pan.\n"
+        "Y de ahí el emisor extrae la formulación que le interesa dejar: «un "
+        "índice no es un promedio de porcentajes: es un promedio ponderado».",
+        [
+            ("Demuestra que el precio del pan sube más rápido que el de los pasajes",
+             "Las cifras del ejemplo son supuestas y sirven para explicar la ponderación."),
+            ("Explica por qué la canasta se actualiza solamente cada cinco años",
+             "La actualización se explica antes, a propósito de la Encuesta de Presupuestos Familiares."),
+            ("Ilustra el ajuste por calidad que aplican los organismos de estadística",
+             "Ese ajuste se discute en otro párrafo, con el ejemplo del teléfono."),
+        ],
     ),
 ]
