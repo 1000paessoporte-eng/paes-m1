@@ -11,6 +11,7 @@ from sqlalchemy.orm import Session
 from paes_api.core.config import get_settings
 from paes_api.core.email import CorreoNoEnviado, send_email
 from paes_api.core.security import hash_password, verify_password
+from paes_api.modules.correos.service import enviar_bienvenida
 from paes_api.modules.users.models import LoginEvent, PasswordResetToken, User
 from paes_api.modules.users.schemas import RegisterIn, UpdateMeIn
 
@@ -61,6 +62,10 @@ def register_user(db: Session, payload: RegisterIn) -> User | None:
     db.add(user)
     db.commit()
     db.refresh(user)
+    # Después del commit y nunca antes: la cuenta ya existe, así que si el
+    # proveedor de correo está caído la persona igual queda registrada y
+    # adentro. `enviar_bienvenida` no lanza; el fallo queda en el log.
+    enviar_bienvenida(user)
     return user
 
 
@@ -101,6 +106,11 @@ def login_with_google(db: Session, credential: str, client_id: str) -> User:
     picture = claims.get("picture")
 
     user = db.execute(select(User).where(User.google_sub == sub)).scalar_one_or_none()
+    #: Si esta llamada creó la cuenta o solo la reconoció. Enlazar un Google a
+    #: una cuenta que ya existía NO es una cuenta nueva: a esa persona ya se le
+    #: dio la bienvenida cuando se registró con su correo, y repetirla sería
+    #: escribirle para celebrar algo que hizo hace meses.
+    cuenta_nueva = False
     if user is None:
         # Mismo correo registrado antes con contraseña: se enlaza la cuenta en
         # lugar de crear una duplicada, así conserva su historial de ensayos.
@@ -110,10 +120,13 @@ def login_with_google(db: Session, credential: str, client_id: str) -> User:
         else:
             user = User(email=email, name=name, google_sub=sub, hashed_password=None)
             db.add(user)
+            cuenta_nueva = True
 
     user.avatar_url = picture
     db.commit()
     db.refresh(user)
+    if cuenta_nueva:
+        enviar_bienvenida(user)
     return user
 
 
