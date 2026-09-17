@@ -74349,23 +74349,39 @@ LESSONS: dict[str, dict] = {
             "lo que sostiene la convivencia."
         ),
         "theory": (
-            "**Los derechos humanos son universales, inalienables e "
-            "indivisibles.** Universales porque los tiene toda persona por serlo; "
-            "inalienables porque no se pueden ceder ni quitar; indivisibles "
-            "porque no se pueden respetar unos y desconocer otros.\n\n"
-            "**El Estado no los concede: los reconoce.** No nacen de una ley que "
-            "los otorga, así que tampoco desaparecen si una ley los ignora. Esa "
-            "distinción aparece una y otra vez en las preguntas.\n\n"
-            "**Se suelen agrupar en generaciones.** Los civiles y políticos "
-            "(vida, libertad, voto), los económicos, sociales y culturales "
-            "(educación, salud, trabajo) y los colectivos (medio ambiente sano, "
-            "desarrollo). La agrupación es didáctica: ninguno vale menos que "
-            "otro. Los de segunda generación se realizan de forma progresiva, "
-            "porque dependen de recursos.\n\n"
-            "**A cada derecho corresponde un deber.** El derecho de uno se "
-            "sostiene en la obligación de los demás y del Estado de respetarlo. "
-            "La libertad de expresión convive con el deber de no calumniar, y "
-            "por eso casi ningún derecho es absoluto."
+            "**Los derechos humanos son universales, inalienables e indivisibles.** "
+            "Universales porque los tiene toda persona por serlo; inalienables porque "
+            "no se pueden ceder ni quitar; indivisibles porque no se pueden respetar "
+            "unos y desconocer otros. Se suman dos rasgos: son **interdependientes** "
+            "—el ejercicio de uno depende de los otros— e **imprescriptibles**: no "
+            "caducan con el tiempo.\\n\\n"
+            "**El Estado no los concede: los reconoce.** No nacen de una ley que los "
+            "otorga, así que tampoco desaparecen si una ley los ignora. Esa "
+            "distinción aparece una y otra vez en las preguntas.\\n\\n"
+            "**Se suelen agrupar en generaciones.**\\n\\n"
+            "| Generación | Qué incluye | Qué exige del Estado |\\n"
+            "|---|---|---|\\n"
+            "| Primera: civiles y políticos | vida, libertad, voto, debido proceso | "
+            "sobre todo abstenerse de vulnerarlos |\\n"
+            "| Segunda: económicos, sociales y culturales | educación, salud, "
+            "trabajo, vivienda | prestaciones y recursos, de forma progresiva |\\n"
+            "| Tercera: colectivos | medio ambiente sano, desarrollo, paz | "
+            "coordinación con otros Estados |\\n\\n"
+            "La agrupación es didáctica: ninguno vale menos que otro, y el orden es "
+            "histórico, no jerárquico.\\n\\n"
+            "**Las tres obligaciones del Estado**: respetar (no vulnerar), proteger "
+            "(impedir que terceros vulneren) y garantizar (crear las condiciones para "
+            "ejercerlos). La segunda es la que suele olvidarse: un Estado también "
+            "responde cuando no impide el abuso de un particular.\\n\\n"
+            "**A cada derecho corresponde un deber.** El derecho de uno se sostiene "
+            "en la obligación de los demás y del Estado de respetarlo. La libertad de "
+            "expresión convive con el deber de no calumniar, y por eso casi ningún "
+            "derecho es absoluto: cuando dos chocan, se ponderan según el caso.\\n\\n"
+            "**Cómo se hacen exigibles.** Además de las constituciones nacionales, "
+            "existen tratados que los Estados ratifican y sistemas regionales de "
+            "protección —en América, la Comisión y la Corte Interamericana de "
+            "Derechos Humanos—, ante los cuales una persona puede reclamar cuando ya "
+            "agotó la vía interna de su país."
         ),
         "example_statement": (
             "Una persona publica en redes sociales acusaciones falsas contra un "
@@ -74387,6 +74403,62 @@ LESSONS: dict[str, dict] = {
                 "porque": "No se trata de que un derecho \"gane\" siempre, sino de resolver el conflicto concreto atendiendo al daño causado y a la falsedad de lo publicado.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un municipio prohíbe toda manifestación en la plaza principal "
+                    "argumentando que molesta al comercio. ¿Qué derechos están en juego y "
+                    "cómo se analiza el caso?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico los derechos en tensión: la libertad de reunión y de "
+                            "expresión de quienes se manifiestan, y el derecho a desarrollar una "
+                            "actividad económica de los comerciantes."
+                        ),
+                        "porque": (
+                            "Los casos difíciles casi nunca son «un derecho contra ninguno». "
+                            "Reconocer el choque es el primer paso y es lo que la pregunta evalúa."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Recuerdo que ningún derecho es absoluto, pero que una restricción debe "
+                            "ser establecida por ley, perseguir un fin legítimo y ser proporcionada."
+                        ),
+                        "porque": (
+                            "Esos son los criterios con que se evalúa una limitación. Sin ellos, "
+                            "cualquier molestia bastaría para suprimir un derecho, que es justamente "
+                            "lo que no puede ocurrir."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Evalúo la medida: prohibir TODA manifestación en el lugar central no "
+                            "restringe el derecho, lo anula en la práctica, y por eso es "
+                            "desproporcionada."
+                        ),
+                        "porque": (
+                            "Una prohibición total no es una regulación. Medidas como exigir aviso "
+                            "previo, fijar horarios o resguardar accesos cumplirían el mismo fin "
+                            "afectando mucho menos el derecho."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que el Estado debe armonizar ambos derechos y no sacrificar uno "
+                            "completo, y que la decisión municipal es revisable ante los tribunales."
+                        ),
+                        "porque": (
+                            "La revisabilidad es la otra mitad de la respuesta: los derechos valen en "
+                            "la medida en que exista dónde reclamarlos cuando una autoridad los "
+                            "desconoce."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Tratar los derechos como permisos ilimitados: \"tengo derecho, "
             "entonces puedo\". Todos los derechos conviven con los de los demás, "
@@ -74401,23 +74473,42 @@ LESSONS: dict[str, dict] = {
             "problema es leerlos con cuidado, no recordar datos."
         ),
         "theory": (
-            "**Lee primero los ejes, la leyenda y las unidades.** Un gráfico mal "
-            "leído se responde con seguridad y se responde mal. Antes de mirar "
-            "la curva, fíjate qué mide cada eje y en qué unidad.\n\n"
+            "**Lee primero el título, los ejes, la leyenda y las unidades.** Un "
+            "gráfico mal leído se responde con seguridad y se responde mal. Antes de "
+            "mirar la curva, fíjate qué mide cada eje, en qué unidad y qué período "
+            "cubre.\\n\\n"
             "**Porcentaje y cantidad no son lo mismo.** Un grupo puede bajar su "
             "porcentaje mientras crece en número, si el total creció más. Muchas "
-            "alternativas incorrectas viven exactamente en esa confusión.\n\n"
-            "**Puntos porcentuales no son porcentaje.** Pasar de 20% a 30% es un "
-            "alza de diez PUNTOS porcentuales, pero de un 50%. Si la pregunta "
-            "dice «puntos», resta; si dice «en qué porcentaje», divide.\n\n"
-            "**En una pirámide de población, la forma es el mensaje.** Base "
-            "ancha significa población joven y alta natalidad; base angosta y "
-            "cima ancha, envejecimiento. Comparar dos pirámides del mismo país "
-            "es comparar dos momentos de su historia demográfica.\n\n"
+            "alternativas incorrectas viven exactamente en esa confusión.\\n\\n"
+            "**Puntos porcentuales no son porcentaje.** Pasar de $20\\%$ a $30\\%$ es "
+            "un alza de diez PUNTOS porcentuales, pero de un $50\\%$. Si la pregunta "
+            "dice «puntos», resta; si dice «en qué porcentaje varió», divide por el "
+            "valor inicial.\\n\\n"
+            "| Representación | Qué muestra bien | Qué se pregunta de ella |\\n"
+            "|---|---|---|\\n"
+            "| Gráfico de líneas | la evolución en el tiempo | tendencias, quiebres, "
+            "ritmos |\\n"
+            "| Barras | comparación entre categorías | cuál es mayor, cuánto más |\\n"
+            "| Circular | la composición de un total | qué parte pesa más |\\n"
+            "| Pirámide de población | la estructura por edad y sexo | "
+            "envejecimiento, natalidad |\\n"
+            "| Mapa temático | la distribución en el espacio | dónde se concentra |\\n"
+            "| Línea de tiempo | el orden y la simultaneidad | qué vino antes, qué "
+            "coincidió |\\n\\n"
+            "**En una pirámide de población, la forma es el mensaje.** Base ancha "
+            "significa población joven y alta natalidad; base angosta y cima ancha, "
+            "envejecimiento. Comparar dos pirámides del mismo país es comparar dos "
+            "momentos de su historia demográfica.\\n\\n"
             "**La escala puede exagerar o esconder.** Dos gráficos de los mismos "
-            "datos dan impresiones distintas si el eje vertical no parte de cero "
-            "o si cambia el rango. Cuando dos fuentes muestran la misma variable "
-            "y se ven distintas, mira la escala antes que los datos."
+            "datos dan impresiones distintas si el eje vertical no parte de cero o si "
+            "cambia el rango. Cuando dos fuentes muestran la misma variable y se ven "
+            "distintas, mira la escala antes que los datos.\\n\\n"
+            "**Un mapa también es una interpretación.** Qué se colorea, con qué "
+            "cortes y en qué proyección son decisiones: cambiar los rangos de una "
+            "leyenda puede hacer que un mismo dato se vea homogéneo o polarizado.\\n\\n"
+            "**Una tendencia no es una predicción.** Que una curva venga subiendo no "
+            "obliga a que siga subiendo, y extrapolar más allá del período "
+            "representado es el error que la prueba suele poner como alternativa."
         ),
         "example_statement": (
             "Un gráfico muestra la alfabetización de las mujeres rurales en "
@@ -74438,6 +74529,56 @@ LESSONS: dict[str, dict] = {
                 "porque": "Ese número también es correcto, pero responde otra pregunta. Está puesto ahí precisamente para quien no distinguió las dos operaciones.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un gráfico muestra que la población rural de un país pasó del $40\\%$ al "
+                    "$25\\%$ del total entre 1950 y 2000, mientras la población total creció "
+                    "de 6 a 15 millones. ¿Disminuyó la población rural?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Distingo qué mide el gráfico: porcentajes, no cantidades absolutas de "
+                            "personas."
+                        ),
+                        "porque": (
+                            "Es la distinción que decide la pregunta. Un porcentaje siempre se "
+                            "calcula sobre un total, y si el total cambia, el porcentaje puede "
+                            "moverse sin que la cantidad lo haga en el mismo sentido."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo la cantidad de 1950: el $40\\%$ de $6$ millones son $2{,}4$ "
+                            "millones de personas."
+                        ),
+                        "porque": (
+                            "Convertir el porcentaje en personas es el único modo de responder por la "
+                            "cantidad. El gráfico no lo muestra, pero el dato del total lo permite."
+                        ),
+                    },
+                    {
+                        "accion": "Calculo la de 2000: el $25\\%$ de $15$ millones son $3{,}75$ millones.",
+                        "porque": (
+                            "El porcentaje bajó quince puntos y la cantidad, en cambio, aumentó en "
+                            "más de un millón de personas. Las dos cosas son ciertas a la vez."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que la población rural CRECIÓ en número y disminuyó en "
+                            "proporción, porque la urbana creció mucho más rápido."
+                        ),
+                        "porque": (
+                            "Responder «disminuyó» leyendo solo el porcentaje es el error más "
+                            "frecuente en este tipo de gráfico, y es justamente la alternativa que la "
+                            "prueba ofrece."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Responder desde la impresión visual sin mirar la escala. Una curva "
             "que «se dispara» puede ser un alza de dos puntos en un eje que "
@@ -74453,24 +74594,37 @@ LESSONS: dict[str, dict] = {
             "sin que ninguno mienta."
         ),
         "theory": (
-            "**Casi ningún proceso tiene una sola causa.** Suelen combinarse "
-            "causas económicas, políticas, sociales y culturales. Una alternativa "
-            "que reduce un proceso grande a un único motivo casi siempre es el "
-            "distractor.\n\n"
-            "**Distingue causa estructural de causa inmediata.** La estructural "
-            "venía formándose hace tiempo y explica por qué el proceso era "
-            "posible; la inmediata es el detonante, y explica por qué ocurrió "
-            "justo entonces. Las dos son verdaderas y no compiten.\n\n"
-            "**Un mismo hecho puede ser causa y consecuencia.** El ferrocarril "
-            "es consecuencia de la industrialización y causa de la migración a "
-            "las ciudades. Depende del proceso desde el cual se lo mire.\n\n"
-            "**No juzgues el pasado con los criterios del presente.** Es lo que "
-            "se llama presentismo. Explicar por qué alguien pensaba así en su "
-            "época no es justificarlo: es entenderlo.\n\n"
-            "**Que la historia se reescriba no significa que sea opinable.** "
-            "Cada generación pregunta cosas nuevas y aparecen fuentes nuevas, "
-            "pero las interpretaciones siguen teniendo que sostenerse en "
-            "evidencia. Reescribirse no es inventarse."
+            "**Casi ningún proceso tiene una sola causa.** Suelen combinarse causas "
+            "económicas, políticas, sociales y culturales. Una alternativa que reduce "
+            "un proceso grande a un único motivo casi siempre es el distractor.\\n\\n"
+            "| Tipo de causa | Qué explica | Ejemplo |\\n"
+            "|---|---|---|\\n"
+            "| Estructural o profunda | por qué era posible | una economía "
+            "dependiente de un solo producto |\\n"
+            "| Coyuntural | por qué en ese momento | una caída brusca del precio |\\n"
+            "| Inmediata o detonante | por qué ese día | una decisión, un incidente |\\n\\n"
+            "Las tres pueden ser verdaderas a la vez y no compiten entre sí: "
+            "responden preguntas distintas.\\n\\n"
+            "**Un mismo hecho puede ser causa y consecuencia.** El ferrocarril es "
+            "consecuencia de la industrialización y causa de la migración a las "
+            "ciudades. Depende del proceso desde el cual se lo mire.\\n\\n"
+            "**Consecuencias buscadas y no buscadas.** Muchos efectos importantes no "
+            "estaban en el plan de nadie, y explicarlos por la intención de alguien "
+            "es una forma de simplificar el pasado.\\n\\n"
+            "**Que la historia se reescriba no significa que sea opinable.** Las "
+            "interpretaciones cambian porque aparecen fuentes nuevas, porque se hacen "
+            "preguntas nuevas o porque cambian los métodos. Lo que no cambia es la "
+            "exigencia de sostener cada afirmación con evidencia.\\n\\n"
+            "**Interpretación no es opinión.** Dos historiadores pueden discrepar "
+            "sobre el peso de una causa y ambos apoyarse en fuentes; ninguno puede "
+            "discrepar sobre si un hecho ocurrió cuando la evidencia lo establece.\\n\\n"
+            "**No juzgues el pasado con los criterios del presente.** Es lo que se "
+            "llama presentismo. Explicar por qué alguien pensaba así en su época no "
+            "es justificarlo: es entenderlo.\\n\\n"
+            "**Cuidado con dos atajos.** El determinismo, que hace parecer inevitable "
+            "lo que ocurrió —siempre hubo otros caminos posibles—, y la explicación "
+            "por un solo protagonista, que convierte un proceso colectivo en la "
+            "biografía de una persona."
         ),
         "example_statement": (
             "Un estudiante afirma: «los campesinos medievales eran ignorantes "
@@ -74491,6 +74645,60 @@ LESSONS: dict[str, dict] = {
                 "porque": "Entender por qué alguien creía algo en su época es distinto de darle la razón. Esa distinción es la que separa explicar de justificar.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un texto afirma: «la crisis de 1929 hundió la economía chilena porque el "
+                    "país vendía salitre». ¿Qué le falta a esa explicación?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Separo las causas por tipo: la caída del comercio mundial en 1929 es la "
+                            "causa coyuntural, el detonante externo."
+                        ),
+                        "porque": (
+                            "Es el hecho que responde «por qué justo entonces». Por sí solo no "
+                            "explica por qué el golpe fue tan duro en Chile y menos en otros países."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Identifico la causa estructural que el texto nombra sin desarrollar: una "
+                            "economía concentrada en un solo producto de exportación, con el "
+                            "presupuesto fiscal atado a él."
+                        ),
+                        "porque": (
+                            "Esa dependencia venía formándose desde el siglo XIX y es lo que explica "
+                            "por qué era posible un derrumbe de esa magnitud. La estructura explica "
+                            "la vulnerabilidad; la coyuntura, el momento."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Agrego un factor que el texto omite: el salitre ya venía perdiendo "
+                            "mercado frente al nitrato sintético desarrollado años antes."
+                        ),
+                        "porque": (
+                            "Una explicación multicausal no es una lista más larga por gusto: cada "
+                            "factor cubre algo que los otros no. Sin este, parecería que todo se "
+                            "explica por un año."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que la explicación no es falsa, pero es incompleta: reduce un "
+                            "proceso a una sola causa y a una sola fecha."
+                        ),
+                        "porque": (
+                            "Es exactamente el distractor típico de la prueba. La respuesta correcta "
+                            "suele ser la que combina una causa estructural con un detonante, no la "
+                            "que elige una de las dos."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Confundir explicar con justificar. Cuando una pregunta pide "
             "entender por qué un grupo actuó de cierta manera, no está pidiendo "
@@ -74509,29 +74717,43 @@ LESSONS: dict[str, dict] = {
         "theory": (
             "**Por qué existe el derecho laboral.** Las partes no negocian en "
             "igualdad: la empresa pierde un candidato, el trabajador pierde su "
-            "sustento. Esa asimetría explica por qué el derecho civil no "
-            "bastaba y por qué hay mínimos que no se pueden pactar a la baja.\n"
-            "**Contrato e irrenunciabilidad.** El contrato no crea los "
-            "derechos, que están en la ley: los hace verificables. Y son "
-            "irrenunciables durante la relación laboral, porque si no bastaría "
-            "con incluir la renuncia en el contrato.\n"
-            "**Organización colectiva.** Negociar en grupo equilibra el poder. "
-            "La huelga da fuerza a esa posición introduciendo un costo para "
-            "ambas partes; suspende la relación laboral, no la termina.\n"
-            "**Seguridad social.** Reúne aportes de muchos para cubrir a "
-            "quienes enfrentan la contingencia. Quien trabaja sin contrato "
-            "queda fuera: sin salud, sin seguro de cesantía y sin fondos para "
-            "la vejez. La informalidad de hoy es el problema previsional de "
-            "mañana.\n"
-            "**Brecha de género.** El trabajo doméstico y de cuidados no "
-            "remunerado recae mayoritariamente en mujeres, limita la "
-            "disponibilidad horaria e interrumpe trayectorias. Por eso las "
-            "políticas combinan medidas laborales con salas cuna y permisos "
-            "compartidos.\n"
-            "**Lo que viene cambiando.** La automatización reduce unas tareas y "
-            "crea otras: el problema es la transición, no el total de empleos. "
-            "Las plataformas obligan a definir si hay dependencia, y de eso "
-            "depende qué protecciones aplican."
+            "sustento. Esa asimetría explica por qué el derecho civil no bastaba y "
+            "por qué hay mínimos que no se pueden pactar a la baja.\\n\\n"
+            "**Contrato e irrenunciabilidad.** El contrato no crea los derechos, que "
+            "están en la ley: los hace verificables. Y son irrenunciables durante la "
+            "relación laboral, porque si no bastaría con incluir la renuncia en el "
+            "contrato para dejarlos sin efecto.\\n\\n"
+            "| Derecho | Qué asegura |\\n"
+            "|---|---|\\n"
+            "| Contrato escrito | deja constancia de funciones, jornada y "
+            "remuneración |\\n"
+            "| Jornada máxima y descansos | límite de horas y día de descanso semanal "
+            "|\\n"
+            "| Remuneración mínima | un piso que no se puede pactar a la baja |\\n"
+            "| Feriado anual | descanso pagado por año trabajado |\\n"
+            "| Protección de la maternidad | fuero y permisos |\\n"
+            "| Seguridad en el trabajo | prevención de riesgos y cobertura de "
+            "accidentes |\\n"
+            "| Libertad sindical | organizarse y negociar colectivamente |\\n\\n"
+            "**Organización colectiva.** Negociar en grupo equilibra el poder. La "
+            "huelga da fuerza a esa posición introduciendo un costo para ambas "
+            "partes; suspende la relación laboral, no la termina.\\n\\n"
+            "**Seguridad social.** Reúne aportes de muchos para cubrir a quienes "
+            "enfrentan una contingencia: enfermedad, accidente, cesantía, vejez. "
+            "Funciona por el número: el riesgo individual es impredecible, el "
+            "colectivo se puede estimar.\\n\\n"
+            "**Quien trabaja sin contrato queda fuera** del sistema: sin cotización "
+            "de salud, sin seguro de cesantía y sin fondos para la vejez. La "
+            "informalidad de hoy es el problema previsional de mañana, y afecta más a "
+            "quienes tienen menos capacidad de exigir un contrato.\\n\\n"
+            "**Cambios en el mundo del trabajo.** Plataformas digitales, trabajo a "
+            "honorarios y teletrabajo desdibujan la frontera entre trabajador "
+            "dependiente e independiente. La discusión no es si la tecnología cambia "
+            "el trabajo, sino qué protecciones acompañan a esas nuevas formas.\\n\\n"
+            "**Dónde se reclama.** La Dirección del Trabajo fiscaliza y media, y los "
+            "tribunales laborales resuelven los conflictos. Existen plazos para "
+            "reclamar, y dejarlos pasar es una de las formas más comunes de perder un "
+            "derecho que se tenía."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -74577,6 +74799,63 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una persona acepta un trabajo «a trato», sin contrato escrito, con la "
+                    "promesa de un sueldo mayor porque «así no se descuenta nada». ¿Qué está "
+                    "perdiendo, aunque reciba más dinero cada mes?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico lo que no se descuenta: las cotizaciones de salud, de "
+                            "pensiones y del seguro de cesantía."
+                        ),
+                        "porque": (
+                            "Lo que aparece como un sueldo mayor es en realidad el mismo costo sin "
+                            "las coberturas. El dinero extra es exactamente lo que se dejó de "
+                            "aportar."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Determino las consecuencias inmediatas: sin cotización de salud, una "
+                            "licencia médica no se paga; sin seguro de cesantía, el despido no tiene "
+                            "cobertura."
+                        ),
+                        "porque": (
+                            "El riesgo no desaparece por no estar cubierto: se traslada entero a la "
+                            "persona. La seguridad social funciona porque reparte entre muchos un "
+                            "riesgo que es impredecible para cada uno."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Sumo la consecuencia de largo plazo: sin fondos acumulados, la pensión "
+                            "futura será menor, y ese daño no se puede reparar después."
+                        ),
+                        "porque": (
+                            "Las lagunas previsionales no se recuperan. Es lo que hace que la "
+                            "informalidad de hoy sea el problema previsional de mañana."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Aclaro un punto jurídico: la ausencia de contrato escrito no elimina la "
+                            "relación laboral. Si hay subordinación, horario y remuneración, los "
+                            "derechos existen igual y se pueden reclamar ante la Dirección del "
+                            "Trabajo."
+                        ),
+                        "porque": (
+                            "El contrato hace verificable el vínculo; no lo crea. Lo que la "
+                            "informalidad quita no es el derecho, sino la facilidad para probarlo, y "
+                            "por eso importan los plazos para reclamar."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Tratar el contrato de trabajo como cualquier otro acuerdo entre "
             "partes libres. Si lo fuera, bastaría con que ambas firmaran para "
@@ -74592,28 +74871,42 @@ LESSONS: dict[str, dict] = {
             "entrena a mirar quién gana, quién paga y qué queda después."
         ),
         "theory": (
-            "**Crecimiento vs desarrollo.** El primero mide cuánto se produce; "
-            "el segundo pregunta por condiciones de vida y distribución. La "
-            "pobreza multidimensional aplica esa idea: mide ingreso Y acceso a "
-            "educación, salud, vivienda y trabajo.\n"
-            "**Renovable y no renovable.** El cobre no se repone a escala "
-            "humana: cada tonelada extraída es una menos. El sol y el viento no "
-            "se agotan con su uso.\n"
-            "**El riesgo de exportar pocos productos.** El precio se fija "
-            "afuera. Sube y todo mejora; baja y el ajuste llega al presupuesto "
-            "y al empleo. Por eso se discute diversificar y agregar valor.\n"
-            "**Abundancia no es desarrollo.** Hay países con enormes reservas y "
-            "malos indicadores sociales. Lo decisivo es qué se hace con la "
-            "renta: si deja capacidades instaladas o solo ingresos "
-            "transitorios.\n"
-            "**Sostenibilidad.** Satisfacer hoy sin comprometer el mañana. "
-            "Obliga a mirar el largo plazo y a preguntarse si el daño es "
-            "reversible. Las emisiones son un caso especial: afectan a todo el "
-            "planeta, así que ningún país resuelve el problema solo.\n"
-            "**Quién gana y quién paga.** En los conflictos socioambientales el "
-            "beneficio suele ser nacional y el costo, local. Esa asimetría "
-            "explica el conflicto mejor que suponer desinformación de alguna de "
-            "las partes."
+            "**Crecimiento y desarrollo no son lo mismo.** El crecimiento mide cuánto "
+            "se produce; el desarrollo pregunta por condiciones de vida, "
+            "oportunidades y distribución. Un país puede crecer varios años seguidos "
+            "sin que mejore la vida de la mayoría.\\n\\n"
+            "**La pobreza multidimensional** aplica esa idea: mide ingreso Y acceso a "
+            "educación, salud, vivienda, trabajo y redes. Una familia puede superar "
+            "la línea de ingreso y seguir sin acceso a salud oportuna.\\n\\n"
+            "**Renovable y no renovable.** El cobre no se repone a escala humana: "
+            "cada tonelada extraída es una menos. El sol y el viento no se agotan con "
+            "su uso, aunque instalar la infraestructura tenga sus propios costos "
+            "ambientales.\\n\\n"
+            "| Concepto | Qué dice |\\n"
+            "|---|---|\\n"
+            "| Sostenibilidad | satisfacer hoy sin comprometer las necesidades de "
+            "mañana |\\n"
+            "| Huella ecológica | cuántos recursos consume una población respecto de "
+            "lo que su territorio repone |\\n"
+            "| Desarrollo humano (IDH) | combina ingreso, educación y salud |\\n"
+            "| Matriz productiva | qué produce y exporta un país, y con cuánto valor "
+            "agregado |\\n\\n"
+            "**El riesgo de exportar pocos productos.** El precio se fija afuera. "
+            "Sube y todo mejora; baja y el ajuste llega al presupuesto y al empleo. "
+            "Por eso se discute diversificar y agregar valor: vender cobre refinado o "
+            "productos derivados no es lo mismo que vender concentrado.\\n\\n"
+            "**Abundancia no es desarrollo.** Hay países con enormes reservas y malos "
+            "indicadores sociales. Lo decisivo es qué se hace con la renta: si deja "
+            "capacidades instaladas —educación, infraestructura, instituciones— o "
+            "solo ingresos transitorios que se agotan con el yacimiento.\\n\\n"
+            "**El costo ambiental de producir.** Minería, agricultura de exportación "
+            "y energía compiten por agua y suelo con las comunidades que viven ahí. "
+            "Por eso existen la evaluación de impacto ambiental y la consulta a "
+            "comunidades: no eliminan el conflicto, lo ordenan.\\n\\n"
+            "**Sostenibilidad obliga a mirar el largo plazo** y a preguntarse si el "
+            "daño es reversible. Un bosque replantado vuelve en décadas; un acuífero "
+            "agotado o una especie extinta, no. Esa asimetría entre lo reversible y "
+            "lo irreversible es la que suele decidir las preguntas del eje."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -74660,6 +74953,62 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un país exporta un mineral que representa el 60% de sus exportaciones. "
+                    "El precio internacional se duplica durante cinco años. ¿Qué "
+                    "oportunidades y qué riesgos plantea ese auge?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico la oportunidad inmediata: más ingresos fiscales y más "
+                            "divisas, es decir, recursos que antes no existían."
+                        ),
+                        "porque": (
+                            "Un auge de precios en un producto que pesa el 60% de las exportaciones "
+                            "se traduce directamente en el presupuesto del Estado. Es la cara visible "
+                            "del ciclo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Distingo qué se puede hacer con esos ingresos: gastarlos en el momento, "
+                            "o invertirlos en capacidades que duren más que el auge —educación, "
+                            "infraestructura, diversificación—."
+                        ),
+                        "porque": (
+                            "Es la diferencia entre crecimiento y desarrollo. La renta de un recurso "
+                            "no renovable se agota; lo que se construya con ella puede quedar."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Nombro el riesgo: si el gasto permanente se ajusta al ingreso "
+                            "transitorio, cuando el precio baje habrá que recortar justo cuando la "
+                            "economía se debilita."
+                        ),
+                        "porque": (
+                            "El precio se fija afuera y el ciclo se revierte. Por eso existen los "
+                            "fondos de estabilización: guardar en el auge para sostener el gasto en "
+                            "la caída."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Agrego el riesgo de concentración: un auge puede desincentivar otras "
+                            "actividades y dejar al país más dependiente que antes."
+                        ),
+                        "porque": (
+                            "Mientras el mineral rinde, invertir en otra cosa parece menos atractivo. "
+                            "Así la bonanza puede terminar profundizando justamente la vulnerabilidad "
+                            "que convenía reducir."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Evaluar un proyecto o una política solo por su saldo agregado. La "
             "pregunta que este eje entrena es otra: quién recibe el beneficio, "
@@ -74675,29 +75024,47 @@ LESSONS: dict[str, dict] = {
             "preguntas del eje económico."
         ),
         "theory": (
-            "**Escasez y costo de oportunidad.** Los recursos son limitados y "
-            "las necesidades no, así que toda elección implica renunciar a "
-            "algo. Ese sacrificio existe aunque no se pague dinero.\n"
-            "**Qué hacen los precios.** En un mercado competitivo, más demanda "
-            "con igual oferta empuja el precio hacia arriba, y esa señal indica "
-            "a unos que produzcan más y a otros que consuman menos. El precio "
-            "transmite información sin que nadie la coordine.\n"
-            "**Cuándo falla el mercado.** Dos casos clásicos. BIEN PÚBLICO: "
-            "nadie puede ser excluido (el alumbrado), así que a todos les "
-            "conviene no pagar y el bien no se produce. EXTERNALIDAD: el costo "
-            "recae sobre terceros (la fábrica que contamina el río), así que el "
-            "precio no lo refleja.\n"
-            "**Qué hace el Estado.** Regula, provee, invierte y redistribuye. "
-            "PROGRESIVO: quien gana más paga una proporción mayor (impuesto a "
-            "la renta). REGRESIVO: misma tasa para todos, pero pesa más sobre "
-            "ingresos bajos porque ellos consumen casi todo lo que reciben "
-            "(IVA).\n"
-            "**Política fiscal y ciclo.** En recesión, más gasto público para "
-            "sostener demanda y empleo. Se llama contracíclica y exige ahorrar "
-            "en las expansiones.\n"
-            "**Cuidado con los indicadores.** El PIB mide cuánto se produce, no "
-            "cómo se reparte, ni el trabajo doméstico, ni el daño ambiental. "
-            "Saber qué deja fuera un indicador es parte de saber usarlo."
+            "**Escasez y costo de oportunidad.** Los recursos son limitados y las "
+            "necesidades no, así que toda elección implica renunciar a algo. Ese "
+            "sacrificio existe aunque no se pague dinero: el costo de oportunidad de "
+            "estudiar una tarde es lo mejor que se podría haber hecho con esa tarde.\\n\\n"
+            "**Qué hacen los precios.** En un mercado competitivo, más demanda con "
+            "igual oferta empuja el precio hacia arriba, y esa señal indica a unos "
+            "que produzcan más y a otros que consuman menos. El precio transmite "
+            "información sin que nadie la coordine.\\n\\n"
+            "**Cuándo falla el mercado.**\\n\\n"
+            "| Falla | En qué consiste | Ejemplo |\\n"
+            "|---|---|---|\\n"
+            "| Bien público | nadie puede ser excluido y a todos conviene no pagar | "
+            "alumbrado, defensa |\\n"
+            "| Externalidad negativa | el costo recae sobre terceros | una fábrica "
+            "que contamina un río |\\n"
+            "| Externalidad positiva | el beneficio se derrama a quien no pagó | "
+            "vacunarse, educarse |\\n"
+            "| Información asimétrica | una parte sabe más que la otra | quien vende "
+            "un auto usado |\\n"
+            "| Monopolio | un solo oferente fija el precio | un servicio sin "
+            "competencia |\\n\\n"
+            "En todos estos casos el precio no refleja el costo o el beneficio real, "
+            "y por eso el mercado produce de más o de menos.\\n\\n"
+            "**Qué hace el Estado.** Regula, provee, invierte y redistribuye. Cobra "
+            "impuestos para financiarlo, y la forma del impuesto importa tanto como "
+            "el monto:\\n\\n"
+            "- **progresivo**: quien gana más paga una proporción mayor (impuesto a "
+            "la renta);\\n"
+            "- **proporcional**: todos pagan la misma proporción;\\n"
+            "- **regresivo**: misma tasa para todos, pero pesa más sobre los ingresos "
+            "bajos, como ocurre con el IVA, porque quien gana poco consume casi todo "
+            "lo que gana.\\n\\n"
+            "**Gasto social y redistribución.** Los impuestos financian salud, "
+            "educación, pensiones y subsidios. Por eso la desigualdad se mide antes y "
+            "después de impuestos y transferencias: la diferencia entre ambas cifras "
+            "es cuánto redistribuye efectivamente ese Estado.\\n\\n"
+            "**También hay fallas del Estado.** Regular mal, capturar rentas o gastar "
+            "sin control son problemas reales, y por eso existen la Contraloría, la "
+            "transparencia y la evaluación de programas. Ni el mercado ni el Estado "
+            "funcionan solos: la pregunta de política pública es qué hace mejor cada "
+            "uno y con qué controles."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -74744,6 +75111,63 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una fábrica vierte residuos en un río y vende su producto barato. ¿Qué "
+                    "falla de mercado hay aquí y qué instrumentos tiene el Estado para "
+                    "corregirla?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico la falla: una externalidad negativa. El costo de la "
+                            "contaminación lo pagan quienes usan el río, no la fábrica ni sus "
+                            "clientes."
+                        ),
+                        "porque": (
+                            "El precio del producto refleja solo los costos que la empresa asume. Al "
+                            "quedar fuera el daño ambiental, el precio es artificialmente bajo y se "
+                            "produce de más."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Explico la consecuencia: como el producto se vende bajo su costo social, "
+                            "se consume más de lo que sería eficiente."
+                        ),
+                        "porque": (
+                            "La señal del precio está distorsionada. No es que el mercado funcione "
+                            "mal por descuido: funciona exactamente como debe con la información que "
+                            "tiene, y esa información está incompleta."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Nombro los instrumentos: regulación con límites de vertido y "
+                            "fiscalización, impuestos que incorporen el daño al precio, y "
+                            "responsabilidad por el daño causado."
+                        ),
+                        "porque": (
+                            "Los tres apuntan a lo mismo desde ángulos distintos: que el costo vuelva "
+                            "a quien lo genera. Un impuesto ambiental no busca recaudar, busca "
+                            "corregir el precio."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Agrego el contrapeso: la regulación necesita capacidad de fiscalizar, o "
+                            "queda escrita sin efecto."
+                        ),
+                        "porque": (
+                            "También hay fallas del Estado. Reconocerlo no invalida la intervención: "
+                            "obliga a preguntarse con qué controles se hace, que es la pregunta de "
+                            "política pública de verdad."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Suponer que si un mercado falla, la respuesta es reemplazarlo por "
             "el Estado. Las herramientas habituales frente a una externalidad "
@@ -74761,30 +75185,45 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**Qué hace un tribunal.** Resuelve conflictos aplicando el derecho "
-            "vigente y fundando su decisión. Fundar es lo que permite revisar: "
-            "si la sentencia expone su razonamiento, otro tribunal puede "
-            "examinarlo. Las instancias son limitadas; después el fallo queda "
-            "ejecutoriado.\n"
+            "vigente y fundando su decisión. Fundar es lo que permite revisar: si la "
+            "sentencia expone su razonamiento, otro tribunal puede examinarlo. Las "
+            "instancias son limitadas; después el fallo queda ejecutoriado y no se "
+            "puede volver a discutir lo mismo.\\n\\n"
             "**Independencia judicial.** Ni el Presidente ni el Congreso pueden "
-            "revisar los fundamentos de un fallo. Es la contrapartida de que "
-            "los jueces no sean elegidos: responden ante el derecho, no ante el "
-            "electorado ni ante el gobierno.\n"
-            "**Presunción de inocencia.** Prueba quien acusa. El imputado no "
-            "tiene que demostrar que no lo hizo, entre otras cosas porque "
-            "probar que algo no ocurrió suele ser imposible.\n"
-            "**La reforma procesal penal.** Antes un mismo juez investigaba, "
-            "acusaba y fallaba. Ahora: Ministerio Público investiga y acusa; "
-            "juez de garantía controla derechos; tribunal oral sentencia. La "
-            "imparcialidad deja de depender del carácter del juez y pasa a "
-            "estar en el diseño.\n"
-            "**Debido proceso.** Prueba lícita, posibilidad de controvertirla, "
-            "fallo fundado, defensa técnica. No impide condenar: fija cómo se "
-            "llega a una condena. Y se aplica a todos porque al decidir nadie "
-            "sabe todavía quién es culpable.\n"
-            "**Igualdad formal y acceso real.** La ley es la misma para todos, "
-            "pero hacerla valer exige tiempo, dinero y abogado. Defensoría "
-            "pública, corporaciones de asistencia judicial y procedimientos "
-            "simplificados apuntan a esa brecha."
+            "revisar los fundamentos de un fallo. Es la contrapartida de que los "
+            "jueces no sean elegidos: responden ante el derecho, no ante el "
+            "electorado ni ante el gobierno.\\n\\n"
+            "**Garantías del debido proceso**, que valen para cualquier persona "
+            "investigada:\\n\\n"
+            "| Garantía | Qué significa |\\n"
+            "|---|---|\\n"
+            "| Presunción de inocencia | prueba quien acusa; el imputado no debe "
+            "demostrar su inocencia |\\n"
+            "| Derecho a defensa | asistencia letrada desde el inicio, aunque no "
+            "pueda pagarla |\\n"
+            "| Juez imparcial | quien juzga no investiga ni acusa |\\n"
+            "| Derecho a ser oído | poder presentar pruebas y controvertir las de la "
+            "contraparte |\\n"
+            "| Plazo razonable | la causa no puede quedar abierta indefinidamente |\\n"
+            "| Derecho al recurso | poder pedir que otro tribunal revise |\\n\\n"
+            "**Por qué la presunción de inocencia.** Prueba quien acusa, entre otras "
+            "cosas porque demostrar que algo NO ocurrió suele ser imposible. No "
+            "significa creer que el imputado es inocente: significa que mientras no "
+            "se pruebe lo contrario, el Estado debe tratarlo como tal.\\n\\n"
+            "**La reforma procesal penal.** Antes un mismo juez investigaba, acusaba "
+            "y fallaba. Ahora: el Ministerio Público investiga y acusa, el juez de "
+            "garantía controla los derechos del imputado, el tribunal oral sentencia, "
+            "y la Defensoría Penal Pública provee abogado a quien no tiene. La "
+            "imparcialidad deja de depender de la virtud de una persona y pasa a "
+            "estar asegurada por el diseño.\\n\\n"
+            "**Igualdad ante la ley e igualdad real.** La ley rige para todos, pero "
+            "no todos llegan en las mismas condiciones a un juicio. Por eso existen "
+            "la defensa penal pública, las corporaciones de asistencia judicial y los "
+            "procedimientos simplificados: el acceso a la justicia es parte del "
+            "derecho, no un trámite previo.\\n\\n"
+            "**Justicia penal no es la única.** Los conflictos civiles, laborales, de "
+            "familia y vecinales tienen sus propios tribunales y procedimientos, y en "
+            "varios casos la mediación resuelve sin llegar a juicio."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -74832,6 +75271,60 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un noticiario presenta a una persona detenida como «el autor del robo», "
+                    "antes de que exista sentencia. ¿Qué principio se vulnera y por qué "
+                    "importa?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico el principio: la presunción de inocencia, que rige mientras "
+                            "no exista una sentencia condenatoria firme."
+                        ),
+                        "porque": (
+                            "Detenido, imputado y condenado son tres situaciones distintas. Tratar la "
+                            "primera como si fuera la tercera es exactamente lo que el principio "
+                            "prohíbe."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Precisar qué exige: que el Estado y, en su medida, los medios traten a "
+                            "la persona como inocente, y que sea la acusación la que deba probar."
+                        ),
+                        "porque": (
+                            "No se trata de creer en su inocencia, sino de la distribución de la "
+                            "carga de la prueba y del trato mientras el proceso ocurre."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Explico por qué importa: una condena mediática produce efectos —pérdida "
+                            "de trabajo, estigma— que no se reparan aunque después la persona sea "
+                            "absuelta."
+                        ),
+                        "porque": (
+                            "El daño ocurre antes de que el proceso termine, y por eso la garantía "
+                            "tiene que operar durante el juicio y no solo al final."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Señalo la tensión con la libertad de expresión: informar sobre una "
+                            "detención es legítimo; afirmar la culpabilidad sin sentencia, no."
+                        ),
+                        "porque": (
+                            "Los dos derechos conviven, y la solución no es prohibir la cobertura "
+                            "sino exigir precisión: «detenido como presunto autor» informa lo mismo "
+                            "sin condenar."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Pensar que las garantías del debido proceso protegen a los "
             "culpables y estorban a la justicia. Al momento de juzgar todavía "
@@ -74848,29 +75341,42 @@ LESSONS: dict[str, dict] = {
             "aplicar a un documento histórico."
         ),
         "theory": (
-            "**Libertad de expresión y pluralismo.** Sin censura previa, aunque "
-            "con responsabilidad posterior. Y como informar supone elegir qué "
-            "destacar, que existan medios de orientaciones distintas permite "
-            "comparar coberturas del mismo hecho.\n"
-            "**Error no es desinformación.** Lo que las separa es la INTENCIÓN. "
-            "El error se rectifica; la desinformación se produce sabiendo que "
-            "el contenido es falso.\n"
-            "**Cómo se evalúa una fuente.** Quién la produce, con qué respaldo, "
-            "con qué interés, y si otras fuentes independientes dicen lo mismo. "
-            "El alcance y el número de veces que algo se comparte no son "
-            "indicadores de veracidad.\n"
-            "**Primaria y secundaria.** La primaria es contemporánea al hecho "
-            "(carta, ley, fotografía); la secundaria lo interpreta después. "
-            "Ninguna es mejor: se cruzan.\n"
-            "**Toda fuente tiene punto de vista.** Un discurso oficial no se "
-            "descarta por interesado: se usa para lo que prueba (qué quería "
-            "proyectar) y no para lo que no prueba (si los resultados fueron "
-            "los que afirma).\n"
-            "**Algoritmos y regulación.** Las plataformas muestran más de lo "
-            "mismo y reducen la exposición a lo distinto. Y regular lo falso "
-            "obliga a designar a alguien que decida qué es falso: dos bienes "
-            "democráticos en tensión, sin solución que satisfaga a ambos por "
-            "completo."
+            "**Libertad de expresión y pluralismo.** Sin censura previa, aunque con "
+            "responsabilidad posterior: se puede responder por injurias o calumnias "
+            "después, no impedir la publicación antes. Y como informar supone elegir "
+            "qué destacar, que existan medios de orientaciones distintas permite "
+            "comparar coberturas del mismo hecho.\\n\\n"
+            "**Error no es desinformación.** Lo que las separa es la INTENCIÓN. El "
+            "error se rectifica; la desinformación se produce sabiendo que el "
+            "contenido es falso, y suele buscar un efecto.\\n\\n"
+            "| Concepto | Qué es |\\n"
+            "|---|---|\\n"
+            "| Error | dato equivocado sin intención de engañar; se corrige |\\n"
+            "| Desinformación | contenido falso difundido a sabiendas |\\n"
+            "| Información descontextualizada | dato verdadero presentado de modo que "
+            "induce a error |\\n"
+            "| Opinión | valoración legítima; no se verifica, se argumenta |\\n"
+            "| Publicidad encubierta | contenido pagado presentado como información |\\n\\n"
+            "**Cómo se evalúa una fuente**: quién la produce, con qué respaldo, con "
+            "qué interés, y si otras fuentes independientes dicen lo mismo. "
+            "Independientes significa que no se copian entre sí: tres medios que "
+            "reproducen el mismo cable no son tres confirmaciones.\\n\\n"
+            "**Lo verdadero también puede engañar.** Un dato correcto sacado de "
+            "contexto, un gráfico con eje truncado o una cifra sin su punto de "
+            "comparación pueden llevar a una conclusión falsa sin decir ninguna "
+            "mentira.\\n\\n"
+            "**Cómo circula hoy la desinformación.** Las plataformas ordenan lo que "
+            "se ve según lo que retiene la atención, y lo indignante retiene más que "
+            "lo matizado. Eso produce burbujas donde cada persona ve confirmada su "
+            "posición, y explica por qué una noticia falsa puede difundirse más "
+            "rápido que su desmentido.\\n\\n"
+            "**Qué hacer antes de compartir**: revisar la fecha —muchas informaciones "
+            "falsas son noticias viejas recirculadas—, buscar la fuente original, "
+            "desconfiar de los titulares que piden indignarse, y comprobar si algún "
+            "medio con estándares editoriales lo reporta.\\n\\n"
+            "**Responsabilidad de quien comparte.** Difundir algo falso, aunque sea "
+            "de buena fe, lo amplifica igual. En materia de información, el usuario "
+            "no es solo receptor: es parte de la cadena de distribución."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -74918,6 +75424,62 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Circula por redes sociales una foto real de una protesta con el texto "
+                    "«así está la ciudad hoy». La foto corresponde a una manifestación de "
+                    "hace seis años. ¿Es desinformación, aunque la imagen no esté manipulada?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Distingo los dos planos: la imagen es auténtica, pero la afirmación que "
+                            "la acompaña es falsa."
+                        ),
+                        "porque": (
+                            "La verificación no se agota en si el archivo fue editado. Una foto real "
+                            "puede sostener una afirmación falsa sin que nadie haya tocado un pixel."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Clasifico el caso: es información descontextualizada, el tipo más "
+                            "difícil de detectar porque cada elemento, por separado, resiste la "
+                            "comprobación."
+                        ),
+                        "porque": (
+                            "Quien revisa la foto la encuentra genuina y da por buena la publicación. "
+                            "El engaño está en la relación entre la imagen y la fecha, no en ninguna "
+                            "de las dos."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Decido si es desinformación según la intención: si quien publica sabía "
+                            "que la foto era antigua, sí; si se equivocó de buena fe, es un error que "
+                            "corresponde rectificar."
+                        ),
+                        "porque": (
+                            "Es la distinción del eje: lo que separa error de desinformación es saber "
+                            "que el contenido induce a error. En los dos casos el efecto sobre quien "
+                            "lo lee es el mismo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo con la verificación que correspondía: buscar la imagen por su "
+                            "fecha de origen antes de compartirla."
+                        ),
+                        "porque": (
+                            "Revisar la fecha es el chequeo más barato y el que más desinformación "
+                            "detiene, porque gran parte de lo que circula son contenidos viejos "
+                            "recirculados como actuales."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Creer que una fuente sesgada no sirve. Todas tienen un punto de "
             "vista, y el sesgo es información: dice qué le importaba a quien "
@@ -74933,29 +75495,42 @@ LESSONS: dict[str, dict] = {
             "también el criterio con que la prueba pide evaluar situaciones."
         ),
         "theory": (
-            "**Estado de derecho.** Gobernantes y gobernados bajo las mismas "
-            "normas. La autoridad solo puede hacer lo que la ley la faculta a "
-            "hacer, y sus actos son revisables. Nadie está por sobre la ley.\n"
-            "**Separación de poderes.** No es una división de tareas: es un "
-            "sistema de controles recíprocos. Hace el gobierno más lento a "
-            "propósito, porque la demora es el precio de que las decisiones "
-            "pasen por más de un filtro.\n"
-            "**Quién controla a quién.** El Congreso fiscaliza al Ejecutivo "
-            "(comisiones investigadoras, acusación constitucional). La "
-            "Contraloría revisa la legalidad de los actos administrativos. Los "
-            "tribunales resuelven conflictos jurídicos. La transparencia "
-            "habilita el control ciudadano.\n"
-            "**Jerarquía normativa.** La Constitución está por sobre las leyes, "
-            "y las leyes por sobre los reglamentos. Por eso reformarla exige "
-            "quórums altos: fija las reglas con que se dictan todas las demás "
-            "normas.\n"
-            "**Los límites de la mayoría.** Hay derechos que una votación no "
-            "puede suprimir, porque protegen a quien queda en minoría. Quien "
-            "hoy es mayoría puede ser minoría mañana.\n"
-            "**Votar no basta.** Hacen falta además libertad de expresión, "
-            "posibilidad real de competir, recuento transparente y órganos que "
-            "controlen al gobierno electo. Hay regímenes con elecciones "
-            "periódicas que no son democráticos."
+            "**Estado de derecho.** Gobernantes y gobernados bajo las mismas normas. "
+            "La autoridad solo puede hacer lo que la ley la faculta a hacer —y no "
+            "todo lo que la ley no le prohíbe, que es la regla para los "
+            "particulares—, y sus actos son revisables. Nadie está por sobre la ley.\\n\\n"
+            "**Separación de poderes.** No es una división de tareas: es un sistema "
+            "de controles recíprocos. Hace el gobierno más lento a propósito, porque "
+            "la demora es el precio de que las decisiones pasen por más de un filtro.\\n\\n"
+            "| Quién controla | A quién | Con qué |\\n"
+            "|---|---|---|\\n"
+            "| Congreso | Ejecutivo | comisiones investigadoras, acusación "
+            "constitucional, aprobación del presupuesto |\\n"
+            "| Presidente | Congreso | veto, urgencias legislativas |\\n"
+            "| Tribunal Constitucional | leyes y decretos | declara inaplicable o "
+            "inconstitucional una norma |\\n"
+            "| Contraloría | administración | toma de razón y auditoría del gasto "
+            "público |\\n"
+            "| Tribunales | actos de autoridad | recursos de protección y amparo |\\n"
+            "| Servicio Electoral | procesos electorales | registro, escrutinio, "
+            "financiamiento |\\n\\n"
+            "**La jerarquía de las normas.** La Constitución está sobre las leyes, y "
+            "las leyes sobre los reglamentos y decretos. Una norma inferior contraria "
+            "a una superior puede ser anulada, y ese orden es lo que hace que "
+            "«cumplir la ley» tenga un sentido preciso.\\n\\n"
+            "**Cómo se hace una ley, en corto**: iniciativa (mensaje del Presidente o "
+            "moción parlamentaria), discusión y votación en ambas cámaras, eventual "
+            "veto presidencial, promulgación y publicación en el Diario Oficial. "
+            "Ciertas materias exigen quórums más altos, justamente para que no "
+            "dependan de una mayoría circunstancial.\\n\\n"
+            "**Niveles de la administración.** El nivel nacional (ministerios), el "
+            "regional (gobiernos regionales, con gobernador electo) y el comunal "
+            "(municipios). Descentralizar es trasladar decisiones y recursos hacia "
+            "abajo, y es distinto de simplemente desconcentrar tareas.\\n\\n"
+            "**Probidad y transparencia.** El cargo público se ejerce en interés "
+            "general, no propio. La ley de transparencia permite pedir información a "
+            "los órganos del Estado sin explicar para qué, y esa posibilidad de "
+            "revisar es lo que vuelve exigible la probidad."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -75004,6 +75579,63 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un ministerio dicta un decreto que contradice lo que dice una ley "
+                    "vigente. ¿Qué mecanismos existen para corregirlo y qué principio está en "
+                    "juego?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico el principio: la jerarquía normativa. Un decreto es inferior "
+                            "a la ley, y no puede contradecirla."
+                        ),
+                        "porque": (
+                            "La pregunta no es si el decreto es conveniente, sino si podía dictarse. "
+                            "Una norma inferior contraria a una superior es inválida aunque su "
+                            "contenido parezca razonable."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Nombro el primer control: la Contraloría General de la República revisa "
+                            "la legalidad de los decretos mediante la toma de razón y puede "
+                            "representarlos."
+                        ),
+                        "porque": (
+                            "Es el control previo y administrativo. Su función es justamente impedir "
+                            "que una norma ilegal entre en vigencia, antes de que alguien tenga que "
+                            "litigar."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Nombro el control judicial: quien resulte afectado puede recurrir a los "
+                            "tribunales, y el Tribunal Constitucional puede pronunciarse sobre normas "
+                            "contrarias a la Constitución."
+                        ),
+                        "porque": (
+                            "Si el control previo falla, queda el posterior. Tener más de un "
+                            "mecanismo es el diseño, no la redundancia: es lo que significa que los "
+                            "actos de autoridad sean revisables."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que el Estado de derecho no consiste en que la autoridad no se "
+                            "equivoque, sino en que exista quién y cómo corregirla."
+                        ),
+                        "porque": (
+                            "Es la idea central del eje: lo que distingue a un Estado de derecho no "
+                            "es la infalibilidad, sino la existencia de controles efectivos sobre el "
+                            "poder."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Identificar democracia con regla de la mayoría sin más. Si todo "
             "pudiera decidirse por votación, quien queda en minoría dependería "
@@ -75020,33 +75652,48 @@ LESSONS: dict[str, dict] = {
             "hecho establecido y qué es una interpretación en disputa."
         ),
         "theory": (
-            "**Supresión del Estado de derecho.** Congreso disuelto, partidos "
-            "proscritos, registros electorales destruidos, censura de prensa, "
-            "Ejecutivo y Legislativo en el mismo órgano. No es solo un cambio "
-            "de gobierno: desaparecen los mecanismos para controlarlo y "
-            "sustituirlo.\n"
-            "**Derechos humanos: lo establecido.** Las comisiones de verdad y "
-            "los tribunales determinaron que las violaciones fueron "
-            "SISTEMÁTICAS y ejecutadas por organismos del Estado, no hechos "
-            "aislados. Esa distinción define la responsabilidad del Estado como "
-            "tal.\n"
-            "**El modelo económico.** Privatizaciones, apertura comercial, "
-            "desregulación financiera, plan laboral y capitalización individual "
-            "en pensiones. La industria queda expuesta a la competencia "
-            "externa. En 1982 la crisis obliga a intervenir la banca: ningún "
-            "modelo se aplica en estado puro.\n"
-            "**La Constitución de 1980.** Dejó mecanismos que limitaban a los "
-            "gobiernos electos posteriores: senadores designados, sistema "
-            "electoral desproporcionado, quórums altos. Se los llama enclaves "
-            "autoritarios.\n"
-            "**Cómo se salió.** Protestas desde 1983, reorganización de la "
-            "oposición, documentación de las violaciones. En 1988 el régimen es "
-            "derrotado en el plebiscito previsto por su propia Constitución; "
-            "elecciones en 1989 y traspaso en 1990.\n"
-            "**Lo que se discute.** No los hechos del 11 de septiembre, sino "
-            "sus causas: polarización interna, crisis económica, intervención "
-            "extranjera, fragilidad institucional. Ahí difieren las "
-            "interpretaciones historiográficas."
+            "**Supresión del Estado de derecho.** Tras el golpe de Estado del 11 de "
+            "septiembre de 1973: Congreso disuelto, partidos políticos proscritos, "
+            "registros electorales destruidos, censura de prensa, y funciones "
+            "ejecutivas y legislativas reunidas en el mismo órgano. No es solo un "
+            "cambio de gobierno: desaparecen los mecanismos para controlarlo y "
+            "sustituirlo.\\n\\n"
+            "**Derechos humanos: lo establecido.** Las comisiones de verdad —Informe "
+            "Rettig (1991), sobre ejecuciones y desapariciones, e Informe Valech "
+            "(2004 y 2011), sobre prisión política y tortura— y los tribunales "
+            "determinaron que las violaciones fueron SISTEMÁTICAS y ejecutadas por "
+            "organismos del Estado, no hechos aislados. Esa distinción define la "
+            "responsabilidad del Estado como tal, y no solo la de quienes ejecutaron.\\n\\n"
+            "| Hito | Año |\\n"
+            "|---|---|\\n"
+            "| Golpe de Estado | 1973 |\\n"
+            "| Constitución aprobada en plebiscito sin registros electorales ni "
+            "competencia | 1980 |\\n"
+            "| Crisis económica y protestas nacionales | 1982-1983 |\\n"
+            "| Plebiscito: gana el No con cerca del 56% | 1988 |\\n"
+            "| Elecciones presidenciales y parlamentarias | 1989 |\\n"
+            "| Traspaso del poder y retorno a la democracia | 1990 |\\n"
+            "| Informe Rettig | 1991 |\\n"
+            "| Informe Valech | 2004 y 2011 |\\n\\n"
+            "**El cambio económico.** Se aplicó un programa de liberalización: "
+            "apertura comercial, privatización de empresas públicas, reducción del "
+            "rol productivo del Estado y reformas a la previsión, la salud y la "
+            "educación. La crisis de 1982 obligó a un rescate estatal de la banca, "
+            "que muestra que el modelo no operó sin intervención.\\n\\n"
+            "**La transición fue pactada e institucional.** El cambio de régimen "
+            "ocurrió por las reglas de la propia Constitución de 1980, lo que explica "
+            "que buena parte de su marco institucional siguiera vigente después de "
+            "1990 y que su reforma haya sido un tema político por décadas.\\n\\n"
+            "**Verdad, justicia y memoria** son procesos distintos y posteriores: las "
+            "comisiones establecieron los hechos, los tribunales determinaron "
+            "responsabilidades penales —muchas décadas después—, y los sitios de "
+            "memoria buscan que lo ocurrido no se olvide.\\n\\n"
+            "**Cómo se responde en la prueba.** Sobre las violaciones a los derechos "
+            "humanos no hay dos versiones equivalentes: están establecidas por "
+            "informes oficiales y sentencias judiciales. Lo que sí admite debate "
+            "historiográfico son las causas del quiebre de 1973 y los efectos de las "
+            "reformas económicas, y ahí lo que se evalúa es sostener la afirmación "
+            "con la fuente que se tiene delante."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -75094,6 +75741,64 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Por qué los informes Rettig y Valech distinguen entre violaciones "
+                    "«sistemáticas» y hechos aislados, y qué consecuencia tiene esa "
+                    "distinción?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Defino sistemático: hechos repetidos según un patrón común, con métodos, "
+                            "recintos y organismos identificables, y no episodios sueltos de personas "
+                            "actuando por su cuenta."
+                        ),
+                        "porque": (
+                            "El criterio no es la cantidad sino el patrón: la existencia de "
+                            "organismos creados para eso y de procedimientos que se repiten en todo "
+                            "el país."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Identifico la consecuencia jurídica: la responsabilidad recae sobre el "
+                            "Estado como tal, y no solo sobre los individuos que ejecutaron."
+                        ),
+                        "porque": (
+                            "Si fueran hechos aislados, respondería cada autor por separado. Al ser "
+                            "sistemáticos, responde el aparato que los ordenó, los permitió y los "
+                            "encubrió."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Agrego la consecuencia en materia de reparación: el Estado asume medidas "
+                            "de reparación hacia las víctimas y sus familias."
+                        ),
+                        "porque": (
+                            "Reconocer responsabilidad estatal es lo que fundamenta pensiones, "
+                            "atención en salud y medidas de memoria, que se dirigen a un conjunto de "
+                            "víctimas y no caso a caso."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Distingo qué está establecido y qué se discute: los hechos y su carácter "
+                            "sistemático están determinados por informes oficiales y sentencias; las "
+                            "causas del quiebre de 1973 siguen siendo objeto de debate "
+                            "historiográfico."
+                        ),
+                        "porque": (
+                            "Confundir los dos planos es el error más grave al estudiar este período. "
+                            "Que la historia se reescriba no significa que los hechos establecidos "
+                            "sean opinables."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Confundir lo que está establecido con lo que está en discusión. El "
             "carácter sistemático de las violaciones a los derechos humanos, la "
@@ -75112,29 +75817,44 @@ LESSONS: dict[str, dict] = {
             "ritmo."
         ),
         "theory": (
-            "**Del campo a la ciudad.** El campo expulsaba (tierra concentrada) "
-            "y la ciudad atraía (trabajo asalariado, escuela, salud). El empleo "
-            "se desplazó de la agricultura hacia la industria y los servicios.\n"
-            "**Lo que la ciudad no pudo absorber.** Sin vivienda suficiente, "
-            "las familias ocuparon terrenos en la periferia y construyeron con "
-            "materiales precarios. De ahí nace el movimiento de pobladores, con "
-            "demandas propias de urbanización y títulos.\n"
-            "**La pobreza cambia de estatus.** Deja de ser desgracia privada "
-            "atendida por caridad y pasa a ser materia de política pública: "
-            "vivienda, salud, previsión, educación. Beneficencia entrega un "
-            "socorro; la política pública crea un derecho exigible.\n"
-            "**Democratización política.** Voto femenino pleno a fines de los "
-            "cuarenta, ejercido en la presidencial de 1952. Cédula única en "
-            "1958, que ataca el cohecho al hacer imposible verificar el voto "
-            "ajeno. Alfabetización creciente, que ampliaba el padrón porque "
-            "leer era requisito para votar hasta 1970.\n"
-            "**Pero no fue lineal.** Entre 1948 y 1958 se proscribió al Partido "
-            "Comunista. Se amplió por un lado y se restringió por otro: "
-            "describir el período como un avance continuo deja fuera lo que "
-            "explica sus tensiones.\n"
-            "**El campo.** Reforma agraria desde 1962 y sindicalización "
-            "campesina en 1967. Aun así, la estructura de la propiedad cambió "
-            "poco, y por eso más derechos convivieron con desigualdad profunda."
+            "**Del campo a la ciudad.** El campo expulsaba —tierra concentrada, "
+            "trabajo mal pagado— y la ciudad atraía: trabajo asalariado, escuela, "
+            "salud. El empleo se desplazó de la agricultura hacia la industria y los "
+            "servicios, y hacia mediados de siglo Chile pasó a ser un país "
+            "mayoritariamente urbano.\\n\\n"
+            "**Lo que la ciudad no pudo absorber.** Sin vivienda suficiente, las "
+            "familias ocuparon terrenos en la periferia y construyeron con materiales "
+            "precarios. De ahí nace el movimiento de pobladores, con demandas propias "
+            "de urbanización, agua potable y títulos de dominio.\\n\\n"
+            "**La pobreza cambia de estatus.** Deja de ser una desgracia privada "
+            "atendida por caridad y pasa a ser un problema público con instituciones "
+            "a cargo: cajas de previsión, servicio de salud, vivienda social. Es la "
+            "versión chilena del Estado de bienestar.\\n\\n"
+            "| Proceso | Cuándo | Qué implicó |\\n"
+            "|---|---|---|\\n"
+            "| Voto femenino en elecciones municipales | 1935 | primer reconocimiento "
+            "político |\\n"
+            "| Voto femenino en elecciones presidenciales | 1949 | sufragio pleno |\\n"
+            "| Creación del Servicio Nacional de Salud | 1952 | salud pública "
+            "unificada |\\n"
+            "| Reforma agraria | 1962-1973 | redistribución de la tierra, fin del "
+            "sistema de haciendas |\\n"
+            "| Nacionalización del cobre | 1971 | aprobada por unanimidad en el "
+            "Congreso |\\n\\n"
+            "**La ampliación de la ciudadanía** fue un proceso largo: sufragio "
+            "femenino, fin de la exclusión por analfabetismo, rebaja de la edad para "
+            "votar. Cada paso amplió quiénes contaban como parte del «pueblo» que la "
+            "Constitución invocaba.\\n\\n"
+            "**Décadas de reformas y de polarización.** Entre 1960 y 1973 se aceleran "
+            "los cambios —reforma agraria, sindicalización campesina, nacionalización "
+            "del cobre— en un clima de creciente polarización política, en el que "
+            "cada sector consideraba insuficiente o excesivo el ritmo del cambio.\\n\\n"
+            "**Cómo se estudia este período.** Las causas del quiebre de 1973 son "
+            "objeto de debate historiográfico, y la prueba no pide tomar partido: "
+            "pide reconocer que hubo factores internos —polarización, crisis "
+            "económica, ruptura de los acuerdos institucionales— y externos —Guerra "
+            "Fría, intervención de Estados Unidos—, y sostener lo que se afirme con "
+            "la fuente que se tenga delante."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -75180,6 +75900,59 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un gráfico muestra que la población urbana de Chile pasó del 50% en 1930 "
+                    "al 75% en 1970. ¿Qué procesos explican ese cambio y qué consecuencias "
+                    "tuvo en las ciudades?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico las causas de expulsión: concentración de la tierra, baja "
+                            "remuneración y escasas oportunidades en el mundo rural."
+                        ),
+                        "porque": (
+                            "Toda migración tiene un factor que empuja y otro que atrae. Nombrar solo "
+                            "uno deja la explicación a medias, que es el error frecuente."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Identifico las de atracción: empleo industrial y de servicios, y acceso "
+                            "a escuela y salud concentrado en las ciudades."
+                        ),
+                        "porque": (
+                            "El proceso coincide con la industrialización sustitutiva, que creó "
+                            "empleo urbano. Las dos cosas se refuerzan: hay causa económica y causa "
+                            "social."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Deduzco la consecuencia inmediata: la vivienda no creció al mismo ritmo, "
+                            "y aparecieron asentamientos precarios en la periferia."
+                        ),
+                        "porque": (
+                            "El dato del gráfico no dice esto, pero el proceso lo explica: ninguna "
+                            "ciudad podía absorber esa llegada en dos décadas. De ahí surge el "
+                            "movimiento de pobladores."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Señalo el cambio de largo plazo: el país deja de ser rural y las "
+                            "demandas sociales pasan a ser urbanas —vivienda, transporte, servicios—."
+                        ),
+                        "porque": (
+                            "Es un cambio estructural, de los que se miden en generaciones. Lo que se "
+                            "transforma no es solo dónde vive la gente, sino qué le exige al Estado."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Leer la democratización del período como una línea ascendente. En "
             "los mismos años conviven el primer voto femenino y la proscripción "
@@ -75198,26 +75971,46 @@ LESSONS: dict[str, dict] = {
             "confrontación ajena."
         ),
         "theory": (
-            "**Qué la define.** Confrontación entre Estados Unidos y la URSS "
-            "SIN guerra directa entre ellos. Los enfrentamientos armados "
-            "ocurrieron en terceros países alineados con cada bloque.\n"
-            "**Se peleó también fuera de lo militar.** Carrera espacial, "
-            "propaganda, cultura, deporte: cada logro se exhibía como prueba de "
-            "que un sistema era superior al otro. El Muro de Berlín (1961) es "
-            "la división vuelta hormigón.\n"
-            "**El giro latinoamericano.** La Revolución Cubana (1959) estimuló "
-            "movimientos de cambio profundo en toda la región, y Estados Unidos "
-            "respondió con la Alianza para el Progreso: ayuda y reformas para "
-            "evitar que la revolución se extendiera.\n"
-            "**Doctrina de seguridad nacional.** Su novedad es dónde ubica al "
-            "enemigo: DENTRO de la propia sociedad. Es la justificación que "
-            "invocaron las dictaduras militares de los sesenta y setenta, que "
-            "compartieron la violación sistemática de los derechos humanos.\n"
-            "**El final y lo que vino.** El derrumbe del bloque soviético "
-            "(1989-1991) terminó con el sistema bipolar. Después: apertura "
-            "comercial, privatizaciones y menor papel económico del Estado "
-            "—neoliberalismo—, junto con una globalización que integra los "
-            "mercados."
+            "**Qué la define.** Confrontación entre Estados Unidos y la Unión "
+            "Soviética, aproximadamente entre 1947 y 1991, SIN guerra directa entre "
+            "ellos. Los enfrentamientos armados ocurrieron en terceros países "
+            "alineados con cada bloque: Corea, Vietnam, Afganistán.\\n\\n"
+            "**Dos modelos en disputa.** No era solo una rivalidad entre potencias: "
+            "cada bloque proponía una forma de organizar la economía y la política "
+            "—economía de mercado y democracia liberal frente a economía planificada "
+            "y partido único—, y esa disputa se libró también dentro de cada país.\\n\\n"
+            "**Se peleó también fuera de lo militar.** Carrera espacial, propaganda, "
+            "cultura, deporte: cada logro se exhibía como prueba de que un sistema "
+            "era superior al otro.\\n\\n"
+            "| Hito | Año | Por qué importa |\\n"
+            "|---|---|---|\\n"
+            "| Plan Marshall y doctrina de contención | 1947 | ayuda económica como "
+            "herramienta de alineamiento |\\n"
+            "| OTAN y Pacto de Varsovia | 1949 / 1955 | los dos bloques militares |\\n"
+            "| Revolución Cubana | 1959 | un país socialista en el continente "
+            "americano |\\n"
+            "| Muro de Berlín | 1961 | la división vuelta hormigón |\\n"
+            "| Crisis de los misiles | 1962 | el momento más cerca de la guerra "
+            "nuclear |\\n"
+            "| Caída del Muro | 1989 | el fin del bloque soviético en Europa |\\n"
+            "| Disolución de la URSS | 1991 | el fin del período |\\n\\n"
+            "**El equilibrio del terror.** Ambas potencias tenían armas nucleares "
+            "suficientes para destruirse, y esa certeza mutua es lo que hizo "
+            "improbable el enfrentamiento directo. La disuasión explica la paradoja "
+            "de un conflicto largo sin batalla entre sus protagonistas.\\n\\n"
+            "**El giro latinoamericano.** La Revolución Cubana estimuló movimientos "
+            "de cambio profundo en toda la región. Estados Unidos respondió con la "
+            "Alianza para el Progreso —ayuda para reformas que evitaran otra Cuba— y, "
+            "cuando eso no bastó, con apoyo a gobiernos autoritarios anticomunistas. "
+            "Buena parte de las dictaduras del Cono Sur se inscribe en ese marco.\\n\\n"
+            "**La Doctrina de Seguridad Nacional** redefinió al enemigo: ya no era un "
+            "ejército extranjero, sino el «enemigo interno». Esa definición es la que "
+            "justificó la intervención militar en la política interna de varios "
+            "países de la región.\\n\\n"
+            "**Cuidado con explicarlo todo desde afuera.** El contexto internacional "
+            "condiciona, pero cada país tuvo sus propios conflictos, actores y "
+            "decisiones. Reducir procesos nacionales a una orden externa es el atajo "
+            "que la prueba suele poner como distractor."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -75265,6 +76058,57 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Por qué se llama «fría» a una guerra en la que murieron millones de "
+                    "personas en Corea, Vietnam y otros países?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Precisar a qué se refiere el adjetivo: «fría» describe la relación entre "
+                            "las dos superpotencias, que nunca combatieron directamente entre sí."
+                        ),
+                        "porque": (
+                            "El término no niega los muertos: describe una forma específica de "
+                            "conflicto. Leerlo como «guerra sin violencia» es el error que la "
+                            "pregunta busca."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Identifico dónde sí hubo guerra caliente: en terceros países alineados "
+                            "con cada bloque, como Corea, Vietnam y Afganistán."
+                        ),
+                        "porque": (
+                            "Son las llamadas guerras por delegación. La rivalidad se descargó en "
+                            "escenarios periféricos, con enorme costo humano local."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Explico por qué no se enfrentaron directamente: ambas potencias tenían "
+                            "armamento nuclear suficiente para destruirse mutuamente."
+                        ),
+                        "porque": (
+                            "La disuasión hizo demasiado caro el choque directo. Es la explicación "
+                            "estructural del carácter «frío» del conflicto entre ellas."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que el nombre describe la relación entre los protagonistas y no "
+                            "la experiencia de los países donde se combatió."
+                        ),
+                        "porque": (
+                            "Distinguir el punto de vista desde el que se nombra un proceso es parte "
+                            "del pensamiento histórico: para Vietnam esa guerra no tuvo nada de fría."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Explicar todo lo ocurrido en América Latina como consecuencia "
             "directa de la Guerra Fría, o negar por completo que influyera. Las "
@@ -75282,25 +76126,43 @@ LESSONS: dict[str, dict] = {
             "límites."
         ),
         "theory": (
-            "**La ONU y su diferencia con lo anterior.** Creada en 1945 para "
-            "mantener la paz y la seguridad. Frente a la Sociedad de Naciones, "
-            "que había fracasado, aportó un órgano con decisiones OBLIGATORIAS: "
-            "el Consejo de Seguridad. Cinco miembros permanentes tienen veto, "
-            "es decir, pueden bloquear cualquier resolución.\n"
-            "**La Declaración de 1948.** Afirma que todos nacen libres e "
-            "iguales en dignidad y derechos: eso es universalidad. Su efecto de "
-            "fondo es que el trato de un Estado a su población deja de ser "
-            "asunto puramente interno. Pero era una declaración, no un tratado: "
-            "por sí sola no creaba obligaciones exigibles.\n"
-            "**Núremberg.** La novedad no fue condenar a un país, sino juzgar a "
-            "PERSONAS por crímenes contra la humanidad.\n"
-            "**Descolonización.** Las potencias europeas salieron debilitadas "
-            "de la guerra, y sobre esa debilidad avanzaron las independencias "
-            "de Asia y África. Entre 1955 y 1975 cambia por completo el mapa "
-            "africano.\n"
-            "**Bipolaridad y no alineados.** Con dos superpotencias, cada "
-            "Estado debía alinearse o buscar una posición propia. Bandung "
-            "(1955) es esa tercera vía."
+            "**La ONU y su diferencia con lo anterior.** Creada en 1945 para mantener "
+            "la paz y la seguridad. Frente a la Sociedad de Naciones, que había "
+            "fracasado, aportó un órgano con decisiones OBLIGATORIAS: el Consejo de "
+            "Seguridad. Cinco miembros permanentes tienen veto, es decir, pueden "
+            "bloquear cualquier resolución, y esa regla explica buena parte de sus "
+            "parálisis posteriores.\\n\\n"
+            "**La Declaración Universal de 1948.** Afirma que todos nacen libres e "
+            "iguales en dignidad y derechos: eso es universalidad. Su efecto de fondo "
+            "es que el trato de un Estado a su propia población deja de ser un asunto "
+            "puramente interno.\\n\\n"
+            "**Por qué en ese momento.** La Segunda Guerra Mundial dejó decenas de "
+            "millones de muertos, el Holocausto mostró un exterminio planificado por "
+            "un Estado, y los juicios de Núremberg establecieron que hay crímenes que "
+            "se juzgan aunque fueran legales en el país donde ocurrieron.\\n\\n"
+            "| Institución o texto | Año | Qué aportó |\\n"
+            "|---|---|---|\\n"
+            "| ONU | 1945 | foro permanente y Consejo de Seguridad con decisiones "
+            "obligatorias |\\n"
+            "| Juicios de Núremberg | 1945-1946 | responsabilidad penal individual "
+            "por crímenes de guerra y contra la humanidad |\\n"
+            "| Declaración Universal | 1948 | catálogo común de derechos, con "
+            "vocación universal |\\n"
+            "| Convenios de Ginebra | 1949 | protección de civiles y prisioneros en "
+            "conflictos |\\n\\n"
+            "**La descolonización.** Entre las décadas de 1940 y 1970, Asia y África "
+            "accedieron a la independencia, y la ONU pasó de cincuenta y un miembros "
+            "a más del triple. El mapa político del mundo cambió más en treinta años "
+            "que en el siglo anterior.\\n\\n"
+            "**Un orden con dos caras.** Al mismo tiempo que se proclamaban los "
+            "derechos universales, el mundo se dividía en dos bloques enfrentados: "
+            "los mismos Estados que firmaron la Declaración sostuvieron regímenes "
+            "aliados que la vulneraban. Señalar esa contradicción es análisis "
+            "histórico, no opinión.\\n\\n"
+            "**De la declaración a la exigibilidad.** Una declaración no es un "
+            "tratado: obliga moral y políticamente. Por eso vinieron después los "
+            "pactos internacionales de 1966 y los sistemas regionales —como la Corte "
+            "Interamericana— que sí permiten reclamar ante un órgano."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -75349,6 +76211,62 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Por qué se dice que la Declaración Universal de 1948 cambió la relación "
+                    "entre soberanía y derechos humanos?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Recuerdo qué significaba soberanía antes: un Estado no reconocía "
+                            "autoridad por encima de sí, y lo que hiciera con su población era asunto "
+                            "interno."
+                        ),
+                        "porque": (
+                            "Sin ese punto de partida la Declaración parece una lista de buenas "
+                            "intenciones. Su novedad se mide contra la regla anterior."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Identifico el cambio: al afirmar que los derechos son universales, la "
+                            "comunidad internacional queda habilitada para pronunciarse sobre lo que "
+                            "ocurre dentro de un Estado."
+                        ),
+                        "porque": (
+                            "Universal significa que no dependen de la nacionalidad ni de la ley "
+                            "local. Por eso el trato a los propios ciudadanos deja de ser un asunto "
+                            "exclusivamente doméstico."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Conecto con Núremberg: allí ya se había establecido que obedecer la ley "
+                            "nacional no exime de responsabilidad por crímenes contra la humanidad."
+                        ),
+                        "porque": (
+                            "Los dos hechos van juntos y se refuerzan: uno fija responsabilidad penal "
+                            "individual; el otro, un catálogo de derechos que ningún Estado puede "
+                            "desconocer."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Matizo el alcance: una declaración no crea tribunales ni obliga como un "
+                            "tratado, y por eso hicieron falta los pactos de 1966 y los sistemas "
+                            "regionales."
+                        ),
+                        "porque": (
+                            "Una respuesta completa distingue el principio de su exigibilidad. "
+                            "Sostener que en 1948 los derechos quedaron garantizados es el error que "
+                            "la pregunta busca."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Suponer que porque un derecho está declarado en un documento "
             "internacional, existe un mecanismo que lo hace cumplir. "
@@ -75365,25 +76283,40 @@ LESSONS: dict[str, dict] = {
             "país, y ahí está lo que la prueba pregunta."
         ),
         "theory": (
-            "**Qué entra en crisis.** El Estado liberal del siglo XIX: garante "
-            "del orden y de los contratos, ausente de la economía. La crisis de "
-            "1929 lo dejó sin respuesta frente al desempleo masivo.\n"
+            "**Qué entra en crisis.** El Estado liberal del siglo XIX: garante del "
+            "orden y de los contratos, ausente de la economía. La crisis de 1929 lo "
+            "dejó sin respuesta frente al desempleo masivo, y en varios países la "
+            "respuesta vino antes de los movimientos autoritarios que del propio "
+            "liberalismo.\\n\\n"
+            "**La crisis de 1929.** El derrumbe bursátil en Nueva York arrastró al "
+            "comercio mundial: cayeron los precios de las materias primas y el "
+            "crédito internacional se cortó. Chile fue de los países más golpeados "
+            "por su dependencia del salitre.\\n\\n"
             "**La salida intervencionista.** Estados que sostienen la actividad "
-            "económica y asumen responsabilidades permanentes en salud, "
-            "previsión y educación: el Estado de bienestar.\n"
-            "**La salida latinoamericana.** Como el comercio exterior se "
-            "derrumbó, la región produjo internamente lo que antes importaba: "
-            "industrialización por sustitución de importaciones. En Chile, "
-            "Frente Popular en 1938 y CORFO en 1939. El Estado pasa de garante "
-            "del orden a agente económico.\n"
-            "**La salida totalitaria.** Partido único, líder supremo, "
-            "eliminación de la oposición, propaganda con una versión única de "
-            "la realidad. Su rasgo propio es la ambición TOTAL: controlar "
-            "escuela, trabajo, prensa, ocio y vida privada.\n"
-            "**Totalitarismo y populismo no son lo mismo.** Vargas y Perón "
-            "apelaron a las masas, concentraron poder y ampliaron derechos "
-            "sociales, pero no intentaron controlar la vida entera de la "
-            "sociedad. Esa es la diferencia que suele preguntarse."
+            "económica con obra pública y gasto —lo que después se asociaría a "
+            "Keynes— y que asumen responsabilidades permanentes en salud, previsión y "
+            "educación: el Estado de bienestar.\\n\\n"
+            "**La salida latinoamericana.** Como el comercio exterior se derrumbó, la "
+            "región produjo internamente lo que antes importaba: es la "
+            "industrialización por sustitución de importaciones (ISI), con aranceles, "
+            "crédito estatal y empresas públicas. En Chile su instrumento fue la "
+            "CORFO, creada en 1939 tras el terremoto de Chillán y bajo el gobierno "
+            "del Frente Popular.\\n\\n"
+            "| Antes de 1929 | Después |\\n"
+            "|---|---|\\n"
+            "| Estado árbitro, no productor | Estado empresario e inversor |\\n"
+            "| Crecer exportando materias primas | producir internamente lo que se "
+            "importaba |\\n"
+            "| Asistencia social por caridad | derechos sociales y previsión |\\n"
+            "| Librecambio | aranceles y protección |\\n\\n"
+            "**El costo del modelo ISI.** Funcionó mientras hubo mercado interno que "
+            "abastecer; con el tiempo mostró límites —industrias poco competitivas, "
+            "dependencia de la protección, presión sobre las cuentas fiscales— que "
+            "están detrás de los debates económicos de las décadas siguientes.\\n\\n"
+            "**No todas las salidas fueron democráticas.** En Europa, la crisis "
+            "alimentó el ascenso de regímenes fascistas que prometieron orden y "
+            "empleo suprimiendo libertades. Es el contraste que las preguntas suelen "
+            "poner: ante la misma crisis, respuestas políticas opuestas."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -75433,6 +76366,60 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Por qué la crisis de 1929 golpeó con más fuerza a Chile que a países de "
+                    "economía diversificada, y qué cambio de rol del Estado produjo?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico la causa estructural: el presupuesto fiscal y las "
+                            "exportaciones dependían en gran medida de un solo producto, el salitre, "
+                            "con precio fijado en el mercado internacional."
+                        ),
+                        "porque": (
+                            "Una economía concentrada traslada cualquier caída externa directamente "
+                            "al Estado y al empleo. La diversificación funciona como amortiguador, y "
+                            "Chile no lo tenía."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Sumo el factor previo: el nitrato sintético ya venía desplazando al "
+                            "salitre natural desde la Primera Guerra Mundial."
+                        ),
+                        "porque": (
+                            "La crisis encontró a la industria salitrera debilitada. Explicar el "
+                            "golpe solo por 1929 deja fuera la tendencia que lo hizo irreversible."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Describo el cambio: el Estado pasa de árbitro a productor e inversor, "
+                            "con la CORFO (1939) impulsando industria, electricidad y petróleo."
+                        ),
+                        "porque": (
+                            "Sin crédito externo ni demanda para el salitre, el impulso tenía que "
+                            "venir de adentro. Ese es el sentido concreto de la industrialización por "
+                            "sustitución de importaciones."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo señalando la continuidad: ese rol del Estado se mantuvo por "
+                            "décadas, más allá del gobierno que lo inició."
+                        ),
+                        "porque": (
+                            "Un cambio de este tipo es estructural, no coyuntural: sobrevive a los "
+                            "gobiernos. Distinguir eso es exactamente lo que evalúa la habilidad de "
+                            "continuidad y cambio."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Meter en el mismo saco a todo gobierno de los años treinta que "
             "concentre poder y hable de las masas. Un Estado que interviene la "
@@ -75450,29 +76437,46 @@ LESSONS: dict[str, dict] = {
             "del siglo."
         ),
         "theory": (
-            "**El orden portaliano y su vuelco.** La Constitución de 1833 dio a "
-            "Chile un Ejecutivo fuerte y una estabilidad institucional inusual "
-            "en la región. La guerra civil de 1891 invirtió el equilibrio: el "
-            "Congreso pasó a predominar sobre el Presidente.\n"
-            "**Una economía de pocos productos.** Trigo y plata primero, "
-            "salitre después. El auge del oro en California y Australia empujó "
-            "las exportaciones de trigo; la Guerra del Pacífico entregó a Chile "
-            "las salitreras y ató el presupuesto fiscal a ese mineral. Los "
-            "ferrocarriles se trazaron para llevar carga a los puertos, no para "
-            "conectar el país consigo mismo.\n"
-            "**El riesgo de esa estructura.** Cuando un país exporta pocos "
-            "productos, su ingreso depende de precios que se fijan afuera. Toda "
-            "pregunta sobre vulnerabilidad económica del período apunta ahí.\n"
-            "**Expansión del Estado hacia dentro.** La ocupación de la "
-            "Araucanía (1861-1883) incorporó territorio y despojó al pueblo "
-            "mapuche de gran parte de sus tierras. Las leyes laicas (1883-1884) "
-            "traspasaron al Estado los registros civiles que llevaba la "
-            "Iglesia.\n"
-            "**La cuestión social.** No es una guerra ni una ley: es el nombre "
-            "que se dio a las condiciones de vida de los trabajadores urbanos "
-            "—conventillos, jornadas largas, enfermedad—. Ante la ausencia de "
-            "previsión estatal, los trabajadores se organizaron en sociedades "
-            "de socorros mutuos."
+            "**El orden portaliano y su vuelco.** La Constitución de 1833 dio a Chile "
+            "un Ejecutivo fuerte, con amplias facultades y estados de excepción a la "
+            "mano, y una estabilidad institucional inusual en la región. Durante el "
+            "siglo el Congreso fue ganando terreno, y la guerra civil de 1891 "
+            "invirtió el equilibrio: se abre el período parlamentario, con predominio "
+            "del Congreso sobre el Presidente.\\n\\n"
+            "**Una economía de pocos productos.** Trigo y plata primero, salitre "
+            "después. El auge del oro en California y Australia empujó las "
+            "exportaciones de trigo a mediados de siglo; la Guerra del Pacífico "
+            "(1879-1883) entregó a Chile las salitreras de Tarapacá y Antofagasta, y "
+            "ató el presupuesto fiscal a ese mineral.\\n\\n"
+            "**El salitre financió al Estado.** Los derechos de exportación llegaron "
+            "a sostener buena parte del gasto público: obras, ferrocarriles y "
+            "escuelas. Esa dependencia es la cara positiva y la vulnerabilidad del "
+            "mismo modelo, y explica el golpe que vendría con el nitrato sintético y "
+            "la crisis de 1929.\\n\\n"
+            "| Proceso | Cuándo | Qué dejó |\\n"
+            "|---|---|---|\\n"
+            "| Constitución de 1833 | 1833 | Ejecutivo fuerte, estabilidad "
+            "institucional |\\n"
+            "| Ciclo del trigo y la plata | mediados de siglo | exportaciones, "
+            "primeros ferrocarriles |\\n"
+            "| Ocupación de la Araucanía | 1861-1883 | incorporación forzada del "
+            "territorio mapuche |\\n"
+            "| Guerra del Pacífico | 1879-1883 | provincias salitreras, renta fiscal "
+            "|\\n"
+            "| Guerra civil | 1891 | predominio del Congreso |\\n\\n"
+            "**La expansión territorial tuvo costos que las preguntas suelen pedir.** "
+            "La llamada «pacificación de la Araucanía» fue una ocupación militar que "
+            "despojó de tierras al pueblo mapuche y lo confinó a reducciones; la "
+            "colonización del sur trajo migrantes europeos a territorios que no "
+            "estaban vacíos.\\n\\n"
+            "**La cuestión social.** Hacia fin de siglo, el crecimiento de las "
+            "ciudades y de la minería produjo hacinamiento en conventillos, jornadas "
+            "extensas, trabajo infantil y alta mortalidad. De ahí surgen las primeras "
+            "organizaciones obreras —mancomunales, sociedades de socorros mutuos— y "
+            "las primeras leyes sociales del siglo XX.\\n\\n"
+            "**El Estado se hace presente a través del ferrocarril, la escuela y el "
+            "registro civil**, que es la forma concreta en que un Estado abstracto "
+            "llega a la vida de la gente."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -75522,6 +76526,63 @@ LESSONS: dict[str, dict] = {
                 ),
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una tabla muestra que entre 1880 y 1900 los ingresos fiscales de Chile "
+                    "se triplicaron y que la participación de los derechos del salitre en "
+                    "esos ingresos pasó del 5% a más del 50%. ¿Qué conclusión permite "
+                    "sostener y cuál no?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Leo las dos variables: una es el monto total de ingresos y la otra, la "
+                            "composición de ese total."
+                        ),
+                        "porque": (
+                            "Son cosas distintas, igual que cantidad y porcentaje. El crecimiento del "
+                            "total y el cambio de composición cuentan dos partes de la misma "
+                            "historia."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Sostengo la conclusión directa: tras la Guerra del Pacífico, el Estado "
+                            "chileno pasó a financiarse principalmente con la exportación de un solo "
+                            "producto."
+                        ),
+                        "porque": (
+                            "Los dos datos apuntan a lo mismo y hay un hecho que los conecta: la "
+                            "incorporación de las provincias salitreras en 1883. La conclusión no "
+                            "necesita nada más."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Agrego lo que se sigue de ahí: esa dependencia hizo al presupuesto "
+                            "vulnerable a un precio que se fijaba afuera."
+                        ),
+                        "porque": (
+                            "Es una causa estructural, y es lo que explica por qué la crisis de 1929 "
+                            "golpeó a Chile con especial dureza. Una tabla de 1900 permite anticipar "
+                            "esa fragilidad."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Descarto la conclusión de que el nivel de vida de la población mejoró en "
+                            "la misma proporción."
+                        ),
+                        "porque": (
+                            "La tabla mide ingresos del Estado, no condiciones de vida. Justamente en "
+                            "esas décadas se agudiza la cuestión social, así que el dato fiscal no "
+                            "autoriza a hablar del bienestar de la gente."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Leer el crecimiento de las exportaciones del siglo XIX como "
             "desarrollo económico sin más. La prueba suele pedir justamente lo "
@@ -75540,25 +76601,40 @@ LESSONS: dict[str, dict] = {
         "theory": (
             "**Qué es un Estado-nación.** Un poder soberano que manda sobre un "
             "territorio de límites definidos y sobre quienes lo habitan, sin "
-            "reconocer autoridad por encima de sí. Es la combinación de dos "
-            "cosas: un Estado (el aparato que gobierna) y una nación (una "
-            "comunidad que se piensa a sí misma como una).\n"
-            "**El cambio de fundamento.** La monarquía justificaba el poder por "
-            "herencia y origen divino. La república lo funda en la soberanía "
-            "popular ejercida por representantes elegidos, y reparte las "
-            "funciones del Estado en poderes separados para que no vuelva a "
-            "concentrarse.\n"
-            "**Lo declarado y lo efectivo.** Este es el punto que más se "
-            "pregunta. Las constituciones declararon igualdad ante la ley, y al "
-            "mismo tiempo el voto quedó restringido por renta o alfabetización "
-            "y la tierra siguió concentrada. No es una contradicción que haya "
-            "que resolver: es el rasgo del período. La igualdad fue jurídica y "
-            "no social.\n"
-            "**La nación se construye.** Escuela pública, himno, bandera, "
-            "museos y fiestas patrias no son adorno: son las herramientas con "
-            "que el Estado fabricó un sentido de pertenencia que antes no "
-            "existía. Y definir quién pertenece define también quién queda "
-            "fuera: los pueblos indígenas quedaron al margen de ese proyecto."
+            "reconocer autoridad por encima de sí. Es la combinación de dos cosas: un "
+            "**Estado** (el aparato que gobierna: leyes, tribunales, ejército, "
+            "impuestos) y una **nación** (una comunidad que se piensa a sí misma como "
+            "una).\\n\\n"
+            "**El cambio de fundamento.** La monarquía absoluta justificaba el poder "
+            "por herencia y origen divino. La república lo funda en la soberanía "
+            "popular ejercida por representantes elegidos, y reparte las funciones "
+            "del Estado en poderes separados.\\n\\n"
+            "| Antes | Después |\\n"
+            "|---|---|\\n"
+            "| Súbditos | ciudadanos |\\n"
+            "| Poder por herencia y origen divino | poder por soberanía popular |\\n"
+            "| Privilegios por estamento | igualdad ante la ley |\\n"
+            "| Fueros y costumbres locales | constitución y códigos únicos |\\n"
+            "| Fronteras difusas | territorio delimitado |\\n\\n"
+            "**De dónde salen estas ideas.** De la Ilustración —separación de "
+            "poderes, contrato social, soberanía popular— y de las revoluciones que "
+            "las pusieron en práctica: la independencia de Estados Unidos (1776) y la "
+            "Revolución Francesa (1789), con su Declaración de los Derechos del "
+            "Hombre y del Ciudadano.\\n\\n"
+            "**La ciudadanía no nació universal.** En el siglo XIX el derecho a voto "
+            "era censitario: exigía propiedad, renta o alfabetización, y excluía a "
+            "las mujeres. La ampliación del sufragio es un proceso de más de un "
+            "siglo, y por eso «democracia» en 1830 no significa lo mismo que hoy.\\n\\n"
+            "**Cómo se construye una nación.** No basta con declarar la "
+            "independencia: hay que fabricar el sentimiento de pertenencia. La "
+            "escuela pública, el servicio militar, los símbolos patrios, una lengua "
+            "oficial y una historia nacional común cumplen esa función, y casi "
+            "siempre a costa de las identidades locales e indígenas.\\n\\n"
+            "**En América Latina el orden costó décadas.** Tras la independencia, las "
+            "nuevas repúblicas enfrentaron guerras civiles, disputas de límites, "
+            "caudillismo y economías desarticuladas. Chile fue una excepción relativa "
+            "en estabilidad institucional temprana, y esa excepción es justamente lo "
+            "que las preguntas suelen pedir explicar."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n"
@@ -75605,6 +76681,60 @@ LESSONS: dict[str, dict] = {
                     "Hablar de desigualdad social exigiría datos de riqueza o de "
                     "propiedad que esta fuente no entrega."
                 ),
+            },
+        ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una fuente de 1850 celebra la apertura de escuelas públicas «para formar "
+                    "chilenos». ¿Qué proceso histórico ilustra esa frase y por qué la escuela "
+                    "cumple ese papel?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico el proceso: la construcción del Estado-nación, en su "
+                            "dimensión de nación y no solo de aparato estatal."
+                        ),
+                        "porque": (
+                            "La frase no habla de administrar un territorio, sino de FORMAR personas "
+                            "que se sientan parte de algo. Esa es la dimensión nacional del proceso."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Explico el papel de la escuela: enseña una lengua, una historia y unos "
+                            "símbolos comunes a niños de regiones distintas."
+                        ),
+                        "porque": (
+                            "La pertenencia nacional no es natural ni heredada: se aprende. La "
+                            "escuela, el servicio militar y los símbolos patrios son las "
+                            "instituciones que la producen."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Noto la tensión: esa unificación se hace a costa de identidades locales "
+                            "e indígenas, que quedan fuera del relato común."
+                        ),
+                        "porque": (
+                            "Una respuesta completa reconoce el costo del proceso. Explicar por qué "
+                            "se hizo así no equivale a validarlo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Contextualizo la fuente: quien celebra la apertura de escuelas en 1850 "
+                            "es parte de la élite que dirige ese proceso, así que el documento "
+                            "muestra un propósito y no un resultado."
+                        ),
+                        "porque": (
+                            "La fuente prueba qué se quería lograr, no cuánta gente efectivamente "
+                            "asistió. Confundir la intención con el efecto es el error típico al usar "
+                            "fuentes oficiales."
+                        ),
+                    },
+                ],
             },
         ],
         "common_error": (
@@ -80444,23 +81574,43 @@ LESSONS: dict[str, dict] = {
             "Analizar fuentes es la habilidad central, y se entrena."
         ),
         "theory": (
-            "**Primaria o secundaria.** Una fuente primaria se produjo en la "
-            "época estudiada: una carta, una ley, una fotografía, un discurso. "
-            "Una secundaria la escribió alguien después analizando el período: "
-            "un libro de historia, un artículo. Ninguna es \"mejor\": sirven "
-            "para cosas distintas.\n\n"
-            "**Toda fuente tiene un autor con una posición.** Quién la escribió, "
-            "para quién y con qué intención cambia lo que dice. Un discurso "
-            "oficial y un panfleto opositor sobre el mismo hecho no se "
-            "contradicen por error: cada uno defiende algo.\n\n"
-            "**Distingue el HECHO de la INTERPRETACIÓN.** \"La producción "
-            "aumentó un 20%\" es un hecho. \"La política económica fue un "
-            "éxito\" es una interpretación de ese hecho. Las preguntas suelen "
-            "jugar exactamente con esa diferencia.\n\n"
-            "**Responde con la fuente, no con lo que sabes.** Aunque conozcas el "
-            "tema, la alternativa correcta es la que se sostiene en lo que el "
-            "documento muestra. Si necesitas un dato que la fuente no da, esa "
-            "alternativa está mal."
+            "**Primaria o secundaria.** Una fuente primaria se produjo en la época "
+            "estudiada: una carta, una ley, una fotografía, un discurso, un censo. "
+            "Una secundaria la escribió alguien después analizando el período: un "
+            "libro de historia, un artículo. Ninguna es «mejor»: sirven para cosas "
+            "distintas, y una secundaria bien hecha puede ser más confiable que una "
+            "primaria interesada.\\n\\n"
+            "| Tipo de fuente | Ejemplos | Sirve sobre todo para |\\n"
+            "|---|---|---|\\n"
+            "| Primaria escrita | leyes, cartas, prensa de la época, discursos | "
+            "saber qué se decía y cómo se decía |\\n"
+            "| Primaria material o visual | fotografías, objetos, planos, afiches | "
+            "ver condiciones de vida y símbolos |\\n"
+            "| Primaria cuantitativa | censos, registros de aduana, presupuestos | "
+            "medir magnitudes y tendencias |\\n"
+            "| Oral | entrevistas, testimonios | recoger la experiencia de quienes "
+            "vivieron el hecho |\\n"
+            "| Secundaria | libros y artículos de historiadores | interpretar, "
+            "comparar, situar en contexto |\\n\\n"
+            "**Toda fuente tiene un autor con una posición.** Quién la escribió, para "
+            "quién y con qué intención cambia lo que dice. Un discurso oficial y un "
+            "panfleto opositor sobre el mismo hecho no se contradicen por error: cada "
+            "uno defiende algo.\\n\\n"
+            "**Las cuatro preguntas que se le hacen a una fuente**: quién la produjo, "
+            "cuándo, para quién y con qué propósito. Responderlas es lo que la prueba "
+            "llama «contextualizar», y sin eso una cita queda flotando.\\n\\n"
+            "**Interesada no es lo mismo que falsa.** Un aviso publicitario de 1910 "
+            "puede mentir sobre el producto y ser una fuente excelente sobre qué se "
+            "consideraba deseable en 1910. La pregunta correcta no es «¿es verdad?», "
+            "sino «¿de qué es evidencia?».\\n\\n"
+            "**Corroborar es comparar.** Una afirmación sostenida por dos fuentes "
+            "independientes vale más que una repetida por dos que copian de la misma. "
+            "Cuando dos fuentes discrepan, el trabajo no es elegir la simpática: es "
+            "explicar por qué difieren.\\n\\n"
+            "**Los silencios también son evidencia.** Quién no aparece en los "
+            "documentos —mujeres, trabajadores, pueblos originarios— dice algo sobre "
+            "quién escribía y para quién. Por eso la historia reciente usa tanto la "
+            "fuente oral: recupera voces que los archivos no registraron."
         ),
         "example_statement": (
             "Lee la fuente y responde.\n\n"
@@ -80486,6 +81636,65 @@ LESSONS: dict[str, dict] = {
                 "porque": "La fuente contrapone dos realidades en la misma ciudad. Esa desigualdad es lo que se puede sostener sin agregar nada de fuera del documento.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un estudiante investiga las condiciones de trabajo en las salitreras y "
+                    "encuentra dos documentos: el reglamento interno de una oficina, firmado "
+                    "por la administración en 1907, y una carta de un obrero a su familia del "
+                    "mismo año. ¿Cómo debe usar cada uno?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Clasifico: las dos son fuentes primarias, porque se produjeron en la "
+                            "época estudiada."
+                        ),
+                        "porque": (
+                            "Ser primaria no dice nada sobre su confiabilidad: dice cuándo se "
+                            "produjo. Las dos lo son, así que la distinción útil tiene que venir por "
+                            "otro lado."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Le hago a cada una las cuatro preguntas: el reglamento lo escribe la "
+                            "administración para los trabajadores, con el propósito de fijar "
+                            "obligaciones; la carta la escribe un obrero para su familia, sin destino "
+                            "público."
+                        ),
+                        "porque": (
+                            "Autor, destinatario e intención cambian lo que cada documento puede "
+                            "probar. Un reglamento muestra las reglas oficiales; una carta privada, "
+                            "cómo se vivían."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Defino de qué es evidencia cada uno: el reglamento prueba qué normas "
+                            "existían, no que se cumplieran; la carta prueba la experiencia de quien "
+                            "la escribió, no la de todos."
+                        ),
+                        "porque": (
+                            "Confundir la norma con la práctica es el error clásico. Y un testimonio "
+                            "individual no se puede generalizar a toda la pampa sin más respaldo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Corroboro: si la carta describe algo que el reglamento prohíbe, no hay "
+                            "contradicción que resolver sino una brecha entre norma y práctica que "
+                            "explicar, y conviene buscar una tercera fuente."
+                        ),
+                        "porque": (
+                            "Cuando dos fuentes discrepan, el trabajo del historiador no es elegir "
+                            "una, sino explicar por qué difieren. Muchas veces esa diferencia es el "
+                            "hallazgo."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Descartar una fuente por \"sesgada\". Todas las fuentes tienen un "
             "punto de vista, y el sesgo es información: dice qué le importaba a "
@@ -80501,21 +81710,40 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**Hecho y proceso.** Un hecho ocurre en una fecha; un proceso dura "
-            "décadas. La independencia se declara un día, pero la construcción "
-            "del Estado toma generaciones. Confundirlos lleva a respuestas "
-            "equivocadas sobre causas.\n\n"
-            "**Continuidad y cambio conviven.** En todo período hay cosas que "
-            "cambian y cosas que siguen igual. Las preguntas suelen pedir "
-            "identificar justamente cuál es cuál, no describir el período "
-            "entero.\n\n"
-            "**Causas y consecuencias son múltiples.** Un proceso histórico rara "
-            "vez tiene una sola causa. Suelen distinguirse causas estructurales "
-            "—de fondo y de larga data— y coyunturales, que son el detonante "
-            "inmediato.\n\n"
-            "**No juzgues el pasado con los valores de hoy.** Es el anacronismo, "
-            "y es el error de razonamiento más frecuente en esta prueba. Para "
-            "entender por qué alguien actuó como actuó hay que mirar lo que era "
-            "pensable en SU época."
+            "décadas. La independencia se declara un día, pero la construcción del "
+            "Estado toma generaciones. Confundirlos lleva a respuestas equivocadas "
+            "sobre causas.\\n\\n"
+            "| Escala | Qué abarca | Ejemplo |\\n"
+            "|---|---|---|\\n"
+            "| Acontecimiento (corta duración) | días o meses | una batalla, una "
+            "elección |\\n"
+            "| Coyuntura (media duración) | años o décadas | una crisis económica, un "
+            "gobierno |\\n"
+            "| Estructura (larga duración) | siglos | la urbanización, el cambio "
+            "demográfico |\\n\\n"
+            "**Cómo se cuentan los siglos.** El siglo XIX va de 1801 a 1900, porque "
+            "el primer siglo empezó en el año 1: para pasar de un año a su siglo se "
+            "toman las centenas y se suma uno, salvo en los años terminados en dos "
+            "ceros. Y en las fechas antes de Cristo el orden se invierte: el año 300 "
+            "a.C. es POSTERIOR al 500 a.C.\\n\\n"
+            "**Periodizar es una decisión, no un dato.** Los cortes —Edad Media, "
+            "Época Colonial, República— los pone el historiador para ordenar, y por "
+            "eso se discuten: cambiar dónde empieza un período es afirmar qué lo "
+            "define.\\n\\n"
+            "**Continuidad y cambio conviven.** En todo período hay cosas que cambian "
+            "y cosas que siguen igual. Las preguntas suelen pedir identificar "
+            "justamente cuál es cuál, no describir el período entero.\\n\\n"
+            "**Simultaneidad.** Procesos distintos ocurren a la vez en lugares "
+            "distintos, y una línea de tiempo con varios carriles sirve precisamente "
+            "para verlo: mientras en Europa ocurría una cosa, en América ocurría "
+            "otra, y a veces están conectadas.\\n\\n"
+            "**Ritmos distintos.** Un cambio político puede ser brusco y el social "
+            "lentísimo: se cambia una constitución en un año y las formas de vida "
+            "tardan generaciones. Por eso una fecha rara vez marca el comienzo real "
+            "de un proceso, solo su momento visible.\\n\\n"
+            "**Anacronismo y presentismo.** Poner en el pasado cosas que no existían "
+            "—o juzgarlo con los criterios de hoy— impide explicarlo. Entender por "
+            "qué alguien pensaba así en su época no es justificarlo."
         ),
         "example_statement": (
             "Un historiador afirma: «La urbanización de Chile no comenzó con la "
@@ -80537,6 +81765,61 @@ LESSONS: dict[str, dict] = {
                 "porque": "Es la forma en que la historiografía evita explicar procesos largos por un solo acontecimiento. Reconocer ese movimiento es lo que la pregunta evalúa.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Ordena estos elementos según su escala temporal y explica la diferencia: "
+                    "(1) la firma de un tratado en 1904; (2) el auge y la caída del salitre "
+                    "entre 1880 y 1930; (3) el paso de una población mayoritariamente rural a "
+                    "una urbana a lo largo del siglo XX."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "El primero es un acontecimiento: ocurre en una fecha precisa y se puede "
+                            "narrar en una línea."
+                        ),
+                        "porque": (
+                            "Los acontecimientos son los que tienen fecha exacta. Son los más fáciles "
+                            "de datar y los que menos explican por sí solos."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El segundo es una coyuntura: dura unas cinco décadas, tiene un auge y un "
+                            "declive, y se explica por precios y mercados."
+                        ),
+                        "porque": (
+                            "Una coyuntura abarca años o décadas y suele organizarse como ciclo. Es "
+                            "la escala en que se mueven las crisis económicas y los períodos de "
+                            "gobierno."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El tercero es una estructura de larga duración: se mide en generaciones "
+                            "y ningún año lo inaugura."
+                        ),
+                        "porque": (
+                            "Los cambios de larga duración son casi invisibles para quien los vive. "
+                            "Nadie recuerda el día en que el país se volvió urbano, porque no hubo "
+                            "tal día."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Relaciono las tres escalas: el ciclo del salitre atrajo población a las "
+                            "ciudades del norte, y eso alimentó el proceso urbano de larga duración."
+                        ),
+                        "porque": (
+                            "Las escalas no compiten: se encajan. Un acontecimiento se entiende "
+                            "dentro de su coyuntura, y una coyuntura, dentro de la estructura que la "
+                            "contiene."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Buscar UNA causa y una fecha exacta para todo. Los procesos "
             "históricos se superponen: cuando uno empieza, el anterior todavía "
@@ -80552,21 +81835,43 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**Soberanía popular y representación.** El poder reside en la "
-            "ciudadanía, que lo ejerce a través de representantes elegidos. Por "
-            "eso las elecciones periódicas y competitivas son el mínimo de "
-            "cualquier democracia.\n\n"
+            "ciudadanía, que lo ejerce a través de representantes elegidos. Por eso "
+            "las elecciones periódicas, competitivas e informadas son el mínimo de "
+            "cualquier democracia: sin alternativa real no hay elección, solo "
+            "ratificación.\\n\\n"
+            "**Democracia no es solo votar.** Supone también libertades de expresión, "
+            "reunión y asociación, medios plurales, y límites al poder de quien gana. "
+            "Una mayoría que suprime los derechos de una minoría no por eso actúa "
+            "democráticamente: la regla de mayoría decide dentro de un marco que no "
+            "puede borrar.\\n\\n"
             "**Separación de poderes.** El Ejecutivo administra y gobierna, el "
             "Legislativo hace las leyes y el Judicial las aplica y resuelve "
-            "conflictos. Que sean independientes es lo que impide que el poder "
-            "se concentre en una sola mano.\n\n"
-            "**En Chile el sistema es presidencial y el Congreso bicameral.** "
-            "Existe la Cámara de Diputadas y Diputados y el Senado; ambas "
-            "participan en la formación de la ley.\n\n"
-            "**Participar es más que votar.** También son participación los "
-            "plebiscitos, las organizaciones sociales, los sindicatos, las "
-            "juntas de vecinos y la deliberación pública. Una democracia con "
-            "alta participación electoral y nula vida asociativa es una "
-            "democracia débil."
+            "conflictos. Que sean independientes es lo que impide que el poder se "
+            "concentre en una sola mano.\\n\\n"
+            "| En Chile | Cómo funciona |\\n"
+            "|---|---|\\n"
+            "| Régimen | presidencial: el Presidente es jefe de Estado y de Gobierno "
+            "|\\n"
+            "| Congreso | bicameral: Cámara de Diputadas y Diputados, y Senado |\\n"
+            "| Voto | universal, secreto e igualitario, desde los 18 años |\\n"
+            "| Nivel local | alcaldes y concejales electos; el municipio administra "
+            "la comuna |\\n\\n"
+            "**Participación no se agota en el voto.** Incluye organizaciones "
+            "sociales, juntas de vecinos, sindicatos, consultas ciudadanas, cabildos "
+            "y movilización. Una democracia con alta participación electoral y sin "
+            "organización social es tan incompleta como la inversa.\\n\\n"
+            "**Representación y rendición de cuentas.** Elegir no es delegar en "
+            "blanco: el representante responde ante quienes lo eligieron, y las "
+            "elecciones periódicas son el mecanismo que hace efectiva esa "
+            "responsabilidad.\\n\\n"
+            "**Mayoría y minorías.** La decisión se toma por mayoría, pero el sistema "
+            "protege a las minorías con derechos garantizados, quórums especiales "
+            "para ciertas materias y tribunales que pueden invalidar una ley "
+            "contraria a la Constitución.\\n\\n"
+            "**Cuidado con confundir régimen y gobierno.** Cambiar de gobierno es "
+            "algo que ocurre dentro de la democracia; cambiar de régimen es cambiar "
+            "las reglas con que se gobierna. Las preguntas suelen apuntar exactamente "
+            "a esa diferencia."
         ),
         "example_statement": (
             "Un proyecto de ley es aprobado por el Congreso, pero el Presidente "
@@ -80587,6 +81892,59 @@ LESSONS: dict[str, dict] = {
                 "porque": "El diseño busca que ningún poder decida solo. La pregunta apunta a esa lógica de frenos mutuos, no al contenido del proyecto.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un país realiza elecciones cada cuatro años, pero un solo partido puede "
+                    "presentar candidatos, la prensa está bajo control estatal y los "
+                    "tribunales dependen del Ejecutivo. ¿Es una democracia? Justifica."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Reviso el primer requisito: hay elecciones periódicas, lo que por sí "
+                            "solo parecería cumplir el mínimo."
+                        ),
+                        "porque": (
+                            "Es el rasgo más visible de una democracia y por eso el más fácil de "
+                            "imitar. Quedarse aquí es el error que la pregunta pone a prueba."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reviso si son competitivas: con un solo partido habilitado, no hay "
+                            "alternativa real entre la cual elegir."
+                        ),
+                        "porque": (
+                            "Una elección sin competencia no transfiere el poder: lo ratifica. La "
+                            "posibilidad de que gane otro es parte de la definición, no un adorno."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reviso las libertades: con prensa controlada, la ciudadanía no puede "
+                            "informarse ni comparar, así que el voto no es informado."
+                        ),
+                        "porque": (
+                            "Sin pluralismo informativo, la decisión se toma con la información que "
+                            "entrega quien gobierna. La libertad de expresión no es un añadido a la "
+                            "democracia: es una condición para votar con sentido."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reviso la separación de poderes: tribunales dependientes del Ejecutivo "
+                            "eliminan el control sobre quien gobierna. Concluyo que no es una "
+                            "democracia pese a tener elecciones."
+                        ),
+                        "porque": (
+                            "Faltan tres de los cuatro elementos. La democracia es un conjunto de "
+                            "condiciones, y las elecciones son la más visible pero no la única."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Reducir la democracia al acto de votar. Votar es necesario pero no "
             "suficiente: sin separación de poderes, sin libertad de prensa y sin "
@@ -80601,23 +81959,48 @@ LESSONS: dict[str, dict] = {
             "evalúa acá."
         ),
         "theory": (
-            "**PIB.** Es el valor de todos los bienes y servicios FINALES "
-            "producidos dentro de un país en un período. Mide producción, no "
-            "bienestar: no dice cómo se reparte ni cuenta el trabajo no "
-            "remunerado ni el daño ambiental.\n\n"
+            "**PIB.** Es el valor de todos los bienes y servicios FINALES producidos "
+            "dentro de un país en un período. Se dice «finales» para no contar dos "
+            "veces: la harina que se usa para hacer pan ya está incluida en el precio "
+            "del pan.\\n\\n"
+            "**El PIB mide producción, no bienestar**: no dice cómo se reparte, no "
+            "cuenta el trabajo doméstico no remunerado ni el voluntariado, y no "
+            "descuenta el daño ambiental. Un desastre que obliga a reconstruir puede "
+            "incluso aumentarlo.\\n\\n"
             "**PIB per cápita.** Es el PIB dividido por la población. Sirve para "
-            "comparar países de distinto tamaño, pero es un PROMEDIO: puede "
-            "subir mientras la mayoría no mejora.\n\n"
-            "**Inflación.** Es el alza sostenida y generalizada de los precios. "
-            "En Chile la mide el IPC, que calcula el Instituto Nacional de "
-            "Estadísticas (INE) siguiendo una canasta de bienes y servicios "
-            "representativa. Si hay inflación, el dinero pierde poder "
-            "adquisitivo.\n\n"
-            "**Desempleo.** Es el porcentaje de la fuerza de trabajo que busca "
-            "empleo y no lo encuentra. Clave: quien no está buscando trabajo NO "
-            "cuenta como desempleado, sino que queda fuera de la fuerza de "
-            "trabajo. Por eso la tasa puede bajar sin que se hayan creado "
-            "empleos."
+            "comparar países de distinto tamaño, pero es un PROMEDIO: puede subir "
+            "mientras la mayoría no mejora. Y para comparar entre países hay que "
+            "corregir por el poder adquisitivo de cada moneda.\\n\\n"
+            "| Indicador | Qué mide | Su límite |\\n"
+            "|---|---|---|\\n"
+            "| PIB | producción total | no dice nada de distribución ni de bienestar "
+            "|\\n"
+            "| PIB per cápita | producción por habitante | es un promedio |\\n"
+            "| IPC / inflación | alza sostenida y general de precios | usa una "
+            "canasta promedio, no la de cada hogar |\\n"
+            "| Tasa de desempleo | desocupados sobre fuerza de trabajo | no cuenta a "
+            "quien dejó de buscar |\\n"
+            "| Coeficiente de Gini | desigualdad de ingresos (0 a 1) | no distingue "
+            "de dónde viene la desigualdad |\\n"
+            "| Pobreza multidimensional | ingreso más educación, salud, vivienda, "
+            "trabajo | depende de los umbrales que se fijen |\\n"
+            "| IDH | ingreso, educación y salud combinados | promedia dimensiones muy "
+            "distintas |\\n\\n"
+            "**Inflación.** Es el alza sostenida y generalizada de los precios. En "
+            "Chile la mide el IPC, que calcula el Instituto Nacional de Estadísticas "
+            "sobre una canasta representativa. Que baje la inflación no significa que "
+            "bajen los precios: significa que suben más lento.\\n\\n"
+            "**Por qué importa.** La inflación erosiona el poder adquisitivo de quien "
+            "tiene ingresos fijos, y por eso existen unidades reajustables como la "
+            "UF. Comparar dos sueldos de años distintos sin corregir por inflación es "
+            "comparar cosas que no son iguales.\\n\\n"
+            "**Desempleo: quién cuenta.** Solo se considera desocupado a quien no "
+            "tiene trabajo y está buscándolo activamente. Quien se cansó de buscar "
+            "sale de la fuerza de trabajo y deja de aparecer en la tasa, que entonces "
+            "puede bajar sin que haya mejorado nada.\\n\\n"
+            "**Ningún indicador solo alcanza.** Un país puede crecer con desigualdad "
+            "alta, o tener baja inflación con desempleo elevado. Leerlos juntos, y "
+            "con su definición a la vista, es lo que la prueba evalúa."
         ),
         "example_statement": (
             "En un país el PIB creció 4% durante el año, pero la población "
@@ -80637,6 +82020,61 @@ LESSONS: dict[str, dict] = {
                 "porque": "Es exactamente el caso que estas preguntas quieren evaluar: crecimiento agregado no significa mejora por persona.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un país informa que su PIB creció 5% y que su tasa de desempleo bajó de "
+                    "9% a 7%. Un analista sostiene que «por lo tanto, la población está "
+                    "mejor». ¿Qué le falta a esa conclusión?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Reviso qué mide el PIB: producción total, sin decir nada sobre cómo se "
+                            "reparte."
+                        ),
+                        "porque": (
+                            "El crecimiento es compatible con que la mejora se concentre en pocos. "
+                            "Sin un indicador de distribución —Gini, pobreza— no se puede afirmar "
+                            "nada sobre «la población»."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reviso la caída del desempleo: habría que ver si se debe a más empleo o "
+                            "a personas que dejaron de buscar y salieron de la fuerza de trabajo."
+                        ),
+                        "porque": (
+                            "La tasa solo cuenta a quienes buscan activamente. Una baja puede "
+                            "reflejar desaliento en vez de contratación, y en ese caso significa lo "
+                            "contrario de lo que parece."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Pregunto por la inflación: si los precios subieron más que los sueldos, "
+                            "el ingreso real pudo caer aunque la economía creciera."
+                        ),
+                        "porque": (
+                            "Lo que importa para el bolsillo es el ingreso real, no el nominal. Un "
+                            "alza de sueldos menor que la inflación es una pérdida de poder "
+                            "adquisitivo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que los dos datos son buenas señales pero insuficientes: para "
+                            "hablar de bienestar hacen falta indicadores de distribución, calidad del "
+                            "empleo e ingreso real."
+                        ),
+                        "porque": (
+                            "Ningún indicador solo describe el bienestar. La conclusión no es falsa, "
+                            "es prematura, y esa diferencia es la que la pregunta evalúa."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Confundir crecimiento del PIB con mejora en el bienestar de la "
             "gente. El PIB puede crecer con toda la ganancia concentrada en unos "
@@ -80651,18 +82089,42 @@ LESSONS: dict[str, dict] = {
             "cantidad, y ese es todo el modelo."
         ),
         "theory": (
-            "**Ley de la demanda.** A mayor precio, los consumidores compran "
-            "MENOS. La curva de demanda tiene pendiente negativa.\n\n"
-            "**Ley de la oferta.** A mayor precio, los productores quieren "
-            "vender MÁS. La curva de oferta tiene pendiente positiva.\n\n"
-            "**Equilibrio.** Es donde las dos curvas se cruzan: la cantidad que "
-            "se quiere comprar es igual a la que se quiere vender. Si el precio "
-            "está por sobre el de equilibrio sobra producto; si está por debajo, "
-            "falta.\n\n"
-            "**Distingue moverse SOBRE la curva de MOVER la curva.** Un cambio "
-            "de precio mueve a lo largo de la curva. Un cambio en otra cosa "
-            "—ingreso, moda, costo de producción, cantidad de vendedores— "
-            "DESPLAZA la curva entera. Esta distinción es la que más se pregunta."
+            "**Ley de la demanda.** A mayor precio, los consumidores compran MENOS. "
+            "La curva de demanda tiene pendiente negativa.\\n\\n"
+            "**Ley de la oferta.** A mayor precio, los productores quieren vender "
+            "MÁS. La curva de oferta tiene pendiente positiva.\\n\\n"
+            "**Equilibrio.** Es donde las dos curvas se cruzan: la cantidad que se "
+            "quiere comprar es igual a la que se quiere vender. Si el precio está por "
+            "sobre el de equilibrio sobra producto —excedente—; si está por debajo, "
+            "falta —escasez—, y en ambos casos el precio tiende a corregirse.\\n\\n"
+            "**Distingue moverse SOBRE la curva de MOVER la curva.** Es la distinción "
+            "que más se pregunta:\\n\\n"
+            "| Qué cambió | Qué ocurre |\\n"
+            "|---|---|\\n"
+            "| El precio del propio producto | movimiento a lo largo de la curva |\\n"
+            "| El ingreso de los hogares | se desplaza la demanda |\\n"
+            "| El precio de un sustituto o complemento | se desplaza la demanda |\\n"
+            "| Gustos, modas, población | se desplaza la demanda |\\n"
+            "| El costo de producción o la tecnología | se desplaza la oferta |\\n"
+            "| Un factor climático sobre la cosecha | se desplaza la oferta |\\n\\n"
+            "**Cómo se lee un desplazamiento.** Si la demanda se desplaza a la "
+            "derecha con la oferta quieta, suben el precio y la cantidad. Si es la "
+            "oferta la que se desplaza a la derecha, el precio baja y la cantidad "
+            "sube. Conviene dibujarlo: una flecha bien puesta responde la pregunta "
+            "sin cálculos.\\n\\n"
+            "**Bienes sustitutos y complementarios.** Dos bienes son sustitutos si "
+            "uno reemplaza al otro —té y café—, así que al subir el precio de uno "
+            "aumenta la demanda del otro. Son complementarios si se consumen juntos "
+            "—autos y bencina—, y ahí ocurre lo contrario.\\n\\n"
+            "**Elasticidad.** Mide cuánto responde la cantidad a un cambio de precio. "
+            "La demanda es **inelástica** cuando el bien es de primera necesidad o no "
+            "tiene sustitutos: aunque suba el precio, se sigue comprando casi lo "
+            "mismo. Es **elástica** cuando hay alternativas fáciles.\\n\\n"
+            "**Precios fijados por la autoridad.** Un precio máximo bajo el "
+            "equilibrio produce escasez y filas; un precio mínimo sobre el equilibrio "
+            "produce excedente. El caso más discutido de precio mínimo es el salario "
+            "mínimo, precisamente porque el bien en cuestión es el trabajo de una "
+            "persona."
         ),
         "example_statement": (
             "Una sequía destruye buena parte de la cosecha de trigo de un país. "
@@ -80681,6 +82143,61 @@ LESSONS: dict[str, dict] = {
             {
                 "accion": "Con la demanda sin cambios y menos oferta, el nuevo equilibrio queda con MAYOR precio y MENOR cantidad.",
                 "porque": "El cruce de las dos curvas se desplaza hacia arriba y a la izquierda. Es el resultado típico de un shock negativo de oferta.",
+            },
+        ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una helada destruye parte de la cosecha de paltas y, al mismo tiempo, no "
+                    "cambia nada en el bolsillo de los consumidores. ¿Qué pasa con el precio "
+                    "y la cantidad transada?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico qué curva se mueve: la helada afecta lo que hay disponible "
+                            "para vender, así que desplaza la OFERTA, no la demanda."
+                        ),
+                        "porque": (
+                            "Los factores que afectan la producción mueven la oferta. El enunciado "
+                            "aclara además que el ingreso de los hogares no cambió, para descartar la "
+                            "demanda."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Determino la dirección: hay menos producto a cada precio, así que la "
+                            "oferta se desplaza a la IZQUIERDA."
+                        ),
+                        "porque": (
+                            "Izquierda significa menor cantidad ofrecida a cada precio posible. Es el "
+                            "error habitual: el desplazamiento no depende de si el precio sube, sino "
+                            "de cuánto hay para vender."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Leo el nuevo equilibrio: con la demanda quieta, el cruce se produce a un "
+                            "precio MAYOR y una cantidad MENOR."
+                        ),
+                        "porque": (
+                            "Al haber menos producto, quienes más lo valoran pagan más y el resto se "
+                            "retira. Dibujar las dos curvas y correr una hace visible el resultado "
+                            "sin ningún cálculo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Aclaro qué NO ocurrió: la demanda no cambió, aunque se compren menos "
+                            "paltas."
+                        ),
+                        "porque": (
+                            "Se compran menos porque el precio subió, y eso es un movimiento SOBRE la "
+                            "curva de demanda, no un desplazamiento de ella. Es justamente la "
+                            "distinción que la pregunta evalúa."
+                        ),
+                    },
+                ],
             },
         ],
         "common_error": (

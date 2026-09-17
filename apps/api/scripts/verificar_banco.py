@@ -190,6 +190,9 @@ RESULTADOS_EJEMPLOS_EXTRA: dict[str, Fraction] = {
     # Biologia.
     "cie_ciclo_celular": Fraction(12 * 2),                          # 24 cromatidas
     "cie_ecosistemas": Fraction(50_000, 10**3),                     # 50 kJ al terciario
+
+    # Historia: lectura de graficos.
+    "his_representaciones": Fraction(25 * 15, 100),                 # 3,75 millones rurales
 }
 
 # --- Ciencias: física y química ---
