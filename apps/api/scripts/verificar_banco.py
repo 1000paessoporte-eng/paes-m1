@@ -164,6 +164,32 @@ RESULTADOS_EJEMPLOS_EXTRA: dict[str, Fraction] = {
     "prob_dispersion": Fraction(30**2 + 10**2 + 10**2 + 30**2, 4),  # varianza 500
     "prob_binomial": Fraction(4 * 8**3 * 2, 10**4),                 # 0,4096
     "prob_condicional": Fraction(18, 28),                           # 9/14
+
+    # Ciencias: física.
+    "cie_fuerzas": Fraction(400 * 2 + 400 * 10),                    # tension 4.800 N
+    "cie_roce": Fraction(2 * 10, 250),                              # 0,08 m de estiramiento
+    "cie_ondas": Fraction(3 * 10**8, 10**8),                        # 3 m de longitud de onda
+    "cie_electricidad": Fraction(12, 4 + 8),                        # 1 A
+    # Refrigerador: 0,15 kW x 24 h x 30 dias = 108 kWh
+    "cie_energia_electrica": Fraction(150 * 24 * 30, 1000),
+    "cie_movimiento": Fraction(-12**2, 2 * 60),                     # -1,2 m/s2
+    "cie_cosmologia": Fraction(round(64 ** (1 / 3))),               # 4 UA
+    "cie_ondas_fenomenos": Fraction(340, 680),                      # 0,5 m en el aire
+    "cie_optica": Fraction(1, Fraction(1, 10) - Fraction(1, 15)),   # imagen a 30 cm
+    "cie_tierra": Fraction(7 * 100_000, 100_000),                   # 7 km
+    # Quimica.
+    "cie_leyes_ponderales": Fraction(3 * 2 + 4 * 1, 2),             # coeficiente 5 del O2
+    "cie_limitante": Fraction(9, 2) - 3,                            # sobran 1,5 mol de H2
+    "cie_formulas": Fraction(2 * 12 + 6 * 1 + 16),                  # masa 46 de C2H6O
+    "cie_atomo": Fraction(27 - 13),                                 # 14 neutrones
+    "cie_estequiometria": Fraction(8 * 44, 16),                     # 22 g de CO2
+    "cie_soluciones": Fraction(Fraction(117, 10), Fraction(585, 10)) / Fraction(1, 2),
+    # Mezcla: (0,5 L/mol x 0,2 L + 1,0 x 0,3) / 0,5 L = 0,8 mol/L
+    "cie_dilucion": (Fraction(1, 2) * Fraction(1, 5) + Fraction(3, 10))
+    / Fraction(1, 2),
+    # Biologia.
+    "cie_ciclo_celular": Fraction(12 * 2),                          # 24 cromatidas
+    "cie_ecosistemas": Fraction(50_000, 10**3),                     # 50 kJ al terciario
 }
 
 # --- Ciencias: física y química ---

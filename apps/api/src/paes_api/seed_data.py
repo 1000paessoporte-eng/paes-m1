@@ -78352,32 +78352,38 @@ LESSONS: dict[str, dict] = {
             "de sustancias distintas."
         ),
         "theory": (
-            "**Tetravalencia.** El carbono tiene 4 electrones de valencia y "
-            "forma exactamente 4 enlaces covalentes. Como siempre le quedan "
-            "valencias para seguir uniéndose, arma cadenas de largo casi "
-            "ilimitado.\n\n"
-            "**Hibridación: se cuenta, no se memoriza.** Cuenta las REGIONES "
-            "de electrones alrededor del carbono, contando cada enlace "
-            "múltiple como una sola región:\n\n"
-            "| Regiones | Hibridación | Geometría | Ángulo |\n"
-            "|---|---|---|---|\n"
-            "| 4 | sp³ | tetraédrica | 109,5° |\n"
-            "| 3 | sp² | trigonal plana | 120° |\n"
-            "| 2 | sp | lineal | 180° |\n\n"
-            "**Longitud y energía de enlace van al revés.** Mientras más "
-            "pares de electrones se comparten, más se atraen los núcleos: el "
-            "enlace se acorta y cuesta más romperlo.\n\n"
-            "longitud: C–C > C=C > C≡C  ·  energía: C–C < C=C < C≡C\n\n"
-            "**Series homólogas.** Alcanos $C_nH_{2n+2}$ (solo simples), "
-            "alquenos $C_nH_{2n}$ (un doble), alquinos $C_nH_{2n-2}$ (un "
-            "triple).\n\n"
-            "**Grupos funcionales.** Son el átomo o grupo que le da a la "
-            "molécula sus propiedades: hidroxilo –OH (alcoholes), carbonilo "
-            "C=O entre dos carbonos (cetonas) o en el extremo (aldehídos), "
-            "carboxilo –COOH (ácidos), amino –NH₂ (aminas).\n\n"
-            "**Por qué la fórmula molecular no basta.** C₂H₆O es a la vez el "
-            "etanol y el dimetiléter. Para distinguirlos hace falta una "
-            "fórmula que muestre los enlaces: son isómeros."
+            "**Tetravalencia.** El carbono tiene $4$ electrones de valencia y forma "
+            "exactamente $4$ enlaces covalentes. Como siempre le quedan valencias "
+            "para seguir uniéndose, arma cadenas de largo casi ilimitado, lineales, "
+            "ramificadas o cerradas en ciclos.\\n\\n"
+            "**Hibridación: se cuenta, no se memoriza.** Cuenta las REGIONES de "
+            "electrones alrededor del carbono, contando cada enlace múltiple como una "
+            "sola región:\\n\\n"
+            "| Regiones | Hibridación | Geometría | Ángulo |\\n"
+            "|---|---|---|---|\\n"
+            "| $4$ | sp³ | tetraédrica | $109{,}5^\\circ$ |\\n"
+            "| $3$ | sp² | trigonal plana | $120^\\circ$ |\\n"
+            "| $2$ | sp | lineal | $180^\\circ$ |\\n\\n"
+            "**Longitud y energía de enlace van al revés.** Mientras más pares de "
+            "electrones se comparten, más se atraen los núcleos: el enlace se acorta "
+            "y cuesta más romperlo.\\n\\n"
+            "longitud: C–C > C=C > C≡C · energía: C–C < C=C < C≡C\\n\\n"
+            "**Enlaces sigma y pi.** Un enlace simple es un sigma; el doble es un "
+            "sigma y un pi; el triple, un sigma y dos pi. El enlace sigma permite el "
+            "giro de la cadena y el pi no, y de esa rigidez sale la isomería "
+            "cis-trans en los alquenos.\\n\\n"
+            "**Series homólogas.** Alcanos $C_nH_{2n+2}$ (solo simples), alquenos "
+            "$C_nH_{2n}$ (un doble), alquinos $C_nH_{2n-2}$ (un triple). Los miembros "
+            "de una serie se diferencian en un CH₂ y sus propiedades cambian de forma "
+            "gradual: a más carbonos, mayor temperatura de ebullición.\\n\\n"
+            "**Grupos funcionales.** Son el átomo o grupo que le da a la molécula sus "
+            "propiedades: hidroxilo $-$OH (alcoholes), carbonilo C$=$O entre dos "
+            "carbonos (cetonas) o en el extremo (aldehídos), carboxilo $-$COOH "
+            "(ácidos), amino $-$NH₂ (aminas).\\n\\n"
+            "**Por qué la fórmula molecular no basta.** C₂H₆O es a la vez el etanol y "
+            "el dimetiléter. Para distinguirlos hace falta una fórmula que muestre "
+            "los enlaces: son **isómeros**, misma fórmula molecular y distinta "
+            "estructura, y por eso uno es un líquido que se bebe y el otro un gas."
         ),
         "example_statement": (
             "Determina la hibridación y el ángulo de enlace de cada carbono "
@@ -78401,6 +78407,46 @@ LESSONS: dict[str, dict] = {
                 "porque": "Los dos carbonos del triple enlace quedan sp, y por eso ese tramo de la molécula es rígido y lineal.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un hidrocarburo de cadena abierta tiene $5$ carbonos y un solo doble "
+                    "enlace. Escribe su fórmula molecular, di a qué serie pertenece y qué "
+                    "hibridación tiene cada carbono."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Con un doble enlace y cadena abierta, la serie es la de los alquenos, "
+                            "cuya fórmula general es $C_nH_{2n}$."
+                        ),
+                        "porque": (
+                            "Cada serie homóloga tiene su fórmula general: un doble enlace «consume» "
+                            "dos hidrógenos respecto del alcano correspondiente."
+                        ),
+                    },
+                    {
+                        "accion": "Reemplazo $n = 5$: la fórmula molecular es $\\mathrm{C_5H_{10}}$.",
+                        "porque": (
+                            "El alcano de cinco carbonos sería $\\mathrm{C_5H_{12}}$. La diferencia de "
+                            "dos hidrógenos es exactamente el doble enlace."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Los dos carbonos del doble enlace tienen tres regiones de electrones "
+                            "cada uno, así que son sp² con ángulos de $120^\\circ$; los otros tres "
+                            "tienen cuatro regiones y son sp³, con $109{,}5^\\circ$."
+                        ),
+                        "porque": (
+                            "La hibridación se cuenta carbono por carbono, no por molécula. El doble "
+                            "enlace cuenta como UNA región, y por eso esos carbonos quedan con tres y "
+                            "no con cuatro."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Contar un doble o un triple enlace como dos o tres regiones. Se "
             "cuenta como UNA: lo que determina la geometría es hacia cuántas "
@@ -78419,22 +78465,38 @@ LESSONS: dict[str, dict] = {
             "ni por qué una planta se marchita."
         ),
         "theory": (
+            "**La teoría celular** sostiene tres cosas: todo ser vivo está formado "
+            "por células, la célula es la unidad funcional de la vida, y toda célula "
+            "proviene de otra célula preexistente.\\n\\n"
             "**La membrana es selectiva, no un colador.** Es una doble capa de "
-            "lípidos con proteínas incrustadas. Lo que es pequeño y sin carga "
-            "(oxígeno, dióxido de carbono) la cruza solo; lo que tiene carga o "
-            "es grande necesita una proteína que lo pase.\n\n"
-            "**Transporte pasivo: no gasta energía.** La sustancia va de donde "
-            "hay MÁS a donde hay MENOS, a favor del gradiente. Incluye la "
-            "difusión simple, la difusión facilitada (con proteína) y la "
-            "ósmosis, que es el caso del agua.\n\n"
-            "**Transporte activo: gasta ATP.** Va en contra del gradiente, de "
-            "donde hay menos a donde hay más. El ejemplo clásico es la bomba "
-            "sodio-potasio, que saca sodio y mete potasio aunque afuera ya haya "
-            "más sodio.\n\n"
-            "**Ósmosis: se mueve el AGUA, no el soluto.** El agua pasa hacia "
-            "donde hay más soluto. Un medio hipertónico tiene más soluto que la "
-            "célula y la deshidrata; uno hipotónico tiene menos y la hincha; uno "
-            "isotónico está en equilibrio y no la cambia."
+            "lípidos con proteínas incrustadas —el modelo del mosaico fluido—. Lo que "
+            "es pequeño y sin carga (oxígeno, dióxido de carbono) la cruza solo; lo "
+            "que tiene carga o es grande necesita una proteína que lo pase.\\n\\n"
+            "| Transporte | Gasta ATP | Dirección | Ejemplos |\\n"
+            "|---|---|---|---|\\n"
+            "| Difusión simple | no | a favor del gradiente | O₂, CO₂ |\\n"
+            "| Difusión facilitada | no | a favor del gradiente | glucosa, con "
+            "proteína |\\n"
+            "| Ósmosis | no | el agua, hacia donde hay más soluto | agua |\\n"
+            "| Transporte activo | sí | EN CONTRA del gradiente | bomba sodio-potasio "
+            "|\\n"
+            "| Endocitosis y exocitosis | sí | partículas grandes, en vesículas | "
+            "fagocitosis |\\n\\n"
+            "**A favor o en contra del gradiente** es la distinción que decide si hay "
+            "gasto de energía: bajar la pendiente es gratis, subirla cuesta ATP.\\n\\n"
+            "**Ósmosis: se mueve el AGUA, no el soluto.** El agua pasa hacia donde "
+            "hay más soluto, buscando igualar las concentraciones:\\n\\n"
+            "| Medio | Respecto de la célula | Le ocurre |\\n"
+            "|---|---|---|\\n"
+            "| Hipertónico | más soluto afuera | pierde agua y se arruga |\\n"
+            "| Isotónico | igual concentración | no cambia |\\n"
+            "| Hipotónico | menos soluto afuera | gana agua y se hincha |\\n\\n"
+            "**La pared celular cambia el desenlace.** Una célula animal en medio "
+            "hipotónico puede estallar; una vegetal, con su pared de celulosa, se "
+            "pone turgente y no revienta. Por eso las plantas se mantienen erguidas "
+            "por presión de agua, y se marchitan cuando la pierden.\\n\\n"
+            "**El suero fisiológico es isotónico a propósito**: si se inyectara agua "
+            "pura, los glóbulos rojos absorberían agua hasta romperse."
         ),
         "example_statement": (
             "Se colocan glóbulos rojos humanos en tres vasos: uno con agua "
@@ -78456,6 +78518,48 @@ LESSONS: dict[str, dict] = {
                 "porque": "El agua siempre viaja hacia donde hay más soluto, es decir hacia adentro. Y el glóbulo rojo no tiene pared celular que lo contenga, por eso estalla en vez de quedar turgente como una célula vegetal.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Se colocan trozos de papa en tres vasos: uno con agua destilada, uno con "
+                    "solución salina concentrada y uno isotónico. ¿Qué le pasa a cada trozo y "
+                    "por qué?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "En el agua destilada el medio es hipotónico: hay menos soluto afuera que "
+                            "dentro de las células, así que el agua entra y el trozo queda más rígido "
+                            "y algo más pesado."
+                        ),
+                        "porque": (
+                            "El agua se mueve hacia donde hay más soluto, y eso está dentro de la "
+                            "célula. La pared celular de la papa impide que estalle, así que en vez "
+                            "de romperse queda turgente."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "En la solución salina concentrada el medio es hipertónico: el agua sale "
+                            "de las células y el trozo queda blando y más liviano."
+                        ),
+                        "porque": (
+                            "Ahora hay más soluto afuera, así que el agua se va en esa dirección. Es "
+                            "el mismo principio por el que la sal conserva alimentos: deshidrata a "
+                            "los microorganismos."
+                        ),
+                    },
+                    {
+                        "accion": "En el vaso isotónico no hay cambio apreciable de masa ni de rigidez.",
+                        "porque": (
+                            "Las concentraciones están igualadas, así que entra y sale la misma "
+                            "cantidad de agua. Este vaso es el control del experimento: sin él no se "
+                            "podría atribuir el cambio de los otros dos a la ósmosis."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Creer que en la ósmosis se mueve el soluto para igualar las "
             "concentraciones. Se mueve el AGUA. La sal no sale del vaso hacia "
@@ -78469,20 +78573,37 @@ LESSONS: dict[str, dict] = {
             "misma idea contada tres veces."
         ),
         "theory": (
-            "**Tres partículas, dos lugares.** Protones (carga +) y neutrones "
-            "(sin carga) están en el núcleo; los electrones (carga −) giran "
-            "alrededor. El número atómico $Z$ es la cantidad de protones y es lo "
-            "que define al elemento: cambiarlo cambia el elemento.\n\n"
-            "**Número másico y isótopos.** El número másico $A$ es protones más "
-            "neutrones. Dos átomos del mismo elemento con distinto número de "
-            "neutrones son isótopos: mismo $Z$, distinto $A$.\n\n"
+            "**Tres partículas, dos lugares.** Protones (carga $+$) y neutrones (sin "
+            "carga) están en el núcleo; los electrones (carga $-$) ocupan la nube que "
+            "lo rodea. Casi toda la masa está en el núcleo: un electrón pesa unas "
+            "$1.800$ veces menos que un protón.\\n\\n"
+            "**El número atómico $Z$** es la cantidad de protones y es lo que define "
+            "al elemento: cambiarlo cambia el elemento. **El número másico $A$** es "
+            "protones más neutrones, así que $\\text{neutrones} = A - Z$.\\n\\n"
+            "| Concepto | Qué cambia | Qué se mantiene |\\n"
+            "|---|---|---|\\n"
+            "| Isótopos | el número de neutrones ($A$) | el elemento ($Z$) |\\n"
+            "| Iones | el número de electrones | protones y neutrones |\\n"
+            "| Elementos distintos | los protones ($Z$) | — |\\n\\n"
             "**Iones: se ganan o pierden ELECTRONES, nunca protones.** Un catión "
-            "perdió electrones y queda positivo; un anión ganó y queda negativo. "
-            "El número de protones no se toca.\n\n"
+            "perdió electrones y queda positivo; un anión ganó y queda negativo. La "
+            "carga es siempre $\\text{protones} - \\text{electrones}$.\\n\\n"
+            "**Los modelos, y qué corrigió cada uno.** Dalton propuso el átomo "
+            "indivisible; Thomson descubrió el electrón y lo imaginó incrustado en "
+            "una masa positiva; Rutherford, con la lámina de oro, descubrió que la "
+            "carga positiva está concentrada en un núcleo diminuto y el resto es "
+            "vacío; Bohr agregó que los electrones ocupan niveles de energía "
+            "definidos; el modelo actual reemplaza las órbitas por orbitales, zonas "
+            "de probabilidad.\\n\\n"
             "**Los electrones de valencia mandan.** Son los del último nivel y "
-            "explican con quién se une el átomo. En los grupos principales, el "
-            "número de grupo coincide con los electrones de valencia, y por eso "
-            "los elementos de una misma columna reaccionan parecido."
+            "explican con quién se une el átomo. En los grupos principales, el número "
+            "de grupo coincide con los electrones de valencia, y por eso los "
+            "elementos de una misma columna reaccionan parecido. Los gases nobles, "
+            "con su último nivel completo, casi no reaccionan.\\n\\n"
+            "**Cómo se ordena la tabla periódica.** Los elementos van por $Z$ "
+            "creciente; el **período** (fila) indica cuántos niveles de energía tiene "
+            "y el **grupo** (columna), los electrones de valencia. Hacia la derecha y "
+            "hacia arriba aumenta la electronegatividad y disminuye el radio atómico."
         ),
         "example_statement": (
             "Un ion tiene 16 protones, 18 neutrones y 18 electrones. Determina "
@@ -78502,6 +78623,42 @@ LESSONS: dict[str, dict] = {
                 "porque": "Hay más electrones que protones, lo que significa que el átomo GANÓ dos electrones: es un anión. Con 16 protones se trata del azufre, y el ion es el sulfuro.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "El ion $\\mathrm{Al}^{3+}$ tiene número atómico $13$ y número másico "
+                    "$27$. Determina cuántos protones, neutrones y electrones tiene."
+                ),
+                "steps": [
+                    {
+                        "accion": "Los protones son el número atómico: $13$, y no cambian por ser un ion.",
+                        "porque": (
+                            "El número de protones define al elemento. Si cambiara, dejaría de ser "
+                            "aluminio: un ion sigue siendo el mismo elemento, con otra carga."
+                        ),
+                    },
+                    {
+                        "accion": "Los neutrones son $A - Z = 27 - 13 = 14$.",
+                        "porque": (
+                            "El número másico cuenta las partículas del núcleo, que son protones más "
+                            "neutrones. Los electrones no entran en esa cuenta porque su masa es "
+                            "despreciable."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Los electrones: la carga $3+$ significa que perdió tres, así que tiene "
+                            "$13 - 3 = 10$."
+                        ),
+                        "porque": (
+                            "Una carga positiva se obtiene perdiendo electrones, nunca ganando "
+                            "protones. Con diez electrones, el ion queda con la configuración del "
+                            "neón, que es estable: por eso el aluminio forma justamente ese ion."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Restar mal la carga y decir $2+$. Más electrones que protones "
             "significa carga NEGATIVA, porque el electrón es el que aporta la "
@@ -78516,20 +78673,39 @@ LESSONS: dict[str, dict] = {
             "casi todo lo que la PAES pregunta de cinemática."
         ),
         "theory": (
-            "**Distancia y desplazamiento no son lo mismo.** La distancia es "
-            "todo el camino recorrido; el desplazamiento es la diferencia entre "
-            "la posición final y la inicial. Si vas y vuelves, recorriste "
-            "distancia pero tu desplazamiento es cero.\n\n"
-            "**Velocidad media.** Es el desplazamiento dividido por el tiempo: "
-            "$v = \\frac{\\Delta x}{\\Delta t}$. No es el promedio de las "
-            "velocidades salvo que los tramos duren lo mismo.\n\n"
-            "**MRU: velocidad constante.** La posición avanza parejo: "
-            "$x = x_0 + v\\,t$. En un gráfico posición-tiempo es una recta, y su "
-            "pendiente es la velocidad.\n\n"
-            "**MRUA: aceleración constante.** La velocidad cambia parejo: "
-            "$v = v_0 + a\\,t$ y $x = x_0 + v_0 t + \\frac{1}{2}a t^2$. En un "
-            "gráfico velocidad-tiempo es una recta cuya pendiente es la "
-            "aceleración, y el ÁREA bajo esa recta es el desplazamiento."
+            "**Distancia y desplazamiento no son lo mismo.** La distancia es todo el "
+            "camino recorrido y nunca disminuye; el desplazamiento es la diferencia "
+            "entre la posición final y la inicial, es un vector y puede ser cero. Si "
+            "vas y vuelves, recorriste distancia pero tu desplazamiento es cero.\\n\\n"
+            "Lo mismo separa **rapidez** de **velocidad**: la rapidez es distancia "
+            "sobre tiempo y la velocidad, desplazamiento sobre tiempo.\\n\\n"
+            "**Velocidad media.** $v = \\dfrac{\\Delta x}{\\Delta t}$. No es el promedio "
+            "de las velocidades salvo que los tramos duren lo mismo: si se recorren "
+            "distancias iguales a distinta velocidad, la media se calcula como "
+            "distancia total sobre tiempo total.\\n\\n"
+            "**Aceleración.** $a = \\dfrac{\\Delta v}{\\Delta t}$, en $\\text{m/s}^2$. Es "
+            "positiva o negativa según el sistema de referencia: una aceleración "
+            "negativa no significa «frenar», significa que apunta hacia el lado "
+            "negativo. Frena cuando apunta al revés de la velocidad.\\n\\n"
+            "| | MRU (velocidad constante) | MRUA (aceleración constante) |\\n"
+            "|---|---|---|\\n"
+            "| Velocidad | $v = $ constante | $v = v_0 + a\\,t$ |\\n"
+            "| Posición | $x = x_0 + v\\,t$ | $x = x_0 + v_0 t + \\dfrac{1}{2}a t^2$ |\\n"
+            "| Sin el tiempo | — | $v^2 = v_0^2 + 2a\\,\\Delta x$ |\\n"
+            "| Gráfico $x$-$t$ | recta | parábola |\\n"
+            "| Gráfico $v$-$t$ | horizontal | recta inclinada |\\n\\n"
+            "**Leer gráficos es la mitad de las preguntas.** En un gráfico "
+            "posición-tiempo la PENDIENTE es la velocidad. En uno velocidad-tiempo la "
+            "pendiente es la aceleración y el ÁREA bajo la curva es el "
+            "desplazamiento. Una recta horizontal en $x$-$t$ es un cuerpo detenido; "
+            "en $v$-$t$, uno que se mueve a velocidad constante.\\n\\n"
+            "**Caída libre.** Es un MRUA con $a = g \\approx 10\\ \\text{m/s}^2$ hacia "
+            "abajo, independiente de la masa: sin aire, una pluma y una piedra caen "
+            "igual. Al subir, el cuerpo frena con esa misma aceleración, y en el "
+            "punto más alto la velocidad es cero pero la aceleración sigue siendo "
+            "$g$.\\n\\n"
+            "**Las unidades tienen que calzar.** $1\\ \\text{m/s} = 3{,}6\\ "
+            "\\text{km/h}$: para pasar de km/h a m/s se divide por $3{,}6$."
         ),
         "example_statement": (
             "Un auto parte del reposo y acelera de manera constante hasta "
@@ -78550,6 +78726,57 @@ LESSONS: dict[str, dict] = {
                 "porque": "También sirve el área del gráfico velocidad-tiempo: un triángulo de base 5 s y altura 20 m/s da $\\frac{5 \\cdot 20}{2} = 50$ m. Llegar por los dos caminos es una buena forma de comprobar.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un ciclista va a $12$ m/s y frena uniformemente hasta detenerse en $60$ "
+                    "metros. ¿Cuánto vale su aceleración?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Elijo la ecuación que no usa el tiempo, porque el tiempo no es dato ni "
+                            "se pide: $v^2 = v_0^2 + 2a\\,\\Delta x$."
+                        ),
+                        "porque": (
+                            "De las tres ecuaciones del MRUA, esta relaciona velocidades con "
+                            "distancia. Usar otra obligaría a calcular primero el tiempo, con un paso "
+                            "extra donde equivocarse."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reemplazo con velocidad final cero: $0 = 12^2 + 2a \\cdot 60$, o sea $0 = "
+                            "144 + 120a$."
+                        ),
+                        "porque": (
+                            "«Hasta detenerse» significa $v = 0$, y es el dato que suele pasar "
+                            "desapercibido porque no viene con número en el enunciado."
+                        ),
+                    },
+                    {
+                        "accion": "Despejo: $a = -\\dfrac{144}{120} = -1{,}2\\ \\text{m/s}^2$.",
+                        "porque": (
+                            "El signo negativo indica que la aceleración apunta al revés del "
+                            "movimiento, que es lo que significa frenar. Su magnitud, $1{,}2\\ "
+                            "\\text{m/s}^2$, es lo que se informa como respuesta."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Compruebo con otra ecuación: si $v = v_0 + a t$, el ciclista demora $t = "
+                            "\\dfrac{12}{1{,}2} = 10$ s, y en ese tiempo recorre $\\dfrac{12 + 0}{2} "
+                            "\\cdot 10 = 60$ m."
+                        ),
+                        "porque": (
+                            "Con aceleración constante la distancia es la velocidad media por el "
+                            "tiempo, y la velocidad media es el promedio de la inicial y la final. "
+                            "Que devuelva los $60$ m del enunciado confirma el resultado."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Calcular la distancia como $v \\cdot t = 20 \\cdot 5 = 100$ m. Esa "
             "fórmula sirve solo si la velocidad es CONSTANTE. Acá el auto pasó "
@@ -78564,21 +78791,33 @@ LESSONS: dict[str, dict] = {
             "moles."
         ),
         "theory": (
-            "**El mol es un número, como la docena.** Un mol son "
-            "$6{,}02 \\times 10^{23}$ partículas (número de Avogadro). Se usa "
-            "porque las reacciones ocurren entre CANTIDADES de partículas, no "
-            "entre gramos.\n\n"
-            "**La masa molar convierte gramos en moles.** Es la masa de un mol, "
-            "en g/mol, y sale de sumar las masas atómicas de la tabla: "
-            "$n = \\frac{m}{M}$.\n\n"
+            "**El mol es un número, como la docena.** Un mol son $6{,}02 \\times "
+            "10^{23}$ partículas (número de Avogadro). Se usa porque las reacciones "
+            "ocurren entre CANTIDADES de partículas, no entre gramos.\\n\\n"
+            "**La masa molar convierte gramos en moles.** Es la masa de un mol, en "
+            "g/mol, y sale de sumar las masas atómicas de la tabla.\\n\\n"
+            "| Para pasar de | a | Se usa |\\n"
+            "|---|---|---|\\n"
+            "| masa (g) | moles | $n = \\dfrac{m}{M}$ |\\n"
+            "| moles | masa (g) | $m = n \\cdot M$ |\\n"
+            "| moles | partículas | $N = n \\cdot 6{,}02 \\times 10^{23}$ |\\n"
+            "| moles de gas en CNPT | volumen | $V = n \\cdot 22{,}4$ L |\\n\\n"
             "**La ecuación debe estar balanceada antes de calcular.** Los "
-            "coeficientes son la receta: dicen cuántos moles de cada cosa "
-            "participan. Usar una ecuación sin balancear da siempre un "
-            "resultado incorrecto.\n\n"
+            "coeficientes son la receta: dicen cuántos moles de cada cosa participan. "
+            "Usar una ecuación sin balancear da siempre un resultado incorrecto.\\n\\n"
             "**Los coeficientes son proporción de MOLES, no de gramos.** En "
-            "$2\\mathrm{H_2} + \\mathrm{O_2} \\rightarrow 2\\mathrm{H_2O}$, dos "
-            "moles de hidrógeno reaccionan con uno de oxígeno; en gramos esa "
-            "proporción es completamente distinta."
+            "$2\\mathrm{H_2} + \\mathrm{O_2} \\rightarrow 2\\mathrm{H_2O}$, dos moles de "
+            "hidrógeno reaccionan con uno de oxígeno; en gramos esa proporción es $4$ "
+            "a $32$, completamente distinta.\\n\\n"
+            "**El camino es siempre el mismo**: de los gramos del dato se pasa a "
+            "moles, de esos moles se cruza a los moles del compuesto que interesa "
+            "usando los coeficientes, y recién ahí se vuelve a gramos. Los tres "
+            "pasos, siempre en ese orden.\\n\\n"
+            "$$\\text{g de A} \\;\\to\\; \\text{mol de A} \\;\\to\\; \\text{mol de B} \\;\\to\\; "
+            "\\text{g de B}$$\\n\\n"
+            "**La masa se conserva, los moles no.** En la reacción del agua, $3$ "
+            "moles de reactantes dan $2$ de producto, pero los gramos de un lado y "
+            "del otro coinciden exactamente."
         ),
         "example_statement": (
             "¿Cuántos gramos de agua se forman al reaccionar completamente 4 g "
@@ -78599,6 +78838,52 @@ LESSONS: dict[str, dict] = {
                 "porque": "El resultado se pide en gramos, así que hay que volver con la masa molar del agua. El camino siempre es el mismo: gramos → moles → moles → gramos.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Qué masa de dióxido de carbono se produce al quemar $8$ g de metano "
+                    "según $\\mathrm{CH_4} + 2\\mathrm{O_2} \\rightarrow \\mathrm{CO_2} + "
+                    "2\\mathrm{H_2O}$? (Masas molares: CH₄ $= 16$ g/mol, CO₂ $= 44$ g/mol.)"
+                ),
+                "steps": [
+                    {
+                        "accion": "Paso los gramos de metano a moles: $n = \\dfrac{8}{16} = 0{,}5$ mol.",
+                        "porque": (
+                            "La ecuación relaciona moles, no gramos, así que este paso es obligatorio "
+                            "antes de usar cualquier coeficiente."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Uso la proporción de la ecuación: el coeficiente del metano y el del CO₂ "
+                            "son ambos $1$, así que se producen también $0{,}5$ mol de CO₂."
+                        ),
+                        "porque": (
+                            "La receta dice que cada molécula de metano da una de dióxido. Si el "
+                            "coeficiente hubiera sido $2$, habría que multiplicar por dos."
+                        ),
+                    },
+                    {
+                        "accion": "Vuelvo a gramos: $m = 0{,}5 \\cdot 44 = 22$ g de CO₂.",
+                        "porque": (
+                            "La respuesta se pide en masa, así que se cierra el camino con la masa "
+                            "molar del compuesto de llegada, que es distinta de la del de partida."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Compruebo la conservación: reaccionaron $8$ g de metano y $0{,}5 \\cdot 2 "
+                            "\\cdot 32 = 32$ g de oxígeno, o sea $40$ g; y se formaron $22$ g de CO₂ "
+                            "más $0{,}5 \\cdot 2 \\cdot 18 = 18$ g de agua, también $40$ g."
+                        ),
+                        "porque": (
+                            "La masa total tiene que calzar a ambos lados. Es la comprobación que "
+                            "detecta un coeficiente mal usado sin rehacer todo el ejercicio."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Aplicar la proporción de la ecuación directamente sobre los "
             "gramos: \"4 g de H₂ dan 4 g de agua\". Los coeficientes cuentan "
@@ -78613,22 +78898,38 @@ LESSONS: dict[str, dict] = {
             "camino; la materia da vueltas y vuelve."
         ),
         "theory": (
-            "**Los productores hacen la energía disponible.** Las plantas y "
-            "algas capturan energía luminosa y la convierten en materia "
-            "orgánica mediante la fotosíntesis. Todo lo demás del ecosistema "
-            "depende de eso.\n\n"
-            "**Niveles tróficos.** Productores, consumidores primarios "
-            "(herbívoros), secundarios (carnívoros que comen herbívoros), "
-            "terciarios, y descomponedores, que devuelven la materia al "
-            "suelo.\n\n"
-            "**La regla del 10%.** Solo alrededor de una décima parte de la "
-            "energía de un nivel pasa al siguiente; el resto se va en "
-            "respiración, movimiento y calor. Por eso las cadenas tróficas son "
-            "cortas y hay muchos menos depredadores que presas.\n\n"
-            "**La energía FLUYE, la materia CICLA.** La energía entra como luz "
-            "y sale como calor: no vuelve. El carbono, el nitrógeno y el agua, "
-            "en cambio, se reciclan una y otra vez entre los seres vivos y el "
-            "ambiente."
+            "**Los productores hacen la energía disponible.** Las plantas y algas "
+            "capturan energía luminosa y la convierten en materia orgánica mediante "
+            "la fotosíntesis. Todo lo demás del ecosistema depende de eso.\\n\\n"
+            "**Niveles tróficos.** Productores, consumidores primarios (herbívoros), "
+            "secundarios (carnívoros que comen herbívoros), terciarios, y "
+            "descomponedores, que devuelven la materia al suelo cerrando el ciclo.\\n\\n"
+            "**La regla del $10\\%$.** Solo alrededor de una décima parte de la "
+            "energía de un nivel pasa al siguiente; el resto se va en respiración, "
+            "movimiento y calor:\\n\\n"
+            "| Nivel | Energía disponible |\\n"
+            "|---|---|\\n"
+            "| Productores | $100\\%$ |\\n"
+            "| Consumidores primarios | $10\\%$ |\\n"
+            "| Consumidores secundarios | $1\\%$ |\\n"
+            "| Consumidores terciarios | $0{,}1\\%$ |\\n\\n"
+            "Por eso las cadenas tróficas rara vez pasan de cuatro o cinco eslabones "
+            "y hay muchos menos depredadores que presas.\\n\\n"
+            "**La energía FLUYE, la materia CICLA.** La energía entra como luz y sale "
+            "como calor: no vuelve, y por eso el ecosistema necesita un aporte "
+            "constante. El carbono, el nitrógeno y el agua, en cambio, se reciclan "
+            "una y otra vez entre los seres vivos y el ambiente.\\n\\n"
+            "**Cadena y red.** Una cadena trófica es una secuencia lineal; una red "
+            "trófica es el conjunto de todas las cadenas conectadas, y es lo que de "
+            "verdad ocurre: casi ningún animal come de una sola cosa. Por eso quitar "
+            "una especie afecta a varias a la vez.\\n\\n"
+            "**Bioacumulación.** Los contaminantes que no se degradan se concentran a "
+            "lo largo de la cadena, porque cada depredador acumula lo de todas sus "
+            "presas. Los niveles superiores son los más afectados, aunque el "
+            "contaminante esté diluido en el agua.\\n\\n"
+            "**Hábitat y nicho.** El hábitat es dónde vive una especie; el nicho, el "
+            "papel que cumple: qué come, cuándo está activa, con quién compite. Dos "
+            "especies pueden compartir hábitat y no competir si sus nichos difieren."
         ),
         "example_statement": (
             "En un ecosistema, los productores fijan 20.000 kJ de energía. "
@@ -78649,6 +78950,49 @@ LESSONS: dict[str, dict] = {
                 "porque": "De los 20.000 kJ iniciales queda el 1%. Ese desplome es justamente la razón de que casi ningún ecosistema tenga cinco o seis niveles tróficos.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "En un ecosistema los productores fijan $50.000$ kJ. Si se aplica la "
+                    "regla del $10\\%$, ¿cuánta energía llega a un consumidor terciario? ¿Y "
+                    "qué implica ese número?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Del productor al consumidor primario pasa el $10\\%$: $50.000 \\cdot 0{,}1 "
+                            "= 5.000$ kJ."
+                        ),
+                        "porque": (
+                            "El $90\\%$ restante se disipó como calor y en el propio metabolismo de la "
+                            "planta. No desapareció: dejó de estar disponible como alimento."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Al secundario pasa el $10\\%$ de eso: $500$ kJ. Y al terciario, otro "
+                            "$10\\%$: $50$ kJ."
+                        ),
+                        "porque": (
+                            "La regla se aplica escalón por escalón, no una sola vez. Tres saltos "
+                            "equivalen a multiplicar por $0{,}001$, o sea que llega la milésima "
+                            "parte."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Interpreto: el consumidor terciario dispone del $0{,}1\\%$ de la energía "
+                            "original, y por eso necesita un territorio enorme para sostenerse."
+                        ),
+                        "porque": (
+                            "Es la razón de que los grandes depredadores sean escasos y de que sean "
+                            "los primeros en desaparecer cuando el ecosistema se reduce: dependen de "
+                            "toda la pirámide que tienen debajo."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Aplicar el 10% una sola vez y responder 2.000 kJ. Hay que contar "
             "los SALTOS entre niveles, no los niveles: de productores a "
@@ -78662,20 +79006,43 @@ LESSONS: dict[str, dict] = {
             "las fuerzas y sumándolas bien."
         ),
         "theory": (
-            "**Primera ley (inercia).** Si la fuerza neta es cero, el cuerpo "
-            "sigue como estaba: quieto, o moviéndose en línea recta a velocidad "
-            "constante. Moverse NO requiere fuerza; cambiar el movimiento sí.\n\n"
+            "**Una fuerza es un vector**: tiene magnitud, dirección y sentido, y se "
+            "mide en newton ($1\\ \\text{N} = 1\\ \\text{kg} \\cdot \\text{m/s}^2$). Por "
+            "eso dos fuerzas no se suman como números sueltos: en la misma dirección "
+            "se suman o se restan según el sentido, y perpendiculares se componen con "
+            "Pitágoras.\\n\\n"
+            "**Primera ley (inercia).** Si la fuerza neta es cero, el cuerpo sigue "
+            "como estaba: quieto, o moviéndose en línea recta a velocidad constante. "
+            "Moverse NO requiere fuerza; cambiar el movimiento sí.\\n\\n"
             "**Segunda ley.** $F_{neta} = m\\,a$. La aceleración va en la misma "
-            "dirección que la fuerza neta y es proporcional a ella. Ojo con "
-            "\"neta\": es la SUMA de todas las fuerzas, no una sola.\n\n"
-            "**Tercera ley (acción y reacción).** Toda fuerza viene de a pares: "
-            "si A empuja a B, B empuja a A con la misma intensidad y sentido "
-            "contrario. Las dos fuerzas actúan sobre CUERPOS DISTINTOS, y por "
-            "eso no se anulan entre sí.\n\n"
-            "**Peso y masa son cosas distintas.** La masa (kg) es cuánta "
-            "materia hay y no cambia de lugar en lugar. El peso (N) es la "
-            "fuerza con que el planeta te atrae: $P = m\\,g$, y en la Luna es "
-            "menor aunque la masa sea la misma."
+            "dirección que la fuerza neta y es proporcional a ella. Ojo con «neta»: "
+            "es la SUMA de todas las fuerzas, no una sola. De aquí sale que con la "
+            "misma fuerza, el cuerpo de más masa acelera menos.\\n\\n"
+            "**Tercera ley (acción y reacción).** Toda fuerza viene de a pares: si A "
+            "empuja a B, B empuja a A con la misma intensidad y sentido contrario. "
+            "Las dos fuerzas actúan sobre CUERPOS DISTINTOS, y por eso no se anulan "
+            "entre sí.\\n\\n"
+            "**El diagrama de cuerpo libre** es el método, no un adorno: se aísla un "
+            "solo cuerpo, se dibujan todas las fuerzas que actúan SOBRE él —y ninguna "
+            "de las que él ejerce—, se elige un sistema de ejes y se suman por "
+            "separado en cada dirección.\\n\\n"
+            "| Situación | Qué se cumple |\\n"
+            "|---|---|\\n"
+            "| Equilibrio estático (en reposo) | $F_{neta} = 0$ y $v = 0$ |\\n"
+            "| Equilibrio dinámico (velocidad constante) | $F_{neta} = 0$ y $v \\neq "
+            "0$ |\\n"
+            "| Acelerando | $F_{neta} = m\\,a \\neq 0$ |\\n\\n"
+            "Que un cuerpo se mueva no significa que haya fuerza neta: un ascensor "
+            "que sube a velocidad constante tiene fuerza neta cero, igual que uno "
+            "detenido.\\n\\n"
+            "**En un plano inclinado** el peso se descompone en dos: $m g \\sin\\theta$ "
+            "paralela al plano, que es la que hace bajar al cuerpo, y $m g "
+            "\\cos\\theta$ perpendicular, que es la que la normal equilibra. Por eso en "
+            "una rampa más empinada el cuerpo acelera más y la normal es menor.\\n\\n"
+            "**Peso y masa son cosas distintas.** La masa (kg) es cuánta materia hay "
+            "y no cambia de lugar en lugar. El peso (N) es la fuerza con que el "
+            "planeta atrae: $P = m\\,g$, y en la Luna es menor aunque la masa sea la "
+            "misma."
         ),
         "example_statement": (
             "Sobre un bloque de 5 kg apoyado en una superficie horizontal sin "
@@ -78696,6 +79063,57 @@ LESSONS: dict[str, dict] = {
                 "porque": "La aceleración apunta siempre en la misma dirección que la fuerza neta. Dar la dirección es parte de la respuesta, no un adorno.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un ascensor de $400$ kg sube con una aceleración de $2\\ \\text{m/s}^2$. "
+                    "¿Qué tensión soporta el cable? (Usa $g = 10\\ \\text{m/s}^2$.)"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Hago el diagrama de cuerpo libre del ascensor: la tensión $T$ apunta "
+                            "hacia arriba y el peso $P = 400 \\cdot 10 = 4.000$ N hacia abajo."
+                        ),
+                        "porque": (
+                            "Son las únicas dos fuerzas que actúan sobre el ascensor. Lo que el "
+                            "ascensor ejerce sobre el cable es la reacción, y esa no entra en su "
+                            "propio diagrama."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Escribo la segunda ley tomando como positivo el sentido de la "
+                            "aceleración: $T - P = m\\,a$."
+                        ),
+                        "porque": (
+                            "Como el ascensor acelera hacia arriba, la fuerza neta apunta hacia "
+                            "arriba, así que la tensión tiene que superar al peso. El signo menos del "
+                            "peso viene de que apunta al revés."
+                        ),
+                    },
+                    {
+                        "accion": "Despejo: $T = m\\,a + P = 400 \\cdot 2 + 4.000 = 800 + 4.000 = 4.800$ N.",
+                        "porque": (
+                            "La tensión carga con el peso más lo que cuesta acelerar. Si el ascensor "
+                            "subiera a velocidad constante, la tensión sería exactamente el peso, "
+                            "$4.000$ N."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reviso el sentido del resultado: $4.800 > 4.000$, como corresponde a un "
+                            "ascensor que está acelerando hacia arriba."
+                        ),
+                        "porque": (
+                            "Si el ascensor frenara al subir —aceleración hacia abajo— la tensión "
+                            "saldría MENOR que el peso. El signo de la aceleración, y no la dirección "
+                            "del viaje, es lo que decide."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Creer que la acción y la reacción se anulan y que entonces nada se "
             "movería nunca. Actúan sobre cuerpos DISTINTOS: el suelo empuja al "
@@ -78710,20 +79128,40 @@ LESSONS: dict[str, dict] = {
             "orden se resuelven casi todas las preguntas de la prueba."
         ),
         "theory": (
-            "**Gen y alelo.** El gen es la instrucción para una característica; "
-            "los alelos son sus versiones. Cada persona tiene dos alelos de cada "
-            "gen, uno de cada progenitor.\n\n"
-            "**Genotipo y fenotipo.** El genotipo son los alelos que se tienen "
-            "(AA, Aa, aa); el fenotipo es lo que se ve. Dos genotipos distintos "
-            "pueden dar el mismo fenotipo.\n\n"
+            "**Gen y alelo.** El gen es la instrucción para una característica; los "
+            "alelos son sus versiones. Cada persona tiene dos alelos de cada gen, uno "
+            "de cada progenitor. Si los dos son iguales es **homocigoto** (AA o aa); "
+            "si son distintos, **heterocigoto** (Aa).\\n\\n"
+            "**Genotipo y fenotipo.** El genotipo son los alelos que se tienen; el "
+            "fenotipo es lo que se ve. Dos genotipos distintos pueden dar el mismo "
+            "fenotipo: AA y Aa se ven igual.\\n\\n"
             "**Dominante y recesivo.** El alelo dominante (mayúscula) se expresa "
-            "aunque venga solo; el recesivo (minúscula) necesita estar en las "
-            "DOS copias. Por eso un rasgo recesivo puede saltarse generaciones "
-            "sin desaparecer.\n\n"
-            "**El cuadro de Punnett cruza gametos.** Cada progenitor aporta un "
-            "alelo por gameto. Se ponen los del padre en las columnas, los de la "
-            "madre en las filas, y cada casilla es una combinación igual de "
-            "probable."
+            "aunque venga solo; el recesivo (minúscula) necesita estar en las DOS "
+            "copias. Por eso un rasgo recesivo puede saltarse generaciones sin "
+            "desaparecer: lo llevan portadores que no lo manifiestan.\\n\\n"
+            "**El cuadro de Punnett cruza gametos.** Cada progenitor aporta un alelo "
+            "por gameto. Se ponen los del padre en las columnas, los de la madre en "
+            "las filas, y cada casilla es una combinación igual de probable:\\n\\n"
+            "| Cruce | Genotipos | Fenotipos |\\n"
+            "|---|---|---|\\n"
+            "| AA × aa | $100\\%$ Aa | todos dominantes |\\n"
+            "| Aa × Aa | $1$ AA : $2$ Aa : $1$ aa | $3$ dominantes : $1$ recesivo |\\n"
+            "| Aa × aa | $1$ Aa : $1$ aa | $1 : 1$ |\\n\\n"
+            "**La proporción es probabilidad, no reparto garantizado.** Un cruce Aa × "
+            "Aa da $25\\%$ de probabilidad de descendencia recesiva en CADA hijo; "
+            "cuatro hijos pueden salir los cuatro dominantes sin que nada esté mal.\\n\\n"
+            "**No todo es dominancia completa.** En la **codominancia** se expresan "
+            "los dos alelos a la vez, como en el grupo sanguíneo AB; en la "
+            "**dominancia incompleta** aparece un fenotipo intermedio, como la flor "
+            "rosada de un cruce rojo por blanco.\\n\\n"
+            "**Herencia ligada al sexo.** Los genes del cromosoma X se heredan "
+            "distinto: un hombre (XY) tiene una sola copia, así que un alelo recesivo "
+            "se le expresa sin necesidad de estar duplicado. Es la razón de que el "
+            "daltonismo y la hemofilia sean mucho más frecuentes en hombres.\\n\\n"
+            "**Mutación y variabilidad.** Una mutación es un cambio en la secuencia "
+            "del ADN; puede ser neutra, perjudicial o ventajosa según el ambiente, y "
+            "es la fuente última de toda la variabilidad sobre la que actúa la "
+            "evolución."
         ),
         "example_statement": (
             "En arvejas, el color amarillo de la semilla (A) domina sobre el "
@@ -78744,6 +79182,57 @@ LESSONS: dict[str, dict] = {
                 "porque": "El verde es recesivo, y un recesivo solo se ve cuando están las dos copias. Las tres casillas con al menos una A salen amarillas: proporción fenotípica 3 : 1.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Dos personas de visión normal tienen un hijo daltónico. El daltonismo es "
+                    "recesivo y está ligado al cromosoma X. ¿Cuál es el genotipo de cada "
+                    "progenitor?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Escribo los genotipos posibles: la madre puede ser $X^A X^A$ o $X^A "
+                            "X^a$, y el padre, al tener un solo X, es $X^A Y$ porque ve normal."
+                        ),
+                        "porque": (
+                            "En la herencia ligada al X, el hombre no puede ser portador: con una "
+                            "sola copia, o tiene el alelo y lo expresa, o no lo tiene."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El hijo daltónico es $X^a Y$, y su Y solo pudo venir del padre, así que "
+                            "su $X^a$ vino de la madre."
+                        ),
+                        "porque": (
+                            "El sexo lo determina el cromosoma que aporta el padre. Como el padre le "
+                            "dio la Y, el único X del hijo es materno: ahí está la clave del "
+                            "ejercicio."
+                        ),
+                    },
+                    {
+                        "accion": "Concluyo que la madre es portadora, $X^A X^a$, y el padre $X^A Y$.",
+                        "porque": (
+                            "La madre ve normal porque su otro alelo es dominante, pero transmite el "
+                            "recesivo a la mitad de sus hijos. El padre no aportó nada al daltonismo "
+                            "del hijo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo el riesgo para los siguientes hijos varones: $50\\%$, y para las "
+                            "hijas, $0\\%$ de ser daltónicas pero $50\\%$ de ser portadoras."
+                        ),
+                        "porque": (
+                            "Las hijas reciben además el $X^A$ del padre, que las protege. Es "
+                            "exactamente por esto que el daltonismo es mucho más frecuente en hombres "
+                            "que en mujeres."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Confundir la proporción de genotipos con la de fenotipos. Los "
             "genotipos salen 1 : 2 : 1 (AA : Aa : aa), pero lo que se VE es "
@@ -78759,21 +79248,36 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**Los cuatro datos de una onda.** Amplitud (qué tan grande es la "
-            "oscilación), longitud de onda $\\lambda$ (distancia entre dos "
-            "crestas), frecuencia $f$ (oscilaciones por segundo, en hertz) y "
-            "período $T$ (lo que dura una oscilación). Frecuencia y período son "
-            "inversos: $T = \\frac{1}{f}$.\n\n"
-            "**La ecuación fundamental.** $v = \\lambda f$. La velocidad la pone "
-            "el MEDIO, no la fuente: en un mismo medio, si sube la frecuencia "
-            "baja la longitud de onda.\n\n"
-            "**Transversales y longitudinales.** En las transversales la "
-            "oscilación es perpendicular al avance (una cuerda, la luz). En las "
-            "longitudinales es paralela, con compresiones y rarefacciones: el "
-            "sonido es longitudinal.\n\n"
-            "**Qué se oye.** La frecuencia determina el TONO —más frecuencia, "
-            "más agudo— y la amplitud determina la INTENSIDAD, o sea el "
-            "volumen. El sonido necesita un medio material: en el vacío no se "
-            "propaga."
+            "oscilación), longitud de onda $\\lambda$ (distancia entre dos crestas), "
+            "frecuencia $f$ (oscilaciones por segundo, en hertz) y período $T$ (lo "
+            "que dura una oscilación). Frecuencia y período son inversos: $T = "
+            "\\dfrac{1}{f}$.\\n\\n"
+            "**La ecuación fundamental.** $v = \\lambda f$. La velocidad la pone el "
+            "MEDIO, no la fuente: en un mismo medio, si sube la frecuencia baja la "
+            "longitud de onda.\\n\\n"
+            "**Una onda transporta energía, no materia.** El corcho en el agua sube y "
+            "baja pero no viaja con la ola: lo que avanza es la perturbación.\\n\\n"
+            "**Transversales y longitudinales.** En las transversales la oscilación "
+            "es perpendicular al avance (una cuerda, la luz). En las longitudinales "
+            "es paralela, con compresiones y rarefacciones: el sonido es "
+            "longitudinal.\\n\\n"
+            "**Mecánicas y electromagnéticas.** Las mecánicas necesitan un medio "
+            "material —el sonido no se propaga en el vacío—; las electromagnéticas no "
+            "lo necesitan y en el vacío viajan todas a la misma velocidad, $c = 3 "
+            "\\times 10^8$ m/s.\\n\\n"
+            "| Espectro electromagnético | Frecuencia | Energía |\\n"
+            "|---|---|---|\\n"
+            "| Radio, microondas | menor | menor |\\n"
+            "| Infrarrojo, luz visible | intermedia | intermedia |\\n"
+            "| Ultravioleta, rayos X, gamma | mayor | mayor |\\n\\n"
+            "La energía de la radiación crece con la frecuencia, $E = h f$, y por eso "
+            "el ultravioleta daña la piel y la luz de una ampolleta no: no es "
+            "cuestión de intensidad, sino de frecuencia. Dentro del visible, el rojo "
+            "es el de menor frecuencia y el violeta el de mayor.\\n\\n"
+            "**Qué se oye.** La frecuencia determina el TONO —más frecuencia, más "
+            "agudo— y la amplitud determina la INTENSIDAD, o sea el volumen. El oído "
+            "humano capta aproximadamente entre $20$ Hz y $20.000$ Hz; bajo eso es "
+            "infrasonido y sobre eso, ultrasonido."
         ),
         "example_statement": (
             "Una onda sonora se propaga en el aire a 340 m/s con una frecuencia "
@@ -78794,6 +79298,49 @@ LESSONS: dict[str, dict] = {
                 "porque": "En $v = \\lambda f$ con $v$ fija, frecuencia y longitud de onda son inversamente proporcionales. La velocidad la pone el medio, y el medio sigue siendo el mismo aire.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una emisora transmite en $100$ MHz, es decir $1 \\times 10^{8}$ Hz. ¿Cuál "
+                    "es la longitud de onda de su señal, sabiendo que viaja a $3 \\times "
+                    "10^{8}$ m/s?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Despejo la longitud de onda de la ecuación fundamental: $\\lambda = "
+                            "\\dfrac{v}{f}$."
+                        ),
+                        "porque": (
+                            "La relación $v = \\lambda f$ vale para cualquier onda; acá se conocen la "
+                            "velocidad y la frecuencia, así que la incógnita se despeja dividiendo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reemplazo: $\\lambda = \\dfrac{3 \\times 10^{8}}{1 \\times 10^{8}} = 3$ "
+                            "metros."
+                        ),
+                        "porque": (
+                            "Al dividir potencias de la misma base se restan los exponentes, y acá se "
+                            "cancelan: queda un número del orden de las unidades. Por eso las antenas "
+                            "de radio FM miden metros y no kilómetros."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Compruebo el sentido: una emisora de $50$ MHz tendría una longitud de "
+                            "onda de $6$ m, el doble."
+                        ),
+                        "porque": (
+                            "En un mismo medio, frecuencia y longitud de onda son inversamente "
+                            "proporcionales. Si al bajar la frecuencia la longitud bajara también, la "
+                            "relación estaría mal aplicada."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Pensar que gritar más fuerte hace que el sonido viaje más rápido o "
             "que suba de tono. Gritar aumenta la AMPLITUD. La velocidad depende "
@@ -78808,19 +79355,33 @@ LESSONS: dict[str, dict] = {
             "mayor parte de lo que se pregunta."
         ),
         "theory": (
-            "**Ley de Ohm.** $V = I\\,R$: el voltaje es el empuje, la corriente "
-            "$I$ es cuánta carga pasa por segundo (amperes) y la resistencia $R$ "
-            "es cuánto se le opone el material (ohms).\n\n"
-            "**En serie: un solo camino.** La corriente es la MISMA en todos los "
-            "elementos y los voltajes se reparten. Las resistencias se suman: "
-            "$R_{eq} = R_1 + R_2$. Si se corta un punto, se apaga todo.\n\n"
-            "**En paralelo: varios caminos.** El voltaje es el MISMO en cada "
-            "rama y la corriente se reparte. La resistencia equivalente es menor "
-            "que la más pequeña: $\\frac{1}{R_{eq}} = \\frac{1}{R_1} + "
-            "\\frac{1}{R_2}$. Si se corta una rama, las otras siguen.\n\n"
-            "**Potencia.** $P = V\\,I$, y se mide en watts. Es la energía que el "
-            "circuito entrega por segundo, y es lo que determina cuánto consume "
-            "un aparato."
+            "**Qué es cada cosa.** La **corriente** $I$ es cuánta carga pasa por "
+            "segundo, $I = \\dfrac{Q}{t}$, y se mide en amperes. El **voltaje** $V$ es "
+            "el empuje que la mueve, en volts. La **resistencia** $R$ es cuánto se le "
+            "opone el material, en ohms.\\n\\n"
+            "**Ley de Ohm.** $V = I\\,R$. De ella salen $I = \\dfrac{V}{R}$ y $R = "
+            "\\dfrac{V}{I}$, que son la misma relación despejada.\\n\\n"
+            "| | En serie | En paralelo |\\n"
+            "|---|---|---|\\n"
+            "| Caminos | uno solo | varios |\\n"
+            "| Corriente | la MISMA en todos | se reparte |\\n"
+            "| Voltaje | se reparte | el MISMO en cada rama |\\n"
+            "| Resistencia equivalente | $R_1 + R_2$ | $\\dfrac{1}{R_{eq}} = "
+            "\\dfrac{1}{R_1} + \\dfrac{1}{R_2}$ |\\n"
+            "| Si se corta un punto | se apaga todo | las otras ramas siguen |\\n\\n"
+            "**En paralelo la resistencia equivalente es menor que la más pequeña**, "
+            "porque agregar caminos facilita el paso de la corriente. Con dos "
+            "resistencias iguales, la equivalente es la mitad de una.\\n\\n"
+            "**Potencia.** $P = V\\,I$, en watts. Combinada con la ley de Ohm da "
+            "también $P = I^2 R$ y $P = \\dfrac{V^2}{R}$, y las tres sirven según qué "
+            "datos haya.\\n\\n"
+            "**Los aparatos de medición.** El amperímetro se conecta en SERIE, porque "
+            "mide la corriente que lo atraviesa, y el voltímetro en PARALELO, porque "
+            "mide la diferencia entre dos puntos.\\n\\n"
+            "**De dónde sale el calor.** Toda la potencia disipada en una resistencia "
+            "se convierte en calor (efecto Joule), y como depende de $I^2$, duplicar "
+            "la corriente cuadruplica el calor. Es la razón de que un cable "
+            "sobrecargado se caliente antes que el artefacto."
         ),
         "example_statement": (
             "Dos resistencias de 6 Ω cada una se conectan en paralelo a una "
@@ -78841,6 +79402,56 @@ LESSONS: dict[str, dict] = {
                 "porque": "La batería ve la resistencia equivalente. Esos 4 A se reparten en 2 A por cada rama, porque las dos ramas son iguales.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Dos resistencias, de $4\\ \\Omega$ y $8\\ \\Omega$, se conectan en SERIE a "
+                    "una batería de $12$ V. Calcula la corriente del circuito y el voltaje en "
+                    "cada resistencia."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Sumo las resistencias, porque están en serie: $R_{eq} = 4 + 8 = 12\\ "
+                            "\\Omega$."
+                        ),
+                        "porque": (
+                            "En serie hay un solo camino y la corriente atraviesa las dos, así que "
+                            "los obstáculos se acumulan. En paralelo, en cambio, la equivalente "
+                            "habría sido menor que $4\\ \\Omega$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Aplico la ley de Ohm al circuito completo: $I = \\dfrac{V}{R_{eq}} = "
+                            "\\dfrac{12}{12} = 1$ A."
+                        ),
+                        "porque": (
+                            "Esa corriente es la misma en toda la serie: por la de $4\\ \\Omega$ y por "
+                            "la de $8\\ \\Omega$ pasa exactamente $1$ A."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo el voltaje de cada una: $V_1 = 1 \\cdot 4 = 4$ V y $V_2 = 1 \\cdot "
+                            "8 = 8$ V."
+                        ),
+                        "porque": (
+                            "En serie el voltaje se reparte en proporción a la resistencia: la mayor "
+                            "se lleva la mayor parte del empuje disponible."
+                        ),
+                    },
+                    {
+                        "accion": "Compruebo que la suma devuelva el voltaje de la batería: $4 + 8 = 12$ V.",
+                        "porque": (
+                            "En un circuito en serie los voltajes parciales tienen que sumar el "
+                            "total. Si no calzaran, habría un error en la resistencia equivalente o "
+                            "en la corriente."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Sumar las resistencias en paralelo como si fueran en serie y "
             "responder 12 Ω. En paralelo la resistencia BAJA, no sube: hay más "
@@ -78854,19 +79465,35 @@ LESSONS: dict[str, dict] = {
             "hay en cuánta disolución."
         ),
         "theory": (
-            "**Soluto, disolvente y disolución.** El soluto es lo que se "
-            "disuelve; el disolvente, lo que disuelve. La disolución es la suma "
-            "de los dos, y ese total es lo que casi siempre va en el "
-            "denominador.\n\n"
-            "**Porcentaje masa/masa.** $\\%\\,m/m = \\frac{m_{soluto}}"
-            "{m_{disolución}} \\times 100$. Ojo: en el denominador va la masa "
-            "TOTAL, no la del disolvente solo.\n\n"
-            "**Molaridad.** $M = \\frac{n_{soluto}}{V_{disolución}}$, con el "
-            "volumen en LITROS y la cantidad de soluto en moles. Es la unidad "
-            "que más se usa porque las reacciones ocurren entre moles.\n\n"
-            "**Diluir agrega disolvente y no cambia el soluto.** Por eso vale "
-            "$C_1 V_1 = C_2 V_2$: la cantidad de soluto antes y después es la "
-            "misma, solo está repartida en más volumen."
+            "**Soluto, disolvente y disolución.** El soluto es lo que se disuelve; el "
+            "disolvente, lo que disuelve. La disolución es la suma de los dos, y ese "
+            "total es lo que casi siempre va en el denominador.\\n\\n"
+            "| Unidad | Fórmula | Ojo con |\\n"
+            "|---|---|---|\\n"
+            "| Porcentaje masa/masa | $\\dfrac{m_{soluto}}{m_{disolución}} \\cdot 100$ "
+            "| el denominador es la masa TOTAL |\\n"
+            "| Porcentaje masa/volumen | "
+            "$\\dfrac{m_{soluto}\\,[\\text{g}]}{V_{disolución}\\,[\\text{mL}]} \\cdot 100$ "
+            "| mezcla dos unidades a propósito |\\n"
+            "| Molaridad | $M = \\dfrac{n_{soluto}}{V_{disolución}}$ | el volumen va "
+            "en LITROS |\\n"
+            "| Molalidad | $m = \\dfrac{n_{soluto}}{kg_{disolvente}}$ | acá sí va solo "
+            "el disolvente |\\n"
+            "| Partes por millón | $\\dfrac{mg_{soluto}}{kg_{disolución}}$ | para "
+            "cantidades muy pequeñas |\\n\\n"
+            "**La masa de la disolución es soluto más disolvente.** Disolver $20$ g "
+            "de sal en $180$ g de agua da $200$ g de disolución, no $180$: dividir "
+            "por la masa del agua es el error más frecuente de la unidad.\\n\\n"
+            "**Los volúmenes, en cambio, no siempre se suman.** Al mezclar alcohol y "
+            "agua el volumen final es algo menor que la suma, porque las moléculas se "
+            "acomodan entre sí. Por eso la molaridad se define sobre el volumen FINAL "
+            "medido, y en el laboratorio se completa con disolvente hasta el aforo.\\n\\n"
+            "**Concentrada y diluida son términos relativos**; saturada, en cambio, "
+            "es un límite físico: la disolución ya no admite más soluto a esa "
+            "temperatura.\\n\\n"
+            "**Diluir agrega disolvente y no cambia el soluto.** Por eso vale $C_1 "
+            "V_1 = C_2 V_2$: la cantidad de soluto antes y después es la misma, solo "
+            "está repartida en más volumen."
         ),
         "example_statement": (
             "Se disuelven 20 g de sal en 180 g de agua. ¿Cuál es la "
@@ -78884,6 +79511,39 @@ LESSONS: dict[str, dict] = {
             {
                 "accion": "Interpreto el resultado: en cada 100 g de esta disolución hay 10 g de sal.",
                 "porque": "Saber leer qué significa el número permite comprobar si es razonable y responder preguntas derivadas sin recalcular todo.",
+            },
+        ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Se disuelven $11{,}7$ g de cloruro de sodio (masa molar $58{,}5$ g/mol) "
+                    "y se completa con agua hasta $500$ mL de disolución. ¿Cuál es su "
+                    "molaridad?"
+                ),
+                "steps": [
+                    {
+                        "accion": "Paso el soluto a moles: $n = \\dfrac{11{,}7}{58{,}5} = 0{,}2$ mol.",
+                        "porque": (
+                            "La molaridad se define en moles por litro, así que los gramos hay que "
+                            "convertirlos primero con la masa molar."
+                        ),
+                    },
+                    {
+                        "accion": "Paso el volumen a litros: $500$ mL $= 0{,}5$ L.",
+                        "porque": (
+                            "Es el paso que más se olvida. Usar $500$ en el denominador daría "
+                            "$0{,}0004$ mol/L, mil veces menos de lo real."
+                        ),
+                    },
+                    {
+                        "accion": "Aplico la definición: $M = \\dfrac{0{,}2}{0{,}5} = 0{,}4$ mol/L.",
+                        "porque": (
+                            "El volumen que va en el denominador es el de la DISOLUCIÓN terminada, no "
+                            "el del agua agregada: por eso el enunciado dice «se completa hasta $500$ "
+                            "mL»."
+                        ),
+                    },
+                ],
             },
         ],
         "common_error": (
@@ -80676,23 +81336,38 @@ LESSONS: dict[str, dict] = {
             "comportan tan distinto."
         ),
         "theory": (
-            "**Procarionte y eucarionte: la diferencia es el núcleo.** La "
-            "célula procarionte (bacterias) tiene su ADN suelto en el "
-            "citoplasma, en una zona llamada nucleoide, y no tiene organelos "
-            "con membrana. La eucarionte guarda su ADN dentro de un núcleo con "
-            "envoltura y tiene organelos.\n\n"
-            "**Animal y vegetal: tres diferencias.** La vegetal tiene pared "
-            "celular de celulosa, cloroplastos y una vacuola central grande. La "
-            "animal no tiene ninguna de las tres, y en cambio tiene centríolos. "
-            "Las dos son eucariontes.\n\n"
-            "**Cada organelo hace una cosa.** La mitocondria libera energía "
-            "desde la glucosa; el cloroplasto la capta desde la luz; el retículo "
-            "rugoso, con ribosomas pegados, fabrica proteínas para exportar; el "
-            "Golgi las empaqueta; el lisosoma digiere.\n\n"
-            "**La forma sigue a la función.** Una neurona es larga porque "
-            "conduce señales a distancia; una célula muscular tiene muchas "
-            "mitocondrias porque gasta mucha energía; un glóbulo rojo humano "
-            "pierde su núcleo para llevar más hemoglobina."
+            "**Procarionte y eucarionte: la diferencia es el núcleo.** La célula "
+            "procarionte (bacterias) tiene su ADN suelto en el citoplasma, en una "
+            "zona llamada nucleoide, y no tiene organelos con membrana. La eucarionte "
+            "guarda su ADN dentro de un núcleo con envoltura y tiene organelos. La "
+            "procarionte además es mucho más pequeña.\\n\\n"
+            "| | Procarionte | Eucarionte animal | Eucarionte vegetal |\\n"
+            "|---|---|---|---|\\n"
+            "| Núcleo | no | sí | sí |\\n"
+            "| Pared celular | sí, de peptidoglicano | no | sí, de celulosa |\\n"
+            "| Cloroplastos | no | no | sí |\\n"
+            "| Vacuola central | no | pequeñas o ninguna | grande |\\n"
+            "| Centríolos | no | sí | no |\\n"
+            "| Mitocondrias | no | sí | sí |\\n\\n"
+            "Las dos eucariontes comparten núcleo, mitocondrias, retículo y Golgi: "
+            "las diferencias son las tres primeras filas, no la existencia de "
+            "organelos.\\n\\n"
+            "**Cada organelo hace una cosa.** La mitocondria libera energía desde la "
+            "glucosa; el cloroplasto la capta desde la luz; el retículo rugoso, con "
+            "ribosomas pegados, fabrica proteínas para exportar; el liso sintetiza "
+            "lípidos; el Golgi empaqueta y despacha; el lisosoma digiere; el núcleo "
+            "guarda la información.\\n\\n"
+            "**Los ribosomas son la excepción**: no tienen membrana y están tanto en "
+            "procariontes como en eucariontes, porque toda célula necesita fabricar "
+            "proteínas.\\n\\n"
+            "**La ruta de una proteína de exportación** conecta cuatro organelos en "
+            "orden: núcleo (se transcribe) → retículo rugoso (se sintetiza) → Golgi "
+            "(se modifica y empaqueta) → vesícula hacia la membrana.\\n\\n"
+            "**La forma sigue a la función.** Una neurona es larga porque conduce "
+            "señales a distancia; una célula muscular tiene muchas mitocondrias "
+            "porque gasta mucha energía; un glóbulo rojo humano pierde su núcleo para "
+            "llevar más hemoglobina; una célula del intestino tiene microvellosidades "
+            "para absorber más."
         ),
         "example_statement": (
             "Al microscopio se observa una célula con pared celular, núcleo "
@@ -80712,6 +81387,49 @@ LESSONS: dict[str, dict] = {
                 "porque": "La pared sola no basta para decir 'vegetal'. La de los hongos es de quitina y la de las plantas, de celulosa, y solo las segundas traen cloroplastos.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Se observan al microscopio dos células: la primera tiene pared celular "
+                    "pero no núcleo definido; la segunda tiene núcleo, pared y vacuola "
+                    "grande. ¿Qué tipo es cada una?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "La primera no tiene núcleo definido, así que es procarionte: una "
+                            "bacteria."
+                        ),
+                        "porque": (
+                            "El núcleo es el criterio que separa los dos grandes tipos. La pared "
+                            "celular no sirve para clasificar por sí sola, porque también la tienen "
+                            "las plantas y los hongos."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "La segunda tiene núcleo, así que es eucarionte; y como tiene pared y una "
+                            "vacuola central grande, es vegetal."
+                        ),
+                        "porque": (
+                            "Esos dos rasgos, más los cloroplastos, son los que distinguen a la "
+                            "vegetal de la animal. Una célula animal con núcleo nunca tendría pared."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que la pared celular no basta para clasificar: hay que mirar el "
+                            "núcleo primero y los organelos después."
+                        ),
+                        "porque": (
+                            "El orden importa. Quedarse en la pared llevaría a decir que las dos son "
+                            "del mismo tipo, cuando la diferencia entre ellas es la más profunda que "
+                            "existe entre células."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Usar la pared celular como sinónimo de célula vegetal. Los hongos "
             "también tienen pared, y las bacterias también. Lo que solo tienen "
@@ -80726,25 +81444,39 @@ LESSONS: dict[str, dict] = {
             "droga."
         ),
         "theory": (
-            "**La neurona tiene tres partes con tres papeles.** Las dendritas "
-            "reciben la señal, el cuerpo la integra y el axón la conduce hasta "
-            "el terminal. La señal viaja siempre en ese sentido.\n\n"
-            "**Dentro de la neurona la señal es eléctrica; entre neuronas, "
-            "química.** En la sinapsis el impulso llega al terminal, se liberan "
-            "neurotransmisores al espacio sináptico y estos se unen a receptores "
-            "de la neurona siguiente. Por eso la sinapsis tiene un sentido "
-            "único.\n\n"
-            "**Central y periférico.** El sistema nervioso central es encéfalo y "
-            "médula espinal; el periférico son los nervios que llevan "
-            "información hacia el centro (vía sensitiva) y órdenes desde él (vía "
-            "motora).\n\n"
-            "**El arco reflejo se salta el encéfalo.** Receptor, neurona "
-            "sensitiva, médula, neurona motora, músculo. Por eso la respuesta "
-            "ocurre antes de que la persona sea consciente del estímulo: la "
-            "señal llega al encéfalo después.\n\n"
-            "**Las drogas actúan en la sinapsis.** Algunas imitan al "
-            "neurotransmisor, otras bloquean su receptor y otras impiden que se "
-            "recapte, dejándolo actuando más tiempo."
+            "**La neurona tiene tres partes con tres papeles.** Las dendritas reciben "
+            "la señal, el cuerpo la integra y el axón la conduce hasta el terminal. "
+            "La señal viaja siempre en ese sentido.\\n\\n"
+            "**Dentro de la neurona la señal es eléctrica; entre neuronas, química.** "
+            "En la sinapsis el impulso llega al terminal, se liberan "
+            "neurotransmisores al espacio sináptico y estos se unen a receptores de "
+            "la neurona siguiente. Por eso la sinapsis tiene un sentido único.\\n\\n"
+            "**El impulso es todo o nada.** Si el estímulo no alcanza el umbral, no "
+            "hay impulso; si lo alcanza, el impulso es siempre del mismo tamaño. Lo "
+            "que codifica la intensidad no es la amplitud sino la FRECUENCIA de los "
+            "impulsos y cuántas neuronas se activan.\\n\\n"
+            "**La mielina acelera la conducción.** Es una vaina que recubre el axón y "
+            "obliga al impulso a saltar entre nodos; por eso una fibra mielinizada "
+            "conduce mucho más rápido, y por eso las enfermedades desmielinizantes "
+            "enlentecen las respuestas.\\n\\n"
+            "| División | Qué incluye | Qué hace |\\n"
+            "|---|---|---|\\n"
+            "| Central | encéfalo y médula espinal | integra y decide |\\n"
+            "| Periférico sensitivo (aferente) | nervios hacia el centro | lleva "
+            "información |\\n"
+            "| Periférico motor (eferente) | nervios desde el centro | lleva órdenes "
+            "|\\n"
+            "| Autónomo simpático | — | prepara para la acción: acelera el corazón |\\n"
+            "| Autónomo parasimpático | — | reposo y digestión: lo desacelera |\\n\\n"
+            "**El arco reflejo se salta el encéfalo.** Receptor, neurona sensitiva, "
+            "médula, neurona motora, músculo. Por eso la respuesta ocurre antes de "
+            "que la persona sea consciente del estímulo: la señal llega al encéfalo "
+            "después, y esa demora es lo que salva la mano.\\n\\n"
+            "**Las drogas actúan en la sinapsis.** Algunas imitan al neurotransmisor, "
+            "otras bloquean su receptor y otras impiden que se recapte, dejándolo "
+            "actuando más tiempo. El consumo sostenido lleva a **tolerancia** —la "
+            "misma dosis hace menos efecto, porque la neurona reduce sus receptores— "
+            "y a dependencia."
         ),
         "example_statement": (
             "Una persona pisa una tachuela y retira el pie de inmediato; el "
@@ -80764,6 +81496,50 @@ LESSONS: dict[str, dict] = {
                 "porque": "El orden observado no es casualidad ni error de percepción: refleja dos caminos de longitud distinta que salen del mismo estímulo.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una persona toca una superficie caliente y retira la mano antes de "
+                    "sentir dolor. Ordena el recorrido de la señal y explica por qué el dolor "
+                    "llega después."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "El receptor de la piel detecta el calor y la neurona sensitiva lleva la "
+                            "señal hasta la médula espinal."
+                        ),
+                        "porque": (
+                            "El receptor convierte un estímulo físico en impulso nervioso. La vía "
+                            "sensitiva siempre va desde la periferia hacia el sistema nervioso "
+                            "central."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "En la médula, una interneurona conecta directamente con la neurona "
+                            "motora, que ordena al músculo contraerse y retirar la mano."
+                        ),
+                        "porque": (
+                            "Ese atajo es el arco reflejo: la respuesta se decide en la médula, sin "
+                            "esperar al encéfalo. Menos sinapsis significa menos tiempo, y acá el "
+                            "tiempo es tejido quemado."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "En paralelo, la señal sube por la médula hasta el encéfalo, y recién ahí "
+                            "se hace consciente el dolor."
+                        ),
+                        "porque": (
+                            "El camino al encéfalo es más largo y tiene más relevos, así que llega "
+                            "después. Por eso primero se retira la mano y después duele, y no al "
+                            "revés."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Creer que el encéfalo ordena retirar el pie y que solo es muy "
             "rápido. En un reflejo el encéfalo no participa de la orden: se "
@@ -80778,25 +81554,38 @@ LESSONS: dict[str, dict] = {
             "el ciclo que prepara al útero para un posible embarazo."
         ),
         "theory": (
-            "**Los gametos se forman por meiosis y son haploides.** Cada uno "
-            "aporta 23 cromosomas, y al unirse restituyen los 46 de la célula "
-            "somática. Sin esa reducción el número se duplicaría en cada "
-            "generación.\n\n"
+            "**Los gametos se forman por meiosis y son haploides.** Cada uno aporta "
+            "$23$ cromosomas, y al unirse restituyen los $46$ de la célula somática. "
+            "Sin esa reducción el número se duplicaría en cada generación.\\n\\n"
+            "**La meiosis genera variabilidad de tres formas**: el entrecruzamiento "
+            "intercambia trozos entre cromosomas homólogos, la repartición de los "
+            "homólogos es al azar, y la unión de dos gametos cualesquiera agrega una "
+            "tercera lotería. Por eso dos hermanos no son iguales.\\n\\n"
             "**Espermatogénesis y ovogénesis no son simétricas.** De cada célula "
-            "precursora se forman cuatro espermatozoides funcionales, pero un "
-            "solo óvulo: las otras tres células quedan como cuerpos polares, "
-            "porque el óvulo concentra las reservas.\n\n"
-            "**El ciclo menstrual dura unos 28 días y tiene dos mitades.** En la "
-            "primera madura un folículo y el endometrio se engrosa; alrededor "
-            "del día 14 ocurre la ovulación; en la segunda, el cuerpo lúteo "
-            "mantiene el endometrio. Si no hay fecundación, el endometrio se "
-            "desprende: eso es la menstruación.\n\n"
-            "**Cuatro hormonas.** La FSH hace madurar el folículo y la LH dispara "
-            "la ovulación; los estrógenos engrosan el endometrio y la "
-            "progesterona lo mantiene.\n\n"
-            "**La fecundación ocurre en la trompa de Falopio**, no en el útero. "
-            "El cigoto se divide mientras baja y se implanta en el endometrio "
-            "unos días después."
+            "precursora se forman cuatro espermatozoides funcionales, pero un solo "
+            "óvulo: las otras tres células quedan como cuerpos polares, porque el "
+            "óvulo concentra las reservas. Además, la producción de espermatozoides "
+            "es continua desde la pubertad, mientras que los ovocitos están todos "
+            "presentes desde antes del nacimiento.\\n\\n"
+            "**El ciclo menstrual dura unos $28$ días y tiene dos mitades.** En la "
+            "primera madura un folículo y el endometrio se engrosa; alrededor del día "
+            "$14$ ocurre la ovulación; en la segunda, el cuerpo lúteo mantiene el "
+            "endometrio. Si no hay fecundación, el endometrio se desprende: eso es la "
+            "menstruación.\\n\\n"
+            "| Hormona | La produce | Qué hace |\\n"
+            "|---|---|---|\\n"
+            "| FSH | hipófisis | hace madurar el folículo |\\n"
+            "| LH | hipófisis | su alza dispara la ovulación |\\n"
+            "| Estrógenos | folículo | engrosan el endometrio |\\n"
+            "| Progesterona | cuerpo lúteo | mantiene el endometrio |\\n\\n"
+            "**La fecundación ocurre en la trompa de Falopio**, no en el útero. El "
+            "cigoto se divide mientras baja y se implanta en el endometrio unos días "
+            "después.\\n\\n"
+            "**La ventana fértil es más ancha que el día de la ovulación.** Los "
+            "espermatozoides sobreviven hasta unos cinco días en el tracto y el "
+            "ovocito, alrededor de veinticuatro horas: por eso una relación varios "
+            "días ANTES de ovular puede terminar en embarazo, y por eso los métodos "
+            "de calendario fallan tanto."
         ),
         "example_statement": (
             "En un ciclo regular de 28 días, ¿en qué momento es más probable "
@@ -80816,6 +81605,61 @@ LESSONS: dict[str, dict] = {
                 "porque": "Después de la ovulación la ventana se cierra rápido, y esa asimetría es justamente lo que hace poco confiables los métodos basados solo en el calendario.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una persona con ciclos regulares de $28$ días tuvo su última "
+                    "menstruación el día $1$ del mes. ¿Alrededor de qué día ovula y qué días "
+                    "abarca su ventana fértil?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "La ovulación ocurre unos $14$ días ANTES de la siguiente menstruación, "
+                            "así que en un ciclo de $28$ días cae alrededor del día $14$."
+                        ),
+                        "porque": (
+                            "La segunda mitad del ciclo es la más constante, de unos $14$ días. "
+                            "Contar desde el final y no desde el inicio es lo que hace útil la "
+                            "estimación cuando el ciclo no mide exactamente $28$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "La ventana fértil empieza unos cinco días antes, es decir cerca del día "
+                            "$9$."
+                        ),
+                        "porque": (
+                            "Los espermatozoides sobreviven hasta unos cinco días en el tracto "
+                            "reproductor, así que una relación del día $9$ todavía puede coincidir "
+                            "con el ovocito del día $14$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Y termina alrededor del día $15$, porque el ovocito sobrevive cerca de "
+                            "veinticuatro horas."
+                        ),
+                        "porque": (
+                            "La ventana es asimétrica: se extiende mucho más hacia atrás que hacia "
+                            "adelante, y esa asimetría es justamente lo que el método del calendario "
+                            "suele estimar mal."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que la ventana fértil va aproximadamente del día $9$ al $15$, y "
+                            "que la estimación falla si el ciclo se corre."
+                        ),
+                        "porque": (
+                            "Un ciclo que se adelanta unos días mueve toda la ventana. Por eso este "
+                            "método tiene una eficacia baja comparado con los métodos de barrera u "
+                            "hormonales."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Suponer que la fecundación ocurre en el útero. Ocurre en la trompa "
             "de Falopio; lo que ocurre en el útero, varios días después, es la "
@@ -80829,24 +81673,36 @@ LESSONS: dict[str, dict] = {
             "sirven para ambos. Distinguirlos es lo que esta unidad pide."
         ),
         "theory": (
-            "**Métodos de barrera.** El preservativo impide el contacto entre "
-            "los fluidos y los gametos. Es el único método que además reduce el "
-            "riesgo de infecciones de transmisión sexual.\n\n"
-            "**Métodos hormonales.** Píldora, implante e inyectable aportan "
-            "hormonas que impiden la ovulación. Son muy eficaces contra el "
-            "embarazo y no ofrecen ninguna protección frente a infecciones.\n\n"
-            "**Dispositivo intrauterino.** Actúa dentro del útero dificultando "
-            "la fecundación y la implantación. Tampoco protege de "
-            "infecciones.\n\n"
-            "**Métodos basados en el calendario.** Estiman los días fértiles a "
-            "partir de ciclos anteriores. Su eficacia es baja porque el ciclo "
-            "varía y los espermatozoides sobreviven varios días.\n\n"
+            "**Los métodos se distinguen por cómo actúan y por qué protegen.**\\n\\n"
+            "| Método | Cómo actúa | ¿Protege de ITS? |\\n"
+            "|---|---|---|\\n"
+            "| Preservativo | barrera física | **sí** |\\n"
+            "| Píldora, implante, inyectable | impiden la ovulación | no |\\n"
+            "| Dispositivo intrauterino | dificulta fecundación e implantación | no |\\n"
+            "| Calendario, temperatura basal | estiman los días fértiles | no |\\n"
+            "| Esterilización quirúrgica | cierra las vías | no |\\n\\n"
+            "**El preservativo es el único que hace las dos cosas**: es la razón por "
+            "la que se recomienda el doble método —uno hormonal para el embarazo y "
+            "preservativo para las infecciones— y no basta con elegir el más eficaz "
+            "de una sola columna.\\n\\n"
+            "**Eficacia teórica y eficacia real.** La teórica supone un uso perfecto; "
+            "la real incluye los olvidos y los errores de uso, y es siempre menor. La "
+            "diferencia es enorme en los métodos que dependen de la constancia "
+            "diaria.\\n\\n"
+            "**Los métodos basados en el calendario tienen eficacia baja** porque el "
+            "ciclo varía y los espermatozoides sobreviven varios días: la ventana "
+            "fértil es más ancha de lo que la cuenta sugiere.\\n\\n"
             "**Las ITS se transmiten por fluidos o por contacto.** Algunas son "
-            "bacterianas y se tratan con antibióticos (sífilis, gonorrea); otras "
-            "son virales y el tratamiento controla pero no elimina el virus "
-            "(VIH, herpes). Muchas cursan sin síntomas visibles durante largos "
-            "períodos, y por eso la ausencia de síntomas no descarta una "
-            "infección."
+            "bacterianas y se tratan con antibióticos (sífilis, gonorrea, clamidia); "
+            "otras son virales y el tratamiento controla pero no elimina el virus "
+            "(VIH, herpes, VPH).\\n\\n"
+            "**Muchas cursan sin síntomas durante largos períodos**, y por eso la "
+            "ausencia de síntomas no descarta una infección: la única forma de "
+            "saberlo es el examen. Una infección asintomática se transmite igual.\\n\\n"
+            "**Hay dos vacunas relevantes**: la del VPH, que previene la mayoría de "
+            "los cánceres cervicouterinos asociados al virus, y la de la hepatitis B. "
+            "Contra el VIH no existe vacuna, pero sí tratamiento que vuelve la carga "
+            "viral indetectable e intransmisible."
         ),
         "example_statement": (
             "Una persona usa un método hormonal muy eficaz y concluye que está "
@@ -80867,6 +81723,57 @@ LESSONS: dict[str, dict] = {
                 "porque": "Esa es la razón por la que se recomienda la combinación de métodos: uno cubre el embarazo y el otro, la transmisión.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una persona usa píldoras anticonceptivas correctamente y concluye que no "
+                    "necesita preservativo con una pareja nueva. ¿Qué error hay en ese "
+                    "razonamiento?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Reconozco que el razonamiento mezcla dos riesgos distintos: el embarazo "
+                            "y las infecciones de transmisión sexual."
+                        ),
+                        "porque": (
+                            "Un método puede ser excelente para uno y nulo para el otro. La eficacia "
+                            "siempre se declara respecto de algo, no en abstracto."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "La píldora impide la ovulación, así que actúa sobre el embarazo y no "
+                            "ofrece ninguna barrera frente a fluidos o contacto."
+                        ),
+                        "porque": (
+                            "Su mecanismo es hormonal y ocurre dentro del cuerpo de quien la toma; no "
+                            "interfiere en absoluto con la transmisión de un virus o una bacteria."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El preservativo sigue siendo necesario, porque es el único método que "
+                            "reduce el riesgo de ITS."
+                        ),
+                        "porque": (
+                            "Es el doble método: uno para cada riesgo. Sumar dos métodos hormonales "
+                            "no cubre el hueco, porque ninguno actúa sobre la transmisión."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Agrego que la ausencia de síntomas en la pareja no descarta una "
+                            "infección."
+                        ),
+                        "porque": (
+                            "Muchas ITS son asintomáticas por largos períodos y se transmiten igual. "
+                            "«Se ve sano» no es información clínica; un examen sí lo es."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Confundir eficacia anticonceptiva con protección frente a "
             "infecciones. Un método puede ser casi perfecto para lo primero y "
@@ -80880,23 +81787,35 @@ LESSONS: dict[str, dict] = {
             "tanto la cicatrización como el cáncer."
         ),
         "theory": (
-            "**El ciclo tiene dos grandes partes.** La interfase ocupa casi todo "
-            "el tiempo y se divide en G1 (crecimiento), S (duplicación del ADN) "
-            "y G2 (preparación). La fase M es la división propiamente tal.\n\n"
-            "**La duplicación ocurre en S, no en la mitosis.** Al terminar S "
-            "cada cromosoma tiene dos cromátidas hermanas idénticas, unidas por "
-            "el centrómero. La mitosis solo las separa.\n\n"
-            "**Cuatro fases en la mitosis.** En profase los cromosomas se "
-            "condensan y desaparece la envoltura nuclear; en metafase se alinean "
-            "en el centro; en anafase las cromátidas se separan hacia los polos; "
-            "en telofase se forman los dos núcleos. Después la citocinesis parte "
-            "el citoplasma.\n\n"
-            "**El resultado son dos células idénticas a la original**, con el "
-            "mismo número de cromosomas. Eso distingue la mitosis de la "
-            "meiosis.\n\n"
-            "**Hay puntos de control.** Si el ADN está dañado, el ciclo se "
-            "detiene para repararlo. Cuando esos controles fallan, la célula se "
-            "divide sin freno: ese es el origen del cáncer."
+            "**El ciclo tiene dos grandes partes.** La interfase ocupa casi todo el "
+            "tiempo y se divide en G1 (crecimiento), S (duplicación del ADN) y G2 "
+            "(preparación). La fase M es la división propiamente tal.\\n\\n"
+            "**La duplicación ocurre en S, no en la mitosis.** Al terminar S cada "
+            "cromosoma tiene dos cromátidas hermanas idénticas, unidas por el "
+            "centrómero. La mitosis solo las separa.\\n\\n"
+            "| Fase | Qué ocurre |\\n"
+            "|---|---|\\n"
+            "| Profase | los cromosomas se condensan y desaparece la envoltura "
+            "nuclear |\\n"
+            "| Metafase | se alinean en el centro, en el plano ecuatorial |\\n"
+            "| Anafase | las cromátidas hermanas se separan hacia los polos |\\n"
+            "| Telofase | se forman los dos núcleos nuevos |\\n"
+            "| Citocinesis | se parte el citoplasma en dos células |\\n\\n"
+            "**Cuántos cromosomas hay en cada momento.** El número de cromosomas lo "
+            "fija la cantidad de centrómeros, no de cromátidas: una célula humana en "
+            "metafase tiene $46$ cromosomas con $92$ cromátidas, y en anafase, al "
+            "separarse, pasa a tener momentáneamente $92$ cromosomas antes de "
+            "repartirse en dos células de $46$.\\n\\n"
+            "**El resultado son dos células idénticas a la original**, con el mismo "
+            "número de cromosomas. Eso distingue la mitosis de la meiosis, que "
+            "produce cuatro células con la mitad.\\n\\n"
+            "**Para qué sirve cada una.** La mitosis hace crecer al organismo, repara "
+            "tejidos y reemplaza células muertas; la meiosis forma gametos.\\n\\n"
+            "**Hay puntos de control.** Si el ADN está dañado, el ciclo se detiene "
+            "para repararlo; si el daño es irreparable, la célula se autodestruye "
+            "(apoptosis). Cuando esos controles fallan, la célula se divide sin "
+            "freno: ese es el origen del cáncer, y por eso los tumores se describen "
+            "como un problema de regulación del ciclo, no de velocidad."
         ),
         "example_statement": (
             "Una célula humana con 46 cromosomas se encuentra en metafase "
@@ -80917,6 +81836,50 @@ LESSONS: dict[str, dict] = {
                 "porque": "Recién en anafase, cuando los centrómeros se separan, esas 92 cromátidas pasan a contarse como 92 cromosomas repartidos entre dos polos.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una célula de un organismo con $12$ cromosomas termina la fase S. "
+                    "¿Cuántos cromosomas y cuántas cromátidas tiene entonces, y cuántos "
+                    "cromosomas tendrá cada célula hija al terminar la mitosis?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Al terminar S sigue teniendo $12$ cromosomas, pero cada uno con dos "
+                            "cromátidas: $24$ cromátidas en total."
+                        ),
+                        "porque": (
+                            "La fase S duplica el ADN, no el número de cromosomas. Las dos copias "
+                            "quedan unidas por un centrómero, y mientras estén unidas cuentan como un "
+                            "solo cromosoma."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "En anafase las cromátidas se separan, y ahí cada una pasa a contar como "
+                            "un cromosoma independiente: $24$ por un instante."
+                        ),
+                        "porque": (
+                            "Al soltarse del centrómero común, cada cromátida tiene el suyo. Es el "
+                            "único momento del ciclo en que la célula duplica su número de "
+                            "cromosomas."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Tras la citocinesis, cada célula hija queda con $12$ cromosomas de una "
+                            "cromátida cada uno."
+                        ),
+                        "porque": (
+                            "Los $24$ se reparten en partes iguales, así que las hijas tienen el "
+                            "mismo número que la célula original. Esa constancia es lo que define a "
+                            "la mitosis frente a la meiosis."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Creer que el número de cromosomas se duplica al duplicarse el ADN. "
             "Lo que se duplica son las cromátidas: los 46 cromosomas siguen "
@@ -80934,20 +81897,38 @@ LESSONS: dict[str, dict] = {
             "intermedias y su orden en el tiempo; la anatomía comparada muestra "
             "estructuras homólogas; el desarrollo embrionario muestra etapas "
             "compartidas; y la biología molecular compara secuencias de ADN y "
-            "proteínas.\n\n"
-            "**Homólogo y análogo no son lo mismo.** Órganos homólogos tienen el "
-            "mismo origen y distinta función (el brazo humano y el ala del "
-            "murciélago): indican ancestro común. Órganos análogos tienen la "
-            "misma función y distinto origen (el ala del insecto y la del ave): "
-            "indican convergencia, no parentesco.\n\n"
-            "**La selección natural necesita tres condiciones**: que haya "
-            "variabilidad entre los individuos, que esa variabilidad sea "
-            "heredable y que influya en cuántos descendientes deja cada uno.\n\n"
+            "proteínas: mientras más parecidas, más cercano el parentesco.\\n\\n"
+            "**Homólogo y análogo no son lo mismo.**\\n\\n"
+            "| | Homólogos | Análogos |\\n"
+            "|---|---|---|\\n"
+            "| Origen | el mismo | distinto |\\n"
+            "| Función | distinta | la misma |\\n"
+            "| Ejemplo | brazo humano y ala de murciélago | ala de insecto y ala de "
+            "ave |\\n"
+            "| Indican | ancestro común (divergencia) | convergencia por ambiente "
+            "similar |\\n\\n"
+            "**Las tres condiciones de la selección natural**: que haya variabilidad "
+            "entre los individuos, que esa variabilidad sea heredable, y que influya "
+            "en cuántos descendientes deja cada uno. Si falta cualquiera de las tres, "
+            "no hay selección.\\n\\n"
             "**La variabilidad es previa al ambiente.** Las mutaciones ocurren al "
-            "azar y el ambiente solo selecciona entre las que ya existen. El "
-            "ambiente no produce la variante que conviene.\n\n"
-            "**Además de la selección hay deriva génica**, un cambio al azar en "
-            "las frecuencias que pesa mucho en poblaciones pequeñas."
+            "azar y el ambiente solo selecciona entre las que ya existen. El ambiente "
+            "no produce la variante que conviene, y ese es el punto que separa a "
+            "Darwin de Lamarck: no se hereda lo adquirido durante la vida, se heredan "
+            "los genes.\\n\\n"
+            "**Quién evoluciona es la población, no el individuo.** Un organismo no "
+            "se adapta a lo largo de su vida: lo que cambia con las generaciones es "
+            "la frecuencia de los alelos en el conjunto.\\n\\n"
+            "**Además de la selección hay deriva génica**, un cambio al azar en las "
+            "frecuencias que pesa mucho en poblaciones pequeñas, y flujo génico, que "
+            "es el intercambio de alelos entre poblaciones que se mezclan.\\n\\n"
+            "**Especiación.** Cuando dos poblaciones quedan aisladas —por una barrera "
+            "geográfica, por ejemplo— acumulan cambios distintos hasta que ya no "
+            "pueden cruzarse entre sí. Ahí son dos especies.\\n\\n"
+            "**«Adaptación» no significa intención.** Decir que una especie "
+            "«desarrolló» una característica para sobrevivir es una forma de hablar: "
+            "lo que ocurrió es que los individuos que ya la tenían dejaron más "
+            "descendencia."
         ),
         "example_statement": (
             "Tras años de uso de un antibiótico, una población bacteriana pasa "
@@ -80967,6 +81948,63 @@ LESSONS: dict[str, dict] = {
                 "porque": "El cambio ocurre en la POBLACIÓN a lo largo de generaciones, no dentro de una bacteria individual. Ninguna bacteria se volvió resistente.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "En una población de insectos se aplica un insecticida nuevo. Al "
+                    "principio muere el $99\\%$, pero tras varias generaciones el producto "
+                    "deja de funcionar. ¿Cuál es la explicación correcta y cuál es el error "
+                    "frecuente?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Antes de aplicar el insecticida ya existían algunos insectos con "
+                            "variantes genéticas que los hacían resistentes, surgidas por mutación al "
+                            "azar."
+                        ),
+                        "porque": (
+                            "La variabilidad es previa al ambiente. Si no hubiera existido ningún "
+                            "resistente de antemano, la población entera habría muerto y no habría "
+                            "nada que seleccionar."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El insecticida actuó como agente de selección: mató al $99\\%$ sensible y "
+                            "dejó reproducirse casi solo a los resistentes."
+                        ),
+                        "porque": (
+                            "La selección no crea la característica, la filtra. El producto no hizo "
+                            "nada a los genes de nadie: solo decidió quién dejaba descendencia."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "En las generaciones siguientes la frecuencia del alelo resistente sube, "
+                            "hasta que la población es mayoritariamente resistente."
+                        ),
+                        "porque": (
+                            "Lo que evolucionó es la POBLACIÓN, no los individuos: ningún insecto se "
+                            "volvió resistente durante su vida. Cambió la proporción de alelos en el "
+                            "conjunto."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El error frecuente es decir que los insectos «se hicieron resistentes "
+                            "por el uso del insecticida», como si el ambiente produjera la variante "
+                            "necesaria."
+                        ),
+                        "porque": (
+                            "Esa es la explicación lamarckista, y es la alternativa incorrecta que "
+                            "casi siempre aparece. Es exactamente el mismo mecanismo de la "
+                            "resistencia bacteriana a los antibióticos."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Decir que las bacterias 'se hicieron resistentes' por estar "
             "expuestas al antibiótico. La resistencia ya existía en algunas por "
@@ -80980,23 +82018,40 @@ LESSONS: dict[str, dict] = {
             "otra la libera. Casi toda la energía que usa la vida pasa por ahí."
         ),
         "theory": (
-            "**Fotosíntesis: seis de cada uno.** Seis moléculas de dióxido de "
-            "carbono y seis de agua, con energía luminosa, dan una de glucosa y "
-            "seis de oxígeno. Ocurre en los cloroplastos.\n\n"
-            "**Tiene dos etapas.** La fase luminosa, en las membranas del "
-            "tilacoide, capta la luz, libera el oxígeno que viene del AGUA y "
-            "produce ATP. La fase oscura, en el estroma, usa ese ATP para fijar "
-            "el dióxido de carbono en glucosa; no necesita oscuridad, solo no "
-            "necesita luz directa.\n\n"
-            "**Respiración celular: la reacción inversa.** Glucosa y oxígeno dan "
-            "dióxido de carbono, agua y energía en forma de ATP. Ocurre "
-            "principalmente en la mitocondria.\n\n"
+            "**Fotosíntesis: seis de cada uno.**\\n\\n"
+            "$$6\\,\\mathrm{CO_2} + 6\\,\\mathrm{H_2O} + \\text{luz} \\;\\rightarrow\\; "
+            "\\mathrm{C_6H_{12}O_6} + 6\\,\\mathrm{O_2}$$\\n\\n"
+            "Ocurre en los cloroplastos, y la clorofila es el pigmento que capta la "
+            "luz: refleja el verde, que es el color que vemos.\\n\\n"
+            "**Tiene dos etapas.** La fase luminosa, en las membranas del tilacoide, "
+            "capta la luz, libera el oxígeno que viene del AGUA y produce ATP y "
+            "NADPH. La fase oscura o ciclo de Calvin, en el estroma, usa ese ATP para "
+            "fijar el dióxido de carbono en glucosa; no necesita oscuridad, solo no "
+            "necesita luz directa.\\n\\n"
+            "| | Fotosíntesis | Respiración celular |\\n"
+            "|---|---|---|\\n"
+            "| Dónde | cloroplasto | mitocondria |\\n"
+            "| Consume | CO₂ y H₂O | glucosa y O₂ |\\n"
+            "| Produce | glucosa y O₂ | CO₂, H₂O y ATP |\\n"
+            "| Con la energía | la almacena | la libera |\\n"
+            "| Cuándo | solo con luz | todo el día |\\n\\n"
             "**Las plantas hacen las dos cosas.** Respiran todo el día y "
             "fotosintetizan solo con luz. De día la fotosíntesis supera a la "
-            "respiración, y por eso el balance neto es liberar oxígeno.\n\n"
-            "**El oxígeno liberado proviene del agua**, no del dióxido de "
-            "carbono. Se comprobó marcando el oxígeno del agua con un isótopo y "
-            "siguiéndolo hasta el gas liberado."
+            "respiración, y por eso el balance neto es liberar oxígeno; de noche solo "
+            "respiran, y el balance se invierte.\\n\\n"
+            "**El punto de compensación** es la intensidad de luz en que ambas "
+            "velocidades se igualan y el intercambio neto de gases es cero. Bajo esa "
+            "intensidad la planta consume más de lo que produce.\\n\\n"
+            "**Qué limita la fotosíntesis.** La intensidad de la luz, la "
+            "concentración de CO₂ y la temperatura. Al subir uno, la velocidad "
+            "aumenta hasta que otro factor se vuelve limitante y la curva se aplana.\\n\\n"
+            "**El oxígeno liberado proviene del agua**, no del dióxido de carbono. Se "
+            "comprobó marcando el oxígeno del agua con un isótopo y siguiéndolo hasta "
+            "el gas liberado.\\n\\n"
+            "**Respiración celular no es respirar.** Respirar es un intercambio de "
+            "gases con el ambiente; la respiración celular es la reacción que libera "
+            "energía dentro de la célula, y ocurre en todos los seres vivos, plantas "
+            "incluidas."
         ),
         "example_statement": (
             "Una planta se mantiene en oscuridad total durante varios días. "
@@ -81016,6 +82071,60 @@ LESSONS: dict[str, dict] = {
                 "porque": "Con los días agota además sus reservas de glucosa, que solo puede reponer fotosintetizando: por eso termina muriendo.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una planta acuática se ilumina con intensidad creciente y se cuentan las "
+                    "burbujas de oxígeno por minuto. Al principio suben; después de cierto "
+                    "punto, dejan de aumentar. ¿Cómo se explica cada tramo?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "En el primer tramo, más luz significa más energía disponible para la "
+                            "fase luminosa, así que la fotosíntesis se acelera y se libera más "
+                            "oxígeno."
+                        ),
+                        "porque": (
+                            "La luz es el factor limitante mientras escasea: cada aumento se traduce "
+                            "directamente en más producto."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "En el tramo plano, seguir subiendo la luz ya no aumenta las burbujas: "
+                            "otro factor pasó a ser limitante, probablemente la concentración de CO₂ "
+                            "o la temperatura."
+                        ),
+                        "porque": (
+                            "La velocidad de un proceso con varias etapas la fija el recurso más "
+                            "escaso. Por mucha luz que haya, sin CO₂ no hay con qué armar la glucosa."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Para comprobarlo se repite el experimento aumentando el CO₂ y se observa "
+                            "si la curva vuelve a subir."
+                        ),
+                        "porque": (
+                            "Cambiar una variable a la vez es lo que permite atribuirle el efecto. Si "
+                            "al agregar CO₂ las burbujas vuelven a aumentar, el CO₂ era efectivamente "
+                            "el limitante."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Nota: las burbujas miden el oxígeno NETO, es decir la fotosíntesis menos "
+                            "la respiración, que sigue ocurriendo todo el tiempo."
+                        ),
+                        "porque": (
+                            "La planta consume parte del oxígeno que produce. En oscuridad total no "
+                            "habría burbujas y el consumo neto sería de oxígeno, no de CO₂."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Creer que las plantas respiran solo de noche. Respiran siempre; lo "
             "que ocurre solo con luz es la fotosíntesis, y de día su producción "
@@ -81029,24 +82138,36 @@ LESSONS: dict[str, dict] = {
             "elástica y roce son las cinco que aparecen una y otra vez."
         ),
         "theory": (
-            "**El peso apunta siempre hacia abajo** y vale $P = m \\cdot g$, con "
-            "$g$ cercano a 10 m/s². No depende de la superficie ni de la "
-            "inclinación.\n\n"
-            "**La normal es perpendicular a la superficie**, no siempre vertical. "
-            "En un plano horizontal sin otras fuerzas verticales coincide en "
-            "magnitud con el peso; en un plano inclinado es menor, porque solo "
-            "equilibra la componente perpendicular.\n\n"
-            "**La normal y el peso no son un par de acción y reacción.** Actúan "
-            "sobre el MISMO cuerpo. La reacción al peso es la atracción que el "
-            "cuerpo ejerce sobre la Tierra.\n\n"
-            "**El roce se opone al movimiento relativo** y vale $f = \\mu \\cdot "
-            "N$. Depende del coeficiente y de la normal, no del área de "
-            "contacto. El roce estático máximo es algo mayor que el cinético: "
-            "por eso cuesta más empezar a mover un mueble que mantenerlo en "
-            "movimiento.\n\n"
-            "**La fuerza elástica sigue la ley de Hooke**, $F = k \\cdot x$, "
-            "donde $x$ es el estiramiento respecto de la posición natural del "
-            "resorte."
+            "**El peso apunta siempre hacia abajo** y vale $P = m \\cdot g$, con $g$ "
+            "cercano a $10\\ \\text{m/s}^2$. No depende de la superficie ni de la "
+            "inclinación.\\n\\n"
+            "**La normal es perpendicular a la superficie**, no siempre vertical, y "
+            "es la fuerza con que la superficie sostiene al cuerpo. Su valor sale del "
+            "equilibrio en esa dirección, no de una fórmula fija:\\n\\n"
+            "| Situación | Normal |\\n"
+            "|---|---|\\n"
+            "| Plano horizontal, sin otras fuerzas verticales | $N = m g$ |\\n"
+            "| Plano inclinado $\\theta$ | $N = m g \\cos\\theta$ |\\n"
+            "| Con una fuerza vertical hacia abajo $F$ | $N = m g + F$ |\\n"
+            "| Tirando con una fuerza vertical hacia arriba $F$ | $N = m g - F$ |\\n\\n"
+            "**La normal y el peso no son un par de acción y reacción.** Actúan sobre "
+            "el MISMO cuerpo. La reacción al peso es la atracción que el cuerpo "
+            "ejerce sobre la Tierra.\\n\\n"
+            "**El roce se opone al movimiento relativo** y vale $f = \\mu \\cdot N$. "
+            "Depende del coeficiente y de la normal, no del área de contacto ni de la "
+            "velocidad.\\n\\n"
+            "**Estático y cinético.** El roce **estático** es el que impide que el "
+            "cuerpo empiece a moverse: crece según cuánto se empuje, hasta un máximo "
+            "$\\mu_e N$. El **cinético** actúa cuando ya se mueve y vale $\\mu_c N$, "
+            "constante. Como $\\mu_e > \\mu_c$, cuesta más empezar a mover un mueble "
+            "que mantenerlo en movimiento.\\n\\n"
+            "**La tensión** es la fuerza que transmite una cuerda, siempre tirando y "
+            "nunca empujando. En una cuerda ideal es la misma en toda su extensión, y "
+            "una polea sin roce solo le cambia la dirección.\\n\\n"
+            "**La fuerza elástica sigue la ley de Hooke**, $F = k \\cdot x$, donde $x$ "
+            "es la deformación respecto de la posición natural del resorte y $k$ es "
+            "su constante, en N/m. Apunta siempre a devolver el resorte a su largo "
+            "original, por eso se la llama restauradora."
         ),
         "example_statement": (
             "Un bloque de 10 kg se arrastra por una superficie horizontal con un "
@@ -81067,6 +82188,41 @@ LESSONS: dict[str, dict] = {
                 "porque": "Apoyar el bloque de canto o de plano no cambia la fuerza de roce, aunque la intuición diga lo contrario.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un resorte de constante $k = 250$ N/m sostiene colgando un cuerpo de $2$ "
+                    "kg. ¿Cuánto se estira? (Usa $g = 10\\ \\text{m/s}^2$.)"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "El cuerpo está en reposo, así que la fuerza neta es cero: la fuerza "
+                            "elástica equilibra exactamente al peso."
+                        ),
+                        "porque": (
+                            "En equilibrio las fuerzas se cancelan. Ese es el puente entre el peso, "
+                            "que es dato, y el estiramiento, que es la incógnita."
+                        ),
+                    },
+                    {
+                        "accion": "Calculo el peso: $P = 2 \\cdot 10 = 20$ N, y planteo $k\\,x = 20$.",
+                        "porque": (
+                            "La ley de Hooke relaciona la fuerza con la deformación. Igualarla al "
+                            "peso es lo que permite despejar $x$."
+                        ),
+                    },
+                    {
+                        "accion": "Despejo: $x = \\dfrac{20}{250} = 0{,}08$ m, es decir $8$ cm.",
+                        "porque": (
+                            "La constante está en N/m, así que el resultado sale en metros y conviene "
+                            "pasarlo a centímetros para que se entienda. Un $k$ mayor significa un "
+                            "resorte más duro, que se estira menos con el mismo peso."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Calcular el roce con el peso cuando el plano está inclinado. Ahí la "
             "normal es menor que el peso, y usar el peso sobreestima el roce."
@@ -81080,24 +82236,41 @@ LESSONS: dict[str, dict] = {
             "anterior no podía explicar."
         ),
         "theory": (
-            "**Del geocentrismo al heliocentrismo.** El modelo de Ptolomeo ponía "
-            "la Tierra en el centro y explicaba el movimiento retrógrado de los "
-            "planetas con epiciclos. Copérnico puso al Sol en el centro, y "
-            "Galileo aportó observaciones decisivas: las fases de Venus y las "
-            "lunas de Júpiter, que giraban en torno a algo que no era la "
-            "Tierra.\n\n"
-            "**Kepler corrigió las órbitas.** No son circulares sino elípticas, "
-            "con el Sol en uno de los focos. Su tercera ley relaciona el período "
-            "con la distancia: $T^2 = a^3$ cuando el período va en años y la "
-            "distancia en unidades astronómicas.\n\n"
-            "**Newton explicó por qué.** La gravitación universal da la causa "
-            "del movimiento que Kepler había descrito.\n\n"
-            "**El universo está en expansión.** Hubble observó que las galaxias "
-            "se alejan y que las más lejanas lo hacen más rápido. Ese "
-            "corrimiento al rojo, junto con la radiación de fondo de microondas, "
-            "sostiene el modelo del Big Bang.\n\n"
-            "**La expansión no tiene centro.** No es que las galaxias se alejen "
-            "de un punto: es el espacio entre ellas el que se estira."
+            "**Del geocentrismo al heliocentrismo.** El modelo de Ptolomeo ponía la "
+            "Tierra en el centro y explicaba el movimiento retrógrado de los planetas "
+            "con epiciclos. Copérnico puso al Sol en el centro, y Galileo aportó "
+            "observaciones decisivas: las fases de Venus y las lunas de Júpiter, que "
+            "giraban en torno a algo que no era la Tierra.\\n\\n"
+            "**Las tres leyes de Kepler.**\\n\\n"
+            "| Ley | Qué dice |\\n"
+            "|---|---|\\n"
+            "| Primera (órbitas) | son elipses, con el Sol en uno de los focos |\\n"
+            "| Segunda (áreas) | el planeta barre áreas iguales en tiempos iguales, "
+            "así que va más rápido cerca del Sol |\\n"
+            "| Tercera (períodos) | $T^2 = a^3$, con $T$ en años y $a$ en unidades "
+            "astronómicas |\\n\\n"
+            "La tercera ley es la que se calcula: un planeta el doble de lejos no "
+            "tarda el doble, sino $\\sqrt{2^3} \\approx 2{,}8$ veces más.\\n\\n"
+            "**Newton explicó por qué.** La gravitación universal, $F = G\\dfrac{m_1 "
+            "m_2}{d^2}$, da la causa del movimiento que Kepler había descrito. Al "
+            "depender del cuadrado de la distancia, alejarse al doble reduce la "
+            "fuerza a la cuarta parte.\\n\\n"
+            "**Escalas y unidades.** La unidad astronómica es la distancia "
+            "Tierra-Sol; el año luz es la distancia que recorre la luz en un año, y "
+            "por eso mirar lejos es mirar al pasado: la luz del Sol demora unos ocho "
+            "minutos en llegar.\\n\\n"
+            "**El universo está en expansión.** Hubble observó que las galaxias se "
+            "alejan y que las más lejanas lo hacen más rápido. Ese corrimiento al "
+            "rojo, junto con la radiación de fondo de microondas y la abundancia de "
+            "helio primordial, sostiene el modelo del Big Bang.\\n\\n"
+            "**La expansión no tiene centro.** No es que las galaxias se alejen de un "
+            "punto: es el espacio entre ellas el que se estira, y desde cualquier "
+            "galaxia se vería lo mismo.\\n\\n"
+            "**Cómo nacen y mueren las estrellas.** Se forman por colapso "
+            "gravitacional de nubes de gas, brillan mientras fusionan hidrógeno en "
+            "helio y terminan como enanas blancas, estrellas de neutrones o agujeros "
+            "negros según su masa. Los elementos más pesados que el hierro se forjan "
+            "en esas muertes."
         ),
         "example_statement": (
             "Un planeta orbita el Sol a 4 unidades astronómicas. ¿Cuánto dura su "
@@ -81117,6 +82290,42 @@ LESSONS: dict[str, dict] = {
                 "porque": "El resultado es coherente con la ley: al cuadruplicar la distancia el año se multiplica por ocho, no por cuatro.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un cometa tiene un período orbital de $8$ años. ¿Cuál es el semieje "
+                    "mayor de su órbita, en unidades astronómicas?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Uso la tercera ley de Kepler en la forma que corresponde a las unidades "
+                            "del enunciado: $T^2 = a^3$, con $T$ en años y $a$ en UA."
+                        ),
+                        "porque": (
+                            "Esa versión simplificada solo vale con esas unidades, y acá el período "
+                            "ya viene en años. Con otras unidades habría que arrastrar la constante "
+                            "completa."
+                        ),
+                    },
+                    {
+                        "accion": "Reemplazo: $8^2 = a^3$, es decir $64 = a^3$.",
+                        "porque": (
+                            "Acá se conoce el período y se busca la distancia, o sea el camino "
+                            "inverso del ejemplo anterior: se eleva al cuadrado el dato conocido."
+                        ),
+                    },
+                    {
+                        "accion": "Saco la raíz cúbica: $a = \\sqrt[3]{64} = 4$ UA.",
+                        "porque": (
+                            "El exponente que acompaña a la incógnita es el que hay que deshacer. "
+                            "Como $4^3 = 64$, la raíz sale exacta: el cometa orbita cuatro veces más "
+                            "lejos que la Tierra."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Suponer que el período crece en proporción directa con la "
             "distancia. La relación no es lineal: duplicar la distancia "
@@ -81130,21 +82339,36 @@ LESSONS: dict[str, dict] = {
             "partir de una descripción es lo que la prueba pide."
         ),
         "theory": (
-            "**Reflexión: la onda vuelve.** El ángulo de incidencia es igual al "
-            "de reflexión, medidos desde la perpendicular a la superficie. La "
-            "rapidez no cambia porque el medio es el mismo.\n\n"
-            "**Refracción: la onda cambia de medio y se desvía.** Al pasar a un "
-            "medio donde viaja más lento se acerca a la perpendicular. **La "
-            "frecuencia NO cambia** —la impone la fuente—; lo que cambian son la "
-            "rapidez y la longitud de onda.\n\n"
+            "**Reflexión: la onda vuelve.** El ángulo de incidencia es igual al de "
+            "reflexión, medidos desde la perpendicular a la superficie. La rapidez no "
+            "cambia porque el medio es el mismo. El eco es reflexión del sonido, y la "
+            "reverberación, muchas reflexiones seguidas.\\n\\n"
+            "**Refracción: la onda cambia de medio y se desvía.** Al pasar a un medio "
+            "donde viaja más lento se acerca a la perpendicular; al pasar a uno donde "
+            "va más rápido, se aleja. **La frecuencia NO cambia** —la impone la "
+            "fuente—; lo que cambian son la rapidez y la longitud de onda.\\n\\n"
+            "| En este fenómeno | Cambia | No cambia |\\n"
+            "|---|---|---|\\n"
+            "| Reflexión | la dirección | rapidez, frecuencia, longitud de onda |\\n"
+            "| Refracción | dirección, rapidez, longitud de onda | la frecuencia |\\n"
+            "| Difracción | la forma del frente | rapidez, frecuencia, longitud de "
+            "onda |\\n"
+            "| Doppler | la frecuencia PERCIBIDA | la emitida por la fuente |\\n\\n"
             "**Difracción: la onda rodea un obstáculo o se abre al pasar por una "
-            "rendija.** Es apreciable cuando la abertura es comparable a la "
-            "longitud de onda; por eso las ondas largas de radio rodean cerros y "
-            "la luz visible, no.\n\n"
-            "**Efecto Doppler: cambia la frecuencia percibida** cuando la fuente "
-            "y el observador se acercan o se alejan. Al acercarse, la frecuencia "
-            "sube; al alejarse, baja. En astronomía se ve como corrimiento al "
-            "azul o al rojo.\n\n"
+            "rendija.** Es apreciable cuando la abertura es comparable a la longitud "
+            "de onda; por eso las ondas largas de radio rodean cerros y la luz "
+            "visible, no, y por eso se escucha a alguien desde otra habitación aunque "
+            "no se le vea.\\n\\n"
+            "**Interferencia.** Dos ondas que se encuentran se suman: si las crestas "
+            "coinciden, la amplitud crece (constructiva); si una cresta coincide con "
+            "un valle, se cancelan (destructiva). Es el principio de los audífonos "
+            "con cancelación de ruido.\\n\\n"
+            "**Efecto Doppler: cambia la frecuencia percibida** cuando la fuente y el "
+            "observador se acercan o se alejan. Al acercarse, la frecuencia sube; al "
+            "alejarse, baja, y por eso la sirena de una ambulancia cambia de tono "
+            "justo al pasar. La fuente sigue emitiendo siempre lo mismo. En "
+            "astronomía se ve como corrimiento al azul o al rojo, y es la evidencia "
+            "con que se mide que las galaxias se alejan.\\n\\n"
             "**Para todas ellas vale $v = \\lambda \\cdot f$.**"
         ),
         "example_statement": (
@@ -81166,6 +82390,49 @@ LESSONS: dict[str, dict] = {
                 "porque": "En esa igualdad la frecuencia es la constante del problema, así que rapidez y longitud de onda están obligadas a cambiar juntas.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Una onda sonora de $680$ Hz viaja en el aire a $340$ m/s y pasa al agua, "
+                    "donde el sonido viaja a $1.480$ m/s. ¿Qué ocurre con su frecuencia y con "
+                    "su longitud de onda?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Calculo la longitud de onda en el aire: $\\lambda = \\dfrac{340}{680} = "
+                            "0{,}5$ m."
+                        ),
+                        "porque": (
+                            "La ecuación fundamental relaciona los tres datos, y en el aire se "
+                            "conocen la velocidad y la frecuencia."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "En el agua la frecuencia sigue siendo $680$ Hz, porque la impone la "
+                            "fuente y no el medio."
+                        ),
+                        "porque": (
+                            "Es la regla que decide el ejercicio: al cambiar de medio la frecuencia "
+                            "se conserva. Si cambiara, el sonido se escucharía en otro tono bajo el "
+                            "agua, y no es lo que ocurre."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo la nueva longitud de onda: $\\lambda = \\dfrac{1480}{680} \\approx "
+                            "2{,}2$ m."
+                        ),
+                        "porque": (
+                            "Con la frecuencia fija, la longitud de onda tiene que crecer en la misma "
+                            "proporción que la velocidad: el agua transmite el sonido más rápido, así "
+                            "que cada oscilación abarca más distancia."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Decir que en la refracción cambia la frecuencia. La impone la "
             "fuente y se conserva al cambiar de medio; lo que cambian son la "
@@ -81179,23 +82446,37 @@ LESSONS: dict[str, dict] = {
             "dónde está el objeto respecto del foco."
         ),
         "theory": (
-            "**Espejo plano: imagen virtual, del mismo tamaño**, a la misma "
-            "distancia detrás del espejo y con izquierda y derecha invertidas. "
-            "Para verse de cuerpo entero basta un espejo de la mitad de la "
-            "estatura.\n\n"
-            "**Espejos curvos.** En un espejo cóncavo la distancia focal es la "
-            "mitad del radio de curvatura. Si el objeto está más lejos que el "
-            "foco, la imagen es real e invertida; si está más cerca, es virtual, "
-            "derecha y mayor. El espejo convexo siempre da imagen virtual, "
-            "derecha y menor, y por eso se usa como retrovisor.\n\n"
-            "**Lentes.** La convergente se comporta como el espejo cóncavo y la "
-            "divergente, como el convexo.\n\n"
-            "**La ecuación es una sola**: el inverso de la distancia focal es la "
-            "suma de los inversos de las distancias del objeto y de la imagen. "
-            "El aumento es el cociente entre el tamaño de la imagen y el del "
-            "objeto.\n\n"
+            "**Imagen real e imagen virtual.** La real se forma donde los rayos "
+            "efectivamente se cruzan y se puede proyectar en una pantalla; la virtual "
+            "se forma donde parecen venir los rayos y solo se ve mirando al espejo o "
+            "a la lente. Es la distinción que ordena toda la unidad.\\n\\n"
+            "**Espejo plano: imagen virtual, del mismo tamaño**, a la misma distancia "
+            "detrás del espejo y con izquierda y derecha invertidas. Para verse de "
+            "cuerpo entero basta un espejo de la mitad de la estatura.\\n\\n"
+            "**Espejos curvos.** En un espejo cóncavo la distancia focal es la mitad "
+            "del radio de curvatura, $f = \\dfrac{R}{2}$:\\n\\n"
+            "| Elemento | Objeto más lejos que el foco | Objeto más cerca que el foco "
+            "|\\n"
+            "|---|---|---|\\n"
+            "| Espejo cóncavo / lente convergente | imagen real e invertida | imagen "
+            "virtual, derecha y mayor |\\n"
+            "| Espejo convexo / lente divergente | siempre virtual, derecha y menor | "
+            "siempre virtual, derecha y menor |\\n\\n"
+            "El espejo convexo se usa como retrovisor y en las esquinas de los "
+            "pasillos justamente porque achica: abarca más campo visual.\\n\\n"
+            "**La ecuación es una sola**: $\\dfrac{1}{f} = \\dfrac{1}{d_o} + "
+            "\\dfrac{1}{d_i}$, donde $d_o$ es la distancia del objeto y $d_i$ la de la "
+            "imagen. El **aumento** es $A = -\\dfrac{d_i}{d_o}$, y su signo dice si la "
+            "imagen está derecha o invertida; su valor absoluto, cuántas veces más "
+            "grande es.\\n\\n"
+            "**Cuidado al despejar**: la ecuación relaciona los INVERSOS, así que el "
+            "resultado del cálculo es $\\dfrac{1}{d_i}$ y hay que invertirlo al final "
+            "para volver a centímetros.\\n\\n"
             "**La potencia de una lente**, en dioptrías, es el inverso de la "
-            "distancia focal expresada en metros."
+            "distancia focal en metros: $P = \\dfrac{1}{f}$. Es positiva en las "
+            "convergentes y negativa en las divergentes, y es el número que aparece "
+            "en la receta de los anteojos: la miopía se corrige con lentes "
+            "divergentes y la hipermetropía, con convergentes."
         ),
         "example_statement": (
             "Un objeto se coloca a 30 cm de una lente convergente de 10 cm de "
@@ -81215,6 +82496,54 @@ LESSONS: dict[str, dict] = {
                 "porque": "El inverso de un quinceavo es 15. Como el objeto estaba más lejos que el foco, la imagen resulta real e invertida, del otro lado de la lente.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un objeto de $4$ cm de alto se coloca a $15$ cm de una lente convergente "
+                    "de $10$ cm de distancia focal. ¿Dónde se forma la imagen y de qué tamaño "
+                    "es?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Planteo la ecuación: $\\dfrac{1}{10} = \\dfrac{1}{15} + \\dfrac{1}{d_i}$, y "
+                            "despejo $\\dfrac{1}{d_i} = \\dfrac{1}{10} - \\dfrac{1}{15}$."
+                        ),
+                        "porque": (
+                            "Lo que se despeja es el inverso de la distancia de la imagen, no la "
+                            "distancia. Restar mal este paso es el error más frecuente de la unidad."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Resuelvo la resta con denominador común $30$: $\\dfrac{3}{30} - "
+                            "\\dfrac{2}{30} = \\dfrac{1}{30}$, así que $d_i = 30$ cm."
+                        ),
+                        "porque": (
+                            "Al final hay que INVERTIR el resultado para volver a centímetros. Como "
+                            "$\\dfrac{1}{d_i}$ dio $\\dfrac{1}{30}$, la imagen está a $30$ cm de la "
+                            "lente, al otro lado."
+                        ),
+                    },
+                    {
+                        "accion": "Calculo el aumento: $A = -\\dfrac{30}{15} = -2$.",
+                        "porque": (
+                            "El signo negativo indica que la imagen está invertida, y el $2$, que "
+                            "mide el doble. Corresponde al caso de objeto más lejos que el foco: "
+                            "imagen real e invertida."
+                        ),
+                    },
+                    {
+                        "accion": "El tamaño de la imagen es $|{-2}| \\cdot 4 = 8$ cm, invertida.",
+                        "porque": (
+                            "El aumento multiplica el tamaño del objeto. Si el objeto se hubiera "
+                            "puesto a menos de $10$ cm, dentro del foco, la imagen habría salido "
+                            "virtual y derecha, que es como funciona una lupa."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Sumar directamente las distancias o restar los denominadores. La "
             "ecuación relaciona los INVERSOS de las distancias, así que hay que "
@@ -81229,24 +82558,35 @@ LESSONS: dict[str, dict] = {
             "todos los meses."
         ),
         "theory": (
-            "**Potencia: $P = V \\cdot I$.** Se mide en watt. Combinada con la "
-            "ley de Ohm da también $P = I^2 \\cdot R$, que explica por qué un "
-            "cable delgado se calienta: toda la potencia disipada se va en "
-            "calor.\n\n"
-            "**Energía: potencia por tiempo.** La compañía cobra en "
-            "kilowatt-hora, que es la energía de un artefacto de 1.000 W "
-            "funcionando una hora. Para calcularla se pasan los watt a kilowatt "
-            "y se multiplica por las horas.\n\n"
-            "**En la instalación domiciliaria los artefactos van en paralelo.** "
-            "Así todos reciben los mismos 220 V y cada uno se puede apagar sin "
-            "cortar a los demás. En serie, apagar uno cortaría todo el "
-            "circuito.\n\n"
-            "**El automático protege el cable, no el artefacto.** Corta cuando "
-            "la corriente total supera lo que el conductor tolera, que es lo que "
-            "ocurre al enchufar demasiados aparatos de alto consumo en el mismo "
-            "circuito.\n\n"
-            "**La conexión a tierra desvía la corriente de falla** hacia el "
-            "suelo en vez de hacia la persona que toca el artefacto."
+            "**Potencia: $P = V \\cdot I$.** Se mide en watt. Combinada con la ley de "
+            "Ohm da también $P = I^2 \\cdot R$, que explica por qué un cable delgado "
+            "se calienta: toda la potencia disipada se va en calor.\\n\\n"
+            "**Energía: potencia por tiempo.** La compañía cobra en kilowatt-hora, "
+            "que es la energía de un artefacto de $1.000$ W funcionando una hora:\\n\\n"
+            "$$E\\,[\\text{kWh}] = \\dfrac{P\\,[\\text{W}]}{1000} \\cdot t\\,[\\text{h}]$$\\n\\n"
+            "El kilowatt-hora es una unidad de ENERGÍA, no de potencia, aunque lleve "
+            "«watt» en el nombre. Y el costo de la boleta es esa energía por el "
+            "precio del kWh.\\n\\n"
+            "| Artefacto | Potencia típica | En $2$ horas |\\n"
+            "|---|---|---|\\n"
+            "| Ampolleta LED | $10$ W | $0{,}02$ kWh |\\n"
+            "| Televisor | $100$ W | $0{,}2$ kWh |\\n"
+            "| Estufa eléctrica | $2.000$ W | $4$ kWh |\\n\\n"
+            "Lo que encarece la boleta son los artefactos que producen calor "
+            "—estufas, hervidores, secadoras—, no los que quedan encendidos muchas "
+            "horas con poca potencia.\\n\\n"
+            "**En la instalación domiciliaria los artefactos van en paralelo.** Así "
+            "todos reciben los mismos $220$ V y cada uno se puede apagar sin cortar a "
+            "los demás. En serie, apagar uno cortaría todo el circuito.\\n\\n"
+            "**Cada artefacto que se enchufa suma corriente**, porque en paralelo la "
+            "resistencia total baja. Por eso la sobrecarga es un problema del "
+            "circuito completo y no de un aparato en particular.\\n\\n"
+            "**El automático protege el cable, no el artefacto.** Corta cuando la "
+            "corriente total supera lo que el conductor tolera. El **diferencial**, "
+            "en cambio, protege a la persona: corta cuando detecta que se está "
+            "fugando corriente del circuito.\\n\\n"
+            "**La conexión a tierra desvía la corriente de falla** hacia el suelo en "
+            "vez de hacia la persona que toca el artefacto."
         ),
         "example_statement": (
             "Una estufa de 2.000 W funciona 3 horas diarias. ¿Cuánta energía "
@@ -81266,6 +82606,48 @@ LESSONS: dict[str, dict] = {
                 "porque": "Ese salto es el que vuelve útil el cálculo: la boleta cobra energía acumulada, no la potencia del artefacto.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "En una casa hay un refrigerador de $150$ W encendido las $24$ horas y un "
+                    "hervidor de $2.000$ W que se usa $15$ minutos al día. Si el kWh cuesta "
+                    "$\\$140$, ¿cuál de los dos gasta más al mes ($30$ días)?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Refrigerador: $\\dfrac{150}{1000} \\cdot 24 = 3{,}6$ kWh al día, y en el "
+                            "mes $3{,}6 \\cdot 30 = 108$ kWh."
+                        ),
+                        "porque": (
+                            "Los watt se pasan a kilowatt dividiendo por mil antes de multiplicar por "
+                            "las horas. Su potencia es baja, pero funciona todo el día."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Hervidor: $15$ minutos son $0{,}25$ h, así que $\\dfrac{2000}{1000} \\cdot "
+                            "0{,}25 = 0{,}5$ kWh al día, y en el mes $15$ kWh."
+                        ),
+                        "porque": (
+                            "El tiempo tiene que estar en horas, igual que en la definición del kWh. "
+                            "Usar $15$ en vez de $0{,}25$ multiplicaría el resultado por sesenta."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Comparo y valorizo: el refrigerador gasta $108$ kWh contra $15$ kWh, es "
+                            "decir $108 \\cdot 140 = \\$15.120$ al mes contra $\\$2.100$."
+                        ),
+                        "porque": (
+                            "La potencia sola no decide el consumo: lo que se paga es potencia POR "
+                            "tiempo. El hervidor tiene trece veces más potencia y gasta siete veces "
+                            "menos, porque funciona un rato."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Multiplicar los watt por las horas y llamar kilowatt-hora al "
             "resultado. Falta dividir por mil: 2.000 W durante 3 h son 6 kWh, no "
@@ -81280,25 +82662,38 @@ LESSONS: dict[str, dict] = {
             "maneras."
         ),
         "theory": (
-            "**La Tierra tiene capas.** Corteza, manto y núcleo. La litosfera, "
-            "que es la corteza más la parte rígida del manto, está fragmentada "
-            "en placas que se mueven sobre la astenosfera, más plástica.\n\n"
-            "**Tres tipos de borde.** En el divergente las placas se separan y "
-            "se crea corteza nueva, como en las dorsales oceánicas. En el "
-            "convergente una placa se hunde bajo la otra: eso es la subducción, "
-            "y forma fosas, cordilleras y volcanes. En el transformante las "
-            "placas se deslizan de lado.\n\n"
-            "**Chile está en un borde convergente**: la placa de Nazca subduce "
-            "bajo la sudamericana a unos 7 cm por año. De ahí salen la fosa "
-            "frente a la costa, la cordillera de los Andes y la cadena "
-            "volcánica.\n\n"
-            "**Los sismos liberan energía acumulada** en la zona de contacto. "
-            "Las ondas P son las más rápidas y llegan primero; las S llegan "
-            "después. Esa diferencia de tiempo permite calcular a qué distancia "
-            "ocurrió el sismo.\n\n"
-            "**Magnitud e intensidad no son lo mismo.** La magnitud es una sola "
-            "por sismo y mide la energía liberada; la intensidad varía según el "
-            "lugar y mide los efectos observados."
+            "**La Tierra tiene capas.** Corteza, manto y núcleo. La **litosfera**, "
+            "que es la corteza más la parte rígida del manto, está fragmentada en "
+            "placas que se mueven sobre la **astenosfera**, más plástica. El motor "
+            "del movimiento son las corrientes de convección del manto.\\n\\n"
+            "**La deriva continental.** Wegener propuso en 1912 que los continentes "
+            "habían estado unidos en Pangea, con tres evidencias: el calce de las "
+            "costas, fósiles iguales en continentes separados por océanos y "
+            "formaciones geológicas que continúan de un lado al otro. Le faltaba el "
+            "mecanismo, y por eso no se aceptó hasta que la tectónica de placas lo "
+            "aportó.\\n\\n"
+            "| Tipo de borde | Qué pasa | Dónde se ve |\\n"
+            "|---|---|---|\\n"
+            "| Divergente | las placas se separan y se crea corteza nueva | dorsales "
+            "oceánicas |\\n"
+            "| Convergente | una placa se hunde bajo la otra (subducción) | fosas, "
+            "cordilleras, volcanes |\\n"
+            "| Transformante | se deslizan de lado | falla de San Andrés |\\n\\n"
+            "**Chile está en un borde convergente**: la placa de Nazca subduce bajo "
+            "la sudamericana a unos $7$ cm por año. De ahí salen la fosa frente a la "
+            "costa, la cordillera de los Andes y la cadena volcánica.\\n\\n"
+            "**Los sismos liberan energía acumulada** en la zona de contacto. El "
+            "**hipocentro** es el punto donde se origina, dentro de la Tierra, y el "
+            "**epicentro** es el punto de la superficie justo encima.\\n\\n"
+            "**Ondas sísmicas.** Las P son longitudinales, las más rápidas, y "
+            "atraviesan sólidos y líquidos; las S son transversales, más lentas, y no "
+            "pasan por líquidos —de ahí se dedujo que el núcleo externo es líquido—. "
+            "La diferencia de tiempo entre una y otra permite calcular a qué "
+            "distancia ocurrió el sismo.\\n\\n"
+            "**Magnitud e intensidad no son lo mismo.** La magnitud es una sola por "
+            "sismo y mide la energía liberada, en una escala logarítmica: un grado "
+            "más son unas $32$ veces más energía. La intensidad, en cambio, varía "
+            "según el lugar y mide los efectos observados."
         ),
         "example_statement": (
             "En una estación sismológica, la onda P llega 40 segundos antes que "
@@ -81319,6 +82714,44 @@ LESSONS: dict[str, dict] = {
                 "porque": "Este es el principio con que se ubica el epicentro: con tres estaciones y sus distancias, la intersección de tres circunferencias lo determina.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Si la placa de Nazca avanza $7$ cm por año, ¿cuánto se habrá desplazado "
+                    "en $100.000$ años, en kilómetros?"
+                ),
+                "steps": [
+                    {
+                        "accion": "Multiplico la velocidad por el tiempo: $7 \\cdot 100.000 = 700.000$ cm.",
+                        "porque": (
+                            "El movimiento de placas es lento pero constante, así que se trata como "
+                            "un MRU: distancia igual a velocidad por tiempo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Paso a kilómetros dividiendo por $100.000$: $700.000 \\div 100.000 = 7$ "
+                            "km."
+                        ),
+                        "porque": (
+                            "Un kilómetro son $1.000$ m y cada metro $100$ cm, o sea $100.000$ cm. "
+                            "Cambiar de unidad al final, y no a mitad de camino, evita arrastrar el "
+                            "error."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Interpreto el resultado: siete kilómetros en cien mil años, un abrir y "
+                            "cerrar de ojos en escala geológica."
+                        ),
+                        "porque": (
+                            "A ese ritmo, los $180$ millones de años desde Pangea dan miles de "
+                            "kilómetros: es lo que explica que los continentes estén donde están hoy."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Multiplicar los 40 segundos por la diferencia de rapideces. Lo que "
             "vale 40 segundos es la diferencia de TIEMPOS, y hay que despejar la "
@@ -81333,25 +82766,41 @@ LESSONS: dict[str, dict] = {
             "valor fijo."
         ),
         "theory": (
-            "**Sustancia pura o mezcla.** Una sustancia pura tiene composición "
-            "fija: puede ser un elemento (un solo tipo de átomo) o un compuesto "
-            "(dos o más elementos unidos en proporción constante). Una mezcla "
-            "tiene composición variable y sus componentes conservan sus "
-            "propiedades.\n\n"
+            "**Sustancia pura o mezcla.** Una sustancia pura tiene composición fija: "
+            "puede ser un **elemento** (un solo tipo de átomo) o un **compuesto** "
+            "(dos o más elementos unidos en proporción constante). Una mezcla tiene "
+            "composición variable y sus componentes conservan sus propiedades, porque "
+            "no hubo reacción química.\\n\\n"
             "**Homogénea o heterogénea.** En la homogénea no se distinguen los "
-            "componentes ni al microscopio: son las disoluciones. En la "
-            "heterogénea se reconocen fases distintas.\n\n"
-            "**Cada método de separación aprovecha una propiedad.** La "
-            "filtración separa un sólido insoluble de un líquido; la decantación "
-            "aprovecha la diferencia de densidad; el tamizado, el tamaño de "
-            "grano; la destilación, la diferencia de temperatura de ebullición, "
-            "y es la única de estas cuatro que sirve para una disolución.\n\n"
-            "**Las propiedades intensivas no dependen de la cantidad**: "
-            "densidad, temperatura de fusión, temperatura de ebullición. Las "
-            "extensivas sí: masa y volumen. Por eso la densidad identifica un "
-            "material y la masa no.\n\n"
-            "**Densidad: masa dividida por volumen.** Un objeto flota en un "
-            "líquido si su densidad es menor que la de ese líquido."
+            "componentes ni al microscopio: son las disoluciones. En la heterogénea "
+            "se reconocen fases distintas.\\n\\n"
+            "| Método | Qué propiedad aprovecha | Sirve para |\\n"
+            "|---|---|---|\\n"
+            "| Filtración | tamaño de partícula | sólido insoluble en líquido |\\n"
+            "| Decantación | diferencia de densidad | líquidos no miscibles, o sólido "
+            "sedimentado |\\n"
+            "| Tamizado | tamaño de grano | sólidos de distinto grosor |\\n"
+            "| Destilación | temperatura de ebullición | disoluciones (líquido + "
+            "soluto disuelto) |\\n"
+            "| Evaporación | volatilidad del disolvente | recuperar el soluto sólido "
+            "|\\n"
+            "| Cromatografía | afinidad con el soporte | pigmentos y mezclas de "
+            "colorantes |\\n\\n"
+            "La destilación es la única de las primeras cuatro que sirve para una "
+            "disolución: filtrar agua salada no separa nada, porque la sal pasa por "
+            "el filtro junto con el agua.\\n\\n"
+            "**Cambio físico y cambio químico.** En el físico cambia la forma o el "
+            "estado, pero la sustancia sigue siendo la misma y el proceso suele ser "
+            "reversible: fundir hielo, disolver azúcar. En el químico se forman "
+            "sustancias nuevas: oxidarse, quemar, fermentar.\\n\\n"
+            "**Las propiedades intensivas no dependen de la cantidad**: densidad, "
+            "temperatura de fusión, temperatura de ebullición, color. Las extensivas "
+            "sí: masa, volumen, peso. Por eso la densidad identifica un material y la "
+            "masa no.\\n\\n"
+            "**Densidad: $\\rho = \\dfrac{m}{V}$.** Un objeto flota en un líquido si su "
+            "densidad es menor que la de ese líquido. El agua tiene $1\\ \\text{g/mL}$, "
+            "que es la referencia con que se compara todo lo demás. Y para un sólido "
+            "irregular, el volumen se mide por desplazamiento de agua."
         ),
         "example_statement": (
             "Un objeto de 54 g se sumerge en una probeta con 25 mL de agua y el "
@@ -81371,6 +82820,47 @@ LESSONS: dict[str, dict] = {
                 "porque": "Ese valor corresponde además al aluminio, de modo que la densidad sirve para identificar el material sin destruir la muestra.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Se tiene una mezcla de arena, sal y agua. Describe cómo separar los tres "
+                    "componentes y qué propiedad aprovecha cada paso."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Primero filtro la mezcla: la arena queda en el papel filtro y pasa el "
+                            "agua con la sal disuelta."
+                        ),
+                        "porque": (
+                            "La arena es un sólido insoluble, así que sus partículas no atraviesan el "
+                            "filtro. La sal sí pasa, porque está disuelta: no es un sólido suspendido "
+                            "sino parte de una disolución."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Lo que pasó el filtro es agua salada, una disolución homogénea. La "
+                            "destilo: el agua hierve a $100\\ ^\\circ$C, se evapora y al condensarse se "
+                            "recupera pura."
+                        ),
+                        "porque": (
+                            "La sal tiene una temperatura de ebullición altísima y se queda en el "
+                            "recipiente. Es la diferencia de temperatura de ebullición lo que permite "
+                            "separar lo que un filtro no puede."
+                        ),
+                    },
+                    {
+                        "accion": "La sal queda como residuo sólido en el fondo del matraz de destilación.",
+                        "porque": (
+                            "Si solo interesara la sal y no el agua, bastaría con evaporar sin "
+                            "condensar. La destilación se usa cuando se quieren recuperar los DOS "
+                            "componentes."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Tomar el volumen final de la probeta, 45 mL, como volumen del "
             "objeto. Ese número incluye el agua que ya estaba: el volumen del "
@@ -81384,23 +82874,40 @@ LESSONS: dict[str, dict] = {
             "sin memorizar compuesto por compuesto."
         ),
         "theory": (
-            "**Hidrocarburos: solo carbono e hidrógeno.** Los alcanos tienen "
-            "enlaces simples y fórmula general $C_nH_{2n+2}$; los alquenos "
-            "tienen un doble enlace y responden a $C_nH_{2n}$; los alquinos "
-            "tienen un triple y responden a $C_nH_{2n-2}$. Los aromáticos "
-            "contienen el anillo del benceno.\n\n"
-            "**Los grupos con oxígeno.** El alcohol lleva $-OH$; el aldehído, "
-            "$-CHO$ en un extremo de la cadena; la cetona, un $C=O$ en el "
-            "interior; el ácido carboxílico, $-COOH$; el éster resulta de un "
-            "ácido con un alcohol.\n\n"
-            "**Los grupos con nitrógeno.** La amina lleva $-NH_2$ y la amida "
-            "combina el carbonilo con el nitrógeno.\n\n"
+            "**Hidrocarburos: solo carbono e hidrógeno.** Los alcanos tienen enlaces "
+            "simples y fórmula general $C_nH_{2n+2}$; los alquenos tienen un doble "
+            "enlace y responden a $C_nH_{2n}$; los alquinos tienen un triple y "
+            "responden a $C_nH_{2n-2}$. Los aromáticos contienen el anillo del "
+            "benceno.\\n\\n"
+            "| Familia | Grupo funcional | Terminación | Ejemplo |\\n"
+            "|---|---|---|---|\\n"
+            "| Alcano | solo enlaces simples | -ano | propano |\\n"
+            "| Alqueno | C$=$C | -eno | propeno |\\n"
+            "| Alquino | C≡C | -ino | propino |\\n"
+            "| Alcohol | $-$OH | -ol | etanol |\\n"
+            "| Aldehído | $-$CHO (en el extremo) | -al | etanal |\\n"
+            "| Cetona | C$=$O (interior) | -ona | propanona |\\n"
+            "| Ácido carboxílico | $-$COOH | -oico | ácido etanoico |\\n"
+            "| Éster | $-$COO$-$ | -ato de -ilo | etanoato de etilo |\\n"
+            "| Amina | $-$NH₂ | -amina | etilamina |\\n"
+            "| Amida | $-$CONH₂ | -amida | etanamida |\\n\\n"
             "**La posición importa.** Aldehído y cetona tienen el mismo grupo "
-            "carbonilo: lo que los distingue es si está al final de la cadena o "
-            "en medio.\n\n"
-            "**La nomenclatura sigue la cadena principal.** El prefijo cuenta "
-            "los carbonos (met, et, prop, but) y la terminación indica el grupo "
-            "funcional: -ano, -eno, -ino, -ol, -al, -ona, -oico."
+            "carbonilo: lo que los distingue es si está al final de la cadena o en "
+            "medio. Por eso la cetona más simple tiene tres carbonos: con dos, el "
+            "carbonilo quedaría forzosamente en un extremo.\\n\\n"
+            "**La nomenclatura sigue la cadena principal.** El prefijo cuenta los "
+            "carbonos (met $1$, et $2$, prop $3$, but $4$, pent $5$, hex $6$) y la "
+            "terminación indica el grupo funcional. Cuando hace falta, un número "
+            "indica en qué carbono está el grupo, contando desde el extremo que dé el "
+            "número más bajo.\\n\\n"
+            "**El grupo funcional manda sobre las propiedades.** El $-$OH del alcohol "
+            "forma puentes de hidrógeno, y por eso el etanol es líquido mientras el "
+            "etano, de masa parecida, es un gas. El $-$COOH del ácido libera H⁺ en "
+            "agua, y de ahí su acidez.\\n\\n"
+            "**Dónde aparecen en la vida diaria.** El ácido etanoico es el vinagre; "
+            "la propanona, el quitaesmalte; los ésteres dan el aroma de las frutas; y "
+            "las amidas forman el enlace peptídico que une los aminoácidos de las "
+            "proteínas."
         ),
         "example_statement": (
             "Un compuesto responde a la fórmula $CH_3-CH_2-OH$. ¿Qué grupo "
@@ -81420,6 +82927,57 @@ LESSONS: dict[str, dict] = {
                 "porque": "Ese nombre ya anticipa propiedades: los alcoholes de cadena corta se disuelven bien en agua, porque el $-OH$ forma puentes de hidrógeno.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Nombra el compuesto $\\mathrm{CH_3-CH_2-CH_2-COOH}$ e indica en qué se "
+                    "diferencia de $\\mathrm{CH_3-CH_2-CO-CH_3}$."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Cuento los carbonos del primero: son cuatro, incluido el del $-$COOH, "
+                            "así que el prefijo es but-."
+                        ),
+                        "porque": (
+                            "El carbono del grupo carboxilo forma parte de la cadena principal y se "
+                            "cuenta. Olvidarlo deja el nombre corrido en un carbono."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El grupo $-$COOH es el del ácido carboxílico, cuya terminación es -oico: "
+                            "el compuesto es el ácido butanoico."
+                        ),
+                        "porque": (
+                            "La terminación identifica la familia. Y el $-$COOH va siempre en un "
+                            "extremo, así que no necesita número de posición."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El segundo compuesto tiene un C$=$O en el interior de la cadena, no un "
+                            "$-$COOH: es una cetona, la butanona."
+                        ),
+                        "porque": (
+                            "Los dos tienen cuatro carbonos y un oxígeno doblemente enlazado, pero el "
+                            "del ácido está en el extremo y acompañado de un $-$OH. Esa diferencia de "
+                            "posición cambia la familia y todas sus propiedades."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo: el ácido butanoico es ácido y forma sales, mientras que la "
+                            "butanona es un disolvente neutro."
+                        ),
+                        "porque": (
+                            "El grupo funcional, y no la cantidad de carbonos, es lo que determina el "
+                            "comportamiento químico. Es la idea central de toda la unidad."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Confundir aldehído con cetona. Los dos tienen el grupo carbonilo; "
             "el aldehído lo lleva en un carbono del extremo y la cetona, en uno "
@@ -81433,24 +82991,37 @@ LESSONS: dict[str, dict] = {
             "que los átomos no aparecen ni desaparecen."
         ),
         "theory": (
-            "**Conservación de la materia.** En un sistema cerrado, la masa de "
-            "los reactantes es igual a la de los productos. Si el recipiente "
-            "está abierto y se libera un gas, la balanza marca menos, pero la "
-            "materia no se perdió: salió del sistema.\n\n"
-            "**Proporciones definidas.** Un compuesto puro siempre tiene la "
-            "misma proporción en masa entre sus elementos. El agua es siempre 8 "
-            "gramos de oxígeno por cada gramo de hidrógeno, venga de donde "
-            "venga.\n\n"
-            "**Proporciones múltiples.** Cuando dos elementos forman más de un "
-            "compuesto, las masas de uno que se combinan con una masa fija del "
-            "otro están en razón de números enteros pequeños.\n\n"
-            "**Partes de una ecuación.** Los reactantes van antes de la flecha y "
-            "los productos, después. Los coeficientes indican proporciones y son "
-            "lo único que se puede modificar al balancear; los subíndices "
-            "definen el compuesto y cambiarlos cambia la sustancia.\n\n"
-            "**Cómo balancear.** Conviene dejar para el final los elementos que "
-            "aparecen en más de un compuesto, típicamente el oxígeno y el "
-            "hidrógeno."
+            "**Conservación de la materia (Lavoisier).** En un sistema cerrado, la "
+            "masa de los reactantes es igual a la de los productos. Si el recipiente "
+            "está abierto y se libera un gas, la balanza marca menos, pero la materia "
+            "no se perdió: salió del sistema.\\n\\n"
+            "**Proporciones definidas (Proust).** Un compuesto puro siempre tiene la "
+            "misma proporción en masa entre sus elementos. El agua es siempre $8$ "
+            "gramos de oxígeno por cada gramo de hidrógeno, venga de donde venga.\\n\\n"
+            "**Proporciones múltiples (Dalton).** Cuando dos elementos forman más de "
+            "un compuesto, las masas de uno que se combinan con una masa fija del "
+            "otro están en razón de números enteros pequeños, como en el CO y el CO₂.\\n\\n"
+            "**Partes de una ecuación.** Los reactantes van antes de la flecha y los "
+            "productos, después:\\n\\n"
+            "| Elemento de la ecuación | Qué significa | ¿Se puede cambiar? |\\n"
+            "|---|---|---|\\n"
+            "| Coeficiente (delante) | cuántas unidades participan | sí, es lo único "
+            "que se ajusta |\\n"
+            "| Subíndice (dentro) | cuántos átomos tiene la molécula | no, cambia la "
+            "sustancia |\\n"
+            "| Estado $(s)$, $(l)$, $(g)$, $(ac)$ | en qué fase está | es "
+            "información, no se ajusta |\\n\\n"
+            "Cambiar H₂O por H₂O₂ para «cuadrar» el oxígeno no balancea la ecuación: "
+            "la convierte en otra reacción.\\n\\n"
+            "**Cómo balancear.** Se cuentan los átomos de cada elemento a ambos lados "
+            "y se ajustan los coeficientes, dejando para el final los elementos que "
+            "aparecen en más de un compuesto —típicamente el oxígeno y el hidrógeno—. "
+            "Si queda un coeficiente fraccionario, se multiplica toda la ecuación "
+            "para volver a enteros.\\n\\n"
+            "**Balancear es contar átomos, no moléculas.** Un subíndice multiplica "
+            "solo a su átomo, mientras que el coeficiente multiplica a toda la "
+            "fórmula: en $3\\mathrm{H_2SO_4}$ hay $6$ hidrógenos, $3$ azufres y $12$ "
+            "oxígenos."
         ),
         "example_statement": (
             "Balancear la combustión $CH_4 + O_2 \\rightarrow CO_2 + H_2O$."
@@ -81469,6 +83040,60 @@ LESSONS: dict[str, dict] = {
                 "porque": "El oxígeno va al final porque aparece en DOS productos: su cuenta depende de los coeficientes que ya se fijaron. La ecuación queda $CH_4 + 2O_2 \\rightarrow CO_2 + 2H_2O$.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Balancea la ecuación $\\mathrm{C_3H_8} + \\mathrm{O_2} \\rightarrow "
+                    "\\mathrm{CO_2} + \\mathrm{H_2O}$, la combustión del propano."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Empiezo por el carbono: hay $3$ a la izquierda, así que pongo "
+                            "coeficiente $3$ al CO₂."
+                        ),
+                        "porque": (
+                            "Se parte por los elementos que aparecen en un solo compuesto a cada "
+                            "lado. El carbono solo está en el propano y en el dióxido, así que su "
+                            "ajuste no desarma nada más."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Sigo con el hidrógeno: hay $8$ en el propano, y como cada agua aporta "
+                            "$2$, necesito $4$ moléculas de agua."
+                        ),
+                        "porque": (
+                            "El subíndice $8$ cuenta átomos de hidrógeno, y cada H₂O tiene dos. Por "
+                            "eso el coeficiente es $8 \\div 2 = 4$ y no $8$."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Dejo el oxígeno para el final: a la derecha hay $3 \\cdot 2 + 4 \\cdot 1 = "
+                            "10$ átomos, y como el O₂ trae dos, el coeficiente es $5$."
+                        ),
+                        "porque": (
+                            "El oxígeno aparece en dos compuestos del lado derecho, así que su cuenta "
+                            "solo queda fija una vez que los demás están ajustados. Ajustarlo primero "
+                            "obliga a rehacerlo."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "La ecuación balanceada es $\\mathrm{C_3H_8} + 5\\mathrm{O_2} \\rightarrow "
+                            "3\\mathrm{CO_2} + 4\\mathrm{H_2O}$, y verifico: $3$ C, $8$ H y $10$ O a "
+                            "cada lado."
+                        ),
+                        "porque": (
+                            "El recuento final por elemento es la comprobación. Si un lado quedara "
+                            "con un átomo de más, la ley de conservación de la materia no se "
+                            "cumpliría."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Balancear cambiando subíndices, por ejemplo escribiendo $H_2O_2$ "
             "para que cuadre el oxígeno. Eso convierte el agua en agua "
@@ -81484,18 +83109,27 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**El limitante se agota; el otro sobra.** El reactivo limitante se "
-            "consume por completo y fija el máximo de producto. El reactivo en "
-            "exceso queda sin reaccionar dentro del recipiente.\n\n"
+            "consume por completo y fija el máximo de producto. El reactivo en exceso "
+            "queda sin reaccionar dentro del recipiente.\\n\\n"
             "**No se comparan masas ni moles crudos.** Los coeficientes de la "
-            "ecuación piden proporciones distintas de cada reactante, así que "
-            "hay que dividir los moles de cada uno por su coeficiente. El menor "
-            "de esos cocientes señala al limitante.\n\n"
-            "**El producto se calcula desde el limitante.** Se toma su cantidad "
-            "y se aplica la proporción de la ecuación hasta el producto que "
-            "interesa.\n\n"
+            "ecuación piden proporciones distintas de cada reactante, así que el "
+            "procedimiento es siempre el mismo:\\n\\n"
+            "1) pasar cada masa a moles con $n = \\dfrac{m}{M}$;\\n"
+            "2) dividir los moles de cada reactante por su coeficiente;\\n"
+            "3) el cociente MENOR señala al limitante;\\n"
+            "4) calcular el producto a partir de ese reactante.\\n\\n"
+            "**El producto se calcula desde el limitante.** Se toma su cantidad y se "
+            "aplica la proporción de la ecuación hasta el producto que interesa. "
+            "Calcularlo desde el reactivo en exceso da un número mayor que el real, "
+            "porque supone que hay material que no alcanza.\\n\\n"
             "**El sobrante también se calcula desde el limitante.** Se determina "
-            "cuánto del otro reactante se consumió y se resta de lo que "
-            "había.\n\n"
+            "cuánto del otro reactante se consumió y se resta de lo que había:\\n\\n"
+            "$$\\text{sobrante} = \\text{lo que había} - \\text{lo que reaccionó}$$\\n\\n"
+            "**Rendimiento.** El cálculo entrega el rendimiento **teórico**, que es "
+            "el máximo posible. Lo que se obtiene en el laboratorio es el rendimiento "
+            "**real**, y su cociente por cien es el rendimiento porcentual: $\\%R = "
+            "\\dfrac{\\text{real}}{\\text{teórico}} \\cdot 100$. Nunca pasa del $100\\%$; "
+            "si lo hiciera, el producto está impuro o mal secado.\\n\\n"
             "**Agregar más del reactivo en exceso no cambia nada.** Esa "
             "insensibilidad es la prueba experimental de cuál de los dos está "
             "limitando: se duplica uno solo y se observa si el producto aumenta."
@@ -81518,6 +83152,61 @@ LESSONS: dict[str, dict] = {
                 "porque": "Calcular desde el hidrógeno habría dado 36 gramos, el doble del real: por eso identificar el limitante va siempre antes que el cálculo del producto.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Se hacen reaccionar $28$ g de nitrógeno con $9$ g de hidrógeno según "
+                    "$\\mathrm{N_2} + 3\\mathrm{H_2} \\rightarrow 2\\mathrm{NH_3}$. ¿Cuál es el "
+                    "limitante y cuántos moles de amoníaco se forman? (Masas molares: N₂ $= "
+                    "28$ g/mol, H₂ $= 2$ g/mol.)"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Paso las masas a moles: $n(\\mathrm{N_2}) = \\dfrac{28}{28} = 1$ mol y "
+                            "$n(\\mathrm{H_2}) = \\dfrac{9}{2} = 4{,}5$ mol."
+                        ),
+                        "porque": (
+                            "La ecuación habla de moles, no de gramos. Comparar $28$ g con $9$ g "
+                            "directamente no dice nada, porque una molécula de nitrógeno pesa catorce "
+                            "veces más que una de hidrógeno."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Divido cada uno por su coeficiente: nitrógeno $\\dfrac{1}{1} = 1$ e "
+                            "hidrógeno $\\dfrac{4{,}5}{3} = 1{,}5$."
+                        ),
+                        "porque": (
+                            "La receta pide tres hidrógenos por cada nitrógeno, así que el hidrógeno "
+                            "debe ser tres veces más abundante solo para empatar. Este cociente es lo "
+                            "que pone a los dos en la misma escala."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "El menor cociente es el del nitrógeno ($1 < 1{,}5$), así que el "
+                            "nitrógeno es el limitante y el hidrógeno está en exceso."
+                        ),
+                        "porque": (
+                            "El nitrógeno se acaba primero y con él se detiene la reacción, aunque "
+                            "quede hidrógeno dando vueltas en el recipiente."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo el producto desde el limitante: $1$ mol de N₂ produce $2$ moles "
+                            "de NH₃, y sobran $4{,}5 - 3 = 1{,}5$ moles de H₂."
+                        ),
+                        "porque": (
+                            "La proporción de la ecuación es $1:2$ entre nitrógeno y amoníaco. Y del "
+                            "hidrógeno se consumieron tres moles, los que exigía ese mol de "
+                            "nitrógeno: el resto queda sin reaccionar."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Suponer que limita el reactante con menos masa o con menos moles. "
             "Lo que decide es el cociente entre moles y coeficiente, y puede "
@@ -81532,21 +83221,34 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**Análisis porcentual.** El porcentaje en masa de un elemento es su "
-            "aporte dividido por la masa molar del compuesto, por cien. La suma "
-            "de todos los porcentajes da 100%.\n\n"
-            "**Fórmula empírica: la menor proporción entera** entre los átomos. "
-            "Se obtiene pasando cada porcentaje a moles —dividiendo por la masa "
-            "atómica— y dividiendo después todos los resultados por el menor de "
-            "ellos.\n\n"
-            "**Si queda un decimal, se multiplica.** Un 0,5 pide multiplicar "
-            "todos los valores por 2; un 0,33 o un 0,67, por 3. Redondear "
-            "cambiaría el compuesto.\n\n"
-            "**Fórmula molecular: la empírica por un factor entero.** Ese factor "
-            "es la masa molar dividida por la masa de la fórmula empírica, así "
-            "que **un análisis porcentual por sí solo nunca alcanza**: hace falta "
-            "además la masa molar.\n\n"
-            "**Compuestos distintos pueden compartir la empírica.** El "
-            "formaldehído, el ácido acético y la glucosa son todos $CH_2O$."
+            "aporte dividido por la masa molar del compuesto, por cien:\\n\\n"
+            "$$\\%\\,\\text{elemento} = \\dfrac{n_{\\text{átomos}} \\cdot \\text{masa "
+            "atómica}}{\\text{masa molar}} \\cdot 100$$\\n\\n"
+            "La suma de todos los porcentajes da $100\\%$, y esa es la primera "
+            "comprobación del ejercicio.\\n\\n"
+            "**Fórmula empírica: la menor proporción entera** entre los átomos. Se "
+            "obtiene en tres pasos: pasar cada porcentaje a moles dividiendo por la "
+            "masa atómica; dividir todos los resultados por el menor de ellos; y "
+            "llevar a enteros.\\n\\n"
+            "**Si queda un decimal, se multiplica.** Un $0{,}5$ pide multiplicar "
+            "todos los valores por $2$; un $0{,}33$ o un $0{,}67$, por $3$; un "
+            "$0{,}25$, por $4$. Redondear cambiaría el compuesto.\\n\\n"
+            "**Fórmula molecular: la empírica por un factor entero**, $k = "
+            "\\dfrac{\\text{masa molar}}{\\text{masa de la fórmula empírica}}$. Por eso "
+            "**un análisis porcentual por sí solo nunca alcanza**: hace falta además "
+            "la masa molar.\\n\\n"
+            "| Compuesto | Fórmula empírica | Fórmula molecular |\\n"
+            "|---|---|---|\\n"
+            "| Formaldehído | CH₂O | CH₂O |\\n"
+            "| Ácido acético | CH₂O | C₂H₄O₂ |\\n"
+            "| Glucosa | CH₂O | C₆H₁₂O₆ |\\n"
+            "| Agua oxigenada | HO | H₂O₂ |\\n\\n"
+            "**Compuestos distintos pueden compartir la empírica**, como muestra la "
+            "tabla: la empírica dice en qué PROPORCIÓN están los átomos y la "
+            "molecular, cuántos hay realmente.\\n\\n"
+            "**Trabajar con $100$ g imaginarios** es el atajo que simplifica todo: si "
+            "el compuesto tiene $40\\%$ de carbono, se supone que hay $40$ g de "
+            "carbono, y los porcentajes se leen directamente como gramos."
         ),
         "example_statement": (
             "Un compuesto contiene 40% de carbono, 6,7% de hidrógeno y 53,3% de "
@@ -81567,6 +83269,62 @@ LESSONS: dict[str, dict] = {
                 "porque": "Sin la masa molar el ejercicio se habría quedado en $CH_2O$, que también corresponde al formaldehído. El factor es lo que identifica a la glucosa.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Un compuesto contiene $52{,}2\\%$ de carbono, $13{,}0\\%$ de hidrógeno y "
+                    "$34{,}8\\%$ de oxígeno, y su masa molar es $46$ g/mol. Determina su "
+                    "fórmula molecular. (Masas atómicas: C $= 12$, H $= 1$, O $= 16$.)"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Supongo $100$ g de compuesto y paso cada masa a moles: C "
+                            "$\\dfrac{52{,}2}{12} = 4{,}35$; H $\\dfrac{13{,}0}{1} = 13{,}0$; O "
+                            "$\\dfrac{34{,}8}{16} = 2{,}18$."
+                        ),
+                        "porque": (
+                            "Con $100$ g los porcentajes se leen como gramos. Y hay que pasar a moles "
+                            "porque la fórmula cuenta ÁTOMOS, no masa: el hidrógeno pesa poco y "
+                            "aporta muchos átomos."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Divido los tres por el menor, que es $2{,}18$: C $\\approx 2$; H $\\approx "
+                            "6$; O $= 1$."
+                        ),
+                        "porque": (
+                            "Dividir por el menor deja al menos abundante en $1$ y expresa a los "
+                            "demás en relación a él, que es justamente la proporción que la fórmula "
+                            "empírica necesita."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "La fórmula empírica es C₂H₆O, cuya masa es $2 \\cdot 12 + 6 \\cdot 1 + 16 "
+                            "= 46$ g/mol."
+                        ),
+                        "porque": (
+                            "Los tres cocientes salieron enteros, así que no hay que multiplicar por "
+                            "nada. Calcular la masa de la empírica es el paso previo obligatorio para "
+                            "el factor."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Calculo el factor: $k = \\dfrac{46}{46} = 1$, así que la fórmula "
+                            "molecular también es C₂H₆O."
+                        ),
+                        "porque": (
+                            "Un factor de $1$ significa que empírica y molecular coinciden. Y ojo: "
+                            "esa fórmula corresponde tanto al etanol como al dimetiléter, que son "
+                            "isómeros; el análisis porcentual no puede distinguirlos."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Usar los porcentajes como subíndices y escribir algo como "
             "$C_{40}H_7O_{53}$. Los porcentajes son masas: hay que dividirlos "
@@ -81580,24 +83338,35 @@ LESSONS: dict[str, dict] = {
             "cambian, y ver en qué volumen quedan repartidos."
         ),
         "theory": (
-            "**Diluir es agregar disolvente.** Los moles de soluto no cambian y "
-            "el volumen aumenta, así que la concentración baja. De ahí sale "
-            "$C_1V_1 = C_2V_2$: los dos productos son los mismos moles.\n\n"
-            "**Mezclar es sumar aportes.** Los moles de las dos disoluciones se "
-            "suman y los volúmenes también; la concentración final es el "
-            "cociente. Nunca queda por encima de la mayor de las dos "
-            "concentraciones ni por debajo de la menor.\n\n"
-            "**Las concentraciones no se suman.** Sumar 0,3 y 0,5 para obtener "
-            "0,8 es el error más frecuente de esta unidad: lo que se suma son "
-            "los moles.\n\n"
+            "**Diluir es agregar disolvente.** Los moles de soluto no cambian y el "
+            "volumen aumenta, así que la concentración baja. De ahí sale $C_1V_1 = "
+            "C_2V_2$: los dos productos son los mismos moles.\\n\\n"
+            "**Concentrar es lo inverso**: evaporar disolvente deja los mismos moles "
+            "en menos volumen, y la misma fórmula sirve.\\n\\n"
+            "**Mezclar es sumar aportes.** Los moles de las dos disoluciones se suman "
+            "y los volúmenes también; la concentración final es el cociente:\\n\\n"
+            "$$C_f = \\dfrac{C_1V_1 + C_2V_2}{V_1 + V_2}$$\\n\\n"
+            "El resultado nunca queda por encima de la mayor de las dos "
+            "concentraciones ni por debajo de la menor: es un promedio pesado por los "
+            "volúmenes, y esa es la comprobación de un segundo.\\n\\n"
+            "**Las concentraciones no se suman.** Sumar $0{,}3$ y $0{,}5$ para "
+            "obtener $0{,}8$ es el error más frecuente de esta unidad: lo que se suma "
+            "son los moles.\\n\\n"
             "**Solubilidad: el máximo que se disuelve** en una cantidad fija de "
-            "disolvente a una temperatura dada. Suele expresarse en gramos por "
-            "cada 100 gramos de agua. Superado ese valor, el exceso queda sin "
-            "disolver.\n\n"
-            "**Factores.** En la mayoría de los sólidos la solubilidad sube con "
-            "la temperatura; en los gases baja con la temperatura y sube con la "
-            "presión. La agitación y el tamaño de grano cambian la VELOCIDAD, "
-            "no el límite."
+            "disolvente a una temperatura dada. Suele expresarse en gramos por cada "
+            "$100$ gramos de agua. Superado ese valor, el exceso queda sin disolver "
+            "en el fondo y la disolución está **saturada**.\\n\\n"
+            "| Factor | En sólidos | En gases |\\n"
+            "|---|---|---|\\n"
+            "| Subir la temperatura | suele aumentar la solubilidad | la DISMINUYE |\\n"
+            "| Subir la presión | casi no influye | la aumenta |\\n"
+            "| Agitar o moler | cambia la velocidad, no el límite | — |\\n\\n"
+            "Que el gas sea menos soluble en caliente explica dos cosas cotidianas: "
+            "que una bebida tibia pierda el gas más rápido y que el agua de un río "
+            "caliente tenga menos oxígeno disponible para los peces.\\n\\n"
+            "**Leer una curva de solubilidad.** Un punto sobre la curva es una "
+            "disolución saturada; bajo ella, insaturada; y sobre ella, sobresaturada, "
+            "que es un estado inestable."
         ),
         "example_statement": (
             "Se toman 100 mL de una disolución 2 mol/L y se completan con agua "
@@ -81615,6 +83384,45 @@ LESSONS: dict[str, dict] = {
             {
                 "accion": "Verifico la coherencia: el volumen se multiplicó por cuatro y la concentración quedó en la cuarta parte.",
                 "porque": "Concentración y volumen son inversamente proporcionales al diluir, así que ese control de razonabilidad detecta de inmediato una multiplicación hecha al revés.",
+            },
+        ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Se mezclan $200$ mL de una disolución $0{,}5$ mol/L con $300$ mL de otra "
+                    "$1{,}0$ mol/L del mismo soluto. ¿Cuál es la concentración final?"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Calculo los moles de cada disolución por separado: $0{,}5 \\cdot 0{,}2 = "
+                            "0{,}1$ mol y $1{,}0 \\cdot 0{,}3 = 0{,}3$ mol."
+                        ),
+                        "porque": (
+                            "Lo que se conserva y se suma son los moles. Y los volúmenes van en "
+                            "litros, porque la molaridad está definida por litro."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Sumo moles y volúmenes: $0{,}1 + 0{,}3 = 0{,}4$ mol en $0{,}2 + 0{,}3 = "
+                            "0{,}5$ L."
+                        ),
+                        "porque": (
+                            "Al juntar las dos disoluciones, todo el soluto queda repartido en todo "
+                            "el líquido. Sumar las concentraciones ($0{,}5 + 1{,}0$) no tiene sentido "
+                            "físico."
+                        ),
+                    },
+                    {
+                        "accion": "Divido: $C_f = \\dfrac{0{,}4}{0{,}5} = 0{,}8$ mol/L.",
+                        "porque": (
+                            "El resultado queda entre $0{,}5$ y $1{,}0$, como tiene que ser, y más "
+                            "cerca de $1{,}0$ porque la disolución más concentrada aportó más "
+                            "volumen."
+                        ),
+                    },
+                ],
             },
         ],
         "common_error": (
