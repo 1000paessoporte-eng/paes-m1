@@ -7,6 +7,7 @@ import { cn } from "@paes-m1/utils";
 import { FiguraPregunta } from "@/components/exam/figura-pregunta";
 import { Resolucion } from "@/components/exam/resolucion";
 import { Burbuja } from "@/components/ui/burbuja";
+import { ReportarPregunta } from "@/components/reportar-pregunta";
 import {
   answerPractice,
   ApiError,
@@ -261,9 +262,12 @@ export function PracticeRunner({ code }: { code: string }) {
       </div>
 
       <div className="rounded-xl border border-border bg-surface p-6">
-        <span className="text-xs font-medium text-muted">
-          {current.difficulty === "facil" ? "Fácil" : current.difficulty === "medio" ? "Medio" : "Difícil"}
-        </span>
+        <div className="flex items-start justify-between gap-3">
+          <span className="text-xs font-medium text-muted">
+            {current.difficulty === "facil" ? "Fácil" : current.difficulty === "medio" ? "Medio" : "Difícil"}
+          </span>
+          <ReportarPregunta questionId={current.id} contexto="practica" className="-mt-1.5" />
+        </div>
         <p className="mt-2 text-base leading-relaxed text-foreground">{current.stem}</p>
 
         {current.image_url && <FiguraPregunta src={current.image_url} />}

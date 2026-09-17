@@ -6,13 +6,16 @@ import {
   getAdminMetrics,
   getColegiosAdmin,
   getErroresCliente,
+  getPreguntasReportadas,
   type AdminMetrics,
   type ColegioAdmin,
   type ErrorCliente,
+  type PreguntaReportada,
 } from "@/lib/api";
 import { TOKEN_COOKIE } from "@/lib/auth";
 import { ColegiosPanel } from "@/components/admin/colegios-panel";
 import { ErroresPanel } from "@/components/admin/errores-panel";
+import { ReportesPanel } from "@/components/admin/reportes-panel";
 import { SerieChart } from "@/components/admin/serie-chart";
 import { StatTile } from "@/components/analytics/stat-tile";
 
@@ -62,10 +65,12 @@ export default async function AdminPage() {
   // despliegan por separado-- el panel de métricas debe seguir cargando.
   let errores: ErrorCliente[] = [];
   let colegios: ColegioAdmin[] = [];
+  let reportes: PreguntaReportada[] = [];
   try {
-    [errores, colegios] = await Promise.all([
+    [errores, colegios, reportes] = await Promise.all([
       getErroresCliente(token),
       getColegiosAdmin(token),
+      getPreguntasReportadas(token),
     ]);
   } catch {
     // Sin datos, las dos secciones se dibujan vacías.
@@ -590,6 +595,14 @@ export default async function AdminPage() {
           ])}
           vacio="Faltan respuestas para armar el ranking."
         />
+      </Seccion>
+
+      {/* ── Preguntas reportadas ─────────────────────────────────────
+          Va antes de los errores del navegador porque una pregunta mala la
+          están respondiendo alumnos AHORA, y arreglarla es editar una línea
+          de `seed_data.py`. */}
+      <Seccion titulo="Preguntas reportadas por los alumnos">
+        <ReportesPanel reportes={reportes} />
       </Seccion>
 
       {/* ── Errores del navegador ───────────────────────────────────── */}

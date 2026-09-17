@@ -150,6 +150,20 @@ export function IconoAdvertencia(props: PropsIcono) {
   );
 }
 
+/** Signo de exclamación en un círculo. Avisar que algo de esta pregunta está
+ *  mal. Se distingue del triángulo de advertencia a propósito: el triángulo lo
+ *  pone el sitio para avisarle al alumno, este lo pulsa el alumno para
+ *  avisarnos a nosotros. */
+export function IconoExclamacion(props: PropsIcono) {
+  return (
+    <Base {...props}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7.5v5" />
+      <path d="M12 16.5h.01" />
+    </Base>
+  );
+}
+
 /** Estrella. Marca una pregunta para volver a ella. Se rellena al marcarla. */
 export function IconoEstrella({ marcada, ...props }: PropsIcono & { marcada?: boolean }) {
   return (

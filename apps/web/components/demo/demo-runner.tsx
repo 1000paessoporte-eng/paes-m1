@@ -7,6 +7,7 @@ import { CapturaCorreo } from "@/components/demo/captura-correo";
 import { FiguraPregunta } from "@/components/exam/figura-pregunta";
 import { PassagePanel } from "@/components/exam/passage-panel";
 import { Resolucion } from "@/components/exam/resolucion";
+import { ReportarPregunta } from "@/components/reportar-pregunta";
 import { Burbuja } from "@/components/ui/burbuja";
 import {
   gradeDemo,
@@ -172,6 +173,9 @@ export function DemoRunner({ inicial = "m1" }: { inicial?: Subject }) {
           </span>
           <span className="text-xs text-muted">·</span>
           <span className="text-xs text-muted">{current.axis_label}</span>
+          {/* La demo también responde preguntas del banco de verdad, y la ve
+              gente que nunca va a crear una cuenta para escribirnos. */}
+          <ReportarPregunta questionId={current.id} contexto="revision" className="ml-auto" />
         </div>
         <p className="mt-2 text-base leading-relaxed text-foreground">{current.stem}</p>
         {current.image_url ? <FiguraPregunta src={current.image_url} /> : null}

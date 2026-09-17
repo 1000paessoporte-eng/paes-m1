@@ -21,6 +21,7 @@ from paes_api.modules.leads.router import router as leads_router
 from paes_api.modules.metrics.router import router as metrics_router
 from paes_api.modules.practice.router import router as practice_router
 from paes_api.modules.reminders.router import router as reminders_router
+from paes_api.modules.reportes.router import router as reportes_router
 from paes_api.modules.skill_tree.router import router as skill_tree_router
 from paes_api.modules.users.router import router as users_router
 
@@ -56,6 +57,7 @@ app.include_router(metrics_router, prefix="/api")
 app.include_router(admin_router, prefix="/api")
 app.include_router(colegios_router, prefix="/api")
 app.include_router(errores_router, prefix="/api")
+app.include_router(reportes_router, prefix="/api")
 
 
 @app.get("/health")
