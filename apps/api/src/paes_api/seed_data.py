@@ -75642,20 +75642,35 @@ LESSONS: dict[str, dict] = {
             "volver a mirar."
         ),
         "theory": (
-            "**La respuesta está escrita.** En estas preguntas no hay que "
-            "deducir nada: el dato aparece en el texto. Tu trabajo es "
-            "encontrarlo, no reconstruirlo.\n\n"
-            "**Lee primero la pregunta, después busca.** Saber qué buscas "
-            "convierte una relectura completa en una búsqueda dirigida. Es la "
-            "diferencia entre releer cuatro párrafos y mirar solo el que "
-            "importa.\n\n"
-            "**Los conectores te llevan al lugar.** «Por eso» y «así que» "
-            "anuncian una consecuencia; «en cambio» y «sin embargo», un "
-            "contraste; «por ejemplo», un caso. Si la pregunta pide una causa, "
-            "busca el conector que la marca.\n\n"
-            "**Los distractores suelen ser verdaderos.** Casi siempre son cosas "
-            "que el texto sí dice, pero que no responden lo que se preguntó. "
-            "Que una alternativa sea cierta no la hace correcta."
+            "**La respuesta está escrita.** En estas preguntas no hay que deducir "
+            "nada: el dato aparece en el texto. Tu trabajo es encontrarlo, no "
+            "reconstruirlo.\\n\\n"
+            "**Lee primero la pregunta, después busca.** Saber qué buscas convierte "
+            "una relectura completa en una búsqueda dirigida. Es la diferencia entre "
+            "releer cuatro párrafos y mirar solo el que importa.\\n\\n"
+            "**Qué tipo de dato se pide, y dónde suele estar:**\\n\\n"
+            "| Si la pregunta pide | Busca |\\n"
+            "|---|---|\\n"
+            "| Una cifra o una fecha | los números, que saltan a la vista |\\n"
+            "| Un nombre o un lugar | las mayúsculas |\\n"
+            "| Una definición | las comillas, la cursiva o «es decir» |\\n"
+            "| Una causa | «porque», «debido a», «ya que» |\\n"
+            "| Una consecuencia | «por eso», «así que», «de ahí que» |\\n"
+            "| Un contraste | «en cambio», «sin embargo», «pero» |\\n"
+            "| Un ejemplo | «por ejemplo», «como», los dos puntos |\\n\\n"
+            "**Los conectores te llevan al lugar.** No son adornos: son las señales "
+            "con que el texto marca qué está haciendo en cada línea.\\n\\n"
+            "**Cuidado con los cuantificadores y las negaciones.** «Todos» no es «la "
+            "mayoría», «siempre» no es «con frecuencia», y una pregunta que dice "
+            "«EXCEPTO» o «NO se menciona» invierte la tarea: hay que descartar las "
+            "tres que sí aparecen.\\n\\n"
+            "**Los distractores suelen ser verdaderos.** Casi siempre son cosas que "
+            "el texto sí dice, pero que no responden lo que se preguntó. Que una "
+            "alternativa sea cierta no la hace correcta: tiene que ser cierta **y** "
+            "responder la pregunta.\\n\\n"
+            "**Vuelve al texto siempre.** Responder de memoria después de una primera "
+            "lectura es el origen de casi todos los errores en este tipo de pregunta: "
+            "el recuerdo mezcla lo que el texto dijo con lo que uno supone."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -75681,6 +75696,50 @@ LESSONS: dict[str, dict] = {
                 "porque": "Que el alerce viva tres mil años es verdadero y está en el texto, pero no es lo que se preguntó. Ese es el distractor típico de estas preguntas.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Lee el texto y responde: según el texto, ¿cuál es la razón de que el "
+                    "servicio se suspenda en invierno?\\n\\n"
+                    "*El teleférico del cerro funciona de martes a domingo entre las 10 y las "
+                    "19 horas. El servicio se suspende cada julio por mantenimiento "
+                    "obligatorio de los cables, y también los días de viento sobre 60 km/h. "
+                    "En 2024 transportó a 180 mil visitantes, un 12% más que el año "
+                    "anterior.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Leo la pregunta primero: pide una CAUSA de la suspensión en invierno, "
+                            "así que voy a buscar un conector causal o una razón explícita."
+                        ),
+                        "porque": (
+                            "Saber qué tipo de dato se busca convierte la relectura en una búsqueda "
+                            "dirigida. Acá no interesan los horarios ni las cifras de visitantes."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Ubico la frase: «se suspende cada julio por mantenimiento obligatorio de "
+                            "los cables». El «por» marca la causa."
+                        ),
+                        "porque": (
+                            "Julio es el invierno chileno, así que esa es la suspensión que la "
+                            "pregunta nombra. La respuesta está literalmente escrita: no hay que "
+                            "deducir nada."
+                        ),
+                    },
+                    {
+                        "accion": "Descarto el viento sobre 60 km/h, aunque el texto lo mencione.",
+                        "porque": (
+                            "Es un distractor verdadero: el texto sí lo dice, pero no es la "
+                            "suspensión de invierno, sino una condición de cualquier día. Ser cierto "
+                            "no basta para ser la respuesta."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Responder de memoria sin volver al texto. Después de leerlo una "
             "vez uno cree recordarlo, y la alternativa que \"suena\" a lo que "
@@ -75695,19 +75754,36 @@ LESSONS: dict[str, dict] = {
             "reconocer la misma idea disfrazada de sinónimo."
         ),
         "theory": (
-            "**La prueba casi nunca repite las palabras del texto.** Si lo "
-            "hiciera, bastaría con hacer Ctrl+F. La pregunta dice «principal "
-            "motivo» donde el texto dice «lo que explica»; dice «disminuyó» "
-            "donde el texto dice «cayó a la mitad».\n\n"
-            "**Traduce la pregunta antes de buscar.** Cámbiale las palabras por "
-            "otras que signifiquen lo mismo y quédate con la idea. Eso es lo "
-            "que vas a rastrear en el texto.\n\n"
-            "**Ojo con el sinónimo que no lo es.** «Frecuente» no es lo mismo "
-            "que «regular»; «la mayoría» no es «todos»; «puede» no es «debe». "
-            "Los distractores viven justo en esa diferencia.\n\n"
+            "**La prueba casi nunca repite las palabras del texto.** Si lo hiciera, "
+            "bastaría con buscar la palabra. La pregunta dice «principal motivo» "
+            "donde el texto dice «lo que explica»; dice «disminuyó» donde el texto "
+            "dice «cayó a la mitad».\\n\\n"
+            "**Traduce la pregunta antes de buscar.** Cámbiale las palabras por otras "
+            "que signifiquen lo mismo y quédate con la idea. Eso es lo que vas a "
+            "rastrear en el texto.\\n\\n"
+            "**Las tres formas de decir lo mismo con otras palabras:**\\n\\n"
+            "- **sinónimo**: una palabra por otra equivalente (empezar / iniciar);\\n"
+            "- **hiperónimo**: una palabra más general que cubre a la otra (perro → "
+            "animal). Sirve para resumir, pero pierde precisión;\\n"
+            "- **nominalización**: convertir una acción en sustantivo («se construyó» "
+            "→ «la construcción»). Es la marca del lenguaje formal.\\n\\n"
+            "**Ojo con el sinónimo que no lo es.** Las alternativas se construyen "
+            "justo en esa diferencia:\\n\\n"
+            "| El texto dice | NO significa |\\n"
+            "|---|---|\\n"
+            "| la mayoría | todos |\\n"
+            "| puede | debe |\\n"
+            "| se asocia a | causa |\\n"
+            "| frecuente | regular |\\n"
+            "| algunos estudios | los estudios |\\n"
+            "| sugiere | demuestra |\\n\\n"
+            "**Los modalizadores cambian la fuerza de una afirmación.** «Quizás», "
+            "«podría», «en general» la debilitan; «sin duda», «siempre», "
+            "«necesariamente» la refuerzan. Una paráfrasis que cambia el modalizador "
+            "ya no dice lo mismo, aunque conserve todas las demás palabras.\\n\\n"
             "**Verifica en los dos sentidos.** Encontrado el pasaje, léelo y "
-            "pregúntate si dice exactamente lo que afirma la alternativa, ni "
-            "más ni menos. Una paráfrasis correcta no agrega nada."
+            "pregúntate si dice exactamente lo que afirma la alternativa, ni más ni "
+            "menos. Una paráfrasis correcta no agrega, no quita y no exagera."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -75733,6 +75809,63 @@ LESSONS: dict[str, dict] = {
                 "porque": "El texto dice expresamente que la feria «no compite por precio». Una alternativa que hable de precio usa una palabra del texto para afirmar lo contrario de lo que dice.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Cuál de estas afirmaciones parafrasea correctamente el fragmento?\\n\\n"
+                    "*Algunos estudios sugieren que dormir menos de seis horas podría "
+                    "asociarse a un menor rendimiento escolar, aunque los autores advierten "
+                    "que no midieron otros factores del entorno familiar.*\\n\\n"
+                    "A) Dormir poco causa mal rendimiento escolar.\\n"
+                    "B) Hay estudios que relacionan el poco sueño con un rendimiento más "
+                    "bajo, sin descartar otras causas."
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Marco los modalizadores del original: «algunos estudios», «sugieren», "
+                            "«podría», «asociarse». Todos debilitan la afirmación."
+                        ),
+                        "porque": (
+                            "Son las palabras que fijan cuánta fuerza tiene lo que se dice. Una "
+                            "paráfrasis fiel tiene que conservar ese nivel de certeza, no solo el "
+                            "tema."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reviso la alternativa A: reemplaza «podría asociarse» por «causa» y "
+                            "borra el «algunos»."
+                        ),
+                        "porque": (
+                            "Asociación no es causa, y ese salto es el error más frecuente de la "
+                            "prueba. Además convierte unos estudios en un hecho establecido: dice "
+                            "bastante más de lo que dice el texto."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reviso la B: conserva la atribución a estudios, la relación en vez de la "
+                            "causa, y recoge la advertencia sobre otros factores."
+                        ),
+                        "porque": (
+                            "Dice lo mismo con otras palabras, sin agregar ni quitar fuerza. Esa es "
+                            "exactamente la definición de una buena paráfrasis."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que la correcta es la B, y que la A es el distractor típico: "
+                            "verdadero de tono, falso de contenido."
+                        ),
+                        "porque": (
+                            "La A suena razonable y por eso funciona como trampa. La pregunta no es "
+                            "si podría ser cierta, sino si el texto la sostiene."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Elegir la alternativa que repite palabras del texto. Cuando una "
             "opción usa las mismas palabras y las otras no, se siente correcta "
@@ -75748,20 +75881,38 @@ LESSONS: dict[str, dict] = {
             "se oponen."
         ),
         "theory": (
-            "**Identifica primero qué tipo de relación se pide.** Causa "
-            "(¿por qué ocurre?), consecuencia (¿qué produce?), contraste (¿en "
-            "qué se diferencian?), ejemplo (¿de qué es caso esto?). Cada tipo "
-            "se busca en un lugar distinto.\n\n"
-            "**Los dos extremos están en el texto; el vínculo puede no "
-            "estarlo.** El texto dice A en el párrafo dos y B en el cinco, y la "
-            "pregunta es qué tienen que ver. Tu trabajo es el puente.\n\n"
-            "**Cuidado con el orden y la causa.** Que algo aparezca antes en el "
-            "texto no lo convierte en la causa de lo que viene después. «Vino "
-            "después» y «fue por causa de» son cosas distintas.\n\n"
-            "**Cuando el texto es un reglamento, la relación es regla-caso.** "
-            "Te dan una situación concreta y hay que decidir qué artículo la "
-            "cubre. Lee la regla completa, incluidas sus excepciones, antes de "
-            "aplicarla."
+            "**Identifica primero qué tipo de relación se pide.** Causa (¿por qué "
+            "ocurre?), consecuencia (¿qué produce?), contraste (¿en qué se "
+            "diferencian?), ejemplo (¿de qué es caso esto?). Cada tipo se busca en un "
+            "lugar distinto.\\n\\n"
+            "| Relación | Conectores que la marcan |\\n"
+            "|---|---|\\n"
+            "| Causa | porque, ya que, debido a, puesto que |\\n"
+            "| Consecuencia | por eso, así que, de ahí que, en consecuencia |\\n"
+            "| Contraste | en cambio, sin embargo, no obstante, pero |\\n"
+            "| Adición | además, asimismo, también, incluso |\\n"
+            "| Ejemplo | por ejemplo, como, a saber |\\n"
+            "| Condición | si, siempre que, a menos que |\\n"
+            "| Concesión | aunque, si bien, a pesar de |\\n"
+            "| Reformulación | es decir, o sea, en otras palabras |\\n\\n"
+            "**Los dos extremos están en el texto; el vínculo puede no estarlo.** El "
+            "texto dice A en el párrafo dos y B en el cinco, y la pregunta es qué "
+            "tienen que ver. Tu trabajo es el puente.\\n\\n"
+            "**Cuidado con el orden y la causa.** Que algo aparezca antes en el texto "
+            "no lo convierte en la causa de lo que viene después. «Vino después» y "
+            "«fue por causa de» son cosas distintas, y la diferencia tiene nombre: "
+            "correlación no es causalidad.\\n\\n"
+            "**Las estructuras que más se repiten** son cuatro, y reconocerlas "
+            "adelanta dónde estará cada parte: problema-solución, causa-efecto, "
+            "comparación-contraste y general-particular.\\n\\n"
+            "**Cuando el texto es un reglamento, la relación es regla-caso.** Te dan "
+            "una situación concreta y hay que decidir qué artículo la cubre. Lee la "
+            "regla completa, incluidas sus excepciones, antes de aplicarla: la "
+            "excepción suele ser justo lo que la pregunta evalúa.\\n\\n"
+            "**Un mismo conector puede cambiar todo el sentido.** «Llovió y "
+            "suspendieron el partido» solo suma dos hechos; «suspendieron el partido "
+            "porque llovió» afirma una causa. La pregunta suele pedir exactamente esa "
+            "distinción."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -75787,6 +75938,62 @@ LESSONS: dict[str, dict] = {
                 "porque": "Los tres días son «sin costo», no un descuento. Contar los días entre el diez y el trece y multiplicarlos por cien es la trampa que espera la pregunta.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Qué relación establece el segundo párrafo con el primero?\\n\\n"
+                    "*La municipalidad amplió el horario de la biblioteca hasta las 21 horas "
+                    "y los préstamos aumentaron un 30% en tres meses.*\\n\\n"
+                    "*Sin embargo, el aumento se concentró en las dos semanas previas a los "
+                    "exámenes, cuando también se habilitó una sala de estudio en el mismo "
+                    "edificio.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Ubico el conector que abre el segundo párrafo: «sin embargo», que marca "
+                            "contraste."
+                        ),
+                        "porque": (
+                            "El conector inicial de un párrafo anuncia qué hace ese párrafo con el "
+                            "anterior. Acá avisa que lo que viene va a tensionar lo recién dicho, no "
+                            "a sumarse."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Identifico qué afirmación del primer párrafo se pone en duda: la idea "
+                            "implícita de que la ampliación del horario explica el alza de préstamos."
+                        ),
+                        "porque": (
+                            "El primer párrafo pone dos hechos juntos y deja sugerida una causa. El "
+                            "segundo no niega el alza: niega que su causa esté clara."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Veo cómo lo hace: aporta un dato que ofrece una explicación alternativa "
+                            "—la sala de estudio y la época de exámenes—."
+                        ),
+                        "porque": (
+                            "Que dos cosas ocurran juntas no prueba que una produzca la otra. El "
+                            "segundo párrafo introduce un tercer factor que podría explicar ambas."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo: el segundo párrafo matiza la relación causal insinuada en el "
+                            "primero, no la contradice ni la ejemplifica."
+                        ),
+                        "porque": (
+                            "Las alternativas típicas ofrecerían «la refuta» o «la ejemplifica». "
+                            "Ninguna calza: el texto no dice que el horario no influyera, dice que el "
+                            "dato no alcanza para afirmarlo."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Aplicar la regla general sin leer la excepción. Los reglamentos de "
             "esta prueba casi siempre traen un «salvo que» o un «excepto» "
@@ -75802,18 +76009,39 @@ LESSONS: dict[str, dict] = {
             "tiene ahí, en ese párrafo, para ese emisor."
         ),
         "theory": (
-            "**El contexto manda sobre el diccionario.** «Un problema de "
-            "escritorio» no habla de muebles. La alternativa que traduce la "
-            "expresión palabra por palabra casi nunca es la correcta.\n\n"
+            "**El contexto manda sobre el diccionario.** «Un problema de escritorio» "
+            "no habla de muebles. La alternativa que traduce la expresión palabra por "
+            "palabra casi nunca es la correcta.\\n\\n"
+            "**Denotación y connotación.** La denotación es el significado literal, "
+            "el del diccionario; la connotación es lo que la palabra arrastra además. "
+            "«Vivienda», «casa» y «hogar» denotan casi lo mismo y connotan cosas "
+            "distintas, y elegir una u otra ya es una decisión del emisor.\\n\\n"
+            "| Recurso | Qué hace | Ejemplo |\\n"
+            "|---|---|---|\\n"
+            "| Metáfora | nombra algo con el nombre de otra cosa | «la ciudad es una "
+            "olla a presión» |\\n"
+            "| Comparación | lo mismo, pero con «como» | «la discusión es como una "
+            "olla a presión» |\\n"
+            "| Metonimia | nombra por una parte o por algo asociado | «leí a Neruda» "
+            "|\\n"
+            "| Hipérbole | exagera a propósito | «te llamé mil veces» |\\n"
+            "| Ironía | dice lo contrario de lo que quiere decir | «qué gran idea», "
+            "tras un fracaso |\\n"
+            "| Eufemismo | suaviza algo incómodo | «reducción de personal» |\\n\\n"
             "**Lee la línea de antes y la de después.** El sentido de una frase "
-            "citada está sostenido por lo que la rodea. Si vuelves solo a la "
-            "frase, te quedas con lo que ya sabías.\n\n"
-            "**Pregúntate qué idea sostiene la frase.** El emisor no la puso "
-            "para adornar: está ahí para decir algo que en lenguaje directo "
-            "habría sido más largo. Reconstruye ese algo.\n\n"
+            "citada está sostenido por lo que la rodea. Si vuelves solo a la frase, "
+            "te quedas con lo que ya sabías.\\n\\n"
+            "**Pregúntate qué idea sostiene la frase.** El emisor no la puso para "
+            "adornar: está ahí para decir algo que en lenguaje directo habría sido "
+            "más largo, más débil o más incómodo.\\n\\n"
             "**Las comillas y la cursiva son un aviso.** Cuando el emisor "
-            "entrecomilla una expresión, casi siempre está marcando que no la "
-            "usa en su sentido habitual."
+            "entrecomilla una expresión, casi siempre está marcando que no la usa en "
+            "su sentido habitual: puede estar citando, tomando distancia o "
+            "ironizando.\\n\\n"
+            "**Para una palabra poco frecuente**, no adivines por parecido: mira qué "
+            "función cumple en la frase, si lo que la rodea la define, y si el texto "
+            "la contrapone a otra palabra que sí conoces. Una oposición explícita "
+            "(«no X, sino Y») es una definición disfrazada."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -75839,6 +76067,60 @@ LESSONS: dict[str, dict] = {
                 "porque": "Esa es la idea que la expresión resume. Una alternativa que hable de falta de presupuesto agrega algo que el texto no dice.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Qué quiere decir el emisor con la expresión subrayada?\\n\\n"
+                    "*El plan de reciclaje se anunció en marzo con una campaña en radio, "
+                    "afiches en cada esquina y una cuenta en redes sociales. Ocho meses "
+                    "después, los contenedores siguen esperando el camión que nunca pasó. Es "
+                    "reciclaje de vitrina.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Descarto el sentido literal: no se trata de reciclar vitrinas ni de un "
+                            "contenedor con vidrios."
+                        ),
+                        "porque": (
+                            "La alternativa literal es el distractor de entrada en este tipo de "
+                            "pregunta. Si el sentido literal bastara, la frase no cerraría un párrafo "
+                            "sobre un plan que no funcionó."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Leo lo que rodea la frase: hay campaña, afiches y redes sociales por un "
+                            "lado, y ningún camión por el otro."
+                        ),
+                        "porque": (
+                            "El contexto opone lo que se muestra con lo que efectivamente ocurre. La "
+                            "expresión es el cierre de esa oposición, así que tiene que recogerla."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reconstruyo la metáfora: una vitrina exhibe, no sirve para usar lo que "
+                            "hay adentro."
+                        ),
+                        "porque": (
+                            "La metáfora traslada esa propiedad al plan: existe para ser visto. Es lo "
+                            "que el emisor habría dicho en diez palabras más aburridas."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que significa que el plan fue hecho para mostrarse y no para "
+                            "funcionar, y que el tono del emisor es crítico."
+                        ),
+                        "porque": (
+                            "La expresión no es neutra: elegirla es tomar posición. Una pregunta por "
+                            "el tono del texto se responde con la misma frase."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Elegir la alternativa que parafrasea la expresión sin explicarla. "
             "«Que faltan camiones» repite la frase con otras palabras y no dice "
@@ -75855,17 +76137,36 @@ LESSONS: dict[str, dict] = {
         "theory": (
             "**Toda inferencia se apoya en una marca del texto.** Si no puedes "
             "señalar la línea que la sostiene, no es una inferencia: es una "
-            "suposición tuya.\n\n"
-            "**Lo razonable no es lo mismo que lo respaldado.** Muchos "
-            "distractores son perfectamente plausibles y no tienen apoyo en el "
-            "texto. La pregunta no es si podría ser cierto, sino si el texto "
-            "obliga a concluirlo.\n\n"
-            "**Los detalles que parecen decorativos suelen ser la marca.** Que "
-            "un personaje mire el reloj dos veces, que una cartilla dedique "
-            "media página a un punto menor: eso está puesto ahí a propósito.\n\n"
-            "**Cuidado con las inferencias demasiado grandes.** Del hecho de "
-            "que alguien no responda no se sigue que esté molesto. Prefiere la "
-            "conclusión más pequeña que el texto permita."
+            "suposición tuya.\\n\\n"
+            "**Inferir es sacar lo que el texto no dice pero implica.** Entre lo "
+            "explícito y lo inventado hay una franja estrecha, y ahí viven estas "
+            "preguntas.\\n\\n"
+            "| | Qué es | Ejemplo |\\n"
+            "|---|---|---|\\n"
+            "| Explícito | está escrito | «llegó tarde» |\\n"
+            "| Inferencia | el texto obliga a concluirlo | «llegó tarde otra vez» → "
+            "no es la primera |\\n"
+            "| Suposición | podría ser cierto, el texto no lo sostiene | «llegó "
+            "tarde» → es irresponsable |\\n\\n"
+            "**Lo razonable no es lo mismo que lo respaldado.** Muchos distractores "
+            "son perfectamente plausibles y no tienen apoyo en el texto. La pregunta "
+            "no es si podría ser cierto, sino si el texto obliga a concluirlo.\\n\\n"
+            "**Hay palabras que arrastran información sin decirla.** «Volvió a "
+            "postular» implica que ya lo había hecho; «dejó de fumar» implica que "
+            "fumaba; «incluso los más escépticos aceptaron» implica que había "
+            "escépticos. Son presuposiciones, y suelen ser la marca que sostiene la "
+            "inferencia correcta.\\n\\n"
+            "**Los detalles que parecen decorativos suelen ser la marca.** Que un "
+            "personaje mire el reloj dos veces, que una cartilla dedique media página "
+            "a un punto menor: eso está puesto ahí a propósito, sobre todo en los "
+            "textos literarios.\\n\\n"
+            "**Cuidado con las inferencias demasiado grandes.** Del hecho de que "
+            "alguien no responda no se sigue que esté molesto. Entre dos alternativas "
+            "que el texto permite, prefiere siempre la más pequeña: la que agrega "
+            "menos.\\n\\n"
+            "**Cómo verificar una inferencia**: formúlala, busca la línea que la "
+            "apoya y pregúntate si alguien podría leer el mismo texto y concluir lo "
+            "contrario sin contradecirlo. Si puede, la inferencia no estaba obligada."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -75889,6 +76190,62 @@ LESSONS: dict[str, dict] = {
                 "porque": "Que buscara trabajo es posible y el texto no lo respalda: también podría vender algo o buscar un arriendo. Esa alternativa mayor es el distractor.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Qué se puede inferir del fragmento?\\n\\n"
+                    "*Mi tía guardaba las bolsas del supermercado dobladas en un cajón, una "
+                    "dentro de otra, y lavaba los frascos de mermelada antes de botarlos. "
+                    "Cuando le regalaron una radio nueva, siguió usando la vieja hasta que "
+                    "dejó de encenderse. La nueva quedó en su caja, arriba del refrigerador, "
+                    "durante cuatro años.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Reúno las marcas: guarda bolsas, lava frascos antes de botarlos, usa la "
+                            "radio vieja hasta el final y no estrena la nueva en cuatro años."
+                        ),
+                        "porque": (
+                            "Una inferencia sólida se apoya en varias marcas que apuntan en la misma "
+                            "dirección, no en un detalle suelto que podría ser casual."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Busco qué tienen en común: todas muestran una relación cuidadosa con los "
+                            "objetos y una resistencia a desechar o reemplazar."
+                        ),
+                        "porque": (
+                            "El texto nunca dice que la tía sea ahorrativa ni que venga de una época "
+                            "de escasez. Lo muestra con conductas, que es como funciona la narración "
+                            "literaria."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Descarto las inferencias grandes: no se sigue que sea pobre, ni que "
+                            "desconfíe de la tecnología, ni que no le gustara el regalo."
+                        ),
+                        "porque": (
+                            "Son suposiciones plausibles sin marca que las sostenga. Que guarde la "
+                            "radio no dice nada sobre su opinión del aparato ni sobre su situación "
+                            "económica."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Me quedo con la conclusión más pequeña que el texto obliga: que para "
+                            "ella los objetos se usan hasta agotarlos, y lo nuevo se reserva."
+                        ),
+                        "porque": (
+                            "Entre dos inferencias compatibles con el texto, la correcta es la que "
+                            "agrega menos. Esa es la regla que separa leer de imaginar."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Completar el texto con una historia propia. El relato deja huecos "
             "y la cabeza los llena sola, casi siempre con lo más dramático. "
@@ -75903,20 +76260,34 @@ LESSONS: dict[str, dict] = {
             "entero. Todo lo que el emisor incluyó cumple un trabajo."
         ),
         "theory": (
-            "**Pregúntate qué pasaría si eso no estuviera.** Es la forma más "
-            "rápida de ver su función. Si al sacarlo el argumento queda sin "
-            "apoyo, su función era sostenerlo; si queda igual de claro pero más "
-            "seco, era ilustrarlo.\n\n"
-            "**Función no es contenido.** «Menciona el caso de una feria» "
-            "describe qué dice; «ilustra con un caso cotidiano una idea "
-            "abstracta» dice para qué sirve. La pregunta pide lo segundo.\n\n"
-            "**Los elementos más frecuentes tienen funciones típicas.** El "
-            "ejemplo concreta; la cita da autoridad; la comparación traduce lo "
-            "desconocido a lo conocido; la pregunta retórica instala un tema; "
-            "la objeción anticipada desarma una crítica antes de recibirla.\n\n"
+            "**Pregúntate qué pasaría si eso no estuviera.** Es la forma más rápida "
+            "de ver su función. Si al sacarlo el argumento queda sin apoyo, su "
+            "función era sostenerlo; si queda igual de claro pero más seco, era "
+            "ilustrarlo.\\n\\n"
+            "**Función no es contenido.** «Menciona el caso de una feria» describe "
+            "qué dice; «ilustra con un caso cotidiano una idea abstracta» dice para "
+            "qué sirve. La pregunta pide lo segundo, y por eso las alternativas "
+            "correctas suelen empezar con un verbo de acción: ejemplificar, refutar, "
+            "matizar, anticipar, cerrar.\\n\\n"
+            "| Recurso | Su función típica |\\n"
+            "|---|---|\\n"
+            "| Ejemplo | concreta una idea abstracta |\\n"
+            "| Cifra o estudio | respalda con evidencia |\\n"
+            "| Cita de un experto | da autoridad |\\n"
+            "| Comparación o analogía | traduce lo desconocido a lo conocido |\\n"
+            "| Pregunta retórica | instala un tema o interpela |\\n"
+            "| Objeción anticipada | desarma una crítica antes de recibirla |\\n"
+            "| Anécdota inicial | atrae y baja el tema a lo concreto |\\n"
+            "| Concesión | reconoce algo del otro lado para ganar credibilidad |\\n\\n"
             "**Mira dónde está puesto.** Un párrafo al principio suele abrir el "
-            "problema; al final, cerrar o abrir una proyección. La posición es "
-            "parte de la función."
+            "problema; al medio, desarrollarlo o matizarlo; al final, cerrar o "
+            "proyectar. La posición es parte de la función.\\n\\n"
+            "**En un texto argumentativo, distingue las piezas**: la tesis es lo que "
+            "se sostiene; los argumentos, las razones que la apoyan; los respaldos, "
+            "los datos que apoyan a esos argumentos; y el contraargumento, lo que el "
+            "emisor trae del otro lado para responderlo.\\n\\n"
+            "**Un mismo elemento puede cumplir dos funciones a la vez**, y la "
+            "pregunta pide la principal: la que se pierde si el elemento desaparece."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -75941,6 +76312,63 @@ LESSONS: dict[str, dict] = {
                 "porque": "Ese es el trabajo de la analogía. Una alternativa que diga que «demuestra» el problema confunde ilustrar con probar: una comparación no prueba nada.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Qué función cumple la pregunta con que se abre el segundo párrafo?\\n\\n"
+                    "*Las ciclovías de la comuna suman 14 kilómetros y el uso de la bicicleta "
+                    "creció un 40% en dos años.*\\n\\n"
+                    "*¿Pero de qué sirve una ciclovía que termina en medio de una avenida? "
+                    "Seis de los catorce kilómetros no conectan con ninguna otra vía, y los "
+                    "ciclistas deben bajarse a la calzada justo donde el tránsito es más "
+                    "denso.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico el recurso: es una pregunta retórica, porque el emisor no "
+                            "espera respuesta y él mismo la contesta en las líneas siguientes."
+                        ),
+                        "porque": (
+                            "Reconocer el recurso es el primer paso, pero no es la respuesta: la "
+                            "pregunta pide para qué sirve acá, no cómo se llama."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Pruebo a sacarla: sin ella, el párrafo seguiría entregando los mismos "
+                            "datos, pero perdería el giro respecto del párrafo anterior."
+                        ),
+                        "porque": (
+                            "La prueba de la eliminación muestra qué aporta un elemento. Acá lo que "
+                            "se pierde no es información, sino la marca de que el texto va a "
+                            "cuestionar lo recién dicho."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Miro su posición: abre el párrafo justo después de dos cifras "
+                            "favorables."
+                        ),
+                        "porque": (
+                            "Colocada ahí, la pregunta funciona como bisagra entre el dato optimista "
+                            "y la objeción. En otro lugar del texto cumpliría otra función."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que su función es introducir una objeción a la lectura "
+                            "optimista del primer párrafo, no informar ni pedir datos."
+                        ),
+                        "porque": (
+                            "Una alternativa que dijera «plantea una duda del autor sobre las cifras» "
+                            "describiría el contenido; la correcta nombra lo que la pregunta HACE "
+                            "dentro del texto."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Responder con lo que el elemento dice en vez de con lo que hace. "
             "Si tu respuesta se puede escribir sin usar un verbo como ilustrar, "
@@ -75955,21 +76383,37 @@ LESSONS: dict[str, dict] = {
             "qué ideas mandan y cuáles están al servicio de otras."
         ),
         "theory": (
-            "**Tema e idea central son distintos.** El tema se dice en dos "
-            "palabras («el reciclaje»); la idea central es una afirmación "
-            "completa («el reciclaje fracasa porque no hay quién recoja»). Si "
-            "tu respuesta no tiene verbo, es un tema.\n\n"
-            "**La idea central cubre todo el texto.** Pruébala contra cada "
-            "párrafo: si uno queda fuera, era la idea de una sección, no del "
-            "texto. Ese es el distractor más frecuente.\n\n"
-            "**Distingue lo que sostiene de lo que apoya.** Los ejemplos, las "
-            "cifras y las citas están al servicio de una afirmación. Una "
-            "alternativa que resuma un ejemplo está eligiendo una idea "
-            "subordinada.\n\n"
-            "**En una columna, busca la tesis; en un reportaje, el hallazgo.** "
-            "Cada tipo de texto pone su idea principal en otro lugar: la "
-            "columna la declara, muchas veces al cierre; el reportaje la "
-            "reparte entre los datos."
+            "**Tema e idea central son distintos.** El tema se dice en dos palabras "
+            "(«el reciclaje»); la idea central es una afirmación completa («el "
+            "reciclaje fracasa porque no hay quién recoja»). Si tu respuesta no tiene "
+            "verbo, es un tema.\\n\\n"
+            "| | Qué es | Cómo se formula |\\n"
+            "|---|---|---|\\n"
+            "| Tema | de qué trata | un sustantivo o una frase nominal |\\n"
+            "| Idea central | qué se afirma sobre el tema | una oración completa |\\n"
+            "| Tesis | la idea central de un texto argumentativo | una oración que "
+            "alguien podría discutir |\\n"
+            "| Idea secundaria | lo que sostiene o ilustra la central | ejemplos, "
+            "cifras, citas |\\n\\n"
+            "**La idea central cubre todo el texto.** Pruébala contra cada párrafo: "
+            "si uno queda fuera, era la idea de una sección, no del texto. Ese es el "
+            "distractor más frecuente, y suele ser una afirmación verdadera pero "
+            "parcial.\\n\\n"
+            "**Distingue lo que sostiene de lo que apoya.** Los ejemplos, las cifras "
+            "y las citas están al servicio de una afirmación. Una alternativa que "
+            "resuma un ejemplo está eligiendo una idea subordinada.\\n\\n"
+            "**Dónde suele estar.** En un texto expositivo, la idea central aparece "
+            "con frecuencia en el primer párrafo o en la oración temática de cada "
+            "sección; en una columna de opinión, muchas veces al cierre; en un "
+            "reportaje, repartida entre los datos, sin declararse.\\n\\n"
+            "**Cómo armarla si no está escrita**: resume cada párrafo en una frase, "
+            "mira qué tienen en común esas frases y escribe la afirmación que las "
+            "abarca. Ese es el procedimiento, y funciona incluso cuando ninguna "
+            "oración del texto la dice tal cual.\\n\\n"
+            "**Los cuatro errores que la prueba pone como alternativas**: demasiado "
+            "amplia (podría encabezar cualquier texto del tema), demasiado estrecha "
+            "(resume un párrafo), verdadera pero ajena (dice algo correcto que el "
+            "texto no sostiene) y contraria (invierte la postura del emisor)."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -75997,6 +76441,67 @@ LESSONS: dict[str, dict] = {
                 "porque": "Esta afirmación cubre los cuatro elementos del texto. Una que solo dijera «el clima no explica la diferencia» resume un paso y deja fuera el cierre.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Cuál es la idea central del texto?\\n\\n"
+                    "*Las áreas verdes de la ciudad no están mal distribuidas por azar. En "
+                    "las comunas del sector oriente hay más de veinte metros cuadrados por "
+                    "habitante; en varias del sector sur, menos de cinco.*\\n\\n"
+                    "*La diferencia no se explica solo por el suelo disponible: mantener un "
+                    "parque cuesta dinero municipal, y los municipios con menos ingresos son "
+                    "justamente los que tienen más habitantes por área verde.*\\n\\n"
+                    "*Mientras el financiamiento dependa de lo que cada comuna recaude, la "
+                    "brecha seguirá creciendo, por muchos árboles que se planten.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Resumo cada párrafo en una frase: (1) la distribución de áreas verdes es "
+                            "muy desigual; (2) la causa es el financiamiento municipal, no el "
+                            "espacio; (3) mientras no cambie el financiamiento, la brecha crecerá."
+                        ),
+                        "porque": (
+                            "Resumir párrafo por párrafo es el procedimiento que evita quedarse con "
+                            "el que más impresionó. Las tres frases, juntas, muestran hacia dónde va "
+                            "el texto."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Busco la afirmación que abarca las tres: la desigualdad de áreas verdes "
+                            "se explica por cómo se financian los municipios, y por eso no se corrige "
+                            "plantando árboles."
+                        ),
+                        "porque": (
+                            "Cubre los tres párrafos: el problema, su causa y su consecuencia. Una "
+                            "idea central tiene que poder sostener el texto entero, no una parte."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Descarto «hay desigualdad de áreas verdes entre comunas», que es "
+                            "verdadera pero se queda en el primer párrafo."
+                        ),
+                        "porque": (
+                            "Es el distractor estrecho: resume una sección y deja fuera la "
+                            "explicación, que es justamente lo que el texto agrega y lo que le da "
+                            "sentido."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Descarto también «las ciudades necesitan más áreas verdes», que podría "
+                            "encabezar cualquier texto del tema."
+                        ),
+                        "porque": (
+                            "Es el distractor amplio. Una idea central que serviría para otro texto "
+                            "distinto no identifica a este."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Elegir la idea del último párrafo. Suele sonar a conclusión y a "
             "veces lo es, pero muchas veces es solo el ejemplo final o una "
@@ -76011,20 +76516,36 @@ LESSONS: dict[str, dict] = {
             "para quién."
         ),
         "theory": (
-            "**El propósito se lee en el conjunto, no en una frase.** Una línea "
-            "puede sonar a denuncia dentro de un texto que explica. Decide "
-            "mirando qué hace el texto entero.\n\n"
+            "**El propósito se lee en el conjunto, no en una frase.** Una línea puede "
+            "sonar a denuncia dentro de un texto que explica. Decide mirando qué hace "
+            "el texto entero.\\n\\n"
+            "| Propósito | El texto | Marcas frecuentes |\\n"
+            "|---|---|---|\\n"
+            "| Informar | expone hechos | datos, fuentes, tercera persona |\\n"
+            "| Explicar | responde por qué o cómo | conectores causales, ejemplos |\\n"
+            "| Convencer | sostiene una postura | tesis, argumentos, adjetivación "
+            "valorativa |\\n"
+            "| Instruir | indica cómo hacer algo | imperativos, pasos numerados |\\n"
+            "| Promover | invita a actuar o a comprar | apelaciones directas, segunda "
+            "persona |\\n"
+            "| Narrar | cuenta hechos en el tiempo | verbos en pasado, secuencia |\\n\\n"
             "**Piensa en el destinatario.** El temario lo dice expresamente: la "
             "intención se determina «en función del destinatario». Una cartilla "
-            "escrita para un consumidor y un informe escrito para una autoridad "
-            "usan los mismos datos con propósitos distintos.\n\n"
-            "**Distingue el propósito del tema.** Informar sobre los "
-            "microplásticos y alertar sobre los microplásticos son propósitos "
-            "distintos con el mismo tema. Fíjate si el texto se limita a "
-            "exponer o si empuja hacia algo.\n\n"
-            "**El cierre suele delatar la intención.** Muchos textos guardan "
-            "para el final la pregunta, la recomendación o el llamado que "
-            "revela para qué se escribieron."
+            "escrita para un consumidor y un informe escrito para una autoridad usan "
+            "los mismos datos con propósitos distintos.\\n\\n"
+            "**Distingue el propósito del tema.** Informar sobre los microplásticos y "
+            "alertar sobre los microplásticos son propósitos distintos con el mismo "
+            "tema. Fíjate si el texto se limita a exponer o si empuja hacia algo.\\n\\n"
+            "**Las marcas de apelación delatan.** La segunda persona («usted puede»), "
+            "los imperativos, las preguntas dirigidas al lector y las recomendaciones "
+            "explícitas indican que el texto quiere producir una conducta, no solo "
+            "entregar información.\\n\\n"
+            "**El cierre suele delatar la intención.** Muchos textos guardan para el "
+            "final la pregunta, la recomendación o el llamado que revela para qué se "
+            "escribieron. Si el último párrafo pide algo, el texto no era puramente "
+            "informativo.\\n\\n"
+            "**Un texto puede tener más de un propósito**, y la pregunta pide el "
+            "principal: aquel sin el cual el texto no existiría."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -76049,6 +76570,63 @@ LESSONS: dict[str, dict] = {
                 "porque": "El cierre lo confirma: «no está obligado a mencionar nada de eso si usted no lo consulta». Todo el texto apunta a que el lector consulte.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Cuál es el propósito principal del texto y quién es su destinatario?\\n\\n"
+                    "*Antes de firmar un contrato de telefonía, revise tres cosas. Primero: "
+                    "cuánto dura el precio promocional y a cuánto sube después. Segundo: si "
+                    "el equipo queda en cuotas aparte del plan. Tercero: qué cobran por "
+                    "terminar el contrato antes de tiempo.*\\n\\n"
+                    "*Ninguna de las tres aparece en la publicidad. Las tres están en el "
+                    "contrato, y usted tiene derecho a leerlo completo antes de firmar.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Marco las señales de apelación: «revise», «usted tiene derecho», la "
+                            "enumeración en pasos."
+                        ),
+                        "porque": (
+                            "Los imperativos y la segunda persona muestran que el texto se dirige a "
+                            "alguien para que haga algo. Un texto solo informativo describiría el "
+                            "mercado en tercera persona."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Identifico al destinatario: una persona a punto de contratar, no una "
+                            "autoridad ni una empresa."
+                        ),
+                        "porque": (
+                            "El vocabulario es cotidiano, las tres cosas son las que ve un cliente y "
+                            "el derecho que se invoca es el suyo. El destinatario define el propósito "
+                            "tanto como el contenido."
+                        ),
+                    },
+                    {
+                        "accion": "Reviso el cierre: recuerda un derecho y refuerza la acción recomendada.",
+                        "porque": (
+                            "El cierre es donde el texto muestra para qué se escribió. Acá no cierra "
+                            "con un dato ni con una conclusión: cierra con una habilitación para "
+                            "actuar."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que el propósito principal es orientar al consumidor para que "
+                            "revise el contrato, y no informar sobre la industria ni denunciar a las "
+                            "empresas."
+                        ),
+                        "porque": (
+                            "Aunque el texto critique implícitamente la publicidad, esa crítica está "
+                            "al servicio de la recomendación. La denuncia sería el propósito si el "
+                            "texto terminara señalando responsables en vez de indicando qué hacer."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Confundir el propósito con el tema o con la opinión del emisor. "
             "«Hablar sobre los planes de internet» es el tema; «criticar a las "
@@ -76063,18 +76641,38 @@ LESSONS: dict[str, dict] = {
             "tarea pide leer esa posición."
         ),
         "theory": (
-            "**La postura está en la elección de palabras.** No es lo mismo "
-            "«medida», «ocurrencia» y «política pública» para referirse a lo "
-            "mismo. El adjetivo delata antes que la afirmación.\n\n"
-            "**Conceder no es estar de acuerdo.** Muchos emisores reconocen "
-            "primero lo que tiene de razonable la posición contraria y después "
-            "la rechazan. Si te quedas en la concesión, inviertes su postura.\n\n"
-            "**El tono es distinto de la postura.** Se puede estar a favor con "
-            "tono irónico y en contra con tono respetuoso. Si la pregunta dice "
-            "«actitud» o «tono», pide el cómo; si dice «posición», el qué.\n\n"
-            "**Busca los matices.** Casi nunca la respuesta es un apoyo total o "
-            "un rechazo total. Suele ser «apoya la medida pero desconfía de "
-            "cómo se aplica», y las alternativas extremas están para descartarse."
+            "**La postura está en la elección de palabras.** No es lo mismo «medida», "
+            "«ocurrencia» y «política pública» para referirse a lo mismo. El adjetivo "
+            "delata antes que la afirmación.\\n\\n"
+            "**Cómo se marca una postura en el texto:**\\n\\n"
+            "| Marca | Ejemplo | Qué revela |\\n"
+            "|---|---|---|\\n"
+            "| Adjetivación valorativa | «una decisión apresurada» | juicio del "
+            "emisor |\\n"
+            "| Verbos de actitud | «admite», «insiste», «reconoce» | distancia o "
+            "adhesión |\\n"
+            "| Modalizadores | «sin duda», «quizás», «apenas» | grado de certeza |\\n"
+            "| Comillas de distancia | la «solución» propuesta | desacuerdo o ironía "
+            "|\\n"
+            "| Selección de datos | qué cifra se destaca y cuál no | hacia dónde "
+            "empuja |\\n\\n"
+            "**Conceder no es estar de acuerdo.** Muchos emisores reconocen primero "
+            "lo que tiene de razonable la posición contraria y después la rechazan: "
+            "«es cierto que…, pero…». Si te quedas en la concesión, inviertes su "
+            "postura. El conector adversativo marca dónde empieza lo que el emisor "
+            "realmente sostiene.\\n\\n"
+            "**El tono es distinto de la postura.** Se puede estar a favor con tono "
+            "irónico y en contra con tono respetuoso. Si la pregunta dice «actitud» o "
+            "«tono», pide el cómo; si dice «posición», el qué. Tonos que conviene "
+            "poder nombrar: irónico, crítico, admirativo, nostálgico, cauteloso, "
+            "solemne, humorístico.\\n\\n"
+            "**Busca los matices.** Casi nunca la respuesta es un apoyo total o un "
+            "rechazo total. Suele ser «apoya la medida pero desconfía de cómo se "
+            "aplica», y las alternativas extremas están para descartarse.\\n\\n"
+            "**Un texto puede no tener postura**, y eso también es una respuesta: un "
+            "reportaje que entrega cifras sin adjetivos valorativos ni "
+            "recomendaciones está informando, y elegir una postura donde no la hay es "
+            "el error simétrico."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -76100,6 +76698,63 @@ LESSONS: dict[str, dict] = {
                 "porque": "No es rechazo —lo llama buena noticia— ni entusiasmo —dice que es la parte fácil—. Las alternativas que eligen un extremo ignoran la mitad del texto.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Cuál es la postura del emisor?\\n\\n"
+                    "*Nadie discute que el nuevo sistema de alerta funciona: los mensajes "
+                    "llegan en segundos y eso, en un terremoto, son vidas. Lo he defendido en "
+                    "esta misma columna.*\\n\\n"
+                    "*Dicho eso, un sistema que solo llega a los teléfonos deja fuera "
+                    "justamente a quienes más lo necesitan. En las comunas rurales que "
+                    "visité, la mitad de los adultos mayores no tiene un equipo compatible. "
+                    "La alerta perfecta que no suena donde hace falta sigue siendo una alerta "
+                    "a medias.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Identifico la concesión inicial: el emisor reconoce que el sistema "
+                            "funciona y aclara que lo ha defendido antes."
+                        ),
+                        "porque": (
+                            "Es una concesión, no la postura. Quedarse en el primer párrafo llevaría "
+                            "a responder que el emisor está a favor sin reservas, que es el "
+                            "distractor más frecuente."
+                        ),
+                    },
+                    {
+                        "accion": "Ubico el giro: «dicho eso» abre lo que el emisor realmente sostiene.",
+                        "porque": (
+                            "El conector adversativo marca la bisagra. Lo que viene después de él es "
+                            "la posición que el texto defiende, y a lo que apunta el cierre."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Leo las marcas valorativas del segundo párrafo: «deja fuera justamente a "
+                            "quienes más lo necesitan», «una alerta a medias»."
+                        ),
+                        "porque": (
+                            "La adjetivación muestra el juicio. No dice que el sistema sea malo: dice "
+                            "que su cobertura es insuficiente, que es una crítica distinta y más "
+                            "precisa."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo: valora el sistema y critica su cobertura; no lo rechaza ni lo "
+                            "respalda sin reservas."
+                        ),
+                        "porque": (
+                            "La respuesta correcta en este tipo de pregunta casi siempre es la "
+                            "matizada. Las dos alternativas extremas —«lo rechaza» y «lo respalda "
+                            "plenamente»— están puestas para descartarse."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Quedarse con la primera frase. Los textos de opinión suelen abrir "
             "con la concesión, y quien lee rápido sale convencido de que el "
@@ -76114,18 +76769,37 @@ LESSONS: dict[str, dict] = {
             "forma también significan."
         ),
         "theory": (
-            "**El orden es una decisión.** Empezar por el caso concreto y "
-            "terminar en la regla no es lo mismo que al revés. Pregúntate qué "
-            "gana el texto con el orden que eligió.\n\n"
-            "**El registro indica para quién se escribió.** Un texto que "
-            "explica qué significa cada término está escrito para quien no los "
-            "conoce; uno que los usa sin explicar, para quien ya está adentro.\n\n"
-            "**El cierre es la posición más fuerte.** Lo último que se lee es "
-            "lo que queda. Si un relato termina en un gesto y no en una "
-            "explicación, eso es una decisión sobre qué quiere dejar abierto.\n\n"
-            "**La persona narrativa cambia lo que se puede saber.** Un narrador "
-            "en primera persona solo puede contar lo que él vio, y eso limita "
-            "—a propósito— lo que el lector conoce del resto."
+            "**El orden es una decisión.** Empezar por el caso concreto y terminar en "
+            "la regla no es lo mismo que al revés. Pregúntate qué gana el texto con "
+            "el orden que eligió.\\n\\n"
+            "| Tipo de texto | Su estructura típica |\\n"
+            "|---|---|\\n"
+            "| Narrativo | situación inicial, quiebre, desarrollo, desenlace |\\n"
+            "| Expositivo | introducción, desarrollo por subtemas, cierre |\\n"
+            "| Argumentativo | tesis, argumentos, contraargumento, conclusión |\\n"
+            "| Instructivo | materiales, pasos en orden, advertencias |\\n"
+            "| Noticioso | lo más importante primero, detalles después |\\n\\n"
+            "**El registro indica para quién se escribió.** Un texto que explica qué "
+            "significa cada término está escrito para quien no los conoce; uno que "
+            "los usa sin explicar, para quien ya está adentro. El registro formal, el "
+            "técnico y el coloquial no son mejores ni peores: son decisiones sobre el "
+            "destinatario.\\n\\n"
+            "**El cierre es la posición más fuerte.** Lo último que se lee es lo que "
+            "queda. Si un relato termina en un gesto y no en una explicación, eso es "
+            "una decisión sobre qué quiere dejar abierto.\\n\\n"
+            "**La persona narrativa cambia lo que se puede saber.** Un narrador en "
+            "primera persona solo puede contar lo que él vio, y eso limita —a "
+            "propósito— lo que el lector conoce del resto. Un narrador omnisciente "
+            "sabe lo que piensan todos; uno testigo, solo lo que observa desde "
+            "afuera.\\n\\n"
+            "**El tiempo del relato no es el tiempo de la historia.** Un texto puede "
+            "empezar por el final (in medias res), volver atrás (analepsis) o "
+            "adelantar lo que vendrá. Reordenar es una decisión que produce intriga, "
+            "contraste o ironía.\\n\\n"
+            "**Los textos discontinuos se leen distinto.** Infografías, tablas y "
+            "gráficos no se leen de corrido: primero el título, después las etiquetas "
+            "y las unidades, y recién ahí los datos. Lo que en un texto continuo hace "
+            "un conector, acá lo hacen la disposición, el color y el tamaño."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -76149,6 +76823,65 @@ LESSONS: dict[str, dict] = {
                 "porque": "Ese es el trabajo de la elección formal: la incertidumbre no está en los hechos, está en quién los cuenta. En tercera persona el relato podría haber resuelto el punto.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Qué efecto produce la estructura elegida en este fragmento?\\n\\n"
+                    "*El martes a las seis y media, la señora Ruiz encontró la puerta de la "
+                    "panadería cerrada con candado y un cartel escrito a mano.*\\n\\n"
+                    "*Don Luis la había abierto todos los días durante treinta y un años, "
+                    "incluido el día del terremoto, cuando repartió el pan gratis en la "
+                    "plaza. Nunca contrató a nadie. Decía que el horno se conocía con las "
+                    "manos y que las manos no se heredan.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Observo el orden: el texto empieza por el final —la panadería cerrada— y "
+                            "recién después cuenta los treinta y un años anteriores."
+                        ),
+                        "porque": (
+                            "Es una alteración del orden cronológico: primero el desenlace, después "
+                            "el pasado que lo explica. La historia no ocurrió en ese orden; el relato "
+                            "eligió contarlo así."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Pruebo el orden inverso: si empezara por los treinta y un años y "
+                            "terminara en el candado, el cierre sería el cierre de la panadería."
+                        ),
+                        "porque": (
+                            "Comparar con la versión alternativa es la forma de ver qué aporta la "
+                            "estructura elegida. En la versión cronológica el efecto sería de "
+                            "desenlace; acá es de misterio y luego de pérdida."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Identifico el efecto: el lector llega a la historia de don Luis sabiendo "
+                            "ya que terminó, así que cada detalle se lee como algo que se perdió."
+                        ),
+                        "porque": (
+                            "El pan repartido en el terremoto no tendría el mismo peso leído antes "
+                            "del candado. La estructura, y no las palabras, es lo que carga esos "
+                            "detalles."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Noto además que el cierre queda en una frase de don Luis y no en una "
+                            "explicación del narrador."
+                        ),
+                        "porque": (
+                            "Cerrar con la voz del personaje deja el sentido abierto: no explica por "
+                            "qué cerró la panadería. La posición final es la más fuerte, y el texto "
+                            "la usa para dejar resonando el oficio, no el desenlace."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Responder con lo que el texto cuenta en lugar de con lo que la "
             "forma produce. «Muestra que la casa estaba vacía» es contenido. La "
@@ -76164,19 +76897,34 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**Separa la afirmación de su respaldo.** Primero identifica qué se "
-            "sostiene; después, con qué. Muchas preguntas van justo al hueco "
-            "entre las dos cosas.\n\n"
-            "**Distingue dato de opinión.** «El consumo subió 12%» se puede "
+            "sostiene; después, con qué. Muchas preguntas van justo al hueco entre "
+            "las dos cosas.\\n\\n"
+            "**Distingue dato de opinión.** «El consumo subió $12\\%$» se puede "
             "verificar; «el consumo subió demasiado» es una valoración. Una "
-            "alternativa que presente una opinión como dato es incorrecta "
-            "aunque suene razonable.\n\n"
-            "**Un ejemplo no prueba una regla.** Si el texto sostiene algo "
-            "general y lo apoya en un caso, el apoyo es débil y la pregunta "
-            "suele ir por ahí.\n\n"
-            "**Fíjate en lo que el propio emisor reconoce.** Los textos "
-            "rigurosos avisan sus límites: «el estudio midió difusión, no "
-            "creencia». Esa línea suele ser la respuesta a qué no permite "
-            "concluir el texto."
+            "alternativa que presente una opinión como dato es incorrecta aunque "
+            "suene razonable.\\n\\n"
+            "| Cómo se debilita un respaldo | Qué revisar |\\n"
+            "|---|---|\\n"
+            "| Muestra pequeña o poco representativa | a cuántos y a quiénes se midió "
+            "|\\n"
+            "| Se confunde correlación con causa | si hay un tercer factor posible |\\n"
+            "| Un caso sostiene una regla general | cuántos casos, y si son típicos |\\n"
+            "| La fuente tiene interés en el resultado | quién financió o quién "
+            "difunde |\\n"
+            "| El dato es viejo o de otro contexto | cuándo y dónde se midió |\\n"
+            "| Se generaliza fuera del rango medido | qué dijeron exactamente los "
+            "autores |\\n\\n"
+            "**Un ejemplo no prueba una regla.** Si el texto sostiene algo general y "
+            "lo apoya en un caso, el apoyo es débil y la pregunta suele ir por ahí. "
+            "Un caso sí sirve para refutar una afirmación absoluta: para tumbar un "
+            "«siempre» basta un contraejemplo.\\n\\n"
+            "**Fíjate en lo que el propio emisor reconoce.** Los textos rigurosos "
+            "avisan sus límites: «el estudio midió difusión, no creencia». Esa línea "
+            "suele ser la respuesta a qué NO permite concluir el texto.\\n\\n"
+            "**Evaluar no es estar de acuerdo.** Un texto puede defender algo que uno "
+            "comparte y sostenerlo con evidencia débil. La pregunta es por la calidad "
+            "del respaldo, no por la simpatía de la conclusión: es la distinción más "
+            "difícil de esta unidad y la que más se evalúa."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -76202,6 +76950,61 @@ LESSONS: dict[str, dict] = {
                 "porque": "No se trata de decir que la conclusión sea falsa, sino que la evidencia presentada no la sostiene. Esa distinción es lo que se evalúa.",
             },
         ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "¿Qué debilidad tiene el respaldo que ofrece el texto?\\n\\n"
+                    "*Los cursos de meditación mejoran las notas. En nuestro colegio, los "
+                    "treinta estudiantes que se inscribieron voluntariamente en el taller "
+                    "subieron su promedio medio punto respecto del semestre anterior, "
+                    "mientras que el resto del curso se mantuvo igual.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Separo la afirmación general —«los cursos de meditación mejoran las "
+                            "notas»— del respaldo, que es un grupo de treinta estudiantes de un "
+                            "colegio."
+                        ),
+                        "porque": (
+                            "La afirmación es universal y el respaldo es un caso particular. Ese "
+                            "desajuste de alcance es lo primero que hay que medir al evaluar "
+                            "información."
+                        ),
+                    },
+                    {
+                        "accion": "Reviso cómo se formó el grupo: se inscribieron VOLUNTARIAMENTE.",
+                        "porque": (
+                            "Los que se inscriben solos pueden ser distintos del resto en algo que "
+                            "también afecta las notas: más motivación, más tiempo, más apoyo en la "
+                            "casa. El grupo no es comparable con el que no se inscribió."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Nombro el problema: la mejora podría deberse a esa diferencia previa y "
+                            "no a la meditación. Es correlación, no causa demostrada."
+                        ),
+                        "porque": (
+                            "Para atribuir la causa habría que asignar el taller al azar, de modo que "
+                            "los dos grupos se parezcan en todo lo demás. Sin eso, el dato es "
+                            "compatible con varias explicaciones."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que el respaldo es débil por la muestra pequeña y "
+                            "autoseleccionada, aunque la conclusión pudiera ser cierta."
+                        ),
+                        "porque": (
+                            "Evaluar el respaldo no es negar la afirmación. La meditación podría "
+                            "servir; lo que este texto no logra es demostrarlo, y esa es exactamente "
+                            "la distinción que la pregunta evalúa."
+                        ),
+                    },
+                ],
+            },
+        ],
         "common_error": (
             "Juzgar si la afirmación es verdadera en vez de si está respaldada. "
             "Que dormir bien ayude a rendir puede ser cierto y aun así este "
@@ -76216,18 +77019,31 @@ LESSONS: dict[str, dict] = {
             "prueba de que entendiste, no de que recordaste."
         ),
         "theory": (
-            "**Primero extrae el criterio, después aplícalo.** No busques en el "
-            "texto la situación nueva, porque no está. Busca la regla, el "
-            "principio o el hallazgo, y recién ahí mira el caso.\n\n"
-            "**Comprueba que el caso cumpla todas las condiciones.** Si el "
-            "texto exige tres requisitos y el caso cumple dos, la respuesta "
-            "cambia. Las preguntas se construyen sobre el requisito que falta.\n\n"
-            "**No agregues criterios de tu experiencia.** Lo que tú harías o lo "
-            "que te parece razonable no cuenta. Solo cuenta lo que el texto "
-            "permite sostener.\n\n"
-            "**Si el texto marca un límite, respétalo.** Cuando un emisor dice "
-            "que su hallazgo vale para cierto rango, aplicarlo fuera de ese "
-            "rango es exactamente el error que la pregunta busca."
+            "**Primero extrae el criterio, después aplícalo.** No busques en el texto "
+            "la situación nueva, porque no está. Busca la regla, el principio o el "
+            "hallazgo, y recién ahí mira el caso.\\n\\n"
+            "**El procedimiento, en cuatro pasos:**\\n\\n"
+            "1) formular el criterio con tus palabras, como una regla;\\n"
+            "2) listar las condiciones que exige;\\n"
+            "3) comprobar el caso contra cada una;\\n"
+            "4) decidir solo con lo que el texto permite.\\n\\n"
+            "**Comprueba que el caso cumpla TODAS las condiciones.** Si el texto "
+            "exige tres requisitos y el caso cumple dos, la respuesta cambia. Las "
+            "preguntas se construyen sobre el requisito que falta, y ese requisito "
+            "suele estar en una cláusula secundaria de la regla.\\n\\n"
+            "**Condición necesaria no es lo mismo que suficiente.** Que un producto "
+            "supere el límite de azúcar es suficiente para llevar el sello; que no lo "
+            "supere no basta para descartarlo, porque puede superar el de sodio. Una "
+            "regla con varios caminos se cumple por cualquiera de ellos.\\n\\n"
+            "**Ojo con las excepciones.** «Salvo que», «excepto», «a menos que» "
+            "introducen los casos donde la regla general no se aplica, y son "
+            "justamente los que la prueba pone como caso nuevo.\\n\\n"
+            "**No agregues criterios de tu experiencia.** Lo que tú harías o lo que "
+            "te parece razonable no cuenta. Solo cuenta lo que el texto permite "
+            "sostener.\\n\\n"
+            "**Si el texto marca un límite, respétalo.** Cuando un emisor dice que su "
+            "hallazgo vale para cierto rango, cierta población o cierto período, "
+            "aplicarlo fuera de ahí es exactamente el error que la pregunta busca."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
@@ -76251,6 +77067,65 @@ LESSONS: dict[str, dict] = {
             {
                 "accion": "Respondo: la ausencia de sellos indica que no supera esos cuatro límites, no que el producto sea saludable en general.",
                 "porque": "Es la aplicación exacta del alcance que el texto fija. Ni niega el valor del sello ni lo extiende más allá de lo que mide.",
+            },
+        ],
+        "extra_examples": [
+            {
+                "statement": (
+                    "Según el reglamento, ¿puede renovar su préstamo un usuario que lleva "
+                    "ocho días con un libro que otro usuario reservó ayer, y que además tiene "
+                    "una multa impaga de 2024?\\n\\n"
+                    "*El préstamo dura diez días y puede renovarse una vez por igual período, "
+                    "siempre que el ejemplar no esté reservado por otro usuario y que el "
+                    "solicitante no registre multas pendientes. Los usuarios con credencial "
+                    "de investigador quedan exentos del límite de renovaciones.*"
+                ),
+                "steps": [
+                    {
+                        "accion": (
+                            "Extraigo el criterio y sus condiciones: se puede renovar si (a) no se ha "
+                            "renovado antes, (b) el ejemplar no está reservado y (c) el usuario no "
+                            "tiene multas pendientes."
+                        ),
+                        "porque": (
+                            "La regla está escrita con dos «que» encadenados, y cada uno es una "
+                            "condición independiente. Listarlas por separado es lo que impide pasar "
+                            "una por alto."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Comparo el caso con cada condición: los ocho días no son un obstáculo "
+                            "—el plazo es de diez—, pero el ejemplar SÍ está reservado y el usuario "
+                            "SÍ tiene una multa."
+                        ),
+                        "porque": (
+                            "El dato de los ocho días es el distractor: parece el relevante porque es "
+                            "el más concreto, y en realidad no incumple nada."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Concluyo que no puede renovar, y que basta con que falle una de las "
+                            "condiciones."
+                        ),
+                        "porque": (
+                            "Las tres condiciones van unidas por «y»: son necesarias todas. Acá "
+                            "fallan dos, pero con una habría bastado."
+                        ),
+                    },
+                    {
+                        "accion": (
+                            "Reviso la excepción final: la exención de los investigadores es solo del "
+                            "LÍMITE de renovaciones, no de la reserva ni de las multas."
+                        ),
+                        "porque": (
+                            "Las excepciones tienen su propio alcance, y leerlas de más es el otro "
+                            "error clásico. Aunque el usuario fuera investigador, la reserva y la "
+                            "multa seguirían impidiendo la renovación."
+                        ),
+                    },
+                ],
             },
         ],
         "common_error": (
