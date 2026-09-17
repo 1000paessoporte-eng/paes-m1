@@ -6,6 +6,7 @@ import { cn } from "@paes-m1/utils";
 import { CompartirResultado } from "@/components/exam/compartir-resultado";
 import { FiguraPregunta } from "@/components/exam/figura-pregunta";
 import { Resolucion } from "@/components/exam/resolucion";
+import { ReportarPregunta } from "@/components/reportar-pregunta";
 import { TextoRico } from "@/components/texto-rico";
 import type { BreakdownItem, ExamResult, ExamReview, ReviewQuestion } from "@/lib/api";
 import { formatearTiempo } from "@/lib/tiempo";
@@ -421,6 +422,10 @@ function RevisionItem({
           <span className="ml-auto rounded-full bg-surface-hover px-2 py-0.5 text-xs text-muted">
             {pregunta.skill_node_name}
           </span>
+          {/* Acá es donde más sirve: el alumno acaba de ver cuál era la
+              correcta y su justificación, así que si algo no cuadra lo sabe
+              con el detalle suficiente para contarlo. */}
+          <ReportarPregunta questionId={pregunta.id} contexto="revision" />
         </div>
 
         <TextoRico texto={pregunta.stem} />

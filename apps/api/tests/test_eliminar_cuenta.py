@@ -101,6 +101,7 @@ def test_ninguna_tabla_apunta_a_users_sin_estar_en_el_borrado() -> None:
         "pagos",
         "password_reset_tokens",
         "practice_answers",
+        "reportes_pregunta",  # no se borra: se le quita el dueño
         "study_streaks",
         "user_goals",  # el modelo se llama MetaUsuario
         "subscriptions",

@@ -1586,6 +1586,66 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/reportes": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Listar Reportes
+         * @description Las preguntas reportadas, la más reportada primero.
+         *
+         *     Agrupadas por pregunta: lo que se arregla es la pregunta, y tres alumnos
+         *     avisando de la misma son una sola cosa que hacer. Por defecto solo trae las
+         *     que tienen algún aviso pendiente; el historial completo se pide aparte,
+         *     porque una pregunta ya revisada y dejada como está va a seguir juntando
+         *     avisos para siempre.
+         */
+        get: operations["listar_reportes_api_reportes_get"];
+        put?: never;
+        /**
+         * Reportar Pregunta
+         * @description Recibe el aviso de que una pregunta está mal.
+         *
+         *     Sin sesión también: la demo se responde sin cuenta y es donde entra gente
+         *     que nunca nos va a escribir un correo.
+         *
+         *     Responde 204 y nada más. El alumno está en medio de un ensayo: lo único que
+         *     necesita ver es que el aviso se fue.
+         */
+        post: operations["reportar_pregunta_api_reportes_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/reportes/{question_id}/revisado": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Marcar Revisado
+         * @description Cierra todos los avisos de una pregunta.
+         *
+         *     Vale tanto si la pregunta se corrigió como si se revisó y estaba bien: en
+         *     los dos casos ya no hay nada que hacer con esos avisos. La pregunta sigue
+         *     en el panel si alguien vuelve a reportarla.
+         */
+        post: operations["marcar_revisado_api_reportes__question_id__revisado_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/health": {
         parameters: {
             query?: never;
@@ -2061,6 +2121,22 @@ export interface components {
             es_profesor: boolean;
             /** Alumnos */
             alumnos: number;
+        };
+        /** ComentarioOut */
+        ComentarioOut: {
+            /** Motivo */
+            motivo: string;
+            /** Comentario */
+            comentario: string | null;
+            /** Contexto */
+            contexto: string;
+            /**
+             * Creado En
+             * Format: date-time
+             */
+            creado_en: string;
+            /** Revisado En */
+            revisado_en: string | null;
         };
         /** ContenidoOut */
         ContenidoOut: {
@@ -3313,6 +3389,56 @@ export interface components {
             axis_labels: string[];
             /** Nodes */
             nodes?: components["schemas"]["RepasoNodoOut"][];
+        };
+        /** ReporteIn */
+        ReporteIn: {
+            /** Question Id */
+            question_id: number;
+            /**
+             * Motivo
+             * @enum {string}
+             */
+            motivo: "respuesta_incorrecta" | "varias_correctas" | "enunciado_confuso" | "datos_erroneos" | "otro";
+            /** Comentario */
+            comentario?: string | null;
+            /**
+             * Contexto
+             * @enum {string}
+             */
+            contexto: "ensayo" | "revision" | "practica";
+        };
+        /**
+         * ReportePreguntaOut
+         * @description Una pregunta reportada, con todos sus avisos juntos.
+         *
+         *     El panel agrupa por pregunta porque lo que se arregla es la pregunta: tres
+         *     alumnos avisando de la misma es una sola cosa que hacer, y el orden en que
+         *     hay que hacerlas lo da cuánta gente avisó.
+         */
+        ReportePreguntaOut: {
+            /** Question Id */
+            question_id: number;
+            /** Stem */
+            stem: string;
+            /** Skill Node Name */
+            skill_node_name: string;
+            /** Respuesta Correcta */
+            respuesta_correcta: string | null;
+            /** Reportes */
+            reportes: number;
+            /** Pendientes */
+            pendientes: number;
+            /** Motivos */
+            motivos: {
+                [key: string]: number;
+            };
+            /** Comentarios */
+            comentarios: components["schemas"]["ComentarioOut"][];
+            /**
+             * Ultimo En
+             * Format: date-time
+             */
+            ultimo_en: string;
         };
         /** ResetPasswordIn */
         ResetPasswordIn: {
@@ -5991,6 +6117,97 @@ export interface operations {
                 "application/json": components["schemas"]["ErrorClienteIn"];
             };
         };
+        responses: {
+            /** @description Successful Response */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    listar_reportes_api_reportes_get: {
+        parameters: {
+            query?: {
+                incluir_revisados?: boolean;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ReportePreguntaOut"][];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    reportar_pregunta_api_reportes_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ReporteIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    marcar_revisado_api_reportes__question_id__revisado_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                question_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
         responses: {
             /** @description Successful Response */
             204: {

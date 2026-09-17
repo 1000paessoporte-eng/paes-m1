@@ -9,6 +9,7 @@ import { PassagePanel } from "@/components/exam/passage-panel";
 import { Pizarra } from "@/components/texto/pizarra";
 import { Burbuja } from "@/components/ui/burbuja";
 import { IconoEstrella } from "@/components/ui/iconos";
+import { ReportarPregunta } from "@/components/reportar-pregunta";
 import { TextoRico } from "@/components/texto-rico";
 import { ExamConfigScreen, SUBJECT_LABELS } from "@/components/exam/exam-config";
 import { ExamResults } from "@/components/exam/exam-results";
@@ -1055,30 +1056,38 @@ export function ExamRunner({
                           ? `Pregunta ${idx + 1}`
                           : q.axis || q.skill_node_name}
                       </span>
-                      <button
-                        type="button"
-                        onClick={() => toggleFlag(q.id)}
-                        className={cn(
-                          "shrink-0 rounded-lg border px-3 py-1.5 text-xs font-medium transition",
-                          est?.flagged
-                            ? "border-warning/50 bg-warning/10 text-warning"
-                            : "border-border text-muted hover:bg-surface-hover"
-                        )}
-                      >
-                        {/* La estrella rebota al marcarse. Es una microacción que
-                            se repite decenas de veces en un ensayo y era muda: el
-                            único acuse de recibo era el cambio de color. */}
-                        <motion.span
-                          key={est?.flagged ? "si" : "no"}
-                          initial={{ scale: est?.flagged ? 0.6 : 1 }}
-                          animate={{ scale: 1 }}
-                          transition={{ type: "spring", stiffness: 500, damping: 15 }}
-                          className="inline-flex items-center gap-1.5"
+                      <div className="flex shrink-0 items-center gap-1">
+                        <button
+                          type="button"
+                          onClick={() => toggleFlag(q.id)}
+                          className={cn(
+                            "shrink-0 rounded-lg border px-3 py-1.5 text-xs font-medium transition",
+                            est?.flagged
+                              ? "border-warning/50 bg-warning/10 text-warning"
+                              : "border-border text-muted hover:bg-surface-hover"
+                          )}
                         >
-                          <IconoEstrella tamano={13} marcada={est?.flagged} />
-                          {est?.flagged ? "Marcada" : "Marcar"}
-                        </motion.span>
-                      </button>
+                          {/* La estrella rebota al marcarse. Es una microacción que
+                              se repite decenas de veces en un ensayo y era muda: el
+                              único acuse de recibo era el cambio de color. */}
+                          <motion.span
+                            key={est?.flagged ? "si" : "no"}
+                            initial={{ scale: est?.flagged ? 0.6 : 1 }}
+                            animate={{ scale: 1 }}
+                            transition={{ type: "spring", stiffness: 500, damping: 15 }}
+                            className="inline-flex items-center gap-1.5"
+                          >
+                            <IconoEstrella tamano={13} marcada={est?.flagged} />
+                            {est?.flagged ? "Marcada" : "Marcar"}
+                          </motion.span>
+                        </button>
+                        {/* Avisar que la pregunta está mal. Chico y al lado
+                            de "Marcar" a propósito: es la misma clase de
+                            gesto —hacer algo con esta pregunta, no
+                            responderla— y así el que lo busca lo encuentra
+                            sin que le estorbe al que está rindiendo. */}
+                        <ReportarPregunta questionId={q.id} contexto="ensayo" />
+                      </div>
                     </div>
 
                     {/* La segunda oportunidad. Con miles de preguntas sorteadas al

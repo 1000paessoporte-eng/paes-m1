@@ -46,7 +46,8 @@ No es un banco de preguntas plano. Las piezas:
 | **Historial** | 🟢 Funcional | Evolución del puntaje, mejor/promedio/último, borrado por intento, respaldo JSON. |
 | **Analítica** | 🟢 Funcional | Racha, precisión global, tiempo invertido, gráficos SVG propios. |
 | **Demo sin cuenta** | 🟢 Funcional | `/demo`: 5 preguntas, sin auth y sin persistir nada. |
-| **Panel de administración** | 🟢 Funcional | `/admin`: usuarios, entradas, visitas (incluidas anónimas) y uso del contenido. Solo cuentas con rol admin. |
+| **Panel de administración** | 🟢 Funcional | `/admin`: usuarios, entradas, visitas (incluidas anónimas), uso del contenido y preguntas reportadas. Solo cuentas con rol admin. |
+| **Reportar una pregunta** | 🟢 Funcional | Botón chico en cada pregunta --rindiendo, practicando, en la retroalimentación y en la demo-- con cinco motivos y comentario opcional. `verificar_banco.py` no ve un enunciado ambiguo ni una clave mal puesta; el alumno sí. Llega agrupado por pregunta a `/admin`, con lo que escribió cada uno. |
 | **Cobros / planes** | 🟡 Funciona, sin encender | Pasarela **Flow** integrada (`modules/billing`): catálogo con el precio en el servidor, `/plan/pagar`, confirmación por webhook y diagnóstico para admin. Hay una compra real completada. Los topes del plan Gratis se informan pero **no bloquean** mientras `LIMITES_ACTIVOS` esté apagado -- salvo el de carreras en Mi meta, que sí corta. |
 | **Prueba gratis + suscripción** | 🟡 Código listo, falta crear el plan en Flow | 3 días de Pro con tarjeta inscrita y cobro automático mensual, sobre *Flow Suscripciones* (`customer/register` + `subscription/create`). Uno por cuenta. La fecha de término la manda Flow (`period_end`), nunca se calcula acá: `plan_actual` reconcilia cuando la fecha local vence y el cron `/api/plan/flow/reconciliar` barre a diario. Cancelar apaga la renovación en Flow **y** conserva el acceso hasta la fecha ya cobrada. Se enciende con `FLOW_PLAN_PRO_ID`, que se crea con `scripts/crear_plan_flow.py`. |
 
@@ -154,6 +155,10 @@ modules/colegios/      Plan Colegios: curso, código de seis letras, panel del
                        tiene los límites del plan Pro.
 modules/errores/       Errores de JavaScript reportados por el navegador,
                        agrupados por mensaje y ruta. Se ven en /admin.
+modules/reportes/      Preguntas que los alumnos marcan como malas desde el
+                       botón de la tarjeta. Una fila por aviso (el comentario
+                       es el dato que decide), agrupadas por pregunta en
+                       /admin.
 modules/correos/       Bienvenida al crear la cuenta y difusión (un correo
                        escrito a mano a las cuentas registradas). Los correos
                        de recuperar contraseña viven en modules/users y los

@@ -845,3 +845,35 @@ export type ErrorCliente =
 export function getErroresCliente(token?: string): Promise<ErrorCliente[]> {
   return apiFetch<ErrorCliente[]>("/api/errores", token);
 }
+
+// --- Preguntas reportadas por los alumnos ---------------------------------
+
+export type ReporteIn = components["schemas"]["ReporteIn"];
+export type MotivoReporte = ReporteIn["motivo"];
+export type ContextoReporte = ReporteIn["contexto"];
+
+export type PreguntaReportada =
+  paths["/api/reportes"]["get"]["responses"][200]["content"]["application/json"][number];
+
+/**
+ * Avisar que una pregunta del banco está mal.
+ *
+ * Sin token también: la demo se responde sin cuenta. Y no devuelve nada porque
+ * no hay nada que mostrar --el alumno está en medio de un ensayo y lo único
+ * que necesita saber es que el aviso llegó.
+ */
+export function reportarPregunta(cuerpo: ReporteIn, token?: string): Promise<void> {
+  return apiFetch<void>("/api/reportes", token, {
+    method: "POST",
+    headers: JSON_HEADERS,
+    body: JSON.stringify(cuerpo),
+  });
+}
+
+export function getPreguntasReportadas(token?: string): Promise<PreguntaReportada[]> {
+  return apiFetch<PreguntaReportada[]>("/api/reportes", token);
+}
+
+export function marcarReporteRevisado(questionId: number, token?: string): Promise<void> {
+  return apiFetch<void>(`/api/reportes/${questionId}/revisado`, token, { method: "POST" });
+}

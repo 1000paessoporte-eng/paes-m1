@@ -5,7 +5,7 @@ from datetime import UTC, datetime, timedelta
 
 from google.auth.transport import requests as google_requests
 from google.oauth2 import id_token as google_id_token
-from sqlalchemy import delete, select
+from sqlalchemy import delete, select, update
 from sqlalchemy.orm import Session
 
 from paes_api.core.config import get_settings
@@ -306,6 +306,7 @@ def eliminar_cuenta(db: Session, user: User, password: str | None) -> bool:
     from paes_api.modules.goals.models import MetaUsuario
     from paes_api.modules.metrics.models import PageView
     from paes_api.modules.practice.models import PracticeAnswer
+    from paes_api.modules.reportes.models import ReportePregunta
     from paes_api.modules.skill_tree.models import UserSkillProgress
 
     # ANTES de borrar nada: apagar el cobro recurrente en Flow.
@@ -356,6 +357,13 @@ def eliminar_cuenta(db: Session, user: User, password: str | None) -> bool:
         ErrorCliente.__table__.update()
         .where(ErrorCliente.user_id == user.id)
         .values(user_id=None)
+    )
+
+    # El aviso de que una pregunta está mala se conserva sin dueño: la
+    # pregunta sigue mala aunque quien avisó se haya ido, y el comentario es lo
+    # que permite arreglarla.
+    db.execute(
+        update(ReportePregunta).where(ReportePregunta.user_id == user.id).values(user_id=None)
     )
 
     # La visita se conserva, sin dueño: deja de identificar y sigue contando.
