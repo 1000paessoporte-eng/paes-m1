@@ -13,19 +13,22 @@ export const metadata = {
 export default async function MetaPage() {
   const token = (await cookies()).get(TOKEN_COOKIE)?.value;
 
+  // Los dos en paralelo: eran independientes y en secuencia sumaban. El plan
+  // (cuántas carreras admite) lleva su propio catch: si falla, se asume el tope
+  // del sistema, que ofrecer de más y que la API corrija es mejor que esconder
+  // carreras a quien las pagó.
   let meta: Meta | null = null;
   let sinSesion = false;
+  let plan: Awaited<ReturnType<typeof getMiPlan>> | null = null;
   try {
-    meta = await getMeta(token);
+    [meta, plan] = await Promise.all([
+      getMeta(token),
+      getMiPlan(token).catch(() => null),
+    ]);
   } catch (err) {
     if (err instanceof ApiError && err.status === 401) sinSesion = true;
   }
   if (sinSesion) redirect("/login?next=/meta");
-
-  // Cuántas carreras admite SU plan. Si falla, se asume el tope del sistema:
-  // que la pantalla ofrezca de más y la API corrija es mejor que esconderle
-  // carreras a quien sí las tiene pagadas.
-  const plan = await getMiPlan(token).catch(() => null);
 
   if (meta === null) {
     return (

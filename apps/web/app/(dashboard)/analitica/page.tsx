@@ -20,22 +20,19 @@ export const metadata = {
 export default async function DashboardAnaliticoPage() {
   const token = (await cookies()).get(TOKEN_COOKIE)?.value;
 
+  // Los dos en paralelo: son independientes y en secuencia sumaban sus
+  // tiempos. El diagnóstico lleva su propio catch, así que un fallo suyo no
+  // llega al try de abajo, que existe solo para el 401 del summary (el crítico).
   let summary;
+  let diagnostico: Diagnostico | null = null;
   try {
-    summary = await getAnalyticsSummary(token);
+    [summary, diagnostico] = await Promise.all([
+      getAnalyticsSummary(token),
+      getDiagnostico(token).catch(() => null),
+    ]);
   } catch (err) {
     if (err instanceof ApiError && err.status === 401) redirect("/login?next=/analitica");
     throw err;
-  }
-
-  // El diagnóstico es lo nuevo de esta pantalla, pero no es lo único: si
-  // falla, la analítica de siempre se muestra igual. Un dato de más no puede
-  // llevarse por delante a los que ya funcionaban.
-  let diagnostico: Diagnostico | null = null;
-  try {
-    diagnostico = await getDiagnostico(token);
-  } catch {
-    diagnostico = null;
   }
 
   if (summary.total_questions_answered === 0) {
