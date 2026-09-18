@@ -9982,13 +9982,7 @@ QUESTIONS += [
         "num_porcentajes", "dificil",
         "El precio de un producto con IVA incluido de 19% es $23.800. ¿Cuál es su precio neto, sin IVA?",
         "$20.000",
-        "El precio con IVA es el 119% del neto, no el 100%.\n\n"
-        "1) Plantea: neto · 1,19 = 23.800.\n"
-        "2) Despeja dividiendo: neto = 23.800 ÷ 1,19.\n"
-        "3) Calcula: 20.000.\n"
-        "4) Verifica: el 19% de 20.000 es 3.800, y 20.000 + 3.800 = 23.800.\n\n"
-        "Error frecuente: restarle el 19% al precio con IVA, que daría 19.278 y no "
-        "reconstruye el total al volver a aplicar el impuesto.",
+        "El precio con impuesto al valor agregado (IVA) es el 119% del neto, no el 100%.\n\n1) Plantea: neto · 1,19 = 23.800.\n2) Despeja dividiendo: neto = 23.800 ÷ 1,19.\n3) Calcula: 20.000.\n4) Verifica: el 19% de 20.000 es 3.800, y 20.000 + 3.800 = 23.800.\n\nError frecuente: restarle el 19% al precio con IVA, que daría 19.278 y no reconstruye el total al volver a aplicar el impuesto.",
         [
             ("$19.278", "Restó el 19% del precio con IVA en vez de dividir por 1,19."),
             ("$4.522", "Calculó el 19% del precio con IVA, que tampoco es el impuesto real."),
@@ -15818,11 +15812,7 @@ QUESTIONS += [
         "num_porcentajes", "dificil",
         "Un servicio cuesta $30.000 más IVA. Si el IVA es del 19%, ¿cuánto se paga en total?",
         "$35.700",
-        "El IVA se calcula sobre el precio neto y se suma.\n\n"
-        "1) Calcula el 19% de 30.000: 30.000 · 0,19 = 5.700.\n"
-        "2) Súmalo al precio neto: 30.000 + 5.700 = 35.700.\n"
-        "3) Se pagan $35.700.\n"
-        "4) Atajo: multiplicar directamente por 1,19 da el total en un paso, 30.000 · 1,19 = 35.700 ✓.",
+        "El impuesto al valor agregado (IVA) se calcula sobre el precio neto y se suma.\n\n1) Calcula el 19% de 30.000: 30.000 · 0,19 = 5.700.\n2) Súmalo al precio neto: 30.000 + 5.700 = 35.700.\n3) Se pagan $35.700.\n4) Atajo: multiplicar directamente por 1,19 da el total en un paso, 30.000 · 1,19 = 35.700 ✓.",
         [
             ("$5.700", "Dio el monto del IVA en lugar del total a pagar."),
             ("$24.300", "Restó el IVA en vez de sumarlo."),
@@ -40245,10 +40235,7 @@ QUESTIONS_LECTORA = [
         "Si el consumo del período hubiera sido de cero kilowatt-hora, ¿qué habría "
         "cobrado esta boleta?",
         "Solo el cargo fijo, más el IVA correspondiente",
-        "Tres de los cuatro cobros se calculan multiplicando por los kilowatt-hora, "
-        "de modo que con cero consumo esas tres líneas quedan en cero.\n\nEl cargo "
-        "fijo, en cambio, se cobra «por mes, independiente del consumo», según la "
-        "propia tabla. Sobre ese subtotal se seguiría aplicando el 19 % de IVA.",
+        "Tres de los cuatro cobros se calculan multiplicando por los kilowatt-hora, de modo que con cero consumo esas tres líneas quedan en cero.\n\nEl cargo fijo, en cambio, se cobra «por mes, independiente del consumo», según la propia tabla. Sobre ese subtotal se seguiría aplicando el 19 % de impuesto al valor agregado (IVA).",
         [
             ("Nada, porque no hubo consumo que facturar", "El cargo fijo se cobra aunque el consumo sea nulo."),
             ("El cargo fijo y el transporte de electricidad", "El transporte también se calcula por kilowatt-hora."),
@@ -49922,12 +49909,7 @@ QUESTIONS_CIENCIAS = [
         "Una sustancia entra a la célula desde donde está menos concentrada "
         "hacia donde está más concentrada. ¿Qué tipo de transporte es?",
         "Transporte activo, con gasto de ATP",
-        "Ir de menor a mayor concentración es moverse EN CONTRA del gradiente, "
-        "y eso nunca ocurre solo.\n\n"
-        "Como el proceso no es espontáneo, la célula tiene que pagarlo con "
-        "energía: por eso se llama transporte activo y consume ATP.\n\n"
-        "La regla es corta: a favor del gradiente es gratis (transporte "
-        "pasivo), en contra del gradiente se paga.",
+        "Ir de menor a mayor concentración es moverse EN CONTRA del gradiente, y eso nunca ocurre solo.\n\nComo el proceso no es espontáneo, la célula tiene que pagarlo con energía: por eso se llama transporte activo y consume adenosín trifosfato (ATP).\n\nLa regla es corta: a favor del gradiente es gratis (transporte pasivo), en contra del gradiente se paga.",
         [
             ("Difusión simple, sin gasto de energía", "La difusión simple solo va a favor del gradiente, nunca en contra."),
             ("Difusión facilitada por proteínas", "También es pasiva: la proteína da el paso, pero no aporta energía para subir el gradiente."),
@@ -50284,14 +50266,7 @@ QUESTIONS_CIENCIAS = [
         "¿Cuál es la diferencia fundamental entre una célula procarionte y una "
         "eucarionte?",
         "La eucarionte tiene el material genético en un núcleo",
-        "La palabra lo dice: «carionte» viene de núcleo. Eucarionte es "
-        "núcleo verdadero; procarionte, antes del núcleo.\n\n"
-        "En la procarionte —las bacterias— el ADN flota en el citoplasma sin "
-        "envoltura. En la eucarionte está encerrado en un núcleo con membrana "
-        "propia.\n\n"
-        "De ahí se sigue el resto: las eucariontes tienen además organelos "
-        "internos con membrana, como mitocondrias y cloroplastos, que las "
-        "procariontes no poseen.",
+        "La palabra lo dice: «carionte» viene de núcleo. Eucarionte es núcleo verdadero; procarionte, antes del núcleo.\n\nEn la procarionte —las bacterias— el ácido desoxirribonucleico (ADN) flota en el citoplasma sin envoltura. En la eucarionte está encerrado en un núcleo con membrana propia.\n\nDe ahí se sigue el resto: las eucariontes tienen además organelos internos con membrana, como mitocondrias y cloroplastos, que las procariontes no poseen.",
         [
             ("La procarionte no tiene material genético", "Todas las células tienen ADN; la diferencia es si está dentro de un núcleo."),
             ("La eucarionte no tiene membrana plasmática", "Toda célula tiene membrana plasmática; el núcleo es una envoltura adicional."),
@@ -50302,13 +50277,7 @@ QUESTIONS_CIENCIAS = [
         "cie_celula", "medio",
         "¿Cuál es la función principal de las mitocondrias?",
         "Obtener energía en forma de ATP mediante la respiración celular",
-        "La mitocondria toma la glucosa ya procesada y, usando oxígeno, extrae "
-        "de ella la mayor parte de la energía aprovechable, que queda "
-        "almacenada como ATP.\n\n"
-        "Ese ATP es la moneda energética que la célula gasta en todo lo demás: "
-        "transporte activo, síntesis de proteínas, movimiento.\n\n"
-        "Por eso las células con mayor demanda energética —musculares, "
-        "nerviosas— tienen muchas más mitocondrias que el resto.",
+        "La mitocondria toma la glucosa ya procesada y, usando oxígeno, extrae de ella la mayor parte de la energía aprovechable, que queda almacenada como adenosín trifosfato (ATP).\n\nEse ATP es la moneda energética que la célula gasta en todo lo demás: transporte activo, síntesis de proteínas, movimiento.\n\nPor eso las células con mayor demanda energética —musculares, nerviosas— tienen muchas más mitocondrias que el resto.",
         [
             ("Fabricar proteínas a partir de la información del ADN", "Eso lo hacen los ribosomas."),
             ("Digerir sustancias y desechos dentro de la célula", "Esa es la función de los lisosomas."),
@@ -50356,13 +50325,7 @@ QUESTIONS_CIENCIAS = [
         "cie_celula", "medio",
         "¿Dónde ocurre la síntesis de proteínas dentro de la célula?",
         "En los ribosomas",
-        "Los ribosomas leen la información que llega desde el núcleo en forma de "
-        "ARN mensajero y ensamblan los aminoácidos en el orden indicado.\n\n"
-        "Están libres en el citoplasma o adheridos al retículo endoplasmático "
-        "rugoso, que debe su aspecto justamente a ellos.\n\n"
-        "Es la única estructura presente tanto en procariontes como en "
-        "eucariontes, lo que dice algo sobre su antigüedad: fabricar proteínas "
-        "es anterior a la existencia del núcleo.",
+        "Los ribosomas leen la información que llega desde el núcleo en forma de ácido ribonucleico (ARN) mensajero y ensamblan los aminoácidos en el orden indicado.\n\nEstán libres en el citoplasma o adheridos al retículo endoplasmático rugoso, que debe su aspecto justamente a ellos.\n\nEs la única estructura presente tanto en procariontes como en eucariontes, lo que dice algo sobre su antigüedad: fabricar proteínas es anterior a la existencia del núcleo.",
         [
             ("En el núcleo, junto al ADN", "En el núcleo se transcribe el ARN, pero la proteína se ensambla fuera."),
             ("En las mitocondrias", "Las mitocondrias producen ATP; no son el sitio principal de síntesis proteica."),
@@ -50373,15 +50336,7 @@ QUESTIONS_CIENCIAS = [
         "cie_genetica", "medio",
         "¿Qué es una mutación?",
         "Un cambio en el ADN, no siempre perjudicial",
-        "Una mutación es cualquier alteración en la secuencia de bases del ADN, "
-        "sea por error al copiarlo o por agentes externos como la radiación."
-        "\n\n"
-        "No todas son dañinas. Muchas no producen ningún efecto, algunas "
-        "perjudican y unas pocas resultan ventajosas en un ambiente "
-        "determinado.\n\n"
-        "Esa variabilidad es materia prima de la evolución: sin mutaciones no "
-        "habría diferencias sobre las cuales la selección natural pudiera "
-        "actuar.",
+        "Una mutación es cualquier alteración en la secuencia de bases del ácido desoxirribonucleico (ADN), sea por error al copiarlo o por agentes externos como la radiación.\n\nNo todas son dañinas. Muchas no producen ningún efecto, algunas perjudican y unas pocas resultan ventajosas en un ambiente determinado.\n\nEsa variabilidad es materia prima de la evolución: sin mutaciones no habría diferencias sobre las cuales la selección natural pudiera actuar.",
         [
             ("Un daño irreversible que siempre causa enfermedad", "Muchas mutaciones son neutras y algunas resultan ventajosas."),
             ("La mezcla de genes de los dos progenitores", "Eso es la recombinación genética, propia de la reproducción sexual."),
@@ -50883,12 +50838,7 @@ QUESTIONS_CIENCIAS = [
         "cie_celula", "facil",
         "¿Cuál es la función del núcleo celular?",
         "Contener el material genético y dirigir la célula",
-        "El núcleo guarda el ADN, donde está la información para fabricar todas "
-        "las proteínas de la célula.\n\n"
-        "Desde ahí se transcribe el ARN mensajero que sale al citoplasma con "
-        "las instrucciones.\n\n"
-        "Está rodeado por una envoltura con poros que regulan qué entra y qué "
-        "sale, protegiendo el material genético del resto del citoplasma.",
+        "El núcleo guarda el ácido desoxirribonucleico (ADN), donde está la información para fabricar todas las proteínas de la célula.\n\nDesde ahí se transcribe el ARN mensajero que sale al citoplasma con las instrucciones.\n\nEstá rodeado por una envoltura con poros que regulan qué entra y qué sale, protegiendo el material genético del resto del citoplasma.",
         [
             ("Producir la energía que la célula necesita", "Esa es la función de las mitocondrias."),
             ("Regular el paso de sustancias hacia el exterior", "Eso lo hace la membrana plasmática."),
@@ -50899,12 +50849,7 @@ QUESTIONS_CIENCIAS = [
         "cie_fotosintesis", "dificil",
         "¿Qué relación existe entre la respiración celular y la fotosíntesis?",
         "Son complementarios: lo que uno produce, el otro lo usa",
-        "La fotosíntesis toma $CO_2$ y agua y, con energía luminosa, produce "
-        "glucosa y oxígeno.\n\n"
-        "La respiración celular hace el camino inverso: consume glucosa y "
-        "oxígeno y libera $CO_2$, agua y energía en forma de ATP.\n\n"
-        "Ese acoplamiento sostiene el ciclo del carbono en la biosfera. Las "
-        "plantas hacen ambos procesos; los animales, solo el segundo.",
+        "La fotosíntesis toma $CO_2$ y agua y, con energía luminosa, produce glucosa y oxígeno.\n\nLa respiración celular hace el camino inverso: consume glucosa y oxígeno y libera $CO_2$, agua y energía en forma de adenosín trifosfato (ATP).\n\nEse acoplamiento sostiene el ciclo del carbono en la biosfera. Las plantas hacen ambos procesos; los animales, solo el segundo.",
         [
             ("Son el mismo proceso con distinto nombre", "Van en sentidos opuestos y ocurren en organelos distintos."),
             ("La respiración celular solo ocurre en animales", "Las plantas también respiran, de día y de noche."),
@@ -50981,13 +50926,7 @@ QUESTIONS_CIENCIAS = [
         "cie_ciclo_celular", "medio",
         "¿Qué es el ADN y dónde se encuentra en una célula eucarionte?",
         "Una doble hélice con la información genética, en el núcleo",
-        "El ADN es una doble hélice formada por dos hebras complementarias de "
-        "nucleótidos.\n\n"
-        "En las células eucariontes se encuentra principalmente en el núcleo, "
-        "organizado en cromosomas, y también en pequeña cantidad dentro de las "
-        "mitocondrias.\n\n"
-        "En las procariontes no hay núcleo, así que el ADN queda libre en el "
-        "citoplasma.",
+        "El ácido desoxirribonucleico (ADN) es una doble hélice formada por dos hebras complementarias de nucleótidos.\n\nEn las células eucariontes se encuentra principalmente en el núcleo, organizado en cromosomas, y también en pequeña cantidad dentro de las mitocondrias.\n\nEn las procariontes no hay núcleo, así que el ADN queda libre en el citoplasma.",
         [
             ("Una proteína que se encuentra en el citoplasma", "El ADN es un ácido nucleico, no una proteína."),
             ("Una molécula de hebra simple ubicada en la membrana", "Es de doble hebra y no está en la membrana."),
@@ -51050,14 +50989,7 @@ QUESTIONS_CIENCIAS = [
         "cie_celula", "medio",
         "¿Qué es la difusión facilitada?",
         "El paso a favor del gradiente con ayuda de proteínas",
-        "Algunas moléculas no atraviesan la bicapa de lípidos por sí solas, "
-        "como la glucosa o los iones.\n\n"
-        "La difusión facilitada les da paso mediante proteínas "
-        "transportadoras, pero siempre en la dirección que el gradiente "
-        "favorece: de mayor a menor concentración.\n\n"
-        "Por eso es transporte pasivo: la proteína abre la puerta, no aporta "
-        "energía. Si el movimiento fuera contra el gradiente, habría que pagar "
-        "con ATP.",
+        "Algunas moléculas no atraviesan la bicapa de lípidos por sí solas, como la glucosa o los iones.\n\nLa difusión facilitada les da paso mediante proteínas transportadoras, pero siempre en la dirección que el gradiente favorece: de mayor a menor concentración.\n\nPor eso es transporte pasivo: la proteína abre la puerta, no aporta energía. Si el movimiento fuera contra el gradiente, habría que pagar con adenosín trifosfato (ATP).",
         [
             ("El paso de sustancias contra el gradiente usando ATP", "Eso es transporte activo."),
             ("El movimiento del agua a través de la membrana", "Ese caso particular se llama osmosis."),
@@ -51078,15 +51010,7 @@ QUESTIONS_CIENCIAS = [
         "El esquema muestra una célula animal con cinco estructuras numeradas. "
         "¿Cuál de ellas produce la mayor parte del ATP de la célula?",
         "La estructura 3",
-        "La 3 es la mitocondria, y se reconoce por los pliegues que recorren su "
-        "interior: son las crestas.\n\n"
-        "Esos pliegues no son un adorno del dibujo. Ahí está anclada la cadena "
-        "transportadora de electrones, y plegar la membrana multiplica la "
-        "superficie disponible para ella. Más superficie es más ATP en el mismo "
-        "volumen.\n\n"
-        "El resto del esquema reparte otras tareas: guardar el material "
-        "genético, sintetizar proteínas y despacharlas. Ninguna de ellas produce "
-        "energía; todas la gastan.",
+        "La 3 es la mitocondria, y se reconoce por los pliegues que recorren su interior: son las crestas.\n\nEsos pliegues no son un adorno del dibujo. Ahí está anclada la cadena transportadora de electrones, y plegar la membrana multiplica la superficie disponible para ella. Más superficie es más adenosín trifosfato (ATP) en el mismo volumen.\n\nEl resto del esquema reparte otras tareas: guardar el material genético, sintetizar proteínas y despacharlas. Ninguna de ellas produce energía; todas la gastan.",
         [
             ("La estructura 1", "Es la membrana plasmática: controla qué entra y qué sale, pero no produce ATP."),
             ("La estructura 2", "Es el núcleo. Guarda el ADN y dirige la síntesis de proteínas; la energía la consume, no la fabrica."),
@@ -55455,12 +55379,7 @@ QUESTIONS_HISTORIA = [
         "¿Qué ventaja tiene un índice mensual de actividad económica frente al PIB "
         "trimestral?",
         "Entrega una señal más temprana de lo que está ocurriendo",
-        "El PIB trimestral es la medida más completa de la producción, pero se "
-        "publica semanas después de terminado el trimestre: cuando llega, el "
-        "período que describe ya quedó atrás.\nUn índice mensual entrega una señal "
-        "más temprana y más frecuente, aunque cubra menos actividades y se corrija "
-        "después.\nLos dos se usan juntos y para cosas distintas: el índice mensual "
-        "para advertir un giro a tiempo, el PIB trimestral para medirlo bien.",
+        "El Producto Interno Bruto (PIB) trimestral es la medida más completa de la producción, pero se publica semanas después de terminado el trimestre: cuando llega, el período que describe ya quedó atrás.\nUn índice mensual entrega una señal más temprana y más frecuente, aunque cubra menos actividades y se corrija después.\nLos dos se usan juntos y para cosas distintas: el índice mensual para advertir un giro a tiempo, el PIB trimestral para medirlo bien.",
         [
             ("Mide la producción con más precisión que el PIB", "El PIB trimestral es la medida más completa: el índice mensual cubre menos."),
             ("Incluye actividades que el PIB deja fuera por definición", "Un índice mensual suele cubrir menos actividades, no más."),
@@ -56605,12 +56524,7 @@ QUESTIONS_HISTORIA = [
         "¿Qué columna de la Tabla 1 permite ver que la recuperación posterior a "
         "1982 no alcanzó a los trabajadores?",
         "La del salario real",
-        "El índice de salario real toma 1970 como base 100 y registra 87 en 1982 y "
-        "79 en 1986.\nEn ese mismo tramo el PIB pasa de caer 14% a crecer 6%, de "
-        "modo que la actividad se recupera mientras el poder de compra del salario "
-        "retrocede ocho puntos.\nNinguna de las otras columnas muestra eso: la de "
-        "desocupación baja, y las de producto e inflación describen el agregado sin "
-        "decir cómo se reparte.",
+        "El índice de salario real toma 1970 como base 100 y registra 87 en 1982 y 79 en 1986.\nEn ese mismo tramo el Producto Interno Bruto (PIB) pasa de caer 14% a crecer 6%, de modo que la actividad se recupera mientras el poder de compra del salario retrocede ocho puntos.\nNinguna de las otras columnas muestra eso: la de desocupación baja, y las de producto e inflación describen el agregado sin decir cómo se reparte.",
         [
             ("La de variación del PIB", "Muestra la recuperación, no a quién alcanzó."),
             ("La de inflación", "El nivel de precios no informa sobre el poder de compra del salario por sí solo."),
@@ -56991,11 +56905,7 @@ QUESTIONS_HISTORIA = [
         "Un país destina 54.000 millones de dólares a gasto social y su PIB es de "
         "300.000 millones. ¿Qué porcentaje del PIB representa ese gasto?",
         "18% del PIB",
-        "El indicador compara el gasto con el tamaño de la economía que lo "
-        "financia.\nEl cálculo es 54.000 ÷ 300.000 = 0,18, es decir 18% del "
-        "PIB.\nSe usa esa proporción y no el monto absoluto porque permite comparar "
-        "países de tamaños muy distintos y seguir la evolución de un mismo país en "
-        "el tiempo.",
+        "El indicador compara el gasto con el tamaño de la economía que lo financia.\nEl cálculo es 54.000 ÷ 300.000 = 0,18, es decir 18% del Producto Interno Bruto (PIB).\nSe usa esa proporción y no el monto absoluto porque permite comparar países de tamaños muy distintos y seguir la evolución de un mismo país en el tiempo.",
         [
             ("5,4% del PIB", "Corre la coma un lugar: el cociente de 54.000 entre 300.000 es 0,18, no 0,054."),
             ("54% del PIB", "Confunde el monto del gasto con la proporción que representa."),
@@ -57058,14 +56968,7 @@ QUESTIONS_HISTORIA = [
         "¿Por qué el PIB por habitante se ajusta por poder de compra al comparar "
         "países?",
         "Porque un dólar compra distinto en cada país",
-        "Convertir el producto de cada país a una moneda común con el tipo de "
-        "cambio de mercado no basta: los precios internos difieren mucho entre "
-        "países.\nUn mismo corte de pelo, arriendo o almuerzo cuesta bastante menos "
-        "en unas economías que en otras, de modo que el mismo monto en dólares "
-        "permite un nivel de vida muy distinto.\nEl ajuste corrige esa diferencia y "
-        "hace comparables las cifras. Sin él, los países con precios internos bajos "
-        "aparecen sistemáticamente más pobres de lo que su población efectivamente "
-        "consume.",
+        "Convertir el producto de cada país a una moneda común con el tipo de cambio de mercado no basta: los precios internos difieren mucho entre países.\nUn mismo corte de pelo, arriendo o almuerzo cuesta bastante menos en unas economías que en otras, de modo que el mismo monto en dólares permite un nivel de vida muy distinto.\nEl ajuste corrige esa diferencia y hace comparables las cifras. Sin él, los países con precios internos bajos aparecen sistemáticamente más pobres de lo que su población efectivamente consume. (PIB: Producto Interno Bruto.)",
         [
             ("Porque el tipo de cambio varía todos los días", "El problema no es la volatilidad sino la diferencia de precios internos."),
             ("Porque algunos países no publican su PIB en dólares", "El ajuste no responde a un problema de disponibilidad de datos."),
@@ -57239,11 +57142,7 @@ QUESTIONS_HISTORIA = [
         "La deuda pública de un país es de 90.000 millones de dólares y su PIB "
         "anual, de 300.000 millones. ¿A qué porcentaje del PIB equivale la deuda?",
         "30%",
-        "El indicador compara el saldo de deuda con la producción anual del país, "
-        "que es una medida de su capacidad de pago.\nEl cálculo es 90.000 ÷ 300.000 "
-        "= 0,30, es decir 30% del PIB.\nSe usa esa proporción y no el monto "
-        "absoluto porque una misma deuda pesa muy distinto según el tamaño de la "
-        "economía que debe servirla.",
+        "El indicador compara el saldo de deuda con la producción anual del país, que es una medida de su capacidad de pago.\nEl cálculo es 90.000 ÷ 300.000 = 0,30, es decir 30% del Producto Interno Bruto (PIB).\nSe usa esa proporción y no el monto absoluto porque una misma deuda pesa muy distinto según el tamaño de la economía que debe servirla.",
         [
             ("3,33 veces el PIB anual del país", "Invirtió la razón: dividió el PIB por la deuda."),
             ("90%", "Confunde el monto en millones con un porcentaje."),
@@ -57307,13 +57206,7 @@ QUESTIONS_HISTORIA = [
         "El PIB nominal de un país creció 12% en un año y el nivel general de "
         "precios también subió 12%. ¿Qué ocurrió con la producción?",
         "Se mantuvo prácticamente en el mismo nivel",
-        "El PIB nominal mide la producción a los precios de cada año, de modo que "
-        "aumenta tanto si se produce más como si lo mismo se vende más caro.\nSi "
-        "todo el crecimiento del valor se explica por el alza de precios, la "
-        "cantidad producida no cambió: el PIB real creció alrededor de 0%.\nPor eso "
-        "las comparaciones entre años siempre se hacen con el PIB real. El nominal "
-        "puede mostrar cifras muy altas en un país con inflación fuerte sin que se "
-        "haya producido una unidad más.",
+        "El Producto Interno Bruto (PIB) nominal mide la producción a los precios de cada año, de modo que aumenta tanto si se produce más como si lo mismo se vende más caro.\nSi todo el crecimiento del valor se explica por el alza de precios, la cantidad producida no cambió: el PIB real creció alrededor de 0%.\nPor eso las comparaciones entre años siempre se hacen con el PIB real. El nominal puede mostrar cifras muy altas en un país con inflación fuerte sin que se haya producido una unidad más.",
         [
             ("Creció 12%, igual que el PIB nominal del período", "Ese porcentaje incluye el efecto de los precios."),
             ("Creció 24%, sumando producción y precios", "El ajuste por precios es una resta, no una suma."),
@@ -57325,14 +57218,7 @@ QUESTIONS_HISTORIA = [
         "La inflación de un año fue 6%, pero los alimentos subieron 14% y el "
         "transporte 11%. ¿A qué hogares golpea más ese año?",
         "A los que gastan más en alimento y transporte",
-        "El IPC promedia el alza de precios ponderando cada producto por su peso en "
-        "una canasta representativa del consumo del país.\nEl alza que enfrenta un "
-        "hogar concreto depende de su propia canasta. Si alimento y transporte "
-        "ocupan una parte mayor de su presupuesto, su inflación efectiva estará más "
-        "cerca del 14% y el 11% que del 6% promedio.\nEsos productos pesan más en "
-        "los hogares de menores ingresos, que destinan una fracción mayor de su "
-        "gasto a lo básico. Por eso una misma cifra de inflación no describe la "
-        "misma realidad para todos.",
+        "El índice de precios al consumidor (IPC) promedia el alza de precios ponderando cada producto por su peso en una canasta representativa del consumo del país.\nEl alza que enfrenta un hogar concreto depende de su propia canasta. Si alimento y transporte ocupan una parte mayor de su presupuesto, su inflación efectiva estará más cerca del 14% y el 11% que del 6% promedio.\nEsos productos pesan más en los hogares de menores ingresos, que destinan una fracción mayor de su gasto a lo básico. Por eso una misma cifra de inflación no describe la misma realidad para todos.",
         [
             ("A todos por igual, porque el IPC es un promedio nacional", "El promedio nacional no describe la canasta de cada hogar."),
             ("A los hogares de mayores ingresos, que consumen más", "Consumen más en total, pero alimento y transporte pesan menos en su presupuesto."),
@@ -58770,10 +58656,7 @@ QUESTIONS_HISTORIA = [
         "eco_modelos_cifras", "eco_desarrollo", "facil",
         "Según la Tabla 1, ¿qué país tiene el índice de desarrollo humano más alto?",
         "Bardenas, con 0,86",
-        "La columna del índice entrega 0,72, 0,86, 0,68 y 0,74 para Aurelia, "
-        "Bardenas, Corvina y Duraznal.\nEl valor más alto es el de Bardenas, que "
-        "además registra el menor Gini y la menor pobreza de la tabla, con un PIB "
-        "por habitante similar al de Aurelia.",
+        "La columna del índice entrega 0,72, 0,86, 0,68 y 0,74 para Aurelia, Bardenas, Corvina y Duraznal.\nEl valor más alto es el de Bardenas, que además registra el menor Gini y la menor pobreza de la tabla, con un Producto Interno Bruto (PIB) por habitante similar al de Aurelia.",
         [
             ("Aurelia, con 0,72", "Es el tercer valor de la columna, pese a tener el mayor PIB por habitante."),
             ("Duraznal, con 0,74", "Es el segundo más alto, por debajo de Bardenas."),
@@ -58813,12 +58696,7 @@ QUESTIONS_HISTORIA = [
         "Aurelia y Bardenas tienen un PIB por habitante parecido. ¿Qué las "
         "distingue según la Tabla 1?",
         "Bardenas reparte mejor y vive mejor",
-        "Los dos ingresos por habitante son cercanos: 24.000 y 23.000 "
-        "dólares.\nTodo lo demás difiere. Bardenas registra 0,86 de desarrollo "
-        "humano frente a 0,72, un Gini de 0,29 frente a 0,52 y 6% de pobreza frente "
-        "a 18%.\nEl par muestra por qué el ingreso por habitante no basta para "
-        "describir una sociedad: dos países pueden producir lo mismo por persona y "
-        "ofrecer condiciones de vida muy distintas.",
+        "Los dos ingresos por habitante son cercanos: 24.000 y 23.000 dólares.\nTodo lo demás difiere. Bardenas registra 0,86 de desarrollo humano frente a 0,72, un Gini de 0,29 frente a 0,52 y 6% de pobreza frente a 18%.\nEl par muestra por qué el ingreso por habitante no basta para describir una sociedad: dos países pueden producir lo mismo por persona y ofrecer condiciones de vida muy distintas. (PIB: Producto Interno Bruto.)",
         [
             ("Aurelia produce mucho más por habitante", "La diferencia es de mil dólares: los dos valores son cercanos."),
             ("Bardenas tiene más pobreza pero menos desigualdad", "Registra menos pobreza y menos desigualdad a la vez."),
@@ -58849,13 +58727,7 @@ QUESTIONS_HISTORIA = [
         "Duraznal tiene menor PIB por habitante que Aurelia y mayor índice de "
         "desarrollo humano. ¿Qué muestra ese contraste?",
         "Producir menos no impide vivir mejor",
-        "Aurelia registra 24.000 dólares por habitante y 0,72 de índice; Duraznal, "
-        "8.500 y 0,74.\nEl caso funciona como contraejemplo de la equivalencia "
-        "entre producción y bienestar: con menos de la mitad del ingreso por "
-        "persona, Duraznal alcanza un índice mayor.\nLas otras columnas ayudan a "
-        "entender por qué. Duraznal tiene un Gini de 0,33 frente a 0,52 y una "
-        "pobreza de 19% frente a 18%, es decir un ingreso menor pero mucho mejor "
-        "repartido.",
+        "Aurelia registra 24.000 dólares por habitante y 0,72 de índice; Duraznal, 8.500 y 0,74.\nEl caso funciona como contraejemplo de la equivalencia entre producción y bienestar: con menos de la mitad del ingreso por persona, Duraznal alcanza un índice mayor.\nLas otras columnas ayudan a entender por qué. Duraznal tiene un Gini de 0,33 frente a 0,52 y una pobreza de 19% frente a 18%, es decir un ingreso menor pero mucho mejor repartido. (PIB: Producto Interno Bruto.)",
         [
             ("Duraznal produce en realidad más que Aurelia", "Su PIB por habitante es menos de la mitad."),
             ("El índice de desarrollo humano no considera el ingreso", "La primera nota señala que sí lo incluye."),
@@ -58886,13 +58758,7 @@ QUESTIONS_HISTORIA = [
         "Según la segunda nota, ¿qué significa que Aurelia tenga un Gini de 0,52 y "
         "Bardenas de 0,29?",
         "El ingreso está más concentrado en Aurelia",
-        "La nota fija los extremos: 0 sería reparto perfectamente igualitario y 1, "
-        "concentración total.\nUn valor más alto indica entonces mayor "
-        "concentración, de modo que el 0,52 de Aurelia describe un ingreso "
-        "repartido de manera bastante más desigual que el 0,29 de Bardenas.\nEl "
-        "dato es imprescindible junto al PIB por habitante: los dos países producen "
-        "casi lo mismo por persona y ese ingreso llega a la población de maneras "
-        "muy distintas.",
+        "La nota fija los extremos: 0 sería reparto perfectamente igualitario y 1, concentración total.\nUn valor más alto indica entonces mayor concentración, de modo que el 0,52 de Aurelia describe un ingreso repartido de manera bastante más desigual que el 0,29 de Bardenas.\nEl dato es imprescindible junto al Producto Interno Bruto (PIB) por habitante: los dos países producen casi lo mismo por persona y ese ingreso llega a la población de maneras muy distintas.",
         [
             ("Aurelia reparte su ingreso de forma más igualitaria", "Un Gini mayor indica más concentración, no menos."),
             ("Bardenas tiene el doble de ingreso que Aurelia", "El Gini describe el reparto, no el nivel del ingreso."),
@@ -59205,13 +59071,7 @@ QUESTIONS_HISTORIA = [
         "Según el texto, ¿qué precaución exige informar el PIB por habitante de un "
         "país?",
         "Es un promedio y no describe el reparto",
-        "El PIB por habitante divide toda la producción del país entre toda su "
-        "población, de modo que entrega una cifra por persona que quizá ninguna "
-        "persona recibe.\nEl texto lo explica con el contraste entre promedio y "
-        "mediana: el primero sube si el ingreso se concentra en pocos, y el segundo "
-        "permanece quieto.\nPor eso la cifra se informa junto a un coeficiente de "
-        "desigualdad. Sin ese acompañamiento, dos países con la misma cifra pueden "
-        "tener realidades muy distintas y el indicador no permite distinguirlas.",
+        "El Producto Interno Bruto (PIB) por habitante divide toda la producción del país entre toda su población, de modo que entrega una cifra por persona que quizá ninguna persona recibe.\nEl texto lo explica con el contraste entre promedio y mediana: el primero sube si el ingreso se concentra en pocos, y el segundo permanece quieto.\nPor eso la cifra se informa junto a un coeficiente de desigualdad. Sin ese acompañamiento, dos países con la misma cifra pueden tener realidades muy distintas y el indicador no permite distinguirlas.",
         [
             ("Está expresado en una moneda que cambia de valor", "El texto no plantea el problema en términos monetarios."),
             ("Incluye solo la producción de bienes y no de servicios", "El texto no establece esa restricción."),
@@ -62504,11 +62364,7 @@ QUESTIONS_HISTORIA = [
         "dictadura_economia_cifras", "his_dictadura", "facil",
         "Según la Tabla 1, ¿en qué año la desocupación alcanzó su punto más alto?",
         "En 1982, con 24%",
-        "La columna de desocupación entrega 5%, 15%, 12%, 24%, 12% y 8% para los "
-        "seis cortes de la serie.\nEl máximo es el 24% de 1982, que coincide con la "
-        "mayor caída del PIB del período. Y la primera nota advierte que la cifra "
-        "real fue mayor: no incluye a los inscritos en programas estatales de "
-        "empleo de emergencia.",
+        "La columna de desocupación entrega 5%, 15%, 12%, 24%, 12% y 8% para los seis cortes de la serie.\nEl máximo es el 24% de 1982, que coincide con la mayor caída del Producto Interno Bruto (PIB) del período. Y la primera nota advierte que la cifra real fue mayor: no incluye a los inscritos en programas estatales de empleo de emergencia.",
         [
             ("En 1975, con 15%", "Es alto y corresponde a la primera recesión, pero está por debajo del de 1982."),
             ("En 1986, con 12%", "Coincide con el valor de 1980 y no es el máximo de la serie."),
@@ -62548,13 +62404,7 @@ QUESTIONS_HISTORIA = [
         "dictadura_economia_cifras", "his_dictadura", "medio",
         "¿Qué muestran juntas las columnas de PIB y desocupación en 1975 y 1982?",
         "Dos recesiones profundas con desempleo muy alto",
-        "En 1975 el PIB cae 13% y la desocupación llega a 15%; en 1982 el PIB cae "
-        "14% y la desocupación, a 24%.\nSon las dos contracciones mayores de la "
-        "serie y ninguna es un ajuste menor: una caída del producto superior al 10% "
-        "implica que la economía se contrae en más de una décima parte en un "
-        "año.\nLa nota agrega que en 1982 y 1983 los programas estatales de empleo "
-        "de emergencia ocuparon a cientos de miles de personas que no aparecen en "
-        "la cifra de desocupación.",
+        "En 1975 el Producto Interno Bruto (PIB) cae 13% y la desocupación llega a 15%; en 1982 el PIB cae 14% y la desocupación, a 24%.\nSon las dos contracciones mayores de la serie y ninguna es un ajuste menor: una caída del producto superior al 10% implica que la economía se contrae en más de una décima parte en un año.\nLa nota agrega que en 1982 y 1983 los programas estatales de empleo de emergencia ocuparon a cientos de miles de personas que no aparecen en la cifra de desocupación.",
         [
             ("Un crecimiento sostenido con pleno empleo", "Las dos columnas registran caídas del producto y desempleo de dos dígitos."),
             ("Una recesión seguida de otra sin efecto en el empleo", "La desocupación sube en ambos años respecto de los cortes anteriores."),
@@ -62582,12 +62432,7 @@ QUESTIONS_HISTORIA = [
         "dictadura_economia_cifras", "his_dictadura", "medio",
         "¿Qué transformación estructural muestra la Tabla 2 entre 1973 y 1981?",
         "El Estado deja de ser productor y se abre el comercio",
-        "Las dos primeras columnas se mueven en la misma dirección. Las empresas "
-        "estatales pasan de 500 a 45, y el arancel promedio, de 94% a 10%.\nSon dos "
-        "caras de la misma reorientación: el Estado se retira de la producción y la "
-        "economía se expone a la competencia externa.\nLa tercera columna registra "
-        "un efecto de ese cambio: el peso de la industria en el PIB baja de 26% a "
-        "21%, y sigue bajando hasta 19% en 1990.",
+        "Las dos primeras columnas se mueven en la misma dirección. Las empresas estatales pasan de 500 a 45, y el arancel promedio, de 94% a 10%.\nSon dos caras de la misma reorientación: el Estado se retira de la producción y la economía se expone a la competencia externa.\nLa tercera columna registra un efecto de ese cambio: el peso de la industria en el Producto Interno Bruto (PIB) baja de 26% a 21%, y sigue bajando hasta 19% en 1990.",
         [
             ("El Estado amplía su participación en la producción", "Las empresas estatales caen de 500 a 45 en ocho años."),
             ("La industria aumenta su peso dentro del producto", "Su participación baja de 26% a 21% en ese lapso."),
@@ -62599,13 +62444,7 @@ QUESTIONS_HISTORIA = [
         "Según la segunda nota, ¿qué hizo el Estado entre 1981 y 1983 y por qué "
         "resulta llamativo?",
         "Intervino la banca pese a declararse no intervencionista",
-        "La nota consigna las dos cosas juntas: el Estado intervino la banca y "
-        "asumió sus deudas, pese al principio de no intervención que el propio "
-        "gobierno declaraba.\nLa tensión es entre el principio enunciado y la "
-        "conducta efectiva, y aparece en el peor momento de la serie: 1982 registra "
-        "la mayor caída del PIB y la mayor desocupación de la tabla.\nReconocer esa "
-        "distancia entre lo declarado y lo hecho es parte de leer una fuente, y no "
-        "depende de aprobar o rechazar la medida.",
+        "La nota consigna las dos cosas juntas: el Estado intervino la banca y asumió sus deudas, pese al principio de no intervención que el propio gobierno declaraba.\nLa tensión es entre el principio enunciado y la conducta efectiva, y aparece en el peor momento de la serie: 1982 registra la mayor caída del Producto Interno Bruto (PIB) y la mayor desocupación de la tabla.\nReconocer esa distancia entre lo declarado y lo hecho es parte de leer una fuente, y no depende de aprobar o rechazar la medida.",
         [
             ("Nacionalizó la industria para enfrentar la recesión", "La nota se refiere a la banca, y como intervención de rescate."),
             ("Aumentó los aranceles hasta el nivel de 1973", "El arancel de 1990 es 15%, muy por debajo del 94% inicial."),
@@ -62635,14 +62474,7 @@ QUESTIONS_HISTORIA = [
         "¿Qué relación entre apertura comercial e industria permiten observar las "
         "tablas?",
         "El peso de la industria baja mientras cae el arancel",
-        "Las dos series se mueven en direcciones inversas y en el mismo período: el "
-        "arancel promedio pasa de 94% a 10% entre 1973 y 1981, y el peso de la "
-        "industria en el PIB, de 26% a 21%.\nEl vínculo es plausible: con aranceles "
-        "muy bajos, la producción local compite con importaciones que antes estaban "
-        "encarecidas, y los sectores menos competitivos se contraen.\nLa tabla "
-        "permite constatar la coincidencia, no probar la causa. Habría que "
-        "descartar otros factores del período, como las dos recesiones, que también "
-        "golpearon a la industria.",
+        "Las dos series se mueven en direcciones inversas y en el mismo período: el arancel promedio pasa de 94% a 10% entre 1973 y 1981, y el peso de la industria en el Producto Interno Bruto (PIB), de 26% a 21%.\nEl vínculo es plausible: con aranceles muy bajos, la producción local compite con importaciones que antes estaban encarecidas, y los sectores menos competitivos se contraen.\nLa tabla permite constatar la coincidencia, no probar la causa. Habría que descartar otros factores del período, como las dos recesiones, que también golpearon a la industria.",
         [
             ("La industria crece cuando bajan los aranceles", "Su participación cae en los dos tramos de la serie."),
             ("El arancel no tiene relación con la estructura productiva", "Las dos series se mueven de manera inversa y simultánea."),
@@ -62654,14 +62486,7 @@ QUESTIONS_HISTORIA = [
         "En 1986 el PIB crece 6% y el salario real cae a 79. ¿Qué muestra esa "
         "combinación?",
         "El crecimiento no llegaba a los salarios",
-        "Las dos cifras corresponden al mismo año y no se contradicen: el producto "
-        "puede aumentar mientras la remuneración del trabajo pierde poder de "
-        "compra.\nQue ocurra significa que lo producido se reparte de otro modo, "
-        "sea porque el desempleo alto de esos años debilitaba la posición de quien "
-        "negocia un salario, sea porque la recuperación se concentró en sectores "
-        "con poco empleo.\nLa lección de método es general: el crecimiento agregado "
-        "no describe cómo se reparte lo que se produce, y por eso las dos columnas "
-        "hay que leerlas juntas.",
+        "Las dos cifras corresponden al mismo año y no se contradicen: el producto puede aumentar mientras la remuneración del trabajo pierde poder de compra.\nQue ocurra significa que lo producido se reparte de otro modo, sea porque el desempleo alto de esos años debilitaba la posición de quien negocia un salario, sea porque la recuperación se concentró en sectores con poco empleo.\nLa lección de método es general: el crecimiento agregado no describe cómo se reparte lo que se produce, y por eso las dos columnas hay que leerlas juntas. (PIB: Producto Interno Bruto.)",
         [
             ("Que la tabla contiene un error en una de las dos columnas", "Las dos cosas pueden ocurrir a la vez sin contradicción alguna."),
             ("Que la inflación de ese año se comió todo el crecimiento", "La inflación de 1986 es 17%, menor que la de la mayoría de la serie."),
@@ -62673,13 +62498,7 @@ QUESTIONS_HISTORIA = [
         "Un texto sostiene que las cifras de 1990 prueban el éxito del modelo. ¿Qué "
         "matiza la serie completa?",
         "Veinte años para volver al salario real de 1970",
-        "Las cifras de 1990 son mejores que las de los cortes anteriores: PIB "
-        "creciendo, desocupación en 8% y salario real en 102.\nPero la serie "
-        "muestra qué hubo que atravesar para llegar ahí: dos recesiones con caídas "
-        "de dos dígitos, desocupación de 24% en 1982 y un salario real que estuvo "
-        "bajo el nivel de 1970 durante todo el período.\nUn punto final favorable y "
-        "un recorrido costoso son dos afirmaciones distintas, y la tabla sostiene "
-        "las dos. Quedarse con una sola describe mal el período.",
+        "Las cifras de 1990 son mejores que las de los cortes anteriores: Producto Interno Bruto (PIB) creciendo, desocupación en 8% y salario real en 102.\nPero la serie muestra qué hubo que atravesar para llegar ahí: dos recesiones con caídas de dos dígitos, desocupación de 24% en 1982 y un salario real que estuvo bajo el nivel de 1970 durante todo el período.\nUn punto final favorable y un recorrido costoso son dos afirmaciones distintas, y la tabla sostiene las dos. Quedarse con una sola describe mal el período.",
         [
             ("Que en 1990 la desocupación seguía por encima del 20%", "En 1990 la tabla registra 8%."),
             ("Que las privatizaciones se revirtieron después de 1981", "Las empresas del Estado se mantienen en 45 hasta 1990."),
@@ -69472,14 +69291,7 @@ QUESTIONS_HISTORIA = [
         "Entre 1989 y 1991 se produjo el derrumbe del bloque soviético. ¿Qué "
         "consecuencia tuvo para el orden internacional?",
         "El fin del sistema bipolar de posguerra",
-        "Durante cuarenta años cada conflicto se leía en clave de dos bloques, y "
-        "los países definían su posición respecto de ellos.\nCon la desaparición de "
-        "uno de los polos, ese esquema dejó de operar: Estados Unidos quedó como "
-        "única superpotencia, varios Estados nuevos surgieron del espacio soviético "
-        "y la ONU pudo actuar en asuntos que antes quedaban bloqueados por el "
-        "veto.\nEn el terreno económico, la ausencia de una alternativa organizada "
-        "favoreció la expansión de las políticas de mercado y aceleró la "
-        "globalización.",
+        "Durante cuarenta años cada conflicto se leía en clave de dos bloques, y los países definían su posición respecto de ellos.\nCon la desaparición de uno de los polos, ese esquema dejó de operar: Estados Unidos quedó como única superpotencia, varios Estados nuevos surgieron del espacio soviético y la Organización de las Naciones Unidas (ONU) pudo actuar en asuntos que antes quedaban bloqueados por el veto.\nEn el terreno económico, la ausencia de una alternativa organizada favoreció la expansión de las políticas de mercado y aceleró la globalización.",
         [
             ("El regreso a los imperios coloniales", "La descolonización ya se había consumado décadas antes."),
             ("La disolución de las Naciones Unidas", "La ONU continuó y amplió su actividad."),
@@ -69586,12 +69398,7 @@ QUESTIONS_HISTORIA = [
         "En 1945 se creó la Organización de las Naciones Unidas. ¿Cuál fue su "
         "propósito principal?",
         "Mantener la paz y la seguridad",
-        "La ONU nació de la experiencia de dos guerras mundiales en treinta años, y "
-        "ese origen define su tarea central.\nSu Carta establece un marco para "
-        "resolver las controversias entre Estados sin recurrir a la fuerza, y crea "
-        "órganos con atribuciones para actuar cuando la paz se ve amenazada.\nA eso "
-        "se sumaron después funciones de cooperación económica, social y de "
-        "derechos humanos, pero el propósito fundacional es el primero.",
+        "La Organización de las Naciones Unidas (ONU) nació de la experiencia de dos guerras mundiales en treinta años, y ese origen define su tarea central.\nSu Carta establece un marco para resolver las controversias entre Estados sin recurrir a la fuerza, y crea órganos con atribuciones para actuar cuando la paz se ve amenazada.\nA eso se sumaron después funciones de cooperación económica, social y de derechos humanos, pero el propósito fundacional es el primero.",
         [
             ("Administrar las colonias europeas en África", "La ONU acompañó la descolonización; no administró colonias."),
             ("Fijar los precios del comercio mundial", "El comercio internacional se regula por otros acuerdos y organismos."),
@@ -69603,13 +69410,7 @@ QUESTIONS_HISTORIA = [
         "En el Consejo de Seguridad de la ONU cinco Estados disponen de un derecho "
         "especial. ¿En qué consiste?",
         "Pueden vetar las resoluciones del Consejo",
-        "Los cinco miembros permanentes —las potencias vencedoras de la Segunda "
-        "Guerra— pueden impedir con su voto negativo que una resolución se apruebe, "
-        "aunque el resto la respalde.\nEl diseño buscaba asegurar que ninguna de "
-        "ellas quedara obligada contra su voluntad, para que no abandonaran la "
-        "organización como había ocurrido con la Sociedad de Naciones.\nEl costo de "
-        "esa garantía se vio durante la Guerra Fría: el Consejo quedó bloqueado "
-        "cada vez que el conflicto involucraba a alguna de las dos superpotencias.",
+        "Los cinco miembros permanentes —las potencias vencedoras de la Segunda Guerra— pueden impedir con su voto negativo que una resolución se apruebe, aunque el resto la respalde.\nEl diseño buscaba asegurar que ninguna de ellas quedara obligada contra su voluntad, para que no abandonaran la organización como había ocurrido con la Sociedad de Naciones.\nEl costo de esa garantía se vio durante la Guerra Fría: el Consejo quedó bloqueado cada vez que el conflicto involucraba a alguna de las dos superpotencias. (ONU: Organización de las Naciones Unidas.)",
         [
             ("Pueden expulsar por sí solos a un país miembro", "La expulsión requiere un procedimiento y no depende de un solo Estado."),
             ("Pueden modificar por sí solos la Carta", "Reformar la Carta exige mayorías amplias y ratificación."),
@@ -69641,14 +69442,7 @@ QUESTIONS_HISTORIA = [
         "numerosos territorios en Asia y África. ¿Qué factor contribuyó a ese "
         "proceso?",
         "El debilitamiento de las potencias coloniales",
-        "La guerra dejó a las metrópolis europeas exhaustas: economías destruidas, "
-        "deudas enormes y ejércitos desgastados.\nSostener administraciones "
-        "coloniales en territorios lejanos se volvió caro y difícil, justo cuando "
-        "los movimientos independentistas locales —muchos fortalecidos por su "
-        "participación en la guerra— se organizaban y presionaban.\nA eso se sumó "
-        "un clima internacional favorable: la Carta de la ONU había consagrado la "
-        "libre determinación de los pueblos, y las dos superpotencias no defendían "
-        "el orden colonial europeo.",
+        "La guerra dejó a las metrópolis europeas exhaustas: economías destruidas, deudas enormes y ejércitos desgastados.\nSostener administraciones coloniales en territorios lejanos se volvió caro y difícil, justo cuando los movimientos independentistas locales —muchos fortalecidos por su participación en la guerra— se organizaban y presionaban.\nA eso se sumó un clima internacional favorable: la Carta de la Organización de las Naciones Unidas (ONU) había consagrado la libre determinación de los pueblos, y las dos superpotencias no defendían el orden colonial europeo.",
         [
             ("El fortalecimiento de los imperios europeos", "La guerra los debilitó profundamente."),
             ("La renuncia de la ONU a intervenir en el tema", "La ONU acompañó el proceso e incorporó a los nuevos Estados."),
@@ -69752,13 +69546,7 @@ QUESTIONS_HISTORIA = [
         "La ONU sucedió a la Sociedad de Naciones, creada tras la Primera Guerra "
         "Mundial. ¿Qué diferencia introdujo la nueva organización?",
         "Un órgano con decisiones obligatorias",
-        "La Sociedad de Naciones dependía de la unanimidad y carecía de medios para "
-        "hacer cumplir lo que acordaba, lo que la dejó impotente frente a las "
-        "agresiones de los años treinta.\nLa ONU corrigió ese punto con un Consejo "
-        "de Seguridad cuyas resoluciones obligan a los miembros y que puede "
-        "autorizar sanciones e incluso el uso de la fuerza.\nEl precio de esa "
-        "capacidad fue el veto de los cinco permanentes: se ganó poder de decisión "
-        "y se aceptó que ese poder pudiera bloquearse.",
+        "La Sociedad de Naciones dependía de la unanimidad y carecía de medios para hacer cumplir lo que acordaba, lo que la dejó impotente frente a las agresiones de los años treinta.\nLa Organización de las Naciones Unidas (ONU) corrigió ese punto con un Consejo de Seguridad cuyas resoluciones obligan a los miembros y que puede autorizar sanciones e incluso el uso de la fuerza.\nEl precio de esa capacidad fue el veto de los cinco permanentes: se ganó poder de decisión y se aceptó que ese poder pudiera bloquearse.",
         [
             ("La participación exclusiva de países europeos", "La ONU nació con vocación universal y se amplió con la descolonización."),
             ("La renuncia a toda intervención militar", "La Carta contempla el uso de la fuerza autorizado por el Consejo."),
@@ -69770,13 +69558,7 @@ QUESTIONS_HISTORIA = [
         "El mapa político de África cambió profundamente entre 1955 y 1975. ¿Qué "
         "proceso explica ese cambio?",
         "La independencia de los territorios coloniales",
-        "En dos décadas, decenas de territorios administrados por potencias "
-        "europeas se convirtieron en Estados soberanos, con asiento propio en la "
-        "ONU.\nEl mapa resultante conservó en buena medida las fronteras trazadas "
-        "durante el reparto colonial, que no coincidían con la distribución de los "
-        "pueblos que vivían en ellas.\nEsa herencia territorial explica parte de "
-        "los conflictos posteriores, y es un buen ejemplo de cómo una decisión del "
-        "pasado sigue operando mucho después de que su causa desapareció.",
+        "En dos décadas, decenas de territorios administrados por potencias europeas se convirtieron en Estados soberanos, con asiento propio en la Organización de las Naciones Unidas (ONU).\nEl mapa resultante conservó en buena medida las fronteras trazadas durante el reparto colonial, que no coincidían con la distribución de los pueblos que vivían en ellas.\nEsa herencia territorial explica parte de los conflictos posteriores, y es un buen ejemplo de cómo una decisión del pasado sigue operando mucho después de que su causa desapareció.",
         [
             ("La unificación del continente en un solo Estado", "Surgieron numerosos Estados separados, no uno solo."),
             ("El reparto del continente entre potencias europeas", "Ese reparto es anterior: ocurre a fines del siglo XIX."),
@@ -69904,12 +69686,7 @@ QUESTIONS_HISTORIA = [
         "producción interna de bienes que antes importaban. ¿Cómo se conoce esa "
         "estrategia?",
         "Industrialización por sustitución de importaciones",
-        "La crisis cortó dos flujos a la vez: cayeron los precios de las materias "
-        "primas exportadas y se hizo difícil pagar las manufacturas importadas.\nLa "
-        "respuesta fue producir localmente lo que antes se compraba afuera, con "
-        "apoyo estatal: aranceles que protegían a la industria naciente, crédito "
-        "público y empresas creadas por el propio Estado.\nEn Chile ese impulso se "
-        "organizó a través de la CORFO, creada en 1939.",
+        "La crisis cortó dos flujos a la vez: cayeron los precios de las materias primas exportadas y se hizo difícil pagar las manufacturas importadas.\nLa respuesta fue producir localmente lo que antes se compraba afuera, con apoyo estatal: aranceles que protegían a la industria naciente, crédito público y empresas creadas por el propio Estado.\nEn Chile ese impulso se organizó a través de la Corporación de Fomento de la Producción (CORFO), creada en 1939.",
         [
             ("Liberalización comercial sin restricciones arancelarias", "La estrategia usó aranceles para proteger la industria naciente."),
             ("Especialización exclusiva en materias primas", "Es el modelo anterior, que la crisis puso en cuestión."),
@@ -69940,12 +69717,7 @@ QUESTIONS_HISTORIA = [
         "En 1939 el Estado chileno creó la Corporación de Fomento de la Producción. "
         "¿Qué papel se le asignó?",
         "Impulsar la industrialización del país",
-        "La CORFO nació con una tarea que el mercado interno no estaba en "
-        "condiciones de asumir: financiar y organizar industrias de gran "
-        "escala.\nCon su intervención se crearon o impulsaron la producción de "
-        "electricidad, acero y petróleo, sectores que exigían inversiones que "
-        "ningún privado chileno podía enfrentar solo.\nEs el ejemplo más claro del "
-        "giro de la época: el Estado deja de limitarse a regular y pasa a producir.",
+        "La Corporación de Fomento de la Producción (CORFO) nació con una tarea que el mercado interno no estaba en condiciones de asumir: financiar y organizar industrias de gran escala.\nCon su intervención se crearon o impulsaron la producción de electricidad, acero y petróleo, sectores que exigían inversiones que ningún privado chileno podía enfrentar solo.\nEs el ejemplo más claro del giro de la época: el Estado deja de limitarse a regular y pasa a producir.",
         [
             ("Administrar las salitreras del norte", "Las salitreras tenían otro régimen y no dependían de la CORFO."),
             ("Fijar los salarios de todos los trabajadores", "La fijación de salarios corresponde a otras instituciones."),
@@ -69991,13 +69763,7 @@ QUESTIONS_HISTORIA = [
         "En 1938 llegó al gobierno en Chile la coalición del Frente Popular. ¿Qué "
         "orientación tuvo su programa?",
         "Ampliar el papel del Estado",
-        "El Frente Popular reunió a partidos de centro e izquierda en torno a un "
-        "programa de industrialización y de mejoramiento de las condiciones de vida "
-        "de los sectores populares.\nSu instrumento principal fue la CORFO, creada "
-        "al año siguiente, y su impulso alcanzó también a la educación, la salud y "
-        "la vivienda.\nCoincide con lo que ocurría en otras partes: tras la crisis "
-        "de 1929, los Estados asumen tareas económicas y sociales que antes no les "
-        "correspondían.",
+        "El Frente Popular reunió a partidos de centro e izquierda en torno a un programa de industrialización y de mejoramiento de las condiciones de vida de los sectores populares.\nSu instrumento principal fue la Corporación de Fomento de la Producción (CORFO), creada al año siguiente, y su impulso alcanzó también a la educación, la salud y la vivienda.\nCoincide con lo que ocurría en otras partes: tras la crisis de 1929, los Estados asumen tareas económicas y sociales que antes no les correspondían.",
         [
             ("Restablecer el predominio del Congreso", "El régimen presidencial estaba vigente desde la Constitución de 1925."),
             ("Reducir el gasto público a su mínimo", "Su programa suponía justamente aumentar la acción estatal."),
@@ -70605,12 +70371,7 @@ QUESTIONS_HISTORIA = [
         "Si una canasta de bienes costaba $50.000 el año pasado y hoy cuesta "
         "$53.500, ¿cuál fue la variación porcentual de precios?",
         "7%",
-        "La variación porcentual compara el cambio con el valor inicial.\n\n"
-        "1) Calcula el alza: 53.500 − 50.000 = 3.500.\n"
-        "2) Divide por el valor inicial: 3.500 ÷ 50.000 = 0,07.\n"
-        "3) Expresa en porcentaje: 7%.\n\n"
-        "Es el mismo cálculo con que se construye el IPC, que mide cuánto varía "
-        "el costo de una canasta representativa entre dos momentos.",
+        "La variación porcentual compara el cambio con el valor inicial.\n\n1) Calcula el alza: 53.500 − 50.000 = 3.500.\n2) Divide por el valor inicial: 3.500 ÷ 50.000 = 0,07.\n3) Expresa en porcentaje: 7%.\n\nEs el mismo cálculo con que se construye el índice de precios al consumidor (IPC), que mide cuánto varía el costo de una canasta representativa entre dos momentos.",
         [
             ("3,5%", "Dividió el alza por 100.000 o corrió la coma decimal."),
             ("6,5%", "Dividió por el precio nuevo en vez del inicial."),
@@ -70663,13 +70424,7 @@ QUESTIONS_HISTORIA = [
         "El IPC de un país pasa de 100 a 106 puntos en un año. ¿Cuál fue la "
         "inflación anual?",
         "6%",
-        "La inflación es la variación porcentual del índice de precios entre "
-        "dos momentos.\n\n"
-        "$\\frac{106 - 100}{100} \\times 100 = 6\\%$.\n\n"
-        "El IPC mide una canasta fija de bienes y servicios representativa del "
-        "consumo de los hogares. Que suba 6% no significa que todo suba 6%: es "
-        "un promedio ponderado, y adentro hay precios que suben mucho más y "
-        "otros que bajan.",
+        "La inflación es la variación porcentual del índice de precios entre dos momentos.\n\n$\\frac{106 - 100}{100} \\times 100 = 6\\%$.\n\nEl índice de precios al consumidor (IPC) mide una canasta fija de bienes y servicios representativa del consumo de los hogares. Que suba 6% no significa que todo suba 6%: es un promedio ponderado, y adentro hay precios que suben mucho más y otros que bajan.",
         [
             ("106%", "Entregó el valor del índice, no su variación."),
             ("1,06%", "Se equivocó en un factor cien al pasar a porcentaje."),
@@ -70681,14 +70436,7 @@ QUESTIONS_HISTORIA = [
         "Un país tiene un PIB de 300.000 millones de dólares y 20 millones de "
         "habitantes. ¿Cuál es su PIB per cápita?",
         "15.000 dólares",
-        "El PIB per cápita reparte la producción total entre todos los "
-        "habitantes.\n\n"
-        "$\\frac{300.000\\ \\text{millones}}{20\\ \\text{millones}} = 15.000$ "
-        "dólares por habitante.\n\n"
-        "Es un promedio, y como todo promedio esconde la distribución: dos "
-        "países con el mismo PIB per cápita pueden tener realidades muy "
-        "distintas si en uno la riqueza está concentrada. Por eso nunca se lee "
-        "solo, sino junto a indicadores de desigualdad.",
+        "El Producto Interno Bruto (PIB) per cápita reparte la producción total entre todos los habitantes.\n\n$\\frac{300.000\\ \\text{millones}}{20\\ \\text{millones}} = 15.000$ dólares por habitante.\n\nEs un promedio, y como todo promedio esconde la distribución: dos países con el mismo PIB per cápita pueden tener realidades muy distintas si en uno la riqueza está concentrada. Por eso nunca se lee solo, sino junto a indicadores de desigualdad.",
         [
             ("15.000 millones de dólares", "Arrastró la unidad equivocada: el resultado es por habitante, no en millones."),
             ("6.000.000 de dólares", "Multiplicó en vez de dividir."),
@@ -70721,14 +70469,7 @@ QUESTIONS_HISTORIA = [
         "la venta como si fuera producción del período. ¿Por qué esa operación no "
         "debería sumar al PIB?",
         "Porque el PIB mide producción del período, no traspasos",
-        "El PIB es el valor de los bienes y servicios FINALES producidos en un "
-        "período determinado. Es un flujo: mide lo que se produjo entre enero y "
-        "diciembre, no lo que el país posee.\nVender un activo que ya existía no "
-        "agrega producción nueva: cambia de manos algo que se produjo en otros "
-        "años. Lo que sí entra al PIB de este año es el servicio de intermediación "
-        "de la operación, que sí se prestó ahora.\nEse es el sentido de llamarlo "
-        "flujo y no stock. Confundirlos permitiría inflar el PIB simplemente "
-        "vendiéndose cosas entre sí.",
+        "El Producto Interno Bruto (PIB) es el valor de los bienes y servicios FINALES producidos en un período determinado. Es un flujo: mide lo que se produjo entre enero y diciembre, no lo que el país posee.\nVender un activo que ya existía no agrega producción nueva: cambia de manos algo que se produjo en otros años. Lo que sí entra al PIB de este año es el servicio de intermediación de la operación, que sí se prestó ahora.\nEse es el sentido de llamarlo flujo y no stock. Confundirlos permitiría inflar el PIB simplemente vendiéndose cosas entre sí.",
         [
             ("Porque el PIB solo considera bienes y no servicios", "El PIB incluye ambos: es el valor de los bienes y servicios finales."),
             ("Porque la mina fue construida con capital extranjero", "El origen del capital no determina si una operación es producción del período."),
@@ -70759,13 +70500,7 @@ QUESTIONS_HISTORIA = [
         "El PIB de un país creció 8% en valor, pero la inflación del mismo "
         "período fue 8%. ¿Qué pasó con el PIB REAL?",
         "No creció",
-        "El PIB nominal se mide a precios corrientes, así que sube tanto si se "
-        "produce más como si simplemente todo cuesta más.\n\n"
-        "Acá el aumento del 8% se explica íntegramente por el alza de precios: "
-        "descontada la inflación, no queda crecimiento.\n\n"
-        "El PIB real corrige esa distorsión midiendo a precios de un año base. "
-        "Es el único que responde la pregunta que importa: ¿el país produjo más "
-        "cosas, o solo más caras?",
+        "El Producto Interno Bruto (PIB) nominal se mide a precios corrientes, así que sube tanto si se produce más como si simplemente todo cuesta más.\n\nAcá el aumento del 8% se explica íntegramente por el alza de precios: descontada la inflación, no queda crecimiento.\n\nEl PIB real corrige esa distorsión midiendo a precios de un año base. Es el único que responde la pregunta que importa: ¿el país produjo más cosas, o solo más caras?",
         [
             ("Creció 8%", "Ese es el crecimiento nominal, que incluye el efecto de los precios."),
             ("Creció 16%", "Sumó inflación y crecimiento nominal; el ajuste es una resta, no una suma."),
@@ -71752,12 +71487,7 @@ QUESTIONS_HISTORIA = [
         "Dos países tienen el mismo PIB per cápita, pero uno tiene un coeficiente "
         "de Gini bastante más alto. ¿Qué se puede afirmar de ese país?",
         "Que su ingreso está repartido de forma más desigual",
-        "El Gini mide la desigualdad en la distribución del ingreso: cuanto más "
-        "alto, más concentrado está el ingreso en una parte de la población.\nEl "
-        "PIB per cápita, en cambio, es un promedio: divide toda la producción por "
-        "todos los habitantes y no dice nada sobre cómo se reparte.\nPor eso los "
-        "dos países pueden tener el mismo promedio con realidades muy distintas, y "
-        "por eso el Gini se informa junto al per cápita y no en su lugar.",
+        "El Gini mide la desigualdad en la distribución del ingreso: cuanto más alto, más concentrado está el ingreso en una parte de la población.\nEl Producto Interno Bruto (PIB) per cápita, en cambio, es un promedio: divide toda la producción por todos los habitantes y no dice nada sobre cómo se reparte.\nPor eso los dos países pueden tener el mismo promedio con realidades muy distintas, y por eso el Gini se informa junto al per cápita y no en su lugar.",
         [
             ("Que produce menos por habitante que el otro país", "El PIB per cápita es el mismo en ambos: eso es lo que el enunciado fija."),
             ("Que tiene una inflación más alta que el otro país", "El nivel de precios lo mide el IPC, no el Gini."),
@@ -71844,14 +71574,7 @@ QUESTIONS_HISTORIA = [
         "mejoran sus indicadores de salud, educación ni acceso a agua potable. ¿Qué "
         "muestra ese contraste?",
         "Que crecer no basta: depende de cómo se usa lo producido",
-        "El crecimiento económico mide el aumento de la producción de un país, "
-        "normalmente a través del PIB. El desarrollo apunta a otra cosa: a las "
-        "condiciones de vida de la población.\nEl caso descrito muestra que uno "
-        "puede ocurrir sin el otro. Lo producido puede concentrarse en pocas manos, "
-        "exportarse sin encadenarse con el resto de la economía o no traducirse en "
-        "servicios públicos.\nPor eso existen indicadores distintos: el crecimiento "
-        "se mide con el PIB, y el desarrollo, con medidas de salud, educación e "
-        "ingreso combinadas.",
+        "El crecimiento económico mide el aumento de la producción de un país, normalmente a través del Producto Interno Bruto (PIB). El desarrollo apunta a otra cosa: a las condiciones de vida de la población.\nEl caso descrito muestra que uno puede ocurrir sin el otro. Lo producido puede concentrarse en pocas manos, exportarse sin encadenarse con el resto de la economía o no traducirse en servicios públicos.\nPor eso existen indicadores distintos: el crecimiento se mide con el PIB, y el desarrollo, con medidas de salud, educación e ingreso combinadas.",
         [
             ("Que las cifras de crecimiento están necesariamente falseadas", "No hace falta ningún fraude: crecimiento y desarrollo miden cosas distintas."),
             ("Que el desarrollo siempre precede al crecimiento económico", "El enunciado no permite establecer ningún orden entre ambos."),
@@ -71863,13 +71586,7 @@ QUESTIONS_HISTORIA = [
         "¿Por qué el IPC puede no reflejar el alza de precios que percibe una "
         "familia concreta?",
         "Porque mide una canasta promedio y cada hogar consume otra",
-        "El IPC pondera los productos según el consumo de un hogar "
-        "representativo.\n\n"
-        "Una familia que gasta buena parte de su ingreso en transporte y "
-        "alimentos sentirá con más fuerza el alza de esos ítems, aunque el "
-        "índice general suba poco.\n\n"
-        "Por eso la inflación percibida suele diferir de la medida: ambas "
-        "pueden ser correctas y estar hablando de canastas distintas.",
+        "El índice de precios al consumidor (IPC) pondera los productos según el consumo de un hogar representativo.\n\nUna familia que gasta buena parte de su ingreso en transporte y alimentos sentirá con más fuerza el alza de esos ítems, aunque el índice general suba poco.\n\nPor eso la inflación percibida suele diferir de la medida: ambas pueden ser correctas y estar hablando de canastas distintas.",
         [
             ("Porque el IPC se calcula con datos de años anteriores", "Se calcula con precios del período medido."),
             ("Porque las familias no saben cuánto gastan realmente", "La diferencia proviene de la composición del consumo, no de un error de percepción."),
@@ -74167,13 +73884,7 @@ QUESTIONS_HISTORIA += [
         "eco_indicadores", "facil",
         "Según el gráfico de la figura, ¿qué ocurrió con los precios en abril?",
         "Bajaron levemente respecto de marzo",
-        "El gráfico muestra la variación mensual del IPC, o sea cuánto cambian los "
-        "precios de un mes al siguiente.\n\n1) En abril la variación es −0,1%: es "
-        "el único mes bajo la línea del cero.\n2) Una variación negativa significa "
-        "que el nivel de precios fue menor que el del mes anterior.\n\nOjo con lo "
-        "que mide el eje: en los otros meses la variación baja pero sigue siendo "
-        "positiva, y eso significa que los precios siguen subiendo, solo que más "
-        "despacio.",
+        "El gráfico muestra la variación mensual del índice de precios al consumidor (IPC), o sea cuánto cambian los precios de un mes al siguiente.\n\n1) En abril la variación es −0,1%: es el único mes bajo la línea del cero.\n2) Una variación negativa significa que el nivel de precios fue menor que el del mes anterior.\n\nOjo con lo que mide el eje: en los otros meses la variación baja pero sigue siendo positiva, y eso significa que los precios siguen subiendo, solo que más despacio.",
         [
             ("Subieron más rápido que en marzo", "En marzo la variación fue 0,2% y en abril, −0,1%: el cambio fue a la baja."),
             ("Se mantuvieron exactamente iguales", "Una variación de −0,1% no es cero, aunque sea pequeña."),
@@ -74222,12 +73933,7 @@ QUESTIONS_HISTORIA += [
         "El gráfico de la figura muestra cómo se compone el PIB de un país. Si "
         "ese PIB es de 200.000 millones de dólares, ¿cuánto aporta la minería?",
         "24.000 millones de dólares",
-        "El gráfico da la participación de cada sector y el enunciado, el total.\n\n"
-        "1) La minería aporta el 12%.\n"
-        "2) El 12% de 200.000 millones es 200.000 · 0,12.\n"
-        "3) Son 24.000 millones de dólares.\n\n"
-        "El gráfico circular sirve justo para eso: muestra cómo se reparte un "
-        "todo, y con el valor del todo se recupera cada parte.",
+        "El gráfico da la participación de cada sector y el enunciado, el total.\n\n1) La minería aporta el 12%.\n2) El 12% de 200.000 millones es 200.000 · 0,12.\n3) Son 24.000 millones de dólares.\n\nEl gráfico circular sirve justo para eso: muestra cómo se reparte un todo, y con el valor del todo se recupera cada parte. (PIB: Producto Interno Bruto.)",
         [
             ("12.000 millones de dólares", "Usó el 12 como si fuera el resultado, dividiendo por diez de más."),
             ("110.000 millones de dólares", "Corresponde a un 55%, que es la participación de los servicios."),
@@ -86199,16 +85905,7 @@ QUESTIONS_CIENCIAS += [
         "El VIH y la gonorrea son infecciones de transmisión sexual, pero "
         "requieren tratamientos distintos. ¿Cuál es la diferencia de fondo?",
         "El VIH es un virus y la gonorrea es causada por una bacteria",
-        "El tratamiento depende del tipo de agente patógeno.\n\n"
-        "1) La gonorrea la produce una bacteria, y las bacterias se combaten "
-        "con antibióticos.\n"
-        "2) El VIH es un virus, y los antibióticos no tienen efecto sobre "
-        "virus: se trata con antirretrovirales, que controlan la infección "
-        "sin eliminarla.\n"
-        "3) Por eso conocer el agente no es un dato de memoria: determina "
-        "qué tratamiento sirve.\n"
-        "4) La prevención, en cambio, es la misma para ambas: el uso de "
-        "preservativo interrumpe la vía de transmisión.",
+        "El tratamiento depende del tipo de agente patógeno.\n\n1) La gonorrea la produce una bacteria, y las bacterias se combaten con antibióticos.\n2) El virus de la inmunodeficiencia humana (VIH) es un virus, y los antibióticos no tienen efecto sobre virus: se trata con antirretrovirales, que controlan la infección sin eliminarla.\n3) Por eso conocer el agente no es un dato de memoria: determina qué tratamiento sirve.\n4) La prevención, en cambio, es la misma para ambas: el uso de preservativo interrumpe la vía de transmisión.",
         [
             ("El VIH se transmite por vía sexual y la gonorrea no", "Ambas son infecciones de transmisión sexual: comparten la vía principal de contagio."),
             ("La gonorrea es un virus y el VIH una bacteria", "Están invertidos: la gonorrea es bacteriana y el VIH es viral."),
@@ -90856,17 +90553,7 @@ QUESTIONS_CIENCIAS += [
         "La radiación ultravioleta del Sol puede dañar la piel, mientras que la "
         "luz visible no lo hace. ¿Qué explica la diferencia?",
         "El ultravioleta tiene mayor frecuencia y más energía",
-        "El daño depende de cuánta energía transporta cada porción de "
-        "radiación.\n\n"
-        "1) El ultravioleta tiene menor longitud de onda que la luz visible y "
-        "por lo tanto mayor frecuencia.\n"
-        "2) La energía crece con la frecuencia, así que el ultravioleta llega "
-        "con energía suficiente para romper enlaces químicos en las moléculas de "
-        "la piel, incluido el ADN.\n"
-        "3) La luz visible, de menor frecuencia, no alcanza ese umbral por "
-        "intensa que sea.\n\n"
-        "Por eso el criterio no es cuánta luz llega sino de qué tipo: la "
-        "protección solar bloquea el ultravioleta, no el brillo.",
+        "El daño depende de cuánta energía transporta cada porción de radiación.\n\n1) El ultravioleta tiene menor longitud de onda que la luz visible y por lo tanto mayor frecuencia.\n2) La energía crece con la frecuencia, así que el ultravioleta llega con energía suficiente para romper enlaces químicos en las moléculas de la piel, incluido el ácido desoxirribonucleico (ADN).\n3) La luz visible, de menor frecuencia, no alcanza ese umbral por intensa que sea.\n\nPor eso el criterio no es cuánta luz llega sino de qué tipo: la protección solar bloquea el ultravioleta, no el brillo.",
         [
             ("El ultravioleta viaja más rápido y golpea con más fuerza",
              "Todas las ondas electromagnéticas viajan a la misma rapidez en el vacío."),
@@ -91044,17 +90731,7 @@ QUESTIONS_CIENCIAS += [
         "Se dice que la capa de ozono protege la vida en la Tierra. ¿Qué hace "
         "exactamente?",
         "Absorbe buena parte de la radiación ultravioleta solar",
-        "La atmósfera no es transparente por igual a todas las regiones del "
-        "espectro.\n\n"
-        "1) El ozono de la estratósfera absorbe con mucha eficiencia el "
-        "ultravioleta de longitudes de onda más cortas y energéticas.\n"
-        "2) Esa radiación tiene energía suficiente para romper enlaces químicos, "
-        "incluidos los del ADN: sin ese filtro, la vida en la superficie sería "
-        "inviable tal como la conocemos.\n"
-        "3) La luz visible y buena parte del infrarrojo, en cambio, atraviesan "
-        "la atmósfera, y de ahí que veamos y que el planeta se caliente.\n\n"
-        "El deterioro de esa capa por ciertos compuestos industriales aumenta "
-        "la radiación ultravioleta que llega al suelo.",
+        "La atmósfera no es transparente por igual a todas las regiones del espectro.\n\n1) El ozono de la estratósfera absorbe con mucha eficiencia el ultravioleta de longitudes de onda más cortas y energéticas.\n2) Esa radiación tiene energía suficiente para romper enlaces químicos, incluidos los del ácido desoxirribonucleico (ADN): sin ese filtro, la vida en la superficie sería inviable tal como la conocemos.\n3) La luz visible y buena parte del infrarrojo, en cambio, atraviesan la atmósfera, y de ahí que veamos y que el planeta se caliente.\n\nEl deterioro de esa capa por ciertos compuestos industriales aumenta la radiación ultravioleta que llega al suelo.",
         [
             ("Refleja los rayos X provenientes del espacio exterior",
              "Los rayos X cósmicos los absorbe la atmósfera en capas mucho más altas, y no es la función del ozono."),
@@ -91333,15 +91010,7 @@ QUESTIONS_CIENCIAS += [
         "Los rayos gamma se usan para esterilizar instrumental médico. ¿Qué "
         "propiedad de esta radiación lo permite?",
         "Su alta energía destruye el material genético de los microorganismos",
-        "El uso se apoya directamente en su posición en el espectro.\n\n"
-        "1) Los rayos gamma tienen las frecuencias más altas de todo el "
-        "espectro electromagnético, y por lo tanto la mayor energía.\n"
-        "2) Esa energía alcanza para ionizar átomos y romper enlaces químicos, "
-        "incluidos los del ADN de bacterias y esporas.\n"
-        "3) El instrumental queda estéril sin necesidad de calentarlo ni de "
-        "abrir el envase, porque la radiación lo atraviesa.\n\n"
-        "La misma propiedad exige blindaje y protocolos estrictos: lo que "
-        "destruye microorganismos daña también tejidos vivos.",
+        "El uso se apoya directamente en su posición en el espectro.\n\n1) Los rayos gamma tienen las frecuencias más altas de todo el espectro electromagnético, y por lo tanto la mayor energía.\n2) Esa energía alcanza para ionizar átomos y romper enlaces químicos, incluidos los del ácido desoxirribonucleico (ADN) de bacterias y esporas.\n3) El instrumental queda estéril sin necesidad de calentarlo ni de abrir el envase, porque la radiación lo atraviesa.\n\nLa misma propiedad exige blindaje y protocolos estrictos: lo que destruye microorganismos daña también tejidos vivos.",
         [
             ("Su gran longitud de onda le permite atravesar los envases",
              "Su longitud de onda es la más pequeña del espectro; atraviesa por su energía, no por ser larga."),
@@ -91451,16 +91120,7 @@ QUESTIONS_CIENCIAS += [
         "Se clasifica la radiación electromagnética en ionizante y no ionizante. "
         "¿Cuál de los siguientes conjuntos corresponde a radiación ionizante?",
         "Rayos X y rayos gamma",
-        "El criterio es si la radiación tiene energía suficiente para arrancar "
-        "electrones de los átomos.\n\n"
-        "1) La energía crece con la frecuencia, así que las regiones ionizantes "
-        "están en el extremo de frecuencias altas del espectro.\n"
-        "2) Los rayos X y los rayos gamma superan ampliamente el umbral "
-        "necesario, y también lo hace el ultravioleta más energético.\n"
-        "3) Las ondas de radio, las microondas, el infrarrojo y la luz visible "
-        "quedan por debajo: pueden calentar un material, pero no ionizarlo.\n\n"
-        "La distinción importa porque solo la radiación ionizante puede dañar "
-        "directamente el ADN.",
+        "El criterio es si la radiación tiene energía suficiente para arrancar electrones de los átomos.\n\n1) La energía crece con la frecuencia, así que las regiones ionizantes están en el extremo de frecuencias altas del espectro.\n2) Los rayos X y los rayos gamma superan ampliamente el umbral necesario, y también lo hace el ultravioleta más energético.\n3) Las ondas de radio, las microondas, el infrarrojo y la luz visible quedan por debajo: pueden calentar un material, pero no ionizarlo.\n\nLa distinción importa porque solo la radiación ionizante puede dañar directamente el ácido desoxirribonucleico (ADN).",
         [
             ("Ondas de radio y microondas",
              "Son las de menor frecuencia y energía del espectro: no alcanzan a ionizar."),
@@ -92008,19 +91668,7 @@ QUESTIONS_CIENCIAS += [
         "radiación'. ¿Qué precisión falta en esa afirmación para que sea "
         "informativa?",
         "De qué radiación se trata, porque el riesgo está en el ultravioleta",
-        "Bloquear radiación en general no dice nada sobre la protección "
-        "efectiva.\n\n"
-        "1) La radiación solar que llega incluye visible, infrarrojo y "
-        "ultravioleta. Solo esta última tiene energía suficiente para dañar el "
-        "ADN de la piel.\n"
-        "2) Un producto podría bloquear casi toda la radiación total y aun así "
-        "dejar pasar buena parte del ultravioleta, porque el visible y el "
-        "infrarrojo aportan la mayor parte de la energía.\n"
-        "3) La información útil es qué fracción del ultravioleta detiene, y "
-        "distinguiendo además sus dos rangos, que penetran a distinta "
-        "profundidad.\n\n"
-        "Por eso el índice de protección se define sobre el ultravioleta y no "
-        "sobre la radiación total.",
+        "Bloquear radiación en general no dice nada sobre la protección efectiva.\n\n1) La radiación solar que llega incluye visible, infrarrojo y ultravioleta. Solo esta última tiene energía suficiente para dañar el ácido desoxirribonucleico (ADN) de la piel.\n2) Un producto podría bloquear casi toda la radiación total y aun así dejar pasar buena parte del ultravioleta, porque el visible y el infrarrojo aportan la mayor parte de la energía.\n3) La información útil es qué fracción del ultravioleta detiene, y distinguiendo además sus dos rangos, que penetran a distinta profundidad.\n\nPor eso el índice de protección se define sobre el ultravioleta y no sobre la radiación total.",
         [
             ("Cuánto tiempo dura la protección después de aplicado",
              "Es un dato relevante en la práctica, pero no corrige el problema de fondo de la afirmación."),
@@ -99930,15 +99578,7 @@ QUESTIONS_CIENCIAS += [
         "cie_evolucion", "medio",
         "¿Qué papel cumplen las mutaciones en la evolución?",
         "Son la fuente original de variabilidad genética",
-        "Sin variación no hay nada sobre lo que la selección pueda actuar.\n\n"
-        "1) Las mutaciones son cambios en la secuencia del ADN, y ocurren al "
-        "azar respecto de lo que al organismo le conviene.\n"
-        "2) La mayoría es neutra o perjudicial; unas pocas resultan ventajosas "
-        "en un ambiente determinado.\n"
-        "3) Son la única forma de introducir variantes verdaderamente nuevas; la "
-        "reproducción sexual las recombina, pero no crea alelos nuevos.\n\n"
-        "Esa combinación es la clave: la mutación aporta el material bruto sin "
-        "dirección, y la selección natural le da dirección al resultado.",
+        "Sin variación no hay nada sobre lo que la selección pueda actuar.\n\n1) Las mutaciones son cambios en la secuencia del ácido desoxirribonucleico (ADN), y ocurren al azar respecto de lo que al organismo le conviene.\n2) La mayoría es neutra o perjudicial; unas pocas resultan ventajosas en un ambiente determinado.\n3) Son la única forma de introducir variantes verdaderamente nuevas; la reproducción sexual las recombina, pero no crea alelos nuevos.\n\nEsa combinación es la clave: la mutación aporta el material bruto sin dirección, y la selección natural le da dirección al resultado.",
         [
             ("Dirigen el cambio hacia formas mejor adaptadas",
              "Las mutaciones no tienen dirección: quien introduce el sesgo hacia lo adaptativo es la selección."),
@@ -100185,17 +99825,7 @@ QUESTIONS_CIENCIAS += [
         "comparada, embriología, biología molecular y registro fósil- se "
         "refuerzan entre sí. ¿Qué significa eso?",
         "Que son independientes y llegan a las mismas relaciones de parentesco",
-        "El valor está en la independencia de los métodos.\n\n"
-        "1) Comparar huesos, comparar embriones, comparar secuencias de ADN y "
-        "datar estratos son procedimientos que no dependen unos de otros: usan "
-        "datos y técnicas distintas.\n"
-        "2) Sin embargo, los árboles de parentesco que resultan de cada uno "
-        "coinciden en lo esencial.\n"
-        "3) Que métodos independientes converjan en el mismo resultado es lo que "
-        "vuelve improbable que se trate de una coincidencia o de un artefacto de "
-        "un método particular.\n\n"
-        "Si una línea contradijera sistemáticamente a las otras, habría un "
-        "problema serio que resolver. No es lo que ocurre.",
+        "El valor está en la independencia de los métodos.\n\n1) Comparar huesos, comparar embriones, comparar secuencias de ácido desoxirribonucleico (ADN) y datar estratos son procedimientos que no dependen unos de otros: usan datos y técnicas distintas.\n2) Sin embargo, los árboles de parentesco que resultan de cada uno coinciden en lo esencial.\n3) Que métodos independientes converjan en el mismo resultado es lo que vuelve improbable que se trate de una coincidencia o de un artefacto de un método particular.\n\nSi una línea contradijera sistemáticamente a las otras, habría un problema serio que resolver. No es lo que ocurre.",
         [
             ("Que las cuatro usan los mismos datos analizados de maneras distintas",
              "Usan datos distintos: huesos, embriones, secuencias y estratos son fuentes independientes."),
@@ -100211,16 +99841,7 @@ QUESTIONS_CIENCIAS += [
         "desarrollaron tallos gruesos que almacenan agua y espinas en vez de "
         "hojas, pese a no estar emparentadas. ¿Cómo se explica?",
         "Convergencia: ambientes semejantes favorecen soluciones semejantes",
-        "El parecido no implica parentesco cuando las presiones son "
-        "equivalentes.\n\n"
-        "1) Los dos linajes enfrentaron el mismo problema: escasez de agua y "
-        "alta radiación.\n"
-        "2) En cada uno, la selección natural favoreció variantes con menor "
-        "superficie de evaporación y mayor capacidad de almacenar agua.\n"
-        "3) El resultado son estructuras ANÁLOGAS: misma función, orígenes "
-        "distintos.\n\n"
-        "Al examinar la anatomía interna y las secuencias de ADN aparecen las "
-        "diferencias que delatan el parentesco real de cada una.",
+        "El parecido no implica parentesco cuando las presiones son equivalentes.\n\n1) Los dos linajes enfrentaron el mismo problema: escasez de agua y alta radiación.\n2) En cada uno, la selección natural favoreció variantes con menor superficie de evaporación y mayor capacidad de almacenar agua.\n3) El resultado son estructuras ANÁLOGAS: misma función, orígenes distintos.\n\nAl examinar la anatomía interna y las secuencias de ácido desoxirribonucleico (ADN) aparecen las diferencias que delatan el parentesco real de cada una.",
         [
             ("Ambas descienden de un antepasado común muy reciente",
              "Un parentesco cercano se reflejaría en la anatomía interna y en las secuencias, y no es el caso."),
@@ -100383,15 +100004,7 @@ QUESTIONS_CIENCIAS += [
         "funcionales de otras especies, pero que en nosotros están dañadas y no "
         "producen ninguna proteína. ¿Qué evidencian?",
         "Que descendemos de antepasados donde esos genes funcionaban",
-        "Es el equivalente molecular de una estructura vestigial.\n\n"
-        "1) Esas secuencias conservan la estructura reconocible del gen, pero "
-        "con mutaciones que lo inactivaron.\n"
-        "2) Su presencia no cumple ninguna función actual: son restos.\n"
-        "3) Se explican si el gen era funcional en un antepasado y se inactivó "
-        "en nuestro linaje, quedando la copia rota en el genoma.\n\n"
-        "Un ejemplo conocido es el gen de la síntesis de vitamina C, funcional "
-        "en la mayoría de los mamíferos e inactivado en los primates, que la "
-        "obtienen de la dieta.",
+        "Es el equivalente molecular de una estructura vestigial.\n\n1) Esas secuencias conservan la estructura reconocible del gen, pero con mutaciones que lo inactivaron.\n2) Su presencia no cumple ninguna función actual: son restos.\n3) Se explican si el gen era funcional en un antepasado y se inactivó en nuestro linaje, quedando la copia rota en el genoma.\n\nUn ejemplo conocido es el gen de la síntesis de vitamina C, funcional en la mayoría de los mamíferos e inactivado en los primates, que la obtienen de la dieta. (ADN: ácido desoxirribonucleico.)",
         [
             ("Que el ADN humano contiene errores de secuenciación",
              "Se trata de secuencias reales del genoma, confirmadas repetidamente, no de errores técnicos."),
@@ -100430,18 +100043,7 @@ QUESTIONS_CIENCIAS += [
         "El ser humano y el chimpancé comparten alrededor del 98 % de su "
         "secuencia de ADN. ¿Qué se puede concluir de ese dato?",
         "Que su antepasado común es relativamente reciente",
-        "El porcentaje de similitud es un indicador de tiempo de "
-        "divergencia.\n\n"
-        "1) Desde que dos linajes se separan, cada uno acumula cambios de manera "
-        "independiente.\n"
-        "2) Una similitud tan alta indica que ha transcurrido poco tiempo, en "
-        "escala evolutiva, desde la separación.\n"
-        "3) Ese resultado coincide con el que sugieren la anatomía comparada y "
-        "el registro fósil de homínidos.\n\n"
-        "Ojo con la interpretación del 2 % restante: en un genoma de miles de "
-        "millones de bases, esa fracción representa una cantidad enorme de "
-        "diferencias, y en ella están los rasgos que distinguen a ambas "
-        "especies.",
+        "El porcentaje de similitud es un indicador de tiempo de divergencia.\n\n1) Desde que dos linajes se separan, cada uno acumula cambios de manera independiente.\n2) Una similitud tan alta indica que ha transcurrido poco tiempo, en escala evolutiva, desde la separación.\n3) Ese resultado coincide con el que sugieren la anatomía comparada y el registro fósil de homínidos.\n\nOjo con la interpretación del 2 % restante: en un genoma de miles de millones de bases, esa fracción representa una cantidad enorme de diferencias, y en ella están los rasgos que distinguen a ambas especies. (ADN: ácido desoxirribonucleico.)",
         [
             ("Que ambas especies son prácticamente idénticas en sus características",
              "El 2 % de diferencia abarca millones de posiciones e incluye los rasgos que las distinguen."),
@@ -100854,16 +100456,7 @@ QUESTIONS_CIENCIAS += [
         "¿Qué significa que la selección natural actúa sobre el fenotipo y no "
         "directamente sobre el genotipo?",
         "El ambiente interactúa con los rasgos expresados del organismo",
-        "La distinción explica varios fenómenos evolutivos.\n\n"
-        "1) El depredador ve el color de la polilla, no su secuencia de ADN: lo "
-        "que determina si sobrevive es el rasgo EXPRESADO.\n"
-        "2) El genotipo se ve afectado de manera indirecta, porque los genes que "
-        "producen fenotipos favorables se transmiten más.\n"
-        "3) Por eso un alelo recesivo puede permanecer largo tiempo en una "
-        "población aunque sea perjudicial: en los heterocigotos no se expresa y "
-        "queda oculto a la selección.\n\n"
-        "También explica que un mismo genotipo pueda tener distinto éxito según "
-        "el ambiente en que se exprese.",
+        "La distinción explica varios fenómenos evolutivos.\n\n1) El depredador ve el color de la polilla, no su secuencia de ácido desoxirribonucleico (ADN): lo que determina si sobrevive es el rasgo EXPRESADO.\n2) El genotipo se ve afectado de manera indirecta, porque los genes que producen fenotipos favorables se transmiten más.\n3) Por eso un alelo recesivo puede permanecer largo tiempo en una población aunque sea perjudicial: en los heterocigotos no se expresa y queda oculto a la selección.\n\nTambién explica que un mismo genotipo pueda tener distinto éxito según el ambiente en que se exprese.",
         [
             ("El ambiente modifica directamente los genes del organismo",
              "El ambiente no reescribe los genes: actúa sobre los rasgos expresados y con ello afecta qué genes se transmiten."),
@@ -101159,16 +100752,7 @@ QUESTIONS_CIENCIAS += [
         "Al observar una célula al microscopio se encuentra una cantidad "
         "excepcional de mitocondrias. ¿Qué se puede inferir sobre su función?",
         "Que realiza una actividad con alta demanda de energía",
-        "La abundancia de un organelo indica el tipo de trabajo que la célula "
-        "hace.\n\n"
-        "1) Las mitocondrias son el lugar donde se obtiene la mayor parte del "
-        "ATP de la célula.\n"
-        "2) Una cantidad excepcional de ellas indica una demanda energética "
-        "sostenida y alta.\n"
-        "3) Es lo que se observa en fibras musculares, que se contraen, y en "
-        "enterocitos, que hacen transporte activo contra gradiente.\n\n"
-        "El razonamiento es el que la prueba pide: no memorizar qué célula tiene "
-        "qué, sino inferir la función a partir de la estructura observada.",
+        "La abundancia de un organelo indica el tipo de trabajo que la célula hace.\n\n1) Las mitocondrias son el lugar donde se obtiene la mayor parte del adenosín trifosfato (ATP) de la célula.\n2) Una cantidad excepcional de ellas indica una demanda energética sostenida y alta.\n3) Es lo que se observa en fibras musculares, que se contraen, y en enterocitos, que hacen transporte activo contra gradiente.\n\nEl razonamiento es el que la prueba pide: no memorizar qué célula tiene qué, sino inferir la función a partir de la estructura observada.",
         [
             ("Que sintetiza grandes cantidades de proteínas para exportar",
              "Eso se infiere de un retículo endoplasmático rugoso desarrollado, no de las mitocondrias."),
@@ -101184,15 +100768,7 @@ QUESTIONS_CIENCIAS += [
         "incluso cuando la concentración de glucosa dentro de la célula es mayor "
         "que fuera. ¿Qué tipo de transporte realiza y qué requiere?",
         "Transporte activo, que requiere gasto de energía",
-        "Mover una sustancia contra su gradiente no ocurre espontáneamente.\n\n"
-        "1) La difusión lleva las sustancias de donde están más concentradas "
-        "hacia donde están menos: es un proceso espontáneo.\n"
-        "2) Aquí ocurre lo contrario: la glucosa entra hacia donde ya hay más. "
-        "Eso exige aportar energía.\n"
-        "3) La célula lo consigue mediante proteínas transportadoras que "
-        "consumen ATP, directa o indirectamente.\n\n"
-        "Esa demanda energética explica la abundancia de mitocondrias en el "
-        "enterocito: la estructura vuelve a corresponder con la función.",
+        "Mover una sustancia contra su gradiente no ocurre espontáneamente.\n\n1) La difusión lleva las sustancias de donde están más concentradas hacia donde están menos: es un proceso espontáneo.\n2) Aquí ocurre lo contrario: la glucosa entra hacia donde ya hay más. Eso exige aportar energía.\n3) La célula lo consigue mediante proteínas transportadoras que consumen adenosín trifosfato (ATP), directa o indirectamente.\n\nEsa demanda energética explica la abundancia de mitocondrias en el enterocito: la estructura vuelve a corresponder con la función.",
         [
             ("Difusión simple, que no requiere energía",
              "La difusión simple solo ocurre a favor del gradiente, y aquí es contra el gradiente."),
@@ -101412,16 +100988,7 @@ QUESTIONS_CIENCIAS += [
         "paralelo y varios núcleos periféricos. ¿Qué tipo celular es y en qué se "
         "basa la identificación?",
         "Una fibra muscular esquelética, por sus miofibrillas y sus varios núcleos",
-        "Cada rasgo observado apunta en la misma dirección.\n\n"
-        "1) Las estructuras proteicas ordenadas en paralelo son las "
-        "MIOFIBRILLAS, responsables de la contracción.\n"
-        "2) Las mitocondrias intercaladas aportan el ATP que esa contracción "
-        "consume, y su ubicación entre las miofibrillas acorta la distancia de "
-        "entrega.\n"
-        "3) La presencia de VARIOS NÚCLEOS es distintiva: resulta de la fusión "
-        "de mioblastos durante el desarrollo.\n\n"
-        "Ninguno de los otros tipos celulares del temario combina esos tres "
-        "rasgos.",
+        "Cada rasgo observado apunta en la misma dirección.\n\n1) Las estructuras proteicas ordenadas en paralelo son las MIOFIBRILLAS, responsables de la contracción.\n2) Las mitocondrias intercaladas aportan el adenosín trifosfato (ATP) que esa contracción consume, y su ubicación entre las miofibrillas acorta la distancia de entrega.\n3) La presencia de VARIOS NÚCLEOS es distintiva: resulta de la fusión de mioblastos durante el desarrollo.\n\nNinguno de los otros tipos celulares del temario combina esos tres rasgos.",
         [
             ("Un enterocito, por sus mitocondrias abundantes",
              "El enterocito tiene un solo núcleo y microvellosidades, no miofibrillas."),
@@ -101580,16 +101147,7 @@ QUESTIONS_CIENCIAS += [
         "Un fármaco inhibe la síntesis de ATP en las mitocondrias. ¿Qué función "
         "del enterocito se vería comprometida primero?",
         "El transporte activo de nutrientes contra su gradiente",
-        "El efecto se concentra en los procesos que dependen directamente del "
-        "ATP.\n\n"
-        "1) El transporte activo mueve sustancias contra su gradiente y por eso "
-        "consume ATP de manera continua.\n"
-        "2) Sin producción de ATP, esas bombas dejan de funcionar y los "
-        "nutrientes ya no pueden ser absorbidos contra gradiente.\n"
-        "3) La difusión simple, en cambio, no requiere energía y seguiría "
-        "ocurriendo mientras exista gradiente favorable.\n\n"
-        "Es un buen ejemplo de cómo una intervención permite distinguir procesos "
-        "que en condiciones normales ocurren juntos.",
+        "El efecto se concentra en los procesos que dependen directamente del adenosín trifosfato (ATP).\n\n1) El transporte activo mueve sustancias contra su gradiente y por eso consume ATP de manera continua.\n2) Sin producción de ATP, esas bombas dejan de funcionar y los nutrientes ya no pueden ser absorbidos contra gradiente.\n3) La difusión simple, en cambio, no requiere energía y seguiría ocurriendo mientras exista gradiente favorable.\n\nEs un buen ejemplo de cómo una intervención permite distinguir procesos que en condiciones normales ocurren juntos.",
         [
             ("La difusión simple de agua a través de su membrana",
              "El paso de agua por ósmosis no requiere ATP y continuaría."),
@@ -101670,16 +101228,7 @@ QUESTIONS_CIENCIAS += [
         "¿Qué estructura celular contiene el material genético en una célula "
         "eucarionte?",
         "El núcleo",
-        "Es la característica que define a las células eucariontes.\n\n"
-        "1) El ADN está confinado en el núcleo, separado del citoplasma por una "
-        "envoltura con poros.\n"
-        "2) Esa separación permite regular qué información se usa y en qué "
-        "momento, porque la transcripción ocurre dentro y la traducción, "
-        "fuera.\n"
-        "3) En las células procariontes, en cambio, el material genético está en "
-        "el citoplasma sin envoltura que lo rodee.\n\n"
-        "Las mitocondrias y los cloroplastos tienen además su propio ADN, "
-        "pequeño y circular, distinto del nuclear.",
+        "Es la característica que define a las células eucariontes.\n\n1) El ácido desoxirribonucleico (ADN) está confinado en el núcleo, separado del citoplasma por una envoltura con poros.\n2) Esa separación permite regular qué información se usa y en qué momento, porque la transcripción ocurre dentro y la traducción, fuera.\n3) En las células procariontes, en cambio, el material genético está en el citoplasma sin envoltura que lo rodee.\n\nLas mitocondrias y los cloroplastos tienen además su propio ADN, pequeño y circular, distinto del nuclear.",
         [
             ("El ribosoma", "Los ribosomas sintetizan proteínas leyendo el ARN mensajero; no almacenan el material genético."),
             ("El aparato de Golgi", "Clasifica y empaqueta proteínas."),
@@ -101691,18 +101240,7 @@ QUESTIONS_CIENCIAS += [
         "¿Qué diferencia estructural distingue a una célula procarionte de una "
         "eucarionte?",
         "La procarionte carece de núcleo definido y de organelos con membrana",
-        "La diferencia es de organización interna, no de tamaño ni de "
-        "complejidad química.\n\n"
-        "1) En la PROCARIONTE el material genético está en el citoplasma, sin "
-        "una envoltura que lo separe, y no hay organelos delimitados por "
-        "membrana.\n"
-        "2) En la EUCARIONTE el ADN está dentro del núcleo y existen "
-        "compartimentos especializados: mitocondrias, retículo, Golgi, "
-        "lisosomas.\n"
-        "3) Ambas tienen membrana plasmática, citoplasma, ribosomas y material "
-        "genético: lo que cambia es cómo está organizado.\n\n"
-        "Esa compartimentación permite a la eucarionte realizar procesos "
-        "incompatibles entre sí en lugares distintos y al mismo tiempo.",
+        "La diferencia es de organización interna, no de tamaño ni de complejidad química.\n\n1) En la PROCARIONTE el material genético está en el citoplasma, sin una envoltura que lo separe, y no hay organelos delimitados por membrana.\n2) En la EUCARIONTE el ácido desoxirribonucleico (ADN) está dentro del núcleo y existen compartimentos especializados: mitocondrias, retículo, Golgi, lisosomas.\n3) Ambas tienen membrana plasmática, citoplasma, ribosomas y material genético: lo que cambia es cómo está organizado.\n\nEsa compartimentación permite a la eucarionte realizar procesos incompatibles entre sí en lugares distintos y al mismo tiempo.",
         [
             ("La procarionte no tiene material genético",
              "Sí lo tiene: está en el citoplasma, sin envoltura nuclear."),
@@ -101742,15 +101280,7 @@ QUESTIONS_CIENCIAS += [
         "preferentemente entre las miofibrillas y no dispersas al azar. ¿Qué "
         "explica esa disposición?",
         "Acorta la distancia entre la producción de ATP y su consumo",
-        "La ubicación de un organelo también es información funcional.\n\n"
-        "1) El ATP se difunde por el citoplasma, y esa difusión toma tiempo y "
-        "tiene alcance limitado.\n"
-        "2) Las miofibrillas son las que consumen ATP durante la contracción.\n"
-        "3) Situar las mitocondrias justo entre ellas reduce al mínimo la "
-        "distancia que el ATP debe recorrer, y permite sostener contracciones "
-        "intensas.\n\n"
-        "El mismo principio aparece en otras células: los organelos no están "
-        "dispersos al azar sino ubicados donde su producto se necesita.",
+        "La ubicación de un organelo también es información funcional.\n\n1) El adenosín trifosfato (ATP) se difunde por el citoplasma, y esa difusión toma tiempo y tiene alcance limitado.\n2) Las miofibrillas son las que consumen ATP durante la contracción.\n3) Situar las mitocondrias justo entre ellas reduce al mínimo la distancia que el ATP debe recorrer, y permite sostener contracciones intensas.\n\nEl mismo principio aparece en otras células: los organelos no están dispersos al azar sino ubicados donde su producto se necesita.",
         [
             ("Evita que las miofibrillas se enreden entre sí durante la contracción",
              "El ordenamiento de las miofibrillas lo mantiene el citoesqueleto, no las mitocondrias."),
@@ -101793,17 +101323,7 @@ QUESTIONS_CIENCIAS += [
         "Un espermatozoide tiene un flagelo y una zona intermedia repleta de "
         "mitocondrias. ¿Qué relación hay entre ambas estructuras?",
         "Las mitocondrias aportan el ATP que el flagelo consume al moverse",
-        "El desplazamiento es un trabajo mecánico y por lo tanto consume "
-        "energía.\n\n"
-        "1) El flagelo bate continuamente para impulsar a la célula, y ese "
-        "movimiento requiere ATP.\n"
-        "2) Las mitocondrias se concentran justo en la base del flagelo, donde "
-        "esa energía se necesita.\n"
-        "3) La proximidad reduce la distancia que el ATP debe recorrer por "
-        "difusión.\n\n"
-        "El espermatozoide además reduce al mínimo su citoplasma: casi todo su "
-        "volumen es núcleo, mitocondrias y flagelo. Es una célula construida "
-        "para desplazarse y entregar material genético.",
+        "El desplazamiento es un trabajo mecánico y por lo tanto consume energía.\n\n1) El flagelo bate continuamente para impulsar a la célula, y ese movimiento requiere adenosín trifosfato (ATP).\n2) Las mitocondrias se concentran justo en la base del flagelo, donde esa energía se necesita.\n3) La proximidad reduce la distancia que el ATP debe recorrer por difusión.\n\nEl espermatozoide además reduce al mínimo su citoplasma: casi todo su volumen es núcleo, mitocondrias y flagelo. Es una célula construida para desplazarse y entregar material genético.",
         [
             ("Las mitocondrias dirigen el movimiento del flagelo",
              "La dirección del movimiento no la determinan las mitocondrias: ellas solo aportan energía."),
@@ -101868,16 +101388,7 @@ QUESTIONS_CIENCIAS += [
         "cantidad de mitocondrias, igual que los enterocitos. ¿Qué sugiere esa "
         "coincidencia?",
         "Que ambas reabsorben sustancias mediante transporte activo",
-        "Estructuras semejantes en tejidos distintos apuntan a funciones "
-        "semejantes.\n\n"
-        "1) Las MICROVELLOSIDADES aumentan la superficie de contacto: indican "
-        "intercambio intenso con el medio.\n"
-        "2) Las MITOCONDRIAS abundantes indican alta demanda de ATP, propia del "
-        "transporte activo contra gradiente.\n"
-        "3) En el riñón, esas células recuperan glucosa, aminoácidos e iones "
-        "del filtrado antes de que se pierdan en la orina.\n\n"
-        "Es un buen ejemplo de que la estructura permite predecir la función "
-        "aunque los órganos sean distintos.",
+        "Estructuras semejantes en tejidos distintos apuntan a funciones semejantes.\n\n1) Las MICROVELLOSIDADES aumentan la superficie de contacto: indican intercambio intenso con el medio.\n2) Las MITOCONDRIAS abundantes indican alta demanda de adenosín trifosfato (ATP), propia del transporte activo contra gradiente.\n3) En el riñón, esas células recuperan glucosa, aminoácidos e iones del filtrado antes de que se pierdan en la orina.\n\nEs un buen ejemplo de que la estructura permite predecir la función aunque los órganos sean distintos.",
         [
             ("Que ambas producen hormonas para regular el organismo",
              "Ninguna de las dos estructuras señaladas es característica de una célula productora de hormonas."),
@@ -101893,16 +101404,7 @@ QUESTIONS_CIENCIAS += [
         "contiene abundantes reservas en su citoplasma. ¿Qué función cumplen "
         "esas reservas?",
         "Sostener las primeras divisiones tras la fecundación",
-        "El tamaño de la célula responde a lo que tendrá que hacer después.\n\n"
-        "1) Tras la fecundación, el embrión comienza a dividirse antes de "
-        "implantarse y de recibir nutrientes de la madre.\n"
-        "2) Durante ese periodo depende por completo del material acumulado en "
-        "el citoplasma del ovocito.\n"
-        "3) Por eso el ovocito almacena nutrientes, ARN y proteínas: son el "
-        "abastecimiento inicial del desarrollo.\n\n"
-        "El contraste con el espermatozoide es notable: uno aporta material "
-        "genético y prácticamente nada más, y el otro aporta además todo el "
-        "citoplasma inicial.",
+        "El tamaño de la célula responde a lo que tendrá que hacer después.\n\n1) Tras la fecundación, el embrión comienza a dividirse antes de implantarse y de recibir nutrientes de la madre.\n2) Durante ese periodo depende por completo del material acumulado en el citoplasma del ovocito.\n3) Por eso el ovocito almacena nutrientes, ácido ribonucleico (ARN) y proteínas: son el abastecimiento inicial del desarrollo.\n\nEl contraste con el espermatozoide es notable: uno aporta material genético y prácticamente nada más, y el otro aporta además todo el citoplasma inicial.",
         [
             ("Permitir que el ovocito se desplace hacia el útero por sí mismo",
              "El ovocito no se desplaza por sí mismo: lo movilizan los cilios y la musculatura de la trompa."),
@@ -101943,17 +101445,7 @@ QUESTIONS_CIENCIAS += [
         "específicamente las mitocondrias y observa que unas células se ven "
         "intensamente teñidas y otras apenas. ¿Qué puede concluir?",
         "Que difieren en su demanda energética",
-        "La intensidad de la tinción es proporcional a la cantidad del organelo "
-        "marcado.\n\n"
-        "1) El colorante marca mitocondrias, así que la intensidad refleja "
-        "cuántas tiene cada célula.\n"
-        "2) La cantidad de mitocondrias se relaciona con la demanda sostenida de "
-        "ATP.\n"
-        "3) Las células intensamente teñidas realizan una actividad "
-        "energéticamente más costosa.\n\n"
-        "La conclusión es una inferencia razonable, no una demostración: "
-        "confirmarla exigiría medir directamente el consumo de oxígeno o la "
-        "producción de ATP.",
+        "La intensidad de la tinción es proporcional a la cantidad del organelo marcado.\n\n1) El colorante marca mitocondrias, así que la intensidad refleja cuántas tiene cada célula.\n2) La cantidad de mitocondrias se relaciona con la demanda sostenida de adenosín trifosfato (ATP).\n3) Las células intensamente teñidas realizan una actividad energéticamente más costosa.\n\nLa conclusión es una inferencia razonable, no una demostración: confirmarla exigiría medir directamente el consumo de oxígeno o la producción de ATP.",
         [
             ("Que unas células están vivas y las otras muertas",
              "La tinción indica cantidad de mitocondrias; la viabilidad se evalúa con otros marcadores."),
@@ -102062,17 +101554,7 @@ QUESTIONS_CIENCIAS += [
         "fecundación pero tienen estructuras opuestas. ¿Qué explica esa "
         "diferencia?",
         "Uno está especializado en desplazarse y el otro en aportar reservas",
-        "Cada gameto resuelve una parte distinta del problema.\n\n"
-        "1) El ESPERMATOZOIDE debe recorrer una distancia considerable: reduce "
-        "al mínimo su citoplasma, se dota de un flagelo y concentra mitocondrias "
-        "en su base.\n"
-        "2) El OVOCITO no se desplaza por sí mismo, pero debe sostener las "
-        "primeras divisiones del embrión: acumula un citoplasma enorme con "
-        "nutrientes, ARN y proteínas.\n"
-        "3) Ambos aportan la mitad del material genético, así que esa parte es "
-        "simétrica.\n\n"
-        "La asimetría está en todo lo demás, y responde a la división de tareas "
-        "entre movilidad y abastecimiento.",
+        "Cada gameto resuelve una parte distinta del problema.\n\n1) El ESPERMATOZOIDE debe recorrer una distancia considerable: reduce al mínimo su citoplasma, se dota de un flagelo y concentra mitocondrias en su base.\n2) El OVOCITO no se desplaza por sí mismo, pero debe sostener las primeras divisiones del embrión: acumula un citoplasma enorme con nutrientes, ácido ribonucleico (ARN) y proteínas.\n3) Ambos aportan la mitad del material genético, así que esa parte es simétrica.\n\nLa asimetría está en todo lo demás, y responde a la división de tareas entre movilidad y abastecimiento.",
         [
             ("Uno aporta más material genético que el otro",
              "Ambos aportan un juego haploide de cromosomas: en eso son equivalentes."),
@@ -102112,17 +101594,7 @@ QUESTIONS_CIENCIAS += [
         "Se afirma que una célula con muchas mitocondrias necesariamente "
         "sintetiza muchas proteínas. ¿Cómo se evalúa esa inferencia?",
         "Es incorrecta: las mitocondrias indican demanda de energía, no de síntesis",
-        "Cada organelo señala una actividad distinta y no conviene "
-        "confundirlas.\n\n"
-        "1) Las MITOCONDRIAS producen ATP: su abundancia indica alto consumo de "
-        "energía, cualquiera sea el proceso que la consuma.\n"
-        "2) La síntesis de proteínas para exportar se refleja en el RETÍCULO "
-        "RUGOSO y en el complejo de Golgi.\n"
-        "3) Una fibra muscular tiene muchísimas mitocondrias y no es una célula "
-        "secretora: gasta esa energía en contraerse.\n\n"
-        "La síntesis de proteínas sí consume energía, y por eso una célula "
-        "secretora también tiene mitocondrias abundantes; pero la relación no "
-        "funciona al revés.",
+        "Cada organelo señala una actividad distinta y no conviene confundirlas.\n\n1) Las MITOCONDRIAS producen adenosín trifosfato (ATP): su abundancia indica alto consumo de energía, cualquiera sea el proceso que la consuma.\n2) La síntesis de proteínas para exportar se refleja en el RETÍCULO RUGOSO y en el complejo de Golgi.\n3) Una fibra muscular tiene muchísimas mitocondrias y no es una célula secretora: gasta esa energía en contraerse.\n\nLa síntesis de proteínas sí consume energía, y por eso una célula secretora también tiene mitocondrias abundantes; pero la relación no funciona al revés.",
         [
             ("Es correcta: toda síntesis de proteínas requiere energía",
              "Requiere energía, pero muchas otras actividades también: la inferencia en ese sentido no es válida."),
@@ -102182,15 +101654,7 @@ QUESTIONS_CIENCIAS += [
         "Una célula procarionte, como una bacteria, realiza respiración celular "
         "sin tener mitocondrias. ¿Cómo lo consigue?",
         "Usa su propia membrana plasmática para esos procesos",
-        "La ausencia de un organelo no implica la ausencia de la función.\n\n"
-        "1) La respiración celular requiere una membrana con las proteínas "
-        "adecuadas para transportar electrones y generar ATP.\n"
-        "2) En la eucarionte, esa membrana es la interna de la mitocondria.\n"
-        "3) En la procarionte, es la propia membrana plasmática, a veces con "
-        "pliegues que aumentan su superficie.\n\n"
-        "Esa semejanza funcional es uno de los argumentos de la hipótesis de que "
-        "las mitocondrias descienden de bacterias incorporadas por una célula "
-        "ancestral.",
+        "La ausencia de un organelo no implica la ausencia de la función.\n\n1) La respiración celular requiere una membrana con las proteínas adecuadas para transportar electrones y generar adenosín trifosfato (ATP).\n2) En la eucarionte, esa membrana es la interna de la mitocondria.\n3) En la procarionte, es la propia membrana plasmática, a veces con pliegues que aumentan su superficie.\n\nEsa semejanza funcional es uno de los argumentos de la hipótesis de que las mitocondrias descienden de bacterias incorporadas por una célula ancestral.",
         [
             ("Obtiene energía únicamente por fermentación, sin respirar",
              "Muchas bacterias realizan respiración celular completa: la fermentación es otra vía."),
@@ -102230,17 +101694,7 @@ QUESTIONS_CIENCIAS += [
         "glucosa mediante transporte activo. ¿Qué resultado apoyaría esa "
         "hipótesis?",
         "Que la reabsorción se detiene al bloquear la producción de ATP",
-        "El transporte activo se distingue de la difusión por su dependencia "
-        "energética.\n\n"
-        "1) La difusión, simple o facilitada, ocurre sin gasto de energía y "
-        "continuaría aunque falte ATP.\n"
-        "2) El transporte activo depende del ATP: si se bloquea su producción, "
-        "debe detenerse.\n"
-        "3) Observar esa detención es evidencia directa a favor de la "
-        "hipótesis.\n\n"
-        "Conviene comprobar además que la célula sigue viva y que otros procesos "
-        "no dependientes de ATP continúan: así se descarta que el bloqueo haya "
-        "simplemente matado la célula.",
+        "El transporte activo se distingue de la difusión por su dependencia energética.\n\n1) La difusión, simple o facilitada, ocurre sin gasto de energía y continuaría aunque falte adenosín trifosfato (ATP).\n2) El transporte activo depende del ATP: si se bloquea su producción, debe detenerse.\n3) Observar esa detención es evidencia directa a favor de la hipótesis.\n\nConviene comprobar además que la célula sigue viva y que otros procesos no dependientes de ATP continúan: así se descarta que el bloqueo haya simplemente matado la célula.",
         [
             ("Que la reabsorción aumenta al elevar la concentración de glucosa en el filtrado",
              "Eso ocurre también en la difusión facilitada: no distingue entre ambos mecanismos."),
@@ -102332,19 +101786,7 @@ QUESTIONS_CIENCIAS += [
         "diferencia notoria a favor del primero. ¿Qué se concluye y qué habría "
         "que controlar?",
         "Que el entrenamiento aumenta las mitocondrias, controlando edad y dieta",
-        "La conclusión es plausible pero exige descartar explicaciones "
-        "alternativas.\n\n"
-        "1) El entrenamiento de resistencia impone una demanda energética "
-        "sostenida, y el tejido responde aumentando su maquinaria "
-        "productora de ATP.\n"
-        "2) Pero la diferencia observada podría deberse a otras variables: edad, "
-        "alimentación, predisposición genética o el tipo de fibra muscular "
-        "predominante.\n"
-        "3) Un diseño sólido compara grupos equiparados en esas variables, o "
-        "mejor aún, sigue a las mismas personas antes y después de un programa "
-        "de entrenamiento.\n\n"
-        "Ese seguimiento longitudinal es el que permite atribuir el cambio al "
-        "entrenamiento y no a diferencias previas entre las personas.",
+        "La conclusión es plausible pero exige descartar explicaciones alternativas.\n\n1) El entrenamiento de resistencia impone una demanda energética sostenida, y el tejido responde aumentando su maquinaria productora de adenosín trifosfato (ATP).\n2) Pero la diferencia observada podría deberse a otras variables: edad, alimentación, predisposición genética o el tipo de fibra muscular predominante.\n3) Un diseño sólido compara grupos equiparados en esas variables, o mejor aún, sigue a las mismas personas antes y después de un programa de entrenamiento.\n\nEse seguimiento longitudinal es el que permite atribuir el cambio al entrenamiento y no a diferencias previas entre las personas.",
         [
             ("Que las personas con más mitocondrias eligen deportes de resistencia",
              "Es una explicación alternativa que hay que descartar, no la conclusión que el diseño longitudinal apoya."),
@@ -102407,18 +101849,7 @@ QUESTIONS_CIENCIAS += [
         "podría convertirse una célula de la piel en una neurona activando los "
         "genes adecuados. ¿Cómo se evalúa esa propuesta?",
         "Es plausible en principio y se ha logrado experimentalmente",
-        "La propuesta se apoya en un hecho correcto y llega a una conclusión "
-        "razonable.\n\n"
-        "1) Es cierto que las células somáticas comparten el genoma completo y "
-        "que la especialización resulta de expresión diferencial.\n"
-        "2) Por lo tanto, en principio, cambiar el patrón de expresión debería "
-        "poder cambiar la identidad de la célula.\n"
-        "3) Eso se ha conseguido en el laboratorio: reprogramando células "
-        "adultas se obtienen células capaces de originar otros tipos "
-        "celulares.\n\n"
-        "La dificultad es práctica y enorme: el patrón de expresión está "
-        "estabilizado por múltiples mecanismos, y revertirlo de manera "
-        "controlada es complejo.",
+        "La propuesta se apoya en un hecho correcto y llega a una conclusión razonable.\n\n1) Es cierto que las células somáticas comparten el genoma completo y que la especialización resulta de expresión diferencial.\n2) Por lo tanto, en principio, cambiar el patrón de expresión debería poder cambiar la identidad de la célula.\n3) Eso se ha conseguido en el laboratorio: reprogramando células adultas se obtienen células capaces de originar otros tipos celulares.\n\nLa dificultad es práctica y enorme: el patrón de expresión está estabilizado por múltiples mecanismos, y revertirlo de manera controlada es complejo. (ADN: ácido desoxirribonucleico.)",
         [
             ("Es imposible, porque las células especializadas pierden los genes que no usan",
              "No los pierden: conservan el genoma completo, con los genes no usados silenciados."),
@@ -102433,18 +101864,7 @@ QUESTIONS_CIENCIAS += [
         "¿Qué organelo es responsable de la síntesis de proteínas en cualquier "
         "célula?",
         "El ribosoma",
-        "Es una estructura presente en todas las células, procariontes "
-        "incluidas.\n\n"
-        "1) El ribosoma lee la secuencia del ARN mensajero y ensambla la cadena "
-        "de aminoácidos correspondiente.\n"
-        "2) Puede estar libre en el citoplasma, y entonces produce proteínas "
-        "para uso interno, o adherido al retículo endoplasmático, y entonces "
-        "produce proteínas para exportar o para organelos.\n"
-        "3) Su presencia universal es una de las evidencias de antepasado común "
-        "entre todos los seres vivos.\n\n"
-        "Que los ribosomas bacterianos difieran algo de los humanos es lo que "
-        "permite que ciertos antibióticos los bloqueen sin afectar a nuestras "
-        "células.",
+        "Es una estructura presente en todas las células, procariontes incluidas.\n\n1) El ribosoma lee la secuencia del ácido ribonucleico (ARN) mensajero y ensambla la cadena de aminoácidos correspondiente.\n2) Puede estar libre en el citoplasma, y entonces produce proteínas para uso interno, o adherido al retículo endoplasmático, y entonces produce proteínas para exportar o para organelos.\n3) Su presencia universal es una de las evidencias de antepasado común entre todos los seres vivos.\n\nQue los ribosomas bacterianos difieran algo de los humanos es lo que permite que ciertos antibióticos los bloqueen sin afectar a nuestras células.",
         [
             ("El lisosoma", "El lisosoma degrada material mediante enzimas digestivas."),
             ("La mitocondria", "Produce ATP; tiene ribosomas propios, pero no es ella la que sintetiza las proteínas celulares."),
@@ -102543,15 +101963,7 @@ QUESTIONS_CIENCIAS += [
         "Dentro del núcleo se distingue una región más densa llamada nucléolo. "
         "¿Qué se produce allí?",
         "Los componentes de los ribosomas",
-        "El nucléolo es una zona especializada dentro del núcleo.\n\n"
-        "1) Ahí se transcriben los ARN ribosómicos y se ensamblan con proteínas "
-        "para formar las subunidades de los ribosomas.\n"
-        "2) Esas subunidades salen al citoplasma por los poros nucleares y ahí "
-        "se unen para funcionar.\n"
-        "3) Por eso las células que sintetizan muchas proteínas tienen "
-        "nucléolos grandes y bien visibles.\n\n"
-        "El nucléolo no está rodeado por membrana: es una acumulación densa de "
-        "material dentro del propio núcleo.",
+        "El nucléolo es una zona especializada dentro del núcleo.\n\n1) Ahí se transcriben los ácido ribonucleico (ARN) ribosómicos y se ensamblan con proteínas para formar las subunidades de los ribosomas.\n2) Esas subunidades salen al citoplasma por los poros nucleares y ahí se unen para funcionar.\n3) Por eso las células que sintetizan muchas proteínas tienen nucléolos grandes y bien visibles.\n\nEl nucléolo no está rodeado por membrana: es una acumulación densa de material dentro del propio núcleo.",
         [
             ("El ADN de la célula",
              "El ADN no se produce en el nucléolo: se duplica en el núcleo durante la fase S del ciclo celular."),
@@ -102801,17 +102213,7 @@ QUESTIONS_CIENCIAS += [
         "Los cloroplastos y las mitocondrias tienen algo en común que los "
         "distingue de otros organelos. ¿Qué es?",
         "Ambos tienen doble membrana y ADN propio",
-        "Esas dos características son la base de una hipótesis sobre su "
-        "origen.\n\n"
-        "1) Ambos están rodeados por DOS membranas, a diferencia del Golgi o de "
-        "los lisosomas.\n"
-        "2) Ambos contienen su propio ADN, pequeño y circular, y sus propios "
-        "ribosomas, parecidos a los bacterianos.\n"
-        "3) Ambos se dividen por su cuenta dentro de la célula, en vez de ser "
-        "fabricados desde cero.\n\n"
-        "Esas coincidencias sostienen la hipótesis de que descienden de "
-        "bacterias que fueron incorporadas por una célula ancestral y "
-        "permanecieron en su interior.",
+        "Esas dos características son la base de una hipótesis sobre su origen.\n\n1) Ambos están rodeados por DOS membranas, a diferencia del Golgi o de los lisosomas.\n2) Ambos contienen su propio ácido desoxirribonucleico (ADN), pequeño y circular, y sus propios ribosomas, parecidos a los bacterianos.\n3) Ambos se dividen por su cuenta dentro de la célula, en vez de ser fabricados desde cero.\n\nEsas coincidencias sostienen la hipótesis de que descienden de bacterias que fueron incorporadas por una célula ancestral y permanecieron en su interior.",
         [
             ("Ambos realizan la fotosíntesis en distintas condiciones",
              "Solo los cloroplastos realizan fotosíntesis; las mitocondrias hacen respiración celular."),
@@ -102853,16 +102255,7 @@ QUESTIONS_CIENCIAS += [
         "ribosomas más pequeños que los del citoplasma. ¿Qué organelo aisló "
         "probablemente?",
         "Mitocondrias o cloroplastos",
-        "Las características encontradas son distintivas de estos dos "
-        "organelos.\n\n"
-        "1) El ADN CIRCULAR es característico de bacterias y de estos dos "
-        "organelos; el ADN nuclear de los eucariontes es lineal.\n"
-        "2) Los RIBOSOMAS MÁS PEQUEÑOS también se parecen a los bacterianos y "
-        "difieren de los del citoplasma eucarionte.\n"
-        "3) Ningún otro organelo de la célula tiene material genético ni "
-        "ribosomas propios.\n\n"
-        "Este tipo de hallazgo fue clave para sostener que ambos organelos "
-        "descienden de bacterias incorporadas por una célula ancestral.",
+        "Las características encontradas son distintivas de estos dos organelos.\n\n1) El ácido desoxirribonucleico (ADN) CIRCULAR es característico de bacterias y de estos dos organelos; el ADN nuclear de los eucariontes es lineal.\n2) Los RIBOSOMAS MÁS PEQUEÑOS también se parecen a los bacterianos y difieren de los del citoplasma eucarionte.\n3) Ningún otro organelo de la célula tiene material genético ni ribosomas propios.\n\nEste tipo de hallazgo fue clave para sostener que ambos organelos descienden de bacterias incorporadas por una célula ancestral.",
         [
             ("El núcleo de la célula",
              "El núcleo contiene ADN lineal asociado a proteínas y no tiene ribosomas propios distintos."),
@@ -102878,15 +102271,7 @@ QUESTIONS_CIENCIAS += [
         "se encuentra que es mucho mayor adentro, y que esa diferencia se "
         "mantiene de manera estable. ¿Qué se infiere?",
         "Que la célula gasta energía para sostener esa diferencia",
-        "Una diferencia estable contra el gradiente no se mantiene sola.\n\n"
-        "1) Por difusión, el potasio tendería a salir hasta igualar las "
-        "concentraciones a ambos lados.\n"
-        "2) Que la diferencia se mantenga indica que algo lo bombea de vuelta "
-        "hacia adentro, contra su gradiente.\n"
-        "3) Ese transporte activo consume ATP de manera continua.\n\n"
-        "En una neurona, mantener esas diferencias iónicas consume una fracción "
-        "importante de toda la energía de la célula, y es la condición para "
-        "poder generar impulsos nerviosos.",
+        "Una diferencia estable contra el gradiente no se mantiene sola.\n\n1) Por difusión, el potasio tendería a salir hasta igualar las concentraciones a ambos lados.\n2) Que la diferencia se mantenga indica que algo lo bombea de vuelta hacia adentro, contra su gradiente.\n3) Ese transporte activo consume adenosín trifosfato (ATP) de manera continua.\n\nEn una neurona, mantener esas diferencias iónicas consume una fracción importante de toda la energía de la célula, y es la condición para poder generar impulsos nerviosos.",
         [
             ("Que la membrana es impermeable al potasio",
              "Si fuera del todo impermeable no habría necesidad de bombeo, pero la membrana tiene canales de potasio."),
@@ -103001,16 +102386,7 @@ QUESTIONS_CIENCIAS += [
         "posibilidad de realizar procesos incompatibles al mismo tiempo. ¿Qué "
         "ventaja tiene la eucarionte?",
         "Sus organelos con membrana permiten separar procesos en el espacio",
-        "La compartimentación es la gran innovación de la célula eucarionte.\n\n"
-        "1) Los lisosomas mantienen enzimas digestivas activas en su interior "
-        "sin dañar el resto de la célula.\n"
-        "2) Las mitocondrias sostienen condiciones internas distintas de las del "
-        "citoplasma para producir ATP.\n"
-        "3) El núcleo separa la transcripción de la traducción, lo que permite "
-        "regular la expresión génica con mucho más detalle.\n\n"
-        "Una procarionte, sin esos compartimentos, debe realizar todo en un mismo "
-        "espacio, lo que limita la complejidad de sus procesos aunque las hace "
-        "muy eficientes y rápidas.",
+        "La compartimentación es la gran innovación de la célula eucarionte.\n\n1) Los lisosomas mantienen enzimas digestivas activas en su interior sin dañar el resto de la célula.\n2) Las mitocondrias sostienen condiciones internas distintas de las del citoplasma para producir adenosín trifosfato (ATP).\n3) El núcleo separa la transcripción de la traducción, lo que permite regular la expresión génica con mucho más detalle.\n\nUna procarionte, sin esos compartimentos, debe realizar todo en un mismo espacio, lo que limita la complejidad de sus procesos aunque las hace muy eficientes y rápidas.",
         [
             ("Su ADN es más resistente a las mutaciones",
              "El ADN eucarionte no es intrínsecamente más resistente a las mutaciones."),
@@ -103024,16 +102400,7 @@ QUESTIONS_CIENCIAS += [
         "cie_celula", "medio",
         "Una célula deja de producir ATP. ¿Qué proceso se detendría primero?",
         "El transporte activo a través de la membrana",
-        "Los procesos que dependen directamente del ATP se detienen antes que "
-        "los demás.\n\n"
-        "1) El transporte activo mueve sustancias contra su gradiente y consume "
-        "ATP de manera continua: sin él, se detiene de inmediato.\n"
-        "2) La difusión simple y la ósmosis no requieren energía y siguen "
-        "ocurriendo mientras haya gradiente.\n"
-        "3) A medida que las bombas se detienen, las diferencias de "
-        "concentración se disipan y la célula pierde su medio interno.\n\n"
-        "Por eso la falta de oxígeno daña tan rápido a las neuronas: sin ATP no "
-        "pueden sostener las diferencias iónicas de las que depende su función.",
+        "Los procesos que dependen directamente del adenosín trifosfato (ATP) se detienen antes que los demás.\n\n1) El transporte activo mueve sustancias contra su gradiente y consume ATP de manera continua: sin él, se detiene de inmediato.\n2) La difusión simple y la ósmosis no requieren energía y siguen ocurriendo mientras haya gradiente.\n3) A medida que las bombas se detienen, las diferencias de concentración se disipan y la célula pierde su medio interno.\n\nPor eso la falta de oxígeno daña tan rápido a las neuronas: sin ATP no pueden sostener las diferencias iónicas de las que depende su función.",
         [
             ("La ósmosis del agua a través de la membrana",
              "La ósmosis es un proceso pasivo y no requiere ATP."),
@@ -103047,16 +102414,7 @@ QUESTIONS_CIENCIAS += [
         "cie_celula", "medio",
         "¿Qué función cumple la envoltura nuclear y qué permite su estructura?",
         "Separa el núcleo del citoplasma y regula el paso por sus poros",
-        "Es una doble membrana atravesada por poros.\n\n"
-        "1) SEPARA el material genético del citoplasma, lo que permite que la "
-        "transcripción y la traducción ocurran en compartimentos distintos.\n"
-        "2) Sus POROS regulan el tránsito: dejan salir el ARN mensajero y las "
-        "subunidades de los ribosomas, y dejan entrar proteínas necesarias en el "
-        "núcleo.\n"
-        "3) Es continua con el retículo endoplasmático rugoso, del que forma "
-        "parte estructuralmente.\n\n"
-        "Esa separación es la que permite regular la expresión génica en etapas "
-        "sucesivas, y es una de las diferencias clave con la célula procarionte.",
+        "Es una doble membrana atravesada por poros.\n\n1) SEPARA el material genético del citoplasma, lo que permite que la transcripción y la traducción ocurran en compartimentos distintos.\n2) Sus POROS regulan el tránsito: dejan salir el ácido ribonucleico (ARN) mensajero y las subunidades de los ribosomas, y dejan entrar proteínas necesarias en el núcleo.\n3) Es continua con el retículo endoplasmático rugoso, del que forma parte estructuralmente.\n\nEsa separación es la que permite regular la expresión génica en etapas sucesivas, y es una de las diferencias clave con la célula procarionte.",
         [
             ("Impide por completo el paso de sustancias entre núcleo y citoplasma",
              "Sus poros permiten un tránsito constante y regulado en ambos sentidos."),
@@ -103212,16 +102570,7 @@ QUESTIONS_CIENCIAS += [
         "¿Qué organelo se encarga de la respiración celular, el proceso que "
         "obtiene energía a partir de la glucosa?",
         "La mitocondria",
-        "Es el organelo donde ocurren las etapas que rinden la mayor parte del "
-        "ATP.\n\n"
-        "1) La glucosa se degrada parcialmente en el citoplasma y los productos "
-        "ingresan a la mitocondria.\n"
-        "2) Allí, en presencia de oxígeno, se completa su oxidación y se obtiene "
-        "la mayor parte del ATP.\n"
-        "3) La estructura del organelo, con su membrana interna muy plegada, "
-        "aumenta la superficie donde ocurre ese proceso.\n\n"
-        "Por eso las células de alta demanda energética tienen tantas "
-        "mitocondrias y con las crestas tan desarrolladas.",
+        "Es el organelo donde ocurren las etapas que rinden la mayor parte del adenosín trifosfato (ATP).\n\n1) La glucosa se degrada parcialmente en el citoplasma y los productos ingresan a la mitocondria.\n2) Allí, en presencia de oxígeno, se completa su oxidación y se obtiene la mayor parte del ATP.\n3) La estructura del organelo, con su membrana interna muy plegada, aumenta la superficie donde ocurre ese proceso.\n\nPor eso las células de alta demanda energética tienen tantas mitocondrias y con las crestas tan desarrolladas.",
         [
             ("El cloroplasto", "Realiza fotosíntesis, que produce glucosa en vez de degradarla."),
             ("El ribosoma", "Sintetiza proteínas."),
@@ -103233,16 +102582,7 @@ QUESTIONS_CIENCIAS += [
         "¿Qué componente del citoesqueleto participa en el transporte de "
         "vesículas dentro de la célula?",
         "Los microtúbulos, que funcionan como vías internas",
-        "El citoesqueleto no solo sostiene: también organiza el movimiento.\n\n"
-        "1) Los microtúbulos son filamentos que atraviesan el citoplasma y "
-        "definen direcciones dentro de la célula.\n"
-        "2) Proteínas motoras se desplazan sobre ellos consumiendo ATP y "
-        "arrastran vesículas y organelos.\n"
-        "3) Ese transporte dirigido es imprescindible en células grandes: en una "
-        "neurona, el material debe recorrer un axón que puede medir "
-        "centímetros.\n\n"
-        "Los mismos microtúbulos forman el huso durante la división celular y el "
-        "eje interno de cilios y flagelos.",
+        "El citoesqueleto no solo sostiene: también organiza el movimiento.\n\n1) Los microtúbulos son filamentos que atraviesan el citoplasma y definen direcciones dentro de la célula.\n2) Proteínas motoras se desplazan sobre ellos consumiendo adenosín trifosfato (ATP) y arrastran vesículas y organelos.\n3) Ese transporte dirigido es imprescindible en células grandes: en una neurona, el material debe recorrer un axón que puede medir centímetros.\n\nLos mismos microtúbulos forman el huso durante la división celular y el eje interno de cilios y flagelos.",
         [
             ("La pared celular, que guía las vesículas hacia la membrana",
              "La pared es externa y las células animales no la tienen."),
@@ -103327,16 +102667,7 @@ QUESTIONS_CIENCIAS += [
         "cie_celula", "medio",
         "¿Dónde se encuentra el material genético de una célula procarionte?",
         "En el citoplasma",
-        "La ausencia de núcleo definido es lo que caracteriza a estas "
-        "células.\n\n"
-        "1) El ADN bacteriano es una molécula circular ubicada en una región del "
-        "citoplasma, sin envoltura que la separe.\n"
-        "2) Esa región se denomina nucleoide, pero no es un organelo: no tiene "
-        "membrana propia.\n"
-        "3) Por eso la transcripción y la traducción ocurren en el mismo espacio "
-        "y prácticamente al mismo tiempo.\n\n"
-        "En la célula eucarionte, en cambio, la envoltura nuclear separa ambos "
-        "procesos y permite regularlos por etapas.",
+        "La ausencia de núcleo definido es lo que caracteriza a estas células.\n\n1) El ácido desoxirribonucleico (ADN) bacteriano es una molécula circular ubicada en una región del citoplasma, sin envoltura que la separe.\n2) Esa región se denomina nucleoide, pero no es un organelo: no tiene membrana propia.\n3) Por eso la transcripción y la traducción ocurren en el mismo espacio y prácticamente al mismo tiempo.\n\nEn la célula eucarionte, en cambio, la envoltura nuclear separa ambos procesos y permite regularlos por etapas.",
         [
             ("Dentro de un núcleo rodeado por una envoltura con poros",
              "Esa organización corresponde a las células eucariontes."),
@@ -103396,15 +102727,7 @@ QUESTIONS_CIENCIAS += [
         "cie_celula", "medio",
         "¿Qué caracteriza al transporte pasivo a través de la membrana?",
         "No consume energía",
-        "Es el rasgo que lo distingue del transporte activo.\n\n"
-        "1) Ocurre siempre a favor del gradiente: de donde hay más hacia donde "
-        "hay menos.\n"
-        "2) Ese movimiento es espontáneo, así que la célula no necesita gastar "
-        "ATP.\n"
-        "3) Incluye la difusión simple, la difusión facilitada por proteínas y "
-        "la ósmosis del agua.\n\n"
-        "El transporte ACTIVO es el que va contra el gradiente y por eso exige "
-        "consumo de energía.",
+        "Es el rasgo que lo distingue del transporte activo.\n\n1) Ocurre siempre a favor del gradiente: de donde hay más hacia donde hay menos.\n2) Ese movimiento es espontáneo, así que la célula no necesita gastar adenosín trifosfato (ATP).\n3) Incluye la difusión simple, la difusión facilitada por proteínas y la ósmosis del agua.\n\nEl transporte ACTIVO es el que va contra el gradiente y por eso exige consumo de energía.",
         [
             ("Siempre requiere proteínas transportadoras específicas de la membrana",
              "La difusión simple es transporte pasivo y no requiere proteínas."),
@@ -103468,15 +102791,7 @@ QUESTIONS_CIENCIAS += [
         "cie_celula", "medio",
         "¿Qué función cumple la membrana interna plegada de la mitocondria?",
         "Aumentar la superficie donde se produce ATP",
-        "El plegamiento responde a una necesidad concreta.\n\n"
-        "1) Las proteínas que generan ATP están insertas en la membrana "
-        "interna.\n"
-        "2) Cuanta más superficie tenga esa membrana, más de esas proteínas "
-        "caben y más ATP puede producir la mitocondria.\n"
-        "3) Los pliegues, llamados crestas, multiplican esa superficie sin "
-        "aumentar el tamaño del organelo.\n\n"
-        "Es el mismo principio de las microvellosidades del enterocito y de las "
-        "membranas apiladas del cloroplasto: plegar para ganar superficie.",
+        "El plegamiento responde a una necesidad concreta.\n\n1) Las proteínas que generan adenosín trifosfato (ATP) están insertas en la membrana interna.\n2) Cuanta más superficie tenga esa membrana, más de esas proteínas caben y más ATP puede producir la mitocondria.\n3) Los pliegues, llamados crestas, multiplican esa superficie sin aumentar el tamaño del organelo.\n\nEs el mismo principio de las microvellosidades del enterocito y de las membranas apiladas del cloroplasto: plegar para ganar superficie.",
         [
             ("Separar el material genético mitocondrial del resto del organelo",
              "El ADN mitocondrial está en el espacio interno, sin una envoltura propia que lo separe."),
@@ -103515,16 +102830,7 @@ QUESTIONS_CIENCIAS += [
         "Se afirma que una célula sin mitocondrias no puede obtener energía en "
         "absoluto. ¿Cómo se evalúa esa afirmación?",
         "Es incorrecta: existe la fermentación en el citoplasma",
-        "La mitocondria es la vía principal, pero no la única.\n\n"
-        "1) La primera etapa de la degradación de la glucosa ocurre en el "
-        "citoplasma y rinde algo de ATP sin necesidad de mitocondrias ni de "
-        "oxígeno.\n"
-        "2) Cuando no hay mitocondrias o falta oxígeno, la célula puede "
-        "continuar por la vía de la fermentación, que mantiene esa producción "
-        "reducida.\n"
-        "3) El rendimiento es mucho menor, pero no es cero.\n\n"
-        "Los glóbulos rojos maduros funcionan así toda su vida: sin "
-        "mitocondrias, obtienen su ATP exclusivamente por esta vía.",
+        "La mitocondria es la vía principal, pero no la única.\n\n1) La primera etapa de la degradación de la glucosa ocurre en el citoplasma y rinde algo de adenosín trifosfato (ATP) sin necesidad de mitocondrias ni de oxígeno.\n2) Cuando no hay mitocondrias o falta oxígeno, la célula puede continuar por la vía de la fermentación, que mantiene esa producción reducida.\n3) El rendimiento es mucho menor, pero no es cero.\n\nLos glóbulos rojos maduros funcionan así toda su vida: sin mitocondrias, obtienen su ATP exclusivamente por esta vía.",
         [
             ("Es correcta: sin mitocondrias no hay producción de ATP posible",
              "La primera etapa de la degradación de la glucosa ocurre en el citoplasma y sí rinde ATP."),
@@ -103741,15 +103047,7 @@ QUESTIONS_CIENCIAS += [
         "¿Qué ocurre en la membrana de una neurona cuando se genera un impulso "
         "nervioso?",
         "Entran iones que invierten momentáneamente su carga",
-        "El impulso es un cambio eléctrico rápido y local.\n\n"
-        "1) En reposo, el interior de la neurona es negativo respecto del "
-        "exterior: hay una diferencia de potencial mantenida por bombas.\n"
-        "2) Ante un estímulo suficiente, se abren canales y entran iones "
-        "positivos: la diferencia se invierte por un instante.\n"
-        "3) Ese cambio abre los canales vecinos y así el impulso se propaga a lo "
-        "largo de la membrana.\n\n"
-        "Después la neurona restablece su estado de reposo, gastando ATP, y "
-        "queda lista para conducir el siguiente impulso.",
+        "El impulso es un cambio eléctrico rápido y local.\n\n1) En reposo, el interior de la neurona es negativo respecto del exterior: hay una diferencia de potencial mantenida por bombas.\n2) Ante un estímulo suficiente, se abren canales y entran iones positivos: la diferencia se invierte por un instante.\n3) Ese cambio abre los canales vecinos y así el impulso se propaga a lo largo de la membrana.\n\nDespués la neurona restablece su estado de reposo, gastando adenosín trifosfato (ATP), y queda lista para conducir el siguiente impulso.",
         [
             ("Se libera energía en forma de calor a lo largo del axón",
              "El impulso es un fenómeno eléctrico por movimiento de iones, no una liberación de calor."),
@@ -103903,17 +103201,7 @@ QUESTIONS_CIENCIAS += [
         "Se compara la velocidad de conducción en un axón con mielina y en uno "
         "sin ella, del mismo diámetro. ¿Qué resultado se espera y por qué?",
         "El mielinizado conduce mucho más rápido",
-        "El mecanismo de propagación cambia por completo con la mielina.\n\n"
-        "1) En un axón SIN mielina, el impulso debe regenerarse punto a punto a "
-        "lo largo de toda la membrana: es un proceso continuo y relativamente "
-        "lento.\n"
-        "2) En un axón MIELINIZADO, la membrana solo queda expuesta en las "
-        "interrupciones de la vaina, y el impulso salta de una a la siguiente.\n"
-        "3) Al reducirse el número de puntos donde debe regenerarse, la "
-        "velocidad aumenta mucho.\n\n"
-        "La mielina permite además ahorrar energía: al regenerarse en menos "
-        "puntos, se mueven menos iones y se gasta menos ATP en restablecer el "
-        "reposo.",
+        "El mecanismo de propagación cambia por completo con la mielina.\n\n1) En un axón SIN mielina, el impulso debe regenerarse punto a punto a lo largo de toda la membrana: es un proceso continuo y relativamente lento.\n2) En un axón MIELINIZADO, la membrana solo queda expuesta en las interrupciones de la vaina, y el impulso salta de una a la siguiente.\n3) Al reducirse el número de puntos donde debe regenerarse, la velocidad aumenta mucho.\n\nLa mielina permite además ahorrar energía: al regenerarse en menos puntos, se mueven menos iones y se gasta menos adenosín trifosfato (ATP) en restablecer el reposo.",
         [
             ("El no mielinizado conduce más rápido porque no tiene obstáculos",
              "La mielina no es un obstáculo para la señal: cambia el modo de propagación y la acelera."),
@@ -104354,15 +103642,7 @@ QUESTIONS_CIENCIAS += [
         "Se compara la conducción del impulso nervioso con la de la corriente "
         "por un cable eléctrico. ¿Cuál es la diferencia esencial?",
         "El impulso se regenera en cada punto y no se debilita",
-        "Los dos son fenómenos eléctricos, pero de naturaleza distinta.\n\n"
-        "1) En un cable, la corriente se atenúa con la distancia por la "
-        "resistencia del conductor.\n"
-        "2) En un axón, el impulso no viaja pasivamente: en cada punto se abren "
-        "canales que lo REGENERAN con la misma amplitud.\n"
-        "3) Por eso llega al final del axón exactamente igual de intenso que al "
-        "comienzo, incluso tras un metro de recorrido.\n\n"
-        "El costo de esa regeneración es energético: la neurona debe restablecer "
-        "después las diferencias iónicas, y eso consume ATP.",
+        "Los dos son fenómenos eléctricos, pero de naturaleza distinta.\n\n1) En un cable, la corriente se atenúa con la distancia por la resistencia del conductor.\n2) En un axón, el impulso no viaja pasivamente: en cada punto se abren canales que lo REGENERAN con la misma amplitud.\n3) Por eso llega al final del axón exactamente igual de intenso que al comienzo, incluso tras un metro de recorrido.\n\nEl costo de esa regeneración es energético: la neurona debe restablecer después las diferencias iónicas, y eso consume adenosín trifosfato (ATP).",
         [
             ("El impulso nervioso viaja mucho más rápido que la corriente eléctrica",
              "Ocurre lo contrario: la señal eléctrica en un cable es muchísimo más rápida."),
@@ -104686,16 +103966,7 @@ QUESTIONS_CIENCIAS += [
         "cie_nervioso", "medio",
         "¿Qué es el potencial de reposo de una neurona?",
         "La diferencia de carga que mantiene cuando no conduce impulsos",
-        "Es el estado desde el cual la neurona puede responder.\n\n"
-        "1) En reposo, el interior de la neurona es negativo respecto del "
-        "exterior.\n"
-        "2) Esa diferencia se mantiene gracias a bombas que trasladan iones "
-        "contra su gradiente, consumiendo ATP de manera continua.\n"
-        "3) Cuando llega un estímulo suficiente, esa diferencia se invierte de "
-        "golpe y se genera el impulso.\n\n"
-        "Mantener el reposo no es gratuito: es una de las principales razones del "
-        "alto consumo energético del tejido nervioso, incluso cuando parece "
-        "inactivo.",
+        "Es el estado desde el cual la neurona puede responder.\n\n1) En reposo, el interior de la neurona es negativo respecto del exterior.\n2) Esa diferencia se mantiene gracias a bombas que trasladan iones contra su gradiente, consumiendo adenosín trifosfato (ATP) de manera continua.\n3) Cuando llega un estímulo suficiente, esa diferencia se invierte de golpe y se genera el impulso.\n\nMantener el reposo no es gratuito: es una de las principales razones del alto consumo energético del tejido nervioso, incluso cuando parece inactivo.",
         [
             ("El estado en que la neurona deja de consumir energía por completo",
              "Mantener el potencial de reposo consume ATP de manera continua."),
@@ -104710,16 +103981,7 @@ QUESTIONS_CIENCIAS += [
         "¿Qué relación hay entre la función de la neurona y su alto consumo de "
         "energía?",
         "Mantener las diferencias iónicas de la membrana cuesta ATP",
-        "El gasto no se debe sobre todo a conducir impulsos, sino a estar "
-        "lista para hacerlo.\n\n"
-        "1) Cada impulso mueve iones a través de la membrana y desordena las "
-        "diferencias de concentración.\n"
-        "2) Restablecerlas exige bombear esos iones de vuelta contra su "
-        "gradiente, y eso consume ATP.\n"
-        "3) Ese trabajo es continuo, incluso en reposo.\n\n"
-        "Por eso el tejido nervioso consume una fracción enorme de la energía "
-        "del organismo, y por eso una interrupción del suministro de oxígeno lo "
-        "daña en pocos minutos.",
+        "El gasto no se debe sobre todo a conducir impulsos, sino a estar lista para hacerlo.\n\n1) Cada impulso mueve iones a través de la membrana y desordena las diferencias de concentración.\n2) Restablecerlas exige bombear esos iones de vuelta contra su gradiente, y eso consume adenosín trifosfato (ATP).\n3) Ese trabajo es continuo, incluso en reposo.\n\nPor eso el tejido nervioso consume una fracción enorme de la energía del organismo, y por eso una interrupción del suministro de oxígeno lo daña en pocos minutos.",
         [
             ("La neurona gasta energía sobre todo en sintetizar neurotransmisores",
              "La síntesis consume energía, pero el gasto dominante es el mantenimiento de los gradientes iónicos."),
@@ -104851,16 +104113,7 @@ QUESTIONS_CIENCIAS += [
         "¿Por qué el sistema nervioso es especialmente vulnerable a una "
         "interrupción del suministro de oxígeno?",
         "Su alto consumo de energía no admite pausas",
-        "El tejido nervioso depende críticamente de un abastecimiento "
-        "continuo.\n\n"
-        "1) Mantener las diferencias iónicas de sus membranas consume ATP de "
-        "manera permanente.\n"
-        "2) Las neuronas prácticamente no almacenan reservas energéticas y "
-        "dependen del aporte continuo de glucosa y oxígeno.\n"
-        "3) Sin oxígeno, la producción de ATP cae en segundos y las bombas se "
-        "detienen: el daño comienza en pocos minutos y es irreversible.\n\n"
-        "Por eso una interrupción del riego cerebral es una emergencia médica "
-        "donde cada minuto cuenta.",
+        "El tejido nervioso depende críticamente de un abastecimiento continuo.\n\n1) Mantener las diferencias iónicas de sus membranas consume adenosín trifosfato (ATP) de manera permanente.\n2) Las neuronas prácticamente no almacenan reservas energéticas y dependen del aporte continuo de glucosa y oxígeno.\n3) Sin oxígeno, la producción de ATP cae en segundos y las bombas se detienen: el daño comienza en pocos minutos y es irreversible.\n\nPor eso una interrupción del riego cerebral es una emergencia médica donde cada minuto cuenta.",
         [
             ("Las neuronas necesitan oxígeno para transmitir el impulso directamente",
              "El impulso depende de gradientes iónicos; el oxígeno se necesita para producir el ATP que los mantiene."),
@@ -104914,15 +104167,7 @@ QUESTIONS_CIENCIAS += [
         "cie_reproduccion", "facil",
         "¿Qué aporta cada gameto en la fecundación humana?",
         "Cada uno aporta la mitad del material genético",
-        "La contribución genética es simétrica; el resto no.\n\n"
-        "1) Tanto el ovocito como el espermatozoide son células HAPLOIDES: "
-        "portan 23 cromosomas cada uno.\n"
-        "2) Al fusionarse, el cigoto queda con 46: la dotación completa de la "
-        "especie.\n"
-        "3) El ovocito aporta además todo el citoplasma, con sus nutrientes, sus "
-        "organelos y su ARN, que sostienen las primeras divisiones.\n\n"
-        "Por eso las mitocondrias, con su propio ADN, se heredan por vía "
-        "materna: las del espermatozoide no ingresan o se degradan.",
+        "La contribución genética es simétrica; el resto no.\n\n1) Tanto el ovocito como el espermatozoide son células HAPLOIDES: portan 23 cromosomas cada uno.\n2) Al fusionarse, el cigoto queda con 46: la dotación completa de la especie.\n3) El ovocito aporta además todo el citoplasma, con sus nutrientes, sus organelos y su ARN, que sostienen las primeras divisiones.\n\nPor eso las mitocondrias, con su propio ácido desoxirribonucleico (ADN), se heredan por vía materna: las del espermatozoide no ingresan o se degradan.",
         [
             ("El espermatozoide aporta el material genético y el ovocito, los nutrientes",
              "El ovocito aporta también la mitad del material genético: la contribución genética es equitativa."),
@@ -105054,15 +104299,7 @@ QUESTIONS_CIENCIAS += [
         "¿Qué característica del espermatozoide se relaciona directamente con su "
         "función?",
         "Su flagelo, que le permite desplazarse",
-        "Su estructura está reducida a lo indispensable para su tarea.\n\n"
-        "1) Debe recorrer una distancia considerable dentro del tracto "
-        "reproductor femenino.\n"
-        "2) El FLAGELO le da movilidad, y las mitocondrias concentradas en su "
-        "base aportan el ATP que ese movimiento consume.\n"
-        "3) Su citoplasma está reducido al mínimo para disminuir el peso a "
-        "desplazar.\n\n"
-        "Lleva además una estructura en su extremo anterior con enzimas que le "
-        "permiten atravesar las cubiertas del ovocito al llegar.",
+        "Su estructura está reducida a lo indispensable para su tarea.\n\n1) Debe recorrer una distancia considerable dentro del tracto reproductor femenino.\n2) El FLAGELO le da movilidad, y las mitocondrias concentradas en su base aportan el adenosín trifosfato (ATP) que ese movimiento consume.\n3) Su citoplasma está reducido al mínimo para disminuir el peso a desplazar.\n\nLleva además una estructura en su extremo anterior con enzimas que le permiten atravesar las cubiertas del ovocito al llegar.",
         [
             ("Su gran cantidad de citoplasma con nutrientes de reserva",
              "El espermatozoide tiene citoplasma reducido al mínimo: las reservas las aporta el ovocito."),
@@ -105953,17 +105190,7 @@ QUESTIONS_CIENCIAS += [
         "es grande porque acumula reservas para el desarrollo inicial. ¿Cuál es "
         "correcta?",
         "La segunda: su tamaño se debe al citoplasma, no al ADN",
-        "El tamaño de una célula no se relaciona con su contenido "
-        "genético.\n\n"
-        "1) El ovocito es haploide: contiene la MITAD del material genético de "
-        "una célula somática común, no más.\n"
-        "2) Su gran tamaño se debe al citoplasma cargado de nutrientes, ARN, "
-        "proteínas y organelos.\n"
-        "3) Esas reservas sostienen las primeras divisiones del embrión antes de "
-        "la implantación.\n\n"
-        "El espermatozoide aporta la misma cantidad de ADN en un volumen miles "
-        "de veces menor: la comparación deja claro que tamaño y contenido "
-        "genético son independientes.",
+        "El tamaño de una célula no se relaciona con su contenido genético.\n\n1) El ovocito es haploide: contiene la MITAD del material genético de una célula somática común, no más.\n2) Su gran tamaño se debe al citoplasma cargado de nutrientes, ARN, proteínas y organelos.\n3) Esas reservas sostienen las primeras divisiones del embrión antes de la implantación.\n\nEl espermatozoide aporta la misma cantidad de ácido desoxirribonucleico (ADN) en un volumen miles de veces menor: la comparación deja claro que tamaño y contenido genético son independientes.",
         [
             ("La primera: a mayor tamaño celular, mayor cantidad de ADN",
              "El ovocito es haploide y el espermatozoide también: ambos tienen la misma cantidad de ADN pese a la enorme diferencia de tamaño."),
@@ -106278,16 +105505,7 @@ QUESTIONS_CIENCIAS += [
         "cie_natalidad_its", "facil",
         "¿Qué tipo de agente patógeno causa el VIH?",
         "Un virus",
-        "Identificar el agente determina el tratamiento posible.\n\n"
-        "1) El VIH es un virus que infecta células del sistema inmune, en "
-        "particular ciertos linfocitos.\n"
-        "2) Al destruirlas progresivamente, deteriora la capacidad de defensa "
-        "del organismo.\n"
-        "3) Los antibióticos no tienen ningún efecto sobre virus: el tratamiento "
-        "es con antirretrovirales, que controlan la infección sin eliminar el "
-        "virus del organismo.\n\n"
-        "Con tratamiento sostenido, la carga viral puede volverse indetectable y "
-        "la persona no transmite el virus por vía sexual.",
+        "Identificar el agente determina el tratamiento posible.\n\n1) El virus de la inmunodeficiencia humana (VIH) es un virus que infecta células del sistema inmune, en particular ciertos linfocitos.\n2) Al destruirlas progresivamente, deteriora la capacidad de defensa del organismo.\n3) Los antibióticos no tienen ningún efecto sobre virus: el tratamiento es con antirretrovirales, que controlan la infección sin eliminar el virus del organismo.\n\nCon tratamiento sostenido, la carga viral puede volverse indetectable y la persona no transmite el virus por vía sexual.",
         [
             ("Una bacteria", "Las bacterias causan la gonorrea y la clamidia, y se tratan con antibióticos."),
             ("Un hongo", "Los hongos causan otras infecciones, y el VIH no es una de ellas."),
@@ -106300,16 +105518,7 @@ QUESTIONS_CIENCIAS += [
         "¿Cuál es el único método anticonceptivo que además previene las "
         "infecciones de transmisión sexual?",
         "El preservativo",
-        "Es el único que actúa como barrera física frente a los agentes "
-        "infecciosos.\n\n"
-        "1) Impide el contacto directo entre mucosas y el paso de fluidos, que "
-        "es la vía de transmisión de la mayoría de las ITS.\n"
-        "2) Los métodos hormonales actúan sobre la ovulación o sobre el moco "
-        "cervical: no interponen ninguna barrera frente a los patógenos.\n"
-        "3) Los quirúrgicos impiden el encuentro de los gametos, pero tampoco "
-        "protegen de infecciones.\n\n"
-        "Por eso se recomienda su uso incluso cuando se emplea otro método "
-        "anticonceptivo: cumplen funciones distintas.",
+        "Es el único que actúa como barrera física frente a los agentes infecciosos.\n\n1) Impide el contacto directo entre mucosas y el paso de fluidos, que es la vía de transmisión de la mayoría de las infecciones de transmisión sexual (ITS).\n2) Los métodos hormonales actúan sobre la ovulación o sobre el moco cervical: no interponen ninguna barrera frente a los patógenos.\n3) Los quirúrgicos impiden el encuentro de los gametos, pero tampoco protegen de infecciones.\n\nPor eso se recomienda su uso incluso cuando se emplea otro método anticonceptivo: cumplen funciones distintas.",
         [
             ("La píldora anticonceptiva",
              "Actúa sobre el ciclo hormonal y no ofrece ninguna protección frente a infecciones."),
@@ -106414,14 +105623,7 @@ QUESTIONS_CIENCIAS += [
         "¿Por qué el VIH deteriora progresivamente la capacidad de defensa del "
         "organismo?",
         "Infecta y destruye células clave del sistema inmune",
-        "El daño no es indirecto: ataca al propio sistema de defensa.\n\n"
-        "1) El virus infecta linfocitos que coordinan la respuesta inmune.\n"
-        "2) Al replicarse dentro de ellos los destruye, y su número disminuye "
-        "con el tiempo.\n"
-        "3) Sin esa coordinación, el organismo queda vulnerable a infecciones "
-        "que normalmente controlaría sin dificultad.\n\n"
-        "El tratamiento antirretroviral frena la replicación del virus y permite "
-        "que el número de esos linfocitos se recupere y se mantenga.",
+        "El daño no es indirecto: ataca al propio sistema de defensa.\n\n1) El virus infecta linfocitos que coordinan la respuesta inmune.\n2) Al replicarse dentro de ellos los destruye, y su número disminuye con el tiempo.\n3) Sin esa coordinación, el organismo queda vulnerable a infecciones que normalmente controlaría sin dificultad.\n\nEl tratamiento antirretroviral frena la replicación del virus y permite que el número de esos linfocitos se recupere y se mantenga. (VIH: virus de la inmunodeficiencia humana.)",
         [
             ("Produce toxinas que dañan directamente a todos los tejidos",
              "El VIH no actúa por toxinas: su efecto es la destrucción de células inmunes."),
@@ -106482,17 +105684,7 @@ QUESTIONS_CIENCIAS += [
         "¿Por qué la gonorrea y la clamidia se tratan con antibióticos y el VIH "
         "no?",
         "Las primeras son bacterianas y el VIH es viral",
-        "El tratamiento depende del tipo de agente patógeno.\n\n"
-        "1) Los antibióticos actúan sobre estructuras propias de las bacterias, "
-        "como su pared o sus ribosomas.\n"
-        "2) Los virus no tienen esas estructuras: usan la maquinaria de la "
-        "célula que infectan, así que los antibióticos no tienen blanco sobre el "
-        "cual actuar.\n"
-        "3) El VIH se trata con antirretrovirales, que bloquean pasos "
-        "específicos de la replicación viral.\n\n"
-        "Por eso identificar el agente es el primer paso del tratamiento, y por "
-        "eso usar antibióticos ante una infección viral no sirve y contribuye a "
-        "la resistencia bacteriana.",
+        "El tratamiento depende del tipo de agente patógeno.\n\n1) Los antibióticos actúan sobre estructuras propias de las bacterias, como su pared o sus ribosomas.\n2) Los virus no tienen esas estructuras: usan la maquinaria de la célula que infectan, así que los antibióticos no tienen blanco sobre el cual actuar.\n3) El virus de la inmunodeficiencia humana (VIH) se trata con antirretrovirales, que bloquean pasos específicos de la replicación viral.\n\nPor eso identificar el agente es el primer paso del tratamiento, y por eso usar antibióticos ante una infección viral no sirve y contribuye a la resistencia bacteriana.",
         [
             ("Las primeras son más recientes y por eso hay tratamiento disponible",
              "La antigüedad no determina la disponibilidad de tratamiento: lo hace el tipo de agente."),
@@ -106506,18 +105698,7 @@ QUESTIONS_CIENCIAS += [
         "cie_natalidad_its", "medio",
         "¿Cuáles son las principales vías de transmisión del VIH?",
         "Sexual, sanguínea y de madre a hijo",
-        "El virus se transmite por fluidos que lo contienen en cantidad "
-        "suficiente.\n\n"
-        "1) SEXUAL: por contacto con fluidos durante relaciones sin "
-        "preservativo.\n"
-        "2) SANGUÍNEA: por compartir material punzante o por transfusiones no "
-        "controladas.\n"
-        "3) DE MADRE A HIJO: durante el embarazo, el parto o la lactancia, "
-        "riesgo que el tratamiento reduce drásticamente.\n\n"
-        "No se transmite por contacto cotidiano: dar la mano, compartir "
-        "utensilios, abrazar o usar el mismo baño no representan riesgo alguno. "
-        "Esa precisión importa, porque el desconocimiento alimenta la "
-        "discriminación.",
+        "El virus se transmite por fluidos que lo contienen en cantidad suficiente.\n\n1) SEXUAL: por contacto con fluidos durante relaciones sin preservativo.\n2) SANGUÍNEA: por compartir material punzante o por transfusiones no controladas.\n3) DE MADRE A HIJO: durante el embarazo, el parto o la lactancia, riesgo que el tratamiento reduce drásticamente.\n\nNo se transmite por contacto cotidiano: dar la mano, compartir utensilios, abrazar o usar el mismo baño no representan riesgo alguno. Esa precisión importa, porque el desconocimiento alimenta la discriminación. (VIH: virus de la inmunodeficiencia humana.)",
         [
             ("Por contacto cotidiano, como compartir utensilios o dar la mano",
              "El contacto cotidiano no transmite el VIH: esa creencia es incorrecta y alimenta la discriminación."),
@@ -106579,15 +105760,7 @@ QUESTIONS_CIENCIAS += [
         "Una persona afirma que si su pareja no presenta síntomas, no hay riesgo "
         "de infección de transmisión sexual. ¿Cómo se evalúa esa afirmación?",
         "Es incorrecta: varias ITS cursan sin síntomas evidentes",
-        "La ausencia de síntomas no equivale a ausencia de infección.\n\n"
-        "1) La clamidia y la gonorrea con frecuencia no producen síntomas, sobre "
-        "todo en las etapas iniciales.\n"
-        "2) El VIH puede permanecer años sin manifestaciones evidentes mientras "
-        "se transmite igual.\n"
-        "3) El herpes puede transmitirse incluso sin lesiones visibles.\n\n"
-        "Por eso la ausencia de síntomas no es un criterio para descartar riesgo: "
-        "lo que corresponde es el uso de preservativo y, si hay dudas, el examen "
-        "correspondiente.",
+        "La ausencia de síntomas no equivale a ausencia de infección.\n\n1) La clamidia y la gonorrea con frecuencia no producen síntomas, sobre todo en las etapas iniciales.\n2) El virus de la inmunodeficiencia humana (VIH) puede permanecer años sin manifestaciones evidentes mientras se transmite igual.\n3) El herpes puede transmitirse incluso sin lesiones visibles.\n\nPor eso la ausencia de síntomas no es un criterio para descartar riesgo: lo que corresponde es el uso de preservativo y, si hay dudas, el examen correspondiente.",
         [
             ("Es correcta: las infecciones siempre producen síntomas visibles",
              "Muchas ITS son asintomáticas durante largos periodos."),
@@ -106648,14 +105821,7 @@ QUESTIONS_CIENCIAS += [
         "¿Qué medida es la más eficaz para prevenir las infecciones de "
         "transmisión sexual durante una relación?",
         "El uso correcto y consistente del preservativo",
-        "Es la única barrera que interrumpe la vía de transmisión.\n\n"
-        "1) Impide el contacto directo entre mucosas y el intercambio de "
-        "fluidos, que es como se transmiten la mayoría de las ITS.\n"
-        "2) CORRECTO significa usarlo desde el comienzo y de la manera "
-        "indicada; CONSISTENTE, en todas las relaciones.\n"
-        "3) Ningún método hormonal ni quirúrgico ofrece esa protección.\n\n"
-        "A eso se suman los controles periódicos y, en el caso de algunas "
-        "infecciones, la vacunación disponible.",
+        "Es la única barrera que interrumpe la vía de transmisión.\n\n1) Impide el contacto directo entre mucosas y el intercambio de fluidos, que es como se transmiten la mayoría de las infecciones de transmisión sexual (ITS).\n2) CORRECTO significa usarlo desde el comienzo y de la manera indicada; CONSISTENTE, en todas las relaciones.\n3) Ningún método hormonal ni quirúrgico ofrece esa protección.\n\nA eso se suman los controles periódicos y, en el caso de algunas infecciones, la vacunación disponible.",
         [
             ("Tomar antibióticos de manera preventiva antes de la relación",
              "El uso de antibióticos sin indicación no previene infecciones y favorece la resistencia bacteriana."),
@@ -106694,14 +105860,7 @@ QUESTIONS_CIENCIAS += [
         "Se afirma que los métodos anticonceptivos hormonales protegen contra el "
         "VIH porque impiden el embarazo. ¿Cómo se evalúa?",
         "Es incorrecta: impedir el embarazo y prevenir infecciones son cosas distintas",
-        "El razonamiento confunde dos mecanismos sin relación entre sí.\n\n"
-        "1) Los métodos hormonales actúan sobre la ovulación y sobre el moco "
-        "cervical: impiden la fecundación.\n"
-        "2) El VIH se transmite por contacto con fluidos, y eso ocurre con "
-        "independencia de si hay ovulación o no.\n"
-        "3) Solo una barrera física interrumpe esa vía.\n\n"
-        "La confusión es peligrosa en la práctica: alguien podría sentirse "
-        "protegido y no serlo. Por eso se insiste en la doble protección.",
+        "El razonamiento confunde dos mecanismos sin relación entre sí.\n\n1) Los métodos hormonales actúan sobre la ovulación y sobre el moco cervical: impiden la fecundación.\n2) El virus de la inmunodeficiencia humana (VIH) se transmite por contacto con fluidos, y eso ocurre con independencia de si hay ovulación o no.\n3) Solo una barrera física interrumpe esa vía.\n\nLa confusión es peligrosa en la práctica: alguien podría sentirse protegido y no serlo. Por eso se insiste en la doble protección.",
         [
             ("Es correcta: al impedir el embarazo también se bloquea el contagio",
              "El contagio no depende de la fecundación: son procesos independientes."),
@@ -106785,14 +105944,7 @@ QUESTIONS_CIENCIAS += [
         "cie_natalidad_its", "medio",
         "¿Qué significa que una persona con VIH tenga carga viral indetectable?",
         "El tratamiento redujo el virus a niveles no medibles",
-        "Es un objetivo terapéutico con consecuencias importantes.\n\n"
-        "1) El tratamiento antirretroviral frena la replicación del virus.\n"
-        "2) Cuando la cantidad de virus en sangre cae por debajo del límite que "
-        "los exámenes detectan, se habla de carga indetectable.\n"
-        "3) En esa condición, y manteniendo el tratamiento, la persona no "
-        "transmite el virus por vía sexual.\n\n"
-        "No significa que el virus haya desaparecido del organismo: si el "
-        "tratamiento se interrumpe, la carga vuelve a aumentar.",
+        "Es un objetivo terapéutico con consecuencias importantes.\n\n1) El tratamiento antirretroviral frena la replicación del virus.\n2) Cuando la cantidad de virus en sangre cae por debajo del límite que los exámenes detectan, se habla de carga indetectable.\n3) En esa condición, y manteniendo el tratamiento, la persona no transmite el virus por vía sexual.\n\nNo significa que el virus haya desaparecido del organismo: si el tratamiento se interrumpe, la carga vuelve a aumentar. (VIH: virus de la inmunodeficiencia humana.)",
         [
             ("El virus fue eliminado por completo del organismo",
              "El virus permanece en el organismo: lo que baja es su cantidad en sangre."),
@@ -106807,15 +105959,7 @@ QUESTIONS_CIENCIAS += [
         "¿Por qué se recomienda combinar un método anticonceptivo con el "
         "preservativo?",
         "Porque cada uno cubre un riesgo distinto",
-        "Prevenir el embarazo y prevenir infecciones son objetivos "
-        "diferentes.\n\n"
-        "1) Un método hormonal o un dispositivo intrauterino ofrece alta "
-        "eficacia anticonceptiva, pero ninguna protección frente a las ITS.\n"
-        "2) El preservativo protege frente a las ITS y además aporta eficacia "
-        "anticonceptiva.\n"
-        "3) Usarlos juntos cubre ambos frentes.\n\n"
-        "A esa combinación se la llama doble protección, y es la recomendación "
-        "habitual en salud sexual.",
+        "Prevenir el embarazo y prevenir infecciones son objetivos diferentes.\n\n1) Un método hormonal o un dispositivo intrauterino ofrece alta eficacia anticonceptiva, pero ninguna protección frente a las infecciones de transmisión sexual (ITS).\n2) El preservativo protege frente a las ITS y además aporta eficacia anticonceptiva.\n3) Usarlos juntos cubre ambos frentes.\n\nA esa combinación se la llama doble protección, y es la recomendación habitual en salud sexual.",
         [
             ("Porque un método por sí solo nunca tiene eficacia suficiente",
              "Varios métodos tienen alta eficacia anticonceptiva por sí solos: el punto es que no cubren las infecciones."),
@@ -106880,16 +106024,7 @@ QUESTIONS_CIENCIAS += [
         "¿Por qué el examen de VIH puede dar negativo aunque la persona esté "
         "infectada, si se realiza muy poco después de la exposición?",
         "El organismo aún no produce lo que el examen detecta",
-        "Existe un periodo entre la infección y la posibilidad de "
-        "detectarla.\n\n"
-        "1) Muchos exámenes detectan los anticuerpos que el organismo produce en "
-        "respuesta al virus.\n"
-        "2) Esa producción toma un tiempo: durante ese periodo el examen puede "
-        "resultar negativo aunque la infección exista.\n"
-        "3) Por eso se indica repetir el examen pasado un plazo determinado.\n\n"
-        "Durante ese periodo la persona sí puede transmitir el virus, lo que "
-        "refuerza la importancia de las medidas de prevención mientras se espera "
-        "el resultado confirmatorio.",
+        "Existe un periodo entre la infección y la posibilidad de detectarla.\n\n1) Muchos exámenes detectan los anticuerpos que el organismo produce en respuesta al virus.\n2) Esa producción toma un tiempo: durante ese periodo el examen puede resultar negativo aunque la infección exista.\n3) Por eso se indica repetir el examen pasado un plazo determinado.\n\nDurante ese periodo la persona sí puede transmitir el virus, lo que refuerza la importancia de las medidas de prevención mientras se espera el resultado confirmatorio. (VIH: virus de la inmunodeficiencia humana.)",
         [
             ("El virus permanece inactivo y no puede transmitirse durante ese periodo",
              "La transmisión es posible durante ese periodo, y de hecho puede ser especialmente eficiente."),
@@ -106904,16 +106039,7 @@ QUESTIONS_CIENCIAS += [
         "¿Qué tienen en común el VIH y el herpes genital en cuanto a su agente "
         "patógeno?",
         "Ambos son causados por virus",
-        "La clasificación del agente determina el tipo de tratamiento "
-        "disponible.\n\n"
-        "1) Ambos son infecciones virales, y por lo tanto los antibióticos no "
-        "tienen efecto sobre ellos.\n"
-        "2) En ambos casos el virus permanece en el organismo: los tratamientos "
-        "controlan la infección, no la eliminan.\n"
-        "3) La gonorrea y la clamidia, en cambio, son bacterianas y sí se curan "
-        "con antibióticos.\n\n"
-        "Esa diferencia entre infecciones curables y controlables es una de las "
-        "distinciones centrales del contenido.",
+        "La clasificación del agente determina el tipo de tratamiento disponible.\n\n1) Ambos son infecciones virales, y por lo tanto los antibióticos no tienen efecto sobre ellos.\n2) En ambos casos el virus permanece en el organismo: los tratamientos controlan la infección, no la eliminan.\n3) La gonorrea y la clamidia, en cambio, son bacterianas y sí se curan con antibióticos.\n\nEsa diferencia entre infecciones curables y controlables es una de las distinciones centrales del contenido. (VIH: virus de la inmunodeficiencia humana.)",
         [
             ("Ambos son causados por bacterias",
              "Las infecciones bacterianas de este grupo son la gonorrea y la clamidia."),
@@ -106952,15 +106078,7 @@ QUESTIONS_CIENCIAS += [
         "¿Qué significa que las ITS puedan transmitirse durante el periodo de "
         "ventana o en ausencia de síntomas, en términos de prevención?",
         "La prevención no puede basarse en la apariencia de salud",
-        "El criterio visual no funciona como medida preventiva.\n\n"
-        "1) Varias infecciones cursan sin síntomas durante largos periodos, y "
-        "aun así se transmiten.\n"
-        "2) Otras, como el VIH, tienen un periodo inicial en que los exámenes "
-        "todavía no las detectan pero la transmisión ya es posible.\n"
-        "3) Por lo tanto, ni la ausencia de síntomas ni un examen reciente "
-        "garantizan ausencia de riesgo.\n\n"
-        "La conclusión práctica es que la prevención debe ser una conducta "
-        "sostenida y no una evaluación caso a caso basada en apariencias.",
+        "El criterio visual no funciona como medida preventiva.\n\n1) Varias infecciones cursan sin síntomas durante largos periodos, y aun así se transmiten.\n2) Otras, como el virus de la inmunodeficiencia humana (VIH), tienen un periodo inicial en que los exámenes todavía no las detectan pero la transmisión ya es posible.\n3) Por lo tanto, ni la ausencia de síntomas ni un examen reciente garantizan ausencia de riesgo.\n\nLa conclusión práctica es que la prevención debe ser una conducta sostenida y no una evaluación caso a caso basada en apariencias. (ITS: infecciones de transmisión sexual.)",
         [
             ("Basta con observar cuidadosamente antes de cada relación",
              "La observación no detecta infecciones asintomáticas, que son frecuentes."),
@@ -106992,15 +106110,7 @@ QUESTIONS_CIENCIAS += [
         "cie_natalidad_its", "facil",
         "¿Qué tipo de agente patógeno causa la sífilis?",
         "Una bacteria",
-        "El tipo de agente decide si existe tratamiento curativo.\n\n"
-        "1) La sífilis es causada por una bacteria que se transmite por vía "
-        "sexual y también de la persona gestante al feto.\n"
-        "2) Al ser bacteriana, responde a antibióticos y la infección puede "
-        "curarse por completo si se trata a tiempo.\n"
-        "3) Eso la diferencia del VIH y del herpes, que son virales y solo "
-        "admiten tratamientos que controlan la infección.\n\n"
-        "Curable no significa inofensiva: sin tratamiento avanza por etapas y "
-        "puede dañar el sistema nervioso y el corazón años después.",
+        "El tipo de agente decide si existe tratamiento curativo.\n\n1) La sífilis es causada por una bacteria que se transmite por vía sexual y también de la persona gestante al feto.\n2) Al ser bacteriana, responde a antibióticos y la infección puede curarse por completo si se trata a tiempo.\n3) Eso la diferencia del virus de la inmunodeficiencia humana (VIH) y del herpes, que son virales y solo admiten tratamientos que controlan la infección.\n\nCurable no significa inofensiva: sin tratamiento avanza por etapas y puede dañar el sistema nervioso y el corazón años después.",
         [
             ("Un virus",
              "Confunde la sífilis con las infecciones virales como el VIH o el herpes genital."),
@@ -107014,17 +106124,7 @@ QUESTIONS_CIENCIAS += [
         "cie_natalidad_its", "facil",
         "¿Cuál de las siguientes situaciones NO transmite el VIH?",
         "Compartir utensilios de cocina",
-        "Conocer las vías reales de transmisión evita el estigma sin bajar la "
-        "prevención.\n\n"
-        "1) El VIH se transmite por sangre, por relaciones sexuales sin "
-        "protección y de la persona gestante al hijo durante el embarazo, el "
-        "parto o la lactancia.\n"
-        "2) El virus no sobrevive lo suficiente fuera del organismo ni alcanza "
-        "concentraciones infectantes en la saliva.\n"
-        "3) Por eso convivir, abrazarse o compartir vajilla no implica ningún "
-        "riesgo de contagio.\n\n"
-        "Separar lo que transmite de lo que no es parte de la prevención: el "
-        "miedo mal dirigido no protege y sí aísla a las personas.",
+        "Conocer las vías reales de transmisión evita el estigma sin bajar la prevención.\n\n1) El virus de la inmunodeficiencia humana (VIH) se transmite por sangre, por relaciones sexuales sin protección y de la persona gestante al hijo durante el embarazo, el parto o la lactancia.\n2) El virus no sobrevive lo suficiente fuera del organismo ni alcanza concentraciones infectantes en la saliva.\n3) Por eso convivir, abrazarse o compartir vajilla no implica ningún riesgo de contagio.\n\nSeparar lo que transmite de lo que no es parte de la prevención: el miedo mal dirigido no protege y sí aísla a las personas.",
         [
             ("Una transfusión con sangre infectada",
              "Es una de las vías de transmisión reconocidas, por contacto directo con sangre."),
@@ -107039,17 +106139,7 @@ QUESTIONS_CIENCIAS += [
         "¿Contra cuál de estas infecciones existe una vacuna incluida en el "
         "programa nacional de inmunizaciones?",
         "El virus del papiloma humano",
-        "La vacunación es una medida de prevención primaria, anterior a la "
-        "exposición.\n\n"
-        "1) La vacuna contra el virus del papiloma humano se administra en la "
-        "edad escolar, antes del inicio de la vida sexual.\n"
-        "2) Se aplica entonces porque protege frente a los tipos virales "
-        "asociados al cáncer cervicouterino, y su efecto es preventivo y no "
-        "curativo.\n"
-        "3) Para el VIH, la gonorrea y la clamidia no existe vacuna disponible: "
-        "su prevención depende del preservativo y del diagnóstico oportuno.\n\n"
-        "Que exista vacuna para una infección no reemplaza las demás medidas "
-        "frente a las otras.",
+        "La vacunación es una medida de prevención primaria, anterior a la exposición.\n\n1) La vacuna contra el virus del papiloma humano se administra en la edad escolar, antes del inicio de la vida sexual.\n2) Se aplica entonces porque protege frente a los tipos virales asociados al cáncer cervicouterino, y su efecto es preventivo y no curativo.\n3) Para el virus de la inmunodeficiencia humana (VIH), la gonorrea y la clamidia no existe vacuna disponible: su prevención depende del preservativo y del diagnóstico oportuno.\n\nQue exista vacuna para una infección no reemplaza las demás medidas frente a las otras.",
         [
             ("El VIH",
              "No existe una vacuna disponible contra el VIH; su prevención es conductual y farmacológica."),
@@ -107204,15 +106294,7 @@ QUESTIONS_CIENCIAS += [
         "cie_natalidad_its", "medio",
         "¿Por qué el control del embarazo incluye exámenes de VIH y de sífilis?",
         "Ambas pueden transmitirse al feto",
-        "El tamizaje se justifica por una vía de transmisión que no es sexual.\n\n"
-        "1) El VIH y la sífilis pueden pasar de la persona gestante al hijo "
-        "durante el embarazo, el parto o la lactancia.\n"
-        "2) Detectadas a tiempo, existen tratamientos que reducen esa "
-        "transmisión a niveles muy bajos.\n"
-        "3) Como ambas pueden cursar sin síntomas, el examen es la única forma "
-        "de identificarlas dentro del plazo en que el tratamiento sirve.\n\n"
-        "Es un ejemplo de prevención que depende del diagnóstico y no de la "
-        "conducta de la persona examinada.",
+        "El tamizaje se justifica por una vía de transmisión que no es sexual.\n\n1) El virus de la inmunodeficiencia humana (VIH) y la sífilis pueden pasar de la persona gestante al hijo durante el embarazo, el parto o la lactancia.\n2) Detectadas a tiempo, existen tratamientos que reducen esa transmisión a niveles muy bajos.\n3) Como ambas pueden cursar sin síntomas, el examen es la única forma de identificarlas dentro del plazo en que el tratamiento sirve.\n\nEs un ejemplo de prevención que depende del diagnóstico y no de la conducta de la persona examinada.",
         [
             ("Porque son las dos únicas infecciones de transmisión sexual que existen",
              "Hay muchas otras; estas se tamizan por su transmisión al feto y por tener tratamiento."),
@@ -107671,16 +106753,7 @@ QUESTIONS_CIENCIAS += [
         "cie_ciclo_celular", "facil",
         "¿De qué está formada la cromatina?",
         "ADN asociado a proteínas",
-        "La cromatina es el estado habitual del material genético dentro del "
-        "núcleo.\n\n"
-        "1) El ADN no está suelto: se enrolla sobre proteínas llamadas "
-        "histonas.\n"
-        "2) Ese conjunto de ADN más proteínas es lo que se denomina "
-        "cromatina.\n"
-        "3) Según cuánto se enrolle, la misma cromatina se ve dispersa o "
-        "condensada en forma de cromosomas.\n\n"
-        "Hablar de cromatina o de cromosoma no es hablar de dos materiales "
-        "distintos, sino del mismo material en distinto grado de compactación.",
+        "La cromatina es el estado habitual del material genético dentro del núcleo.\n\n1) El ácido desoxirribonucleico (ADN) no está suelto: se enrolla sobre proteínas llamadas histonas.\n2) Ese conjunto de ADN más proteínas es lo que se denomina cromatina.\n3) Según cuánto se enrolle, la misma cromatina se ve dispersa o condensada en forma de cromosomas.\n\nHablar de cromatina o de cromosoma no es hablar de dos materiales distintos, sino del mismo material en distinto grado de compactación.",
         [
             ("Solo ADN",
              "El ADN por sí solo no se compacta: necesita las proteínas sobre las que se enrolla."),
@@ -107694,16 +106767,7 @@ QUESTIONS_CIENCIAS += [
         "cie_ciclo_celular", "facil",
         "¿Cuál es la unidad básica de compactación de la cromatina?",
         "El nucleosoma",
-        "El primer nivel de compactación se repite a lo largo de toda la "
-        "molécula.\n\n"
-        "1) El ADN da unas dos vueltas alrededor de un grupo de histonas y "
-        "forma una unidad llamada nucleosoma.\n"
-        "2) Esa unidad se repite miles de veces, lo que al microscopio da el "
-        "aspecto de un collar de cuentas.\n"
-        "3) Sobre ese primer nivel se apoyan los siguientes, hasta llegar al "
-        "cromosoma metafásico.\n\n"
-        "La compactación ocurre por etapas y no de una sola vez, y eso permite "
-        "que la célula abra solo las regiones que necesita leer.",
+        "El primer nivel de compactación se repite a lo largo de toda la molécula.\n\n1) El ácido desoxirribonucleico (ADN) da unas dos vueltas alrededor de un grupo de histonas y forma una unidad llamada nucleosoma.\n2) Esa unidad se repite miles de veces, lo que al microscopio da el aspecto de un collar de cuentas.\n3) Sobre ese primer nivel se apoyan los siguientes, hasta llegar al cromosoma metafásico.\n\nLa compactación ocurre por etapas y no de una sola vez, y eso permite que la célula abra solo las regiones que necesita leer.",
         [
             ("El centrómero",
              "El centrómero es la región por donde se unen las cromátidas hermanas, no una unidad de enrollamiento."),
@@ -107717,14 +106781,7 @@ QUESTIONS_CIENCIAS += [
         "cie_ciclo_celular", "facil",
         "¿En qué etapa del ciclo celular se duplica el ADN?",
         "En la fase S",
-        "La duplicación ocurre antes de que empiece la división.\n\n"
-        "1) La interfase se divide en G1, S y G2.\n"
-        "2) La S es la fase de síntesis: cada molécula de ADN se copia y el "
-        "cromosoma queda con dos cromátidas hermanas idénticas.\n"
-        "3) Recién después, en la mitosis, esas cromátidas se reparten entre "
-        "las dos células hijas.\n\n"
-        "Que la copia anteceda al reparto es lo que permite que ambas hijas "
-        "reciban la información completa.",
+        "La duplicación ocurre antes de que empiece la división.\n\n1) La interfase se divide en G1, S y G2.\n2) La S es la fase de síntesis: cada molécula de ácido desoxirribonucleico (ADN) se copia y el cromosoma queda con dos cromátidas hermanas idénticas.\n3) Recién después, en la mitosis, esas cromátidas se reparten entre las dos células hijas.\n\nQue la copia anteceda al reparto es lo que permite que ambas hijas reciban la información completa.",
         [
             ("En la fase G1",
              "En G1 la célula crece y sintetiza proteínas y organelos, pero aún no copia su ADN."),
@@ -107738,15 +106795,7 @@ QUESTIONS_CIENCIAS += [
         "cie_ciclo_celular", "facil",
         "¿Qué ocurre principalmente durante la fase G1?",
         "La célula crece y sintetiza proteínas",
-        "G1 es la fase que prepara a la célula para poder copiar su ADN.\n\n"
-        "1) Tras la división, la célula hija tiene la mitad del tamaño y del "
-        "contenido de organelos de la original.\n"
-        "2) En G1 aumenta de tamaño, fabrica proteínas y multiplica sus "
-        "organelos.\n"
-        "3) Solo si alcanza las condiciones adecuadas avanza a la fase S y "
-        "duplica su ADN.\n\n"
-        "Es también la fase más variable en duración: en algunos tipos "
-        "celulares dura horas y en otros, años.",
+        "G1 es la fase que prepara a la célula para poder copiar su ácido desoxirribonucleico (ADN).\n\n1) Tras la división, la célula hija tiene la mitad del tamaño y del contenido de organelos de la original.\n2) En G1 aumenta de tamaño, fabrica proteínas y multiplica sus organelos.\n3) Solo si alcanza las condiciones adecuadas avanza a la fase S y duplica su ADN.\n\nEs también la fase más variable en duración: en algunos tipos celulares dura horas y en otros, años.",
         [
             ("Se separan las cromátidas hermanas",
              "Eso ocurre en la anafase de la mitosis, no en la interfase."),
@@ -107783,15 +106832,7 @@ QUESTIONS_CIENCIAS += [
         "cie_ciclo_celular", "facil",
         "¿Cuál es el resultado de una mitosis?",
         "Dos células con la misma información genética",
-        "El resultado define para qué sirve este tipo de división.\n\n"
-        "1) El ADN se duplicó antes, en la fase S, y en la mitosis se reparte "
-        "una copia completa a cada célula hija.\n"
-        "2) Por eso ambas quedan con el mismo número de cromosomas que la "
-        "célula original y con la misma información.\n"
-        "3) Ese reparto idéntico es lo que permite el crecimiento y la "
-        "reparación de tejidos sin alterar la información.\n\n"
-        "La división que reduce el número de cromosomas y genera variabilidad "
-        "es la meiosis, que ocurre solo en la formación de gametos.",
+        "El resultado define para qué sirve este tipo de división.\n\n1) El ácido desoxirribonucleico (ADN) se duplicó antes, en la fase S, y en la mitosis se reparte una copia completa a cada célula hija.\n2) Por eso ambas quedan con el mismo número de cromosomas que la célula original y con la misma información.\n3) Ese reparto idéntico es lo que permite el crecimiento y la reparación de tejidos sin alterar la información.\n\nLa división que reduce el número de cromosomas y genera variabilidad es la meiosis, que ocurre solo en la formación de gametos.",
         [
             ("Cuatro células con la mitad de los cromosomas",
              "Ese es el resultado de la meiosis, no de la mitosis."),
@@ -107826,15 +106867,7 @@ QUESTIONS_CIENCIAS += [
         "cie_ciclo_celular", "facil",
         "¿Por qué el ADN necesita compactarse dentro del núcleo?",
         "Porque es mucho más largo que el núcleo",
-        "El problema es de espacio, y su solución es el enrollamiento.\n\n"
-        "1) El ADN de una célula humana mide alrededor de dos metros si se "
-        "estira, y el núcleo tiene unas pocas milésimas de milímetro.\n"
-        "2) Enrollado sobre histonas y plegado en niveles sucesivos, ese "
-        "material cabe en el núcleo.\n"
-        "3) La compactación máxima llega en la mitosis, cuando además hay que "
-        "transportar los cromosomas sin enredarlos.\n\n"
-        "Una molécula tan larga sin compactar no solo no cabría: se rompería al "
-        "moverse.",
+        "El problema es de espacio, y su solución es el enrollamiento.\n\n1) El ácido desoxirribonucleico (ADN) de una célula humana mide alrededor de dos metros si se estira, y el núcleo tiene unas pocas milésimas de milímetro.\n2) Enrollado sobre histonas y plegado en niveles sucesivos, ese material cabe en el núcleo.\n3) La compactación máxima llega en la mitosis, cuando además hay que transportar los cromosomas sin enredarlos.\n\nUna molécula tan larga sin compactar no solo no cabría: se rompería al moverse.",
         [
             ("Porque así se protege del calor",
              "La compactación no cumple una función térmica."),
@@ -107913,15 +106946,7 @@ QUESTIONS_CIENCIAS += [
         "cie_ciclo_celular", "facil",
         "¿Qué fase del ciclo celular ocupa la mayor parte del tiempo?",
         "La interfase",
-        "La proporción del tiempo revela qué es lo excepcional.\n\n"
-        "1) La interfase reúne G1, S y G2: crecimiento, duplicación del ADN y "
-        "preparación de la división.\n"
-        "2) En la mayoría de las células ocupa más del 90% de la duración del "
-        "ciclo.\n"
-        "3) La mitosis, en cambio, es breve: en un ciclo típico de un día dura "
-        "aproximadamente una hora.\n\n"
-        "Por eso, al mirar un tejido al microscopio, la mayoría de las células "
-        "se ve en interfase.",
+        "La proporción del tiempo revela qué es lo excepcional.\n\n1) La interfase reúne G1, S y G2: crecimiento, duplicación del ácido desoxirribonucleico (ADN) y preparación de la división.\n2) En la mayoría de las células ocupa más del 90% de la duración del ciclo.\n3) La mitosis, en cambio, es breve: en un ciclo típico de un día dura aproximadamente una hora.\n\nPor eso, al mirar un tejido al microscopio, la mayoría de las células se ve en interfase.",
         [
             ("La profase",
              "Es una etapa de la mitosis y ocupa solo una parte de esa hora."),
@@ -107935,16 +106960,7 @@ QUESTIONS_CIENCIAS += [
         "cie_ciclo_celular", "medio",
         "¿Qué diferencia hay entre la cromatina laxa y la condensada?",
         "El grado de enrollamiento del ADN",
-        "El grado de compactación decide qué se puede leer.\n\n"
-        "1) En la cromatina laxa el ADN está poco enrollado y las enzimas "
-        "pueden acceder a la secuencia.\n"
-        "2) En la condensada el enrollamiento es tan compacto que ese acceso se "
-        "bloquea.\n"
-        "3) Por eso una región muy condensada no se transcribe, aunque el gen "
-        "esté presente e intacto.\n\n"
-        "Durante la mitosis toda la cromatina se condensa al máximo, y esa es "
-        "una de las razones de que la célula prácticamente no transcriba "
-        "mientras se divide.",
+        "El grado de compactación decide qué se puede leer.\n\n1) En la cromatina laxa el ácido desoxirribonucleico (ADN) está poco enrollado y las enzimas pueden acceder a la secuencia.\n2) En la condensada el enrollamiento es tan compacto que ese acceso se bloquea.\n3) Por eso una región muy condensada no se transcribe, aunque el gen esté presente e intacto.\n\nDurante la mitosis toda la cromatina se condensa al máximo, y esa es una de las razones de que la célula prácticamente no transcriba mientras se divide.",
         [
             ("Que llevan información genética distinta",
              "Es el mismo ADN: lo que cambia es cuánto está enrollado."),
@@ -107980,15 +106996,7 @@ QUESTIONS_CIENCIAS += [
         "cie_ciclo_celular", "medio",
         "¿Qué verifica el punto de control G1–S?",
         "Si la célula está en condiciones de duplicar su ADN",
-        "Este control decide si el ciclo continúa o se detiene.\n\n"
-        "1) Antes de entrar a la fase S, la célula evalúa su tamaño, la "
-        "disponibilidad de nutrientes y las señales externas.\n"
-        "2) También comprueba que el ADN no tenga daños: copiar una molécula "
-        "dañada multiplica el error.\n"
-        "3) Si algo no se cumple, la célula detiene el ciclo o sale de él hacia "
-        "un estado de reposo.\n\n"
-        "Es el punto de decisión más importante del ciclo, porque después de "
-        "entrar a S la división ya está comprometida.",
+        "Este control decide si el ciclo continúa o se detiene.\n\n1) Antes de entrar a la fase S, la célula evalúa su tamaño, la disponibilidad de nutrientes y las señales externas.\n2) También comprueba que el ácido desoxirribonucleico (ADN) no tenga daños: copiar una molécula dañada multiplica el error.\n3) Si algo no se cumple, la célula detiene el ciclo o sale de él hacia un estado de reposo.\n\nEs el punto de decisión más importante del ciclo, porque después de entrar a S la división ya está comprometida.",
         [
             ("Si las cromátidas están unidas al huso",
              "Eso lo verifica el punto de control de metafase, mucho más adelante."),
@@ -108002,14 +107010,7 @@ QUESTIONS_CIENCIAS += [
         "cie_ciclo_celular", "medio",
         "¿Qué verifica el punto de control G2–M?",
         "Que la duplicación del ADN esté completa y sin daño",
-        "Este control protege el reparto que viene a continuación.\n\n"
-        "1) Entre la fase S y la mitosis, la célula comprueba que todo su ADN "
-        "haya sido copiado una sola vez y por completo.\n"
-        "2) También verifica que no queden roturas ni errores sin reparar.\n"
-        "3) Si detecta un problema, retrasa la entrada en mitosis mientras "
-        "actúan los mecanismos de reparación.\n\n"
-        "Entrar en mitosis con el ADN a medio copiar produciría células hijas "
-        "con información incompleta.",
+        "Este control protege el reparto que viene a continuación.\n\n1) Entre la fase S y la mitosis, la célula comprueba que todo su ácido desoxirribonucleico (ADN) haya sido copiado una sola vez y por completo.\n2) También verifica que no queden roturas ni errores sin reparar.\n3) Si detecta un problema, retrasa la entrada en mitosis mientras actúan los mecanismos de reparación.\n\nEntrar en mitosis con el ADN a medio copiar produciría células hijas con información incompleta.",
         [
             ("Que la célula tenga nutrientes suficientes para crecer",
              "Esa evaluación corresponde al punto G1–S, antes de la duplicación."),
@@ -108068,16 +107069,7 @@ QUESTIONS_CIENCIAS += [
         "cie_ciclo_celular", "medio",
         "¿Qué caracteriza al estado G0?",
         "La célula sale del ciclo y no se divide",
-        "No todas las células están en camino a dividirse.\n\n"
-        "1) Desde G1, una célula puede salir del ciclo y entrar en un estado de "
-        "reposo llamado G0.\n"
-        "2) En G0 mantiene su actividad metabólica y cumple su función, pero no "
-        "avanza hacia la duplicación del ADN.\n"
-        "3) Algunas permanecen ahí de forma definitiva, como las neuronas; "
-        "otras pueden reingresar al ciclo si reciben la señal adecuada, como "
-        "las del hígado.\n\n"
-        "Que una célula no se divida no significa que esté inactiva ni "
-        "deteriorada.",
+        "No todas las células están en camino a dividirse.\n\n1) Desde G1, una célula puede salir del ciclo y entrar en un estado de reposo llamado G0.\n2) En G0 mantiene su actividad metabólica y cumple su función, pero no avanza hacia la duplicación del ácido desoxirribonucleico (ADN).\n3) Algunas permanecen ahí de forma definitiva, como las neuronas; otras pueden reingresar al ciclo si reciben la señal adecuada, como las del hígado.\n\nQue una célula no se divida no significa que esté inactiva ni deteriorada.",
         [
             ("La célula duplica su ADN sin dividirse",
              "Duplicar el ADN es entrar en fase S, o sea seguir dentro del ciclo."),
@@ -108091,14 +107083,7 @@ QUESTIONS_CIENCIAS += [
         "cie_ciclo_celular", "medio",
         "¿Por qué se dice que el cáncer es una enfermedad del ciclo celular?",
         "Porque falla el control de la división",
-        "El origen está en la regulación y no en la división misma.\n\n"
-        "1) Dividirse es una actividad normal de muchas células del organismo.\n"
-        "2) Lo que la mantiene ordenada son los puntos de control, que detienen "
-        "el ciclo cuando algo anda mal.\n"
-        "3) Si mutaciones dañan esos mecanismos, las células siguen "
-        "dividiéndose pese al daño en el ADN o a la falta de señales.\n\n"
-        "De ahí que un tumor no sea un tejido que se divide, sino uno que no "
-        "sabe cuándo dejar de hacerlo.",
+        "El origen está en la regulación y no en la división misma.\n\n1) Dividirse es una actividad normal de muchas células del organismo.\n2) Lo que la mantiene ordenada son los puntos de control, que detienen el ciclo cuando algo anda mal.\n3) Si mutaciones dañan esos mecanismos, las células siguen dividiéndose pese al daño en el ácido desoxirribonucleico (ADN) o a la falta de señales.\n\nDe ahí que un tumor no sea un tejido que se divide, sino uno que no sabe cuándo dejar de hacerlo.",
         [
             ("Porque las células cancerosas no tienen ADN",
              "Sí lo tienen, y con frecuencia alterado; el problema es el control de la división."),
@@ -108113,15 +107098,7 @@ QUESTIONS_CIENCIAS += [
         "¿Por qué muchos tratamientos contra el cáncer afectan también al "
         "cabello y a la mucosa digestiva?",
         "Porque atacan a las células que se dividen rápido",
-        "El efecto adverso viene del mismo mecanismo que da el efecto buscado.\n\n"
-        "1) Varios fármacos interfieren con la duplicación del ADN o con el "
-        "huso, o sea con la división celular.\n"
-        "2) Las células tumorales se dividen mucho, por eso son especialmente "
-        "sensibles.\n"
-        "3) Pero también se dividen rápido las de los folículos pilosos, la "
-        "mucosa digestiva y la médula ósea, que resultan afectadas.\n\n"
-        "Los efectos adversos característicos de estos tratamientos son la "
-        "consecuencia directa de esa falta de selectividad.",
+        "El efecto adverso viene del mismo mecanismo que da el efecto buscado.\n\n1) Varios fármacos interfieren con la duplicación del ácido desoxirribonucleico (ADN) o con el huso, o sea con la división celular.\n2) Las células tumorales se dividen mucho, por eso son especialmente sensibles.\n3) Pero también se dividen rápido las de los folículos pilosos, la mucosa digestiva y la médula ósea, que resultan afectadas.\n\nLos efectos adversos característicos de estos tratamientos son la consecuencia directa de esa falta de selectividad.",
         [
             ("Porque el fármaco se acumula en la piel y en el sistema digestivo",
              "El efecto no depende de dónde se acumule, sino de qué células se dividen más."),
@@ -108202,14 +107179,7 @@ QUESTIONS_CIENCIAS += [
         "Una célula se encuentra en G2. ¿En qué estado está su material "
         "genético?",
         "Duplicado, con cromosomas de dos cromátidas",
-        "La ubicación en el ciclo determina cuánto ADN hay.\n\n"
-        "1) G2 es posterior a la fase S, donde el ADN ya fue copiado.\n"
-        "2) Cada cromosoma está formado por dos cromátidas hermanas unidas por "
-        "el centrómero.\n"
-        "3) El número de cromosomas no cambió: lo que se duplicó es la cantidad "
-        "de ADN.\n\n"
-        "Es una distinción que se presta a error: contar cromátidas no es lo "
-        "mismo que contar cromosomas.",
+        "La ubicación en el ciclo determina cuánto ácido desoxirribonucleico (ADN) hay.\n\n1) G2 es posterior a la fase S, donde el ADN ya fue copiado.\n2) Cada cromosoma está formado por dos cromátidas hermanas unidas por el centrómero.\n3) El número de cromosomas no cambió: lo que se duplicó es la cantidad de ADN.\n\nEs una distinción que se presta a error: contar cromátidas no es lo mismo que contar cromosomas.",
         [
             ("Sin duplicar, con una cromátida por cromosoma",
              "Ese es el estado de G1, anterior a la fase S."),
@@ -108223,15 +107193,7 @@ QUESTIONS_CIENCIAS += [
         "cie_ciclo_celular", "medio",
         "¿Qué ocurre con los organelos durante la división celular?",
         "Se reparten entre las dos células hijas",
-        "El reparto del citoplasma es menos preciso que el del ADN.\n\n"
-        "1) Antes de dividirse, la célula aumenta el número de sus organelos "
-        "durante G1 y G2.\n"
-        "2) En la citocinesis, esos organelos quedan distribuidos entre ambas "
-        "hijas junto con el citoplasma.\n"
-        "3) La distribución es aproximada y no exacta, a diferencia del reparto "
-        "de cromosomas, que sí lo es.\n\n"
-        "Cada célula hija completa después su dotación durante la fase G1 "
-        "siguiente.",
+        "El reparto del citoplasma es menos preciso que el del ácido desoxirribonucleico (ADN).\n\n1) Antes de dividirse, la célula aumenta el número de sus organelos durante G1 y G2.\n2) En la citocinesis, esos organelos quedan distribuidos entre ambas hijas junto con el citoplasma.\n3) La distribución es aproximada y no exacta, a diferencia del reparto de cromosomas, que sí lo es.\n\nCada célula hija completa después su dotación durante la fase G1 siguiente.",
         [
             ("Se destruyen y se sintetizan de nuevo en cada hija",
              "No se destruyen: se heredan y luego se complementan con nuevos."),
@@ -108245,15 +107207,7 @@ QUESTIONS_CIENCIAS += [
         "cie_ciclo_celular", "medio",
         "¿Qué ocurre en la profase de la mitosis?",
         "La cromatina se condensa y se forma el huso",
-        "La profase prepara las condiciones para el reparto.\n\n"
-        "1) La cromatina, hasta entonces dispersa, se compacta hasta hacerse "
-        "visible como cromosomas.\n"
-        "2) Se organiza el huso a partir de los centros organizadores de "
-        "microtúbulos, en polos opuestos.\n"
-        "3) Hacia el final, la envoltura nuclear se desarma y las fibras del "
-        "huso alcanzan a los cromosomas.\n\n"
-        "Sin esa condensación previa, mover moléculas de ADN de dos metros sin "
-        "romperlas sería imposible.",
+        "La profase prepara las condiciones para el reparto.\n\n1) La cromatina, hasta entonces dispersa, se compacta hasta hacerse visible como cromosomas.\n2) Se organiza el huso a partir de los centros organizadores de microtúbulos, en polos opuestos.\n3) Hacia el final, la envoltura nuclear se desarma y las fibras del huso alcanzan a los cromosomas.\n\nSin esa condensación previa, mover moléculas de ácido desoxirribonucleico (ADN) de dos metros sin romperlas sería imposible.",
         [
             ("Se separan las cromátidas hermanas",
              "Esa separación ocurre en la anafase."),
@@ -108450,14 +107404,7 @@ QUESTIONS_CIENCIAS += [
         "Un fármaco impide la síntesis de ADN sin afectar otras funciones "
         "celulares. ¿Dónde se detendrá el ciclo?",
         "En la fase S",
-        "El bloqueo aparece donde se necesita la función suprimida.\n\n"
-        "1) La célula avanza normalmente por G1, porque ahí solo crece y "
-        "sintetiza proteínas.\n"
-        "2) Al entrar en S intenta copiar su ADN y no puede completarlo.\n"
-        "3) El punto de control G2–M no la dejará entrar en mitosis con la "
-        "duplicación incompleta, de modo que el ciclo queda detenido.\n\n"
-        "Ese es el mecanismo de varios fármacos usados contra tumores de "
-        "división rápida.",
+        "El bloqueo aparece donde se necesita la función suprimida.\n\n1) La célula avanza normalmente por G1, porque ahí solo crece y sintetiza proteínas.\n2) Al entrar en S intenta copiar su ácido desoxirribonucleico (ADN) y no puede completarlo.\n3) El punto de control G2–M no la dejará entrar en mitosis con la duplicación incompleta, de modo que el ciclo queda detenido.\n\nEse es el mecanismo de varios fármacos usados contra tumores de división rápida.",
         [
             ("En la anafase",
              "La célula no llega a la mitosis: se detiene antes, con el ADN a medio copiar."),
@@ -108540,14 +107487,7 @@ QUESTIONS_CIENCIAS += [
         "¿Cómo varía la cantidad de ADN de una célula a lo largo de un ciclo "
         "completo?",
         "Se duplica en S y vuelve a la mitad al dividirse",
-        "El contenido de ADN sube una vez por ciclo y baja una vez por ciclo.\n\n"
-        "1) Durante G1 la célula mantiene su cantidad de ADN inicial.\n"
-        "2) En la fase S esa cantidad se duplica, y se mantiene duplicada "
-        "durante G2 y la mitosis.\n"
-        "3) Al repartirse entre las dos hijas en la anafase y la citocinesis, "
-        "cada una queda con la cantidad inicial.\n\n"
-        "Ese patrón de subida y bajada es lo que permite identificar en qué "
-        "fase está una célula midiendo su contenido de ADN.",
+        "El contenido de ácido desoxirribonucleico (ADN) sube una vez por ciclo y baja una vez por ciclo.\n\n1) Durante G1 la célula mantiene su cantidad de ADN inicial.\n2) En la fase S esa cantidad se duplica, y se mantiene duplicada durante G2 y la mitosis.\n3) Al repartirse entre las dos hijas en la anafase y la citocinesis, cada una queda con la cantidad inicial.\n\nEse patrón de subida y bajada es lo que permite identificar en qué fase está una célula midiendo su contenido de ADN.",
         [
             ("Aumenta de forma continua durante todo el ciclo",
              "El aumento se concentra en la fase S; en G1 y G2 la cantidad se mantiene estable."),
@@ -108634,15 +107574,7 @@ QUESTIONS_CIENCIAS += [
         "resultado muestra un grupo con cierta cantidad y otro con el doble. "
         "¿Qué representa cada grupo?",
         "Células antes y después de la fase S",
-        "El contenido de ADN identifica la posición en el ciclo.\n\n"
-        "1) Las células en G1 todavía no han duplicado su ADN y muestran la "
-        "cantidad menor.\n"
-        "2) Las que ya pasaron por la fase S, o sea las que están en G2 o en "
-        "mitosis, muestran el doble.\n"
-        "3) Entre ambos grupos aparecen las células en plena fase S, con "
-        "valores intermedios.\n\n"
-        "La medición no observa las células dividiéndose: infiere su fase a "
-        "partir de cuánto ADN contienen.",
+        "El contenido de ácido desoxirribonucleico (ADN) identifica la posición en el ciclo.\n\n1) Las células en G1 todavía no han duplicado su ADN y muestran la cantidad menor.\n2) Las que ya pasaron por la fase S, o sea las que están en G2 o en mitosis, muestran el doble.\n3) Entre ambos grupos aparecen las células en plena fase S, con valores intermedios.\n\nLa medición no observa las células dividiéndose: infiere su fase a partir de cuánto ADN contienen.",
         [
             ("Células de dos especies distintas",
              "La muestra proviene de un solo cultivo: la diferencia es de fase, no de origen."),
@@ -108707,15 +107639,7 @@ QUESTIONS_CIENCIAS += [
         "En una línea celular, una mutación inactiva el punto de control "
         "G1–S. ¿Qué se espera que ocurra?",
         "Células con ADN dañado entrarán en fase S",
-        "Perder un control no detiene el ciclo: lo deja avanzar sin filtro.\n\n"
-        "1) Ese punto de control impide entrar a la fase S cuando hay daño en "
-        "el ADN o faltan condiciones.\n"
-        "2) Inactivado, las células avanzan igual y copian el ADN dañado tal "
-        "como está.\n"
-        "3) Cada célula hija hereda entonces ese daño, que se acumula a lo "
-        "largo de las divisiones siguientes.\n\n"
-        "La acumulación de alteraciones en el material genético es uno de los "
-        "pasos que llevan a la división descontrolada.",
+        "Perder un control no detiene el ciclo: lo deja avanzar sin filtro.\n\n1) Ese punto de control impide entrar a la fase S cuando hay daño en el ácido desoxirribonucleico (ADN) o faltan condiciones.\n2) Inactivado, las células avanzan igual y copian el ADN dañado tal como está.\n3) Cada célula hija hereda entonces ese daño, que se acumula a lo largo de las divisiones siguientes.\n\nLa acumulación de alteraciones en el material genético es uno de los pasos que llevan a la división descontrolada.",
         [
             ("El ciclo celular se detendrá por completo",
              "Perder un control no detiene el ciclo: lo que se pierde es la capacidad de detenerlo."),
@@ -108777,15 +107701,7 @@ QUESTIONS_CIENCIAS += [
         "recién sintetizado y se observa que lo incorpora el 20% de las "
         "células. ¿Qué representa ese porcentaje?",
         "La proporción de células que están en fase S",
-        "El marcador solo entra donde hay síntesis en curso.\n\n"
-        "1) El compuesto se incorpora mientras el ADN se está copiando, o sea "
-        "durante la fase S.\n"
-        "2) Las células en G1, G2 o mitosis no lo incorporan, porque en esas "
-        "etapas no hay síntesis de ADN.\n"
-        "3) Por lo tanto, el 20% marcado corresponde a las células que se "
-        "encontraban en fase S durante la exposición al compuesto.\n\n"
-        "Es una forma indirecta de estimar qué proporción del ciclo ocupa esa "
-        "fase en ese tipo celular.",
+        "El marcador solo entra donde hay síntesis en curso.\n\n1) El compuesto se incorpora mientras el ácido desoxirribonucleico (ADN) se está copiando, o sea durante la fase S.\n2) Las células en G1, G2 o mitosis no lo incorporan, porque en esas etapas no hay síntesis de ADN.\n3) Por lo tanto, el 20% marcado corresponde a las células que se encontraban en fase S durante la exposición al compuesto.\n\nEs una forma indirecta de estimar qué proporción del ciclo ocupa esa fase en ese tipo celular.",
         [
             ("La proporción de células en mitosis",
              "En mitosis no hay síntesis de ADN, así que esas células no incorporan el compuesto."),
@@ -108824,15 +107740,7 @@ QUESTIONS_CIENCIAS += [
         "¿Cuál de las siguientes es una hipótesis que puede ponerse a prueba "
         "experimentalmente sobre el ciclo celular?",
         "Cierta sustancia alarga la duración de la fase S",
-        "Una hipótesis contrastable propone una relación medible.\n\n"
-        "1) La duración de la fase S puede medirse con marcadores de síntesis "
-        "de ADN.\n"
-        "2) La sustancia puede aplicarse o no, generando dos grupos "
-        "comparables.\n"
-        "3) Con eso es posible obtener evidencia que la respalde o la "
-        "contradiga, que es lo que exige una hipótesis.\n\n"
-        "Las afirmaciones que no definen qué medir ni cómo compararlo pueden "
-        "ser interesantes, pero no se pueden poner a prueba.",
+        "Una hipótesis contrastable propone una relación medible.\n\n1) La duración de la fase S puede medirse con marcadores de síntesis de ácido desoxirribonucleico (ADN).\n2) La sustancia puede aplicarse o no, generando dos grupos comparables.\n3) Con eso es posible obtener evidencia que la respalde o la contradiga, que es lo que exige una hipótesis.\n\nLas afirmaciones que no definen qué medir ni cómo compararlo pueden ser interesantes, pero no se pueden poner a prueba.",
         [
             ("La división celular es un proceso fundamental para la vida",
              "Es una afirmación general y valiosa, pero no propone nada que se pueda medir ni comparar."),
@@ -108870,15 +107778,7 @@ QUESTIONS_CIENCIAS += [
         "Un tejido irradiado detiene su división durante algunas horas y luego "
         "la reanuda con normalidad. ¿Qué inferencia es más razonable?",
         "Los puntos de control detuvieron el ciclo mientras se reparaba el daño",
-        "La detención transitoria es una respuesta y no una falla.\n\n"
-        "1) La radiación produce daños en el ADN que los puntos de control "
-        "detectan.\n"
-        "2) Detectado el daño, el ciclo se detiene y actúan los mecanismos de "
-        "reparación.\n"
-        "3) Que la división se reanude con normalidad indica que la reparación "
-        "fue efectiva y el control levantó la detención.\n\n"
-        "Si el daño hubiera sido irreparable, esas células habrían quedado "
-        "detenidas de forma permanente o habrían muerto.",
+        "La detención transitoria es una respuesta y no una falla.\n\n1) La radiación produce daños en el ácido desoxirribonucleico (ADN) que los puntos de control detectan.\n2) Detectado el daño, el ciclo se detiene y actúan los mecanismos de reparación.\n3) Que la división se reanude con normalidad indica que la reparación fue efectiva y el control levantó la detención.\n\nSi el daño hubiera sido irreparable, esas células habrían quedado detenidas de forma permanente o habrían muerto.",
         [
             ("La radiación no produjo ningún daño en el material genético",
              "Sin daño no habría razón para que la división se detuviera durante horas."),
@@ -108984,15 +107884,7 @@ QUESTIONS_CIENCIAS += [
         "cie_genetica", "facil",
         "¿Cuántas divisiones celulares comprende la meiosis?",
         "Dos, con una sola duplicación previa",
-        "La estructura del proceso explica el resultado.\n\n"
-        "1) Antes de la meiosis, el ADN se duplica una sola vez, igual que "
-        "antes de una mitosis.\n"
-        "2) Le siguen dos divisiones consecutivas: la meiosis I y la meiosis "
-        "II, sin duplicación entre ellas.\n"
-        "3) Duplicar una vez y dividir dos veces es lo que reduce a la mitad el "
-        "número de cromosomas.\n\n"
-        "De una célula se obtienen cuatro, cada una con la mitad de la dotación "
-        "original.",
+        "La estructura del proceso explica el resultado.\n\n1) Antes de la meiosis, el ácido desoxirribonucleico (ADN) se duplica una sola vez, igual que antes de una mitosis.\n2) Le siguen dos divisiones consecutivas: la meiosis I y la meiosis II, sin duplicación entre ellas.\n3) Duplicar una vez y dividir dos veces es lo que reduce a la mitad el número de cromosomas.\n\nDe una célula se obtienen cuatro, cada una con la mitad de la dotación original.",
         [
             ("Una sola división",
              "Con una división no se lograría reducir a la mitad el número de cromosomas."),
@@ -109115,15 +108007,7 @@ QUESTIONS_CIENCIAS += [
         "cie_genetica", "facil",
         "¿Qué es un organismo transgénico?",
         "Uno que porta un gen de otra especie",
-        "El nombre describe de dónde viene el gen incorporado.\n\n"
-        "1) Mediante técnicas de manipulación genética se puede insertar en un "
-        "organismo un fragmento de ADN proveniente de otra especie.\n"
-        "2) Si ese gen se integra y se expresa, el organismo produce una "
-        "proteína que antes no fabricaba.\n"
-        "3) Eso es lo que permite, por ejemplo, que una bacteria produzca una "
-        "proteína humana.\n\n"
-        "La transferencia es posible porque el código genético es prácticamente "
-        "el mismo en todos los seres vivos.",
+        "El nombre describe de dónde viene el gen incorporado.\n\n1) Mediante técnicas de manipulación genética se puede insertar en un organismo un fragmento de ácido desoxirribonucleico (ADN) proveniente de otra especie.\n2) Si ese gen se integra y se expresa, el organismo produce una proteína que antes no fabricaba.\n3) Eso es lo que permite, por ejemplo, que una bacteria produzca una proteína humana.\n\nLa transferencia es posible porque el código genético es prácticamente el mismo en todos los seres vivos.",
         [
             ("Uno que ha sufrido una mutación espontánea",
              "Las mutaciones espontáneas ocurren sin intervención y no incorporan genes de otra especie."),
@@ -109270,16 +108154,7 @@ QUESTIONS_CIENCIAS += [
         "cie_genetica", "medio",
         "¿Por qué no hay una fase S entre la meiosis I y la meiosis II?",
         "Porque así la dotación queda reducida a la mitad",
-        "La ausencia de duplicación intermedia es lo que define el "
-        "resultado.\n\n"
-        "1) El ADN se duplicó una sola vez, antes de la meiosis I.\n"
-        "2) La primera división reparte los homólogos y la segunda, las "
-        "cromátidas, sin que se agregue material nuevo.\n"
-        "3) Dividir dos veces lo que se duplicó una vez deja células con la "
-        "mitad de la dotación original.\n\n"
-        "Si hubiera una segunda duplicación, las cuatro células resultantes "
-        "serían diploides y la fecundación duplicaría el número de cromosomas "
-        "en cada generación.",
+        "La ausencia de duplicación intermedia es lo que define el resultado.\n\n1) El ácido desoxirribonucleico (ADN) se duplicó una sola vez, antes de la meiosis I.\n2) La primera división reparte los homólogos y la segunda, las cromátidas, sin que se agregue material nuevo.\n3) Dividir dos veces lo que se duplicó una vez deja células con la mitad de la dotación original.\n\nSi hubiera una segunda duplicación, las cuatro células resultantes serían diploides y la fecundación duplicaría el número de cromosomas en cada generación.",
         [
             ("Porque la célula no dispone de tiempo suficiente",
              "No es una limitación de tiempo: la ausencia de esa fase es lo que produce la reducción."),
@@ -109294,15 +108169,7 @@ QUESTIONS_CIENCIAS += [
         "¿Por qué se dice que la meiosis I es reduccional y la meiosis II es "
         "ecuacional?",
         "Porque solo la primera reduce el número de cromosomas",
-        "Los nombres describen qué le pasa a la dotación en cada división.\n\n"
-        "1) La meiosis I separa los homólogos, con lo que cada célula pasa de "
-        "dos juegos a uno solo.\n"
-        "2) La meiosis II separa cromátidas hermanas, de modo que el número de "
-        "cromosomas por célula no cambia.\n"
-        "3) Lo que cambia en la segunda división es la cantidad de ADN por "
-        "célula, no el número de cromosomas.\n\n"
-        "Distinguirlas evita el error frecuente de suponer que cada división "
-        "reduce a la mitad la dotación.",
+        "Los nombres describen qué le pasa a la dotación en cada división.\n\n1) La meiosis I separa los homólogos, con lo que cada célula pasa de dos juegos a uno solo.\n2) La meiosis II separa cromátidas hermanas, de modo que el número de cromosomas por célula no cambia.\n3) Lo que cambia en la segunda división es la cantidad de ácido desoxirribonucleico (ADN) por célula, no el número de cromosomas.\n\nDistinguirlas evita el error frecuente de suponer que cada división reduce a la mitad la dotación.",
         [
             ("Porque la segunda división ocurre sin huso",
              "Ambas divisiones utilizan el huso para repartir el material."),
@@ -109430,15 +108297,7 @@ QUESTIONS_CIENCIAS += [
         "¿Qué función cumple un plásmido en la producción de proteínas por "
         "bacterias?",
         "Transporta el gen hasta la bacteria",
-        "El plásmido actúa como vehículo del gen que se quiere expresar.\n\n"
-        "1) Es una molécula de ADN circular, independiente del cromosoma "
-        "bacteriano, que la bacteria puede incorporar y replicar.\n"
-        "2) El gen de interés se inserta en ese plásmido y luego el plásmido se "
-        "introduce en la bacteria.\n"
-        "3) Al multiplicarse, la bacteria copia también el plásmido y expresa "
-        "el gen, fabricando la proteína.\n\n"
-        "Es el mecanismo con que se producen la insulina y otras proteínas de "
-        "uso farmacéutico.",
+        "El plásmido actúa como vehículo del gen que se quiere expresar.\n\n1) Es una molécula de ácido desoxirribonucleico (ADN) circular, independiente del cromosoma bacteriano, que la bacteria puede incorporar y replicar.\n2) El gen de interés se inserta en ese plásmido y luego el plásmido se introduce en la bacteria.\n3) Al multiplicarse, la bacteria copia también el plásmido y expresa el gen, fabricando la proteína.\n\nEs el mecanismo con que se producen la insulina y otras proteínas de uso farmacéutico.",
         [
             ("Corta el ADN en secuencias específicas",
              "Esa función la cumplen las enzimas de restricción, no el plásmido."),
@@ -109500,15 +108359,7 @@ QUESTIONS_CIENCIAS += [
         "Una célula humana termina la meiosis I. ¿Cuántos cromosomas tiene y "
         "cómo están formados?",
         "23 cromosomas, cada uno con dos cromátidas",
-        "El estado intermedio se presta a confusión.\n\n"
-        "1) La meiosis I separó los homólogos, así que la célula pasó de 46 a "
-        "23 cromosomas.\n"
-        "2) Como no hubo separación de cromátidas, cada uno de esos 23 sigue "
-        "formado por dos cromátidas hermanas.\n"
-        "3) Recién la meiosis II las separa y deja 23 cromosomas de una sola "
-        "cromátida en cada gameto.\n\n"
-        "La célula ya es haploide en número de cromosomas, aunque todavía "
-        "contiene el doble de ADN que un gameto maduro.",
+        "El estado intermedio se presta a confusión.\n\n1) La meiosis I separó los homólogos, así que la célula pasó de 46 a 23 cromosomas.\n2) Como no hubo separación de cromátidas, cada uno de esos 23 sigue formado por dos cromátidas hermanas.\n3) Recién la meiosis II las separa y deja 23 cromosomas de una sola cromátida en cada gameto.\n\nLa célula ya es haploide en número de cromosomas, aunque todavía contiene el doble de ácido desoxirribonucleico (ADN) que un gameto maduro.",
         [
             ("46 cromosomas, cada uno con dos cromátidas",
              "Ese es el estado previo a la meiosis I, no el posterior."),
@@ -110036,16 +108887,7 @@ QUESTIONS_CIENCIAS += [
         "Alguien sostiene que los alimentos transgénicos son riesgosos porque "
         "contienen ADN. ¿Cómo se evalúa ese argumento?",
         "Es incorrecto: todo alimento contiene ADN",
-        "El argumento se apoya en una premisa que no distingue nada.\n\n"
-        "1) Cualquier alimento de origen vegetal o animal contiene el material "
-        "genético de las células que lo componen.\n"
-        "2) Ese ADN se degrada durante la digestión igual que las demás "
-        "moléculas del alimento.\n"
-        "3) Por lo tanto, la presencia de ADN no distingue a un producto "
-        "modificado de uno convencional.\n\n"
-        "Las preguntas de seguridad que sí corresponden son otras: si la "
-        "proteína introducida puede ser alergénica o tóxica, y qué efectos "
-        "tiene el cultivo sobre el ambiente.",
+        "El argumento se apoya en una premisa que no distingue nada.\n\n1) Cualquier alimento de origen vegetal o animal contiene el material genético de las células que lo componen.\n2) Ese ácido desoxirribonucleico (ADN) se degrada durante la digestión igual que las demás moléculas del alimento.\n3) Por lo tanto, la presencia de ADN no distingue a un producto modificado de uno convencional.\n\nLas preguntas de seguridad que sí corresponden son otras: si la proteína introducida puede ser alergénica o tóxica, y qué efectos tiene el cultivo sobre el ambiente.",
         [
             ("Es correcto, porque el ADN modificado no se digiere",
              "El ADN se degrada en la digestión con independencia de su origen."),
@@ -110084,15 +108926,7 @@ QUESTIONS_CIENCIAS += [
         "Si una célula completara la meiosis I pero omitiera la meiosis II, "
         "¿qué gametos resultarían?",
         "Dos gametos con cromosomas de dos cromátidas",
-        "Omitir la segunda división deja el proceso a medio camino.\n\n"
-        "1) Tras la meiosis I quedan dos células con 23 cromosomas, cada uno "
-        "formado por dos cromátidas.\n"
-        "2) Sin la meiosis II, esas cromátidas no se separan y no se generan "
-        "las cuatro células habituales.\n"
-        "3) El resultado son dos células con el número de cromosomas de un "
-        "gameto, pero con el doble de ADN.\n\n"
-        "Al fecundar, ese gameto aportaría dos copias de cada cromosoma en vez "
-        "de una.",
+        "Omitir la segunda división deja el proceso a medio camino.\n\n1) Tras la meiosis I quedan dos células con 23 cromosomas, cada uno formado por dos cromátidas.\n2) Sin la meiosis II, esas cromátidas no se separan y no se generan las cuatro células habituales.\n3) El resultado son dos células con el número de cromosomas de un gameto, pero con el doble de ácido desoxirribonucleico (ADN).\n\nAl fecundar, ese gameto aportaría dos copias de cada cromosoma en vez de una.",
         [
             ("Cuatro gametos normales",
              "Los cuatro solo se obtienen si ocurre la segunda división."),
@@ -110353,15 +109187,7 @@ QUESTIONS_CIENCIAS += [
         "cie_fotosintesis", "facil",
         "¿En qué organelo ocurre principalmente la respiración celular?",
         "En la mitocondria",
-        "La respiración celular tiene su propio organelo especializado.\n\n"
-        "1) La mitocondria es donde se completa la degradación de la glucosa en "
-        "presencia de oxígeno.\n"
-        "2) Ahí se obtiene la mayor parte del ATP que la célula usa como "
-        "energía disponible.\n"
-        "3) La primera etapa de la degradación de la glucosa ocurre en el "
-        "citoplasma, antes de entrar a la mitocondria.\n\n"
-        "Las células vegetales tienen mitocondrias además de cloroplastos: "
-        "fabrican materia orgánica y también la degradan.",
+        "La respiración celular tiene su propio organelo especializado.\n\n1) La mitocondria es donde se completa la degradación de la glucosa en presencia de oxígeno.\n2) Ahí se obtiene la mayor parte del adenosín trifosfato (ATP) que la célula usa como energía disponible.\n3) La primera etapa de la degradación de la glucosa ocurre en el citoplasma, antes de entrar a la mitocondria.\n\nLas células vegetales tienen mitocondrias además de cloroplastos: fabrican materia orgánica y también la degradan.",
         [
             ("En el cloroplasto",
              "El cloroplasto realiza la fotosíntesis, que almacena energía en lugar de liberarla."),
@@ -110506,14 +109332,7 @@ QUESTIONS_CIENCIAS += [
         "cie_fotosintesis", "medio",
         "¿Qué ocurre en la etapa lumínica de la fotosíntesis?",
         "Se capta luz y se rompe la molécula de agua",
-        "La primera etapa transforma energía luminosa en energía química.\n\n"
-        "1) Los pigmentos de los tilacoides absorben la luz y excitan "
-        "electrones.\n"
-        "2) La molécula de agua se rompe para reponer esos electrones, y en el "
-        "proceso se libera oxígeno.\n"
-        "3) La energía se almacena en ATP y en un transportador de electrones "
-        "que quedará disponible para la etapa siguiente.\n\n"
-        "Nada de carbono se fija todavía: eso ocurre después, en el estroma.",
+        "La primera etapa transforma energía luminosa en energía química.\n\n1) Los pigmentos de los tilacoides absorben la luz y excitan electrones.\n2) La molécula de agua se rompe para reponer esos electrones, y en el proceso se libera oxígeno.\n3) La energía se almacena en adenosín trifosfato (ATP) y en un transportador de electrones que quedará disponible para la etapa siguiente.\n\nNada de carbono se fija todavía: eso ocurre después, en el estroma.",
         [
             ("Se fija el dióxido de carbono",
              "La fijación del carbono ocurre en la segunda etapa, en el estroma."),
@@ -110550,15 +109369,7 @@ QUESTIONS_CIENCIAS += [
         "¿Qué papel cumplen el ATP y el transportador de electrones producidos "
         "en la etapa lumínica?",
         "Aportan energía y electrones para fijar el carbono",
-        "Ambas moléculas conectan las dos etapas del proceso.\n\n"
-        "1) La etapa lumínica no fabrica azúcar: produce energía química y poder "
-        "reductor.\n"
-        "2) Esas moléculas se difunden al estroma y son consumidas por las "
-        "reacciones que incorporan el dióxido de carbono.\n"
-        "3) Sin ellas, la fijación de carbono se detiene aunque haya dióxido de "
-        "carbono disponible.\n\n"
-        "Por eso la segunda etapa depende de la luz, aunque la luz no participe "
-        "directamente en sus reacciones.",
+        "Ambas moléculas conectan las dos etapas del proceso.\n\n1) La etapa lumínica no fabrica azúcar: produce energía química y poder reductor.\n2) Esas moléculas se difunden al estroma y son consumidas por las reacciones que incorporan el dióxido de carbono.\n3) Sin ellas, la fijación de carbono se detiene aunque haya dióxido de carbono disponible.\n\nPor eso la segunda etapa depende de la luz, aunque la luz no participe directamente en sus reacciones. (ATP: adenosín trifosfato.)",
         [
             ("Se liberan al ambiente como productos finales",
              "Se consumen dentro del mismo cloroplasto: no salen como productos."),
@@ -110573,15 +109384,7 @@ QUESTIONS_CIENCIAS += [
         "¿Por qué la fijación de carbono depende de la luz aunque sus "
         "reacciones no la usen directamente?",
         "Porque consume lo que produce la etapa lumínica",
-        "La dependencia es indirecta pero estricta.\n\n"
-        "1) Las reacciones de fijación necesitan ATP y poder reductor para "
-        "incorporar el dióxido de carbono.\n"
-        "2) Esas moléculas solo se generan mientras la etapa lumínica está "
-        "operando.\n"
-        "3) En oscuridad prolongada se agotan y la fijación se detiene, aunque "
-        "las enzimas estén intactas.\n\n"
-        "Por eso llamarla etapa oscura induce a error: no es una etapa que "
-        "ocurra de noche.",
+        "La dependencia es indirecta pero estricta.\n\n1) Las reacciones de fijación necesitan adenosín trifosfato (ATP) y poder reductor para incorporar el dióxido de carbono.\n2) Esas moléculas solo se generan mientras la etapa lumínica está operando.\n3) En oscuridad prolongada se agotan y la fijación se detiene, aunque las enzimas estén intactas.\n\nPor eso llamarla etapa oscura induce a error: no es una etapa que ocurra de noche.",
         [
             ("Porque sus enzimas necesitan luz para activarse",
              "Aunque la regulación existe, la razón principal es el suministro de ATP y poder reductor."),
@@ -110685,15 +109488,7 @@ QUESTIONS_CIENCIAS += [
         "cie_fotosintesis", "medio",
         "¿Por qué una planta también realiza respiración celular?",
         "Porque necesita liberar la energía de la glucosa",
-        "Fabricar materia orgánica no es lo mismo que disponer de energía.\n\n"
-        "1) La fotosíntesis almacena energía en los enlaces de la glucosa, pero "
-        "las células no pueden usarla en esa forma.\n"
-        "2) La respiración celular degrada esa glucosa y produce ATP, que es la "
-        "moneda energética de la célula.\n"
-        "3) Por eso la planta respira de día y de noche, en todas sus células, "
-        "incluidas las que no fotosintetizan.\n\n"
-        "Las raíces, por ejemplo, no reciben luz y dependen por completo de la "
-        "materia orgánica que llega desde las hojas.",
+        "Fabricar materia orgánica no es lo mismo que disponer de energía.\n\n1) La fotosíntesis almacena energía en los enlaces de la glucosa, pero las células no pueden usarla en esa forma.\n2) La respiración celular degrada esa glucosa y produce adenosín trifosfato (ATP), que es la moneda energética de la célula.\n3) Por eso la planta respira de día y de noche, en todas sus células, incluidas las que no fotosintetizan.\n\nLas raíces, por ejemplo, no reciben luz y dependen por completo de la materia orgánica que llega desde las hojas.",
         [
             ("Porque necesita eliminar el oxígeno sobrante",
              "El oxígeno se libera por difusión: no se requiere respirar para eliminarlo."),
@@ -111002,15 +109797,7 @@ QUESTIONS_CIENCIAS += [
         "¿Dónde comienza y dónde termina la degradación de la glucosa en la "
         "respiración celular?",
         "Comienza en el citoplasma y termina en la mitocondria",
-        "El proceso se reparte entre dos compartimentos de la célula.\n\n"
-        "1) La primera etapa ocurre en el citoplasma y rompe la glucosa en "
-        "moléculas más pequeñas, con una ganancia modesta de energía.\n"
-        "2) Esas moléculas ingresan a la mitocondria, donde se completa la "
-        "degradación en presencia de oxígeno.\n"
-        "3) La mayor parte del ATP se obtiene en esa segunda parte del "
-        "proceso.\n\n"
-        "Por eso las células con alta demanda energética tienen muchas "
-        "mitocondrias.",
+        "El proceso se reparte entre dos compartimentos de la célula.\n\n1) La primera etapa ocurre en el citoplasma y rompe la glucosa en moléculas más pequeñas, con una ganancia modesta de energía.\n2) Esas moléculas ingresan a la mitocondria, donde se completa la degradación en presencia de oxígeno.\n3) La mayor parte del adenosín trifosfato (ATP) se obtiene en esa segunda parte del proceso.\n\nPor eso las células con alta demanda energética tienen muchas mitocondrias.",
         [
             ("Comienza y termina en el cloroplasto",
              "El cloroplasto realiza la fotosíntesis y no la degradación de la glucosa."),
@@ -111025,15 +109812,7 @@ QUESTIONS_CIENCIAS += [
         "¿Qué diferencia hay entre la respiración celular y la ventilación "
         "pulmonar?",
         "Una ocurre en la célula y la otra mueve aire",
-        "El mismo nombre designa dos procesos de escala distinta.\n\n"
-        "1) La ventilación pulmonar es el movimiento de aire que entra y sale "
-        "de los pulmones.\n"
-        "2) La respiración celular es la degradación de la glucosa dentro de "
-        "las células, con producción de ATP.\n"
-        "3) La primera hace llegar el oxígeno hasta la sangre; la segunda es la "
-        "que efectivamente lo usa.\n\n"
-        "Las plantas realizan respiración celular sin tener pulmones ni ningún "
-        "sistema de ventilación.",
+        "El mismo nombre designa dos procesos de escala distinta.\n\n1) La ventilación pulmonar es el movimiento de aire que entra y sale de los pulmones.\n2) La respiración celular es la degradación de la glucosa dentro de las células, con producción de adenosín trifosfato (ATP).\n3) La primera hace llegar el oxígeno hasta la sangre; la segunda es la que efectivamente lo usa.\n\nLas plantas realizan respiración celular sin tener pulmones ni ningún sistema de ventilación.",
         [
             ("Son dos nombres del mismo proceso",
              "Son procesos distintos: uno es un intercambio de aire y el otro, una reacción celular."),
@@ -111093,14 +109872,7 @@ QUESTIONS_CIENCIAS += [
         "¿Qué ocurre con el intercambio de gases de una planta durante la "
         "noche?",
         "Consume oxígeno y libera dióxido de carbono",
-        "De noche solo queda uno de los dos procesos.\n\n"
-        "1) Sin luz, la fotosíntesis se detiene y deja de producirse oxígeno.\n"
-        "2) La respiración celular continúa, porque las células siguen "
-        "necesitando ATP.\n"
-        "3) El balance nocturno es entonces el de cualquier organismo "
-        "heterótrofo: consumo de oxígeno y liberación de dióxido de carbono.\n\n"
-        "Es el mismo proceso que ocurre de día, solo que de día queda "
-        "enmascarado por una fotosíntesis más intensa.",
+        "De noche solo queda uno de los dos procesos.\n\n1) Sin luz, la fotosíntesis se detiene y deja de producirse oxígeno.\n2) La respiración celular continúa, porque las células siguen necesitando adenosín trifosfato (ATP).\n3) El balance nocturno es entonces el de cualquier organismo heterótrofo: consumo de oxígeno y liberación de dióxido de carbono.\n\nEs el mismo proceso que ocurre de día, solo que de día queda enmascarado por una fotosíntesis más intensa.",
         [
             ("Consume dióxido de carbono y libera oxígeno",
              "Ese es el balance diurno, cuando la fotosíntesis supera a la respiración."),
@@ -111323,16 +110095,7 @@ QUESTIONS_CIENCIAS += [
         "Un estudiante afirma que las plantas respiran solo de noche, porque de "
         "día fotosintetizan. ¿Cómo se evalúa esa afirmación?",
         "Es incorrecta: respiran de día y de noche",
-        "La afirmación confunde lo observado con lo que ocurre.\n\n"
-        "1) La respiración celular es continua: las células necesitan ATP en "
-        "todo momento.\n"
-        "2) De día ambos procesos ocurren a la vez, y como la fotosíntesis es "
-        "más intensa, el balance observado es de liberación de oxígeno.\n"
-        "3) Ese balance da la impresión de que no hay respiración, cuando lo "
-        "que ocurre es que queda enmascarada.\n\n"
-        "Se comprueba midiendo el intercambio de gases a intensidades "
-        "decrecientes de luz: al bajar la fotosíntesis, el consumo de oxígeno "
-        "vuelve a hacerse visible.",
+        "La afirmación confunde lo observado con lo que ocurre.\n\n1) La respiración celular es continua: las células necesitan adenosín trifosfato (ATP) en todo momento.\n2) De día ambos procesos ocurren a la vez, y como la fotosíntesis es más intensa, el balance observado es de liberación de oxígeno.\n3) Ese balance da la impresión de que no hay respiración, cuando lo que ocurre es que queda enmascarada.\n\nSe comprueba midiendo el intercambio de gases a intensidades decrecientes de luz: al bajar la fotosíntesis, el consumo de oxígeno vuelve a hacerse visible.",
         [
             ("Es correcta, porque de día la planta no necesita energía",
              "Necesita energía en todo momento, también mientras fotosintetiza."),
@@ -111416,15 +110179,7 @@ QUESTIONS_CIENCIAS += [
         "Si se bloqueara por completo la etapa lumínica, ¿qué ocurriría con la "
         "fijación de carbono?",
         "Se detendría al agotarse el ATP disponible",
-        "La segunda etapa depende de los productos de la primera.\n\n"
-        "1) La fijación de carbono consume ATP y poder reductor generados en "
-        "los tilacoides.\n"
-        "2) Bloqueada la etapa lumínica, esas moléculas dejan de producirse y "
-        "las existentes se agotan en poco tiempo.\n"
-        "3) Sin ellas, las enzimas del estroma no pueden incorporar el dióxido "
-        "de carbono, aunque esté disponible.\n\n"
-        "El experimento inverso también funciona: aportando esas moléculas en "
-        "el laboratorio, la fijación ocurre sin luz.",
+        "La segunda etapa depende de los productos de la primera.\n\n1) La fijación de carbono consume adenosín trifosfato (ATP) y poder reductor generados en los tilacoides.\n2) Bloqueada la etapa lumínica, esas moléculas dejan de producirse y las existentes se agotan en poco tiempo.\n3) Sin ellas, las enzimas del estroma no pueden incorporar el dióxido de carbono, aunque esté disponible.\n\nEl experimento inverso también funciona: aportando esas moléculas en el laboratorio, la fijación ocurre sin luz.",
         [
             ("Continuaría igual, porque no necesita luz",
              "No usa luz directamente, pero sí los productos que la etapa lumínica genera."),
@@ -126933,13 +125688,7 @@ QUESTIONS += [
         "Una casa se vende en 3.000 UF y la UF vale $38.000. ¿Cuál es el precio "
         "en pesos?",
         "$114.000.000",
-        "La UF es una unidad de cuenta que se multiplica por su valor del "
-        "día.\n\n"
-        "1) El precio en pesos es 3.000 · 38.000.\n"
-        "2) El producto es 114.000.000.\n\n"
-        "Las propiedades se cotizan en UF porque esa unidad se reajusta con la "
-        "inflación: el precio en pesos cambia todos los días aunque el precio "
-        "en UF sea el mismo.",
+        "La Unidad de Fomento (UF) es una unidad de cuenta que se multiplica por su valor del día.\n\n1) El precio en pesos es 3.000 · 38.000.\n2) El producto es 114.000.000.\n\nLas propiedades se cotizan en UF porque esa unidad se reajusta con la inflación: el precio en pesos cambia todos los días aunque el precio en UF sea el mismo.",
         [
             ("$41.000",
              "Suma las dos cantidades en vez de multiplicarlas."),
@@ -127082,12 +125831,7 @@ QUESTIONS += [
         "Un crédito hipotecario se paga con un dividendo mensual de 12 UF "
         "durante 20 años. ¿Cuántas UF se pagan en total?",
         "2.880 UF",
-        "Se cuentan todos los dividendos del plazo.\n\n"
-        "1) En 20 años hay 240 meses.\n"
-        "2) El total es 240 · 12 UF.\n"
-        "3) El resultado son 2.880 UF.\n\n"
-        "Si la propiedad costó 2.000 UF, esas 880 UF de diferencia son el costo "
-        "del crédito a lo largo de las dos décadas.",
+        "Se cuentan todos los dividendos del plazo.\n\n1) En 20 años hay 240 meses.\n2) El total es 240 · 12 Unidad de Fomento (UF).\n3) El resultado son 2.880 UF.\n\nSi la propiedad costó 2.000 UF, esas 880 UF de diferencia son el costo del crédito a lo largo de las dos décadas.",
         [
             ("240 UF",
              "Cuenta los meses pero olvida multiplicar por el valor del dividendo."),
@@ -127183,12 +125927,7 @@ QUESTIONS += [
         "El valor de la UF sube de $38.000 a $38.760 en un mes. ¿Cuál fue la "
         "variación porcentual?",
         "2%",
-        "La variación se calcula sobre el valor inicial.\n\n"
-        "1) La diferencia es 38.760 − 38.000 = 760.\n"
-        "2) Se divide por el valor inicial: 760/38.000 = 0,02.\n"
-        "3) Expresado como porcentaje, 2%.\n\n"
-        "La UF se reajusta con la inflación del mes anterior: por eso una deuda "
-        "en UF conserva su valor real aunque suban los precios.",
+        "La variación se calcula sobre el valor inicial.\n\n1) La diferencia es 38.760 − 38.000 = 760.\n2) Se divide por el valor inicial: 760/38.000 = 0,02.\n3) Expresado como porcentaje, 2%.\n\nLa Unidad de Fomento (UF) se reajusta con la inflación del mes anterior: por eso una deuda en UF conserva su valor real aunque suban los precios.",
         [
             ("0,2%",
              "Corre la coma un lugar: 760 sobre 38.000 da 0,02, es decir, 2%."),
@@ -127242,14 +125981,7 @@ QUESTIONS += [
         "¿Por qué una deuda expresada en UF puede crecer en pesos aunque no se "
         "atrase ningún pago?",
         "Porque la UF se reajusta con la inflación",
-        "La UF no es una moneda sino una unidad que se actualiza.\n\n"
-        "1) El saldo en UF disminuye con cada pago, tal como corresponde.\n"
-        "2) Pero cada UF vale más pesos cada mes, porque se reajusta según la "
-        "inflación.\n"
-        "3) Si la inflación es alta, el saldo en pesos puede subir aunque el "
-        "saldo en UF baje.\n\n"
-        "El objetivo de ese diseño es que la deuda conserve su valor real: el "
-        "banco recibe el mismo poder de compra que prestó.",
+        "La Unidad de Fomento (UF) no es una moneda sino una unidad que se actualiza.\n\n1) El saldo en UF disminuye con cada pago, tal como corresponde.\n2) Pero cada UF vale más pesos cada mes, porque se reajusta según la inflación.\n3) Si la inflación es alta, el saldo en pesos puede subir aunque el saldo en UF baje.\n\nEl objetivo de ese diseño es que la deuda conserve su valor real: el banco recibe el mismo poder de compra que prestó.",
         [
             ("Porque el banco cobra intereses sobre intereses",
              "Eso es el interés compuesto, que es un mecanismo distinto del reajuste."),
@@ -127430,12 +126162,7 @@ QUESTIONS += [
         "Un crédito hipotecario de 2.500 UF se paga en 25 años con dividendos "
         "mensuales de 14 UF. ¿Cuánto se paga por sobre el monto prestado?",
         "1.700 UF",
-        "Se compara el total de dividendos con el monto del crédito.\n\n"
-        "1) En 25 años hay 300 meses.\n"
-        "2) El total pagado es 300 · 14 = 4.200 UF.\n"
-        "3) La diferencia es 4.200 − 2.500 = 1.700 UF.\n\n"
-        "En un crédito largo el costo financiero puede acercarse al monto "
-        "prestado: aquí equivale al 68% de la propiedad.",
+        "Se compara el total de dividendos con el monto del crédito.\n\n1) En 25 años hay 300 meses.\n2) El total pagado es 300 · 14 = 4.200 Unidad de Fomento (UF).\n3) La diferencia es 4.200 − 2.500 = 1.700 UF.\n\nEn un crédito largo el costo financiero puede acercarse al monto prestado: aquí equivale al 68% de la propiedad.",
         [
             ("4.200 UF",
              "Es el total pagado, no lo que se paga POR SOBRE el crédito."),
@@ -127534,12 +126261,7 @@ QUESTIONS += [
         "Un artículo con IVA incluido cuesta $23.800. Si el IVA es del 19%, "
         "¿cuál es el precio neto?",
         "$20.000",
-        "El precio con IVA es el neto multiplicado por 1,19.\n\n"
-        "1) Si N es el neto, entonces N · 1,19 = 23.800.\n"
-        "2) N = 23.800/1,19.\n"
-        "3) El resultado es 20.000.\n\n"
-        "El error habitual es restarle el 19% al precio final: eso daría "
-        "19.278, porque el porcentaje se calcularía sobre la base equivocada.",
+        "El precio con impuesto al valor agregado (IVA) es el neto multiplicado por 1,19.\n\n1) Si N es el neto, entonces N · 1,19 = 23.800.\n2) N = 23.800/1,19.\n3) El resultado es 20.000.\n\nEl error habitual es restarle el 19% al precio final: eso daría 19.278, porque el porcentaje se calcularía sobre la base equivocada.",
         [
             ("$19.278",
              "Descuenta el 19% del precio final; el IVA se calcula sobre el NETO."),
@@ -127662,14 +126384,7 @@ QUESTIONS += [
         "La inflación anual es del 6% y un depósito rinde un 4% anual. ¿Qué "
         "ocurre con el poder de compra del ahorro?",
         "Disminuye, porque los precios suben más que el ahorro",
-        "Lo que importa es la rentabilidad real, no la nominal.\n\n"
-        "1) El dinero crece un 4%.\n"
-        "2) Los precios suben un 6%.\n"
-        "3) Como los precios suben más rápido, con el saldo final se compra "
-        "menos que al comienzo: la rentabilidad real es negativa.\n\n"
-        "Es la razón por la que los instrumentos de largo plazo se expresan en "
-        "UF: así la rentabilidad que se informa ya está por sobre la "
-        "inflación.",
+        "Lo que importa es la rentabilidad real, no la nominal.\n\n1) El dinero crece un 4%.\n2) Los precios suben un 6%.\n3) Como los precios suben más rápido, con el saldo final se compra menos que al comienzo: la rentabilidad real es negativa.\n\nEs la razón por la que los instrumentos de largo plazo se expresan en Unidad de Fomento (UF): así la rentabilidad que se informa ya está por sobre la inflación.",
         [
             ("Aumenta, porque el saldo en pesos es mayor",
              "El saldo nominal sube, pero cada peso compra menos que antes."),
@@ -145412,12 +144127,7 @@ QUESTIONS_HISTORIA += [
         "eco_indicadores_tabla", "eco_indicadores", "facil",
         "Según la tabla, ¿en qué año el país registró una caída del PIB?",
         "En 2020, con una variación de −5,8%",
-        "La columna de variación del PIB registra 2,3%, 3,7%, −5,8%, 2,1% y "
-        "1,6% en los cinco años de la tabla.\n"
-        "El único valor negativo es el de 2020, y una variación negativa "
-        "significa que el país produjo menos que el año anterior.\n"
-        "Ese mismo año la desocupación alcanza su valor más alto de la serie, "
-        "10,8%, lo que es coherente con una caída de la producción.",
+        "La columna de variación del Producto Interno Bruto (PIB) registra 2,3%, 3,7%, −5,8%, 2,1% y 1,6% en los cinco años de la tabla.\nEl único valor negativo es el de 2020, y una variación negativa significa que el país produjo menos que el año anterior.\nEse mismo año la desocupación alcanza su valor más alto de la serie, 10,8%, lo que es coherente con una caída de la producción.",
         [
             ("En 2022, cuando la inflación alcanzó su valor más alto de la serie",
              "En 2022 el PIB creció 2,1%: lo que subió fue la inflación."),
@@ -145432,12 +144142,7 @@ QUESTIONS_HISTORIA += [
         "Según la tabla, ¿qué ocurrió con la desigualdad medida por el índice "
         "de Gini entre 2015 y 2024?",
         "Bajó levemente, de 0,50 a 0,48",
-        "La columna del Gini recorre 0,50, 0,49, 0,51, 0,49 y 0,48.\n"
-        "El movimiento total es de dos centésimas a la baja, con un repunte en "
-        "2020 que coincide con la caída del PIB y el alza de la "
-        "desocupación.\n"
-        "La nota precisa cómo se lee la escala: el índice va de 0 a 1 y cuanto "
-        "más alto, más desigual es la distribución del ingreso.",
+        "La columna del Gini recorre 0,50, 0,49, 0,51, 0,49 y 0,48.\nEl movimiento total es de dos centésimas a la baja, con un repunte en 2020 que coincide con la caída del Producto Interno Bruto (PIB) y el alza de la desocupación.\nLa nota precisa cómo se lee la escala: el índice va de 0 a 1 y cuanto más alto, más desigual es la distribución del ingreso.",
         [
             ("Subió de manera sostenida durante todo el período",
              "El valor final, 0,48, es menor que el inicial, 0,50."),
@@ -145452,12 +144157,7 @@ QUESTIONS_HISTORIA += [
         "Según la tabla, ¿en qué año la inflación anual fue más alta y cuánto "
         "alcanzó?",
         "En 2022, con un 12,8%",
-        "La columna de inflación registra 4,4%, 2,6%, 3,0%, 12,8% y 4,2%.\n"
-        "El máximo, 12,8%, corresponde a 2022 y cuadruplica con creces el "
-        "valor del año más bajo de la serie, 2018.\n"
-        "Ese mismo año el PIB creció 2,1% y la desocupación bajó respecto de "
-        "2020: la inflación alta no coincide aquí con una caída de la "
-        "actividad.",
+        "La columna de inflación registra 4,4%, 2,6%, 3,0%, 12,8% y 4,2%.\nEl máximo, 12,8%, corresponde a 2022 y cuadruplica con creces el valor del año más bajo de la serie, 2018.\nEse mismo año el Producto Interno Bruto (PIB) creció 2,1% y la desocupación bajó respecto de 2020: la inflación alta no coincide aquí con una caída de la actividad.",
         [
             ("En 2020, cuando el PIB registró su única variación negativa",
              "En 2020 la inflación fue 3,0%, una de las más bajas de la serie."),
@@ -145494,14 +144194,7 @@ QUESTIONS_HISTORIA += [
         "Un analista afirma que el crecimiento del PIB en 2018 mejoró la "
         "situación de todos los hogares. ¿Qué objeción permite la fuente?",
         "Que el PIB mide lo producido y no cómo se reparte",
-        "La primera nota es explícita: el PIB mide el valor de lo producido "
-        "dentro del país en un año y «su variación no indica cómo se reparte "
-        "ese valor».\n"
-        "La tabla ofrece además el indicador que sí habla de reparto: el Gini "
-        "pasa de 0,50 en 2015 a 0,49 en 2018, una mejora mucho más discreta "
-        "que el 3,7% de crecimiento.\n"
-        "La objeción no es que el crecimiento sea irrelevante: es que un solo "
-        "indicador no permite concluir sobre todos los hogares.",
+        "La primera nota es explícita: el Producto Interno Bruto (PIB) mide el valor de lo producido dentro del país en un año y «su variación no indica cómo se reparte ese valor».\nLa tabla ofrece además el indicador que sí habla de reparto: el Gini pasa de 0,50 en 2015 a 0,49 en 2018, una mejora mucho más discreta que el 3,7% de crecimiento.\nLa objeción no es que el crecimiento sea irrelevante: es que un solo indicador no permite concluir sobre todos los hogares.",
         [
             ("Que el PIB de 2018 fue menor que el de los años siguientes",
              "3,7% es la mayor variación positiva de toda la serie."),
@@ -145555,14 +144248,7 @@ QUESTIONS_HISTORIA += [
         "eco_indicadores_tabla", "eco_indicadores", "dificil",
         "¿Qué relación entre indicadores muestra la tabla para el año 2020?",
         "Caída del PIB, desocupación máxima y el Gini más alto de la serie",
-        "El año 2020 concentra los tres registros extremos: la única variación "
-        "negativa del PIB, −5,8%; la desocupación más alta, 10,8%; y el Gini "
-        "más alto, 0,51.\n"
-        "La coincidencia es coherente: menos producción suele significar menos "
-        "empleo, y el desempleo tiende a golpear con más fuerza a los hogares "
-        "de menores ingresos, lo que amplía la desigualdad.\n"
-        "La inflación de ese año, en cambio, fue baja: 3,0%, lo que muestra "
-        "que los cuatro indicadores no se mueven siempre juntos.",
+        "El año 2020 concentra los tres registros extremos: la única variación negativa del Producto Interno Bruto (PIB), −5,8%; la desocupación más alta, 10,8%; y el Gini más alto, 0,51.\nLa coincidencia es coherente: menos producción suele significar menos empleo, y el desempleo tiende a golpear con más fuerza a los hogares de menores ingresos, lo que amplía la desigualdad.\nLa inflación de ese año, en cambio, fue baja: 3,0%, lo que muestra que los cuatro indicadores no se mueven siempre juntos.",
         [
             ("Caída del PIB acompañada de la inflación más alta del período",
              "La inflación más alta fue la de 2022, con 12,8%."),
@@ -145644,14 +144330,7 @@ QUESTIONS_HISTORIA += [
         "Según el texto, ¿por qué el impuesto al valor agregado se describe "
         "como regresivo?",
         "Porque absorbe una fracción mayor del presupuesto de quien menos tiene",
-        "El texto parte del dato formal: el IVA se aplica con la misma tasa a "
-        "todos, cualquiera sea su ingreso.\n"
-        "El efecto desigual aparece al mirar qué proporción del ingreso se "
-        "destina a consumo: los hogares de menores ingresos destinan casi todo "
-        "lo que reciben, mientras los de mayores ingresos ahorran una parte.\n"
-        "Como el impuesto grava el consumo y no el ahorro, termina absorbiendo "
-        "una fracción mayor del presupuesto de quien menos tiene, que es "
-        "exactamente lo contrario de un impuesto progresivo.",
+        "El texto parte del dato formal: el impuesto al valor agregado (IVA) se aplica con la misma tasa a todos, cualquiera sea su ingreso.\nEl efecto desigual aparece al mirar qué proporción del ingreso se destina a consumo: los hogares de menores ingresos destinan casi todo lo que reciben, mientras los de mayores ingresos ahorran una parte.\nComo el impuesto grava el consumo y no el ahorro, termina absorbiendo una fracción mayor del presupuesto de quien menos tiene, que es exactamente lo contrario de un impuesto progresivo.",
         [
             ("Porque su tasa aumenta con el precio del producto adquirido",
              "El texto señala que la tasa es la misma para todos."),
