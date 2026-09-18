@@ -106,7 +106,12 @@ const nextConfig: NextConfig = {
               // next/font descarga las tipografías en el build y las sirve
               // desde el propio dominio: no hace falta abrir Google Fonts.
               "font-src 'self' data:",
-              "style-src 'self' 'unsafe-inline'",
+              // accounts.google.com va acá porque la librería de Google
+              // Identity carga su propia hoja (/gsi/style) para el botón: sin
+              // esto la CSP la bloquea y cada carga de la portada deja un
+              // error en la consola. El origen ya es de confianza para
+              // script-src, connect-src y frame-src, así que no amplía nada.
+              "style-src 'self' 'unsafe-inline' https://accounts.google.com",
               // Analytics y Speed Insights de Vercel se sirven desde el mismo
               // dominio (/_vercel/...), así que 'self' los cubre.
               "script-src 'self' 'unsafe-inline' https://accounts.google.com",
