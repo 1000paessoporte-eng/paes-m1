@@ -66,12 +66,11 @@ export default async function PanelPage() {
   // a una prueba que no rinde. Se toma la primera de las que declaró; si no
   // respondió el cuestionario, se queda M1, que es la que rinden casi todos.
   const pruebaDelPanel = onboardingPrevio?.pruebas_objetivo?.[0] ?? "m1";
-  const [nodos, recomendado, analytics, meta, onboarding, plan, porEje] = await Promise.all([
+  const [nodos, recomendado, analytics, meta, plan, porEje] = await Promise.all([
     getSkillTree(token, pruebaDelPanel).catch(() => []),
     getRecommendedNode(token, pruebaDelPanel).catch(() => null),
     getAnalyticsSummary(token).catch(() => null),
     getMeta(token).catch(() => null),
-    getOnboarding(token).catch(() => null),
     // Si falla, el panel se dibuja sin el bloque de Pro. Un aviso comercial no
     // vale romper la pantalla principal del alumno.
     getMiPlan(token).catch(() => null),
@@ -92,7 +91,7 @@ export default async function PanelPage() {
       ejesDe={ultimoRendido?.subject ?? null}
       analytics={analytics}
       meta={meta}
-      onboarding={onboarding}
+      onboarding={onboardingPrevio}
       plan={plan}
     />
   );

@@ -40,8 +40,21 @@ MIN_ATTEMPTS_FOR_UNLOCK = 4
 
 
 def _load_nodes(db: Session) -> dict[int, SkillNode]:
+    """Los nodos con lo que el árbol necesita de cada uno, en dos consultas.
+
+    `lesson` va en el `selectinload` porque la respuesta del árbol trae
+    `has_lesson` y `lesson_intro`: sin precargarla, SQLAlchemy pedía la lección
+    de cada nodo por separado y una sola llamada abría 95 consultas contra una
+    base que está a un océano de distancia. Medido en producción, el endpoint
+    del árbol tardaba 1,2 s.
+    """
     nodes = (
-        db.execute(select(SkillNode).options(selectinload(SkillNode.prerequisites)))
+        db.execute(
+            select(SkillNode).options(
+                selectinload(SkillNode.prerequisites),
+                selectinload(SkillNode.lesson),
+            )
+        )
         .scalars()
         .all()
     )
@@ -127,7 +140,12 @@ def get_user_skill_tree(
     nodes_by_id = _load_nodes(db)
     progress_by_node = _ensure_progress(db, user_id, nodes_by_id)
     _recompute_unlocks(nodes_by_id, progress_by_node)
-    db.commit()
+    # Solo si hay algo que guardar. Para un alumno que ya tiene sus filas de
+    # progreso y no acaba de dominar un tema --el caso de casi todas las
+    # visitas-- no hay nada que escribir, y el commit era un viaje de ida y
+    # vuelta a la base por cada carga del árbol.
+    if db.new or db.dirty:
+        db.commit()
 
     ordered = sorted(nodes_by_id.values(), key=lambda n: (n.axis, n.display_order))
     if subject is not None:
@@ -180,7 +198,9 @@ def get_recommended_node(
 
     None si no hay nada desbloqueado pendiente de dominar."""
 
-    nodes_by_id = _load_nodes(db)
+    # El árbol ya carga los nodos; pedirlos otra vez acá duplicaba el trabajo
+    # más caro del endpoint. Se reutiliza el mapa que deja `_load_nodes` por
+    # dentro, a través del identity map de la sesión, pidiéndolo DESPUÉS.
     # El árbol de la prueba que se está mirando, no el de M1 siempre.
     # `get_user_skill_tree` sin argumento devuelve M1 por defecto, así que la
     # tarjeta "Empieza por acá" recomendaba un nodo de M1 en las cinco
@@ -192,6 +212,8 @@ def get_recommended_node(
     if not candidates:
         return None
 
+    # Acá los nodos ya están en la sesión, así que esto no vuelve a la base.
+    nodes_by_id = _load_nodes(db)
     impact = _compute_impact(nodes_by_id)
     max_impact = max(impact.values()) or 1
 
