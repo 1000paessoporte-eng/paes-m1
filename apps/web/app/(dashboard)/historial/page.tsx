@@ -13,25 +13,25 @@ export const metadata = {
 export default async function HistorialPage() {
   const token = (await cookies()).get(TOKEN_COOKIE)?.value;
 
+  // Los dos en paralelo: en secuencia sumaban sus tiempos sin necesidad. Los
+  // hitos cuentan preguntas y rachas, que viven en analítica; si ese endpoint
+  // falla, el historial se muestra igual con lo que sabe por su cuenta.
   let attempts: Awaited<ReturnType<typeof listExamAttempts>> = [];
-  try {
-    attempts = await listExamAttempts(token);
-  } catch (err) {
-    if (err instanceof ApiError && err.status === 401) redirect("/login?next=/historial");
-  }
-
-  // Los hitos cuentan preguntas y rachas, que viven en analítica. Si ese
-  // endpoint falla, el historial se muestra igual con lo que sabe por su
-  // cuenta: un dato de más no puede llevarse por delante a la pantalla.
   let analitica = null;
   try {
-    const resumen = await getAnalyticsSummary(token);
-    analitica = {
-      preguntasRespondidas: resumen.total_questions_answered,
-      mejorRacha: resumen.best_exam_streak_days,
-    };
-  } catch {
-    analitica = null;
+    const [intentos, resumen] = await Promise.all([
+      listExamAttempts(token),
+      getAnalyticsSummary(token).catch(() => null),
+    ]);
+    attempts = intentos;
+    if (resumen) {
+      analitica = {
+        preguntasRespondidas: resumen.total_questions_answered,
+        mejorRacha: resumen.best_exam_streak_days,
+      };
+    }
+  } catch (err) {
+    if (err instanceof ApiError && err.status === 401) redirect("/login?next=/historial");
   }
 
   // Solo los ensayos terminados tienen puntaje; los en curso no son historial.
