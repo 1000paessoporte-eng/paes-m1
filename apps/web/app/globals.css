@@ -214,6 +214,34 @@
   --color-warning: var(--warning);
   --color-accent-warm: var(--accent-warm);
   --color-accent-warm-strong: var(--accent-warm-strong);
+
+  /* ── Puente para shadcn/ui ────────────────────────────────────────────
+     shadcn escribe sus componentes contra sus propios nombres de rol
+     (primary, secondary, card, ring...). Aquí se mapean a los tokens del
+     sitio, que ya se invierten solos entre claro y oscuro, así que un
+     componente shadcn hereda el tema sin configuración extra.
+
+     No se redefinen `accent` ni `muted`: en este sitio ya significan otra
+     cosa (accent = grafito de marca; muted = gris de TEXTO) y decenas de
+     componentes dependen de esa semántica. Donde shadcn usa `accent` como
+     color de hover, se ajusta en el componente, no acá. */
+  --color-primary: var(--grafito);
+  --color-primary-foreground: var(--on-fill);
+  --color-secondary: var(--surface-hover);
+  --color-secondary-foreground: var(--foreground);
+  --color-destructive: var(--danger);
+  --color-destructive-foreground: var(--on-fill);
+  --color-muted-foreground: var(--muted);
+  --color-card: var(--surface);
+  --color-card-foreground: var(--foreground);
+  --color-popover: var(--surface);
+  --color-popover-foreground: var(--foreground);
+  --color-input: var(--border);
+  --color-ring: var(--accent-2);
+  /* CTA naranjo del sitio, para la variante `cta` del botón. */
+  --color-cta: var(--accent-warm-strong);
+  --color-cta-foreground: var(--on-fill);
+  --radius: 0.75rem;
   --font-sans: var(--fuente-ui);
   --font-display: var(--fuente-display);
   --font-lectura: var(--fuente-lectura);
