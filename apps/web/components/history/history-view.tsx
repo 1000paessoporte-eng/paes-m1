@@ -11,6 +11,18 @@ import { NOMBRE_CORTO } from "@/lib/colores-prueba";
 import { ApiError, deleteExamAttempt, type ExamAttemptSummary } from "@/lib/api";
 import { getClientToken, loginHref } from "@/lib/auth";
 import { formatearTiempo } from "@/lib/tiempo";
+import { Button } from "@/components/ui/button";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 const FECHA_FMT = new Intl.DateTimeFormat("es-CL", {
   day: "numeric",
@@ -34,7 +46,6 @@ export function HistoryView({ intentos, analitica }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const [borrando, setBorrando] = useState<number | null>(null);
-  const [confirmarBorrado, setConfirmarBorrado] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const avances = useMemo(() => avancePorPrueba(intentos), [intentos]);
@@ -83,7 +94,6 @@ export function HistoryView({ intentos, analitica }: Props) {
       for (const intento of intentos) {
         await deleteExamAttempt(intento.attempt_id, token);
       }
-      setConfirmarBorrado(false);
       router.refresh();
     } catch {
       setError("No se pudo borrar todo el historial.");
@@ -204,67 +214,76 @@ export function HistoryView({ intentos, analitica }: Props) {
                   >
                     {intento.estimated_score ?? "—"}
                   </span>
-                  <button
-                    type="button"
-                    onClick={() => borrar(intento.attempt_id)}
-                    disabled={borrando === intento.attempt_id}
-                    aria-label="Eliminar este ensayo del historial"
-                    className="shrink-0 rounded px-2 py-1 text-muted transition-colors hover:bg-surface-hover hover:text-danger disabled:opacity-40"
-                  >
-                    ×
-                  </button>
+                  <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                      <button
+                        type="button"
+                        disabled={borrando === intento.attempt_id}
+                        aria-label="Eliminar este ensayo del historial"
+                        className="shrink-0 rounded px-2 py-1 text-muted transition-colors hover:bg-surface-hover hover:text-danger disabled:opacity-40"
+                      >
+                        ×
+                      </button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle>¿Eliminar este ensayo?</AlertDialogTitle>
+                        <AlertDialogDescription>
+                          Se quita de tu historial y no se puede deshacer. Tu
+                          mejor puntaje se recalcula con los que queden.
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogCancel>Cancelar</AlertDialogCancel>
+                        <AlertDialogAction
+                          variant="destructive"
+                          onClick={() => borrar(intento.attempt_id)}
+                        >
+                          Eliminar
+                        </AlertDialogAction>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
                 </li>
               ))}
             </ul>
           </section>
 
           <div className="flex flex-col gap-2 sm:flex-row">
-            <button
-              type="button"
-              onClick={descargar}
-              className="flex-1 rounded-lg border border-border px-4 py-2.5 text-sm font-medium hover:bg-surface-hover"
-            >
+            <Button variant="outline" size="lg" onClick={descargar} className="flex-1">
               Descargar respaldo (JSON)
-            </button>
-            <button
-              type="button"
-              onClick={() => setConfirmarBorrado(true)}
-              className="flex-1 rounded-lg border border-danger/40 px-4 py-2.5 text-sm font-medium text-danger hover:bg-danger/10"
-            >
-              Borrar todo el historial
-            </button>
+            </Button>
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="flex-1 border-danger/40 text-danger hover:bg-danger/10 hover:text-danger"
+                >
+                  Borrar todo el historial
+                </Button>
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>¿Borrar todo el historial?</AlertDialogTitle>
+                  <AlertDialogDescription>
+                    Se eliminarán los {intentos.length} ensayos guardados. Esta
+                    acción no se puede deshacer. Si quieres conservarlos,
+                    descarga primero el respaldo.
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>Cancelar</AlertDialogCancel>
+                  <AlertDialogAction variant="destructive" onClick={borrarTodo}>
+                    Borrar todo
+                  </AlertDialogAction>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
           </div>
         </>
       )}
 
-      {confirmarBorrado && (
-        <div className="fixed inset-0 z-30 flex items-center justify-center bg-foreground/40 p-4">
-          <div className="w-full max-w-sm rounded-xl border border-border bg-background p-5">
-            <h2 className="text-lg font-bold">¿Borrar todo el historial?</h2>
-            <p className="mt-2 text-sm text-muted">
-              Se eliminarán los {intentos.length} ensayos guardados. Esta acción
-              no se puede deshacer. Si quieres conservarlos, descarga primero el
-              respaldo.
-            </p>
-            <div className="mt-5 flex gap-2">
-              <button
-                type="button"
-                onClick={() => setConfirmarBorrado(false)}
-                className="flex-1 rounded-lg border border-border px-4 py-2.5 font-medium hover:bg-surface-hover"
-              >
-                Cancelar
-              </button>
-              <button
-                type="button"
-                onClick={borrarTodo}
-                className="flex-1 rounded-lg bg-danger px-4 py-2.5 font-semibold text-on-fill hover:opacity-90"
-              >
-                Borrar
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

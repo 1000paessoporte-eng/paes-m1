@@ -17,7 +17,6 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-surface-hover",
         link: "text-primary underline-offset-4 hover:underline",
-        // Variantes de la identidad del sitio, no del zinc por defecto.
         cta: "bg-cta text-cta-foreground shadow-xs hover:bg-cta/90",
         success: "bg-success text-on-fill shadow-xs hover:bg-success/90",
       },
