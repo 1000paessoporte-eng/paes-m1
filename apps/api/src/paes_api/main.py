@@ -27,7 +27,36 @@ from paes_api.modules.users.router import router as users_router
 
 settings = get_settings()
 
-app = FastAPI(title="PAES M1 API", version="0.1.0")
+# En produccion la documentacion interactiva se apaga. /docs, /redoc y
+# /openapi.json le entregan a cualquiera el mapa completo de la API --cada
+# ruta, cada parametro, cada schema-- sin pedir nada. Es reconocimiento
+# regalado para quien busca por donde entrar. En desarrollo siguen abiertas,
+# que es donde sirven.
+_es_prod = settings.environment.lower() == "production"
+
+app = FastAPI(
+    title="PAES M1 API",
+    version="0.1.0",
+    docs_url=None if _es_prod else "/docs",
+    redoc_url=None if _es_prod else "/redoc",
+    openapi_url=None if _es_prod else "/openapi.json",
+)
+
+
+@app.middleware("http")
+async def _cabeceras_de_seguridad(request, call_next):
+    """Cabeceras de endurecimiento en cada respuesta de la API.
+
+    La web ya las manda (ver next.config.ts), pero la API es un dominio
+    aparte y respondia solo con HSTS. Estas tres son las baratas y sin
+    efectos secundarios: no adivinar el tipo de contenido, no dejarse
+    enmarcar, y no filtrar la URL completa como referer."""
+    respuesta = await call_next(request)
+    respuesta.headers.setdefault("X-Content-Type-Options", "nosniff")
+    respuesta.headers.setdefault("X-Frame-Options", "DENY")
+    respuesta.headers.setdefault("Referrer-Policy", "strict-origin-when-cross-origin")
+    return respuesta
+
 
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)  # type: ignore[arg-type]
