@@ -74888,7 +74888,8 @@ LESSONS: dict[str, dict] = {
             "mañana |\n"
             "| Huella ecológica | cuántos recursos consume una población respecto de "
             "lo que su territorio repone |\n"
-            "| Desarrollo humano (IDH) | combina ingreso, educación y salud |\n"
+            "| Índice de desarrollo humano (IDH) | combina ingreso, educación y salud "
+            "|\n"
             "| Matriz productiva | qué produce y exporta un país, y con cuánto valor "
             "agregado |\n\n"
             "**El riesgo de exportar pocos productos.** El precio se fija afuera. "
@@ -75054,8 +75055,8 @@ LESSONS: dict[str, dict] = {
             "la renta);\n"
             "- **proporcional**: todos pagan la misma proporción;\n"
             "- **regresivo**: misma tasa para todos, pero pesa más sobre los ingresos "
-            "bajos, como ocurre con el IVA, porque quien gana poco consume casi todo "
-            "lo que gana.\n\n"
+            "bajos, como ocurre con el impuesto al valor agregado (IVA), porque quien "
+            "gana poco consume casi todo lo que gana.\n\n"
             "**Gasto social y redistribución.** Los impuestos financian salud, "
             "educación, pensiones y subsidios. Por eso la desigualdad se mide antes y "
             "después de impuestos y transferencias: la diferencia entre ambas cifras "
@@ -75834,7 +75835,9 @@ LESSONS: dict[str, dict] = {
             "|---|---|---|\n"
             "| Voto femenino en elecciones municipales | 1935 | primer reconocimiento "
             "político |\n"
-            "| Voto femenino en elecciones presidenciales | 1949 | sufragio pleno |\n"
+            "| Ley que extiende el voto femenino a las elecciones presidenciales y "
+            "parlamentarias | 1949 | sufragio pleno; la primera presidencial con voto "
+            "de mujeres fue la de 1952 |\n"
             "| Creación del Servicio Nacional de Salud | 1952 | salud pública "
             "unificada |\n"
             "| Reforma agraria | 1962-1973 | redistribución de la tierra, fin del "
@@ -75972,9 +75975,10 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**Qué la define.** Confrontación entre Estados Unidos y la Unión "
-            "Soviética, aproximadamente entre 1947 y 1991, SIN guerra directa entre "
-            "ellos. Los enfrentamientos armados ocurrieron en terceros países "
-            "alineados con cada bloque: Corea, Vietnam, Afganistán.\n\n"
+            "Soviética —la Unión de Repúblicas Socialistas Soviéticas, URSS—, "
+            "aproximadamente entre 1947 y 1991, SIN guerra directa entre ellos. Los "
+            "enfrentamientos armados ocurrieron en terceros países alineados con cada "
+            "bloque: Corea, Vietnam, Afganistán.\n\n"
             "**Dos modelos en disputa.** No era solo una rivalidad entre potencias: "
             "cada bloque proponía una forma de organizar la economía y la política "
             "—economía de mercado y democracia liberal frente a economía planificada "
@@ -75986,7 +75990,9 @@ LESSONS: dict[str, dict] = {
             "|---|---|---|\n"
             "| Plan Marshall y doctrina de contención | 1947 | ayuda económica como "
             "herramienta de alineamiento |\n"
-            "| OTAN y Pacto de Varsovia | 1949 / 1955 | los dos bloques militares |\n"
+            "| OTAN (Organización del Tratado del Atlántico Norte) y Pacto de "
+            "Varsovia | 1949 / 1955 | los dos bloques militares, el occidental y el "
+            "soviético |\n"
             "| Revolución Cubana | 1959 | un país socialista en el continente "
             "americano |\n"
             "| Muro de Berlín | 1961 | la división vuelta hormigón |\n"
@@ -76126,12 +76132,12 @@ LESSONS: dict[str, dict] = {
             "límites."
         ),
         "theory": (
-            "**La ONU y su diferencia con lo anterior.** Creada en 1945 para mantener "
-            "la paz y la seguridad. Frente a la Sociedad de Naciones, que había "
-            "fracasado, aportó un órgano con decisiones OBLIGATORIAS: el Consejo de "
-            "Seguridad. Cinco miembros permanentes tienen veto, es decir, pueden "
-            "bloquear cualquier resolución, y esa regla explica buena parte de sus "
-            "parálisis posteriores.\n\n"
+            "**La Organización de las Naciones Unidas (ONU) y su diferencia con lo "
+            "anterior.** Creada en 1945 para mantener la paz y la seguridad. Frente a "
+            "la Sociedad de Naciones, que había fracasado, aportó un órgano con "
+            "decisiones OBLIGATORIAS: el Consejo de Seguridad. Cinco miembros "
+            "permanentes tienen veto, es decir, pueden bloquear cualquier resolución, "
+            "y esa regla explica buena parte de sus parálisis posteriores.\n\n"
             "**La Declaración Universal de 1948.** Afirma que todos nacen libres e "
             "iguales en dignidad y derechos: eso es universalidad. Su efecto de fondo "
             "es que el trato de un Estado a su propia población deja de ser un asunto "
@@ -76300,8 +76306,8 @@ LESSONS: dict[str, dict] = {
             "región produjo internamente lo que antes importaba: es la "
             "industrialización por sustitución de importaciones (ISI), con aranceles, "
             "crédito estatal y empresas públicas. En Chile su instrumento fue la "
-            "CORFO, creada en 1939 tras el terremoto de Chillán y bajo el gobierno "
-            "del Frente Popular.\n\n"
+            "Corporación de Fomento de la Producción (CORFO), creada en 1939 tras el "
+            "terremoto de Chillán y bajo el gobierno del Frente Popular.\n\n"
             "| Antes de 1929 | Después |\n"
             "|---|---|\n"
             "| Estado árbitro, no productor | Estado empresario e inversor |\n"
@@ -78292,8 +78298,8 @@ LESSONS: dict[str, dict] = {
             "se simplifica |\n"
             "| $\\dfrac{a}{b} \\cdot \\dfrac{c}{d}$ | $\\dfrac{ac}{bd}$ |\n"
             "| $\\dfrac{a}{b} \\div \\dfrac{c}{d}$ | $\\dfrac{ad}{bc}$ |\n"
-            "| Comparar $\\dfrac{a}{b}$ con $\\dfrac{c}{d}$ | es mayor la del producto "
-            "cruzado mayor: $ad$ contra $bc$ |\n\n"
+            "| Comparar $\\dfrac{a}{b}$ con $\\dfrac{c}{d}$ (con $b$ y $d$ positivos) | "
+            "si $ad > bc$, entonces $\\dfrac{a}{b}$ es la mayor |\n\n"
             "**Comparar fracciones.** Con el mismo denominador, gana la de numerador "
             "mayor; con el mismo numerador, gana la de denominador MENOR, porque el "
             "entero se partió en menos pedazos. Si no coinciden ni uno ni otro, se "
@@ -78327,7 +78333,7 @@ LESSONS: dict[str, dict] = {
             },
             {
                 "accion": "Reviso si se puede simplificar: 11 es primo y no divide a 18, así que $\\frac{11}{18}$ es la respuesta final.",
-                "porque": "En la PAES las alternativas vienen simplificadas; una respuesta correcta sin simplificar puede no aparecer entre ellas.",
+                "porque": "En la PAES --la Prueba de Acceso a la Educación Superior-- las alternativas vienen simplificadas; una respuesta correcta sin simplificar puede no aparecer entre ellas.",
             },
         ],
         "extra_examples": [
@@ -78486,9 +78492,9 @@ LESSONS: dict[str, dict] = {
     },
     "num_porcentajes": {
         "intro": (
-            "Un porcentaje es una fracción de denominador 100. Es el contenido "
-            "que más aparece en la vida real —descuentos, IVA, sueldos— y uno de "
-            "los que más se repite en la prueba."
+            "Un porcentaje es una fracción de denominador 100. Es el contenido que "
+            "más aparece en la vida real —descuentos, impuesto al valor agregado "
+            "(IVA), sueldos— y uno de los que más se repite en la prueba."
         ),
         "theory": (
             "**Un porcentaje es una fracción de denominador $100$**: el $p\\%$ es "
@@ -78725,10 +78731,10 @@ LESSONS: dict[str, dict] = {
     },
     "alg_proporcionalidad": {
         "intro": (
-            "Casi todos los problemas de la vida diaria que aparecen en la PAES "
-            "son de proporción: precios, recetas, mapas, cuadrillas de trabajo. "
-            "La pregunta que hay que hacerse siempre es una sola: cuando una "
-            "magnitud sube, ¿la otra sube o baja?"
+            "Casi todos los problemas de la vida diaria que aparecen en la PAES —la "
+            "Prueba de Acceso a la Educación Superior— son de proporción: precios, "
+            "recetas, mapas, cuadrillas de trabajo. La pregunta que hay que hacerse "
+            "siempre es una sola: cuando una magnitud sube, ¿la otra sube o baja?"
         ),
         "theory": (
             "**Una razón** es el cociente entre dos cantidades, $a : b$ o "
@@ -79355,14 +79361,16 @@ LESSONS: dict[str, dict] = {
             "|---|---|---|\n"
             "| Cuadrado de lado $a$ | $a^2$ | $4a$ |\n"
             "| Rectángulo de lados $a$ y $b$ | $a \\cdot b$ | $2(a+b)$ |\n"
-            "| Paralelogramo de base $b$ y altura $h$ | $b \\cdot h$ | $2(a+b)$ |\n"
+            "| Paralelogramo de lados $a$ y $b$, con altura $h$ sobre $b$ | $b \\cdot "
+            "h$ | $2(a+b)$ |\n"
             "| Triángulo | $\\dfrac{b \\cdot h}{2}$ | suma de los tres lados |\n"
             "| Triángulo equilátero de lado $a$ | $\\dfrac{\\sqrt{3}}{4}a^2$ | $3a$ |\n"
             "| Trapecio de bases $B$ y $b$ | $\\dfrac{(B+b) \\cdot h}{2}$ | suma de los "
             "cuatro lados |\n"
-            "| Rombo de diagonales $D$ y $d$ | $\\dfrac{D \\cdot d}{2}$ | $4a$ |\n"
-            "| Polígono regular de perímetro $P$ y apotema $a$ | $\\dfrac{P \\cdot "
-            "a}{2}$ | $n \\cdot \\text{lado}$ |\n"
+            "| Rombo de lado $a$ y diagonales $D$ y $d$ | $\\dfrac{D \\cdot d}{2}$ | "
+            "$4a$ |\n"
+            "| Polígono regular de perímetro $P$ y apotema $m$ | $\\dfrac{P \\cdot "
+            "m}{2}$ | $n \\cdot \\text{lado}$ |\n"
             "| Círculo de radio $r$ | $\\pi r^2$ | $2\\pi r$ |\n\n"
             "**Radio y diámetro**: $d = 2r$. Si el enunciado da el diámetro hay que "
             "dividirlo entre dos antes de entrar a las fórmulas del círculo. Es el "
@@ -79682,10 +79690,11 @@ LESSONS: dict[str, dict] = {
             "La razón es que un área depende de dos dimensiones y un volumen de tres, "
             "y el factor se aplica a cada una.\n\n"
             "**Criterios de semejanza de triángulos.** Basta con uno:\n\n"
-            "- **AA**: dos ángulos iguales. Es el más usado, porque el tercero queda "
-            "determinado;\n"
-            "- **LAL**: dos lados proporcionales y el ángulo entre ellos igual;\n"
-            "- **LLL**: los tres lados proporcionales.\n\n"
+            "- **ángulo-ángulo (AA)**: dos ángulos iguales. Es el más usado, porque "
+            "el tercero queda determinado;\n"
+            "- **lado-ángulo-lado (LAL)**: dos lados proporcionales y el ángulo entre "
+            "ellos igual;\n"
+            "- **lado-lado-lado (LLL)**: los tres lados proporcionales.\n\n"
             "**Teorema de Thales.** Toda recta paralela a un lado de un triángulo "
             "corta a los otros dos en segmentos proporcionales, y forma con él un "
             "triángulo semejante al original. Es lo que hay detrás de casi todos los "
@@ -79905,8 +79914,9 @@ LESSONS: dict[str, dict] = {
             "ninguna de las dos mitades.\n\n"
             "**Percentiles**: la misma idea con cien tramos. Estar en el percentil "
             "$80$ significa que el $80\\%$ de los datos está por debajo. Es "
-            "exactamente lo que dice tu puntaje PAES respecto del resto: un percentil "
-            "no es un porcentaje de logro ni una nota.\n\n"
+            "exactamente lo que dice tu puntaje en la PAES, la Prueba de Acceso a la "
+            "Educación Superior, respecto del resto: un percentil no es un porcentaje "
+            "de logro ni una nota.\n\n"
             "| Medida | Deja por debajo | Equivale a |\n"
             "|---|---|---|\n"
             "| $Q_1$ | $25\\%$ | percentil $25$ |\n"
@@ -80248,7 +80258,7 @@ LESSONS: dict[str, dict] = {
             "juntos |\n"
             "| Intersección independiente | $P(A \\cap B) = P(A) \\cdot P(B)$ | uno no "
             "afecta al otro |\n"
-            "| Intersección dependiente | $P(A) \\cdot P(B|A)$ | sin reposición |\n\n"
+            "| Intersección dependiente | $P(A) \\cdot P(B \\mid A)$ | sin reposición |\n\n"
             "**Por qué se resta la intersección.** Al sumar $P(A)$ y $P(B)$, los "
             "casos que cumplen las dos cosas se cuentan dos veces. En un diagrama de "
             "Venn es la zona del medio, y por eso se descuenta una vez.\n\n"
@@ -80476,7 +80486,9 @@ LESSONS: dict[str, dict] = {
             "**La membrana es selectiva, no un colador.** Es una doble capa de "
             "lípidos con proteínas incrustadas —el modelo del mosaico fluido—. Lo que "
             "es pequeño y sin carga (oxígeno, dióxido de carbono) la cruza solo; lo "
-            "que tiene carga o es grande necesita una proteína que lo pase.\n\n"
+            "que tiene carga o es grande necesita una proteína que lo pase. Cuando "
+            "ese paso cuesta energía, la célula la paga con **ATP (adenosín "
+            "trifosfato)**, la molécula que guarda y entrega energía en cada proceso.\n\n"
             "| Transporte | Gasta ATP | Dirección | Ejemplos |\n"
             "|---|---|---|---|\n"
             "| Difusión simple | no | a favor del gradiente | O₂, CO₂ |\n"
@@ -80673,9 +80685,10 @@ LESSONS: dict[str, dict] = {
     },
     "cie_movimiento": {
         "intro": (
-            "Describir un movimiento es responder tres cosas: dónde está, qué "
-            "tan rápido va y si está cambiando de rapidez. Con eso se resuelve "
-            "casi todo lo que la PAES pregunta de cinemática."
+            "Describir un movimiento es responder tres cosas: dónde está, qué tan "
+            "rápido va y si está cambiando de rapidez. Con eso se resuelve casi todo "
+            "lo que la PAES, la Prueba de Acceso a la Educación Superior, pregunta de "
+            "cinemática."
         ),
         "theory": (
             "**Distancia y desplazamiento no son lo mismo.** La distancia es todo el "
@@ -80692,6 +80705,10 @@ LESSONS: dict[str, dict] = {
             "positiva o negativa según el sistema de referencia: una aceleración "
             "negativa no significa «frenar», significa que apunta hacia el lado "
             "negativo. Frena cuando apunta al revés de la velocidad.\n\n"
+            "Los dos movimientos que la prueba pide distinguir son el **movimiento "
+            "rectilíneo uniforme (MRU)**, el de velocidad constante, y el "
+            "**movimiento rectilíneo uniformemente acelerado (MRUA)**, el de "
+            "aceleración constante.\n\n"
             "| | MRU (velocidad constante) | MRUA (aceleración constante) |\n"
             "|---|---|---|\n"
             "| Velocidad | $v = $ constante | $v = v_0 + a\\,t$ |\n"
@@ -80806,7 +80823,8 @@ LESSONS: dict[str, dict] = {
             "| masa (g) | moles | $n = \\dfrac{m}{M}$ |\n"
             "| moles | masa (g) | $m = n \\cdot M$ |\n"
             "| moles | partículas | $N = n \\cdot 6{,}02 \\times 10^{23}$ |\n"
-            "| moles de gas en CNPT | volumen | $V = n \\cdot 22{,}4$ L |\n\n"
+            "| moles de gas en CNPT (condiciones normales de presión y temperatura) | "
+            "volumen | $V = n \\cdot 22{,}4$ L |\n\n"
             "**La ecuación debe estar balanceada antes de calcular.** Los "
             "coeficientes son la receta: dicen cuántos moles de cada cosa participan. "
             "Usar una ecuación sin balancear da siempre un resultado incorrecto.\n\n"
@@ -81164,9 +81182,10 @@ LESSONS: dict[str, dict] = {
             "se le expresa sin necesidad de estar duplicado. Es la razón de que el "
             "daltonismo y la hemofilia sean mucho más frecuentes en hombres.\n\n"
             "**Mutación y variabilidad.** Una mutación es un cambio en la secuencia "
-            "del ADN; puede ser neutra, perjudicial o ventajosa según el ambiente, y "
-            "es la fuente última de toda la variabilidad sobre la que actúa la "
-            "evolución."
+            "del ácido desoxirribonucleico (ADN), la molécula donde está escrita la "
+            "información genética; puede ser neutra, perjudicial o ventajosa según el "
+            "ambiente, y es la fuente última de toda la variabilidad sobre la que "
+            "actúa la evolución."
         ),
         "example_statement": (
             "En arvejas, el color amarillo de la semilla (A) domina sobre el "
@@ -81959,10 +81978,10 @@ LESSONS: dict[str, dict] = {
             "evalúa acá."
         ),
         "theory": (
-            "**PIB.** Es el valor de todos los bienes y servicios FINALES producidos "
-            "dentro de un país en un período. Se dice «finales» para no contar dos "
-            "veces: la harina que se usa para hacer pan ya está incluida en el precio "
-            "del pan.\n\n"
+            "**Producto Interno Bruto (PIB).** Es el valor de todos los bienes y "
+            "servicios FINALES producidos dentro de un país en un período. Se dice "
+            "«finales» para no contar dos veces: la harina que se usa para hacer pan "
+            "ya está incluida en el precio del pan.\n\n"
             "**El PIB mide producción, no bienestar**: no dice cómo se reparte, no "
             "cuenta el trabajo doméstico no remunerado ni el voluntariado, y no "
             "descuenta el daño ambiental. Un desastre que obliga a reconstruir puede "
@@ -81976,24 +81995,24 @@ LESSONS: dict[str, dict] = {
             "| PIB | producción total | no dice nada de distribución ni de bienestar "
             "|\n"
             "| PIB per cápita | producción por habitante | es un promedio |\n"
-            "| IPC / inflación | alza sostenida y general de precios | usa una "
-            "canasta promedio, no la de cada hogar |\n"
+            "| IPC (índice de precios al consumidor) / inflación | alza sostenida y "
+            "general de precios | usa una canasta promedio, no la de cada hogar |\n"
             "| Tasa de desempleo | desocupados sobre fuerza de trabajo | no cuenta a "
             "quien dejó de buscar |\n"
             "| Coeficiente de Gini | desigualdad de ingresos (0 a 1) | no distingue "
             "de dónde viene la desigualdad |\n"
             "| Pobreza multidimensional | ingreso más educación, salud, vivienda, "
             "trabajo | depende de los umbrales que se fijen |\n"
-            "| IDH | ingreso, educación y salud combinados | promedia dimensiones muy "
-            "distintas |\n\n"
+            "| IDH (índice de desarrollo humano) | ingreso, educación y salud "
+            "combinados | promedia dimensiones muy distintas |\n\n"
             "**Inflación.** Es el alza sostenida y generalizada de los precios. En "
             "Chile la mide el IPC, que calcula el Instituto Nacional de Estadísticas "
             "sobre una canasta representativa. Que baje la inflación no significa que "
             "bajen los precios: significa que suben más lento.\n\n"
             "**Por qué importa.** La inflación erosiona el poder adquisitivo de quien "
             "tiene ingresos fijos, y por eso existen unidades reajustables como la "
-            "UF. Comparar dos sueldos de años distintos sin corregir por inflación es "
-            "comparar cosas que no son iguales.\n\n"
+            "Unidad de Fomento (UF). Comparar dos sueldos de años distintos sin "
+            "corregir por inflación es comparar cosas que no son iguales.\n\n"
             "**Desempleo: quién cuenta.** Solo se considera desocupado a quien no "
             "tiene trabajo y está buscándolo activamente. Quien se cansó de buscar "
             "sale de la fuerza de trabajo y deja de aparecer en la tasa, que entonces "
@@ -82359,7 +82378,7 @@ LESSONS: dict[str, dict] = {
             "|---|---|---|\n"
             "| suma una constante $c$ | sube en $c$ | no cambia |\n"
             "| multiplica por una constante $k$ | se multiplica por $k$ | se "
-            "multiplica por $|k|$ |\n\n"
+            "multiplica por $\\lvert k\\rvert$ |\n\n"
             "Sumar una constante mueve todo el conjunto sin separarlo, así que la "
             "dispersión se mantiene; multiplicar sí estira las distancias.\n\n"
             "**Cómo se lee.** A mayor desviación estándar, más dispersos los datos. "
@@ -82675,9 +82694,9 @@ LESSONS: dict[str, dict] = {
             "las propiedades y se vuelve a la forma exponencial. Las soluciones que "
             "dejen un argumento negativo o cero se descartan.\n\n"
             "**Para qué sirven en la vida real.** Las escalas logarítmicas comprimen "
-            "rangos enormes: la magnitud Richter, el pH y los decibeles. Por eso un "
-            "sismo de magnitud $7$ libera unas $32$ veces más energía que uno de $6$, "
-            "y no un séptimo más.\n\n"
+            "rangos enormes: la magnitud Richter, el pH —el potencial de hidrógeno, "
+            "que mide la acidez— y los decibeles. Por eso un sismo de magnitud $7$ "
+            "libera unas $32$ veces más energía que uno de $6$, y no un séptimo más.\n\n"
             "[figura:/preguntas/mat-grafico-logaritmo.svg]"
         ),
         "example_statement": (
@@ -82770,8 +82789,8 @@ LESSONS: dict[str, dict] = {
             "factores no altera el resultado: aplicar primero el descuento o primero "
             "el recargo da lo mismo.\n\n"
             "**Volver al precio original es dividir.** Si el final es $\\$11.900$ con "
-            "IVA del $19\\%$, el neto es $\\dfrac{11.900}{1{,}19} = \\$10.000$, no el "
-            "final menos su $19\\%$.\n\n"
+            "impuesto al valor agregado (IVA) del $19\\%$, el neto es "
+            "$\\dfrac{11.900}{1{,}19} = \\$10.000$, no el final menos su $19\\%$.\n\n"
             "**Comparar alternativas.** Para decidir entre dos ofertas de crédito o "
             "de ahorro se calcula el monto final de cada una con su propia fórmula y "
             "recién ahí se comparan: una tasa más baja con más períodos puede "
@@ -82779,7 +82798,7 @@ LESSONS: dict[str, dict] = {
             "[figura:/preguntas/mat-interes-simple-compuesto.svg]"
         ),
         "example_statement": (
-            "Un producto cuesta $10.000. Primero sube un 20% y después el nuevo "
+            "Un producto cuesta \\$10.000. Primero sube un 20% y después el nuevo "
             "precio se rebaja un 25%. ¿Cuál es el precio final?"
         ),
         "example_steps": [
@@ -82788,11 +82807,11 @@ LESSONS: dict[str, dict] = {
                 "porque": "Trabajar con factores evita calcular el monto intermedio y equivocarse en la resta. Un aumento del $p\\%$ es $1 + \\frac{p}{100}$; un descuento, $1 - \\frac{p}{100}$.",
             },
             {
-                "accion": "Multiplico en cadena: $10.000 \\cdot 1{,}20 \\cdot 0{,}75$.",
+                "accion": "Multiplico en cadena: \\$10.000 por $1{,}20$ y después por $0{,}75$.",
                 "porque": "El segundo porcentaje se aplica sobre el precio YA aumentado, no sobre el original. Por eso van encadenados y no sumados.",
             },
             {
-                "accion": "Calculo: $10.000 \\cdot 1{,}20 = 12.000$ y $12.000 \\cdot 0{,}75 = 9.000$. El precio final es $9.000.",
+                "accion": "Calculo: \\$10.000 por $1{,}20$ da \\$12.000, y \\$12.000 por $0{,}75$ da \\$9.000. El precio final es \\$9.000.",
                 "porque": "El factor total es $1{,}20 \\cdot 0{,}75 = 0{,}90$, o sea una baja neta del 10%: no del 5% que daría restar 25 menos 20.",
             },
         ],
@@ -83729,10 +83748,10 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**Procarionte y eucarionte: la diferencia es el núcleo.** La célula "
-            "procarionte (bacterias) tiene su ADN suelto en el citoplasma, en una "
-            "zona llamada nucleoide, y no tiene organelos con membrana. La eucarionte "
-            "guarda su ADN dentro de un núcleo con envoltura y tiene organelos. La "
-            "procarionte además es mucho más pequeña.\n\n"
+            "procarionte (bacterias) tiene su ácido desoxirribonucleico (ADN) suelto "
+            "en el citoplasma, en una zona llamada nucleoide, y no tiene organelos "
+            "con membrana. La eucarionte guarda su ADN dentro de un núcleo con "
+            "envoltura y tiene organelos. La procarionte además es mucho más pequeña.\n\n"
             "| | Procarionte | Eucarionte animal | Eucarionte vegetal |\n"
             "|---|---|---|---|\n"
             "| Núcleo | no | sí | sí |\n"
@@ -83966,8 +83985,9 @@ LESSONS: dict[str, dict] = {
             "menstruación.\n\n"
             "| Hormona | La produce | Qué hace |\n"
             "|---|---|---|\n"
-            "| FSH | hipófisis | hace madurar el folículo |\n"
-            "| LH | hipófisis | su alza dispara la ovulación |\n"
+            "| FSH (hormona foliculoestimulante) | hipófisis | hace madurar el "
+            "folículo |\n"
+            "| LH (hormona luteinizante) | hipófisis | su alza dispara la ovulación |\n"
             "| Estrógenos | folículo | engrosan el endometrio |\n"
             "| Progesterona | cuerpo lúteo | mantiene el endometrio |\n\n"
             "**La fecundación ocurre en la trompa de Falopio**, no en el útero. El "
@@ -84065,7 +84085,9 @@ LESSONS: dict[str, dict] = {
             "sirven para ambos. Distinguirlos es lo que esta unidad pide."
         ),
         "theory": (
-            "**Los métodos se distinguen por cómo actúan y por qué protegen.**\n\n"
+            "**Los métodos se distinguen por cómo actúan y de qué protegen**: del "
+            "embarazo, de las infecciones de transmisión sexual (ITS), o de las dos "
+            "cosas.\n\n"
             "| Método | Cómo actúa | ¿Protege de ITS? |\n"
             "|---|---|---|\n"
             "| Preservativo | barrera física | **sí** |\n"
@@ -84086,8 +84108,9 @@ LESSONS: dict[str, dict] = {
             "fértil es más ancha de lo que la cuenta sugiere.\n\n"
             "**Las ITS se transmiten por fluidos o por contacto.** Algunas son "
             "bacterianas y se tratan con antibióticos (sífilis, gonorrea, clamidia); "
-            "otras son virales y el tratamiento controla pero no elimina el virus "
-            "(VIH, herpes, VPH).\n\n"
+            "otras son virales y el tratamiento controla pero no elimina el virus: el "
+            "de la inmunodeficiencia humana (VIH), el herpes y el del papiloma humano "
+            "(VPH).\n\n"
             "**Muchas cursan sin síntomas durante largos períodos**, y por eso la "
             "ausencia de síntomas no descarta una infección: la única forma de "
             "saberlo es el examen. Una infección asintomática se transmite igual.\n\n"
@@ -84174,9 +84197,9 @@ LESSONS: dict[str, dict] = {
     },
     "cie_ciclo_celular": {
         "intro": (
-            "Una célula pasa la mayor parte de su vida creciendo y copiando su "
-            "ADN, y solo un rato dividiéndose. Entender ese reparto explica "
-            "tanto la cicatrización como el cáncer."
+            "Una célula pasa la mayor parte de su vida creciendo y copiando su ácido "
+            "desoxirribonucleico (ADN), y solo un rato dividiéndose. Entender ese "
+            "reparto explica tanto la cicatrización como el cáncer."
         ),
         "theory": (
             "**El ciclo tiene dos grandes partes.** La interfase ocupa casi todo el "
@@ -84288,8 +84311,9 @@ LESSONS: dict[str, dict] = {
             "**Cuatro tipos de evidencia.** El registro fósil muestra formas "
             "intermedias y su orden en el tiempo; la anatomía comparada muestra "
             "estructuras homólogas; el desarrollo embrionario muestra etapas "
-            "compartidas; y la biología molecular compara secuencias de ADN y "
-            "proteínas: mientras más parecidas, más cercano el parentesco.\n\n"
+            "compartidas; y la biología molecular compara secuencias de ácido "
+            "desoxirribonucleico (ADN) y de proteínas: mientras más parecidas, más "
+            "cercano el parentesco.\n\n"
             "**Homólogo y análogo no son lo mismo.**\n\n"
             "| | Homólogos | Análogos |\n"
             "|---|---|---|\n"
@@ -84416,10 +84440,12 @@ LESSONS: dict[str, dict] = {
             "Ocurre en los cloroplastos, y la clorofila es el pigmento que capta la "
             "luz: refleja el verde, que es el color que vemos.\n\n"
             "**Tiene dos etapas.** La fase luminosa, en las membranas del tilacoide, "
-            "capta la luz, libera el oxígeno que viene del AGUA y produce ATP y "
-            "NADPH. La fase oscura o ciclo de Calvin, en el estroma, usa ese ATP para "
-            "fijar el dióxido de carbono en glucosa; no necesita oscuridad, solo no "
-            "necesita luz directa.\n\n"
+            "capta la luz, libera el oxígeno que viene del AGUA y produce ATP "
+            "(adenosín trifosfato) y NADPH (nicotinamida adenina dinucleótido "
+            "fosfato), los dos transportadores de energía que gasta la etapa "
+            "siguiente. La fase oscura o ciclo de Calvin, en el estroma, usa ese ATP "
+            "para fijar el dióxido de carbono en glucosa; no necesita oscuridad, solo "
+            "no necesita luz directa.\n\n"
             "| | Fotosíntesis | Respiración celular |\n"
             "|---|---|---|\n"
             "| Dónde | cloroplasto | mitocondria |\n"
@@ -84640,7 +84666,7 @@ LESSONS: dict[str, dict] = {
             "| Segunda (áreas) | el planeta barre áreas iguales en tiempos iguales, "
             "así que va más rápido cerca del Sol |\n"
             "| Tercera (períodos) | $T^2 = a^3$, con $T$ en años y $a$ en unidades "
-            "astronómicas |\n\n"
+            "astronómicas (UA) |\n\n"
             "La tercera ley es la que se calcula: un planeta el doble de lejos no "
             "tarda el doble, sino $\\sqrt{2^3} \\approx 2{,}8$ veces más.\n\n"
             "**Newton explicó por qué.** La gravitación universal, $F = G\\dfrac{m_1 "
@@ -85117,7 +85143,8 @@ LESSONS: dict[str, dict] = {
                         "accion": "Multiplico la velocidad por el tiempo: $7 \\cdot 100.000 = 700.000$ cm.",
                         "porque": (
                             "El movimiento de placas es lento pero constante, así que se trata como "
-                            "un MRU: distancia igual a velocidad por tiempo."
+                            "un movimiento rectilíneo uniforme (MRU): distancia igual a velocidad por "
+                            "tiempo."
                         ),
                     },
                     {
