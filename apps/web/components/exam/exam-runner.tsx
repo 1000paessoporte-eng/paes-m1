@@ -38,6 +38,16 @@ import { setModoExamen } from "@/lib/modo-examen";
 import { formatearTiempo } from "@/lib/tiempo";
 import { COLOR_PRUEBA } from "@/lib/colores-prueba";
 import { formatearReloj } from "@/lib/tiempo";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 
 const STORAGE_KEY = "paes_exam_attempt_id";
 //: Instante en que el alumno se fue del ensayo a otra sección del sitio. Se
@@ -810,18 +820,23 @@ export function ExamRunner({
       {/* Aviso al volver de otra pestaña o de otra app, solo en el oficial.
           No bloquea el ensayo ni descuenta nada: informa lo que ya pasó, que
           es que el reloj siguió corriendo sin él. */}
-      {avisoSalida && (
-        <div className="fixed inset-0 z-50 flex items-end justify-center bg-foreground/40 p-4 backdrop-blur-sm sm:items-center">
-          <div className="w-full max-w-md rounded-2xl border border-border bg-background p-6 shadow-xl">
-            <p className="text-lg font-semibold">Volviste al ensayo</p>
-            <p className="mt-2 text-sm text-muted">
+      <AlertDialog
+        open={!!avisoSalida}
+        onOpenChange={(abierto) => {
+          if (!abierto) setAvisoSalida(null);
+        }}
+      >
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Volviste al ensayo</AlertDialogTitle>
+            <AlertDialogDescription>
               Estuviste{" "}
               <strong className="text-foreground">
-                {formatearTiempo(avisoSalida.segundos)}
+                {avisoSalida ? formatearTiempo(avisoSalida.segundos) : ""}
               </strong>{" "}
               fuera de la página y el tiempo siguió corriendo, como en la prueba
               real.
-              {avisoSalida.veces > 1 && (
+              {avisoSalida && avisoSalida.veces > 1 && (
                 <>
                   {" "}
                   Van{" "}
@@ -831,58 +846,64 @@ export function ExamRunner({
                   en este ensayo.
                 </>
               )}
-            </p>
-            <button
-              type="button"
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            {/* La reentrada a pantalla completa tiene que venir de un gesto del
+                usuario (requisito del navegador para requestFullscreen), por
+                eso va en el onClick del botón y no en onOpenChange. */}
+            <AlertDialogAction
+              variant="cta"
               onClick={() => {
                 setAvisoSalida(null);
                 void entrarAPantallaCompleta();
               }}
-              className="btn-glow mt-5 w-full rounded-lg px-4 py-2.5 text-sm font-medium text-accent-foreground"
             >
               Seguir rindiendo
-            </button>
-          </div>
-        </div>
-      )}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
 
       {/* Confirmación antes de dejar el ensayo por otra sección del sitio.
           El ensayo no se cancela ni se entrega: queda abierto y se puede
           retomar. Lo que no se recupera es el tiempo, porque el reloj lo lleva
           el servidor desde que empezó. */}
-      {salidaPendiente && (
-        <div className="fixed inset-0 z-50 flex items-end justify-center bg-foreground/40 p-4 backdrop-blur-sm sm:items-center">
-          <div className="w-full max-w-md rounded-2xl border border-border bg-background p-6 shadow-xl">
-            <p className="text-lg font-semibold">
+      <AlertDialog
+        open={!!salidaPendiente}
+        onOpenChange={(abierto) => {
+          if (!abierto) setSalidaPendiente(null);
+        }}
+      >
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>
               {esOficial ? "Estás rindiendo el ensayo oficial" : "Tienes un ensayo en curso"}
-            </p>
-            <p className="mt-2 text-sm text-muted">
+            </AlertDialogTitle>
+            <AlertDialogDescription>
               {esOficial
                 ? "El reloj no se detiene y la salida queda registrada en tu resultado. El ensayo sigue abierto y puedes retomarlo, pero el tiempo que pase no vuelve."
                 : "El reloj sigue corriendo mientras estás en otra sección. El ensayo queda abierto y puedes retomarlo donde lo dejaste."}
-            </p>
-            <div className="mt-5 flex flex-col gap-2 sm:flex-row-reverse">
-              <button
-                type="button"
-                onClick={() => {
-                  setSalidaPendiente(null);
-                  if (esOficial) void entrarAPantallaCompleta();
-                }}
-                className="btn-glow flex-1 rounded-lg px-4 py-2.5 text-sm font-medium text-accent-foreground"
-              >
-                Seguir rindiendo
-              </button>
-              <button
-                type="button"
-                onClick={confirmarSalida}
-                className="flex-1 rounded-lg border border-border px-4 py-2.5 text-sm font-medium transition-colors hover:bg-surface-hover"
-              >
-                Salir igual
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            {/* "Salir igual" es la salida real, en secundario; "Seguir
+                rindiendo" es la opción segura y prominente, y recibe el foco
+                inicial (AlertDialog enfoca el Cancel). */}
+            <AlertDialogAction variant="outline" onClick={confirmarSalida}>
+              Salir igual
+            </AlertDialogAction>
+            <AlertDialogCancel
+              variant="cta"
+              onClick={() => {
+                if (esOficial) void entrarAPantallaCompleta();
+              }}
+            >
+              Seguir rindiendo
+            </AlertDialogCancel>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
 
       {/* ── Barra superior ──────────────────────────────────────────── */}
       {/* La franja de arriba dice de qué prueba es este ensayo sin ocupar una
@@ -1225,11 +1246,17 @@ export function ExamRunner({
       </main>
 
       {/* ── Confirmación de término ─────────────────────────────────── */}
-      {confirmingSubmit && (
-        <div className="fixed inset-0 z-30 flex items-center justify-center bg-foreground/40 p-4">
-          <div className="w-full max-w-sm rounded-xl border border-border bg-background p-5">
-            <h2 className="text-lg font-bold">¿Terminar el ensayo?</h2>
-            <p className="mt-2 text-sm text-muted">
+      <AlertDialog
+        open={confirmingSubmit}
+        onOpenChange={(abierto) => {
+          // No dejar cerrar el diálogo mientras el envío está en curso.
+          if (!abierto && !submitting) setConfirmingSubmit(false);
+        }}
+      >
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>¿Terminar el ensayo?</AlertDialogTitle>
+            <AlertDialogDescription>
               {sinResponder > 0 ? (
                 <>
                   Te quedan{" "}
@@ -1242,28 +1269,20 @@ export function ExamRunner({
               ) : (
                 "Respondiste todas las preguntas. Al terminar verás tu puntaje y las explicaciones."
               )}
-            </p>
-            <div className="mt-5 flex gap-2">
-              <button
-                type="button"
-                onClick={() => setConfirmingSubmit(false)}
-                disabled={submitting}
-                className="flex-1 rounded-lg border border-border px-4 py-2.5 font-medium hover:bg-surface-hover disabled:opacity-60"
-              >
-                Seguir
-              </button>
-              <button
-                type="button"
-                onClick={doSubmit}
-                disabled={submitting}
-                className="flex-1 rounded-lg bg-success px-4 py-2.5 font-semibold text-on-fill transition hover:opacity-90 disabled:opacity-60"
-              >
-                {submitting ? "Enviando…" : "Terminar"}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel disabled={submitting}>Seguir</AlertDialogCancel>
+            {/* doSubmit gestiona su propio estado y errores; el diálogo se
+                cierra al accionar y, si el envío falla, el aviso sale en la
+                barra. `success` mapea al verde del sitio por el puente de
+                tokens. */}
+            <AlertDialogAction variant="success" onClick={doSubmit} disabled={submitting}>
+              {submitting ? "Enviando…" : "Terminar"}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
