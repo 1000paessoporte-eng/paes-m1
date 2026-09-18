@@ -5,8 +5,9 @@
 > y pendientes.
 >
 > **Este archivo es público y NO contiene secretos.** Donde veas
-> `<PASSWORD_NEON>`, `<SECRET_KEY>` o `<pedir a Pablo...>`, ese valor se pide
-> por canal privado (gestor de contraseñas, llamada) y se guarda **solo** en
+> `<PASSWORD_NEON>`, `<HOST_NEON_...>`, `<SECRET_KEY>` o `<pedir a Pablo...>`,
+> ese valor se pide por canal privado (gestor de contraseñas, llamada) y se
+> guarda **solo** en
 > tu `.env` local, que está gitignored. Nunca lo commitees acá.
 
 ---
@@ -49,7 +50,7 @@ Estás tomando un proyecto en marcha. Contexto mínimo antes de tocar nada:
 |---|---|---|
 | Vercel | cuenta de servicio `1000paessoporte@gmail.com` — usuario `1000paessoporte-9167` (plan **Hobby**) | Hosting y deploy (`milpaes-web`, `milpaes-api`) |
 | Google / Gmail | `1000paessoporte@gmail.com` | Cuenta raíz del proyecto: entra a Vercel y a Neon |
-| Neon | **cuenta personal de Pablo** (verificado 2026-08-16) | PostgreSQL de producción — endpoint `ep-broad-glade-acd1vxdw` |
+| Neon | **cuenta personal de Pablo** (verificado 2026-08-16) | PostgreSQL de producción — endpoint en `HANDOFF-PRIVADO.md` |
 | GitHub | `1000paessoporte-eng/paes-m1` (**público**) | Código |
 | Dominio | `1000paes.cl` | DNS en AWS Route53 (lo administra el papá de Pablo) |
 
@@ -98,12 +99,12 @@ Para obtener el string de `paes_preview`, se toma el de producción y se cambia
 
 **Pooled** — para el runtime de la API (es la que está en Vercel como `DATABASE_URL`):
 ```
-postgresql://neondb_owner:<PASSWORD_NEON>@ep-broad-glade-acd1vxdw-pooler.sa-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+postgresql://neondb_owner:<PASSWORD_NEON>@<HOST_NEON_POOLED>/neondb?sslmode=require&channel_binding=require
 ```
 
 **Directa** (sin `-pooler`) — para Alembic y `scripts/seed.py`:
 ```
-postgresql+psycopg://neondb_owner:<PASSWORD_NEON>@ep-broad-glade-acd1vxdw.sa-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+postgresql+psycopg://neondb_owner:<PASSWORD_NEON>@<HOST_NEON_DIRECTO>/neondb?sslmode=require&channel_binding=require
 ```
 
 > ⚠️ En Vercel, `DATABASE_URL` está marcada como **Sensitive**: es de solo
@@ -115,7 +116,7 @@ postgresql+psycopg://neondb_owner:<PASSWORD_NEON>@ep-broad-glade-acd1vxdw.sa-eas
 
 ```bash
 cd apps/api
-export DATABASE_URL="postgresql+psycopg://neondb_owner:<PASSWORD_NEON>@ep-broad-glade-acd1vxdw.sa-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+export DATABASE_URL="postgresql+psycopg://neondb_owner:<PASSWORD_NEON>@<HOST_NEON_DIRECTO>/neondb?sslmode=require&channel_binding=require"
 uv run alembic upgrade head      # esquema
 uv run python scripts/seed.py    # contenido (idempotente: no duplica)
 ```
