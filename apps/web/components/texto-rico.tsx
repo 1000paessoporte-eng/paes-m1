@@ -148,7 +148,7 @@ function renderizarTabla(bloque: string): string {
   const th = encabezado
     .map(
       (c) =>
-        `<th class="border border-border px-3 py-1.5 bg-surface-hover font-semibold text-left">${renderizarConFormulas(c)}</th>`
+        `<th class="border border-border px-2 py-1.5 sm:px-3 bg-surface-hover font-semibold text-left">${renderizarConFormulas(c)}</th>`
     )
     .join("");
 
@@ -156,7 +156,7 @@ function renderizarTabla(bloque: string): string {
     .map(
       (fila) =>
         `<tr>${fila
-          .map((c) => `<td class="border border-border px-3 py-1.5">${renderizarConFormulas(c)}</td>`)
+          .map((c) => `<td class="border border-border px-2 py-1.5 sm:px-3">${renderizarConFormulas(c)}</td>`)
           .join("")}</tr>`
     )
     .join("");
@@ -165,7 +165,7 @@ function renderizarTabla(bloque: string): string {
   // encogida contra el margen izquierdo y cuesta seguir la fila; el
   // `overflow-x-auto` del contenedor sigue cubriendo el caso de una fórmula
   // que no se puede partir en una pantalla angosta.
-  return `<div class="my-3 overflow-x-auto"><table class="w-full border-collapse text-sm"><thead><tr>${th}</tr></thead><tbody>${tbody}</tbody></table></div>`;
+  return `<div class="my-3 overflow-x-auto"><table class="w-full border-collapse text-[13px] sm:text-sm"><thead><tr>${th}</tr></thead><tbody>${tbody}</tbody></table></div>`;
 }
 
 /**
