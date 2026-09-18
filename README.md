@@ -40,7 +40,7 @@ No es un banco de preguntas plano. Las piezas:
 |---|---|---|
 | **Modo Ensayo** | 🟢 Funcional | Ensayo configurable: prueba (las cinco), ejes, cantidad y ritmo. Tiempo proporcional al oficial. |
 | **Puntaje y revisión** | 🟢 Funcional | Puntaje 100-1000 con tablas oficiales DEMRE, desglose por eje/dificultad/nodo, desarrollo paso a paso de cada pregunta. |
-| **Árbol de Habilidades** | 🟢 Funcional | Temario de las cinco pruebas como grafo de nodos con prerrequisitos (`/arbol?prueba=`). Cada nodo trae su lección en `/aprender/[code]` --las cinco pruebas, no solo M1--: teoría, ejemplo resuelto paso a paso y el error típico, antes de practicar. |
+| **Árbol de Habilidades** | 🟢 Funcional | Temario de las cinco pruebas como grafo de nodos con prerrequisitos (`/arbol?prueba=`). Cada nodo trae su lección en `/aprender/[code]` --las 95, de las cinco pruebas--: teoría con definiciones y tablas de fórmulas, dos ejercicios resueltos paso a paso y el error típico, antes de practicar. |
 | **Mi meta** | 🟢 Funcional | `/meta`: lista de hasta 10 preferencias con las ponderaciones oficiales del DEMRE, puntaje ponderado, simulador, ritmo contra la fecha de la PAES y plan de práctica. |
 | **Práctica por nodo** | 🟢 Funcional | `/practicar/[code]`: una pregunta a la vez con corrección inmediata. |
 | **Historial** | 🟢 Funcional | Evolución del puntaje, mejor/promedio/último, borrado por intento, respaldo JSON. |
@@ -53,30 +53,31 @@ No es un banco de preguntas plano. Las piezas:
 
 ### Contenido actual
 
-Cifras verificadas contra la base de producción el **2026-08-24**. Si esta
-sección vuelve a quedar vieja, se consulta con `scripts/verificar_banco.py` o
-directo a la base: es más barato que discutirla.
+Cifras verificadas contra `scripts/verificar_banco.py` el **2026-09-17**. Si
+esta sección vuelve a quedar vieja, se consulta con ese script o directo a la
+base: es más barato que discutirla.
 
-- **52 nodos** de habilidad y **52 lecciones**, una por nodo. Las cinco
-  pruebas tienen teoría escrita, no solo M1.
-- **3.033 preguntas** con **12.132 alternativas**, y cada alternativa
-  incorrecta trae su `distractor_justification`.
+- **95 nodos** de habilidad y **95 lecciones**, una por nodo. Las cinco pruebas
+  tienen teoría escrita, no solo M1, y cada lección trae **dos** ejercicios
+  resueltos paso a paso: el primero se despliega de a un paso y el segundo
+  arranca cerrado, para intentarlo solo.
+- **6.466 preguntas**, y cada alternativa incorrecta trae su
+  `distractor_justification`.
 
-  | Prueba | Preguntas | Un ensayo pide | Nodos |
-  |---|---:|---:|---:|
-  | Matemática M1 | 1.156 | 65 | 17 |
-  | Competencia Lectora | 1.103 | 65 | 12 |
-  | Ciencias | 312 | 80 | 14 |
-  | Matemática M2 | 243 | 55 | 15 |
-  | Historia y Cs. Sociales | 219 | 65 | 10 |
+  | Prueba | Preguntas | Un ensayo pide |
+  |---|---:|---:|
+  | Matemática M1 y M2 | 2.175 | 65 / 55 |
+  | Ciencias | 1.800 | 80 |
+  | Historia y Cs. Sociales | 1.276 | 65 |
+  | Competencia Lectora | 1.215 | 65 |
 
-  Las cinco superan tres veces lo que pide un ensayo completo. **Ampliar el
+  Las cinco superan varias veces lo que pide un ensayo completo. **Ampliar el
   banco ya no es el cuello de botella**; lo era cuando esta sección decía 344
   preguntas. (M2 reutiliza los nodos de M1, así que un ensayo de M2 elige entre
-  1.399 preguntas, no 243.)
+  todo el pool de matemática.)
 
-- **108 textos fuente** (`reading_passages`): 87 de Competencia Lectora y 21 de
-  Historia.
+- **161 textos y fuentes** (`reading_passages`): los de Competencia Lectora más
+  las fuentes escritas para Historia.
 
 El desbalance que quedaba era de **nodos**, no de preguntas, y **Lectora ya se
 resolvió**: el 2026-08-26 pasó de 3 nodos a los 12 que salen de las *tareas
@@ -521,9 +522,6 @@ Ordenado por impacto:
    24 puntos para Medicina en la Chile". Es trabajo de recolección de datos,
    no de código, y **no se estima**: un corte inventado es alguien decidiendo
    su matrícula con información falsa.
-5. **Lecciones para las otras cuatro pruebas.** Hoy solo M1 tiene teoría; el
-   resto de los nodos lleva directo a practicar y el árbol lo dice en pantalla.
-4. **Lecciones para las otras cuatro pruebas.** Hoy la teoría está escrita para los 15 nodos de M1; el resto lleva directo a practicar.
 5. **Motor de recomendación real.** Hoy `get_recommended_node()` es un ranking
    ponderado con pandas (accuracy 60% + impacto 30% + nunca intentado 40%), no
    un modelo entrenado.
