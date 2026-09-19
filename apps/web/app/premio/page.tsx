@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Premio Puntaje Nacional",
   description:
-    "Bases del premio de $500.000 para estudiantes con plan Pro que obtengan puntaje nacional en la PAES.",
+    "Bases del premio de $500.000 para estudiantes con plan Pro que obtengan puntaje nacional en la PAES regular de la Admisión 2028.",
   alternates: { canonical: "/premio" },
 };
 
@@ -18,13 +18,22 @@ export const metadata = {
  * El tope de premios es lo más importante de todo el documento. Una promoción
  * sin límite declarado es una deuda de monto desconocido contra la caja de un
  * producto que todavía no cobra.
+ *
+ * Rige para la Admisión 2028 y no la 2027: el plan Pro se pudo contratar
+ * recién en agosto de 2026, así que para la PAES de noviembre de ese año nadie
+ * alcanzaba a juntar los 6 meses. Anunciar un premio que nadie puede ganar es
+ * publicidad engañosa (Ley 19.496, art. 28).
+ *
+ * Pendiente: identificar al organizador con razón social y RUT, y definir
+ * quién paga los impuestos del premio.
  */
 
 const SECCIONES = [
   {
     titulo: "1. Quién organiza y a quién aplica",
     parrafos: [
-      "El premio lo entrega 1000paes a estudiantes que rindan la PAES del proceso de admisión vigente en Chile y que cumplan TODOS los requisitos de la sección 3.",
+      "El premio lo entrega 1000paes a estudiantes que rindan la PAES regular del proceso de Admisión 2028, que se rinde a fines de 2027, y que cumplan TODOS los requisitos de la sección 3.",
+      "Solo cuenta el puntaje de la PAES regular. La PAES de invierno no participa.",
       "El titular de la cuenta debe ser la misma persona que rinde la prueba. Las cuentas compartidas entre varios estudiantes quedan fuera, porque el requisito de práctica dejaría de significar algo.",
       "Si el estudiante es menor de edad, el premio se entrega a su madre, padre o apoderado, quien deberá aceptar las bases.",
     ],
@@ -32,7 +41,7 @@ const SECCIONES = [
   {
     titulo: "2. Qué se premia",
     parrafos: [
-      "$500.000 (quinientos mil pesos chilenos) por obtener 1.000 puntos —puntaje nacional— en cualquiera de las cinco pruebas PAES: Competencia Lectora, Competencia Matemática M1, Competencia Matemática M2, Ciencias, o Historia y Ciencias Sociales.",
+      "$500.000 (quinientos mil pesos chilenos) por obtener 1.000 puntos —puntaje nacional— en la PAES regular, en cualquiera de las cinco pruebas: Competencia Lectora, Competencia Matemática M1, Competencia Matemática M2, Ciencias, o Historia y Ciencias Sociales.",
       "El premio se entrega una sola vez por persona, aunque obtenga puntaje nacional en más de una prueba.",
       "No es un sorteo ni depende del azar: se obtiene por el resultado de la prueba.",
     ],
@@ -40,7 +49,7 @@ const SECCIONES = [
   {
     titulo: "3. Requisitos",
     lista: [
-      "Haber tenido plan Pro o superior activo por al menos 6 meses, sumados, dentro de los 12 meses anteriores al día de la prueba. No necesitan ser consecutivos.",
+      "Haber tenido plan Pro o superior activo por al menos 6 meses, sumados, dentro de los 12 meses anteriores al primer día de la PAES regular. No necesitan ser consecutivos.",
       "Haber rendido y terminado al menos 30 ensayos de 34 preguntas o más en la plataforma. Los ensayos cortos, la práctica por tema y los intentos abandonados no cuentan.",
       "Haber practicado en al menos 90 días distintos, entendiendo por día practicado aquel en que se respondieron 10 o más preguntas.",
       "Haber alcanzado una racha de al menos 15 días seguidos rindiendo ensayos. Se considera la racha MÁS LARGA lograda en el periodo, no la que esté activa al momento de la prueba: enfermarse un día no puede dejar a nadie fuera del premio.",
@@ -66,10 +75,18 @@ const SECCIONES = [
     ],
   },
   {
-    titulo: "6. Vigencia y cambios",
+    titulo: "6. Publicación de resultados",
     parrafos: [
-      "Estas bases rigen para el proceso de admisión 2027 y estarán publicadas en esta página durante toda su vigencia.",
-      "1000paes puede modificar o terminar la promoción avisando en esta misma página, pero los cambios no afectan a quien ya cumplía los requisitos al momento del aviso.",
+      "Dentro de los 60 días corridos siguientes a la publicación oficial de resultados del DEMRE, 1000paes publicará en esta página cuántos premios se entregaron y el monto pagado a cada ganador.",
+      "Los nombres de los ganadores se publican solo con su autorización escrita o, si es menor de edad, con la de su madre, padre o apoderado.",
+    ],
+  },
+  {
+    titulo: "7. Vigencia y cambios",
+    parrafos: [
+      "Estas bases rigen desde el 21 de septiembre de 2026 para el proceso de Admisión 2028, y estarán publicadas en esta página durante toda su vigencia.",
+      "Las bases solo pueden modificarse para ampliar plazos, bajar requisitos o aumentar el premio. Ningún cambio puede perjudicar a quien participa.",
+      "Si la promoción terminara antes de tiempo, quienes hayan contratado el plan Pro durante su vigencia conservan el derecho a participar con las bases vigentes al momento de contratar.",
       "El premio no es transferible ni canjeable por otro beneficio.",
     ],
   },
@@ -117,9 +134,9 @@ export default function PremioPage() {
       </div>
 
       <p className="mt-10 rounded-xl border border-border bg-surface p-5 text-sm leading-relaxed text-muted">
-        La promoción empieza a correr cuando el plan Pro esté disponible para
-        contratar. Hasta entonces estas bases son informativas: ningún requisito
-        de meses pagados puede cumplirse todavía.
+        Este premio es para quienes rinden la PAES regular a fines de 2027. Si
+        rindes la PAES este año (2026), no alcanzas a cumplir los 6 meses de
+        plan Pro que se piden, y preferimos decírtelo claro desde ahora.
       </p>
 
       <p className="mt-8 text-center text-sm">

@@ -126,9 +126,10 @@ export function AnuncioPremio({ progreso }: { progreso: ProgresoPremio }) {
             </h2>
 
             <p className="mt-2 text-sm leading-relaxed text-muted">
-              Si obtienes 1.000 puntos en cualquiera de las cinco pruebas PAES y
-              preparaste esa prueba acá, te entregamos medio millón de pesos. No
-              es un sorteo: se gana rindiendo.
+              Si obtienes 1.000 puntos en la PAES regular de fines de 2027, en
+              cualquiera de las cinco pruebas, y la preparaste acá, te
+              entregamos medio millón de pesos. No es un sorteo: se gana
+              rindiendo.
             </p>
 
             {/* Lo que lo vuelve suyo: dónde va con los requisitos que ya
