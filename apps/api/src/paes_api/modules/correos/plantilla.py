@@ -216,6 +216,7 @@ def documento(*, url: str, preencabezado: str, portada_html: str, cuerpo: str, c
     </td></tr>
     <tr><td align="center" style="padding:28px 24px 8px;font-family:{FUENTE};font-size:12px;line-height:1.8;color:{APAGADO}">
       <strong style="color:{GRAFITO}">1000paes</strong> — preparación PAES · <a href="{escape(url)}" style="color:{APAGADO}">1000paes.cl</a><br>
+      1000PAES SpA · RUT 78.516.038-K · Región del Maule, Chile<br>
       ¿Dudas o sugerencias? Escríbenos a <a href="mailto:{escape(contacto)}" style="color:{APAGADO}">{escape(contacto)}</a><br>
       Recibes este correo porque tienes una cuenta en 1000paes.<br>
       <a href="{escape(url)}/perfil#correos" style="color:{APAGADO}">Dejar de recibir estos correos</a>
