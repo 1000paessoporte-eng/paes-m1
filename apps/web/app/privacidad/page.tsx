@@ -13,7 +13,7 @@ export default function PrivacidadPage() {
     <main className="flex-1 px-6 py-16">
       <article className="mx-auto max-w-2xl">
         <h1 className="text-2xl font-semibold tracking-tight">Política de privacidad</h1>
-        <p className="mt-2 text-sm text-muted">Última actualización: agosto de 2026.</p>
+        <p className="mt-2 text-sm text-muted">Última actualización: septiembre de 2026.</p>
 
         <div className="mt-8 flex flex-col gap-6 text-sm leading-relaxed text-muted [&_h2]:text-base [&_h2]:font-semibold [&_h2]:text-foreground [&_p]:mt-2 [&_ul]:mt-2 [&_ul]:list-disc [&_ul]:pl-5">
           <section>
@@ -189,7 +189,12 @@ export default function PrivacidadPage() {
           </section>
 
           <section>
-            <h2>10. Contacto</h2>
+            <h2>10. Responsable y contacto</h2>
+            <p>
+              El responsable del tratamiento de tus datos es{" "}
+              <strong>1000PAES SpA</strong>, RUT 78.516.038-K, con domicilio en
+              la Región del Maule, Chile.
+            </p>
             <p>
               Ante cualquier duda sobre tus datos, escríbenos a{" "}
               <a href="mailto:1000paessoporte@gmail.com" className="text-accent hover:underline">

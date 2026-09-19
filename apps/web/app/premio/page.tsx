@@ -24,15 +24,14 @@ export const metadata = {
  * alcanzaba a juntar los 6 meses. Anunciar un premio que nadie puede ganar es
  * publicidad engañosa (Ley 19.496, art. 28).
  *
- * Pendiente: identificar al organizador con razón social y RUT, y definir
- * quién paga los impuestos del premio.
+ * Pendiente: definir con un contador quién paga los impuestos del premio.
  */
 
 const SECCIONES = [
   {
     titulo: "1. Quién organiza y a quién aplica",
     parrafos: [
-      "El premio lo entrega 1000paes a estudiantes que rindan la PAES regular del proceso de Admisión 2028, que se rinde a fines de 2027, y que cumplan TODOS los requisitos de la sección 3.",
+      "El premio lo organiza y lo paga 1000PAES SpA, RUT 78.516.038-K, sociedad chilena con domicilio en la Región del Maule (en adelante, 1000paes), a estudiantes que rindan la PAES regular del proceso de Admisión 2028, que se rinde a fines de 2027, y que cumplan TODOS los requisitos de la sección 3.",
       "Solo cuenta el puntaje de la PAES regular. La PAES de invierno no participa.",
       "El titular de la cuenta debe ser la misma persona que rinde la prueba. Las cuentas compartidas entre varios estudiantes quedan fuera, porque el requisito de práctica dejaría de significar algo.",
       "Si el estudiante es menor de edad, el premio se entrega a su madre, padre o apoderado, quien deberá aceptar las bases.",

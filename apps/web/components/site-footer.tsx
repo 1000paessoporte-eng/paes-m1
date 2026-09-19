@@ -21,6 +21,10 @@ const NOMBRES: Record<string, string> = {
   youtube: "YouTube",
 };
 
+/** Quién opera el sitio. Lo exige la Ley 19.496 a todo proveedor que vende en
+ *  línea, y es lo mismo que dicen los términos y las bases del premio. */
+const EMPRESA = "1000PAES SpA · RUT 78.516.038-K";
+
 export function SiteFooter() {
   const redes = redesActivas();
 
@@ -184,6 +188,9 @@ export function SiteFooter() {
               información legal
             </Link>
             .
+          </p>
+          <p className="mt-2">
+            © {new Date().getFullYear()} {EMPRESA}. Región del Maule, Chile.
           </p>
           {EMAIL_CONTACTO && (
             <p className="mt-2">

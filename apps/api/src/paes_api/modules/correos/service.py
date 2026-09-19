@@ -52,7 +52,7 @@ PUBLICOS = ("todos", "correo", "google")
 
 def _pie_de_baja(url: str) -> str:
     return (
-        "\n\n—\n1000paes — preparación PAES\n"
+        "\n\n—\n1000paes — preparación PAES\n1000PAES SpA · RUT 78.516.038-K\n"
         f"Si no quieres recibir estos correos, apágalos en tu perfil: {url}/perfil"
     )
 

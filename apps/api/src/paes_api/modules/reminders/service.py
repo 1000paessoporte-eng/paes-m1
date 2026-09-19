@@ -56,7 +56,7 @@ DIA_DEL_RESUMEN = 6
 def pie_de_baja(url: str) -> str:
     """La forma de dejar de recibir correos, obligatoria (Ley 19.496)."""
     return (
-        "\n\n—\n1000paes — preparación PAES\n"
+        "\n\n—\n1000paes — preparación PAES\n1000PAES SpA · RUT 78.516.038-K\n"
         f"Si no quieres recibir estos correos, apágalos en tu perfil: {url}/perfil"
     )
 

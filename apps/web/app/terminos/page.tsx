@@ -13,7 +13,7 @@ export default function TerminosPage() {
     <main className="flex-1 px-6 py-16">
       <article className="mx-auto max-w-2xl">
         <h1 className="text-2xl font-semibold tracking-tight">Términos y condiciones</h1>
-        <p className="mt-2 text-sm text-muted">Última actualización: agosto de 2026.</p>
+        <p className="mt-2 text-sm text-muted">Última actualización: septiembre de 2026.</p>
 
         <div className="mt-8 flex flex-col gap-6 text-sm leading-relaxed text-muted [&_h2]:text-base [&_h2]:font-semibold [&_h2]:text-foreground [&_p]:mt-2 [&_ul]:mt-2 [&_ul]:list-disc [&_ul]:pl-5">
           <section>
@@ -28,6 +28,16 @@ export default function TerminosPage() {
               ni con ninguna institución oficial del proceso de admisión. El
               puntaje que entrega la plataforma es una estimación referencial
               y no garantiza el puntaje real que obtengas al rendir la PAES.
+            </p>
+            <p>
+              <strong>Quién presta el servicio.</strong> 1000paes es operado
+              por <strong>1000PAES SpA</strong>, RUT 78.516.038-K, sociedad
+              chilena con domicilio en la Región del Maule. Para cualquier
+              consulta o reclamo puedes escribir a{" "}
+              <a href="mailto:1000paessoporte@gmail.com" className="text-accent hover:underline">
+                1000paessoporte@gmail.com
+              </a>
+              .
             </p>
             <p>
               <strong>Las preguntas son de elaboración propia.</strong> Se
