@@ -205,6 +205,11 @@ def presentacion(url: str) -> str:
     )
 
 
+_MESES = ("enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
+          "septiembre", "octubre", "noviembre", "diciembre")
+FECHA_PAES_TEXTO = f"{FECHA_PAES.day} de {_MESES[FECHA_PAES.month - 1]}"
+
+
 def _dias_paes() -> int:
     return max(0, (FECHA_PAES - datetime.now(UTC)).days)
 
@@ -213,32 +218,37 @@ def bienvenida_html(nombre: str, url: str, *, cuenta_existente: bool = False) ->
     """La bienvenida en HTML. Cuenta lo mismo que `presentacion()`, con la
     identidad del sitio. `nombre` llega sin escapar; acá se escapa."""
     p = plantilla
-    saludo = f"Hola {escape(nombre)}," if nombre else "Hola,"
+    primer = f"<span style=\"color:#a9a8a4\">{escape(nombre)},</span><br>" if nombre else ""
     if cuenta_existente:
-        encabezado = "Te damos la bienvenida a la nueva 1000paes"
-        intro = (
+        antetitulo = "Bienvenida a la nueva 1000paes"
+        titulo = f"{primer}todo lo que necesitas para tu PAES, en un solo lugar"
+        bajada = (
             "Gracias por ser parte de 1000paes. La plataforma creció mucho desde que "
-            "creaste tu cuenta, y queremos contarte todo lo que puedes hacer hoy para "
-            "preparar la PAES."
+            "creaste tu cuenta: esto es lo que puedes hacer hoy."
         )
     else:
-        encabezado = "Tu cuenta está lista"
-        intro = (
-            "Te damos la bienvenida a 1000paes, la plataforma para preparar la PAES "
-            "con ensayos, lecciones y un seguimiento real de tu avance."
+        antetitulo = "Tu cuenta está lista"
+        titulo = f"{primer}te damos la bienvenida a 1000paes"
+        bajada = (
+            "La plataforma para preparar la PAES con ensayos, lecciones y un "
+            "seguimiento real de tu avance."
         )
 
+    portada = p.portada(
+        url=url,
+        antetitulo=antetitulo,
+        titulo_html=titulo,
+        bajada=bajada,
+        boton_texto="Rinde tu primer ensayo",
+        enlace=f"{url}/examen",
+    )
     cuerpo = (
-        f'<h1 style="margin:0 0 20px;font-family:{p.FUENTE};font-size:26px;line-height:1.25;'
-        f'letter-spacing:-.02em;color:{p.TINTA}">{escape(encabezado)}</h1>'
-        + p.parrafo(f"<strong>{saludo}</strong>")
-        + p.parrafo(escape(intro))
-        + p.boton("Rinde tu primer ensayo", f"{url}/examen")
-        + p.cifras([
+        p.cifras([
             ("6.400+", "preguntas originales"),
             ("95", "lecciones paso a paso"),
             ("100–1000", "puntaje con tablas DEMRE"),
         ])
+        + p.cuenta_regresiva(url, _dias_paes(), FECHA_PAES_TEXTO)
         + p.titulo("Las cinco pruebas")
         + p.pruebas()
         + p.titulo("Lo que tienes disponible")
@@ -280,7 +290,6 @@ def bienvenida_html(nombre: str, url: str, *, cuenta_existente: bool = False) ->
             "<strong>Practicar un poco casi todos los días</strong> rinde más que una "
             "sesión larga el fin de semana."
         )
-        + p.cuenta_regresiva(_dias_paes())
         + p.parrafo(
             f'<span style="color:{p.APAGADO};font-size:14px">Los domingos te enviaremos '
             "un resumen de tu semana: lo que practicaste, cómo va tu puntaje y qué te "
@@ -291,6 +300,7 @@ def bienvenida_html(nombre: str, url: str, *, cuenta_existente: bool = False) ->
     return p.documento(
         url=url,
         preencabezado="Las cinco pruebas, 95 lecciones y tu puntaje con tablas DEMRE.",
+        portada_html=portada,
         cuerpo=cuerpo,
         contacto=CONTACTO,
     )

@@ -11,6 +11,7 @@ dependencies = [
     "fastapi>=0.141.1",
     "google-auth>=2.56.3",
     "pandas>=3.0.5",
+    "pillow>=11",
     "psycopg[binary]>=3.3.4",
     "pydantic-settings>=2.15.0",
     "pyjwt>=2.13.0",

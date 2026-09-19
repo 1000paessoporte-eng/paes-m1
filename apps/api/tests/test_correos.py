@@ -172,5 +172,19 @@ def test_la_difusion_personaliza_el_nombre(db_session, monkeypatch) -> None:
 
     _, asunto_final, cuerpo_final, html_final = salida[0]
     assert asunto_final.startswith("Camila,")
-    assert "Hola Camila:" in cuerpo_final and "Hola Camila," in html_final
+    assert "Hola Camila:" in cuerpo_final and "Camila,</span>" in html_final
     assert "{nombre}" not in asunto_final + cuerpo_final + html_final
+
+
+def test_la_cuenta_regresiva_es_un_gif_animado_que_no_se_cachea(client: TestClient) -> None:
+    """Sesenta cuadros, uno por segundo, y sin caché: el reloj tiene que marcar
+    la hora de cuando se abre el correo."""
+    from io import BytesIO
+
+    from PIL import Image
+
+    r = client.get("/api/correo/cuenta-regresiva.gif")
+    assert r.status_code == 200
+    assert r.headers["content-type"] == "image/gif"
+    assert "no-store" in r.headers["cache-control"]
+    assert Image.open(BytesIO(r.content)).n_frames == 60

@@ -148,47 +148,74 @@ def nota(html_seguro: str) -> str:
     )
 
 
-def cuenta_regresiva(dias: int) -> str:
+def cuenta_regresiva(url: str, dias: int, fecha: str) -> str:
+    """El reloj animado hasta la PAES (lo dibuja `cuenta_regresiva.gif`).
+
+    El `alt` lleva los días en texto: es lo que ve quien tiene las imágenes
+    bloqueadas, que en Outlook y en algunos Gmail de empresa es lo normal.
+    """
     if dias <= 0:
         return ""
     return (
         '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" '
-        'style="margin:28px 0 8px"><tr>'
-        f'<td align="center" bgcolor="{GRAFITO}" style="border-radius:14px;padding:22px 16px">'
-        f'<div style="font-family:{FUENTE};font-size:40px;font-weight:700;color:#ffffff;'
-        f'letter-spacing:-.02em;line-height:1">{dias}</div>'
-        f'<div style="font-family:{FUENTE};font-size:14px;color:#d4d3cf;margin-top:6px">'
-        "días para la PAES regular. Cada semana cuenta.</div></td></tr></table>"
+        f'style="margin:32px 0 8px;background:{FONDO};border-radius:16px"><tr>'
+        '<td align="center" style="padding:24px 20px 20px">'
+        f'<div style="font-family:{FUENTE};font-size:12px;font-weight:700;letter-spacing:.1em;'
+        f'text-transform:uppercase;color:{APAGADO};margin-bottom:16px">La PAES regular empieza en</div>'
+        f'<img src="{escape(url)}/api/correo/cuenta-regresiva.gif" width="480" '
+        f'alt="Quedan {dias} días para la PAES" '
+        'style="display:block;width:100%;max-width:480px;height:auto;border:0;margin:0 auto">'
+        f'<div style="font-family:{FUENTE};font-size:13px;color:{APAGADO};margin-top:14px">'
+        f"{escape(fecha)} · Cada semana de práctica cuenta</div>"
+        "</td></tr></table>"
     )
 
 
-def documento(*, url: str, preencabezado: str, cuerpo: str, contacto: str) -> str:
-    """El correo completo: logo, tarjeta blanca y pie con la baja.
+def portada(*, url: str, antetitulo: str, titulo_html: str, bajada: str, boton_texto: str, enlace: str) -> str:
+    """La cabecera oscura del correo: logo, titular y botón principal.
+
+    `titulo_html` llega ya escapado (puede traer el nombre en negrita).
+    """
+    return f"""<tr><td bgcolor="{GRAFITO}" style="background:{GRAFITO};border-radius:20px 20px 0 0;padding:32px 36px 40px">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+    <a href="{escape(url)}" target="_blank" style="text-decoration:none">
+      <img src="{escape(url)}/apple-icon" width="30" height="30" alt="" style="vertical-align:middle;border:0;border-radius:8px">
+      <span style="vertical-align:middle;font-family:{FUENTE};font-size:20px;font-weight:600;color:#ffffff;letter-spacing:-.02em;margin-left:8px">1000paes</span>
+    </a>
+  </td></tr></table>
+  <div style="height:36px;line-height:36px">&nbsp;</div>
+  <div style="font-family:{FUENTE};font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#a9a8a4">{escape(antetitulo)}</div>
+  <h1 style="margin:10px 0 14px;font-family:{FUENTE};font-size:34px;line-height:1.15;font-weight:700;letter-spacing:-.03em;color:#ffffff">{titulo_html}</h1>
+  <p style="margin:0 0 28px;font-family:{FUENTE};font-size:16px;line-height:1.6;color:#d4d3cf">{escape(bajada)}</p>
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+    <td bgcolor="#ffffff" style="border-radius:999px">
+      <a href="{escape(enlace)}" target="_blank" style="display:inline-block;padding:15px 30px;font-family:{FUENTE};font-size:15px;font-weight:700;color:{GRAFITO};text-decoration:none;border-radius:999px">{escape(boton_texto)} →</a>
+    </td></tr></table>
+</td></tr>"""
+
+
+def documento(*, url: str, preencabezado: str, portada_html: str, cuerpo: str, contacto: str) -> str:
+    """El correo completo: portada oscura, cuerpo blanco y pie con la baja.
 
     `preencabezado` es el texto gris que Gmail muestra junto al asunto en la
     bandeja: se escribe, o el cliente pone lo primero que encuentre.
     """
-    logo = f"{url}/apple-icon"
     return f"""<!doctype html>
 <html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light only"><title>1000paes</title></head>
+<meta name="color-scheme" content="light only"><meta name="supported-color-schemes" content="light only">
+<title>1000paes</title></head>
 <body style="margin:0;padding:0;background:{FONDO}">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0">{escape(preencabezado)}</div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0">{escape(preencabezado)}&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="{FONDO}">
 <tr><td align="center" style="padding:28px 12px">
   <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%">
-    <tr><td align="center" style="padding:0 0 20px">
-      <a href="{escape(url)}" target="_blank" style="text-decoration:none">
-        <img src="{escape(logo)}" width="36" height="36" alt="" style="vertical-align:middle;border:0;border-radius:8px">
-        <span style="vertical-align:middle;font-family:{FUENTE};font-size:24px;font-weight:600;color:{GRAFITO};letter-spacing:-.02em;margin-left:8px">1000paes</span>
-      </a>
-    </td></tr>
-    <tr><td bgcolor="{PAPEL}" style="border:1px solid {BORDE};border-radius:16px;padding:36px 36px 28px">
+    {portada_html}
+    <tr><td bgcolor="{PAPEL}" style="background:{PAPEL};border:1px solid {BORDE};border-top:0;border-radius:0 0 20px 20px;padding:36px 36px 28px">
       {cuerpo}
     </td></tr>
-    <tr><td align="center" style="padding:24px 24px 8px;font-family:{FUENTE};font-size:12px;line-height:1.7;color:{APAGADO}">
-      1000paes — preparación PAES · <a href="{escape(url)}" style="color:{APAGADO}">1000paes.cl</a><br>
+    <tr><td align="center" style="padding:28px 24px 8px;font-family:{FUENTE};font-size:12px;line-height:1.8;color:{APAGADO}">
+      <strong style="color:{GRAFITO}">1000paes</strong> — preparación PAES · <a href="{escape(url)}" style="color:{APAGADO}">1000paes.cl</a><br>
       ¿Dudas o sugerencias? Escríbenos a <a href="mailto:{escape(contacto)}" style="color:{APAGADO}">{escape(contacto)}</a><br>
       Recibes este correo porque tienes una cuenta en 1000paes.<br>
       <a href="{escape(url)}/perfil#correos" style="color:{APAGADO}">Dejar de recibir estos correos</a>
