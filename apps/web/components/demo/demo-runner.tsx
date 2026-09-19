@@ -147,12 +147,11 @@ export function DemoRunner({ inicial = "m1" }: { inicial?: Subject }) {
           {/* El rótulo sale de la pregunta, no de una constante: antes decía
               "Competencia Matemática M1" siempre, incluso cuando el sorteo
               devolvía una pregunta de otra prueba. */}
-          {/* h1 y no <p>: era la otra página pública sin encabezado
-              principal, y es la que convierte. Se ve igual; lo que cambia es
-              que ahora Google y un lector de pantalla saben de qué va. */}
-          <h1 className="text-sm font-medium text-foreground">
+          {/* El h1 de la página lo pone `app/demo/page.tsx`, que sí se
+              renderiza en el servidor. Acá basta el rótulo de la prueba. */}
+          <p className="text-sm font-medium text-foreground">
             {PRUEBAS.find((p) => p.id === subject)?.nombre ?? current.node_name}
-          </h1>
+          </p>
         </div>
         <span className="text-sm text-muted">
           Pregunta <span className="text-foreground">{index + 1}</span> de {questions.length}

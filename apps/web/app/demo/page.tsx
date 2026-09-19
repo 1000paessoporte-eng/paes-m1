@@ -20,6 +20,14 @@ export default async function DemoPage({ searchParams }: PageProps<"/demo">) {
 
   return (
     <main className="flex flex-1 flex-col px-6 py-16">
+      {/* El encabezado va en el servidor, no dentro del runner.
+          La demo arma sus preguntas en el cliente, así que el HTML que
+          recibían Google y los lectores de pantalla llegaba sin ningún h1:
+          justo en la página pública que más convierte. Va oculto a la vista
+          porque en pantalla el rótulo lo pone la pregunta. */}
+      <h1 className="sr-only">
+        Demo de ensayo PAES: cinco preguntas sin crear cuenta
+      </h1>
       <DemoRunner inicial={inicial} />
     </main>
   );
