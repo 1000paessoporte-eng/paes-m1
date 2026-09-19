@@ -52,6 +52,25 @@ export function ProfileForm({
     }
   }
 
+  const [avisoMsg, setAvisoMsg] = useState<Msg | null>(null);
+
+  async function handleRecordatorios(activar: boolean) {
+    setGuardandoAviso(true);
+    setAvisoMsg(null);
+    try {
+      await updateMe({ recordatorios_email: activar }, getClientToken() ?? undefined);
+      setRecordatorios(activar);
+      setAvisoMsg({
+        type: "ok",
+        text: activar ? "Listo, te volveremos a escribir." : "Listo, no te enviaremos más correos.",
+      });
+    } catch {
+      setAvisoMsg({ type: "error", text: "No se pudo guardar. Intenta de nuevo." });
+    } finally {
+      setGuardandoAviso(false);
+    }
+  }
+
   async function handlePasswordSubmit(e: React.FormEvent) {
     e.preventDefault();
     setSavingPassword(true);
@@ -120,6 +139,38 @@ export function ProfileForm({
             {savingName ? "Guardando…" : "Guardar nombre"}
           </button>
         </form>
+      </div>
+
+      <div id="correos" className="rounded-xl border border-border bg-surface p-5">
+        <h2 className="text-sm font-medium text-foreground">Correos</h2>
+        <label className="mt-4 flex cursor-pointer items-start gap-3">
+          <input
+            type="checkbox"
+            checked={recordatorios}
+            disabled={guardandoAviso}
+            onChange={(e) => handleRecordatorios(e.target.checked)}
+            className="mt-0.5 h-4 w-4 accent-[var(--accent)] disabled:cursor-not-allowed"
+          />
+          <span className="flex flex-col gap-0.5">
+            <span className="text-sm text-foreground">Recordatorios y resumen semanal</span>
+            <span className="text-xs text-muted">
+              Un recordatorio cada dos días como máximo si no has practicado, y los domingos un
+              resumen de tu avance. Los correos de seguridad, como recuperar tu contraseña, llegan
+              siempre.
+            </span>
+          </span>
+        </label>
+        {avisoMsg && (
+          <p
+            className={
+              avisoMsg.type === "ok"
+                ? "mt-3 text-xs text-success"
+                : "mt-3 rounded-lg border border-danger/40 bg-danger/10 px-3 py-2 text-xs text-danger"
+            }
+          >
+            {avisoMsg.text}
+          </p>
+        )}
       </div>
 
       <div className="rounded-xl border border-border bg-surface p-5">

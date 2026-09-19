@@ -177,26 +177,34 @@ aparecen en `/review`, que exige el intento ya finalizado.
 
 ### Correo
 
-Todo sale por SMTP (`core/email.py`). **Con `SMTP_HOST` vacío no se manda
+Todo sale por SMTP (`core/email.py`), en producción por **Resend** con el
+dominio `1000paes.cl` verificado (plan gratis: 100 correos al día). **Con `SMTP_HOST` vacío no se manda
 nada**: en desarrollo el mensaje queda en el log —cómodo, se prueba el flujo
 completo sin proveedor— y en producción `send_email` lanza `CorreoNoEnviado`,
 que es lo que hay que evitar: significa que nadie puede recuperar su
 contraseña. `GET /api/auth/diagnostico-correo` (admin) abre una conexión real
 al proveedor y dice si el correo saldría o no.
 
-Cuatro correos, dos naturalezas distintas:
+Cinco correos, dos naturalezas distintas:
 
 | Correo | Se dispara | Opt-out |
 |---|---|---|
 | Recuperar contraseña | `POST /auth/forgot-password` | no, es transaccional |
 | Bienvenida | al crear la cuenta (registro o primer login con Google) | sí |
-| Recordatorio de racha | cron diario 22:00 → `/api/reminders/run` | sí |
+| Recordatorio | cron diario 20:00 UTC (17:00 Chile) → `/api/reminders/run`, salvo domingo | sí |
+| Resumen semanal de progreso | cron domingo 21:00 UTC (18:00 Chile) → `/api/reminders/resumen` | sí |
 | Difusión / anuncio | a mano, `scripts/enviar_correo.py` | sí |
 
 El opt-out es la casilla `users.recordatorios_email`, que se apaga desde
 `/perfil`, y el pie con el enlace para apagarlo lo agrega el código, no quien
 escribe el correo: la Ley 19.496 exige que toda comunicación promocional
 identifique al remitente y ofrezca darse de baja.
+
+**Un correo al día como máximo por persona.** El recordatorio sale cada dos
+días como mucho y nunca el domingo, que es el día del resumen. Los dos traen
+el nodo recomendado del árbol (`get_recommended_node`) con enlace directo a
+practicarlo, y los días que faltan para la PAES. Los dos cortan la tanda a los
+22 s (`PRESUPUESTO_SEGUNDOS`) porque la función muere a los 30.
 
 **Mandar un anuncio** (la difusión no se puede deshacer, así que el orden es
 siempre este):
