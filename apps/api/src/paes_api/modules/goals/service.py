@@ -61,22 +61,30 @@ def normalizar(texto: str) -> str:
 def buscar_carreras(
     db: Session,
     texto: str,
-    limite: int = 20,
+    limite: int = 60,
     region: str | None = None,
     comuna: str | None = None,
+    universidad: str | None = None,
 ) -> list[Carrera]:
     """Busca por nombre, universidad o sede, ignorando tildes.
 
     Cada palabra se exige por separado: "enfermeria concepcion" encuentra la
     carrera aunque en el dato la universidad vaya antes que la sede.
 
-    `region` y `comuna` acotan por ubicación y se pueden usar sin texto: filtrar
-    "todas las carreras de la Región de Los Ríos" es una consulta legítima. Se
-    comparan por igualdad con el valor tal como lo devuelve `ubicaciones`, que
-    sale del mismo dato, así que no hace falta normalizarlos.
+    `region`, `comuna` y `universidad` acotan y se pueden usar sin texto:
+    filtrar "todas las carreras de la Región de Los Ríos" es una consulta
+    legítima. Se comparan por igualdad con el valor tal como lo devuelven
+    `ubicaciones` y `universidades`, que salen del mismo dato.
+
+    **Se ordena por NOMBRE de carrera y después por universidad.** Antes era al
+    revés, y con el límite eso rompía la búsqueda amplia: "ingeniería" matchea
+    cientos de carreras y, ordenadas por universidad, las primeras 20 caían
+    todas en la primera del alfabeto -- el usuario veía "ingeniería" de una
+    sola universidad. Por nombre, aparecen las distintas ingenierías y, dentro
+    de cada una, sus universidades: variedad en vez de un bloque.
     """
     palabras = [p for p in normalizar(texto).split() if p]
-    if not palabras and not region and not comuna:
+    if not palabras and not region and not comuna and not universidad:
         return []
     consulta = select(Carrera)
     for palabra in palabras:
@@ -85,8 +93,10 @@ def buscar_carreras(
         consulta = consulta.where(Carrera.region == region)
     if comuna:
         consulta = consulta.where(Carrera.comuna == comuna)
+    if universidad:
+        consulta = consulta.where(Carrera.universidad == universidad)
     return list(
-        db.execute(consulta.order_by(Carrera.universidad, Carrera.nombre).limit(limite))
+        db.execute(consulta.order_by(Carrera.nombre, Carrera.universidad).limit(limite))
         .scalars()
         .all()
     )

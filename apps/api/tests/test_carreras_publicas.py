@@ -295,3 +295,57 @@ def test_ubicaciones_agrupa_comunas_por_region_de_norte_a_sur(
     por_region = {r["region"]: r["comunas"] for r in datos}
     assert por_region["Metropolitana"] == ["SANTIAGO"]
     assert por_region["Valparaíso"] == ["VALPARAÍSO"]
+
+
+def test_buscar_filtra_por_universidad(db_session, client: TestClient) -> None:
+    """La queja que motivó el filtro: "busco ingeniería y sale de una sola
+    universidad". Con el filtro por universidad se puede acotar a propósito, y
+    sin él la misma búsqueda trae las de todas."""
+    db_session.add_all(
+        [
+            Carrera(
+                codigo="A1", universidad="UNIVERSIDAD ALFA", nombre="INGENIERÍA CIVIL",
+                sede="S", m1=50, lectora=50, electivo_alternativo=False,
+                proceso=2026, fuente="x",
+            ),
+            Carrera(
+                codigo="B1", universidad="UNIVERSIDAD BETA", nombre="INGENIERÍA CIVIL",
+                sede="S", m1=50, lectora=50, electivo_alternativo=False,
+                proceso=2026, fuente="x",
+            ),
+        ]
+    )
+    db_session.commit()
+
+    todas = client.get("/api/carreras/buscar?q=ingenieria").json()
+    universidades = {c["universidad"] for c in todas}
+    assert "UNIVERSIDAD ALFA" in universidades
+    assert "UNIVERSIDAD BETA" in universidades
+
+    solo_beta = client.get("/api/carreras/buscar?q=ingenieria&universidad=UNIVERSIDAD BETA").json()
+    assert {c["universidad"] for c in solo_beta} == {"UNIVERSIDAD BETA"}
+
+
+def test_buscar_por_universidad_sin_texto(db_session, client: TestClient) -> None:
+    """Filtrar por universidad sola, sin escribir nada, es una consulta válida:
+    "muéstrame todo lo de esta universidad"."""
+    db_session.add(
+        Carrera(
+            codigo="C1", universidad="UNIVERSIDAD GAMMA", nombre="DERECHO",
+            sede="S", lectora=100, electivo_alternativo=False, proceso=2026, fuente="x",
+        )
+    )
+    db_session.commit()
+    res = client.get("/api/carreras/buscar?universidad=UNIVERSIDAD GAMMA").json()
+    assert [c["codigo"] for c in res] == ["C1"]
+
+
+def test_buscar_trae_las_ponderaciones(client: TestClient, carreras) -> None:
+    """El resultado ahora muestra cuánto pesa cada prueba, para comparar sin
+    entrar a la ficha."""
+    res = client.get("/api/carreras/buscar?q=ingenieria civil").json()
+    fila = next(c for c in res if c["codigo"] == "99001")
+    assert fila["m1"] == 35
+    assert fila["lectora"] == 10
+    assert fila["ponderado_min"] == 600
+    assert fila["vacantes"] == 80

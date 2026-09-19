@@ -64,10 +64,11 @@ class CarreraCatalogoOut(BaseModel):
 class CarreraBusquedaOut(BaseModel):
     """Una fila de resultados del buscador.
 
-    Es el `CarreraCatalogoOut` más la ubicación: el catálogo entero (1.855
-    filas para el sitemap) no la carga para no engordar un payload que solo
-    nombra y enlaza, pero un resultado de búsqueda sí la muestra —dónde queda
-    la carrera es justo lo que el filtro por región y comuna deja ver.
+    Trae la ubicación y las ponderaciones. El catálogo entero (1.855 filas para
+    el sitemap) no las carga, porque solo nombra y enlaza; pero un resultado de
+    búsqueda son a lo más 60 filas, y mostrar ahí cuánto pesa cada prueba y el
+    ponderado mínimo evita entrar a cada ficha para comparar -- que es
+    justamente lo que se hace al elegir carrera.
     """
 
     model_config = ConfigDict(from_attributes=True)
@@ -78,6 +79,22 @@ class CarreraBusquedaOut(BaseModel):
     sede: str
     region: str | None = None
     comuna: str | None = None
+
+    #: Ponderaciones en porcentaje, para comparar sin abrir la ficha. Suman 100.
+    nem: float | None = None
+    ranking: float | None = None
+    lectora: float | None = None
+    m1: float | None = None
+    historia: float | None = None
+    ciencias: float | None = None
+    m2: float | None = None
+    prueba_especial: float | None = None
+    electivo_alternativo: bool = False
+
+    #: Requisito de POSTULACIÓN, no el corte (que el DEMRE publica al cerrar el
+    #: proceso y no tenemos). `None` cuando la carrera no lo declara.
+    ponderado_min: float | None = None
+    vacantes: int | None = None
 
 
 class RegionConComunasOut(BaseModel):

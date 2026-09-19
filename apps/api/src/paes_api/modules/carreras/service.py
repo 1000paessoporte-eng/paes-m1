@@ -84,7 +84,7 @@ def universidades(db: Session) -> list[UniversidadOut]:
 
 #: Cuántos resultados devuelve la búsqueda pública. Corto a propósito: quien
 #: busca "medicina" no revisa 60 fichas, refina la búsqueda.
-LIMITE_BUSQUEDA = 25
+LIMITE_BUSQUEDA = 60
 
 
 def buscar(
@@ -92,6 +92,7 @@ def buscar(
     texto: str,
     region: str | None = None,
     comuna: str | None = None,
+    universidad: str | None = None,
 ) -> list[Carrera]:
     """Busca carreras por nombre, universidad o sede, y/o por ubicación. Sin sesión.
 
@@ -110,14 +111,22 @@ def buscar(
     texto = texto.strip()[:120]
     region = (region or "").strip()[:80] or None
     comuna = (comuna or "").strip()[:80] or None
-    if len(texto) < 3 and not region and not comuna:
+    universidad = (universidad or "").strip()[:200] or None
+    if len(texto) < 3 and not region and not comuna and not universidad:
         # Con una o dos letras el resultado no discrimina nada: "me" está
         # dentro de medicina, comercio, ingeniería comercial y otras 300.
         return []
     # Un texto demasiado corto no debe filtrar, pero tampoco anular la búsqueda
-    # cuando lo que acota es la ubicación.
+    # cuando lo que acota es la ubicación o la universidad.
     texto_util = texto if len(texto) >= 3 else ""
-    return _buscar(db, texto_util, limite=LIMITE_BUSQUEDA, region=region, comuna=comuna)
+    return _buscar(
+        db,
+        texto_util,
+        limite=LIMITE_BUSQUEDA,
+        region=region,
+        comuna=comuna,
+        universidad=universidad,
+    )
 
 
 def ubicaciones(db: Session) -> list[RegionConComunasOut]:
