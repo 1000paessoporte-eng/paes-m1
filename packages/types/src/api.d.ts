@@ -1180,13 +1180,14 @@ export interface paths {
         };
         /**
          * Buscar Carreras
-         * @description Busca carreras por nombre, universidad o sede, y filtra por ubicación. Público.
+         * @description Busca carreras por nombre, universidad o sede, y filtra por ubicación
+         *     y universidad. Público.
          *
          *     Es la pregunta con la que la gente llega de verdad —cuánto puntaje
          *     necesita para la carrera que quiere—, y hasta ahora el buscador vivía
-         *     detrás del login. `region` y `comuna` acotan el resultado, y sirven solas:
-         *     se puede pedir "todas las de tal comuna" sin escribir nada. Va ANTES de
-         *     `/{codigo}`, como el resto.
+         *     detrás del login. `region`, `comuna` y `universidad` acotan el resultado y
+         *     sirven solas: se puede pedir "todas las de tal universidad" sin escribir
+         *     nada. Va ANTES de `/{codigo}`, como el resto.
          */
         get: operations["buscar_carreras_api_carreras_buscar_get"];
         put?: never;
@@ -1920,10 +1921,11 @@ export interface components {
          * CarreraBusquedaOut
          * @description Una fila de resultados del buscador.
          *
-         *     Es el `CarreraCatalogoOut` más la ubicación: el catálogo entero (1.855
-         *     filas para el sitemap) no la carga para no engordar un payload que solo
-         *     nombra y enlaza, pero un resultado de búsqueda sí la muestra —dónde queda
-         *     la carrera es justo lo que el filtro por región y comuna deja ver.
+         *     Trae la ubicación y las ponderaciones. El catálogo entero (1.855 filas para
+         *     el sitemap) no las carga, porque solo nombra y enlaza; pero un resultado de
+         *     búsqueda son a lo más 60 filas, y mostrar ahí cuánto pesa cada prueba y el
+         *     ponderado mínimo evita entrar a cada ficha para comparar -- que es
+         *     justamente lo que se hace al elegir carrera.
          */
         CarreraBusquedaOut: {
             /** Codigo */
@@ -1938,6 +1940,31 @@ export interface components {
             region?: string | null;
             /** Comuna */
             comuna?: string | null;
+            /** Nem */
+            nem?: number | null;
+            /** Ranking */
+            ranking?: number | null;
+            /** Lectora */
+            lectora?: number | null;
+            /** M1 */
+            m1?: number | null;
+            /** Historia */
+            historia?: number | null;
+            /** Ciencias */
+            ciencias?: number | null;
+            /** M2 */
+            m2?: number | null;
+            /** Prueba Especial */
+            prueba_especial?: number | null;
+            /**
+             * Electivo Alternativo
+             * @default false
+             */
+            electivo_alternativo: boolean;
+            /** Ponderado Min */
+            ponderado_min?: number | null;
+            /** Vacantes */
+            vacantes?: number | null;
         };
         /**
          * CarreraCatalogoOut
@@ -5586,6 +5613,7 @@ export interface operations {
                 q?: string;
                 region?: string;
                 comuna?: string;
+                universidad?: string;
             };
             header?: never;
             path?: never;

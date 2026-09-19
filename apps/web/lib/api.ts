@@ -618,12 +618,13 @@ export type CarreraBusqueda =
 
 export function buscarCarrerasPublico(
   q: string,
-  filtros: { region?: string; comuna?: string } = {},
+  filtros: { region?: string; comuna?: string; universidad?: string } = {},
 ): Promise<CarreraBusqueda[]> {
   const params = new URLSearchParams();
   if (q) params.set("q", q);
   if (filtros.region) params.set("region", filtros.region);
   if (filtros.comuna) params.set("comuna", filtros.comuna);
+  if (filtros.universidad) params.set("universidad", filtros.universidad);
   return apiFetch<CarreraBusqueda[]>(`/api/carreras/buscar?${params.toString()}`);
 }
 

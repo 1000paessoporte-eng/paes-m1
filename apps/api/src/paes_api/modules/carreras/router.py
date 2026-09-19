@@ -44,17 +44,19 @@ def buscar_carreras(
     q: str = Query(default="", max_length=120),
     region: str = Query(default="", max_length=80),
     comuna: str = Query(default="", max_length=80),
+    universidad: str = Query(default="", max_length=200),
     db: Session = Depends(get_db),
 ) -> list[Carrera]:
-    """Busca carreras por nombre, universidad o sede, y filtra por ubicación. Público.
+    """Busca carreras por nombre, universidad o sede, y filtra por ubicación
+    y universidad. Público.
 
     Es la pregunta con la que la gente llega de verdad —cuánto puntaje
     necesita para la carrera que quiere—, y hasta ahora el buscador vivía
-    detrás del login. `region` y `comuna` acotan el resultado, y sirven solas:
-    se puede pedir "todas las de tal comuna" sin escribir nada. Va ANTES de
-    `/{codigo}`, como el resto.
+    detrás del login. `region`, `comuna` y `universidad` acotan el resultado y
+    sirven solas: se puede pedir "todas las de tal universidad" sin escribir
+    nada. Va ANTES de `/{codigo}`, como el resto.
     """
-    return service.buscar(db, q, region=region, comuna=comuna)
+    return service.buscar(db, q, region=region, comuna=comuna, universidad=universidad)
 
 
 @router.get("/ubicaciones", response_model=list[RegionConComunasOut])

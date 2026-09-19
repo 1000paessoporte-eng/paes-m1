@@ -7,9 +7,12 @@ import {
   buscarCarrerasPublico,
   type CarreraBusqueda,
   getUbicacionesCarreras,
+  getUniversidades,
   type RegionConComunas,
+  type Universidad,
 } from "@/lib/api";
 import { nombreCarrera, nombreLegible, slugCarrera } from "@/lib/carreras";
+import { Ponderaciones } from "@/components/carreras/ponderaciones";
 
 type Estado = "quieto" | "buscando" | "listo" | "error";
 
@@ -27,30 +30,37 @@ export function BuscadorCarreras({
   inicial = "",
   regionInicial = "",
   comunaInicial = "",
+  universidadInicial = "",
 }: {
   inicial?: string;
   regionInicial?: string;
   comunaInicial?: string;
+  universidadInicial?: string;
 }) {
   const [texto, setTexto] = useState(inicial);
   const [region, setRegion] = useState(regionInicial);
   const [comuna, setComuna] = useState(comunaInicial);
+  const [universidad, setUniversidad] = useState(universidadInicial);
   const [ubicaciones, setUbicaciones] = useState<RegionConComunas[]>([]);
+  const [universidades, setUniversidades] = useState<Universidad[]>([]);
   const [resultados, setResultados] = useState<CarreraBusqueda[]>([]);
   const [estado, setEstado] = useState<Estado>("quieto");
 
-  // Las regiones y comunas se piden una vez: cambian una vez por proceso de
-  // admisión, no mientras alguien busca.
+  // Las regiones/comunas y las universidades se piden una vez: cambian una vez
+  // por proceso de admisión, no mientras alguien busca. Si alguna falla, su
+  // filtro no aparece pero el buscador por texto sigue funcionando.
   useEffect(() => {
     let vigente = true;
     getUbicacionesCarreras()
       .then((data) => {
         if (vigente) setUbicaciones(data);
       })
-      .catch(() => {
-        // Sin ubicaciones el filtro no aparece, pero el buscador por texto
-        // sigue funcionando: no es motivo para romper la página.
-      });
+      .catch(() => {});
+    getUniversidades()
+      .then((data) => {
+        if (vigente) setUniversidades(data);
+      })
+      .catch(() => {});
     return () => {
       vigente = false;
     };
@@ -62,9 +72,9 @@ export function BuscadorCarreras({
 
   useEffect(() => {
     const consulta = texto.trim();
-    const hayUbicacion = Boolean(region || comuna);
-    // Sin texto suficiente y sin filtro de ubicación no hay nada que buscar.
-    if (consulta.length < 3 && !hayUbicacion) {
+    const hayFiltro = Boolean(region || comuna || universidad);
+    // Sin texto suficiente y sin ningún filtro no hay nada que buscar.
+    if (consulta.length < 3 && !hayFiltro) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setEstado("quieto");
       setResultados([]);
@@ -77,7 +87,7 @@ export function BuscadorCarreras({
     const t = setTimeout(async () => {
       setEstado("buscando");
       try {
-        const data = await buscarCarrerasPublico(consulta, { region, comuna });
+        const data = await buscarCarrerasPublico(consulta, { region, comuna, universidad });
         if (!vigente) return;
         setResultados(data);
         setEstado("listo");
@@ -90,7 +100,7 @@ export function BuscadorCarreras({
       vigente = false;
       clearTimeout(t);
     };
-  }, [texto, region, comuna]);
+  }, [texto, region, comuna, universidad]);
 
   // La URL sigue al texto y a la ubicación sin recargar ni ensuciar el
   // historial: así una búsqueda filtrada se comparte y vuelve con el botón
@@ -102,12 +112,13 @@ export function BuscadorCarreras({
       ["q", consulta],
       ["region", region],
       ["comuna", comuna],
+      ["universidad", universidad],
     ] as const) {
       if (valor) url.searchParams.set(clave, valor);
       else url.searchParams.delete(clave);
     }
     window.history.replaceState(null, "", url);
-  }, [texto, region, comuna]);
+  }, [texto, region, comuna, universidad]);
 
   return (
     <div>
@@ -171,6 +182,27 @@ export function BuscadorCarreras({
         </div>
       )}
 
+      {universidades.length > 0 && (
+        <div className="mt-2">
+          <label htmlFor="universidad" className="sr-only">
+            Filtrar por universidad
+          </label>
+          <select
+            id="universidad"
+            value={universidad}
+            onChange={(e) => setUniversidad(e.target.value)}
+            className="w-full rounded-xl border border-border bg-surface px-3 py-2.5 text-sm text-foreground focus:border-accent focus:outline-none"
+          >
+            <option value="">Todas las universidades</option>
+            {universidades.map((u) => (
+              <option key={u.universidad} value={u.universidad}>
+                {nombreLegible(u.universidad)} ({u.carreras})
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
+
       {estado === "quieto" &&
         texto.trim().length > 0 &&
         texto.trim().length < 3 &&
@@ -220,15 +252,29 @@ export function BuscadorCarreras({
             <li key={c.codigo}>
               <Link
                 href={`/carrera/${slugCarrera(c)}`}
-                className="card-hover flex flex-col gap-0.5 rounded-lg border border-border bg-surface p-3"
+                className="card-hover flex flex-col gap-1.5 rounded-lg border border-border bg-surface p-3"
               >
-                <span className="text-sm font-medium text-foreground">
-                  {nombreCarrera(c.nombre)}
-                </span>
+                <div className="flex items-baseline justify-between gap-3">
+                  <span className="text-sm font-medium text-foreground">
+                    {nombreCarrera(c.nombre)}
+                  </span>
+                  {/* El ponderado mínimo, cuando la carrera lo publica: es lo
+                      primero que se mira al comparar dónde alcanza. No es el
+                      corte, y por eso dice "mín.". */}
+                  {c.ponderado_min != null && (
+                    <span className="shrink-0 text-xs text-muted">
+                      mín.{" "}
+                      <strong className="text-foreground tabular-nums">
+                        {c.ponderado_min}
+                      </strong>
+                    </span>
+                  )}
+                </div>
                 <span className="text-xs text-muted">
                   {nombreLegible(c.universidad)} · {nombreLegible(c.sede)}
                   {c.comuna ? ` · ${nombreLegible(c.comuna)}` : ""}
                 </span>
+                <Ponderaciones carrera={c} className="mt-0.5" />
               </Link>
             </li>
           ))}
@@ -246,6 +292,7 @@ export function BuscadorConParams() {
       inicial={params.get("q") ?? ""}
       regionInicial={params.get("region") ?? ""}
       comunaInicial={params.get("comuna") ?? ""}
+      universidadInicial={params.get("universidad") ?? ""}
     />
   );
 }
