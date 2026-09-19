@@ -27,12 +27,14 @@ import logging
 import time
 from collections.abc import Sequence
 from datetime import UTC, datetime
+from html import escape
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from paes_api.core.config import get_settings
 from paes_api.core.email import CorreoNoEnviado, send_email
+from paes_api.modules.correos import plantilla
 from paes_api.modules.goals.service import FECHA_PAES
 from paes_api.modules.users.models import User
 
@@ -74,6 +76,10 @@ def destinatarios(db: Session, publico: str = "todos") -> Sequence[User]:
     return db.execute(consulta.order_by(User.id)).scalars().all()
 
 
+def _primer_nombre(user: User) -> str:
+    return user.name.split(" ")[0] if user.name else ""
+
+
 def difundir(
     db: Session,
     asunto: str,
@@ -83,6 +89,8 @@ def difundir(
     prueba: bool = False,
     solo: str | None = None,
     pausa: float = 1.0,
+    html: str | None = None,
+    nombre_solo: str = "",
 ) -> dict[str, object]:
     """Manda un correo escrito a mano. Devuelve el recuento de lo que hizo.
 
@@ -98,12 +106,24 @@ def difundir(
     Un envío que falla NO detiene la tanda, por lo mismo que en los
     recordatorios: una dirección rebotada no puede dejar sin correo a las
     demás. Se cuenta aparte y se sigue.
+
+    `html`, si viene, va como versión HTML del mismo correo. Debe traer su
+    propio pie de baja (`plantilla.documento` lo pone). En asunto, cuerpo y
+    html, `{nombre}` se reemplaza por el primer nombre de cada destinatario
+    --escapado en el HTML--; con `solo`, por `nombre_solo`.
     """
     url = get_settings().frontend_url
     cuerpo_final = cuerpo.rstrip() + _pie_de_baja(url)
 
+    def _para(nombre: str) -> tuple[str, str, str | None]:
+        return (
+            asunto.replace("{nombre}", nombre),
+            cuerpo_final.replace("{nombre}", nombre),
+            html.replace("{nombre}", escape(nombre)) if html else None,
+        )
+
     if solo is not None:
-        send_email(solo, asunto, cuerpo_final)
+        send_email(solo, *_para(nombre_solo))
         return {"enviados": 1, "fallidos": 0, "destinatarios": [solo], "prueba": False}
 
     cuentas = destinatarios(db, publico)
@@ -121,7 +141,7 @@ def difundir(
     fallidos = 0
     for indice, user in enumerate(cuentas):
         try:
-            send_email(user.email, asunto, cuerpo_final)
+            send_email(user.email, *_para(_primer_nombre(user)))
         except CorreoNoEnviado:
             logger.exception("No se pudo enviar la difusión a %s", user.email)
             fallidos += 1
@@ -185,6 +205,97 @@ def presentacion(url: str) -> str:
     )
 
 
+def _dias_paes() -> int:
+    return max(0, (FECHA_PAES - datetime.now(UTC)).days)
+
+
+def bienvenida_html(nombre: str, url: str, *, cuenta_existente: bool = False) -> str:
+    """La bienvenida en HTML. Cuenta lo mismo que `presentacion()`, con la
+    identidad del sitio. `nombre` llega sin escapar; acá se escapa."""
+    p = plantilla
+    saludo = f"Hola {escape(nombre)}," if nombre else "Hola,"
+    if cuenta_existente:
+        encabezado = "Te damos la bienvenida a la nueva 1000paes"
+        intro = (
+            "Gracias por ser parte de 1000paes. La plataforma creció mucho desde que "
+            "creaste tu cuenta, y queremos contarte todo lo que puedes hacer hoy para "
+            "preparar la PAES."
+        )
+    else:
+        encabezado = "Tu cuenta está lista"
+        intro = (
+            "Te damos la bienvenida a 1000paes, la plataforma para preparar la PAES "
+            "con ensayos, lecciones y un seguimiento real de tu avance."
+        )
+
+    cuerpo = (
+        f'<h1 style="margin:0 0 20px;font-family:{p.FUENTE};font-size:26px;line-height:1.25;'
+        f'letter-spacing:-.02em;color:{p.TINTA}">{escape(encabezado)}</h1>'
+        + p.parrafo(f"<strong>{saludo}</strong>")
+        + p.parrafo(escape(intro))
+        + p.boton("Rinde tu primer ensayo", f"{url}/examen")
+        + p.cifras([
+            ("6.400+", "preguntas originales"),
+            ("95", "lecciones paso a paso"),
+            ("100–1000", "puntaje con tablas DEMRE"),
+        ])
+        + p.titulo("Las cinco pruebas")
+        + p.pruebas()
+        + p.titulo("Lo que tienes disponible")
+        + p.funcion(
+            "Modo Ensayo",
+            "Eliges prueba, ejes, cantidad de preguntas y ritmo. El tiempo es "
+            "proporcional al oficial.",
+            "#1d4ed8",
+        )
+        + p.funcion(
+            "Revisión de cada pregunta",
+            "El desarrollo completo y por qué cada alternativa incorrecta lo es. "
+            "Ahí es donde más se aprende.",
+            "#0f766e",
+        )
+        + p.funcion(
+            "Árbol de Habilidades",
+            "El temario completo en 95 lecciones, con teoría, ejercicios resueltos "
+            "y el error más común de cada tema. Te dice qué reforzar primero.",
+            "#7e22ce",
+        )
+        + p.funcion(
+            "Mi meta",
+            "Agrega las carreras que te interesan y calcula tu puntaje ponderado con "
+            "las ponderaciones oficiales.",
+            "#b45309",
+        )
+        + p.titulo("Cómo empezar")
+        + p.pasos([
+            ("Rinde un ensayo corto", "20 preguntas, unos 40 minutos. Es tu punto de partida.", f"{url}/examen"),
+            ("Revisa tus errores", "Cada pregunta trae su desarrollo paso a paso.", None),
+            ("Sigue el Árbol de Habilidades", "Te indica qué tema reforzar primero.", f"{url}/arbol"),
+            ("Define tu meta", "Para saber cuántos puntos te faltan.", f"{url}/meta"),
+        ])
+        + p.titulo("Dos datos que conviene saber")
+        + p.nota(
+            "<strong>Las respuestas incorrectas no descuentan puntaje</strong> en la "
+            "PAES: nunca dejes una pregunta en blanco.<br><br>"
+            "<strong>Practicar un poco casi todos los días</strong> rinde más que una "
+            "sesión larga el fin de semana."
+        )
+        + p.cuenta_regresiva(_dias_paes())
+        + p.parrafo(
+            f'<span style="color:{p.APAGADO};font-size:14px">Los domingos te enviaremos '
+            "un resumen de tu semana: lo que practicaste, cómo va tu puntaje y qué te "
+            "conviene estudiar después.</span>"
+        )
+        + p.parrafo("Mucho éxito en tu preparación.<br><strong>El equipo de 1000paes</strong>")
+    )
+    return p.documento(
+        url=url,
+        preencabezado="Las cinco pruebas, 95 lecciones y tu puntaje con tablas DEMRE.",
+        cuerpo=cuerpo,
+        contacto=CONTACTO,
+    )
+
+
 def enviar_bienvenida(user: User) -> bool:
     """Le da la bienvenida a una cuenta recién creada. Nunca lanza.
 
@@ -210,8 +321,24 @@ def enviar_bienvenida(user: User) -> bool:
     cuerpo += _pie_de_baja(ajustes.frontend_url)
 
     try:
-        send_email(user.email, asunto, cuerpo)
+        send_email(user.email, asunto, cuerpo, bienvenida_html(nombre, ajustes.frontend_url))
     except CorreoNoEnviado:
         logger.exception("No se pudo enviar la bienvenida a %s", user.email)
         return False
     return True
+
+
+def bienvenida_existentes(url: str) -> tuple[str, str, str]:
+    """Asunto, texto y HTML de la bienvenida a cuentas que ya existían, con
+    `{nombre}` para que `difundir` lo personalice. El texto no lleva pie de
+    baja: `difundir` lo agrega; el HTML sí, porque lo pone la plantilla."""
+    asunto = "{nombre}, te damos la bienvenida a la nueva 1000paes"
+    cuerpo = (
+        "Hola {nombre}:\n\n"
+        "Gracias por ser parte de 1000paes. La plataforma creció mucho desde que "
+        "creaste tu cuenta, y queremos contarte todo lo que puedes hacer hoy para "
+        "preparar la PAES.\n\n"
+        + presentacion(url)
+        + "\n\nMucho éxito en tu preparación.\nEl equipo de 1000paes"
+    )
+    return asunto, cuerpo, bienvenida_html("{nombre}", url, cuenta_existente=True)

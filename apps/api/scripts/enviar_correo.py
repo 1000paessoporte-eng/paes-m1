@@ -44,12 +44,22 @@ from paes_api.modules.correos import service
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Manda un correo a las cuentas registradas.")
-    parser.add_argument("--asunto", required=True, help="Asunto del correo")
+    parser.add_argument("--asunto", help="Asunto del correo ({nombre} se personaliza)")
     parser.add_argument(
         "--cuerpo",
-        required=True,
         type=Path,
         help="Archivo de texto con el cuerpo del mensaje",
+    )
+    parser.add_argument(
+        "--html",
+        type=Path,
+        default=None,
+        help="Archivo HTML opcional: la versión con diseño del mismo correo",
+    )
+    parser.add_argument(
+        "--bienvenida",
+        action="store_true",
+        help="Manda la bienvenida con diseño a cuentas que ya existían (sin --asunto ni --cuerpo)",
     )
     parser.add_argument(
         "--publico",
@@ -75,13 +85,22 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    if not args.cuerpo.is_file():
-        print(f"No existe el archivo {args.cuerpo}")
-        return 1
-    cuerpo = args.cuerpo.read_text(encoding="utf-8").strip()
-    if not cuerpo:
-        print(f"{args.cuerpo} está vacío.")
-        return 1
+    html = None
+    if args.bienvenida:
+        args.asunto, cuerpo, html = service.bienvenida_existentes(get_settings().frontend_url)
+    else:
+        if not args.asunto or not args.cuerpo:
+            print("Faltan --asunto y --cuerpo (o usa --bienvenida).")
+            return 1
+        if not args.cuerpo.is_file():
+            print(f"No existe el archivo {args.cuerpo}")
+            return 1
+        cuerpo = args.cuerpo.read_text(encoding="utf-8").strip()
+        if not cuerpo:
+            print(f"{args.cuerpo} está vacío.")
+            return 1
+        if args.html:
+            html = args.html.read_text(encoding="utf-8")
 
     # El pie de baja lo agrega el servicio; acá solo se muestra lo que se
     # escribió, para releerlo una última vez antes de apretar el gatillo.
@@ -98,7 +117,7 @@ def main() -> int:
 
     with SessionLocal() as db:
         if args.solo:
-            service.difundir(db, args.asunto, cuerpo, solo=args.solo)
+            service.difundir(db, args.asunto, cuerpo, solo=args.solo, html=html)
             print(f"Enviado solo a {args.solo}.")
             return 0
 
@@ -123,7 +142,7 @@ def main() -> int:
             return 1
 
         resultado = service.difundir(
-            db, args.asunto, cuerpo, args.publico, pausa=args.pausa
+            db, args.asunto, cuerpo, args.publico, pausa=args.pausa, html=html
         )
         print(f"Enviados: {resultado['enviados']} · Fallidos: {resultado['fallidos']}")
         return 0 if resultado["fallidos"] == 0 else 1

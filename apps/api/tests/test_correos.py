@@ -19,7 +19,7 @@ def enviados(monkeypatch) -> list[tuple[str, str, str]]:
     """Intercepta los envíos reales y deja el registro de lo que se mandó."""
     registro: list[tuple[str, str, str]] = []
 
-    def _falso(to: str, subject: str, body: str) -> None:
+    def _falso(to: str, subject: str, body: str, html: str | None = None) -> None:
         registro.append((to, subject, body))
 
     monkeypatch.setattr(service, "send_email", _falso)
@@ -54,7 +54,7 @@ def test_si_el_correo_falla_el_registro_igual_funciona(
 ) -> None:
     """Un proveedor caído no puede dejar a nadie sin poder crear su cuenta."""
 
-    def _explota(to: str, subject: str, body: str) -> None:
+    def _explota(to: str, subject: str, body: str, html: str | None = None) -> None:
         raise CorreoNoEnviado("proveedor caído")
 
     monkeypatch.setattr(service, "send_email", _explota)
@@ -122,7 +122,7 @@ def test_modo_prueba_no_manda_nada(db_session, enviados) -> None:
 def test_una_direccion_rebotada_no_corta_la_tanda(db_session, monkeypatch) -> None:
     ok: list[str] = []
 
-    def _falla_la_primera(to: str, subject: str, body: str) -> None:
+    def _falla_la_primera(to: str, subject: str, body: str, html: str | None = None) -> None:
         if to == "rebota@test.cl":
             raise CorreoNoEnviado("dirección inexistente")
         ok.append(to)
@@ -145,3 +145,32 @@ def test_una_direccion_rebotada_no_corta_la_tanda(db_session, monkeypatch) -> No
 def test_publico_desconocido_es_error(db_session) -> None:
     with pytest.raises(ValueError):
         service.destinatarios(db_session, "inventado")
+
+
+def test_la_bienvenida_lleva_html_con_la_baja_y_el_nombre_escapado(monkeypatch) -> None:
+    """El nombre lo escribe la persona: sin escapar, un nombre con HTML se
+    inyectaría en el correo."""
+    capturado: dict[str, str | None] = {}
+
+    def _falso(to: str, subject: str, body: str, html: str | None = None) -> None:
+        capturado["html"] = html
+
+    monkeypatch.setattr(service, "send_email", _falso)
+    assert service.enviar_bienvenida(User(email="x@test.cl", name="<b>Ana</b> Soto"))
+    html = capturado["html"] or ""
+    assert "&lt;b&gt;Ana&lt;/b&gt;" in html and "<b>Ana</b>" not in html
+    assert "/perfil#correos" in html
+
+
+def test_la_difusion_personaliza_el_nombre(db_session, monkeypatch) -> None:
+    salida: list[tuple] = []
+    monkeypatch.setattr(service, "send_email", lambda *a: salida.append(a))
+    _usuario(db_session, "camila@test.cl")
+    asunto, cuerpo, html = service.bienvenida_existentes("https://1000paes.cl")
+
+    service.difundir(db_session, asunto, cuerpo, html=html, pausa=0)
+
+    _, asunto_final, cuerpo_final, html_final = salida[0]
+    assert asunto_final.startswith("Camila,")
+    assert "Hola Camila:" in cuerpo_final and "Hola Camila," in html_final
+    assert "{nombre}" not in asunto_final + cuerpo_final + html_final

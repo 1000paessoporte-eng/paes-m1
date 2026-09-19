@@ -106,7 +106,7 @@ def test_forgot_password_and_reset_flow(
 
     sent: dict[str, str] = {}
 
-    def fake_send_email(to: str, subject: str, body: str) -> None:
+    def fake_send_email(to: str, subject: str, body: str, html: str | None = None) -> None:
         sent["to"] = to
         sent["body"] = body
 
