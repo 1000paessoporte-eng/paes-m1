@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 export const metadata = {
   title: "Planes",
   description:
-    "El plan Gratis no tiene costo ni vencimiento: 4 ensayos al mes con el banco completo, el árbol y las lecciones. Pro quita el tope por $9.990 al mes.",
+    "El plan Gratis no tiene costo ni vencimiento: el ensayo del día de cada prueba, el árbol y las lecciones. Pro te deja armar todos los ensayos que quieras por $9.990 al mes.",
   alternates: { canonical: "/planes" },
 };
 

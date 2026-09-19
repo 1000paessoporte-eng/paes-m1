@@ -8,7 +8,7 @@ import { getMiPlan, type MiPlan } from "@/lib/api";
 import { getClientToken } from "@/lib/auth";
 
 /**
- * Lo que ve un alumno del plan Gratis cuando agota sus ensayos del mes.
+ * Lo que ve un alumno del plan Gratis cuando ya rindió el ensayo del día.
  *
  * Antes esto era un mensaje de error técnico —"Verifica que la API esté
  * disponible"— que hacía parecer que el sitio estaba roto. Un tope alcanzado y
@@ -42,15 +42,9 @@ import { getClientToken } from "@/lib/auth";
 /** Lo que Pro entrega de verdad. Los mismos dos puntos que la página de
  *  planes: si acá dijera más, sería el mismo problema que ya se arregló allá. */
 const LO_QUE_SUMA = [
-  "Ensayos sin límite, todos los que quieras rendir",
+  "Ensayos sin límite: oficiales, a tu medida y de refuerzo",
   "Hasta 10 carreras en Mi meta, comparadas entre sí",
 ] as const;
-
-/** Cuándo vuelve a haber ensayos: el tope es por mes de calendario. */
-function reinicio(ahora: Date = new Date()): string {
-  const primero = new Date(ahora.getFullYear(), ahora.getMonth() + 1, 1);
-  return primero.toLocaleDateString("es-CL", { day: "numeric", month: "long" });
-}
 
 export function LimiteAlcanzado({
   motivo,
@@ -86,17 +80,16 @@ export function LimiteAlcanzado({
           </span>
 
           <h1 className="mt-4 text-2xl font-semibold tracking-tight">
-            Llegaste al tope de este mes
+            Ese ya lo rendiste hoy
           </h1>
 
           <p className="mt-3 text-sm leading-relaxed text-muted">{motivo}</p>
 
-          {/* La fecha exacta, no "el mes que viene": con ella, esperar es una
-              decisión informada. Si faltan tres días quizá espere, y si faltan
-              veinticinco sabe que la espera es real. */}
+          {/* Cuándo vuelve a haber, dicho exacto: esperar hasta mañana es una
+              decisión razonable, y hay que poder tomarla sabiendo eso. */}
           <p className="mt-2 text-sm leading-relaxed text-muted">
-            Tus 4 ensayos se renuevan el{" "}
-            <strong className="text-foreground">{reinicio()}</strong>.
+            A medianoche sale el ensayo del día nuevo de{" "}
+            <strong className="text-foreground">cada prueba</strong>.
           </p>
         </div>
 

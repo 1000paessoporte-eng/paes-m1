@@ -56,7 +56,11 @@ class Limites:
     comprueba no es un límite, es una promesa falsa en las dos direcciones.
     """
 
-    ensayos_por_mes: int | None
+    #: El plan Gratis rinde solo el ensayo del día, uno por prueba
+    #: (`exam_focus/del_dia.py`). Reemplazó al tope de 4 ensayos al mes: un tope
+    #: mensual se gastaba el primer fin de semana y dejaba al alumno tres
+    #: semanas sin ensayar; uno diario lo trae de vuelta cada día.
+    solo_ensayo_del_dia: bool
     carreras_en_meta: int
 
 
@@ -70,15 +74,12 @@ def limites_de(plan: Plan) -> Limites:
     le sirve; uno sobre la cantidad de ensayos lo deja comprobarlo y aprieta
     recién cuando ya le encontró el valor.
 
-    La cuota del plan Gratis se lee del entorno en cada llamada para poder
-    ajustarla mirando la conversión, sin desplegar.
+    Lo que se limita en Gratis es QUÉ ensayo se rinde --el del día, uno por
+    prueba-- y no el acceso al contenido.
     """
     if plan is Plan.GRATIS:
-        return Limites(
-            ensayos_por_mes=get_settings().ensayos_gratis_por_mes,
-            carreras_en_meta=1,
-        )
-    return Limites(ensayos_por_mes=None, carreras_en_meta=10)
+        return Limites(solo_ensayo_del_dia=True, carreras_en_meta=1)
+    return Limites(solo_ensayo_del_dia=False, carreras_en_meta=10)
 
 
 
@@ -260,23 +261,14 @@ def ensayos_del_mes(db: Session, user_id: int) -> int:
     ).scalar_one()
 
 
-def puede_rendir(db: Session, user_id: int) -> tuple[bool, str | None]:
-    """Si puede empezar otro ensayo, y si no, por qué."""
+def solo_ensayo_del_dia(db: Session, user_id: int) -> bool:
+    """Si este alumno solo puede rendir el ensayo del día.
+
+    Mientras `limites_activos()` esté apagado, nadie queda restringido: el
+    plan Gratis arma los ensayos que quiera, como antes.
+    """
     plan, _ = plan_actual(db, user_id)
-    limite = limites_de(plan).ensayos_por_mes
-    if limite is None:
-        return True, None
-
-    usados = ensayos_del_mes(db, user_id)
-    if usados < limite:
-        return True, None
-
-    motivo = (
-        f"Llegaste a los {limite} ensayos de este mes del plan Gratis. "
-        "El plan Pro no tiene límite."
-    )
-    # Mientras no se pueda contratar Pro, el límite se informa pero no corta.
-    return (not limites_activos()), motivo
+    return limites_de(plan).solo_ensayo_del_dia and limites_activos()
 
 
 def canjear_codigo(db: Session, user_id: int, codigo: str) -> Subscription:

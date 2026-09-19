@@ -362,6 +362,28 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/exam/del-dia": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Get Ensayo Del Dia
+         * @description El ensayo del día de cada prueba y si el alumno ya lo rindió.
+         *
+         *     Va antes de `/{attempt_id}`: si no, "del-dia" se intentaría leer como id.
+         */
+        get: operations["get_ensayo_del_dia_api_exam_del_dia_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/exam/repaso": {
         parameters: {
             query?: never;
@@ -687,7 +709,7 @@ export interface paths {
          *     ACEPTA GET, y ese es el arreglo. Los cron de Vercel disparan un GET con la
          *     cabecera `Authorization: Bearer $CRON_SECRET`; este endpoint solo aceptaba
          *     POST con una cabecera propia, así que la tarea programada respondía 405
-         *     todos los días a las 22:00 desde que se creó. Resultado: cero recordatorios
+         *     todos los días desde que se creó. Resultado: cero recordatorios
          *     enviados en toda la vida del producto, con los siete usuarios teniéndolos
          *     activados y siendo este el único mecanismo de retención que existe.
          *
@@ -710,7 +732,7 @@ export interface paths {
          *     ACEPTA GET, y ese es el arreglo. Los cron de Vercel disparan un GET con la
          *     cabecera `Authorization: Bearer $CRON_SECRET`; este endpoint solo aceptaba
          *     POST con una cabecera propia, así que la tarea programada respondía 405
-         *     todos los días a las 22:00 desde que se creó. Resultado: cero recordatorios
+         *     todos los días desde que se creó. Resultado: cero recordatorios
          *     enviados en toda la vida del producto, con los siete usuarios teniéndolos
          *     activados y siendo este el único mecanismo de retención que existe.
          *
@@ -725,6 +747,32 @@ export interface paths {
          *     entornada por comodidad.
          */
         post: operations["correr_recordatorios_api_reminders_run_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/reminders/resumen": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Correr Resumen Semanal
+         * @description Manda el resumen semanal de progreso. La llama el cron de los domingos,
+         *     con el mismo secreto y las mismas reglas de acceso que `/run`.
+         */
+        get: operations["correr_resumen_semanal_api_reminders_resumen_get"];
+        put?: never;
+        /**
+         * Correr Resumen Semanal
+         * @description Manda el resumen semanal de progreso. La llama el cron de los domingos,
+         *     con el mismo secreto y las mismas reglas de acceso que `/run`.
+         */
+        post: operations["correr_resumen_semanal_api_reminders_resumen_post"];
         delete?: never;
         options?: never;
         head?: never;
@@ -2451,6 +2499,35 @@ export interface components {
             /** Visitantes Convertidos */
             visitantes_convertidos: number;
         };
+        /**
+         * EnsayoDelDiaOut
+         * @description El ensayo del día de cada prueba y cómo va el alumno con cada uno.
+         */
+        EnsayoDelDiaOut: {
+            /**
+             * Fecha
+             * Format: date
+             */
+            fecha: string;
+            /** Solo Ensayo Del Dia */
+            solo_ensayo_del_dia: boolean;
+            /** Pruebas */
+            pruebas: components["schemas"]["EnsayoDelDiaPruebaOut"][];
+        };
+        /** EnsayoDelDiaPruebaOut */
+        EnsayoDelDiaPruebaOut: {
+            subject: components["schemas"]["Subject"];
+            /** Estado */
+            estado: string;
+            /** Attempt Id */
+            attempt_id?: number | null;
+            /** Puntaje */
+            puntaje?: number | null;
+            /** Question Count */
+            question_count: number;
+            /** Duration Seconds */
+            duration_seconds: number;
+        };
         /** EnsayoProgramadoOut */
         EnsayoProgramadoOut: {
             /** Id */
@@ -2668,6 +2745,11 @@ export interface components {
              * @default false
              */
             oficial: boolean;
+            /**
+             * Del Dia
+             * @default false
+             */
+            del_dia: boolean;
         };
         /** ExamConfigOut */
         ExamConfigOut: {
@@ -2987,6 +3069,11 @@ export interface components {
             ensayos_usados: number;
             /** Ensayos Limite */
             ensayos_limite: number | null;
+            /**
+             * Solo Ensayo Del Dia
+             * @default false
+             */
+            solo_ensayo_del_dia: boolean;
             /** Carreras Limite */
             carreras_limite: number;
             /** Limites Activos */
@@ -4516,6 +4603,26 @@ export interface operations {
             };
         };
     };
+    get_ensayo_del_dia_api_exam_del_dia_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["EnsayoDelDiaOut"];
+                };
+            };
+        };
+    };
     get_repaso_api_exam_repaso_get: {
         parameters: {
             query?: {
@@ -5108,6 +5215,74 @@ export interface operations {
         };
     };
     correr_recordatorios_api_reminders_run_post: {
+        parameters: {
+            query?: never;
+            header?: {
+                authorization?: string;
+                "x-cron-secret"?: string;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        [key: string]: number;
+                    };
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    correr_resumen_semanal_api_reminders_resumen_get: {
+        parameters: {
+            query?: never;
+            header?: {
+                authorization?: string;
+                "x-cron-secret"?: string;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        [key: string]: number;
+                    };
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    correr_resumen_semanal_api_reminders_resumen_post: {
         parameters: {
             query?: never;
             header?: {

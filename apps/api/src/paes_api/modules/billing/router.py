@@ -60,7 +60,10 @@ def _armar(db: Session, user_id: int) -> MiPlanOut:
         plan=plan,
         vence_el=sub.expires_at if sub else None,
         ensayos_usados=service.ensayos_del_mes(db, user_id),
-        ensayos_limite=limites.ensayos_por_mes,
+        # Ya no hay tope mensual; se sigue mandando en null para que una web
+        # vieja, desplegada unos minutos antes que la API, no muestre un cupo.
+        ensayos_limite=None,
+        solo_ensayo_del_dia=limites.solo_ensayo_del_dia and service.limites_activos(),
         carreras_limite=limites.carreras_en_meta,
         limites_activos=service.limites_activos(),
         en_trial=bool(sub and sub.en_trial),

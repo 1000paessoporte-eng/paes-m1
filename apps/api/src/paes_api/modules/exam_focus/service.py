@@ -9,6 +9,7 @@ reconstruir de forma determinística como cuando el examen era siempre completo.
 
 import random
 from collections import defaultdict
+from contextvars import ContextVar
 from datetime import UTC, datetime
 
 from sqlalchemy import delete, select
@@ -91,6 +92,19 @@ UNIDADES_POR_EJE: dict[Subject, dict[str, int]] = {
         SkillAxis.PROBABILIDAD.value: 4,
     },
 }
+
+
+#: El azar con que se arman los ensayos. Por defecto es el del módulo `random`;
+#: el ensayo del día (`del_dia.py`) pone uno con semilla fija para que salga
+#: el mismo para todos. Es una ContextVar y no un `random.seed()` global porque
+#: la API atiende varios ensayos a la vez en hilos distintos: sembrar el global
+#: haría que el ensayo de otro alumno, armado en ese mismo instante, consumiera
+#: números de la secuencia del día y la cambiara.
+AZAR: ContextVar[random.Random | None] = ContextVar("azar_del_ensayo", default=None)
+
+
+def _azar() -> random.Random:
+    return AZAR.get() or random._inst  # type: ignore[attr-defined]
 
 
 def _unidades(subject: Subject, axis: str) -> int:
@@ -359,7 +373,7 @@ def _seleccionar_por_texto(
             por_texto[q.passage_id].append(q)
 
     claves = list(por_texto)
-    random.shuffle(claves)
+    _azar().shuffle(claves)
 
     # Los textos que el estudiante acaba de leer van al final de la fila.
     #
@@ -400,7 +414,7 @@ def _seleccionar_por_texto(
     # fijado arriba.
     grupos = {c: list(por_texto[c]) for c in claves}
     for grupo in grupos.values():
-        random.shuffle(grupo)
+        _azar().shuffle(grupo)
 
     # Cuántos textos entran. Se apunta al promedio oficial y se acota por los
     # textos disponibles y por el mínimo que justifica montar una lectura.
@@ -468,7 +482,7 @@ def _seleccionar_por_texto(
     # deberían existir en esta prueba: una pregunta de lectura sin lectura no
     # se puede responder. El verificador del banco ya lo prohíbe.
     if len(elegidas) < count and sueltas:
-        random.shuffle(sueltas)
+        _azar().shuffle(sueltas)
         elegidas.extend(sueltas[: count - len(elegidas)])
     return elegidas
 
@@ -493,7 +507,7 @@ def _repartir_entre_temas(
         return []
 
     for preguntas in por_tema.values():
-        random.shuffle(preguntas)
+        _azar().shuffle(preguntas)
 
     elegidas: list[Question] = []
     restantes = list(por_tema.keys())
@@ -509,7 +523,7 @@ def _repartir_entre_temas(
                 elegidas.append(disponibles.pop())
             else:
                 restantes.remove(codigo)
-    random.shuffle(elegidas)
+    _azar().shuffle(elegidas)
     return elegidas
 
 
@@ -556,7 +570,7 @@ def _aplicar_cuota_suficiencia(
         reemplazos = [
             q for q in disponibles if q.id not in ids and not _es_suficiencia(q)
         ]
-        random.shuffle(reemplazos)
+        _azar().shuffle(reemplazos)
         for fuera in sobrantes:
             eje = fuera.skill_node.axis.value
             entra = next(
@@ -574,7 +588,7 @@ def _aplicar_cuota_suficiencia(
     candidatos = [
         q for q in disponibles if q.id not in ids and _es_suficiencia(q)
     ]
-    random.shuffle(candidatos)
+    _azar().shuffle(candidatos)
     for entra in candidatos[: objetivo - len(dentro)]:
         eje = entra.skill_node.axis.value
         normales = [q for q in resultado if not _es_suficiencia(q)]
@@ -627,7 +641,7 @@ def _select_questions(
         return _seleccionar_por_texto(pool, count, recientes)
     available = [q for q in pool if not axes or q.skill_node.axis.value in axes]
     if len(available) <= count:
-        random.shuffle(available)
+        _azar().shuffle(available)
         return available
 
     by_axis: dict[str, list[Question]] = defaultdict(list)
@@ -667,7 +681,7 @@ def _select_questions(
         )
 
     chosen = _aplicar_cuota_suficiencia(available, chosen, subject, count)
-    random.shuffle(chosen)
+    _azar().shuffle(chosen)
     return chosen
 
 
@@ -729,7 +743,7 @@ def _tomar(
     if cuantas >= len(grupo):
         return list(grupo)
 
-    barajado = random.sample(grupo, len(grupo))
+    barajado = _azar().sample(grupo, len(grupo))
     if figuras:
         # `sorted` es estable: dentro de cada tramo se conserva el azar.
         barajado.sort(
@@ -785,7 +799,33 @@ def _repartir_por_dificultad(
     return elegidas
 
 
-def start_attempt(db: Session, user: User, config: ExamConfigIn) -> ExamAttempt:
+def start_attempt(
+    db: Session,
+    user: User,
+    config: ExamConfigIn,
+    elegidas: list[Question] | None = None,
+) -> ExamAttempt:
+    """Crea el intento. Con `elegidas`, esas son las preguntas y no se arma
+    nada: es como entra el ensayo del día, que ya viene armado."""
+    if elegidas is not None:
+        attempt = ExamAttempt(
+            user_id=user.id,
+            pace=Pace.OFICIAL,
+            subject=config.subject,
+            axes=None,
+            oficial=False,
+            duration_limit_seconds=duration_for(len(elegidas), Pace.OFICIAL, config.subject),
+        )
+        db.add(attempt)
+        db.flush()
+        db.add_all(
+            ExamAttemptQuestion(attempt_id=attempt.id, question_id=q.id, position=i)
+            for i, q in enumerate(elegidas)
+        )
+        db.commit()
+        db.refresh(attempt)
+        return attempt
+
     if config.oficial:
         config = config.model_copy(
             update={

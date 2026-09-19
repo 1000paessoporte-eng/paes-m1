@@ -379,6 +379,13 @@ export function getRepaso(token?: string, subject: Subject = "m1"): Promise<Repa
   return apiFetch<Repaso>(`/api/exam/repaso?subject=${subject}`, token);
 }
 
+export type EnsayoDelDia =
+  paths["/api/exam/del-dia"]["get"]["responses"][200]["content"]["application/json"];
+
+export function getEnsayoDelDia(token?: string): Promise<EnsayoDelDia> {
+  return apiFetch<EnsayoDelDia>("/api/exam/del-dia", token);
+}
+
 export function startExam(config: ExamConfig, token?: string): Promise<ExamStart> {
   return apiFetch<ExamStart>("/api/exam/start", token, {
     method: "POST",

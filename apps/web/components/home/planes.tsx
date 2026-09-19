@@ -94,7 +94,7 @@ const PLANES = [
     facturacion: "No requiere tarjeta",
     duracion: "Acceso permanente",
     incluye: [
-      "4 ensayos al mes, con el banco completo",
+      "El ensayo del día de cada prueba: uno nuevo cada día, el mismo para todos",
       "Puntaje PAES estimado y resolución de cada ejercicio",
       "Qué nodo reforzar, recomendado según tus errores",
       "Historial y analítica de tu progreso",
@@ -129,7 +129,7 @@ const PLANES = [
     // hace cumplir, no antes.
     incluye: [
       "Todo lo del plan Gratis",
-      "Ensayos sin límite: se acaba el tope de 4 al mes",
+      "Ensayos sin límite: oficiales, a tu medida y de refuerzo",
       "Hasta 10 carreras en Mi meta, con el simulador comparándolas",
     ],
     destacado: true,

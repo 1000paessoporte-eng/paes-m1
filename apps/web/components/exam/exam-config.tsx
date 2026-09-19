@@ -8,7 +8,7 @@ import {
   QUE_MIDE,
   estiloPrueba,
 } from "@/lib/colores-prueba";
-import type { ExamConfig, ExamOptions, Pace, Repaso, Subject } from "@/lib/api";
+import type { EnsayoDelDia, ExamConfig, ExamOptions, Pace, Repaso, Subject } from "@/lib/api";
 import { diasHastaPaes } from "@/lib/paes-fecha";
 
 /**
@@ -114,6 +114,7 @@ interface Props {
   ensayosRendidos: number;
   //: Cuota del mes cuando el plan la tiene. `null` = sin límite.
   cuota?: { usados: number; limite: number | null; activa: boolean } | null;
+  delDia?: EnsayoDelDia | null;
   resumable: { attemptId: number; subject: Subject } | null;
   errorMsg: string | null;
   onComenzar: (config: ExamConfig) => void;
@@ -125,11 +126,15 @@ export function ExamConfigScreen({
   repasoBySubject,
   ensayosRendidos,
   cuota,
+  delDia = null,
   resumable,
   errorMsg,
   onComenzar,
   onContinuar,
 }: Props) {
+  //: El plan Gratis rinde solo el ensayo del día: el armado a medida, el
+  //: oficial y el refuerzo se esconden en vez de mostrarse y fallar al tocar.
+  const soloDelDia = Boolean(delDia?.solo_ensayo_del_dia);
   const [subject, setSubject] = useState<Subject>("m1");
   // Quien nunca ha rendido arranca en el relámpago: la primera pantalla no
   // debería ofrecerle un compromiso de dos horas como opción marcada.
@@ -275,6 +280,7 @@ export function ExamConfigScreen({
                     pace: "oficial",
                     axes: [],
                     oficial: true,
+                    del_dia: false,
                   });
                 }}
                 className="btn-glow flex-1 rounded-lg px-4 py-2.5 text-sm font-medium text-accent-foreground"
@@ -315,6 +321,50 @@ export function ExamConfigScreen({
         </p>
       </header>
 
+      {delDia && (
+        <EnsayoDelDiaSeccion
+          delDia={delDia}
+          onRendir={(subjectDia) =>
+            onComenzar({
+              subject: subjectDia,
+              question_count: 20,
+              pace: "oficial",
+              axes: [],
+              oficial: false,
+              del_dia: true,
+            })
+          }
+          onContinuar={onContinuar}
+        />
+      )}
+
+      {soloDelDia && (
+        <div className="mb-8 rounded-xl border border-accent/40 bg-accent/5 p-5">
+          <p className="font-semibold tracking-tight">¿Quieres rendir más?</p>
+          <p className="mt-1 text-sm text-muted">
+            Con el plan Pro armas todos los ensayos que quieras: la prueba
+            oficial completa, a tu medida por ejes y ritmo, y de refuerzo con
+            tus temas débiles. La práctica por tema sigue sin límite en tu plan.
+          </p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            <Link
+              href="/planes"
+              className="btn-glow rounded-lg px-4 py-2 text-sm font-medium text-accent-foreground"
+            >
+              Ver el plan Pro
+            </Link>
+            <Link
+              href="/arbol"
+              className="rounded-lg border border-border px-4 py-2 text-sm font-medium transition-colors hover:bg-surface-hover"
+            >
+              Practicar por tema
+            </Link>
+          </div>
+        </div>
+      )}
+
+      {!soloDelDia && (
+        <>
       {/* El formato oficial va primero y aparte: no es una configuración más.
           Un ensayo a medida entrena contenido; este entrena rendir la prueba,
           que es la otra mitad de lo que la PAES mide. */}
@@ -388,6 +438,7 @@ export function ExamConfigScreen({
                   // Los temas, no el eje: en eso consiste el refuerzo.
                   skill_nodes: temasDebiles.map((n) => n.code),
                   oficial: false,
+                  del_dia: false,
                 })
               }
               className="btn-glow shrink-0 rounded-lg px-4 py-2 text-sm font-medium text-accent-foreground"
@@ -415,6 +466,9 @@ export function ExamConfigScreen({
         </div>
       )}
 
+        </>
+      )}
+
       {resumable && (
         <div className="mb-8 rounded-xl border border-accent/40 bg-accent/5 p-4">
           <p className="text-sm">
@@ -439,6 +493,8 @@ export function ExamConfigScreen({
         </p>
       )}
 
+      {!soloDelDia && (
+        <>
       {/* ── Prueba ──────────────────────────────────────────────────── */}
       {/* Cada chip trae su cantidad de preguntas disponibles: sin ese número
           hay que elegir una prueba, mirar más abajo y volver, para descubrir
@@ -700,6 +756,7 @@ export function ExamConfigScreen({
               pace: ritmo,
               oficial: false,
               axes: ejes,
+              del_dia: false,
             })
           }
           className="btn-glow mt-2.5 w-full rounded-lg px-4 py-3 font-semibold text-accent-foreground sm:mt-3"
@@ -707,6 +764,9 @@ export function ExamConfigScreen({
           Comenzar ensayo
         </button>
       </div>
+
+        </>
+      )}
 
       {cuota?.limite != null && (() => {
         const restantes = Math.max(0, cuota.limite - cuota.usados);
@@ -763,5 +823,107 @@ export function ExamConfigScreen({
         </p>
       </footer>
     </div>
+  );
+}
+
+
+const DIAS_SEMANA = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+const MESES = [
+  "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
+  "septiembre", "octubre", "noviembre", "diciembre",
+];
+
+/** "sábado 19 de septiembre", a partir de "2026-09-19" y sin pasar por la
+ *  zona horaria del navegador: la fecha ya viene calculada en hora de Chile. */
+function fechaLarga(iso: string): string {
+  const [a, m, d] = iso.split("-").map(Number);
+  const dia = new Date(Date.UTC(a, m - 1, d)).getUTCDay();
+  return `${DIAS_SEMANA[dia]} ${d} de ${MESES[m - 1]}`;
+}
+
+/**
+ * El ensayo del día: uno por prueba, el mismo para todos, nuevo cada día.
+ *
+ * Dice de una vez qué se puede rendir hoy y qué ya se rindió, prueba por
+ * prueba. Quien lo ve no tiene que adivinar si le queda algo: la fila le dice
+ * "Rendir", "Continuar" o su puntaje de hoy.
+ */
+function EnsayoDelDiaSeccion({
+  delDia,
+  onRendir,
+  onContinuar,
+}: {
+  delDia: EnsayoDelDia;
+  onRendir: (subject: Subject) => void;
+  onContinuar: () => void;
+}) {
+  const rendidos = delDia.pruebas.filter((p) => p.estado === "rendido").length;
+  return (
+    <section className="mb-8 overflow-hidden rounded-xl border-2 border-accent/30">
+      <div className="bg-accent/5 px-5 py-4">
+        <div className="flex flex-wrap items-baseline justify-between gap-2">
+          <h2 className="text-lg font-semibold tracking-tight">Ensayo del día</h2>
+          <span className="text-xs font-medium text-muted capitalize">
+            {fechaLarga(delDia.fecha)}
+          </span>
+        </div>
+        <p className="mt-1 text-sm text-muted">
+          20 preguntas de cada prueba, las mismas para todos los alumnos: compara
+          tu puntaje con tus compañeros. A medianoche sale uno nuevo.
+          {delDia.solo_ensayo_del_dia &&
+            " Tu plan incluye el ensayo del día de cada prueba."}
+        </p>
+      </div>
+      <ul className="divide-y divide-border">
+        {delDia.pruebas.map((p) => (
+          <li
+            key={p.subject}
+            style={estiloPrueba(p.subject)}
+            className="flex flex-wrap items-center justify-between gap-3 px-5 py-3"
+          >
+            <span className="flex min-w-0 items-center gap-2.5">
+              <span aria-hidden className="h-2.5 w-2.5 shrink-0 rounded-full bg-(--color-prueba)" />
+              <span className="min-w-0">
+                <span className="block text-sm font-semibold">{SUBJECT_LABELS[p.subject]}</span>
+                <span className="block text-xs text-muted">
+                  {p.question_count} preguntas · {formatearDuracionLarga(p.duration_seconds)}
+                </span>
+              </span>
+            </span>
+            {p.estado === "rendido" ? (
+              <span className="flex items-center gap-3">
+                <span className="text-sm font-semibold text-success">
+                  ✓ {p.puntaje != null ? `${p.puntaje} puntos` : "Rendido"}
+                </span>
+                <Link href="/historial" className="text-xs font-medium text-accent hover:underline">
+                  Ver
+                </Link>
+              </span>
+            ) : p.estado === "en_curso" ? (
+              <button
+                type="button"
+                onClick={onContinuar}
+                className="rounded-lg border border-(--color-prueba) px-4 py-1.5 text-sm font-medium text-(--color-prueba) transition-colors hover:bg-(--color-prueba)/10"
+              >
+                Continuar
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => onRendir(p.subject)}
+                className="btn-glow rounded-lg px-4 py-1.5 text-sm font-medium text-accent-foreground"
+              >
+                Rendir
+              </button>
+            )}
+          </li>
+        ))}
+      </ul>
+      {delDia.solo_ensayo_del_dia && rendidos > 0 && (
+        <p className="border-t border-border bg-surface px-5 py-2.5 text-xs text-muted">
+          Llevas {rendidos} de {delDia.pruebas.length} ensayos del día de hoy.
+        </p>
+      )}
+    </section>
   );
 }

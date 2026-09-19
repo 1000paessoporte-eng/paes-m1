@@ -1,6 +1,13 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { ApiError, getExamOptions, getMiPlan, getRepaso, listExamAttempts } from "@/lib/api";
+import {
+  ApiError,
+  getEnsayoDelDia,
+  getExamOptions,
+  getMiPlan,
+  getRepaso,
+  listExamAttempts,
+} from "@/lib/api";
 import { TOKEN_COOKIE } from "@/lib/auth";
 import { ExamRunner } from "@/components/exam/exam-runner";
 
@@ -59,6 +66,16 @@ export default async function ModoEnsayoPage() {
     cuota = null;
   }
 
+  // El ensayo del día, con su propio try por lo mismo: si la API todavía no
+  // lo tiene (la web y la API se despliegan por separado), la pantalla sigue
+  // como antes.
+  let delDia = null;
+  try {
+    delDia = await getEnsayoDelDia(token);
+  } catch {
+    delDia = null;
+  }
+
   const pastAttempts = attempts.filter((a) => a.status === "submitted");
   // Se pasa también el subject: el ensayo pendiente puede ser de otra prueba
   // que la elegida en pantalla, y retomarlo cambia de prueba. Hay que decirlo.
@@ -74,6 +91,7 @@ export default async function ModoEnsayoPage() {
         historia: optionsHistoria,
       }}
       cuota={cuota}
+      delDia={delDia}
       repasoBySubject={{
         m1: repasoM1,
         m2: repasoM2,

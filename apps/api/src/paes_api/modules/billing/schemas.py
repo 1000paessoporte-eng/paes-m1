@@ -13,6 +13,9 @@ class MiPlanOut(BaseModel):
     #: Cuántos ensayos lleva este mes y cuántos permite su plan (null = sin tope).
     ensayos_usados: int
     ensayos_limite: int | None
+    #: True si el plan solo rinde el ensayo del día (Gratis con límites
+    #: activos). La pantalla de ensayo esconde el armado a medida.
+    solo_ensayo_del_dia: bool = False
     carreras_limite: int
     #: False mientras los límites se informen pero no bloqueen, porque todavía
     #: no se puede contratar el plan Pro.

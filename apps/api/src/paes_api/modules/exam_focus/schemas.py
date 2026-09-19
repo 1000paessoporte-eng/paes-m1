@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import date, datetime
 
 from pydantic import BaseModel, Field
 
@@ -99,6 +99,10 @@ class ExamConfigIn(BaseModel):
     #: del DEMRE. Cuando viene en True, el servidor ignora `question_count`,
     #: `pace` y `axes`: el formato no es configurable, en eso consiste.
     oficial: bool = False
+    #: El ensayo del día de esa prueba (`del_dia.py`): el servidor ignora todo
+    #: lo demás salvo `subject`. En el plan Gratis es el único que se puede
+    #: rendir, venga o no en True.
+    del_dia: bool = False
 
 
 class ExamConfigOut(BaseModel):
@@ -288,3 +292,23 @@ class ExamReviewOut(BaseModel):
     status: AttemptStatus
     questions: list[ReviewQuestionOut]
     node_diagnosis: list[NodeDiagnosisOut]
+
+
+class EnsayoDelDiaPruebaOut(BaseModel):
+    subject: Subject
+    #: "disponible", "en_curso" o "rendido".
+    estado: str
+    attempt_id: int | None = None
+    #: Puntaje del ensayo de hoy, si ya lo rindió.
+    puntaje: int | None = None
+    question_count: int
+    duration_seconds: int
+
+
+class EnsayoDelDiaOut(BaseModel):
+    """El ensayo del día de cada prueba y cómo va el alumno con cada uno."""
+
+    fecha: date
+    #: True si el plan del alumno solo rinde el ensayo del día.
+    solo_ensayo_del_dia: bool
+    pruebas: list[EnsayoDelDiaPruebaOut]
