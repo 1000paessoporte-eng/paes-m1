@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import type { Carrera, Meta, Postulacion } from "@/lib/api";
 import {
@@ -205,37 +205,63 @@ function Buscador({
   const [cargando, setCargando] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  async function buscar(e: React.FormEvent) {
-    e.preventDefault();
-    if (texto.trim().length < 3) return;
-    setCargando(true);
-    setError(null);
-    try {
-      setResultados(await buscarCarreras(texto, token()));
-    } catch {
-      setError("No se pudo buscar. Intenta de nuevo.");
-    } finally {
+  // Se busca solo mientras se escribe: antes había que apretar "Buscar" o Enter
+  // para ver algo, y quien no sabe el nombre exacto de la carrera se quedaba
+  // mirando una caja vacía. Se espera 250 ms tras la última tecla para no
+  // disparar una consulta por letra. Mismo comportamiento que el buscador
+  // público de /carreras.
+  useEffect(() => {
+    const consulta = texto.trim();
+    if (consulta.length < 3) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setResultados(null);
+      setError(null);
       setCargando(false);
+      return;
     }
-  }
+
+    let vigente = true;
+    setCargando(true);
+    const t = setTimeout(async () => {
+      try {
+        const data = await buscarCarreras(consulta, token());
+        if (!vigente) return;
+        setResultados(data);
+        setError(null);
+      } catch {
+        if (vigente) setError("No se pudo buscar. Intenta de nuevo.");
+      } finally {
+        if (vigente) setCargando(false);
+      }
+    }, 250);
+
+    return () => {
+      vigente = false;
+      clearTimeout(t);
+    };
+  }, [texto]);
 
   return (
     <section className="card-panel mt-6 p-5">
-      <form onSubmit={buscar} className="flex gap-2">
-        <input
-          value={texto}
-          onChange={(e) => setTexto(e.target.value)}
-          placeholder="Ingeniería civil, enfermería concepción…"
-          aria-label="Buscar carrera o universidad"
-          className="min-w-0 flex-1 rounded-lg border border-border bg-background px-4 py-2.5 text-sm"
-        />
-        <button
-          type="submit"
-          disabled={texto.trim().length < 3 || cargando}
-          className="btn-glow shrink-0 rounded-lg px-5 py-2.5 text-sm font-semibold text-accent-foreground disabled:opacity-50"
-        >
-          {cargando ? "Buscando…" : "Buscar"}
-        </button>
+      <div className="flex gap-2">
+        <div className="relative min-w-0 flex-1">
+          <input
+            value={texto}
+            onChange={(e) => setTexto(e.target.value)}
+            placeholder="Ingeniería civil, enfermería concepción…"
+            aria-label="Buscar carrera o universidad"
+            autoComplete="off"
+            className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm"
+          />
+          {cargando && (
+            <span
+              className="absolute top-1/2 right-3 -translate-y-1/2 text-xs text-muted"
+              aria-hidden
+            >
+              Buscando…
+            </span>
+          )}
+        </div>
         {onCerrar && (
           <button
             type="button"
@@ -245,11 +271,15 @@ function Buscador({
             Cerrar
           </button>
         )}
-      </form>
+      </div>
+
+      {texto.trim().length > 0 && texto.trim().length < 3 && (
+        <p className="mt-2 text-xs text-muted">Escribe al menos tres letras.</p>
+      )}
 
       {error && <p className="mt-3 text-sm text-danger">{error}</p>}
 
-      {resultados?.length === 0 && (
+      {resultados?.length === 0 && !cargando && (
         <p className="mt-4 text-sm text-muted">
           Sin resultados. Son 1.855 carreras del proceso 2026; unas pocas quedaron
           fuera porque su fila en el documento oficial no se pudo leer con
