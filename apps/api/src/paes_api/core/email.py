@@ -30,8 +30,12 @@ class CorreoNoEnviado(Exception):
     """
 
 
-def send_email(to: str, subject: str, body: str) -> None:
+def send_email(to: str, subject: str, body: str, html: str | None = None) -> None:
     """Manda el correo, o lanza CorreoNoEnviado.
+
+    Con `html`, el mensaje lleva las dos versiones: el cliente muestra la HTML
+    y el texto queda para quien no carga HTML y para los filtros de spam, que
+    desconfían de un correo que es solo HTML.
 
     Nunca deja pasar una excepción de smtplib hacia arriba: el detalle del
     fallo va al log, donde sirve, y no a la respuesta, donde filtra.
@@ -57,6 +61,8 @@ def send_email(to: str, subject: str, body: str) -> None:
     message["From"] = settings.smtp_from
     message["To"] = to
     message.set_content(body)
+    if html:
+        message.add_alternative(html, subtype="html")
 
     try:
         with smtplib.SMTP(settings.smtp_host, settings.smtp_port, timeout=15) as smtp:

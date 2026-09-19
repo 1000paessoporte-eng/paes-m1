@@ -10,7 +10,11 @@
   "crons": [
     {
       "path": "/api/reminders/run",
-      "schedule": "0 22 * * *"
+      "schedule": "0 20 * * *"
+    },
+    {
+      "path": "/api/reminders/resumen",
+      "schedule": "0 21 * * 0"
     },
     {
       "path": "/api/plan/flow/reconciliar",

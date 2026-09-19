@@ -58,6 +58,8 @@ packaging==26.3
     # via limits
 pandas==3.0.5
     # via paes-api
+pillow==12.3.0
+    # via paes-api
 psycopg==3.3.4
     # via paes-api
 psycopg-binary==3.3.4 ; implementation_name != 'pypy'

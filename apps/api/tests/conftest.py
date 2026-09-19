@@ -11,6 +11,13 @@ from collections.abc import Generator
 # import.
 os.environ["ENVIRONMENT"] = "test"
 
+# Y NUNCA manda correo de verdad. Pasó el 2026-09-19: al poner las credenciales
+# de Resend en el .env local, la suite completa empezó a mandar correos reales
+# a direcciones de prueba (@test.cl) y agotó en dos corridas la cuota diaria
+# del plan gratis (100): ese día dejaron de salir también los de recuperar
+# contraseña en producción. Una variable de entorno le gana al .env.
+os.environ["SMTP_HOST"] = ""
+
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine

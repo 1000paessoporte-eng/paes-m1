@@ -13,6 +13,7 @@ from paes_api.modules.billing.router import router as billing_router
 from paes_api.modules.carreras.router import router as carreras_router
 from paes_api.modules.colegios.router import router as colegios_router
 from paes_api.modules.content.router import router as content_router
+from paes_api.modules.correos.router import router as correo_router
 from paes_api.modules.demo.router import router as demo_router
 from paes_api.modules.errores.router import router as errores_router
 from paes_api.modules.exam_focus.router import router as exam_router
@@ -77,6 +78,7 @@ app.include_router(exam_router, prefix="/api")
 app.include_router(goals_router, prefix="/api")
 app.include_router(practice_router, prefix="/api")
 app.include_router(reminders_router, prefix="/api")
+app.include_router(correo_router, prefix="/api")
 app.include_router(analytics_router, prefix="/api")
 app.include_router(billing_router, prefix="/api")
 app.include_router(demo_router, prefix="/api")

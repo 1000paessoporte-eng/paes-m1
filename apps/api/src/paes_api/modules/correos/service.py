@@ -26,12 +26,16 @@ identifique al remitente e incluya una forma de pedir que no se le escriba más.
 import logging
 import time
 from collections.abc import Sequence
+from datetime import UTC, datetime
+from html import escape
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from paes_api.core.config import get_settings
 from paes_api.core.email import CorreoNoEnviado, send_email
+from paes_api.modules.correos import plantilla
+from paes_api.modules.goals.service import FECHA_PAES
 from paes_api.modules.users.models import User
 
 logger = logging.getLogger(__name__)
@@ -72,6 +76,10 @@ def destinatarios(db: Session, publico: str = "todos") -> Sequence[User]:
     return db.execute(consulta.order_by(User.id)).scalars().all()
 
 
+def _primer_nombre(user: User) -> str:
+    return user.name.split(" ")[0] if user.name else ""
+
+
 def difundir(
     db: Session,
     asunto: str,
@@ -81,6 +89,8 @@ def difundir(
     prueba: bool = False,
     solo: str | None = None,
     pausa: float = 1.0,
+    html: str | None = None,
+    nombre_solo: str = "",
 ) -> dict[str, object]:
     """Manda un correo escrito a mano. Devuelve el recuento de lo que hizo.
 
@@ -96,12 +106,24 @@ def difundir(
     Un envío que falla NO detiene la tanda, por lo mismo que en los
     recordatorios: una dirección rebotada no puede dejar sin correo a las
     demás. Se cuenta aparte y se sigue.
+
+    `html`, si viene, va como versión HTML del mismo correo. Debe traer su
+    propio pie de baja (`plantilla.documento` lo pone). En asunto, cuerpo y
+    html, `{nombre}` se reemplaza por el primer nombre de cada destinatario
+    --escapado en el HTML--; con `solo`, por `nombre_solo`.
     """
     url = get_settings().frontend_url
     cuerpo_final = cuerpo.rstrip() + _pie_de_baja(url)
 
+    def _para(nombre: str) -> tuple[str, str, str | None]:
+        return (
+            asunto.replace("{nombre}", nombre),
+            cuerpo_final.replace("{nombre}", nombre),
+            html.replace("{nombre}", escape(nombre)) if html else None,
+        )
+
     if solo is not None:
-        send_email(solo, asunto, cuerpo_final)
+        send_email(solo, *_para(nombre_solo))
         return {"enviados": 1, "fallidos": 0, "destinatarios": [solo], "prueba": False}
 
     cuentas = destinatarios(db, publico)
@@ -119,7 +141,7 @@ def difundir(
     fallidos = 0
     for indice, user in enumerate(cuentas):
         try:
-            send_email(user.email, asunto, cuerpo_final)
+            send_email(user.email, *_para(_primer_nombre(user)))
         except CorreoNoEnviado:
             logger.exception("No se pudo enviar la difusión a %s", user.email)
             fallidos += 1
@@ -136,6 +158,154 @@ def difundir(
     }
 
 
+#: A dónde escribir. `no-responder@1000paes.cl` no tiene buzón --el dominio no
+#: tiene MX--, así que "responde este correo" mandaba las dudas a ninguna parte.
+CONTACTO = "1000paessoporte@gmail.com"
+
+
+def presentacion(url: str) -> str:
+    """Qué ofrece la plataforma y cómo aprovecharla. Lo comparten la bienvenida
+    a cuentas nuevas y la difusión a las que ya existían, para que las dos
+    cuenten lo mismo.
+
+    Cada cifra sale del README ("Contenido actual", verificado con
+    `verificar_banco.py`): si el banco cambia mucho, se actualiza acá también.
+    Nada de urgencia inventada ni promesas de puntaje.
+    """
+    dias = max(0, (FECHA_PAES - datetime.now(UTC)).days)
+    fecha = f" Quedan {dias} días para la PAES regular." if dias else ""
+    return (
+        "LO QUE TIENES DISPONIBLE\n\n"
+        "• Las cinco pruebas: Competencia Lectora, Matemática M1 y M2, Historia y "
+        "Ciencias Sociales, y Ciencias.\n"
+        "• Más de 6.400 preguntas originales. En cada una puedes ver el desarrollo "
+        "completo y por qué cada alternativa incorrecta lo es.\n"
+        "• Tu puntaje en escala 100-1000, calculado con las tablas oficiales del "
+        "DEMRE, con desglose por eje y por tema.\n"
+        "• Árbol de Habilidades: el temario completo en 95 lecciones, con teoría, "
+        "ejercicios resueltos paso a paso y el error más común de cada tema.\n"
+        "• Mi meta: agrega las carreras que te interesan y calcula tu puntaje "
+        "ponderado con las ponderaciones oficiales.\n\n"
+        "CÓMO EMPEZAR\n\n"
+        "1. Rinde un ensayo corto (20 preguntas, unos 40 minutos). Es tu punto de "
+        f"partida:\n   {url}/examen\n"
+        "2. Revisa cada error con su desarrollo. Ahí se aprende más que "
+        "respondiendo preguntas nuevas.\n"
+        "3. Sigue la recomendación del Árbol de Habilidades, que te indica qué tema "
+        f"reforzar primero:\n   {url}/arbol\n"
+        f"4. Define tu meta para saber cuántos puntos te faltan:\n   {url}/meta\n\n"
+        "DOS DATOS QUE CONVIENE SABER\n\n"
+        "• En la PAES las respuestas incorrectas no descuentan puntaje: nunca dejes "
+        "una pregunta en blanco.\n"
+        "• Rinde más practicar un poco casi todos los días que una sesión larga el "
+        f"fin de semana.{fecha}\n\n"
+        "Los domingos te enviaremos un resumen de tu semana: lo que practicaste, "
+        "cómo va tu puntaje y qué te conviene estudiar después.\n\n"
+        f"¿Dudas o sugerencias? Escríbenos a {CONTACTO}."
+    )
+
+
+_MESES = ("enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
+          "septiembre", "octubre", "noviembre", "diciembre")
+FECHA_PAES_TEXTO = f"{FECHA_PAES.day} de {_MESES[FECHA_PAES.month - 1]}"
+
+
+def _dias_paes() -> int:
+    return max(0, (FECHA_PAES - datetime.now(UTC)).days)
+
+
+def bienvenida_html(nombre: str, url: str, *, cuenta_existente: bool = False) -> str:
+    """La bienvenida en HTML. Cuenta lo mismo que `presentacion()`, con la
+    identidad del sitio. `nombre` llega sin escapar; acá se escapa."""
+    p = plantilla
+    primer = f"<span style=\"color:#a9a8a4\">{escape(nombre)},</span><br>" if nombre else ""
+    if cuenta_existente:
+        antetitulo = "Bienvenida a la nueva 1000paes"
+        titulo = f"{primer}todo lo que necesitas para tu PAES, en un solo lugar"
+        bajada = (
+            "Gracias por ser parte de 1000paes. La plataforma creció mucho desde que "
+            "creaste tu cuenta: esto es lo que puedes hacer hoy."
+        )
+    else:
+        antetitulo = "Tu cuenta está lista"
+        titulo = f"{primer}te damos la bienvenida a 1000paes"
+        bajada = (
+            "La plataforma para preparar la PAES con ensayos, lecciones y un "
+            "seguimiento real de tu avance."
+        )
+
+    portada = p.portada(
+        url=url,
+        antetitulo=antetitulo,
+        titulo_html=titulo,
+        bajada=bajada,
+        boton_texto="Rinde tu primer ensayo",
+        enlace=f"{url}/examen",
+    )
+    cuerpo = (
+        p.cifras([
+            ("6.400+", "preguntas originales"),
+            ("95", "lecciones paso a paso"),
+            ("100–1000", "puntaje con tablas DEMRE"),
+        ])
+        + p.cuenta_regresiva(url, _dias_paes(), FECHA_PAES_TEXTO)
+        + p.titulo("Las cinco pruebas")
+        + p.pruebas()
+        + p.titulo("Lo que tienes disponible")
+        + p.funcion(
+            "Modo Ensayo",
+            "Eliges prueba, ejes, cantidad de preguntas y ritmo. El tiempo es "
+            "proporcional al oficial.",
+            "#1d4ed8",
+        )
+        + p.funcion(
+            "Revisión de cada pregunta",
+            "El desarrollo completo y por qué cada alternativa incorrecta lo es. "
+            "Ahí es donde más se aprende.",
+            "#0f766e",
+        )
+        + p.funcion(
+            "Árbol de Habilidades",
+            "El temario completo en 95 lecciones, con teoría, ejercicios resueltos "
+            "y el error más común de cada tema. Te dice qué reforzar primero.",
+            "#7e22ce",
+        )
+        + p.funcion(
+            "Mi meta",
+            "Agrega las carreras que te interesan y calcula tu puntaje ponderado con "
+            "las ponderaciones oficiales.",
+            "#b45309",
+        )
+        + p.titulo("Cómo empezar")
+        + p.pasos([
+            ("Rinde un ensayo corto", "20 preguntas, unos 40 minutos. Es tu punto de partida.", f"{url}/examen"),
+            ("Revisa tus errores", "Cada pregunta trae su desarrollo paso a paso.", None),
+            ("Sigue el Árbol de Habilidades", "Te indica qué tema reforzar primero.", f"{url}/arbol"),
+            ("Define tu meta", "Para saber cuántos puntos te faltan.", f"{url}/meta"),
+        ])
+        + p.titulo("Dos datos que conviene saber")
+        + p.nota(
+            "<strong>Las respuestas incorrectas no descuentan puntaje</strong> en la "
+            "PAES: nunca dejes una pregunta en blanco.<br><br>"
+            "<strong>Practicar un poco casi todos los días</strong> rinde más que una "
+            "sesión larga el fin de semana."
+        )
+        + p.parrafo(
+            f'<span style="color:{p.APAGADO};font-size:14px">Los domingos te enviaremos '
+            "un resumen de tu semana: lo que practicaste, cómo va tu puntaje y qué te "
+            "conviene estudiar después.</span>"
+        )
+        + p.parrafo("Mucho éxito en tu preparación.<br><strong>El equipo de 1000paes</strong>")
+    )
+    return p.documento(
+        url=url,
+        preencabezado="Las cinco pruebas, 95 lecciones y tu puntaje con tablas DEMRE.",
+        portada_html=portada,
+        cuerpo=cuerpo,
+        contacto=CONTACTO,
+    )
+
+
 def enviar_bienvenida(user: User) -> bool:
     """Le da la bienvenida a una cuenta recién creada. Nunca lanza.
 
@@ -144,28 +314,41 @@ def enviar_bienvenida(user: User) -> bool:
     justamente el punto: este correo es un extra, y su fallo no puede
     convertirse en el fallo del registro.
 
-    El texto no promete nada que la plataforma no haga hoy y no mete urgencia
-    inventada --nada de "quedan X cupos"--: el primer correo es el que decide
-    si los siguientes se abren o se marcan como spam.
+    El primer correo es el que decide si los siguientes se abren o se marcan
+    como spam: por eso informa, no vende.
     """
     ajustes = get_settings()
-    nombre = user.name.split(" ")[0] if user.name else "hola"
-    asunto = f"{nombre}, tu cuenta en 1000paes ya está lista"
+    nombre = user.name.split(" ")[0] if user.name else ""
+    saludo = f"Hola {nombre}:" if nombre else "Hola:"
+    asunto = f"{nombre}, te damos la bienvenida a 1000paes" if nombre else "Te damos la bienvenida a 1000paes"
     cuerpo = (
-        f"Hola {nombre}:\n\n"
-        "Tu cuenta en 1000paes ya está creada. Con ella puedes rendir ensayos "
-        "PAES con preguntas nuevas, ver tu puntaje estimado en la escala 100-1000 "
-        "y saber en qué contenidos estás flojo.\n\n"
-        "Para partir, lo más útil es rendir un ensayo corto (20 preguntas, unos "
-        "40 minutos). De ahí sale tu primer puntaje de referencia:\n"
-        f"{ajustes.frontend_url}/examen\n\n"
-        "Si tienes dudas, responde este correo."
+        f"{saludo}\n\n"
+        "Tu cuenta en 1000paes ya está lista. Te damos la bienvenida a la "
+        "plataforma para preparar la PAES con ensayos, lecciones y un seguimiento "
+        "real de tu avance.\n\n"
+        + presentacion(ajustes.frontend_url)
     )
     cuerpo += _pie_de_baja(ajustes.frontend_url)
 
     try:
-        send_email(user.email, asunto, cuerpo)
+        send_email(user.email, asunto, cuerpo, bienvenida_html(nombre, ajustes.frontend_url))
     except CorreoNoEnviado:
         logger.exception("No se pudo enviar la bienvenida a %s", user.email)
         return False
     return True
+
+
+def bienvenida_existentes(url: str) -> tuple[str, str, str]:
+    """Asunto, texto y HTML de la bienvenida a cuentas que ya existían, con
+    `{nombre}` para que `difundir` lo personalice. El texto no lleva pie de
+    baja: `difundir` lo agrega; el HTML sí, porque lo pone la plantilla."""
+    asunto = "{nombre}, te damos la bienvenida a la nueva 1000paes"
+    cuerpo = (
+        "Hola {nombre}:\n\n"
+        "Gracias por ser parte de 1000paes. La plataforma creció mucho desde que "
+        "creaste tu cuenta, y queremos contarte todo lo que puedes hacer hoy para "
+        "preparar la PAES.\n\n"
+        + presentacion(url)
+        + "\n\nMucho éxito en tu preparación.\nEl equipo de 1000paes"
+    )
+    return asunto, cuerpo, bienvenida_html("{nombre}", url, cuenta_existente=True)
