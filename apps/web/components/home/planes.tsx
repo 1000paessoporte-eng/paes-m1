@@ -49,7 +49,7 @@ const REQUISITOS_PREMIO = [
   {
     titulo: "6 meses de plan Pro en el último año",
     detalle:
-      "Sumados, dentro de los 12 meses anteriores al día de la prueba. No tienen que ser seguidos.",
+      "Sumados, dentro de los 12 meses anteriores a la PAES regular. No tienen que ser seguidos.",
   },
   {
     titulo: "30 ensayos completos rendidos",
@@ -481,15 +481,15 @@ function PremioPuntajeNacional() {
   return (
     <div className="mt-6 overflow-hidden rounded-xl border border-accent-warm/40 bg-accent-warm/5 p-6">
       <span className="rounded-full bg-accent-warm/15 px-2.5 py-1 text-[11px] font-semibold text-accent-warm-strong">
-        Para estudiantes con plan Pro
+        Para estudiantes con plan Pro · Admisión 2028
       </span>
       <h3 className="mt-3 text-xl font-bold tracking-tight">
         $500.000 si sacas puntaje nacional
       </h3>
       <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
-        Si obtienes 1.000 puntos en cualquiera de las cinco pruebas PAES y
-        preparaste esa prueba con nosotros, te entregamos medio millón de pesos.
-        No es un sorteo: se gana rindiendo.
+        Si obtienes 1.000 puntos en la PAES regular de fines de 2027, en
+        cualquiera de las cinco pruebas, y la preparaste con nosotros, te
+        entregamos medio millón de pesos. No es un sorteo: se gana rindiendo.
       </p>
 
       <ul className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
