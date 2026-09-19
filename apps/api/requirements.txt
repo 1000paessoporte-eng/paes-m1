@@ -120,8 +120,9 @@ typing-inspection==0.4.3
     #   fastapi
     #   pydantic
     #   pydantic-settings
-tzdata==2026.3 ; sys_platform == 'emscripten' or sys_platform == 'win32'
+tzdata==2026.3
     # via
+    #   paes-api
     #   pandas
     #   psycopg
 urllib3==2.7.0

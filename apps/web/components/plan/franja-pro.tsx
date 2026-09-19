@@ -84,12 +84,14 @@ export function FranjaPro({ plan }: { plan: MiPlan }) {
               precio es publicidad; uno que parte por el consumo real es
               información, y solo después ofrece la salida. */}
           <p className="mt-0.5 text-xs leading-relaxed text-muted">
-            {restantes === 0
-              ? "Llegaste al tope de ensayos de este mes."
-              : restantes != null
-                ? `Llevas ${usados} de ${limite} ensayos de este mes.`
-                : "Ensayos sin límite de las cinco pruebas."}{" "}
-            Pro los deja sin tope y abre las 10 carreras en Mi meta.
+            {plan.solo_ensayo_del_dia
+              ? "Tu plan trae el ensayo del día de cada prueba."
+              : restantes === 0
+                ? "Llegaste al tope de ensayos de este mes."
+                : restantes != null
+                  ? `Llevas ${usados} de ${limite} ensayos de este mes.`
+                  : "Ensayos sin límite de las cinco pruebas."}{" "}
+            Pro te deja armar todos los que quieras y abre las 10 carreras en Mi meta.
           </p>
         </div>
 

@@ -172,6 +172,12 @@ export function MiPlanPanel({
             </p>
           )}
         </div>
+      ) : plan.plan === "gratis" ? (
+        <p className="mt-3 text-sm text-muted">
+          {plan.solo_ensayo_del_dia
+            ? "Cada día tienes el ensayo del día de cada prueba, el mismo para todos. El árbol y las lecciones están completos."
+            : "Por ahora puedes armar los ensayos que quieras. El árbol y las lecciones están completos."}
+        </p>
       ) : (
         <p className="mt-3 text-sm text-muted">
           Ensayos sin límite, hasta 10 preferencias en tu meta y el análisis

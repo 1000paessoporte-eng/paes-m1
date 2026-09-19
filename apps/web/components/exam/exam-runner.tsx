@@ -24,6 +24,7 @@ import {
   registrarSalidaExamen,
   startExam,
   submitExam,
+  type EnsayoDelDia,
   type ExamAttemptSummary,
   type ExamConfig,
   type ExamOptions,
@@ -92,6 +93,8 @@ interface ExamRunnerProps {
   //: Cuota de ensayos del mes, para avisarle al alumno ANTES de que choque.
   //: Llega desde el servidor para no hacer otra llamada al montar.
   cuota?: { usados: number; limite: number | null; activa: boolean } | null;
+  //: El ensayo del día de cada prueba. `null` si la API no lo pudo dar.
+  delDia?: EnsayoDelDia | null;
 }
 
 /** Las pruebas donde hay algo que desarrollar a mano. Lectora e Historia se
@@ -104,6 +107,7 @@ export function ExamRunner({
   resumable,
   repasoBySubject,
   cuota,
+  delDia = null,
 }: ExamRunnerProps) {
   const router = useRouter();
   const pathname = usePathname();
@@ -788,6 +792,7 @@ export function ExamRunner({
         repasoBySubject={repasoBySubject}
         ensayosRendidos={pastAttempts.length}
         cuota={cuota}
+        delDia={delDia}
         resumable={resumable}
         errorMsg={errorMsg}
         onComenzar={handleStart}

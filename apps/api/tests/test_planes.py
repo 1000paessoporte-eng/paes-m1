@@ -11,7 +11,10 @@ def test_sin_suscripcion_el_plan_es_gratis(client: TestClient, register_user) ->
     headers, _ = register_user()
     datos = client.get("/api/plan", headers=headers).json()
     assert datos["plan"] == "gratis"
-    assert datos["ensayos_limite"] == 4
+    # Ya no hay tope mensual: el plan Gratis rinde el ensayo del día, y solo
+    # con los límites encendidos (en los tests están apagados).
+    assert datos["ensayos_limite"] is None
+    assert datos["solo_ensayo_del_dia"] is False
     assert datos["carreras_limite"] == 1
     assert "analisis_avanzado" not in datos, "un limite que nadie aplica no se informa"
 

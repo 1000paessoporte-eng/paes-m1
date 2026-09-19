@@ -4,9 +4,11 @@ from sqlalchemy.orm import Session
 from paes_api.core.database import get_db
 from paes_api.modules.billing import service as billing
 from paes_api.modules.content.models import Question
-from paes_api.modules.exam_focus import service
+from paes_api.modules.exam_focus import del_dia, service
 from paes_api.modules.exam_focus.models import AttemptStatus
 from paes_api.modules.exam_focus.schemas import (
+    EnsayoDelDiaOut,
+    EnsayoDelDiaPruebaOut,
     ExamAnswerIn,
     ExamAttemptSummary,
     ExamConfigIn,
@@ -24,6 +26,15 @@ from paes_api.modules.exam_focus.schemas import (
 from paes_api.modules.skill_tree.models import Subject
 from paes_api.modules.users.deps import get_current_user
 from paes_api.modules.users.models import User
+
+#: Cómo se nombra cada prueba en los mensajes al alumno.
+_NOMBRES = {
+    Subject.LECTORA: "Competencia Lectora",
+    Subject.M1: "Matemática M1",
+    Subject.M2: "Matemática M2",
+    Subject.HISTORIA: "Historia y Ciencias Sociales",
+    Subject.CIENCIAS: "Ciencias",
+}
 
 router = APIRouter(prefix="/exam", tags=["exam-focus"])
 
@@ -90,6 +101,41 @@ def get_exam_options(
     return service.get_options(db, subject)
 
 
+@router.get("/del-dia", response_model=EnsayoDelDiaOut)
+def get_ensayo_del_dia(
+    db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
+) -> EnsayoDelDiaOut:
+    """El ensayo del día de cada prueba y si el alumno ya lo rindió.
+
+    Va antes de `/{attempt_id}`: si no, "del-dia" se intentaría leer como id.
+    """
+    fecha = del_dia.hoy()
+    solo = billing.solo_ensayo_del_dia(db, user.id)
+    # Para quien arma sus propios ensayos no se puede saber cuál de los de hoy
+    # fue "el del día" sin guardar esa marca, así que se le ofrece siempre.
+    estados = (
+        del_dia.estado(db, user.id, fecha)
+        if solo
+        else [del_dia.EstadoPrueba(s, "disponible", None, None) for s in del_dia.PRUEBAS]
+    )
+    return EnsayoDelDiaOut(
+        fecha=fecha,
+        solo_ensayo_del_dia=solo,
+        pruebas=[
+            EnsayoDelDiaPruebaOut(
+                subject=e.subject,
+                estado=e.estado,
+                attempt_id=e.attempt_id,
+                puntaje=e.puntaje,
+                question_count=del_dia.PREGUNTAS,
+                duration_seconds=del_dia.duracion(e.subject),
+            )
+            for e in estados
+        ],
+    )
+
+
 @router.get("/repaso", response_model=RepasoOut)
 def get_repaso(
     subject: Subject = Subject.M1,
@@ -113,15 +159,33 @@ def start_exam(
     db: Session = Depends(get_db),
     user: User = Depends(get_current_user),
 ) -> ExamStartOut:
-    # El plan Gratis tiene un tope de ensayos al mes. Hoy se informa y no
-    # bloquea (ver billing.limites_activos()): cortarle el paso a alguien
-    # mandándolo a contratar un plan que todavía no se puede contratar es
-    # frustración sin salida.
-    permitido, motivo = billing.puede_rendir(db, user.id)
-    if not permitido:
-        raise HTTPException(status_code=409, detail=motivo)
+    config = config or ExamConfigIn()
 
-    attempt = service.start_attempt(db, user, config or ExamConfigIn())
+    # El plan Gratis rinde solo el ensayo del día, uno por prueba. Venga lo
+    # que venga en la configuración, se le arma ese: armar otro y rechazarlo
+    # sería peor que darle el que sí puede rendir.
+    elegidas = None
+    if config.del_dia or billing.solo_ensayo_del_dia(db, user.id):
+        fecha = del_dia.hoy()
+        previo = del_dia.intento_de_hoy(db, user.id, config.subject, fecha)
+        if previo is not None and billing.solo_ensayo_del_dia(db, user.id):
+            nombre = _NOMBRES[config.subject]
+            if previo.status is AttemptStatus.IN_PROGRESS:
+                motivo = (
+                    f"Ya empezaste el ensayo del día de {nombre}. Retómalo donde "
+                    "quedaste: el tiempo sigue corriendo."
+                )
+            else:
+                motivo = (
+                    f"Ya rendiste el ensayo del día de {nombre}. Mañana hay uno "
+                    "nuevo; mientras, puedes practicar por tema sin límite. Con "
+                    "el plan Pro armas todos los ensayos que quieras."
+                )
+            raise HTTPException(status_code=409, detail=motivo)
+        elegidas = del_dia.preguntas_del_dia(db, config.subject, fecha)
+        config = ExamConfigIn(subject=config.subject, question_count=len(elegidas))
+
+    attempt = service.start_attempt(db, user, config, elegidas)
     questions = service.attempt_questions(db, attempt)
     if not questions:
         raise HTTPException(
