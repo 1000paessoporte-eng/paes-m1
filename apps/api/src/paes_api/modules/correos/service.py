@@ -26,12 +26,14 @@ identifique al remitente e incluya una forma de pedir que no se le escriba más.
 import logging
 import time
 from collections.abc import Sequence
+from datetime import UTC, datetime
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from paes_api.core.config import get_settings
 from paes_api.core.email import CorreoNoEnviado, send_email
+from paes_api.modules.goals.service import FECHA_PAES
 from paes_api.modules.users.models import User
 
 logger = logging.getLogger(__name__)
@@ -136,6 +138,53 @@ def difundir(
     }
 
 
+#: A dónde escribir. `no-responder@1000paes.cl` no tiene buzón --el dominio no
+#: tiene MX--, así que "responde este correo" mandaba las dudas a ninguna parte.
+CONTACTO = "1000paessoporte@gmail.com"
+
+
+def presentacion(url: str) -> str:
+    """Qué ofrece la plataforma y cómo aprovecharla. Lo comparten la bienvenida
+    a cuentas nuevas y la difusión a las que ya existían, para que las dos
+    cuenten lo mismo.
+
+    Cada cifra sale del README ("Contenido actual", verificado con
+    `verificar_banco.py`): si el banco cambia mucho, se actualiza acá también.
+    Nada de urgencia inventada ni promesas de puntaje.
+    """
+    dias = max(0, (FECHA_PAES - datetime.now(UTC)).days)
+    fecha = f" Quedan {dias} días para la PAES regular." if dias else ""
+    return (
+        "LO QUE TIENES DISPONIBLE\n\n"
+        "• Las cinco pruebas: Competencia Lectora, Matemática M1 y M2, Historia y "
+        "Ciencias Sociales, y Ciencias.\n"
+        "• Más de 6.400 preguntas originales. En cada una puedes ver el desarrollo "
+        "completo y por qué cada alternativa incorrecta lo es.\n"
+        "• Tu puntaje en escala 100-1000, calculado con las tablas oficiales del "
+        "DEMRE, con desglose por eje y por tema.\n"
+        "• Árbol de Habilidades: el temario completo en 95 lecciones, con teoría, "
+        "ejercicios resueltos paso a paso y el error más común de cada tema.\n"
+        "• Mi meta: agrega las carreras que te interesan y calcula tu puntaje "
+        "ponderado con las ponderaciones oficiales.\n\n"
+        "CÓMO EMPEZAR\n\n"
+        "1. Rinde un ensayo corto (20 preguntas, unos 40 minutos). Es tu punto de "
+        f"partida:\n   {url}/examen\n"
+        "2. Revisa cada error con su desarrollo. Ahí se aprende más que "
+        "respondiendo preguntas nuevas.\n"
+        "3. Sigue la recomendación del Árbol de Habilidades, que te indica qué tema "
+        f"reforzar primero:\n   {url}/arbol\n"
+        f"4. Define tu meta para saber cuántos puntos te faltan:\n   {url}/meta\n\n"
+        "DOS DATOS QUE CONVIENE SABER\n\n"
+        "• En la PAES las respuestas incorrectas no descuentan puntaje: nunca dejes "
+        "una pregunta en blanco.\n"
+        "• Rinde más practicar un poco casi todos los días que una sesión larga el "
+        f"fin de semana.{fecha}\n\n"
+        "Los domingos te enviaremos un resumen de tu semana: lo que practicaste, "
+        "cómo va tu puntaje y qué te conviene estudiar después.\n\n"
+        f"¿Dudas o sugerencias? Escríbenos a {CONTACTO}."
+    )
+
+
 def enviar_bienvenida(user: User) -> bool:
     """Le da la bienvenida a una cuenta recién creada. Nunca lanza.
 
@@ -144,22 +193,19 @@ def enviar_bienvenida(user: User) -> bool:
     justamente el punto: este correo es un extra, y su fallo no puede
     convertirse en el fallo del registro.
 
-    El texto no promete nada que la plataforma no haga hoy y no mete urgencia
-    inventada --nada de "quedan X cupos"--: el primer correo es el que decide
-    si los siguientes se abren o se marcan como spam.
+    El primer correo es el que decide si los siguientes se abren o se marcan
+    como spam: por eso informa, no vende.
     """
     ajustes = get_settings()
-    nombre = user.name.split(" ")[0] if user.name else "hola"
-    asunto = f"{nombre}, tu cuenta en 1000paes ya está lista"
+    nombre = user.name.split(" ")[0] if user.name else ""
+    saludo = f"Hola {nombre}:" if nombre else "Hola:"
+    asunto = f"{nombre}, te damos la bienvenida a 1000paes" if nombre else "Te damos la bienvenida a 1000paes"
     cuerpo = (
-        f"Hola {nombre}:\n\n"
-        "Tu cuenta en 1000paes ya está creada. Con ella puedes rendir ensayos "
-        "PAES con preguntas nuevas, ver tu puntaje estimado en la escala 100-1000 "
-        "y saber en qué contenidos estás flojo.\n\n"
-        "Para partir, lo más útil es rendir un ensayo corto (20 preguntas, unos "
-        "40 minutos). De ahí sale tu primer puntaje de referencia:\n"
-        f"{ajustes.frontend_url}/examen\n\n"
-        "Si tienes dudas, responde este correo."
+        f"{saludo}\n\n"
+        "Tu cuenta en 1000paes ya está lista. Te damos la bienvenida a la "
+        "plataforma para preparar la PAES con ensayos, lecciones y un seguimiento "
+        "real de tu avance.\n\n"
+        + presentacion(ajustes.frontend_url)
     )
     cuerpo += _pie_de_baja(ajustes.frontend_url)
 
