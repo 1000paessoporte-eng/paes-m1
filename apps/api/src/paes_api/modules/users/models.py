@@ -25,6 +25,12 @@ class User(Base):
     google_sub: Mapped[str | None] = mapped_column(
         String(64), unique=True, index=True, nullable=True
     )
+    #: `oid` de Microsoft (Entra ID): el identificador estable de la persona
+    #: dentro de su organización. No se usa `sub`, que es distinto para cada
+    #: aplicación, ni el correo, que el colegio puede cambiar al titular.
+    microsoft_sub: Mapped[str | None] = mapped_column(
+        String(64), unique=True, index=True, nullable=True
+    )
     avatar_url: Mapped[str | None] = mapped_column(String(500), nullable=True)
     name: Mapped[str] = mapped_column(String(120))
     #: Acceso al panel de administración (/admin). Se otorga a mano con

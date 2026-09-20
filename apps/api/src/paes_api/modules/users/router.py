@@ -6,7 +6,7 @@ from paes_api.core.config import get_settings
 from paes_api.core.database import get_db
 from paes_api.core.limiter import limiter
 from paes_api.core.security import create_access_token
-from paes_api.modules.users import service
+from paes_api.modules.users import microsoft, service
 from paes_api.modules.users.deps import get_current_admin, get_current_user
 from paes_api.modules.users.models import User
 from paes_api.modules.users.schemas import (
@@ -15,6 +15,7 @@ from paes_api.modules.users.schemas import (
     ForgotPasswordIn,
     GoogleLoginIn,
     LoginIn,
+    MicrosoftLoginIn,
     OnboardingIn,
     OnboardingOut,
     RegisterIn,
@@ -75,6 +76,7 @@ def auth_config() -> AuthConfigOut:
     ajustes = get_settings()
     return AuthConfigOut(
         google_enabled=bool(ajustes.google_client_id),
+        microsoft_enabled=bool(ajustes.microsoft_client_id),
         email_enabled=bool(ajustes.smtp_host),
     )
 
@@ -97,6 +99,31 @@ def login_with_google(
     except service.GoogleAuthError as exc:
         raise HTTPException(status_code=401, detail=str(exc)) from exc
     service.record_login(db, user, "google")
+    return TokenOut(
+        access_token=create_access_token(user.id), user=UserOut.model_validate(user)
+    )
+
+
+@router.post("/microsoft", response_model=TokenOut)
+# Mismo freno que /google y /login: es otra puerta de entrada.
+@limiter.limit("5/minute")
+def login_with_microsoft(
+    request: Request,
+    payload: MicrosoftLoginIn,
+    db: Session = Depends(get_db),
+) -> TokenOut:
+    """Cierra el flujo que empezó el navegador: canjea el código y abre sesión."""
+    try:
+        user = service.login_with_microsoft(
+            db,
+            payload.code,
+            payload.code_verifier,
+            payload.redirect_uri,
+            get_settings().microsoft_client_id,
+        )
+    except microsoft.MicrosoftAuthError as exc:
+        raise HTTPException(status_code=401, detail=str(exc)) from exc
+    service.record_login(db, user, "microsoft")
     return TokenOut(
         access_token=create_access_token(user.id), user=UserOut.model_validate(user)
     )

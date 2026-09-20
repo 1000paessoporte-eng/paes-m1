@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { cn } from "@paes-m1/utils";
 import { GoogleButton } from "@/components/auth/google-button";
+import { MicrosoftButton } from "@/components/auth/microsoft-button";
 import { ApiError, loginUser, registerUser } from "@/lib/api";
 import { setClientAuth } from "@/lib/auth";
 
@@ -127,8 +128,9 @@ export function AuthPanel({ initialTab }: Props) {
           ))}
         </div>
 
-        <div className="mt-5 flex justify-center">
+        <div className="mt-5 flex flex-col items-center gap-2">
           <GoogleButton redirectTo={destino} onError={setError} />
+          <MicrosoftButton redirectTo={destino} onError={setError} />
         </div>
 
         <div className="my-5 flex items-center gap-3 text-xs text-muted">

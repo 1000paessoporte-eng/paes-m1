@@ -553,6 +553,22 @@ export function loginWithGoogle(credential: string): Promise<TokenOut> {
   });
 }
 
+/**
+ * Cierra el inicio de sesión con Microsoft: le entrega a la API el código de
+ * un solo uso y el secreto de PKCE, y la API canjea el token con Microsoft.
+ */
+export function loginWithMicrosoft(
+  code: string,
+  codeVerifier: string,
+  redirectUri: string
+): Promise<TokenOut> {
+  return apiFetch<TokenOut>("/api/auth/microsoft", undefined, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ code, code_verifier: codeVerifier, redirect_uri: redirectUri }),
+  });
+}
+
 export function loginUser(email: string, password: string): Promise<TokenOut> {
   return apiFetch<TokenOut>("/api/auth/login", undefined, {
     method: "POST",

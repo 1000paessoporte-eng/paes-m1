@@ -449,6 +449,27 @@ el endpoint responde 401: la web sigue andando con correo y contraseña.
 `NEXT_PUBLIC_*` se incrusta en build time, así que **hay que reconstruir**
 después de cambiarlo. Google no acepta IPs privadas como origen autorizado.
 
+**Inicio de sesión con Microsoft (Entra ID).** Existe por los colegios: casi
+todos entregan cuenta de Office 365 y ese es el correo que el alumno tiene a
+mano. El flujo **no** es el de Google: es *Authorization Code + PKCE*, que es
+lo que Microsoft pide para aplicaciones de página única. El navegador inventa
+un secreto, manda a Microsoft solo su hash, y vuelve con un código de un solo
+uso; **la API canjea ese código** por el ID token (`POST /api/auth/microsoft`)
+y valida firma, expiración, audiencia y emisor. No hay client secret y no hace
+falta: sin el secreto original, un código robado no se puede canjear.
+
+Se configura con `MICROSOFT_CLIENT_ID` (api) y `NEXT_PUBLIC_MICROSOFT_CLIENT_ID`
+(web). Vacías, el botón no aparece. En el registro de Entra ID la aplicación va
+como **SPA** (no "Web"), con las cuentas de *cualquier organización y también
+personales*, y la URI de retorno **exacta** `https://1000paes.cl/entrar/microsoft`
+(más la del preview y `http://localhost:3000/entrar/microsoft` para desarrollo).
+Microsoft las compara carácter a carácter.
+
+Ojo con el **consentimiento del administrador**: algunos colegios bloquean que
+sus alumnos autoricen aplicaciones externas por su cuenta. Ahí el alumno ve un
+error de Microsoft, no nuestro, y lo tiene que habilitar el encargado de
+informática del colegio.
+
 El `<Script>` de Google usa **`onReady` y no `onLoad`**. `onLoad` corre solo la
 primera vez que el script se descarga: al navegar dentro del sitio y volver, el
 script ya está cargado, `onLoad` no vuelve a dispararse y el botón quedaba sin

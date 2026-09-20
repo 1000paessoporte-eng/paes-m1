@@ -157,6 +157,7 @@ los muevas.
 | `FRONTEND_URL` | `https://1000paes.cl` |
 | `CORS_ORIGINS` | los dominios de producción |
 | `GOOGLE_CLIENT_ID` | **vacío** (login con Google no configurado todavía) |
+| `MICROSOFT_CLIENT_ID` | client ID de la app en Entra ID (vacío = sin botón de Microsoft) |
 
 > El `SECRET_KEY` de arriba es el que está en el `.env` local de Pablo. En
 > Vercel la variable también está marcada Sensitive, así que no se puede
@@ -171,6 +172,7 @@ los muevas.
 | `API_URL` | la URL de producción de `milpaes-api` |
 | `NEXT_PUBLIC_API_URL` | **vacío a propósito** — así el navegador usa rutas relativas que `next.config.ts` reenvía a la API. Si le pones un valor, rompes el login. |
 | `NEXT_PUBLIC_GOOGLE_CLIENT_ID` | vacío |
+| `NEXT_PUBLIC_MICROSOFT_CLIENT_ID` | el mismo client ID de Entra ID |
 
 ---
 
@@ -204,6 +206,7 @@ ENVIRONMENT=development
 FRONTEND_URL=http://localhost:3000
 CORS_ORIGINS=["http://localhost:3000"]
 GOOGLE_CLIENT_ID=
+MICROSOFT_CLIENT_ID=
 SMTP_HOST=
 SMTP_PORT=587
 SMTP_USER=
@@ -216,6 +219,7 @@ SMTP_FROM=1000paes <no-responder@1000paes.cl>
 API_URL=http://127.0.0.1:8000
 NEXT_PUBLIC_API_URL=
 NEXT_PUBLIC_GOOGLE_CLIENT_ID=
+NEXT_PUBLIC_MICROSOFT_CLIENT_ID=
 ```
 
 ```bash
