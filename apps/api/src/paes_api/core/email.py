@@ -60,6 +60,8 @@ def send_email(to: str, subject: str, body: str, html: str | None = None) -> Non
     message["Subject"] = subject
     message["From"] = settings.smtp_from
     message["To"] = to
+    if settings.smtp_reply_to:
+        message["Reply-To"] = settings.smtp_reply_to
     message.set_content(body)
     if html:
         message.add_alternative(html, subtype="html")

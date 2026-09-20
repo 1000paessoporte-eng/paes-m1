@@ -25,7 +25,7 @@ identifique al remitente e incluya una forma de pedir que no se le escriba más.
 
 import logging
 import time
-from collections.abc import Sequence
+from collections.abc import Collection, Sequence
 from datetime import UTC, datetime
 from html import escape
 
@@ -57,12 +57,20 @@ def _pie_de_baja(url: str) -> str:
     )
 
 
-def destinatarios(db: Session, publico: str = "todos") -> Sequence[User]:
+def destinatarios(
+    db: Session, publico: str = "todos", excluir: Collection[str] = ()
+) -> Sequence[User]:
     """Las cuentas que recibirían una difusión, ya filtradas por el opt-out.
 
     Se resuelve en una consulta y no recorriendo la tabla en Python porque el
     resultado se muestra ANTES de mandar nada: la parte más cara de equivocarse
     en un correo masivo es no saber a cuántas personas se le va a mandar.
+
+    `excluir` deja fuera direcciones concretas. Hace falta porque en la base
+    conviven cuentas que no son de nadie: la demo (`demo@paes-m1.cl`, un
+    dominio que ni siquiera existe) y las de revisión interna. Escribirles no
+    solo es inútil: una dirección inexistente rebota, y los rebotes le bajan la
+    reputación al dominio, que es de lo que depende que el resto llegue.
     """
     if publico not in PUBLICOS:
         raise ValueError(f"Público desconocido: {publico!r}. Opciones: {', '.join(PUBLICOS)}")
@@ -73,7 +81,11 @@ def destinatarios(db: Session, publico: str = "todos") -> Sequence[User]:
     elif publico == "google":
         consulta = consulta.where(User.google_sub.is_not(None))
 
-    return db.execute(consulta.order_by(User.id)).scalars().all()
+    fuera = {correo.strip().lower() for correo in excluir if correo.strip()}
+    cuentas = db.execute(consulta.order_by(User.id)).scalars().all()
+    if not fuera:
+        return cuentas
+    return [u for u in cuentas if u.email.lower() not in fuera]
 
 
 def _primer_nombre(user: User) -> str:
@@ -91,6 +103,7 @@ def difundir(
     pausa: float = 1.0,
     html: str | None = None,
     nombre_solo: str = "",
+    excluir: Collection[str] = (),
 ) -> dict[str, object]:
     """Manda un correo escrito a mano. Devuelve el recuento de lo que hizo.
 
@@ -126,7 +139,7 @@ def difundir(
         send_email(solo, *_para(nombre_solo))
         return {"enviados": 1, "fallidos": 0, "destinatarios": [solo], "prueba": False}
 
-    cuentas = destinatarios(db, publico)
+    cuentas = destinatarios(db, publico, excluir)
     correos = [u.email for u in cuentas]
 
     if prueba:
@@ -158,8 +171,10 @@ def difundir(
     }
 
 
-#: A dónde escribir. `no-responder@1000paes.cl` no tiene buzón --el dominio no
-#: tiene MX--, así que "responde este correo" mandaba las dudas a ninguna parte.
+#: A dónde escribir. El dominio no tiene MX --Resend solo manda--, así que
+#: ninguna dirección `@1000paes.cl` recibe: una respuesta llega acá porque
+#: `smtp_reply_to` la redirige (ver `core/config.py`), y este es el mismo buzón
+#: para quien prefiera escribir a mano.
 CONTACTO = "1000paessoporte@gmail.com"
 
 
@@ -201,6 +216,8 @@ def presentacion(url: str) -> str:
         f"fin de semana.{fecha}\n\n"
         "Los domingos te enviaremos un resumen de tu semana: lo que practicaste, "
         "cómo va tu puntaje y qué te conviene estudiar después.\n\n"
+        "Una cosa: responde este correo contándonos qué prueba te cuesta más y te "
+        "decimos por dónde conviene partir. Lo leemos nosotros.\n\n"
         f"¿Dudas o sugerencias? Escríbenos a {CONTACTO}."
     )
 
@@ -294,6 +311,10 @@ def bienvenida_html(nombre: str, url: str, *, cuenta_existente: bool = False) ->
             f'<span style="color:{p.APAGADO};font-size:14px">Los domingos te enviaremos '
             "un resumen de tu semana: lo que practicaste, cómo va tu puntaje y qué te "
             "conviene estudiar después.</span>"
+        )
+        + p.parrafo(
+            "<strong>Una cosa:</strong> responde este correo contándonos qué prueba te "
+            "cuesta más y te decimos por dónde conviene partir. Lo leemos nosotros."
         )
         + p.parrafo("Mucho éxito en tu preparación.<br><strong>El equipo de 1000paes</strong>")
     )

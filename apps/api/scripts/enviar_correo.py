@@ -68,6 +68,11 @@ def main() -> int:
         help="A quién: todos, solo quienes se registraron con correo, o solo Google",
     )
     parser.add_argument(
+        "--excluir",
+        default="",
+        help="Direcciones que quedan fuera, separadas por coma (la demo, las de revisión)",
+    )
+    parser.add_argument(
         "--prueba",
         action="store_true",
         help="No manda nada: solo muestra a quién le llegaría",
@@ -78,12 +83,18 @@ def main() -> int:
         help="Manda el correo real a una sola dirección, para revisar cómo llega",
     )
     parser.add_argument(
+        "--nombre",
+        default="",
+        help="Con --solo: el nombre con que se personaliza el correo de prueba",
+    )
+    parser.add_argument(
         "--pausa",
         type=float,
         default=1.0,
         help="Segundos entre correo y correo (default 1)",
     )
     args = parser.parse_args()
+    excluir = [c for c in args.excluir.split(",") if c.strip()]
 
     html = None
     if args.bienvenida:
@@ -117,11 +128,13 @@ def main() -> int:
 
     with SessionLocal() as db:
         if args.solo:
-            service.difundir(db, args.asunto, cuerpo, solo=args.solo, html=html)
+            service.difundir(
+                db, args.asunto, cuerpo, solo=args.solo, html=html, nombre_solo=args.nombre
+            )
             print(f"Enviado solo a {args.solo}.")
             return 0
 
-        gente = service.destinatarios(db, args.publico)
+        gente = service.destinatarios(db, args.publico, excluir)
         print(f"Destinatarios ({args.publico}): {len(gente)}")
         for u in gente:
             print(f"  - {u.email}  ({u.name})")
@@ -142,7 +155,13 @@ def main() -> int:
             return 1
 
         resultado = service.difundir(
-            db, args.asunto, cuerpo, args.publico, pausa=args.pausa, html=html
+            db,
+            args.asunto,
+            cuerpo,
+            args.publico,
+            pausa=args.pausa,
+            html=html,
+            excluir=excluir,
         )
         print(f"Enviados: {resultado['enviados']} · Fallidos: {resultado['fallidos']}")
         return 0 if resultado["fallidos"] == 0 else 1

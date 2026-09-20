@@ -76,7 +76,16 @@ class Settings(BaseSettings):
     smtp_port: int = 587
     smtp_user: str = ""
     smtp_password: str = ""
-    smtp_from: str = "1000paes <no-responder@1000paes.cl>"
+    #: El remitente es una persona con nombre y una dirección que acepta
+    #: respuestas, no un `no-responder@`. No es cosmético: Gmail trata las
+    #: direcciones tipo no-reply@ / info@ / news@ como firma de correo masivo
+    #: y las manda a Promociones, y un correo que se puede responder es lo que
+    #: más empuja hacia Principal (responder una vez basta para que Gmail trate
+    #: al remitente como contacto conocido).
+    smtp_from: str = "Equipo 1000paes <hola@1000paes.cl>"
+    #: A dónde llegan las respuestas. El dominio no tiene buzón --Resend solo
+    #: manda-- así que sin esto una respuesta rebotaría.
+    smtp_reply_to: str = "1000paessoporte@gmail.com"
     #: Si los límites del plan Gratis bloquean de verdad. Va por entorno y no
     #: en el código para que encenderlos no exija un despliegue: el día que el
     #: cobro funcione se cambia la variable y listo. Arranca APAGADO a
