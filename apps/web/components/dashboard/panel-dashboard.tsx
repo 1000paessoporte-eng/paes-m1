@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ensayosQueCuentan } from "@/lib/ensayos";
 import type {
   AnalyticsSummary,
   AuthUserOut,
@@ -87,9 +88,7 @@ export function PanelDashboard({
   // por la bandera dejaba pasar un "mejor puntaje 100" sacado de un ensayo
   // sin responder. Un ensayo sin respuestas no tiene puntaje que mostrar, con
   // bandera o sin ella.
-  const rendidos = entregados.filter(
-    (a) => a.representativo !== false && a.answered > 0
-  );
+  const rendidos = ensayosQueCuentan(attempts);
 
   // El puntaje que encabeza el panel es el del último ensayo, sea de la prueba
   // que sea. Va CON el nombre de su prueba: un 406 no significa lo mismo en
