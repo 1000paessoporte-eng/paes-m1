@@ -9,6 +9,7 @@ import {
   listExamAttempts,
 } from "@/lib/api";
 import { TOKEN_COOKIE } from "@/lib/auth";
+import { ensayosQueCuentan } from "@/lib/ensayos";
 import { ExamRunner } from "@/components/exam/exam-runner";
 
 export const metadata = {
@@ -76,7 +77,10 @@ export default async function ModoEnsayoPage() {
     delDia = null;
   }
 
-  const pastAttempts = attempts.filter((a) => a.status === "submitted");
+  // Los que cuentan como rendidos, con la misma regla que el panel y el
+  // perfil (`lib/ensayos.ts`): esta pantalla los contaba todos y decía "35
+  // ensayos rendidos" donde el panel decía 11.
+  const pastAttempts = ensayosQueCuentan(attempts);
   // Se pasa también el subject: el ensayo pendiente puede ser de otra prueba
   // que la elegida en pantalla, y retomarlo cambia de prueba. Hay que decirlo.
   const enCurso = attempts.find((a) => a.status === "in_progress");

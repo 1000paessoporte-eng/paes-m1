@@ -838,7 +838,10 @@ const MESES = [
 function fechaLarga(iso: string): string {
   const [a, m, d] = iso.split("-").map(Number);
   const dia = new Date(Date.UTC(a, m - 1, d)).getUTCDay();
-  return `${DIAS_SEMANA[dia]} ${d} de ${MESES[m - 1]}`;
+  const nombre = DIAS_SEMANA[dia];
+  // Solo la primera letra en mayúscula. Con `capitalize` de CSS salía
+  // "Domingo 20 De Septiembre", porque esa regla toca todas las palabras.
+  return `${nombre[0].toUpperCase()}${nombre.slice(1)} ${d} de ${MESES[m - 1]}`;
 }
 
 /**
@@ -863,7 +866,7 @@ function EnsayoDelDiaSeccion({
       <div className="bg-accent/5 px-5 py-4">
         <div className="flex flex-wrap items-baseline justify-between gap-2">
           <h2 className="text-lg font-semibold tracking-tight">Ensayo del día</h2>
-          <span className="text-xs font-medium text-muted capitalize">
+          <span className="text-xs font-medium text-muted">
             {fechaLarga(delDia.fecha)}
           </span>
         </div>

@@ -11,6 +11,7 @@ import {
   listExamAttempts,
 } from "@/lib/api";
 import { TOKEN_COOKIE } from "@/lib/auth";
+import { ensayosQueCuentan } from "@/lib/ensayos";
 import { ProfileForm } from "@/components/profile/profile-form";
 import { ZonaPeligro } from "@/components/profile/zona-peligro";
 import { MiPlanPanel } from "@/components/plan/mi-plan";
@@ -77,9 +78,7 @@ export default async function PerfilPage() {
   // Solo los que cuentan. Un ensayo entregado sin responder ninguna pregunta
   // no es un simulacro completado, y el historial ya los excluye: acá seguían
   // sumando. Ver `_es_representativo` en exam_focus/service.py.
-  const submittedAttempts = attempts.filter(
-    (a) => a.status === "submitted" && a.representativo !== false
-  ).length;
+  const submittedAttempts = ensayosQueCuentan(attempts).length;
 
   return (
     <div>
