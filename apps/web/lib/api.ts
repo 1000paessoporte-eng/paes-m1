@@ -553,6 +553,19 @@ export function loginWithGoogle(credential: string): Promise<TokenOut> {
   });
 }
 
+/** Lo que un colegio manda para pedir una cotización. Sin sesión: quien la
+ *  llena todavía no tiene cuenta. */
+export type SolicitudColegio =
+  paths["/api/colegio/cotizacion"]["post"]["requestBody"]["content"]["application/json"];
+
+export function pedirCotizacionColegio(datos: SolicitudColegio): Promise<unknown> {
+  return apiFetch("/api/colegio/cotizacion", undefined, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(datos),
+  });
+}
+
 export function loginUser(email: string, password: string): Promise<TokenOut> {
   return apiFetch<TokenOut>("/api/auth/login", undefined, {
     method: "POST",

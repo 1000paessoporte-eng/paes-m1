@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { BotonComprar } from "@/components/plan/boton-comprar";
 import { BotonTrial } from "@/components/plan/boton-trial";
-import { EMAIL_CONTACTO } from "@/lib/redes-sociales";
 /*
  * PRECIO DE LANZAMIENTO, NO "ANTES/AHORA"
  * ---------------------------------------
@@ -393,23 +392,17 @@ export function Planes({
               ) : plan.nombre === "Colegios" && !plan.disponible ? (
                 /* Un colegio compra con orden de compra y factura, no con
                    tarjeta, así que acá no va un botón de pago: va la forma de
-                   empezar la conversación. Y tiene que ser un ENLACE de
-                   verdad. Esto era un <button disabled> que no hacía nada: el
-                   plan se anunciaba a $19.900 por alumno --desde $597.000 por
-                   un curso de treinta-- y quien quería contratarlo hacía clic
-                   y no pasaba absolutamente nada. Tampoco había un correo en
-                   el pie ni en ninguna otra parte del sitio. */
-                <a
-                  href={`mailto:${EMAIL_CONTACTO}?subject=${encodeURIComponent(
-                    "Plan Colegios - quiero contratar"
-                  )}&body=${encodeURIComponent(
-                    "Hola:\n\nMe interesa el plan Colegios para mi establecimiento.\n\n" +
-                      "Colegio:\nCurso o cursos:\nCantidad de alumnos:\nNombre y cargo:\nTeléfono:\n\n"
-                  )}`}
+                   empezar la conversación. Era un `mailto:`, que falla callado
+                   --en el teléfono puede no abrir nada, y quien usa webmail ve
+                   un cliente de correo que nunca configuró-- y no dejaba
+                   registro de quien estuvo a punto de contratar. Ahora lleva a
+                   /colegios, que explica el plan y tiene el formulario. */
+                <Link
+                  href="/colegios"
                   className="btn-glow mt-6 block w-full rounded-lg px-4 py-2.5 text-center text-sm font-medium text-accent-foreground"
                 >
-                  Escríbenos
-                </a>
+                  Ver el plan Colegios
+                </Link>
               ) : (
                 <button
                   type="button"

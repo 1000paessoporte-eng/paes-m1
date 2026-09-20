@@ -1,6 +1,16 @@
 from datetime import date, datetime
 
-from sqlalchemy import Date, DateTime, Enum, ForeignKey, Integer, String, func
+from sqlalchemy import (
+    Boolean,
+    Date,
+    DateTime,
+    Enum,
+    ForeignKey,
+    Integer,
+    String,
+    Text,
+    func,
+)
 from sqlalchemy.orm import Mapped, mapped_column
 
 from paes_api.modules.exam_focus.models import Pace
@@ -76,4 +86,45 @@ class EnsayoProgramado(Base):
     fecha: Mapped[date] = mapped_column(Date, index=True)
     creado_en: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
+    )
+
+
+class SolicitudColegio(Base):
+    """Un establecimiento que pide una cotización del plan Colegios.
+
+    Hasta ahora el único camino para contratar era un `mailto:` en la página
+    de planes. Un `mailto:` falla callado más de lo que parece --en el teléfono
+    puede no abrir nada, y quien usa webmail ve un cliente de correo vacío que
+    nunca configuró-- y, sobre todo, no deja registro: si la persona no manda
+    el correo, nadie se entera de que estuvo a punto de contratar.
+
+    Un colegio no compra con tarjeta: pide cotización, la aprueba el sostenedor
+    y paga con factura contra orden de compra. Esta tabla es el primer paso de
+    esa conversación, que sigue siendo humana a propósito.
+
+    No guarda RUT ni dirección: para responder una cotización basta con a quién
+    escribirle y de qué tamaño es el curso. El dato que no se guarda no se
+    puede filtrar.
+    """
+
+    __tablename__ = "solicitudes_colegio"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    establecimiento: Mapped[str] = mapped_column(String(160))
+    #: Quién escribe y desde qué cargo. El cargo importa para responder: a un
+    #: profesor se le manda la cotización para que la lleve a dirección; a un
+    #: sostenedor, directo.
+    contacto: Mapped[str] = mapped_column(String(120))
+    cargo: Mapped[str] = mapped_column(String(60))
+    email: Mapped[str] = mapped_column(String(255), index=True)
+    telefono: Mapped[str | None] = mapped_column(String(40), nullable=True)
+    comuna: Mapped[str | None] = mapped_column(String(80), nullable=True)
+    #: Cuántos alumnos, para poder poner un número en la cotización.
+    alumnos: Mapped[int] = mapped_column(Integer)
+    mensaje: Mapped[str | None] = mapped_column(Text, nullable=True)
+    #: Si alguien ya la respondió. Se marca a mano desde el panel: mientras la
+    #: venta sea una conversación, el estado también es humano.
+    atendida: Mapped[bool] = mapped_column(Boolean, default=False, server_default="false")
+    creado_en: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), index=True
     )

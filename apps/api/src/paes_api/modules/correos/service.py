@@ -373,3 +373,85 @@ def bienvenida_existentes(url: str) -> tuple[str, str, str]:
         + "\n\nMucho éxito en tu preparación.\nEl equipo de 1000paes"
     )
     return asunto, cuerpo, bienvenida_html("{nombre}", url, cuenta_existente=True)
+
+
+def cotizacion_recibida(
+    *, establecimiento: str, contacto: str, alumnos: int, url: str
+) -> tuple[str, str, str]:
+    """El acuse que recibe el colegio: asunto, texto y HTML.
+
+    Existe porque una cotización se responde a mano y eso toma horas o un día:
+    sin este correo, quien llenó el formulario no sabe si llegó. Dice lo que
+    va a pasar y cuándo, y nada más --el precio final lo pone una persona.
+    """
+    asunto = "Recibimos tu solicitud del plan Colegios"
+    cuerpo = (
+        f"Hola {contacto}:\n\n"
+        f"Recibimos tu solicitud de cotización del plan Colegios para "
+        f"{establecimiento}, para {alumnos} estudiantes.\n\n"
+        "Te vamos a responder con la cotización formal dentro de un día hábil, "
+        f"a este mismo correo. Si necesitas algo antes, escríbenos a {CONTACTO}.\n\n"
+        "MIENTRAS TANTO\n\n"
+        f"Puedes probar la plataforma como lo haría tu curso: {url}/demo son "
+        "cinco preguntas sin crear cuenta.\n\n"
+        "Gracias por el interés.\n"
+        "El equipo de 1000paes"
+    )
+    portada = plantilla.portada(
+        url=url,
+        antetitulo="Plan Colegios",
+        titulo_html=f"{escape(contacto)}, recibimos tu solicitud",
+        bajada=(
+            f"Cotización para {escape(establecimiento)}, {alumnos} estudiantes. "
+            "Te respondemos dentro de un día hábil."
+        ),
+        boton_texto="Ver la plataforma",
+        enlace=f"{url}/demo",
+    )
+    cuerpo_html = (
+        plantilla.parrafo(
+            "Recibimos tu solicitud de cotización del plan Colegios. La revisa "
+            "una persona, no un sistema: te llega la cotización formal a este "
+            "mismo correo <strong>dentro de un día hábil</strong>."
+        )
+        + plantilla.titulo("Mientras tanto")
+        + plantilla.parrafo(
+            "Puedes probar la plataforma como lo haría tu curso: la demo son "
+            "cinco preguntas y no pide crear cuenta."
+        )
+        + plantilla.nota(
+            "Un colegio contrata con <strong>factura y orden de compra</strong>, "
+            "no con tarjeta. En la cotización van los datos para eso."
+        )
+    )
+    return (
+        asunto,
+        cuerpo,
+        plantilla.documento(
+            url=url,
+            preencabezado="Te respondemos con la cotización dentro de un día hábil.",
+            portada_html=portada,
+            cuerpo=cuerpo_html,
+            contacto=CONTACTO,
+        ),
+    )
+
+
+def aviso_de_cotizacion(datos: dict[str, object], url: str) -> tuple[str, str]:
+    """El aviso interno. Texto plano a propósito: lo lee el equipo, no un
+    cliente, y lo que importa es poder responder desde el teléfono."""
+    lineas = [
+        f"Establecimiento: {datos['establecimiento']}",
+        f"Contacto: {datos['contacto']} ({datos['cargo']})",
+        f"Correo: {datos['email']}",
+        f"Teléfono: {datos.get('telefono') or '--'}",
+        f"Comuna: {datos.get('comuna') or '--'}",
+        f"Estudiantes: {datos['alumnos']}",
+    ]
+    if datos.get("mensaje"):
+        lineas += ["", "Mensaje:", str(datos["mensaje"])]
+    lineas += ["", f"Responder a: {datos['email']}", f"Panel: {url}/admin"]
+    return (
+        f"Cotización Colegios: {datos['establecimiento']} ({datos['alumnos']} alumnos)",
+        "\n".join(lineas),
+    )

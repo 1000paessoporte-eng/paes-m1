@@ -1,6 +1,6 @@
 from datetime import date, datetime
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, EmailStr, Field
 
 from paes_api.modules.exam_focus.models import Pace
 from paes_api.modules.skill_tree.models import Subject
@@ -95,3 +95,41 @@ class ColegioAdminOut(BaseModel):
 class PlanColegioIn(BaseModel):
     #: Hasta cuándo queda pagado. `null` corta el plan.
     plan_hasta: date | None = None
+
+
+class SolicitudColegioIn(BaseModel):
+    """Lo que un colegio llena para pedir una cotización.
+
+    Los largos calzan con la tabla: si acá entrara un nombre más largo que la
+    columna, la petición reventaría con un 500 en vez de decir qué pasó.
+    """
+
+    establecimiento: str = Field(min_length=2, max_length=160)
+    contacto: str = Field(min_length=2, max_length=120)
+    cargo: str = Field(min_length=2, max_length=60)
+    email: EmailStr
+    telefono: str | None = Field(default=None, max_length=40)
+    comuna: str | None = Field(default=None, max_length=80)
+    #: Un curso son unos 30 y el colegio más grande de Chile no llega a 5.000.
+    #: El mínimo no es un filtro comercial --de 10 alumnos se conversa igual--
+    #: sino un freno a que llegue un 0 por error y la cotización salga vacía.
+    alumnos: int = Field(ge=1, le=5000)
+    mensaje: str | None = Field(default=None, max_length=2000)
+
+
+class SolicitudColegioOut(BaseModel):
+    """Lo que ve el panel de administración. La cotización se responde a mano."""
+
+    model_config = ConfigDict(from_attributes=True)
+
+    id: int
+    establecimiento: str
+    contacto: str
+    cargo: str
+    email: str
+    telefono: str | None
+    comuna: str | None
+    alumnos: int
+    mensaje: str | None
+    atendida: bool
+    creado_en: datetime
