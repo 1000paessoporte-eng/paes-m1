@@ -27,12 +27,15 @@ cansancio.
 import logging
 import time
 from datetime import UTC, datetime, timedelta
+from html import escape
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from paes_api.core.config import get_settings
 from paes_api.core.email import CorreoNoEnviado, send_email
+from paes_api.modules.correos import plantilla
+from paes_api.modules.correos.service import CONTACTO, FECHA_PAES_TEXTO
 from paes_api.modules.exam_focus.models import ExamAttempt
 from paes_api.modules.goals.service import FECHA_PAES
 from paes_api.modules.skill_tree.models import Subject
@@ -51,6 +54,12 @@ ABANDONO_DIAS = 45
 PRESUPUESTO_SEGUNDOS = 22
 #: Lunes = 0 ... domingo = 6. El domingo sale el resumen semanal.
 DIA_DEL_RESUMEN = 6
+
+#: Las tres bajadas de la portada, una por situación. Dicen lo mismo que el
+#: texto plano, en una línea: el correo con diseño no puede contar otra cosa.
+_BAJADA_RACHA = "Llevas {racha} días seguidos rindiendo ensayos. Si hoy no rindes ninguno, la racha vuelve a cero."
+_BAJADA_VUELTA = "Hace {dias} días que no rindes un ensayo. Retomar cuesta menos de lo que parece: parte por uno corto."
+_BAJADA_NORMAL = "Un ensayo corto son 20 preguntas y unos 40 minutos, y mantiene tu preparación al día."
 
 
 def pie_de_baja(url: str) -> str:
@@ -108,6 +117,50 @@ def _ultimo_ensayo(db: Session, user_id: int) -> datetime | None:
         .order_by(ExamAttempt.finished_at.desc())
         .limit(1)
     ).scalar_one_or_none()
+
+
+def _html(
+    nombre: str,
+    encabezado: str,
+    bajada: str,
+    paso: tuple[str, str] | None,
+    dias_paes: int,
+    url: str,
+) -> str:
+    """El recordatorio con el diseño del sitio. Corto a propósito: es un
+    empujón, no un informe; el resumen del domingo es el que cuenta cosas."""
+    p = plantilla
+    portada = p.portada(
+        url=url,
+        antetitulo="Ensayo del día",
+        titulo_html=(f'<span style="color:#a9a8a4">{escape(nombre)},</span><br>' if nombre else "")
+        + escape(encabezado),
+        bajada=bajada,
+        boton_texto="Rendir el ensayo de hoy",
+        enlace=f"{url}/examen",
+    )
+    cuerpo = ""
+    if paso:
+        titulo, enlace = paso
+        cuerpo += p.titulo("¿Poco tiempo? Quince minutos")
+        cuerpo += p.funcion(
+            titulo,
+            "Es el tema que más te conviene reforzar según tus últimos ensayos.",
+            "#1d4ed8",
+        )
+        cuerpo += p.boton("Practicar este tema", enlace)
+    cuerpo += p.cuenta_regresiva(url, dias_paes, FECHA_PAES_TEXTO)
+    cuerpo += p.parrafo(
+        f'<span style="color:{p.APAGADO};font-size:14px">Si hoy no puedes, no pasa nada: '
+        "mañana hay un ensayo nuevo de cada prueba.</span>"
+    )
+    return p.documento(
+        url=url,
+        preencabezado="Tu ensayo del día te espera.",
+        portada_html=portada,
+        cuerpo=cuerpo,
+        contacto=CONTACTO,
+    )
 
 
 def _mensaje(
@@ -228,16 +281,24 @@ def enviar_recordatorios(
                 cursor -= timedelta(days=1)
 
         nombre = user.name.split(" ")[0]
+        paso = siguiente_paso(db, user, ajustes.frontend_url)
         asunto, cuerpo = _mensaje(
+            nombre, dias_sin_rendir, racha, ajustes.frontend_url, paso, dias_paes
+        )
+        html = _html(
             nombre,
-            dias_sin_rendir,
-            racha,
-            ajustes.frontend_url,
-            siguiente_paso(db, user, ajustes.frontend_url),
+            asunto.split(", ", 1)[-1] if ", " in asunto else asunto,
+            _BAJADA_RACHA.format(racha=racha)
+            if racha >= 2
+            else _BAJADA_VUELTA.format(dias=dias_sin_rendir)
+            if dias_sin_rendir >= 7
+            else _BAJADA_NORMAL,
+            paso,
             dias_paes,
+            ajustes.frontend_url,
         )
         try:
-            send_email(user.email, asunto, cuerpo)
+            send_email(user.email, asunto, cuerpo, html)
         except CorreoNoEnviado:
             logger.exception("No se pudo enviar el recordatorio a %s", user.email)
             resultado["fallidos"] += 1

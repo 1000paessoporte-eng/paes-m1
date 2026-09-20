@@ -52,8 +52,11 @@ def test_no_se_le_escribe_a_quien_ya_rindio_hoy(db_session) -> None:
 
 
 def test_se_le_escribe_a_quien_lleva_dias_sin_rendir(db_session) -> None:
+    """Con fecha fija: el domingo no salen recordatorios (ese día va el
+    resumen), así que sin fijarla este test fallaba un día de cada siete."""
+    sabado = datetime(2026, 9, 19, 20, tzinfo=UTC)
     u = _usuario(db_session, "pendiente@test.cl")
-    hace_tres = datetime.now(UTC) - timedelta(days=3)
+    hace_tres = sabado - timedelta(days=3)
     db_session.add(
         ExamAttempt(
             user_id=u.id, subject="m1", status="submitted", estimated_score=500,
@@ -62,7 +65,7 @@ def test_se_le_escribe_a_quien_lleva_dias_sin_rendir(db_session) -> None:
     )
     db_session.commit()
 
-    assert service.enviar_recordatorios(db_session)["enviados"] == 1
+    assert service.enviar_recordatorios(db_session, ahora=sabado)["enviados"] == 1
     # Y queda registrado, para que el próximo intento respete el descanso.
     assert db_session.get(User, u.id).ultimo_recordatorio is not None
 

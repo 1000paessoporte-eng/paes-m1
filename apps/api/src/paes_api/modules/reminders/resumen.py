@@ -22,6 +22,7 @@ import logging
 import time
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime, timedelta
+from html import escape
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -33,6 +34,8 @@ from paes_api.modules.analytics.service import (
     _daily_buckets,
     _dias_con_ensayo,
 )
+from paes_api.modules.correos import plantilla
+from paes_api.modules.correos.service import CONTACTO, FECHA_PAES_TEXTO
 from paes_api.modules.exam_focus.models import ExamAttempt
 from paes_api.modules.goals.service import FACTORES, FECHA_PAES
 from paes_api.modules.reminders.service import (
@@ -49,6 +52,15 @@ logger = logging.getLogger(__name__)
 INACTIVIDAD_DIAS = 28
 
 ETIQUETAS = {subject: etiqueta for etiqueta, subject in FACTORES.values() if subject}
+
+#: El color con que el sitio distingue cada prueba (`globals.css`).
+COLOR_PRUEBA = {
+    "lectora": "#b45309",
+    "m1": "#1d4ed8",
+    "m2": "#7e22ce",
+    "historia": "#9f1239",
+    "ciencias": "#0f766e",
+}
 
 
 @dataclass
@@ -208,6 +220,102 @@ def mensaje(
     return asunto, cuerpo
 
 
+def html(
+    nombre: str,
+    esta: Semana,
+    previa: Semana,
+    racha: int,
+    paso: tuple[str, str] | None,
+    dias_paes: int,
+    url: str,
+) -> str:
+    """El resumen semanal con el diseño del sitio.
+
+    Las mismas cifras que el texto plano: acá se ven de un vistazo, que es lo
+    que hace que un correo semanal se siga abriendo en noviembre.
+    """
+    p = plantilla
+    saludo = f'<span style="color:#a9a8a4">{escape(nombre)},</span><br>' if nombre else ""
+    if esta.preguntas:
+        titulo = saludo + "esto hiciste esta semana"
+        bajada = (
+            f"Estudiaste {esta.dias_activos} de 7 días"
+            + (f" y terminaste {esta.ensayos} ensayo{'s' if esta.ensayos != 1 else ''}." if esta.ensayos else ".")
+        )
+    else:
+        titulo = saludo + "esta semana no alcanzaste a practicar"
+        bajada = (
+            "Pasa. Lo importante es no soltar el ritmo por más de una semana: "
+            "con 15 minutos hoy retomas."
+        )
+    portada = p.portada(
+        url=url,
+        antetitulo="Tu semana en 1000paes",
+        titulo_html=titulo,
+        bajada=bajada,
+        boton_texto="Seguir practicando",
+        enlace=f"{url}/examen",
+    )
+
+    cuerpo = ""
+    if esta.preguntas:
+        cuerpo += p.cifras([
+            (str(esta.preguntas), "preguntas respondidas"),
+            (f"{esta.acierto}%" if esta.acierto is not None else "—", "de acierto"),
+            (f"{esta.dias_activos}/7", "días estudiados"),
+        ])
+        comparaciones = []
+        if previa.preguntas:
+            if esta.preguntas > previa.preguntas:
+                comparaciones.append(f"Respondiste {esta.preguntas - previa.preguntas} preguntas más que la semana pasada.")
+            elif esta.preguntas < previa.preguntas:
+                comparaciones.append(f"La semana pasada fueron {previa.preguntas} preguntas.")
+            else:
+                comparaciones.append("Las mismas preguntas que la semana pasada.")
+        if previa.acierto is not None and esta.acierto is not None and previa.acierto != esta.acierto:
+            comparaciones.append(f"Tu acierto la semana pasada fue {previa.acierto}%.")
+        if racha >= 2:
+            comparaciones.append(f"Llevas {racha} días seguidos practicando.")
+        if comparaciones:
+            cuerpo += p.nota(escape(" ".join(comparaciones)))
+
+        if esta.puntajes:
+            cuerpo += p.titulo("Tu mejor puntaje de la semana")
+            for subject, (mejor, antes) in sorted(esta.puntajes.items()):
+                etiqueta = ETIQUETAS.get(subject, subject)
+                if antes is None:
+                    detalle = f"{mejor} puntos · tu primer puntaje en esta prueba"
+                elif mejor > antes:
+                    detalle = f"{mejor} puntos · ¡nuevo récord! antes {antes}"
+                else:
+                    detalle = f"{mejor} puntos · tu récord sigue en {antes}"
+                cuerpo += p.funcion(etiqueta, detalle, COLOR_PRUEBA.get(subject, p.GRAFITO))
+    elif previa.preguntas:
+        cuerpo += p.nota(
+            f"La semana anterior respondiste <strong>{previa.preguntas} preguntas</strong>. "
+            "Retomar cuesta menos de lo que parece."
+        )
+
+    if paso:
+        titulo_paso, enlace = paso
+        cuerpo += p.titulo("Lo que más te conviene ahora")
+        cuerpo += p.funcion(titulo_paso, "Elegido según tus errores de los últimos ensayos.", "#7e22ce")
+        cuerpo += p.boton("Practicar este tema", enlace)
+
+    cuerpo += p.cuenta_regresiva(url, dias_paes, FECHA_PAES_TEXTO)
+    cuerpo += p.parrafo(
+        f'<a href="{escape(url)}/analitica" style="color:{p.GRAFITO};font-weight:600">'
+        "Ver tu avance completo →</a>"
+    )
+    return p.documento(
+        url=url,
+        preencabezado="Preguntas, acierto y días estudiados de los últimos 7 días.",
+        portada_html=portada,
+        cuerpo=cuerpo,
+        contacto=CONTACTO,
+    )
+
+
 def enviar_resumenes(
     db: Session, limite: int = 500, ahora: datetime | None = None
 ) -> dict[str, int]:
@@ -246,17 +354,16 @@ def enviar_resumenes(
             continue
 
         nombre = user.name.split(" ")[0] if user.name else "Hola"
+        racha = _compute_streak(activos)
+        paso = siguiente_paso(db, user, ajustes.frontend_url)
         asunto, cuerpo = mensaje(
-            nombre,
-            esta,
-            previa,
-            _compute_streak(activos),
-            siguiente_paso(db, user, ajustes.frontend_url),
-            dias_paes,
-            ajustes.frontend_url,
+            nombre, esta, previa, racha, paso, dias_paes, ajustes.frontend_url
+        )
+        cuerpo_html = html(
+            nombre, esta, previa, racha, paso, dias_paes, ajustes.frontend_url
         )
         try:
-            send_email(user.email, asunto, cuerpo)
+            send_email(user.email, asunto, cuerpo, cuerpo_html)
         except CorreoNoEnviado:
             logger.exception("No se pudo enviar el resumen semanal a %s", user.email)
             resultado["fallidos"] += 1

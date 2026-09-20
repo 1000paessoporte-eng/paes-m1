@@ -2,6 +2,7 @@ import hashlib
 import logging
 import secrets
 from datetime import UTC, datetime, timedelta
+from html import escape
 
 from google.auth.transport import requests as google_requests
 from google.oauth2 import id_token as google_id_token
@@ -11,7 +12,8 @@ from sqlalchemy.orm import Session
 from paes_api.core.config import get_settings
 from paes_api.core.email import CorreoNoEnviado, send_email
 from paes_api.core.security import hash_password, verify_password
-from paes_api.modules.correos.service import enviar_bienvenida
+from paes_api.modules.correos import plantilla
+from paes_api.modules.correos.service import CONTACTO, enviar_bienvenida
 from paes_api.modules.users.models import LoginEvent, PasswordResetToken, User
 from paes_api.modules.users.schemas import RegisterIn, UpdateMeIn
 
@@ -158,6 +160,46 @@ def _hash_token(raw_token: str) -> str:
     return hashlib.sha256(raw_token.encode("utf-8")).hexdigest()
 
 
+def _html_recuperar(nombre: str, reset_url: str, url: str) -> str:
+    """El correo de recuperación, con el diseño del sitio.
+
+    Es el correo más importante de todos: quien lo recibe está fuera de su
+    cuenta. Por eso no lleva cuenta regresiva, ni temas recomendados, ni nada
+    que compita con el botón; y dice en cuánto vence, porque el enlace expira.
+    """
+    p = plantilla
+    primer = nombre.split(" ")[0] if nombre else ""
+    portada = p.portada(
+        url=url,
+        antetitulo="Recuperar contraseña",
+        titulo_html=(f'<span style="color:#a9a8a4">{escape(primer)},</span><br>' if primer else "")
+        + "crea una contraseña nueva",
+        bajada=(
+            "Recibimos una solicitud para restablecer tu contraseña. El enlace "
+            f"sirve una sola vez y vence en {RESET_TOKEN_TTL_MINUTES} minutos."
+        ),
+        boton_texto="Crear contraseña nueva",
+        enlace=reset_url,
+    )
+    cuerpo = p.nota(
+        "<strong>¿No fuiste tú?</strong> Ignora este correo: tu contraseña "
+        "actual sigue funcionando y nadie puede entrar con este enlace sin "
+        "abrirlo desde tu bandeja."
+    )
+    cuerpo += p.parrafo(
+        f'<span style="color:{p.APAGADO};font-size:13px">Si el botón no funciona, '
+        f'copia y pega este enlace en tu navegador:<br>'
+        f'<span style="word-break:break-all">{escape(reset_url)}</span></span>'
+    )
+    return p.documento(
+        url=url,
+        preencabezado="Un enlace para volver a entrar a tu cuenta.",
+        portada_html=portada,
+        cuerpo=cuerpo,
+        contacto=CONTACTO,
+    )
+
+
 def request_password_reset(db: Session, email: str) -> None:
     """No indica si el correo existe: el llamador siempre responde 204,
     exista o no la cuenta, para no filtrar qué correos están registrados."""
@@ -184,7 +226,8 @@ def request_password_reset(db: Session, email: str) -> None:
     )
     db.commit()
 
-    reset_url = f"{get_settings().frontend_url}/restablecer-contrasena?token={raw_token}"
+    url = get_settings().frontend_url
+    reset_url = f"{url}/restablecer-contrasena?token={raw_token}"
     # El envío puede fallar, y la respuesta NO puede cambiar por eso: este
     # endpoint contesta igual exista o no la cuenta, y un 500 solo cuando el
     # correo existe delataría cuáles están registradas. El fallo queda en el
@@ -193,6 +236,7 @@ def request_password_reset(db: Session, email: str) -> None:
         send_email(
             to=user.email,
             subject="Recupera tu contraseña en 1000paes",
+            html=_html_recuperar(user.name, reset_url, url),
             body=(
                 f"Hola {user.name},\n\n"
                 "Recibimos una solicitud para restablecer tu contraseña en 1000paes.\n"
