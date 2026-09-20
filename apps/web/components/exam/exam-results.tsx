@@ -233,6 +233,27 @@ export function ExamResults({ result, review, onNuevoEnsayo, prueba }: Props) {
       </section>
       )}
 
+      {/* ── Acciones para seguir ────────────────────────────────────────
+          Van acá, apenas debajo del puntaje: al terminar, lo que casi todos
+          quieren es hacer otro ensayo o ver su progreso, y antes había que
+          bajar por toda la revisión para llegar a ellas. Abajo del todo queda
+          un "volver arriba" para regresar sin scrollear a mano. */}
+      <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+        <button
+          type="button"
+          onClick={onNuevoEnsayo}
+          className="btn-glow flex-1 rounded-lg px-4 py-3 font-semibold text-accent-foreground"
+        >
+          Hacer otro ensayo
+        </button>
+        <Link
+          href="/historial"
+          className="flex-1 rounded-lg border border-border px-4 py-3 text-center font-medium transition hover:bg-surface-hover"
+        >
+          Ver mi progreso
+        </Link>
+      </div>
+
       {/* ── Sugerencia de refuerzo ──────────────────────────────────────
           El ensayo terminaba acá en un consejo que el alumno tenía que
           ejecutar a mano ("puedes armar un ensayo filtrando por ese eje"). Es
@@ -368,21 +389,21 @@ export function ExamResults({ result, review, onNuevoEnsayo, prueba }: Props) {
         </section>
       )}
 
-      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-        <button
-          type="button"
-          onClick={onNuevoEnsayo}
-          className="btn-glow flex-1 rounded-lg px-4 py-3 font-semibold text-accent-foreground"
-        >
-          Hacer otro ensayo
-        </button>
-        <Link
-          href="/historial"
-          className="flex-1 rounded-lg border border-border px-4 py-3 text-center font-medium transition hover:bg-surface-hover"
-        >
-          Ver mi progreso
-        </Link>
-      </div>
+      {/* El botón del fondo ya no repite las acciones --están arriba, bajo el
+          puntaje-- sino que devuelve al tope de la página. Solo aparece cuando
+          hay revisión: es la lista larga la que obliga a scrollear de vuelta.
+          En una página corta las acciones de arriba ya están a la vista. */}
+      {preguntas.length > 0 && (
+        <div className="mt-8 flex justify-center">
+          <button
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="rounded-lg border border-border px-5 py-3 font-medium transition hover:bg-surface-hover"
+          >
+            ↑ Volver arriba
+          </button>
+        </div>
+      )}
     </div>
   );
 }
