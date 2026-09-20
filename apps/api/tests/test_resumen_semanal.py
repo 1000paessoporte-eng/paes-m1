@@ -32,8 +32,9 @@ def _ensayo(db_session, user: User, cuando: datetime, puntaje: int) -> None:
     db_session.commit()
 
 
-def _enviados(monkeypatch) -> list[tuple[str, str, str]]:
-    salida: list[tuple[str, str, str]] = []
+def _enviados(monkeypatch) -> list[tuple[str, ...]]:
+    """(destino, asunto, cuerpo, html). El html es la versión con diseño."""
+    salida: list[tuple[str, ...]] = []
     monkeypatch.setattr(resumen, "send_email", lambda *a: salida.append(a))
     monkeypatch.setattr(service, "send_email", lambda *a: salida.append(a))
     return salida
@@ -56,7 +57,7 @@ def test_el_recordatorio_dice_cuantos_dias_quedan(db_session, monkeypatch) -> No
     salida = _enviados(monkeypatch)
 
     service.enviar_recordatorios(db_session, ahora=SABADO)
-    _, _, cuerpo = salida[0]
+    _, _, cuerpo, _html = salida[0]
     assert "días para la PAES" in cuerpo
     assert "/perfil" in cuerpo  # la baja, siempre
 
@@ -74,10 +75,12 @@ def test_resumen_con_actividad_compara_con_la_semana_pasada(db_session, monkeypa
     salida = _enviados(monkeypatch)
 
     assert resumen.enviar_resumenes(db_session, ahora=DOMINGO)["enviados"] == 1
-    _, asunto, cuerpo = salida[0]
+    _, asunto, cuerpo, html = salida[0]
     assert "10 preguntas" in asunto and "70%" in asunto
     assert "nuevo récord" in cuerpo and "560" in cuerpo and "480" in cuerpo
     assert "/analitica" in cuerpo and "/perfil" in cuerpo
+    # Y la versión con diseño cuenta lo mismo.
+    assert "70%" in html and "560" in html and "/perfil#correos" in html
 
 
 def test_resumen_sin_actividad_reciente_no_sale(db_session, monkeypatch) -> None:
@@ -96,7 +99,7 @@ def test_resumen_de_semana_floja_no_reprocha(db_session, monkeypatch) -> None:
     salida = _enviados(monkeypatch)
 
     assert resumen.enviar_resumenes(db_session, ahora=DOMINGO)["enviados"] == 1
-    _, asunto, _ = salida[0]
+    _, asunto, _, _ = salida[0]
     assert "no alcanzaste" in asunto
 
 
