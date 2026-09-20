@@ -1,3 +1,4 @@
+
 from fastapi import APIRouter, Depends, HTTPException, Response
 from sqlalchemy.orm import Session
 
@@ -101,6 +102,33 @@ def get_exam_options(
     return service.get_options(db, subject)
 
 
+def _prueba_del_dia(
+    e: del_dia.EstadoPrueba, c: del_dia.Comparacion
+) -> EnsayoDelDiaPruebaOut:
+    """Una prueba del día: cómo va el alumno y cómo le fue frente al resto.
+
+    La comparación va para todos los planes, no solo para el Gratis. Quien
+    arma sus propios ensayos igual rinde el del día --es el mismo ensayo-- y
+    dejarlo fuera de la comparación por pagar sería al revés de lo razonable.
+    Por eso `mi_puntaje` no se lee del estado, que para el plan Pro siempre
+    dice "disponible", sino del primer intento terminado de hoy.
+    """
+    return EnsayoDelDiaPruebaOut(
+        subject=e.subject,
+        estado=e.estado,
+        attempt_id=e.attempt_id,
+        puntaje=e.puntaje,
+        question_count=del_dia.PREGUNTAS,
+        duration_seconds=del_dia.duracion(e.subject),
+        mi_puntaje=c.mi_puntaje,
+        rindieron=c.rindieron,
+        minimo_para_comparar=del_dia.MINIMO_PARA_COMPARAR,
+        promedio=c.promedio,
+        mejor=c.mejor,
+        posicion=c.posicion,
+    )
+
+
 @router.get("/del-dia", response_model=EnsayoDelDiaOut)
 def get_ensayo_del_dia(
     db: Session = Depends(get_db),
@@ -119,18 +147,12 @@ def get_ensayo_del_dia(
         if solo
         else [del_dia.EstadoPrueba(s, "disponible", None, None) for s in del_dia.PRUEBAS]
     )
+    comparaciones = del_dia.comparaciones(db, user.id, fecha)
     return EnsayoDelDiaOut(
         fecha=fecha,
         solo_ensayo_del_dia=solo,
         pruebas=[
-            EnsayoDelDiaPruebaOut(
-                subject=e.subject,
-                estado=e.estado,
-                attempt_id=e.attempt_id,
-                puntaje=e.puntaje,
-                question_count=del_dia.PREGUNTAS,
-                duration_seconds=del_dia.duracion(e.subject),
-            )
+            _prueba_del_dia(e, comparaciones[e.subject])
             for e in estados
         ],
     )

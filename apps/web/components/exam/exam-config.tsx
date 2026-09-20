@@ -919,6 +919,7 @@ function EnsayoDelDiaSeccion({
                 Rendir
               </button>
             )}
+            <ComparacionDelDia prueba={p} />
           </li>
         ))}
       </ul>
@@ -928,5 +929,48 @@ function EnsayoDelDiaSeccion({
         </p>
       )}
     </section>
+  );
+}
+
+/**
+ * Cómo le fue al alumno hoy frente a quienes rindieron el mismo ensayo.
+ *
+ * Es el sentido de que el ensayo del día sea el mismo para todos: la tarjeta
+ * ya prometía "compara tu puntaje con tus compañeros" y hasta ahora no había
+ * con qué. Es también la conversación que ya ocurre en la sala --"¿cuánto te
+ * sacaste?"--, que es lo que hace que alguien le cuente de esto a otro.
+ *
+ * Sin nombres ni listas: son menores de edad, así que van agregados y el
+ * puesto propio. Y nada se muestra hasta que haya suficiente gente: un
+ * "2° de 3" no dice nada del nivel y deja deducir el puntaje de los demás.
+ */
+function ComparacionDelDia({ prueba }: { prueba: EnsayoDelDia["pruebas"][number] }) {
+  if (prueba.mi_puntaje == null) return null;
+
+  if (prueba.posicion == null || prueba.promedio == null) {
+    return (
+      <p className="w-full text-xs text-muted">
+        Eres de los primeros en rendirlo hoy. Desde {prueba.minimo_para_comparar}{" "}
+        personas te mostramos cómo te comparas.
+      </p>
+    );
+  }
+
+  const sobreElPromedio = prueba.mi_puntaje - prueba.promedio;
+  return (
+    <p className="w-full text-xs text-muted">
+      <span className="font-semibold text-foreground">
+        {prueba.posicion}° de {prueba.rindieron}
+      </span>{" "}
+      hoy · promedio {prueba.promedio}
+      {sobreElPromedio !== 0 && (
+        <span className={sobreElPromedio > 0 ? "text-success" : undefined}>
+          {" "}
+          ({sobreElPromedio > 0 ? "+" : ""}
+          {sobreElPromedio} tú)
+        </span>
+      )}
+      {prueba.mejor != null && ` · el mejor de hoy, ${prueba.mejor}`}
+    </p>
   );
 }

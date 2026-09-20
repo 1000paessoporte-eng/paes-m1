@@ -303,6 +303,19 @@ class EnsayoDelDiaPruebaOut(BaseModel):
     puntaje: int | None = None
     question_count: int
     duration_seconds: int
+    #: El puntaje del alumno en el ensayo del día, sea cual sea su plan.
+    #: `puntaje` solo se llena para quien SOLO rinde el del día; este se llena
+    #: siempre, y es el que se compara.
+    mi_puntaje: int | None = None
+    #: Comparación con quienes rindieron hoy el MISMO ensayo. Solo viene
+    #: llena cuando el alumno ya lo rindió; `promedio`, `mejor` y `posicion`
+    #: quedan nulos mientras no haya suficiente gente (`minimo_para_comparar`)
+    #: para que comparar signifique algo. Sin identidades: son menores de edad.
+    rindieron: int = 0
+    minimo_para_comparar: int = 0
+    promedio: int | None = None
+    mejor: int | None = None
+    posicion: int | None = None
 
 
 class EnsayoDelDiaOut(BaseModel):

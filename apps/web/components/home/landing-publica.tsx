@@ -525,6 +525,24 @@ function SeccionCarreras({
               ? `Las ponderaciones oficiales del DEMRE de ${totalCarreras.toLocaleString("es-CL")} carreras en ${universidades.length} universidades: cuánto pesa cada prueba, el ponderado mínimo de postulación y las vacantes.`
               : "Las ponderaciones oficiales del DEMRE: cuánto pesa cada prueba, el ponderado mínimo de postulación y las vacantes."}
           </p>
+          {/* El simulador existe desde hace meses y la portada no lo nombraba:
+              se llegaba a él por el menú o por la ficha de una carrera. Es lo
+              único que este producto tiene y la competencia no --las
+              ponderaciones oficiales cruzadas con el puntaje real de la
+              persona--, y responde la pregunta que de verdad trae a alguien
+              acá, que no es "quiero practicar matemática" sino "¿me alcanza?".
+              Va antes del listado de universidades porque el listado informa y
+              esto contesta. */}
+          <Link
+            href="/simulador"
+            className="btn-glow mt-6 inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-medium text-accent-foreground"
+          >
+            Calcular si me alcanza
+          </Link>
+          <p className="mt-2 text-xs text-muted">
+            Pones tus puntajes, eliges tus carreras y te decimos cuánto te falta
+            en cada una. Gratis y sin cuenta.
+          </p>
         </div>
 
         <ul className="mt-10 grid grid-cols-1 gap-2 sm:grid-cols-2">
