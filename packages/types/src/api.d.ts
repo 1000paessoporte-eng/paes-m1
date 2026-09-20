@@ -98,6 +98,26 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/auth/microsoft": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Login With Microsoft
+         * @description Cierra el flujo que empezó el navegador: canjea el código y abre sesión.
+         */
+        post: operations["login_with_microsoft_api_auth_microsoft_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/auth/forgot-password": {
         parameters: {
             query?: never;
@@ -1883,6 +1903,11 @@ export interface components {
             /** Google Enabled */
             google_enabled: boolean;
             /**
+             * Microsoft Enabled
+             * @default false
+             */
+            microsoft_enabled: boolean;
+            /**
              * Email Enabled
              * @default false
              */
@@ -3124,6 +3149,23 @@ export interface components {
             /** Tarjeta */
             tarjeta?: string | null;
         };
+        /**
+         * MicrosoftLoginIn
+         * @description Lo que el navegador trae de vuelta desde Microsoft.
+         *
+         *     `code` es de un solo uso y `code_verifier` el secreto que el navegador
+         *     inventó antes de mandar a la persona a Microsoft: sin él, un `code` robado
+         *     no sirve. `redirect_uri` tiene que ser exactamente la misma que se usó al
+         *     pedir el código, porque Microsoft la vuelve a comprobar al canjearlo.
+         */
+        MicrosoftLoginIn: {
+            /** Code */
+            code: string;
+            /** Code Verifier */
+            code_verifier: string;
+            /** Redirect Uri */
+            redirect_uri: string;
+        };
         /** NodeDiagnosisOut */
         NodeDiagnosisOut: {
             /** Skill Node Id */
@@ -4202,6 +4244,39 @@ export interface operations {
         requestBody: {
             content: {
                 "application/json": components["schemas"]["GoogleLoginIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["TokenOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    login_with_microsoft_api_auth_microsoft_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["MicrosoftLoginIn"];
             };
         };
         responses: {

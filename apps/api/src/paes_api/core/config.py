@@ -19,6 +19,11 @@ class Settings(BaseSettings):
     #: Client ID de la app de Google (OAuth 2.0). Vacío desactiva el login con
     #: Google: la API rechaza /auth/google y la web no muestra el botón.
     google_client_id: str = ""
+    #: Client ID de la app registrada en Entra ID (Microsoft). Vacío desactiva
+    #: el inicio de sesión con Microsoft: la API rechaza /auth/microsoft y la
+    #: web no muestra el botón. No hay secreto que guardar: es un cliente
+    #: público y lo que protege el canje del código es PKCE.
+    microsoft_client_id: str = ""
     database_url: str = "postgresql+psycopg://paes:paes@localhost:5432/paes_m1"
 
     @model_validator(mode="after")

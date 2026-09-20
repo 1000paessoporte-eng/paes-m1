@@ -12,8 +12,8 @@ from paes_api.core.config import get_settings
 from paes_api.modules.content.models import Alternative, Difficulty, Question
 from paes_api.modules.exam_focus import del_dia
 from paes_api.modules.exam_focus.models import ExamAttempt
-from paes_api.modules.users.models import User
 from paes_api.modules.skill_tree.models import SkillAxis, SkillNode, Subject
+from paes_api.modules.users.models import User
 
 
 def _banco(db: Session, cuantas: int = 80) -> None:

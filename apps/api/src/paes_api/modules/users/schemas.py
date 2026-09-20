@@ -40,10 +40,25 @@ class GoogleLoginIn(BaseModel):
     credential: str
 
 
+class MicrosoftLoginIn(BaseModel):
+    """Lo que el navegador trae de vuelta desde Microsoft.
+
+    `code` es de un solo uso y `code_verifier` el secreto que el navegador
+    inventó antes de mandar a la persona a Microsoft: sin él, un `code` robado
+    no sirve. `redirect_uri` tiene que ser exactamente la misma que se usó al
+    pedir el código, porque Microsoft la vuelve a comprobar al canjearlo.
+    """
+
+    code: str
+    code_verifier: str
+    redirect_uri: str
+
+
 class AuthConfigOut(BaseModel):
     """Qué puede hacer este despliegue, para que la interfaz no prometa de más."""
 
     google_enabled: bool
+    microsoft_enabled: bool = False
     #: False cuando el servidor no tiene SMTP: la recuperación de contraseña
     #: no puede enviar el enlace, y la pantalla tiene que decirlo en vez de
     #: prometer un correo que nunca va a llegar.

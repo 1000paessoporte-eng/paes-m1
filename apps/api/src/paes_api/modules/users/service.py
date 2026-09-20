@@ -14,6 +14,7 @@ from paes_api.core.email import CorreoNoEnviado, send_email
 from paes_api.core.security import hash_password, verify_password
 from paes_api.modules.correos import plantilla
 from paes_api.modules.correos.service import CONTACTO, enviar_bienvenida
+from paes_api.modules.users import microsoft
 from paes_api.modules.users.models import LoginEvent, PasswordResetToken, User
 from paes_api.modules.users.schemas import RegisterIn, UpdateMeIn
 
@@ -125,6 +126,42 @@ def login_with_google(db: Session, credential: str, client_id: str) -> User:
             cuenta_nueva = True
 
     user.avatar_url = picture
+    db.commit()
+    db.refresh(user)
+    if cuenta_nueva:
+        enviar_bienvenida(user)
+    return user
+
+
+def login_with_microsoft(
+    db: Session, code: str, code_verifier: str, redirect_uri: str, client_id: str
+) -> User:
+    """Canjea el código de Microsoft y devuelve el usuario asociado.
+
+    Misma regla que con Google: si el correo ya tiene cuenta, se enlaza en vez
+    de crear una duplicada --así conserva su historial-- y la bienvenida solo
+    sale cuando la cuenta nace acá.
+    """
+    quien = microsoft.identidad(code, code_verifier, redirect_uri, client_id)
+
+    user = db.execute(
+        select(User).where(User.microsoft_sub == quien["sub"])
+    ).scalar_one_or_none()
+    cuenta_nueva = False
+    if user is None:
+        user = get_by_email(db, quien["email"])
+        if user is not None:
+            user.microsoft_sub = quien["sub"]
+        else:
+            user = User(
+                email=quien["email"],
+                name=quien["name"],
+                microsoft_sub=quien["sub"],
+                hashed_password=None,
+            )
+            db.add(user)
+            cuenta_nueva = True
+
     db.commit()
     db.refresh(user)
     if cuenta_nueva:
