@@ -2527,6 +2527,24 @@ export interface components {
             question_count: number;
             /** Duration Seconds */
             duration_seconds: number;
+            /** Mi Puntaje */
+            mi_puntaje?: number | null;
+            /**
+             * Rindieron
+             * @default 0
+             */
+            rindieron: number;
+            /**
+             * Minimo Para Comparar
+             * @default 0
+             */
+            minimo_para_comparar: number;
+            /** Promedio */
+            promedio?: number | null;
+            /** Mejor */
+            mejor?: number | null;
+            /** Posicion */
+            posicion?: number | null;
         };
         /** EnsayoProgramadoOut */
         EnsayoProgramadoOut: {
