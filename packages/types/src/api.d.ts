@@ -1562,6 +1562,69 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/colegio/cotizacion": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Pedir Cotizacion
+         * @description Un colegio pide cotización del plan Colegios. No necesita cuenta.
+         *
+         *     Pedirle que se registre antes de saber cuánto cuesta sería poner el
+         *     formulario más largo justo delante de la pregunta más simple.
+         */
+        post: operations["pedir_cotizacion_api_colegio_cotizacion_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/colegio/admin/cotizaciones": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Listar Cotizaciones
+         * @description Las solicitudes, de la más nueva a la más vieja.
+         */
+        get: operations["listar_cotizaciones_api_colegio_admin_cotizaciones_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/colegio/admin/cotizaciones/{solicitud_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        /**
+         * Marcar Cotizacion
+         * @description Marca una solicitud como respondida, o la devuelve a pendiente.
+         */
+        put: operations["marcar_cotizacion_api_colegio_admin_cotizaciones__solicitud_id__put"];
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/colegio/admin/todos": {
         parameters: {
             query?: never;
@@ -3800,6 +3863,65 @@ export interface components {
             lesson_intro?: string | null;
             /** Min Attempts To Master */
             min_attempts_to_master: number;
+        };
+        /**
+         * SolicitudColegioIn
+         * @description Lo que un colegio llena para pedir una cotización.
+         *
+         *     Los largos calzan con la tabla: si acá entrara un nombre más largo que la
+         *     columna, la petición reventaría con un 500 en vez de decir qué pasó.
+         */
+        SolicitudColegioIn: {
+            /** Establecimiento */
+            establecimiento: string;
+            /** Contacto */
+            contacto: string;
+            /** Cargo */
+            cargo: string;
+            /**
+             * Email
+             * Format: email
+             */
+            email: string;
+            /** Telefono */
+            telefono?: string | null;
+            /** Comuna */
+            comuna?: string | null;
+            /** Alumnos */
+            alumnos: number;
+            /** Mensaje */
+            mensaje?: string | null;
+        };
+        /**
+         * SolicitudColegioOut
+         * @description Lo que ve el panel de administración. La cotización se responde a mano.
+         */
+        SolicitudColegioOut: {
+            /** Id */
+            id: number;
+            /** Establecimiento */
+            establecimiento: string;
+            /** Contacto */
+            contacto: string;
+            /** Cargo */
+            cargo: string;
+            /** Email */
+            email: string;
+            /** Telefono */
+            telefono: string | null;
+            /** Comuna */
+            comuna: string | null;
+            /** Alumnos */
+            alumnos: number;
+            /** Mensaje */
+            mensaje: string | null;
+            /** Atendida */
+            atendida: boolean;
+            /**
+             * Creado En
+             * Format: date-time
+             */
+            creado_en: string;
         };
         /**
          * Subject
@@ -6254,6 +6376,92 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content?: never;
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    pedir_cotizacion_api_colegio_cotizacion_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["SolicitudColegioIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["SolicitudColegioOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    listar_cotizaciones_api_colegio_admin_cotizaciones_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["SolicitudColegioOut"][];
+                };
+            };
+        };
+    };
+    marcar_cotizacion_api_colegio_admin_cotizaciones__solicitud_id__put: {
+        parameters: {
+            query?: {
+                atendida?: boolean;
+            };
+            header?: never;
+            path: {
+                solicitud_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["SolicitudColegioOut"];
+                };
             };
             /** @description Validation Error */
             422: {

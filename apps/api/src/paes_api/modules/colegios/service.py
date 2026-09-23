@@ -1,5 +1,6 @@
 """El plan Colegios: un curso, su profesor y el avance de cada alumno."""
 
+import logging
 import secrets
 from datetime import UTC, datetime
 
@@ -7,12 +8,17 @@ from sqlalchemy import Integer, case, func, select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from paes_api.modules.colegios.models import Colegio
+from paes_api.core.config import get_settings
+from paes_api.core.email import CorreoNoEnviado, send_email
+from paes_api.modules.colegios.models import Colegio, SolicitudColegio
 from paes_api.modules.content.models import Alternative, Question
+from paes_api.modules.correos import service as correos
 from paes_api.modules.exam_focus.models import AttemptStatus, ExamAnswer, ExamAttempt
 from paes_api.modules.practice.models import PracticeAnswer
 from paes_api.modules.skill_tree.models import AXIS_LABELS, SkillNode
 from paes_api.modules.users.models import User
+
+logger = logging.getLogger(__name__)
 
 #: El alfabeto del código de curso.
 #:
@@ -233,3 +239,37 @@ def ejes_del_curso(db: Session, colegio_id: int) -> list[dict]:
         }
         for f in filas
     ]
+
+
+def registrar_solicitud(db: Session, datos: dict[str, object]) -> SolicitudColegio:
+    """Guarda la cotización y avisa por correo. Nunca falla por el correo.
+
+    Misma regla que la bienvenida: primero se guarda, después se escribe. Que
+    el aviso no salga es un problema --hay que mirar el panel-- pero que un
+    colegio reciba un error después de llenar el formulario es perder la venta
+    con la persona ya convencida.
+    """
+    solicitud = SolicitudColegio(**datos)
+    db.add(solicitud)
+    db.commit()
+    db.refresh(solicitud)
+
+    url = get_settings().frontend_url
+    asunto, cuerpo = correos.aviso_de_cotizacion(datos, url)
+    try:
+        send_email(correos.CONTACTO, asunto, cuerpo)
+    except CorreoNoEnviado:
+        logger.exception("No salió el aviso de la cotización %s", solicitud.id)
+
+    try:
+        asunto, texto, html = correos.cotizacion_recibida(
+            establecimiento=solicitud.establecimiento,
+            contacto=solicitud.contacto.split(" ")[0],
+            alumnos=solicitud.alumnos,
+            url=url,
+        )
+        send_email(solicitud.email, asunto, texto, html)
+    except CorreoNoEnviado:
+        logger.exception("No salió el acuse a %s", solicitud.email)
+
+    return solicitud

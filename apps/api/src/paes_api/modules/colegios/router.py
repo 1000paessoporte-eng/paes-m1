@@ -1,12 +1,13 @@
 from datetime import UTC, datetime, timedelta
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, Request, status
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from paes_api.core.database import get_db
+from paes_api.core.limiter import limiter
 from paes_api.modules.colegios import service
-from paes_api.modules.colegios.models import Colegio, EnsayoProgramado
+from paes_api.modules.colegios.models import Colegio, EnsayoProgramado, SolicitudColegio
 from paes_api.modules.colegios.schemas import (
     AlumnoOut,
     ColegioAdminOut,
@@ -16,6 +17,8 @@ from paes_api.modules.colegios.schemas import (
     EjeCursoOut,
     EnsayoProgramadoOut,
     PlanColegioIn,
+    SolicitudColegioIn,
+    SolicitudColegioOut,
     UnirseIn,
 )
 from paes_api.modules.exam_focus.models import AttemptStatus, ExamAttempt
@@ -260,6 +263,55 @@ def borrar_ensayo(
 # factura, no con tarjeta. Estos dos endpoints son lo que convierte esa
 # conversación en acceso real, y por eso son de administración y no del
 # profesor: el profesor no se activa el plan solo.
+
+
+@router.post(
+    "/cotizacion", response_model=SolicitudColegioOut, status_code=status.HTTP_201_CREATED
+)
+# Es un formulario público: sin freno, un robot llena la tabla y, peor, gasta
+# la cuota diaria de correo, que es la misma que usa "recuperar contraseña".
+@limiter.limit("3/hour")
+def pedir_cotizacion(
+    # `request` no se usa acá: lo exige slowapi para contar por IP.
+    request: Request,
+    payload: SolicitudColegioIn,
+    db: Session = Depends(get_db),
+) -> SolicitudColegioOut:
+    """Un colegio pide cotización del plan Colegios. No necesita cuenta.
+
+    Pedirle que se registre antes de saber cuánto cuesta sería poner el
+    formulario más largo justo delante de la pregunta más simple.
+    """
+    solicitud = service.registrar_solicitud(db, payload.model_dump())
+    return SolicitudColegioOut.model_validate(solicitud)
+
+
+@router.get("/admin/cotizaciones", response_model=list[SolicitudColegioOut])
+def listar_cotizaciones(
+    db: Session = Depends(get_db), _: User = Depends(get_current_admin)
+) -> list[SolicitudColegioOut]:
+    """Las solicitudes, de la más nueva a la más vieja."""
+    filas = db.execute(
+        select(SolicitudColegio).order_by(SolicitudColegio.creado_en.desc())
+    ).scalars().all()
+    return [SolicitudColegioOut.model_validate(f) for f in filas]
+
+
+@router.put("/admin/cotizaciones/{solicitud_id}", response_model=SolicitudColegioOut)
+def marcar_cotizacion(
+    solicitud_id: int,
+    atendida: bool = True,
+    db: Session = Depends(get_db),
+    _: User = Depends(get_current_admin),
+) -> SolicitudColegioOut:
+    """Marca una solicitud como respondida, o la devuelve a pendiente."""
+    solicitud = db.get(SolicitudColegio, solicitud_id)
+    if solicitud is None:
+        raise HTTPException(status_code=404, detail="No existe esa solicitud")
+    solicitud.atendida = atendida
+    db.commit()
+    db.refresh(solicitud)
+    return SolicitudColegioOut.model_validate(solicitud)
 
 
 @router.get("/admin/todos", response_model=list[ColegioAdminOut])

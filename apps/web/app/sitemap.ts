@@ -28,6 +28,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/simulador`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/demo`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/planes`, changeFrequency: "monthly", priority: 0.6 },
+    // El plan Colegios se busca aparte: quien lo busca es un profesor o un
+    // sostenedor, y no llega por la portada de un producto para estudiantes.
+    { url: `${BASE_URL}/colegios`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/registro`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/sobre-nosotros`, changeFrequency: "monthly", priority: 0.7 },
     {
